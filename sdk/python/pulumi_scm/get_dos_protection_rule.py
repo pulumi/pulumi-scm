@@ -118,22 +118,33 @@ class GetDosProtectionRuleResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
+        """
+        Rule disabled?
+        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
+        """
+        List of source zones
+        """
         return pulumi.get(self, "froms")
 
     @_builtins.property
@@ -147,6 +158,9 @@ class GetDosProtectionRuleResult:
     @_builtins.property
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> _builtins.str:
+        """
+        Log forwarding profile name
+        """
         return pulumi.get(self, "log_setting")
 
     @_builtins.property
@@ -160,41 +174,66 @@ class GetDosProtectionRuleResult:
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
+        """
+        Position relative to local device rules
+        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
     def protection(self) -> 'outputs.GetDosProtectionRuleProtectionResult':
+        """
+        Protection
+        """
         return pulumi.get(self, "protection")
 
     @_builtins.property
     @pulumi.getter
     def schedule(self) -> _builtins.str:
+        """
+        Schedule on which to enforce the rule
+        """
         return pulumi.get(self, "schedule")
 
     @_builtins.property
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
+        """
+        List of services
+        """
         return pulumi.get(self, "services")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
+        """
+        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
+        """
+        List of source addresses
+        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
+        """
+        List of tags
+        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
@@ -205,6 +244,9 @@ class GetDosProtectionRuleResult:
     @_builtins.property
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
+        """
+        List of destination zones
+        """
         return pulumi.get(self, "tos")
 
 
@@ -236,19 +278,31 @@ class AwaitableGetDosProtectionRuleResult(GetDosProtectionRuleResult):
             tos=self.tos)
 
 
-def get_dos_protection_rule(id: Optional[_builtins.str] = None,
+def get_dos_protection_rule(device: Optional[_builtins.str] = None,
+                            folder: Optional[_builtins.str] = None,
+                            id: Optional[_builtins.str] = None,
                             name: Optional[_builtins.str] = None,
+                            snippet: Optional[_builtins.str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetDosProtectionRuleResult:
     """
     DosProtectionRule data source
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the DNS security profile
     :param _builtins.str name: Rule name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getDosProtectionRule:getDosProtectionRule', __args__, opts=opts, typ=GetDosProtectionRuleResult).value
 
@@ -273,19 +327,31 @@ def get_dos_protection_rule(id: Optional[_builtins.str] = None,
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'),
         tos=pulumi.get(__ret__, 'tos'))
-def get_dos_protection_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_dos_protection_rule_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                   folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                   id: Optional[pulumi.Input[_builtins.str]] = None,
                                    name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                   snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDosProtectionRuleResult]:
     """
     DosProtectionRule data source
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the DNS security profile
     :param _builtins.str name: Rule name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getDosProtectionRule:getDosProtectionRule', __args__, opts=opts, typ=GetDosProtectionRuleResult)
     return __ret__.apply(lambda __response__: GetDosProtectionRuleResult(

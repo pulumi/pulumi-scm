@@ -16,6 +16,21 @@ public final class GetTrafficSteeringRulePlainArgs extends com.pulumi.resources.
     public static final GetTrafficSteeringRulePlainArgs Empty = new GetTrafficSteeringRulePlainArgs();
 
     /**
+     * The folder containing the traffic steering rule
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable String folder;
+
+    /**
+     * @return The folder containing the traffic steering rule
+     * 
+     */
+    public Optional<String> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * The UUID of the traffic steering rule
      * 
      */
@@ -48,6 +63,7 @@ public final class GetTrafficSteeringRulePlainArgs extends com.pulumi.resources.
     private GetTrafficSteeringRulePlainArgs() {}
 
     private GetTrafficSteeringRulePlainArgs(GetTrafficSteeringRulePlainArgs $) {
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
     }
@@ -68,6 +84,17 @@ public final class GetTrafficSteeringRulePlainArgs extends com.pulumi.resources.
 
         public Builder(GetTrafficSteeringRulePlainArgs defaults) {
             $ = new GetTrafficSteeringRulePlainArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param folder The folder containing the traffic steering rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable String folder) {
+            $.folder = folder;
+            return this;
         }
 
         /**

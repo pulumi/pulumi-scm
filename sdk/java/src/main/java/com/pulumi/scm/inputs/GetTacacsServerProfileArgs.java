@@ -17,6 +17,40 @@ public final class GetTacacsServerProfileArgs extends com.pulumi.resources.Invok
     public static final GetTacacsServerProfileArgs Empty = new GetTacacsServerProfileArgs();
 
     /**
+     * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="device")
+    private @Nullable Output<String> device;
+
+    /**
+     * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<Output<String>> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    /**
+     * The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable Output<String> folder;
+
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * The UUID of the TACACS+ server profile
      * 
      */
@@ -46,11 +80,31 @@ public final class GetTacacsServerProfileArgs extends com.pulumi.resources.Invok
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="snippet")
+    private @Nullable Output<String> snippet;
+
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<Output<String>> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetTacacsServerProfileArgs() {}
 
     private GetTacacsServerProfileArgs(GetTacacsServerProfileArgs $) {
+        this.device = $.device;
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -69,6 +123,52 @@ public final class GetTacacsServerProfileArgs extends com.pulumi.resources.Invok
 
         public Builder(GetTacacsServerProfileArgs defaults) {
             $ = new GetTacacsServerProfileArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(@Nullable Output<String> device) {
+            $.device = device;
+            return this;
+        }
+
+        /**
+         * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(String device) {
+            return device(Output.of(device));
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable Output<String> folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
         }
 
         /**
@@ -111,6 +211,29 @@ public final class GetTacacsServerProfileArgs extends com.pulumi.resources.Invok
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(@Nullable Output<String> snippet) {
+            $.snippet = snippet;
+            return this;
+        }
+
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(String snippet) {
+            return snippet(Output.of(snippet));
         }
 
         public GetTacacsServerProfileArgs build() {

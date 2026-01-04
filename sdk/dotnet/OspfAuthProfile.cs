@@ -11,12 +11,39 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// OspfAuthProfile resource
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/ospfAuthProfile:OspfAuthProfile example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/ospfAuthProfile:OspfAuthProfile example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/ospfAuthProfile:OspfAuthProfile example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/ospfAuthProfile:OspfAuthProfile")]
     public partial class OspfAuthProfile : global::Pulumi.CustomResource
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
@@ -29,7 +56,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -37,7 +63,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// MD5s
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         [Output("md5s")]
@@ -51,7 +76,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Password
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         [Output("password")]
@@ -59,7 +83,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -121,13 +144,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -138,7 +161,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// MD5s
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         public InputList<Inputs.OspfAuthProfileMd5Args> Md5s
@@ -158,7 +180,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Password
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         public Input<string>? Password
@@ -173,7 +194,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -189,6 +209,7 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -211,7 +232,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -222,7 +242,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// MD5s
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         public InputList<Inputs.OspfAuthProfileMd5GetArgs> Md5s
@@ -242,7 +261,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Password
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5` and `Password`.
         /// </summary>
         public Input<string>? Password
@@ -257,7 +275,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

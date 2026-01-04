@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// FQDN
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn` and `IpAddress`.
         /// </summary>
         public readonly string Fqdn;
         /// <summary>
         /// IP address
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn` and `IpAddress`.
         /// </summary>
         public readonly string IpAddress;

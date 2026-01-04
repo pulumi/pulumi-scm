@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Allow
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow`, `Deny`, and `Protect`.
         /// </summary>
         [Input("allow")]
         public Input<Inputs.DosProtectionRuleActionAllowArgs>? Allow { get; set; }
 
         /// <summary>
         /// Deny
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow`, `Deny`, and `Protect`.
         /// </summary>
         [Input("deny")]
@@ -28,7 +28,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Protect
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow`, `Deny`, and `Protect`.
         /// </summary>
         [Input("protect")]

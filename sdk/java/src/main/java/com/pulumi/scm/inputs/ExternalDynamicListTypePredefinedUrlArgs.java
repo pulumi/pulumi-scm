@@ -33,14 +33,14 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
     }
 
     /**
-     * Exception list
+     * URL Exception List for Predefined URL type
      * 
      */
     @Import(name="exceptionLists")
     private @Nullable Output<List<String>> exceptionLists;
 
     /**
-     * @return Exception list
+     * @return URL Exception List for Predefined URL type
      * 
      */
     public Optional<Output<List<String>>> exceptionLists() {
@@ -48,14 +48,14 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
     }
 
     /**
-     * Url
+     * URL source for Predefined URL type
      * 
      */
     @Import(name="url", required=true)
     private Output<String> url;
 
     /**
-     * @return Url
+     * @return URL source for Predefined URL type
      * 
      */
     public Output<String> url() {
@@ -110,7 +110,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists URL Exception List for Predefined URL type
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists URL Exception List for Predefined URL type
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists URL Exception List for Predefined URL type
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param url Url
+         * @param url URL source for Predefined URL type
          * 
          * @return builder
          * 
@@ -152,7 +152,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param url Url
+         * @param url URL source for Predefined URL type
          * 
          * @return builder
          * 

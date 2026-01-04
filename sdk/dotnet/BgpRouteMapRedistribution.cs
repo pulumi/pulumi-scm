@@ -11,19 +11,45 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// BgpRouteMapRedistribution resource
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution")]
     public partial class BgpRouteMapRedistribution : global::Pulumi.CustomResource
     {
         /// <summary>
         /// Bgp
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         [Output("bgp")]
         public Output<Outputs.BgpRouteMapRedistributionBgp?> Bgp { get; private set; } = null!;
 
         /// <summary>
         /// Connected static
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         [Output("connectedStatic")]
@@ -37,7 +63,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
@@ -45,7 +70,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -59,7 +83,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Ospf
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         [Output("ospf")]
@@ -67,7 +90,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -124,13 +146,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Bgp
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         [Input("bgp")]
         public Input<Inputs.BgpRouteMapRedistributionBgpArgs>? Bgp { get; set; }
 
         /// <summary>
         /// Connected static
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         [Input("connectedStatic")]
@@ -144,7 +166,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
@@ -152,7 +173,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -166,7 +186,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Ospf
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         [Input("ospf")]
@@ -174,7 +193,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -190,13 +208,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Bgp
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         [Input("bgp")]
         public Input<Inputs.BgpRouteMapRedistributionBgpGetArgs>? Bgp { get; set; }
 
         /// <summary>
         /// Connected static
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         [Input("connectedStatic")]
@@ -210,7 +228,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
@@ -218,7 +235,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -232,7 +248,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Ospf
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         [Input("ospf")]
@@ -240,7 +255,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

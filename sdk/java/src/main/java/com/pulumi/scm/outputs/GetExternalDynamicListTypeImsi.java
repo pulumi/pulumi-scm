@@ -14,74 +14,74 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeImsi {
     /**
-     * @return Auth
+     * @return IMSI Auth Config for Custom IMSI type
      * 
      */
     private GetExternalDynamicListTypeImsiAuth auth;
     /**
-     * @return Profile for authenticating client certificates
+     * @return IMSI Certificate Profile for Custom IMSI type
      * 
      */
     private String certificateProfile;
     /**
-     * @return Description
+     * @return IMSI Description for Custom IMSI type
      * 
      */
     private String description;
     /**
-     * @return Exception list
+     * @return IMSI Exception List for Custom IMSI type
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return Recurring
+     * @return IMSI Recuring Config for Custom IMSI type
      * 
      */
     private GetExternalDynamicListTypeImsiRecurring recurring;
     /**
-     * @return Url
+     * @return IMSI URL for Custom IMSI type
      * 
      */
     private String url;
 
     private GetExternalDynamicListTypeImsi() {}
     /**
-     * @return Auth
+     * @return IMSI Auth Config for Custom IMSI type
      * 
      */
     public GetExternalDynamicListTypeImsiAuth auth() {
         return this.auth;
     }
     /**
-     * @return Profile for authenticating client certificates
+     * @return IMSI Certificate Profile for Custom IMSI type
      * 
      */
     public String certificateProfile() {
         return this.certificateProfile;
     }
     /**
-     * @return Description
+     * @return IMSI Description for Custom IMSI type
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return Exception list
+     * @return IMSI Exception List for Custom IMSI type
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return Recurring
+     * @return IMSI Recuring Config for Custom IMSI type
      * 
      */
     public GetExternalDynamicListTypeImsiRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return Url
+     * @return IMSI URL for Custom IMSI type
      * 
      */
     public String url() {

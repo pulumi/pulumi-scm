@@ -14,12 +14,12 @@ import java.util.Objects;
 public final class GetScheduleScheduleType {
     /**
      * @return Non recurring
+     * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      * 
      */
     private List<String> nonRecurrings;
     /**
      * @return Recurring
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      * 
      */
@@ -28,6 +28,7 @@ public final class GetScheduleScheduleType {
     private GetScheduleScheduleType() {}
     /**
      * @return Non recurring
+     * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      * 
      */
     public List<String> nonRecurrings() {
@@ -35,7 +36,6 @@ public final class GetScheduleScheduleType {
     }
     /**
      * @return Recurring
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      * 
      */

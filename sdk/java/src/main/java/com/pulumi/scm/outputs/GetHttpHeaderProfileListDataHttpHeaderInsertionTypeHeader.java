@@ -22,7 +22,7 @@ public final class GetHttpHeaderProfileListDataHttpHeaderInsertionTypeHeader {
      */
     private Boolean log;
     /**
-     * @return An auto-generated name (*This should be removed*)
+     * @return The name of the HTTP header
      * 
      */
     private String name;
@@ -48,7 +48,7 @@ public final class GetHttpHeaderProfileListDataHttpHeaderInsertionTypeHeader {
         return this.log;
     }
     /**
-     * @return An auto-generated name (*This should be removed*)
+     * @return The name of the HTTP header
      * 
      */
     public String name() {

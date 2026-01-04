@@ -30,8 +30,11 @@ import * as utilities from "./utilities";
 export function getDynamicUserGroup(args: GetDynamicUserGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetDynamicUserGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDynamicUserGroup:getDynamicUserGroup", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -40,6 +43,16 @@ export function getDynamicUserGroup(args: GetDynamicUserGroupArgs, opts?: pulumi
  */
 export interface GetDynamicUserGroupArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the dynamic user group
      */
     id: string;
@@ -47,6 +60,11 @@ export interface GetDynamicUserGroupArgs {
      * The name of the dynamic address group
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -59,9 +77,17 @@ export interface GetDynamicUserGroupResult {
     readonly description: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The tag-based filter for the dynamic user group
+     */
     readonly filter: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the dynamic user group
@@ -71,7 +97,14 @@ export interface GetDynamicUserGroupResult {
      * The name of the dynamic address group
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * Tags associated with the dynamic user group
+     */
     readonly tags: string[];
     readonly tfid: string;
 }
@@ -101,8 +134,11 @@ export interface GetDynamicUserGroupResult {
 export function getDynamicUserGroupOutput(args: GetDynamicUserGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDynamicUserGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDynamicUserGroup:getDynamicUserGroup", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -111,6 +147,16 @@ export function getDynamicUserGroupOutput(args: GetDynamicUserGroupOutputArgs, o
  */
 export interface GetDynamicUserGroupOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the dynamic user group
      */
     id: pulumi.Input<string>;
@@ -118,4 +164,9 @@ export interface GetDynamicUserGroupOutputArgs {
      * The name of the dynamic address group
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

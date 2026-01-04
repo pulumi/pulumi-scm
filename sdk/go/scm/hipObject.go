@@ -203,29 +203,55 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/hipObject:HipObject example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/hipObject:HipObject example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/hipObject:HipObject example ::device:id
+// ```
 type HipObject struct {
 	pulumi.CustomResourceState
 
 	// Anti malware
-	AntiMalware HipObjectAntiMalwareOutput `pulumi:"antiMalware"`
+	AntiMalware HipObjectAntiMalwarePtrOutput `pulumi:"antiMalware"`
 	// Certificate
 	Certificate HipObjectCertificatePtrOutput `pulumi:"certificate"`
 	// Custom checks
 	CustomChecks HipObjectCustomChecksPtrOutput `pulumi:"customChecks"`
 	// Data loss prevention
-	DataLossPrevention HipObjectDataLossPreventionOutput `pulumi:"dataLossPrevention"`
+	DataLossPrevention HipObjectDataLossPreventionPtrOutput `pulumi:"dataLossPrevention"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Disk backup
-	DiskBackup HipObjectDiskBackupOutput `pulumi:"diskBackup"`
+	DiskBackup HipObjectDiskBackupPtrOutput `pulumi:"diskBackup"`
 	// Disk encryption
-	DiskEncryption HipObjectDiskEncryptionOutput `pulumi:"diskEncryption"`
+	DiskEncryption HipObjectDiskEncryptionPtrOutput `pulumi:"diskEncryption"`
 	// Firewall
-	Firewall HipObjectFirewallOutput `pulumi:"firewall"`
+	Firewall HipObjectFirewallPtrOutput `pulumi:"firewall"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Host info
@@ -237,9 +263,8 @@ type HipObject struct {
 	// Network info
 	NetworkInfo HipObjectNetworkInfoPtrOutput `pulumi:"networkInfo"`
 	// Patch management
-	PatchManagement HipObjectPatchManagementOutput `pulumi:"patchManagement"`
+	PatchManagement HipObjectPatchManagementPtrOutput `pulumi:"patchManagement"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -286,6 +311,7 @@ type hipObjectState struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Disk backup
 	DiskBackup *HipObjectDiskBackup `pulumi:"diskBackup"`
@@ -294,7 +320,6 @@ type hipObjectState struct {
 	// Firewall
 	Firewall *HipObjectFirewall `pulumi:"firewall"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Host info
@@ -308,7 +333,6 @@ type hipObjectState struct {
 	// Patch management
 	PatchManagement *HipObjectPatchManagement `pulumi:"patchManagement"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -326,6 +350,7 @@ type HipObjectState struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Disk backup
 	DiskBackup HipObjectDiskBackupPtrInput
@@ -334,7 +359,6 @@ type HipObjectState struct {
 	// Firewall
 	Firewall HipObjectFirewallPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Host info
@@ -348,7 +372,6 @@ type HipObjectState struct {
 	// Patch management
 	PatchManagement HipObjectPatchManagementPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -370,6 +393,7 @@ type hipObjectArgs struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Disk backup
 	DiskBackup *HipObjectDiskBackup `pulumi:"diskBackup"`
@@ -378,7 +402,6 @@ type hipObjectArgs struct {
 	// Firewall
 	Firewall *HipObjectFirewall `pulumi:"firewall"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Host info
@@ -392,7 +415,6 @@ type hipObjectArgs struct {
 	// Patch management
 	PatchManagement *HipObjectPatchManagement `pulumi:"patchManagement"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -410,6 +432,7 @@ type HipObjectArgs struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Disk backup
 	DiskBackup HipObjectDiskBackupPtrInput
@@ -418,7 +441,6 @@ type HipObjectArgs struct {
 	// Firewall
 	Firewall HipObjectFirewallPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Host info
@@ -432,7 +454,6 @@ type HipObjectArgs struct {
 	// Patch management
 	PatchManagement HipObjectPatchManagementPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -525,8 +546,8 @@ func (o HipObjectOutput) ToHipObjectOutputWithContext(ctx context.Context) HipOb
 }
 
 // Anti malware
-func (o HipObjectOutput) AntiMalware() HipObjectAntiMalwareOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectAntiMalwareOutput { return v.AntiMalware }).(HipObjectAntiMalwareOutput)
+func (o HipObjectOutput) AntiMalware() HipObjectAntiMalwarePtrOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectAntiMalwarePtrOutput { return v.AntiMalware }).(HipObjectAntiMalwarePtrOutput)
 }
 
 // Certificate
@@ -540,8 +561,8 @@ func (o HipObjectOutput) CustomChecks() HipObjectCustomChecksPtrOutput {
 }
 
 // Data loss prevention
-func (o HipObjectOutput) DataLossPrevention() HipObjectDataLossPreventionOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectDataLossPreventionOutput { return v.DataLossPrevention }).(HipObjectDataLossPreventionOutput)
+func (o HipObjectOutput) DataLossPrevention() HipObjectDataLossPreventionPtrOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectDataLossPreventionPtrOutput { return v.DataLossPrevention }).(HipObjectDataLossPreventionPtrOutput)
 }
 
 // Description
@@ -550,27 +571,27 @@ func (o HipObjectOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HipObjectOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObject) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // Disk backup
-func (o HipObjectOutput) DiskBackup() HipObjectDiskBackupOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectDiskBackupOutput { return v.DiskBackup }).(HipObjectDiskBackupOutput)
+func (o HipObjectOutput) DiskBackup() HipObjectDiskBackupPtrOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectDiskBackupPtrOutput { return v.DiskBackup }).(HipObjectDiskBackupPtrOutput)
 }
 
 // Disk encryption
-func (o HipObjectOutput) DiskEncryption() HipObjectDiskEncryptionOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectDiskEncryptionOutput { return v.DiskEncryption }).(HipObjectDiskEncryptionOutput)
+func (o HipObjectOutput) DiskEncryption() HipObjectDiskEncryptionPtrOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectDiskEncryptionPtrOutput { return v.DiskEncryption }).(HipObjectDiskEncryptionPtrOutput)
 }
 
 // Firewall
-func (o HipObjectOutput) Firewall() HipObjectFirewallOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectFirewallOutput { return v.Firewall }).(HipObjectFirewallOutput)
+func (o HipObjectOutput) Firewall() HipObjectFirewallPtrOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectFirewallPtrOutput { return v.Firewall }).(HipObjectFirewallPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HipObjectOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObject) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -597,12 +618,11 @@ func (o HipObjectOutput) NetworkInfo() HipObjectNetworkInfoPtrOutput {
 }
 
 // Patch management
-func (o HipObjectOutput) PatchManagement() HipObjectPatchManagementOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectPatchManagementOutput { return v.PatchManagement }).(HipObjectPatchManagementOutput)
+func (o HipObjectOutput) PatchManagement() HipObjectPatchManagementPtrOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectPatchManagementPtrOutput { return v.PatchManagement }).(HipObjectPatchManagementPtrOutput)
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HipObjectOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObject) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

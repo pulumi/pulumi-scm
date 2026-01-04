@@ -61,17 +61,25 @@ class GetOspfAuthProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
+        """
+        Map of sensitive values returned from the API.
+        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -85,6 +93,10 @@ class GetOspfAuthProfileResult:
     @_builtins.property
     @pulumi.getter
     def md5s(self) -> Sequence['outputs.GetOspfAuthProfileMd5Result']:
+        """
+        MD5s
+        > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+        """
         return pulumi.get(self, "md5s")
 
     @_builtins.property
@@ -98,11 +110,19 @@ class GetOspfAuthProfileResult:
     @_builtins.property
     @pulumi.getter
     def password(self) -> _builtins.str:
+        """
+        Password
+        > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+        """
         return pulumi.get(self, "password")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -128,19 +148,31 @@ class AwaitableGetOspfAuthProfileResult(GetOspfAuthProfileResult):
             tfid=self.tfid)
 
 
-def get_ospf_auth_profile(id: Optional[_builtins.str] = None,
+def get_ospf_auth_profile(device: Optional[_builtins.str] = None,
+                          folder: Optional[_builtins.str] = None,
+                          id: Optional[_builtins.str] = None,
                           name: Optional[_builtins.str] = None,
+                          snippet: Optional[_builtins.str] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetOspfAuthProfileResult:
     """
     OspfAuthProfile data source
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Profile name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getOspfAuthProfile:getOspfAuthProfile', __args__, opts=opts, typ=GetOspfAuthProfileResult).value
 
@@ -154,19 +186,31 @@ def get_ospf_auth_profile(id: Optional[_builtins.str] = None,
         password=pulumi.get(__ret__, 'password'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_ospf_auth_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_ospf_auth_profile_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                 folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                 id: Optional[pulumi.Input[_builtins.str]] = None,
                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                 snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetOspfAuthProfileResult]:
     """
     OspfAuthProfile data source
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Profile name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getOspfAuthProfile:getOspfAuthProfile', __args__, opts=opts, typ=GetOspfAuthProfileResult)
     return __ret__.apply(lambda __response__: GetOspfAuthProfileResult(

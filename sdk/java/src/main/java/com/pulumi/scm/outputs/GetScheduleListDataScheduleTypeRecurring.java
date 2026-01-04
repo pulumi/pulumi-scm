@@ -14,12 +14,12 @@ import java.util.Objects;
 public final class GetScheduleListDataScheduleTypeRecurring {
     /**
      * @return Daily
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
     private List<String> dailies;
     /**
      * @return Weekly
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
@@ -28,6 +28,7 @@ public final class GetScheduleListDataScheduleTypeRecurring {
     private GetScheduleListDataScheduleTypeRecurring() {}
     /**
      * @return Daily
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
     public List<String> dailies() {
@@ -35,7 +36,6 @@ public final class GetScheduleListDataScheduleTypeRecurring {
     }
     /**
      * @return Weekly
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */

@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeImeiRecurringMonthly
     {
         /// <summary>
-        /// Time specification hh (e.g. 20)
+        /// Monthly Time specification hh (e.g. 20) for IMEI
         /// </summary>
         public readonly string At;
         /// <summary>
-        /// Day of month
+        /// Day of month for IMEI updates
         /// </summary>
         public readonly int DayOfMonth;
 

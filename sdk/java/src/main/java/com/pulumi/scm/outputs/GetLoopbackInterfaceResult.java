@@ -26,24 +26,51 @@ public final class GetLoopbackInterfaceResult {
     private String defaultValue;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Interface management profile
+     * 
+     */
     private String interfaceManagementProfile;
+    /**
+     * @return Loopback IP Parent
+     * 
+     */
     private List<GetLoopbackInterfaceIp> ips;
+    /**
+     * @return Loopback IPv6 Configuration
+     * 
+     */
     private GetLoopbackInterfaceIpv6 ipv6;
+    /**
+     * @return MTU
+     * 
+     */
     private Integer mtu;
     /**
      * @return Loopback Interface name
      * 
      */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
     private String tfid;
 
@@ -64,11 +91,17 @@ public final class GetLoopbackInterfaceResult {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -79,15 +112,31 @@ public final class GetLoopbackInterfaceResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Interface management profile
+     * 
+     */
     public String interfaceManagementProfile() {
         return this.interfaceManagementProfile;
     }
+    /**
+     * @return Loopback IP Parent
+     * 
+     */
     public List<GetLoopbackInterfaceIp> ips() {
         return this.ips;
     }
+    /**
+     * @return Loopback IPv6 Configuration
+     * 
+     */
     public GetLoopbackInterfaceIpv6 ipv6() {
         return this.ipv6;
     }
+    /**
+     * @return MTU
+     * 
+     */
     public Integer mtu() {
         return this.mtu;
     }
@@ -98,6 +147,11 @@ public final class GetLoopbackInterfaceResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }

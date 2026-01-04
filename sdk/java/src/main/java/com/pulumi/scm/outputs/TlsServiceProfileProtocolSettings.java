@@ -28,11 +28,6 @@ public final class TlsServiceProfileProtocolSettings {
      */
     private @Nullable Boolean authAlgoSha384;
     /**
-     * @return Allow 3DES algorithm?
-     * 
-     */
-    private @Nullable Boolean encAlgo3des;
-    /**
      * @return Allow AES-128-CBC algorithm?
      * 
      */
@@ -52,11 +47,6 @@ public final class TlsServiceProfileProtocolSettings {
      * 
      */
     private @Nullable Boolean encAlgoAes256Gcm;
-    /**
-     * @return Allow RC4 algorithm?
-     * 
-     */
-    private @Nullable Boolean encAlgoRc4;
     /**
      * @return Allow DHE algorithm?
      * 
@@ -106,13 +96,6 @@ public final class TlsServiceProfileProtocolSettings {
         return Optional.ofNullable(this.authAlgoSha384);
     }
     /**
-     * @return Allow 3DES algorithm?
-     * 
-     */
-    public Optional<Boolean> encAlgo3des() {
-        return Optional.ofNullable(this.encAlgo3des);
-    }
-    /**
      * @return Allow AES-128-CBC algorithm?
      * 
      */
@@ -139,13 +122,6 @@ public final class TlsServiceProfileProtocolSettings {
      */
     public Optional<Boolean> encAlgoAes256Gcm() {
         return Optional.ofNullable(this.encAlgoAes256Gcm);
-    }
-    /**
-     * @return Allow RC4 algorithm?
-     * 
-     */
-    public Optional<Boolean> encAlgoRc4() {
-        return Optional.ofNullable(this.encAlgoRc4);
     }
     /**
      * @return Allow DHE algorithm?
@@ -195,12 +171,10 @@ public final class TlsServiceProfileProtocolSettings {
         private @Nullable Boolean authAlgoSha1;
         private @Nullable Boolean authAlgoSha256;
         private @Nullable Boolean authAlgoSha384;
-        private @Nullable Boolean encAlgo3des;
         private @Nullable Boolean encAlgoAes128Cbc;
         private @Nullable Boolean encAlgoAes128Gcm;
         private @Nullable Boolean encAlgoAes256Cbc;
         private @Nullable Boolean encAlgoAes256Gcm;
-        private @Nullable Boolean encAlgoRc4;
         private @Nullable Boolean keyxchgAlgoDhe;
         private @Nullable Boolean keyxchgAlgoEcdhe;
         private @Nullable Boolean keyxchgAlgoRsa;
@@ -212,12 +186,10 @@ public final class TlsServiceProfileProtocolSettings {
     	      this.authAlgoSha1 = defaults.authAlgoSha1;
     	      this.authAlgoSha256 = defaults.authAlgoSha256;
     	      this.authAlgoSha384 = defaults.authAlgoSha384;
-    	      this.encAlgo3des = defaults.encAlgo3des;
     	      this.encAlgoAes128Cbc = defaults.encAlgoAes128Cbc;
     	      this.encAlgoAes128Gcm = defaults.encAlgoAes128Gcm;
     	      this.encAlgoAes256Cbc = defaults.encAlgoAes256Cbc;
     	      this.encAlgoAes256Gcm = defaults.encAlgoAes256Gcm;
-    	      this.encAlgoRc4 = defaults.encAlgoRc4;
     	      this.keyxchgAlgoDhe = defaults.keyxchgAlgoDhe;
     	      this.keyxchgAlgoEcdhe = defaults.keyxchgAlgoEcdhe;
     	      this.keyxchgAlgoRsa = defaults.keyxchgAlgoRsa;
@@ -244,12 +216,6 @@ public final class TlsServiceProfileProtocolSettings {
             return this;
         }
         @CustomType.Setter
-        public Builder encAlgo3des(@Nullable Boolean encAlgo3des) {
-
-            this.encAlgo3des = encAlgo3des;
-            return this;
-        }
-        @CustomType.Setter
         public Builder encAlgoAes128Cbc(@Nullable Boolean encAlgoAes128Cbc) {
 
             this.encAlgoAes128Cbc = encAlgoAes128Cbc;
@@ -271,12 +237,6 @@ public final class TlsServiceProfileProtocolSettings {
         public Builder encAlgoAes256Gcm(@Nullable Boolean encAlgoAes256Gcm) {
 
             this.encAlgoAes256Gcm = encAlgoAes256Gcm;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder encAlgoRc4(@Nullable Boolean encAlgoRc4) {
-
-            this.encAlgoRc4 = encAlgoRc4;
             return this;
         }
         @CustomType.Setter
@@ -314,12 +274,10 @@ public final class TlsServiceProfileProtocolSettings {
             _resultValue.authAlgoSha1 = authAlgoSha1;
             _resultValue.authAlgoSha256 = authAlgoSha256;
             _resultValue.authAlgoSha384 = authAlgoSha384;
-            _resultValue.encAlgo3des = encAlgo3des;
             _resultValue.encAlgoAes128Cbc = encAlgoAes128Cbc;
             _resultValue.encAlgoAes128Gcm = encAlgoAes128Gcm;
             _resultValue.encAlgoAes256Cbc = encAlgoAes256Cbc;
             _resultValue.encAlgoAes256Gcm = encAlgoAes256Gcm;
-            _resultValue.encAlgoRc4 = encAlgoRc4;
             _resultValue.keyxchgAlgoDhe = keyxchgAlgoDhe;
             _resultValue.keyxchgAlgoEcdhe = keyxchgAlgoEcdhe;
             _resultValue.keyxchgAlgoRsa = keyxchgAlgoRsa;

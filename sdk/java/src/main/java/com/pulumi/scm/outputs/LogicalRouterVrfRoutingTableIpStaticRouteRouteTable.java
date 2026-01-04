@@ -16,26 +16,24 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     /**
      * @return Both
+     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     private @Nullable LogicalRouterVrfRoutingTableIpStaticRouteRouteTableBoth both;
     /**
      * @return Multicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     private @Nullable LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticast multicast;
     /**
      * @return No install
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     private @Nullable LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstall noInstall;
     /**
      * @return Unicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -44,6 +42,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     private LogicalRouterVrfRoutingTableIpStaticRouteRouteTable() {}
     /**
      * @return Both
+     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     public Optional<LogicalRouterVrfRoutingTableIpStaticRouteRouteTableBoth> both() {
@@ -51,7 +50,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     }
     /**
      * @return Multicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -60,7 +58,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     }
     /**
      * @return No install
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -69,7 +66,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     }
     /**
      * @return Unicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */

@@ -60,10 +60,19 @@ func LookupService(ctx *pulumi.Context, args *LookupServiceArgs, opts ...pulumi.
 
 // A collection of arguments for invoking getService.
 type LookupServiceArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// The UUID of the service
 	Id string `pulumi:"id"`
 	// The name of the service
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getService.
@@ -71,16 +80,23 @@ type LookupServiceResult struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the service
 	Id string `pulumi:"id"`
 	// The name of the service
-	Name     string             `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// Protocol
 	Protocol GetServiceProtocol `pulumi:"protocol"`
-	Snippet  string             `pulumi:"snippet"`
-	Tags     []string           `pulumi:"tags"`
-	Tfid     string             `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	// Tags for service object
+	Tags []string `pulumi:"tags"`
+	Tfid string   `pulumi:"tfid"`
 }
 
 func LookupServiceOutput(ctx *pulumi.Context, args LookupServiceOutputArgs, opts ...pulumi.InvokeOption) LookupServiceResultOutput {
@@ -94,10 +110,19 @@ func LookupServiceOutput(ctx *pulumi.Context, args LookupServiceOutputArgs, opts
 
 // A collection of arguments for invoking getService.
 type LookupServiceOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the service
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the service
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupServiceOutputArgs) ElementType() reflect.Type {
@@ -125,10 +150,13 @@ func (o LookupServiceResultOutput) Description() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupServiceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupServiceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -143,14 +171,18 @@ func (o LookupServiceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Protocol
 func (o LookupServiceResultOutput) Protocol() GetServiceProtocolOutput {
 	return o.ApplyT(func(v LookupServiceResult) GetServiceProtocol { return v.Protocol }).(GetServiceProtocolOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupServiceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Tags for service object
 func (o LookupServiceResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

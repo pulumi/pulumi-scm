@@ -21,38 +21,117 @@ public final class GetApplicationFilterResult {
     private List<String> categories;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return only True is a valid value
+     * 
+     */
     private Boolean evasive;
+    /**
+     * @return only True is a valid value
+     * 
+     */
     private Boolean excessiveBandwidthUse;
+    /**
+     * @return Exclude
+     * 
+     */
     private List<String> excludes;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
+    /**
+     * @return only True is a valid value
+     * 
+     */
     private Boolean hasKnownVulnerabilities;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return only True is a valid value
+     * 
+     */
     private Boolean isSaas;
     /**
      * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     private String name;
+    /**
+     * @return only True is a valid value
+     * 
+     */
     private Boolean newAppid;
+    /**
+     * @return only True is a valid value
+     * 
+     */
     private Boolean pervasive;
+    /**
+     * @return only True is a valid value
+     * 
+     */
     private Boolean proneToMisuse;
+    /**
+     * @return Risk
+     * 
+     */
     private List<Integer> risks;
+    /**
+     * @return Saas certifications
+     * 
+     */
     private List<String> saasCertifications;
+    /**
+     * @return Saas risk
+     * 
+     */
     private List<String> saasRisks;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
+    /**
+     * @return Subcategory
+     * 
+     */
     private List<String> subcategories;
+    /**
+     * @return Tagging
+     * 
+     */
     private GetApplicationFilterTagging tagging;
+    /**
+     * @return Technology
+     * 
+     */
     private List<String> technologies;
     private String tfid;
+    /**
+     * @return only True is a valid value
+     * 
+     */
     private Boolean transfersFiles;
+    /**
+     * @return only True is a valid value
+     * 
+     */
     private Boolean tunnelsOtherApps;
+    /**
+     * @return only True is a valid value
+     * 
+     */
     private Boolean usedByMalware;
 
     private GetApplicationFilterResult() {}
@@ -65,23 +144,45 @@ public final class GetApplicationFilterResult {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return only True is a valid value
+     * 
+     */
     public Boolean evasive() {
         return this.evasive;
     }
+    /**
+     * @return only True is a valid value
+     * 
+     */
     public Boolean excessiveBandwidthUse() {
         return this.excessiveBandwidthUse;
     }
+    /**
+     * @return Exclude
+     * 
+     */
     public List<String> excludes() {
         return this.excludes;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
+    /**
+     * @return only True is a valid value
+     * 
+     */
     public Boolean hasKnownVulnerabilities() {
         return this.hasKnownVulnerabilities;
     }
@@ -92,6 +193,10 @@ public final class GetApplicationFilterResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return only True is a valid value
+     * 
+     */
     public Boolean isSaas() {
         return this.isSaas;
     }
@@ -102,45 +207,98 @@ public final class GetApplicationFilterResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return only True is a valid value
+     * 
+     */
     public Boolean newAppid() {
         return this.newAppid;
     }
+    /**
+     * @return only True is a valid value
+     * 
+     */
     public Boolean pervasive() {
         return this.pervasive;
     }
+    /**
+     * @return only True is a valid value
+     * 
+     */
     public Boolean proneToMisuse() {
         return this.proneToMisuse;
     }
+    /**
+     * @return Risk
+     * 
+     */
     public List<Integer> risks() {
         return this.risks;
     }
+    /**
+     * @return Saas certifications
+     * 
+     */
     public List<String> saasCertifications() {
         return this.saasCertifications;
     }
+    /**
+     * @return Saas risk
+     * 
+     */
     public List<String> saasRisks() {
         return this.saasRisks;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return Subcategory
+     * 
+     */
     public List<String> subcategories() {
         return this.subcategories;
     }
+    /**
+     * @return Tagging
+     * 
+     */
     public GetApplicationFilterTagging tagging() {
         return this.tagging;
     }
+    /**
+     * @return Technology
+     * 
+     */
     public List<String> technologies() {
         return this.technologies;
     }
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return only True is a valid value
+     * 
+     */
     public Boolean transfersFiles() {
         return this.transfersFiles;
     }
+    /**
+     * @return only True is a valid value
+     * 
+     */
     public Boolean tunnelsOtherApps() {
         return this.tunnelsOtherApps;
     }
+    /**
+     * @return only True is a valid value
+     * 
+     */
     public Boolean usedByMalware() {
         return this.usedByMalware;
     }

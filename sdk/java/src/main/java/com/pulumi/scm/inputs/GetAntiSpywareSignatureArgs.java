@@ -8,11 +8,47 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetAntiSpywareSignatureArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetAntiSpywareSignatureArgs Empty = new GetAntiSpywareSignatureArgs();
+
+    /**
+     * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="device")
+    private @Nullable Output<String> device;
+
+    /**
+     * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<Output<String>> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    /**
+     * The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable Output<String> folder;
+
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
+    }
 
     /**
      * UUID of the resource
@@ -29,10 +65,30 @@ public final class GetAntiSpywareSignatureArgs extends com.pulumi.resources.Invo
         return this.id;
     }
 
+    /**
+     * The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="snippet")
+    private @Nullable Output<String> snippet;
+
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<Output<String>> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetAntiSpywareSignatureArgs() {}
 
     private GetAntiSpywareSignatureArgs(GetAntiSpywareSignatureArgs $) {
+        this.device = $.device;
+        this.folder = $.folder;
         this.id = $.id;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -54,6 +110,52 @@ public final class GetAntiSpywareSignatureArgs extends com.pulumi.resources.Invo
         }
 
         /**
+         * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(@Nullable Output<String> device) {
+            $.device = device;
+            return this;
+        }
+
+        /**
+         * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(String device) {
+            return device(Output.of(device));
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable Output<String> folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
+        }
+
+        /**
          * @param id UUID of the resource
          * 
          * @return builder
@@ -72,6 +174,29 @@ public final class GetAntiSpywareSignatureArgs extends com.pulumi.resources.Invo
          */
         public Builder id(String id) {
             return id(Output.of(id));
+        }
+
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(@Nullable Output<String> snippet) {
+            $.snippet = snippet;
+            return this;
+        }
+
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(String snippet) {
+            return snippet(Output.of(snippet));
         }
 
         public GetAntiSpywareSignatureArgs build() {

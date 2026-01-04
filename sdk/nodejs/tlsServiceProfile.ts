@@ -8,6 +8,78 @@ import * as utilities from "./utilities";
 
 /**
  * TlsServiceProfile resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const tlsServiceProf1Upper = new scm.TlsServiceProfile("tls_service_prof_1_upper", {
+ *     folder: "All",
+ *     name: "TLS_Service_Profile_1",
+ *     certificate: "Authentication Cookie CA",
+ *     protocolSettings: {
+ *         keyxchgAlgoRsa: true,
+ *     },
+ * });
+ * const tlsServiceProf2Upper = new scm.TlsServiceProfile("tls_service_prof_2_upper", {
+ *     folder: "All",
+ *     name: "TLS_Service_Profile_2",
+ *     certificate: "Forward-Trust-CA",
+ *     protocolSettings: {
+ *         minVersion: "tls1-0",
+ *         maxVersion: "tls1-1",
+ *         encAlgoAes128Cbc: true,
+ *         encAlgoAes256Cbc: true,
+ *     },
+ * });
+ * const tlsServiceProf3Upper = new scm.TlsServiceProfile("tls_service_prof_3_upper", {
+ *     folder: "All",
+ *     name: "TLS_Service_Profile_3",
+ *     certificate: "Root CA",
+ *     protocolSettings: {
+ *         minVersion: "tls1-1",
+ *         maxVersion: "tls1-3",
+ *         keyxchgAlgoRsa: true,
+ *         keyxchgAlgoDhe: true,
+ *         keyxchgAlgoEcdhe: true,
+ *         encAlgoAes128Cbc: true,
+ *         encAlgoAes128Gcm: true,
+ *         encAlgoAes256Cbc: true,
+ *         encAlgoAes256Gcm: true,
+ *         authAlgoSha1: true,
+ *         authAlgoSha256: true,
+ *         authAlgoSha384: true,
+ *     },
+ * });
+ * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example ::device:id
+ * ```
  */
 export class TlsServiceProfile extends pulumi.CustomResource {
     /**
@@ -43,11 +115,11 @@ export class TlsServiceProfile extends pulumi.CustomResource {
     declare public readonly certificate: pulumi.Output<string>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -61,7 +133,6 @@ export class TlsServiceProfile extends pulumi.CustomResource {
     declare public readonly protocolSettings: pulumi.Output<outputs.TlsServiceProfileProtocolSettings>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -118,11 +189,11 @@ export interface TlsServiceProfileState {
     certificate?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -136,7 +207,6 @@ export interface TlsServiceProfileState {
     protocolSettings?: pulumi.Input<inputs.TlsServiceProfileProtocolSettings>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -153,11 +223,11 @@ export interface TlsServiceProfileArgs {
     certificate: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -171,7 +241,6 @@ export interface TlsServiceProfileArgs {
     protocolSettings: pulumi.Input<inputs.TlsServiceProfileProtocolSettings>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeImeiRecurringWeekly
     {
         /// <summary>
-        /// Time specification hh (e.g. 20)
+        /// Weekly Time specification hh (e.g. 20) for IMEI
         /// </summary>
         public readonly string At;
         /// <summary>

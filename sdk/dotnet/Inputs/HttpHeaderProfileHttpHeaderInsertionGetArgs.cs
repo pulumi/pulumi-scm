@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HttpHeaderProfileHttpHeaderInsertionTypeGetArgs>? _types;
 
         /// <summary>
-        /// A list of HTTP header insertion definitions (*This should be an object rather than an array*)
+        /// A list of HTTP header insertion definitions
         /// </summary>
         public InputList<Inputs.HttpHeaderProfileHttpHeaderInsertionTypeGetArgs> Types
         {

@@ -103,6 +103,20 @@ namespace Pulumi.Scm
     public sealed class GetAuthenticationProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// The UUID of the authentication profile
         /// </summary>
         [Input("id", required: true)]
@@ -114,6 +128,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetAuthenticationProfileArgs()
         {
         }
@@ -122,6 +143,20 @@ namespace Pulumi.Scm
 
     public sealed class GetAuthenticationProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the authentication profile
         /// </summary>
@@ -133,6 +168,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetAuthenticationProfileInvokeArgs()
         {
@@ -150,24 +192,51 @@ namespace Pulumi.Scm
         public readonly ImmutableArray<string> AllowLists;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the authentication profile
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Lockout object of the authentication profile
+        /// </summary>
         public readonly Outputs.GetAuthenticationProfileLockoutResult Lockout;
+        /// <summary>
+        /// method object of authentication profile
+        /// </summary>
         public readonly Outputs.GetAuthenticationProfileMethodResult Method;
+        /// <summary>
+        /// Multi factor auth
+        /// </summary>
         public readonly Outputs.GetAuthenticationProfileMultiFactorAuthResult MultiFactorAuth;
         /// <summary>
         /// The name of the authentication profile
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Single sign on
+        /// </summary>
         public readonly Outputs.GetAuthenticationProfileSingleSignOnResult SingleSignOn;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
+        /// <summary>
+        /// User domain
+        /// </summary>
         public readonly string UserDomain;
+        /// <summary>
+        /// Username modifier
+        /// </summary>
         public readonly string UsernameModifier;
 
         [OutputConstructor]

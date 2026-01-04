@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private Input<string>? _password;
 
         /// <summary>
-        /// Password
+        /// Password for Custom IP authentication
         /// </summary>
         public Input<string>? Password
         {
@@ -29,7 +29,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Username
+        /// Username for Custom IP authentication
         /// </summary>
         [Input("username", required: true)]
         public Input<string> Username { get; set; } = null!;

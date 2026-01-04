@@ -23,8 +23,11 @@ import * as utilities from "./utilities";
 export function getAuthenticationSequence(args: GetAuthenticationSequenceArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationSequenceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationSequence:getAuthenticationSequence", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -33,6 +36,16 @@ export function getAuthenticationSequence(args: GetAuthenticationSequenceArgs, o
  */
 export interface GetAuthenticationSequenceArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the authentication sequence
      */
     id: string;
@@ -40,6 +53,11 @@ export interface GetAuthenticationSequenceArgs {
      * The name of the authentication sequence
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -52,8 +70,13 @@ export interface GetAuthenticationSequenceResult {
     readonly authenticationProfiles: string[];
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the authentication sequence
@@ -63,8 +86,15 @@ export interface GetAuthenticationSequenceResult {
      * The name of the authentication sequence
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * Use domain to determine authentication profile?
+     */
     readonly useDomainFindProfile: boolean;
 }
 /**
@@ -86,8 +116,11 @@ export interface GetAuthenticationSequenceResult {
 export function getAuthenticationSequenceOutput(args: GetAuthenticationSequenceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationSequenceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationSequence:getAuthenticationSequence", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -96,6 +129,16 @@ export function getAuthenticationSequenceOutput(args: GetAuthenticationSequenceO
  */
 export interface GetAuthenticationSequenceOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the authentication sequence
      */
     id: pulumi.Input<string>;
@@ -103,4 +146,9 @@ export interface GetAuthenticationSequenceOutputArgs {
      * The name of the authentication sequence
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

@@ -6,19 +6,22 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetSyslogServerProfileListDataFormat;
-import com.pulumi.scm.outputs.GetSyslogServerProfileListDataServers;
+import com.pulumi.scm.outputs.GetSyslogServerProfileListDataServer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
 public final class GetSyslogServerProfileListData {
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String folder;
@@ -38,12 +41,13 @@ public final class GetSyslogServerProfileListData {
      */
     private String name;
     /**
-     * @return Servers
+     * @return A list of syslog server configurations. At least one server is required.
      * 
      */
-    private GetSyslogServerProfileListDataServers servers;
+    private List<GetSyslogServerProfileListDataServer> servers;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String snippet;
@@ -52,13 +56,15 @@ public final class GetSyslogServerProfileListData {
     private GetSyslogServerProfileListData() {}
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String folder() {
@@ -86,14 +92,15 @@ public final class GetSyslogServerProfileListData {
         return this.name;
     }
     /**
-     * @return Servers
+     * @return A list of syslog server configurations. At least one server is required.
      * 
      */
-    public GetSyslogServerProfileListDataServers servers() {
+    public List<GetSyslogServerProfileListDataServer> servers() {
         return this.servers;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String snippet() {
@@ -117,7 +124,7 @@ public final class GetSyslogServerProfileListData {
         private GetSyslogServerProfileListDataFormat format;
         private String id;
         private String name;
-        private GetSyslogServerProfileListDataServers servers;
+        private List<GetSyslogServerProfileListDataServer> servers;
         private String snippet;
         private String tfid;
         public Builder() {}
@@ -174,12 +181,15 @@ public final class GetSyslogServerProfileListData {
             return this;
         }
         @CustomType.Setter
-        public Builder servers(GetSyslogServerProfileListDataServers servers) {
+        public Builder servers(List<GetSyslogServerProfileListDataServer> servers) {
             if (servers == null) {
               throw new MissingRequiredPropertyException("GetSyslogServerProfileListData", "servers");
             }
             this.servers = servers;
             return this;
+        }
+        public Builder servers(GetSyslogServerProfileListDataServer... servers) {
+            return servers(List.of(servers));
         }
         @CustomType.Setter
         public Builder snippet(String snippet) {

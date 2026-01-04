@@ -18,6 +18,32 @@ import javax.annotation.Nullable;
 /**
  * InternalDnsServer resource
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/internalDnsServer:InternalDnsServer example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/internalDnsServer:InternalDnsServer example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/internalDnsServer:InternalDnsServer example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/internalDnsServer:InternalDnsServer")
 public class InternalDnsServer extends com.pulumi.resources.CustomResource {

@@ -34,20 +34,17 @@ class IpsecCryptoProfileArgs:
         The set of arguments for constructing a IpsecCryptoProfile resource.
         :param pulumi.Input['IpsecCryptoProfileLifetimeArgs'] lifetime: Ipsec crypto profile lifetime
         :param pulumi.Input['IpsecCryptoProfileAhArgs'] ah: Ah
+               > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] dh_group: phase-2 DH group (PFS DH group)
         :param pulumi.Input['IpsecCryptoProfileEspArgs'] esp: Esp
-               
                > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['IpsecCryptoProfileLifesizeArgs'] lifesize: Lifesize
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         pulumi.set(__self__, "lifetime", lifetime)
@@ -85,6 +82,7 @@ class IpsecCryptoProfileArgs:
     def ah(self) -> Optional[pulumi.Input['IpsecCryptoProfileAhArgs']]:
         """
         Ah
+        > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         """
         return pulumi.get(self, "ah")
 
@@ -97,7 +95,6 @@ class IpsecCryptoProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -123,7 +120,6 @@ class IpsecCryptoProfileArgs:
     def esp(self) -> Optional[pulumi.Input['IpsecCryptoProfileEspArgs']]:
         """
         Esp
-
         > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         """
         return pulumi.get(self, "esp")
@@ -137,7 +133,6 @@ class IpsecCryptoProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -175,7 +170,6 @@ class IpsecCryptoProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -201,21 +195,18 @@ class _IpsecCryptoProfileState:
         """
         Input properties used for looking up and filtering IpsecCryptoProfile resources.
         :param pulumi.Input['IpsecCryptoProfileAhArgs'] ah: Ah
+               > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] dh_group: phase-2 DH group (PFS DH group)
         :param pulumi.Input['IpsecCryptoProfileEspArgs'] esp: Esp
-               
                > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['IpsecCryptoProfileLifesizeArgs'] lifesize: Lifesize
         :param pulumi.Input['IpsecCryptoProfileLifetimeArgs'] lifetime: Ipsec crypto profile lifetime
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if ah is not None:
@@ -244,6 +235,7 @@ class _IpsecCryptoProfileState:
     def ah(self) -> Optional[pulumi.Input['IpsecCryptoProfileAhArgs']]:
         """
         Ah
+        > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         """
         return pulumi.get(self, "ah")
 
@@ -256,7 +248,6 @@ class _IpsecCryptoProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -282,7 +273,6 @@ class _IpsecCryptoProfileState:
     def esp(self) -> Optional[pulumi.Input['IpsecCryptoProfileEspArgs']]:
         """
         Esp
-
         > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         """
         return pulumi.get(self, "esp")
@@ -296,7 +286,6 @@ class _IpsecCryptoProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -346,7 +335,6 @@ class _IpsecCryptoProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -413,24 +401,47 @@ class IpsecCryptoProfile(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']] ah: Ah
+               > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] dh_group: phase-2 DH group (PFS DH group)
         :param pulumi.Input[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']] esp: Esp
-               
                > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']] lifesize: Lifesize
         :param pulumi.Input[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']] lifetime: Ipsec crypto profile lifetime
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
@@ -469,6 +480,32 @@ class IpsecCryptoProfile(pulumi.CustomResource):
             lifesize={
                 "gb": 10,
             })
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example ::device:id
         ```
 
         :param str resource_name: The name of the resource.
@@ -544,21 +581,18 @@ class IpsecCryptoProfile(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']] ah: Ah
+               > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] dh_group: phase-2 DH group (PFS DH group)
         :param pulumi.Input[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']] esp: Esp
-               
                > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']] lifesize: Lifesize
         :param pulumi.Input[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']] lifetime: Ipsec crypto profile lifetime
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -582,6 +616,7 @@ class IpsecCryptoProfile(pulumi.CustomResource):
     def ah(self) -> pulumi.Output[Optional['outputs.IpsecCryptoProfileAh']]:
         """
         Ah
+        > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         """
         return pulumi.get(self, "ah")
 
@@ -590,7 +625,6 @@ class IpsecCryptoProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -608,7 +642,6 @@ class IpsecCryptoProfile(pulumi.CustomResource):
     def esp(self) -> pulumi.Output[Optional['outputs.IpsecCryptoProfileEsp']]:
         """
         Esp
-
         > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
         """
         return pulumi.get(self, "esp")
@@ -618,7 +651,6 @@ class IpsecCryptoProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -652,7 +684,6 @@ class IpsecCryptoProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

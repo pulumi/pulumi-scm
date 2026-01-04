@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Adaptive
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Adaptive`, `HttpHttps`, and `StaticIp`.
         /// </summary>
         [Input("adaptive")]
         public Input<Inputs.SdwanSaasQualityProfileMonitorModeAdaptiveGetArgs>? Adaptive { get; set; }
 
         /// <summary>
         /// Http https
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Adaptive`, `HttpHttps`, and `StaticIp`.
         /// </summary>
         [Input("httpHttps")]
@@ -28,7 +28,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Static ip
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Adaptive`, `HttpHttps`, and `StaticIp`.
         /// </summary>
         [Input("staticIp")]

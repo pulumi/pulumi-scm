@@ -62,21 +62,6 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow 3DES algorithm?
-     * 
-     */
-    @Import(name="encAlgo3des")
-    private @Nullable Output<Boolean> encAlgo3des;
-
-    /**
-     * @return Allow 3DES algorithm?
-     * 
-     */
-    public Optional<Output<Boolean>> encAlgo3des() {
-        return Optional.ofNullable(this.encAlgo3des);
-    }
-
-    /**
      * Allow AES-128-CBC algorithm?
      * 
      */
@@ -134,21 +119,6 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
      */
     public Optional<Output<Boolean>> encAlgoAes256Gcm() {
         return Optional.ofNullable(this.encAlgoAes256Gcm);
-    }
-
-    /**
-     * Allow RC4 algorithm?
-     * 
-     */
-    @Import(name="encAlgoRc4")
-    private @Nullable Output<Boolean> encAlgoRc4;
-
-    /**
-     * @return Allow RC4 algorithm?
-     * 
-     */
-    public Optional<Output<Boolean>> encAlgoRc4() {
-        return Optional.ofNullable(this.encAlgoRc4);
     }
 
     /**
@@ -232,12 +202,10 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         this.authAlgoSha1 = $.authAlgoSha1;
         this.authAlgoSha256 = $.authAlgoSha256;
         this.authAlgoSha384 = $.authAlgoSha384;
-        this.encAlgo3des = $.encAlgo3des;
         this.encAlgoAes128Cbc = $.encAlgoAes128Cbc;
         this.encAlgoAes128Gcm = $.encAlgoAes128Gcm;
         this.encAlgoAes256Cbc = $.encAlgoAes256Cbc;
         this.encAlgoAes256Gcm = $.encAlgoAes256Gcm;
-        this.encAlgoRc4 = $.encAlgoRc4;
         this.keyxchgAlgoDhe = $.keyxchgAlgoDhe;
         this.keyxchgAlgoEcdhe = $.keyxchgAlgoEcdhe;
         this.keyxchgAlgoRsa = $.keyxchgAlgoRsa;
@@ -327,27 +295,6 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgo3des Allow 3DES algorithm?
-         * 
-         * @return builder
-         * 
-         */
-        public Builder encAlgo3des(@Nullable Output<Boolean> encAlgo3des) {
-            $.encAlgo3des = encAlgo3des;
-            return this;
-        }
-
-        /**
-         * @param encAlgo3des Allow 3DES algorithm?
-         * 
-         * @return builder
-         * 
-         */
-        public Builder encAlgo3des(Boolean encAlgo3des) {
-            return encAlgo3des(Output.of(encAlgo3des));
-        }
-
-        /**
          * @param encAlgoAes128Cbc Allow AES-128-CBC algorithm?
          * 
          * @return builder
@@ -429,27 +376,6 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
          */
         public Builder encAlgoAes256Gcm(Boolean encAlgoAes256Gcm) {
             return encAlgoAes256Gcm(Output.of(encAlgoAes256Gcm));
-        }
-
-        /**
-         * @param encAlgoRc4 Allow RC4 algorithm?
-         * 
-         * @return builder
-         * 
-         */
-        public Builder encAlgoRc4(@Nullable Output<Boolean> encAlgoRc4) {
-            $.encAlgoRc4 = encAlgoRc4;
-            return this;
-        }
-
-        /**
-         * @param encAlgoRc4 Allow RC4 algorithm?
-         * 
-         * @return builder
-         * 
-         */
-        public Builder encAlgoRc4(Boolean encAlgoRc4) {
-            return encAlgoRc4(Output.of(encAlgoRc4));
         }
 
         /**

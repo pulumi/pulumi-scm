@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataTypeImeiAuthResult
     {
         /// <summary>
-        /// Password
+        /// IMEI Auth Password for Custom IMEI type
         /// </summary>
         public readonly string Password;
         /// <summary>
-        /// Username
+        /// IMEI Auth username for Custom IMEI type
         /// </summary>
         public readonly string Username;
 

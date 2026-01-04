@@ -8,6 +8,32 @@ import * as utilities from "./utilities";
 
 /**
  * SdwanRule resource
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/sdwanRule:SdwanRule example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/sdwanRule:SdwanRule example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/sdwanRule:SdwanRule example ::device:id
+ * ```
  */
 export class SdwanRule extends pulumi.CustomResource {
     /**
@@ -55,6 +81,7 @@ export class SdwanRule extends pulumi.CustomResource {
     declare public readonly destinations: pulumi.Output<string[]>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -67,7 +94,6 @@ export class SdwanRule extends pulumi.CustomResource {
     declare public readonly errorCorrectionProfile: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -105,7 +131,6 @@ export class SdwanRule extends pulumi.CustomResource {
     declare public readonly services: pulumi.Output<string[]>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -244,6 +269,7 @@ export interface SdwanRuleState {
     destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -256,7 +282,6 @@ export interface SdwanRuleState {
     errorCorrectionProfile?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -294,7 +319,6 @@ export interface SdwanRuleState {
     services?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -339,6 +363,7 @@ export interface SdwanRuleArgs {
     destinations: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -351,7 +376,6 @@ export interface SdwanRuleArgs {
     errorCorrectionProfile?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -389,7 +413,6 @@ export interface SdwanRuleArgs {
     services: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

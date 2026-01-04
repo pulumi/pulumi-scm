@@ -32,8 +32,11 @@ import * as utilities from "./utilities";
 export function getDecryptionProfile(args: GetDecryptionProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDecryptionProfile:getDecryptionProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -42,6 +45,16 @@ export function getDecryptionProfile(args: GetDecryptionProfileArgs, opts?: pulu
  */
 export interface GetDecryptionProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -49,6 +62,11 @@ export interface GetDecryptionProfileArgs {
      * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -57,8 +75,13 @@ export interface GetDecryptionProfileArgs {
 export interface GetDecryptionProfileResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -68,10 +91,26 @@ export interface GetDecryptionProfileResult {
      * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * Ssl forward proxy
+     */
     readonly sslForwardProxy: outputs.GetDecryptionProfileSslForwardProxy;
+    /**
+     * Ssl inbound proxy
+     */
     readonly sslInboundProxy: outputs.GetDecryptionProfileSslInboundProxy;
+    /**
+     * Ssl no proxy
+     */
     readonly sslNoProxy: outputs.GetDecryptionProfileSslNoProxy;
+    /**
+     * Ssl protocol settings
+     */
     readonly sslProtocolSettings: outputs.GetDecryptionProfileSslProtocolSettings;
     readonly tfid: string;
 }
@@ -101,8 +140,11 @@ export interface GetDecryptionProfileResult {
 export function getDecryptionProfileOutput(args: GetDecryptionProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDecryptionProfile:getDecryptionProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -111,6 +153,16 @@ export function getDecryptionProfileOutput(args: GetDecryptionProfileOutputArgs,
  */
 export interface GetDecryptionProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -118,4 +170,9 @@ export interface GetDecryptionProfileOutputArgs {
      * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

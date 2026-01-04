@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Restart
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Restart` and `WarningOnly`.
         /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestartResult Restart;
         /// <summary>
         /// Warning only
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Restart` and `WarningOnly`.
         /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnlyResult WarningOnly;

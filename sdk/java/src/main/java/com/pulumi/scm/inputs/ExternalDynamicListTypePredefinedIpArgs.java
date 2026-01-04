@@ -33,14 +33,14 @@ public final class ExternalDynamicListTypePredefinedIpArgs extends com.pulumi.re
     }
 
     /**
-     * Exception list
+     * IP Exception List for Predefined IP type
      * 
      */
     @Import(name="exceptionLists")
     private @Nullable Output<List<String>> exceptionLists;
 
     /**
-     * @return Exception list
+     * @return IP Exception List for Predefined IP type
      * 
      */
     public Optional<Output<List<String>>> exceptionLists() {
@@ -48,14 +48,14 @@ public final class ExternalDynamicListTypePredefinedIpArgs extends com.pulumi.re
     }
 
     /**
-     * Url
+     * URL source for Predefined IP type
      * 
      */
     @Import(name="url", required=true)
     private Output<String> url;
 
     /**
-     * @return Url
+     * @return URL source for Predefined IP type
      * 
      */
     public Output<String> url() {
@@ -110,7 +110,7 @@ public final class ExternalDynamicListTypePredefinedIpArgs extends com.pulumi.re
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IP Exception List for Predefined IP type
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class ExternalDynamicListTypePredefinedIpArgs extends com.pulumi.re
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IP Exception List for Predefined IP type
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class ExternalDynamicListTypePredefinedIpArgs extends com.pulumi.re
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IP Exception List for Predefined IP type
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class ExternalDynamicListTypePredefinedIpArgs extends com.pulumi.re
         }
 
         /**
-         * @param url Url
+         * @param url URL source for Predefined IP type
          * 
          * @return builder
          * 
@@ -152,7 +152,7 @@ public final class ExternalDynamicListTypePredefinedIpArgs extends com.pulumi.re
         }
 
         /**
-         * @param url Url
+         * @param url URL source for Predefined IP type
          * 
          * @return builder
          * 

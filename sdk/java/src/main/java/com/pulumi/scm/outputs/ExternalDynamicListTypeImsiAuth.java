@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class ExternalDynamicListTypeImsiAuth {
     /**
-     * @return Password
+     * @return IMSI Auth Password for Custom IMSI type
      * 
      */
     private String password;
     /**
-     * @return Username
+     * @return IMSI Auth Username for Custom IMSI type
      * 
      */
     private String username;
 
     private ExternalDynamicListTypeImsiAuth() {}
     /**
-     * @return Password
+     * @return IMSI Auth Password for Custom IMSI type
      * 
      */
     public String password() {
         return this.password;
     }
     /**
-     * @return Username
+     * @return IMSI Auth Username for Custom IMSI type
      * 
      */
     public String username() {

@@ -31,8 +31,11 @@ import * as utilities from "./utilities";
 export function getLogicalRouter(args: GetLogicalRouterArgs, opts?: pulumi.InvokeOptions): Promise<GetLogicalRouterResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLogicalRouter:getLogicalRouter", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -41,6 +44,16 @@ export function getLogicalRouter(args: GetLogicalRouterArgs, opts?: pulumi.Invok
  */
 export interface GetLogicalRouterArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -48,6 +61,11 @@ export interface GetLogicalRouterArgs {
      * Name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -56,8 +74,13 @@ export interface GetLogicalRouterArgs {
 export interface GetLogicalRouterResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -67,9 +90,19 @@ export interface GetLogicalRouterResult {
      * Name
      */
     readonly name: string;
+    /**
+     * Routing stack
+     */
     readonly routingStack: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * Vrf
+     */
     readonly vrves: outputs.GetLogicalRouterVrf[];
 }
 /**
@@ -97,8 +130,11 @@ export interface GetLogicalRouterResult {
 export function getLogicalRouterOutput(args: GetLogicalRouterOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLogicalRouterResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLogicalRouter:getLogicalRouter", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -107,6 +143,16 @@ export function getLogicalRouterOutput(args: GetLogicalRouterOutputArgs, opts?: 
  */
 export interface GetLogicalRouterOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -114,4 +160,9 @@ export interface GetLogicalRouterOutputArgs {
      * Name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

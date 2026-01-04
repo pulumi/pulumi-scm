@@ -36,11 +36,25 @@ public final class GetPbfRuleResult {
     private List<String> destinations;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return Enforce symmetric return
+     * 
+     */
     private GetPbfRuleEnforceSymmetricReturn enforceSymmetricReturn;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
+    /**
+     * @return From
+     * 
+     */
     private GetPbfRuleFrom from;
     /**
      * @return UUID of the resource
@@ -52,11 +66,36 @@ public final class GetPbfRuleResult {
      * 
      */
     private String name;
+    /**
+     * @return Schedule
+     * 
+     */
     private String schedule;
+    /**
+     * @return Services
+     * 
+     */
     private List<String> services;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
+    /**
+     * @return Source users
+     * 
+     */
     private List<String> sourceUsers;
+    /**
+     * @return Source addresses
+     * 
+     */
     private List<String> sources;
+    /**
+     * @return Tags
+     * 
+     */
     private List<String> tags;
     private String tfid;
 
@@ -91,17 +130,31 @@ public final class GetPbfRuleResult {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return Enforce symmetric return
+     * 
+     */
     public GetPbfRuleEnforceSymmetricReturn enforceSymmetricReturn() {
         return this.enforceSymmetricReturn;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
+    /**
+     * @return From
+     * 
+     */
     public GetPbfRuleFrom from() {
         return this.from;
     }
@@ -119,21 +172,46 @@ public final class GetPbfRuleResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return Schedule
+     * 
+     */
     public String schedule() {
         return this.schedule;
     }
+    /**
+     * @return Services
+     * 
+     */
     public List<String> services() {
         return this.services;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return Source users
+     * 
+     */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
+    /**
+     * @return Source addresses
+     * 
+     */
     public List<String> sources() {
         return this.sources;
     }
+    /**
+     * @return Tags
+     * 
+     */
     public List<String> tags() {
         return this.tags;
     }

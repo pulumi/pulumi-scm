@@ -17,6 +17,21 @@ public final class GetServiceConnectionArgs extends com.pulumi.resources.InvokeA
     public static final GetServiceConnectionArgs Empty = new GetServiceConnectionArgs();
 
     /**
+     * The folder in which the resource is defined
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable Output<String> folder;
+
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * The UUID of the service connection
      * 
      */
@@ -49,6 +64,7 @@ public final class GetServiceConnectionArgs extends com.pulumi.resources.InvokeA
     private GetServiceConnectionArgs() {}
 
     private GetServiceConnectionArgs(GetServiceConnectionArgs $) {
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
     }
@@ -69,6 +85,27 @@ public final class GetServiceConnectionArgs extends com.pulumi.resources.InvokeA
 
         public Builder(GetServiceConnectionArgs defaults) {
             $ = new GetServiceConnectionArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable Output<String> folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
         }
 
         /**

@@ -12,12 +12,12 @@ import java.util.Objects;
 public final class GetHipObjectDiskBackupCriteriaLastBackupTimeWithin {
     /**
      * @return specify time in days
+     * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
     private Integer days;
     /**
      * @return specify time in hours
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
@@ -26,6 +26,7 @@ public final class GetHipObjectDiskBackupCriteriaLastBackupTimeWithin {
     private GetHipObjectDiskBackupCriteriaLastBackupTimeWithin() {}
     /**
      * @return specify time in days
+     * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
     public Integer days() {
@@ -33,7 +34,6 @@ public final class GetHipObjectDiskBackupCriteriaLastBackupTimeWithin {
     }
     /**
      * @return specify time in hours
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */

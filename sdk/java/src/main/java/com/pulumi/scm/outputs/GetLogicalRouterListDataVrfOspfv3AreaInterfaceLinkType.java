@@ -14,19 +14,18 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkType {
     /**
      * @return Broadcast
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeBroadcast broadcast;
     /**
      * @return P2mp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeP2mp p2mp;
     /**
      * @return P2p
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
@@ -35,6 +34,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkType {
     private GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkType() {}
     /**
      * @return Broadcast
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     public GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeBroadcast broadcast() {
@@ -42,7 +42,6 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkType {
     }
     /**
      * @return P2mp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
@@ -51,7 +50,6 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkType {
     }
     /**
      * @return P2p
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */

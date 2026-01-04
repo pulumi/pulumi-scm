@@ -59,10 +59,19 @@ func LookupVlanInterface(ctx *pulumi.Context, args *LookupVlanInterfaceArgs, opt
 
 // A collection of arguments for invoking getVlanInterface.
 type LookupVlanInterfaceArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getVlanInterface.
@@ -76,18 +85,30 @@ type LookupVlanInterfaceResult struct {
 	// Default interface assignment
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	Device     string                     `pulumi:"device"`
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device string `pulumi:"device"`
+	// Vlan interfaces DHCP Client Object
+	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient GetVlanInterfaceDhcpClient `pulumi:"dhcpClient"`
-	Folder     string                     `pulumi:"folder"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id                         string               `pulumi:"id"`
-	InterfaceManagementProfile string               `pulumi:"interfaceManagementProfile"`
-	Ips                        []GetVlanInterfaceIp `pulumi:"ips"`
-	Mtu                        int                  `pulumi:"mtu"`
+	Id string `pulumi:"id"`
+	// Interface management profile
+	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
+	// VLAN Interface IP Parent
+	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+	Ips []GetVlanInterfaceIp `pulumi:"ips"`
+	// MTU
+	Mtu int `pulumi:"mtu"`
 	// L3 sub-interface name
-	Name    string `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
+	// VLAN tag
 	VlanTag string `pulumi:"vlanTag"`
 }
 
@@ -102,10 +123,19 @@ func LookupVlanInterfaceOutput(ctx *pulumi.Context, args LookupVlanInterfaceOutp
 
 // A collection of arguments for invoking getVlanInterface.
 type LookupVlanInterfaceOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupVlanInterfaceOutputArgs) ElementType() reflect.Type {
@@ -148,14 +178,19 @@ func (o LookupVlanInterfaceResultOutput) DefaultValue() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupVlanInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Vlan interfaces DHCP Client Object
+// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o LookupVlanInterfaceResultOutput) DhcpClient() GetVlanInterfaceDhcpClientOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) GetVlanInterfaceDhcpClient { return v.DhcpClient }).(GetVlanInterfaceDhcpClientOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupVlanInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -165,14 +200,18 @@ func (o LookupVlanInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Interface management profile
 func (o LookupVlanInterfaceResultOutput) InterfaceManagementProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
 }
 
+// VLAN Interface IP Parent
+// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o LookupVlanInterfaceResultOutput) Ips() GetVlanInterfaceIpArrayOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) []GetVlanInterfaceIp { return v.Ips }).(GetVlanInterfaceIpArrayOutput)
 }
 
+// MTU
 func (o LookupVlanInterfaceResultOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) int { return v.Mtu }).(pulumi.IntOutput)
 }
@@ -182,6 +221,8 @@ func (o LookupVlanInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupVlanInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -190,6 +231,7 @@ func (o LookupVlanInterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// VLAN tag
 func (o LookupVlanInterfaceResultOutput) VlanTag() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) string { return v.VlanTag }).(pulumi.StringOutput)
 }

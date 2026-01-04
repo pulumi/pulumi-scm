@@ -12,6 +12,40 @@ import (
 )
 
 // SyslogServerProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+//			//
+//			// Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+//			scmSyslogServerProf, err := scm.LookupSyslogServerProfile(ctx, &scm.LookupSyslogServerProfileArgs{
+//				Id: "69f7ee97-7c0a-416d-a28d-d45929851f6e",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmSyslogServerProfileDetails", pulumi.StringMap{
+//				"profileId": scmSyslogServerProf.Id,
+//				"folder":    scmSyslogServerProf.Folder,
+//				"name":      scmSyslogServerProf.Name,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupSyslogServerProfile(ctx *pulumi.Context, args *LookupSyslogServerProfileArgs, opts ...pulumi.InvokeOption) (*LookupSyslogServerProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupSyslogServerProfileResult
@@ -24,25 +58,41 @@ func LookupSyslogServerProfile(ctx *pulumi.Context, args *LookupSyslogServerProf
 
 // A collection of arguments for invoking getSyslogServerProfile.
 type LookupSyslogServerProfileArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// The UUID of the syslog server profile
 	Id string `pulumi:"id"`
 	// The name of the syslog server profile
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSyslogServerProfile.
 type LookupSyslogServerProfileResult struct {
 	// The device in which the resource is defined
-	Device string                       `pulumi:"device"`
-	Folder string                       `pulumi:"folder"`
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder string `pulumi:"folder"`
+	// Format
 	Format GetSyslogServerProfileFormat `pulumi:"format"`
 	// The UUID of the syslog server profile
 	Id string `pulumi:"id"`
 	// The name of the syslog server profile
-	Name    string                        `pulumi:"name"`
-	Servers GetSyslogServerProfileServers `pulumi:"servers"`
-	Snippet string                        `pulumi:"snippet"`
-	Tfid    string                        `pulumi:"tfid"`
+	Name string `pulumi:"name"`
+	// A list of syslog server configurations. At least one server is required.
+	Servers []GetSyslogServerProfileServer `pulumi:"servers"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupSyslogServerProfileOutput(ctx *pulumi.Context, args LookupSyslogServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSyslogServerProfileResultOutput {
@@ -56,10 +106,19 @@ func LookupSyslogServerProfileOutput(ctx *pulumi.Context, args LookupSyslogServe
 
 // A collection of arguments for invoking getSyslogServerProfile.
 type LookupSyslogServerProfileOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the syslog server profile
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the syslog server profile
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupSyslogServerProfileOutputArgs) ElementType() reflect.Type {
@@ -82,14 +141,18 @@ func (o LookupSyslogServerProfileResultOutput) ToLookupSyslogServerProfileResult
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSyslogServerProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSyslogServerProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
+// Format
 func (o LookupSyslogServerProfileResultOutput) Format() GetSyslogServerProfileFormatOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) GetSyslogServerProfileFormat { return v.Format }).(GetSyslogServerProfileFormatOutput)
 }
@@ -104,10 +167,13 @@ func (o LookupSyslogServerProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-func (o LookupSyslogServerProfileResultOutput) Servers() GetSyslogServerProfileServersOutput {
-	return o.ApplyT(func(v LookupSyslogServerProfileResult) GetSyslogServerProfileServers { return v.Servers }).(GetSyslogServerProfileServersOutput)
+// A list of syslog server configurations. At least one server is required.
+func (o LookupSyslogServerProfileResultOutput) Servers() GetSyslogServerProfileServerArrayOutput {
+	return o.ApplyT(func(v LookupSyslogServerProfileResult) []GetSyslogServerProfileServer { return v.Servers }).(GetSyslogServerProfileServerArrayOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSyslogServerProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

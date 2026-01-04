@@ -28,8 +28,11 @@ import * as utilities from "./utilities";
 export function getUrlAccessProfile(args: GetUrlAccessProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetUrlAccessProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getUrlAccessProfile:getUrlAccessProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -38,6 +41,16 @@ export function getUrlAccessProfile(args: GetUrlAccessProfileArgs, opts?: pulumi
  */
 export interface GetUrlAccessProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -45,6 +58,11 @@ export interface GetUrlAccessProfileArgs {
      * Name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -81,25 +99,58 @@ export interface GetUrlAccessProfileResult {
     readonly description: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Local inline cat
+     */
     readonly localInlineCat: boolean;
+    /**
+     * Log container page only
+     */
     readonly logContainerPageOnly: boolean;
+    /**
+     * Log http hdr referer
+     */
     readonly logHttpHdrReferer: boolean;
+    /**
+     * Log http hdr user agent
+     */
     readonly logHttpHdrUserAgent: boolean;
+    /**
+     * Log http hdr xff
+     */
     readonly logHttpHdrXff: boolean;
+    /**
+     * Mlav category exception
+     */
     readonly mlavCategoryExceptions: string[];
     /**
      * Name
      */
     readonly name: string;
+    /**
+     * Redirect
+     */
     readonly redirects: string[];
+    /**
+     * Safe search enforcement
+     */
     readonly safeSearchEnforcement: boolean;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -125,8 +176,11 @@ export interface GetUrlAccessProfileResult {
 export function getUrlAccessProfileOutput(args: GetUrlAccessProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUrlAccessProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getUrlAccessProfile:getUrlAccessProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -135,6 +189,16 @@ export function getUrlAccessProfileOutput(args: GetUrlAccessProfileOutputArgs, o
  */
 export interface GetUrlAccessProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -142,4 +206,9 @@ export interface GetUrlAccessProfileOutputArgs {
      * Name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

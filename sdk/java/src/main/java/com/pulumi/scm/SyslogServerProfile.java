@@ -11,19 +11,159 @@ import com.pulumi.scm.SyslogServerProfileArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.SyslogServerProfileState;
 import com.pulumi.scm.outputs.SyslogServerProfileFormat;
-import com.pulumi.scm.outputs.SyslogServerProfileServers;
+import com.pulumi.scm.outputs.SyslogServerProfileServer;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * SyslogServerProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.SyslogServerProfile;
+ * import com.pulumi.scm.SyslogServerProfileArgs;
+ * import com.pulumi.scm.inputs.SyslogServerProfileServerArgs;
+ * import com.pulumi.scm.inputs.SyslogServerProfileFormatArgs;
+ * import com.pulumi.scm.inputs.SyslogServerProfileFormatEscapingArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmSyslogServerProf1 = new SyslogServerProfile("scmSyslogServerProf1", SyslogServerProfileArgs.builder()
+ *             .folder("All")
+ *             .name("syslog-server-prof-base")
+ *             .servers(SyslogServerProfileServerArgs.builder()
+ *                 .name("Server-Primary")
+ *                 .server("192.168.1.10")
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmSyslogServerProf2 = new SyslogServerProfile("scmSyslogServerProf2", SyslogServerProfileArgs.builder()
+ *             .folder("All")
+ *             .name("syslog-server-prof-mixed")
+ *             .servers(SyslogServerProfileServerArgs.builder()
+ *                 .name("Server-Mixed")
+ *                 .server("10.0.0.50")
+ *                 .transport("TCP")
+ *                 .port(601)
+ *                 .format("IETF")
+ *                 .facility("LOG_LOCAL4")
+ *                 .build())
+ *             .format(SyslogServerProfileFormatArgs.builder()
+ *                 .traffic("$bytes")
+ *                 .threat("$app")
+ *                 .globalprotect("$cloud")
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmSyslogServerProf3 = new SyslogServerProfile("scmSyslogServerProf3", SyslogServerProfileArgs.builder()
+ *             .folder("All")
+ *             .name("syslog-server-prof-complete")
+ *             .servers(            
+ *                 SyslogServerProfileServerArgs.builder()
+ *                     .name("Server-A")
+ *                     .server("172.16.10.1")
+ *                     .transport("UDP")
+ *                     .port(514)
+ *                     .format("BSD")
+ *                     .facility("LOG_LOCAL7")
+ *                     .build(),
+ *                 SyslogServerProfileServerArgs.builder()
+ *                     .name("Server-B")
+ *                     .server("172.16.10.2")
+ *                     .transport("TCP")
+ *                     .port(6514)
+ *                     .format("IETF")
+ *                     .facility("LOG_LOCAL3")
+ *                     .build(),
+ *                 SyslogServerProfileServerArgs.builder()
+ *                     .name("Server-C")
+ *                     .server("192.168.1.10")
+ *                     .transport("UDP")
+ *                     .port(514)
+ *                     .format("BSD")
+ *                     .facility("LOG_USER")
+ *                     .build())
+ *             .format(SyslogServerProfileFormatArgs.builder()
+ *                 .escaping(SyslogServerProfileFormatEscapingArgs.builder()
+ *                     .escapeCharacter("*")
+ *                     .escapedCharacters("&\\#")
+ *                     .build())
+ *                 .traffic("$actionflags")
+ *                 .threat("$error + $errorcode")
+ *                 .wildfire("$client_os")
+ *                 .url("$type")
+ *                 .data("$srcregion")
+ *                 .gtp("$time_generated")
+ *                 .sctp("$device_name and $contenttype")
+ *                 .tunnel("$tunnel_type")
+ *                 .auth("$hostid + $portal")
+ *                 .userid("$hostid and $location")
+ *                 .iptag("dg_hier_level_1")
+ *                 .decryption("dg_hier_level_2")
+ *                 .config("dg_hier_level_3")
+ *                 .system("$vsys_name + $status")
+ *                 .globalprotect("default")
+ *                 .hipMatch("custom")
+ *                 .correlation("custom")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/syslogServerProfile:SyslogServerProfile")
 public class SyslogServerProfile extends com.pulumi.resources.CustomResource {
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -31,6 +171,7 @@ public class SyslogServerProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -38,7 +179,6 @@ public class SyslogServerProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -47,7 +187,6 @@ public class SyslogServerProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -83,22 +222,21 @@ public class SyslogServerProfile extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Servers
+     * A list of syslog server configurations. At least one server is required.
      * 
      */
-    @Export(name="servers", refs={SyslogServerProfileServers.class}, tree="[0]")
-    private Output</* @Nullable */ SyslogServerProfileServers> servers;
+    @Export(name="servers", refs={List.class,SyslogServerProfileServer.class}, tree="[0,1]")
+    private Output<List<SyslogServerProfileServer>> servers;
 
     /**
-     * @return Servers
+     * @return A list of syslog server configurations. At least one server is required.
      * 
      */
-    public Output<Optional<SyslogServerProfileServers>> servers() {
-        return Codegen.optional(this.servers);
+    public Output<List<SyslogServerProfileServer>> servers() {
+        return this.servers;
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -107,7 +245,6 @@ public class SyslogServerProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -133,7 +270,7 @@ public class SyslogServerProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SyslogServerProfile(java.lang.String name, @Nullable SyslogServerProfileArgs args) {
+    public SyslogServerProfile(java.lang.String name, SyslogServerProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -142,7 +279,7 @@ public class SyslogServerProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SyslogServerProfile(java.lang.String name, @Nullable SyslogServerProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SyslogServerProfile(java.lang.String name, SyslogServerProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/syslogServerProfile:SyslogServerProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -150,7 +287,7 @@ public class SyslogServerProfile extends com.pulumi.resources.CustomResource {
         super("scm:index/syslogServerProfile:SyslogServerProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static SyslogServerProfileArgs makeArgs(@Nullable SyslogServerProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static SyslogServerProfileArgs makeArgs(SyslogServerProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

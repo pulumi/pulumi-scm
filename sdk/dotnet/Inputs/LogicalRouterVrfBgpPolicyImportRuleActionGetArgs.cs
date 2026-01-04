@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Allow
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow` and `Deny`.
         /// </summary>
         [Input("allow")]
         public Input<Inputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowGetArgs>? Allow { get; set; }
 
         /// <summary>
         /// Deny
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow` and `Deny`.
         /// </summary>
         [Input("deny")]

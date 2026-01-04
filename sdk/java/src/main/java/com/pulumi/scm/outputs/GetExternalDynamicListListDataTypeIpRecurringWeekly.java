@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListListDataTypeIpRecurringWeekly {
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Weekly Time specification hh (e.g. 20) for IP
      * 
      */
     private String at;
@@ -23,7 +23,7 @@ public final class GetExternalDynamicListListDataTypeIpRecurringWeekly {
 
     private GetExternalDynamicListListDataTypeIpRecurringWeekly() {}
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Weekly Time specification hh (e.g. 20) for IP
      * 
      */
     public String at() {

@@ -107,6 +107,16 @@ import * as utilities from "./utilities";
  *     },
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/site:Site example :::id
+ * ```
  */
 export class Site extends pulumi.CustomResource {
     /**
@@ -152,6 +162,10 @@ export class Site extends pulumi.CustomResource {
      * The country in which the site exists
      */
     declare public readonly country: pulumi.Output<string | undefined>;
+    /**
+     * The folder in which the resource is defined
+     */
+    declare public /*out*/ readonly folder: pulumi.Output<string>;
     /**
      * The latitude coordinate for the site
      */
@@ -207,6 +221,7 @@ export class Site extends pulumi.CustomResource {
             resourceInputs["addressLine2"] = state?.addressLine2;
             resourceInputs["city"] = state?.city;
             resourceInputs["country"] = state?.country;
+            resourceInputs["folder"] = state?.folder;
             resourceInputs["latitude"] = state?.latitude;
             resourceInputs["licenseType"] = state?.licenseType;
             resourceInputs["longitude"] = state?.longitude;
@@ -232,6 +247,7 @@ export class Site extends pulumi.CustomResource {
             resourceInputs["state"] = args?.state;
             resourceInputs["type"] = args?.type;
             resourceInputs["zipCode"] = args?.zipCode;
+            resourceInputs["folder"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -259,6 +275,10 @@ export interface SiteState {
      * The country in which the site exists
      */
     country?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: pulumi.Input<string>;
     /**
      * The latitude coordinate for the site
      */
