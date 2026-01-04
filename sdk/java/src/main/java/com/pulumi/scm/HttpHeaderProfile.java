@@ -19,6 +19,172 @@ import javax.annotation.Nullable;
 /**
  * HttpHeaderProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.HttpHeaderProfile;
+ * import com.pulumi.scm.HttpHeaderProfileArgs;
+ * import com.pulumi.scm.inputs.HttpHeaderProfileHttpHeaderInsertionArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmHttpHeaderProfile1 = new HttpHeaderProfile("scmHttpHeaderProfile1", HttpHeaderProfileArgs.builder()
+ *             .folder("All")
+ *             .name("base_http_header_profile_1")
+ *             .build());
+ * 
+ *         var scmHttpHeaderProfile2 = new HttpHeaderProfile("scmHttpHeaderProfile2", HttpHeaderProfileArgs.builder()
+ *             .folder("All")
+ *             .name("simple_http_header_profile_2")
+ *             .httpHeaderInsertions(HttpHeaderProfileHttpHeaderInsertionArgs.builder()
+ *                 .name("header_one")
+ *                 .type(List.of(Map.ofEntries(
+ *                     Map.entry("name", "Google Apps Access Control"),
+ *                     Map.entry("domains", List.of("*.google.com")),
+ *                     Map.entry("headers", List.of(Map.ofEntries(
+ *                         Map.entry("name", "X-GooGAppls-Allowed-Domains"),
+ *                         Map.entry("header", "X-GooGAppls-Allowed-Domains"),
+ *                         Map.entry("value", "user-allowed")
+ *                     )))
+ *                 )))
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmHttpHeaderProfile3 = new HttpHeaderProfile("scmHttpHeaderProfile3", HttpHeaderProfileArgs.builder()
+ *             .folder("All")
+ *             .name("complete_http_header_profile_3")
+ *             .httpHeaderInsertions(            
+ *                 HttpHeaderProfileHttpHeaderInsertionArgs.builder()
+ *                     .name("header_insertion_one")
+ *                     .type(List.of(Map.ofEntries(
+ *                         Map.entry("name", "Dropbox Network Control"),
+ *                         Map.entry("domains", List.of(                        
+ *                             "*.db.tt",
+ *                             "*.dropbox.com",
+ *                             "dropboxformum.com")),
+ *                         Map.entry("headers", List.of(                        
+ *                             Map.ofEntries(
+ *                                 Map.entry("name", "X-Dropbox-allowed-Team-Ids"),
+ *                                 Map.entry("header", "X-Dropbox-allowed-Team-Ids"),
+ *                                 Map.entry("value", "dropbox-users")
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry("name", "custom_header"),
+ *                                 Map.entry("header", "custom_header"),
+ *                                 Map.entry("value", "10-header")
+ *                             )))
+ *                     )))
+ *                     .build(),
+ *                 HttpHeaderProfileHttpHeaderInsertionArgs.builder()
+ *                     .name("header_insertion_two")
+ *                     .type(List.of(Map.ofEntries(
+ *                         Map.entry("name", "Microsoft Office365 Tenant Restrictions"),
+ *                         Map.entry("domains", List.of(                        
+ *                             "login.mircosoft.com",
+ *                             "login.mircosoftonline.com",
+ *                             "login.windows.net")),
+ *                         Map.entry("headers", List.of(                        
+ *                             Map.ofEntries(
+ *                                 Map.entry("name", "Restrict-Access-Context"),
+ *                                 Map.entry("header", "Restrict-Access-Context"),
+ *                                 Map.entry("value", "denied-context")
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry("name", "Restrict-Access-To-Tenants"),
+ *                                 Map.entry("header", "Restrict-Access-To-Tenants"),
+ *                                 Map.entry("value", "denied-tenants")
+ *                             )))
+ *                     )))
+ *                     .build(),
+ *                 HttpHeaderProfileHttpHeaderInsertionArgs.builder()
+ *                     .name("header_insertion_three")
+ *                     .type(List.of(Map.ofEntries(
+ *                         Map.entry("name", "Dynamic Fields"),
+ *                         Map.entry("domains", List.of("custom_domain")),
+ *                         Map.entry("headers", List.of(Map.ofEntries(
+ *                             Map.entry("name", "Authorization"),
+ *                             Map.entry("header", "Authorization"),
+ *                             Map.entry("value", "auth")
+ *                         )))
+ *                     )))
+ *                     .build(),
+ *                 HttpHeaderProfileHttpHeaderInsertionArgs.builder()
+ *                     .name("header_insertion_four")
+ *                     .type(List.of(Map.ofEntries(
+ *                         Map.entry("name", "Youtube Safe Search"),
+ *                         Map.entry("domains", List.of(                        
+ *                             "m.youtube.com",
+ *                             "www.youtube.com")),
+ *                         Map.entry("headers", List.of(Map.ofEntries(
+ *                             Map.entry("name", "Youtube-Restrict"),
+ *                             Map.entry("header", "Youtube-Restrict"),
+ *                             Map.entry("value", "denied-youtube")
+ *                         )))
+ *                     )))
+ *                     .build(),
+ *                 HttpHeaderProfileHttpHeaderInsertionArgs.builder()
+ *                     .name("header_insertion_five")
+ *                     .type(List.of(Map.ofEntries(
+ *                         Map.entry("name", "Custom"),
+ *                         Map.entry("domains", List.of(                        
+ *                             "custom_1",
+ *                             "custom_2")),
+ *                         Map.entry("headers", List.of(Map.ofEntries(
+ *                             Map.entry("name", "custom_header"),
+ *                             Map.entry("header", "custom_header"),
+ *                             Map.entry("value", "custom")
+ *                         )))
+ *                     )))
+ *                     .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/httpHeaderProfile:HttpHeaderProfile")
 public class HttpHeaderProfile extends com.pulumi.resources.CustomResource {
@@ -38,6 +204,7 @@ public class HttpHeaderProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -45,6 +212,7 @@ public class HttpHeaderProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -52,7 +220,6 @@ public class HttpHeaderProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -61,7 +228,6 @@ public class HttpHeaderProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -98,7 +264,6 @@ public class HttpHeaderProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -107,7 +272,6 @@ public class HttpHeaderProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

@@ -8,6 +8,154 @@ import * as utilities from "./utilities";
 
 /**
  * HttpHeaderProfile resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmHttpHeaderProfile1 = new scm.HttpHeaderProfile("scm_http_header_profile_1", {
+ *     folder: "All",
+ *     name: "base_http_header_profile_1",
+ * });
+ * const scmHttpHeaderProfile2 = new scm.HttpHeaderProfile("scm_http_header_profile_2", {
+ *     folder: "All",
+ *     name: "simple_http_header_profile_2",
+ *     httpHeaderInsertions: [{
+ *         name: "header_one",
+ *         type: [{
+ *             name: "Google Apps Access Control",
+ *             domains: ["*.google.com"],
+ *             headers: [{
+ *                 name: "X-GooGAppls-Allowed-Domains",
+ *                 header: "X-GooGAppls-Allowed-Domains",
+ *                 value: "user-allowed",
+ *             }],
+ *         }],
+ *     }],
+ * });
+ * const scmHttpHeaderProfile3 = new scm.HttpHeaderProfile("scm_http_header_profile_3", {
+ *     folder: "All",
+ *     name: "complete_http_header_profile_3",
+ *     httpHeaderInsertions: [
+ *         {
+ *             name: "header_insertion_one",
+ *             type: [{
+ *                 name: "Dropbox Network Control",
+ *                 domains: [
+ *                     "*.db.tt",
+ *                     "*.dropbox.com",
+ *                     "dropboxformum.com",
+ *                 ],
+ *                 headers: [
+ *                     {
+ *                         name: "X-Dropbox-allowed-Team-Ids",
+ *                         header: "X-Dropbox-allowed-Team-Ids",
+ *                         value: "dropbox-users",
+ *                     },
+ *                     {
+ *                         name: "custom_header",
+ *                         header: "custom_header",
+ *                         value: "10-header",
+ *                     },
+ *                 ],
+ *             }],
+ *         },
+ *         {
+ *             name: "header_insertion_two",
+ *             type: [{
+ *                 name: "Microsoft Office365 Tenant Restrictions",
+ *                 domains: [
+ *                     "login.mircosoft.com",
+ *                     "login.mircosoftonline.com",
+ *                     "login.windows.net",
+ *                 ],
+ *                 headers: [
+ *                     {
+ *                         name: "Restrict-Access-Context",
+ *                         header: "Restrict-Access-Context",
+ *                         value: "denied-context",
+ *                     },
+ *                     {
+ *                         name: "Restrict-Access-To-Tenants",
+ *                         header: "Restrict-Access-To-Tenants",
+ *                         value: "denied-tenants",
+ *                     },
+ *                 ],
+ *             }],
+ *         },
+ *         {
+ *             name: "header_insertion_three",
+ *             type: [{
+ *                 name: "Dynamic Fields",
+ *                 domains: ["custom_domain"],
+ *                 headers: [{
+ *                     name: "Authorization",
+ *                     header: "Authorization",
+ *                     value: "auth",
+ *                 }],
+ *             }],
+ *         },
+ *         {
+ *             name: "header_insertion_four",
+ *             type: [{
+ *                 name: "Youtube Safe Search",
+ *                 domains: [
+ *                     "m.youtube.com",
+ *                     "www.youtube.com",
+ *                 ],
+ *                 headers: [{
+ *                     name: "Youtube-Restrict",
+ *                     header: "Youtube-Restrict",
+ *                     value: "denied-youtube",
+ *                 }],
+ *             }],
+ *         },
+ *         {
+ *             name: "header_insertion_five",
+ *             type: [{
+ *                 name: "Custom",
+ *                 domains: [
+ *                     "custom_1",
+ *                     "custom_2",
+ *                 ],
+ *                 headers: [{
+ *                     name: "custom_header",
+ *                     header: "custom_header",
+ *                     value: "custom",
+ *                 }],
+ *             }],
+ *         },
+ *     ],
+ * });
+ * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example ::device:id
+ * ```
  */
 export class HttpHeaderProfile extends pulumi.CustomResource {
     /**
@@ -43,11 +191,11 @@ export class HttpHeaderProfile extends pulumi.CustomResource {
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -61,7 +209,6 @@ export class HttpHeaderProfile extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -112,11 +259,11 @@ export interface HttpHeaderProfileState {
     description?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -130,7 +277,6 @@ export interface HttpHeaderProfileState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -147,11 +293,11 @@ export interface HttpHeaderProfileArgs {
     description?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -165,7 +311,6 @@ export interface HttpHeaderProfileArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

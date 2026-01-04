@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeDomainRecurringDailyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Time specification hh (e.g. 20)
+        /// Daily Time specification hh (e.g. 20) for Domain
         /// </summary>
         [Input("at", required: true)]
         public Input<string> At { get; set; } = null!;

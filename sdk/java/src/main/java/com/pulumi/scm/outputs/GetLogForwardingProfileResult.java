@@ -19,21 +19,36 @@ public final class GetLogForwardingProfileResult {
     private String description;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the log server profile
      * 
      */
     private String id;
+    /**
+     * @return Match list
+     * 
+     */
     private List<GetLogForwardingProfileMatchList> matchLists;
     /**
      * @return The name of the log forwarding profile
      * 
      */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
     private String tfid;
 
@@ -47,11 +62,17 @@ public final class GetLogForwardingProfileResult {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -62,6 +83,10 @@ public final class GetLogForwardingProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Match list
+     * 
+     */
     public List<GetLogForwardingProfileMatchList> matchLists() {
         return this.matchLists;
     }
@@ -72,6 +97,11 @@ public final class GetLogForwardingProfileResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }

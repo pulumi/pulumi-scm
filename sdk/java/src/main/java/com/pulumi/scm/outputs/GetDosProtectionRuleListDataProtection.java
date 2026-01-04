@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetDosProtectionRuleListDataProtection {
     /**
      * @return Aggregate
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
     private GetDosProtectionRuleListDataProtectionAggregate aggregate;
     /**
      * @return Classified
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
@@ -27,6 +27,7 @@ public final class GetDosProtectionRuleListDataProtection {
     private GetDosProtectionRuleListDataProtection() {}
     /**
      * @return Aggregate
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
     public GetDosProtectionRuleListDataProtectionAggregate aggregate() {
@@ -34,7 +35,6 @@ public final class GetDosProtectionRuleListDataProtection {
     }
     /**
      * @return Classified
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */

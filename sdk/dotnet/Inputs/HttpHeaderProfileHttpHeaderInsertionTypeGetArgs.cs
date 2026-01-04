@@ -37,7 +37,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The HTTP header insertion type (*This is a predefined list in the UI*)
+        /// The HTTP header insertion type
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;

@@ -39,8 +39,8 @@ class InterfaceManagementProfileArgs:
         """
         The set of arguments for constructing a InterfaceManagementProfile resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] http: Allow HTTP?
         :param pulumi.Input[_builtins.bool] http_ocsp: Allow HTTP OCSP?
@@ -50,7 +50,6 @@ class InterfaceManagementProfileArgs:
         :param pulumi.Input[_builtins.bool] ping: Allow ping?
         :param pulumi.Input[_builtins.bool] response_pages: Allow response pages?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] ssh: Allow SSH?
         :param pulumi.Input[_builtins.bool] telnet: Allow telnet? Seriously, why would you do this?!?
@@ -94,6 +93,7 @@ class InterfaceManagementProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -106,7 +106,6 @@ class InterfaceManagementProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -204,7 +203,6 @@ class InterfaceManagementProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -296,8 +294,8 @@ class _InterfaceManagementProfileState:
         """
         Input properties used for looking up and filtering InterfaceManagementProfile resources.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] http: Allow HTTP?
         :param pulumi.Input[_builtins.bool] http_ocsp: Allow HTTP OCSP?
@@ -307,7 +305,6 @@ class _InterfaceManagementProfileState:
         :param pulumi.Input[_builtins.bool] ping: Allow ping?
         :param pulumi.Input[_builtins.bool] response_pages: Allow response pages?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] ssh: Allow SSH?
         :param pulumi.Input[_builtins.bool] telnet: Allow telnet? Seriously, why would you do this?!?
@@ -353,6 +350,7 @@ class _InterfaceManagementProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -365,7 +363,6 @@ class _InterfaceManagementProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -463,7 +460,6 @@ class _InterfaceManagementProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -596,11 +592,37 @@ class InterfaceManagementProfile(pulumi.CustomResource):
             response_pages=False)
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] http: Allow HTTP?
         :param pulumi.Input[_builtins.bool] http_ocsp: Allow HTTP OCSP?
@@ -610,7 +632,6 @@ class InterfaceManagementProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] ping: Allow ping?
         :param pulumi.Input[_builtins.bool] response_pages: Allow response pages?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] ssh: Allow SSH?
         :param pulumi.Input[_builtins.bool] telnet: Allow telnet? Seriously, why would you do this?!?
@@ -654,6 +675,32 @@ class InterfaceManagementProfile(pulumi.CustomResource):
             userid_syslog_listener_ssl=True,
             userid_syslog_listener_udp=True,
             response_pages=False)
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example ::device:id
         ```
 
         :param str resource_name: The name of the resource.
@@ -745,8 +792,8 @@ class InterfaceManagementProfile(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] http: Allow HTTP?
         :param pulumi.Input[_builtins.bool] http_ocsp: Allow HTTP OCSP?
@@ -756,7 +803,6 @@ class InterfaceManagementProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] ping: Allow ping?
         :param pulumi.Input[_builtins.bool] response_pages: Allow response pages?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] ssh: Allow SSH?
         :param pulumi.Input[_builtins.bool] telnet: Allow telnet? Seriously, why would you do this?!?
@@ -791,6 +837,7 @@ class InterfaceManagementProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -799,7 +846,6 @@ class InterfaceManagementProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -865,7 +911,6 @@ class InterfaceManagementProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

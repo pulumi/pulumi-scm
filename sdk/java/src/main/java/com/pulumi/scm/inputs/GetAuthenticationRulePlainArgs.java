@@ -16,6 +16,40 @@ public final class GetAuthenticationRulePlainArgs extends com.pulumi.resources.I
     public static final GetAuthenticationRulePlainArgs Empty = new GetAuthenticationRulePlainArgs();
 
     /**
+     * Device
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="device")
+    private @Nullable String device;
+
+    /**
+     * @return Device
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<String> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    /**
+     * Folder
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable String folder;
+
+    /**
+     * @return Folder
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<String> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * The UUID of the authentication rule
      * 
      */
@@ -45,11 +79,31 @@ public final class GetAuthenticationRulePlainArgs extends com.pulumi.resources.I
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Snippet
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="snippet")
+    private @Nullable String snippet;
+
+    /**
+     * @return Snippet
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<String> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetAuthenticationRulePlainArgs() {}
 
     private GetAuthenticationRulePlainArgs(GetAuthenticationRulePlainArgs $) {
+        this.device = $.device;
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -71,6 +125,30 @@ public final class GetAuthenticationRulePlainArgs extends com.pulumi.resources.I
         }
 
         /**
+         * @param device Device
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(@Nullable String device) {
+            $.device = device;
+            return this;
+        }
+
+        /**
+         * @param folder Folder
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable String folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
          * @param id The UUID of the authentication rule
          * 
          * @return builder
@@ -89,6 +167,18 @@ public final class GetAuthenticationRulePlainArgs extends com.pulumi.resources.I
          */
         public Builder name(@Nullable String name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param snippet Snippet
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(@Nullable String snippet) {
+            $.snippet = snippet;
             return this;
         }
 

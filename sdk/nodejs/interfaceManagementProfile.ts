@@ -38,6 +38,32 @@ import * as utilities from "./utilities";
  *     responsePages: false,
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example ::device:id
+ * ```
  */
 export class InterfaceManagementProfile extends pulumi.CustomResource {
     /**
@@ -69,11 +95,11 @@ export class InterfaceManagementProfile extends pulumi.CustomResource {
 
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -107,7 +133,6 @@ export class InterfaceManagementProfile extends pulumi.CustomResource {
     declare public readonly responsePages: pulumi.Output<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -192,11 +217,11 @@ export class InterfaceManagementProfile extends pulumi.CustomResource {
 export interface InterfaceManagementProfileState {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -230,7 +255,6 @@ export interface InterfaceManagementProfileState {
     responsePages?: pulumi.Input<boolean>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -263,11 +287,11 @@ export interface InterfaceManagementProfileState {
 export interface InterfaceManagementProfileArgs {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -301,7 +325,6 @@ export interface InterfaceManagementProfileArgs {
     responsePages?: pulumi.Input<boolean>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

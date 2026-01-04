@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getLdapServerProfile(args: GetLdapServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetLdapServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLdapServerProfile:getLdapServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getLdapServerProfile(args: GetLdapServerProfileArgs, opts?: pulu
  */
 export interface GetLdapServerProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the LDAP server profile
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetLdapServerProfileArgs {
      * The name of the LDAP server profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -53,25 +71,55 @@ export interface GetLdapServerProfileResult {
     readonly bindTimelimit: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the LDAP server profile
      */
     readonly id: string;
+    /**
+     * The LDAP server time
+     */
     readonly ldapType: string;
     /**
      * The name of the LDAP server profile
      */
     readonly name: string;
+    /**
+     * The search retry interval (seconds)
+     */
     readonly retryInterval: number;
+    /**
+     * The LDAP server configuration
+     */
     readonly servers: outputs.GetLdapServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * Require SSL/TLS secured connection?
+     */
     readonly ssl: boolean;
     readonly tfid: string;
+    /**
+     * The search timeout (seconds)
+     */
     readonly timelimit: number;
+    /**
+     * Verify server certificate for SSL sessions?
+     */
     readonly verifyServerCertificate: boolean;
 }
 /**
@@ -80,8 +128,11 @@ export interface GetLdapServerProfileResult {
 export function getLdapServerProfileOutput(args: GetLdapServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLdapServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLdapServerProfile:getLdapServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -90,6 +141,16 @@ export function getLdapServerProfileOutput(args: GetLdapServerProfileOutputArgs,
  */
 export interface GetLdapServerProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the LDAP server profile
      */
     id: pulumi.Input<string>;
@@ -97,4 +158,9 @@ export interface GetLdapServerProfileOutputArgs {
      * The name of the LDAP server profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

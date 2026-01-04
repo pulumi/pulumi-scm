@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getWildfireAntiVirusProfile(args: GetWildfireAntiVirusProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetWildfireAntiVirusProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getWildfireAntiVirusProfile(args: GetWildfireAntiVirusProfileArg
  */
 export interface GetWildfireAntiVirusProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetWildfireAntiVirusProfileArgs {
      * Name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -41,22 +59,43 @@ export interface GetWildfireAntiVirusProfileResult {
     readonly description: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Mlav exception
+     */
     readonly mlavExceptions: outputs.GetWildfireAntiVirusProfileMlavException[];
     /**
      * Name
      */
     readonly name: string;
+    /**
+     * Packet capture
+     */
     readonly packetCapture: boolean;
+    /**
+     * Rules
+     */
     readonly rules: outputs.GetWildfireAntiVirusProfileRule[];
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * Threat exception
+     */
     readonly threatExceptions: outputs.GetWildfireAntiVirusProfileThreatException[];
 }
 /**
@@ -65,8 +104,11 @@ export interface GetWildfireAntiVirusProfileResult {
 export function getWildfireAntiVirusProfileOutput(args: GetWildfireAntiVirusProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWildfireAntiVirusProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -75,6 +117,16 @@ export function getWildfireAntiVirusProfileOutput(args: GetWildfireAntiVirusProf
  */
 export interface GetWildfireAntiVirusProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -82,4 +134,9 @@ export interface GetWildfireAntiVirusProfileOutputArgs {
      * Name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

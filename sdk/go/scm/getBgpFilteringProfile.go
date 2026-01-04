@@ -24,10 +24,19 @@ func LookupBgpFilteringProfile(ctx *pulumi.Context, args *LookupBgpFilteringProf
 
 // A collection of arguments for invoking getBgpFilteringProfile.
 type LookupBgpFilteringProfileArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Name
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getBgpFilteringProfile.
@@ -35,13 +44,19 @@ type LookupBgpFilteringProfileResult struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id   string                     `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Ipv4
 	Ipv4 GetBgpFilteringProfileIpv4 `pulumi:"ipv4"`
 	// Name
-	Name    string `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -57,10 +72,19 @@ func LookupBgpFilteringProfileOutput(ctx *pulumi.Context, args LookupBgpFilterin
 
 // A collection of arguments for invoking getBgpFilteringProfile.
 type LookupBgpFilteringProfileOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Name
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupBgpFilteringProfileOutputArgs) ElementType() reflect.Type {
@@ -88,10 +112,13 @@ func (o LookupBgpFilteringProfileResultOutput) Description() pulumi.StringOutput
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpFilteringProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpFilteringProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -101,6 +128,7 @@ func (o LookupBgpFilteringProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Ipv4
 func (o LookupBgpFilteringProfileResultOutput) Ipv4() GetBgpFilteringProfileIpv4Output {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) GetBgpFilteringProfileIpv4 { return v.Ipv4 }).(GetBgpFilteringProfileIpv4Output)
 }
@@ -110,6 +138,8 @@ func (o LookupBgpFilteringProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpFilteringProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

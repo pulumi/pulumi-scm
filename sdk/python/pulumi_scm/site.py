@@ -241,6 +241,7 @@ class _SiteState:
                  address_line2: Optional[pulumi.Input[_builtins.str]] = None,
                  city: Optional[pulumi.Input[_builtins.str]] = None,
                  country: Optional[pulumi.Input[_builtins.str]] = None,
+                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  latitude: Optional[pulumi.Input[_builtins.str]] = None,
                  license_type: Optional[pulumi.Input[_builtins.str]] = None,
                  longitude: Optional[pulumi.Input[_builtins.str]] = None,
@@ -257,6 +258,7 @@ class _SiteState:
         :param pulumi.Input[_builtins.str] address_line2: The address in which the site exists (continued)
         :param pulumi.Input[_builtins.str] city: The city in which the site exists
         :param pulumi.Input[_builtins.str] country: The country in which the site exists
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] latitude: The latitude coordinate for the site
         :param pulumi.Input[_builtins.str] license_type: The license type of the site
         :param pulumi.Input[_builtins.str] longitude: The longitude coordinate for the site
@@ -275,6 +277,8 @@ class _SiteState:
             pulumi.set(__self__, "city", city)
         if country is not None:
             pulumi.set(__self__, "country", country)
+        if folder is not None:
+            pulumi.set(__self__, "folder", folder)
         if latitude is not None:
             pulumi.set(__self__, "latitude", latitude)
         if license_type is not None:
@@ -343,6 +347,18 @@ class _SiteState:
     @country.setter
     def country(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "country", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @folder.setter
+    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
@@ -577,6 +593,16 @@ class Site(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/site:Site example :::id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] address_line1: The address in which the site exists
@@ -694,6 +720,16 @@ class Site(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/site:Site example :::id
+        ```
+
         :param str resource_name: The name of the resource.
         :param SiteArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -744,6 +780,7 @@ class Site(pulumi.CustomResource):
             __props__.__dict__["state"] = state
             __props__.__dict__["type"] = type
             __props__.__dict__["zip_code"] = zip_code
+            __props__.__dict__["folder"] = None
             __props__.__dict__["tfid"] = None
         super(Site, __self__).__init__(
             'scm:index/site:Site',
@@ -759,6 +796,7 @@ class Site(pulumi.CustomResource):
             address_line2: Optional[pulumi.Input[_builtins.str]] = None,
             city: Optional[pulumi.Input[_builtins.str]] = None,
             country: Optional[pulumi.Input[_builtins.str]] = None,
+            folder: Optional[pulumi.Input[_builtins.str]] = None,
             latitude: Optional[pulumi.Input[_builtins.str]] = None,
             license_type: Optional[pulumi.Input[_builtins.str]] = None,
             longitude: Optional[pulumi.Input[_builtins.str]] = None,
@@ -780,6 +818,7 @@ class Site(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] address_line2: The address in which the site exists (continued)
         :param pulumi.Input[_builtins.str] city: The city in which the site exists
         :param pulumi.Input[_builtins.str] country: The country in which the site exists
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] latitude: The latitude coordinate for the site
         :param pulumi.Input[_builtins.str] license_type: The license type of the site
         :param pulumi.Input[_builtins.str] longitude: The longitude coordinate for the site
@@ -798,6 +837,7 @@ class Site(pulumi.CustomResource):
         __props__.__dict__["address_line2"] = address_line2
         __props__.__dict__["city"] = city
         __props__.__dict__["country"] = country
+        __props__.__dict__["folder"] = folder
         __props__.__dict__["latitude"] = latitude
         __props__.__dict__["license_type"] = license_type
         __props__.__dict__["longitude"] = longitude
@@ -841,6 +881,14 @@ class Site(pulumi.CustomResource):
         The country in which the site exists
         """
         return pulumi.get(self, "country")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> pulumi.Output[_builtins.str]:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter

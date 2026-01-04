@@ -51,6 +51,7 @@ public final class GetCertificateProfileListData {
     private String crlReceiveTimeout;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -60,7 +61,8 @@ public final class GetCertificateProfileListData {
      */
     private String domain;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String folder;
@@ -80,7 +82,8 @@ public final class GetCertificateProfileListData {
      */
     private String ocspReceiveTimeout;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String snippet;
@@ -153,6 +156,7 @@ public final class GetCertificateProfileListData {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -166,7 +170,8 @@ public final class GetCertificateProfileListData {
         return this.domain;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String folder() {
@@ -194,7 +199,8 @@ public final class GetCertificateProfileListData {
         return this.ocspReceiveTimeout;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String snippet() {

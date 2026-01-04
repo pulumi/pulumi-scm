@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeIpRecurringMonthly {
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Monthly Time specification hh (e.g. 20) for IP
      * 
      */
     private String at;
     /**
-     * @return Day of month
+     * @return Day setting for monthly IP updates
      * 
      */
     private Integer dayOfMonth;
 
     private GetExternalDynamicListTypeIpRecurringMonthly() {}
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Monthly Time specification hh (e.g. 20) for IP
      * 
      */
     public String at() {
         return this.at;
     }
     /**
-     * @return Day of month
+     * @return Day setting for monthly IP updates
      * 
      */
     public Integer dayOfMonth() {

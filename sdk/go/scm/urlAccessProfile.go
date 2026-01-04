@@ -49,6 +49,32 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example ::device:id
+// ```
 type UrlAccessProfile struct {
 	pulumi.CustomResourceState
 
@@ -63,13 +89,13 @@ type UrlAccessProfile struct {
 	// Continue
 	Continues pulumi.StringArrayOutput `pulumi:"continues"`
 	// Credential enforcement
-	CredentialEnforcement UrlAccessProfileCredentialEnforcementOutput `pulumi:"credentialEnforcement"`
+	CredentialEnforcement UrlAccessProfileCredentialEnforcementPtrOutput `pulumi:"credentialEnforcement"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Local inline cat
@@ -91,7 +117,6 @@ type UrlAccessProfile struct {
 	// Safe search enforcement
 	SafeSearchEnforcement pulumi.BoolOutput `pulumi:"safeSearchEnforcement"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -142,9 +167,9 @@ type urlAccessProfileState struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Local inline cat
@@ -166,7 +191,6 @@ type urlAccessProfileState struct {
 	// Safe search enforcement
 	SafeSearchEnforcement *bool `pulumi:"safeSearchEnforcement"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -188,9 +212,9 @@ type UrlAccessProfileState struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Local inline cat
@@ -212,7 +236,6 @@ type UrlAccessProfileState struct {
 	// Safe search enforcement
 	SafeSearchEnforcement pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -238,9 +261,9 @@ type urlAccessProfileArgs struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Local inline cat
@@ -262,7 +285,6 @@ type urlAccessProfileArgs struct {
 	// Safe search enforcement
 	SafeSearchEnforcement *bool `pulumi:"safeSearchEnforcement"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -284,9 +306,9 @@ type UrlAccessProfileArgs struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Local inline cat
@@ -308,7 +330,6 @@ type UrlAccessProfileArgs struct {
 	// Safe search enforcement
 	SafeSearchEnforcement pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -426,8 +447,10 @@ func (o UrlAccessProfileOutput) Continues() pulumi.StringArrayOutput {
 }
 
 // Credential enforcement
-func (o UrlAccessProfileOutput) CredentialEnforcement() UrlAccessProfileCredentialEnforcementOutput {
-	return o.ApplyT(func(v *UrlAccessProfile) UrlAccessProfileCredentialEnforcementOutput { return v.CredentialEnforcement }).(UrlAccessProfileCredentialEnforcementOutput)
+func (o UrlAccessProfileOutput) CredentialEnforcement() UrlAccessProfileCredentialEnforcementPtrOutput {
+	return o.ApplyT(func(v *UrlAccessProfile) UrlAccessProfileCredentialEnforcementPtrOutput {
+		return v.CredentialEnforcement
+	}).(UrlAccessProfileCredentialEnforcementPtrOutput)
 }
 
 // Description
@@ -436,12 +459,12 @@ func (o UrlAccessProfileOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o UrlAccessProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o UrlAccessProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -493,7 +516,6 @@ func (o UrlAccessProfileOutput) SafeSearchEnforcement() pulumi.BoolOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o UrlAccessProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

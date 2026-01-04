@@ -16,9 +16,15 @@ import java.util.Objects;
 public final class GetRadiusServerProfileResult {
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the RADIUS server profile
@@ -30,21 +36,48 @@ public final class GetRadiusServerProfileResult {
      * 
      */
     private String name;
+    /**
+     * @return The RADIUS authentication protocol
+     * 
+     */
     private GetRadiusServerProfileProtocol protocol;
+    /**
+     * @return The number of RADIUS server retries
+     * 
+     */
     private Integer retries;
+    /**
+     * @return Server
+     * 
+     */
     private List<GetRadiusServerProfileServer> servers;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
     private String tfid;
+    /**
+     * @return The RADIUS server authentication timeout (seconds)
+     * 
+     */
     private Integer timeout;
 
     private GetRadiusServerProfileResult() {}
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -62,21 +95,42 @@ public final class GetRadiusServerProfileResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return The RADIUS authentication protocol
+     * 
+     */
     public GetRadiusServerProfileProtocol protocol() {
         return this.protocol;
     }
+    /**
+     * @return The number of RADIUS server retries
+     * 
+     */
     public Integer retries() {
         return this.retries;
     }
+    /**
+     * @return Server
+     * 
+     */
     public List<GetRadiusServerProfileServer> servers() {
         return this.servers;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return The RADIUS server authentication timeout (seconds)
+     * 
+     */
     public Integer timeout() {
         return this.timeout;
     }

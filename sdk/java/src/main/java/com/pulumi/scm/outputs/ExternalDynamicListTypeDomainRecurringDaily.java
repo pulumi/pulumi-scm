@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class ExternalDynamicListTypeDomainRecurringDaily {
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Daily Time specification hh (e.g. 20) for Domain
      * 
      */
     private String at;
 
     private ExternalDynamicListTypeDomainRecurringDaily() {}
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Daily Time specification hh (e.g. 20) for Domain
      * 
      */
     public String at() {

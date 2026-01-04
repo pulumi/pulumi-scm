@@ -56,6 +56,8 @@ func LookupServiceConnection(ctx *pulumi.Context, args *LookupServiceConnectionA
 
 // A collection of arguments for invoking getServiceConnection.
 type LookupServiceConnectionArgs struct {
+	// The folder in which the resource is defined
+	Folder *string `pulumi:"folder"`
 	// The UUID of the service connection
 	Id string `pulumi:"id"`
 	// The name of the service connection
@@ -70,6 +72,8 @@ type LookupServiceConnectionResult struct {
 	BgpPeer GetServiceConnectionBgpPeer `pulumi:"bgpPeer"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// The UUID of the service connection
 	Id string `pulumi:"id"`
 	// Ipsec tunnel
@@ -108,6 +112,8 @@ func LookupServiceConnectionOutput(ctx *pulumi.Context, args LookupServiceConnec
 
 // A collection of arguments for invoking getServiceConnection.
 type LookupServiceConnectionOutputArgs struct {
+	// The folder in which the resource is defined
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the service connection
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the service connection
@@ -146,6 +152,11 @@ func (o LookupServiceConnectionResultOutput) BgpPeer() GetServiceConnectionBgpPe
 // Map of sensitive values returned from the API.
 func (o LookupServiceConnectionResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupServiceConnectionResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
 // The UUID of the service connection

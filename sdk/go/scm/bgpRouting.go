@@ -11,7 +11,9 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// BgpRouting resource
+// **Singleton Resource.** BgpRouting resource
+//
+// This resource is a singleton, meaning only one instance can exist. If the resource typically exists (e.g. bgp_routing), you should import it before managing it.
 //
 // ## Example Usage
 //
@@ -46,6 +48,24 @@ import (
 //		})
 //	}
 //
+// ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
 // ```
 type BgpRouting struct {
 	pulumi.CustomResourceState

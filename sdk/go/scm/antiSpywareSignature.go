@@ -68,6 +68,32 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example ::device:id
+// ```
 type AntiSpywareSignature struct {
 	pulumi.CustomResourceState
 
@@ -80,11 +106,11 @@ type AntiSpywareSignature struct {
 	// anti spyware signature default action
 	DefaultAction AntiSpywareSignatureDefaultActionPtrOutput `pulumi:"defaultAction"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Direction
 	Direction pulumi.StringPtrOutput `pulumi:"direction"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Reference
@@ -92,9 +118,8 @@ type AntiSpywareSignature struct {
 	// Severity
 	Severity pulumi.StringPtrOutput `pulumi:"severity"`
 	// anti spyware signature
-	Signature AntiSpywareSignatureSignatureOutput `pulumi:"signature"`
+	Signature AntiSpywareSignatureSignaturePtrOutput `pulumi:"signature"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -151,11 +176,11 @@ type antiSpywareSignatureState struct {
 	// anti spyware signature default action
 	DefaultAction *AntiSpywareSignatureDefaultAction `pulumi:"defaultAction"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Direction
 	Direction *string `pulumi:"direction"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Reference
@@ -165,7 +190,6 @@ type antiSpywareSignatureState struct {
 	// anti spyware signature
 	Signature *AntiSpywareSignatureSignature `pulumi:"signature"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -187,11 +211,11 @@ type AntiSpywareSignatureState struct {
 	// anti spyware signature default action
 	DefaultAction AntiSpywareSignatureDefaultActionPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Direction
 	Direction pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Reference
@@ -201,7 +225,6 @@ type AntiSpywareSignatureState struct {
 	// anti spyware signature
 	Signature AntiSpywareSignatureSignaturePtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -227,11 +250,11 @@ type antiSpywareSignatureArgs struct {
 	// anti spyware signature default action
 	DefaultAction *AntiSpywareSignatureDefaultAction `pulumi:"defaultAction"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Direction
 	Direction *string `pulumi:"direction"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Reference
@@ -241,7 +264,6 @@ type antiSpywareSignatureArgs struct {
 	// anti spyware signature
 	Signature *AntiSpywareSignatureSignature `pulumi:"signature"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// threat id range \n\n and \n\n
@@ -263,11 +285,11 @@ type AntiSpywareSignatureArgs struct {
 	// anti spyware signature default action
 	DefaultAction AntiSpywareSignatureDefaultActionPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Direction
 	Direction pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Reference
@@ -277,7 +299,6 @@ type AntiSpywareSignatureArgs struct {
 	// anti spyware signature
 	Signature AntiSpywareSignatureSignaturePtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// threat id range \n\n and \n\n
@@ -396,6 +417,7 @@ func (o AntiSpywareSignatureOutput) DefaultAction() AntiSpywareSignatureDefaultA
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AntiSpywareSignatureOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -406,7 +428,6 @@ func (o AntiSpywareSignatureOutput) Direction() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AntiSpywareSignatureOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -423,12 +444,11 @@ func (o AntiSpywareSignatureOutput) Severity() pulumi.StringPtrOutput {
 }
 
 // anti spyware signature
-func (o AntiSpywareSignatureOutput) Signature() AntiSpywareSignatureSignatureOutput {
-	return o.ApplyT(func(v *AntiSpywareSignature) AntiSpywareSignatureSignatureOutput { return v.Signature }).(AntiSpywareSignatureSignatureOutput)
+func (o AntiSpywareSignatureOutput) Signature() AntiSpywareSignatureSignaturePtrOutput {
+	return o.ApplyT(func(v *AntiSpywareSignature) AntiSpywareSignatureSignaturePtrOutput { return v.Signature }).(AntiSpywareSignatureSignaturePtrOutput)
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AntiSpywareSignatureOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

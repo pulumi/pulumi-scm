@@ -18,7 +18,9 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * AutoVpnSetting resource
+ * **Singleton Resource.** AutoVpnSetting resource
+ * 
+ * This resource is a singleton, meaning only one instance can exist. If the resource typically exists (e.g. bgp_routing), you should import it before managing it.
  * 
  * ## Example Usage
  * 
@@ -58,6 +60,24 @@ import javax.annotation.Nullable;
  * }
  * }
  * </pre>
+ * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
+ * ```
  * 
  */
 @ResourceType(type="scm:index/autoVpnSetting:AutoVpnSetting")

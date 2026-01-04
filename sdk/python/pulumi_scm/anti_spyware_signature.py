@@ -44,15 +44,14 @@ class AntiSpywareSignatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: Cve
         :param pulumi.Input['AntiSpywareSignatureDefaultActionArgs'] default_action: anti spyware signature default action
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] direction: Direction
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: Reference
         :param pulumi.Input[_builtins.str] severity: Severity
         :param pulumi.Input['AntiSpywareSignatureSignatureArgs'] signature: anti spyware signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: Vendor
         """
@@ -160,6 +159,7 @@ class AntiSpywareSignatureArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -184,7 +184,6 @@ class AntiSpywareSignatureArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -234,7 +233,6 @@ class AntiSpywareSignatureArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -281,15 +279,14 @@ class _AntiSpywareSignatureState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: Cve
         :param pulumi.Input['AntiSpywareSignatureDefaultActionArgs'] default_action: anti spyware signature default action
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] direction: Direction
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: Reference
         :param pulumi.Input[_builtins.str] severity: Severity
         :param pulumi.Input['AntiSpywareSignatureSignatureArgs'] signature: anti spyware signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] threat_id: threat id range \\n\\n and \\n\\n
         :param pulumi.Input[_builtins.str] threatname: Threatname
@@ -379,6 +376,7 @@ class _AntiSpywareSignatureState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -403,7 +401,6 @@ class _AntiSpywareSignatureState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -453,7 +450,6 @@ class _AntiSpywareSignatureState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -567,6 +563,32 @@ class AntiSpywareSignature(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: Bugtraq
@@ -574,15 +596,14 @@ class AntiSpywareSignature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: Cve
         :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']] default_action: anti spyware signature default action
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] direction: Direction
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: Reference
         :param pulumi.Input[_builtins.str] severity: Severity
         :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: anti spyware signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] threat_id: threat id range \\n\\n and \\n\\n
         :param pulumi.Input[_builtins.str] threatname: Threatname
@@ -630,6 +651,32 @@ class AntiSpywareSignature(pulumi.CustomResource):
                     },
                 },
             })
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example ::device:id
         ```
 
         :param str resource_name: The name of the resource.
@@ -726,15 +773,14 @@ class AntiSpywareSignature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: Cve
         :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']] default_action: anti spyware signature default action
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] direction: Direction
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: Reference
         :param pulumi.Input[_builtins.str] severity: Severity
         :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: anti spyware signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] threat_id: threat id range \\n\\n and \\n\\n
         :param pulumi.Input[_builtins.str] threatname: Threatname
@@ -798,6 +844,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -814,7 +861,6 @@ class AntiSpywareSignature(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -837,7 +883,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def signature(self) -> pulumi.Output['outputs.AntiSpywareSignatureSignature']:
+    def signature(self) -> pulumi.Output[Optional['outputs.AntiSpywareSignatureSignature']]:
         """
         anti spyware signature
         """
@@ -848,7 +894,6 @@ class AntiSpywareSignature(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

@@ -23,6 +23,7 @@ public final class GetProfileGroupListData {
     private List<String> dataFilterings;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -37,7 +38,8 @@ public final class GetProfileGroupListData {
      */
     private List<String> fileBlockings;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String folder;
@@ -57,7 +59,8 @@ public final class GetProfileGroupListData {
      */
     private List<String> saasSecurities;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String snippet;
@@ -100,6 +103,7 @@ public final class GetProfileGroupListData {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -120,7 +124,8 @@ public final class GetProfileGroupListData {
         return this.fileBlockings;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String folder() {
@@ -148,7 +153,8 @@ public final class GetProfileGroupListData {
         return this.saasSecurities;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String snippet() {

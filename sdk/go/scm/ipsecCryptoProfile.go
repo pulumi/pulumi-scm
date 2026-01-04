@@ -58,23 +58,47 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example ::device:id
+// ```
 type IpsecCryptoProfile struct {
 	pulumi.CustomResourceState
 
 	// Ah
+	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Ah IpsecCryptoProfileAhPtrOutput `pulumi:"ah"`
 	// The device in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// phase-2 DH group (PFS DH group)
 	DhGroup pulumi.StringOutput `pulumi:"dhGroup"`
 	// Esp
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Esp IpsecCryptoProfileEspPtrOutput `pulumi:"esp"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Lifesize
@@ -84,7 +108,6 @@ type IpsecCryptoProfile struct {
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -124,19 +147,17 @@ func GetIpsecCryptoProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering IpsecCryptoProfile resources.
 type ipsecCryptoProfileState struct {
 	// Ah
+	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Ah *IpsecCryptoProfileAh `pulumi:"ah"`
 	// The device in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// phase-2 DH group (PFS DH group)
 	DhGroup *string `pulumi:"dhGroup"`
 	// Esp
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Esp *IpsecCryptoProfileEsp `pulumi:"esp"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Lifesize
@@ -146,7 +167,6 @@ type ipsecCryptoProfileState struct {
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -154,19 +174,17 @@ type ipsecCryptoProfileState struct {
 
 type IpsecCryptoProfileState struct {
 	// Ah
+	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Ah IpsecCryptoProfileAhPtrInput
 	// The device in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// phase-2 DH group (PFS DH group)
 	DhGroup pulumi.StringPtrInput
 	// Esp
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Esp IpsecCryptoProfileEspPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Lifesize
@@ -176,7 +194,6 @@ type IpsecCryptoProfileState struct {
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -188,19 +205,17 @@ func (IpsecCryptoProfileState) ElementType() reflect.Type {
 
 type ipsecCryptoProfileArgs struct {
 	// Ah
+	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Ah *IpsecCryptoProfileAh `pulumi:"ah"`
 	// The device in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// phase-2 DH group (PFS DH group)
 	DhGroup *string `pulumi:"dhGroup"`
 	// Esp
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Esp *IpsecCryptoProfileEsp `pulumi:"esp"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Lifesize
@@ -210,7 +225,6 @@ type ipsecCryptoProfileArgs struct {
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -218,19 +232,17 @@ type ipsecCryptoProfileArgs struct {
 // The set of arguments for constructing a IpsecCryptoProfile resource.
 type IpsecCryptoProfileArgs struct {
 	// Ah
+	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Ah IpsecCryptoProfileAhPtrInput
 	// The device in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// phase-2 DH group (PFS DH group)
 	DhGroup pulumi.StringPtrInput
 	// Esp
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Esp IpsecCryptoProfileEspPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Lifesize
@@ -240,7 +252,6 @@ type IpsecCryptoProfileArgs struct {
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -333,12 +344,12 @@ func (o IpsecCryptoProfileOutput) ToIpsecCryptoProfileOutputWithContext(ctx cont
 }
 
 // Ah
+// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 func (o IpsecCryptoProfileOutput) Ah() IpsecCryptoProfileAhPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) IpsecCryptoProfileAhPtrOutput { return v.Ah }).(IpsecCryptoProfileAhPtrOutput)
 }
 
 // The device in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IpsecCryptoProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
@@ -350,14 +361,12 @@ func (o IpsecCryptoProfileOutput) DhGroup() pulumi.StringOutput {
 }
 
 // Esp
-//
 // > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 func (o IpsecCryptoProfileOutput) Esp() IpsecCryptoProfileEspPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) IpsecCryptoProfileEspPtrOutput { return v.Esp }).(IpsecCryptoProfileEspPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IpsecCryptoProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -379,7 +388,6 @@ func (o IpsecCryptoProfileOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IpsecCryptoProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

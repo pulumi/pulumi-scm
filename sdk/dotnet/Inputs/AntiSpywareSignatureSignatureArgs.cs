@@ -14,6 +14,7 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// anti spyware signature combination
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Combination` and `Standard`.
         /// </summary>
         [Input("combination")]
         public Input<Inputs.AntiSpywareSignatureSignatureCombinationArgs>? Combination { get; set; }
@@ -23,7 +24,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Standard
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Combination` and `Standard`.
         /// </summary>
         public InputList<Inputs.AntiSpywareSignatureSignatureStandardArgs> Standards

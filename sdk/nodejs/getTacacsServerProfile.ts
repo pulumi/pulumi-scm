@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getTacacsServerProfile(args: GetTacacsServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetTacacsServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTacacsServerProfile:getTacacsServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getTacacsServerProfile(args: GetTacacsServerProfileArgs, opts?: 
  */
 export interface GetTacacsServerProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the TACACS+ server profile
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetTacacsServerProfileArgs {
      * The name of the TACACS+ server profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -37,8 +55,13 @@ export interface GetTacacsServerProfileArgs {
 export interface GetTacacsServerProfileResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the TACACS+ server profile
@@ -48,11 +71,27 @@ export interface GetTacacsServerProfileResult {
      * The name of the TACACS+ server profile
      */
     readonly name: string;
+    /**
+     * The TACACS+ authentication protocol
+     */
     readonly protocol: string;
+    /**
+     * The TACACS+ server configuration
+     */
     readonly servers: outputs.GetTacacsServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * The TACACS+ timeout (seconds)
+     */
     readonly timeout: number;
+    /**
+     * Use a single TACACS+ connection?
+     */
     readonly useSingleConnection: boolean;
 }
 /**
@@ -61,8 +100,11 @@ export interface GetTacacsServerProfileResult {
 export function getTacacsServerProfileOutput(args: GetTacacsServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTacacsServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTacacsServerProfile:getTacacsServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -71,6 +113,16 @@ export function getTacacsServerProfileOutput(args: GetTacacsServerProfileOutputA
  */
 export interface GetTacacsServerProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the TACACS+ server profile
      */
     id: pulumi.Input<string>;
@@ -78,4 +130,9 @@ export interface GetTacacsServerProfileOutputArgs {
      * The name of the TACACS+ server profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

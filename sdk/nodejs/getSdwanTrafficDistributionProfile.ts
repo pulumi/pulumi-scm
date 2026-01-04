@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getSdwanTrafficDistributionProfile(args: GetSdwanTrafficDistributionProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetSdwanTrafficDistributionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSdwanTrafficDistributionProfile:getSdwanTrafficDistributionProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getSdwanTrafficDistributionProfile(args: GetSdwanTrafficDistribu
  */
 export interface GetSdwanTrafficDistributionProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetSdwanTrafficDistributionProfileArgs {
      * Profile name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -37,20 +55,35 @@ export interface GetSdwanTrafficDistributionProfileArgs {
 export interface GetSdwanTrafficDistributionProfileResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Link-Tags for interfaces identified by defined tags
+     */
     readonly linkTags: outputs.GetSdwanTrafficDistributionProfileLinkTag[];
     /**
      * Profile name
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * Traffic distribution
+     */
     readonly trafficDistribution: string;
 }
 /**
@@ -59,8 +92,11 @@ export interface GetSdwanTrafficDistributionProfileResult {
 export function getSdwanTrafficDistributionProfileOutput(args: GetSdwanTrafficDistributionProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSdwanTrafficDistributionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSdwanTrafficDistributionProfile:getSdwanTrafficDistributionProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -69,6 +105,16 @@ export function getSdwanTrafficDistributionProfileOutput(args: GetSdwanTrafficDi
  */
 export interface GetSdwanTrafficDistributionProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -76,4 +122,9 @@ export interface GetSdwanTrafficDistributionProfileOutputArgs {
      * Profile name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

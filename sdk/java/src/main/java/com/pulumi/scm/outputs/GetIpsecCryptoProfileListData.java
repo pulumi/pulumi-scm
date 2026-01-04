@@ -16,11 +16,13 @@ import java.util.Objects;
 public final class GetIpsecCryptoProfileListData {
     /**
      * @return Ah
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      * 
      */
     private GetIpsecCryptoProfileListDataAh ah;
     /**
-     * @return The device of the item.
+     * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -31,13 +33,13 @@ public final class GetIpsecCryptoProfileListData {
     private String dhGroup;
     /**
      * @return Esp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      * 
      */
     private GetIpsecCryptoProfileListDataEsp esp;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String folder;
@@ -62,7 +64,8 @@ public final class GetIpsecCryptoProfileListData {
      */
     private String name;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String snippet;
@@ -71,13 +74,15 @@ public final class GetIpsecCryptoProfileListData {
     private GetIpsecCryptoProfileListData() {}
     /**
      * @return Ah
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      * 
      */
     public GetIpsecCryptoProfileListDataAh ah() {
         return this.ah;
     }
     /**
-     * @return The device of the item.
+     * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -92,7 +97,6 @@ public final class GetIpsecCryptoProfileListData {
     }
     /**
      * @return Esp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      * 
      */
@@ -100,7 +104,8 @@ public final class GetIpsecCryptoProfileListData {
         return this.esp;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String folder() {
@@ -135,7 +140,8 @@ public final class GetIpsecCryptoProfileListData {
         return this.name;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String snippet() {

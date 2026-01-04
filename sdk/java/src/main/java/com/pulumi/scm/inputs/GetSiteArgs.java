@@ -17,6 +17,21 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSiteArgs Empty = new GetSiteArgs();
 
     /**
+     * The folder in which the resource is defined
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable Output<String> folder;
+
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * The UUID of the site
      * 
      */
@@ -49,6 +64,7 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
     private GetSiteArgs() {}
 
     private GetSiteArgs(GetSiteArgs $) {
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
     }
@@ -69,6 +85,27 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
 
         public Builder(GetSiteArgs defaults) {
             $ = new GetSiteArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable Output<String> folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
         }
 
         /**

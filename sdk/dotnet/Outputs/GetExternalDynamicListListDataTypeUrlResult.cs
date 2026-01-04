@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataTypeUrlResult
     {
         /// <summary>
-        /// Auth
+        /// Authentication settings for Custom URL type
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeUrlAuthResult Auth;
         /// <summary>
@@ -26,15 +26,15 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// Exception list
+        /// URL Exception List for Custom URL type
         /// </summary>
         public readonly ImmutableArray<string> ExceptionLists;
         /// <summary>
-        /// Recurring
+        /// Update Schedule for Custom URL type
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeUrlRecurringResult Recurring;
         /// <summary>
-        /// Url
+        /// External URL for Custom URL type
         /// </summary>
         public readonly string Url;
 

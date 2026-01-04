@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListListDataTypeUrl {
     /**
-     * @return Auth
+     * @return Authentication settings for Custom URL type
      * 
      */
     private GetExternalDynamicListListDataTypeUrlAuth auth;
@@ -29,24 +29,24 @@ public final class GetExternalDynamicListListDataTypeUrl {
      */
     private String description;
     /**
-     * @return Exception list
+     * @return URL Exception List for Custom URL type
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom URL type
      * 
      */
     private GetExternalDynamicListListDataTypeUrlRecurring recurring;
     /**
-     * @return Url
+     * @return External URL for Custom URL type
      * 
      */
     private String url;
 
     private GetExternalDynamicListListDataTypeUrl() {}
     /**
-     * @return Auth
+     * @return Authentication settings for Custom URL type
      * 
      */
     public GetExternalDynamicListListDataTypeUrlAuth auth() {
@@ -67,21 +67,21 @@ public final class GetExternalDynamicListListDataTypeUrl {
         return this.description;
     }
     /**
-     * @return Exception list
+     * @return URL Exception List for Custom URL type
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom URL type
      * 
      */
     public GetExternalDynamicListListDataTypeUrlRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return Url
+     * @return External URL for Custom URL type
      * 
      */
     public String url() {

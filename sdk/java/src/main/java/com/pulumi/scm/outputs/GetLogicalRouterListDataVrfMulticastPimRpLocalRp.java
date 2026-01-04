@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfMulticastPimRpLocalRp {
     /**
      * @return Candidate rp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
     private GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp candidateRp;
     /**
      * @return Static rp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
@@ -27,6 +27,7 @@ public final class GetLogicalRouterListDataVrfMulticastPimRpLocalRp {
     private GetLogicalRouterListDataVrfMulticastPimRpLocalRp() {}
     /**
      * @return Candidate rp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
     public GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp candidateRp() {
@@ -34,7 +35,6 @@ public final class GetLogicalRouterListDataVrfMulticastPimRpLocalRp {
     }
     /**
      * @return Static rp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */

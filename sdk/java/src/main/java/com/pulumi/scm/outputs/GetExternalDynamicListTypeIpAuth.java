@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeIpAuth {
     /**
-     * @return Password
+     * @return Password for Custom IP authentication
      * 
      */
     private String password;
     /**
-     * @return Username
+     * @return Username for Custom IP authentication
      * 
      */
     private String username;
 
     private GetExternalDynamicListTypeIpAuth() {}
     /**
-     * @return Password
+     * @return Password for Custom IP authentication
      * 
      */
     public String password() {
         return this.password;
     }
     /**
-     * @return Username
+     * @return Username for Custom IP authentication
      * 
      */
     public String username() {

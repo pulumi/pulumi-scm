@@ -25,8 +25,11 @@ import * as utilities from "./utilities";
 export function getIpsecTunnel(args: GetIpsecTunnelArgs, opts?: pulumi.InvokeOptions): Promise<GetIpsecTunnelResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIpsecTunnel:getIpsecTunnel", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -35,6 +38,16 @@ export function getIpsecTunnel(args: GetIpsecTunnelArgs, opts?: pulumi.InvokeOpt
  */
 export interface GetIpsecTunnelArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -42,6 +55,11 @@ export interface GetIpsecTunnelArgs {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -62,9 +80,17 @@ export interface GetIpsecTunnelResult {
     readonly copyTos: boolean;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * allow GRE over IPSec
+     */
     readonly enableGreEncapsulation: boolean;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -74,9 +100,19 @@ export interface GetIpsecTunnelResult {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     */
     readonly tunnelInterface: string;
+    /**
+     * Tunnel monitor
+     */
     readonly tunnelMonitor: outputs.GetIpsecTunnelTunnelMonitor;
 }
 /**
@@ -98,8 +134,11 @@ export interface GetIpsecTunnelResult {
 export function getIpsecTunnelOutput(args: GetIpsecTunnelOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpsecTunnelResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIpsecTunnel:getIpsecTunnel", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -108,6 +147,16 @@ export function getIpsecTunnelOutput(args: GetIpsecTunnelOutputArgs, opts?: pulu
  */
 export interface GetIpsecTunnelOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -115,4 +164,9 @@ export interface GetIpsecTunnelOutputArgs {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

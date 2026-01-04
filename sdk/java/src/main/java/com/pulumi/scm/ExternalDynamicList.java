@@ -143,11 +143,38 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/externalDynamicList:ExternalDynamicList example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/externalDynamicList:ExternalDynamicList example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/externalDynamicList:ExternalDynamicList example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/externalDynamicList:ExternalDynamicList")
 public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -155,6 +182,7 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -176,7 +204,6 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -185,7 +212,6 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -208,7 +234,6 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -217,7 +242,6 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -231,18 +255,18 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * Type
+     * Type configuration for External Dynamic List
      * 
      */
     @Export(name="type", refs={ExternalDynamicListType.class}, tree="[0]")
-    private Output<ExternalDynamicListType> type;
+    private Output</* @Nullable */ ExternalDynamicListType> type;
 
     /**
-     * @return Type
+     * @return Type configuration for External Dynamic List
      * 
      */
-    public Output<ExternalDynamicListType> type() {
-        return this.type;
+    public Output<Optional<ExternalDynamicListType>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

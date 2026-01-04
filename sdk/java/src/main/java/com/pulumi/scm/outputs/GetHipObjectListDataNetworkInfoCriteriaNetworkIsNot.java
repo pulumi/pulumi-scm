@@ -15,26 +15,24 @@ import java.util.Objects;
 public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
     /**
      * @return Ethernet
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernet ethernet;
     /**
      * @return Mobile
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobile mobile;
     /**
      * @return Unknown
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknown unknown;
     /**
      * @return Wifi
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -43,6 +41,7 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot() {}
     /**
      * @return Ethernet
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernet ethernet() {
@@ -50,7 +49,6 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
     }
     /**
      * @return Mobile
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -59,7 +57,6 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
     }
     /**
      * @return Unknown
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -68,7 +65,6 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
     }
     /**
      * @return Wifi
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */

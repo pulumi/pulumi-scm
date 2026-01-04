@@ -34,6 +34,11 @@ public final class GetSiteListData {
      */
     private String country;
     /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
      * @return The UUID of the site
      * 
      */
@@ -113,6 +118,13 @@ public final class GetSiteListData {
      */
     public String country() {
         return this.country;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
     }
     /**
      * @return The UUID of the site
@@ -201,6 +213,7 @@ public final class GetSiteListData {
         private String addressLine2;
         private String city;
         private String country;
+        private String folder;
         private String id;
         private String latitude;
         private String licenseType;
@@ -219,6 +232,7 @@ public final class GetSiteListData {
     	      this.addressLine2 = defaults.addressLine2;
     	      this.city = defaults.city;
     	      this.country = defaults.country;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.latitude = defaults.latitude;
     	      this.licenseType = defaults.licenseType;
@@ -262,6 +276,14 @@ public final class GetSiteListData {
               throw new MissingRequiredPropertyException("GetSiteListData", "country");
             }
             this.country = country;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetSiteListData", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -361,6 +383,7 @@ public final class GetSiteListData {
             _resultValue.addressLine2 = addressLine2;
             _resultValue.city = city;
             _resultValue.country = country;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.latitude = latitude;
             _resultValue.licenseType = licenseType;

@@ -50,8 +50,8 @@ class UrlAccessProfileArgs:
         :param pulumi.Input['UrlAccessProfileCredentialEnforcementArgs'] credential_enforcement: Credential enforcement
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
         :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
@@ -63,7 +63,6 @@ class UrlAccessProfileArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
         :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if alerts is not None:
@@ -194,6 +193,7 @@ class UrlAccessProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -206,7 +206,6 @@ class UrlAccessProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -328,7 +327,6 @@ class UrlAccessProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -371,8 +369,8 @@ class _UrlAccessProfileState:
         :param pulumi.Input['UrlAccessProfileCredentialEnforcementArgs'] credential_enforcement: Credential enforcement
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
         :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
@@ -384,7 +382,6 @@ class _UrlAccessProfileState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
         :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if alerts is not None:
@@ -517,6 +514,7 @@ class _UrlAccessProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -529,7 +527,6 @@ class _UrlAccessProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -651,7 +648,6 @@ class _UrlAccessProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -722,6 +718,32 @@ class UrlAccessProfile(pulumi.CustomResource):
             ])
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: Alert
@@ -732,8 +754,8 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']] credential_enforcement: Credential enforcement
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
         :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
@@ -745,7 +767,6 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
         :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
@@ -778,6 +799,32 @@ class UrlAccessProfile(pulumi.CustomResource):
                 "high-risk",
                 "phishing",
             ])
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example ::device:id
         ```
 
         :param str resource_name: The name of the resource.
@@ -888,8 +935,8 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']] credential_enforcement: Credential enforcement
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
         :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
@@ -901,7 +948,6 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
         :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -972,7 +1018,7 @@ class UrlAccessProfile(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="credentialEnforcement")
-    def credential_enforcement(self) -> pulumi.Output['outputs.UrlAccessProfileCredentialEnforcement']:
+    def credential_enforcement(self) -> pulumi.Output[Optional['outputs.UrlAccessProfileCredentialEnforcement']]:
         """
         Credential enforcement
         """
@@ -991,6 +1037,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -999,7 +1046,6 @@ class UrlAccessProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -1081,7 +1127,6 @@ class UrlAccessProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

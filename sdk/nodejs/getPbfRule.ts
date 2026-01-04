@@ -29,8 +29,11 @@ import * as utilities from "./utilities";
 export function getPbfRule(args: GetPbfRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetPbfRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getPbfRule:getPbfRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -39,6 +42,16 @@ export function getPbfRule(args: GetPbfRuleArgs, opts?: pulumi.InvokeOptions): P
  */
 export interface GetPbfRuleArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -46,6 +59,11 @@ export interface GetPbfRuleArgs {
      * PBF rule name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -70,10 +88,21 @@ export interface GetPbfRuleResult {
     readonly destinations: string[];
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Enforce symmetric return
+     */
     readonly enforceSymmetricReturn: outputs.GetPbfRuleEnforceSymmetricReturn;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
+    /**
+     * From
+     */
     readonly from: outputs.GetPbfRuleFrom;
     /**
      * UUID of the resource
@@ -83,11 +112,30 @@ export interface GetPbfRuleResult {
      * PBF rule name
      */
     readonly name: string;
+    /**
+     * Schedule
+     */
     readonly schedule: string;
+    /**
+     * Services
+     */
     readonly services: string[];
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * Source users
+     */
     readonly sourceUsers: string[];
+    /**
+     * Source addresses
+     */
     readonly sources: string[];
+    /**
+     * Tags
+     */
     readonly tags: string[];
     readonly tfid: string;
 }
@@ -114,8 +162,11 @@ export interface GetPbfRuleResult {
 export function getPbfRuleOutput(args: GetPbfRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPbfRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getPbfRule:getPbfRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -124,6 +175,16 @@ export function getPbfRuleOutput(args: GetPbfRuleOutputArgs, opts?: pulumi.Invok
  */
 export interface GetPbfRuleOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -131,4 +192,9 @@ export interface GetPbfRuleOutputArgs {
      * PBF rule name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

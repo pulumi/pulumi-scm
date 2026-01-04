@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataTypeDomainResult
     {
         /// <summary>
-        /// Auth
+        /// Authentication settings for Custom Domain type
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeDomainAuthResult Auth;
         /// <summary>
@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// Exception list
+        /// Domain Exception List for Custom Domain type
         /// </summary>
         public readonly ImmutableArray<string> ExceptionLists;
         /// <summary>
@@ -34,11 +34,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool ExpandDomain;
         /// <summary>
-        /// Recurring
+        /// Update Schedule for Custom Domain type
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeDomainRecurringResult Recurring;
         /// <summary>
-        /// Url
+        /// External URL for Custom Domain type
         /// </summary>
         public readonly string Url;
 

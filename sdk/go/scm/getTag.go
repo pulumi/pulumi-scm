@@ -58,10 +58,19 @@ func LookupTag(ctx *pulumi.Context, args *LookupTagArgs, opts ...pulumi.InvokeOp
 
 // A collection of arguments for invoking getTag.
 type LookupTagArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// The UUID of the tag
 	Id string `pulumi:"id"`
 	// The name of the tag
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getTag.
@@ -71,12 +80,17 @@ type LookupTagResult struct {
 	// The description of the tag
 	Comments string `pulumi:"comments"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the tag
 	Id string `pulumi:"id"`
 	// The name of the tag
-	Name    string `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -92,10 +106,19 @@ func LookupTagOutput(ctx *pulumi.Context, args LookupTagOutputArgs, opts ...pulu
 
 // A collection of arguments for invoking getTag.
 type LookupTagOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the tag
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the tag
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupTagOutputArgs) ElementType() reflect.Type {
@@ -128,10 +151,13 @@ func (o LookupTagResultOutput) Comments() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTagResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTagResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -146,6 +172,8 @@ func (o LookupTagResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTagResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

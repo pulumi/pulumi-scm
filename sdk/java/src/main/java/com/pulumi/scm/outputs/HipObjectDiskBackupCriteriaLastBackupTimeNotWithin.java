@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 public final class HipObjectDiskBackupCriteriaLastBackupTimeNotWithin {
     /**
      * @return specify time in days
+     * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
     private @Nullable Integer days;
     /**
      * @return specify time in hours
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
@@ -27,6 +27,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeNotWithin {
     private HipObjectDiskBackupCriteriaLastBackupTimeNotWithin() {}
     /**
      * @return specify time in days
+     * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
     public Optional<Integer> days() {
@@ -34,7 +35,6 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeNotWithin {
     }
     /**
      * @return specify time in hours
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */

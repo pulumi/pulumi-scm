@@ -139,6 +139,32 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/aggregateInterface:AggregateInterface example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/aggregateInterface:AggregateInterface example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/aggregateInterface:AggregateInterface example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/aggregateInterface:AggregateInterface")]
     public partial class AggregateInterface : global::Pulumi.CustomResource
@@ -157,13 +183,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -171,19 +197,17 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Layer2
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Layer2` and `Layer3`.
         /// </summary>
         [Output("layer2")]
-        public Output<Outputs.AggregateInterfaceLayer2> Layer2 { get; private set; } = null!;
+        public Output<Outputs.AggregateInterfaceLayer2?> Layer2 { get; private set; } = null!;
 
         /// <summary>
         /// Aggregate Interface Layer 3 configuration
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Layer2` and `Layer3`.
         /// </summary>
         [Output("layer3")]
-        public Output<Outputs.AggregateInterfaceLayer3> Layer3 { get; private set; } = null!;
+        public Output<Outputs.AggregateInterfaceLayer3?> Layer3 { get; private set; } = null!;
 
         /// <summary>
         /// Aggregate interface name
@@ -193,7 +217,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -262,13 +285,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -276,7 +299,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Layer2
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Layer2` and `Layer3`.
         /// </summary>
         [Input("layer2")]
@@ -284,7 +306,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Aggregate Interface Layer 3 configuration
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Layer2` and `Layer3`.
         /// </summary>
         [Input("layer3")]
@@ -298,7 +319,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -326,13 +346,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -340,7 +360,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Layer2
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Layer2` and `Layer3`.
         /// </summary>
         [Input("layer2")]
@@ -348,7 +367,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Aggregate Interface Layer 3 configuration
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Layer2` and `Layer3`.
         /// </summary>
         [Input("layer3")]
@@ -362,7 +380,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

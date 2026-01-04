@@ -89,6 +89,32 @@ import * as utilities from "./utilities";
  *     sourceNat: true,
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/serviceConnection:ServiceConnection example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/serviceConnection:ServiceConnection example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/serviceConnection:ServiceConnection example ::device:id
+ * ```
  */
 export class ServiceConnection extends pulumi.CustomResource {
     /**
@@ -130,6 +156,10 @@ export class ServiceConnection extends pulumi.CustomResource {
      * Map of sensitive values returned from the API.
      */
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
+    /**
+     * The folder in which the resource is defined
+     */
+    declare public /*out*/ readonly folder: pulumi.Output<string>;
     /**
      * Ipsec tunnel
      */
@@ -192,6 +222,7 @@ export class ServiceConnection extends pulumi.CustomResource {
             resourceInputs["backupSc"] = state?.backupSc;
             resourceInputs["bgpPeer"] = state?.bgpPeer;
             resourceInputs["encryptedValues"] = state?.encryptedValues;
+            resourceInputs["folder"] = state?.folder;
             resourceInputs["ipsecTunnel"] = state?.ipsecTunnel;
             resourceInputs["name"] = state?.name;
             resourceInputs["natPool"] = state?.natPool;
@@ -226,6 +257,7 @@ export class ServiceConnection extends pulumi.CustomResource {
             resourceInputs["sourceNat"] = args?.sourceNat;
             resourceInputs["subnets"] = args?.subnets;
             resourceInputs["encryptedValues"] = undefined /*out*/;
+            resourceInputs["folder"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -251,6 +283,10 @@ export interface ServiceConnectionState {
      * Map of sensitive values returned from the API.
      */
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: pulumi.Input<string>;
     /**
      * Ipsec tunnel
      */
