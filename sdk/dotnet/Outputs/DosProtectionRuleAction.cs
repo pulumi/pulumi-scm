@@ -15,17 +15,16 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Allow
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow`, `Deny`, and `Protect`.
         /// </summary>
         public readonly Outputs.DosProtectionRuleActionAllow? Allow;
         /// <summary>
         /// Deny
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow`, `Deny`, and `Protect`.
         /// </summary>
         public readonly Outputs.DosProtectionRuleActionDeny? Deny;
         /// <summary>
         /// Protect
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow`, `Deny`, and `Protect`.
         /// </summary>
         public readonly Outputs.DosProtectionRuleActionProtect? Protect;

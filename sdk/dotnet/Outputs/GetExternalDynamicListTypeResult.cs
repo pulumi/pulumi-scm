@@ -14,42 +14,37 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListTypeResult
     {
         /// <summary>
-        /// Domain
+        /// Domain settings for Custom Domain type
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeDomainResult Domain;
         /// <summary>
-        /// Imei
-        /// 
+        /// IMEI Configuration settings
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImeiResult Imei;
         /// <summary>
-        /// Imsi
-        /// 
+        /// IMSI Config for Custom IMSI type
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImsiResult Imsi;
         /// <summary>
-        /// Ip
-        /// 
+        /// IP settings for Custom IP type
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeIpResult Ip;
         /// <summary>
-        /// Predefined ip
-        /// 
+        /// Predefined IP settings for EDL type
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypePredefinedIpResult PredefinedIp;
         /// <summary>
-        /// Predefined url
-        /// 
+        /// Predefined URL settings for EDL type
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypePredefinedUrlResult PredefinedUrl;
         /// <summary>
-        /// Url
-        /// 
+        /// URL settings for Custom URL type
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeUrlResult Url;

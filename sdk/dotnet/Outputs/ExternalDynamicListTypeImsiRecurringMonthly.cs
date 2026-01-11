@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeImsiRecurringMonthly
     {
         /// <summary>
-        /// Time specification hh (e.g. 20)
+        /// Monthly Time specification hh (e.g. 20) for IMSI
         /// </summary>
         public readonly string At;
         /// <summary>
-        /// Day of month
+        /// Day of the month for monthly IMSI updates
         /// </summary>
         public readonly int DayOfMonth;
 

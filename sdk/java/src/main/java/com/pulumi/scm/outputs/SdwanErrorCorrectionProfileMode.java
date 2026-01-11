@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class SdwanErrorCorrectionProfileMode {
     /**
      * @return Forward error correction
+     * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      * 
      */
     private @Nullable SdwanErrorCorrectionProfileModeForwardErrorCorrection forwardErrorCorrection;
     /**
      * @return Packet duplication
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      * 
      */
@@ -28,6 +28,7 @@ public final class SdwanErrorCorrectionProfileMode {
     private SdwanErrorCorrectionProfileMode() {}
     /**
      * @return Forward error correction
+     * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      * 
      */
     public Optional<SdwanErrorCorrectionProfileModeForwardErrorCorrection> forwardErrorCorrection() {
@@ -35,7 +36,6 @@ public final class SdwanErrorCorrectionProfileMode {
     }
     /**
      * @return Packet duplication
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      * 
      */

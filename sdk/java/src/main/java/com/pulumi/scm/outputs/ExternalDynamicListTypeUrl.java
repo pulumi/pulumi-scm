@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListTypeUrl {
     /**
-     * @return Auth
+     * @return Authentication settings for Custom URL type
      * 
      */
     private @Nullable ExternalDynamicListTypeUrlAuth auth;
@@ -31,24 +31,24 @@ public final class ExternalDynamicListTypeUrl {
      */
     private @Nullable String description;
     /**
-     * @return Exception list
+     * @return URL Exception List for Custom URL type
      * 
      */
     private @Nullable List<String> exceptionLists;
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom URL type
      * 
      */
     private ExternalDynamicListTypeUrlRecurring recurring;
     /**
-     * @return Url
+     * @return External URL for Custom URL type
      * 
      */
     private String url;
 
     private ExternalDynamicListTypeUrl() {}
     /**
-     * @return Auth
+     * @return Authentication settings for Custom URL type
      * 
      */
     public Optional<ExternalDynamicListTypeUrlAuth> auth() {
@@ -69,21 +69,21 @@ public final class ExternalDynamicListTypeUrl {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return Exception list
+     * @return URL Exception List for Custom URL type
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists == null ? List.of() : this.exceptionLists;
     }
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom URL type
      * 
      */
     public ExternalDynamicListTypeUrlRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return Url
+     * @return External URL for Custom URL type
      * 
      */
     public String url() {

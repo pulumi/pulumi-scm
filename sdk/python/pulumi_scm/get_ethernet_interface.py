@@ -85,32 +85,50 @@ class GetEthernetInterfaceResult:
     def aggregate_group(self) -> _builtins.str:
         """
         Aggregate group
+        > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "aggregate_group")
 
     @_builtins.property
     @pulumi.getter
     def comment(self) -> _builtins.str:
+        """
+        Interface description
+        """
         return pulumi.get(self, "comment")
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> _builtins.str:
+        """
+        Default interface assignment
+        """
         return pulumi.get(self, "default_value")
 
     @_builtins.property
     @pulumi.getter
     def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
+        """
+        Map of sensitive values returned from the API.
+        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -124,26 +142,43 @@ class GetEthernetInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def layer2(self) -> 'outputs.GetEthernetInterfaceLayer2Result':
+        """
+        Layer2
+        > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
+        """
         return pulumi.get(self, "layer2")
 
     @_builtins.property
     @pulumi.getter
     def layer3(self) -> 'outputs.GetEthernetInterfaceLayer3Result':
+        """
+        Ethernet Interface Layer 3 configuration
+        > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
+        """
         return pulumi.get(self, "layer3")
 
     @_builtins.property
     @pulumi.getter(name="linkDuplex")
     def link_duplex(self) -> _builtins.str:
+        """
+        Link duplex
+        """
         return pulumi.get(self, "link_duplex")
 
     @_builtins.property
     @pulumi.getter(name="linkSpeed")
     def link_speed(self) -> _builtins.str:
+        """
+        Link speed
+        """
         return pulumi.get(self, "link_speed")
 
     @_builtins.property
     @pulumi.getter(name="linkState")
     def link_state(self) -> _builtins.str:
+        """
+        Link state
+        """
         return pulumi.get(self, "link_state")
 
     @_builtins.property
@@ -157,16 +192,27 @@ class GetEthernetInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def poe(self) -> 'outputs.GetEthernetInterfacePoeResult':
+        """
+        Poe
+        """
         return pulumi.get(self, "poe")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tap(self) -> 'outputs.GetEthernetInterfaceTapResult':
+        """
+        Tap
+        > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
+        """
         return pulumi.get(self, "tap")
 
     @_builtins.property
@@ -200,8 +246,11 @@ class AwaitableGetEthernetInterfaceResult(GetEthernetInterfaceResult):
             tfid=self.tfid)
 
 
-def get_ethernet_interface(id: Optional[_builtins.str] = None,
+def get_ethernet_interface(device: Optional[_builtins.str] = None,
+                           folder: Optional[_builtins.str] = None,
+                           id: Optional[_builtins.str] = None,
                            name: Optional[_builtins.str] = None,
+                           snippet: Optional[_builtins.str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetEthernetInterfaceResult:
     """
     EthernetInterface data source
@@ -224,12 +273,21 @@ def get_ethernet_interface(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getEthernetInterface:getEthernetInterface', __args__, opts=opts, typ=GetEthernetInterfaceResult).value
 
@@ -251,8 +309,11 @@ def get_ethernet_interface(id: Optional[_builtins.str] = None,
         snippet=pulumi.get(__ret__, 'snippet'),
         tap=pulumi.get(__ret__, 'tap'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_ethernet_interface_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_ethernet_interface_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                  folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                  id: Optional[pulumi.Input[_builtins.str]] = None,
                                   name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                  snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetEthernetInterfaceResult]:
     """
     EthernetInterface data source
@@ -275,12 +336,21 @@ def get_ethernet_interface_output(id: Optional[pulumi.Input[_builtins.str]] = No
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getEthernetInterface:getEthernetInterface', __args__, opts=opts, typ=GetEthernetInterfaceResult)
     return __ret__.apply(lambda __response__: GetEthernetInterfaceResult(

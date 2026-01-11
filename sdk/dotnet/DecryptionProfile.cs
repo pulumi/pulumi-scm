@@ -180,19 +180,45 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/decryptionProfile:DecryptionProfile example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/decryptionProfile:DecryptionProfile example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/decryptionProfile:DecryptionProfile example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/decryptionProfile:DecryptionProfile")]
     public partial class DecryptionProfile : global::Pulumi.CustomResource
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -206,7 +232,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -216,25 +241,25 @@ namespace Pulumi.Scm
         /// Ssl forward proxy
         /// </summary>
         [Output("sslForwardProxy")]
-        public Output<Outputs.DecryptionProfileSslForwardProxy> SslForwardProxy { get; private set; } = null!;
+        public Output<Outputs.DecryptionProfileSslForwardProxy?> SslForwardProxy { get; private set; } = null!;
 
         /// <summary>
         /// Ssl inbound proxy
         /// </summary>
         [Output("sslInboundProxy")]
-        public Output<Outputs.DecryptionProfileSslInboundProxy> SslInboundProxy { get; private set; } = null!;
+        public Output<Outputs.DecryptionProfileSslInboundProxy?> SslInboundProxy { get; private set; } = null!;
 
         /// <summary>
         /// Ssl no proxy
         /// </summary>
         [Output("sslNoProxy")]
-        public Output<Outputs.DecryptionProfileSslNoProxy> SslNoProxy { get; private set; } = null!;
+        public Output<Outputs.DecryptionProfileSslNoProxy?> SslNoProxy { get; private set; } = null!;
 
         /// <summary>
         /// Ssl protocol settings
         /// </summary>
         [Output("sslProtocolSettings")]
-        public Output<Outputs.DecryptionProfileSslProtocolSettings> SslProtocolSettings { get; private set; } = null!;
+        public Output<Outputs.DecryptionProfileSslProtocolSettings?> SslProtocolSettings { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
@@ -287,13 +312,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -307,7 +332,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -347,13 +371,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -367,7 +391,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

@@ -109,6 +109,12 @@ namespace Pulumi.Scm
     public sealed class GetServiceConnectionGroupArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// The UUID of the service connection group
         /// </summary>
         [Input("id", required: true)]
@@ -128,6 +134,12 @@ namespace Pulumi.Scm
 
     public sealed class GetServiceConnectionGroupInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the service connection group
         /// </summary>
@@ -155,6 +167,10 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly bool DisableSnat;
         /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
         /// The UUID of the service connection group
         /// </summary>
         public readonly string Id;
@@ -176,6 +192,8 @@ namespace Pulumi.Scm
         private GetServiceConnectionGroupResult(
             bool disableSnat,
 
+            string folder,
+
             string id,
 
             string name,
@@ -187,6 +205,7 @@ namespace Pulumi.Scm
             string tfid)
         {
             DisableSnat = disableSnat;
+            Folder = folder;
             Id = id;
             Name = name;
             PbfOnly = pbfOnly;

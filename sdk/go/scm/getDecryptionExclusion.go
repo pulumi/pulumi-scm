@@ -24,10 +24,19 @@ func LookupDecryptionExclusion(ctx *pulumi.Context, args *LookupDecryptionExclus
 
 // A collection of arguments for invoking getDecryptionExclusion.
 type LookupDecryptionExclusionArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Name
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDecryptionExclusion.
@@ -35,12 +44,17 @@ type LookupDecryptionExclusionResult struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Name
-	Name    string `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -56,10 +70,19 @@ func LookupDecryptionExclusionOutput(ctx *pulumi.Context, args LookupDecryptionE
 
 // A collection of arguments for invoking getDecryptionExclusion.
 type LookupDecryptionExclusionOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Name
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupDecryptionExclusionOutputArgs) ElementType() reflect.Type {
@@ -87,10 +110,13 @@ func (o LookupDecryptionExclusionResultOutput) Description() pulumi.StringOutput
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDecryptionExclusionResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDecryptionExclusionResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -105,6 +131,8 @@ func (o LookupDecryptionExclusionResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDecryptionExclusionResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

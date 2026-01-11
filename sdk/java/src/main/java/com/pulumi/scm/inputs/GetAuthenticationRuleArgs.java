@@ -17,6 +17,40 @@ public final class GetAuthenticationRuleArgs extends com.pulumi.resources.Invoke
     public static final GetAuthenticationRuleArgs Empty = new GetAuthenticationRuleArgs();
 
     /**
+     * Device
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="device")
+    private @Nullable Output<String> device;
+
+    /**
+     * @return Device
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<Output<String>> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    /**
+     * Folder
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable Output<String> folder;
+
+    /**
+     * @return Folder
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * The UUID of the authentication rule
      * 
      */
@@ -46,11 +80,31 @@ public final class GetAuthenticationRuleArgs extends com.pulumi.resources.Invoke
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Snippet
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="snippet")
+    private @Nullable Output<String> snippet;
+
+    /**
+     * @return Snippet
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<Output<String>> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetAuthenticationRuleArgs() {}
 
     private GetAuthenticationRuleArgs(GetAuthenticationRuleArgs $) {
+        this.device = $.device;
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -69,6 +123,52 @@ public final class GetAuthenticationRuleArgs extends com.pulumi.resources.Invoke
 
         public Builder(GetAuthenticationRuleArgs defaults) {
             $ = new GetAuthenticationRuleArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param device Device
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(@Nullable Output<String> device) {
+            $.device = device;
+            return this;
+        }
+
+        /**
+         * @param device Device
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(String device) {
+            return device(Output.of(device));
+        }
+
+        /**
+         * @param folder Folder
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable Output<String> folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
+         * @param folder Folder
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
         }
 
         /**
@@ -111,6 +211,29 @@ public final class GetAuthenticationRuleArgs extends com.pulumi.resources.Invoke
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param snippet Snippet
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(@Nullable Output<String> snippet) {
+            $.snippet = snippet;
+            return this;
+        }
+
+        /**
+         * @param snippet Snippet
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(String snippet) {
+            return snippet(Output.of(snippet));
         }
 
         public GetAuthenticationRuleArgs build() {

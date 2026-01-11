@@ -18,6 +18,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgs e
 
     /**
      * Restart
+     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
     @Import(name="restart")
@@ -25,6 +26,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgs e
 
     /**
      * @return Restart
+     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
     public Optional<Output<BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestartArgs>> restart() {
@@ -33,7 +35,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgs e
 
     /**
      * Warning only
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
@@ -42,7 +43,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgs e
 
     /**
      * @return Warning only
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
@@ -77,6 +77,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgs e
 
         /**
          * @param restart Restart
+         * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
          * 
          * @return builder
          * 
@@ -88,6 +89,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgs e
 
         /**
          * @param restart Restart
+         * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
          * 
          * @return builder
          * 
@@ -98,7 +100,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgs e
 
         /**
          * @param warningOnly Warning only
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
          * 
          * @return builder
@@ -111,7 +112,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgs e
 
         /**
          * @param warningOnly Warning only
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
          * 
          * @return builder

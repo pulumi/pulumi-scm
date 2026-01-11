@@ -85,15 +85,41 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/bgpRouteMap:BgpRouteMap example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/bgpRouteMap:BgpRouteMap example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/bgpRouteMap:BgpRouteMap example ::device:id
+// ```
 type BgpRouteMap struct {
 	pulumi.CustomResourceState
 
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Name
@@ -101,7 +127,6 @@ type BgpRouteMap struct {
 	// Route map
 	RouteMaps BgpRouteMapRouteMapArrayOutput `pulumi:"routeMaps"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -140,9 +165,9 @@ type bgpRouteMapState struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name
@@ -150,7 +175,6 @@ type bgpRouteMapState struct {
 	// Route map
 	RouteMaps []BgpRouteMapRouteMap `pulumi:"routeMaps"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -160,9 +184,9 @@ type BgpRouteMapState struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name
@@ -170,7 +194,6 @@ type BgpRouteMapState struct {
 	// Route map
 	RouteMaps BgpRouteMapRouteMapArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -184,9 +207,9 @@ type bgpRouteMapArgs struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name
@@ -194,7 +217,6 @@ type bgpRouteMapArgs struct {
 	// Route map
 	RouteMaps []BgpRouteMapRouteMap `pulumi:"routeMaps"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -204,9 +226,9 @@ type BgpRouteMapArgs struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name
@@ -214,7 +236,6 @@ type BgpRouteMapArgs struct {
 	// Route map
 	RouteMaps BgpRouteMapRouteMapArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -312,12 +333,12 @@ func (o BgpRouteMapOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpRouteMapOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMap) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpRouteMapOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMap) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -334,7 +355,6 @@ func (o BgpRouteMapOutput) RouteMaps() BgpRouteMapRouteMapArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpRouteMapOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMap) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

@@ -24,22 +24,37 @@ func LookupSdwanSaasQualityProfile(ctx *pulumi.Context, args *LookupSdwanSaasQua
 
 // A collection of arguments for invoking getSdwanSaasQualityProfile.
 type LookupSdwanSaasQualityProfileArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Profile name
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSdwanSaasQualityProfile.
 type LookupSdwanSaasQualityProfileResult struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id          string                                `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Monitor mode
 	MonitorMode GetSdwanSaasQualityProfileMonitorMode `pulumi:"monitorMode"`
 	// Profile name
-	Name    string `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -55,10 +70,19 @@ func LookupSdwanSaasQualityProfileOutput(ctx *pulumi.Context, args LookupSdwanSa
 
 // A collection of arguments for invoking getSdwanSaasQualityProfile.
 type LookupSdwanSaasQualityProfileOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Profile name
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupSdwanSaasQualityProfileOutputArgs) ElementType() reflect.Type {
@@ -81,10 +105,13 @@ func (o LookupSdwanSaasQualityProfileResultOutput) ToLookupSdwanSaasQualityProfi
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanSaasQualityProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanSaasQualityProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -94,6 +121,7 @@ func (o LookupSdwanSaasQualityProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Monitor mode
 func (o LookupSdwanSaasQualityProfileResultOutput) MonitorMode() GetSdwanSaasQualityProfileMonitorModeOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) GetSdwanSaasQualityProfileMonitorMode {
 		return v.MonitorMode
@@ -105,6 +133,8 @@ func (o LookupSdwanSaasQualityProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanSaasQualityProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanSaasQualityProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

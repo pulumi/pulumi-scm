@@ -18,9 +18,15 @@ public final class GetTlsServiceProfileResult {
     private String certificate;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the TLS service profile
@@ -32,7 +38,16 @@ public final class GetTlsServiceProfileResult {
      * 
      */
     private String name;
+    /**
+     * @return Protocol settings
+     * 
+     */
     private GetTlsServiceProfileProtocolSettings protocolSettings;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
     private String tfid;
 
@@ -46,11 +61,17 @@ public final class GetTlsServiceProfileResult {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -68,9 +89,18 @@ public final class GetTlsServiceProfileResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return Protocol settings
+     * 
+     */
     public GetTlsServiceProfileProtocolSettings protocolSettings() {
         return this.protocolSettings;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }

@@ -20,14 +20,14 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
     public static final ExternalDynamicListTypeUrlArgs Empty = new ExternalDynamicListTypeUrlArgs();
 
     /**
-     * Auth
+     * Authentication settings for Custom URL type
      * 
      */
     @Import(name="auth")
     private @Nullable Output<ExternalDynamicListTypeUrlAuthArgs> auth;
 
     /**
-     * @return Auth
+     * @return Authentication settings for Custom URL type
      * 
      */
     public Optional<Output<ExternalDynamicListTypeUrlAuthArgs>> auth() {
@@ -65,14 +65,14 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Exception list
+     * URL Exception List for Custom URL type
      * 
      */
     @Import(name="exceptionLists")
     private @Nullable Output<List<String>> exceptionLists;
 
     /**
-     * @return Exception list
+     * @return URL Exception List for Custom URL type
      * 
      */
     public Optional<Output<List<String>>> exceptionLists() {
@@ -80,14 +80,14 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Recurring
+     * Update Schedule for Custom URL type
      * 
      */
     @Import(name="recurring", required=true)
     private Output<ExternalDynamicListTypeUrlRecurringArgs> recurring;
 
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom URL type
      * 
      */
     public Output<ExternalDynamicListTypeUrlRecurringArgs> recurring() {
@@ -95,14 +95,14 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Url
+     * External URL for Custom URL type
      * 
      */
     @Import(name="url", required=true)
     private Output<String> url;
 
     /**
-     * @return Url
+     * @return External URL for Custom URL type
      * 
      */
     public Output<String> url() {
@@ -139,7 +139,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param auth Auth
+         * @param auth Authentication settings for Custom URL type
          * 
          * @return builder
          * 
@@ -150,7 +150,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param auth Auth
+         * @param auth Authentication settings for Custom URL type
          * 
          * @return builder
          * 
@@ -202,7 +202,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists URL Exception List for Custom URL type
          * 
          * @return builder
          * 
@@ -213,7 +213,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists URL Exception List for Custom URL type
          * 
          * @return builder
          * 
@@ -223,7 +223,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists URL Exception List for Custom URL type
          * 
          * @return builder
          * 
@@ -233,7 +233,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param recurring Recurring
+         * @param recurring Update Schedule for Custom URL type
          * 
          * @return builder
          * 
@@ -244,7 +244,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param recurring Recurring
+         * @param recurring Update Schedule for Custom URL type
          * 
          * @return builder
          * 
@@ -254,7 +254,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param url Url
+         * @param url External URL for Custom URL type
          * 
          * @return builder
          * 
@@ -265,7 +265,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param url Url
+         * @param url External URL for Custom URL type
          * 
          * @return builder
          * 

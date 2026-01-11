@@ -17,9 +17,15 @@ public final class GetLayer2SubinterfaceResult {
     private String comment;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
@@ -31,9 +37,22 @@ public final class GetLayer2SubinterfaceResult {
      * 
      */
     private String name;
+    /**
+     * @return Parent interface
+     * 
+     */
     private String parentInterface;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
     private String tfid;
+    /**
+     * @return VLAN tag
+     * 
+     */
     private String vlanTag;
 
     private GetLayer2SubinterfaceResult() {}
@@ -46,11 +65,17 @@ public final class GetLayer2SubinterfaceResult {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -68,15 +93,28 @@ public final class GetLayer2SubinterfaceResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return Parent interface
+     * 
+     */
     public String parentInterface() {
         return this.parentInterface;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return VLAN tag
+     * 
+     */
     public String vlanTag() {
         return this.vlanTag;
     }

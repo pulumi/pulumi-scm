@@ -106,6 +106,20 @@ namespace Pulumi.Scm
     public sealed class GetCertificateProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// The UUID of the certificate profile
         /// </summary>
         [Input("id", required: true)]
@@ -117,6 +131,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetCertificateProfileArgs()
         {
         }
@@ -125,6 +146,20 @@ namespace Pulumi.Scm
 
     public sealed class GetCertificateProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the certificate profile
         /// </summary>
@@ -136,6 +171,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetCertificateProfileInvokeArgs()
         {
@@ -177,9 +219,17 @@ namespace Pulumi.Scm
         public readonly string CrlReceiveTimeout;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// User domain
+        /// </summary>
         public readonly string Domain;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the certificate profile
@@ -189,11 +239,27 @@ namespace Pulumi.Scm
         /// The name of the certificate profile
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// OCSP receive timeout (seconds)
+        /// </summary>
         public readonly string OcspReceiveTimeout;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
+        /// <summary>
+        /// Use CRL?
+        /// </summary>
         public readonly bool UseCrl;
+        /// <summary>
+        /// Use OCSP?
+        /// </summary>
         public readonly bool UseOcsp;
+        /// <summary>
+        /// Certificate username field
+        /// </summary>
         public readonly Outputs.GetCertificateProfileUsernameFieldResult UsernameField;
 
         [OutputConstructor]

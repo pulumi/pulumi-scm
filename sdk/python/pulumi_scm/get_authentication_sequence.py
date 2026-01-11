@@ -65,12 +65,17 @@ class GetAuthenticationSequenceResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -92,6 +97,10 @@ class GetAuthenticationSequenceResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -102,6 +111,9 @@ class GetAuthenticationSequenceResult:
     @_builtins.property
     @pulumi.getter(name="useDomainFindProfile")
     def use_domain_find_profile(self) -> _builtins.bool:
+        """
+        Use domain to determine authentication profile?
+        """
         return pulumi.get(self, "use_domain_find_profile")
 
 
@@ -121,8 +133,11 @@ class AwaitableGetAuthenticationSequenceResult(GetAuthenticationSequenceResult):
             use_domain_find_profile=self.use_domain_find_profile)
 
 
-def get_authentication_sequence(id: Optional[_builtins.str] = None,
+def get_authentication_sequence(device: Optional[_builtins.str] = None,
+                                folder: Optional[_builtins.str] = None,
+                                id: Optional[_builtins.str] = None,
                                 name: Optional[_builtins.str] = None,
+                                snippet: Optional[_builtins.str] = None,
                                 opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAuthenticationSequenceResult:
     """
     AuthenticationSequence data source
@@ -139,12 +154,21 @@ def get_authentication_sequence(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the authentication sequence
     :param _builtins.str name: The name of the authentication sequence
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getAuthenticationSequence:getAuthenticationSequence', __args__, opts=opts, typ=GetAuthenticationSequenceResult).value
 
@@ -157,8 +181,11 @@ def get_authentication_sequence(id: Optional[_builtins.str] = None,
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         use_domain_find_profile=pulumi.get(__ret__, 'use_domain_find_profile'))
-def get_authentication_sequence_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_authentication_sequence_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                       folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                       id: Optional[pulumi.Input[_builtins.str]] = None,
                                        name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                       snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationSequenceResult]:
     """
     AuthenticationSequence data source
@@ -175,12 +202,21 @@ def get_authentication_sequence_output(id: Optional[pulumi.Input[_builtins.str]]
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the authentication sequence
     :param _builtins.str name: The name of the authentication sequence
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationSequence:getAuthenticationSequence', __args__, opts=opts, typ=GetAuthenticationSequenceResult)
     return __ret__.apply(lambda __response__: GetAuthenticationSequenceResult(

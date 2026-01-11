@@ -15,6 +15,20 @@ public final class GetZoneProtectionProfilePlainArgs extends com.pulumi.resource
 
     public static final GetZoneProtectionProfilePlainArgs Empty = new GetZoneProtectionProfilePlainArgs();
 
+    @Import(name="device")
+    private @Nullable String device;
+
+    public Optional<String> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    @Import(name="folder")
+    private @Nullable String folder;
+
+    public Optional<String> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
     @Import(name="id", required=true)
     private String id;
 
@@ -29,11 +43,21 @@ public final class GetZoneProtectionProfilePlainArgs extends com.pulumi.resource
         return Optional.ofNullable(this.name);
     }
 
+    @Import(name="snippet")
+    private @Nullable String snippet;
+
+    public Optional<String> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetZoneProtectionProfilePlainArgs() {}
 
     private GetZoneProtectionProfilePlainArgs(GetZoneProtectionProfilePlainArgs $) {
+        this.device = $.device;
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -54,6 +78,16 @@ public final class GetZoneProtectionProfilePlainArgs extends com.pulumi.resource
             $ = new GetZoneProtectionProfilePlainArgs(Objects.requireNonNull(defaults));
         }
 
+        public Builder device(@Nullable String device) {
+            $.device = device;
+            return this;
+        }
+
+        public Builder folder(@Nullable String folder) {
+            $.folder = folder;
+            return this;
+        }
+
         public Builder id(String id) {
             $.id = id;
             return this;
@@ -61,6 +95,11 @@ public final class GetZoneProtectionProfilePlainArgs extends com.pulumi.resource
 
         public Builder name(@Nullable String name) {
             $.name = name;
+            return this;
+        }
+
+        public Builder snippet(@Nullable String snippet) {
+            $.snippet = snippet;
             return this;
         }
 

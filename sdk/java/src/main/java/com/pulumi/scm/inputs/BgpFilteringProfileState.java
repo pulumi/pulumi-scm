@@ -33,6 +33,7 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -40,6 +41,7 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -48,7 +50,6 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -57,7 +58,6 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -97,7 +97,6 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -106,7 +105,6 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -174,6 +172,7 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -185,6 +184,7 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -195,7 +195,6 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -208,7 +207,6 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -262,7 +260,6 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -275,7 +272,6 @@ public final class BgpFilteringProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

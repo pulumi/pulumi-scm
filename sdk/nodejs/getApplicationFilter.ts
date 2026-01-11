@@ -24,8 +24,11 @@ import * as utilities from "./utilities";
 export function getApplicationFilter(args: GetApplicationFilterArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationFilterResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getApplicationFilter:getApplicationFilter", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -34,6 +37,16 @@ export function getApplicationFilter(args: GetApplicationFilterArgs, opts?: pulu
  */
 export interface GetApplicationFilterArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -41,6 +54,11 @@ export interface GetApplicationFilterArgs {
      * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -53,35 +71,95 @@ export interface GetApplicationFilterResult {
     readonly categories: string[];
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * only True is a valid value
+     */
     readonly evasive: boolean;
+    /**
+     * only True is a valid value
+     */
     readonly excessiveBandwidthUse: boolean;
+    /**
+     * Exclude
+     */
     readonly excludes: string[];
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
+    /**
+     * only True is a valid value
+     */
     readonly hasKnownVulnerabilities: boolean;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * only True is a valid value
+     */
     readonly isSaas: boolean;
     /**
      * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     readonly name: string;
+    /**
+     * only True is a valid value
+     */
     readonly newAppid: boolean;
+    /**
+     * only True is a valid value
+     */
     readonly pervasive: boolean;
+    /**
+     * only True is a valid value
+     */
     readonly proneToMisuse: boolean;
+    /**
+     * Risk
+     */
     readonly risks: number[];
+    /**
+     * Saas certifications
+     */
     readonly saasCertifications: string[];
+    /**
+     * Saas risk
+     */
     readonly saasRisks: string[];
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * Subcategory
+     */
     readonly subcategories: string[];
+    /**
+     * Tagging
+     */
     readonly tagging: outputs.GetApplicationFilterTagging;
+    /**
+     * Technology
+     */
     readonly technologies: string[];
     readonly tfid: string;
+    /**
+     * only True is a valid value
+     */
     readonly transfersFiles: boolean;
+    /**
+     * only True is a valid value
+     */
     readonly tunnelsOtherApps: boolean;
+    /**
+     * only True is a valid value
+     */
     readonly usedByMalware: boolean;
 }
 /**
@@ -102,8 +180,11 @@ export interface GetApplicationFilterResult {
 export function getApplicationFilterOutput(args: GetApplicationFilterOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationFilterResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getApplicationFilter:getApplicationFilter", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -112,6 +193,16 @@ export function getApplicationFilterOutput(args: GetApplicationFilterOutputArgs,
  */
 export interface GetApplicationFilterOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -119,4 +210,9 @@ export interface GetApplicationFilterOutputArgs {
      * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

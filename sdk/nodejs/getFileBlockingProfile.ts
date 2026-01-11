@@ -32,8 +32,11 @@ import * as utilities from "./utilities";
 export function getFileBlockingProfile(args: GetFileBlockingProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetFileBlockingProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getFileBlockingProfile:getFileBlockingProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -42,6 +45,16 @@ export function getFileBlockingProfile(args: GetFileBlockingProfileArgs, opts?: 
  */
 export interface GetFileBlockingProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the file blocking profile
      */
     id: string;
@@ -49,6 +62,11 @@ export interface GetFileBlockingProfileArgs {
      * The name of the file blocking profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -61,8 +79,13 @@ export interface GetFileBlockingProfileResult {
     readonly description: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the file blocking profile
@@ -72,7 +95,14 @@ export interface GetFileBlockingProfileResult {
      * The name of the file blocking profile
      */
     readonly name: string;
+    /**
+     * A list of file blocking rules
+     */
     readonly rules: outputs.GetFileBlockingProfileRule[];
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -102,8 +132,11 @@ export interface GetFileBlockingProfileResult {
 export function getFileBlockingProfileOutput(args: GetFileBlockingProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFileBlockingProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getFileBlockingProfile:getFileBlockingProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -112,6 +145,16 @@ export function getFileBlockingProfileOutput(args: GetFileBlockingProfileOutputA
  */
 export interface GetFileBlockingProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the file blocking profile
      */
     id: pulumi.Input<string>;
@@ -119,4 +162,9 @@ export interface GetFileBlockingProfileOutputArgs {
      * The name of the file blocking profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

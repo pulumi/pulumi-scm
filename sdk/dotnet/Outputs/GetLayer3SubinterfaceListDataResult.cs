@@ -27,16 +27,17 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetLayer3SubinterfaceListDataDdnsConfigResult DdnsConfig;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
         /// Layer3 sub interfaces DHCP Client Object
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly Outputs.GetLayer3SubinterfaceListDataDhcpClientResult DhcpClient;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -49,7 +50,6 @@ namespace Pulumi.Scm.Outputs
         public readonly string InterfaceManagementProfile;
         /// <summary>
         /// L3 sub-interface IP Parent
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetLayer3SubinterfaceListDataIpResult> Ips;
@@ -66,7 +66,8 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string ParentInterface;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Snippet;
         /// <summary>

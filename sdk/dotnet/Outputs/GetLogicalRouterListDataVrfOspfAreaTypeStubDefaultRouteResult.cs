@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Advertise
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Advertise` and `Disable`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteAdvertiseResult Advertise;
         /// <summary>
         /// Disable
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Advertise` and `Disable`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteDisableResult Disable;

@@ -135,27 +135,41 @@ class GetSdwanRuleResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
+        """
+        Disable rule?
+        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter(name="errorCorrectionProfile")
     def error_correction_profile(self) -> _builtins.str:
+        """
+        Error correction profile
+        """
         return pulumi.get(self, "error_correction_profile")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
+        """
+        List of source zones
+        """
         return pulumi.get(self, "froms")
 
     @_builtins.property
@@ -177,51 +191,82 @@ class GetSdwanRuleResult:
     @_builtins.property
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> _builtins.bool:
+        """
+        Negate destination address(es)?
+        """
         return pulumi.get(self, "negate_destination")
 
     @_builtins.property
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> _builtins.bool:
+        """
+        Negate source address(es)?
+        """
         return pulumi.get(self, "negate_source")
 
     @_builtins.property
     @pulumi.getter(name="pathQualityProfile")
     def path_quality_profile(self) -> _builtins.str:
+        """
+        Path quality profile
+        """
         return pulumi.get(self, "path_quality_profile")
 
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
+        """
+        Rule postion relative to device rules
+        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter(name="saasQualityProfile")
     def saas_quality_profile(self) -> _builtins.str:
+        """
+        SaaS quality profile
+        """
         return pulumi.get(self, "saas_quality_profile")
 
     @_builtins.property
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
+        """
+        List of services
+        """
         return pulumi.get(self, "services")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
+        """
+        List of source users
+        """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
+        """
+        List of source addresses
+        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
+        """
+        List of tags
+        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
@@ -232,6 +277,9 @@ class GetSdwanRuleResult:
     @_builtins.property
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
+        """
+        List of destination zones
+        """
         return pulumi.get(self, "tos")
 
 
@@ -266,19 +314,31 @@ class AwaitableGetSdwanRuleResult(GetSdwanRuleResult):
             tos=self.tos)
 
 
-def get_sdwan_rule(id: Optional[_builtins.str] = None,
+def get_sdwan_rule(device: Optional[_builtins.str] = None,
+                   folder: Optional[_builtins.str] = None,
+                   id: Optional[_builtins.str] = None,
                    name: Optional[_builtins.str] = None,
+                   snippet: Optional[_builtins.str] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSdwanRuleResult:
     """
     SdwanRule data source
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Rule name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getSdwanRule:getSdwanRule', __args__, opts=opts, typ=GetSdwanRuleResult).value
 
@@ -306,19 +366,31 @@ def get_sdwan_rule(id: Optional[_builtins.str] = None,
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'),
         tos=pulumi.get(__ret__, 'tos'))
-def get_sdwan_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_sdwan_rule_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                          folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                          id: Optional[pulumi.Input[_builtins.str]] = None,
                           name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                          snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSdwanRuleResult]:
     """
     SdwanRule data source
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Rule name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getSdwanRule:getSdwanRule', __args__, opts=opts, typ=GetSdwanRuleResult)
     return __ret__.apply(lambda __response__: GetSdwanRuleResult(

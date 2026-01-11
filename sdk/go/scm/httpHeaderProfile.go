@@ -12,15 +12,210 @@ import (
 )
 
 // HttpHeaderProfile resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewHttpHeaderProfile(ctx, "scm_http_header_profile_1", &scm.HttpHeaderProfileArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("base_http_header_profile_1"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewHttpHeaderProfile(ctx, "scm_http_header_profile_2", &scm.HttpHeaderProfileArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("simple_http_header_profile_2"),
+//				HttpHeaderInsertions: scm.HttpHeaderProfileHttpHeaderInsertionArray{
+//					&scm.HttpHeaderProfileHttpHeaderInsertionArgs{
+//						Name: pulumi.String("header_one"),
+//						Type: []map[string]interface{}{
+//							map[string]interface{}{
+//								"name": "Google Apps Access Control",
+//								"domains": []string{
+//									"*.google.com",
+//								},
+//								"headers": []map[string]interface{}{
+//									map[string]interface{}{
+//										"name":   "X-GooGAppls-Allowed-Domains",
+//										"header": "X-GooGAppls-Allowed-Domains",
+//										"value":  "user-allowed",
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewHttpHeaderProfile(ctx, "scm_http_header_profile_3", &scm.HttpHeaderProfileArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("complete_http_header_profile_3"),
+//				HttpHeaderInsertions: scm.HttpHeaderProfileHttpHeaderInsertionArray{
+//					&scm.HttpHeaderProfileHttpHeaderInsertionArgs{
+//						Name: pulumi.String("header_insertion_one"),
+//						Type: []map[string]interface{}{
+//							map[string]interface{}{
+//								"name": "Dropbox Network Control",
+//								"domains": []string{
+//									"*.db.tt",
+//									"*.dropbox.com",
+//									"dropboxformum.com",
+//								},
+//								"headers": []map[string]interface{}{
+//									map[string]interface{}{
+//										"name":   "X-Dropbox-allowed-Team-Ids",
+//										"header": "X-Dropbox-allowed-Team-Ids",
+//										"value":  "dropbox-users",
+//									},
+//									map[string]interface{}{
+//										"name":   "custom_header",
+//										"header": "custom_header",
+//										"value":  "10-header",
+//									},
+//								},
+//							},
+//						},
+//					},
+//					&scm.HttpHeaderProfileHttpHeaderInsertionArgs{
+//						Name: pulumi.String("header_insertion_two"),
+//						Type: []map[string]interface{}{
+//							map[string]interface{}{
+//								"name": "Microsoft Office365 Tenant Restrictions",
+//								"domains": []string{
+//									"login.mircosoft.com",
+//									"login.mircosoftonline.com",
+//									"login.windows.net",
+//								},
+//								"headers": []map[string]interface{}{
+//									map[string]interface{}{
+//										"name":   "Restrict-Access-Context",
+//										"header": "Restrict-Access-Context",
+//										"value":  "denied-context",
+//									},
+//									map[string]interface{}{
+//										"name":   "Restrict-Access-To-Tenants",
+//										"header": "Restrict-Access-To-Tenants",
+//										"value":  "denied-tenants",
+//									},
+//								},
+//							},
+//						},
+//					},
+//					&scm.HttpHeaderProfileHttpHeaderInsertionArgs{
+//						Name: pulumi.String("header_insertion_three"),
+//						Type: []map[string]interface{}{
+//							map[string]interface{}{
+//								"name": "Dynamic Fields",
+//								"domains": []string{
+//									"custom_domain",
+//								},
+//								"headers": []map[string]interface{}{
+//									map[string]interface{}{
+//										"name":   "Authorization",
+//										"header": "Authorization",
+//										"value":  "auth",
+//									},
+//								},
+//							},
+//						},
+//					},
+//					&scm.HttpHeaderProfileHttpHeaderInsertionArgs{
+//						Name: pulumi.String("header_insertion_four"),
+//						Type: []map[string]interface{}{
+//							map[string]interface{}{
+//								"name": "Youtube Safe Search",
+//								"domains": []string{
+//									"m.youtube.com",
+//									"www.youtube.com",
+//								},
+//								"headers": []map[string]interface{}{
+//									map[string]interface{}{
+//										"name":   "Youtube-Restrict",
+//										"header": "Youtube-Restrict",
+//										"value":  "denied-youtube",
+//									},
+//								},
+//							},
+//						},
+//					},
+//					&scm.HttpHeaderProfileHttpHeaderInsertionArgs{
+//						Name: pulumi.String("header_insertion_five"),
+//						Type: []map[string]interface{}{
+//							map[string]interface{}{
+//								"name": "Custom",
+//								"domains": []string{
+//									"custom_1",
+//									"custom_2",
+//								},
+//								"headers": []map[string]interface{}{
+//									map[string]interface{}{
+//										"name":   "custom_header",
+//										"header": "custom_header",
+//										"value":  "custom",
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example ::device:id
+// ```
 type HttpHeaderProfile struct {
 	pulumi.CustomResourceState
 
 	// The description of the HTTP header profile
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// A list of HTTP header profile rules
@@ -28,7 +223,6 @@ type HttpHeaderProfile struct {
 	// The name of the HTTP header profile
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -67,9 +261,9 @@ type httpHeaderProfileState struct {
 	// The description of the HTTP header profile
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// A list of HTTP header profile rules
@@ -77,7 +271,6 @@ type httpHeaderProfileState struct {
 	// The name of the HTTP header profile
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -87,9 +280,9 @@ type HttpHeaderProfileState struct {
 	// The description of the HTTP header profile
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// A list of HTTP header profile rules
@@ -97,7 +290,6 @@ type HttpHeaderProfileState struct {
 	// The name of the HTTP header profile
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -111,9 +303,9 @@ type httpHeaderProfileArgs struct {
 	// The description of the HTTP header profile
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// A list of HTTP header profile rules
@@ -121,7 +313,6 @@ type httpHeaderProfileArgs struct {
 	// The name of the HTTP header profile
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -131,9 +322,9 @@ type HttpHeaderProfileArgs struct {
 	// The description of the HTTP header profile
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// A list of HTTP header profile rules
@@ -141,7 +332,6 @@ type HttpHeaderProfileArgs struct {
 	// The name of the HTTP header profile
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -239,12 +429,12 @@ func (o HttpHeaderProfileOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HttpHeaderProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HttpHeaderProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HttpHeaderProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HttpHeaderProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -263,7 +453,6 @@ func (o HttpHeaderProfileOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HttpHeaderProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HttpHeaderProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

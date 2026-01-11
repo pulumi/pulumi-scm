@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetPbfRuleFrom {
     /**
      * @return Source interfaces
+     * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      * 
      */
     private List<String> interfaces;
     /**
      * @return Source zones
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      * 
      */
@@ -27,6 +27,7 @@ public final class GetPbfRuleFrom {
     private GetPbfRuleFrom() {}
     /**
      * @return Source interfaces
+     * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      * 
      */
     public List<String> interfaces() {
@@ -34,7 +35,6 @@ public final class GetPbfRuleFrom {
     }
     /**
      * @return Source zones
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      * 
      */

@@ -6,8 +6,9 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.SyslogServerProfileFormatArgs;
-import com.pulumi.scm.inputs.SyslogServerProfileServersArgs;
+import com.pulumi.scm.inputs.SyslogServerProfileServerArgs;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,6 +20,7 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
 
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -26,6 +28,7 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -34,7 +37,6 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -43,7 +45,6 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -82,23 +83,22 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Servers
+     * A list of syslog server configurations. At least one server is required.
      * 
      */
     @Import(name="servers")
-    private @Nullable Output<SyslogServerProfileServersArgs> servers;
+    private @Nullable Output<List<SyslogServerProfileServerArgs>> servers;
 
     /**
-     * @return Servers
+     * @return A list of syslog server configurations. At least one server is required.
      * 
      */
-    public Optional<Output<SyslogServerProfileServersArgs>> servers() {
+    public Optional<Output<List<SyslogServerProfileServerArgs>>> servers() {
         return Optional.ofNullable(this.servers);
     }
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -107,7 +107,6 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -154,6 +153,7 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -165,6 +165,7 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -175,7 +176,6 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -188,7 +188,6 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -241,29 +240,38 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param servers Servers
+         * @param servers A list of syslog server configurations. At least one server is required.
          * 
          * @return builder
          * 
          */
-        public Builder servers(@Nullable Output<SyslogServerProfileServersArgs> servers) {
+        public Builder servers(@Nullable Output<List<SyslogServerProfileServerArgs>> servers) {
             $.servers = servers;
             return this;
         }
 
         /**
-         * @param servers Servers
+         * @param servers A list of syslog server configurations. At least one server is required.
          * 
          * @return builder
          * 
          */
-        public Builder servers(SyslogServerProfileServersArgs servers) {
+        public Builder servers(List<SyslogServerProfileServerArgs> servers) {
             return servers(Output.of(servers));
         }
 
         /**
-         * @param snippet The snippet in which the resource is defined
+         * @param servers A list of syslog server configurations. At least one server is required.
          * 
+         * @return builder
+         * 
+         */
+        public Builder servers(SyslogServerProfileServerArgs... servers) {
+            return servers(List.of(servers));
+        }
+
+        /**
+         * @param snippet The snippet in which the resource is defined
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -276,7 +284,6 @@ public final class SyslogServerProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

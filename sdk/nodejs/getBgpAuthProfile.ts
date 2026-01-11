@@ -28,8 +28,11 @@ import * as utilities from "./utilities";
 export function getBgpAuthProfile(args: GetBgpAuthProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetBgpAuthProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getBgpAuthProfile:getBgpAuthProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -38,6 +41,16 @@ export function getBgpAuthProfile(args: GetBgpAuthProfileArgs, opts?: pulumi.Inv
  */
 export interface GetBgpAuthProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -45,6 +58,11 @@ export interface GetBgpAuthProfileArgs {
      * Profile name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -53,9 +71,17 @@ export interface GetBgpAuthProfileArgs {
 export interface GetBgpAuthProfileResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -65,7 +91,14 @@ export interface GetBgpAuthProfileResult {
      * Profile name
      */
     readonly name: string;
+    /**
+     * BGP authentication key
+     */
     readonly secret: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -93,8 +126,11 @@ export interface GetBgpAuthProfileResult {
 export function getBgpAuthProfileOutput(args: GetBgpAuthProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBgpAuthProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getBgpAuthProfile:getBgpAuthProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -103,6 +139,16 @@ export function getBgpAuthProfileOutput(args: GetBgpAuthProfileOutputArgs, opts?
  */
 export interface GetBgpAuthProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -110,4 +156,9 @@ export interface GetBgpAuthProfileOutputArgs {
      * Profile name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

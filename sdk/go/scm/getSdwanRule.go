@@ -24,10 +24,19 @@ func LookupSdwanRule(ctx *pulumi.Context, args *LookupSdwanRuleArgs, opts ...pul
 
 // A collection of arguments for invoking getSdwanRule.
 type LookupSdwanRuleArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Rule name
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSdwanRule.
@@ -41,27 +50,45 @@ type LookupSdwanRuleResult struct {
 	// List of destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
-	Device                 string   `pulumi:"device"`
-	Disabled               bool     `pulumi:"disabled"`
-	ErrorCorrectionProfile string   `pulumi:"errorCorrectionProfile"`
-	Folder                 string   `pulumi:"folder"`
-	Froms                  []string `pulumi:"froms"`
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device string `pulumi:"device"`
+	// Disable rule?
+	Disabled bool `pulumi:"disabled"`
+	// Error correction profile
+	ErrorCorrectionProfile string `pulumi:"errorCorrectionProfile"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder string `pulumi:"folder"`
+	// List of source zones
+	Froms []string `pulumi:"froms"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Rule name
-	Name               string   `pulumi:"name"`
-	NegateDestination  bool     `pulumi:"negateDestination"`
-	NegateSource       bool     `pulumi:"negateSource"`
-	PathQualityProfile string   `pulumi:"pathQualityProfile"`
-	Position           string   `pulumi:"position"`
-	SaasQualityProfile string   `pulumi:"saasQualityProfile"`
-	Services           []string `pulumi:"services"`
-	Snippet            string   `pulumi:"snippet"`
-	SourceUsers        []string `pulumi:"sourceUsers"`
-	Sources            []string `pulumi:"sources"`
-	Tags               []string `pulumi:"tags"`
-	Tfid               string   `pulumi:"tfid"`
-	Tos                []string `pulumi:"tos"`
+	Name string `pulumi:"name"`
+	// Negate destination address(es)?
+	NegateDestination bool `pulumi:"negateDestination"`
+	// Negate source address(es)?
+	NegateSource bool `pulumi:"negateSource"`
+	// Path quality profile
+	PathQualityProfile string `pulumi:"pathQualityProfile"`
+	// Rule postion relative to device rules
+	Position string `pulumi:"position"`
+	// SaaS quality profile
+	SaasQualityProfile string `pulumi:"saasQualityProfile"`
+	// List of services
+	Services []string `pulumi:"services"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	// List of source users
+	SourceUsers []string `pulumi:"sourceUsers"`
+	// List of source addresses
+	Sources []string `pulumi:"sources"`
+	// List of tags
+	Tags []string `pulumi:"tags"`
+	Tfid string   `pulumi:"tfid"`
+	// List of destination zones
+	Tos []string `pulumi:"tos"`
 }
 
 func LookupSdwanRuleOutput(ctx *pulumi.Context, args LookupSdwanRuleOutputArgs, opts ...pulumi.InvokeOption) LookupSdwanRuleResultOutput {
@@ -75,10 +102,19 @@ func LookupSdwanRuleOutput(ctx *pulumi.Context, args LookupSdwanRuleOutputArgs, 
 
 // A collection of arguments for invoking getSdwanRule.
 type LookupSdwanRuleOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Rule name
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupSdwanRuleOutputArgs) ElementType() reflect.Type {
@@ -121,22 +157,28 @@ func (o LookupSdwanRuleResultOutput) Destinations() pulumi.StringArrayOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanRuleResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Disable rule?
 func (o LookupSdwanRuleResultOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
+// Error correction profile
 func (o LookupSdwanRuleResultOutput) ErrorCorrectionProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) string { return v.ErrorCorrectionProfile }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanRuleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
+// List of source zones
 func (o LookupSdwanRuleResultOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) []string { return v.Froms }).(pulumi.StringArrayOutput)
 }
@@ -151,42 +193,53 @@ func (o LookupSdwanRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Negate destination address(es)?
 func (o LookupSdwanRuleResultOutput) NegateDestination() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) bool { return v.NegateDestination }).(pulumi.BoolOutput)
 }
 
+// Negate source address(es)?
 func (o LookupSdwanRuleResultOutput) NegateSource() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) bool { return v.NegateSource }).(pulumi.BoolOutput)
 }
 
+// Path quality profile
 func (o LookupSdwanRuleResultOutput) PathQualityProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) string { return v.PathQualityProfile }).(pulumi.StringOutput)
 }
 
+// Rule postion relative to device rules
 func (o LookupSdwanRuleResultOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) string { return v.Position }).(pulumi.StringOutput)
 }
 
+// SaaS quality profile
 func (o LookupSdwanRuleResultOutput) SaasQualityProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) string { return v.SaasQualityProfile }).(pulumi.StringOutput)
 }
 
+// List of services
 func (o LookupSdwanRuleResultOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) []string { return v.Services }).(pulumi.StringArrayOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanRuleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// List of source users
 func (o LookupSdwanRuleResultOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) []string { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
+// List of source addresses
 func (o LookupSdwanRuleResultOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
+// List of tags
 func (o LookupSdwanRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
@@ -195,6 +248,7 @@ func (o LookupSdwanRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// List of destination zones
 func (o LookupSdwanRuleResultOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSdwanRuleResult) []string { return v.Tos }).(pulumi.StringArrayOutput)
 }

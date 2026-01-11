@@ -20,14 +20,14 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
     public static final ExternalDynamicListTypeImeiArgs Empty = new ExternalDynamicListTypeImeiArgs();
 
     /**
-     * Auth
+     * IMEI Auth Cnfig for Custom IMEI type
      * 
      */
     @Import(name="auth")
     private @Nullable Output<ExternalDynamicListTypeImeiAuthArgs> auth;
 
     /**
-     * @return Auth
+     * @return IMEI Auth Cnfig for Custom IMEI type
      * 
      */
     public Optional<Output<ExternalDynamicListTypeImeiAuthArgs>> auth() {
@@ -35,14 +35,14 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
     }
 
     /**
-     * Profile for authenticating client certificates
+     * IMEI Certificate Profile for Custom IMEI type
      * 
      */
     @Import(name="certificateProfile")
     private @Nullable Output<String> certificateProfile;
 
     /**
-     * @return Profile for authenticating client certificates
+     * @return IMEI Certificate Profile for Custom IMEI type
      * 
      */
     public Optional<Output<String>> certificateProfile() {
@@ -50,14 +50,14 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
     }
 
     /**
-     * Description
+     * IMEI Description for Custom IMEI type
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return Description
+     * @return IMEI Description for Custom IMEI type
      * 
      */
     public Optional<Output<String>> description() {
@@ -65,14 +65,14 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
     }
 
     /**
-     * Exception list
+     * IMEI Exception List for Custom IMEI type
      * 
      */
     @Import(name="exceptionLists")
     private @Nullable Output<List<String>> exceptionLists;
 
     /**
-     * @return Exception list
+     * @return IMEI Exception List for Custom IMEI type
      * 
      */
     public Optional<Output<List<String>>> exceptionLists() {
@@ -80,14 +80,14 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
     }
 
     /**
-     * Recurring
+     * Recurring interval for IMEI updates
      * 
      */
     @Import(name="recurring", required=true)
     private Output<ExternalDynamicListTypeImeiRecurringArgs> recurring;
 
     /**
-     * @return Recurring
+     * @return Recurring interval for IMEI updates
      * 
      */
     public Output<ExternalDynamicListTypeImeiRecurringArgs> recurring() {
@@ -95,14 +95,14 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
     }
 
     /**
-     * Url
+     * IMEI URL for Custom IMEI type
      * 
      */
     @Import(name="url", required=true)
     private Output<String> url;
 
     /**
-     * @return Url
+     * @return IMEI URL for Custom IMEI type
      * 
      */
     public Output<String> url() {
@@ -139,7 +139,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param auth Auth
+         * @param auth IMEI Auth Cnfig for Custom IMEI type
          * 
          * @return builder
          * 
@@ -150,7 +150,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param auth Auth
+         * @param auth IMEI Auth Cnfig for Custom IMEI type
          * 
          * @return builder
          * 
@@ -160,7 +160,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param certificateProfile Profile for authenticating client certificates
+         * @param certificateProfile IMEI Certificate Profile for Custom IMEI type
          * 
          * @return builder
          * 
@@ -171,7 +171,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param certificateProfile Profile for authenticating client certificates
+         * @param certificateProfile IMEI Certificate Profile for Custom IMEI type
          * 
          * @return builder
          * 
@@ -181,7 +181,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param description Description
+         * @param description IMEI Description for Custom IMEI type
          * 
          * @return builder
          * 
@@ -192,7 +192,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param description Description
+         * @param description IMEI Description for Custom IMEI type
          * 
          * @return builder
          * 
@@ -202,7 +202,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IMEI Exception List for Custom IMEI type
          * 
          * @return builder
          * 
@@ -213,7 +213,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IMEI Exception List for Custom IMEI type
          * 
          * @return builder
          * 
@@ -223,7 +223,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IMEI Exception List for Custom IMEI type
          * 
          * @return builder
          * 
@@ -233,7 +233,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param recurring Recurring
+         * @param recurring Recurring interval for IMEI updates
          * 
          * @return builder
          * 
@@ -244,7 +244,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param recurring Recurring
+         * @param recurring Recurring interval for IMEI updates
          * 
          * @return builder
          * 
@@ -254,7 +254,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param url Url
+         * @param url IMEI URL for Custom IMEI type
          * 
          * @return builder
          * 
@@ -265,7 +265,7 @@ public final class ExternalDynamicListTypeImeiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param url Url
+         * @param url IMEI URL for Custom IMEI type
          * 
          * @return builder
          * 

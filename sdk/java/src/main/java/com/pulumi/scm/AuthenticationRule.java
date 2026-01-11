@@ -147,6 +147,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/authenticationRule:AuthenticationRule example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/authenticationRule:AuthenticationRule example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/authenticationRule:AuthenticationRule example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/authenticationRule:AuthenticationRule")
 public class AuthenticationRule extends com.pulumi.resources.CustomResource {
@@ -222,6 +248,7 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * Device
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -229,6 +256,7 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Device
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -250,7 +278,6 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * Folder
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -259,7 +286,6 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Folder
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -422,7 +448,6 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * Snippet
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -431,7 +456,6 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Snippet
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

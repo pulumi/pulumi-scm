@@ -33,11 +33,20 @@ namespace Pulumi.Scm
 
     public sealed class GetZoneProtectionProfileArgs : global::Pulumi.InvokeArgs
     {
+        [Input("device")]
+        public string? Device { get; set; }
+
+        [Input("folder")]
+        public string? Folder { get; set; }
+
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
         [Input("name")]
         public string? Name { get; set; }
+
+        [Input("snippet")]
+        public string? Snippet { get; set; }
 
         public GetZoneProtectionProfileArgs()
         {
@@ -47,11 +56,20 @@ namespace Pulumi.Scm
 
     public sealed class GetZoneProtectionProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetZoneProtectionProfileInvokeArgs()
         {

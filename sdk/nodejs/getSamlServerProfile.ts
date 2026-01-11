@@ -10,8 +10,11 @@ import * as utilities from "./utilities";
 export function getSamlServerProfile(args: GetSamlServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetSamlServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSamlServerProfile:getSamlServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -20,6 +23,16 @@ export function getSamlServerProfile(args: GetSamlServerProfileArgs, opts?: pulu
  */
 export interface GetSamlServerProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the SAML server profile
      */
     id: string;
@@ -27,6 +40,11 @@ export interface GetSamlServerProfileArgs {
      * The name of the SAML server profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -39,25 +57,55 @@ export interface GetSamlServerProfileResult {
     readonly certificate: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The identity provider ID
+     */
     readonly entityId: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the SAML server profile
      */
     readonly id: string;
+    /**
+     * Maxiumum clock skew
+     */
     readonly maxClockSkew: number;
     /**
      * The name of the SAML server profile
      */
     readonly name: string;
+    /**
+     * SAML HTTP binding for SLO requests to the identity provider
+     */
     readonly sloBindings: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * SAML HTTP binding for SSO requests to the identity provider
+     */
     readonly ssoBindings: string;
+    /**
+     * Identity provider SSO URL
+     */
     readonly ssoUrl: string;
     readonly tfid: string;
+    /**
+     * Validate the identity provider certificate?
+     */
     readonly validateIdpCertificate: boolean;
+    /**
+     * Sign SAML message to the identity provider?
+     */
     readonly wantAuthRequestsSigned: boolean;
 }
 /**
@@ -66,8 +114,11 @@ export interface GetSamlServerProfileResult {
 export function getSamlServerProfileOutput(args: GetSamlServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSamlServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSamlServerProfile:getSamlServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -76,6 +127,16 @@ export function getSamlServerProfileOutput(args: GetSamlServerProfileOutputArgs,
  */
 export interface GetSamlServerProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the SAML server profile
      */
     id: pulumi.Input<string>;
@@ -83,4 +144,9 @@ export interface GetSamlServerProfileOutputArgs {
      * The name of the SAML server profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

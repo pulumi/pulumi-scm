@@ -5,9 +5,11 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.inputs.SyslogServerProfileFormatArgs;
-import com.pulumi.scm.inputs.SyslogServerProfileServersArgs;
+import com.pulumi.scm.inputs.SyslogServerProfileServerArgs;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,6 +21,7 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
 
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -26,6 +29,7 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -34,7 +38,6 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -43,7 +46,6 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -82,23 +84,22 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Servers
+     * A list of syslog server configurations. At least one server is required.
      * 
      */
-    @Import(name="servers")
-    private @Nullable Output<SyslogServerProfileServersArgs> servers;
+    @Import(name="servers", required=true)
+    private Output<List<SyslogServerProfileServerArgs>> servers;
 
     /**
-     * @return Servers
+     * @return A list of syslog server configurations. At least one server is required.
      * 
      */
-    public Optional<Output<SyslogServerProfileServersArgs>> servers() {
-        return Optional.ofNullable(this.servers);
+    public Output<List<SyslogServerProfileServerArgs>> servers() {
+        return this.servers;
     }
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -107,7 +108,6 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -146,6 +146,7 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -157,6 +158,7 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -167,7 +169,6 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -180,7 +181,6 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -233,29 +233,38 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param servers Servers
+         * @param servers A list of syslog server configurations. At least one server is required.
          * 
          * @return builder
          * 
          */
-        public Builder servers(@Nullable Output<SyslogServerProfileServersArgs> servers) {
+        public Builder servers(Output<List<SyslogServerProfileServerArgs>> servers) {
             $.servers = servers;
             return this;
         }
 
         /**
-         * @param servers Servers
+         * @param servers A list of syslog server configurations. At least one server is required.
          * 
          * @return builder
          * 
          */
-        public Builder servers(SyslogServerProfileServersArgs servers) {
+        public Builder servers(List<SyslogServerProfileServerArgs> servers) {
             return servers(Output.of(servers));
         }
 
         /**
-         * @param snippet The snippet in which the resource is defined
+         * @param servers A list of syslog server configurations. At least one server is required.
          * 
+         * @return builder
+         * 
+         */
+        public Builder servers(SyslogServerProfileServerArgs... servers) {
+            return servers(List.of(servers));
+        }
+
+        /**
+         * @param snippet The snippet in which the resource is defined
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -268,7 +277,6 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -279,6 +287,9 @@ public final class SyslogServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         public SyslogServerProfileArgs build() {
+            if ($.servers == null) {
+                throw new MissingRequiredPropertyException("SyslogServerProfileArgs", "servers");
+            }
             return $;
         }
     }

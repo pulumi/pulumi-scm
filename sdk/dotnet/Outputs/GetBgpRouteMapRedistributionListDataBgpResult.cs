@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Ospf
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ospf` and `Rib`.
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataBgpOspfResult Ospf;
         /// <summary>
         /// BGP Root RIB
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ospf` and `Rib`.
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataBgpRibResult Rib;

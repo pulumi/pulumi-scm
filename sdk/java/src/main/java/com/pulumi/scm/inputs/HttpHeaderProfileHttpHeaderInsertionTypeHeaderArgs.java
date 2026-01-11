@@ -48,18 +48,18 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
     }
 
     /**
-     * An auto-generated name (*This should be removed*)
+     * The name of the HTTP header
      * 
      */
-    @Import(name="name")
-    private @Nullable Output<String> name;
+    @Import(name="name", required=true)
+    private Output<String> name;
 
     /**
-     * @return An auto-generated name (*This should be removed*)
+     * @return The name of the HTTP header
      * 
      */
-    public Optional<Output<String>> name() {
-        return Optional.ofNullable(this.name);
+    public Output<String> name() {
+        return this.name;
     }
 
     /**
@@ -147,18 +147,18 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
         }
 
         /**
-         * @param name An auto-generated name (*This should be removed*)
+         * @param name The name of the HTTP header
          * 
          * @return builder
          * 
          */
-        public Builder name(@Nullable Output<String> name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
         /**
-         * @param name An auto-generated name (*This should be removed*)
+         * @param name The name of the HTTP header
          * 
          * @return builder
          * 
@@ -191,6 +191,9 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
         public HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs build() {
             if ($.header == null) {
                 throw new MissingRequiredPropertyException("HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs", "header");
+            }
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs", "name");
             }
             if ($.value == null) {
                 throw new MissingRequiredPropertyException("HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs", "value");

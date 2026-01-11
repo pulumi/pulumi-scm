@@ -17,12 +17,12 @@ public final class GetExternalDynamicListTypePredefinedUrl {
      */
     private String description;
     /**
-     * @return Exception list
+     * @return URL Exception List for Predefined URL type
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return Url
+     * @return URL source for Predefined URL type
      * 
      */
     private String url;
@@ -36,14 +36,14 @@ public final class GetExternalDynamicListTypePredefinedUrl {
         return this.description;
     }
     /**
-     * @return Exception list
+     * @return URL Exception List for Predefined URL type
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return Url
+     * @return URL source for Predefined URL type
      * 
      */
     public String url() {

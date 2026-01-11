@@ -75,27 +75,41 @@ class GetIkeCryptoProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="dhGroups")
     def dh_groups(self) -> Sequence[_builtins.str]:
+        """
+        Dh group
+        """
         return pulumi.get(self, "dh_groups")
 
     @_builtins.property
     @pulumi.getter
     def encryptions(self) -> Sequence[_builtins.str]:
+        """
+        Encryption algorithm
+        """
         return pulumi.get(self, "encryptions")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def hashes(self) -> Sequence[_builtins.str]:
+        """
+        Hash
+        """
         return pulumi.get(self, "hashes")
 
     @_builtins.property
@@ -109,6 +123,9 @@ class GetIkeCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def lifetime(self) -> 'outputs.GetIkeCryptoProfileLifetimeResult':
+        """
+        Ike crypto profile lifetime
+        """
         return pulumi.get(self, "lifetime")
 
     @_builtins.property
@@ -122,6 +139,10 @@ class GetIkeCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -149,8 +170,11 @@ class AwaitableGetIkeCryptoProfileResult(GetIkeCryptoProfileResult):
             tfid=self.tfid)
 
 
-def get_ike_crypto_profile(id: Optional[_builtins.str] = None,
+def get_ike_crypto_profile(device: Optional[_builtins.str] = None,
+                           folder: Optional[_builtins.str] = None,
+                           id: Optional[_builtins.str] = None,
                            name: Optional[_builtins.str] = None,
+                           snippet: Optional[_builtins.str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetIkeCryptoProfileResult:
     """
     IkeCryptoProfile data source
@@ -167,12 +191,21 @@ def get_ike_crypto_profile(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getIkeCryptoProfile:getIkeCryptoProfile', __args__, opts=opts, typ=GetIkeCryptoProfileResult).value
 
@@ -188,8 +221,11 @@ def get_ike_crypto_profile(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_ike_crypto_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_ike_crypto_profile_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                  folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                  id: Optional[pulumi.Input[_builtins.str]] = None,
                                   name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                  snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIkeCryptoProfileResult]:
     """
     IkeCryptoProfile data source
@@ -206,12 +242,21 @@ def get_ike_crypto_profile_output(id: Optional[pulumi.Input[_builtins.str]] = No
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getIkeCryptoProfile:getIkeCryptoProfile', __args__, opts=opts, typ=GetIkeCryptoProfileResult)
     return __ret__.apply(lambda __response__: GetIkeCryptoProfileResult(

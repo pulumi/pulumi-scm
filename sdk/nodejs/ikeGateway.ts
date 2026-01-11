@@ -59,6 +59,32 @@ import * as utilities from "./utilities";
  *     },
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/ikeGateway:IkeGateway example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/ikeGateway:IkeGateway example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/ikeGateway:IkeGateway example ::device:id
+ * ```
  */
 export class IkeGateway extends pulumi.CustomResource {
     /**
@@ -94,6 +120,7 @@ export class IkeGateway extends pulumi.CustomResource {
     declare public readonly authentication: pulumi.Output<outputs.IkeGatewayAuthentication>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -102,7 +129,6 @@ export class IkeGateway extends pulumi.CustomResource {
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -136,7 +162,6 @@ export class IkeGateway extends pulumi.CustomResource {
     declare public readonly protocolCommon: pulumi.Output<outputs.IkeGatewayProtocolCommon>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -210,6 +235,7 @@ export interface IkeGatewayState {
     authentication?: pulumi.Input<inputs.IkeGatewayAuthentication>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -218,7 +244,6 @@ export interface IkeGatewayState {
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -252,7 +277,6 @@ export interface IkeGatewayState {
     protocolCommon?: pulumi.Input<inputs.IkeGatewayProtocolCommon>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -269,11 +293,11 @@ export interface IkeGatewayArgs {
     authentication: pulumi.Input<inputs.IkeGatewayAuthentication>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -307,7 +331,6 @@ export interface IkeGatewayArgs {
     protocolCommon?: pulumi.Input<inputs.IkeGatewayProtocolCommon>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

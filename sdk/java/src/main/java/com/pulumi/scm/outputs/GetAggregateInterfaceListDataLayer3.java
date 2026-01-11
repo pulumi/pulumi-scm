@@ -29,6 +29,7 @@ public final class GetAggregateInterfaceListDataLayer3 {
     private GetAggregateInterfaceListDataLayer3DdnsConfig ddnsConfig;
     /**
      * @return Aggregate Ethernet DHCP Client Object
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     private GetAggregateInterfaceListDataLayer3DhcpClient dhcpClient;
@@ -39,7 +40,6 @@ public final class GetAggregateInterfaceListDataLayer3 {
     private String interfaceManagementProfile;
     /**
      * @return Aggregate Interface IP addresses
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -72,6 +72,7 @@ public final class GetAggregateInterfaceListDataLayer3 {
     }
     /**
      * @return Aggregate Ethernet DHCP Client Object
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public GetAggregateInterfaceListDataLayer3DhcpClient dhcpClient() {
@@ -86,7 +87,6 @@ public final class GetAggregateInterfaceListDataLayer3 {
     }
     /**
      * @return Aggregate Interface IP addresses
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */

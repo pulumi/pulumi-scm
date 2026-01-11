@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class AntiSpywareSignatureSignature {
     /**
      * @return anti spyware signature combination
+     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
     private @Nullable AntiSpywareSignatureSignatureCombination combination;
     /**
      * @return Standard
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
@@ -29,6 +29,7 @@ public final class AntiSpywareSignatureSignature {
     private AntiSpywareSignatureSignature() {}
     /**
      * @return anti spyware signature combination
+     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
     public Optional<AntiSpywareSignatureSignatureCombination> combination() {
@@ -36,7 +37,6 @@ public final class AntiSpywareSignatureSignature {
     }
     /**
      * @return Standard
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */

@@ -13,38 +13,35 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeImeiRecurringArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Daily
+        /// Daily interval settings for IMEI updates
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("daily")]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringDailyArgs>? Daily { get; set; }
 
         /// <summary>
-        /// Five minute
-        /// 
+        /// Five-minute interval settings for IMEI updates
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("fiveMinute")]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringFiveMinuteArgs>? FiveMinute { get; set; }
 
         /// <summary>
-        /// Hourly
-        /// 
+        /// Hourly interval settings for IMEI updates
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("hourly")]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringHourlyArgs>? Hourly { get; set; }
 
         /// <summary>
-        /// Monthly
-        /// 
+        /// Monthly interval settings for IMEI updates
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("monthly")]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringMonthlyArgs>? Monthly { get; set; }
 
         /// <summary>
-        /// Weekly
-        /// 
+        /// Weekly interval settings for IMEI updates
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("weekly")]

@@ -100,6 +100,12 @@ namespace Pulumi.Scm
     public sealed class GetSiteArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// The UUID of the site
         /// </summary>
         [Input("id", required: true)]
@@ -119,6 +125,12 @@ namespace Pulumi.Scm
 
     public sealed class GetSiteInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the site
         /// </summary>
@@ -157,6 +169,10 @@ namespace Pulumi.Scm
         /// The country in which the site exists
         /// </summary>
         public readonly string Country;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
         /// <summary>
         /// The UUID of the site
         /// </summary>
@@ -209,6 +225,8 @@ namespace Pulumi.Scm
 
             string country,
 
+            string folder,
+
             string id,
 
             string latitude,
@@ -235,6 +253,7 @@ namespace Pulumi.Scm
             AddressLine2 = addressLine2;
             City = city;
             Country = country;
+            Folder = folder;
             Id = id;
             Latitude = latitude;
             LicenseType = licenseType;

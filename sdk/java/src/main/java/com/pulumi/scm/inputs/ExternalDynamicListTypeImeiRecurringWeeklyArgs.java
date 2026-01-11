@@ -15,14 +15,14 @@ public final class ExternalDynamicListTypeImeiRecurringWeeklyArgs extends com.pu
     public static final ExternalDynamicListTypeImeiRecurringWeeklyArgs Empty = new ExternalDynamicListTypeImeiRecurringWeeklyArgs();
 
     /**
-     * Time specification hh (e.g. 20)
+     * Weekly Time specification hh (e.g. 20) for IMEI
      * 
      */
     @Import(name="at", required=true)
     private Output<String> at;
 
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Weekly Time specification hh (e.g. 20) for IMEI
      * 
      */
     public Output<String> at() {
@@ -70,7 +70,7 @@ public final class ExternalDynamicListTypeImeiRecurringWeeklyArgs extends com.pu
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Weekly Time specification hh (e.g. 20) for IMEI
          * 
          * @return builder
          * 
@@ -81,7 +81,7 @@ public final class ExternalDynamicListTypeImeiRecurringWeeklyArgs extends com.pu
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Weekly Time specification hh (e.g. 20) for IMEI
          * 
          * @return builder
          * 

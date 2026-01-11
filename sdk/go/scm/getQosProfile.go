@@ -24,10 +24,19 @@ func LookupQosProfile(ctx *pulumi.Context, args *LookupQosProfileArgs, opts ...p
 
 // A collection of arguments for invoking getQosProfile.
 type LookupQosProfileArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getQosProfile.
@@ -37,12 +46,17 @@ type LookupQosProfileResult struct {
 	// Class bandwidth type
 	ClassBandwidthType GetQosProfileClassBandwidthType `pulumi:"classBandwidthType"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-	Name    string `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -58,10 +72,19 @@ func LookupQosProfileOutput(ctx *pulumi.Context, args LookupQosProfileOutputArgs
 
 // A collection of arguments for invoking getQosProfile.
 type LookupQosProfileOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupQosProfileOutputArgs) ElementType() reflect.Type {
@@ -94,10 +117,13 @@ func (o LookupQosProfileResultOutput) ClassBandwidthType() GetQosProfileClassBan
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupQosProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupQosProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -112,6 +138,8 @@ func (o LookupQosProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupQosProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

@@ -15,14 +15,14 @@ public final class ExternalDynamicListTypeUrlRecurringWeeklyArgs extends com.pul
     public static final ExternalDynamicListTypeUrlRecurringWeeklyArgs Empty = new ExternalDynamicListTypeUrlRecurringWeeklyArgs();
 
     /**
-     * Time specification hh (e.g. 20)
+     * Weekly Time specification hh (e.g. 20) for URL
      * 
      */
     @Import(name="at", required=true)
     private Output<String> at;
 
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Weekly Time specification hh (e.g. 20) for URL
      * 
      */
     public Output<String> at() {
@@ -70,7 +70,7 @@ public final class ExternalDynamicListTypeUrlRecurringWeeklyArgs extends com.pul
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Weekly Time specification hh (e.g. 20) for URL
          * 
          * @return builder
          * 
@@ -81,7 +81,7 @@ public final class ExternalDynamicListTypeUrlRecurringWeeklyArgs extends com.pul
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Weekly Time specification hh (e.g. 20) for URL
          * 
          * @return builder
          * 

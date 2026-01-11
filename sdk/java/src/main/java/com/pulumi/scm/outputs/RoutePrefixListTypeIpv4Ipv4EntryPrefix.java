@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class RoutePrefixListTypeIpv4Ipv4EntryPrefix {
     /**
      * @return Entry
+     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */
     private @Nullable RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry entry;
     /**
      * @return Network
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */
@@ -28,6 +28,7 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefix {
     private RoutePrefixListTypeIpv4Ipv4EntryPrefix() {}
     /**
      * @return Entry
+     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */
     public Optional<RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry> entry() {
@@ -35,7 +36,6 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefix {
     }
     /**
      * @return Network
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */

@@ -10,7 +10,9 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// AutoVpnSetting resource
+    /// **Singleton Resource.** AutoVpnSetting resource
+    /// 
+    /// This resource is a singleton, meaning only one instance can exist. If the resource typically exists (e.g. bgp_routing), you should import it before managing it.
     /// 
     /// ## Example Usage
     /// 
@@ -37,6 +39,24 @@ namespace Pulumi.Scm
     ///     });
     /// 
     /// });
+    /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
     /// ```
     /// </summary>
     [ScmResourceType("scm:index/autoVpnSetting:AutoVpnSetting")]

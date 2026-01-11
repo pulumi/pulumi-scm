@@ -254,6 +254,32 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/hipObject:HipObject example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/hipObject:HipObject example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/hipObject:HipObject example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/hipObject:HipObject")]
     public partial class HipObject : global::Pulumi.CustomResource
@@ -262,7 +288,7 @@ namespace Pulumi.Scm
         /// Anti malware
         /// </summary>
         [Output("antiMalware")]
-        public Output<Outputs.HipObjectAntiMalware> AntiMalware { get; private set; } = null!;
+        public Output<Outputs.HipObjectAntiMalware?> AntiMalware { get; private set; } = null!;
 
         /// <summary>
         /// Certificate
@@ -280,7 +306,7 @@ namespace Pulumi.Scm
         /// Data loss prevention
         /// </summary>
         [Output("dataLossPrevention")]
-        public Output<Outputs.HipObjectDataLossPrevention> DataLossPrevention { get; private set; } = null!;
+        public Output<Outputs.HipObjectDataLossPrevention?> DataLossPrevention { get; private set; } = null!;
 
         /// <summary>
         /// Description
@@ -290,6 +316,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
@@ -298,23 +325,22 @@ namespace Pulumi.Scm
         /// Disk backup
         /// </summary>
         [Output("diskBackup")]
-        public Output<Outputs.HipObjectDiskBackup> DiskBackup { get; private set; } = null!;
+        public Output<Outputs.HipObjectDiskBackup?> DiskBackup { get; private set; } = null!;
 
         /// <summary>
         /// Disk encryption
         /// </summary>
         [Output("diskEncryption")]
-        public Output<Outputs.HipObjectDiskEncryption> DiskEncryption { get; private set; } = null!;
+        public Output<Outputs.HipObjectDiskEncryption?> DiskEncryption { get; private set; } = null!;
 
         /// <summary>
         /// Firewall
         /// </summary>
         [Output("firewall")]
-        public Output<Outputs.HipObjectFirewall> Firewall { get; private set; } = null!;
+        public Output<Outputs.HipObjectFirewall?> Firewall { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -348,11 +374,10 @@ namespace Pulumi.Scm
         /// Patch management
         /// </summary>
         [Output("patchManagement")]
-        public Output<Outputs.HipObjectPatchManagement> PatchManagement { get; private set; } = null!;
+        public Output<Outputs.HipObjectPatchManagement?> PatchManagement { get; private set; } = null!;
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -439,6 +464,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -463,7 +489,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -501,7 +526,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -547,6 +571,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -571,7 +596,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -609,7 +633,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

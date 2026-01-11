@@ -16,74 +16,74 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListTypeImei {
     /**
-     * @return Auth
+     * @return IMEI Auth Cnfig for Custom IMEI type
      * 
      */
     private @Nullable ExternalDynamicListTypeImeiAuth auth;
     /**
-     * @return Profile for authenticating client certificates
+     * @return IMEI Certificate Profile for Custom IMEI type
      * 
      */
     private @Nullable String certificateProfile;
     /**
-     * @return Description
+     * @return IMEI Description for Custom IMEI type
      * 
      */
     private @Nullable String description;
     /**
-     * @return Exception list
+     * @return IMEI Exception List for Custom IMEI type
      * 
      */
     private @Nullable List<String> exceptionLists;
     /**
-     * @return Recurring
+     * @return Recurring interval for IMEI updates
      * 
      */
     private ExternalDynamicListTypeImeiRecurring recurring;
     /**
-     * @return Url
+     * @return IMEI URL for Custom IMEI type
      * 
      */
     private String url;
 
     private ExternalDynamicListTypeImei() {}
     /**
-     * @return Auth
+     * @return IMEI Auth Cnfig for Custom IMEI type
      * 
      */
     public Optional<ExternalDynamicListTypeImeiAuth> auth() {
         return Optional.ofNullable(this.auth);
     }
     /**
-     * @return Profile for authenticating client certificates
+     * @return IMEI Certificate Profile for Custom IMEI type
      * 
      */
     public Optional<String> certificateProfile() {
         return Optional.ofNullable(this.certificateProfile);
     }
     /**
-     * @return Description
+     * @return IMEI Description for Custom IMEI type
      * 
      */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return Exception list
+     * @return IMEI Exception List for Custom IMEI type
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists == null ? List.of() : this.exceptionLists;
     }
     /**
-     * @return Recurring
+     * @return Recurring interval for IMEI updates
      * 
      */
     public ExternalDynamicListTypeImeiRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return Url
+     * @return IMEI URL for Custom IMEI type
      * 
      */
     public String url() {

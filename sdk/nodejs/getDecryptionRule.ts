@@ -25,8 +25,11 @@ import * as utilities from "./utilities";
 export function getDecryptionRule(args: GetDecryptionRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDecryptionRule:getDecryptionRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -35,6 +38,16 @@ export function getDecryptionRule(args: GetDecryptionRuleArgs, opts?: pulumi.Inv
  */
 export interface GetDecryptionRuleArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the decryption rule
      */
     id: string;
@@ -42,6 +55,11 @@ export interface GetDecryptionRuleArgs {
      * The name of the decryption rule
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -70,36 +88,99 @@ export interface GetDecryptionRuleResult {
     readonly destinations: string[];
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Is the rule disabled?
+     */
     readonly disabled: boolean;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
+    /**
+     * The source security zone
+     */
     readonly froms: string[];
     /**
      * The UUID of the decryption rule
      */
     readonly id: string;
+    /**
+     * Log failed decryption events?
+     */
     readonly logFail: boolean;
+    /**
+     * The log settings of the decryption rule
+     */
     readonly logSetting: string;
+    /**
+     * Log successful decryption events?
+     */
     readonly logSuccess: boolean;
     /**
      * The name of the decryption rule
      */
     readonly name: string;
+    /**
+     * Negate the destination addresses?
+     */
     readonly negateDestination: boolean;
+    /**
+     * Negate the source addresses?
+     */
     readonly negateSource: boolean;
+    /**
+     * The position of a security rule
+     */
     readonly position: string;
+    /**
+     * The decryption profile associated with the decryption rule
+     */
     readonly profile: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
     readonly relativePosition: string;
+    /**
+     * The destination services and/or service groups
+     */
     readonly services: string[];
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * Source hip
+     */
     readonly sourceHips: string[];
+    /**
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+     */
     readonly sourceUsers: string[];
+    /**
+     * The source addresses
+     */
     readonly sources: string[];
+    /**
+     * The tags associated with the decryption rule
+     */
     readonly tags: string[];
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
     readonly targetRule: string;
     readonly tfid: string;
+    /**
+     * The destination security zone
+     */
     readonly tos: string[];
+    /**
+     * The type of decryption
+     */
     readonly type: outputs.GetDecryptionRuleType;
 }
 /**
@@ -121,8 +202,11 @@ export interface GetDecryptionRuleResult {
 export function getDecryptionRuleOutput(args: GetDecryptionRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDecryptionRule:getDecryptionRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -131,6 +215,16 @@ export function getDecryptionRuleOutput(args: GetDecryptionRuleOutputArgs, opts?
  */
 export interface GetDecryptionRuleOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the decryption rule
      */
     id: pulumi.Input<string>;
@@ -138,4 +232,9 @@ export interface GetDecryptionRuleOutputArgs {
      * The name of the decryption rule
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

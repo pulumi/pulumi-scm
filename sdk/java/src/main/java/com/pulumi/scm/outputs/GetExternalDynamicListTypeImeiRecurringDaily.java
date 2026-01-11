@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeImeiRecurringDaily {
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Daily Time specification hh (e.g. 20) for IMEI
      * 
      */
     private String at;
 
     private GetExternalDynamicListTypeImeiRecurringDaily() {}
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Daily Time specification hh (e.g. 20) for IMEI
      * 
      */
     public String at() {

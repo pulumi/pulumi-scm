@@ -15,26 +15,24 @@ import java.util.Objects;
 public final class GetApplicationDefault {
     /**
      * @return Ident by icmp6 type
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     private GetApplicationDefaultIdentByIcmp6Type identByIcmp6Type;
     /**
      * @return Ident by icmp type
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     private GetApplicationDefaultIdentByIcmpType identByIcmpType;
     /**
      * @return Ident by ip protocol
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     private String identByIpProtocol;
     /**
      * @return Port
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -43,6 +41,7 @@ public final class GetApplicationDefault {
     private GetApplicationDefault() {}
     /**
      * @return Ident by icmp6 type
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     public GetApplicationDefaultIdentByIcmp6Type identByIcmp6Type() {
@@ -50,7 +49,6 @@ public final class GetApplicationDefault {
     }
     /**
      * @return Ident by icmp type
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -59,7 +57,6 @@ public final class GetApplicationDefault {
     }
     /**
      * @return Ident by ip protocol
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -68,7 +65,6 @@ public final class GetApplicationDefault {
     }
     /**
      * @return Port
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */

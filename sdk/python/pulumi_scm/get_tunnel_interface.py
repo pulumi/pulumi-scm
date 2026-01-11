@@ -83,12 +83,17 @@ class GetTunnelInterfaceResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -102,16 +107,25 @@ class GetTunnelInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> _builtins.str:
+        """
+        Interface management profile
+        """
         return pulumi.get(self, "interface_management_profile")
 
     @_builtins.property
     @pulumi.getter
     def ips(self) -> Sequence['outputs.GetTunnelInterfaceIpResult']:
+        """
+        Tunnel Interface IP Parent
+        """
         return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
     def mtu(self) -> _builtins.int:
+        """
+        MTU
+        """
         return pulumi.get(self, "mtu")
 
     @_builtins.property
@@ -125,6 +139,10 @@ class GetTunnelInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -152,8 +170,11 @@ class AwaitableGetTunnelInterfaceResult(GetTunnelInterfaceResult):
             tfid=self.tfid)
 
 
-def get_tunnel_interface(id: Optional[_builtins.str] = None,
+def get_tunnel_interface(device: Optional[_builtins.str] = None,
+                         folder: Optional[_builtins.str] = None,
+                         id: Optional[_builtins.str] = None,
                          name: Optional[_builtins.str] = None,
+                         snippet: Optional[_builtins.str] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetTunnelInterfaceResult:
     """
     TunnelInterface data source
@@ -176,12 +197,21 @@ def get_tunnel_interface(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: L3 sub-interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getTunnelInterface:getTunnelInterface', __args__, opts=opts, typ=GetTunnelInterfaceResult).value
 
@@ -197,8 +227,11 @@ def get_tunnel_interface(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_tunnel_interface_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_tunnel_interface_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                id: Optional[pulumi.Input[_builtins.str]] = None,
                                 name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTunnelInterfaceResult]:
     """
     TunnelInterface data source
@@ -221,12 +254,21 @@ def get_tunnel_interface_output(id: Optional[pulumi.Input[_builtins.str]] = None
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: L3 sub-interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getTunnelInterface:getTunnelInterface', __args__, opts=opts, typ=GetTunnelInterfaceResult)
     return __ret__.apply(lambda __response__: GetTunnelInterfaceResult(

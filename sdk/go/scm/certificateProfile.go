@@ -61,6 +61,32 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/certificateProfile:CertificateProfile example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/certificateProfile:CertificateProfile example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/certificateProfile:CertificateProfile example ::device:id
+// ```
 type CertificateProfile struct {
 	pulumi.CustomResourceState
 
@@ -79,11 +105,11 @@ type CertificateProfile struct {
 	// CRL receive timeout (seconds)
 	CrlReceiveTimeout pulumi.StringPtrOutput `pulumi:"crlReceiveTimeout"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// User domain
 	Domain pulumi.StringPtrOutput `pulumi:"domain"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the certificate profile
@@ -91,7 +117,6 @@ type CertificateProfile struct {
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout pulumi.StringPtrOutput `pulumi:"ocspReceiveTimeout"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -151,11 +176,11 @@ type certificateProfileState struct {
 	// CRL receive timeout (seconds)
 	CrlReceiveTimeout *string `pulumi:"crlReceiveTimeout"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// User domain
 	Domain *string `pulumi:"domain"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the certificate profile
@@ -163,7 +188,6 @@ type certificateProfileState struct {
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout *string `pulumi:"ocspReceiveTimeout"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -191,11 +215,11 @@ type CertificateProfileState struct {
 	// CRL receive timeout (seconds)
 	CrlReceiveTimeout pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// User domain
 	Domain pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the certificate profile
@@ -203,7 +227,6 @@ type CertificateProfileState struct {
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -235,11 +258,11 @@ type certificateProfileArgs struct {
 	// CRL receive timeout (seconds)
 	CrlReceiveTimeout *string `pulumi:"crlReceiveTimeout"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// User domain
 	Domain *string `pulumi:"domain"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the certificate profile
@@ -247,7 +270,6 @@ type certificateProfileArgs struct {
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout *string `pulumi:"ocspReceiveTimeout"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Use CRL?
@@ -275,11 +297,11 @@ type CertificateProfileArgs struct {
 	// CRL receive timeout (seconds)
 	CrlReceiveTimeout pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// User domain
 	Domain pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the certificate profile
@@ -287,7 +309,6 @@ type CertificateProfileArgs struct {
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Use CRL?
@@ -421,6 +442,7 @@ func (o CertificateProfileOutput) CrlReceiveTimeout() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o CertificateProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -431,7 +453,6 @@ func (o CertificateProfileOutput) Domain() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o CertificateProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -448,7 +469,6 @@ func (o CertificateProfileOutput) OcspReceiveTimeout() pulumi.StringPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o CertificateProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Aggregate
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Aggregate` and `Classified`.
         /// </summary>
         [Input("aggregate")]
         public Input<Inputs.DosProtectionRuleProtectionAggregateGetArgs>? Aggregate { get; set; }
 
         /// <summary>
         /// Classified
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Aggregate` and `Classified`.
         /// </summary>
         [Input("classified")]

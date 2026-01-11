@@ -106,6 +106,20 @@ namespace Pulumi.Scm
     public sealed class GetApplicationArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// The UUID of the application
         /// </summary>
         [Input("id", required: true)]
@@ -117,6 +131,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetApplicationArgs()
         {
         }
@@ -125,6 +146,20 @@ namespace Pulumi.Scm
 
     public sealed class GetApplicationInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the application
         /// </summary>
@@ -136,6 +171,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetApplicationInvokeArgs()
         {
@@ -177,11 +219,25 @@ namespace Pulumi.Scm
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Evasive behavior
+        /// </summary>
         public readonly bool EvasiveBehavior;
+        /// <summary>
+        /// File type ident
+        /// </summary>
         public readonly bool FileTypeIdent;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
+        /// <summary>
+        /// Has known vulnerability
+        /// </summary>
         public readonly bool HasKnownVulnerability;
         /// <summary>
         /// The UUID of the application
@@ -191,24 +247,79 @@ namespace Pulumi.Scm
         /// The name of the application
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// No appid caching
+        /// </summary>
         public readonly bool NoAppidCaching;
+        /// <summary>
+        /// Parent app
+        /// </summary>
         public readonly string ParentApp;
+        /// <summary>
+        /// Pervasive use
+        /// </summary>
         public readonly bool PervasiveUse;
+        /// <summary>
+        /// Prone to misuse
+        /// </summary>
         public readonly bool ProneToMisuse;
+        /// <summary>
+        /// Risk
+        /// </summary>
         public readonly string Risk;
+        /// <summary>
+        /// Signature
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetApplicationSignatureResult> Signatures;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// Subcategory
+        /// </summary>
         public readonly string Subcategory;
+        /// <summary>
+        /// timeout for half-close session in seconds
+        /// </summary>
         public readonly int TcpHalfClosedTimeout;
+        /// <summary>
+        /// timeout for session in TimeWait state in seconds
+        /// </summary>
         public readonly int TcpTimeWaitTimeout;
+        /// <summary>
+        /// timeout in seconds
+        /// </summary>
         public readonly int TcpTimeout;
+        /// <summary>
+        /// Technology
+        /// </summary>
         public readonly string Technology;
         public readonly string Tfid;
+        /// <summary>
+        /// timeout in seconds
+        /// </summary>
         public readonly int Timeout;
+        /// <summary>
+        /// Tunnel applications
+        /// </summary>
         public readonly bool TunnelApplications;
+        /// <summary>
+        /// Tunnel other application
+        /// </summary>
         public readonly bool TunnelOtherApplication;
+        /// <summary>
+        /// timeout in seconds
+        /// </summary>
         public readonly int UdpTimeout;
+        /// <summary>
+        /// Used by malware
+        /// </summary>
         public readonly bool UsedByMalware;
+        /// <summary>
+        /// Virus ident
+        /// </summary>
         public readonly bool VirusIdent;
 
         [OutputConstructor]

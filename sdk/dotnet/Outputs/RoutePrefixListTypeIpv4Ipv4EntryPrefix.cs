@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Entry
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Entry` and `Network`.
         /// </summary>
         public readonly Outputs.RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry? Entry;
         /// <summary>
         /// Network
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Entry` and `Network`.
         /// </summary>
         public readonly string? Network;

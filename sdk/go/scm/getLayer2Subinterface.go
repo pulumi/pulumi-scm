@@ -59,10 +59,19 @@ func LookupLayer2Subinterface(ctx *pulumi.Context, args *LookupLayer2Subinterfac
 
 // A collection of arguments for invoking getLayer2Subinterface.
 type LookupLayer2SubinterfaceArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// L2 sub-interface name
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLayer2Subinterface.
@@ -70,16 +79,23 @@ type LookupLayer2SubinterfaceResult struct {
 	// Description
 	Comment string `pulumi:"comment"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// L2 sub-interface name
-	Name            string `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// Parent interface
 	ParentInterface string `pulumi:"parentInterface"`
-	Snippet         string `pulumi:"snippet"`
-	Tfid            string `pulumi:"tfid"`
-	VlanTag         string `pulumi:"vlanTag"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+	// VLAN tag
+	VlanTag string `pulumi:"vlanTag"`
 }
 
 func LookupLayer2SubinterfaceOutput(ctx *pulumi.Context, args LookupLayer2SubinterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupLayer2SubinterfaceResultOutput {
@@ -93,10 +109,19 @@ func LookupLayer2SubinterfaceOutput(ctx *pulumi.Context, args LookupLayer2Subint
 
 // A collection of arguments for invoking getLayer2Subinterface.
 type LookupLayer2SubinterfaceOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// L2 sub-interface name
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupLayer2SubinterfaceOutputArgs) ElementType() reflect.Type {
@@ -124,10 +149,13 @@ func (o LookupLayer2SubinterfaceResultOutput) Comment() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLayer2SubinterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLayer2SubinterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -142,10 +170,13 @@ func (o LookupLayer2SubinterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Parent interface
 func (o LookupLayer2SubinterfaceResultOutput) ParentInterface() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.ParentInterface }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLayer2SubinterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -154,6 +185,7 @@ func (o LookupLayer2SubinterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// VLAN tag
 func (o LookupLayer2SubinterfaceResultOutput) VlanTag() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.VlanTag }).(pulumi.StringOutput)
 }

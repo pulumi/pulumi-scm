@@ -22,6 +22,32 @@ import javax.annotation.Nullable;
 /**
  * WildfireAntiVirusProfile resource
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile")
 public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResource {
@@ -41,6 +67,7 @@ public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResourc
     }
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -48,6 +75,7 @@ public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResourc
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -55,7 +83,6 @@ public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResourc
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -64,7 +91,6 @@ public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResourc
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -129,7 +155,6 @@ public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResourc
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -138,7 +163,6 @@ public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResourc
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

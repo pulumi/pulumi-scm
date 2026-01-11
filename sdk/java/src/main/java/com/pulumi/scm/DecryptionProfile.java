@@ -192,11 +192,38 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/decryptionProfile:DecryptionProfile example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/decryptionProfile:DecryptionProfile example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/decryptionProfile:DecryptionProfile example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/decryptionProfile:DecryptionProfile")
 public class DecryptionProfile extends com.pulumi.resources.CustomResource {
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -204,6 +231,7 @@ public class DecryptionProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -211,7 +239,6 @@ public class DecryptionProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -220,7 +247,6 @@ public class DecryptionProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -243,7 +269,6 @@ public class DecryptionProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -252,7 +277,6 @@ public class DecryptionProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -264,56 +288,56 @@ public class DecryptionProfile extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="sslForwardProxy", refs={DecryptionProfileSslForwardProxy.class}, tree="[0]")
-    private Output<DecryptionProfileSslForwardProxy> sslForwardProxy;
+    private Output</* @Nullable */ DecryptionProfileSslForwardProxy> sslForwardProxy;
 
     /**
      * @return Ssl forward proxy
      * 
      */
-    public Output<DecryptionProfileSslForwardProxy> sslForwardProxy() {
-        return this.sslForwardProxy;
+    public Output<Optional<DecryptionProfileSslForwardProxy>> sslForwardProxy() {
+        return Codegen.optional(this.sslForwardProxy);
     }
     /**
      * Ssl inbound proxy
      * 
      */
     @Export(name="sslInboundProxy", refs={DecryptionProfileSslInboundProxy.class}, tree="[0]")
-    private Output<DecryptionProfileSslInboundProxy> sslInboundProxy;
+    private Output</* @Nullable */ DecryptionProfileSslInboundProxy> sslInboundProxy;
 
     /**
      * @return Ssl inbound proxy
      * 
      */
-    public Output<DecryptionProfileSslInboundProxy> sslInboundProxy() {
-        return this.sslInboundProxy;
+    public Output<Optional<DecryptionProfileSslInboundProxy>> sslInboundProxy() {
+        return Codegen.optional(this.sslInboundProxy);
     }
     /**
      * Ssl no proxy
      * 
      */
     @Export(name="sslNoProxy", refs={DecryptionProfileSslNoProxy.class}, tree="[0]")
-    private Output<DecryptionProfileSslNoProxy> sslNoProxy;
+    private Output</* @Nullable */ DecryptionProfileSslNoProxy> sslNoProxy;
 
     /**
      * @return Ssl no proxy
      * 
      */
-    public Output<DecryptionProfileSslNoProxy> sslNoProxy() {
-        return this.sslNoProxy;
+    public Output<Optional<DecryptionProfileSslNoProxy>> sslNoProxy() {
+        return Codegen.optional(this.sslNoProxy);
     }
     /**
      * Ssl protocol settings
      * 
      */
     @Export(name="sslProtocolSettings", refs={DecryptionProfileSslProtocolSettings.class}, tree="[0]")
-    private Output<DecryptionProfileSslProtocolSettings> sslProtocolSettings;
+    private Output</* @Nullable */ DecryptionProfileSslProtocolSettings> sslProtocolSettings;
 
     /**
      * @return Ssl protocol settings
      * 
      */
-    public Output<DecryptionProfileSslProtocolSettings> sslProtocolSettings() {
-        return this.sslProtocolSettings;
+    public Output<Optional<DecryptionProfileSslProtocolSettings>> sslProtocolSettings() {
+        return Codegen.optional(this.sslProtocolSettings);
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;

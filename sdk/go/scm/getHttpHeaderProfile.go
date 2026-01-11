@@ -12,6 +12,40 @@ import (
 )
 
 // HttpHeaderProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a single SCM HTTP Header Profile object by its ID.
+//			//
+//			// Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
+//			scmHttpHeaderProf, err := scm.LookupHttpHeaderProfile(ctx, &scm.LookupHttpHeaderProfileArgs{
+//				Id: "2733cba4-c79d-4c98-8e07-4d3cbdd0ba11",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmHttpHeaderProfileDetails", pulumi.StringMap{
+//				"profileId": scmHttpHeaderProf.Id,
+//				"folder":    scmHttpHeaderProf.Folder,
+//				"name":      scmHttpHeaderProf.Name,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupHttpHeaderProfile(ctx *pulumi.Context, args *LookupHttpHeaderProfileArgs, opts ...pulumi.InvokeOption) (*LookupHttpHeaderProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupHttpHeaderProfileResult
@@ -24,10 +58,19 @@ func LookupHttpHeaderProfile(ctx *pulumi.Context, args *LookupHttpHeaderProfileA
 
 // A collection of arguments for invoking getHttpHeaderProfile.
 type LookupHttpHeaderProfileArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// The UUID of the HTTP header profile
 	Id string `pulumi:"id"`
 	// The name of the HTTP header profile
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getHttpHeaderProfile.
@@ -35,13 +78,19 @@ type LookupHttpHeaderProfileResult struct {
 	// The description of the HTTP header profile
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	Device               string                                    `pulumi:"device"`
-	Folder               string                                    `pulumi:"folder"`
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder string `pulumi:"folder"`
+	// A list of HTTP header profile rules
 	HttpHeaderInsertions []GetHttpHeaderProfileHttpHeaderInsertion `pulumi:"httpHeaderInsertions"`
 	// The UUID of the HTTP header profile
 	Id string `pulumi:"id"`
 	// The name of the HTTP header profile
-	Name    string `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -57,10 +106,19 @@ func LookupHttpHeaderProfileOutput(ctx *pulumi.Context, args LookupHttpHeaderPro
 
 // A collection of arguments for invoking getHttpHeaderProfile.
 type LookupHttpHeaderProfileOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the HTTP header profile
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the HTTP header profile
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupHttpHeaderProfileOutputArgs) ElementType() reflect.Type {
@@ -88,14 +146,18 @@ func (o LookupHttpHeaderProfileResultOutput) Description() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupHttpHeaderProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHttpHeaderProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupHttpHeaderProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHttpHeaderProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
+// A list of HTTP header profile rules
 func (o LookupHttpHeaderProfileResultOutput) HttpHeaderInsertions() GetHttpHeaderProfileHttpHeaderInsertionArrayOutput {
 	return o.ApplyT(func(v LookupHttpHeaderProfileResult) []GetHttpHeaderProfileHttpHeaderInsertion {
 		return v.HttpHeaderInsertions
@@ -112,6 +174,8 @@ func (o LookupHttpHeaderProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHttpHeaderProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupHttpHeaderProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHttpHeaderProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
