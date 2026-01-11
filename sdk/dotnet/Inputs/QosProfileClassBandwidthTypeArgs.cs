@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Mbps
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Mbps` and `Percentage`.
         /// </summary>
         [Input("mbps")]
         public Input<Inputs.QosProfileClassBandwidthTypeMbpsArgs>? Mbps { get; set; }
 
         /// <summary>
         /// Percentage
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Mbps` and `Percentage`.
         /// </summary>
         [Input("percentage")]

@@ -17,6 +17,32 @@ import javax.annotation.Nullable;
 /**
  * Label resource
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/label:Label example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/label:Label example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/label:Label example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/label:Label")
 public class Label extends com.pulumi.resources.CustomResource {

@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Discard
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Forward`, and `NoPbf`.
         /// </summary>
         [Input("discard")]
         public Input<Inputs.PbfRuleActionDiscardGetArgs>? Discard { get; set; }
 
         /// <summary>
         /// Forward
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Forward`, and `NoPbf`.
         /// </summary>
         [Input("forward")]
@@ -28,7 +28,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// No pbf
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Forward`, and `NoPbf`.
         /// </summary>
         [Input("noPbf")]

@@ -12,6 +12,32 @@ import (
 )
 
 // ZoneProtectionProfile resource
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example ::device:id
+// ```
 type ZoneProtectionProfile struct {
 	pulumi.CustomResourceState
 
@@ -23,7 +49,6 @@ type ZoneProtectionProfile struct {
 	// The description of the profile
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Discard ICMP packets that are embedded with an error message.
@@ -31,7 +56,6 @@ type ZoneProtectionProfile struct {
 	// Flood
 	Flood ZoneProtectionProfileFloodPtrOutput `pulumi:"flood"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Discard fragmented IP packets.
@@ -75,7 +99,6 @@ type ZoneProtectionProfile struct {
 	// Discard packets if the security option is defined.
 	SecurityDiscard pulumi.BoolPtrOutput `pulumi:"securityDiscard"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
@@ -148,7 +171,6 @@ type zoneProtectionProfileState struct {
 	// The description of the profile
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Discard ICMP packets that are embedded with an error message.
@@ -156,7 +178,6 @@ type zoneProtectionProfileState struct {
 	// Flood
 	Flood *ZoneProtectionProfileFlood `pulumi:"flood"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Discard fragmented IP packets.
@@ -200,7 +221,6 @@ type zoneProtectionProfileState struct {
 	// Discard packets if the security option is defined.
 	SecurityDiscard *bool `pulumi:"securityDiscard"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
@@ -244,7 +264,6 @@ type ZoneProtectionProfileState struct {
 	// The description of the profile
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Discard ICMP packets that are embedded with an error message.
@@ -252,7 +271,6 @@ type ZoneProtectionProfileState struct {
 	// Flood
 	Flood ZoneProtectionProfileFloodPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Discard fragmented IP packets.
@@ -296,7 +314,6 @@ type ZoneProtectionProfileState struct {
 	// Discard packets if the security option is defined.
 	SecurityDiscard pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
@@ -344,7 +361,6 @@ type zoneProtectionProfileArgs struct {
 	// The description of the profile
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Discard ICMP packets that are embedded with an error message.
@@ -352,7 +368,6 @@ type zoneProtectionProfileArgs struct {
 	// Flood
 	Flood *ZoneProtectionProfileFlood `pulumi:"flood"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Discard fragmented IP packets.
@@ -396,7 +411,6 @@ type zoneProtectionProfileArgs struct {
 	// Discard packets if the security option is defined.
 	SecurityDiscard *bool `pulumi:"securityDiscard"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
@@ -440,7 +454,6 @@ type ZoneProtectionProfileArgs struct {
 	// The description of the profile
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Discard ICMP packets that are embedded with an error message.
@@ -448,7 +461,6 @@ type ZoneProtectionProfileArgs struct {
 	// Flood
 	Flood ZoneProtectionProfileFloodPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Discard fragmented IP packets.
@@ -492,7 +504,6 @@ type ZoneProtectionProfileArgs struct {
 	// Discard packets if the security option is defined.
 	SecurityDiscard pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
@@ -627,7 +638,6 @@ func (o ZoneProtectionProfileOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ZoneProtectionProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ZoneProtectionProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
@@ -644,7 +654,6 @@ func (o ZoneProtectionProfileOutput) Flood() ZoneProtectionProfileFloodPtrOutput
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ZoneProtectionProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ZoneProtectionProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -744,7 +753,6 @@ func (o ZoneProtectionProfileOutput) SecurityDiscard() pulumi.BoolPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ZoneProtectionProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ZoneProtectionProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

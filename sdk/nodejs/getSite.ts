@@ -24,6 +24,7 @@ import * as utilities from "./utilities";
 export function getSite(args: GetSiteArgs, opts?: pulumi.InvokeOptions): Promise<GetSiteResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSite:getSite", {
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -33,6 +34,10 @@ export function getSite(args: GetSiteArgs, opts?: pulumi.InvokeOptions): Promise
  * A collection of arguments for invoking getSite.
  */
 export interface GetSiteArgs {
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: string;
     /**
      * The UUID of the site
      */
@@ -63,6 +68,10 @@ export interface GetSiteResult {
      * The country in which the site exists
      */
     readonly country: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
     /**
      * The UUID of the site
      */
@@ -123,6 +132,7 @@ export interface GetSiteResult {
 export function getSiteOutput(args: GetSiteOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSiteResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSite:getSite", {
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -132,6 +142,10 @@ export function getSiteOutput(args: GetSiteOutputArgs, opts?: pulumi.InvokeOutpu
  * A collection of arguments for invoking getSite.
  */
 export interface GetSiteOutputArgs {
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: pulumi.Input<string>;
     /**
      * The UUID of the site
      */

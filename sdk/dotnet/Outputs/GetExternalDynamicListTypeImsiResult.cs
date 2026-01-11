@@ -14,27 +14,27 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListTypeImsiResult
     {
         /// <summary>
-        /// Auth
+        /// IMSI Auth Config for Custom IMSI type
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImsiAuthResult Auth;
         /// <summary>
-        /// Profile for authenticating client certificates
+        /// IMSI Certificate Profile for Custom IMSI type
         /// </summary>
         public readonly string CertificateProfile;
         /// <summary>
-        /// Description
+        /// IMSI Description for Custom IMSI type
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// Exception list
+        /// IMSI Exception List for Custom IMSI type
         /// </summary>
         public readonly ImmutableArray<string> ExceptionLists;
         /// <summary>
-        /// Recurring
+        /// IMSI Recuring Config for Custom IMSI type
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImsiRecurringResult Recurring;
         /// <summary>
-        /// Url
+        /// IMSI URL for Custom IMSI type
         /// </summary>
         public readonly string Url;
 

@@ -58,25 +58,43 @@ func LookupDecryptionProfile(ctx *pulumi.Context, args *LookupDecryptionProfileA
 
 // A collection of arguments for invoking getDecryptionProfile.
 type LookupDecryptionProfileArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDecryptionProfile.
 type LookupDecryptionProfileResult struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
-	Name                string                                  `pulumi:"name"`
-	Snippet             string                                  `pulumi:"snippet"`
-	SslForwardProxy     GetDecryptionProfileSslForwardProxy     `pulumi:"sslForwardProxy"`
-	SslInboundProxy     GetDecryptionProfileSslInboundProxy     `pulumi:"sslInboundProxy"`
-	SslNoProxy          GetDecryptionProfileSslNoProxy          `pulumi:"sslNoProxy"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	// Ssl forward proxy
+	SslForwardProxy GetDecryptionProfileSslForwardProxy `pulumi:"sslForwardProxy"`
+	// Ssl inbound proxy
+	SslInboundProxy GetDecryptionProfileSslInboundProxy `pulumi:"sslInboundProxy"`
+	// Ssl no proxy
+	SslNoProxy GetDecryptionProfileSslNoProxy `pulumi:"sslNoProxy"`
+	// Ssl protocol settings
 	SslProtocolSettings GetDecryptionProfileSslProtocolSettings `pulumi:"sslProtocolSettings"`
 	Tfid                string                                  `pulumi:"tfid"`
 }
@@ -92,10 +110,19 @@ func LookupDecryptionProfileOutput(ctx *pulumi.Context, args LookupDecryptionPro
 
 // A collection of arguments for invoking getDecryptionProfile.
 type LookupDecryptionProfileOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupDecryptionProfileOutputArgs) ElementType() reflect.Type {
@@ -118,10 +145,13 @@ func (o LookupDecryptionProfileResultOutput) ToLookupDecryptionProfileResultOutp
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDecryptionProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDecryptionProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -136,22 +166,28 @@ func (o LookupDecryptionProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDecryptionProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Ssl forward proxy
 func (o LookupDecryptionProfileResultOutput) SslForwardProxy() GetDecryptionProfileSslForwardProxyOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) GetDecryptionProfileSslForwardProxy { return v.SslForwardProxy }).(GetDecryptionProfileSslForwardProxyOutput)
 }
 
+// Ssl inbound proxy
 func (o LookupDecryptionProfileResultOutput) SslInboundProxy() GetDecryptionProfileSslInboundProxyOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) GetDecryptionProfileSslInboundProxy { return v.SslInboundProxy }).(GetDecryptionProfileSslInboundProxyOutput)
 }
 
+// Ssl no proxy
 func (o LookupDecryptionProfileResultOutput) SslNoProxy() GetDecryptionProfileSslNoProxyOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) GetDecryptionProfileSslNoProxy { return v.SslNoProxy }).(GetDecryptionProfileSslNoProxyOutput)
 }
 
+// Ssl protocol settings
 func (o LookupDecryptionProfileResultOutput) SslProtocolSettings() GetDecryptionProfileSslProtocolSettingsOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) GetDecryptionProfileSslProtocolSettings {
 		return v.SslProtocolSettings

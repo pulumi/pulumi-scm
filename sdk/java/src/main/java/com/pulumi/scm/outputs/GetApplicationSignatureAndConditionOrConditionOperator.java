@@ -15,26 +15,24 @@ import java.util.Objects;
 public final class GetApplicationSignatureAndConditionOrConditionOperator {
     /**
      * @return Equal to
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     private GetApplicationSignatureAndConditionOrConditionOperatorEqualTo equalTo;
     /**
      * @return Greater than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     private GetApplicationSignatureAndConditionOrConditionOperatorGreaterThan greaterThan;
     /**
      * @return Less than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     private GetApplicationSignatureAndConditionOrConditionOperatorLessThan lessThan;
     /**
      * @return Pattern match
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -43,6 +41,7 @@ public final class GetApplicationSignatureAndConditionOrConditionOperator {
     private GetApplicationSignatureAndConditionOrConditionOperator() {}
     /**
      * @return Equal to
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     public GetApplicationSignatureAndConditionOrConditionOperatorEqualTo equalTo() {
@@ -50,7 +49,6 @@ public final class GetApplicationSignatureAndConditionOrConditionOperator {
     }
     /**
      * @return Greater than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -59,7 +57,6 @@ public final class GetApplicationSignatureAndConditionOrConditionOperator {
     }
     /**
      * @return Less than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -68,7 +65,6 @@ public final class GetApplicationSignatureAndConditionOrConditionOperator {
     }
     /**
      * @return Pattern match
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */

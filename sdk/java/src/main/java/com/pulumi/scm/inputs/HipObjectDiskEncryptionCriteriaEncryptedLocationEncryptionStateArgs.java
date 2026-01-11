@@ -17,6 +17,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
 
     /**
      * Is
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     @Import(name="is")
@@ -24,6 +25,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
 
     /**
      * @return Is
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public Optional<Output<String>> is() {
@@ -32,7 +34,6 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
 
     /**
      * Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
@@ -41,7 +42,6 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
 
     /**
      * @return Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
@@ -76,6 +76,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
 
         /**
          * @param is Is
+         * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
          * 
          * @return builder
          * 
@@ -87,6 +88,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
 
         /**
          * @param is Is
+         * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
          * 
          * @return builder
          * 
@@ -97,7 +99,6 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
 
         /**
          * @param isNot Is not
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
          * 
          * @return builder
@@ -110,7 +111,6 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
 
         /**
          * @param isNot Is not
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
          * 
          * @return builder

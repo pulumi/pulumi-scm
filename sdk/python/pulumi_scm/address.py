@@ -33,24 +33,19 @@ class AddressArgs:
         The set of arguments for constructing a Address resource.
         :param pulumi.Input[_builtins.str] description: The description of the address object
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] fqdn: Fully qualified domain name
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_netmask: IP address with or without CIDR notation
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_range: Ip range
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_wildcard: IP wildcard mask
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] name: The name of the address object
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags assocaited with the address object
         """
@@ -92,6 +87,7 @@ class AddressArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -104,7 +100,6 @@ class AddressArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -118,7 +113,6 @@ class AddressArgs:
     def fqdn(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Fully qualified domain name
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "fqdn")
@@ -132,7 +126,6 @@ class AddressArgs:
     def ip_netmask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         IP address with or without CIDR notation
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "ip_netmask")
@@ -146,7 +139,6 @@ class AddressArgs:
     def ip_range(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Ip range
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "ip_range")
@@ -160,7 +152,6 @@ class AddressArgs:
     def ip_wildcard(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         IP wildcard mask
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "ip_wildcard")
@@ -186,7 +177,6 @@ class AddressArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -226,24 +216,19 @@ class _AddressState:
         Input properties used for looking up and filtering Address resources.
         :param pulumi.Input[_builtins.str] description: The description of the address object
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] fqdn: Fully qualified domain name
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_netmask: IP address with or without CIDR notation
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_range: Ip range
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_wildcard: IP wildcard mask
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] name: The name of the address object
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags assocaited with the address object
         """
@@ -287,6 +272,7 @@ class _AddressState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -299,7 +285,6 @@ class _AddressState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -313,7 +298,6 @@ class _AddressState:
     def fqdn(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Fully qualified domain name
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "fqdn")
@@ -327,7 +311,6 @@ class _AddressState:
     def ip_netmask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         IP address with or without CIDR notation
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "ip_netmask")
@@ -341,7 +324,6 @@ class _AddressState:
     def ip_range(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Ip range
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "ip_range")
@@ -355,7 +337,6 @@ class _AddressState:
     def ip_wildcard(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         IP wildcard mask
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "ip_wildcard")
@@ -381,7 +362,6 @@ class _AddressState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -493,28 +473,49 @@ class Address(pulumi.CustomResource):
                 ]))
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/address:Address example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/address:Address example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/address:Address example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the address object
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] fqdn: Fully qualified domain name
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_netmask: IP address with or without CIDR notation
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_range: Ip range
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_wildcard: IP wildcard mask
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] name: The name of the address object
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags assocaited with the address object
         """
@@ -586,6 +587,32 @@ class Address(pulumi.CustomResource):
                     scm_addr_tag2,
                     scm_addr_tag3,
                 ]))
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/address:Address example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/address:Address example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/address:Address example ::device:id
         ```
 
         :param str resource_name: The name of the resource.
@@ -663,24 +690,19 @@ class Address(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the address object
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] fqdn: Fully qualified domain name
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_netmask: IP address with or without CIDR notation
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_range: Ip range
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] ip_wildcard: IP wildcard mask
-               
                > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         :param pulumi.Input[_builtins.str] name: The name of the address object
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags assocaited with the address object
         """
@@ -714,6 +736,7 @@ class Address(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -722,7 +745,6 @@ class Address(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -732,7 +754,6 @@ class Address(pulumi.CustomResource):
     def fqdn(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Fully qualified domain name
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "fqdn")
@@ -742,7 +763,6 @@ class Address(pulumi.CustomResource):
     def ip_netmask(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         IP address with or without CIDR notation
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "ip_netmask")
@@ -752,7 +772,6 @@ class Address(pulumi.CustomResource):
     def ip_range(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Ip range
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "ip_range")
@@ -762,7 +781,6 @@ class Address(pulumi.CustomResource):
     def ip_wildcard(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         IP wildcard mask
-
         > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ip_netmask`, `ip_range`, and `ip_wildcard`.
         """
         return pulumi.get(self, "ip_wildcard")
@@ -780,7 +798,6 @@ class Address(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

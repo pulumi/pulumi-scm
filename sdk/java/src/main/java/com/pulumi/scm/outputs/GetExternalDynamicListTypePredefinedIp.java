@@ -17,12 +17,12 @@ public final class GetExternalDynamicListTypePredefinedIp {
      */
     private String description;
     /**
-     * @return Exception list
+     * @return IP Exception List for Predefined IP type
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return Url
+     * @return URL source for Predefined IP type
      * 
      */
     private String url;
@@ -36,14 +36,14 @@ public final class GetExternalDynamicListTypePredefinedIp {
         return this.description;
     }
     /**
-     * @return Exception list
+     * @return IP Exception List for Predefined IP type
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return Url
+     * @return URL source for Predefined IP type
      * 
      */
     public String url() {

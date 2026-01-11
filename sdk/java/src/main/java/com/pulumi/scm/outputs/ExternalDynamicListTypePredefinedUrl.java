@@ -19,12 +19,12 @@ public final class ExternalDynamicListTypePredefinedUrl {
      */
     private @Nullable String description;
     /**
-     * @return Exception list
+     * @return URL Exception List for Predefined URL type
      * 
      */
     private @Nullable List<String> exceptionLists;
     /**
-     * @return Url
+     * @return URL source for Predefined URL type
      * 
      */
     private String url;
@@ -38,14 +38,14 @@ public final class ExternalDynamicListTypePredefinedUrl {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return Exception list
+     * @return URL Exception List for Predefined URL type
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists == null ? List.of() : this.exceptionLists;
     }
     /**
-     * @return Url
+     * @return URL source for Predefined URL type
      * 
      */
     public String url() {

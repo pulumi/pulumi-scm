@@ -18,47 +18,42 @@ import java.util.Objects;
 public final class GetAuthenticationProfileListDataMethod {
     /**
      * @return Cloud
+     * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
     private GetAuthenticationProfileListDataMethodCloud cloud;
     /**
      * @return Kerberos
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
     private GetAuthenticationProfileListDataMethodKerberos kerberos;
     /**
      * @return Ldap
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
     private GetAuthenticationProfileListDataMethodLdap ldap;
     /**
      * @return Local database
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
     private GetAuthenticationProfileListDataMethodLocalDatabase localDatabase;
     /**
      * @return Radius
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
     private GetAuthenticationProfileListDataMethodRadius radius;
     /**
      * @return Saml idp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
     private GetAuthenticationProfileListDataMethodSamlIdp samlIdp;
     /**
      * @return Tacplus
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
@@ -67,6 +62,7 @@ public final class GetAuthenticationProfileListDataMethod {
     private GetAuthenticationProfileListDataMethod() {}
     /**
      * @return Cloud
+     * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
     public GetAuthenticationProfileListDataMethodCloud cloud() {
@@ -74,7 +70,6 @@ public final class GetAuthenticationProfileListDataMethod {
     }
     /**
      * @return Kerberos
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
@@ -83,7 +78,6 @@ public final class GetAuthenticationProfileListDataMethod {
     }
     /**
      * @return Ldap
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
@@ -92,7 +86,6 @@ public final class GetAuthenticationProfileListDataMethod {
     }
     /**
      * @return Local database
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
@@ -101,7 +94,6 @@ public final class GetAuthenticationProfileListDataMethod {
     }
     /**
      * @return Radius
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
@@ -110,7 +102,6 @@ public final class GetAuthenticationProfileListDataMethod {
     }
     /**
      * @return Saml idp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */
@@ -119,7 +110,6 @@ public final class GetAuthenticationProfileListDataMethod {
     }
     /**
      * @return Tacplus
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      * 
      */

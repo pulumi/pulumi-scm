@@ -15,19 +15,18 @@ import javax.annotation.Nullable;
 public final class BgpRouteMapRedistributionConnectedStatic {
     /**
      * @return Connected Static Root BGP
+     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticBgp bgp;
     /**
      * @return Ospf
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticOspf ospf;
     /**
      * @return Rib
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
@@ -36,6 +35,7 @@ public final class BgpRouteMapRedistributionConnectedStatic {
     private BgpRouteMapRedistributionConnectedStatic() {}
     /**
      * @return Connected Static Root BGP
+     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     public Optional<BgpRouteMapRedistributionConnectedStaticBgp> bgp() {
@@ -43,7 +43,6 @@ public final class BgpRouteMapRedistributionConnectedStatic {
     }
     /**
      * @return Ospf
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
@@ -52,7 +51,6 @@ public final class BgpRouteMapRedistributionConnectedStatic {
     }
     /**
      * @return Rib
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */

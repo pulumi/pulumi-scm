@@ -103,6 +103,20 @@ namespace Pulumi.Scm
     public sealed class GetInterfaceManagementProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
@@ -114,6 +128,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetInterfaceManagementProfileArgs()
         {
         }
@@ -122,6 +143,20 @@ namespace Pulumi.Scm
 
     public sealed class GetInterfaceManagementProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// UUID of the resource
         /// </summary>
@@ -133,6 +168,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetInterfaceManagementProfileInvokeArgs()
         {
@@ -146,11 +188,25 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
+        /// <summary>
+        /// Allow HTTP?
+        /// </summary>
         public readonly bool Http;
+        /// <summary>
+        /// Allow HTTP OCSP?
+        /// </summary>
         public readonly bool HttpOcsp;
+        /// <summary>
+        /// Allow HTTPS?
+        /// </summary>
         public readonly bool Https;
         /// <summary>
         /// UUID of the resource
@@ -160,15 +216,43 @@ namespace Pulumi.Scm
         /// Name
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Allowed IP address(es)
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetInterfaceManagementProfilePermittedIpResult> PermittedIps;
+        /// <summary>
+        /// Allow ping?
+        /// </summary>
         public readonly bool Ping;
+        /// <summary>
+        /// Allow response pages?
+        /// </summary>
         public readonly bool ResponsePages;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// Allow SSH?
+        /// </summary>
         public readonly bool Ssh;
+        /// <summary>
+        /// Allow telnet? Seriously, why would you do this?!?
+        /// </summary>
         public readonly bool Telnet;
         public readonly string Tfid;
+        /// <summary>
+        /// Allow User-ID?
+        /// </summary>
         public readonly bool UseridService;
+        /// <summary>
+        /// Allow User-ID syslog listener (SSL)?
+        /// </summary>
         public readonly bool UseridSyslogListenerSsl;
+        /// <summary>
+        /// Allow User-ID syslog listener (UDP)?
+        /// </summary>
         public readonly bool UseridSyslogListenerUdp;
 
         [OutputConstructor]

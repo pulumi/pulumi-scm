@@ -20,6 +20,7 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
     /**
      * Ebgp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     @Import(name="ebgp")
@@ -27,6 +28,7 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
     /**
      * @return Ebgp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     public Optional<Output<LogicalRouterVrfBgpPeerGroupTypeEbgpArgs>> ebgp() {
@@ -35,7 +37,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
     /**
      * Ebgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -44,7 +45,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
     /**
      * @return Ebgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -54,7 +54,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
     /**
      * Ibgp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -63,7 +62,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
     /**
      * @return Ibgp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -73,7 +71,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
     /**
      * Ibgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -82,7 +79,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
     /**
      * @return Ibgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -119,6 +115,7 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
         /**
          * @param ebgp Ebgp
+         * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
          * 
          * @return builder
          * 
@@ -130,6 +127,7 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
         /**
          * @param ebgp Ebgp
+         * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
          * 
          * @return builder
          * 
@@ -140,7 +138,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
         /**
          * @param ebgpConfed Ebgp confed
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
          * 
          * @return builder
@@ -153,7 +150,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
         /**
          * @param ebgpConfed Ebgp confed
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
          * 
          * @return builder
@@ -165,7 +161,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
         /**
          * @param ibgp Ibgp
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
          * 
          * @return builder
@@ -178,7 +173,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
         /**
          * @param ibgp Ibgp
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
          * 
          * @return builder
@@ -190,7 +184,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
         /**
          * @param ibgpConfed Ibgp confed
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
          * 
          * @return builder
@@ -203,7 +196,6 @@ public final class LogicalRouterVrfBgpPeerGroupTypeArgs extends com.pulumi.resou
 
         /**
          * @param ibgpConfed Ibgp confed
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
          * 
          * @return builder

@@ -57,10 +57,16 @@ func LookupNatRule(ctx *pulumi.Context, args *LookupNatRuleArgs, opts ...pulumi.
 
 // A collection of arguments for invoking getNatRule.
 type LookupNatRuleArgs struct {
+	// The device in which the resource is defined
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// NAT rule name
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getNatRule.
@@ -119,10 +125,16 @@ func LookupNatRuleOutput(ctx *pulumi.Context, args LookupNatRuleOutputArgs, opts
 
 // A collection of arguments for invoking getNatRule.
 type LookupNatRuleOutputArgs struct {
+	// The device in which the resource is defined
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// NAT rule name
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupNatRuleOutputArgs) ElementType() reflect.Type {

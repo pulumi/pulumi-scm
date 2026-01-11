@@ -34,8 +34,11 @@ import * as utilities from "./utilities";
 export function getZone(args: GetZoneArgs, opts?: pulumi.InvokeOptions): Promise<GetZoneResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getZone:getZone", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -44,6 +47,16 @@ export function getZone(args: GetZoneArgs, opts?: pulumi.InvokeOptions): Promise
  */
 export interface GetZoneArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * Folder
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -51,6 +64,11 @@ export interface GetZoneArgs {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -59,13 +77,33 @@ export interface GetZoneArgs {
 export interface GetZoneResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Device acl
+     */
     readonly deviceAcl: outputs.GetZoneDeviceAcl;
+    /**
+     * Dos log setting
+     */
     readonly dosLogSetting: string;
+    /**
+     * Dos profile
+     */
     readonly dosProfile: string;
+    /**
+     * Enable device identification
+     */
     readonly enableDeviceIdentification: boolean;
+    /**
+     * Enable user identification
+     */
     readonly enableUserIdentification: boolean;
+    /**
+     * Folder
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -75,9 +113,19 @@ export interface GetZoneResult {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
+    /**
+     * Network
+     */
     readonly network: outputs.GetZoneNetwork;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * User acl
+     */
     readonly userAcl: outputs.GetZoneUserAcl;
 }
 /**
@@ -108,8 +156,11 @@ export interface GetZoneResult {
 export function getZoneOutput(args: GetZoneOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetZoneResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getZone:getZone", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -118,6 +169,16 @@ export function getZoneOutput(args: GetZoneOutputArgs, opts?: pulumi.InvokeOutpu
  */
 export interface GetZoneOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * Folder
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -125,4 +186,9 @@ export interface GetZoneOutputArgs {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

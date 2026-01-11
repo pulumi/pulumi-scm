@@ -12,19 +12,18 @@ import java.util.Objects;
 public final class GetScepProfileListDataCertificateAttributes {
     /**
      * @return Dnsname
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
     private String dnsname;
     /**
      * @return Rfc822name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
     private String rfc822name;
     /**
      * @return Uniform resource identifier
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
@@ -33,6 +32,7 @@ public final class GetScepProfileListDataCertificateAttributes {
     private GetScepProfileListDataCertificateAttributes() {}
     /**
      * @return Dnsname
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
     public String dnsname() {
@@ -40,7 +40,6 @@ public final class GetScepProfileListDataCertificateAttributes {
     }
     /**
      * @return Rfc822name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
@@ -49,7 +48,6 @@ public final class GetScepProfileListDataCertificateAttributes {
     }
     /**
      * @return Uniform resource identifier
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */

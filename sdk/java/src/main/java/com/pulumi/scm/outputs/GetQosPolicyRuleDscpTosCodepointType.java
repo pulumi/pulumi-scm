@@ -16,33 +16,30 @@ import java.util.Objects;
 public final class GetQosPolicyRuleDscpTosCodepointType {
     /**
      * @return Af
+     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeAf af;
     /**
      * @return Cs
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeCs cs;
     /**
      * @return Custom
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeCustom custom;
     /**
      * @return Ef
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeEf ef;
     /**
      * @return Tos
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
@@ -51,6 +48,7 @@ public final class GetQosPolicyRuleDscpTosCodepointType {
     private GetQosPolicyRuleDscpTosCodepointType() {}
     /**
      * @return Af
+     * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
     public GetQosPolicyRuleDscpTosCodepointTypeAf af() {
@@ -58,7 +56,6 @@ public final class GetQosPolicyRuleDscpTosCodepointType {
     }
     /**
      * @return Cs
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
@@ -67,7 +64,6 @@ public final class GetQosPolicyRuleDscpTosCodepointType {
     }
     /**
      * @return Custom
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
@@ -76,7 +72,6 @@ public final class GetQosPolicyRuleDscpTosCodepointType {
     }
     /**
      * @return Ef
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */
@@ -85,7 +80,6 @@ public final class GetQosPolicyRuleDscpTosCodepointType {
     }
     /**
      * @return Tos
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      * 
      */

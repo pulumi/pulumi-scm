@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getSdwanErrorCorrectionProfile(args: GetSdwanErrorCorrectionProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetSdwanErrorCorrectionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSdwanErrorCorrectionProfile:getSdwanErrorCorrectionProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getSdwanErrorCorrectionProfile(args: GetSdwanErrorCorrectionProf
  */
 export interface GetSdwanErrorCorrectionProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetSdwanErrorCorrectionProfileArgs {
      * Name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -41,18 +59,30 @@ export interface GetSdwanErrorCorrectionProfileResult {
     readonly activationThreshold: number;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Mode
+     */
     readonly mode: outputs.GetSdwanErrorCorrectionProfileMode;
     /**
      * Name
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -62,8 +92,11 @@ export interface GetSdwanErrorCorrectionProfileResult {
 export function getSdwanErrorCorrectionProfileOutput(args: GetSdwanErrorCorrectionProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSdwanErrorCorrectionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSdwanErrorCorrectionProfile:getSdwanErrorCorrectionProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -72,6 +105,16 @@ export function getSdwanErrorCorrectionProfileOutput(args: GetSdwanErrorCorrecti
  */
 export interface GetSdwanErrorCorrectionProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -79,4 +122,9 @@ export interface GetSdwanErrorCorrectionProfileOutputArgs {
      * Name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

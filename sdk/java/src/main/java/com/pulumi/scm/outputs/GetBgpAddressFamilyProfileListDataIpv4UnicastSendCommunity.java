@@ -16,33 +16,30 @@ import java.util.Objects;
 public final class GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity {
     /**
      * @return All
+     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll all;
     /**
      * @return Both
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth both;
     /**
      * @return Extended
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended extended;
     /**
      * @return Large
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge large;
     /**
      * @return Standard
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -51,6 +48,7 @@ public final class GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity {
     private GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity() {}
     /**
      * @return All
+     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll all() {
@@ -58,7 +56,6 @@ public final class GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity {
     }
     /**
      * @return Both
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -67,7 +64,6 @@ public final class GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity {
     }
     /**
      * @return Extended
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -76,7 +72,6 @@ public final class GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity {
     }
     /**
      * @return Large
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -85,7 +80,6 @@ public final class GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity {
     }
     /**
      * @return Standard
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */

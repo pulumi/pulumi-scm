@@ -16,6 +16,36 @@ public final class GetSecurityRulePlainArgs extends com.pulumi.resources.InvokeA
     public static final GetSecurityRulePlainArgs Empty = new GetSecurityRulePlainArgs();
 
     /**
+     * The device in which the resource is defined
+     * 
+     */
+    @Import(name="device")
+    private @Nullable String device;
+
+    /**
+     * @return The device in which the resource is defined
+     * 
+     */
+    public Optional<String> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    /**
+     * The folder in which the resource is defined
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable String folder;
+
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public Optional<String> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * The UUID of the security rule
      * 
      */
@@ -45,11 +75,29 @@ public final class GetSecurityRulePlainArgs extends com.pulumi.resources.InvokeA
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The snippet in which the resource is defined
+     * 
+     */
+    @Import(name="snippet")
+    private @Nullable String snippet;
+
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public Optional<String> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetSecurityRulePlainArgs() {}
 
     private GetSecurityRulePlainArgs(GetSecurityRulePlainArgs $) {
+        this.device = $.device;
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -71,6 +119,28 @@ public final class GetSecurityRulePlainArgs extends com.pulumi.resources.InvokeA
         }
 
         /**
+         * @param device The device in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(@Nullable String device) {
+            $.device = device;
+            return this;
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable String folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
          * @param id The UUID of the security rule
          * 
          * @return builder
@@ -89,6 +159,17 @@ public final class GetSecurityRulePlainArgs extends com.pulumi.resources.InvokeA
          */
         public Builder name(@Nullable String name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(@Nullable String snippet) {
+            $.snippet = snippet;
             return this;
         }
 

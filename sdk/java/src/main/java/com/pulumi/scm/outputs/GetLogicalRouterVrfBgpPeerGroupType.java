@@ -15,26 +15,24 @@ import java.util.Objects;
 public final class GetLogicalRouterVrfBgpPeerGroupType {
     /**
      * @return Ebgp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     private GetLogicalRouterVrfBgpPeerGroupTypeEbgp ebgp;
     /**
      * @return Ebgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     private GetLogicalRouterVrfBgpPeerGroupTypeEbgpConfed ebgpConfed;
     /**
      * @return Ibgp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     private GetLogicalRouterVrfBgpPeerGroupTypeIbgp ibgp;
     /**
      * @return Ibgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -43,6 +41,7 @@ public final class GetLogicalRouterVrfBgpPeerGroupType {
     private GetLogicalRouterVrfBgpPeerGroupType() {}
     /**
      * @return Ebgp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     public GetLogicalRouterVrfBgpPeerGroupTypeEbgp ebgp() {
@@ -50,7 +49,6 @@ public final class GetLogicalRouterVrfBgpPeerGroupType {
     }
     /**
      * @return Ebgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -59,7 +57,6 @@ public final class GetLogicalRouterVrfBgpPeerGroupType {
     }
     /**
      * @return Ibgp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -68,7 +65,6 @@ public final class GetLogicalRouterVrfBgpPeerGroupType {
     }
     /**
      * @return Ibgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */

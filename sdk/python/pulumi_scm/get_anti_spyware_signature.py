@@ -114,17 +114,25 @@ class GetAntiSpywareSignatureResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def direction(self) -> _builtins.str:
+        """
+        Direction
+        """
         return pulumi.get(self, "direction")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -138,21 +146,34 @@ class GetAntiSpywareSignatureResult:
     @_builtins.property
     @pulumi.getter
     def references(self) -> Sequence[_builtins.str]:
+        """
+        Reference
+        """
         return pulumi.get(self, "references")
 
     @_builtins.property
     @pulumi.getter
     def severity(self) -> _builtins.str:
+        """
+        Severity
+        """
         return pulumi.get(self, "severity")
 
     @_builtins.property
     @pulumi.getter
     def signature(self) -> 'outputs.GetAntiSpywareSignatureSignatureResult':
+        """
+        anti spyware signature
+        """
         return pulumi.get(self, "signature")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -163,16 +184,25 @@ class GetAntiSpywareSignatureResult:
     @_builtins.property
     @pulumi.getter(name="threatId")
     def threat_id(self) -> _builtins.str:
+        """
+        threat id range \\n\\n and \\n\\n
+        """
         return pulumi.get(self, "threat_id")
 
     @_builtins.property
     @pulumi.getter
     def threatname(self) -> _builtins.str:
+        """
+        Threatname
+        """
         return pulumi.get(self, "threatname")
 
     @_builtins.property
     @pulumi.getter
     def vendors(self) -> Sequence[_builtins.str]:
+        """
+        Vendor
+        """
         return pulumi.get(self, "vendors")
 
 
@@ -200,7 +230,10 @@ class AwaitableGetAntiSpywareSignatureResult(GetAntiSpywareSignatureResult):
             vendors=self.vendors)
 
 
-def get_anti_spyware_signature(id: Optional[_builtins.str] = None,
+def get_anti_spyware_signature(device: Optional[_builtins.str] = None,
+                               folder: Optional[_builtins.str] = None,
+                               id: Optional[_builtins.str] = None,
+                               snippet: Optional[_builtins.str] = None,
                                opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAntiSpywareSignatureResult:
     """
     AntiSpywareSignature data source
@@ -224,10 +257,19 @@ def get_anti_spyware_signature(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getAntiSpywareSignature:getAntiSpywareSignature', __args__, opts=opts, typ=GetAntiSpywareSignatureResult).value
 
@@ -248,7 +290,10 @@ def get_anti_spyware_signature(id: Optional[_builtins.str] = None,
         threat_id=pulumi.get(__ret__, 'threat_id'),
         threatname=pulumi.get(__ret__, 'threatname'),
         vendors=pulumi.get(__ret__, 'vendors'))
-def get_anti_spyware_signature_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_anti_spyware_signature_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                      folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                      id: Optional[pulumi.Input[_builtins.str]] = None,
+                                      snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAntiSpywareSignatureResult]:
     """
     AntiSpywareSignature data source
@@ -272,10 +317,19 @@ def get_anti_spyware_signature_output(id: Optional[pulumi.Input[_builtins.str]] 
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAntiSpywareSignature:getAntiSpywareSignature', __args__, opts=opts, typ=GetAntiSpywareSignatureResult)
     return __ret__.apply(lambda __response__: GetAntiSpywareSignatureResult(

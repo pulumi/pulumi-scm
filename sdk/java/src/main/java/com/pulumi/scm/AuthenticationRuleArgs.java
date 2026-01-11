@@ -96,6 +96,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Device
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -103,6 +104,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return Device
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -126,7 +128,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Folder
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -135,7 +136,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return Folder
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -310,7 +310,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Snippet
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -319,7 +318,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return Snippet
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -619,6 +617,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param device Device
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -630,6 +629,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param device Device
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -661,7 +661,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param folder Folder
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -674,7 +673,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param folder Folder
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -947,7 +945,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param snippet Snippet
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -960,7 +957,6 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param snippet Snippet
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

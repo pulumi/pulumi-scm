@@ -18,6 +18,11 @@ public final class GetServiceConnectionGroupResult {
      */
     private Boolean disableSnat;
     /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
      * @return The UUID of the service connection group
      * 
      */
@@ -46,6 +51,13 @@ public final class GetServiceConnectionGroupResult {
      */
     public Boolean disableSnat() {
         return this.disableSnat;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
     }
     /**
      * @return The UUID of the service connection group
@@ -89,6 +101,7 @@ public final class GetServiceConnectionGroupResult {
     @CustomType.Builder
     public static final class Builder {
         private Boolean disableSnat;
+        private String folder;
         private String id;
         private String name;
         private Boolean pbfOnly;
@@ -98,6 +111,7 @@ public final class GetServiceConnectionGroupResult {
         public Builder(GetServiceConnectionGroupResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.disableSnat = defaults.disableSnat;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.pbfOnly = defaults.pbfOnly;
@@ -111,6 +125,14 @@ public final class GetServiceConnectionGroupResult {
               throw new MissingRequiredPropertyException("GetServiceConnectionGroupResult", "disableSnat");
             }
             this.disableSnat = disableSnat;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetServiceConnectionGroupResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -159,6 +181,7 @@ public final class GetServiceConnectionGroupResult {
         public GetServiceConnectionGroupResult build() {
             final var _resultValue = new GetServiceConnectionGroupResult();
             _resultValue.disableSnat = disableSnat;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.pbfOnly = pbfOnly;

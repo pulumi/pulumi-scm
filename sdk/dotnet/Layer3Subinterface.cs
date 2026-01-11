@@ -97,6 +97,32 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/layer3Subinterface:Layer3Subinterface")]
     public partial class Layer3Subinterface : global::Pulumi.CustomResource
@@ -117,25 +143,24 @@ namespace Pulumi.Scm
         /// Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
         /// </summary>
         [Output("ddnsConfig")]
-        public Output<Outputs.Layer3SubinterfaceDdnsConfig> DdnsConfig { get; private set; } = null!;
+        public Output<Outputs.Layer3SubinterfaceDdnsConfig?> DdnsConfig { get; private set; } = null!;
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// Layer3 sub interfaces DHCP Client Object
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Output("dhcpClient")]
-        public Output<Outputs.Layer3SubinterfaceDhcpClient> DhcpClient { get; private set; } = null!;
+        public Output<Outputs.Layer3SubinterfaceDhcpClient?> DhcpClient { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -149,7 +174,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// L3 sub-interface IP Parent
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Output("ips")]
@@ -175,7 +199,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -262,13 +285,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// Layer3 sub interfaces DHCP Client Object
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Input("dhcpClient")]
@@ -276,7 +299,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -293,7 +315,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// L3 sub-interface IP Parent
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public InputList<Inputs.Layer3SubinterfaceIpArgs> Ips
@@ -322,7 +343,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -368,13 +388,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// Layer3 sub interfaces DHCP Client Object
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Input("dhcpClient")]
@@ -382,7 +402,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -399,7 +418,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// L3 sub-interface IP Parent
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public InputList<Inputs.Layer3SubinterfaceIpGetArgs> Ips
@@ -428,7 +446,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

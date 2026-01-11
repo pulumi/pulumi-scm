@@ -88,6 +88,32 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/autoVpnCluster:AutoVpnCluster")]
     public partial class AutoVpnCluster : global::Pulumi.CustomResource

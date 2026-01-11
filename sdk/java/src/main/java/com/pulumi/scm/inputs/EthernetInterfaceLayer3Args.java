@@ -54,6 +54,7 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
     /**
      * Ethernet Interfaces DHCP Client Object
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
     @Import(name="dhcpClient")
@@ -61,6 +62,7 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
     /**
      * @return Ethernet Interfaces DHCP Client Object
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
     public Optional<Output<EthernetInterfaceLayer3DhcpClientArgs>> dhcpClient() {
@@ -84,7 +86,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
     /**
      * Ethernet Interface IP addresses
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
@@ -93,7 +94,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
     /**
      * @return Ethernet Interface IP addresses
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
@@ -118,7 +118,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
     /**
      * Pppoe
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
@@ -127,7 +126,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
     /**
      * @return Pppoe
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
@@ -219,6 +217,7 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
         /**
          * @param dhcpClient Ethernet Interfaces DHCP Client Object
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
          * 
          * @return builder
          * 
@@ -230,6 +229,7 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
         /**
          * @param dhcpClient Ethernet Interfaces DHCP Client Object
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
          * 
          * @return builder
          * 
@@ -261,7 +261,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
         /**
          * @param ips Ethernet Interface IP addresses
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
          * 
          * @return builder
@@ -274,7 +273,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
         /**
          * @param ips Ethernet Interface IP addresses
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
          * 
          * @return builder
@@ -286,7 +284,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
         /**
          * @param ips Ethernet Interface IP addresses
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
          * 
          * @return builder
@@ -319,7 +316,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
         /**
          * @param pppoe Pppoe
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
          * 
          * @return builder
@@ -332,7 +328,6 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
 
         /**
          * @param pppoe Pppoe
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
          * 
          * @return builder

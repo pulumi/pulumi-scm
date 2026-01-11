@@ -15,47 +15,41 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Alert
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataThreatExceptionActionAlertResult Alert;
         /// <summary>
         /// Allow
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataThreatExceptionActionAllowResult Allow;
         /// <summary>
         /// anti spyware profiles threat exception action block ip
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataThreatExceptionActionBlockIpResult BlockIp;
         /// <summary>
         /// Default
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataThreatExceptionActionDefaultResult Default;
         /// <summary>
         /// Drop
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataThreatExceptionActionDropResult Drop;
         /// <summary>
         /// Reset both
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataThreatExceptionActionResetBothResult ResetBoth;
         /// <summary>
         /// Reset client
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataThreatExceptionActionResetClientResult ResetClient;
         /// <summary>
         /// Reset server
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataThreatExceptionActionResetServerResult ResetServer;

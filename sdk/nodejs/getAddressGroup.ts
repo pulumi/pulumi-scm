@@ -31,8 +31,11 @@ import * as utilities from "./utilities";
 export function getAddressGroup(args: GetAddressGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetAddressGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAddressGroup:getAddressGroup", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -41,6 +44,16 @@ export function getAddressGroup(args: GetAddressGroupArgs, opts?: pulumi.InvokeO
  */
 export interface GetAddressGroupArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the address group
      */
     id: string;
@@ -48,6 +61,11 @@ export interface GetAddressGroupArgs {
      * The name of the address group
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -60,9 +78,18 @@ export interface GetAddressGroupResult {
     readonly description: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Dynamic
+     * > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
+     */
     readonly dynamic: outputs.GetAddressGroupDynamic;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the address group
@@ -72,8 +99,19 @@ export interface GetAddressGroupResult {
      * The name of the address group
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * Static
+     * > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
+     */
     readonly statics: string[];
+    /**
+     * Tags for address group object
+     */
     readonly tags: string[];
     readonly tfid: string;
 }
@@ -102,8 +140,11 @@ export interface GetAddressGroupResult {
 export function getAddressGroupOutput(args: GetAddressGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAddressGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAddressGroup:getAddressGroup", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -112,6 +153,16 @@ export function getAddressGroupOutput(args: GetAddressGroupOutputArgs, opts?: pu
  */
 export interface GetAddressGroupOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the address group
      */
     id: pulumi.Input<string>;
@@ -119,4 +170,9 @@ export interface GetAddressGroupOutputArgs {
      * The name of the address group
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

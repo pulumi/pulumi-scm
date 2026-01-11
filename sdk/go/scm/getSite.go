@@ -51,6 +51,8 @@ func LookupSite(ctx *pulumi.Context, args *LookupSiteArgs, opts ...pulumi.Invoke
 
 // A collection of arguments for invoking getSite.
 type LookupSiteArgs struct {
+	// The folder in which the resource is defined
+	Folder *string `pulumi:"folder"`
 	// The UUID of the site
 	Id string `pulumi:"id"`
 	// The name of the site
@@ -67,6 +69,8 @@ type LookupSiteResult struct {
 	City string `pulumi:"city"`
 	// The country in which the site exists
 	Country string `pulumi:"country"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// The UUID of the site
 	Id string `pulumi:"id"`
 	// The latitude coordinate for the site
@@ -101,6 +105,8 @@ func LookupSiteOutput(ctx *pulumi.Context, args LookupSiteOutputArgs, opts ...pu
 
 // A collection of arguments for invoking getSite.
 type LookupSiteOutputArgs struct {
+	// The folder in which the resource is defined
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the site
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the site
@@ -144,6 +150,11 @@ func (o LookupSiteResultOutput) City() pulumi.StringOutput {
 // The country in which the site exists
 func (o LookupSiteResultOutput) Country() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSiteResult) string { return v.Country }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupSiteResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
 // The UUID of the site

@@ -13,26 +13,24 @@ import javax.annotation.Nullable;
 public final class IkeCryptoProfileLifetime {
     /**
      * @return specify lifetime in days
+     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     private @Nullable Integer days;
     /**
      * @return specify lifetime in hours
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     private @Nullable Integer hours;
     /**
      * @return specify lifetime in minutes
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     private @Nullable Integer minutes;
     /**
      * @return specify lifetime in seconds
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -41,6 +39,7 @@ public final class IkeCryptoProfileLifetime {
     private IkeCryptoProfileLifetime() {}
     /**
      * @return specify lifetime in days
+     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     public Optional<Integer> days() {
@@ -48,7 +47,6 @@ public final class IkeCryptoProfileLifetime {
     }
     /**
      * @return specify lifetime in hours
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -57,7 +55,6 @@ public final class IkeCryptoProfileLifetime {
     }
     /**
      * @return specify lifetime in minutes
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -66,7 +63,6 @@ public final class IkeCryptoProfileLifetime {
     }
     /**
      * @return specify lifetime in seconds
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */

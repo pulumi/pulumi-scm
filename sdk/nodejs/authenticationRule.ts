@@ -105,6 +105,32 @@ import * as utilities from "./utilities";
  *     sourceUsers: ["any"],
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/authenticationRule:AuthenticationRule example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/authenticationRule:AuthenticationRule example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/authenticationRule:AuthenticationRule example ::device:id
+ * ```
  */
 export class AuthenticationRule extends pulumi.CustomResource {
     /**
@@ -156,6 +182,7 @@ export class AuthenticationRule extends pulumi.CustomResource {
     declare public readonly destinations: pulumi.Output<string[]>;
     /**
      * Device
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -164,7 +191,6 @@ export class AuthenticationRule extends pulumi.CustomResource {
     declare public readonly disabled: pulumi.Output<boolean>;
     /**
      * Folder
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -214,7 +240,6 @@ export class AuthenticationRule extends pulumi.CustomResource {
     declare public readonly services: pulumi.Output<string[]>;
     /**
      * Snippet
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -366,6 +391,7 @@ export interface AuthenticationRuleState {
     destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Device
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -374,7 +400,6 @@ export interface AuthenticationRuleState {
     disabled?: pulumi.Input<boolean>;
     /**
      * Folder
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -424,7 +449,6 @@ export interface AuthenticationRuleState {
     services?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Snippet
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -485,6 +509,7 @@ export interface AuthenticationRuleArgs {
     destinations: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Device
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -493,7 +518,6 @@ export interface AuthenticationRuleArgs {
     disabled?: pulumi.Input<boolean>;
     /**
      * Folder
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -543,7 +567,6 @@ export interface AuthenticationRuleArgs {
     services: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Snippet
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

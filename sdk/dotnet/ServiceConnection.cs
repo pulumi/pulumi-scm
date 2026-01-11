@@ -139,6 +139,32 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/serviceConnection:ServiceConnection example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/serviceConnection:ServiceConnection example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/serviceConnection:ServiceConnection example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/serviceConnection:ServiceConnection")]
     public partial class ServiceConnection : global::Pulumi.CustomResource
@@ -160,6 +186,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Output("encryptedValues")]
         public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Output("folder")]
+        public Output<string> Folder { get; private set; } = null!;
 
         /// <summary>
         /// Ipsec tunnel
@@ -399,6 +431,12 @@ namespace Pulumi.Scm
                 _encryptedValues = Output.All(value, emptySecret).Apply(v => v[0]);
             }
         }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
 
         /// <summary>
         /// Ipsec tunnel

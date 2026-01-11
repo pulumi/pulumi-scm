@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetBgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction {
     /**
      * @return Restart
+     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
     private GetBgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestart restart;
     /**
      * @return Warning only
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
@@ -27,6 +27,7 @@ public final class GetBgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction {
     private GetBgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction() {}
     /**
      * @return Restart
+     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
     public GetBgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestart restart() {
@@ -34,7 +35,6 @@ public final class GetBgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction {
     }
     /**
      * @return Warning only
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */

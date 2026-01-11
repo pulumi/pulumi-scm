@@ -34,6 +34,12 @@ namespace Pulumi.Scm
     public sealed class GetTrafficSteeringRuleArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The folder containing the traffic steering rule
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// The UUID of the traffic steering rule
         /// </summary>
         [Input("id", required: true)]
@@ -53,6 +59,12 @@ namespace Pulumi.Scm
 
     public sealed class GetTrafficSteeringRuleInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The folder containing the traffic steering rule
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the traffic steering rule
         /// </summary>

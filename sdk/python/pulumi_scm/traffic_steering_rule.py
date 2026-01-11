@@ -317,6 +317,32 @@ class TrafficSteeringRule(pulumi.CustomResource):
         """
         TrafficSteeringRule resource
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict']] action: Action
@@ -336,6 +362,32 @@ class TrafficSteeringRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         TrafficSteeringRule resource
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example ::device:id
+        ```
 
         :param str resource_name: The name of the resource.
         :param TrafficSteeringRuleArgs args: The arguments to use to populate this resource's properties.

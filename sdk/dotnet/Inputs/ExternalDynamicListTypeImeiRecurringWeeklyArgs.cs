@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeImeiRecurringWeeklyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Time specification hh (e.g. 20)
+        /// Weekly Time specification hh (e.g. 20) for IMEI
         /// </summary>
         [Input("at", required: true)]
         public Input<string> At { get; set; } = null!;

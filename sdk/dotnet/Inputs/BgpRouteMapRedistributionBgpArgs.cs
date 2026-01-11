@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Ospf
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ospf` and `Rib`.
         /// </summary>
         [Input("ospf")]
         public Input<Inputs.BgpRouteMapRedistributionBgpOspfArgs>? Ospf { get; set; }
 
         /// <summary>
         /// BGP Root RIB
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ospf` and `Rib`.
         /// </summary>
         [Input("rib")]

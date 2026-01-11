@@ -20,11 +20,38 @@ import javax.annotation.Nullable;
 /**
  * MfaServer resource
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/mfaServer:MfaServer example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/mfaServer:MfaServer example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/mfaServer:MfaServer example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/mfaServer:MfaServer")
 public class MfaServer extends com.pulumi.resources.CustomResource {
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -32,6 +59,7 @@ public class MfaServer extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -53,7 +81,6 @@ public class MfaServer extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -62,7 +89,6 @@ public class MfaServer extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -88,14 +114,14 @@ public class MfaServer extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="mfaVendorType", refs={MfaServerMfaVendorType.class}, tree="[0]")
-    private Output<MfaServerMfaVendorType> mfaVendorType;
+    private Output</* @Nullable */ MfaServerMfaVendorType> mfaVendorType;
 
     /**
      * @return The MFA vendor type
      * 
      */
-    public Output<MfaServerMfaVendorType> mfaVendorType() {
-        return this.mfaVendorType;
+    public Output<Optional<MfaServerMfaVendorType>> mfaVendorType() {
+        return Codegen.optional(this.mfaVendorType);
     }
     /**
      * The name of the MFA server profile
@@ -113,7 +139,6 @@ public class MfaServer extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -122,7 +147,6 @@ public class MfaServer extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListTypeIpResult
     {
         /// <summary>
-        /// Auth
+        /// Authentication settings for Custom IP type
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeIpAuthResult Auth;
         /// <summary>
@@ -26,15 +26,15 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// Exception list
+        /// IP Exception List for Custom IP type
         /// </summary>
         public readonly ImmutableArray<string> ExceptionLists;
         /// <summary>
-        /// Recurring
+        /// Update Schedule for Custom IP type
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeIpRecurringResult Recurring;
         /// <summary>
-        /// Url
+        /// External URL for Custom IP type
         /// </summary>
         public readonly string Url;
 

@@ -49,12 +49,39 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/applicationFilter:ApplicationFilter example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/applicationFilter:ApplicationFilter example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/applicationFilter:ApplicationFilter example ::device:id
+// ```
 type ApplicationFilter struct {
 	pulumi.CustomResourceState
 
 	// Category
 	Categories pulumi.StringArrayOutput `pulumi:"categories"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// only True is a valid value
 	Evasive pulumi.BoolPtrOutput `pulumi:"evasive"`
@@ -63,7 +90,6 @@ type ApplicationFilter struct {
 	// Exclude
 	Excludes pulumi.StringArrayOutput `pulumi:"excludes"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// only True is a valid value
@@ -85,7 +111,6 @@ type ApplicationFilter struct {
 	// Saas risk
 	SaasRisks pulumi.StringArrayOutput `pulumi:"saasRisks"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Subcategory
@@ -136,6 +161,7 @@ type applicationFilterState struct {
 	// Category
 	Categories []string `pulumi:"categories"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// only True is a valid value
 	Evasive *bool `pulumi:"evasive"`
@@ -144,7 +170,6 @@ type applicationFilterState struct {
 	// Exclude
 	Excludes []string `pulumi:"excludes"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// only True is a valid value
@@ -166,7 +191,6 @@ type applicationFilterState struct {
 	// Saas risk
 	SaasRisks []string `pulumi:"saasRisks"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subcategory
@@ -188,6 +212,7 @@ type ApplicationFilterState struct {
 	// Category
 	Categories pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// only True is a valid value
 	Evasive pulumi.BoolPtrInput
@@ -196,7 +221,6 @@ type ApplicationFilterState struct {
 	// Exclude
 	Excludes pulumi.StringArrayInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// only True is a valid value
@@ -218,7 +242,6 @@ type ApplicationFilterState struct {
 	// Saas risk
 	SaasRisks pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subcategory
@@ -244,6 +267,7 @@ type applicationFilterArgs struct {
 	// Category
 	Categories []string `pulumi:"categories"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// only True is a valid value
 	Evasive *bool `pulumi:"evasive"`
@@ -252,7 +276,6 @@ type applicationFilterArgs struct {
 	// Exclude
 	Excludes []string `pulumi:"excludes"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// only True is a valid value
@@ -274,7 +297,6 @@ type applicationFilterArgs struct {
 	// Saas risk
 	SaasRisks []string `pulumi:"saasRisks"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subcategory
@@ -296,6 +318,7 @@ type ApplicationFilterArgs struct {
 	// Category
 	Categories pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// only True is a valid value
 	Evasive pulumi.BoolPtrInput
@@ -304,7 +327,6 @@ type ApplicationFilterArgs struct {
 	// Exclude
 	Excludes pulumi.StringArrayInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// only True is a valid value
@@ -326,7 +348,6 @@ type ApplicationFilterArgs struct {
 	// Saas risk
 	SaasRisks pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subcategory
@@ -436,6 +457,7 @@ func (o ApplicationFilterOutput) Categories() pulumi.StringArrayOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationFilterOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -456,7 +478,6 @@ func (o ApplicationFilterOutput) Excludes() pulumi.StringArrayOutput {
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationFilterOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -508,7 +529,6 @@ func (o ApplicationFilterOutput) SaasRisks() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationFilterOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

@@ -19,54 +19,48 @@ import java.util.Objects;
 public final class GetAntiSpywareProfileThreatExceptionAction {
     /**
      * @return Alert
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareProfileThreatExceptionActionAlert alert;
     /**
      * @return Allow
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareProfileThreatExceptionActionAllow allow;
     /**
      * @return anti spyware profiles threat exception action block ip
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareProfileThreatExceptionActionBlockIp blockIp;
     /**
      * @return Default
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareProfileThreatExceptionActionDefault default_;
     /**
      * @return Drop
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareProfileThreatExceptionActionDrop drop;
     /**
      * @return Reset both
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareProfileThreatExceptionActionResetBoth resetBoth;
     /**
      * @return Reset client
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareProfileThreatExceptionActionResetClient resetClient;
     /**
      * @return Reset server
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -75,6 +69,7 @@ public final class GetAntiSpywareProfileThreatExceptionAction {
     private GetAntiSpywareProfileThreatExceptionAction() {}
     /**
      * @return Alert
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public GetAntiSpywareProfileThreatExceptionActionAlert alert() {
@@ -82,7 +77,6 @@ public final class GetAntiSpywareProfileThreatExceptionAction {
     }
     /**
      * @return Allow
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -91,7 +85,6 @@ public final class GetAntiSpywareProfileThreatExceptionAction {
     }
     /**
      * @return anti spyware profiles threat exception action block ip
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -100,7 +93,6 @@ public final class GetAntiSpywareProfileThreatExceptionAction {
     }
     /**
      * @return Default
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -109,7 +101,6 @@ public final class GetAntiSpywareProfileThreatExceptionAction {
     }
     /**
      * @return Drop
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -118,7 +109,6 @@ public final class GetAntiSpywareProfileThreatExceptionAction {
     }
     /**
      * @return Reset both
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -127,7 +117,6 @@ public final class GetAntiSpywareProfileThreatExceptionAction {
     }
     /**
      * @return Reset client
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -136,7 +125,6 @@ public final class GetAntiSpywareProfileThreatExceptionAction {
     }
     /**
      * @return Reset server
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */

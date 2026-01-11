@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeDomainArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Auth
+        /// Authentication settings for Custom Domain type
         /// </summary>
         [Input("auth")]
         public Input<Inputs.ExternalDynamicListTypeDomainAuthArgs>? Auth { get; set; }
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _exceptionLists;
 
         /// <summary>
-        /// Exception list
+        /// Domain Exception List for Custom Domain type
         /// </summary>
         public InputList<string> ExceptionLists
         {
@@ -49,13 +49,13 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? ExpandDomain { get; set; }
 
         /// <summary>
-        /// Recurring
+        /// Update Schedule for Custom Domain type
         /// </summary>
         [Input("recurring", required: true)]
         public Input<Inputs.ExternalDynamicListTypeDomainRecurringArgs> Recurring { get; set; } = null!;
 
         /// <summary>
-        /// Url
+        /// External URL for Custom Domain type
         /// </summary>
         [Input("url", required: true)]
         public Input<string> Url { get; set; } = null!;

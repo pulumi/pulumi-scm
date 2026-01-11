@@ -110,10 +110,37 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/zone:Zone example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/zone:Zone example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/zone:Zone example ::device:id
+// ```
 type Zone struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Device acl
 	DeviceAcl ZoneDeviceAclPtrOutput `pulumi:"deviceAcl"`
@@ -126,7 +153,6 @@ type Zone struct {
 	// Enable user identification
 	EnableUserIdentification pulumi.BoolPtrOutput `pulumi:"enableUserIdentification"`
 	// Folder
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
@@ -134,7 +160,6 @@ type Zone struct {
 	// Network
 	Network ZoneNetworkPtrOutput `pulumi:"network"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -173,6 +198,7 @@ func GetZone(ctx *pulumi.Context,
 // Input properties used for looking up and filtering Zone resources.
 type zoneState struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Device acl
 	DeviceAcl *ZoneDeviceAcl `pulumi:"deviceAcl"`
@@ -185,7 +211,6 @@ type zoneState struct {
 	// Enable user identification
 	EnableUserIdentification *bool `pulumi:"enableUserIdentification"`
 	// Folder
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
@@ -193,7 +218,6 @@ type zoneState struct {
 	// Network
 	Network *ZoneNetwork `pulumi:"network"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -203,6 +227,7 @@ type zoneState struct {
 
 type ZoneState struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Device acl
 	DeviceAcl ZoneDeviceAclPtrInput
@@ -215,7 +240,6 @@ type ZoneState struct {
 	// Enable user identification
 	EnableUserIdentification pulumi.BoolPtrInput
 	// Folder
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
@@ -223,7 +247,6 @@ type ZoneState struct {
 	// Network
 	Network ZoneNetworkPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -237,6 +260,7 @@ func (ZoneState) ElementType() reflect.Type {
 
 type zoneArgs struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Device acl
 	DeviceAcl *ZoneDeviceAcl `pulumi:"deviceAcl"`
@@ -249,7 +273,6 @@ type zoneArgs struct {
 	// Enable user identification
 	EnableUserIdentification *bool `pulumi:"enableUserIdentification"`
 	// Folder
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
@@ -257,7 +280,6 @@ type zoneArgs struct {
 	// Network
 	Network *ZoneNetwork `pulumi:"network"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// User acl
@@ -267,6 +289,7 @@ type zoneArgs struct {
 // The set of arguments for constructing a Zone resource.
 type ZoneArgs struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Device acl
 	DeviceAcl ZoneDeviceAclPtrInput
@@ -279,7 +302,6 @@ type ZoneArgs struct {
 	// Enable user identification
 	EnableUserIdentification pulumi.BoolPtrInput
 	// Folder
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
@@ -287,7 +309,6 @@ type ZoneArgs struct {
 	// Network
 	Network ZoneNetworkPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// User acl
@@ -382,6 +403,7 @@ func (o ZoneOutput) ToZoneOutputWithContext(ctx context.Context) ZoneOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ZoneOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Zone) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -412,7 +434,6 @@ func (o ZoneOutput) EnableUserIdentification() pulumi.BoolPtrOutput {
 }
 
 // Folder
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ZoneOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Zone) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -429,7 +450,6 @@ func (o ZoneOutput) Network() ZoneNetworkPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ZoneOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Zone) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
