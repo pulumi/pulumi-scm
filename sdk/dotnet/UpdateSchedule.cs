@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     var usSettings = new Scm.UpdateSchedule("us_settings", new()
     ///     {
     ///         Folder = "All",
-    ///         UpdateSchedule = new Scm.Inputs.UpdateScheduleUpdateScheduleArgs
+    ///         UpdateScheduleDetails = new Scm.Inputs.UpdateScheduleUpdateScheduleArgs
     ///         {
     ///             Threats = new Scm.Inputs.UpdateScheduleUpdateScheduleThreatsArgs
     ///             {
@@ -74,7 +74,7 @@ namespace Pulumi.Scm
     ///     var usSettingsDaily = new Scm.UpdateSchedule("us_settings_daily", new()
     ///     {
     ///         Folder = "All",
-    ///         UpdateSchedule = new Scm.Inputs.UpdateScheduleUpdateScheduleArgs
+    ///         UpdateScheduleDetails = new Scm.Inputs.UpdateScheduleUpdateScheduleArgs
     ///         {
     ///             Threats = new Scm.Inputs.UpdateScheduleUpdateScheduleThreatsArgs
     ///             {
@@ -179,7 +179,7 @@ namespace Pulumi.Scm
         /// Update schedule
         /// </summary>
         [Output("updateSchedule")]
-        public Output<Outputs.UpdateScheduleUpdateSchedule?> UpdateSchedule { get; private set; } = null!;
+        public Output<Outputs.UpdateScheduleUpdateSchedule?> UpdateScheduleDetails { get; private set; } = null!;
 
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace Pulumi.Scm
         /// Update schedule
         /// </summary>
         [Input("updateSchedule")]
-        public Input<Inputs.UpdateScheduleUpdateScheduleArgs>? UpdateSchedule { get; set; }
+        public Input<Inputs.UpdateScheduleUpdateScheduleArgs>? UpdateScheduleDetails { get; set; }
 
         public UpdateScheduleArgs()
         {
@@ -290,7 +290,7 @@ namespace Pulumi.Scm
         /// Update schedule
         /// </summary>
         [Input("updateSchedule")]
-        public Input<Inputs.UpdateScheduleUpdateScheduleGetArgs>? UpdateSchedule { get; set; }
+        public Input<Inputs.UpdateScheduleUpdateScheduleGetArgs>? UpdateScheduleDetails { get; set; }
 
         public UpdateScheduleState()
         {

@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     var miExample = new Scm.ManagementInterface("mi_example", new()
     ///     {
     ///         Folder = "All",
-    ///         ManagementInterface = new Scm.Inputs.ManagementInterfaceManagementInterfaceArgs
+    ///         ManagementInterfaceDetails = new Scm.Inputs.ManagementInterfaceManagementInterfaceArgs
     ///         {
     ///             SpeedDuplex = "auto-negotiate",
     ///             Mtu = 1500,
@@ -113,7 +113,7 @@ namespace Pulumi.Scm
         /// Management interface
         /// </summary>
         [Output("managementInterface")]
-        public Output<Outputs.ManagementInterfaceManagementInterface?> ManagementInterface { get; private set; } = null!;
+        public Output<Outputs.ManagementInterfaceManagementInterface?> ManagementInterfaceDetails { get; private set; } = null!;
 
         /// <summary>
         /// The snippet in which the resource is defined
@@ -189,7 +189,7 @@ namespace Pulumi.Scm
         /// Management interface
         /// </summary>
         [Input("managementInterface")]
-        public Input<Inputs.ManagementInterfaceManagementInterfaceArgs>? ManagementInterface { get; set; }
+        public Input<Inputs.ManagementInterfaceManagementInterfaceArgs>? ManagementInterfaceDetails { get; set; }
 
         /// <summary>
         /// The snippet in which the resource is defined
@@ -224,7 +224,7 @@ namespace Pulumi.Scm
         /// Management interface
         /// </summary>
         [Input("managementInterface")]
-        public Input<Inputs.ManagementInterfaceManagementInterfaceGetArgs>? ManagementInterface { get; set; }
+        public Input<Inputs.ManagementInterfaceManagementInterfaceGetArgs>? ManagementInterfaceDetails { get; set; }
 
         /// <summary>
         /// The snippet in which the resource is defined
