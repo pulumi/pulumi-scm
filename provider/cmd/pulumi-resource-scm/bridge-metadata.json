@@ -353,6 +353,10 @@
                     }
                 }
             },
+            "scm_authentication_setting": {
+                "current": "scm:index/authenticationSetting:AuthenticationSetting",
+                "majorVersion": 1
+            },
             "scm_auto_vpn_cluster": {
                 "current": "scm:index/autoVpnCluster:AutoVpnCluster",
                 "majorVersion": 1,
@@ -390,6 +394,15 @@
                 "majorVersion": 1,
                 "fields": {
                     "vpn_address_pool": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_bandwidth_allocation": {
+                "current": "scm:index/bandwidthAllocation:BandwidthAllocation",
+                "majorVersion": 1,
+                "fields": {
+                    "spn_name_list": {
                         "maxItemsOne": false
                     }
                 }
@@ -558,6 +571,10 @@
                     }
                 }
             },
+            "scm_content_id_setting": {
+                "current": "scm:index/contentIdSetting:ContentIdSetting",
+                "majorVersion": 1
+            },
             "scm_decryption_exclusion": {
                 "current": "scm:index/decryptionExclusion:DecryptionExclusion",
                 "majorVersion": 1
@@ -601,6 +618,10 @@
                         "maxItemsOne": false
                     }
                 }
+            },
+            "scm_device_redistribution_collector": {
+                "current": "scm:index/deviceRedistributionCollector:DeviceRedistributionCollector",
+                "majorVersion": 1
             },
             "scm_dhcp_interface": {
                 "current": "scm:index/dhcpInterface:DhcpInterface",
@@ -842,6 +863,10 @@
                         "maxItemsOne": false
                     }
                 }
+            },
+            "scm_general_setting": {
+                "current": "scm:index/generalSetting:GeneralSetting",
+                "majorVersion": 1
             },
             "scm_hip_object": {
                 "current": "scm:index/hipObject:HipObject",
@@ -1352,6 +1377,23 @@
             "scm_link_tag": {
                 "current": "scm:index/linkTag:LinkTag",
                 "majorVersion": 1
+            },
+            "scm_lldp_profile": {
+                "current": "scm:index/lldpProfile:LldpProfile",
+                "majorVersion": 1,
+                "fields": {
+                    "option_tlvs": {
+                        "fields": {
+                            "management_address": {
+                                "fields": {
+                                    "iplist": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             },
             "scm_local_user": {
                 "current": "scm:index/localUser:LocalUser",
@@ -2022,8 +2064,25 @@
                     }
                 }
             },
+            "scm_management_interface": {
+                "current": "scm:index/managementInterface:ManagementInterface",
+                "majorVersion": 1,
+                "fields": {
+                    "management_interface": {
+                        "fields": {
+                            "permitted_ip": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    }
+                }
+            },
             "scm_mfa_server": {
                 "current": "scm:index/mfaServer:MfaServer",
+                "majorVersion": 1
+            },
+            "scm_motd_banner_setting": {
+                "current": "scm:index/motdBannerSetting:MotdBannerSetting",
                 "majorVersion": 1
             },
             "scm_nat_rule": {
@@ -2574,6 +2633,34 @@
                     }
                 }
             },
+            "scm_service_route": {
+                "current": "scm:index/serviceRoute:ServiceRoute",
+                "majorVersion": 1,
+                "fields": {
+                    "route": {
+                        "fields": {
+                            "destination": {
+                                "maxItemsOne": false
+                            },
+                            "service": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_service_setting": {
+                "current": "scm:index/serviceSetting:ServiceSetting",
+                "majorVersion": 1
+            },
+            "scm_session_setting": {
+                "current": "scm:index/sessionSetting:SessionSetting",
+                "majorVersion": 1
+            },
+            "scm_session_timeout": {
+                "current": "scm:index/sessionTimeout:SessionTimeout",
+                "majorVersion": 1
+            },
             "scm_site": {
                 "current": "scm:index/site:Site",
                 "majorVersion": 1,
@@ -2594,7 +2681,12 @@
             },
             "scm_syslog_server_profile": {
                 "current": "scm:index/syslogServerProfile:SyslogServerProfile",
-                "majorVersion": 1
+                "majorVersion": 1,
+                "fields": {
+                    "server": {
+                        "maxItemsOne": false
+                    }
+                }
             },
             "scm_tacacs_server_profile": {
                 "current": "scm:index/tacacsServerProfile:TacacsServerProfile",
@@ -2607,6 +2699,10 @@
             },
             "scm_tag": {
                 "current": "scm:index/tag:Tag",
+                "majorVersion": 1
+            },
+            "scm_tcp_setting": {
+                "current": "scm:index/tcpSetting:TcpSetting",
                 "majorVersion": 1
             },
             "scm_tls_service_profile": {
@@ -2642,6 +2738,10 @@
                         "maxItemsOne": false
                     }
                 }
+            },
+            "scm_update_schedule": {
+                "current": "scm:index/updateSchedule:UpdateSchedule",
+                "majorVersion": 1
             },
             "scm_url_access_profile": {
                 "current": "scm:index/urlAccessProfile:UrlAccessProfile",
@@ -2707,6 +2807,10 @@
                         "maxItemsOne": false
                     }
                 }
+            },
+            "scm_vpn_setting": {
+                "current": "scm:index/vpnSetting:VpnSetting",
+                "majorVersion": 1
             },
             "scm_vulnerability_protection_profile": {
                 "current": "scm:index/vulnerabilityProtectionProfile:VulnerabilityProtectionProfile",
@@ -3707,6 +3811,19 @@
                     }
                 }
             },
+            "scm_authentication_setting": {
+                "current": "scm:index/getAuthenticationSetting:getAuthenticationSetting",
+                "majorVersion": 1
+            },
+            "scm_authentication_setting_list": {
+                "current": "scm:index/getAuthenticationSettingList:getAuthenticationSettingList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "scm_auto_vpn_cluster": {
                 "current": "scm:index/getAutoVpnCluster:getAutoVpnCluster",
                 "majorVersion": 1,
@@ -3784,6 +3901,31 @@
                 "fields": {
                     "vpn_address_pool": {
                         "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_bandwidth_allocation": {
+                "current": "scm:index/getBandwidthAllocation:getBandwidthAllocation",
+                "majorVersion": 1,
+                "fields": {
+                    "spn_name_list": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_bandwidth_allocation_list": {
+                "current": "scm:index/getBandwidthAllocationList:getBandwidthAllocationList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "spn_name_list": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -4147,6 +4289,19 @@
                     }
                 }
             },
+            "scm_content_id_setting": {
+                "current": "scm:index/getContentIdSetting:getContentIdSetting",
+                "majorVersion": 1
+            },
+            "scm_content_id_setting_list": {
+                "current": "scm:index/getContentIdSettingList:getContentIdSettingList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "scm_decryption_exclusion": {
                 "current": "scm:index/getDecryptionExclusion:getDecryptionExclusion",
                 "majorVersion": 1
@@ -4249,6 +4404,19 @@
                                 }
                             }
                         }
+                    }
+                }
+            },
+            "scm_device_redistribution_collector": {
+                "current": "scm:index/getDeviceRedistributionCollector:getDeviceRedistributionCollector",
+                "majorVersion": 1
+            },
+            "scm_device_redistribution_collector_list": {
+                "current": "scm:index/getDeviceRedistributionCollectorList:getDeviceRedistributionCollectorList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
                     }
                 }
             },
@@ -4799,6 +4967,19 @@
                                 }
                             }
                         }
+                    }
+                }
+            },
+            "scm_general_setting": {
+                "current": "scm:index/getGeneralSetting:getGeneralSetting",
+                "majorVersion": 1
+            },
+            "scm_general_setting_list": {
+                "current": "scm:index/getGeneralSettingList:getGeneralSettingList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
                     }
                 }
             },
@@ -5896,6 +6077,47 @@
                 "fields": {
                     "data": {
                         "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_lldp_profile": {
+                "current": "scm:index/getLldpProfile:getLldpProfile",
+                "majorVersion": 1,
+                "fields": {
+                    "option_tlvs": {
+                        "fields": {
+                            "management_address": {
+                                "fields": {
+                                    "iplist": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_lldp_profile_list": {
+                "current": "scm:index/getLldpProfileList:getLldpProfileList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "option_tlvs": {
+                                    "fields": {
+                                        "management_address": {
+                                            "fields": {
+                                                "iplist": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -7270,6 +7492,52 @@
                     }
                 }
             },
+            "scm_management_interface": {
+                "current": "scm:index/getManagementInterface:getManagementInterface",
+                "majorVersion": 1,
+                "fields": {
+                    "management_interface": {
+                        "fields": {
+                            "permitted_ip": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_management_interface_list": {
+                "current": "scm:index/getManagementInterfaceList:getManagementInterfaceList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "management_interface": {
+                                    "fields": {
+                                        "permitted_ip": {
+                                            "maxItemsOne": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_motd_banner_setting": {
+                "current": "scm:index/getMotdBannerSetting:getMotdBannerSetting",
+                "majorVersion": 1
+            },
+            "scm_motd_banner_setting_list": {
+                "current": "scm:index/getMotdBannerSettingList:getMotdBannerSettingList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "scm_nat_rule": {
                 "current": "scm:index/getNatRule:getNatRule",
                 "majorVersion": 1,
@@ -8540,6 +8808,84 @@
                     }
                 }
             },
+            "scm_service_route": {
+                "current": "scm:index/getServiceRoute:getServiceRoute",
+                "majorVersion": 1,
+                "fields": {
+                    "route": {
+                        "fields": {
+                            "destination": {
+                                "maxItemsOne": false
+                            },
+                            "service": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_service_route_list": {
+                "current": "scm:index/getServiceRouteList:getServiceRouteList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "route": {
+                                    "fields": {
+                                        "destination": {
+                                            "maxItemsOne": false
+                                        },
+                                        "service": {
+                                            "maxItemsOne": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_service_setting": {
+                "current": "scm:index/getServiceSetting:getServiceSetting",
+                "majorVersion": 1
+            },
+            "scm_service_setting_list": {
+                "current": "scm:index/getServiceSettingList:getServiceSettingList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_session_setting": {
+                "current": "scm:index/getSessionSetting:getSessionSetting",
+                "majorVersion": 1
+            },
+            "scm_session_setting_list": {
+                "current": "scm:index/getSessionSettingList:getSessionSettingList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_session_timeout": {
+                "current": "scm:index/getSessionTimeout:getSessionTimeout",
+                "majorVersion": 1
+            },
+            "scm_session_timeout_list": {
+                "current": "scm:index/getSessionTimeoutList:getSessionTimeoutList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "scm_site": {
                 "current": "scm:index/getSite:getSite",
                 "majorVersion": 1,
@@ -8592,14 +8938,26 @@
             },
             "scm_syslog_server_profile": {
                 "current": "scm:index/getSyslogServerProfile:getSyslogServerProfile",
-                "majorVersion": 1
+                "majorVersion": 1,
+                "fields": {
+                    "server": {
+                        "maxItemsOne": false
+                    }
+                }
             },
             "scm_syslog_server_profile_list": {
                 "current": "scm:index/getSyslogServerProfileList:getSyslogServerProfileList",
                 "majorVersion": 1,
                 "fields": {
                     "data": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "server": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -8634,6 +8992,19 @@
             },
             "scm_tag_list": {
                 "current": "scm:index/getTagList:getTagList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_tcp_setting": {
+                "current": "scm:index/getTcpSetting:getTcpSetting",
+                "majorVersion": 1
+            },
+            "scm_tcp_setting_list": {
+                "current": "scm:index/getTcpSettingList:getTcpSettingList",
                 "majorVersion": 1,
                 "fields": {
                     "data": {
@@ -8725,6 +9096,19 @@
                                 }
                             }
                         }
+                    }
+                }
+            },
+            "scm_update_schedule": {
+                "current": "scm:index/getUpdateSchedule:getUpdateSchedule",
+                "majorVersion": 1
+            },
+            "scm_update_schedule_list": {
+                "current": "scm:index/getUpdateScheduleList:getUpdateScheduleList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
                     }
                 }
             },
@@ -8881,6 +9265,19 @@
                                 }
                             }
                         }
+                    }
+                }
+            },
+            "scm_vpn_setting": {
+                "current": "scm:index/getVpnSetting:getVpnSetting",
+                "majorVersion": 1
+            },
+            "scm_vpn_setting_list": {
+                "current": "scm:index/getVpnSettingList:getVpnSettingList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false
                     }
                 }
             },
