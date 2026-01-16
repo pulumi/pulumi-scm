@@ -24,26 +24,45 @@ func LookupOspfAuthProfile(ctx *pulumi.Context, args *LookupOspfAuthProfileArgs,
 
 // A collection of arguments for invoking getOspfAuthProfile.
 type LookupOspfAuthProfileArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Profile name
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getOspfAuthProfile.
 type LookupOspfAuthProfileResult struct {
 	// The device in which the resource is defined
-	Device          string            `pulumi:"device"`
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	Folder          string            `pulumi:"folder"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id   string                  `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// MD5s
+	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Md5s []GetOspfAuthProfileMd5 `pulumi:"md5s"`
 	// Profile name
-	Name     string `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// Password
+	// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 	Password string `pulumi:"password"`
-	Snippet  string `pulumi:"snippet"`
-	Tfid     string `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupOspfAuthProfileOutput(ctx *pulumi.Context, args LookupOspfAuthProfileOutputArgs, opts ...pulumi.InvokeOption) LookupOspfAuthProfileResultOutput {
@@ -57,10 +76,19 @@ func LookupOspfAuthProfileOutput(ctx *pulumi.Context, args LookupOspfAuthProfile
 
 // A collection of arguments for invoking getOspfAuthProfile.
 type LookupOspfAuthProfileOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Profile name
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupOspfAuthProfileOutputArgs) ElementType() reflect.Type {
@@ -83,14 +111,18 @@ func (o LookupOspfAuthProfileResultOutput) ToLookupOspfAuthProfileResultOutputWi
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupOspfAuthProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Map of sensitive values returned from the API.
 func (o LookupOspfAuthProfileResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupOspfAuthProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -100,6 +132,8 @@ func (o LookupOspfAuthProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// MD5s
+// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 func (o LookupOspfAuthProfileResultOutput) Md5s() GetOspfAuthProfileMd5ArrayOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) []GetOspfAuthProfileMd5 { return v.Md5s }).(GetOspfAuthProfileMd5ArrayOutput)
 }
@@ -109,10 +143,14 @@ func (o LookupOspfAuthProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Password
+// > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
 func (o LookupOspfAuthProfileResultOutput) Password() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Password }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupOspfAuthProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

@@ -30,6 +30,7 @@ import (
 //			// Fetch a list of all clusters from the "All" folder.
 //			allClusters, err := scm.GetAutoVpnClusterList(ctx, &scm.GetAutoVpnClusterListArgs{
 //				Folder: pulumi.StringRef("All"),
+//				Limit:  pulumi.IntRef(10),
 //			}, nil)
 //			if err != nil {
 //				return err

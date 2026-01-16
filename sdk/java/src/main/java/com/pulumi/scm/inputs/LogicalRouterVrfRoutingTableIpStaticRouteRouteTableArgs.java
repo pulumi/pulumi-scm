@@ -20,6 +20,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
     /**
      * Both
+     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     @Import(name="both")
@@ -27,6 +28,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
     /**
      * @return Both
+     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     public Optional<Output<LogicalRouterVrfRoutingTableIpStaticRouteRouteTableBothArgs>> both() {
@@ -35,7 +37,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
     /**
      * Multicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -44,7 +45,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
     /**
      * @return Multicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -54,7 +54,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
     /**
      * No install
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -63,7 +62,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
     /**
      * @return No install
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -73,7 +71,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
     /**
      * Unicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -82,7 +79,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
     /**
      * @return Unicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -119,6 +115,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
         /**
          * @param both Both
+         * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
          * 
          * @return builder
          * 
@@ -130,6 +127,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
         /**
          * @param both Both
+         * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
          * 
          * @return builder
          * 
@@ -140,7 +138,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
         /**
          * @param multicast Multicast
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
          * 
          * @return builder
@@ -153,7 +150,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
         /**
          * @param multicast Multicast
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
          * 
          * @return builder
@@ -165,7 +161,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
         /**
          * @param noInstall No install
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
          * 
          * @return builder
@@ -178,7 +173,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
         /**
          * @param noInstall No install
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
          * 
          * @return builder
@@ -190,7 +184,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
         /**
          * @param unicast Unicast
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
          * 
          * @return builder
@@ -203,7 +196,6 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs exten
 
         /**
          * @param unicast Unicast
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
          * 
          * @return builder

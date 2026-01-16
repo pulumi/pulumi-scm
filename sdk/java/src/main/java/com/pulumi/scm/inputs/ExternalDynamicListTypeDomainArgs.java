@@ -21,14 +21,14 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
     public static final ExternalDynamicListTypeDomainArgs Empty = new ExternalDynamicListTypeDomainArgs();
 
     /**
-     * Auth
+     * Authentication settings for Custom Domain type
      * 
      */
     @Import(name="auth")
     private @Nullable Output<ExternalDynamicListTypeDomainAuthArgs> auth;
 
     /**
-     * @return Auth
+     * @return Authentication settings for Custom Domain type
      * 
      */
     public Optional<Output<ExternalDynamicListTypeDomainAuthArgs>> auth() {
@@ -66,14 +66,14 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
     }
 
     /**
-     * Exception list
+     * Domain Exception List for Custom Domain type
      * 
      */
     @Import(name="exceptionLists")
     private @Nullable Output<List<String>> exceptionLists;
 
     /**
-     * @return Exception list
+     * @return Domain Exception List for Custom Domain type
      * 
      */
     public Optional<Output<List<String>>> exceptionLists() {
@@ -96,14 +96,14 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
     }
 
     /**
-     * Recurring
+     * Update Schedule for Custom Domain type
      * 
      */
     @Import(name="recurring", required=true)
     private Output<ExternalDynamicListTypeDomainRecurringArgs> recurring;
 
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom Domain type
      * 
      */
     public Output<ExternalDynamicListTypeDomainRecurringArgs> recurring() {
@@ -111,14 +111,14 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
     }
 
     /**
-     * Url
+     * External URL for Custom Domain type
      * 
      */
     @Import(name="url", required=true)
     private Output<String> url;
 
     /**
-     * @return Url
+     * @return External URL for Custom Domain type
      * 
      */
     public Output<String> url() {
@@ -156,7 +156,7 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
         }
 
         /**
-         * @param auth Auth
+         * @param auth Authentication settings for Custom Domain type
          * 
          * @return builder
          * 
@@ -167,7 +167,7 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
         }
 
         /**
-         * @param auth Auth
+         * @param auth Authentication settings for Custom Domain type
          * 
          * @return builder
          * 
@@ -219,7 +219,7 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists Domain Exception List for Custom Domain type
          * 
          * @return builder
          * 
@@ -230,7 +230,7 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists Domain Exception List for Custom Domain type
          * 
          * @return builder
          * 
@@ -240,7 +240,7 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists Domain Exception List for Custom Domain type
          * 
          * @return builder
          * 
@@ -271,7 +271,7 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
         }
 
         /**
-         * @param recurring Recurring
+         * @param recurring Update Schedule for Custom Domain type
          * 
          * @return builder
          * 
@@ -282,7 +282,7 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
         }
 
         /**
-         * @param recurring Recurring
+         * @param recurring Update Schedule for Custom Domain type
          * 
          * @return builder
          * 
@@ -292,7 +292,7 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
         }
 
         /**
-         * @param url Url
+         * @param url External URL for Custom Domain type
          * 
          * @return builder
          * 
@@ -303,7 +303,7 @@ public final class ExternalDynamicListTypeDomainArgs extends com.pulumi.resource
         }
 
         /**
-         * @param url Url
+         * @param url External URL for Custom Domain type
          * 
          * @return builder
          * 

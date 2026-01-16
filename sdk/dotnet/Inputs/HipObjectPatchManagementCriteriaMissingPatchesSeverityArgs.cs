@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Greater equal
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         [Input("greaterEqual")]
         public Input<int>? GreaterEqual { get; set; }
 
         /// <summary>
         /// Greater than
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         [Input("greaterThan")]
@@ -28,7 +28,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Is
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         [Input("is")]
@@ -36,7 +35,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Is not
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         [Input("isNot")]
@@ -44,7 +42,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Less equal
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         [Input("lessEqual")]
@@ -52,7 +49,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Less than
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         [Input("lessThan")]

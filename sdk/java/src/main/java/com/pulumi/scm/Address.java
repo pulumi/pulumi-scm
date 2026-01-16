@@ -118,6 +118,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/address:Address example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/address:Address example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/address:Address example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/address:Address")
 public class Address extends com.pulumi.resources.CustomResource {
@@ -137,6 +163,7 @@ public class Address extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -144,6 +171,7 @@ public class Address extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -151,7 +179,6 @@ public class Address extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -160,7 +187,6 @@ public class Address extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -169,7 +195,6 @@ public class Address extends com.pulumi.resources.CustomResource {
     }
     /**
      * Fully qualified domain name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -178,7 +203,6 @@ public class Address extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Fully qualified domain name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -187,7 +211,6 @@ public class Address extends com.pulumi.resources.CustomResource {
     }
     /**
      * IP address with or without CIDR notation
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -196,7 +219,6 @@ public class Address extends com.pulumi.resources.CustomResource {
 
     /**
      * @return IP address with or without CIDR notation
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -205,7 +227,6 @@ public class Address extends com.pulumi.resources.CustomResource {
     }
     /**
      * Ip range
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -214,7 +235,6 @@ public class Address extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Ip range
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -223,7 +243,6 @@ public class Address extends com.pulumi.resources.CustomResource {
     }
     /**
      * IP wildcard mask
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -232,7 +251,6 @@ public class Address extends com.pulumi.resources.CustomResource {
 
     /**
      * @return IP wildcard mask
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -255,7 +273,6 @@ public class Address extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -264,7 +281,6 @@ public class Address extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

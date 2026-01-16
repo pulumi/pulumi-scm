@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class HipObjectNetworkInfoCriteriaNetwork {
     /**
      * @return Is
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIs is;
     /**
      * @return Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
@@ -28,6 +28,7 @@ public final class HipObjectNetworkInfoCriteriaNetwork {
     private HipObjectNetworkInfoCriteriaNetwork() {}
     /**
      * @return Is
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetworkIs> is() {
@@ -35,7 +36,6 @@ public final class HipObjectNetworkInfoCriteriaNetwork {
     }
     /**
      * @return Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */

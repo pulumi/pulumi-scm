@@ -151,7 +151,9 @@ class AutoVpnSetting(pulumi.CustomResource):
                  vpn_address_pools: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        AutoVpnSetting resource
+        **Singleton Resource.** AutoVpnSetting resource
+
+        This resource is a singleton, meaning only one instance can exist. If the resource typically exists (e.g. bgp_routing), you should import it before managing it.
 
         ## Example Usage
 
@@ -168,6 +170,24 @@ class AutoVpnSetting(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['AutoVpnSettingAsRangeArgs', 'AutoVpnSettingAsRangeArgsDict']] as_range: As range
@@ -181,7 +201,9 @@ class AutoVpnSetting(pulumi.CustomResource):
                  args: AutoVpnSettingArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        AutoVpnSetting resource
+        **Singleton Resource.** AutoVpnSetting resource
+
+        This resource is a singleton, meaning only one instance can exist. If the resource typically exists (e.g. bgp_routing), you should import it before managing it.
 
         ## Example Usage
 
@@ -196,6 +218,24 @@ class AutoVpnSetting(pulumi.CustomResource):
                 "start": 65001,
                 "end": 65200,
             })
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
         ```
 
         :param str resource_name: The name of the resource.

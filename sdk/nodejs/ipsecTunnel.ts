@@ -76,6 +76,32 @@ import * as utilities from "./utilities";
  *     dependsOn: [exampleIkeGateway],
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example ::device:id
+ * ```
  */
 export class IpsecTunnel extends pulumi.CustomResource {
     /**
@@ -119,6 +145,7 @@ export class IpsecTunnel extends pulumi.CustomResource {
     declare public readonly copyTos: pulumi.Output<boolean>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -127,7 +154,6 @@ export class IpsecTunnel extends pulumi.CustomResource {
     declare public readonly enableGreEncapsulation: pulumi.Output<boolean>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -137,7 +163,6 @@ export class IpsecTunnel extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -149,7 +174,7 @@ export class IpsecTunnel extends pulumi.CustomResource {
     /**
      * Tunnel monitor
      */
-    declare public readonly tunnelMonitor: pulumi.Output<outputs.IpsecTunnelTunnelMonitor>;
+    declare public readonly tunnelMonitor: pulumi.Output<outputs.IpsecTunnelTunnelMonitor | undefined>;
 
     /**
      * Create a IpsecTunnel resource with the given unique name, arguments, and options.
@@ -215,6 +240,7 @@ export interface IpsecTunnelState {
     copyTos?: pulumi.Input<boolean>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -223,7 +249,6 @@ export interface IpsecTunnelState {
     enableGreEncapsulation?: pulumi.Input<boolean>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -233,7 +258,6 @@ export interface IpsecTunnelState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -266,6 +290,7 @@ export interface IpsecTunnelArgs {
     copyTos?: pulumi.Input<boolean>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -274,7 +299,6 @@ export interface IpsecTunnelArgs {
     enableGreEncapsulation?: pulumi.Input<boolean>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -284,7 +308,6 @@ export interface IpsecTunnelArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

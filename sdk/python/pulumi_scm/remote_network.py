@@ -508,6 +508,32 @@ class RemoteNetwork(pulumi.CustomResource):
             opts = pulumi.ResourceOptions(depends_on=[example_ipsec_tunnel]))
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] ecmp_load_balancing: Ecmp load balancing
@@ -605,6 +631,32 @@ class RemoteNetwork(pulumi.CustomResource):
                 },
             },
             opts = pulumi.ResourceOptions(depends_on=[example_ipsec_tunnel]))
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example ::device:id
         ```
 
         :param str resource_name: The name of the resource.

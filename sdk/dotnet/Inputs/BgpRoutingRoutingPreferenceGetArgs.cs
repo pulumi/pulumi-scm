@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Default
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Default` and `HotPotatoRouting`.
         /// </summary>
         [Input("default")]
         public Input<Inputs.BgpRoutingRoutingPreferenceDefaultGetArgs>? Default { get; set; }
 
         /// <summary>
         /// Hot potato routing
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Default` and `HotPotatoRouting`.
         /// </summary>
         [Input("hotPotatoRouting")]

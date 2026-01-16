@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getDosProtectionRule(args: GetDosProtectionRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetDosProtectionRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDosProtectionRule:getDosProtectionRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getDosProtectionRule(args: GetDosProtectionRuleArgs, opts?: pulu
  */
 export interface GetDosProtectionRuleArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the DNS security profile
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetDosProtectionRuleArgs {
      * Rule name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -49,29 +67,71 @@ export interface GetDosProtectionRuleResult {
     readonly destinations: string[];
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Rule disabled?
+     */
     readonly disabled: boolean;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
+    /**
+     * List of source zones
+     */
     readonly froms: string[];
     /**
      * The UUID of the DNS security profile
      */
     readonly id: string;
+    /**
+     * Log forwarding profile name
+     */
     readonly logSetting: string;
     /**
      * Rule name
      */
     readonly name: string;
+    /**
+     * Position relative to local device rules
+     */
     readonly position: string;
+    /**
+     * Protection
+     */
     readonly protection: outputs.GetDosProtectionRuleProtection;
+    /**
+     * Schedule on which to enforce the rule
+     */
     readonly schedule: string;
+    /**
+     * List of services
+     */
     readonly services: string[];
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+     */
     readonly sourceUsers: string[];
+    /**
+     * List of source addresses
+     */
     readonly sources: string[];
+    /**
+     * List of tags
+     */
     readonly tags: string[];
     readonly tfid: string;
+    /**
+     * List of destination zones
+     */
     readonly tos: string[];
 }
 /**
@@ -80,8 +140,11 @@ export interface GetDosProtectionRuleResult {
 export function getDosProtectionRuleOutput(args: GetDosProtectionRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDosProtectionRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDosProtectionRule:getDosProtectionRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -90,6 +153,16 @@ export function getDosProtectionRuleOutput(args: GetDosProtectionRuleOutputArgs,
  */
 export interface GetDosProtectionRuleOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the DNS security profile
      */
     id: pulumi.Input<string>;
@@ -97,4 +170,9 @@ export interface GetDosProtectionRuleOutputArgs {
      * Rule name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

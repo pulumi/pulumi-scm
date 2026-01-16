@@ -212,11 +212,38 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/ethernetInterface:EthernetInterface example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/ethernetInterface:EthernetInterface example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/ethernetInterface:EthernetInterface example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/ethernetInterface:EthernetInterface")
 public class EthernetInterface extends com.pulumi.resources.CustomResource {
     /**
      * Aggregate group
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     @Export(name="aggregateGroup", refs={String.class}, tree="[0]")
@@ -224,6 +251,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Aggregate group
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     public Output<Optional<String>> aggregateGroup() {
@@ -259,7 +287,6 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -268,7 +295,6 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -291,7 +317,6 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -300,7 +325,6 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -309,7 +333,6 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Layer2
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -318,7 +341,6 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Layer2
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -327,21 +349,19 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Ethernet Interface Layer 3 configuration
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     @Export(name="layer3", refs={EthernetInterfaceLayer3.class}, tree="[0]")
-    private Output<EthernetInterfaceLayer3> layer3;
+    private Output</* @Nullable */ EthernetInterfaceLayer3> layer3;
 
     /**
      * @return Ethernet Interface Layer 3 configuration
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
-    public Output<EthernetInterfaceLayer3> layer3() {
-        return this.layer3;
+    public Output<Optional<EthernetInterfaceLayer3>> layer3() {
+        return Codegen.optional(this.layer3);
     }
     /**
      * Link duplex
@@ -404,18 +424,17 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="poe", refs={EthernetInterfacePoe.class}, tree="[0]")
-    private Output<EthernetInterfacePoe> poe;
+    private Output</* @Nullable */ EthernetInterfacePoe> poe;
 
     /**
      * @return Poe
      * 
      */
-    public Output<EthernetInterfacePoe> poe() {
-        return this.poe;
+    public Output<Optional<EthernetInterfacePoe>> poe() {
+        return Codegen.optional(this.poe);
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -424,7 +443,6 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -433,7 +451,6 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Tap
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -442,7 +459,6 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Tap
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */

@@ -24,10 +24,19 @@ func LookupLinkTag(ctx *pulumi.Context, args *LookupLinkTagArgs, opts ...pulumi.
 
 // A collection of arguments for invoking getLinkTag.
 type LookupLinkTagArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the link tag
 	Id string `pulumi:"id"`
 	// The name of the link tag
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLinkTag.
@@ -37,12 +46,17 @@ type LookupLinkTagResult struct {
 	// Description of the link tag
 	Comments string `pulumi:"comments"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the link tag
 	Id string `pulumi:"id"`
 	// The name of the link tag
-	Name    string `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -58,10 +72,19 @@ func LookupLinkTagOutput(ctx *pulumi.Context, args LookupLinkTagOutputArgs, opts
 
 // A collection of arguments for invoking getLinkTag.
 type LookupLinkTagOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the link tag
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the link tag
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupLinkTagOutputArgs) ElementType() reflect.Type {
@@ -94,10 +117,13 @@ func (o LookupLinkTagResultOutput) Comments() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLinkTagResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLinkTagResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLinkTagResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLinkTagResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -112,6 +138,8 @@ func (o LookupLinkTagResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLinkTagResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLinkTagResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLinkTagResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

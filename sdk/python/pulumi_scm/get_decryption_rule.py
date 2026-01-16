@@ -161,22 +161,33 @@ class GetDecryptionRuleResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
+        """
+        Is the rule disabled?
+        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
+        """
+        The source security zone
+        """
         return pulumi.get(self, "froms")
 
     @_builtins.property
@@ -190,16 +201,25 @@ class GetDecryptionRuleResult:
     @_builtins.property
     @pulumi.getter(name="logFail")
     def log_fail(self) -> _builtins.bool:
+        """
+        Log failed decryption events?
+        """
         return pulumi.get(self, "log_fail")
 
     @_builtins.property
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> _builtins.str:
+        """
+        The log settings of the decryption rule
+        """
         return pulumi.get(self, "log_setting")
 
     @_builtins.property
     @pulumi.getter(name="logSuccess")
     def log_success(self) -> _builtins.bool:
+        """
+        Log successful decryption events?
+        """
         return pulumi.get(self, "log_success")
 
     @_builtins.property
@@ -213,61 +233,98 @@ class GetDecryptionRuleResult:
     @_builtins.property
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> _builtins.bool:
+        """
+        Negate the destination addresses?
+        """
         return pulumi.get(self, "negate_destination")
 
     @_builtins.property
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> _builtins.bool:
+        """
+        Negate the source addresses?
+        """
         return pulumi.get(self, "negate_source")
 
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
+        """
+        The position of a security rule
+        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
     def profile(self) -> _builtins.str:
+        """
+        The decryption profile associated with the decryption rule
+        """
         return pulumi.get(self, "profile")
 
     @_builtins.property
     @pulumi.getter(name="relativePosition")
     def relative_position(self) -> _builtins.str:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
         return pulumi.get(self, "relative_position")
 
     @_builtins.property
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
+        """
+        The destination services and/or service groups
+        """
         return pulumi.get(self, "services")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> Sequence[_builtins.str]:
+        """
+        Source hip
+        """
         return pulumi.get(self, "source_hips")
 
     @_builtins.property
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
+        """
+        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
+        """
+        The source addresses
+        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
+        """
+        The tags associated with the decryption rule
+        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> _builtins.str:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
         return pulumi.get(self, "target_rule")
 
     @_builtins.property
@@ -278,11 +335,17 @@ class GetDecryptionRuleResult:
     @_builtins.property
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
+        """
+        The destination security zone
+        """
         return pulumi.get(self, "tos")
 
     @_builtins.property
     @pulumi.getter
     def type(self) -> 'outputs.GetDecryptionRuleTypeResult':
+        """
+        The type of decryption
+        """
         return pulumi.get(self, "type")
 
 
@@ -323,8 +386,11 @@ class AwaitableGetDecryptionRuleResult(GetDecryptionRuleResult):
             type=self.type)
 
 
-def get_decryption_rule(id: Optional[_builtins.str] = None,
+def get_decryption_rule(device: Optional[_builtins.str] = None,
+                        folder: Optional[_builtins.str] = None,
+                        id: Optional[_builtins.str] = None,
                         name: Optional[_builtins.str] = None,
+                        snippet: Optional[_builtins.str] = None,
                         opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetDecryptionRuleResult:
     """
     DecryptionRule data source
@@ -341,12 +407,21 @@ def get_decryption_rule(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the decryption rule
     :param _builtins.str name: The name of the decryption rule
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getDecryptionRule:getDecryptionRule', __args__, opts=opts, typ=GetDecryptionRuleResult).value
 
@@ -380,8 +455,11 @@ def get_decryption_rule(id: Optional[_builtins.str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         tos=pulumi.get(__ret__, 'tos'),
         type=pulumi.get(__ret__, 'type'))
-def get_decryption_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_decryption_rule_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                               folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                               id: Optional[pulumi.Input[_builtins.str]] = None,
                                name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                               snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDecryptionRuleResult]:
     """
     DecryptionRule data source
@@ -398,12 +476,21 @@ def get_decryption_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the decryption rule
     :param _builtins.str name: The name of the decryption rule
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getDecryptionRule:getDecryptionRule', __args__, opts=opts, typ=GetDecryptionRuleResult)
     return __ret__.apply(lambda __response__: GetDecryptionRuleResult(

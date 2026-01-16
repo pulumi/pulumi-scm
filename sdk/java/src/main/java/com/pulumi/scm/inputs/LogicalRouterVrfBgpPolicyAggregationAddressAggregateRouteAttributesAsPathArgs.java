@@ -19,6 +19,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
     /**
      * None
+     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     @Import(name="none")
@@ -26,6 +27,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
     /**
      * @return None
+     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public Optional<Output<LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNoneArgs>> none() {
@@ -34,7 +36,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
     /**
      * Prepend
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -43,7 +44,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
     /**
      * @return Prepend
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -53,7 +53,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
     /**
      * Remove
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -62,7 +61,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
     /**
      * @return Remove
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -72,7 +70,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
     /**
      * Remove and prepend
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -81,7 +78,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
     /**
      * @return Remove and prepend
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -118,6 +114,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
         /**
          * @param none None
+         * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
          * 
          * @return builder
          * 
@@ -129,6 +126,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
         /**
          * @param none None
+         * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
          * 
          * @return builder
          * 
@@ -139,7 +137,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
         /**
          * @param prepend Prepend
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
          * 
          * @return builder
@@ -152,7 +149,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
         /**
          * @param prepend Prepend
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
          * 
          * @return builder
@@ -164,7 +160,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
         /**
          * @param remove Remove
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
          * 
          * @return builder
@@ -177,7 +172,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
         /**
          * @param remove Remove
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
          * 
          * @return builder
@@ -189,7 +183,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
         /**
          * @param removeAndPrepend Remove and prepend
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
          * 
          * @return builder
@@ -202,7 +195,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
         /**
          * @param removeAndPrepend Remove and prepend
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
          * 
          * @return builder

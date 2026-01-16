@@ -19,47 +19,42 @@ import javax.annotation.Nullable;
 public final class AntiSpywareSignatureDefaultAction {
     /**
      * @return Alert
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private @Nullable AntiSpywareSignatureDefaultActionAlert alert;
     /**
      * @return Allow
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private @Nullable AntiSpywareSignatureDefaultActionAllow allow;
     /**
      * @return anti spyware signature block ip
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private @Nullable AntiSpywareSignatureDefaultActionBlockIp blockIp;
     /**
      * @return Drop
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private @Nullable AntiSpywareSignatureDefaultActionDrop drop;
     /**
      * @return Reset both
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private @Nullable AntiSpywareSignatureDefaultActionResetBoth resetBoth;
     /**
      * @return Reset client
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private @Nullable AntiSpywareSignatureDefaultActionResetClient resetClient;
     /**
      * @return Reset server
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -68,6 +63,7 @@ public final class AntiSpywareSignatureDefaultAction {
     private AntiSpywareSignatureDefaultAction() {}
     /**
      * @return Alert
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<AntiSpywareSignatureDefaultActionAlert> alert() {
@@ -75,7 +71,6 @@ public final class AntiSpywareSignatureDefaultAction {
     }
     /**
      * @return Allow
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -84,7 +79,6 @@ public final class AntiSpywareSignatureDefaultAction {
     }
     /**
      * @return anti spyware signature block ip
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -93,7 +87,6 @@ public final class AntiSpywareSignatureDefaultAction {
     }
     /**
      * @return Drop
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -102,7 +95,6 @@ public final class AntiSpywareSignatureDefaultAction {
     }
     /**
      * @return Reset both
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -111,7 +103,6 @@ public final class AntiSpywareSignatureDefaultAction {
     }
     /**
      * @return Reset client
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -120,7 +111,6 @@ public final class AntiSpywareSignatureDefaultAction {
     }
     /**
      * @return Reset server
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */

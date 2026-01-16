@@ -58,10 +58,18 @@ import com.pulumi.scm.inputs.GetAuthenticationSequenceArgs;
 import com.pulumi.scm.inputs.GetAuthenticationSequenceListArgs;
 import com.pulumi.scm.inputs.GetAuthenticationSequenceListPlainArgs;
 import com.pulumi.scm.inputs.GetAuthenticationSequencePlainArgs;
+import com.pulumi.scm.inputs.GetAuthenticationSettingArgs;
+import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
+import com.pulumi.scm.inputs.GetAuthenticationSettingListPlainArgs;
+import com.pulumi.scm.inputs.GetAuthenticationSettingPlainArgs;
 import com.pulumi.scm.inputs.GetAutoVpnClusterArgs;
 import com.pulumi.scm.inputs.GetAutoVpnClusterListArgs;
 import com.pulumi.scm.inputs.GetAutoVpnClusterListPlainArgs;
 import com.pulumi.scm.inputs.GetAutoVpnClusterPlainArgs;
+import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
+import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
+import com.pulumi.scm.inputs.GetBandwidthAllocationListPlainArgs;
+import com.pulumi.scm.inputs.GetBandwidthAllocationPlainArgs;
 import com.pulumi.scm.inputs.GetBgpAddressFamilyProfileArgs;
 import com.pulumi.scm.inputs.GetBgpAddressFamilyProfileListArgs;
 import com.pulumi.scm.inputs.GetBgpAddressFamilyProfileListPlainArgs;
@@ -90,6 +98,10 @@ import com.pulumi.scm.inputs.GetCertificateProfileArgs;
 import com.pulumi.scm.inputs.GetCertificateProfileListArgs;
 import com.pulumi.scm.inputs.GetCertificateProfileListPlainArgs;
 import com.pulumi.scm.inputs.GetCertificateProfilePlainArgs;
+import com.pulumi.scm.inputs.GetContentIdSettingArgs;
+import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
+import com.pulumi.scm.inputs.GetContentIdSettingListPlainArgs;
+import com.pulumi.scm.inputs.GetContentIdSettingPlainArgs;
 import com.pulumi.scm.inputs.GetDecryptionExclusionArgs;
 import com.pulumi.scm.inputs.GetDecryptionExclusionListArgs;
 import com.pulumi.scm.inputs.GetDecryptionExclusionListPlainArgs;
@@ -102,6 +114,10 @@ import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
 import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
 import com.pulumi.scm.inputs.GetDecryptionRuleListPlainArgs;
 import com.pulumi.scm.inputs.GetDecryptionRulePlainArgs;
+import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
+import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
+import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListPlainArgs;
+import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorPlainArgs;
 import com.pulumi.scm.inputs.GetDhcpInterfaceArgs;
 import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
 import com.pulumi.scm.inputs.GetDhcpInterfaceListPlainArgs;
@@ -142,6 +158,10 @@ import com.pulumi.scm.inputs.GetFolderArgs;
 import com.pulumi.scm.inputs.GetFolderListArgs;
 import com.pulumi.scm.inputs.GetFolderListPlainArgs;
 import com.pulumi.scm.inputs.GetFolderPlainArgs;
+import com.pulumi.scm.inputs.GetGeneralSettingArgs;
+import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
+import com.pulumi.scm.inputs.GetGeneralSettingListPlainArgs;
+import com.pulumi.scm.inputs.GetGeneralSettingPlainArgs;
 import com.pulumi.scm.inputs.GetHipObjectArgs;
 import com.pulumi.scm.inputs.GetHipObjectListArgs;
 import com.pulumi.scm.inputs.GetHipObjectListPlainArgs;
@@ -202,6 +222,10 @@ import com.pulumi.scm.inputs.GetLinkTagArgs;
 import com.pulumi.scm.inputs.GetLinkTagListArgs;
 import com.pulumi.scm.inputs.GetLinkTagListPlainArgs;
 import com.pulumi.scm.inputs.GetLinkTagPlainArgs;
+import com.pulumi.scm.inputs.GetLldpProfileArgs;
+import com.pulumi.scm.inputs.GetLldpProfileListArgs;
+import com.pulumi.scm.inputs.GetLldpProfileListPlainArgs;
+import com.pulumi.scm.inputs.GetLldpProfilePlainArgs;
 import com.pulumi.scm.inputs.GetLocalUserArgs;
 import com.pulumi.scm.inputs.GetLocalUserGroupArgs;
 import com.pulumi.scm.inputs.GetLocalUserGroupListArgs;
@@ -222,6 +246,14 @@ import com.pulumi.scm.inputs.GetLoopbackInterfaceArgs;
 import com.pulumi.scm.inputs.GetLoopbackInterfaceListArgs;
 import com.pulumi.scm.inputs.GetLoopbackInterfaceListPlainArgs;
 import com.pulumi.scm.inputs.GetLoopbackInterfacePlainArgs;
+import com.pulumi.scm.inputs.GetManagementInterfaceArgs;
+import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
+import com.pulumi.scm.inputs.GetManagementInterfaceListPlainArgs;
+import com.pulumi.scm.inputs.GetManagementInterfacePlainArgs;
+import com.pulumi.scm.inputs.GetMotdBannerSettingArgs;
+import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
+import com.pulumi.scm.inputs.GetMotdBannerSettingListPlainArgs;
+import com.pulumi.scm.inputs.GetMotdBannerSettingPlainArgs;
 import com.pulumi.scm.inputs.GetNatRuleArgs;
 import com.pulumi.scm.inputs.GetNatRuleListArgs;
 import com.pulumi.scm.inputs.GetNatRuleListPlainArgs;
@@ -326,6 +358,22 @@ import com.pulumi.scm.inputs.GetServiceGroupPlainArgs;
 import com.pulumi.scm.inputs.GetServiceListArgs;
 import com.pulumi.scm.inputs.GetServiceListPlainArgs;
 import com.pulumi.scm.inputs.GetServicePlainArgs;
+import com.pulumi.scm.inputs.GetServiceRouteArgs;
+import com.pulumi.scm.inputs.GetServiceRouteListArgs;
+import com.pulumi.scm.inputs.GetServiceRouteListPlainArgs;
+import com.pulumi.scm.inputs.GetServiceRoutePlainArgs;
+import com.pulumi.scm.inputs.GetServiceSettingArgs;
+import com.pulumi.scm.inputs.GetServiceSettingListArgs;
+import com.pulumi.scm.inputs.GetServiceSettingListPlainArgs;
+import com.pulumi.scm.inputs.GetServiceSettingPlainArgs;
+import com.pulumi.scm.inputs.GetSessionSettingArgs;
+import com.pulumi.scm.inputs.GetSessionSettingListArgs;
+import com.pulumi.scm.inputs.GetSessionSettingListPlainArgs;
+import com.pulumi.scm.inputs.GetSessionSettingPlainArgs;
+import com.pulumi.scm.inputs.GetSessionTimeoutArgs;
+import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
+import com.pulumi.scm.inputs.GetSessionTimeoutListPlainArgs;
+import com.pulumi.scm.inputs.GetSessionTimeoutPlainArgs;
 import com.pulumi.scm.inputs.GetSiteArgs;
 import com.pulumi.scm.inputs.GetSiteListArgs;
 import com.pulumi.scm.inputs.GetSiteListPlainArgs;
@@ -346,6 +394,10 @@ import com.pulumi.scm.inputs.GetTagArgs;
 import com.pulumi.scm.inputs.GetTagListArgs;
 import com.pulumi.scm.inputs.GetTagListPlainArgs;
 import com.pulumi.scm.inputs.GetTagPlainArgs;
+import com.pulumi.scm.inputs.GetTcpSettingArgs;
+import com.pulumi.scm.inputs.GetTcpSettingListArgs;
+import com.pulumi.scm.inputs.GetTcpSettingListPlainArgs;
+import com.pulumi.scm.inputs.GetTcpSettingPlainArgs;
 import com.pulumi.scm.inputs.GetTlsServiceProfileArgs;
 import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
 import com.pulumi.scm.inputs.GetTlsServiceProfileListPlainArgs;
@@ -358,6 +410,10 @@ import com.pulumi.scm.inputs.GetTunnelInterfaceArgs;
 import com.pulumi.scm.inputs.GetTunnelInterfaceListArgs;
 import com.pulumi.scm.inputs.GetTunnelInterfaceListPlainArgs;
 import com.pulumi.scm.inputs.GetTunnelInterfacePlainArgs;
+import com.pulumi.scm.inputs.GetUpdateScheduleArgs;
+import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
+import com.pulumi.scm.inputs.GetUpdateScheduleListPlainArgs;
+import com.pulumi.scm.inputs.GetUpdateSchedulePlainArgs;
 import com.pulumi.scm.inputs.GetUrlAccessProfileArgs;
 import com.pulumi.scm.inputs.GetUrlAccessProfileListArgs;
 import com.pulumi.scm.inputs.GetUrlAccessProfileListPlainArgs;
@@ -374,6 +430,10 @@ import com.pulumi.scm.inputs.GetVlanInterfaceArgs;
 import com.pulumi.scm.inputs.GetVlanInterfaceListArgs;
 import com.pulumi.scm.inputs.GetVlanInterfaceListPlainArgs;
 import com.pulumi.scm.inputs.GetVlanInterfacePlainArgs;
+import com.pulumi.scm.inputs.GetVpnSettingArgs;
+import com.pulumi.scm.inputs.GetVpnSettingListArgs;
+import com.pulumi.scm.inputs.GetVpnSettingListPlainArgs;
+import com.pulumi.scm.inputs.GetVpnSettingPlainArgs;
 import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileArgs;
 import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileListArgs;
 import com.pulumi.scm.inputs.GetVulnerabilityProtectionProfileListPlainArgs;
@@ -418,9 +478,13 @@ import com.pulumi.scm.outputs.GetAuthenticationRuleListResult;
 import com.pulumi.scm.outputs.GetAuthenticationRuleResult;
 import com.pulumi.scm.outputs.GetAuthenticationSequenceListResult;
 import com.pulumi.scm.outputs.GetAuthenticationSequenceResult;
+import com.pulumi.scm.outputs.GetAuthenticationSettingListResult;
+import com.pulumi.scm.outputs.GetAuthenticationSettingResult;
 import com.pulumi.scm.outputs.GetAutoVpnClusterListResult;
 import com.pulumi.scm.outputs.GetAutoVpnClusterResult;
 import com.pulumi.scm.outputs.GetAutoVpnSettingResult;
+import com.pulumi.scm.outputs.GetBandwidthAllocationListResult;
+import com.pulumi.scm.outputs.GetBandwidthAllocationResult;
 import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileListResult;
 import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileResult;
 import com.pulumi.scm.outputs.GetBgpAuthProfileListResult;
@@ -436,12 +500,16 @@ import com.pulumi.scm.outputs.GetBgpRouteMapResult;
 import com.pulumi.scm.outputs.GetBgpRoutingResult;
 import com.pulumi.scm.outputs.GetCertificateProfileListResult;
 import com.pulumi.scm.outputs.GetCertificateProfileResult;
+import com.pulumi.scm.outputs.GetContentIdSettingListResult;
+import com.pulumi.scm.outputs.GetContentIdSettingResult;
 import com.pulumi.scm.outputs.GetDecryptionExclusionListResult;
 import com.pulumi.scm.outputs.GetDecryptionExclusionResult;
 import com.pulumi.scm.outputs.GetDecryptionProfileListResult;
 import com.pulumi.scm.outputs.GetDecryptionProfileResult;
 import com.pulumi.scm.outputs.GetDecryptionRuleListResult;
 import com.pulumi.scm.outputs.GetDecryptionRuleResult;
+import com.pulumi.scm.outputs.GetDeviceRedistributionCollectorListResult;
+import com.pulumi.scm.outputs.GetDeviceRedistributionCollectorResult;
 import com.pulumi.scm.outputs.GetDhcpInterfaceListResult;
 import com.pulumi.scm.outputs.GetDhcpInterfaceResult;
 import com.pulumi.scm.outputs.GetDnsProxyListResult;
@@ -462,6 +530,8 @@ import com.pulumi.scm.outputs.GetFileBlockingProfileListResult;
 import com.pulumi.scm.outputs.GetFileBlockingProfileResult;
 import com.pulumi.scm.outputs.GetFolderListResult;
 import com.pulumi.scm.outputs.GetFolderResult;
+import com.pulumi.scm.outputs.GetGeneralSettingListResult;
+import com.pulumi.scm.outputs.GetGeneralSettingResult;
 import com.pulumi.scm.outputs.GetHipObjectListResult;
 import com.pulumi.scm.outputs.GetHipObjectResult;
 import com.pulumi.scm.outputs.GetHipProfileListResult;
@@ -492,6 +562,8 @@ import com.pulumi.scm.outputs.GetLdapServerProfileListResult;
 import com.pulumi.scm.outputs.GetLdapServerProfileResult;
 import com.pulumi.scm.outputs.GetLinkTagListResult;
 import com.pulumi.scm.outputs.GetLinkTagResult;
+import com.pulumi.scm.outputs.GetLldpProfileListResult;
+import com.pulumi.scm.outputs.GetLldpProfileResult;
 import com.pulumi.scm.outputs.GetLocalUserGroupListResult;
 import com.pulumi.scm.outputs.GetLocalUserGroupResult;
 import com.pulumi.scm.outputs.GetLocalUserListResult;
@@ -502,6 +574,10 @@ import com.pulumi.scm.outputs.GetLogicalRouterListResult;
 import com.pulumi.scm.outputs.GetLogicalRouterResult;
 import com.pulumi.scm.outputs.GetLoopbackInterfaceListResult;
 import com.pulumi.scm.outputs.GetLoopbackInterfaceResult;
+import com.pulumi.scm.outputs.GetManagementInterfaceListResult;
+import com.pulumi.scm.outputs.GetManagementInterfaceResult;
+import com.pulumi.scm.outputs.GetMotdBannerSettingListResult;
+import com.pulumi.scm.outputs.GetMotdBannerSettingResult;
 import com.pulumi.scm.outputs.GetNatRuleListResult;
 import com.pulumi.scm.outputs.GetNatRuleResult;
 import com.pulumi.scm.outputs.GetOspfAuthProfileListResult;
@@ -554,6 +630,14 @@ import com.pulumi.scm.outputs.GetServiceGroupListResult;
 import com.pulumi.scm.outputs.GetServiceGroupResult;
 import com.pulumi.scm.outputs.GetServiceListResult;
 import com.pulumi.scm.outputs.GetServiceResult;
+import com.pulumi.scm.outputs.GetServiceRouteListResult;
+import com.pulumi.scm.outputs.GetServiceRouteResult;
+import com.pulumi.scm.outputs.GetServiceSettingListResult;
+import com.pulumi.scm.outputs.GetServiceSettingResult;
+import com.pulumi.scm.outputs.GetSessionSettingListResult;
+import com.pulumi.scm.outputs.GetSessionSettingResult;
+import com.pulumi.scm.outputs.GetSessionTimeoutListResult;
+import com.pulumi.scm.outputs.GetSessionTimeoutResult;
 import com.pulumi.scm.outputs.GetSiteListResult;
 import com.pulumi.scm.outputs.GetSiteResult;
 import com.pulumi.scm.outputs.GetSnippetListResult;
@@ -564,12 +648,16 @@ import com.pulumi.scm.outputs.GetTacacsServerProfileListResult;
 import com.pulumi.scm.outputs.GetTacacsServerProfileResult;
 import com.pulumi.scm.outputs.GetTagListResult;
 import com.pulumi.scm.outputs.GetTagResult;
+import com.pulumi.scm.outputs.GetTcpSettingListResult;
+import com.pulumi.scm.outputs.GetTcpSettingResult;
 import com.pulumi.scm.outputs.GetTlsServiceProfileListResult;
 import com.pulumi.scm.outputs.GetTlsServiceProfileResult;
 import com.pulumi.scm.outputs.GetTrafficSteeringRuleListResult;
 import com.pulumi.scm.outputs.GetTrafficSteeringRuleResult;
 import com.pulumi.scm.outputs.GetTunnelInterfaceListResult;
 import com.pulumi.scm.outputs.GetTunnelInterfaceResult;
+import com.pulumi.scm.outputs.GetUpdateScheduleListResult;
+import com.pulumi.scm.outputs.GetUpdateScheduleResult;
 import com.pulumi.scm.outputs.GetUrlAccessProfileListResult;
 import com.pulumi.scm.outputs.GetUrlAccessProfileResult;
 import com.pulumi.scm.outputs.GetUrlCategoryListResult;
@@ -578,6 +666,8 @@ import com.pulumi.scm.outputs.GetVariableListResult;
 import com.pulumi.scm.outputs.GetVariableResult;
 import com.pulumi.scm.outputs.GetVlanInterfaceListResult;
 import com.pulumi.scm.outputs.GetVlanInterfaceResult;
+import com.pulumi.scm.outputs.GetVpnSettingListResult;
+import com.pulumi.scm.outputs.GetVpnSettingResult;
 import com.pulumi.scm.outputs.GetVulnerabilityProtectionProfileListResult;
 import com.pulumi.scm.outputs.GetVulnerabilityProtectionProfileResult;
 import com.pulumi.scm.outputs.GetVulnerabilityProtectionSignatureListResult;
@@ -5672,6 +5762,519 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getAuthenticationSequenceList:getAuthenticationSequenceList", TypeShape.of(GetAuthenticationSequenceListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * AuthenticationSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getAuthenticationSetting(GetAuthenticationSettingArgs.builder()
+     *             .id("f4e09263-f8bf-4a4d-a37d-b54d6530810a")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetAuthenticationSettingResult> getAuthenticationSetting(GetAuthenticationSettingArgs args) {
+        return getAuthenticationSetting(args, InvokeOptions.Empty);
+    }
+    /**
+     * AuthenticationSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getAuthenticationSetting(GetAuthenticationSettingArgs.builder()
+     *             .id("f4e09263-f8bf-4a4d-a37d-b54d6530810a")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetAuthenticationSettingResult> getAuthenticationSettingPlain(GetAuthenticationSettingPlainArgs args) {
+        return getAuthenticationSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * AuthenticationSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getAuthenticationSetting(GetAuthenticationSettingArgs.builder()
+     *             .id("f4e09263-f8bf-4a4d-a37d-b54d6530810a")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetAuthenticationSettingResult> getAuthenticationSetting(GetAuthenticationSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getAuthenticationSetting:getAuthenticationSetting", TypeShape.of(GetAuthenticationSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * AuthenticationSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getAuthenticationSetting(GetAuthenticationSettingArgs.builder()
+     *             .id("f4e09263-f8bf-4a4d-a37d-b54d6530810a")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetAuthenticationSettingResult> getAuthenticationSetting(GetAuthenticationSettingArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getAuthenticationSetting:getAuthenticationSetting", TypeShape.of(GetAuthenticationSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * AuthenticationSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getAuthenticationSetting(GetAuthenticationSettingArgs.builder()
+     *             .id("f4e09263-f8bf-4a4d-a37d-b54d6530810a")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetAuthenticationSettingResult> getAuthenticationSettingPlain(GetAuthenticationSettingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getAuthenticationSetting:getAuthenticationSetting", TypeShape.of(GetAuthenticationSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getAuthenticationSettingList(GetAuthenticationSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetAuthenticationSettingListResult> getAuthenticationSettingList() {
+        return getAuthenticationSettingList(GetAuthenticationSettingListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getAuthenticationSettingList(GetAuthenticationSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetAuthenticationSettingListResult> getAuthenticationSettingListPlain() {
+        return getAuthenticationSettingListPlain(GetAuthenticationSettingListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getAuthenticationSettingList(GetAuthenticationSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetAuthenticationSettingListResult> getAuthenticationSettingList(GetAuthenticationSettingListArgs args) {
+        return getAuthenticationSettingList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getAuthenticationSettingList(GetAuthenticationSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetAuthenticationSettingListResult> getAuthenticationSettingListPlain(GetAuthenticationSettingListPlainArgs args) {
+        return getAuthenticationSettingListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getAuthenticationSettingList(GetAuthenticationSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetAuthenticationSettingListResult> getAuthenticationSettingList(GetAuthenticationSettingListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getAuthenticationSettingList:getAuthenticationSettingList", TypeShape.of(GetAuthenticationSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getAuthenticationSettingList(GetAuthenticationSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetAuthenticationSettingListResult> getAuthenticationSettingList(GetAuthenticationSettingListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getAuthenticationSettingList:getAuthenticationSettingList", TypeShape.of(GetAuthenticationSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getAuthenticationSettingList(GetAuthenticationSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetAuthenticationSettingListResult> getAuthenticationSettingListPlain(GetAuthenticationSettingListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getAuthenticationSettingList:getAuthenticationSettingList", TypeShape.of(GetAuthenticationSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * AutoVpnCluster data source
      * 
      * ## Example Usage
@@ -5941,6 +6544,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all clusters from the "All" folder.
      *         final var allClusters = ScmFunctions.getAutoVpnClusterList(GetAutoVpnClusterListArgs.builder()
      *             .folder("All")
+     *             .limit(10)
      *             .build());
      * 
      *         ctx.export("autoVpnClustersList", allClusters);
@@ -5983,6 +6587,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all clusters from the "All" folder.
      *         final var allClusters = ScmFunctions.getAutoVpnClusterList(GetAutoVpnClusterListArgs.builder()
      *             .folder("All")
+     *             .limit(10)
      *             .build());
      * 
      *         ctx.export("autoVpnClustersList", allClusters);
@@ -6025,6 +6630,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all clusters from the "All" folder.
      *         final var allClusters = ScmFunctions.getAutoVpnClusterList(GetAutoVpnClusterListArgs.builder()
      *             .folder("All")
+     *             .limit(10)
      *             .build());
      * 
      *         ctx.export("autoVpnClustersList", allClusters);
@@ -6067,6 +6673,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all clusters from the "All" folder.
      *         final var allClusters = ScmFunctions.getAutoVpnClusterList(GetAutoVpnClusterListArgs.builder()
      *             .folder("All")
+     *             .limit(10)
      *             .build());
      * 
      *         ctx.export("autoVpnClustersList", allClusters);
@@ -6109,6 +6716,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all clusters from the "All" folder.
      *         final var allClusters = ScmFunctions.getAutoVpnClusterList(GetAutoVpnClusterListArgs.builder()
      *             .folder("All")
+     *             .limit(10)
      *             .build());
      * 
      *         ctx.export("autoVpnClustersList", allClusters);
@@ -6151,6 +6759,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all clusters from the "All" folder.
      *         final var allClusters = ScmFunctions.getAutoVpnClusterList(GetAutoVpnClusterListArgs.builder()
      *             .folder("All")
+     *             .limit(10)
      *             .build());
      * 
      *         ctx.export("autoVpnClustersList", allClusters);
@@ -6193,6 +6802,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all clusters from the "All" folder.
      *         final var allClusters = ScmFunctions.getAutoVpnClusterList(GetAutoVpnClusterListArgs.builder()
      *             .folder("All")
+     *             .limit(10)
      *             .build());
      * 
      *         ctx.export("autoVpnClustersList", allClusters);
@@ -6470,6 +7080,615 @@ public final class ScmFunctions {
      */
     public static CompletableFuture<GetAutoVpnSettingResult> getAutoVpnSettingPlain(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getAutoVpnSetting:getAutoVpnSetting", TypeShape.of(GetAutoVpnSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * BandwidthAllocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up an existing Bandwidth Allocation by name
+     *         final var example = ScmFunctions.getBandwidthAllocation(GetBandwidthAllocationArgs.builder()
+     *             .name("taiwan")
+     *             .build());
+     * 
+     *         ctx.export("allocatedBandwidth", example.allocatedBandwidth());
+     *         ctx.export("spnNameList", example.spnNameLists());
+     *         ctx.export("qosProfile", example.qos().profile());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetBandwidthAllocationResult> getBandwidthAllocation() {
+        return getBandwidthAllocation(GetBandwidthAllocationArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * BandwidthAllocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up an existing Bandwidth Allocation by name
+     *         final var example = ScmFunctions.getBandwidthAllocation(GetBandwidthAllocationArgs.builder()
+     *             .name("taiwan")
+     *             .build());
+     * 
+     *         ctx.export("allocatedBandwidth", example.allocatedBandwidth());
+     *         ctx.export("spnNameList", example.spnNameLists());
+     *         ctx.export("qosProfile", example.qos().profile());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetBandwidthAllocationResult> getBandwidthAllocationPlain() {
+        return getBandwidthAllocationPlain(GetBandwidthAllocationPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * BandwidthAllocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up an existing Bandwidth Allocation by name
+     *         final var example = ScmFunctions.getBandwidthAllocation(GetBandwidthAllocationArgs.builder()
+     *             .name("taiwan")
+     *             .build());
+     * 
+     *         ctx.export("allocatedBandwidth", example.allocatedBandwidth());
+     *         ctx.export("spnNameList", example.spnNameLists());
+     *         ctx.export("qosProfile", example.qos().profile());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetBandwidthAllocationResult> getBandwidthAllocation(GetBandwidthAllocationArgs args) {
+        return getBandwidthAllocation(args, InvokeOptions.Empty);
+    }
+    /**
+     * BandwidthAllocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up an existing Bandwidth Allocation by name
+     *         final var example = ScmFunctions.getBandwidthAllocation(GetBandwidthAllocationArgs.builder()
+     *             .name("taiwan")
+     *             .build());
+     * 
+     *         ctx.export("allocatedBandwidth", example.allocatedBandwidth());
+     *         ctx.export("spnNameList", example.spnNameLists());
+     *         ctx.export("qosProfile", example.qos().profile());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetBandwidthAllocationResult> getBandwidthAllocationPlain(GetBandwidthAllocationPlainArgs args) {
+        return getBandwidthAllocationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * BandwidthAllocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up an existing Bandwidth Allocation by name
+     *         final var example = ScmFunctions.getBandwidthAllocation(GetBandwidthAllocationArgs.builder()
+     *             .name("taiwan")
+     *             .build());
+     * 
+     *         ctx.export("allocatedBandwidth", example.allocatedBandwidth());
+     *         ctx.export("spnNameList", example.spnNameLists());
+     *         ctx.export("qosProfile", example.qos().profile());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetBandwidthAllocationResult> getBandwidthAllocation(GetBandwidthAllocationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getBandwidthAllocation:getBandwidthAllocation", TypeShape.of(GetBandwidthAllocationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * BandwidthAllocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up an existing Bandwidth Allocation by name
+     *         final var example = ScmFunctions.getBandwidthAllocation(GetBandwidthAllocationArgs.builder()
+     *             .name("taiwan")
+     *             .build());
+     * 
+     *         ctx.export("allocatedBandwidth", example.allocatedBandwidth());
+     *         ctx.export("spnNameList", example.spnNameLists());
+     *         ctx.export("qosProfile", example.qos().profile());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetBandwidthAllocationResult> getBandwidthAllocation(GetBandwidthAllocationArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getBandwidthAllocation:getBandwidthAllocation", TypeShape.of(GetBandwidthAllocationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * BandwidthAllocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up an existing Bandwidth Allocation by name
+     *         final var example = ScmFunctions.getBandwidthAllocation(GetBandwidthAllocationArgs.builder()
+     *             .name("taiwan")
+     *             .build());
+     * 
+     *         ctx.export("allocatedBandwidth", example.allocatedBandwidth());
+     *         ctx.export("spnNameList", example.spnNameLists());
+     *         ctx.export("qosProfile", example.qos().profile());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetBandwidthAllocationResult> getBandwidthAllocationPlain(GetBandwidthAllocationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getBandwidthAllocation:getBandwidthAllocation", TypeShape.of(GetBandwidthAllocationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getBandwidthAllocationList(GetBandwidthAllocationListArgs.builder()
+     *             .name("taiwan")
+     *             .limit(50)
+     *             .offset(0)
+     *             .build());
+     * 
+     *         ctx.export("allocationList", example.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetBandwidthAllocationListResult> getBandwidthAllocationList() {
+        return getBandwidthAllocationList(GetBandwidthAllocationListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getBandwidthAllocationList(GetBandwidthAllocationListArgs.builder()
+     *             .name("taiwan")
+     *             .limit(50)
+     *             .offset(0)
+     *             .build());
+     * 
+     *         ctx.export("allocationList", example.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetBandwidthAllocationListResult> getBandwidthAllocationListPlain() {
+        return getBandwidthAllocationListPlain(GetBandwidthAllocationListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getBandwidthAllocationList(GetBandwidthAllocationListArgs.builder()
+     *             .name("taiwan")
+     *             .limit(50)
+     *             .offset(0)
+     *             .build());
+     * 
+     *         ctx.export("allocationList", example.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetBandwidthAllocationListResult> getBandwidthAllocationList(GetBandwidthAllocationListArgs args) {
+        return getBandwidthAllocationList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getBandwidthAllocationList(GetBandwidthAllocationListArgs.builder()
+     *             .name("taiwan")
+     *             .limit(50)
+     *             .offset(0)
+     *             .build());
+     * 
+     *         ctx.export("allocationList", example.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetBandwidthAllocationListResult> getBandwidthAllocationListPlain(GetBandwidthAllocationListPlainArgs args) {
+        return getBandwidthAllocationListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getBandwidthAllocationList(GetBandwidthAllocationListArgs.builder()
+     *             .name("taiwan")
+     *             .limit(50)
+     *             .offset(0)
+     *             .build());
+     * 
+     *         ctx.export("allocationList", example.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetBandwidthAllocationListResult> getBandwidthAllocationList(GetBandwidthAllocationListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getBandwidthAllocationList:getBandwidthAllocationList", TypeShape.of(GetBandwidthAllocationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getBandwidthAllocationList(GetBandwidthAllocationListArgs.builder()
+     *             .name("taiwan")
+     *             .limit(50)
+     *             .offset(0)
+     *             .build());
+     * 
+     *         ctx.export("allocationList", example.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetBandwidthAllocationListResult> getBandwidthAllocationList(GetBandwidthAllocationListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getBandwidthAllocationList:getBandwidthAllocationList", TypeShape.of(GetBandwidthAllocationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetBandwidthAllocationListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getBandwidthAllocationList(GetBandwidthAllocationListArgs.builder()
+     *             .name("taiwan")
+     *             .limit(50)
+     *             .offset(0)
+     *             .build());
+     * 
+     *         ctx.export("allocationList", example.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetBandwidthAllocationListResult> getBandwidthAllocationListPlain(GetBandwidthAllocationListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getBandwidthAllocationList:getBandwidthAllocationList", TypeShape.of(GetBandwidthAllocationListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * BgpAddressFamilyProfile data source
@@ -8593,6 +9812,519 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getCertificateProfileList:getCertificateProfileList", TypeShape.of(GetCertificateProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * ContentIdSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getContentIdSetting(GetContentIdSettingArgs.builder()
+     *             .id("d154bf67-5e4b-4907-b892-1d93cd8cafbc")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetContentIdSettingResult> getContentIdSetting(GetContentIdSettingArgs args) {
+        return getContentIdSetting(args, InvokeOptions.Empty);
+    }
+    /**
+     * ContentIdSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getContentIdSetting(GetContentIdSettingArgs.builder()
+     *             .id("d154bf67-5e4b-4907-b892-1d93cd8cafbc")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetContentIdSettingResult> getContentIdSettingPlain(GetContentIdSettingPlainArgs args) {
+        return getContentIdSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ContentIdSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getContentIdSetting(GetContentIdSettingArgs.builder()
+     *             .id("d154bf67-5e4b-4907-b892-1d93cd8cafbc")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetContentIdSettingResult> getContentIdSetting(GetContentIdSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getContentIdSetting:getContentIdSetting", TypeShape.of(GetContentIdSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ContentIdSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getContentIdSetting(GetContentIdSettingArgs.builder()
+     *             .id("d154bf67-5e4b-4907-b892-1d93cd8cafbc")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetContentIdSettingResult> getContentIdSetting(GetContentIdSettingArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getContentIdSetting:getContentIdSetting", TypeShape.of(GetContentIdSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ContentIdSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getContentIdSetting(GetContentIdSettingArgs.builder()
+     *             .id("d154bf67-5e4b-4907-b892-1d93cd8cafbc")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetContentIdSettingResult> getContentIdSettingPlain(GetContentIdSettingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getContentIdSetting:getContentIdSetting", TypeShape.of(GetContentIdSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getContentIdSettingList(GetContentIdSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetContentIdSettingListResult> getContentIdSettingList() {
+        return getContentIdSettingList(GetContentIdSettingListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getContentIdSettingList(GetContentIdSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetContentIdSettingListResult> getContentIdSettingListPlain() {
+        return getContentIdSettingListPlain(GetContentIdSettingListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getContentIdSettingList(GetContentIdSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetContentIdSettingListResult> getContentIdSettingList(GetContentIdSettingListArgs args) {
+        return getContentIdSettingList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getContentIdSettingList(GetContentIdSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetContentIdSettingListResult> getContentIdSettingListPlain(GetContentIdSettingListPlainArgs args) {
+        return getContentIdSettingListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getContentIdSettingList(GetContentIdSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetContentIdSettingListResult> getContentIdSettingList(GetContentIdSettingListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getContentIdSettingList:getContentIdSettingList", TypeShape.of(GetContentIdSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getContentIdSettingList(GetContentIdSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetContentIdSettingListResult> getContentIdSettingList(GetContentIdSettingListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getContentIdSettingList:getContentIdSettingList", TypeShape.of(GetContentIdSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getContentIdSettingList(GetContentIdSettingListArgs.builder()
+     *             .folder("Prisma Access")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetContentIdSettingListResult> getContentIdSettingListPlain(GetContentIdSettingListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getContentIdSettingList:getContentIdSettingList", TypeShape.of(GetContentIdSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * DecryptionExclusion data source
      * 
      */
@@ -9675,6 +11407,519 @@ public final class ScmFunctions {
      */
     public static CompletableFuture<GetDecryptionRuleListResult> getDecryptionRuleListPlain(GetDecryptionRuleListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getDecryptionRuleList:getDecryptionRuleList", TypeShape.of(GetDecryptionRuleListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * DeviceRedistributionCollector data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getDeviceRedistributionCollector(GetDeviceRedistributionCollectorArgs.builder()
+     *             .id("8c1f7d95-83bd-4ae6-877c-89e1a212ef14")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDeviceRedistributionCollectorResult> getDeviceRedistributionCollector(GetDeviceRedistributionCollectorArgs args) {
+        return getDeviceRedistributionCollector(args, InvokeOptions.Empty);
+    }
+    /**
+     * DeviceRedistributionCollector data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getDeviceRedistributionCollector(GetDeviceRedistributionCollectorArgs.builder()
+     *             .id("8c1f7d95-83bd-4ae6-877c-89e1a212ef14")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDeviceRedistributionCollectorResult> getDeviceRedistributionCollectorPlain(GetDeviceRedistributionCollectorPlainArgs args) {
+        return getDeviceRedistributionCollectorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * DeviceRedistributionCollector data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getDeviceRedistributionCollector(GetDeviceRedistributionCollectorArgs.builder()
+     *             .id("8c1f7d95-83bd-4ae6-877c-89e1a212ef14")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDeviceRedistributionCollectorResult> getDeviceRedistributionCollector(GetDeviceRedistributionCollectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDeviceRedistributionCollector:getDeviceRedistributionCollector", TypeShape.of(GetDeviceRedistributionCollectorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * DeviceRedistributionCollector data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getDeviceRedistributionCollector(GetDeviceRedistributionCollectorArgs.builder()
+     *             .id("8c1f7d95-83bd-4ae6-877c-89e1a212ef14")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDeviceRedistributionCollectorResult> getDeviceRedistributionCollector(GetDeviceRedistributionCollectorArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDeviceRedistributionCollector:getDeviceRedistributionCollector", TypeShape.of(GetDeviceRedistributionCollectorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * DeviceRedistributionCollector data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getDeviceRedistributionCollector(GetDeviceRedistributionCollectorArgs.builder()
+     *             .id("8c1f7d95-83bd-4ae6-877c-89e1a212ef14")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDeviceRedistributionCollectorResult> getDeviceRedistributionCollectorPlain(GetDeviceRedistributionCollectorPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getDeviceRedistributionCollector:getDeviceRedistributionCollector", TypeShape.of(GetDeviceRedistributionCollectorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getDeviceRedistributionCollectorList(GetDeviceRedistributionCollectorListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDeviceRedistributionCollectorListResult> getDeviceRedistributionCollectorList() {
+        return getDeviceRedistributionCollectorList(GetDeviceRedistributionCollectorListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getDeviceRedistributionCollectorList(GetDeviceRedistributionCollectorListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDeviceRedistributionCollectorListResult> getDeviceRedistributionCollectorListPlain() {
+        return getDeviceRedistributionCollectorListPlain(GetDeviceRedistributionCollectorListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getDeviceRedistributionCollectorList(GetDeviceRedistributionCollectorListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDeviceRedistributionCollectorListResult> getDeviceRedistributionCollectorList(GetDeviceRedistributionCollectorListArgs args) {
+        return getDeviceRedistributionCollectorList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getDeviceRedistributionCollectorList(GetDeviceRedistributionCollectorListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDeviceRedistributionCollectorListResult> getDeviceRedistributionCollectorListPlain(GetDeviceRedistributionCollectorListPlainArgs args) {
+        return getDeviceRedistributionCollectorListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getDeviceRedistributionCollectorList(GetDeviceRedistributionCollectorListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDeviceRedistributionCollectorListResult> getDeviceRedistributionCollectorList(GetDeviceRedistributionCollectorListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDeviceRedistributionCollectorList:getDeviceRedistributionCollectorList", TypeShape.of(GetDeviceRedistributionCollectorListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getDeviceRedistributionCollectorList(GetDeviceRedistributionCollectorListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDeviceRedistributionCollectorListResult> getDeviceRedistributionCollectorList(GetDeviceRedistributionCollectorListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDeviceRedistributionCollectorList:getDeviceRedistributionCollectorList", TypeShape.of(GetDeviceRedistributionCollectorListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getDeviceRedistributionCollectorList(GetDeviceRedistributionCollectorListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDeviceRedistributionCollectorListResult> getDeviceRedistributionCollectorListPlain(GetDeviceRedistributionCollectorListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getDeviceRedistributionCollectorList:getDeviceRedistributionCollectorList", TypeShape.of(GetDeviceRedistributionCollectorListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * DhcpInterface data source
@@ -12651,6 +14896,519 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getFolderList:getFolderList", TypeShape.of(GetFolderListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * GeneralSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getGeneralSetting(GetGeneralSettingArgs.builder()
+     *             .id("f7e61db6-b03a-493b-a70d-da39ed2e21b0")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetGeneralSettingResult> getGeneralSetting(GetGeneralSettingArgs args) {
+        return getGeneralSetting(args, InvokeOptions.Empty);
+    }
+    /**
+     * GeneralSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getGeneralSetting(GetGeneralSettingArgs.builder()
+     *             .id("f7e61db6-b03a-493b-a70d-da39ed2e21b0")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetGeneralSettingResult> getGeneralSettingPlain(GetGeneralSettingPlainArgs args) {
+        return getGeneralSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * GeneralSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getGeneralSetting(GetGeneralSettingArgs.builder()
+     *             .id("f7e61db6-b03a-493b-a70d-da39ed2e21b0")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetGeneralSettingResult> getGeneralSetting(GetGeneralSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getGeneralSetting:getGeneralSetting", TypeShape.of(GetGeneralSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * GeneralSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getGeneralSetting(GetGeneralSettingArgs.builder()
+     *             .id("f7e61db6-b03a-493b-a70d-da39ed2e21b0")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetGeneralSettingResult> getGeneralSetting(GetGeneralSettingArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getGeneralSetting:getGeneralSetting", TypeShape.of(GetGeneralSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * GeneralSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getGeneralSetting(GetGeneralSettingArgs.builder()
+     *             .id("f7e61db6-b03a-493b-a70d-da39ed2e21b0")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetGeneralSettingResult> getGeneralSettingPlain(GetGeneralSettingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getGeneralSetting:getGeneralSetting", TypeShape.of(GetGeneralSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getGeneralSettingList(GetGeneralSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetGeneralSettingListResult> getGeneralSettingList() {
+        return getGeneralSettingList(GetGeneralSettingListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getGeneralSettingList(GetGeneralSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetGeneralSettingListResult> getGeneralSettingListPlain() {
+        return getGeneralSettingListPlain(GetGeneralSettingListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getGeneralSettingList(GetGeneralSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetGeneralSettingListResult> getGeneralSettingList(GetGeneralSettingListArgs args) {
+        return getGeneralSettingList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getGeneralSettingList(GetGeneralSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetGeneralSettingListResult> getGeneralSettingListPlain(GetGeneralSettingListPlainArgs args) {
+        return getGeneralSettingListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getGeneralSettingList(GetGeneralSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetGeneralSettingListResult> getGeneralSettingList(GetGeneralSettingListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getGeneralSettingList:getGeneralSettingList", TypeShape.of(GetGeneralSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getGeneralSettingList(GetGeneralSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetGeneralSettingListResult> getGeneralSettingList(GetGeneralSettingListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getGeneralSettingList:getGeneralSettingList", TypeShape.of(GetGeneralSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getGeneralSettingList(GetGeneralSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetGeneralSettingListResult> getGeneralSettingListPlain(GetGeneralSettingListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getGeneralSettingList:getGeneralSettingList", TypeShape.of(GetGeneralSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * HipObject data source
      * 
      * ## Example Usage
@@ -13773,12 +16531,96 @@ public final class ScmFunctions {
     /**
      * HttpHeaderProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM HTTP Header Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
+     *         final var scmHttpHeaderProf = ScmFunctions.getHttpHeaderProfile(GetHttpHeaderProfileArgs.builder()
+     *             .id("2733cba4-c79d-4c98-8e07-4d3cbdd0ba11")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmHttpHeaderProf.id()),
+     *             Map.entry("folder", scmHttpHeaderProf.folder()),
+     *             Map.entry("name", scmHttpHeaderProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetHttpHeaderProfileResult> getHttpHeaderProfile(GetHttpHeaderProfileArgs args) {
         return getHttpHeaderProfile(args, InvokeOptions.Empty);
     }
     /**
      * HttpHeaderProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM HTTP Header Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
+     *         final var scmHttpHeaderProf = ScmFunctions.getHttpHeaderProfile(GetHttpHeaderProfileArgs.builder()
+     *             .id("2733cba4-c79d-4c98-8e07-4d3cbdd0ba11")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmHttpHeaderProf.id()),
+     *             Map.entry("folder", scmHttpHeaderProf.folder()),
+     *             Map.entry("name", scmHttpHeaderProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetHttpHeaderProfileResult> getHttpHeaderProfilePlain(GetHttpHeaderProfilePlainArgs args) {
@@ -13787,12 +16629,96 @@ public final class ScmFunctions {
     /**
      * HttpHeaderProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM HTTP Header Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
+     *         final var scmHttpHeaderProf = ScmFunctions.getHttpHeaderProfile(GetHttpHeaderProfileArgs.builder()
+     *             .id("2733cba4-c79d-4c98-8e07-4d3cbdd0ba11")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmHttpHeaderProf.id()),
+     *             Map.entry("folder", scmHttpHeaderProf.folder()),
+     *             Map.entry("name", scmHttpHeaderProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetHttpHeaderProfileResult> getHttpHeaderProfile(GetHttpHeaderProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", TypeShape.of(GetHttpHeaderProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * HttpHeaderProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM HTTP Header Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
+     *         final var scmHttpHeaderProf = ScmFunctions.getHttpHeaderProfile(GetHttpHeaderProfileArgs.builder()
+     *             .id("2733cba4-c79d-4c98-8e07-4d3cbdd0ba11")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmHttpHeaderProf.id()),
+     *             Map.entry("folder", scmHttpHeaderProf.folder()),
+     *             Map.entry("name", scmHttpHeaderProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetHttpHeaderProfileResult> getHttpHeaderProfile(GetHttpHeaderProfileArgs args, InvokeOutputOptions options) {
@@ -13801,12 +16727,92 @@ public final class ScmFunctions {
     /**
      * HttpHeaderProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM HTTP Header Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
+     *         final var scmHttpHeaderProf = ScmFunctions.getHttpHeaderProfile(GetHttpHeaderProfileArgs.builder()
+     *             .id("2733cba4-c79d-4c98-8e07-4d3cbdd0ba11")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmHttpHeaderProf.id()),
+     *             Map.entry("folder", scmHttpHeaderProf.folder()),
+     *             Map.entry("name", scmHttpHeaderProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetHttpHeaderProfileResult> getHttpHeaderProfilePlain(GetHttpHeaderProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", TypeShape.of(GetHttpHeaderProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetHttpHeaderProfileListResult> getHttpHeaderProfileList() {
@@ -13815,12 +16821,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetHttpHeaderProfileListResult> getHttpHeaderProfileListPlain() {
         return getHttpHeaderProfileListPlain(GetHttpHeaderProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetHttpHeaderProfileListResult> getHttpHeaderProfileList(GetHttpHeaderProfileListArgs args) {
@@ -13829,12 +16911,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetHttpHeaderProfileListResult> getHttpHeaderProfileListPlain(GetHttpHeaderProfileListPlainArgs args) {
         return getHttpHeaderProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetHttpHeaderProfileListResult> getHttpHeaderProfileList(GetHttpHeaderProfileListArgs args, InvokeOptions options) {
@@ -13843,12 +17001,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetHttpHeaderProfileListResult> getHttpHeaderProfileList(GetHttpHeaderProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getHttpHeaderProfileList:getHttpHeaderProfileList", TypeShape.of(GetHttpHeaderProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmHttpHeaderProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetHttpHeaderProfileListResult> getHttpHeaderProfileListPlain(GetHttpHeaderProfileListPlainArgs args, InvokeOptions options) {
@@ -17519,6 +20753,90 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getLinkTagList:getLinkTagList", TypeShape.of(GetLinkTagListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * LldpProfile data source
+     * 
+     */
+    public static Output<GetLldpProfileResult> getLldpProfile(GetLldpProfileArgs args) {
+        return getLldpProfile(args, InvokeOptions.Empty);
+    }
+    /**
+     * LldpProfile data source
+     * 
+     */
+    public static CompletableFuture<GetLldpProfileResult> getLldpProfilePlain(GetLldpProfilePlainArgs args) {
+        return getLldpProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * LldpProfile data source
+     * 
+     */
+    public static Output<GetLldpProfileResult> getLldpProfile(GetLldpProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getLldpProfile:getLldpProfile", TypeShape.of(GetLldpProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * LldpProfile data source
+     * 
+     */
+    public static Output<GetLldpProfileResult> getLldpProfile(GetLldpProfileArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getLldpProfile:getLldpProfile", TypeShape.of(GetLldpProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * LldpProfile data source
+     * 
+     */
+    public static CompletableFuture<GetLldpProfileResult> getLldpProfilePlain(GetLldpProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getLldpProfile:getLldpProfile", TypeShape.of(GetLldpProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetLldpProfileListResult> getLldpProfileList() {
+        return getLldpProfileList(GetLldpProfileListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetLldpProfileListResult> getLldpProfileListPlain() {
+        return getLldpProfileListPlain(GetLldpProfileListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetLldpProfileListResult> getLldpProfileList(GetLldpProfileListArgs args) {
+        return getLldpProfileList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetLldpProfileListResult> getLldpProfileListPlain(GetLldpProfileListPlainArgs args) {
+        return getLldpProfileListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetLldpProfileListResult> getLldpProfileList(GetLldpProfileListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getLldpProfileList:getLldpProfileList", TypeShape.of(GetLldpProfileListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetLldpProfileListResult> getLldpProfileList(GetLldpProfileListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getLldpProfileList:getLldpProfileList", TypeShape.of(GetLldpProfileListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetLldpProfileListResult> getLldpProfileListPlain(GetLldpProfileListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getLldpProfileList:getLldpProfileList", TypeShape.of(GetLldpProfileListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * LocalUser data source
      * 
      */
@@ -18375,6 +21693,1032 @@ public final class ScmFunctions {
      */
     public static CompletableFuture<GetLoopbackInterfaceListResult> getLoopbackInterfaceListPlain(GetLoopbackInterfaceListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getLoopbackInterfaceList:getLoopbackInterfaceList", TypeShape.of(GetLoopbackInterfaceListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ManagementInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getManagementInterface(GetManagementInterfaceArgs.builder()
+     *             .id("c94505fb-9554-4e19-b56d-e6104c908fa7")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetManagementInterfaceResult> getManagementInterface(GetManagementInterfaceArgs args) {
+        return getManagementInterface(args, InvokeOptions.Empty);
+    }
+    /**
+     * ManagementInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getManagementInterface(GetManagementInterfaceArgs.builder()
+     *             .id("c94505fb-9554-4e19-b56d-e6104c908fa7")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetManagementInterfaceResult> getManagementInterfacePlain(GetManagementInterfacePlainArgs args) {
+        return getManagementInterfacePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ManagementInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getManagementInterface(GetManagementInterfaceArgs.builder()
+     *             .id("c94505fb-9554-4e19-b56d-e6104c908fa7")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetManagementInterfaceResult> getManagementInterface(GetManagementInterfaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getManagementInterface:getManagementInterface", TypeShape.of(GetManagementInterfaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ManagementInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getManagementInterface(GetManagementInterfaceArgs.builder()
+     *             .id("c94505fb-9554-4e19-b56d-e6104c908fa7")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetManagementInterfaceResult> getManagementInterface(GetManagementInterfaceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getManagementInterface:getManagementInterface", TypeShape.of(GetManagementInterfaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ManagementInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getManagementInterface(GetManagementInterfaceArgs.builder()
+     *             .id("c94505fb-9554-4e19-b56d-e6104c908fa7")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetManagementInterfaceResult> getManagementInterfacePlain(GetManagementInterfacePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getManagementInterface:getManagementInterface", TypeShape.of(GetManagementInterfaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getManagementInterfaceList(GetManagementInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetManagementInterfaceListResult> getManagementInterfaceList() {
+        return getManagementInterfaceList(GetManagementInterfaceListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getManagementInterfaceList(GetManagementInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetManagementInterfaceListResult> getManagementInterfaceListPlain() {
+        return getManagementInterfaceListPlain(GetManagementInterfaceListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getManagementInterfaceList(GetManagementInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetManagementInterfaceListResult> getManagementInterfaceList(GetManagementInterfaceListArgs args) {
+        return getManagementInterfaceList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getManagementInterfaceList(GetManagementInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetManagementInterfaceListResult> getManagementInterfaceListPlain(GetManagementInterfaceListPlainArgs args) {
+        return getManagementInterfaceListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getManagementInterfaceList(GetManagementInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetManagementInterfaceListResult> getManagementInterfaceList(GetManagementInterfaceListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getManagementInterfaceList:getManagementInterfaceList", TypeShape.of(GetManagementInterfaceListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getManagementInterfaceList(GetManagementInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetManagementInterfaceListResult> getManagementInterfaceList(GetManagementInterfaceListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getManagementInterfaceList:getManagementInterfaceList", TypeShape.of(GetManagementInterfaceListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetManagementInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getManagementInterfaceList(GetManagementInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetManagementInterfaceListResult> getManagementInterfaceListPlain(GetManagementInterfaceListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getManagementInterfaceList:getManagementInterfaceList", TypeShape.of(GetManagementInterfaceListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * MotdBannerSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getMotdBannerSetting(GetMotdBannerSettingArgs.builder()
+     *             .id("bc31452f-7f57-4c29-9dab-e1cb461799eb")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetMotdBannerSettingResult> getMotdBannerSetting(GetMotdBannerSettingArgs args) {
+        return getMotdBannerSetting(args, InvokeOptions.Empty);
+    }
+    /**
+     * MotdBannerSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getMotdBannerSetting(GetMotdBannerSettingArgs.builder()
+     *             .id("bc31452f-7f57-4c29-9dab-e1cb461799eb")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetMotdBannerSettingResult> getMotdBannerSettingPlain(GetMotdBannerSettingPlainArgs args) {
+        return getMotdBannerSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * MotdBannerSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getMotdBannerSetting(GetMotdBannerSettingArgs.builder()
+     *             .id("bc31452f-7f57-4c29-9dab-e1cb461799eb")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetMotdBannerSettingResult> getMotdBannerSetting(GetMotdBannerSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getMotdBannerSetting:getMotdBannerSetting", TypeShape.of(GetMotdBannerSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * MotdBannerSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getMotdBannerSetting(GetMotdBannerSettingArgs.builder()
+     *             .id("bc31452f-7f57-4c29-9dab-e1cb461799eb")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetMotdBannerSettingResult> getMotdBannerSetting(GetMotdBannerSettingArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getMotdBannerSetting:getMotdBannerSetting", TypeShape.of(GetMotdBannerSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * MotdBannerSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getMotdBannerSetting(GetMotdBannerSettingArgs.builder()
+     *             .id("bc31452f-7f57-4c29-9dab-e1cb461799eb")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetMotdBannerSettingResult> getMotdBannerSettingPlain(GetMotdBannerSettingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getMotdBannerSetting:getMotdBannerSetting", TypeShape.of(GetMotdBannerSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getMotdBannerSettingList(GetMotdBannerSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetMotdBannerSettingListResult> getMotdBannerSettingList() {
+        return getMotdBannerSettingList(GetMotdBannerSettingListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getMotdBannerSettingList(GetMotdBannerSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetMotdBannerSettingListResult> getMotdBannerSettingListPlain() {
+        return getMotdBannerSettingListPlain(GetMotdBannerSettingListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getMotdBannerSettingList(GetMotdBannerSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetMotdBannerSettingListResult> getMotdBannerSettingList(GetMotdBannerSettingListArgs args) {
+        return getMotdBannerSettingList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getMotdBannerSettingList(GetMotdBannerSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetMotdBannerSettingListResult> getMotdBannerSettingListPlain(GetMotdBannerSettingListPlainArgs args) {
+        return getMotdBannerSettingListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getMotdBannerSettingList(GetMotdBannerSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetMotdBannerSettingListResult> getMotdBannerSettingList(GetMotdBannerSettingListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getMotdBannerSettingList:getMotdBannerSettingList", TypeShape.of(GetMotdBannerSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getMotdBannerSettingList(GetMotdBannerSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetMotdBannerSettingListResult> getMotdBannerSettingList(GetMotdBannerSettingListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getMotdBannerSettingList:getMotdBannerSettingList", TypeShape.of(GetMotdBannerSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetMotdBannerSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getMotdBannerSettingList(GetMotdBannerSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetMotdBannerSettingListResult> getMotdBannerSettingListPlain(GetMotdBannerSettingListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getMotdBannerSettingList:getMotdBannerSettingList", TypeShape.of(GetMotdBannerSettingListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * NatRule data source
@@ -23570,6 +27914,2138 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getServiceList:getServiceList", TypeShape.of(GetServiceListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * ServiceRoute data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getServiceRoute(GetServiceRouteArgs.builder()
+     *             .id("a232c048-98d6-4507-a299-bb10f66fca01")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceRouteResult> getServiceRoute(GetServiceRouteArgs args) {
+        return getServiceRoute(args, InvokeOptions.Empty);
+    }
+    /**
+     * ServiceRoute data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getServiceRoute(GetServiceRouteArgs.builder()
+     *             .id("a232c048-98d6-4507-a299-bb10f66fca01")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceRouteResult> getServiceRoutePlain(GetServiceRoutePlainArgs args) {
+        return getServiceRoutePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ServiceRoute data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getServiceRoute(GetServiceRouteArgs.builder()
+     *             .id("a232c048-98d6-4507-a299-bb10f66fca01")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceRouteResult> getServiceRoute(GetServiceRouteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getServiceRoute:getServiceRoute", TypeShape.of(GetServiceRouteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ServiceRoute data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getServiceRoute(GetServiceRouteArgs.builder()
+     *             .id("a232c048-98d6-4507-a299-bb10f66fca01")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceRouteResult> getServiceRoute(GetServiceRouteArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getServiceRoute:getServiceRoute", TypeShape.of(GetServiceRouteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ServiceRoute data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getServiceRoute(GetServiceRouteArgs.builder()
+     *             .id("a232c048-98d6-4507-a299-bb10f66fca01")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceRouteResult> getServiceRoutePlain(GetServiceRoutePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getServiceRoute:getServiceRoute", TypeShape.of(GetServiceRouteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceRouteList(GetServiceRouteListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceRouteListResult> getServiceRouteList() {
+        return getServiceRouteList(GetServiceRouteListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceRouteList(GetServiceRouteListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceRouteListResult> getServiceRouteListPlain() {
+        return getServiceRouteListPlain(GetServiceRouteListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceRouteList(GetServiceRouteListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceRouteListResult> getServiceRouteList(GetServiceRouteListArgs args) {
+        return getServiceRouteList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceRouteList(GetServiceRouteListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceRouteListResult> getServiceRouteListPlain(GetServiceRouteListPlainArgs args) {
+        return getServiceRouteListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceRouteList(GetServiceRouteListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceRouteListResult> getServiceRouteList(GetServiceRouteListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getServiceRouteList:getServiceRouteList", TypeShape.of(GetServiceRouteListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceRouteList(GetServiceRouteListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceRouteListResult> getServiceRouteList(GetServiceRouteListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getServiceRouteList:getServiceRouteList", TypeShape.of(GetServiceRouteListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceRouteListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceRouteList(GetServiceRouteListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceRouteListResult> getServiceRouteListPlain(GetServiceRouteListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getServiceRouteList:getServiceRouteList", TypeShape.of(GetServiceRouteListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ServiceSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getServiceSetting(GetServiceSettingArgs.builder()
+     *             .id("d64ba07a-c8fa-4143-992e-0dcae477a263")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", Map.ofEntries(
+     *             Map.entry("folder", settingsData.folder()),
+     *             Map.entry("id", settingsData.id()),
+     *             Map.entry("dnsPrimary", settingsData.services().dnsSetting().servers().primary()),
+     *             Map.entry("dnsSecondary", settingsData.services().dnsSetting().servers().secondary()),
+     *             Map.entry("fqdnRefreshTime", settingsData.services().fqdnRefreshTime()),
+     *             Map.entry("fqdnStaleEntryTimeout", settingsData.services().fqdnStaleEntryTimeout()),
+     *             Map.entry("ntpPrimaryAddress", settingsData.services().ntpServers().primaryNtpServer().ntpServerAddress()),
+     *             Map.entry("ntpSecondaryAddress", settingsData.services().ntpServers().secondaryNtpServer().ntpServerAddress()),
+     *             Map.entry("updateServer", settingsData.services().updateServer()),
+     *             Map.entry("serverVerification", settingsData.services().serverVerification()),
+     *             Map.entry("secureProxyServer", settingsData.services().secureProxyServer()),
+     *             Map.entry("secureProxyPort", settingsData.services().secureProxyPort()),
+     *             Map.entry("secureProxyUser", settingsData.services().secureProxyUser()),
+     *             Map.entry("lcaasUseProxy", settingsData.services().lcaasUseProxy()),
+     *             Map.entry("inlineCloudProxy", settingsData.services().inlineCloudProxy())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceSettingResult> getServiceSetting(GetServiceSettingArgs args) {
+        return getServiceSetting(args, InvokeOptions.Empty);
+    }
+    /**
+     * ServiceSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getServiceSetting(GetServiceSettingArgs.builder()
+     *             .id("d64ba07a-c8fa-4143-992e-0dcae477a263")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", Map.ofEntries(
+     *             Map.entry("folder", settingsData.folder()),
+     *             Map.entry("id", settingsData.id()),
+     *             Map.entry("dnsPrimary", settingsData.services().dnsSetting().servers().primary()),
+     *             Map.entry("dnsSecondary", settingsData.services().dnsSetting().servers().secondary()),
+     *             Map.entry("fqdnRefreshTime", settingsData.services().fqdnRefreshTime()),
+     *             Map.entry("fqdnStaleEntryTimeout", settingsData.services().fqdnStaleEntryTimeout()),
+     *             Map.entry("ntpPrimaryAddress", settingsData.services().ntpServers().primaryNtpServer().ntpServerAddress()),
+     *             Map.entry("ntpSecondaryAddress", settingsData.services().ntpServers().secondaryNtpServer().ntpServerAddress()),
+     *             Map.entry("updateServer", settingsData.services().updateServer()),
+     *             Map.entry("serverVerification", settingsData.services().serverVerification()),
+     *             Map.entry("secureProxyServer", settingsData.services().secureProxyServer()),
+     *             Map.entry("secureProxyPort", settingsData.services().secureProxyPort()),
+     *             Map.entry("secureProxyUser", settingsData.services().secureProxyUser()),
+     *             Map.entry("lcaasUseProxy", settingsData.services().lcaasUseProxy()),
+     *             Map.entry("inlineCloudProxy", settingsData.services().inlineCloudProxy())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceSettingResult> getServiceSettingPlain(GetServiceSettingPlainArgs args) {
+        return getServiceSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ServiceSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getServiceSetting(GetServiceSettingArgs.builder()
+     *             .id("d64ba07a-c8fa-4143-992e-0dcae477a263")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", Map.ofEntries(
+     *             Map.entry("folder", settingsData.folder()),
+     *             Map.entry("id", settingsData.id()),
+     *             Map.entry("dnsPrimary", settingsData.services().dnsSetting().servers().primary()),
+     *             Map.entry("dnsSecondary", settingsData.services().dnsSetting().servers().secondary()),
+     *             Map.entry("fqdnRefreshTime", settingsData.services().fqdnRefreshTime()),
+     *             Map.entry("fqdnStaleEntryTimeout", settingsData.services().fqdnStaleEntryTimeout()),
+     *             Map.entry("ntpPrimaryAddress", settingsData.services().ntpServers().primaryNtpServer().ntpServerAddress()),
+     *             Map.entry("ntpSecondaryAddress", settingsData.services().ntpServers().secondaryNtpServer().ntpServerAddress()),
+     *             Map.entry("updateServer", settingsData.services().updateServer()),
+     *             Map.entry("serverVerification", settingsData.services().serverVerification()),
+     *             Map.entry("secureProxyServer", settingsData.services().secureProxyServer()),
+     *             Map.entry("secureProxyPort", settingsData.services().secureProxyPort()),
+     *             Map.entry("secureProxyUser", settingsData.services().secureProxyUser()),
+     *             Map.entry("lcaasUseProxy", settingsData.services().lcaasUseProxy()),
+     *             Map.entry("inlineCloudProxy", settingsData.services().inlineCloudProxy())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceSettingResult> getServiceSetting(GetServiceSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getServiceSetting:getServiceSetting", TypeShape.of(GetServiceSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ServiceSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getServiceSetting(GetServiceSettingArgs.builder()
+     *             .id("d64ba07a-c8fa-4143-992e-0dcae477a263")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", Map.ofEntries(
+     *             Map.entry("folder", settingsData.folder()),
+     *             Map.entry("id", settingsData.id()),
+     *             Map.entry("dnsPrimary", settingsData.services().dnsSetting().servers().primary()),
+     *             Map.entry("dnsSecondary", settingsData.services().dnsSetting().servers().secondary()),
+     *             Map.entry("fqdnRefreshTime", settingsData.services().fqdnRefreshTime()),
+     *             Map.entry("fqdnStaleEntryTimeout", settingsData.services().fqdnStaleEntryTimeout()),
+     *             Map.entry("ntpPrimaryAddress", settingsData.services().ntpServers().primaryNtpServer().ntpServerAddress()),
+     *             Map.entry("ntpSecondaryAddress", settingsData.services().ntpServers().secondaryNtpServer().ntpServerAddress()),
+     *             Map.entry("updateServer", settingsData.services().updateServer()),
+     *             Map.entry("serverVerification", settingsData.services().serverVerification()),
+     *             Map.entry("secureProxyServer", settingsData.services().secureProxyServer()),
+     *             Map.entry("secureProxyPort", settingsData.services().secureProxyPort()),
+     *             Map.entry("secureProxyUser", settingsData.services().secureProxyUser()),
+     *             Map.entry("lcaasUseProxy", settingsData.services().lcaasUseProxy()),
+     *             Map.entry("inlineCloudProxy", settingsData.services().inlineCloudProxy())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceSettingResult> getServiceSetting(GetServiceSettingArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getServiceSetting:getServiceSetting", TypeShape.of(GetServiceSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ServiceSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getServiceSetting(GetServiceSettingArgs.builder()
+     *             .id("d64ba07a-c8fa-4143-992e-0dcae477a263")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", Map.ofEntries(
+     *             Map.entry("folder", settingsData.folder()),
+     *             Map.entry("id", settingsData.id()),
+     *             Map.entry("dnsPrimary", settingsData.services().dnsSetting().servers().primary()),
+     *             Map.entry("dnsSecondary", settingsData.services().dnsSetting().servers().secondary()),
+     *             Map.entry("fqdnRefreshTime", settingsData.services().fqdnRefreshTime()),
+     *             Map.entry("fqdnStaleEntryTimeout", settingsData.services().fqdnStaleEntryTimeout()),
+     *             Map.entry("ntpPrimaryAddress", settingsData.services().ntpServers().primaryNtpServer().ntpServerAddress()),
+     *             Map.entry("ntpSecondaryAddress", settingsData.services().ntpServers().secondaryNtpServer().ntpServerAddress()),
+     *             Map.entry("updateServer", settingsData.services().updateServer()),
+     *             Map.entry("serverVerification", settingsData.services().serverVerification()),
+     *             Map.entry("secureProxyServer", settingsData.services().secureProxyServer()),
+     *             Map.entry("secureProxyPort", settingsData.services().secureProxyPort()),
+     *             Map.entry("secureProxyUser", settingsData.services().secureProxyUser()),
+     *             Map.entry("lcaasUseProxy", settingsData.services().lcaasUseProxy()),
+     *             Map.entry("inlineCloudProxy", settingsData.services().inlineCloudProxy())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceSettingResult> getServiceSettingPlain(GetServiceSettingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getServiceSetting:getServiceSetting", TypeShape.of(GetServiceSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceSettingList(GetServiceSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("dnsSetting", allSettings.datas()[0].services().dnsSetting())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceSettingListResult> getServiceSettingList() {
+        return getServiceSettingList(GetServiceSettingListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceSettingList(GetServiceSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("dnsSetting", allSettings.datas()[0].services().dnsSetting())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceSettingListResult> getServiceSettingListPlain() {
+        return getServiceSettingListPlain(GetServiceSettingListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceSettingList(GetServiceSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("dnsSetting", allSettings.datas()[0].services().dnsSetting())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceSettingListResult> getServiceSettingList(GetServiceSettingListArgs args) {
+        return getServiceSettingList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceSettingList(GetServiceSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("dnsSetting", allSettings.datas()[0].services().dnsSetting())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceSettingListResult> getServiceSettingListPlain(GetServiceSettingListPlainArgs args) {
+        return getServiceSettingListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceSettingList(GetServiceSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("dnsSetting", allSettings.datas()[0].services().dnsSetting())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceSettingListResult> getServiceSettingList(GetServiceSettingListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getServiceSettingList:getServiceSettingList", TypeShape.of(GetServiceSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceSettingList(GetServiceSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("dnsSetting", allSettings.datas()[0].services().dnsSetting())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetServiceSettingListResult> getServiceSettingList(GetServiceSettingListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getServiceSettingList:getServiceSettingList", TypeShape.of(GetServiceSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getServiceSettingList(GetServiceSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("dnsSetting", allSettings.datas()[0].services().dnsSetting())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetServiceSettingListResult> getServiceSettingListPlain(GetServiceSettingListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getServiceSettingList:getServiceSettingList", TypeShape.of(GetServiceSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * SessionSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getSessionSetting(GetSessionSettingArgs.builder()
+     *             .id("e869d51d-0d34-4c89-a674-1824cec0eeae")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionSettingResult> getSessionSetting(GetSessionSettingArgs args) {
+        return getSessionSetting(args, InvokeOptions.Empty);
+    }
+    /**
+     * SessionSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getSessionSetting(GetSessionSettingArgs.builder()
+     *             .id("e869d51d-0d34-4c89-a674-1824cec0eeae")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSessionSettingResult> getSessionSettingPlain(GetSessionSettingPlainArgs args) {
+        return getSessionSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * SessionSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getSessionSetting(GetSessionSettingArgs.builder()
+     *             .id("e869d51d-0d34-4c89-a674-1824cec0eeae")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionSettingResult> getSessionSetting(GetSessionSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSessionSetting:getSessionSetting", TypeShape.of(GetSessionSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * SessionSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getSessionSetting(GetSessionSettingArgs.builder()
+     *             .id("e869d51d-0d34-4c89-a674-1824cec0eeae")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionSettingResult> getSessionSetting(GetSessionSettingArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSessionSetting:getSessionSetting", TypeShape.of(GetSessionSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * SessionSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getSessionSetting(GetSessionSettingArgs.builder()
+     *             .id("e869d51d-0d34-4c89-a674-1824cec0eeae")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSessionSettingResult> getSessionSettingPlain(GetSessionSettingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getSessionSetting:getSessionSetting", TypeShape.of(GetSessionSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionSettingList(GetSessionSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSequenceListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionSettingListResult> getSessionSettingList() {
+        return getSessionSettingList(GetSessionSettingListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionSettingList(GetSessionSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSequenceListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSessionSettingListResult> getSessionSettingListPlain() {
+        return getSessionSettingListPlain(GetSessionSettingListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionSettingList(GetSessionSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSequenceListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionSettingListResult> getSessionSettingList(GetSessionSettingListArgs args) {
+        return getSessionSettingList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionSettingList(GetSessionSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSequenceListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSessionSettingListResult> getSessionSettingListPlain(GetSessionSettingListPlainArgs args) {
+        return getSessionSettingListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionSettingList(GetSessionSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSequenceListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionSettingListResult> getSessionSettingList(GetSessionSettingListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSessionSettingList:getSessionSettingList", TypeShape.of(GetSessionSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionSettingList(GetSessionSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSequenceListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionSettingListResult> getSessionSettingList(GetSessionSettingListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSessionSettingList:getSessionSettingList", TypeShape.of(GetSessionSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionSettingList(GetSessionSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSequenceListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSessionSettingListResult> getSessionSettingListPlain(GetSessionSettingListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getSessionSettingList:getSessionSettingList", TypeShape.of(GetSessionSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * SessionTimeout data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getSessionTimeout(GetSessionTimeoutArgs.builder()
+     *             .id("c86b4a2c-1621-4c9c-9f9c-c9798bc9da87")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionTimeoutResult> getSessionTimeout(GetSessionTimeoutArgs args) {
+        return getSessionTimeout(args, InvokeOptions.Empty);
+    }
+    /**
+     * SessionTimeout data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getSessionTimeout(GetSessionTimeoutArgs.builder()
+     *             .id("c86b4a2c-1621-4c9c-9f9c-c9798bc9da87")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSessionTimeoutResult> getSessionTimeoutPlain(GetSessionTimeoutPlainArgs args) {
+        return getSessionTimeoutPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * SessionTimeout data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getSessionTimeout(GetSessionTimeoutArgs.builder()
+     *             .id("c86b4a2c-1621-4c9c-9f9c-c9798bc9da87")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionTimeoutResult> getSessionTimeout(GetSessionTimeoutArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSessionTimeout:getSessionTimeout", TypeShape.of(GetSessionTimeoutResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * SessionTimeout data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getSessionTimeout(GetSessionTimeoutArgs.builder()
+     *             .id("c86b4a2c-1621-4c9c-9f9c-c9798bc9da87")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionTimeoutResult> getSessionTimeout(GetSessionTimeoutArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSessionTimeout:getSessionTimeout", TypeShape.of(GetSessionTimeoutResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * SessionTimeout data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getSessionTimeout(GetSessionTimeoutArgs.builder()
+     *             .id("c86b4a2c-1621-4c9c-9f9c-c9798bc9da87")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSessionTimeoutResult> getSessionTimeoutPlain(GetSessionTimeoutPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getSessionTimeout:getSessionTimeout", TypeShape.of(GetSessionTimeoutResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionTimeoutList(GetSessionTimeoutListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionTimeoutListResult> getSessionTimeoutList() {
+        return getSessionTimeoutList(GetSessionTimeoutListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionTimeoutList(GetSessionTimeoutListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSessionTimeoutListResult> getSessionTimeoutListPlain() {
+        return getSessionTimeoutListPlain(GetSessionTimeoutListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionTimeoutList(GetSessionTimeoutListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionTimeoutListResult> getSessionTimeoutList(GetSessionTimeoutListArgs args) {
+        return getSessionTimeoutList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionTimeoutList(GetSessionTimeoutListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSessionTimeoutListResult> getSessionTimeoutListPlain(GetSessionTimeoutListPlainArgs args) {
+        return getSessionTimeoutListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionTimeoutList(GetSessionTimeoutListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionTimeoutListResult> getSessionTimeoutList(GetSessionTimeoutListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSessionTimeoutList:getSessionTimeoutList", TypeShape.of(GetSessionTimeoutListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionTimeoutList(GetSessionTimeoutListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSessionTimeoutListResult> getSessionTimeoutList(GetSessionTimeoutListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSessionTimeoutList:getSessionTimeoutList", TypeShape.of(GetSessionTimeoutListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSessionTimeoutListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getSessionTimeoutList(GetSessionTimeoutListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSessionTimeoutListResult> getSessionTimeoutListPlain(GetSessionTimeoutListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getSessionTimeoutList:getSessionTimeoutList", TypeShape.of(GetSessionTimeoutListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * Site data source
      * 
      * ## Example Usage
@@ -24362,12 +30838,96 @@ public final class ScmFunctions {
     /**
      * SyslogServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+     *         final var scmSyslogServerProf = ScmFunctions.getSyslogServerProfile(GetSyslogServerProfileArgs.builder()
+     *             .id("69f7ee97-7c0a-416d-a28d-d45929851f6e")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmSyslogServerProf.id()),
+     *             Map.entry("folder", scmSyslogServerProf.folder()),
+     *             Map.entry("name", scmSyslogServerProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSyslogServerProfileResult> getSyslogServerProfile(GetSyslogServerProfileArgs args) {
         return getSyslogServerProfile(args, InvokeOptions.Empty);
     }
     /**
      * SyslogServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+     *         final var scmSyslogServerProf = ScmFunctions.getSyslogServerProfile(GetSyslogServerProfileArgs.builder()
+     *             .id("69f7ee97-7c0a-416d-a28d-d45929851f6e")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmSyslogServerProf.id()),
+     *             Map.entry("folder", scmSyslogServerProf.folder()),
+     *             Map.entry("name", scmSyslogServerProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetSyslogServerProfileResult> getSyslogServerProfilePlain(GetSyslogServerProfilePlainArgs args) {
@@ -24376,12 +30936,96 @@ public final class ScmFunctions {
     /**
      * SyslogServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+     *         final var scmSyslogServerProf = ScmFunctions.getSyslogServerProfile(GetSyslogServerProfileArgs.builder()
+     *             .id("69f7ee97-7c0a-416d-a28d-d45929851f6e")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmSyslogServerProf.id()),
+     *             Map.entry("folder", scmSyslogServerProf.folder()),
+     *             Map.entry("name", scmSyslogServerProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSyslogServerProfileResult> getSyslogServerProfile(GetSyslogServerProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getSyslogServerProfile:getSyslogServerProfile", TypeShape.of(GetSyslogServerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * SyslogServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+     *         final var scmSyslogServerProf = ScmFunctions.getSyslogServerProfile(GetSyslogServerProfileArgs.builder()
+     *             .id("69f7ee97-7c0a-416d-a28d-d45929851f6e")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmSyslogServerProf.id()),
+     *             Map.entry("folder", scmSyslogServerProf.folder()),
+     *             Map.entry("name", scmSyslogServerProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSyslogServerProfileResult> getSyslogServerProfile(GetSyslogServerProfileArgs args, InvokeOutputOptions options) {
@@ -24390,12 +31034,92 @@ public final class ScmFunctions {
     /**
      * SyslogServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+     *         final var scmSyslogServerProf = ScmFunctions.getSyslogServerProfile(GetSyslogServerProfileArgs.builder()
+     *             .id("69f7ee97-7c0a-416d-a28d-d45929851f6e")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmSyslogServerProf.id()),
+     *             Map.entry("folder", scmSyslogServerProf.folder()),
+     *             Map.entry("name", scmSyslogServerProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetSyslogServerProfileResult> getSyslogServerProfilePlain(GetSyslogServerProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getSyslogServerProfile:getSyslogServerProfile", TypeShape.of(GetSyslogServerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSyslogServerProfileListResult> getSyslogServerProfileList() {
@@ -24404,12 +31128,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetSyslogServerProfileListResult> getSyslogServerProfileListPlain() {
         return getSyslogServerProfileListPlain(GetSyslogServerProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSyslogServerProfileListResult> getSyslogServerProfileList(GetSyslogServerProfileListArgs args) {
@@ -24418,12 +31218,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetSyslogServerProfileListResult> getSyslogServerProfileListPlain(GetSyslogServerProfileListPlainArgs args) {
         return getSyslogServerProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSyslogServerProfileListResult> getSyslogServerProfileList(GetSyslogServerProfileListArgs args, InvokeOptions options) {
@@ -24432,12 +31308,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSyslogServerProfileListResult> getSyslogServerProfileList(GetSyslogServerProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getSyslogServerProfileList:getSyslogServerProfileList", TypeShape.of(GetSyslogServerProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSyslogServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetSyslogServerProfileListResult> getSyslogServerProfileListPlain(GetSyslogServerProfileListPlainArgs args, InvokeOptions options) {
@@ -25069,7 +32021,562 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getTagList:getTagList", TypeShape.of(GetTagListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * TcpSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getTcpSetting(GetTcpSettingArgs.builder()
+     *             .id("e7e9b9e1-e8db-4eed-b355-099a36a380c9")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTcpSettingResult> getTcpSetting(GetTcpSettingArgs args) {
+        return getTcpSetting(args, InvokeOptions.Empty);
+    }
+    /**
+     * TcpSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getTcpSetting(GetTcpSettingArgs.builder()
+     *             .id("e7e9b9e1-e8db-4eed-b355-099a36a380c9")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTcpSettingResult> getTcpSettingPlain(GetTcpSettingPlainArgs args) {
+        return getTcpSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * TcpSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getTcpSetting(GetTcpSettingArgs.builder()
+     *             .id("e7e9b9e1-e8db-4eed-b355-099a36a380c9")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTcpSettingResult> getTcpSetting(GetTcpSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getTcpSetting:getTcpSetting", TypeShape.of(GetTcpSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * TcpSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getTcpSetting(GetTcpSettingArgs.builder()
+     *             .id("e7e9b9e1-e8db-4eed-b355-099a36a380c9")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTcpSettingResult> getTcpSetting(GetTcpSettingArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getTcpSetting:getTcpSetting", TypeShape.of(GetTcpSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * TcpSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getTcpSetting(GetTcpSettingArgs.builder()
+     *             .id("e7e9b9e1-e8db-4eed-b355-099a36a380c9")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTcpSettingResult> getTcpSettingPlain(GetTcpSettingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getTcpSetting:getTcpSetting", TypeShape.of(GetTcpSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getTcpSettingList(GetTcpSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTcpSettingListResult> getTcpSettingList() {
+        return getTcpSettingList(GetTcpSettingListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getTcpSettingList(GetTcpSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTcpSettingListResult> getTcpSettingListPlain() {
+        return getTcpSettingListPlain(GetTcpSettingListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getTcpSettingList(GetTcpSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTcpSettingListResult> getTcpSettingList(GetTcpSettingListArgs args) {
+        return getTcpSettingList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getTcpSettingList(GetTcpSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTcpSettingListResult> getTcpSettingListPlain(GetTcpSettingListPlainArgs args) {
+        return getTcpSettingListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getTcpSettingList(GetTcpSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTcpSettingListResult> getTcpSettingList(GetTcpSettingListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getTcpSettingList:getTcpSettingList", TypeShape.of(GetTcpSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getTcpSettingList(GetTcpSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTcpSettingListResult> getTcpSettingList(GetTcpSettingListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getTcpSettingList:getTcpSettingList", TypeShape.of(GetTcpSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTcpSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getTcpSettingList(GetTcpSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTcpSettingListResult> getTcpSettingListPlain(GetTcpSettingListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getTcpSettingList:getTcpSettingList", TypeShape.of(GetTcpSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * TlsServiceProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM TLS Service Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
+     *         final var scmTlsServiceProf = ScmFunctions.getTlsServiceProfile(GetTlsServiceProfileArgs.builder()
+     *             .id("b4d70015-5b0e-4491-a2a9-4305b01397d5")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmTlsServiceProf.id()),
+     *             Map.entry("folder", scmTlsServiceProf.folder()),
+     *             Map.entry("name", scmTlsServiceProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetTlsServiceProfileResult> getTlsServiceProfile(GetTlsServiceProfileArgs args) {
@@ -25078,12 +32585,96 @@ public final class ScmFunctions {
     /**
      * TlsServiceProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM TLS Service Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
+     *         final var scmTlsServiceProf = ScmFunctions.getTlsServiceProfile(GetTlsServiceProfileArgs.builder()
+     *             .id("b4d70015-5b0e-4491-a2a9-4305b01397d5")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmTlsServiceProf.id()),
+     *             Map.entry("folder", scmTlsServiceProf.folder()),
+     *             Map.entry("name", scmTlsServiceProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetTlsServiceProfileResult> getTlsServiceProfilePlain(GetTlsServiceProfilePlainArgs args) {
         return getTlsServiceProfilePlain(args, InvokeOptions.Empty);
     }
     /**
      * TlsServiceProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM TLS Service Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
+     *         final var scmTlsServiceProf = ScmFunctions.getTlsServiceProfile(GetTlsServiceProfileArgs.builder()
+     *             .id("b4d70015-5b0e-4491-a2a9-4305b01397d5")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmTlsServiceProf.id()),
+     *             Map.entry("folder", scmTlsServiceProf.folder()),
+     *             Map.entry("name", scmTlsServiceProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetTlsServiceProfileResult> getTlsServiceProfile(GetTlsServiceProfileArgs args, InvokeOptions options) {
@@ -25092,12 +32683,96 @@ public final class ScmFunctions {
     /**
      * TlsServiceProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM TLS Service Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
+     *         final var scmTlsServiceProf = ScmFunctions.getTlsServiceProfile(GetTlsServiceProfileArgs.builder()
+     *             .id("b4d70015-5b0e-4491-a2a9-4305b01397d5")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmTlsServiceProf.id()),
+     *             Map.entry("folder", scmTlsServiceProf.folder()),
+     *             Map.entry("name", scmTlsServiceProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetTlsServiceProfileResult> getTlsServiceProfile(GetTlsServiceProfileArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getTlsServiceProfile:getTlsServiceProfile", TypeShape.of(GetTlsServiceProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * TlsServiceProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM TLS Service Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
+     *         final var scmTlsServiceProf = ScmFunctions.getTlsServiceProfile(GetTlsServiceProfileArgs.builder()
+     *             .id("b4d70015-5b0e-4491-a2a9-4305b01397d5")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmTlsServiceProf.id()),
+     *             Map.entry("folder", scmTlsServiceProf.folder()),
+     *             Map.entry("name", scmTlsServiceProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetTlsServiceProfileResult> getTlsServiceProfilePlain(GetTlsServiceProfilePlainArgs args, InvokeOptions options) {
@@ -25106,12 +32781,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM TLS Service Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetTlsServiceProfileListResult> getTlsServiceProfileList() {
         return getTlsServiceProfileList(GetTlsServiceProfileListArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM TLS Service Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetTlsServiceProfileListResult> getTlsServiceProfileListPlain() {
@@ -25120,12 +32871,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM TLS Service Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetTlsServiceProfileListResult> getTlsServiceProfileList(GetTlsServiceProfileListArgs args) {
         return getTlsServiceProfileList(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM TLS Service Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetTlsServiceProfileListResult> getTlsServiceProfileListPlain(GetTlsServiceProfileListPlainArgs args) {
@@ -25134,6 +32961,44 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM TLS Service Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetTlsServiceProfileListResult> getTlsServiceProfileList(GetTlsServiceProfileListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getTlsServiceProfileList:getTlsServiceProfileList", TypeShape.of(GetTlsServiceProfileListResult.class), args, Utilities.withVersion(options));
@@ -25141,12 +33006,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM TLS Service Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetTlsServiceProfileListResult> getTlsServiceProfileList(GetTlsServiceProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getTlsServiceProfileList:getTlsServiceProfileList", TypeShape.of(GetTlsServiceProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTlsServiceProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM TLS Service Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmTlsServiceProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetTlsServiceProfileListResult> getTlsServiceProfileListPlain(GetTlsServiceProfileListPlainArgs args, InvokeOptions options) {
@@ -25538,6 +33479,519 @@ public final class ScmFunctions {
      */
     public static CompletableFuture<GetTunnelInterfaceListResult> getTunnelInterfaceListPlain(GetTunnelInterfaceListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getTunnelInterfaceList:getTunnelInterfaceList", TypeShape.of(GetTunnelInterfaceListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * UpdateSchedule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getUpdateSchedule(GetUpdateScheduleArgs.builder()
+     *             .id("4bde6878-8709-4231-a7b4-c51d8fb4008a")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetUpdateScheduleResult> getUpdateSchedule(GetUpdateScheduleArgs args) {
+        return getUpdateSchedule(args, InvokeOptions.Empty);
+    }
+    /**
+     * UpdateSchedule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getUpdateSchedule(GetUpdateScheduleArgs.builder()
+     *             .id("4bde6878-8709-4231-a7b4-c51d8fb4008a")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetUpdateScheduleResult> getUpdateSchedulePlain(GetUpdateSchedulePlainArgs args) {
+        return getUpdateSchedulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * UpdateSchedule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getUpdateSchedule(GetUpdateScheduleArgs.builder()
+     *             .id("4bde6878-8709-4231-a7b4-c51d8fb4008a")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetUpdateScheduleResult> getUpdateSchedule(GetUpdateScheduleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getUpdateSchedule:getUpdateSchedule", TypeShape.of(GetUpdateScheduleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * UpdateSchedule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getUpdateSchedule(GetUpdateScheduleArgs.builder()
+     *             .id("4bde6878-8709-4231-a7b4-c51d8fb4008a")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetUpdateScheduleResult> getUpdateSchedule(GetUpdateScheduleArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getUpdateSchedule:getUpdateSchedule", TypeShape.of(GetUpdateScheduleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * UpdateSchedule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getUpdateSchedule(GetUpdateScheduleArgs.builder()
+     *             .id("4bde6878-8709-4231-a7b4-c51d8fb4008a")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetUpdateScheduleResult> getUpdateSchedulePlain(GetUpdateSchedulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getUpdateSchedule:getUpdateSchedule", TypeShape.of(GetUpdateScheduleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getUpdateScheduleList(GetUpdateScheduleListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetUpdateScheduleListResult> getUpdateScheduleList() {
+        return getUpdateScheduleList(GetUpdateScheduleListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getUpdateScheduleList(GetUpdateScheduleListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetUpdateScheduleListResult> getUpdateScheduleListPlain() {
+        return getUpdateScheduleListPlain(GetUpdateScheduleListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getUpdateScheduleList(GetUpdateScheduleListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetUpdateScheduleListResult> getUpdateScheduleList(GetUpdateScheduleListArgs args) {
+        return getUpdateScheduleList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getUpdateScheduleList(GetUpdateScheduleListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetUpdateScheduleListResult> getUpdateScheduleListPlain(GetUpdateScheduleListPlainArgs args) {
+        return getUpdateScheduleListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getUpdateScheduleList(GetUpdateScheduleListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetUpdateScheduleListResult> getUpdateScheduleList(GetUpdateScheduleListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getUpdateScheduleList:getUpdateScheduleList", TypeShape.of(GetUpdateScheduleListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getUpdateScheduleList(GetUpdateScheduleListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetUpdateScheduleListResult> getUpdateScheduleList(GetUpdateScheduleListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getUpdateScheduleList:getUpdateScheduleList", TypeShape.of(GetUpdateScheduleListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUpdateScheduleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getUpdateScheduleList(GetUpdateScheduleListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetUpdateScheduleListResult> getUpdateScheduleListPlain(GetUpdateScheduleListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getUpdateScheduleList:getUpdateScheduleList", TypeShape.of(GetUpdateScheduleListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * UrlAccessProfile data source
@@ -27588,6 +36042,519 @@ public final class ScmFunctions {
      */
     public static CompletableFuture<GetVlanInterfaceListResult> getVlanInterfaceListPlain(GetVlanInterfaceListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getVlanInterfaceList:getVlanInterfaceList", TypeShape.of(GetVlanInterfaceListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * VpnSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getVpnSetting(GetVpnSettingArgs.builder()
+     *             .id("7e4287ab-dfec-48bc-866d-8fb2ae3e1c5f")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetVpnSettingResult> getVpnSetting(GetVpnSettingArgs args) {
+        return getVpnSetting(args, InvokeOptions.Empty);
+    }
+    /**
+     * VpnSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getVpnSetting(GetVpnSettingArgs.builder()
+     *             .id("7e4287ab-dfec-48bc-866d-8fb2ae3e1c5f")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetVpnSettingResult> getVpnSettingPlain(GetVpnSettingPlainArgs args) {
+        return getVpnSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * VpnSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getVpnSetting(GetVpnSettingArgs.builder()
+     *             .id("7e4287ab-dfec-48bc-866d-8fb2ae3e1c5f")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetVpnSettingResult> getVpnSetting(GetVpnSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getVpnSetting:getVpnSetting", TypeShape.of(GetVpnSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * VpnSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getVpnSetting(GetVpnSettingArgs.builder()
+     *             .id("7e4287ab-dfec-48bc-866d-8fb2ae3e1c5f")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetVpnSettingResult> getVpnSetting(GetVpnSettingArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getVpnSetting:getVpnSetting", TypeShape.of(GetVpnSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * VpnSetting data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var settingsData = ScmFunctions.getVpnSetting(GetVpnSettingArgs.builder()
+     *             .id("7e4287ab-dfec-48bc-866d-8fb2ae3e1c5f")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettings", settingsData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetVpnSettingResult> getVpnSettingPlain(GetVpnSettingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getVpnSetting:getVpnSetting", TypeShape.of(GetVpnSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getVpnSettingList(GetVpnSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetVpnSettingListResult> getVpnSettingList() {
+        return getVpnSettingList(GetVpnSettingListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getVpnSettingList(GetVpnSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetVpnSettingListResult> getVpnSettingListPlain() {
+        return getVpnSettingListPlain(GetVpnSettingListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getVpnSettingList(GetVpnSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetVpnSettingListResult> getVpnSettingList(GetVpnSettingListArgs args) {
+        return getVpnSettingList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getVpnSettingList(GetVpnSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetVpnSettingListResult> getVpnSettingListPlain(GetVpnSettingListPlainArgs args) {
+        return getVpnSettingListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getVpnSettingList(GetVpnSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetVpnSettingListResult> getVpnSettingList(GetVpnSettingListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getVpnSettingList:getVpnSettingList", TypeShape.of(GetVpnSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getVpnSettingList(GetVpnSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetVpnSettingListResult> getVpnSettingList(GetVpnSettingListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getVpnSettingList:getVpnSettingList", TypeShape.of(GetVpnSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVpnSettingListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSettings = ScmFunctions.getVpnSettingList(GetVpnSettingListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedSettingListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allSettings.total()),
+     *             Map.entry("value", allSettings.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetVpnSettingListResult> getVpnSettingListPlain(GetVpnSettingListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getVpnSettingList:getVpnSettingList", TypeShape.of(GetVpnSettingListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * VulnerabilityProtectionProfile data source

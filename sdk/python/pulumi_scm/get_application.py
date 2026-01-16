@@ -189,27 +189,41 @@ class GetApplicationResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="evasiveBehavior")
     def evasive_behavior(self) -> _builtins.bool:
+        """
+        Evasive behavior
+        """
         return pulumi.get(self, "evasive_behavior")
 
     @_builtins.property
     @pulumi.getter(name="fileTypeIdent")
     def file_type_ident(self) -> _builtins.bool:
+        """
+        File type ident
+        """
         return pulumi.get(self, "file_type_ident")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="hasKnownVulnerability")
     def has_known_vulnerability(self) -> _builtins.bool:
+        """
+        Has known vulnerability
+        """
         return pulumi.get(self, "has_known_vulnerability")
 
     @_builtins.property
@@ -231,61 +245,98 @@ class GetApplicationResult:
     @_builtins.property
     @pulumi.getter(name="noAppidCaching")
     def no_appid_caching(self) -> _builtins.bool:
+        """
+        No appid caching
+        """
         return pulumi.get(self, "no_appid_caching")
 
     @_builtins.property
     @pulumi.getter(name="parentApp")
     def parent_app(self) -> _builtins.str:
+        """
+        Parent app
+        """
         return pulumi.get(self, "parent_app")
 
     @_builtins.property
     @pulumi.getter(name="pervasiveUse")
     def pervasive_use(self) -> _builtins.bool:
+        """
+        Pervasive use
+        """
         return pulumi.get(self, "pervasive_use")
 
     @_builtins.property
     @pulumi.getter(name="proneToMisuse")
     def prone_to_misuse(self) -> _builtins.bool:
+        """
+        Prone to misuse
+        """
         return pulumi.get(self, "prone_to_misuse")
 
     @_builtins.property
     @pulumi.getter
     def risk(self) -> _builtins.str:
+        """
+        Risk
+        """
         return pulumi.get(self, "risk")
 
     @_builtins.property
     @pulumi.getter
     def signatures(self) -> Sequence['outputs.GetApplicationSignatureResult']:
+        """
+        Signature
+        """
         return pulumi.get(self, "signatures")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def subcategory(self) -> _builtins.str:
+        """
+        Subcategory
+        """
         return pulumi.get(self, "subcategory")
 
     @_builtins.property
     @pulumi.getter(name="tcpHalfClosedTimeout")
     def tcp_half_closed_timeout(self) -> _builtins.int:
+        """
+        timeout for half-close session in seconds
+        """
         return pulumi.get(self, "tcp_half_closed_timeout")
 
     @_builtins.property
     @pulumi.getter(name="tcpTimeWaitTimeout")
     def tcp_time_wait_timeout(self) -> _builtins.int:
+        """
+        timeout for session in time_wait state in seconds
+        """
         return pulumi.get(self, "tcp_time_wait_timeout")
 
     @_builtins.property
     @pulumi.getter(name="tcpTimeout")
     def tcp_timeout(self) -> _builtins.int:
+        """
+        timeout in seconds
+        """
         return pulumi.get(self, "tcp_timeout")
 
     @_builtins.property
     @pulumi.getter
     def technology(self) -> _builtins.str:
+        """
+        Technology
+        """
         return pulumi.get(self, "technology")
 
     @_builtins.property
@@ -296,31 +347,49 @@ class GetApplicationResult:
     @_builtins.property
     @pulumi.getter
     def timeout(self) -> _builtins.int:
+        """
+        timeout in seconds
+        """
         return pulumi.get(self, "timeout")
 
     @_builtins.property
     @pulumi.getter(name="tunnelApplications")
     def tunnel_applications(self) -> _builtins.bool:
+        """
+        Tunnel applications
+        """
         return pulumi.get(self, "tunnel_applications")
 
     @_builtins.property
     @pulumi.getter(name="tunnelOtherApplication")
     def tunnel_other_application(self) -> _builtins.bool:
+        """
+        Tunnel other application
+        """
         return pulumi.get(self, "tunnel_other_application")
 
     @_builtins.property
     @pulumi.getter(name="udpTimeout")
     def udp_timeout(self) -> _builtins.int:
+        """
+        timeout in seconds
+        """
         return pulumi.get(self, "udp_timeout")
 
     @_builtins.property
     @pulumi.getter(name="usedByMalware")
     def used_by_malware(self) -> _builtins.bool:
+        """
+        Used by malware
+        """
         return pulumi.get(self, "used_by_malware")
 
     @_builtins.property
     @pulumi.getter(name="virusIdent")
     def virus_ident(self) -> _builtins.bool:
+        """
+        Virus ident
+        """
         return pulumi.get(self, "virus_ident")
 
 
@@ -365,8 +434,11 @@ class AwaitableGetApplicationResult(GetApplicationResult):
             virus_ident=self.virus_ident)
 
 
-def get_application(id: Optional[_builtins.str] = None,
+def get_application(device: Optional[_builtins.str] = None,
+                    folder: Optional[_builtins.str] = None,
+                    id: Optional[_builtins.str] = None,
                     name: Optional[_builtins.str] = None,
+                    snippet: Optional[_builtins.str] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetApplicationResult:
     """
     Application data source
@@ -384,12 +456,21 @@ def get_application(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the application
     :param _builtins.str name: The name of the application
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getApplication:getApplication', __args__, opts=opts, typ=GetApplicationResult).value
 
@@ -427,8 +508,11 @@ def get_application(id: Optional[_builtins.str] = None,
         udp_timeout=pulumi.get(__ret__, 'udp_timeout'),
         used_by_malware=pulumi.get(__ret__, 'used_by_malware'),
         virus_ident=pulumi.get(__ret__, 'virus_ident'))
-def get_application_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_application_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                           folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                           id: Optional[pulumi.Input[_builtins.str]] = None,
                            name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                           snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationResult]:
     """
     Application data source
@@ -446,12 +530,21 @@ def get_application_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the application
     :param _builtins.str name: The name of the application
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getApplication:getApplication', __args__, opts=opts, typ=GetApplicationResult)
     return __ret__.apply(lambda __response__: GetApplicationResult(

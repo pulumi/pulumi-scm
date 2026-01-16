@@ -20,14 +20,16 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     public static final ExternalDynamicListTypeIpRecurringArgs Empty = new ExternalDynamicListTypeIpRecurringArgs();
 
     /**
-     * Daily
+     * Daily settings for IP recurring
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     @Import(name="daily")
     private @Nullable Output<ExternalDynamicListTypeIpRecurringDailyArgs> daily;
 
     /**
-     * @return Daily
+     * @return Daily settings for IP recurring
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<Output<ExternalDynamicListTypeIpRecurringDailyArgs>> daily() {
@@ -35,8 +37,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     }
 
     /**
-     * Five minute
-     * 
+     * Five minute settings for IP recurring
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -44,8 +45,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     private @Nullable Output<ExternalDynamicListTypeIpRecurringFiveMinuteArgs> fiveMinute;
 
     /**
-     * @return Five minute
-     * 
+     * @return Five minute settings for IP recurring
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -54,8 +54,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     }
 
     /**
-     * Hourly
-     * 
+     * Hourly settings for IP recurring
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -63,8 +62,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     private @Nullable Output<ExternalDynamicListTypeIpRecurringHourlyArgs> hourly;
 
     /**
-     * @return Hourly
-     * 
+     * @return Hourly settings for IP recurring
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -73,8 +71,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     }
 
     /**
-     * Monthly
-     * 
+     * Monthly settings for IP recurring
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -82,8 +79,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     private @Nullable Output<ExternalDynamicListTypeIpRecurringMonthlyArgs> monthly;
 
     /**
-     * @return Monthly
-     * 
+     * @return Monthly settings for IP recurring
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -92,8 +88,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     }
 
     /**
-     * Weekly
-     * 
+     * Weekly settings for IP recurring
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -101,8 +96,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     private @Nullable Output<ExternalDynamicListTypeIpRecurringWeeklyArgs> weekly;
 
     /**
-     * @return Weekly
-     * 
+     * @return Weekly settings for IP recurring
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -139,7 +133,8 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param daily Daily
+         * @param daily Daily settings for IP recurring
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 
@@ -150,7 +145,8 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param daily Daily
+         * @param daily Daily settings for IP recurring
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 
@@ -160,8 +156,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param fiveMinute Five minute
-         * 
+         * @param fiveMinute Five minute settings for IP recurring
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -173,8 +168,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param fiveMinute Five minute
-         * 
+         * @param fiveMinute Five minute settings for IP recurring
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -185,8 +179,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param hourly Hourly
-         * 
+         * @param hourly Hourly settings for IP recurring
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -198,8 +191,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param hourly Hourly
-         * 
+         * @param hourly Hourly settings for IP recurring
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -210,8 +202,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param monthly Monthly
-         * 
+         * @param monthly Monthly settings for IP recurring
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -223,8 +214,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param monthly Monthly
-         * 
+         * @param monthly Monthly settings for IP recurring
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -235,8 +225,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param weekly Weekly
-         * 
+         * @param weekly Weekly settings for IP recurring
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -248,8 +237,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param weekly Weekly
-         * 
+         * @param weekly Weekly settings for IP recurring
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder

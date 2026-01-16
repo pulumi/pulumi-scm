@@ -19,6 +19,7 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
 
     /**
      * No tag
+     * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
     @Import(name="noTag")
@@ -26,6 +27,7 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
 
     /**
      * @return No tag
+     * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
     public Optional<Output<Boolean>> noTag() {
@@ -34,7 +36,6 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
 
     /**
      * Tag
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
@@ -43,7 +44,6 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
 
     /**
      * @return Tag
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
@@ -78,6 +78,7 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
 
         /**
          * @param noTag No tag
+         * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
          * 
          * @return builder
          * 
@@ -89,6 +90,7 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
 
         /**
          * @param noTag No tag
+         * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
          * 
          * @return builder
          * 
@@ -99,7 +101,6 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
 
         /**
          * @param tags Tag
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
          * 
          * @return builder
@@ -112,7 +113,6 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
 
         /**
          * @param tags Tag
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
          * 
          * @return builder
@@ -124,7 +124,6 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
 
         /**
          * @param tags Tag
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
          * 
          * @return builder

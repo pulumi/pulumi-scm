@@ -52,6 +52,7 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -59,6 +60,7 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -67,7 +69,6 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -76,7 +77,6 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -161,7 +161,6 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -170,7 +169,6 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -271,6 +269,7 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -282,6 +281,7 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -292,7 +292,6 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -305,7 +304,6 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -462,7 +460,6 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -475,7 +472,6 @@ public final class AntiSpywareProfileArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

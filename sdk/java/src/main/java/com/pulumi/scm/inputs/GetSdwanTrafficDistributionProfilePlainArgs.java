@@ -16,6 +16,40 @@ public final class GetSdwanTrafficDistributionProfilePlainArgs extends com.pulum
     public static final GetSdwanTrafficDistributionProfilePlainArgs Empty = new GetSdwanTrafficDistributionProfilePlainArgs();
 
     /**
+     * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="device")
+    private @Nullable String device;
+
+    /**
+     * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<String> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    /**
+     * The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable String folder;
+
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<String> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * UUID of the resource
      * 
      */
@@ -45,11 +79,31 @@ public final class GetSdwanTrafficDistributionProfilePlainArgs extends com.pulum
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    @Import(name="snippet")
+    private @Nullable String snippet;
+
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
+    public Optional<String> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetSdwanTrafficDistributionProfilePlainArgs() {}
 
     private GetSdwanTrafficDistributionProfilePlainArgs(GetSdwanTrafficDistributionProfilePlainArgs $) {
+        this.device = $.device;
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -71,6 +125,30 @@ public final class GetSdwanTrafficDistributionProfilePlainArgs extends com.pulum
         }
 
         /**
+         * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(@Nullable String device) {
+            $.device = device;
+            return this;
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable String folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
          * @param id UUID of the resource
          * 
          * @return builder
@@ -89,6 +167,18 @@ public final class GetSdwanTrafficDistributionProfilePlainArgs extends com.pulum
          */
         public Builder name(@Nullable String name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(@Nullable String snippet) {
+            $.snippet = snippet;
             return this;
         }
 

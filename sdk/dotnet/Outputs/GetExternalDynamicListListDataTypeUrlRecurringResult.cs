@@ -14,30 +14,27 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataTypeUrlRecurringResult
     {
         /// <summary>
-        /// Daily
+        /// Daily settings for URL recurring
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeUrlRecurringDailyResult Daily;
         /// <summary>
-        /// Five minute
-        /// 
+        /// Five minute settings for URL recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeUrlRecurringFiveMinuteResult FiveMinute;
         /// <summary>
-        /// Hourly
-        /// 
+        /// Hourly settings for URL recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeUrlRecurringHourlyResult Hourly;
         /// <summary>
-        /// Monthly
-        /// 
+        /// Monthly settings for URL recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeUrlRecurringMonthlyResult Monthly;
         /// <summary>
-        /// Weekly
-        /// 
+        /// Weekly settings for URL recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeUrlRecurringWeeklyResult Weekly;

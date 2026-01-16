@@ -238,6 +238,7 @@ class _ServiceConnectionState:
                  backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
                  bgp_peer: Optional[pulumi.Input['ServiceConnectionBgpPeerArgs']] = None,
                  encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
@@ -255,6 +256,7 @@ class _ServiceConnectionState:
         :param pulumi.Input[_builtins.str] backup_sc: Backup s c
         :param pulumi.Input['ServiceConnectionBgpPeerArgs'] bgp_peer: Bgp peer
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] ipsec_tunnel: Ipsec tunnel
         :param pulumi.Input[_builtins.str] name: The name of the service connection
         :param pulumi.Input[_builtins.str] nat_pool: Nat pool
@@ -273,6 +275,8 @@ class _ServiceConnectionState:
             pulumi.set(__self__, "bgp_peer", bgp_peer)
         if encrypted_values is not None:
             pulumi.set(__self__, "encrypted_values", encrypted_values)
+        if folder is not None:
+            pulumi.set(__self__, "folder", folder)
         if ipsec_tunnel is not None:
             pulumi.set(__self__, "ipsec_tunnel", ipsec_tunnel)
         if name is not None:
@@ -333,6 +337,18 @@ class _ServiceConnectionState:
     @encrypted_values.setter
     def encrypted_values(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "encrypted_values", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @folder.setter
+    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecTunnel")
@@ -576,6 +592,32 @@ class ServiceConnection(pulumi.CustomResource):
             source_nat=True)
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnection:ServiceConnection example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnection:ServiceConnection example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnection:ServiceConnection example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] backup_sc: Backup s c
@@ -678,6 +720,32 @@ class ServiceConnection(pulumi.CustomResource):
             source_nat=True)
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnection:ServiceConnection example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnection:ServiceConnection example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnection:ServiceConnection example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param ServiceConnectionArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -733,6 +801,7 @@ class ServiceConnection(pulumi.CustomResource):
             __props__.__dict__["source_nat"] = source_nat
             __props__.__dict__["subnets"] = subnets
             __props__.__dict__["encrypted_values"] = None
+            __props__.__dict__["folder"] = None
             __props__.__dict__["tfid"] = None
         secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["encryptedValues"])
         opts = pulumi.ResourceOptions.merge(opts, secret_opts)
@@ -749,6 +818,7 @@ class ServiceConnection(pulumi.CustomResource):
             backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
             bgp_peer: Optional[pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
             encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
+            folder: Optional[pulumi.Input[_builtins.str]] = None,
             ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
@@ -771,6 +841,7 @@ class ServiceConnection(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] backup_sc: Backup s c
         :param pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']] bgp_peer: Bgp peer
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] ipsec_tunnel: Ipsec tunnel
         :param pulumi.Input[_builtins.str] name: The name of the service connection
         :param pulumi.Input[_builtins.str] nat_pool: Nat pool
@@ -790,6 +861,7 @@ class ServiceConnection(pulumi.CustomResource):
         __props__.__dict__["backup_sc"] = backup_sc
         __props__.__dict__["bgp_peer"] = bgp_peer
         __props__.__dict__["encrypted_values"] = encrypted_values
+        __props__.__dict__["folder"] = folder
         __props__.__dict__["ipsec_tunnel"] = ipsec_tunnel
         __props__.__dict__["name"] = name
         __props__.__dict__["nat_pool"] = nat_pool
@@ -827,6 +899,14 @@ class ServiceConnection(pulumi.CustomResource):
         Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> pulumi.Output[_builtins.str]:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="ipsecTunnel")

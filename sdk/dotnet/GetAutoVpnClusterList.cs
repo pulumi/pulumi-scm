@@ -28,6 +28,7 @@ namespace Pulumi.Scm
         ///     var allClusters = Scm.GetAutoVpnClusterList.Invoke(new()
         ///     {
         ///         Folder = "All",
+        ///         Limit = 10,
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -57,6 +58,7 @@ namespace Pulumi.Scm
         ///     var allClusters = Scm.GetAutoVpnClusterList.Invoke(new()
         ///     {
         ///         Folder = "All",
+        ///         Limit = 10,
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -86,6 +88,7 @@ namespace Pulumi.Scm
         ///     var allClusters = Scm.GetAutoVpnClusterList.Invoke(new()
         ///     {
         ///         Folder = "All",
+        ///         Limit = 10,
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;

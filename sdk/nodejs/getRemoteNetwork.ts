@@ -29,6 +29,7 @@ import * as utilities from "./utilities";
 export function getRemoteNetwork(args: GetRemoteNetworkArgs, opts?: pulumi.InvokeOptions): Promise<GetRemoteNetworkResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRemoteNetwork:getRemoteNetwork", {
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -38,6 +39,10 @@ export function getRemoteNetwork(args: GetRemoteNetworkArgs, opts?: pulumi.Invok
  * A collection of arguments for invoking getRemoteNetwork.
  */
 export interface GetRemoteNetworkArgs {
+    /**
+     * The folder that contains the remote network
+     */
+    folder?: string;
     /**
      * The UUID of the remote network
      */
@@ -129,6 +134,7 @@ export interface GetRemoteNetworkResult {
 export function getRemoteNetworkOutput(args: GetRemoteNetworkOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRemoteNetworkResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRemoteNetwork:getRemoteNetwork", {
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -138,6 +144,10 @@ export function getRemoteNetworkOutput(args: GetRemoteNetworkOutputArgs, opts?: 
  * A collection of arguments for invoking getRemoteNetwork.
  */
 export interface GetRemoteNetworkOutputArgs {
+    /**
+     * The folder that contains the remote network
+     */
+    folder?: pulumi.Input<string>;
     /**
      * The UUID of the remote network
      */

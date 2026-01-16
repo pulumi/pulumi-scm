@@ -83,23 +83,48 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/service:Service example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/service:Service example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/service:Service example ::device:id
+// ```
 type Service struct {
 	pulumi.CustomResourceState
 
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the service
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Protocol
-	Protocol ServiceProtocolOutput `pulumi:"protocol"`
+	Protocol ServiceProtocolPtrOutput `pulumi:"protocol"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Tags for service object
@@ -140,9 +165,9 @@ type serviceState struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the service
@@ -150,7 +175,6 @@ type serviceState struct {
 	// Protocol
 	Protocol *ServiceProtocol `pulumi:"protocol"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tags for service object
@@ -162,9 +186,9 @@ type ServiceState struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the service
@@ -172,7 +196,6 @@ type ServiceState struct {
 	// Protocol
 	Protocol ServiceProtocolPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tags for service object
@@ -188,9 +211,9 @@ type serviceArgs struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the service
@@ -198,7 +221,6 @@ type serviceArgs struct {
 	// Protocol
 	Protocol *ServiceProtocol `pulumi:"protocol"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tags for service object
@@ -210,9 +232,9 @@ type ServiceArgs struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the service
@@ -220,7 +242,6 @@ type ServiceArgs struct {
 	// Protocol
 	Protocol ServiceProtocolPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tags for service object
@@ -320,12 +341,12 @@ func (o ServiceOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ServiceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Service) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ServiceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Service) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -337,12 +358,11 @@ func (o ServiceOutput) Name() pulumi.StringOutput {
 }
 
 // Protocol
-func (o ServiceOutput) Protocol() ServiceProtocolOutput {
-	return o.ApplyT(func(v *Service) ServiceProtocolOutput { return v.Protocol }).(ServiceProtocolOutput)
+func (o ServiceOutput) Protocol() ServiceProtocolPtrOutput {
+	return o.ApplyT(func(v *Service) ServiceProtocolPtrOutput { return v.Protocol }).(ServiceProtocolPtrOutput)
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ServiceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Service) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

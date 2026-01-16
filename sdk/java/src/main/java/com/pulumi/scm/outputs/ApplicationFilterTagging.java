@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class ApplicationFilterTagging {
     /**
      * @return No tag
+     * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
     private @Nullable Boolean noTag;
     /**
      * @return Tag
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
@@ -29,6 +29,7 @@ public final class ApplicationFilterTagging {
     private ApplicationFilterTagging() {}
     /**
      * @return No tag
+     * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
     public Optional<Boolean> noTag() {
@@ -36,7 +37,6 @@ public final class ApplicationFilterTagging {
     }
     /**
      * @return Tag
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */

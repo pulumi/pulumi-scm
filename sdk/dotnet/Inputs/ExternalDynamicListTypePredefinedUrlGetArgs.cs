@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _exceptionLists;
 
         /// <summary>
-        /// Exception list
+        /// URL Exception List for Predefined URL type
         /// </summary>
         public InputList<string> ExceptionLists
         {
@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Url
+        /// URL source for Predefined URL type
         /// </summary>
         [Input("url", required: true)]
         public Input<string> Url { get; set; } = null!;

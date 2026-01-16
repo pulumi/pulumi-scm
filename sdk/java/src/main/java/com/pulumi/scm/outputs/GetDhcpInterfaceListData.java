@@ -14,11 +14,13 @@ import java.util.Objects;
 public final class GetDhcpInterfaceListData {
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String folder;
@@ -34,20 +36,19 @@ public final class GetDhcpInterfaceListData {
     private String name;
     /**
      * @return Relay
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      * 
      */
     private GetDhcpInterfaceListDataRelay relay;
     /**
      * @return Server
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      * 
      */
     private GetDhcpInterfaceListDataServer server;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String snippet;
@@ -56,13 +57,15 @@ public final class GetDhcpInterfaceListData {
     private GetDhcpInterfaceListData() {}
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String folder() {
@@ -84,7 +87,6 @@ public final class GetDhcpInterfaceListData {
     }
     /**
      * @return Relay
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      * 
      */
@@ -93,7 +95,6 @@ public final class GetDhcpInterfaceListData {
     }
     /**
      * @return Server
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      * 
      */
@@ -101,7 +102,8 @@ public final class GetDhcpInterfaceListData {
         return this.server;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String snippet() {

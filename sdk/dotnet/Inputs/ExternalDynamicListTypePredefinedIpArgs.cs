@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _exceptionLists;
 
         /// <summary>
-        /// Exception list
+        /// IP Exception List for Predefined IP type
         /// </summary>
         public InputList<string> ExceptionLists
         {
@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Url
+        /// URL source for Predefined IP type
         /// </summary>
         [Input("url", required: true)]
         public Input<string> Url { get; set; } = null!;

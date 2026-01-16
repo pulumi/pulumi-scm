@@ -11,19 +11,45 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// HttpServerProfile resource
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/httpServerProfile:HttpServerProfile example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/httpServerProfile:HttpServerProfile example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/httpServerProfile:HttpServerProfile example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/httpServerProfile:HttpServerProfile")]
     public partial class HttpServerProfile : global::Pulumi.CustomResource
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -33,7 +59,7 @@ namespace Pulumi.Scm
         /// Format
         /// </summary>
         [Output("format")]
-        public Output<Outputs.HttpServerProfileFormat> Format { get; private set; } = null!;
+        public Output<Outputs.HttpServerProfileFormat?> Format { get; private set; } = null!;
 
         /// <summary>
         /// The name of the profile
@@ -49,7 +75,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -112,13 +137,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -150,7 +175,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -172,13 +196,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -210,7 +234,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

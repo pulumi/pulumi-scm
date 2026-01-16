@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListListDataTypeDomainAuth {
     /**
-     * @return Password
+     * @return Password for Custom Domain authentication
      * 
      */
     private String password;
     /**
-     * @return Username
+     * @return Username for Custom Domain authentication
      * 
      */
     private String username;
 
     private GetExternalDynamicListListDataTypeDomainAuth() {}
     /**
-     * @return Password
+     * @return Password for Custom Domain authentication
      * 
      */
     public String password() {
         return this.password;
     }
     /**
-     * @return Username
+     * @return Username for Custom Domain authentication
      * 
      */
     public String username() {

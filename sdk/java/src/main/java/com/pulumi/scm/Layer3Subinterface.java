@@ -116,6 +116,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/layer3Subinterface:Layer3Subinterface")
 public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
@@ -152,17 +178,18 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="ddnsConfig", refs={Layer3SubinterfaceDdnsConfig.class}, tree="[0]")
-    private Output<Layer3SubinterfaceDdnsConfig> ddnsConfig;
+    private Output</* @Nullable */ Layer3SubinterfaceDdnsConfig> ddnsConfig;
 
     /**
      * @return Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
      * 
      */
-    public Output<Layer3SubinterfaceDdnsConfig> ddnsConfig() {
-        return this.ddnsConfig;
+    public Output<Optional<Layer3SubinterfaceDdnsConfig>> ddnsConfig() {
+        return Codegen.optional(this.ddnsConfig);
     }
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -170,6 +197,7 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -177,25 +205,22 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Layer3 sub interfaces DHCP Client Object
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     @Export(name="dhcpClient", refs={Layer3SubinterfaceDhcpClient.class}, tree="[0]")
-    private Output<Layer3SubinterfaceDhcpClient> dhcpClient;
+    private Output</* @Nullable */ Layer3SubinterfaceDhcpClient> dhcpClient;
 
     /**
      * @return Layer3 sub interfaces DHCP Client Object
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
-    public Output<Layer3SubinterfaceDhcpClient> dhcpClient() {
-        return this.dhcpClient;
+    public Output<Optional<Layer3SubinterfaceDhcpClient>> dhcpClient() {
+        return Codegen.optional(this.dhcpClient);
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -204,7 +229,6 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -227,7 +251,6 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * L3 sub-interface IP Parent
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -236,7 +259,6 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return L3 sub-interface IP Parent
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -287,7 +309,6 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -296,7 +317,6 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

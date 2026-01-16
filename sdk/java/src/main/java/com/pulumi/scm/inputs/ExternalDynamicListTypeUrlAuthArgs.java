@@ -15,14 +15,14 @@ public final class ExternalDynamicListTypeUrlAuthArgs extends com.pulumi.resourc
     public static final ExternalDynamicListTypeUrlAuthArgs Empty = new ExternalDynamicListTypeUrlAuthArgs();
 
     /**
-     * Password
+     * Password for Custom URL authentication
      * 
      */
     @Import(name="password", required=true)
     private Output<String> password;
 
     /**
-     * @return Password
+     * @return Password for Custom URL authentication
      * 
      */
     public Output<String> password() {
@@ -30,14 +30,14 @@ public final class ExternalDynamicListTypeUrlAuthArgs extends com.pulumi.resourc
     }
 
     /**
-     * Username
+     * Username for Custom URL authentication
      * 
      */
     @Import(name="username", required=true)
     private Output<String> username;
 
     /**
-     * @return Username
+     * @return Username for Custom URL authentication
      * 
      */
     public Output<String> username() {
@@ -70,7 +70,7 @@ public final class ExternalDynamicListTypeUrlAuthArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param password Password
+         * @param password Password for Custom URL authentication
          * 
          * @return builder
          * 
@@ -81,7 +81,7 @@ public final class ExternalDynamicListTypeUrlAuthArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param password Password
+         * @param password Password for Custom URL authentication
          * 
          * @return builder
          * 
@@ -91,7 +91,7 @@ public final class ExternalDynamicListTypeUrlAuthArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param username Username
+         * @param username Username for Custom URL authentication
          * 
          * @return builder
          * 
@@ -102,7 +102,7 @@ public final class ExternalDynamicListTypeUrlAuthArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param username Username
+         * @param username Username for Custom URL authentication
          * 
          * @return builder
          * 

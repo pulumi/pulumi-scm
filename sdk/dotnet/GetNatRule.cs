@@ -121,6 +121,18 @@ namespace Pulumi.Scm
     public sealed class GetNatRuleArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
@@ -132,6 +144,12 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetNatRuleArgs()
         {
         }
@@ -140,6 +158,18 @@ namespace Pulumi.Scm
 
     public sealed class GetNatRuleInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// UUID of the resource
         /// </summary>
@@ -151,6 +181,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetNatRuleInvokeArgs()
         {

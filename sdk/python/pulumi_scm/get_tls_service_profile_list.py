@@ -165,6 +165,20 @@ def get_tls_service_profile_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM TLS Service Profile objects.
+    #
+    # Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+    all_shared = scm.get_tls_service_profile_list(folder="All")
+    pulumi.export("scmTlsServiceProfileListAllShared", all_shared.datas)
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +217,20 @@ def get_tls_service_profile_list_output(device: Optional[pulumi.Input[Optional[_
                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTlsServiceProfileListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM TLS Service Profile objects.
+    #
+    # Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+    all_shared = scm.get_tls_service_profile_list(folder="All")
+    pulumi.export("scmTlsServiceProfileListAllShared", all_shared.datas)
+    ```
 
 
     :param _builtins.str device: The device of the item.

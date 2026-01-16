@@ -32,8 +32,11 @@ import * as utilities from "./utilities";
 export function getExternalDynamicList(args: GetExternalDynamicListArgs, opts?: pulumi.InvokeOptions): Promise<GetExternalDynamicListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getExternalDynamicList:getExternalDynamicList", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -42,6 +45,16 @@ export function getExternalDynamicList(args: GetExternalDynamicListArgs, opts?: 
  */
 export interface GetExternalDynamicListArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the external dynamic list
      */
     id: string;
@@ -49,6 +62,11 @@ export interface GetExternalDynamicListArgs {
      * The name of the external dynamic list
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -57,9 +75,17 @@ export interface GetExternalDynamicListArgs {
 export interface GetExternalDynamicListResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the external dynamic list
@@ -69,8 +95,15 @@ export interface GetExternalDynamicListResult {
      * The name of the external dynamic list
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * Type configuration for External Dynamic List
+     */
     readonly type: outputs.GetExternalDynamicListType;
 }
 /**
@@ -99,8 +132,11 @@ export interface GetExternalDynamicListResult {
 export function getExternalDynamicListOutput(args: GetExternalDynamicListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetExternalDynamicListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getExternalDynamicList:getExternalDynamicList", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -109,6 +145,16 @@ export function getExternalDynamicListOutput(args: GetExternalDynamicListOutputA
  */
 export interface GetExternalDynamicListOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the external dynamic list
      */
     id: pulumi.Input<string>;
@@ -116,4 +162,9 @@ export interface GetExternalDynamicListOutputArgs {
      * The name of the external dynamic list
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

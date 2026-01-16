@@ -19,6 +19,7 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
 
     /**
      * Daily
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
     @Import(name="dailies")
@@ -26,6 +27,7 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
 
     /**
      * @return Daily
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
     public Optional<Output<List<String>>> dailies() {
@@ -34,7 +36,6 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
 
     /**
      * Weekly
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
@@ -43,7 +44,6 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
 
     /**
      * @return Weekly
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
@@ -78,6 +78,7 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
 
         /**
          * @param dailies Daily
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
          * 
          * @return builder
          * 
@@ -89,6 +90,7 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
 
         /**
          * @param dailies Daily
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
          * 
          * @return builder
          * 
@@ -99,6 +101,7 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
 
         /**
          * @param dailies Daily
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
          * 
          * @return builder
          * 
@@ -109,7 +112,6 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
 
         /**
          * @param weekly Weekly
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
          * 
          * @return builder
@@ -122,7 +124,6 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
 
         /**
          * @param weekly Weekly
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
          * 
          * @return builder

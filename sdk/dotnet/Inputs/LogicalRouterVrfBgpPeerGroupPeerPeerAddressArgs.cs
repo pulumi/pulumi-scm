@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Fqdn
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn` and `Ip`.
         /// </summary>
         [Input("fqdn")]
         public Input<string>? Fqdn { get; set; }
 
         /// <summary>
         /// Ip
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn` and `Ip`.
         /// </summary>
         [Input("ip")]

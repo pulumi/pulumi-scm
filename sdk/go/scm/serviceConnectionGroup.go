@@ -161,11 +161,39 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example ::device:id
+// ```
 type ServiceConnectionGroup struct {
 	pulumi.CustomResourceState
 
 	// Disable snat
 	DisableSnat pulumi.BoolPtrOutput `pulumi:"disableSnat"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringOutput `pulumi:"folder"`
 	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Pbf only
@@ -210,6 +238,8 @@ func GetServiceConnectionGroup(ctx *pulumi.Context,
 type serviceConnectionGroupState struct {
 	// Disable snat
 	DisableSnat *bool `pulumi:"disableSnat"`
+	// The folder in which the resource is defined
+	Folder *string `pulumi:"folder"`
 	// Name
 	Name *string `pulumi:"name"`
 	// Pbf only
@@ -222,6 +252,8 @@ type serviceConnectionGroupState struct {
 type ServiceConnectionGroupState struct {
 	// Disable snat
 	DisableSnat pulumi.BoolPtrInput
+	// The folder in which the resource is defined
+	Folder pulumi.StringPtrInput
 	// Name
 	Name pulumi.StringPtrInput
 	// Pbf only
@@ -348,6 +380,11 @@ func (o ServiceConnectionGroupOutput) ToServiceConnectionGroupOutputWithContext(
 // Disable snat
 func (o ServiceConnectionGroupOutput) DisableSnat() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceConnectionGroup) pulumi.BoolPtrOutput { return v.DisableSnat }).(pulumi.BoolPtrOutput)
+}
+
+// The folder in which the resource is defined
+func (o ServiceConnectionGroupOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v *ServiceConnectionGroup) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
 }
 
 // Name

@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class ExternalDynamicListTypeImsiRecurringDaily {
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Daily Time specification hh (e.g. 20) for IMSI
      * 
      */
     private String at;
 
     private ExternalDynamicListTypeImsiRecurringDaily() {}
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Daily Time specification hh (e.g. 20) for IMSI
      * 
      */
     public String at() {

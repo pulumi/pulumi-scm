@@ -27,7 +27,7 @@ class GetSiteResult:
     """
     A collection of values returned by getSite.
     """
-    def __init__(__self__, address_line1=None, address_line2=None, city=None, country=None, id=None, latitude=None, license_type=None, longitude=None, members=None, name=None, qos=None, state=None, tfid=None, type=None, zip_code=None):
+    def __init__(__self__, address_line1=None, address_line2=None, city=None, country=None, folder=None, id=None, latitude=None, license_type=None, longitude=None, members=None, name=None, qos=None, state=None, tfid=None, type=None, zip_code=None):
         if address_line1 and not isinstance(address_line1, str):
             raise TypeError("Expected argument 'address_line1' to be a str")
         pulumi.set(__self__, "address_line1", address_line1)
@@ -40,6 +40,9 @@ class GetSiteResult:
         if country and not isinstance(country, str):
             raise TypeError("Expected argument 'country' to be a str")
         pulumi.set(__self__, "country", country)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -105,6 +108,14 @@ class GetSiteResult:
         The country in which the site exists
         """
         return pulumi.get(self, "country")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
@@ -202,6 +213,7 @@ class AwaitableGetSiteResult(GetSiteResult):
             address_line2=self.address_line2,
             city=self.city,
             country=self.country,
+            folder=self.folder,
             id=self.id,
             latitude=self.latitude,
             license_type=self.license_type,
@@ -215,7 +227,8 @@ class AwaitableGetSiteResult(GetSiteResult):
             zip_code=self.zip_code)
 
 
-def get_site(id: Optional[_builtins.str] = None,
+def get_site(folder: Optional[_builtins.str] = None,
+             id: Optional[_builtins.str] = None,
              name: Optional[_builtins.str] = None,
              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSiteResult:
     """
@@ -232,10 +245,12 @@ def get_site(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the site
     :param _builtins.str name: The name of the site
     """
     __args__ = dict()
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
@@ -246,6 +261,7 @@ def get_site(id: Optional[_builtins.str] = None,
         address_line2=pulumi.get(__ret__, 'address_line2'),
         city=pulumi.get(__ret__, 'city'),
         country=pulumi.get(__ret__, 'country'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         latitude=pulumi.get(__ret__, 'latitude'),
         license_type=pulumi.get(__ret__, 'license_type'),
@@ -257,7 +273,8 @@ def get_site(id: Optional[_builtins.str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         type=pulumi.get(__ret__, 'type'),
         zip_code=pulumi.get(__ret__, 'zip_code'))
-def get_site_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_site_output(folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                    id: Optional[pulumi.Input[_builtins.str]] = None,
                     name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSiteResult]:
     """
@@ -274,10 +291,12 @@ def get_site_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     ```
 
 
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: The UUID of the site
     :param _builtins.str name: The name of the site
     """
     __args__ = dict()
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
@@ -287,6 +306,7 @@ def get_site_output(id: Optional[pulumi.Input[_builtins.str]] = None,
         address_line2=pulumi.get(__response__, 'address_line2'),
         city=pulumi.get(__response__, 'city'),
         country=pulumi.get(__response__, 'country'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         latitude=pulumi.get(__response__, 'latitude'),
         license_type=pulumi.get(__response__, 'license_type'),

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeDomainRecurringWeekly {
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Weekly Time specification hh (e.g. 20) for Domain
      * 
      */
     private String at;
@@ -23,7 +23,7 @@ public final class GetExternalDynamicListTypeDomainRecurringWeekly {
 
     private GetExternalDynamicListTypeDomainRecurringWeekly() {}
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Weekly Time specification hh (e.g. 20) for Domain
      * 
      */
     public String at() {

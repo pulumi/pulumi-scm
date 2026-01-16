@@ -70,13 +70,39 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/applicationGroup:ApplicationGroup example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/applicationGroup:ApplicationGroup example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/applicationGroup:ApplicationGroup example ::device:id
+// ```
 type ApplicationGroup struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Members
@@ -84,7 +110,6 @@ type ApplicationGroup struct {
 	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -124,9 +149,9 @@ func GetApplicationGroup(ctx *pulumi.Context,
 // Input properties used for looking up and filtering ApplicationGroup resources.
 type applicationGroupState struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Members
@@ -134,7 +159,6 @@ type applicationGroupState struct {
 	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -142,9 +166,9 @@ type applicationGroupState struct {
 
 type ApplicationGroupState struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Members
@@ -152,7 +176,6 @@ type ApplicationGroupState struct {
 	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -164,9 +187,9 @@ func (ApplicationGroupState) ElementType() reflect.Type {
 
 type applicationGroupArgs struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Members
@@ -174,7 +197,6 @@ type applicationGroupArgs struct {
 	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -182,9 +204,9 @@ type applicationGroupArgs struct {
 // The set of arguments for constructing a ApplicationGroup resource.
 type ApplicationGroupArgs struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Members
@@ -192,7 +214,6 @@ type ApplicationGroupArgs struct {
 	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -285,12 +306,12 @@ func (o ApplicationGroupOutput) ToApplicationGroupOutputWithContext(ctx context.
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationGroupOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationGroup) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -307,7 +328,6 @@ func (o ApplicationGroupOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

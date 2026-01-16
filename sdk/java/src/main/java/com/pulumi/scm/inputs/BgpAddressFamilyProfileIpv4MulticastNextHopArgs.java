@@ -18,6 +18,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastNextHopArgs extends com.p
 
     /**
      * Self
+     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
     @Import(name="self")
@@ -25,6 +26,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastNextHopArgs extends com.p
 
     /**
      * @return Self
+     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
     public Optional<Output<BgpAddressFamilyProfileIpv4MulticastNextHopSelfArgs>> self() {
@@ -33,7 +35,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastNextHopArgs extends com.p
 
     /**
      * Self force
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
@@ -42,7 +43,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastNextHopArgs extends com.p
 
     /**
      * @return Self force
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
@@ -77,6 +77,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastNextHopArgs extends com.p
 
         /**
          * @param self Self
+         * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
          * 
          * @return builder
          * 
@@ -88,6 +89,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastNextHopArgs extends com.p
 
         /**
          * @param self Self
+         * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
          * 
          * @return builder
          * 
@@ -98,7 +100,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastNextHopArgs extends com.p
 
         /**
          * @param selfForce Self force
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
          * 
          * @return builder
@@ -111,7 +112,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastNextHopArgs extends com.p
 
         /**
          * @param selfForce Self force
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
          * 
          * @return builder

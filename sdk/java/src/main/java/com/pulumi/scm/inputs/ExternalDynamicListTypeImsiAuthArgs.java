@@ -15,14 +15,14 @@ public final class ExternalDynamicListTypeImsiAuthArgs extends com.pulumi.resour
     public static final ExternalDynamicListTypeImsiAuthArgs Empty = new ExternalDynamicListTypeImsiAuthArgs();
 
     /**
-     * Password
+     * IMSI Auth Password for Custom IMSI type
      * 
      */
     @Import(name="password", required=true)
     private Output<String> password;
 
     /**
-     * @return Password
+     * @return IMSI Auth Password for Custom IMSI type
      * 
      */
     public Output<String> password() {
@@ -30,14 +30,14 @@ public final class ExternalDynamicListTypeImsiAuthArgs extends com.pulumi.resour
     }
 
     /**
-     * Username
+     * IMSI Auth Username for Custom IMSI type
      * 
      */
     @Import(name="username", required=true)
     private Output<String> username;
 
     /**
-     * @return Username
+     * @return IMSI Auth Username for Custom IMSI type
      * 
      */
     public Output<String> username() {
@@ -70,7 +70,7 @@ public final class ExternalDynamicListTypeImsiAuthArgs extends com.pulumi.resour
         }
 
         /**
-         * @param password Password
+         * @param password IMSI Auth Password for Custom IMSI type
          * 
          * @return builder
          * 
@@ -81,7 +81,7 @@ public final class ExternalDynamicListTypeImsiAuthArgs extends com.pulumi.resour
         }
 
         /**
-         * @param password Password
+         * @param password IMSI Auth Password for Custom IMSI type
          * 
          * @return builder
          * 
@@ -91,7 +91,7 @@ public final class ExternalDynamicListTypeImsiAuthArgs extends com.pulumi.resour
         }
 
         /**
-         * @param username Username
+         * @param username IMSI Auth Username for Custom IMSI type
          * 
          * @return builder
          * 
@@ -102,7 +102,7 @@ public final class ExternalDynamicListTypeImsiAuthArgs extends com.pulumi.resour
         }
 
         /**
-         * @param username Username
+         * @param username IMSI Auth Username for Custom IMSI type
          * 
          * @return builder
          * 

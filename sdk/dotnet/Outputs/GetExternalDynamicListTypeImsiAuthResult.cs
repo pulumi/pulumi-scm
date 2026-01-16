@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListTypeImsiAuthResult
     {
         /// <summary>
-        /// Password
+        /// IMSI Auth Password for Custom IMSI type
         /// </summary>
         public readonly string Password;
         /// <summary>
-        /// Username
+        /// IMSI Auth Username for Custom IMSI type
         /// </summary>
         public readonly string Username;
 

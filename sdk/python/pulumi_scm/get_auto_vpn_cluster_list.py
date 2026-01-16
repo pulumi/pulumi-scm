@@ -172,7 +172,8 @@ def get_auto_vpn_cluster_list(device: Optional[_builtins.str] = None,
     import pulumi_scm as scm
 
     # Fetch a list of all clusters from the "All" folder.
-    all_clusters = scm.get_auto_vpn_cluster_list(folder="All")
+    all_clusters = scm.get_auto_vpn_cluster_list(folder="All",
+        limit=10)
     pulumi.export("autoVpnClustersList", all_clusters)
     ```
 
@@ -222,7 +223,8 @@ def get_auto_vpn_cluster_list_output(device: Optional[pulumi.Input[Optional[_bui
     import pulumi_scm as scm
 
     # Fetch a list of all clusters from the "All" folder.
-    all_clusters = scm.get_auto_vpn_cluster_list(folder="All")
+    all_clusters = scm.get_auto_vpn_cluster_list(folder="All",
+        limit=10)
     pulumi.export("autoVpnClustersList", all_clusters)
     ```
 

@@ -66,6 +66,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/vlanInterface:VlanInterface example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/vlanInterface:VlanInterface example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/vlanInterface:VlanInterface example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/vlanInterface:VlanInterface")
 public class VlanInterface extends com.pulumi.resources.CustomResource {
@@ -102,14 +128,14 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="ddnsConfig", refs={VlanInterfaceDdnsConfig.class}, tree="[0]")
-    private Output<VlanInterfaceDdnsConfig> ddnsConfig;
+    private Output</* @Nullable */ VlanInterfaceDdnsConfig> ddnsConfig;
 
     /**
      * @return Dynamic DNS configuration specific to the Vlan Interfaces.
      * 
      */
-    public Output<VlanInterfaceDdnsConfig> ddnsConfig() {
-        return this.ddnsConfig;
+    public Output<Optional<VlanInterfaceDdnsConfig>> ddnsConfig() {
+        return Codegen.optional(this.ddnsConfig);
     }
     /**
      * Default interface assignment
@@ -127,6 +153,7 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -134,6 +161,7 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -141,25 +169,22 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Vlan interfaces DHCP Client Object
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     @Export(name="dhcpClient", refs={VlanInterfaceDhcpClient.class}, tree="[0]")
-    private Output<VlanInterfaceDhcpClient> dhcpClient;
+    private Output</* @Nullable */ VlanInterfaceDhcpClient> dhcpClient;
 
     /**
      * @return Vlan interfaces DHCP Client Object
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
-    public Output<VlanInterfaceDhcpClient> dhcpClient() {
-        return this.dhcpClient;
+    public Output<Optional<VlanInterfaceDhcpClient>> dhcpClient() {
+        return Codegen.optional(this.dhcpClient);
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -168,7 +193,6 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -191,7 +215,6 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * VLAN Interface IP Parent
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -200,7 +223,6 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return VLAN Interface IP Parent
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -237,7 +259,6 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -246,7 +267,6 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

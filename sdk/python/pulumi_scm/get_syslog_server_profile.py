@@ -43,8 +43,8 @@ class GetSyslogServerProfileResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
-        if servers and not isinstance(servers, dict):
-            raise TypeError("Expected argument 'servers' to be a dict")
+        if servers and not isinstance(servers, list):
+            raise TypeError("Expected argument 'servers' to be a list")
         pulumi.set(__self__, "servers", servers)
         if snippet and not isinstance(snippet, str):
             raise TypeError("Expected argument 'snippet' to be a str")
@@ -58,17 +58,25 @@ class GetSyslogServerProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def format(self) -> 'outputs.GetSyslogServerProfileFormatResult':
+        """
+        Format
+        """
         return pulumi.get(self, "format")
 
     @_builtins.property
@@ -89,12 +97,19 @@ class GetSyslogServerProfileResult:
 
     @_builtins.property
     @pulumi.getter
-    def servers(self) -> 'outputs.GetSyslogServerProfileServersResult':
+    def servers(self) -> Sequence['outputs.GetSyslogServerProfileServerResult']:
+        """
+        A list of syslog server configurations. At least one server is required.
+        """
         return pulumi.get(self, "servers")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -119,19 +134,49 @@ class AwaitableGetSyslogServerProfileResult(GetSyslogServerProfileResult):
             tfid=self.tfid)
 
 
-def get_syslog_server_profile(id: Optional[_builtins.str] = None,
+def get_syslog_server_profile(device: Optional[_builtins.str] = None,
+                              folder: Optional[_builtins.str] = None,
+                              id: Optional[_builtins.str] = None,
                               name: Optional[_builtins.str] = None,
+                              snippet: Optional[_builtins.str] = None,
                               opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSyslogServerProfileResult:
     """
     SyslogServerProfile data source
 
+    ## Example Usage
 
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+    scm_syslog_server_prof = scm.get_syslog_server_profile(id="69f7ee97-7c0a-416d-a28d-d45929851f6e")
+    pulumi.export("scmSyslogServerProfileDetails", {
+        "profileId": scm_syslog_server_prof.id,
+        "folder": scm_syslog_server_prof.folder,
+        "name": scm_syslog_server_prof.name,
+    })
+    ```
+
+
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the syslog server profile
     :param _builtins.str name: The name of the syslog server profile
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getSyslogServerProfile:getSyslogServerProfile', __args__, opts=opts, typ=GetSyslogServerProfileResult).value
 
@@ -144,19 +189,49 @@ def get_syslog_server_profile(id: Optional[_builtins.str] = None,
         servers=pulumi.get(__ret__, 'servers'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_syslog_server_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_syslog_server_profile_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                     folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                     id: Optional[pulumi.Input[_builtins.str]] = None,
                                      name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                     snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSyslogServerProfileResult]:
     """
     SyslogServerProfile data source
 
+    ## Example Usage
 
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+    scm_syslog_server_prof = scm.get_syslog_server_profile(id="69f7ee97-7c0a-416d-a28d-d45929851f6e")
+    pulumi.export("scmSyslogServerProfileDetails", {
+        "profileId": scm_syslog_server_prof.id,
+        "folder": scm_syslog_server_prof.folder,
+        "name": scm_syslog_server_prof.name,
+    })
+    ```
+
+
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the syslog server profile
     :param _builtins.str name: The name of the syslog server profile
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getSyslogServerProfile:getSyslogServerProfile', __args__, opts=opts, typ=GetSyslogServerProfileResult)
     return __ret__.apply(lambda __response__: GetSyslogServerProfileResult(

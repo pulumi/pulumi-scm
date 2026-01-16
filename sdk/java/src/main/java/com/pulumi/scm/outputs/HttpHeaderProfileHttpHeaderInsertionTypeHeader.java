@@ -24,10 +24,10 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeader {
      */
     private @Nullable Boolean log;
     /**
-     * @return An auto-generated name (*This should be removed*)
+     * @return The name of the HTTP header
      * 
      */
-    private @Nullable String name;
+    private String name;
     /**
      * @return The value associated with the HTTP header
      * 
@@ -50,11 +50,11 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeader {
         return Optional.ofNullable(this.log);
     }
     /**
-     * @return An auto-generated name (*This should be removed*)
+     * @return The name of the HTTP header
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public String name() {
+        return this.name;
     }
     /**
      * @return The value associated with the HTTP header
@@ -75,7 +75,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeader {
     public static final class Builder {
         private String header;
         private @Nullable Boolean log;
-        private @Nullable String name;
+        private String name;
         private String value;
         public Builder() {}
         public Builder(HttpHeaderProfileHttpHeaderInsertionTypeHeader defaults) {
@@ -101,8 +101,10 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeader {
             return this;
         }
         @CustomType.Setter
-        public Builder name(@Nullable String name) {
-
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("HttpHeaderProfileHttpHeaderInsertionTypeHeader", "name");
+            }
             this.name = name;
             return this;
         }

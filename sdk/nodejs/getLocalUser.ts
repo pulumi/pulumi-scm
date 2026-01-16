@@ -10,8 +10,11 @@ import * as utilities from "./utilities";
 export function getLocalUser(args: GetLocalUserArgs, opts?: pulumi.InvokeOptions): Promise<GetLocalUserResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLocalUser:getLocalUser", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -20,6 +23,16 @@ export function getLocalUser(args: GetLocalUserArgs, opts?: pulumi.InvokeOptions
  */
 export interface GetLocalUserArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the local user
      */
     id: string;
@@ -27,6 +40,11 @@ export interface GetLocalUserArgs {
      * The name of the local user
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -35,10 +53,21 @@ export interface GetLocalUserArgs {
 export interface GetLocalUserResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Is the local user disabled?
+     */
     readonly disabled: boolean;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the local user
@@ -48,7 +77,14 @@ export interface GetLocalUserResult {
      * The name of the local user
      */
     readonly name: string;
+    /**
+     * The password of the local user
+     */
     readonly password: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -58,8 +94,11 @@ export interface GetLocalUserResult {
 export function getLocalUserOutput(args: GetLocalUserOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLocalUserResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLocalUser:getLocalUser", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -68,6 +107,16 @@ export function getLocalUserOutput(args: GetLocalUserOutputArgs, opts?: pulumi.I
  */
 export interface GetLocalUserOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the local user
      */
     id: pulumi.Input<string>;
@@ -75,4 +124,9 @@ export interface GetLocalUserOutputArgs {
      * The name of the local user
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

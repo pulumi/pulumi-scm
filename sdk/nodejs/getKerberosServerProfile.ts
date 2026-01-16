@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getKerberosServerProfile(args: GetKerberosServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetKerberosServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getKerberosServerProfile:getKerberosServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getKerberosServerProfile(args: GetKerberosServerProfileArgs, opt
  */
 export interface GetKerberosServerProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the Kerberos server profile
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetKerberosServerProfileArgs {
      * The name of the Kerberos server profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -37,8 +55,13 @@ export interface GetKerberosServerProfileArgs {
 export interface GetKerberosServerProfileResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the Kerberos server profile
@@ -48,7 +71,14 @@ export interface GetKerberosServerProfileResult {
      * The name of the Kerberos server profile
      */
     readonly name: string;
+    /**
+     * The Kerberos server configuration
+     */
     readonly servers: outputs.GetKerberosServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -58,8 +88,11 @@ export interface GetKerberosServerProfileResult {
 export function getKerberosServerProfileOutput(args: GetKerberosServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetKerberosServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getKerberosServerProfile:getKerberosServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -68,6 +101,16 @@ export function getKerberosServerProfileOutput(args: GetKerberosServerProfileOut
  */
 export interface GetKerberosServerProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the Kerberos server profile
      */
     id: pulumi.Input<string>;
@@ -75,4 +118,9 @@ export interface GetKerberosServerProfileOutputArgs {
      * The name of the Kerberos server profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

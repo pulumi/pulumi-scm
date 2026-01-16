@@ -18,6 +18,7 @@ public final class LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs extends com.
 
     /**
      * Advertise
+     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     @Import(name="advertise")
@@ -25,6 +26,7 @@ public final class LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs extends com.
 
     /**
      * @return Advertise
+     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertiseArgs>> advertise() {
@@ -33,7 +35,6 @@ public final class LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs extends com.
 
     /**
      * Disable
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
@@ -42,7 +43,6 @@ public final class LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs extends com.
 
     /**
      * @return Disable
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
@@ -77,6 +77,7 @@ public final class LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs extends com.
 
         /**
          * @param advertise Advertise
+         * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
          * 
          * @return builder
          * 
@@ -88,6 +89,7 @@ public final class LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs extends com.
 
         /**
          * @param advertise Advertise
+         * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
          * 
          * @return builder
          * 
@@ -98,7 +100,6 @@ public final class LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs extends com.
 
         /**
          * @param disable Disable
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
          * 
          * @return builder
@@ -111,7 +112,6 @@ public final class LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs extends com.
 
         /**
          * @param disable Disable
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
          * 
          * @return builder

@@ -26,8 +26,11 @@ import * as utilities from "./utilities";
 export function getIkeGateway(args: GetIkeGatewayArgs, opts?: pulumi.InvokeOptions): Promise<GetIkeGatewayResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIkeGateway:getIkeGateway", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -36,6 +39,16 @@ export function getIkeGateway(args: GetIkeGatewayArgs, opts?: pulumi.InvokeOptio
  */
 export interface GetIkeGatewayArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -43,6 +56,11 @@ export interface GetIkeGatewayArgs {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -55,24 +73,54 @@ export interface GetIkeGatewayResult {
     readonly authentication: outputs.GetIkeGatewayAuthentication;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Local address
+     */
     readonly localAddress: outputs.GetIkeGatewayLocalAddress;
+    /**
+     * Local id
+     */
     readonly localId: outputs.GetIkeGatewayLocalId;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
+    /**
+     * Peer address
+     */
     readonly peerAddress: outputs.GetIkeGatewayPeerAddress;
+    /**
+     * Peer id
+     */
     readonly peerId: outputs.GetIkeGatewayPeerId;
+    /**
+     * Protocol
+     */
     readonly protocol: outputs.GetIkeGatewayProtocol;
+    /**
+     * Protocol common
+     */
     readonly protocolCommon: outputs.GetIkeGatewayProtocolCommon;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -96,8 +144,11 @@ export interface GetIkeGatewayResult {
 export function getIkeGatewayOutput(args: GetIkeGatewayOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIkeGatewayResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIkeGateway:getIkeGateway", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -106,6 +157,16 @@ export function getIkeGatewayOutput(args: GetIkeGatewayOutputArgs, opts?: pulumi
  */
 export interface GetIkeGatewayOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -113,4 +174,9 @@ export interface GetIkeGatewayOutputArgs {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

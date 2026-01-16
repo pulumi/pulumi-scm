@@ -20,6 +20,7 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * Bgp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
     @Import(name="bgp")
@@ -27,6 +28,7 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * @return Bgp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionBgpArgs>> bgp() {
@@ -35,7 +37,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * Connected static
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
@@ -44,7 +45,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * @return Connected static
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
@@ -69,7 +69,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * The device in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -78,7 +77,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * @return The device in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -88,7 +86,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -97,7 +94,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -122,7 +118,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * Ospf
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
@@ -131,7 +126,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * @return Ospf
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
@@ -141,7 +135,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -150,7 +143,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -191,6 +183,7 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param bgp Bgp
+         * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
          * 
          * @return builder
          * 
@@ -202,6 +195,7 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param bgp Bgp
+         * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
          * 
          * @return builder
          * 
@@ -212,7 +206,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param connectedStatic Connected static
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
          * 
          * @return builder
@@ -225,7 +218,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param connectedStatic Connected static
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
          * 
          * @return builder
@@ -258,7 +250,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param device The device in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -271,7 +262,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param device The device in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -283,7 +273,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -296,7 +285,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -329,7 +317,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param ospf Ospf
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
          * 
          * @return builder
@@ -342,7 +329,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param ospf Ospf
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
          * 
          * @return builder
@@ -354,7 +340,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -367,7 +352,6 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

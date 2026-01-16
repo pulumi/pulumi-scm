@@ -14,12 +14,12 @@ import java.util.Objects;
 public final class GetSdwanSaasQualityProfileListDataMonitorModeStaticIp {
     /**
      * @return Fqdn
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     private GetSdwanSaasQualityProfileListDataMonitorModeStaticIpFqdn fqdn;
     /**
      * @return List of IP addresses
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
@@ -28,6 +28,7 @@ public final class GetSdwanSaasQualityProfileListDataMonitorModeStaticIp {
     private GetSdwanSaasQualityProfileListDataMonitorModeStaticIp() {}
     /**
      * @return Fqdn
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public GetSdwanSaasQualityProfileListDataMonitorModeStaticIpFqdn fqdn() {
@@ -35,7 +36,6 @@ public final class GetSdwanSaasQualityProfileListDataMonitorModeStaticIp {
     }
     /**
      * @return List of IP addresses
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */

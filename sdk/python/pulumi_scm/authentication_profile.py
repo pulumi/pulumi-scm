@@ -36,8 +36,8 @@ class AuthenticationProfileArgs:
         The set of arguments for constructing a AuthenticationProfile resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The allow_list of the authentication profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['AuthenticationProfileLockoutArgs'] lockout: Lockout object of the authentication profile
         :param pulumi.Input['AuthenticationProfileMethodArgs'] method: method object of authentication profile
@@ -45,7 +45,6 @@ class AuthenticationProfileArgs:
         :param pulumi.Input[_builtins.str] name: The name of the authentication profile
         :param pulumi.Input['AuthenticationProfileSingleSignOnArgs'] single_sign_on: Single sign on
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] user_domain: User domain
         :param pulumi.Input[_builtins.str] username_modifier: Username modifier
@@ -90,6 +89,7 @@ class AuthenticationProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -102,7 +102,6 @@ class AuthenticationProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -176,7 +175,6 @@ class AuthenticationProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -229,8 +227,8 @@ class _AuthenticationProfileState:
         Input properties used for looking up and filtering AuthenticationProfile resources.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The allow_list of the authentication profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['AuthenticationProfileLockoutArgs'] lockout: Lockout object of the authentication profile
         :param pulumi.Input['AuthenticationProfileMethodArgs'] method: method object of authentication profile
@@ -238,7 +236,6 @@ class _AuthenticationProfileState:
         :param pulumi.Input[_builtins.str] name: The name of the authentication profile
         :param pulumi.Input['AuthenticationProfileSingleSignOnArgs'] single_sign_on: Single sign on
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] user_domain: User domain
         :param pulumi.Input[_builtins.str] username_modifier: Username modifier
@@ -285,6 +282,7 @@ class _AuthenticationProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -297,7 +295,6 @@ class _AuthenticationProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -371,7 +368,6 @@ class _AuthenticationProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -478,12 +474,38 @@ class AuthenticationProfile(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The allow_list of the authentication profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']] lockout: Lockout object of the authentication profile
         :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']] method: method object of authentication profile
@@ -491,7 +513,6 @@ class AuthenticationProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the authentication profile
         :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']] single_sign_on: Single sign on
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] user_domain: User domain
         :param pulumi.Input[_builtins.str] username_modifier: Username modifier
@@ -546,6 +567,32 @@ class AuthenticationProfile(pulumi.CustomResource):
             single_sign_on={
                 "realm": "EXAMPLE.COM",
             })
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example ::device:id
         ```
 
         :param str resource_name: The name of the resource.
@@ -626,8 +673,8 @@ class AuthenticationProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The allow_list of the authentication profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']] lockout: Lockout object of the authentication profile
         :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']] method: method object of authentication profile
@@ -635,7 +682,6 @@ class AuthenticationProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the authentication profile
         :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']] single_sign_on: Single sign on
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] user_domain: User domain
         :param pulumi.Input[_builtins.str] username_modifier: Username modifier
@@ -671,6 +717,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -679,7 +726,6 @@ class AuthenticationProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -729,7 +775,6 @@ class AuthenticationProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

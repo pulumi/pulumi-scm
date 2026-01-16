@@ -13,21 +13,47 @@ import (
 )
 
 // DnsProxy resource
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/dnsProxy:DnsProxy example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/dnsProxy:DnsProxy example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/dnsProxy:DnsProxy example ::device:id
+// ```
 type DnsProxy struct {
 	pulumi.CustomResourceState
 
 	// Cache
-	Cache DnsProxyCacheOutput `pulumi:"cache"`
+	Cache DnsProxyCachePtrOutput `pulumi:"cache"`
 	// Default
 	Default DnsProxyDefaultOutput `pulumi:"default"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// DNS proxy rules
 	DomainServers DnsProxyDomainServerArrayOutput `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrOutput `pulumi:"enabled"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interfaces on which to enable DNS proxy service
@@ -35,16 +61,15 @@ type DnsProxy struct {
 	// DNS proxy name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Static entries
 	StaticEntries DnsProxyStaticEntryArrayOutput `pulumi:"staticEntries"`
 	// Tcp queries
-	TcpQueries DnsProxyTcpQueriesOutput `pulumi:"tcpQueries"`
-	Tfid       pulumi.StringOutput      `pulumi:"tfid"`
+	TcpQueries DnsProxyTcpQueriesPtrOutput `pulumi:"tcpQueries"`
+	Tfid       pulumi.StringOutput         `pulumi:"tfid"`
 	// Udp queries
-	UdpQueries DnsProxyUdpQueriesOutput `pulumi:"udpQueries"`
+	UdpQueries DnsProxyUdpQueriesPtrOutput `pulumi:"udpQueries"`
 }
 
 // NewDnsProxy registers a new resource with the given unique name, arguments, and options.
@@ -85,13 +110,13 @@ type dnsProxyState struct {
 	// Default
 	Default *DnsProxyDefault `pulumi:"default"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// DNS proxy rules
 	DomainServers []DnsProxyDomainServer `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled *bool `pulumi:"enabled"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interfaces on which to enable DNS proxy service
@@ -99,7 +124,6 @@ type dnsProxyState struct {
 	// DNS proxy name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Static entries
@@ -117,13 +141,13 @@ type DnsProxyState struct {
 	// Default
 	Default DnsProxyDefaultPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// DNS proxy rules
 	DomainServers DnsProxyDomainServerArrayInput
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interfaces on which to enable DNS proxy service
@@ -131,7 +155,6 @@ type DnsProxyState struct {
 	// DNS proxy name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Static entries
@@ -153,13 +176,13 @@ type dnsProxyArgs struct {
 	// Default
 	Default DnsProxyDefault `pulumi:"default"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// DNS proxy rules
 	DomainServers []DnsProxyDomainServer `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled *bool `pulumi:"enabled"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interfaces on which to enable DNS proxy service
@@ -167,7 +190,6 @@ type dnsProxyArgs struct {
 	// DNS proxy name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Static entries
@@ -185,13 +207,13 @@ type DnsProxyArgs struct {
 	// Default
 	Default DnsProxyDefaultInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// DNS proxy rules
 	DomainServers DnsProxyDomainServerArrayInput
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interfaces on which to enable DNS proxy service
@@ -199,7 +221,6 @@ type DnsProxyArgs struct {
 	// DNS proxy name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Static entries
@@ -298,8 +319,8 @@ func (o DnsProxyOutput) ToDnsProxyOutputWithContext(ctx context.Context) DnsProx
 }
 
 // Cache
-func (o DnsProxyOutput) Cache() DnsProxyCacheOutput {
-	return o.ApplyT(func(v *DnsProxy) DnsProxyCacheOutput { return v.Cache }).(DnsProxyCacheOutput)
+func (o DnsProxyOutput) Cache() DnsProxyCachePtrOutput {
+	return o.ApplyT(func(v *DnsProxy) DnsProxyCachePtrOutput { return v.Cache }).(DnsProxyCachePtrOutput)
 }
 
 // Default
@@ -308,6 +329,7 @@ func (o DnsProxyOutput) Default() DnsProxyDefaultOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DnsProxyOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DnsProxy) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -323,7 +345,6 @@ func (o DnsProxyOutput) Enabled() pulumi.BoolPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DnsProxyOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DnsProxy) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -340,7 +361,6 @@ func (o DnsProxyOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DnsProxyOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DnsProxy) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
@@ -352,8 +372,8 @@ func (o DnsProxyOutput) StaticEntries() DnsProxyStaticEntryArrayOutput {
 }
 
 // Tcp queries
-func (o DnsProxyOutput) TcpQueries() DnsProxyTcpQueriesOutput {
-	return o.ApplyT(func(v *DnsProxy) DnsProxyTcpQueriesOutput { return v.TcpQueries }).(DnsProxyTcpQueriesOutput)
+func (o DnsProxyOutput) TcpQueries() DnsProxyTcpQueriesPtrOutput {
+	return o.ApplyT(func(v *DnsProxy) DnsProxyTcpQueriesPtrOutput { return v.TcpQueries }).(DnsProxyTcpQueriesPtrOutput)
 }
 
 func (o DnsProxyOutput) Tfid() pulumi.StringOutput {
@@ -361,8 +381,8 @@ func (o DnsProxyOutput) Tfid() pulumi.StringOutput {
 }
 
 // Udp queries
-func (o DnsProxyOutput) UdpQueries() DnsProxyUdpQueriesOutput {
-	return o.ApplyT(func(v *DnsProxy) DnsProxyUdpQueriesOutput { return v.UdpQueries }).(DnsProxyUdpQueriesOutput)
+func (o DnsProxyOutput) UdpQueries() DnsProxyUdpQueriesPtrOutput {
+	return o.ApplyT(func(v *DnsProxy) DnsProxyUdpQueriesPtrOutput { return v.UdpQueries }).(DnsProxyUdpQueriesPtrOutput)
 }
 
 type DnsProxyArrayOutput struct{ *pulumi.OutputState }

@@ -17,6 +17,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
     /**
      * specify lifetime in days
+     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     @Import(name="days")
@@ -24,6 +25,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
     /**
      * @return specify lifetime in days
+     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     public Optional<Output<Integer>> days() {
@@ -32,7 +34,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
     /**
      * specify lifetime in hours
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -41,7 +42,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
     /**
      * @return specify lifetime in hours
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -51,7 +51,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
     /**
      * specify lifetime in minutes
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -60,7 +59,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
     /**
      * @return specify lifetime in minutes
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -70,7 +68,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
     /**
      * specify lifetime in seconds
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -79,7 +76,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
     /**
      * @return specify lifetime in seconds
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -116,6 +112,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
         /**
          * @param days specify lifetime in days
+         * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
          * 
          * @return builder
          * 
@@ -127,6 +124,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
         /**
          * @param days specify lifetime in days
+         * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
          * 
          * @return builder
          * 
@@ -137,7 +135,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
         /**
          * @param hours specify lifetime in hours
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
          * 
          * @return builder
@@ -150,7 +147,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
         /**
          * @param hours specify lifetime in hours
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
          * 
          * @return builder
@@ -162,7 +158,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
         /**
          * @param minutes specify lifetime in minutes
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
          * 
          * @return builder
@@ -175,7 +170,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
         /**
          * @param minutes specify lifetime in minutes
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
          * 
          * @return builder
@@ -187,7 +181,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
         /**
          * @param seconds specify lifetime in seconds
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
          * 
          * @return builder
@@ -200,7 +193,6 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
 
         /**
          * @param seconds specify lifetime in seconds
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
          * 
          * @return builder

@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeImeiGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Auth
+        /// IMEI Auth Cnfig for Custom IMEI type
         /// </summary>
         [Input("auth")]
         public Input<Inputs.ExternalDynamicListTypeImeiAuthGetArgs>? Auth { get; set; }
 
         /// <summary>
-        /// Profile for authenticating client certificates
+        /// IMEI Certificate Profile for Custom IMEI type
         /// </summary>
         [Input("certificateProfile")]
         public Input<string>? CertificateProfile { get; set; }
 
         /// <summary>
-        /// Description
+        /// IMEI Description for Custom IMEI type
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _exceptionLists;
 
         /// <summary>
-        /// Exception list
+        /// IMEI Exception List for Custom IMEI type
         /// </summary>
         public InputList<string> ExceptionLists
         {
@@ -43,13 +43,13 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Recurring
+        /// Recurring interval for IMEI updates
         /// </summary>
         [Input("recurring", required: true)]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringGetArgs> Recurring { get; set; } = null!;
 
         /// <summary>
-        /// Url
+        /// IMEI URL for Custom IMEI type
         /// </summary>
         [Input("url", required: true)]
         public Input<string> Url { get; set; } = null!;

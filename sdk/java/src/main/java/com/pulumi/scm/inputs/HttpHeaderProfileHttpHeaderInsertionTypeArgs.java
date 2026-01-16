@@ -47,14 +47,14 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
     }
 
     /**
-     * The HTTP header insertion type (*This is a predefined list in the UI*)
+     * The HTTP header insertion type
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The HTTP header insertion type (*This is a predefined list in the UI*)
+     * @return The HTTP header insertion type
      * 
      */
     public Output<String> name() {
@@ -150,7 +150,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param name The HTTP header insertion type (*This is a predefined list in the UI*)
+         * @param name The HTTP header insertion type
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param name The HTTP header insertion type (*This is a predefined list in the UI*)
+         * @param name The HTTP header insertion type
          * 
          * @return builder
          * 

@@ -53,19 +53,45 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/ipsecCryptoProfile:IpsecCryptoProfile")]
     public partial class IpsecCryptoProfile : global::Pulumi.CustomResource
     {
         /// <summary>
         /// Ah
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ah` and `Esp`.
         /// </summary>
         [Output("ah")]
         public Output<Outputs.IpsecCryptoProfileAh?> Ah { get; private set; } = null!;
 
         /// <summary>
         /// The device in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
@@ -79,7 +105,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Esp
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ah` and `Esp`.
         /// </summary>
         [Output("esp")]
@@ -87,7 +112,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -113,7 +137,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -170,13 +193,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Ah
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ah` and `Esp`.
         /// </summary>
         [Input("ah")]
         public Input<Inputs.IpsecCryptoProfileAhArgs>? Ah { get; set; }
 
         /// <summary>
         /// The device in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
@@ -190,7 +213,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Esp
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ah` and `Esp`.
         /// </summary>
         [Input("esp")]
@@ -198,7 +220,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -224,7 +245,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -240,13 +260,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Ah
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ah` and `Esp`.
         /// </summary>
         [Input("ah")]
         public Input<Inputs.IpsecCryptoProfileAhGetArgs>? Ah { get; set; }
 
         /// <summary>
         /// The device in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
@@ -260,7 +280,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Esp
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ah` and `Esp`.
         /// </summary>
         [Input("esp")]
@@ -268,7 +287,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -294,7 +312,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

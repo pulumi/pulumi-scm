@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// HttpHeaderProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM HTTP Header Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
+        ///     var scmHttpHeaderProf = Scm.GetHttpHeaderProfile.Invoke(new()
+        ///     {
+        ///         Id = "2733cba4-c79d-4c98-8e07-4d3cbdd0ba11",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmHttpHeaderProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Id) },
+        ///             { "folder", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Folder) },
+        ///             { "name", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetHttpHeaderProfileResult> InvokeAsync(GetHttpHeaderProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetHttpHeaderProfileResult>("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", args ?? new GetHttpHeaderProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// HttpHeaderProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM HTTP Header Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
+        ///     var scmHttpHeaderProf = Scm.GetHttpHeaderProfile.Invoke(new()
+        ///     {
+        ///         Id = "2733cba4-c79d-4c98-8e07-4d3cbdd0ba11",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmHttpHeaderProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Id) },
+        ///             { "folder", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Folder) },
+        ///             { "name", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetHttpHeaderProfileResult> Invoke(GetHttpHeaderProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetHttpHeaderProfileResult>("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", args ?? new GetHttpHeaderProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// HttpHeaderProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM HTTP Header Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
+        ///     var scmHttpHeaderProf = Scm.GetHttpHeaderProfile.Invoke(new()
+        ///     {
+        ///         Id = "2733cba4-c79d-4c98-8e07-4d3cbdd0ba11",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmHttpHeaderProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Id) },
+        ///             { "folder", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Folder) },
+        ///             { "name", scmHttpHeaderProf.Apply(getHttpHeaderProfileResult =&gt; getHttpHeaderProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetHttpHeaderProfileResult> Invoke(GetHttpHeaderProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetHttpHeaderProfileResult>("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", args ?? new GetHttpHeaderProfileInvokeArgs(), options.WithDefaults());
@@ -33,6 +126,20 @@ namespace Pulumi.Scm
 
     public sealed class GetHttpHeaderProfileArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the HTTP header profile
         /// </summary>
@@ -45,6 +152,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetHttpHeaderProfileArgs()
         {
         }
@@ -53,6 +167,20 @@ namespace Pulumi.Scm
 
     public sealed class GetHttpHeaderProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the HTTP header profile
         /// </summary>
@@ -64,6 +192,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetHttpHeaderProfileInvokeArgs()
         {
@@ -81,9 +216,17 @@ namespace Pulumi.Scm
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
+        /// <summary>
+        /// A list of HTTP header profile rules
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetHttpHeaderProfileHttpHeaderInsertionResult> HttpHeaderInsertions;
         /// <summary>
         /// The UUID of the HTTP header profile
@@ -93,6 +236,10 @@ namespace Pulumi.Scm
         /// The name of the HTTP header profile
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

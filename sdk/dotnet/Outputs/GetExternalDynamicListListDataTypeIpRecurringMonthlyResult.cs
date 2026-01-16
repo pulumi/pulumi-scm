@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataTypeIpRecurringMonthlyResult
     {
         /// <summary>
-        /// Time specification hh (e.g. 20)
+        /// Monthly Time specification hh (e.g. 20) for IP
         /// </summary>
         public readonly string At;
         /// <summary>
-        /// Day of month
+        /// Day setting for monthly IP updates
         /// </summary>
         public readonly int DayOfMonth;
 

@@ -23,7 +23,7 @@ public final class GetHttpHeaderProfileListDataHttpHeaderInsertionType {
      */
     private List<GetHttpHeaderProfileListDataHttpHeaderInsertionTypeHeader> headers;
     /**
-     * @return The HTTP header insertion type (*This is a predefined list in the UI*)
+     * @return The HTTP header insertion type
      * 
      */
     private String name;
@@ -44,7 +44,7 @@ public final class GetHttpHeaderProfileListDataHttpHeaderInsertionType {
         return this.headers;
     }
     /**
-     * @return The HTTP header insertion type (*This is a predefined list in the UI*)
+     * @return The HTTP header insertion type
      * 
      */
     public String name() {

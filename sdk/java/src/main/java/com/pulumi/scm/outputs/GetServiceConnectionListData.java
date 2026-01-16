@@ -32,6 +32,11 @@ public final class GetServiceConnectionListData {
      */
     private Map<String,String> encryptedValues;
     /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
      * @return The UUID of the service connection
      * 
      */
@@ -114,6 +119,13 @@ public final class GetServiceConnectionListData {
      */
     public Map<String,String> encryptedValues() {
         return this.encryptedValues;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
     }
     /**
      * @return The UUID of the service connection
@@ -215,6 +227,7 @@ public final class GetServiceConnectionListData {
         private String backupSc;
         private GetServiceConnectionListDataBgpPeer bgpPeer;
         private Map<String,String> encryptedValues;
+        private String folder;
         private String id;
         private String ipsecTunnel;
         private String name;
@@ -234,6 +247,7 @@ public final class GetServiceConnectionListData {
     	      this.backupSc = defaults.backupSc;
     	      this.bgpPeer = defaults.bgpPeer;
     	      this.encryptedValues = defaults.encryptedValues;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.ipsecTunnel = defaults.ipsecTunnel;
     	      this.name = defaults.name;
@@ -271,6 +285,14 @@ public final class GetServiceConnectionListData {
               throw new MissingRequiredPropertyException("GetServiceConnectionListData", "encryptedValues");
             }
             this.encryptedValues = encryptedValues;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetServiceConnectionListData", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -385,6 +407,7 @@ public final class GetServiceConnectionListData {
             _resultValue.backupSc = backupSc;
             _resultValue.bgpPeer = bgpPeer;
             _resultValue.encryptedValues = encryptedValues;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.ipsecTunnel = ipsecTunnel;
             _resultValue.name = name;

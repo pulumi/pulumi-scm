@@ -32,12 +32,11 @@ class TlsServiceProfileArgs:
         :param pulumi.Input[_builtins.str] certificate: Certificate name
         :param pulumi.Input['TlsServiceProfileProtocolSettingsArgs'] protocol_settings: Protocol settings
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         pulumi.set(__self__, "certificate", certificate)
@@ -80,6 +79,7 @@ class TlsServiceProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -92,7 +92,6 @@ class TlsServiceProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -118,7 +117,6 @@ class TlsServiceProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -142,13 +140,12 @@ class _TlsServiceProfileState:
         Input properties used for looking up and filtering TlsServiceProfile resources.
         :param pulumi.Input[_builtins.str] certificate: Certificate name
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         :param pulumi.Input['TlsServiceProfileProtocolSettingsArgs'] protocol_settings: Protocol settings
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if certificate is not None:
@@ -183,6 +180,7 @@ class _TlsServiceProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -195,7 +193,6 @@ class _TlsServiceProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -233,7 +230,6 @@ class _TlsServiceProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -268,17 +264,85 @@ class TlsServiceProfile(pulumi.CustomResource):
         """
         TlsServiceProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        tls_service_prof1_upper = scm.TlsServiceProfile("tls_service_prof_1_upper",
+            folder="All",
+            name="TLS_Service_Profile_1",
+            certificate="Authentication Cookie CA",
+            protocol_settings={
+                "keyxchg_algo_rsa": True,
+            })
+        tls_service_prof2_upper = scm.TlsServiceProfile("tls_service_prof_2_upper",
+            folder="All",
+            name="TLS_Service_Profile_2",
+            certificate="Forward-Trust-CA",
+            protocol_settings={
+                "min_version": "tls1-0",
+                "max_version": "tls1-1",
+                "enc_algo_aes128_cbc": True,
+                "enc_algo_aes256_cbc": True,
+            })
+        tls_service_prof3_upper = scm.TlsServiceProfile("tls_service_prof_3_upper",
+            folder="All",
+            name="TLS_Service_Profile_3",
+            certificate="Root CA",
+            protocol_settings={
+                "min_version": "tls1-1",
+                "max_version": "tls1-3",
+                "keyxchg_algo_rsa": True,
+                "keyxchg_algo_dhe": True,
+                "keyxchg_algo_ecdhe": True,
+                "enc_algo_aes128_cbc": True,
+                "enc_algo_aes128_gcm": True,
+                "enc_algo_aes256_cbc": True,
+                "enc_algo_aes256_gcm": True,
+                "auth_algo_sha1": True,
+                "auth_algo_sha256": True,
+                "auth_algo_sha384": True,
+            })
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] certificate: Certificate name
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: Protocol settings
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
@@ -289,6 +353,75 @@ class TlsServiceProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         TlsServiceProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        tls_service_prof1_upper = scm.TlsServiceProfile("tls_service_prof_1_upper",
+            folder="All",
+            name="TLS_Service_Profile_1",
+            certificate="Authentication Cookie CA",
+            protocol_settings={
+                "keyxchg_algo_rsa": True,
+            })
+        tls_service_prof2_upper = scm.TlsServiceProfile("tls_service_prof_2_upper",
+            folder="All",
+            name="TLS_Service_Profile_2",
+            certificate="Forward-Trust-CA",
+            protocol_settings={
+                "min_version": "tls1-0",
+                "max_version": "tls1-1",
+                "enc_algo_aes128_cbc": True,
+                "enc_algo_aes256_cbc": True,
+            })
+        tls_service_prof3_upper = scm.TlsServiceProfile("tls_service_prof_3_upper",
+            folder="All",
+            name="TLS_Service_Profile_3",
+            certificate="Root CA",
+            protocol_settings={
+                "min_version": "tls1-1",
+                "max_version": "tls1-3",
+                "keyxchg_algo_rsa": True,
+                "keyxchg_algo_dhe": True,
+                "keyxchg_algo_ecdhe": True,
+                "enc_algo_aes128_cbc": True,
+                "enc_algo_aes128_gcm": True,
+                "enc_algo_aes256_cbc": True,
+                "enc_algo_aes256_gcm": True,
+                "auth_algo_sha1": True,
+                "auth_algo_sha256": True,
+                "auth_algo_sha384": True,
+            })
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example ::device:id
+        ```
 
         :param str resource_name: The name of the resource.
         :param TlsServiceProfileArgs args: The arguments to use to populate this resource's properties.
@@ -357,13 +490,12 @@ class TlsServiceProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] certificate: Certificate name
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: Protocol settings
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -392,6 +524,7 @@ class TlsServiceProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -400,7 +533,6 @@ class TlsServiceProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -426,7 +558,6 @@ class TlsServiceProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

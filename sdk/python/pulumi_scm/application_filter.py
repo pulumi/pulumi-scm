@@ -47,11 +47,11 @@ class ApplicationFilterArgs:
         The set of arguments for constructing a ApplicationFilter resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] evasive: only True is a valid value
         :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
         :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
@@ -63,7 +63,6 @@ class ApplicationFilterArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
         :param pulumi.Input['ApplicationFilterTaggingArgs'] tagging: Tagging
@@ -134,6 +133,7 @@ class ApplicationFilterArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -182,7 +182,6 @@ class ApplicationFilterArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -304,7 +303,6 @@ class ApplicationFilterArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -416,11 +414,11 @@ class _ApplicationFilterState:
         Input properties used for looking up and filtering ApplicationFilter resources.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] evasive: only True is a valid value
         :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
         :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
@@ -432,7 +430,6 @@ class _ApplicationFilterState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
         :param pulumi.Input['ApplicationFilterTaggingArgs'] tagging: Tagging
@@ -505,6 +502,7 @@ class _ApplicationFilterState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -553,7 +551,6 @@ class _ApplicationFilterState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -675,7 +672,6 @@ class _ApplicationFilterState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -815,15 +811,41 @@ class ApplicationFilter(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/applicationFilter:ApplicationFilter example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/applicationFilter:ApplicationFilter example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/applicationFilter:ApplicationFilter example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] evasive: only True is a valid value
         :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
         :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
@@ -835,7 +857,6 @@ class ApplicationFilter(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
         :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']] tagging: Tagging
@@ -868,6 +889,32 @@ class ApplicationFilter(pulumi.CustomResource):
             tagging={
                 "no_tag": True,
             })
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/applicationFilter:ApplicationFilter example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/applicationFilter:ApplicationFilter example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/applicationFilter:ApplicationFilter example ::device:id
         ```
 
         :param str resource_name: The name of the resource.
@@ -981,11 +1028,11 @@ class ApplicationFilter(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] evasive: only True is a valid value
         :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
         :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
@@ -997,7 +1044,6 @@ class ApplicationFilter(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
         :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']] tagging: Tagging
@@ -1048,6 +1094,7 @@ class ApplicationFilter(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -1080,7 +1127,6 @@ class ApplicationFilter(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -1162,7 +1208,6 @@ class ApplicationFilter(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

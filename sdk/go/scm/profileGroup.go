@@ -12,6 +12,32 @@ import (
 )
 
 // ProfileGroup resource
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/profileGroup:ProfileGroup example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/profileGroup:ProfileGroup example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/profileGroup:ProfileGroup example ::device:id
+// ```
 type ProfileGroup struct {
 	pulumi.CustomResourceState
 
@@ -20,13 +46,13 @@ type ProfileGroup struct {
 	// Data filtering
 	DataFilterings pulumi.StringArrayOutput `pulumi:"dataFilterings"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Dns security
 	DnsSecurities pulumi.StringArrayOutput `pulumi:"dnsSecurities"`
 	// File blocking
 	FileBlockings pulumi.StringArrayOutput `pulumi:"fileBlockings"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the profile group
@@ -34,7 +60,6 @@ type ProfileGroup struct {
 	// Saas security
 	SaasSecurities pulumi.StringArrayOutput `pulumi:"saasSecurities"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Spyware
@@ -83,13 +108,13 @@ type profileGroupState struct {
 	// Data filtering
 	DataFilterings []string `pulumi:"dataFilterings"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Dns security
 	DnsSecurities []string `pulumi:"dnsSecurities"`
 	// File blocking
 	FileBlockings []string `pulumi:"fileBlockings"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the profile group
@@ -97,7 +122,6 @@ type profileGroupState struct {
 	// Saas security
 	SaasSecurities []string `pulumi:"saasSecurities"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Spyware
@@ -117,13 +141,13 @@ type ProfileGroupState struct {
 	// Data filtering
 	DataFilterings pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Dns security
 	DnsSecurities pulumi.StringArrayInput
 	// File blocking
 	FileBlockings pulumi.StringArrayInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the profile group
@@ -131,7 +155,6 @@ type ProfileGroupState struct {
 	// Saas security
 	SaasSecurities pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Spyware
@@ -155,13 +178,13 @@ type profileGroupArgs struct {
 	// Data filtering
 	DataFilterings []string `pulumi:"dataFilterings"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Dns security
 	DnsSecurities []string `pulumi:"dnsSecurities"`
 	// File blocking
 	FileBlockings []string `pulumi:"fileBlockings"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the profile group
@@ -169,7 +192,6 @@ type profileGroupArgs struct {
 	// Saas security
 	SaasSecurities []string `pulumi:"saasSecurities"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Spyware
@@ -189,13 +211,13 @@ type ProfileGroupArgs struct {
 	// Data filtering
 	DataFilterings pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Dns security
 	DnsSecurities pulumi.StringArrayInput
 	// File blocking
 	FileBlockings pulumi.StringArrayInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the profile group
@@ -203,7 +225,6 @@ type ProfileGroupArgs struct {
 	// Saas security
 	SaasSecurities pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Spyware
@@ -314,6 +335,7 @@ func (o ProfileGroupOutput) DataFilterings() pulumi.StringArrayOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ProfileGroupOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -329,7 +351,6 @@ func (o ProfileGroupOutput) FileBlockings() pulumi.StringArrayOutput {
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ProfileGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -346,7 +367,6 @@ func (o ProfileGroupOutput) SaasSecurities() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ProfileGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

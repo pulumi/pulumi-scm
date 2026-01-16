@@ -12,6 +12,40 @@ import (
 )
 
 // TlsServiceProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a single SCM TLS Service Profile object by its ID.
+//			//
+//			// Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
+//			scmTlsServiceProf, err := scm.LookupTlsServiceProfile(ctx, &scm.LookupTlsServiceProfileArgs{
+//				Id: "b4d70015-5b0e-4491-a2a9-4305b01397d5",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmTlsServiceProfileDetails", pulumi.StringMap{
+//				"profileId": scmTlsServiceProf.Id,
+//				"folder":    scmTlsServiceProf.Folder,
+//				"name":      scmTlsServiceProf.Name,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupTlsServiceProfile(ctx *pulumi.Context, args *LookupTlsServiceProfileArgs, opts ...pulumi.InvokeOption) (*LookupTlsServiceProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupTlsServiceProfileResult
@@ -24,10 +58,19 @@ func LookupTlsServiceProfile(ctx *pulumi.Context, args *LookupTlsServiceProfileA
 
 // A collection of arguments for invoking getTlsServiceProfile.
 type LookupTlsServiceProfileArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// The UUID of the TLS service profile
 	Id string `pulumi:"id"`
 	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getTlsServiceProfile.
@@ -35,15 +78,21 @@ type LookupTlsServiceProfileResult struct {
 	// Certificate name
 	Certificate string `pulumi:"certificate"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the TLS service profile
 	Id string `pulumi:"id"`
 	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
-	Name             string                               `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// Protocol settings
 	ProtocolSettings GetTlsServiceProfileProtocolSettings `pulumi:"protocolSettings"`
-	Snippet          string                               `pulumi:"snippet"`
-	Tfid             string                               `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupTlsServiceProfileOutput(ctx *pulumi.Context, args LookupTlsServiceProfileOutputArgs, opts ...pulumi.InvokeOption) LookupTlsServiceProfileResultOutput {
@@ -57,10 +106,19 @@ func LookupTlsServiceProfileOutput(ctx *pulumi.Context, args LookupTlsServicePro
 
 // A collection of arguments for invoking getTlsServiceProfile.
 type LookupTlsServiceProfileOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the TLS service profile
 	Id pulumi.StringInput `pulumi:"id"`
 	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupTlsServiceProfileOutputArgs) ElementType() reflect.Type {
@@ -88,10 +146,13 @@ func (o LookupTlsServiceProfileResultOutput) Certificate() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTlsServiceProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTlsServiceProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -106,10 +167,13 @@ func (o LookupTlsServiceProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Protocol settings
 func (o LookupTlsServiceProfileResultOutput) ProtocolSettings() GetTlsServiceProfileProtocolSettingsOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) GetTlsServiceProfileProtocolSettings { return v.ProtocolSettings }).(GetTlsServiceProfileProtocolSettingsOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTlsServiceProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

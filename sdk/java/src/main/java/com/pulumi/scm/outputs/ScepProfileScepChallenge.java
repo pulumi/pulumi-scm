@@ -14,19 +14,18 @@ import javax.annotation.Nullable;
 public final class ScepProfileScepChallenge {
     /**
      * @return Dynamic
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     private @Nullable ScepProfileScepChallengeDynamic dynamic;
     /**
      * @return Challenge to use for SCEP server on mobile clients
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     private @Nullable String fixed;
     /**
      * @return No OTP
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
@@ -35,6 +34,7 @@ public final class ScepProfileScepChallenge {
     private ScepProfileScepChallenge() {}
     /**
      * @return Dynamic
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     public Optional<ScepProfileScepChallengeDynamic> dynamic() {
@@ -42,7 +42,6 @@ public final class ScepProfileScepChallenge {
     }
     /**
      * @return Challenge to use for SCEP server on mobile clients
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
@@ -51,7 +50,6 @@ public final class ScepProfileScepChallenge {
     }
     /**
      * @return No OTP
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */

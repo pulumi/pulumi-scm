@@ -27,8 +27,11 @@ import * as utilities from "./utilities";
 export function getSecurityRule(args: GetSecurityRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetSecurityRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSecurityRule:getSecurityRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -37,6 +40,14 @@ export function getSecurityRule(args: GetSecurityRuleArgs, opts?: pulumi.InvokeO
  */
 export interface GetSecurityRuleArgs {
     /**
+     * The device in which the resource is defined
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: string;
+    /**
      * The UUID of the security rule
      */
     id: string;
@@ -44,6 +55,10 @@ export interface GetSecurityRuleArgs {
      * The name of the security rule
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    snippet?: string;
 }
 
 /**
@@ -233,8 +248,11 @@ export interface GetSecurityRuleResult {
 export function getSecurityRuleOutput(args: GetSecurityRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSecurityRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSecurityRule:getSecurityRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -243,6 +261,14 @@ export function getSecurityRuleOutput(args: GetSecurityRuleOutputArgs, opts?: pu
  */
 export interface GetSecurityRuleOutputArgs {
     /**
+     * The device in which the resource is defined
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the security rule
      */
     id: pulumi.Input<string>;
@@ -250,4 +276,8 @@ export interface GetSecurityRuleOutputArgs {
      * The name of the security rule
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     */
+    snippet?: pulumi.Input<string>;
 }

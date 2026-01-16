@@ -12,40 +12,36 @@ import java.util.Objects;
 public final class GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverity {
     /**
      * @return Greater equal
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private Integer greaterEqual;
     /**
      * @return Greater than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private Integer greaterThan;
     /**
      * @return Is
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private Integer is;
     /**
      * @return Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private Integer isNot;
     /**
      * @return Less equal
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private Integer lessEqual;
     /**
      * @return Less than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -54,6 +50,7 @@ public final class GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeve
     private GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverity() {}
     /**
      * @return Greater equal
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     public Integer greaterEqual() {
@@ -61,7 +58,6 @@ public final class GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeve
     }
     /**
      * @return Greater than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -70,7 +66,6 @@ public final class GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeve
     }
     /**
      * @return Is
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -79,7 +74,6 @@ public final class GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeve
     }
     /**
      * @return Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -88,7 +82,6 @@ public final class GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeve
     }
     /**
      * @return Less equal
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -97,7 +90,6 @@ public final class GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeve
     }
     /**
      * @return Less than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */

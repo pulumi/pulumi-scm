@@ -16,6 +16,21 @@ public final class GetServiceConnectionPlainArgs extends com.pulumi.resources.In
     public static final GetServiceConnectionPlainArgs Empty = new GetServiceConnectionPlainArgs();
 
     /**
+     * The folder in which the resource is defined
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable String folder;
+
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public Optional<String> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * The UUID of the service connection
      * 
      */
@@ -48,6 +63,7 @@ public final class GetServiceConnectionPlainArgs extends com.pulumi.resources.In
     private GetServiceConnectionPlainArgs() {}
 
     private GetServiceConnectionPlainArgs(GetServiceConnectionPlainArgs $) {
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
     }
@@ -68,6 +84,17 @@ public final class GetServiceConnectionPlainArgs extends com.pulumi.resources.In
 
         public Builder(GetServiceConnectionPlainArgs defaults) {
             $ = new GetServiceConnectionPlainArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable String folder) {
+            $.folder = folder;
+            return this;
         }
 
         /**

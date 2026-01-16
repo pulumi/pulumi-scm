@@ -143,6 +143,32 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/remoteNetwork:RemoteNetwork example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/remoteNetwork:RemoteNetwork example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/remoteNetwork:RemoteNetwork example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/remoteNetwork:RemoteNetwork")]
     public partial class RemoteNetwork : global::Pulumi.CustomResource

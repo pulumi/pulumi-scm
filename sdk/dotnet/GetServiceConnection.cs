@@ -115,6 +115,12 @@ namespace Pulumi.Scm
     public sealed class GetServiceConnectionArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// The UUID of the service connection
         /// </summary>
         [Input("id", required: true)]
@@ -134,6 +140,12 @@ namespace Pulumi.Scm
 
     public sealed class GetServiceConnectionInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the service connection
         /// </summary>
@@ -168,6 +180,10 @@ namespace Pulumi.Scm
         /// Map of sensitive values returned from the API.
         /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
         /// <summary>
         /// The UUID of the service connection
         /// </summary>
@@ -226,6 +242,8 @@ namespace Pulumi.Scm
 
             ImmutableDictionary<string, string> encryptedValues,
 
+            string folder,
+
             string id,
 
             string ipsecTunnel,
@@ -255,6 +273,7 @@ namespace Pulumi.Scm
             BackupSc = backupSc;
             BgpPeer = bgpPeer;
             EncryptedValues = encryptedValues;
+            Folder = folder;
             Id = id;
             IpsecTunnel = ipsecTunnel;
             Name = name;

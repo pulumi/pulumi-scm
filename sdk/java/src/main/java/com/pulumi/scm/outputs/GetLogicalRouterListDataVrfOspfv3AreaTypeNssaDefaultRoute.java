@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRoute {
     /**
      * @return Advertise
+     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteAdvertise advertise;
     /**
      * @return Disable
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
@@ -27,6 +27,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRoute {
     private GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRoute() {}
     /**
      * @return Advertise
+     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     public GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteAdvertise advertise() {
@@ -34,7 +35,6 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRoute {
     }
     /**
      * @return Disable
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */

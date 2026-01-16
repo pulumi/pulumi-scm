@@ -12,14 +12,24 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class ExternalDynamicListTypeImsiAuthArgs : global::Pulumi.ResourceArgs
     {
-        /// <summary>
-        /// Password
-        /// </summary>
         [Input("password", required: true)]
-        public Input<string> Password { get; set; } = null!;
+        private Input<string>? _password;
 
         /// <summary>
-        /// Username
+        /// IMSI Auth Password for Custom IMSI type
+        /// </summary>
+        public Input<string>? Password
+        {
+            get => _password;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _password = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// IMSI Auth Username for Custom IMSI type
         /// </summary>
         [Input("username", required: true)]
         public Input<string> Username { get; set; } = null!;

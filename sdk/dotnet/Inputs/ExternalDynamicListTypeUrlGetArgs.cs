@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeUrlGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Auth
+        /// Authentication settings for Custom URL type
         /// </summary>
         [Input("auth")]
         public Input<Inputs.ExternalDynamicListTypeUrlAuthGetArgs>? Auth { get; set; }
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _exceptionLists;
 
         /// <summary>
-        /// Exception list
+        /// URL Exception List for Custom URL type
         /// </summary>
         public InputList<string> ExceptionLists
         {
@@ -43,13 +43,13 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Recurring
+        /// Update Schedule for Custom URL type
         /// </summary>
         [Input("recurring", required: true)]
         public Input<Inputs.ExternalDynamicListTypeUrlRecurringGetArgs> Recurring { get; set; } = null!;
 
         /// <summary>
-        /// Url
+        /// External URL for Custom URL type
         /// </summary>
         [Input("url", required: true)]
         public Input<string> Url { get; set; } = null!;

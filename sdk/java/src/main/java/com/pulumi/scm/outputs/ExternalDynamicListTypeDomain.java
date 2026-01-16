@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListTypeDomain {
     /**
-     * @return Auth
+     * @return Authentication settings for Custom Domain type
      * 
      */
     private @Nullable ExternalDynamicListTypeDomainAuth auth;
@@ -32,7 +32,7 @@ public final class ExternalDynamicListTypeDomain {
      */
     private @Nullable String description;
     /**
-     * @return Exception list
+     * @return Domain Exception List for Custom Domain type
      * 
      */
     private @Nullable List<String> exceptionLists;
@@ -42,19 +42,19 @@ public final class ExternalDynamicListTypeDomain {
      */
     private @Nullable Boolean expandDomain;
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom Domain type
      * 
      */
     private ExternalDynamicListTypeDomainRecurring recurring;
     /**
-     * @return Url
+     * @return External URL for Custom Domain type
      * 
      */
     private String url;
 
     private ExternalDynamicListTypeDomain() {}
     /**
-     * @return Auth
+     * @return Authentication settings for Custom Domain type
      * 
      */
     public Optional<ExternalDynamicListTypeDomainAuth> auth() {
@@ -75,7 +75,7 @@ public final class ExternalDynamicListTypeDomain {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return Exception list
+     * @return Domain Exception List for Custom Domain type
      * 
      */
     public List<String> exceptionLists() {
@@ -89,14 +89,14 @@ public final class ExternalDynamicListTypeDomain {
         return Optional.ofNullable(this.expandDomain);
     }
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom Domain type
      * 
      */
     public ExternalDynamicListTypeDomainRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return Url
+     * @return External URL for Custom Domain type
      * 
      */
     public String url() {

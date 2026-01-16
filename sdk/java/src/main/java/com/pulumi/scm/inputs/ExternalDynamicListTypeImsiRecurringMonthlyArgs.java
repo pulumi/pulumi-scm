@@ -16,14 +16,14 @@ public final class ExternalDynamicListTypeImsiRecurringMonthlyArgs extends com.p
     public static final ExternalDynamicListTypeImsiRecurringMonthlyArgs Empty = new ExternalDynamicListTypeImsiRecurringMonthlyArgs();
 
     /**
-     * Time specification hh (e.g. 20)
+     * Monthly Time specification hh (e.g. 20) for IMSI
      * 
      */
     @Import(name="at", required=true)
     private Output<String> at;
 
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Monthly Time specification hh (e.g. 20) for IMSI
      * 
      */
     public Output<String> at() {
@@ -31,14 +31,14 @@ public final class ExternalDynamicListTypeImsiRecurringMonthlyArgs extends com.p
     }
 
     /**
-     * Day of month
+     * Day of the month for monthly IMSI updates
      * 
      */
     @Import(name="dayOfMonth", required=true)
     private Output<Integer> dayOfMonth;
 
     /**
-     * @return Day of month
+     * @return Day of the month for monthly IMSI updates
      * 
      */
     public Output<Integer> dayOfMonth() {
@@ -71,7 +71,7 @@ public final class ExternalDynamicListTypeImsiRecurringMonthlyArgs extends com.p
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Monthly Time specification hh (e.g. 20) for IMSI
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class ExternalDynamicListTypeImsiRecurringMonthlyArgs extends com.p
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Monthly Time specification hh (e.g. 20) for IMSI
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class ExternalDynamicListTypeImsiRecurringMonthlyArgs extends com.p
         }
 
         /**
-         * @param dayOfMonth Day of month
+         * @param dayOfMonth Day of the month for monthly IMSI updates
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class ExternalDynamicListTypeImsiRecurringMonthlyArgs extends com.p
         }
 
         /**
-         * @param dayOfMonth Day of month
+         * @param dayOfMonth Day of the month for monthly IMSI updates
          * 
          * @return builder
          * 

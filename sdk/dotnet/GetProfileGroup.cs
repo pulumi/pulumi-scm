@@ -34,6 +34,20 @@ namespace Pulumi.Scm
     public sealed class GetProfileGroupArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// The UUID of the profile group
         /// </summary>
         [Input("id", required: true)]
@@ -45,6 +59,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetProfileGroupArgs()
         {
         }
@@ -53,6 +74,20 @@ namespace Pulumi.Scm
 
     public sealed class GetProfileGroupInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the profile group
         /// </summary>
@@ -64,6 +99,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetProfileGroupInvokeArgs()
         {
@@ -85,10 +127,21 @@ namespace Pulumi.Scm
         public readonly ImmutableArray<string> DataFilterings;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Dns security
+        /// </summary>
         public readonly ImmutableArray<string> DnsSecurities;
+        /// <summary>
+        /// File blocking
+        /// </summary>
         public readonly ImmutableArray<string> FileBlockings;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the profile group
@@ -98,12 +151,31 @@ namespace Pulumi.Scm
         /// The name of the profile group
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Saas security
+        /// </summary>
         public readonly ImmutableArray<string> SaasSecurities;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// Spyware
+        /// </summary>
         public readonly ImmutableArray<string> Spywares;
         public readonly string Tfid;
+        /// <summary>
+        /// Url filtering
+        /// </summary>
         public readonly ImmutableArray<string> UrlFilterings;
+        /// <summary>
+        /// Virus and wildfire analysis
+        /// </summary>
         public readonly ImmutableArray<string> VirusAndWildfireAnalyses;
+        /// <summary>
+        /// Vulnerability
+        /// </summary>
         public readonly ImmutableArray<string> Vulnerabilities;
 
         [OutputConstructor]

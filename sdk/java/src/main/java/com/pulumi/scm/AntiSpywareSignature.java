@@ -84,6 +84,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/antiSpywareSignature:AntiSpywareSignature")
 public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
@@ -145,6 +171,7 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -152,6 +179,7 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -173,7 +201,6 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -182,7 +209,6 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -222,18 +248,17 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="signature", refs={AntiSpywareSignatureSignature.class}, tree="[0]")
-    private Output<AntiSpywareSignatureSignature> signature;
+    private Output</* @Nullable */ AntiSpywareSignatureSignature> signature;
 
     /**
      * @return anti spyware signature
      * 
      */
-    public Output<AntiSpywareSignatureSignature> signature() {
-        return this.signature;
+    public Output<Optional<AntiSpywareSignatureSignature>> signature() {
+        return Codegen.optional(this.signature);
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -242,7 +267,6 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

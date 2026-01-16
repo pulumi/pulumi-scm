@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Dynamic
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic`, `Fixed`, and `None`.
         /// </summary>
         [Input("dynamic")]
         public Input<Inputs.ScepProfileScepChallengeDynamicGetArgs>? Dynamic { get; set; }
 
         /// <summary>
         /// Challenge to use for SCEP server on mobile clients
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic`, `Fixed`, and `None`.
         /// </summary>
         [Input("fixed")]
@@ -28,7 +28,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// No OTP
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic`, `Fixed`, and `None`.
         /// </summary>
         [Input("none")]

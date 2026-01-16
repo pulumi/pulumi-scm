@@ -15,17 +15,16 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Broadcast
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Broadcast`, `P2mp`, and `P2p`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcastResult Broadcast;
         /// <summary>
         /// P2mp
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Broadcast`, `P2mp`, and `P2p`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpResult P2mp;
         /// <summary>
         /// P2p
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Broadcast`, `P2mp`, and `P2p`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2pResult P2p;

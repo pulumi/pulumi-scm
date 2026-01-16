@@ -125,6 +125,7 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -132,6 +133,7 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -140,7 +142,6 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -149,7 +150,6 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -294,7 +294,6 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -303,7 +302,6 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -542,6 +540,7 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -553,6 +552,7 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -563,7 +563,6 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -576,7 +575,6 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -797,7 +795,6 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -810,7 +807,6 @@ public final class UrlAccessProfileArgs extends com.pulumi.resources.ResourceArg
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

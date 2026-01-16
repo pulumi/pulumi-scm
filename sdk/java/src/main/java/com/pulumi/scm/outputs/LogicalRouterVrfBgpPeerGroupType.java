@@ -16,26 +16,24 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfBgpPeerGroupType {
     /**
      * @return Ebgp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPeerGroupTypeEbgp ebgp;
     /**
      * @return Ebgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPeerGroupTypeEbgpConfed ebgpConfed;
     /**
      * @return Ibgp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPeerGroupTypeIbgp ibgp;
     /**
      * @return Ibgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -44,6 +42,7 @@ public final class LogicalRouterVrfBgpPeerGroupType {
     private LogicalRouterVrfBgpPeerGroupType() {}
     /**
      * @return Ebgp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     public Optional<LogicalRouterVrfBgpPeerGroupTypeEbgp> ebgp() {
@@ -51,7 +50,6 @@ public final class LogicalRouterVrfBgpPeerGroupType {
     }
     /**
      * @return Ebgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -60,7 +58,6 @@ public final class LogicalRouterVrfBgpPeerGroupType {
     }
     /**
      * @return Ibgp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -69,7 +66,6 @@ public final class LogicalRouterVrfBgpPeerGroupType {
     }
     /**
      * @return Ibgp confed
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */

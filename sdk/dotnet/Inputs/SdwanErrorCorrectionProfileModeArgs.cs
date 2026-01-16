@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Forward error correction
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `ForwardErrorCorrection` and `PacketDuplication`.
         /// </summary>
         [Input("forwardErrorCorrection")]
         public Input<Inputs.SdwanErrorCorrectionProfileModeForwardErrorCorrectionArgs>? ForwardErrorCorrection { get; set; }
 
         /// <summary>
         /// Packet duplication
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `ForwardErrorCorrection` and `PacketDuplication`.
         /// </summary>
         [Input("packetDuplication")]

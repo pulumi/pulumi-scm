@@ -25,8 +25,11 @@ import * as utilities from "./utilities";
 export function getAuthenticationProfile(args: GetAuthenticationProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationProfile:getAuthenticationProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -35,6 +38,16 @@ export function getAuthenticationProfile(args: GetAuthenticationProfileArgs, opt
  */
 export interface GetAuthenticationProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the authentication profile
      */
     id: string;
@@ -42,6 +55,11 @@ export interface GetAuthenticationProfileArgs {
      * The name of the authentication profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -54,24 +72,51 @@ export interface GetAuthenticationProfileResult {
     readonly allowLists: string[];
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the authentication profile
      */
     readonly id: string;
+    /**
+     * Lockout object of the authentication profile
+     */
     readonly lockout: outputs.GetAuthenticationProfileLockout;
+    /**
+     * method object of authentication profile
+     */
     readonly method: outputs.GetAuthenticationProfileMethod;
+    /**
+     * Multi factor auth
+     */
     readonly multiFactorAuth: outputs.GetAuthenticationProfileMultiFactorAuth;
     /**
      * The name of the authentication profile
      */
     readonly name: string;
+    /**
+     * Single sign on
+     */
     readonly singleSignOn: outputs.GetAuthenticationProfileSingleSignOn;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * User domain
+     */
     readonly userDomain: string;
+    /**
+     * Username modifier
+     */
     readonly usernameModifier: string;
 }
 /**
@@ -93,8 +138,11 @@ export interface GetAuthenticationProfileResult {
 export function getAuthenticationProfileOutput(args: GetAuthenticationProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationProfile:getAuthenticationProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -103,6 +151,16 @@ export function getAuthenticationProfileOutput(args: GetAuthenticationProfileOut
  */
 export interface GetAuthenticationProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the authentication profile
      */
     id: pulumi.Input<string>;
@@ -110,4 +168,9 @@ export interface GetAuthenticationProfileOutputArgs {
      * The name of the authentication profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

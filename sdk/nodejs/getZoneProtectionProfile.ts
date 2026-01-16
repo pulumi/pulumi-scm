@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getZoneProtectionProfile(args: GetZoneProtectionProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetZoneProtectionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getZoneProtectionProfile:getZoneProtectionProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -21,8 +24,11 @@ export function getZoneProtectionProfile(args: GetZoneProtectionProfileArgs, opt
  * A collection of arguments for invoking getZoneProtectionProfile.
  */
 export interface GetZoneProtectionProfileArgs {
+    device?: string;
+    folder?: string;
     id: string;
     name?: string;
+    snippet?: string;
 }
 
 /**
@@ -75,8 +81,11 @@ export interface GetZoneProtectionProfileResult {
 export function getZoneProtectionProfileOutput(args: GetZoneProtectionProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetZoneProtectionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getZoneProtectionProfile:getZoneProtectionProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -84,6 +93,9 @@ export function getZoneProtectionProfileOutput(args: GetZoneProtectionProfileOut
  * A collection of arguments for invoking getZoneProtectionProfile.
  */
 export interface GetZoneProtectionProfileOutputArgs {
+    device?: pulumi.Input<string>;
+    folder?: pulumi.Input<string>;
     id: pulumi.Input<string>;
     name?: pulumi.Input<string>;
+    snippet?: pulumi.Input<string>;
 }

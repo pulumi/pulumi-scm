@@ -16,33 +16,30 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfOspfv3AuthProfileAh {
     /**
      * @return Md5
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfv3AuthProfileAhMd5 md5;
     /**
      * @return Sha1
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha1 sha1;
     /**
      * @return Sha256
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha256 sha256;
     /**
      * @return Sha384
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha384 sha384;
     /**
      * @return Sha512
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
@@ -51,6 +48,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AuthProfileAh {
     private GetLogicalRouterListDataVrfOspfv3AuthProfileAh() {}
     /**
      * @return Md5
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public GetLogicalRouterListDataVrfOspfv3AuthProfileAhMd5 md5() {
@@ -58,7 +56,6 @@ public final class GetLogicalRouterListDataVrfOspfv3AuthProfileAh {
     }
     /**
      * @return Sha1
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
@@ -67,7 +64,6 @@ public final class GetLogicalRouterListDataVrfOspfv3AuthProfileAh {
     }
     /**
      * @return Sha256
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
@@ -76,7 +72,6 @@ public final class GetLogicalRouterListDataVrfOspfv3AuthProfileAh {
     }
     /**
      * @return Sha384
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
@@ -85,7 +80,6 @@ public final class GetLogicalRouterListDataVrfOspfv3AuthProfileAh {
     }
     /**
      * @return Sha512
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */

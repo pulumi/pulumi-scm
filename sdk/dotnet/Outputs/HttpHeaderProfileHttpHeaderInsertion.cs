@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// A list of HTTP header insertion definitions (*This should be an object rather than an array*)
+        /// A list of HTTP header insertion definitions
         /// </summary>
         public readonly ImmutableArray<Outputs.HttpHeaderProfileHttpHeaderInsertionType> Types;
 

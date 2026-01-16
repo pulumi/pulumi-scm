@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Ipv4
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ipv4` and `Ipv6`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfBgpAggregateRouteTypeIpv4? Ipv4;
         /// <summary>
         /// Ipv6
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ipv4` and `Ipv6`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfBgpAggregateRouteTypeIpv6? Ipv6;

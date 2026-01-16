@@ -18,6 +18,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool DisableSnat;
         /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
         /// The UUID of the service connection group
         /// </summary>
         public readonly string Id;
@@ -39,6 +43,8 @@ namespace Pulumi.Scm.Outputs
         private GetServiceConnectionGroupListDataResult(
             bool disableSnat,
 
+            string folder,
+
             string id,
 
             string name,
@@ -50,6 +56,7 @@ namespace Pulumi.Scm.Outputs
             string tfid)
         {
             DisableSnat = disableSnat;
+            Folder = folder;
             Id = id;
             Name = name;
             PbfOnly = pbfOnly;

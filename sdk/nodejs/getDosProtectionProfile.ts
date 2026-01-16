@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getDosProtectionProfile(args: GetDosProtectionProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetDosProtectionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDosProtectionProfile:getDosProtectionProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getDosProtectionProfile(args: GetDosProtectionProfileArgs, opts?
  */
 export interface GetDosProtectionProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the DNS security profile
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetDosProtectionProfileArgs {
      * Profile name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -41,9 +59,17 @@ export interface GetDosProtectionProfileResult {
     readonly description: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Flood
+     */
     readonly flood: outputs.GetDosProtectionProfileFlood;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the DNS security profile
@@ -53,9 +79,19 @@ export interface GetDosProtectionProfileResult {
      * Profile name
      */
     readonly name: string;
+    /**
+     * Resource
+     */
     readonly resource: outputs.GetDosProtectionProfileResource;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * Type
+     */
     readonly type: string;
 }
 /**
@@ -64,8 +100,11 @@ export interface GetDosProtectionProfileResult {
 export function getDosProtectionProfileOutput(args: GetDosProtectionProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDosProtectionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDosProtectionProfile:getDosProtectionProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -74,6 +113,16 @@ export function getDosProtectionProfileOutput(args: GetDosProtectionProfileOutpu
  */
 export interface GetDosProtectionProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the DNS security profile
      */
     id: pulumi.Input<string>;
@@ -81,4 +130,9 @@ export interface GetDosProtectionProfileOutputArgs {
      * Profile name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

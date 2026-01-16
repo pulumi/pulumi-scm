@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class SdwanSaasQualityProfileMonitorModeStaticIp {
     /**
      * @return Fqdn
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     private @Nullable SdwanSaasQualityProfileMonitorModeStaticIpFqdn fqdn;
     /**
      * @return List of IP addresses
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
@@ -29,6 +29,7 @@ public final class SdwanSaasQualityProfileMonitorModeStaticIp {
     private SdwanSaasQualityProfileMonitorModeStaticIp() {}
     /**
      * @return Fqdn
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public Optional<SdwanSaasQualityProfileMonitorModeStaticIpFqdn> fqdn() {
@@ -36,7 +37,6 @@ public final class SdwanSaasQualityProfileMonitorModeStaticIp {
     }
     /**
      * @return List of IP addresses
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */

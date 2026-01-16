@@ -38,14 +38,13 @@ class SamlServerProfileArgs:
         :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
         :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
         :param pulumi.Input[_builtins.bool] want_auth_requests_signed: Sign SAML message to the identity provider?
@@ -124,6 +123,7 @@ class SamlServerProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -136,7 +136,6 @@ class SamlServerProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -186,7 +185,6 @@ class SamlServerProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -240,15 +238,14 @@ class _SamlServerProfileState:
         Input properties used for looking up and filtering SamlServerProfile resources.
         :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
         :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
@@ -299,6 +296,7 @@ class _SamlServerProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -323,7 +321,6 @@ class _SamlServerProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -373,7 +370,6 @@ class _SamlServerProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -462,19 +458,44 @@ class SamlServerProfile(pulumi.CustomResource):
         """
         SamlServerProfile resource
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
         :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
@@ -489,6 +510,32 @@ class SamlServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         SamlServerProfile resource
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example ::device:id
+        ```
 
         :param str resource_name: The name of the resource.
         :param SamlServerProfileArgs args: The arguments to use to populate this resource's properties.
@@ -579,15 +626,14 @@ class SamlServerProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
         :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
@@ -626,6 +672,7 @@ class SamlServerProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -642,7 +689,6 @@ class SamlServerProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -676,7 +722,6 @@ class SamlServerProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

@@ -42,6 +42,32 @@ import * as utilities from "./utilities";
  *     ],
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/applicationGroup:ApplicationGroup example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/applicationGroup:ApplicationGroup example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/applicationGroup:ApplicationGroup example ::device:id
+ * ```
  */
 export class ApplicationGroup extends pulumi.CustomResource {
     /**
@@ -73,11 +99,11 @@ export class ApplicationGroup extends pulumi.CustomResource {
 
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -91,7 +117,6 @@ export class ApplicationGroup extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -139,11 +164,11 @@ export class ApplicationGroup extends pulumi.CustomResource {
 export interface ApplicationGroupState {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -157,7 +182,6 @@ export interface ApplicationGroupState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -170,11 +194,11 @@ export interface ApplicationGroupState {
 export interface ApplicationGroupArgs {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -188,7 +212,6 @@ export interface ApplicationGroupArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

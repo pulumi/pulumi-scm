@@ -15,26 +15,24 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTable {
     /**
      * @return Both
+     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     private GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableBoth both;
     /**
      * @return Multicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     private GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableMulticast multicast;
     /**
      * @return No install
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     private GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableNoInstall noInstall;
     /**
      * @return Unicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -43,6 +41,7 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTabl
     private GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTable() {}
     /**
      * @return Both
+     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     public GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableBoth both() {
@@ -50,7 +49,6 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTabl
     }
     /**
      * @return Multicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -59,7 +57,6 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTabl
     }
     /**
      * @return No install
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -68,7 +65,6 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTabl
     }
     /**
      * @return Unicast
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */

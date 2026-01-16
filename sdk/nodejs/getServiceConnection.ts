@@ -29,6 +29,7 @@ import * as utilities from "./utilities";
 export function getServiceConnection(args: GetServiceConnectionArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceConnectionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getServiceConnection:getServiceConnection", {
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -38,6 +39,10 @@ export function getServiceConnection(args: GetServiceConnectionArgs, opts?: pulu
  * A collection of arguments for invoking getServiceConnection.
  */
 export interface GetServiceConnectionArgs {
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: string;
     /**
      * The UUID of the service connection
      */
@@ -64,6 +69,10 @@ export interface GetServiceConnectionResult {
      * Map of sensitive values returned from the API.
      */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
     /**
      * The UUID of the service connection
      */
@@ -137,6 +146,7 @@ export interface GetServiceConnectionResult {
 export function getServiceConnectionOutput(args: GetServiceConnectionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceConnectionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getServiceConnection:getServiceConnection", {
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -146,6 +156,10 @@ export function getServiceConnectionOutput(args: GetServiceConnectionOutputArgs,
  * A collection of arguments for invoking getServiceConnection.
  */
 export interface GetServiceConnectionOutputArgs {
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: pulumi.Input<string>;
     /**
      * The UUID of the service connection
      */

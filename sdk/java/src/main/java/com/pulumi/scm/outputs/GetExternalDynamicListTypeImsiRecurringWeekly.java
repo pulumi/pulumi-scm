@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeImsiRecurringWeekly {
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Weekly Time specification hh (e.g. 20) for IMSI
      * 
      */
     private String at;
@@ -23,7 +23,7 @@ public final class GetExternalDynamicListTypeImsiRecurringWeekly {
 
     private GetExternalDynamicListTypeImsiRecurringWeekly() {}
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Weekly Time specification hh (e.g. 20) for IMSI
      * 
      */
     public String at() {

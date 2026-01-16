@@ -15,14 +15,14 @@ public final class ExternalDynamicListTypeDomainRecurringDailyArgs extends com.p
     public static final ExternalDynamicListTypeDomainRecurringDailyArgs Empty = new ExternalDynamicListTypeDomainRecurringDailyArgs();
 
     /**
-     * Time specification hh (e.g. 20)
+     * Daily Time specification hh (e.g. 20) for Domain
      * 
      */
     @Import(name="at", required=true)
     private Output<String> at;
 
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Daily Time specification hh (e.g. 20) for Domain
      * 
      */
     public Output<String> at() {
@@ -54,7 +54,7 @@ public final class ExternalDynamicListTypeDomainRecurringDailyArgs extends com.p
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Daily Time specification hh (e.g. 20) for Domain
          * 
          * @return builder
          * 
@@ -65,7 +65,7 @@ public final class ExternalDynamicListTypeDomainRecurringDailyArgs extends com.p
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Daily Time specification hh (e.g. 20) for Domain
          * 
          * @return builder
          * 

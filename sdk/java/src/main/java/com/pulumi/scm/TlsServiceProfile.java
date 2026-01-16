@@ -18,6 +18,103 @@ import javax.annotation.Nullable;
 /**
  * TlsServiceProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.TlsServiceProfile;
+ * import com.pulumi.scm.TlsServiceProfileArgs;
+ * import com.pulumi.scm.inputs.TlsServiceProfileProtocolSettingsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tlsServiceProf1Upper = new TlsServiceProfile("tlsServiceProf1Upper", TlsServiceProfileArgs.builder()
+ *             .folder("All")
+ *             .name("TLS_Service_Profile_1")
+ *             .certificate("Authentication Cookie CA")
+ *             .protocolSettings(TlsServiceProfileProtocolSettingsArgs.builder()
+ *                 .keyxchgAlgoRsa(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var tlsServiceProf2Upper = new TlsServiceProfile("tlsServiceProf2Upper", TlsServiceProfileArgs.builder()
+ *             .folder("All")
+ *             .name("TLS_Service_Profile_2")
+ *             .certificate("Forward-Trust-CA")
+ *             .protocolSettings(TlsServiceProfileProtocolSettingsArgs.builder()
+ *                 .minVersion("tls1-0")
+ *                 .maxVersion("tls1-1")
+ *                 .encAlgoAes128Cbc(true)
+ *                 .encAlgoAes256Cbc(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var tlsServiceProf3Upper = new TlsServiceProfile("tlsServiceProf3Upper", TlsServiceProfileArgs.builder()
+ *             .folder("All")
+ *             .name("TLS_Service_Profile_3")
+ *             .certificate("Root CA")
+ *             .protocolSettings(TlsServiceProfileProtocolSettingsArgs.builder()
+ *                 .minVersion("tls1-1")
+ *                 .maxVersion("tls1-3")
+ *                 .keyxchgAlgoRsa(true)
+ *                 .keyxchgAlgoDhe(true)
+ *                 .keyxchgAlgoEcdhe(true)
+ *                 .encAlgoAes128Cbc(true)
+ *                 .encAlgoAes128Gcm(true)
+ *                 .encAlgoAes256Cbc(true)
+ *                 .encAlgoAes256Gcm(true)
+ *                 .authAlgoSha1(true)
+ *                 .authAlgoSha256(true)
+ *                 .authAlgoSha384(true)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/tlsServiceProfile:TlsServiceProfile")
 public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
@@ -37,6 +134,7 @@ public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -44,6 +142,7 @@ public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -51,7 +150,6 @@ public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -60,7 +158,6 @@ public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -97,7 +194,6 @@ public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -106,7 +202,6 @@ public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

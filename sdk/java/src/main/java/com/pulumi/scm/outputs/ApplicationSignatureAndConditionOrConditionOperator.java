@@ -16,26 +16,24 @@ import javax.annotation.Nullable;
 public final class ApplicationSignatureAndConditionOrConditionOperator {
     /**
      * @return Equal to
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorEqualTo equalTo;
     /**
      * @return Greater than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorGreaterThan greaterThan;
     /**
      * @return Less than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorLessThan lessThan;
     /**
      * @return Pattern match
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -44,6 +42,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperator {
     private ApplicationSignatureAndConditionOrConditionOperator() {}
     /**
      * @return Equal to
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorEqualTo> equalTo() {
@@ -51,7 +50,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperator {
     }
     /**
      * @return Greater than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -60,7 +58,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperator {
     }
     /**
      * @return Less than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -69,7 +66,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperator {
     }
     /**
      * @return Pattern match
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */

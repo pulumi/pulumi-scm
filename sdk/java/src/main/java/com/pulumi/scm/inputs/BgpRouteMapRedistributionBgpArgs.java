@@ -18,6 +18,7 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
 
     /**
      * Ospf
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
     @Import(name="ospf")
@@ -25,6 +26,7 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
 
     /**
      * @return Ospf
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionBgpOspfArgs>> ospf() {
@@ -33,7 +35,6 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
 
     /**
      * BGP Root RIB
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
@@ -42,7 +43,6 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
 
     /**
      * @return BGP Root RIB
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
@@ -77,6 +77,7 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
 
         /**
          * @param ospf Ospf
+         * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
          * 
          * @return builder
          * 
@@ -88,6 +89,7 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
 
         /**
          * @param ospf Ospf
+         * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
          * 
          * @return builder
          * 
@@ -98,7 +100,6 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
 
         /**
          * @param rib BGP Root RIB
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
          * 
          * @return builder
@@ -111,7 +112,6 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
 
         /**
          * @param rib BGP Root RIB
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
          * 
          * @return builder

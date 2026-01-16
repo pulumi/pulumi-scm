@@ -12,6 +12,7 @@ import * as utilities from "./utilities";
 export function getTrafficSteeringRule(args: GetTrafficSteeringRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetTrafficSteeringRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", {
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -21,6 +22,10 @@ export function getTrafficSteeringRule(args: GetTrafficSteeringRuleArgs, opts?: 
  * A collection of arguments for invoking getTrafficSteeringRule.
  */
 export interface GetTrafficSteeringRuleArgs {
+    /**
+     * The folder containing the traffic steering rule
+     */
+    folder?: string;
     /**
      * The UUID of the traffic steering rule
      */
@@ -79,6 +84,7 @@ export interface GetTrafficSteeringRuleResult {
 export function getTrafficSteeringRuleOutput(args: GetTrafficSteeringRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTrafficSteeringRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", {
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -88,6 +94,10 @@ export function getTrafficSteeringRuleOutput(args: GetTrafficSteeringRuleOutputA
  * A collection of arguments for invoking getTrafficSteeringRule.
  */
 export interface GetTrafficSteeringRuleOutputArgs {
+    /**
+     * The folder containing the traffic steering rule
+     */
+    folder?: pulumi.Input<string>;
     /**
      * The UUID of the traffic steering rule
      */

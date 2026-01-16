@@ -11,6 +11,231 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// HttpHeaderProfile resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmHttpHeaderProfile1 = new Scm.HttpHeaderProfile("scm_http_header_profile_1", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "base_http_header_profile_1",
+    ///     });
+    /// 
+    ///     var scmHttpHeaderProfile2 = new Scm.HttpHeaderProfile("scm_http_header_profile_2", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "simple_http_header_profile_2",
+    ///         HttpHeaderInsertions = new[]
+    ///         {
+    ///             new Scm.Inputs.HttpHeaderProfileHttpHeaderInsertionArgs
+    ///             {
+    ///                 Name = "header_one",
+    ///                 Type = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "name", "Google Apps Access Control" },
+    ///                         { "domains", new[]
+    ///                         {
+    ///                             "*.google.com",
+    ///                         } },
+    ///                         { "headers", new[]
+    ///                         {
+    ///                             
+    ///                             {
+    ///                                 { "name", "X-GooGAppls-Allowed-Domains" },
+    ///                                 { "header", "X-GooGAppls-Allowed-Domains" },
+    ///                                 { "value", "user-allowed" },
+    ///                             },
+    ///                         } },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmHttpHeaderProfile3 = new Scm.HttpHeaderProfile("scm_http_header_profile_3", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "complete_http_header_profile_3",
+    ///         HttpHeaderInsertions = new[]
+    ///         {
+    ///             new Scm.Inputs.HttpHeaderProfileHttpHeaderInsertionArgs
+    ///             {
+    ///                 Name = "header_insertion_one",
+    ///                 Type = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "name", "Dropbox Network Control" },
+    ///                         { "domains", new[]
+    ///                         {
+    ///                             "*.db.tt",
+    ///                             "*.dropbox.com",
+    ///                             "dropboxformum.com",
+    ///                         } },
+    ///                         { "headers", new[]
+    ///                         {
+    ///                             
+    ///                             {
+    ///                                 { "name", "X-Dropbox-allowed-Team-Ids" },
+    ///                                 { "header", "X-Dropbox-allowed-Team-Ids" },
+    ///                                 { "value", "dropbox-users" },
+    ///                             },
+    ///                             
+    ///                             {
+    ///                                 { "name", "custom_header" },
+    ///                                 { "header", "custom_header" },
+    ///                                 { "value", "10-header" },
+    ///                             },
+    ///                         } },
+    ///                     },
+    ///                 },
+    ///             },
+    ///             new Scm.Inputs.HttpHeaderProfileHttpHeaderInsertionArgs
+    ///             {
+    ///                 Name = "header_insertion_two",
+    ///                 Type = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "name", "Microsoft Office365 Tenant Restrictions" },
+    ///                         { "domains", new[]
+    ///                         {
+    ///                             "login.mircosoft.com",
+    ///                             "login.mircosoftonline.com",
+    ///                             "login.windows.net",
+    ///                         } },
+    ///                         { "headers", new[]
+    ///                         {
+    ///                             
+    ///                             {
+    ///                                 { "name", "Restrict-Access-Context" },
+    ///                                 { "header", "Restrict-Access-Context" },
+    ///                                 { "value", "denied-context" },
+    ///                             },
+    ///                             
+    ///                             {
+    ///                                 { "name", "Restrict-Access-To-Tenants" },
+    ///                                 { "header", "Restrict-Access-To-Tenants" },
+    ///                                 { "value", "denied-tenants" },
+    ///                             },
+    ///                         } },
+    ///                     },
+    ///                 },
+    ///             },
+    ///             new Scm.Inputs.HttpHeaderProfileHttpHeaderInsertionArgs
+    ///             {
+    ///                 Name = "header_insertion_three",
+    ///                 Type = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "name", "Dynamic Fields" },
+    ///                         { "domains", new[]
+    ///                         {
+    ///                             "custom_domain",
+    ///                         } },
+    ///                         { "headers", new[]
+    ///                         {
+    ///                             
+    ///                             {
+    ///                                 { "name", "Authorization" },
+    ///                                 { "header", "Authorization" },
+    ///                                 { "value", "auth" },
+    ///                             },
+    ///                         } },
+    ///                     },
+    ///                 },
+    ///             },
+    ///             new Scm.Inputs.HttpHeaderProfileHttpHeaderInsertionArgs
+    ///             {
+    ///                 Name = "header_insertion_four",
+    ///                 Type = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "name", "Youtube Safe Search" },
+    ///                         { "domains", new[]
+    ///                         {
+    ///                             "m.youtube.com",
+    ///                             "www.youtube.com",
+    ///                         } },
+    ///                         { "headers", new[]
+    ///                         {
+    ///                             
+    ///                             {
+    ///                                 { "name", "Youtube-Restrict" },
+    ///                                 { "header", "Youtube-Restrict" },
+    ///                                 { "value", "denied-youtube" },
+    ///                             },
+    ///                         } },
+    ///                     },
+    ///                 },
+    ///             },
+    ///             new Scm.Inputs.HttpHeaderProfileHttpHeaderInsertionArgs
+    ///             {
+    ///                 Name = "header_insertion_five",
+    ///                 Type = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "name", "Custom" },
+    ///                         { "domains", new[]
+    ///                         {
+    ///                             "custom_1",
+    ///                             "custom_2",
+    ///                         } },
+    ///                         { "headers", new[]
+    ///                         {
+    ///                             
+    ///                             {
+    ///                                 { "name", "custom_header" },
+    ///                                 { "header", "custom_header" },
+    ///                                 { "value", "custom" },
+    ///                             },
+    ///                         } },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/httpHeaderProfile:HttpHeaderProfile")]
     public partial class HttpHeaderProfile : global::Pulumi.CustomResource
@@ -23,13 +248,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -49,7 +274,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -112,13 +336,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -144,7 +368,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -166,13 +389,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -198,7 +421,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

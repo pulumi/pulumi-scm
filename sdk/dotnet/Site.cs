@@ -166,6 +166,16 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/site:Site example :::id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/site:Site")]
     public partial class Site : global::Pulumi.CustomResource
@@ -193,6 +203,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Output("country")]
         public Output<string?> Country { get; private set; } = null!;
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Output("folder")]
+        public Output<string> Folder { get; private set; } = null!;
 
         /// <summary>
         /// The latitude coordinate for the site
@@ -412,6 +428,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("country")]
         public Input<string>? Country { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
 
         /// <summary>
         /// The latitude coordinate for the site

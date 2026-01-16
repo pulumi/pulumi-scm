@@ -19,6 +19,7 @@ public final class GetDosProtectionProfileListData {
     private String description;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -28,7 +29,8 @@ public final class GetDosProtectionProfileListData {
      */
     private GetDosProtectionProfileListDataFlood flood;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String folder;
@@ -48,7 +50,8 @@ public final class GetDosProtectionProfileListData {
      */
     private GetDosProtectionProfileListDataResource resource;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String snippet;
@@ -69,6 +72,7 @@ public final class GetDosProtectionProfileListData {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -82,7 +86,8 @@ public final class GetDosProtectionProfileListData {
         return this.flood;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String folder() {
@@ -110,7 +115,8 @@ public final class GetDosProtectionProfileListData {
         return this.resource;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String snippet() {

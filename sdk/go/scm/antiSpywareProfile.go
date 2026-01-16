@@ -97,9 +97,9 @@ type AntiSpywareProfile struct {
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Inline exception edl url
@@ -113,7 +113,6 @@ type AntiSpywareProfile struct {
 	// Rules
 	Rules AntiSpywareProfileRuleArrayOutput `pulumi:"rules"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -156,9 +155,9 @@ type antiSpywareProfileState struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Inline exception edl url
@@ -172,7 +171,6 @@ type antiSpywareProfileState struct {
 	// Rules
 	Rules []AntiSpywareProfileRule `pulumi:"rules"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -186,9 +184,9 @@ type AntiSpywareProfileState struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Inline exception edl url
@@ -202,7 +200,6 @@ type AntiSpywareProfileState struct {
 	// Rules
 	Rules AntiSpywareProfileRuleArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -220,9 +217,9 @@ type antiSpywareProfileArgs struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Inline exception edl url
@@ -236,7 +233,6 @@ type antiSpywareProfileArgs struct {
 	// Rules
 	Rules []AntiSpywareProfileRule `pulumi:"rules"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Threat exception
@@ -250,9 +246,9 @@ type AntiSpywareProfileArgs struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Inline exception edl url
@@ -266,7 +262,6 @@ type AntiSpywareProfileArgs struct {
 	// Rules
 	Rules AntiSpywareProfileRuleArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Threat exception
@@ -371,12 +366,12 @@ func (o AntiSpywareProfileOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AntiSpywareProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AntiSpywareProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -410,7 +405,6 @@ func (o AntiSpywareProfileOutput) Rules() AntiSpywareProfileRuleArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AntiSpywareProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

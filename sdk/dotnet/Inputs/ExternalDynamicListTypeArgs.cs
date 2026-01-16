@@ -13,54 +13,49 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Domain
+        /// Domain settings for Custom Domain type
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("domain")]
         public Input<Inputs.ExternalDynamicListTypeDomainArgs>? Domain { get; set; }
 
         /// <summary>
-        /// Imei
-        /// 
+        /// IMEI Configuration settings
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("imei")]
         public Input<Inputs.ExternalDynamicListTypeImeiArgs>? Imei { get; set; }
 
         /// <summary>
-        /// Imsi
-        /// 
+        /// IMSI Config for Custom IMSI type
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("imsi")]
         public Input<Inputs.ExternalDynamicListTypeImsiArgs>? Imsi { get; set; }
 
         /// <summary>
-        /// Ip
-        /// 
+        /// IP settings for Custom IP type
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("ip")]
         public Input<Inputs.ExternalDynamicListTypeIpArgs>? Ip { get; set; }
 
         /// <summary>
-        /// Predefined ip
-        /// 
+        /// Predefined IP settings for EDL type
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("predefinedIp")]
         public Input<Inputs.ExternalDynamicListTypePredefinedIpArgs>? PredefinedIp { get; set; }
 
         /// <summary>
-        /// Predefined url
-        /// 
+        /// Predefined URL settings for EDL type
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("predefinedUrl")]
         public Input<Inputs.ExternalDynamicListTypePredefinedUrlArgs>? PredefinedUrl { get; set; }
 
         /// <summary>
-        /// Url
-        /// 
+        /// URL settings for Custom URL type
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("url")]

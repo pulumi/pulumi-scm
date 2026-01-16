@@ -13,13 +13,39 @@ import (
 )
 
 // KerberosServerProfile resource
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/kerberosServerProfile:KerberosServerProfile example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/kerberosServerProfile:KerberosServerProfile example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/kerberosServerProfile:KerberosServerProfile example ::device:id
+// ```
 type KerberosServerProfile struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the Kerberos server profile
@@ -27,7 +53,6 @@ type KerberosServerProfile struct {
 	// The Kerberos server configuration
 	Servers KerberosServerProfileServerArrayOutput `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -67,9 +92,9 @@ func GetKerberosServerProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering KerberosServerProfile resources.
 type kerberosServerProfileState struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the Kerberos server profile
@@ -77,7 +102,6 @@ type kerberosServerProfileState struct {
 	// The Kerberos server configuration
 	Servers []KerberosServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -85,9 +109,9 @@ type kerberosServerProfileState struct {
 
 type KerberosServerProfileState struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the Kerberos server profile
@@ -95,7 +119,6 @@ type KerberosServerProfileState struct {
 	// The Kerberos server configuration
 	Servers KerberosServerProfileServerArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -107,9 +130,9 @@ func (KerberosServerProfileState) ElementType() reflect.Type {
 
 type kerberosServerProfileArgs struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the Kerberos server profile
@@ -117,7 +140,6 @@ type kerberosServerProfileArgs struct {
 	// The Kerberos server configuration
 	Servers []KerberosServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -125,9 +147,9 @@ type kerberosServerProfileArgs struct {
 // The set of arguments for constructing a KerberosServerProfile resource.
 type KerberosServerProfileArgs struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the Kerberos server profile
@@ -135,7 +157,6 @@ type KerberosServerProfileArgs struct {
 	// The Kerberos server configuration
 	Servers KerberosServerProfileServerArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -228,12 +249,12 @@ func (o KerberosServerProfileOutput) ToKerberosServerProfileOutputWithContext(ct
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o KerberosServerProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *KerberosServerProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o KerberosServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *KerberosServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -250,7 +271,6 @@ func (o KerberosServerProfileOutput) Servers() KerberosServerProfileServerArrayO
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o KerberosServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *KerberosServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

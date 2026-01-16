@@ -15,14 +15,14 @@ public final class ExternalDynamicListTypeIpRecurringDailyArgs extends com.pulum
     public static final ExternalDynamicListTypeIpRecurringDailyArgs Empty = new ExternalDynamicListTypeIpRecurringDailyArgs();
 
     /**
-     * Time specification hh (e.g. 20)
+     * Daily Time specification hh (e.g. 20) for IP
      * 
      */
     @Import(name="at", required=true)
     private Output<String> at;
 
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Daily Time specification hh (e.g. 20) for IP
      * 
      */
     public Output<String> at() {
@@ -54,7 +54,7 @@ public final class ExternalDynamicListTypeIpRecurringDailyArgs extends com.pulum
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Daily Time specification hh (e.g. 20) for IP
          * 
          * @return builder
          * 
@@ -65,7 +65,7 @@ public final class ExternalDynamicListTypeIpRecurringDailyArgs extends com.pulum
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Daily Time specification hh (e.g. 20) for IP
          * 
          * @return builder
          * 

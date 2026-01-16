@@ -252,7 +252,9 @@ class BgpRouting(pulumi.CustomResource):
                  withdraw_static_route: Optional[pulumi.Input[_builtins.bool]] = None,
                  __props__=None):
         """
-        BgpRouting resource
+        **Singleton Resource.** BgpRouting resource
+
+        This resource is a singleton, meaning only one instance can exist. If the resource typically exists (e.g. bgp_routing), you should import it before managing it.
 
         ## Example Usage
 
@@ -271,6 +273,24 @@ class BgpRouting(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] accept_route_over_sc: Accept route over s c
@@ -287,7 +307,9 @@ class BgpRouting(pulumi.CustomResource):
                  args: Optional[BgpRoutingArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        BgpRouting resource
+        **Singleton Resource.** BgpRouting resource
+
+        This resource is a singleton, meaning only one instance can exist. If the resource typically exists (e.g. bgp_routing), you should import it before managing it.
 
         ## Example Usage
 
@@ -304,6 +326,24 @@ class BgpRouting(pulumi.CustomResource):
             routing_preference={
                 "default": {},
             })
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
         ```
 
         :param str resource_name: The name of the resource.

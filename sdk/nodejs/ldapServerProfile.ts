@@ -8,6 +8,32 @@ import * as utilities from "./utilities";
 
 /**
  * LdapServerProfile resource
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example ::device:id
+ * ```
  */
 export class LdapServerProfile extends pulumi.CustomResource {
     /**
@@ -55,6 +81,7 @@ export class LdapServerProfile extends pulumi.CustomResource {
     declare public readonly bindTimelimit: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -63,7 +90,6 @@ export class LdapServerProfile extends pulumi.CustomResource {
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -85,7 +111,6 @@ export class LdapServerProfile extends pulumi.CustomResource {
     declare public readonly servers: pulumi.Output<outputs.LdapServerProfileServer[]>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -183,6 +208,7 @@ export interface LdapServerProfileState {
     bindTimelimit?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -191,7 +217,6 @@ export interface LdapServerProfileState {
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -213,7 +238,6 @@ export interface LdapServerProfileState {
     servers?: pulumi.Input<pulumi.Input<inputs.LdapServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -254,11 +278,11 @@ export interface LdapServerProfileArgs {
     bindTimelimit?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -280,7 +304,6 @@ export interface LdapServerProfileArgs {
     servers: pulumi.Input<pulumi.Input<inputs.LdapServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

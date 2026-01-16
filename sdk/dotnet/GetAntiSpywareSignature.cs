@@ -127,10 +127,31 @@ namespace Pulumi.Scm
     public sealed class GetAntiSpywareSignatureArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
 
         public GetAntiSpywareSignatureArgs()
         {
@@ -141,10 +162,31 @@ namespace Pulumi.Scm
     public sealed class GetAntiSpywareSignatureInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
+        /// <summary>
         /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetAntiSpywareSignatureInvokeArgs()
         {
@@ -174,21 +216,51 @@ namespace Pulumi.Scm
         public readonly Outputs.GetAntiSpywareSignatureDefaultActionResult DefaultAction;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Direction
+        /// </summary>
         public readonly string Direction;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Reference
+        /// </summary>
         public readonly ImmutableArray<string> References;
+        /// <summary>
+        /// Severity
+        /// </summary>
         public readonly string Severity;
+        /// <summary>
+        /// anti spyware signature
+        /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureSignatureResult Signature;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
+        /// <summary>
+        /// threat id range \n\n and \n\n
+        /// </summary>
         public readonly string ThreatId;
+        /// <summary>
+        /// Threatname
+        /// </summary>
         public readonly string Threatname;
+        /// <summary>
+        /// Vendor
+        /// </summary>
         public readonly ImmutableArray<string> Vendors;
 
         [OutputConstructor]

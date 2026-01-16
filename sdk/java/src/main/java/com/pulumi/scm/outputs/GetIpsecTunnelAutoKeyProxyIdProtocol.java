@@ -14,19 +14,18 @@ import java.util.Objects;
 public final class GetIpsecTunnelAutoKeyProxyIdProtocol {
     /**
      * @return IP protocol number
+     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     private Integer number;
     /**
-     * @return IPv4 type of proxyId protocol values for TCP protocol
-     * 
+     * @return IPv4 type of proxy*id protocol values for TCP protocol
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     private GetIpsecTunnelAutoKeyProxyIdProtocolTcp tcp;
     /**
-     * @return IPv6 type of proxyId protocol values for UDP protocol
-     * 
+     * @return IPv6 type of proxy*id protocol values for UDP protocol
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
@@ -35,14 +34,14 @@ public final class GetIpsecTunnelAutoKeyProxyIdProtocol {
     private GetIpsecTunnelAutoKeyProxyIdProtocol() {}
     /**
      * @return IP protocol number
+     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     public Integer number() {
         return this.number;
     }
     /**
-     * @return IPv4 type of proxyId protocol values for TCP protocol
-     * 
+     * @return IPv4 type of proxy*id protocol values for TCP protocol
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
@@ -50,8 +49,7 @@ public final class GetIpsecTunnelAutoKeyProxyIdProtocol {
         return this.tcp;
     }
     /**
-     * @return IPv6 type of proxyId protocol values for UDP protocol
-     * 
+     * @return IPv6 type of proxy*id protocol values for UDP protocol
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */

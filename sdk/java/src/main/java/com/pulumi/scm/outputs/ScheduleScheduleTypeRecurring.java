@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class ScheduleScheduleTypeRecurring {
     /**
      * @return Daily
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
     private @Nullable List<String> dailies;
     /**
      * @return Weekly
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
@@ -29,6 +29,7 @@ public final class ScheduleScheduleTypeRecurring {
     private ScheduleScheduleTypeRecurring() {}
     /**
      * @return Daily
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
     public List<String> dailies() {
@@ -36,7 +37,6 @@ public final class ScheduleScheduleTypeRecurring {
     }
     /**
      * @return Weekly
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */

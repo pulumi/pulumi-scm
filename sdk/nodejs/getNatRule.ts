@@ -30,8 +30,11 @@ import * as utilities from "./utilities";
 export function getNatRule(args: GetNatRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetNatRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getNatRule:getNatRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -40,6 +43,14 @@ export function getNatRule(args: GetNatRuleArgs, opts?: pulumi.InvokeOptions): P
  */
 export interface GetNatRuleArgs {
     /**
+     * The device in which the resource is defined
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -47,6 +58,10 @@ export interface GetNatRuleArgs {
      * NAT rule name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    snippet?: string;
 }
 
 /**
@@ -159,8 +174,11 @@ export interface GetNatRuleResult {
 export function getNatRuleOutput(args: GetNatRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetNatRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getNatRule:getNatRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -169,6 +187,14 @@ export function getNatRuleOutput(args: GetNatRuleOutputArgs, opts?: pulumi.Invok
  */
 export interface GetNatRuleOutputArgs {
     /**
+     * The device in which the resource is defined
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -176,4 +202,8 @@ export interface GetNatRuleOutputArgs {
      * NAT rule name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     */
+    snippet?: pulumi.Input<string>;
 }

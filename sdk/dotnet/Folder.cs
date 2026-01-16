@@ -102,6 +102,16 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/folder:Folder example :::id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/folder:Folder")]
     public partial class Folder : global::Pulumi.CustomResource

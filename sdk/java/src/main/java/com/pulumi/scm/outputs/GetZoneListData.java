@@ -16,6 +16,7 @@ import java.util.Objects;
 public final class GetZoneListData {
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -45,7 +46,8 @@ public final class GetZoneListData {
      */
     private Boolean enableUserIdentification;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return Folder
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String folder;
@@ -65,7 +67,8 @@ public final class GetZoneListData {
      */
     private GetZoneListDataNetwork network;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String snippet;
@@ -79,6 +82,7 @@ public final class GetZoneListData {
     private GetZoneListData() {}
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -120,7 +124,8 @@ public final class GetZoneListData {
         return this.enableUserIdentification;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return Folder
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String folder() {
@@ -148,7 +153,8 @@ public final class GetZoneListData {
         return this.network;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String snippet() {

@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM HTTP Header Profile objects.
+ * //
+ * // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+ * const allShared = scm.getHttpHeaderProfileList({
+ *     folder: "All",
+ * });
+ * export const scmHttpHeaderProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getHttpHeaderProfileList(args?: GetHttpHeaderProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetHttpHeaderProfileListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetHttpHeaderProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM HTTP Header Profile objects.
+ * //
+ * // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+ * const allShared = scm.getHttpHeaderProfileList({
+ *     folder: "All",
+ * });
+ * export const scmHttpHeaderProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getHttpHeaderProfileListOutput(args?: GetHttpHeaderProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHttpHeaderProfileListResult> {
     args = args || {};

@@ -63,10 +63,10 @@ class ApplicationArgs:
         :param pulumi.Input['ApplicationDefaultArgs'] default: Default
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
         :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
         :param pulumi.Input[_builtins.str] name: The name of the application
@@ -76,7 +76,6 @@ class ApplicationArgs:
         :param pulumi.Input[_builtins.bool] prone_to_misuse: Prone to misuse
         :param pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]] signatures: Signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] subcategory: Subcategory
         :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
@@ -252,6 +251,7 @@ class ApplicationArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -288,7 +288,6 @@ class ApplicationArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -386,7 +385,6 @@ class ApplicationArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -573,10 +571,10 @@ class _ApplicationState:
         :param pulumi.Input['ApplicationDefaultArgs'] default: Default
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
         :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
         :param pulumi.Input[_builtins.str] name: The name of the application
@@ -587,7 +585,6 @@ class _ApplicationState:
         :param pulumi.Input[_builtins.str] risk: Risk
         :param pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]] signatures: Signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] subcategory: Subcategory
         :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
@@ -755,6 +752,7 @@ class _ApplicationState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -791,7 +789,6 @@ class _ApplicationState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -901,7 +898,6 @@ class _ApplicationState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -1161,6 +1157,32 @@ class Application(pulumi.CustomResource):
             }])
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/application:Application example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/application:Application example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/application:Application example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] able_to_transfer_file: Able to transfer file
@@ -1171,10 +1193,10 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']] default: Default
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
         :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
         :param pulumi.Input[_builtins.str] name: The name of the application
@@ -1185,7 +1207,6 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] risk: Risk
         :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: Signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] subcategory: Subcategory
         :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
@@ -1274,6 +1295,32 @@ class Application(pulumi.CustomResource):
                     },
                 }],
             }])
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/application:Application example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/application:Application example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/application:Application example ::device:id
         ```
 
         :param str resource_name: The name of the resource.
@@ -1424,10 +1471,10 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']] default: Default
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
         :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
         :param pulumi.Input[_builtins.str] name: The name of the application
@@ -1438,7 +1485,6 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] risk: Risk
         :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: Signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] subcategory: Subcategory
         :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
@@ -1551,6 +1597,7 @@ class Application(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -1575,7 +1622,6 @@ class Application(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -1649,7 +1695,6 @@ class Application(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

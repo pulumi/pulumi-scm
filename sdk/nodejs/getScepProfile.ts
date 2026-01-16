@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getScepProfile(args: GetScepProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetScepProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getScepProfile:getScepProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getScepProfile(args: GetScepProfileArgs, opts?: pulumi.InvokeOpt
  */
 export interface GetScepProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the SCEP profile
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetScepProfileArgs {
      * The name of the SCEP profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -49,11 +67,25 @@ export interface GetScepProfileResult {
     readonly certificateAttributes: outputs.GetScepProfileCertificateAttributes;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Digest for CSR
+     */
     readonly digest: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * CA certificate fingerprint
+     */
     readonly fingerprint: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the SCEP profile
@@ -63,14 +95,39 @@ export interface GetScepProfileResult {
      * The name of the SCEP profile
      */
     readonly name: string;
+    /**
+     * SCEP server CA certificate
+     */
     readonly scepCaCert: string;
+    /**
+     * One Time Password challenge
+     */
     readonly scepChallenge: outputs.GetScepProfileScepChallenge;
+    /**
+     * SCEP client ceertificate
+     */
     readonly scepClientCert: string;
+    /**
+     * SCEP server URL
+     */
     readonly scepUrl: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * Subject
+     */
     readonly subject: string;
     readonly tfid: string;
+    /**
+     * Use as digital signature?
+     */
     readonly useAsDigitalSignature: boolean;
+    /**
+     * Use for key encipherment?
+     */
     readonly useForKeyEncipherment: boolean;
 }
 /**
@@ -79,8 +136,11 @@ export interface GetScepProfileResult {
 export function getScepProfileOutput(args: GetScepProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetScepProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getScepProfile:getScepProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -89,6 +149,16 @@ export function getScepProfileOutput(args: GetScepProfileOutputArgs, opts?: pulu
  */
 export interface GetScepProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the SCEP profile
      */
     id: pulumi.Input<string>;
@@ -96,4 +166,9 @@ export interface GetScepProfileOutputArgs {
      * The name of the SCEP profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class ExternalDynamicListTypeDomainRecurringMonthly {
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Monthly Time specification hh (e.g. 20) for domain
      * 
      */
     private String at;
     /**
-     * @return Day of month
+     * @return Day setting for monthly Domain updates
      * 
      */
     private Integer dayOfMonth;
 
     private ExternalDynamicListTypeDomainRecurringMonthly() {}
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Monthly Time specification hh (e.g. 20) for domain
      * 
      */
     public String at() {
         return this.at;
     }
     /**
-     * @return Day of month
+     * @return Day setting for monthly Domain updates
      * 
      */
     public Integer dayOfMonth() {

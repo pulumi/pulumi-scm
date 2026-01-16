@@ -127,6 +127,20 @@ namespace Pulumi.Scm
     public sealed class GetLayer2SubinterfaceArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
@@ -138,6 +152,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetLayer2SubinterfaceArgs()
         {
         }
@@ -146,6 +167,20 @@ namespace Pulumi.Scm
 
     public sealed class GetLayer2SubinterfaceInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// UUID of the resource
         /// </summary>
@@ -157,6 +192,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetLayer2SubinterfaceInvokeArgs()
         {
@@ -174,8 +216,13 @@ namespace Pulumi.Scm
         public readonly string Comment;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
@@ -185,9 +232,19 @@ namespace Pulumi.Scm
         /// L2 sub-interface name
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Parent interface
+        /// </summary>
         public readonly string ParentInterface;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
+        /// <summary>
+        /// VLAN tag
+        /// </summary>
         public readonly string VlanTag;
 
         [OutputConstructor]

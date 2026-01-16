@@ -11,6 +11,92 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// TlsServiceProfile resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var tlsServiceProf1Upper = new Scm.TlsServiceProfile("tls_service_prof_1_upper", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "TLS_Service_Profile_1",
+    ///         Certificate = "Authentication Cookie CA",
+    ///         ProtocolSettings = new Scm.Inputs.TlsServiceProfileProtocolSettingsArgs
+    ///         {
+    ///             KeyxchgAlgoRsa = true,
+    ///         },
+    ///     });
+    /// 
+    ///     var tlsServiceProf2Upper = new Scm.TlsServiceProfile("tls_service_prof_2_upper", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "TLS_Service_Profile_2",
+    ///         Certificate = "Forward-Trust-CA",
+    ///         ProtocolSettings = new Scm.Inputs.TlsServiceProfileProtocolSettingsArgs
+    ///         {
+    ///             MinVersion = "tls1-0",
+    ///             MaxVersion = "tls1-1",
+    ///             EncAlgoAes128Cbc = true,
+    ///             EncAlgoAes256Cbc = true,
+    ///         },
+    ///     });
+    /// 
+    ///     var tlsServiceProf3Upper = new Scm.TlsServiceProfile("tls_service_prof_3_upper", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "TLS_Service_Profile_3",
+    ///         Certificate = "Root CA",
+    ///         ProtocolSettings = new Scm.Inputs.TlsServiceProfileProtocolSettingsArgs
+    ///         {
+    ///             MinVersion = "tls1-1",
+    ///             MaxVersion = "tls1-3",
+    ///             KeyxchgAlgoRsa = true,
+    ///             KeyxchgAlgoDhe = true,
+    ///             KeyxchgAlgoEcdhe = true,
+    ///             EncAlgoAes128Cbc = true,
+    ///             EncAlgoAes128Gcm = true,
+    ///             EncAlgoAes256Cbc = true,
+    ///             EncAlgoAes256Gcm = true,
+    ///             AuthAlgoSha1 = true,
+    ///             AuthAlgoSha256 = true,
+    ///             AuthAlgoSha384 = true,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/tlsServiceProfile:TlsServiceProfile example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/tlsServiceProfile:TlsServiceProfile")]
     public partial class TlsServiceProfile : global::Pulumi.CustomResource
@@ -23,13 +109,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -49,7 +135,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -112,13 +197,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -138,7 +223,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -160,13 +244,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -186,7 +270,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

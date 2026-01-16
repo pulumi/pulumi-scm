@@ -32,22 +32,18 @@ class BgpRouteMapRedistributionArgs:
         """
         The set of arguments for constructing a BgpRouteMapRedistribution resource.
         :param pulumi.Input['BgpRouteMapRedistributionBgpArgs'] bgp: Bgp
+               > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs'] connected_static: Connected static
-               
                > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input[_builtins.str] description: BGP Route Map Redistributions Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: BGP Route Map Redistributions Name
         :param pulumi.Input['BgpRouteMapRedistributionOspfArgs'] ospf: Ospf
-               
                > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if bgp is not None:
@@ -72,6 +68,7 @@ class BgpRouteMapRedistributionArgs:
     def bgp(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpArgs']]:
         """
         Bgp
+        > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         """
         return pulumi.get(self, "bgp")
 
@@ -84,7 +81,6 @@ class BgpRouteMapRedistributionArgs:
     def connected_static(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs']]:
         """
         Connected static
-
         > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         """
         return pulumi.get(self, "connected_static")
@@ -110,7 +106,6 @@ class BgpRouteMapRedistributionArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -124,7 +119,6 @@ class BgpRouteMapRedistributionArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -150,7 +144,6 @@ class BgpRouteMapRedistributionArgs:
     def ospf(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionOspfArgs']]:
         """
         Ospf
-
         > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         """
         return pulumi.get(self, "ospf")
@@ -164,7 +157,6 @@ class BgpRouteMapRedistributionArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -189,22 +181,18 @@ class _BgpRouteMapRedistributionState:
         """
         Input properties used for looking up and filtering BgpRouteMapRedistribution resources.
         :param pulumi.Input['BgpRouteMapRedistributionBgpArgs'] bgp: Bgp
+               > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs'] connected_static: Connected static
-               
                > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input[_builtins.str] description: BGP Route Map Redistributions Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: BGP Route Map Redistributions Name
         :param pulumi.Input['BgpRouteMapRedistributionOspfArgs'] ospf: Ospf
-               
                > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if bgp is not None:
@@ -231,6 +219,7 @@ class _BgpRouteMapRedistributionState:
     def bgp(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpArgs']]:
         """
         Bgp
+        > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         """
         return pulumi.get(self, "bgp")
 
@@ -243,7 +232,6 @@ class _BgpRouteMapRedistributionState:
     def connected_static(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs']]:
         """
         Connected static
-
         > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         """
         return pulumi.get(self, "connected_static")
@@ -269,7 +257,6 @@ class _BgpRouteMapRedistributionState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -283,7 +270,6 @@ class _BgpRouteMapRedistributionState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -309,7 +295,6 @@ class _BgpRouteMapRedistributionState:
     def ospf(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionOspfArgs']]:
         """
         Ospf
-
         > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         """
         return pulumi.get(self, "ospf")
@@ -323,7 +308,6 @@ class _BgpRouteMapRedistributionState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -360,25 +344,47 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
         """
         BgpRouteMapRedistribution resource
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['BgpRouteMapRedistributionBgpArgs', 'BgpRouteMapRedistributionBgpArgsDict']] bgp: Bgp
+               > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input[Union['BgpRouteMapRedistributionConnectedStaticArgs', 'BgpRouteMapRedistributionConnectedStaticArgsDict']] connected_static: Connected static
-               
                > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input[_builtins.str] description: BGP Route Map Redistributions Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: BGP Route Map Redistributions Name
         :param pulumi.Input[Union['BgpRouteMapRedistributionOspfArgs', 'BgpRouteMapRedistributionOspfArgsDict']] ospf: Ospf
-               
                > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
@@ -389,6 +395,32 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         BgpRouteMapRedistribution resource
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example ::device:id
+        ```
 
         :param str resource_name: The name of the resource.
         :param BgpRouteMapRedistributionArgs args: The arguments to use to populate this resource's properties.
@@ -458,22 +490,18 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['BgpRouteMapRedistributionBgpArgs', 'BgpRouteMapRedistributionBgpArgsDict']] bgp: Bgp
+               > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input[Union['BgpRouteMapRedistributionConnectedStaticArgs', 'BgpRouteMapRedistributionConnectedStaticArgsDict']] connected_static: Connected static
-               
                > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input[_builtins.str] description: BGP Route Map Redistributions Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: BGP Route Map Redistributions Name
         :param pulumi.Input[Union['BgpRouteMapRedistributionOspfArgs', 'BgpRouteMapRedistributionOspfArgsDict']] ospf: Ospf
-               
                > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -496,6 +524,7 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
     def bgp(self) -> pulumi.Output[Optional['outputs.BgpRouteMapRedistributionBgp']]:
         """
         Bgp
+        > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         """
         return pulumi.get(self, "bgp")
 
@@ -504,7 +533,6 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
     def connected_static(self) -> pulumi.Output[Optional['outputs.BgpRouteMapRedistributionConnectedStatic']]:
         """
         Connected static
-
         > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         """
         return pulumi.get(self, "connected_static")
@@ -522,7 +550,6 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -532,7 +559,6 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -550,7 +576,6 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
     def ospf(self) -> pulumi.Output[Optional['outputs.BgpRouteMapRedistributionOspf']]:
         """
         Ospf
-
         > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
         """
         return pulumi.get(self, "ospf")
@@ -560,7 +585,6 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

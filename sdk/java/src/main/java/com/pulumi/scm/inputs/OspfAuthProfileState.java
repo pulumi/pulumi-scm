@@ -20,6 +20,7 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -27,6 +28,7 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -50,7 +52,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -59,7 +60,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -69,7 +69,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
     /**
      * MD5s
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      * 
      */
@@ -78,7 +77,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
     /**
      * @return MD5s
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      * 
      */
@@ -103,7 +101,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
     /**
      * Password
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      * 
      */
@@ -112,7 +109,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
     /**
      * @return Password
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      * 
      */
@@ -122,7 +118,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -131,7 +126,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -179,6 +173,7 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -190,6 +185,7 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -221,7 +217,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -234,7 +229,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -246,7 +240,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param md5s MD5s
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
          * 
          * @return builder
@@ -259,7 +252,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param md5s MD5s
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
          * 
          * @return builder
@@ -271,7 +263,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param md5s MD5s
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
          * 
          * @return builder
@@ -304,7 +295,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param password Password
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
          * 
          * @return builder
@@ -317,7 +307,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param password Password
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
          * 
          * @return builder
@@ -329,7 +318,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -342,7 +330,6 @@ public final class OspfAuthProfileState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

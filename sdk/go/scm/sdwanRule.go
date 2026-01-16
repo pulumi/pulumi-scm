@@ -13,6 +13,32 @@ import (
 )
 
 // SdwanRule resource
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/sdwanRule:SdwanRule example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/sdwanRule:SdwanRule example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/sdwanRule:SdwanRule example ::device:id
+// ```
 type SdwanRule struct {
 	pulumi.CustomResourceState
 
@@ -25,13 +51,13 @@ type SdwanRule struct {
 	// List of destination addresses
 	Destinations pulumi.StringArrayOutput `pulumi:"destinations"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Disable rule?
 	Disabled pulumi.BoolOutput `pulumi:"disabled"`
 	// Error correction profile
 	ErrorCorrectionProfile pulumi.StringPtrOutput `pulumi:"errorCorrectionProfile"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// List of source zones
@@ -51,7 +77,6 @@ type SdwanRule struct {
 	// List of services
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// List of source users
@@ -134,13 +159,13 @@ type sdwanRuleState struct {
 	// List of destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Disable rule?
 	Disabled *bool `pulumi:"disabled"`
 	// Error correction profile
 	ErrorCorrectionProfile *string `pulumi:"errorCorrectionProfile"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// List of source zones
@@ -160,7 +185,6 @@ type sdwanRuleState struct {
 	// List of services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// List of source users
@@ -184,13 +208,13 @@ type SdwanRuleState struct {
 	// List of destination addresses
 	Destinations pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Disable rule?
 	Disabled pulumi.BoolPtrInput
 	// Error correction profile
 	ErrorCorrectionProfile pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// List of source zones
@@ -210,7 +234,6 @@ type SdwanRuleState struct {
 	// List of services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// List of source users
@@ -238,13 +261,13 @@ type sdwanRuleArgs struct {
 	// List of destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Disable rule?
 	Disabled *bool `pulumi:"disabled"`
 	// Error correction profile
 	ErrorCorrectionProfile *string `pulumi:"errorCorrectionProfile"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// List of source zones
@@ -264,7 +287,6 @@ type sdwanRuleArgs struct {
 	// List of services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// List of source users
@@ -288,13 +310,13 @@ type SdwanRuleArgs struct {
 	// List of destination addresses
 	Destinations pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Disable rule?
 	Disabled pulumi.BoolPtrInput
 	// Error correction profile
 	ErrorCorrectionProfile pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// List of source zones
@@ -314,7 +336,6 @@ type SdwanRuleArgs struct {
 	// List of services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// List of source users
@@ -435,6 +456,7 @@ func (o SdwanRuleOutput) Destinations() pulumi.StringArrayOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SdwanRuleOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SdwanRule) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -450,7 +472,6 @@ func (o SdwanRuleOutput) ErrorCorrectionProfile() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SdwanRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SdwanRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -497,7 +518,6 @@ func (o SdwanRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SdwanRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SdwanRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

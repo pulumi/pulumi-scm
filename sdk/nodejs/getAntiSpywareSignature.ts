@@ -32,7 +32,10 @@ import * as utilities from "./utilities";
 export function getAntiSpywareSignature(args: GetAntiSpywareSignatureArgs, opts?: pulumi.InvokeOptions): Promise<GetAntiSpywareSignatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -41,9 +44,24 @@ export function getAntiSpywareSignature(args: GetAntiSpywareSignatureArgs, opts?
  */
 export interface GetAntiSpywareSignatureArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -68,21 +86,51 @@ export interface GetAntiSpywareSignatureResult {
     readonly defaultAction: outputs.GetAntiSpywareSignatureDefaultAction;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Direction
+     */
     readonly direction: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Reference
+     */
     readonly references: string[];
+    /**
+     * Severity
+     */
     readonly severity: string;
+    /**
+     * anti spyware signature
+     */
     readonly signature: outputs.GetAntiSpywareSignatureSignature;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * threat id range \n\n and \n\n
+     */
     readonly threatId: string;
+    /**
+     * Threatname
+     */
     readonly threatname: string;
+    /**
+     * Vendor
+     */
     readonly vendors: string[];
 }
 /**
@@ -111,7 +159,10 @@ export interface GetAntiSpywareSignatureResult {
 export function getAntiSpywareSignatureOutput(args: GetAntiSpywareSignatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAntiSpywareSignatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -120,7 +171,22 @@ export function getAntiSpywareSignatureOutput(args: GetAntiSpywareSignatureOutpu
  */
 export interface GetAntiSpywareSignatureOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

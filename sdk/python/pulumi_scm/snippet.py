@@ -189,6 +189,16 @@ class Snippet(pulumi.CustomResource):
             description="Adding a Description from Terraform")
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/snippet:Snippet example :::id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the snippet
@@ -222,6 +232,16 @@ class Snippet(pulumi.CustomResource):
         scm_snippet3 = scm.Snippet("scm_snippet_3",
             name="scm_snippet_3",
             description="Adding a Description from Terraform")
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/snippet:Snippet example :::id
         ```
 
         :param str resource_name: The name of the resource.

@@ -45,11 +45,11 @@ class HipObjectArgs:
         :param pulumi.Input['HipObjectDataLossPreventionArgs'] data_loss_prevention: Data loss prevention
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['HipObjectDiskBackupArgs'] disk_backup: Disk backup
         :param pulumi.Input['HipObjectDiskEncryptionArgs'] disk_encryption: Disk encryption
         :param pulumi.Input['HipObjectFirewallArgs'] firewall: Firewall
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['HipObjectHostInfoArgs'] host_info: Host info
         :param pulumi.Input['HipObjectMobileDeviceArgs'] mobile_device: Mobile device
@@ -57,7 +57,6 @@ class HipObjectArgs:
         :param pulumi.Input['HipObjectNetworkInfoArgs'] network_info: Network info
         :param pulumi.Input['HipObjectPatchManagementArgs'] patch_management: Patch management
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if anti_malware is not None:
@@ -158,6 +157,7 @@ class HipObjectArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -206,7 +206,6 @@ class HipObjectArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -280,7 +279,6 @@ class HipObjectArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -318,11 +316,11 @@ class _HipObjectState:
         :param pulumi.Input['HipObjectDataLossPreventionArgs'] data_loss_prevention: Data loss prevention
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['HipObjectDiskBackupArgs'] disk_backup: Disk backup
         :param pulumi.Input['HipObjectDiskEncryptionArgs'] disk_encryption: Disk encryption
         :param pulumi.Input['HipObjectFirewallArgs'] firewall: Firewall
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['HipObjectHostInfoArgs'] host_info: Host info
         :param pulumi.Input['HipObjectMobileDeviceArgs'] mobile_device: Mobile device
@@ -330,7 +328,6 @@ class _HipObjectState:
         :param pulumi.Input['HipObjectNetworkInfoArgs'] network_info: Network info
         :param pulumi.Input['HipObjectPatchManagementArgs'] patch_management: Patch management
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if anti_malware is not None:
@@ -433,6 +430,7 @@ class _HipObjectState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -481,7 +479,6 @@ class _HipObjectState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -555,7 +552,6 @@ class _HipObjectState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -757,6 +753,32 @@ class HipObject(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']] anti_malware: Anti malware
@@ -765,11 +787,11 @@ class HipObject(pulumi.CustomResource):
         :param pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']] data_loss_prevention: Data loss prevention
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']] disk_backup: Disk backup
         :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']] disk_encryption: Disk encryption
         :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']] firewall: Firewall
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']] host_info: Host info
         :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']] mobile_device: Mobile device
@@ -777,7 +799,6 @@ class HipObject(pulumi.CustomResource):
         :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']] network_info: Network info
         :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']] patch_management: Patch management
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
@@ -946,6 +967,32 @@ class HipObject(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param HipObjectArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1043,11 +1090,11 @@ class HipObject(pulumi.CustomResource):
         :param pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']] data_loss_prevention: Data loss prevention
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']] disk_backup: Disk backup
         :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']] disk_encryption: Disk encryption
         :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']] firewall: Firewall
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']] host_info: Host info
         :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']] mobile_device: Mobile device
@@ -1055,7 +1102,6 @@ class HipObject(pulumi.CustomResource):
         :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']] network_info: Network info
         :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']] patch_management: Patch management
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -1083,7 +1129,7 @@ class HipObject(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="antiMalware")
-    def anti_malware(self) -> pulumi.Output['outputs.HipObjectAntiMalware']:
+    def anti_malware(self) -> pulumi.Output[Optional['outputs.HipObjectAntiMalware']]:
         """
         Anti malware
         """
@@ -1107,7 +1153,7 @@ class HipObject(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="dataLossPrevention")
-    def data_loss_prevention(self) -> pulumi.Output['outputs.HipObjectDataLossPrevention']:
+    def data_loss_prevention(self) -> pulumi.Output[Optional['outputs.HipObjectDataLossPrevention']]:
         """
         Data loss prevention
         """
@@ -1126,12 +1172,13 @@ class HipObject(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="diskBackup")
-    def disk_backup(self) -> pulumi.Output['outputs.HipObjectDiskBackup']:
+    def disk_backup(self) -> pulumi.Output[Optional['outputs.HipObjectDiskBackup']]:
         """
         Disk backup
         """
@@ -1139,7 +1186,7 @@ class HipObject(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="diskEncryption")
-    def disk_encryption(self) -> pulumi.Output['outputs.HipObjectDiskEncryption']:
+    def disk_encryption(self) -> pulumi.Output[Optional['outputs.HipObjectDiskEncryption']]:
         """
         Disk encryption
         """
@@ -1147,7 +1194,7 @@ class HipObject(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def firewall(self) -> pulumi.Output['outputs.HipObjectFirewall']:
+    def firewall(self) -> pulumi.Output[Optional['outputs.HipObjectFirewall']]:
         """
         Firewall
         """
@@ -1158,7 +1205,6 @@ class HipObject(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -1197,7 +1243,7 @@ class HipObject(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="patchManagement")
-    def patch_management(self) -> pulumi.Output['outputs.HipObjectPatchManagement']:
+    def patch_management(self) -> pulumi.Output[Optional['outputs.HipObjectPatchManagement']]:
         """
         Patch management
         """
@@ -1208,7 +1254,6 @@ class HipObject(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

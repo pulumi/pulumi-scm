@@ -18,11 +18,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? Description;
         /// <summary>
-        /// Exception list
+        /// IP Exception List for Predefined IP type
         /// </summary>
         public readonly ImmutableArray<string> ExceptionLists;
         /// <summary>
-        /// Url
+        /// URL source for Predefined IP type
         /// </summary>
         public readonly string Url;
 

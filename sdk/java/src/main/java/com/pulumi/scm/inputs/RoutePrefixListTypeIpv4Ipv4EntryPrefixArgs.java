@@ -18,6 +18,7 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs extends com.pulumi
 
     /**
      * Entry
+     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */
     @Import(name="entry")
@@ -25,6 +26,7 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs extends com.pulumi
 
     /**
      * @return Entry
+     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */
     public Optional<Output<RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs>> entry() {
@@ -33,7 +35,6 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs extends com.pulumi
 
     /**
      * Network
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */
@@ -42,7 +43,6 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs extends com.pulumi
 
     /**
      * @return Network
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */
@@ -77,6 +77,7 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs extends com.pulumi
 
         /**
          * @param entry Entry
+         * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
          * 
          * @return builder
          * 
@@ -88,6 +89,7 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs extends com.pulumi
 
         /**
          * @param entry Entry
+         * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
          * 
          * @return builder
          * 
@@ -98,7 +100,6 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs extends com.pulumi
 
         /**
          * @param network Network
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
          * 
          * @return builder
@@ -111,7 +112,6 @@ public final class RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs extends com.pulumi
 
         /**
          * @param network Network
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
          * 
          * @return builder

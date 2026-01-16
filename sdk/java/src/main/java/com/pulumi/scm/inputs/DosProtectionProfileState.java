@@ -34,6 +34,7 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -41,6 +42,7 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -64,7 +66,6 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -73,7 +74,6 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -113,7 +113,6 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -122,7 +121,6 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -207,6 +205,7 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -218,6 +217,7 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -249,7 +249,6 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -262,7 +261,6 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -316,7 +314,6 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -329,7 +326,6 @@ public final class DosProtectionProfileState extends com.pulumi.resources.Resour
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

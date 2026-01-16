@@ -31,13 +31,12 @@ class HttpHeaderProfileArgs:
         The set of arguments for constructing a HttpHeaderProfile resource.
         :param pulumi.Input[_builtins.str] description: The description of the HTTP header profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['HttpHeaderProfileHttpHeaderInsertionArgs']]] http_header_insertions: A list of HTTP header profile rules
         :param pulumi.Input[_builtins.str] name: The name of the HTTP header profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if description is not None:
@@ -70,6 +69,7 @@ class HttpHeaderProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -82,7 +82,6 @@ class HttpHeaderProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -120,7 +119,6 @@ class HttpHeaderProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -144,13 +142,12 @@ class _HttpHeaderProfileState:
         Input properties used for looking up and filtering HttpHeaderProfile resources.
         :param pulumi.Input[_builtins.str] description: The description of the HTTP header profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['HttpHeaderProfileHttpHeaderInsertionArgs']]] http_header_insertions: A list of HTTP header profile rules
         :param pulumi.Input[_builtins.str] name: The name of the HTTP header profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if description is not None:
@@ -185,6 +182,7 @@ class _HttpHeaderProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -197,7 +195,6 @@ class _HttpHeaderProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -235,7 +232,6 @@ class _HttpHeaderProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -270,17 +266,161 @@ class HttpHeaderProfile(pulumi.CustomResource):
         """
         HttpHeaderProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_http_header_profile1 = scm.HttpHeaderProfile("scm_http_header_profile_1",
+            folder="All",
+            name="base_http_header_profile_1")
+        scm_http_header_profile2 = scm.HttpHeaderProfile("scm_http_header_profile_2",
+            folder="All",
+            name="simple_http_header_profile_2",
+            http_header_insertions=[{
+                "name": "header_one",
+                "type": [{
+                    "name": "Google Apps Access Control",
+                    "domains": ["*.google.com"],
+                    "headers": [{
+                        "name": "X-GooGAppls-Allowed-Domains",
+                        "header": "X-GooGAppls-Allowed-Domains",
+                        "value": "user-allowed",
+                    }],
+                }],
+            }])
+        scm_http_header_profile3 = scm.HttpHeaderProfile("scm_http_header_profile_3",
+            folder="All",
+            name="complete_http_header_profile_3",
+            http_header_insertions=[
+                {
+                    "name": "header_insertion_one",
+                    "type": [{
+                        "name": "Dropbox Network Control",
+                        "domains": [
+                            "*.db.tt",
+                            "*.dropbox.com",
+                            "dropboxformum.com",
+                        ],
+                        "headers": [
+                            {
+                                "name": "X-Dropbox-allowed-Team-Ids",
+                                "header": "X-Dropbox-allowed-Team-Ids",
+                                "value": "dropbox-users",
+                            },
+                            {
+                                "name": "custom_header",
+                                "header": "custom_header",
+                                "value": "10-header",
+                            },
+                        ],
+                    }],
+                },
+                {
+                    "name": "header_insertion_two",
+                    "type": [{
+                        "name": "Microsoft Office365 Tenant Restrictions",
+                        "domains": [
+                            "login.mircosoft.com",
+                            "login.mircosoftonline.com",
+                            "login.windows.net",
+                        ],
+                        "headers": [
+                            {
+                                "name": "Restrict-Access-Context",
+                                "header": "Restrict-Access-Context",
+                                "value": "denied-context",
+                            },
+                            {
+                                "name": "Restrict-Access-To-Tenants",
+                                "header": "Restrict-Access-To-Tenants",
+                                "value": "denied-tenants",
+                            },
+                        ],
+                    }],
+                },
+                {
+                    "name": "header_insertion_three",
+                    "type": [{
+                        "name": "Dynamic Fields",
+                        "domains": ["custom_domain"],
+                        "headers": [{
+                            "name": "Authorization",
+                            "header": "Authorization",
+                            "value": "auth",
+                        }],
+                    }],
+                },
+                {
+                    "name": "header_insertion_four",
+                    "type": [{
+                        "name": "Youtube Safe Search",
+                        "domains": [
+                            "m.youtube.com",
+                            "www.youtube.com",
+                        ],
+                        "headers": [{
+                            "name": "Youtube-Restrict",
+                            "header": "Youtube-Restrict",
+                            "value": "denied-youtube",
+                        }],
+                    }],
+                },
+                {
+                    "name": "header_insertion_five",
+                    "type": [{
+                        "name": "Custom",
+                        "domains": [
+                            "custom_1",
+                            "custom_2",
+                        ],
+                        "headers": [{
+                            "name": "custom_header",
+                            "header": "custom_header",
+                            "value": "custom",
+                        }],
+                    }],
+                },
+            ])
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the HTTP header profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['HttpHeaderProfileHttpHeaderInsertionArgs', 'HttpHeaderProfileHttpHeaderInsertionArgsDict']]]] http_header_insertions: A list of HTTP header profile rules
         :param pulumi.Input[_builtins.str] name: The name of the HTTP header profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
@@ -291,6 +431,151 @@ class HttpHeaderProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         HttpHeaderProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_http_header_profile1 = scm.HttpHeaderProfile("scm_http_header_profile_1",
+            folder="All",
+            name="base_http_header_profile_1")
+        scm_http_header_profile2 = scm.HttpHeaderProfile("scm_http_header_profile_2",
+            folder="All",
+            name="simple_http_header_profile_2",
+            http_header_insertions=[{
+                "name": "header_one",
+                "type": [{
+                    "name": "Google Apps Access Control",
+                    "domains": ["*.google.com"],
+                    "headers": [{
+                        "name": "X-GooGAppls-Allowed-Domains",
+                        "header": "X-GooGAppls-Allowed-Domains",
+                        "value": "user-allowed",
+                    }],
+                }],
+            }])
+        scm_http_header_profile3 = scm.HttpHeaderProfile("scm_http_header_profile_3",
+            folder="All",
+            name="complete_http_header_profile_3",
+            http_header_insertions=[
+                {
+                    "name": "header_insertion_one",
+                    "type": [{
+                        "name": "Dropbox Network Control",
+                        "domains": [
+                            "*.db.tt",
+                            "*.dropbox.com",
+                            "dropboxformum.com",
+                        ],
+                        "headers": [
+                            {
+                                "name": "X-Dropbox-allowed-Team-Ids",
+                                "header": "X-Dropbox-allowed-Team-Ids",
+                                "value": "dropbox-users",
+                            },
+                            {
+                                "name": "custom_header",
+                                "header": "custom_header",
+                                "value": "10-header",
+                            },
+                        ],
+                    }],
+                },
+                {
+                    "name": "header_insertion_two",
+                    "type": [{
+                        "name": "Microsoft Office365 Tenant Restrictions",
+                        "domains": [
+                            "login.mircosoft.com",
+                            "login.mircosoftonline.com",
+                            "login.windows.net",
+                        ],
+                        "headers": [
+                            {
+                                "name": "Restrict-Access-Context",
+                                "header": "Restrict-Access-Context",
+                                "value": "denied-context",
+                            },
+                            {
+                                "name": "Restrict-Access-To-Tenants",
+                                "header": "Restrict-Access-To-Tenants",
+                                "value": "denied-tenants",
+                            },
+                        ],
+                    }],
+                },
+                {
+                    "name": "header_insertion_three",
+                    "type": [{
+                        "name": "Dynamic Fields",
+                        "domains": ["custom_domain"],
+                        "headers": [{
+                            "name": "Authorization",
+                            "header": "Authorization",
+                            "value": "auth",
+                        }],
+                    }],
+                },
+                {
+                    "name": "header_insertion_four",
+                    "type": [{
+                        "name": "Youtube Safe Search",
+                        "domains": [
+                            "m.youtube.com",
+                            "www.youtube.com",
+                        ],
+                        "headers": [{
+                            "name": "Youtube-Restrict",
+                            "header": "Youtube-Restrict",
+                            "value": "denied-youtube",
+                        }],
+                    }],
+                },
+                {
+                    "name": "header_insertion_five",
+                    "type": [{
+                        "name": "Custom",
+                        "domains": [
+                            "custom_1",
+                            "custom_2",
+                        ],
+                        "headers": [{
+                            "name": "custom_header",
+                            "header": "custom_header",
+                            "value": "custom",
+                        }],
+                    }],
+                },
+            ])
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/httpHeaderProfile:HttpHeaderProfile example ::device:id
+        ```
 
         :param str resource_name: The name of the resource.
         :param HttpHeaderProfileArgs args: The arguments to use to populate this resource's properties.
@@ -355,13 +640,12 @@ class HttpHeaderProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the HTTP header profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['HttpHeaderProfileHttpHeaderInsertionArgs', 'HttpHeaderProfileHttpHeaderInsertionArgsDict']]]] http_header_insertions: A list of HTTP header profile rules
         :param pulumi.Input[_builtins.str] name: The name of the HTTP header profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -390,6 +674,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -398,7 +683,6 @@ class HttpHeaderProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -424,7 +708,6 @@ class HttpHeaderProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

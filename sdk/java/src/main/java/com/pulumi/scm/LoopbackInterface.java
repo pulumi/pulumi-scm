@@ -74,6 +74,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/loopbackInterface:LoopbackInterface example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/loopbackInterface:LoopbackInterface example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/loopbackInterface:LoopbackInterface example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/loopbackInterface:LoopbackInterface")
 public class LoopbackInterface extends com.pulumi.resources.CustomResource {
@@ -107,6 +133,7 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -114,6 +141,7 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -121,7 +149,6 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -130,7 +157,6 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -170,14 +196,14 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="ipv6", refs={LoopbackInterfaceIpv6.class}, tree="[0]")
-    private Output<LoopbackInterfaceIpv6> ipv6;
+    private Output</* @Nullable */ LoopbackInterfaceIpv6> ipv6;
 
     /**
      * @return Loopback IPv6 Configuration
      * 
      */
-    public Output<LoopbackInterfaceIpv6> ipv6() {
-        return this.ipv6;
+    public Output<Optional<LoopbackInterfaceIpv6>> ipv6() {
+        return Codegen.optional(this.ipv6);
     }
     /**
      * MTU
@@ -209,7 +235,6 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -218,7 +243,6 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
