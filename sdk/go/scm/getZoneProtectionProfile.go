@@ -24,8 +24,11 @@ func LookupZoneProtectionProfile(ctx *pulumi.Context, args *LookupZoneProtection
 
 // A collection of arguments for invoking getZoneProtectionProfile.
 type LookupZoneProtectionProfileArgs struct {
-	Id   string  `pulumi:"id"`
-	Name *string `pulumi:"name"`
+	Device  *string `pulumi:"device"`
+	Folder  *string `pulumi:"folder"`
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getZoneProtectionProfile.
@@ -82,8 +85,11 @@ func LookupZoneProtectionProfileOutput(ctx *pulumi.Context, args LookupZoneProte
 
 // A collection of arguments for invoking getZoneProtectionProfile.
 type LookupZoneProtectionProfileOutputArgs struct {
-	Id   pulumi.StringInput    `pulumi:"id"`
-	Name pulumi.StringPtrInput `pulumi:"name"`
+	Device  pulumi.StringPtrInput `pulumi:"device"`
+	Folder  pulumi.StringPtrInput `pulumi:"folder"`
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupZoneProtectionProfileOutputArgs) ElementType() reflect.Type {

@@ -27,11 +27,6 @@ public final class GetTlsServiceProfileListDataProtocolSettings {
      */
     private Boolean authAlgoSha384;
     /**
-     * @return Allow 3DES algorithm?
-     * 
-     */
-    private Boolean encAlgo3des;
-    /**
      * @return Allow AES-128-CBC algorithm?
      * 
      */
@@ -51,11 +46,6 @@ public final class GetTlsServiceProfileListDataProtocolSettings {
      * 
      */
     private Boolean encAlgoAes256Gcm;
-    /**
-     * @return Allow RC4 algorithm?
-     * 
-     */
-    private Boolean encAlgoRc4;
     /**
      * @return Allow DHE algorithm?
      * 
@@ -105,13 +95,6 @@ public final class GetTlsServiceProfileListDataProtocolSettings {
         return this.authAlgoSha384;
     }
     /**
-     * @return Allow 3DES algorithm?
-     * 
-     */
-    public Boolean encAlgo3des() {
-        return this.encAlgo3des;
-    }
-    /**
      * @return Allow AES-128-CBC algorithm?
      * 
      */
@@ -138,13 +121,6 @@ public final class GetTlsServiceProfileListDataProtocolSettings {
      */
     public Boolean encAlgoAes256Gcm() {
         return this.encAlgoAes256Gcm;
-    }
-    /**
-     * @return Allow RC4 algorithm?
-     * 
-     */
-    public Boolean encAlgoRc4() {
-        return this.encAlgoRc4;
     }
     /**
      * @return Allow DHE algorithm?
@@ -194,12 +170,10 @@ public final class GetTlsServiceProfileListDataProtocolSettings {
         private Boolean authAlgoSha1;
         private Boolean authAlgoSha256;
         private Boolean authAlgoSha384;
-        private Boolean encAlgo3des;
         private Boolean encAlgoAes128Cbc;
         private Boolean encAlgoAes128Gcm;
         private Boolean encAlgoAes256Cbc;
         private Boolean encAlgoAes256Gcm;
-        private Boolean encAlgoRc4;
         private Boolean keyxchgAlgoDhe;
         private Boolean keyxchgAlgoEcdhe;
         private Boolean keyxchgAlgoRsa;
@@ -211,12 +185,10 @@ public final class GetTlsServiceProfileListDataProtocolSettings {
     	      this.authAlgoSha1 = defaults.authAlgoSha1;
     	      this.authAlgoSha256 = defaults.authAlgoSha256;
     	      this.authAlgoSha384 = defaults.authAlgoSha384;
-    	      this.encAlgo3des = defaults.encAlgo3des;
     	      this.encAlgoAes128Cbc = defaults.encAlgoAes128Cbc;
     	      this.encAlgoAes128Gcm = defaults.encAlgoAes128Gcm;
     	      this.encAlgoAes256Cbc = defaults.encAlgoAes256Cbc;
     	      this.encAlgoAes256Gcm = defaults.encAlgoAes256Gcm;
-    	      this.encAlgoRc4 = defaults.encAlgoRc4;
     	      this.keyxchgAlgoDhe = defaults.keyxchgAlgoDhe;
     	      this.keyxchgAlgoEcdhe = defaults.keyxchgAlgoEcdhe;
     	      this.keyxchgAlgoRsa = defaults.keyxchgAlgoRsa;
@@ -249,14 +221,6 @@ public final class GetTlsServiceProfileListDataProtocolSettings {
             return this;
         }
         @CustomType.Setter
-        public Builder encAlgo3des(Boolean encAlgo3des) {
-            if (encAlgo3des == null) {
-              throw new MissingRequiredPropertyException("GetTlsServiceProfileListDataProtocolSettings", "encAlgo3des");
-            }
-            this.encAlgo3des = encAlgo3des;
-            return this;
-        }
-        @CustomType.Setter
         public Builder encAlgoAes128Cbc(Boolean encAlgoAes128Cbc) {
             if (encAlgoAes128Cbc == null) {
               throw new MissingRequiredPropertyException("GetTlsServiceProfileListDataProtocolSettings", "encAlgoAes128Cbc");
@@ -286,14 +250,6 @@ public final class GetTlsServiceProfileListDataProtocolSettings {
               throw new MissingRequiredPropertyException("GetTlsServiceProfileListDataProtocolSettings", "encAlgoAes256Gcm");
             }
             this.encAlgoAes256Gcm = encAlgoAes256Gcm;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder encAlgoRc4(Boolean encAlgoRc4) {
-            if (encAlgoRc4 == null) {
-              throw new MissingRequiredPropertyException("GetTlsServiceProfileListDataProtocolSettings", "encAlgoRc4");
-            }
-            this.encAlgoRc4 = encAlgoRc4;
             return this;
         }
         @CustomType.Setter
@@ -341,12 +297,10 @@ public final class GetTlsServiceProfileListDataProtocolSettings {
             _resultValue.authAlgoSha1 = authAlgoSha1;
             _resultValue.authAlgoSha256 = authAlgoSha256;
             _resultValue.authAlgoSha384 = authAlgoSha384;
-            _resultValue.encAlgo3des = encAlgo3des;
             _resultValue.encAlgoAes128Cbc = encAlgoAes128Cbc;
             _resultValue.encAlgoAes128Gcm = encAlgoAes128Gcm;
             _resultValue.encAlgoAes256Cbc = encAlgoAes256Cbc;
             _resultValue.encAlgoAes256Gcm = encAlgoAes256Gcm;
-            _resultValue.encAlgoRc4 = encAlgoRc4;
             _resultValue.keyxchgAlgoDhe = keyxchgAlgoDhe;
             _resultValue.keyxchgAlgoEcdhe = keyxchgAlgoEcdhe;
             _resultValue.keyxchgAlgoRsa = keyxchgAlgoRsa;

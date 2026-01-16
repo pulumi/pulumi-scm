@@ -19,6 +19,7 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -26,6 +27,7 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -34,7 +36,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -43,7 +44,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -83,7 +83,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -92,7 +91,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -146,6 +144,7 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -157,6 +156,7 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -167,7 +167,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -180,7 +179,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -244,7 +242,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -257,7 +254,6 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

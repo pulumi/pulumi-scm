@@ -70,6 +70,11 @@ export type AuthenticationSequence = import("./authenticationSequence").Authenti
 export const AuthenticationSequence: typeof import("./authenticationSequence").AuthenticationSequence = null as any;
 utilities.lazyLoad(exports, ["AuthenticationSequence"], () => require("./authenticationSequence"));
 
+export { AuthenticationSettingArgs, AuthenticationSettingState } from "./authenticationSetting";
+export type AuthenticationSetting = import("./authenticationSetting").AuthenticationSetting;
+export const AuthenticationSetting: typeof import("./authenticationSetting").AuthenticationSetting = null as any;
+utilities.lazyLoad(exports, ["AuthenticationSetting"], () => require("./authenticationSetting"));
+
 export { AutoVpnClusterArgs, AutoVpnClusterState } from "./autoVpnCluster";
 export type AutoVpnCluster = import("./autoVpnCluster").AutoVpnCluster;
 export const AutoVpnCluster: typeof import("./autoVpnCluster").AutoVpnCluster = null as any;
@@ -79,6 +84,11 @@ export { AutoVpnSettingArgs, AutoVpnSettingState } from "./autoVpnSetting";
 export type AutoVpnSetting = import("./autoVpnSetting").AutoVpnSetting;
 export const AutoVpnSetting: typeof import("./autoVpnSetting").AutoVpnSetting = null as any;
 utilities.lazyLoad(exports, ["AutoVpnSetting"], () => require("./autoVpnSetting"));
+
+export { BandwidthAllocationArgs, BandwidthAllocationState } from "./bandwidthAllocation";
+export type BandwidthAllocation = import("./bandwidthAllocation").BandwidthAllocation;
+export const BandwidthAllocation: typeof import("./bandwidthAllocation").BandwidthAllocation = null as any;
+utilities.lazyLoad(exports, ["BandwidthAllocation"], () => require("./bandwidthAllocation"));
 
 export { BgpAddressFamilyProfileArgs, BgpAddressFamilyProfileState } from "./bgpAddressFamilyProfile";
 export type BgpAddressFamilyProfile = import("./bgpAddressFamilyProfile").BgpAddressFamilyProfile;
@@ -120,6 +130,11 @@ export type CertificateProfile = import("./certificateProfile").CertificateProfi
 export const CertificateProfile: typeof import("./certificateProfile").CertificateProfile = null as any;
 utilities.lazyLoad(exports, ["CertificateProfile"], () => require("./certificateProfile"));
 
+export { ContentIdSettingArgs, ContentIdSettingState } from "./contentIdSetting";
+export type ContentIdSetting = import("./contentIdSetting").ContentIdSetting;
+export const ContentIdSetting: typeof import("./contentIdSetting").ContentIdSetting = null as any;
+utilities.lazyLoad(exports, ["ContentIdSetting"], () => require("./contentIdSetting"));
+
 export { DecryptionExclusionArgs, DecryptionExclusionState } from "./decryptionExclusion";
 export type DecryptionExclusion = import("./decryptionExclusion").DecryptionExclusion;
 export const DecryptionExclusion: typeof import("./decryptionExclusion").DecryptionExclusion = null as any;
@@ -134,6 +149,11 @@ export { DecryptionRuleArgs, DecryptionRuleState } from "./decryptionRule";
 export type DecryptionRule = import("./decryptionRule").DecryptionRule;
 export const DecryptionRule: typeof import("./decryptionRule").DecryptionRule = null as any;
 utilities.lazyLoad(exports, ["DecryptionRule"], () => require("./decryptionRule"));
+
+export { DeviceRedistributionCollectorArgs, DeviceRedistributionCollectorState } from "./deviceRedistributionCollector";
+export type DeviceRedistributionCollector = import("./deviceRedistributionCollector").DeviceRedistributionCollector;
+export const DeviceRedistributionCollector: typeof import("./deviceRedistributionCollector").DeviceRedistributionCollector = null as any;
+utilities.lazyLoad(exports, ["DeviceRedistributionCollector"], () => require("./deviceRedistributionCollector"));
 
 export { DhcpInterfaceArgs, DhcpInterfaceState } from "./dhcpInterface";
 export type DhcpInterface = import("./dhcpInterface").DhcpInterface;
@@ -184,6 +204,11 @@ export { FolderArgs, FolderState } from "./folder";
 export type Folder = import("./folder").Folder;
 export const Folder: typeof import("./folder").Folder = null as any;
 utilities.lazyLoad(exports, ["Folder"], () => require("./folder"));
+
+export { GeneralSettingArgs, GeneralSettingState } from "./generalSetting";
+export type GeneralSetting = import("./generalSetting").GeneralSetting;
+export const GeneralSetting: typeof import("./generalSetting").GeneralSetting = null as any;
+utilities.lazyLoad(exports, ["GeneralSetting"], () => require("./generalSetting"));
 
 export { GetAddressArgs, GetAddressResult, GetAddressOutputArgs } from "./getAddress";
 export const getAddress: typeof import("./getAddress").getAddress = null as any;
@@ -305,6 +330,16 @@ export const getAuthenticationSequenceList: typeof import("./getAuthenticationSe
 export const getAuthenticationSequenceListOutput: typeof import("./getAuthenticationSequenceList").getAuthenticationSequenceListOutput = null as any;
 utilities.lazyLoad(exports, ["getAuthenticationSequenceList","getAuthenticationSequenceListOutput"], () => require("./getAuthenticationSequenceList"));
 
+export { GetAuthenticationSettingArgs, GetAuthenticationSettingResult, GetAuthenticationSettingOutputArgs } from "./getAuthenticationSetting";
+export const getAuthenticationSetting: typeof import("./getAuthenticationSetting").getAuthenticationSetting = null as any;
+export const getAuthenticationSettingOutput: typeof import("./getAuthenticationSetting").getAuthenticationSettingOutput = null as any;
+utilities.lazyLoad(exports, ["getAuthenticationSetting","getAuthenticationSettingOutput"], () => require("./getAuthenticationSetting"));
+
+export { GetAuthenticationSettingListArgs, GetAuthenticationSettingListResult, GetAuthenticationSettingListOutputArgs } from "./getAuthenticationSettingList";
+export const getAuthenticationSettingList: typeof import("./getAuthenticationSettingList").getAuthenticationSettingList = null as any;
+export const getAuthenticationSettingListOutput: typeof import("./getAuthenticationSettingList").getAuthenticationSettingListOutput = null as any;
+utilities.lazyLoad(exports, ["getAuthenticationSettingList","getAuthenticationSettingListOutput"], () => require("./getAuthenticationSettingList"));
+
 export { GetAutoVpnClusterArgs, GetAutoVpnClusterResult, GetAutoVpnClusterOutputArgs } from "./getAutoVpnCluster";
 export const getAutoVpnCluster: typeof import("./getAutoVpnCluster").getAutoVpnCluster = null as any;
 export const getAutoVpnClusterOutput: typeof import("./getAutoVpnCluster").getAutoVpnClusterOutput = null as any;
@@ -319,6 +354,16 @@ export { GetAutoVpnSettingResult } from "./getAutoVpnSetting";
 export const getAutoVpnSetting: typeof import("./getAutoVpnSetting").getAutoVpnSetting = null as any;
 export const getAutoVpnSettingOutput: typeof import("./getAutoVpnSetting").getAutoVpnSettingOutput = null as any;
 utilities.lazyLoad(exports, ["getAutoVpnSetting","getAutoVpnSettingOutput"], () => require("./getAutoVpnSetting"));
+
+export { GetBandwidthAllocationArgs, GetBandwidthAllocationResult, GetBandwidthAllocationOutputArgs } from "./getBandwidthAllocation";
+export const getBandwidthAllocation: typeof import("./getBandwidthAllocation").getBandwidthAllocation = null as any;
+export const getBandwidthAllocationOutput: typeof import("./getBandwidthAllocation").getBandwidthAllocationOutput = null as any;
+utilities.lazyLoad(exports, ["getBandwidthAllocation","getBandwidthAllocationOutput"], () => require("./getBandwidthAllocation"));
+
+export { GetBandwidthAllocationListArgs, GetBandwidthAllocationListResult, GetBandwidthAllocationListOutputArgs } from "./getBandwidthAllocationList";
+export const getBandwidthAllocationList: typeof import("./getBandwidthAllocationList").getBandwidthAllocationList = null as any;
+export const getBandwidthAllocationListOutput: typeof import("./getBandwidthAllocationList").getBandwidthAllocationListOutput = null as any;
+utilities.lazyLoad(exports, ["getBandwidthAllocationList","getBandwidthAllocationListOutput"], () => require("./getBandwidthAllocationList"));
 
 export { GetBgpAddressFamilyProfileArgs, GetBgpAddressFamilyProfileResult, GetBgpAddressFamilyProfileOutputArgs } from "./getBgpAddressFamilyProfile";
 export const getBgpAddressFamilyProfile: typeof import("./getBgpAddressFamilyProfile").getBgpAddressFamilyProfile = null as any;
@@ -395,6 +440,16 @@ export const getCertificateProfileList: typeof import("./getCertificateProfileLi
 export const getCertificateProfileListOutput: typeof import("./getCertificateProfileList").getCertificateProfileListOutput = null as any;
 utilities.lazyLoad(exports, ["getCertificateProfileList","getCertificateProfileListOutput"], () => require("./getCertificateProfileList"));
 
+export { GetContentIdSettingArgs, GetContentIdSettingResult, GetContentIdSettingOutputArgs } from "./getContentIdSetting";
+export const getContentIdSetting: typeof import("./getContentIdSetting").getContentIdSetting = null as any;
+export const getContentIdSettingOutput: typeof import("./getContentIdSetting").getContentIdSettingOutput = null as any;
+utilities.lazyLoad(exports, ["getContentIdSetting","getContentIdSettingOutput"], () => require("./getContentIdSetting"));
+
+export { GetContentIdSettingListArgs, GetContentIdSettingListResult, GetContentIdSettingListOutputArgs } from "./getContentIdSettingList";
+export const getContentIdSettingList: typeof import("./getContentIdSettingList").getContentIdSettingList = null as any;
+export const getContentIdSettingListOutput: typeof import("./getContentIdSettingList").getContentIdSettingListOutput = null as any;
+utilities.lazyLoad(exports, ["getContentIdSettingList","getContentIdSettingListOutput"], () => require("./getContentIdSettingList"));
+
 export { GetDecryptionExclusionArgs, GetDecryptionExclusionResult, GetDecryptionExclusionOutputArgs } from "./getDecryptionExclusion";
 export const getDecryptionExclusion: typeof import("./getDecryptionExclusion").getDecryptionExclusion = null as any;
 export const getDecryptionExclusionOutput: typeof import("./getDecryptionExclusion").getDecryptionExclusionOutput = null as any;
@@ -424,6 +479,16 @@ export { GetDecryptionRuleListArgs, GetDecryptionRuleListResult, GetDecryptionRu
 export const getDecryptionRuleList: typeof import("./getDecryptionRuleList").getDecryptionRuleList = null as any;
 export const getDecryptionRuleListOutput: typeof import("./getDecryptionRuleList").getDecryptionRuleListOutput = null as any;
 utilities.lazyLoad(exports, ["getDecryptionRuleList","getDecryptionRuleListOutput"], () => require("./getDecryptionRuleList"));
+
+export { GetDeviceRedistributionCollectorArgs, GetDeviceRedistributionCollectorResult, GetDeviceRedistributionCollectorOutputArgs } from "./getDeviceRedistributionCollector";
+export const getDeviceRedistributionCollector: typeof import("./getDeviceRedistributionCollector").getDeviceRedistributionCollector = null as any;
+export const getDeviceRedistributionCollectorOutput: typeof import("./getDeviceRedistributionCollector").getDeviceRedistributionCollectorOutput = null as any;
+utilities.lazyLoad(exports, ["getDeviceRedistributionCollector","getDeviceRedistributionCollectorOutput"], () => require("./getDeviceRedistributionCollector"));
+
+export { GetDeviceRedistributionCollectorListArgs, GetDeviceRedistributionCollectorListResult, GetDeviceRedistributionCollectorListOutputArgs } from "./getDeviceRedistributionCollectorList";
+export const getDeviceRedistributionCollectorList: typeof import("./getDeviceRedistributionCollectorList").getDeviceRedistributionCollectorList = null as any;
+export const getDeviceRedistributionCollectorListOutput: typeof import("./getDeviceRedistributionCollectorList").getDeviceRedistributionCollectorListOutput = null as any;
+utilities.lazyLoad(exports, ["getDeviceRedistributionCollectorList","getDeviceRedistributionCollectorListOutput"], () => require("./getDeviceRedistributionCollectorList"));
 
 export { GetDhcpInterfaceArgs, GetDhcpInterfaceResult, GetDhcpInterfaceOutputArgs } from "./getDhcpInterface";
 export const getDhcpInterface: typeof import("./getDhcpInterface").getDhcpInterface = null as any;
@@ -524,6 +589,16 @@ export { GetFolderListArgs, GetFolderListResult, GetFolderListOutputArgs } from 
 export const getFolderList: typeof import("./getFolderList").getFolderList = null as any;
 export const getFolderListOutput: typeof import("./getFolderList").getFolderListOutput = null as any;
 utilities.lazyLoad(exports, ["getFolderList","getFolderListOutput"], () => require("./getFolderList"));
+
+export { GetGeneralSettingArgs, GetGeneralSettingResult, GetGeneralSettingOutputArgs } from "./getGeneralSetting";
+export const getGeneralSetting: typeof import("./getGeneralSetting").getGeneralSetting = null as any;
+export const getGeneralSettingOutput: typeof import("./getGeneralSetting").getGeneralSettingOutput = null as any;
+utilities.lazyLoad(exports, ["getGeneralSetting","getGeneralSettingOutput"], () => require("./getGeneralSetting"));
+
+export { GetGeneralSettingListArgs, GetGeneralSettingListResult, GetGeneralSettingListOutputArgs } from "./getGeneralSettingList";
+export const getGeneralSettingList: typeof import("./getGeneralSettingList").getGeneralSettingList = null as any;
+export const getGeneralSettingListOutput: typeof import("./getGeneralSettingList").getGeneralSettingListOutput = null as any;
+utilities.lazyLoad(exports, ["getGeneralSettingList","getGeneralSettingListOutput"], () => require("./getGeneralSettingList"));
 
 export { GetHipObjectArgs, GetHipObjectResult, GetHipObjectOutputArgs } from "./getHipObject";
 export const getHipObject: typeof import("./getHipObject").getHipObject = null as any;
@@ -675,6 +750,16 @@ export const getLinkTagList: typeof import("./getLinkTagList").getLinkTagList = 
 export const getLinkTagListOutput: typeof import("./getLinkTagList").getLinkTagListOutput = null as any;
 utilities.lazyLoad(exports, ["getLinkTagList","getLinkTagListOutput"], () => require("./getLinkTagList"));
 
+export { GetLldpProfileArgs, GetLldpProfileResult, GetLldpProfileOutputArgs } from "./getLldpProfile";
+export const getLldpProfile: typeof import("./getLldpProfile").getLldpProfile = null as any;
+export const getLldpProfileOutput: typeof import("./getLldpProfile").getLldpProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getLldpProfile","getLldpProfileOutput"], () => require("./getLldpProfile"));
+
+export { GetLldpProfileListArgs, GetLldpProfileListResult, GetLldpProfileListOutputArgs } from "./getLldpProfileList";
+export const getLldpProfileList: typeof import("./getLldpProfileList").getLldpProfileList = null as any;
+export const getLldpProfileListOutput: typeof import("./getLldpProfileList").getLldpProfileListOutput = null as any;
+utilities.lazyLoad(exports, ["getLldpProfileList","getLldpProfileListOutput"], () => require("./getLldpProfileList"));
+
 export { GetLocalUserArgs, GetLocalUserResult, GetLocalUserOutputArgs } from "./getLocalUser";
 export const getLocalUser: typeof import("./getLocalUser").getLocalUser = null as any;
 export const getLocalUserOutput: typeof import("./getLocalUser").getLocalUserOutput = null as any;
@@ -724,6 +809,26 @@ export { GetLoopbackInterfaceListArgs, GetLoopbackInterfaceListResult, GetLoopba
 export const getLoopbackInterfaceList: typeof import("./getLoopbackInterfaceList").getLoopbackInterfaceList = null as any;
 export const getLoopbackInterfaceListOutput: typeof import("./getLoopbackInterfaceList").getLoopbackInterfaceListOutput = null as any;
 utilities.lazyLoad(exports, ["getLoopbackInterfaceList","getLoopbackInterfaceListOutput"], () => require("./getLoopbackInterfaceList"));
+
+export { GetManagementInterfaceArgs, GetManagementInterfaceResult, GetManagementInterfaceOutputArgs } from "./getManagementInterface";
+export const getManagementInterface: typeof import("./getManagementInterface").getManagementInterface = null as any;
+export const getManagementInterfaceOutput: typeof import("./getManagementInterface").getManagementInterfaceOutput = null as any;
+utilities.lazyLoad(exports, ["getManagementInterface","getManagementInterfaceOutput"], () => require("./getManagementInterface"));
+
+export { GetManagementInterfaceListArgs, GetManagementInterfaceListResult, GetManagementInterfaceListOutputArgs } from "./getManagementInterfaceList";
+export const getManagementInterfaceList: typeof import("./getManagementInterfaceList").getManagementInterfaceList = null as any;
+export const getManagementInterfaceListOutput: typeof import("./getManagementInterfaceList").getManagementInterfaceListOutput = null as any;
+utilities.lazyLoad(exports, ["getManagementInterfaceList","getManagementInterfaceListOutput"], () => require("./getManagementInterfaceList"));
+
+export { GetMotdBannerSettingArgs, GetMotdBannerSettingResult, GetMotdBannerSettingOutputArgs } from "./getMotdBannerSetting";
+export const getMotdBannerSetting: typeof import("./getMotdBannerSetting").getMotdBannerSetting = null as any;
+export const getMotdBannerSettingOutput: typeof import("./getMotdBannerSetting").getMotdBannerSettingOutput = null as any;
+utilities.lazyLoad(exports, ["getMotdBannerSetting","getMotdBannerSettingOutput"], () => require("./getMotdBannerSetting"));
+
+export { GetMotdBannerSettingListArgs, GetMotdBannerSettingListResult, GetMotdBannerSettingListOutputArgs } from "./getMotdBannerSettingList";
+export const getMotdBannerSettingList: typeof import("./getMotdBannerSettingList").getMotdBannerSettingList = null as any;
+export const getMotdBannerSettingListOutput: typeof import("./getMotdBannerSettingList").getMotdBannerSettingListOutput = null as any;
+utilities.lazyLoad(exports, ["getMotdBannerSettingList","getMotdBannerSettingListOutput"], () => require("./getMotdBannerSettingList"));
 
 export { GetNatRuleArgs, GetNatRuleResult, GetNatRuleOutputArgs } from "./getNatRule";
 export const getNatRule: typeof import("./getNatRule").getNatRule = null as any;
@@ -985,6 +1090,46 @@ export const getServiceList: typeof import("./getServiceList").getServiceList = 
 export const getServiceListOutput: typeof import("./getServiceList").getServiceListOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceList","getServiceListOutput"], () => require("./getServiceList"));
 
+export { GetServiceRouteArgs, GetServiceRouteResult, GetServiceRouteOutputArgs } from "./getServiceRoute";
+export const getServiceRoute: typeof import("./getServiceRoute").getServiceRoute = null as any;
+export const getServiceRouteOutput: typeof import("./getServiceRoute").getServiceRouteOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceRoute","getServiceRouteOutput"], () => require("./getServiceRoute"));
+
+export { GetServiceRouteListArgs, GetServiceRouteListResult, GetServiceRouteListOutputArgs } from "./getServiceRouteList";
+export const getServiceRouteList: typeof import("./getServiceRouteList").getServiceRouteList = null as any;
+export const getServiceRouteListOutput: typeof import("./getServiceRouteList").getServiceRouteListOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceRouteList","getServiceRouteListOutput"], () => require("./getServiceRouteList"));
+
+export { GetServiceSettingArgs, GetServiceSettingResult, GetServiceSettingOutputArgs } from "./getServiceSetting";
+export const getServiceSetting: typeof import("./getServiceSetting").getServiceSetting = null as any;
+export const getServiceSettingOutput: typeof import("./getServiceSetting").getServiceSettingOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceSetting","getServiceSettingOutput"], () => require("./getServiceSetting"));
+
+export { GetServiceSettingListArgs, GetServiceSettingListResult, GetServiceSettingListOutputArgs } from "./getServiceSettingList";
+export const getServiceSettingList: typeof import("./getServiceSettingList").getServiceSettingList = null as any;
+export const getServiceSettingListOutput: typeof import("./getServiceSettingList").getServiceSettingListOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceSettingList","getServiceSettingListOutput"], () => require("./getServiceSettingList"));
+
+export { GetSessionSettingArgs, GetSessionSettingResult, GetSessionSettingOutputArgs } from "./getSessionSetting";
+export const getSessionSetting: typeof import("./getSessionSetting").getSessionSetting = null as any;
+export const getSessionSettingOutput: typeof import("./getSessionSetting").getSessionSettingOutput = null as any;
+utilities.lazyLoad(exports, ["getSessionSetting","getSessionSettingOutput"], () => require("./getSessionSetting"));
+
+export { GetSessionSettingListArgs, GetSessionSettingListResult, GetSessionSettingListOutputArgs } from "./getSessionSettingList";
+export const getSessionSettingList: typeof import("./getSessionSettingList").getSessionSettingList = null as any;
+export const getSessionSettingListOutput: typeof import("./getSessionSettingList").getSessionSettingListOutput = null as any;
+utilities.lazyLoad(exports, ["getSessionSettingList","getSessionSettingListOutput"], () => require("./getSessionSettingList"));
+
+export { GetSessionTimeoutArgs, GetSessionTimeoutResult, GetSessionTimeoutOutputArgs } from "./getSessionTimeout";
+export const getSessionTimeout: typeof import("./getSessionTimeout").getSessionTimeout = null as any;
+export const getSessionTimeoutOutput: typeof import("./getSessionTimeout").getSessionTimeoutOutput = null as any;
+utilities.lazyLoad(exports, ["getSessionTimeout","getSessionTimeoutOutput"], () => require("./getSessionTimeout"));
+
+export { GetSessionTimeoutListArgs, GetSessionTimeoutListResult, GetSessionTimeoutListOutputArgs } from "./getSessionTimeoutList";
+export const getSessionTimeoutList: typeof import("./getSessionTimeoutList").getSessionTimeoutList = null as any;
+export const getSessionTimeoutListOutput: typeof import("./getSessionTimeoutList").getSessionTimeoutListOutput = null as any;
+utilities.lazyLoad(exports, ["getSessionTimeoutList","getSessionTimeoutListOutput"], () => require("./getSessionTimeoutList"));
+
 export { GetSiteArgs, GetSiteResult, GetSiteOutputArgs } from "./getSite";
 export const getSite: typeof import("./getSite").getSite = null as any;
 export const getSiteOutput: typeof import("./getSite").getSiteOutput = null as any;
@@ -1035,6 +1180,16 @@ export const getTagList: typeof import("./getTagList").getTagList = null as any;
 export const getTagListOutput: typeof import("./getTagList").getTagListOutput = null as any;
 utilities.lazyLoad(exports, ["getTagList","getTagListOutput"], () => require("./getTagList"));
 
+export { GetTcpSettingArgs, GetTcpSettingResult, GetTcpSettingOutputArgs } from "./getTcpSetting";
+export const getTcpSetting: typeof import("./getTcpSetting").getTcpSetting = null as any;
+export const getTcpSettingOutput: typeof import("./getTcpSetting").getTcpSettingOutput = null as any;
+utilities.lazyLoad(exports, ["getTcpSetting","getTcpSettingOutput"], () => require("./getTcpSetting"));
+
+export { GetTcpSettingListArgs, GetTcpSettingListResult, GetTcpSettingListOutputArgs } from "./getTcpSettingList";
+export const getTcpSettingList: typeof import("./getTcpSettingList").getTcpSettingList = null as any;
+export const getTcpSettingListOutput: typeof import("./getTcpSettingList").getTcpSettingListOutput = null as any;
+utilities.lazyLoad(exports, ["getTcpSettingList","getTcpSettingListOutput"], () => require("./getTcpSettingList"));
+
 export { GetTlsServiceProfileArgs, GetTlsServiceProfileResult, GetTlsServiceProfileOutputArgs } from "./getTlsServiceProfile";
 export const getTlsServiceProfile: typeof import("./getTlsServiceProfile").getTlsServiceProfile = null as any;
 export const getTlsServiceProfileOutput: typeof import("./getTlsServiceProfile").getTlsServiceProfileOutput = null as any;
@@ -1064,6 +1219,16 @@ export { GetTunnelInterfaceListArgs, GetTunnelInterfaceListResult, GetTunnelInte
 export const getTunnelInterfaceList: typeof import("./getTunnelInterfaceList").getTunnelInterfaceList = null as any;
 export const getTunnelInterfaceListOutput: typeof import("./getTunnelInterfaceList").getTunnelInterfaceListOutput = null as any;
 utilities.lazyLoad(exports, ["getTunnelInterfaceList","getTunnelInterfaceListOutput"], () => require("./getTunnelInterfaceList"));
+
+export { GetUpdateScheduleArgs, GetUpdateScheduleResult, GetUpdateScheduleOutputArgs } from "./getUpdateSchedule";
+export const getUpdateSchedule: typeof import("./getUpdateSchedule").getUpdateSchedule = null as any;
+export const getUpdateScheduleOutput: typeof import("./getUpdateSchedule").getUpdateScheduleOutput = null as any;
+utilities.lazyLoad(exports, ["getUpdateSchedule","getUpdateScheduleOutput"], () => require("./getUpdateSchedule"));
+
+export { GetUpdateScheduleListArgs, GetUpdateScheduleListResult, GetUpdateScheduleListOutputArgs } from "./getUpdateScheduleList";
+export const getUpdateScheduleList: typeof import("./getUpdateScheduleList").getUpdateScheduleList = null as any;
+export const getUpdateScheduleListOutput: typeof import("./getUpdateScheduleList").getUpdateScheduleListOutput = null as any;
+utilities.lazyLoad(exports, ["getUpdateScheduleList","getUpdateScheduleListOutput"], () => require("./getUpdateScheduleList"));
 
 export { GetUrlAccessProfileArgs, GetUrlAccessProfileResult, GetUrlAccessProfileOutputArgs } from "./getUrlAccessProfile";
 export const getUrlAccessProfile: typeof import("./getUrlAccessProfile").getUrlAccessProfile = null as any;
@@ -1104,6 +1269,16 @@ export { GetVlanInterfaceListArgs, GetVlanInterfaceListResult, GetVlanInterfaceL
 export const getVlanInterfaceList: typeof import("./getVlanInterfaceList").getVlanInterfaceList = null as any;
 export const getVlanInterfaceListOutput: typeof import("./getVlanInterfaceList").getVlanInterfaceListOutput = null as any;
 utilities.lazyLoad(exports, ["getVlanInterfaceList","getVlanInterfaceListOutput"], () => require("./getVlanInterfaceList"));
+
+export { GetVpnSettingArgs, GetVpnSettingResult, GetVpnSettingOutputArgs } from "./getVpnSetting";
+export const getVpnSetting: typeof import("./getVpnSetting").getVpnSetting = null as any;
+export const getVpnSettingOutput: typeof import("./getVpnSetting").getVpnSettingOutput = null as any;
+utilities.lazyLoad(exports, ["getVpnSetting","getVpnSettingOutput"], () => require("./getVpnSetting"));
+
+export { GetVpnSettingListArgs, GetVpnSettingListResult, GetVpnSettingListOutputArgs } from "./getVpnSettingList";
+export const getVpnSettingList: typeof import("./getVpnSettingList").getVpnSettingList = null as any;
+export const getVpnSettingListOutput: typeof import("./getVpnSettingList").getVpnSettingListOutput = null as any;
+utilities.lazyLoad(exports, ["getVpnSettingList","getVpnSettingListOutput"], () => require("./getVpnSettingList"));
 
 export { GetVulnerabilityProtectionProfileArgs, GetVulnerabilityProtectionProfileResult, GetVulnerabilityProtectionProfileOutputArgs } from "./getVulnerabilityProtectionProfile";
 export const getVulnerabilityProtectionProfile: typeof import("./getVulnerabilityProtectionProfile").getVulnerabilityProtectionProfile = null as any;
@@ -1235,6 +1410,11 @@ export type LinkTag = import("./linkTag").LinkTag;
 export const LinkTag: typeof import("./linkTag").LinkTag = null as any;
 utilities.lazyLoad(exports, ["LinkTag"], () => require("./linkTag"));
 
+export { LldpProfileArgs, LldpProfileState } from "./lldpProfile";
+export type LldpProfile = import("./lldpProfile").LldpProfile;
+export const LldpProfile: typeof import("./lldpProfile").LldpProfile = null as any;
+utilities.lazyLoad(exports, ["LldpProfile"], () => require("./lldpProfile"));
+
 export { LocalUserArgs, LocalUserState } from "./localUser";
 export type LocalUser = import("./localUser").LocalUser;
 export const LocalUser: typeof import("./localUser").LocalUser = null as any;
@@ -1260,10 +1440,20 @@ export type LoopbackInterface = import("./loopbackInterface").LoopbackInterface;
 export const LoopbackInterface: typeof import("./loopbackInterface").LoopbackInterface = null as any;
 utilities.lazyLoad(exports, ["LoopbackInterface"], () => require("./loopbackInterface"));
 
+export { ManagementInterfaceArgs, ManagementInterfaceState } from "./managementInterface";
+export type ManagementInterface = import("./managementInterface").ManagementInterface;
+export const ManagementInterface: typeof import("./managementInterface").ManagementInterface = null as any;
+utilities.lazyLoad(exports, ["ManagementInterface"], () => require("./managementInterface"));
+
 export { MfaServerArgs, MfaServerState } from "./mfaServer";
 export type MfaServer = import("./mfaServer").MfaServer;
 export const MfaServer: typeof import("./mfaServer").MfaServer = null as any;
 utilities.lazyLoad(exports, ["MfaServer"], () => require("./mfaServer"));
+
+export { MotdBannerSettingArgs, MotdBannerSettingState } from "./motdBannerSetting";
+export type MotdBannerSetting = import("./motdBannerSetting").MotdBannerSetting;
+export const MotdBannerSetting: typeof import("./motdBannerSetting").MotdBannerSetting = null as any;
+utilities.lazyLoad(exports, ["MotdBannerSetting"], () => require("./motdBannerSetting"));
 
 export { NatRuleArgs, NatRuleState } from "./natRule";
 export type NatRule = import("./natRule").NatRule;
@@ -1398,6 +1588,26 @@ export type ServiceGroup = import("./serviceGroup").ServiceGroup;
 export const ServiceGroup: typeof import("./serviceGroup").ServiceGroup = null as any;
 utilities.lazyLoad(exports, ["ServiceGroup"], () => require("./serviceGroup"));
 
+export { ServiceRouteArgs, ServiceRouteState } from "./serviceRoute";
+export type ServiceRoute = import("./serviceRoute").ServiceRoute;
+export const ServiceRoute: typeof import("./serviceRoute").ServiceRoute = null as any;
+utilities.lazyLoad(exports, ["ServiceRoute"], () => require("./serviceRoute"));
+
+export { ServiceSettingArgs, ServiceSettingState } from "./serviceSetting";
+export type ServiceSetting = import("./serviceSetting").ServiceSetting;
+export const ServiceSetting: typeof import("./serviceSetting").ServiceSetting = null as any;
+utilities.lazyLoad(exports, ["ServiceSetting"], () => require("./serviceSetting"));
+
+export { SessionSettingArgs, SessionSettingState } from "./sessionSetting";
+export type SessionSetting = import("./sessionSetting").SessionSetting;
+export const SessionSetting: typeof import("./sessionSetting").SessionSetting = null as any;
+utilities.lazyLoad(exports, ["SessionSetting"], () => require("./sessionSetting"));
+
+export { SessionTimeoutArgs, SessionTimeoutState } from "./sessionTimeout";
+export type SessionTimeout = import("./sessionTimeout").SessionTimeout;
+export const SessionTimeout: typeof import("./sessionTimeout").SessionTimeout = null as any;
+utilities.lazyLoad(exports, ["SessionTimeout"], () => require("./sessionTimeout"));
+
 export { SiteArgs, SiteState } from "./site";
 export type Site = import("./site").Site;
 export const Site: typeof import("./site").Site = null as any;
@@ -1423,6 +1633,11 @@ export type Tag = import("./tag").Tag;
 export const Tag: typeof import("./tag").Tag = null as any;
 utilities.lazyLoad(exports, ["Tag"], () => require("./tag"));
 
+export { TcpSettingArgs, TcpSettingState } from "./tcpSetting";
+export type TcpSetting = import("./tcpSetting").TcpSetting;
+export const TcpSetting: typeof import("./tcpSetting").TcpSetting = null as any;
+utilities.lazyLoad(exports, ["TcpSetting"], () => require("./tcpSetting"));
+
 export { TlsServiceProfileArgs, TlsServiceProfileState } from "./tlsServiceProfile";
 export type TlsServiceProfile = import("./tlsServiceProfile").TlsServiceProfile;
 export const TlsServiceProfile: typeof import("./tlsServiceProfile").TlsServiceProfile = null as any;
@@ -1437,6 +1652,11 @@ export { TunnelInterfaceArgs, TunnelInterfaceState } from "./tunnelInterface";
 export type TunnelInterface = import("./tunnelInterface").TunnelInterface;
 export const TunnelInterface: typeof import("./tunnelInterface").TunnelInterface = null as any;
 utilities.lazyLoad(exports, ["TunnelInterface"], () => require("./tunnelInterface"));
+
+export { UpdateScheduleArgs, UpdateScheduleState } from "./updateSchedule";
+export type UpdateSchedule = import("./updateSchedule").UpdateSchedule;
+export const UpdateSchedule: typeof import("./updateSchedule").UpdateSchedule = null as any;
+utilities.lazyLoad(exports, ["UpdateSchedule"], () => require("./updateSchedule"));
 
 export { UrlAccessProfileArgs, UrlAccessProfileState } from "./urlAccessProfile";
 export type UrlAccessProfile = import("./urlAccessProfile").UrlAccessProfile;
@@ -1457,6 +1677,11 @@ export { VlanInterfaceArgs, VlanInterfaceState } from "./vlanInterface";
 export type VlanInterface = import("./vlanInterface").VlanInterface;
 export const VlanInterface: typeof import("./vlanInterface").VlanInterface = null as any;
 utilities.lazyLoad(exports, ["VlanInterface"], () => require("./vlanInterface"));
+
+export { VpnSettingArgs, VpnSettingState } from "./vpnSetting";
+export type VpnSetting = import("./vpnSetting").VpnSetting;
+export const VpnSetting: typeof import("./vpnSetting").VpnSetting = null as any;
+utilities.lazyLoad(exports, ["VpnSetting"], () => require("./vpnSetting"));
 
 export { VulnerabilityProtectionProfileArgs, VulnerabilityProtectionProfileState } from "./vulnerabilityProtectionProfile";
 export type VulnerabilityProtectionProfile = import("./vulnerabilityProtectionProfile").VulnerabilityProtectionProfile;
@@ -1523,10 +1748,14 @@ const _module = {
                 return new AuthenticationRule(name, <any>undefined, { urn })
             case "scm:index/authenticationSequence:AuthenticationSequence":
                 return new AuthenticationSequence(name, <any>undefined, { urn })
+            case "scm:index/authenticationSetting:AuthenticationSetting":
+                return new AuthenticationSetting(name, <any>undefined, { urn })
             case "scm:index/autoVpnCluster:AutoVpnCluster":
                 return new AutoVpnCluster(name, <any>undefined, { urn })
             case "scm:index/autoVpnSetting:AutoVpnSetting":
                 return new AutoVpnSetting(name, <any>undefined, { urn })
+            case "scm:index/bandwidthAllocation:BandwidthAllocation":
+                return new BandwidthAllocation(name, <any>undefined, { urn })
             case "scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile":
                 return new BgpAddressFamilyProfile(name, <any>undefined, { urn })
             case "scm:index/bgpAuthProfile:BgpAuthProfile":
@@ -1543,12 +1772,16 @@ const _module = {
                 return new BgpRouting(name, <any>undefined, { urn })
             case "scm:index/certificateProfile:CertificateProfile":
                 return new CertificateProfile(name, <any>undefined, { urn })
+            case "scm:index/contentIdSetting:ContentIdSetting":
+                return new ContentIdSetting(name, <any>undefined, { urn })
             case "scm:index/decryptionExclusion:DecryptionExclusion":
                 return new DecryptionExclusion(name, <any>undefined, { urn })
             case "scm:index/decryptionProfile:DecryptionProfile":
                 return new DecryptionProfile(name, <any>undefined, { urn })
             case "scm:index/decryptionRule:DecryptionRule":
                 return new DecryptionRule(name, <any>undefined, { urn })
+            case "scm:index/deviceRedistributionCollector:DeviceRedistributionCollector":
+                return new DeviceRedistributionCollector(name, <any>undefined, { urn })
             case "scm:index/dhcpInterface:DhcpInterface":
                 return new DhcpInterface(name, <any>undefined, { urn })
             case "scm:index/dnsProxy:DnsProxy":
@@ -1569,6 +1802,8 @@ const _module = {
                 return new FileBlockingProfile(name, <any>undefined, { urn })
             case "scm:index/folder:Folder":
                 return new Folder(name, <any>undefined, { urn })
+            case "scm:index/generalSetting:GeneralSetting":
+                return new GeneralSetting(name, <any>undefined, { urn })
             case "scm:index/hipObject:HipObject":
                 return new HipObject(name, <any>undefined, { urn })
             case "scm:index/hipProfile:HipProfile":
@@ -1601,6 +1836,8 @@ const _module = {
                 return new LdapServerProfile(name, <any>undefined, { urn })
             case "scm:index/linkTag:LinkTag":
                 return new LinkTag(name, <any>undefined, { urn })
+            case "scm:index/lldpProfile:LldpProfile":
+                return new LldpProfile(name, <any>undefined, { urn })
             case "scm:index/localUser:LocalUser":
                 return new LocalUser(name, <any>undefined, { urn })
             case "scm:index/localUserGroup:LocalUserGroup":
@@ -1611,8 +1848,12 @@ const _module = {
                 return new LogicalRouter(name, <any>undefined, { urn })
             case "scm:index/loopbackInterface:LoopbackInterface":
                 return new LoopbackInterface(name, <any>undefined, { urn })
+            case "scm:index/managementInterface:ManagementInterface":
+                return new ManagementInterface(name, <any>undefined, { urn })
             case "scm:index/mfaServer:MfaServer":
                 return new MfaServer(name, <any>undefined, { urn })
+            case "scm:index/motdBannerSetting:MotdBannerSetting":
+                return new MotdBannerSetting(name, <any>undefined, { urn })
             case "scm:index/natRule:NatRule":
                 return new NatRule(name, <any>undefined, { urn })
             case "scm:index/ospfAuthProfile:OspfAuthProfile":
@@ -1665,6 +1906,14 @@ const _module = {
                 return new ServiceConnectionGroup(name, <any>undefined, { urn })
             case "scm:index/serviceGroup:ServiceGroup":
                 return new ServiceGroup(name, <any>undefined, { urn })
+            case "scm:index/serviceRoute:ServiceRoute":
+                return new ServiceRoute(name, <any>undefined, { urn })
+            case "scm:index/serviceSetting:ServiceSetting":
+                return new ServiceSetting(name, <any>undefined, { urn })
+            case "scm:index/sessionSetting:SessionSetting":
+                return new SessionSetting(name, <any>undefined, { urn })
+            case "scm:index/sessionTimeout:SessionTimeout":
+                return new SessionTimeout(name, <any>undefined, { urn })
             case "scm:index/site:Site":
                 return new Site(name, <any>undefined, { urn })
             case "scm:index/snippet:Snippet":
@@ -1675,12 +1924,16 @@ const _module = {
                 return new TacacsServerProfile(name, <any>undefined, { urn })
             case "scm:index/tag:Tag":
                 return new Tag(name, <any>undefined, { urn })
+            case "scm:index/tcpSetting:TcpSetting":
+                return new TcpSetting(name, <any>undefined, { urn })
             case "scm:index/tlsServiceProfile:TlsServiceProfile":
                 return new TlsServiceProfile(name, <any>undefined, { urn })
             case "scm:index/trafficSteeringRule:TrafficSteeringRule":
                 return new TrafficSteeringRule(name, <any>undefined, { urn })
             case "scm:index/tunnelInterface:TunnelInterface":
                 return new TunnelInterface(name, <any>undefined, { urn })
+            case "scm:index/updateSchedule:UpdateSchedule":
+                return new UpdateSchedule(name, <any>undefined, { urn })
             case "scm:index/urlAccessProfile:UrlAccessProfile":
                 return new UrlAccessProfile(name, <any>undefined, { urn })
             case "scm:index/urlCategory:UrlCategory":
@@ -1689,6 +1942,8 @@ const _module = {
                 return new Variable(name, <any>undefined, { urn })
             case "scm:index/vlanInterface:VlanInterface":
                 return new VlanInterface(name, <any>undefined, { urn })
+            case "scm:index/vpnSetting:VpnSetting":
+                return new VpnSetting(name, <any>undefined, { urn })
             case "scm:index/vulnerabilityProtectionProfile:VulnerabilityProtectionProfile":
                 return new VulnerabilityProtectionProfile(name, <any>undefined, { urn })
             case "scm:index/vulnerabilityProtectionSignature:VulnerabilityProtectionSignature":
@@ -1717,8 +1972,10 @@ pulumi.runtime.registerResourceModule("scm", "index/authenticationPortal", _modu
 pulumi.runtime.registerResourceModule("scm", "index/authenticationProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/authenticationRule", _module)
 pulumi.runtime.registerResourceModule("scm", "index/authenticationSequence", _module)
+pulumi.runtime.registerResourceModule("scm", "index/authenticationSetting", _module)
 pulumi.runtime.registerResourceModule("scm", "index/autoVpnCluster", _module)
 pulumi.runtime.registerResourceModule("scm", "index/autoVpnSetting", _module)
+pulumi.runtime.registerResourceModule("scm", "index/bandwidthAllocation", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpAddressFamilyProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpAuthProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpFilteringProfile", _module)
@@ -1727,9 +1984,11 @@ pulumi.runtime.registerResourceModule("scm", "index/bgpRouteMap", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpRouteMapRedistribution", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpRouting", _module)
 pulumi.runtime.registerResourceModule("scm", "index/certificateProfile", _module)
+pulumi.runtime.registerResourceModule("scm", "index/contentIdSetting", _module)
 pulumi.runtime.registerResourceModule("scm", "index/decryptionExclusion", _module)
 pulumi.runtime.registerResourceModule("scm", "index/decryptionProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/decryptionRule", _module)
+pulumi.runtime.registerResourceModule("scm", "index/deviceRedistributionCollector", _module)
 pulumi.runtime.registerResourceModule("scm", "index/dhcpInterface", _module)
 pulumi.runtime.registerResourceModule("scm", "index/dnsProxy", _module)
 pulumi.runtime.registerResourceModule("scm", "index/dnsSecurityProfile", _module)
@@ -1740,6 +1999,7 @@ pulumi.runtime.registerResourceModule("scm", "index/ethernetInterface", _module)
 pulumi.runtime.registerResourceModule("scm", "index/externalDynamicList", _module)
 pulumi.runtime.registerResourceModule("scm", "index/fileBlockingProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/folder", _module)
+pulumi.runtime.registerResourceModule("scm", "index/generalSetting", _module)
 pulumi.runtime.registerResourceModule("scm", "index/hipObject", _module)
 pulumi.runtime.registerResourceModule("scm", "index/hipProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/httpHeaderProfile", _module)
@@ -1756,12 +2016,15 @@ pulumi.runtime.registerResourceModule("scm", "index/layer2Subinterface", _module
 pulumi.runtime.registerResourceModule("scm", "index/layer3Subinterface", _module)
 pulumi.runtime.registerResourceModule("scm", "index/ldapServerProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/linkTag", _module)
+pulumi.runtime.registerResourceModule("scm", "index/lldpProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/localUser", _module)
 pulumi.runtime.registerResourceModule("scm", "index/localUserGroup", _module)
 pulumi.runtime.registerResourceModule("scm", "index/logForwardingProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/logicalRouter", _module)
 pulumi.runtime.registerResourceModule("scm", "index/loopbackInterface", _module)
+pulumi.runtime.registerResourceModule("scm", "index/managementInterface", _module)
 pulumi.runtime.registerResourceModule("scm", "index/mfaServer", _module)
+pulumi.runtime.registerResourceModule("scm", "index/motdBannerSetting", _module)
 pulumi.runtime.registerResourceModule("scm", "index/natRule", _module)
 pulumi.runtime.registerResourceModule("scm", "index/ospfAuthProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/pbfRule", _module)
@@ -1788,18 +2051,25 @@ pulumi.runtime.registerResourceModule("scm", "index/service", _module)
 pulumi.runtime.registerResourceModule("scm", "index/serviceConnection", _module)
 pulumi.runtime.registerResourceModule("scm", "index/serviceConnectionGroup", _module)
 pulumi.runtime.registerResourceModule("scm", "index/serviceGroup", _module)
+pulumi.runtime.registerResourceModule("scm", "index/serviceRoute", _module)
+pulumi.runtime.registerResourceModule("scm", "index/serviceSetting", _module)
+pulumi.runtime.registerResourceModule("scm", "index/sessionSetting", _module)
+pulumi.runtime.registerResourceModule("scm", "index/sessionTimeout", _module)
 pulumi.runtime.registerResourceModule("scm", "index/site", _module)
 pulumi.runtime.registerResourceModule("scm", "index/snippet", _module)
 pulumi.runtime.registerResourceModule("scm", "index/syslogServerProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/tacacsServerProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/tag", _module)
+pulumi.runtime.registerResourceModule("scm", "index/tcpSetting", _module)
 pulumi.runtime.registerResourceModule("scm", "index/tlsServiceProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/trafficSteeringRule", _module)
 pulumi.runtime.registerResourceModule("scm", "index/tunnelInterface", _module)
+pulumi.runtime.registerResourceModule("scm", "index/updateSchedule", _module)
 pulumi.runtime.registerResourceModule("scm", "index/urlAccessProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/urlCategory", _module)
 pulumi.runtime.registerResourceModule("scm", "index/variable", _module)
 pulumi.runtime.registerResourceModule("scm", "index/vlanInterface", _module)
+pulumi.runtime.registerResourceModule("scm", "index/vpnSetting", _module)
 pulumi.runtime.registerResourceModule("scm", "index/vulnerabilityProtectionProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/vulnerabilityProtectionSignature", _module)
 pulumi.runtime.registerResourceModule("scm", "index/wildfireAntiVirusProfile", _module)

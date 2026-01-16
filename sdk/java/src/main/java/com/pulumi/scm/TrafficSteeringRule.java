@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
 /**
  * TrafficSteeringRule resource
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/trafficSteeringRule:TrafficSteeringRule")
 public class TrafficSteeringRule extends com.pulumi.resources.CustomResource {

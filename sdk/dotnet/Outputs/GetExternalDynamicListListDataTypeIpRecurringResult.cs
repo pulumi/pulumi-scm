@@ -14,30 +14,27 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataTypeIpRecurringResult
     {
         /// <summary>
-        /// Daily
+        /// Daily settings for IP recurring
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeIpRecurringDailyResult Daily;
         /// <summary>
-        /// Five minute
-        /// 
+        /// Five minute settings for IP recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeIpRecurringFiveMinuteResult FiveMinute;
         /// <summary>
-        /// Hourly
-        /// 
+        /// Hourly settings for IP recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeIpRecurringHourlyResult Hourly;
         /// <summary>
-        /// Monthly
-        /// 
+        /// Monthly settings for IP recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeIpRecurringMonthlyResult Monthly;
         /// <summary>
-        /// Weekly
-        /// 
+        /// Weekly settings for IP recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeIpRecurringWeeklyResult Weekly;

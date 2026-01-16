@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Daily
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily` and `Weekly`.
         /// </summary>
         public readonly ImmutableArray<string> Dailies;
         /// <summary>
         /// Weekly
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily` and `Weekly`.
         /// </summary>
         public readonly Outputs.ScheduleScheduleTypeRecurringWeekly? Weekly;

@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getDhcpInterface(args: GetDhcpInterfaceArgs, opts?: pulumi.InvokeOptions): Promise<GetDhcpInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDhcpInterface:getDhcpInterface", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getDhcpInterface(args: GetDhcpInterfaceArgs, opts?: pulumi.Invok
  */
 export interface GetDhcpInterfaceArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetDhcpInterfaceArgs {
      * Interface name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -37,8 +55,13 @@ export interface GetDhcpInterfaceArgs {
 export interface GetDhcpInterfaceResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -48,8 +71,20 @@ export interface GetDhcpInterfaceResult {
      * Interface name
      */
     readonly name: string;
+    /**
+     * Relay
+     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
+     */
     readonly relay: outputs.GetDhcpInterfaceRelay;
+    /**
+     * Server
+     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
+     */
     readonly server: outputs.GetDhcpInterfaceServer;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -59,8 +94,11 @@ export interface GetDhcpInterfaceResult {
 export function getDhcpInterfaceOutput(args: GetDhcpInterfaceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDhcpInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDhcpInterface:getDhcpInterface", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -69,6 +107,16 @@ export function getDhcpInterfaceOutput(args: GetDhcpInterfaceOutputArgs, opts?: 
  */
 export interface GetDhcpInterfaceOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -76,4 +124,9 @@ export interface GetDhcpInterfaceOutputArgs {
      * Interface name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

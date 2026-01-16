@@ -790,6 +790,32 @@ class NatRule(pulumi.CustomResource):
             active_active_device_binding="1")
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
@@ -931,6 +957,32 @@ class NatRule(pulumi.CustomResource):
                 "translated_port": 8080,
             },
             active_active_device_binding="1")
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example ::device:id
         ```
 
         :param str resource_name: The name of the resource.

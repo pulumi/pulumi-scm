@@ -15,37 +15,72 @@ import java.util.Objects;
 public final class GetOspfAuthProfileResult {
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
     private Map<String,String> encryptedValues;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return MD5s
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+     * 
+     */
     private List<GetOspfAuthProfileMd5> md5s;
     /**
      * @return Profile name
      * 
      */
     private String name;
+    /**
+     * @return Password
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+     * 
+     */
     private String password;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
     private String tfid;
 
     private GetOspfAuthProfileResult() {}
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
     public Map<String,String> encryptedValues() {
         return this.encryptedValues;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -56,6 +91,11 @@ public final class GetOspfAuthProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return MD5s
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+     * 
+     */
     public List<GetOspfAuthProfileMd5> md5s() {
         return this.md5s;
     }
@@ -66,9 +106,19 @@ public final class GetOspfAuthProfileResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return Password
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+     * 
+     */
     public String password() {
         return this.password;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }

@@ -18,48 +18,43 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListType {
     /**
-     * @return Domain
+     * @return Domain settings for Custom Domain type
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypeDomain domain;
     /**
-     * @return Imei
-     * 
+     * @return IMEI Configuration settings
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypeImei imei;
     /**
-     * @return Imsi
-     * 
+     * @return IMSI Config for Custom IMSI type
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypeImsi imsi;
     /**
-     * @return Ip
-     * 
+     * @return IP settings for Custom IP type
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypeIp ip;
     /**
-     * @return Predefined ip
-     * 
+     * @return Predefined IP settings for EDL type
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypePredefinedIp predefinedIp;
     /**
-     * @return Predefined url
-     * 
+     * @return Predefined URL settings for EDL type
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypePredefinedUrl predefinedUrl;
     /**
-     * @return Url
-     * 
+     * @return URL settings for Custom URL type
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -67,15 +62,15 @@ public final class ExternalDynamicListType {
 
     private ExternalDynamicListType() {}
     /**
-     * @return Domain
+     * @return Domain settings for Custom Domain type
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public Optional<ExternalDynamicListTypeDomain> domain() {
         return Optional.ofNullable(this.domain);
     }
     /**
-     * @return Imei
-     * 
+     * @return IMEI Configuration settings
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -83,8 +78,7 @@ public final class ExternalDynamicListType {
         return Optional.ofNullable(this.imei);
     }
     /**
-     * @return Imsi
-     * 
+     * @return IMSI Config for Custom IMSI type
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -92,8 +86,7 @@ public final class ExternalDynamicListType {
         return Optional.ofNullable(this.imsi);
     }
     /**
-     * @return Ip
-     * 
+     * @return IP settings for Custom IP type
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -101,8 +94,7 @@ public final class ExternalDynamicListType {
         return Optional.ofNullable(this.ip);
     }
     /**
-     * @return Predefined ip
-     * 
+     * @return Predefined IP settings for EDL type
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -110,8 +102,7 @@ public final class ExternalDynamicListType {
         return Optional.ofNullable(this.predefinedIp);
     }
     /**
-     * @return Predefined url
-     * 
+     * @return Predefined URL settings for EDL type
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -119,8 +110,7 @@ public final class ExternalDynamicListType {
         return Optional.ofNullable(this.predefinedUrl);
     }
     /**
-     * @return Url
-     * 
+     * @return URL settings for Custom URL type
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */

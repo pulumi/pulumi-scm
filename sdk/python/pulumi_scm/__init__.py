@@ -19,8 +19,10 @@ from .authentication_portal import *
 from .authentication_profile import *
 from .authentication_rule import *
 from .authentication_sequence import *
+from .authentication_setting import *
 from .auto_vpn_cluster import *
 from .auto_vpn_setting import *
+from .bandwidth_allocation import *
 from .bgp_address_family_profile import *
 from .bgp_auth_profile import *
 from .bgp_filtering_profile import *
@@ -29,9 +31,11 @@ from .bgp_route_map import *
 from .bgp_route_map_redistribution import *
 from .bgp_routing import *
 from .certificate_profile import *
+from .content_id_setting import *
 from .decryption_exclusion import *
 from .decryption_profile import *
 from .decryption_rule import *
+from .device_redistribution_collector import *
 from .dhcp_interface import *
 from .dns_proxy import *
 from .dns_security_profile import *
@@ -42,6 +46,7 @@ from .ethernet_interface import *
 from .external_dynamic_list import *
 from .file_blocking_profile import *
 from .folder import *
+from .general_setting import *
 from .get_address import *
 from .get_address_group import *
 from .get_address_group_list import *
@@ -66,9 +71,13 @@ from .get_authentication_rule import *
 from .get_authentication_rule_list import *
 from .get_authentication_sequence import *
 from .get_authentication_sequence_list import *
+from .get_authentication_setting import *
+from .get_authentication_setting_list import *
 from .get_auto_vpn_cluster import *
 from .get_auto_vpn_cluster_list import *
 from .get_auto_vpn_setting import *
+from .get_bandwidth_allocation import *
+from .get_bandwidth_allocation_list import *
 from .get_bgp_address_family_profile import *
 from .get_bgp_address_family_profile_list import *
 from .get_bgp_auth_profile import *
@@ -84,12 +93,16 @@ from .get_bgp_route_map_redistribution_list import *
 from .get_bgp_routing import *
 from .get_certificate_profile import *
 from .get_certificate_profile_list import *
+from .get_content_id_setting import *
+from .get_content_id_setting_list import *
 from .get_decryption_exclusion import *
 from .get_decryption_exclusion_list import *
 from .get_decryption_profile import *
 from .get_decryption_profile_list import *
 from .get_decryption_rule import *
 from .get_decryption_rule_list import *
+from .get_device_redistribution_collector import *
+from .get_device_redistribution_collector_list import *
 from .get_dhcp_interface import *
 from .get_dhcp_interface_list import *
 from .get_dns_proxy import *
@@ -110,6 +123,8 @@ from .get_file_blocking_profile import *
 from .get_file_blocking_profile_list import *
 from .get_folder import *
 from .get_folder_list import *
+from .get_general_setting import *
+from .get_general_setting_list import *
 from .get_hip_object import *
 from .get_hip_object_list import *
 from .get_hip_profile import *
@@ -140,6 +155,8 @@ from .get_ldap_server_profile import *
 from .get_ldap_server_profile_list import *
 from .get_link_tag import *
 from .get_link_tag_list import *
+from .get_lldp_profile import *
+from .get_lldp_profile_list import *
 from .get_local_user import *
 from .get_local_user_group import *
 from .get_local_user_group_list import *
@@ -150,6 +167,10 @@ from .get_logical_router import *
 from .get_logical_router_list import *
 from .get_loopback_interface import *
 from .get_loopback_interface_list import *
+from .get_management_interface import *
+from .get_management_interface_list import *
+from .get_motd_banner_setting import *
+from .get_motd_banner_setting_list import *
 from .get_nat_rule import *
 from .get_nat_rule_list import *
 from .get_ospf_auth_profile import *
@@ -202,6 +223,14 @@ from .get_service_connection_list import *
 from .get_service_group import *
 from .get_service_group_list import *
 from .get_service_list import *
+from .get_service_route import *
+from .get_service_route_list import *
+from .get_service_setting import *
+from .get_service_setting_list import *
+from .get_session_setting import *
+from .get_session_setting_list import *
+from .get_session_timeout import *
+from .get_session_timeout_list import *
 from .get_site import *
 from .get_site_list import *
 from .get_snippet import *
@@ -212,12 +241,16 @@ from .get_tacacs_server_profile import *
 from .get_tacacs_server_profile_list import *
 from .get_tag import *
 from .get_tag_list import *
+from .get_tcp_setting import *
+from .get_tcp_setting_list import *
 from .get_tls_service_profile import *
 from .get_tls_service_profile_list import *
 from .get_traffic_steering_rule import *
 from .get_traffic_steering_rule_list import *
 from .get_tunnel_interface import *
 from .get_tunnel_interface_list import *
+from .get_update_schedule import *
+from .get_update_schedule_list import *
 from .get_url_access_profile import *
 from .get_url_access_profile_list import *
 from .get_url_category import *
@@ -226,6 +259,8 @@ from .get_variable import *
 from .get_variable_list import *
 from .get_vlan_interface import *
 from .get_vlan_interface_list import *
+from .get_vpn_setting import *
+from .get_vpn_setting_list import *
 from .get_vulnerability_protection_profile import *
 from .get_vulnerability_protection_profile_list import *
 from .get_vulnerability_protection_signature import *
@@ -252,12 +287,15 @@ from .layer2_subinterface import *
 from .layer3_subinterface import *
 from .ldap_server_profile import *
 from .link_tag import *
+from .lldp_profile import *
 from .local_user import *
 from .local_user_group import *
 from .log_forwarding_profile import *
 from .logical_router import *
 from .loopback_interface import *
+from .management_interface import *
 from .mfa_server import *
+from .motd_banner_setting import *
 from .nat_rule import *
 from .ospf_auth_profile import *
 from .pbf_rule import *
@@ -285,18 +323,25 @@ from .service import *
 from .service_connection import *
 from .service_connection_group import *
 from .service_group import *
+from .service_route import *
+from .service_setting import *
+from .session_setting import *
+from .session_timeout import *
 from .site import *
 from .snippet import *
 from .syslog_server_profile import *
 from .tacacs_server_profile import *
 from .tag import *
+from .tcp_setting import *
 from .tls_service_profile import *
 from .traffic_steering_rule import *
 from .tunnel_interface import *
+from .update_schedule import *
 from .url_access_profile import *
 from .url_category import *
 from .variable import *
 from .vlan_interface import *
+from .vpn_setting import *
 from .vulnerability_protection_profile import *
 from .vulnerability_protection_signature import *
 from .wildfire_anti_virus_profile import *
@@ -421,6 +466,14 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/authenticationSetting",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/authenticationSetting:AuthenticationSetting": "AuthenticationSetting"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/autoVpnCluster",
   "fqn": "pulumi_scm",
   "classes": {
@@ -433,6 +486,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/autoVpnSetting:AutoVpnSetting": "AutoVpnSetting"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/bandwidthAllocation",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/bandwidthAllocation:BandwidthAllocation": "BandwidthAllocation"
   }
  },
  {
@@ -501,6 +562,14 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/contentIdSetting",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/contentIdSetting:ContentIdSetting": "ContentIdSetting"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/decryptionExclusion",
   "fqn": "pulumi_scm",
   "classes": {
@@ -521,6 +590,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/decryptionRule:DecryptionRule": "DecryptionRule"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/deviceRedistributionCollector",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/deviceRedistributionCollector:DeviceRedistributionCollector": "DeviceRedistributionCollector"
   }
  },
  {
@@ -601,6 +678,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/folder:Folder": "Folder"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/generalSetting",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/generalSetting:GeneralSetting": "GeneralSetting"
   }
  },
  {
@@ -733,6 +818,14 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/lldpProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/lldpProfile:LldpProfile": "LldpProfile"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/localUser",
   "fqn": "pulumi_scm",
   "classes": {
@@ -773,10 +866,26 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/managementInterface",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/managementInterface:ManagementInterface": "ManagementInterface"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/mfaServer",
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/mfaServer:MfaServer": "MfaServer"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/motdBannerSetting",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/motdBannerSetting:MotdBannerSetting": "MotdBannerSetting"
   }
  },
  {
@@ -989,6 +1098,38 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/serviceRoute",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/serviceRoute:ServiceRoute": "ServiceRoute"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/serviceSetting",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/serviceSetting:ServiceSetting": "ServiceSetting"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/sessionSetting",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/sessionSetting:SessionSetting": "SessionSetting"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/sessionTimeout",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/sessionTimeout:SessionTimeout": "SessionTimeout"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/site",
   "fqn": "pulumi_scm",
   "classes": {
@@ -1029,6 +1170,14 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/tcpSetting",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/tcpSetting:TcpSetting": "TcpSetting"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/tlsServiceProfile",
   "fqn": "pulumi_scm",
   "classes": {
@@ -1049,6 +1198,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/tunnelInterface:TunnelInterface": "TunnelInterface"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/updateSchedule",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/updateSchedule:UpdateSchedule": "UpdateSchedule"
   }
  },
  {
@@ -1081,6 +1238,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/vlanInterface:VlanInterface": "VlanInterface"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/vpnSetting",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/vpnSetting:VpnSetting": "VpnSetting"
   }
  },
  {

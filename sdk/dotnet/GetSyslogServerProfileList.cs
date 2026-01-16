@@ -13,18 +13,96 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Syslog Server Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetSyslogServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSyslogServerProfileListAllShared"] = allShared.Apply(getSyslogServerProfileListResult =&gt; getSyslogServerProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetSyslogServerProfileListResult> InvokeAsync(GetSyslogServerProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSyslogServerProfileListResult>("scm:index/getSyslogServerProfileList:getSyslogServerProfileList", args ?? new GetSyslogServerProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Syslog Server Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetSyslogServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSyslogServerProfileListAllShared"] = allShared.Apply(getSyslogServerProfileListResult =&gt; getSyslogServerProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSyslogServerProfileListResult> Invoke(GetSyslogServerProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSyslogServerProfileListResult>("scm:index/getSyslogServerProfileList:getSyslogServerProfileList", args ?? new GetSyslogServerProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Syslog Server Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetSyslogServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSyslogServerProfileListAllShared"] = allShared.Apply(getSyslogServerProfileListResult =&gt; getSyslogServerProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSyslogServerProfileListResult> Invoke(GetSyslogServerProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSyslogServerProfileListResult>("scm:index/getSyslogServerProfileList:getSyslogServerProfileList", args ?? new GetSyslogServerProfileListInvokeArgs(), options.WithDefaults());

@@ -29,6 +29,7 @@ public final class GetEthernetInterfaceLayer3 {
     private GetEthernetInterfaceLayer3DdnsConfig ddnsConfig;
     /**
      * @return Ethernet Interfaces DHCP Client Object
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
     private GetEthernetInterfaceLayer3DhcpClient dhcpClient;
@@ -39,7 +40,6 @@ public final class GetEthernetInterfaceLayer3 {
     private String interfaceManagementProfile;
     /**
      * @return Ethernet Interface IP addresses
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
@@ -51,7 +51,6 @@ public final class GetEthernetInterfaceLayer3 {
     private Integer mtu;
     /**
      * @return Pppoe
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
@@ -74,6 +73,7 @@ public final class GetEthernetInterfaceLayer3 {
     }
     /**
      * @return Ethernet Interfaces DHCP Client Object
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
     public GetEthernetInterfaceLayer3DhcpClient dhcpClient() {
@@ -88,7 +88,6 @@ public final class GetEthernetInterfaceLayer3 {
     }
     /**
      * @return Ethernet Interface IP addresses
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
@@ -104,7 +103,6 @@ public final class GetEthernetInterfaceLayer3 {
     }
     /**
      * @return Pppoe
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */

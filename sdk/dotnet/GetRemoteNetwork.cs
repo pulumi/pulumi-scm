@@ -115,6 +115,12 @@ namespace Pulumi.Scm
     public sealed class GetRemoteNetworkArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The folder that contains the remote network
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// The UUID of the remote network
         /// </summary>
         [Input("id", required: true)]
@@ -134,6 +140,12 @@ namespace Pulumi.Scm
 
     public sealed class GetRemoteNetworkInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The folder that contains the remote network
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the remote network
         /// </summary>

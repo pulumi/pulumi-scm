@@ -15,23 +15,21 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Equal to
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `EqualTo`, `GreaterThan`, `LessThan`, and `PatternMatch`.
         /// </summary>
         public readonly Outputs.GetApplicationListDataSignatureAndConditionOrConditionOperatorEqualToResult EqualTo;
         /// <summary>
         /// Greater than
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `EqualTo`, `GreaterThan`, `LessThan`, and `PatternMatch`.
         /// </summary>
         public readonly Outputs.GetApplicationListDataSignatureAndConditionOrConditionOperatorGreaterThanResult GreaterThan;
         /// <summary>
         /// Less than
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `EqualTo`, `GreaterThan`, `LessThan`, and `PatternMatch`.
         /// </summary>
         public readonly Outputs.GetApplicationListDataSignatureAndConditionOrConditionOperatorLessThanResult LessThan;
         /// <summary>
         /// Pattern match
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `EqualTo`, `GreaterThan`, `LessThan`, and `PatternMatch`.
         /// </summary>
         public readonly Outputs.GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatchResult PatternMatch;

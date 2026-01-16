@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeIp {
     /**
-     * @return Auth
+     * @return Authentication settings for Custom IP type
      * 
      */
     private GetExternalDynamicListTypeIpAuth auth;
@@ -29,24 +29,24 @@ public final class GetExternalDynamicListTypeIp {
      */
     private String description;
     /**
-     * @return Exception list
+     * @return IP Exception List for Custom IP type
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom IP type
      * 
      */
     private GetExternalDynamicListTypeIpRecurring recurring;
     /**
-     * @return Url
+     * @return External URL for Custom IP type
      * 
      */
     private String url;
 
     private GetExternalDynamicListTypeIp() {}
     /**
-     * @return Auth
+     * @return Authentication settings for Custom IP type
      * 
      */
     public GetExternalDynamicListTypeIpAuth auth() {
@@ -67,21 +67,21 @@ public final class GetExternalDynamicListTypeIp {
         return this.description;
     }
     /**
-     * @return Exception list
+     * @return IP Exception List for Custom IP type
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom IP type
      * 
      */
     public GetExternalDynamicListTypeIpRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return Url
+     * @return External URL for Custom IP type
      * 
      */
     public String url() {

@@ -145,6 +145,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/serviceConnection:ServiceConnection example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/serviceConnection:ServiceConnection example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/serviceConnection:ServiceConnection example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/serviceConnection:ServiceConnection")
 public class ServiceConnection extends com.pulumi.resources.CustomResource {
@@ -189,6 +215,20 @@ public class ServiceConnection extends com.pulumi.resources.CustomResource {
      */
     public Output<Map<String,String>> encryptedValues() {
         return this.encryptedValues;
+    }
+    /**
+     * The folder in which the resource is defined
+     * 
+     */
+    @Export(name="folder", refs={String.class}, tree="[0]")
+    private Output<String> folder;
+
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public Output<String> folder() {
+        return this.folder;
     }
     /**
      * Ipsec tunnel

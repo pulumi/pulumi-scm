@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getBgpRouteMapRedistribution(args: GetBgpRouteMapRedistributionArgs, opts?: pulumi.InvokeOptions): Promise<GetBgpRouteMapRedistributionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getBgpRouteMapRedistribution:getBgpRouteMapRedistribution", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getBgpRouteMapRedistribution(args: GetBgpRouteMapRedistributionA
  */
 export interface GetBgpRouteMapRedistributionArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * BGP Route Map Redistributions UUID of the resource
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetBgpRouteMapRedistributionArgs {
      * BGP Route Map Redistributions Name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -37,11 +55,27 @@ export interface GetBgpRouteMapRedistributionArgs {
 export interface GetBgpRouteMapRedistributionResult {
     /**
      * Bgp
+     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      */
     readonly bgp: outputs.GetBgpRouteMapRedistributionBgp;
+    /**
+     * Connected static
+     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
+     */
     readonly connectedStatic: outputs.GetBgpRouteMapRedistributionConnectedStatic;
+    /**
+     * BGP Route Map Redistributions Description
+     */
     readonly description: string;
+    /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * BGP Route Map Redistributions UUID of the resource
@@ -51,7 +85,15 @@ export interface GetBgpRouteMapRedistributionResult {
      * BGP Route Map Redistributions Name
      */
     readonly name: string;
+    /**
+     * Ospf
+     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
+     */
     readonly ospf: outputs.GetBgpRouteMapRedistributionOspf;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -61,8 +103,11 @@ export interface GetBgpRouteMapRedistributionResult {
 export function getBgpRouteMapRedistributionOutput(args: GetBgpRouteMapRedistributionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBgpRouteMapRedistributionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getBgpRouteMapRedistribution:getBgpRouteMapRedistribution", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -71,6 +116,16 @@ export function getBgpRouteMapRedistributionOutput(args: GetBgpRouteMapRedistrib
  */
 export interface GetBgpRouteMapRedistributionOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * BGP Route Map Redistributions UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -78,4 +133,9 @@ export interface GetBgpRouteMapRedistributionOutputArgs {
      * BGP Route Map Redistributions Name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

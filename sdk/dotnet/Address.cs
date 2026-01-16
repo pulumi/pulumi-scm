@@ -105,6 +105,32 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/address:Address example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/address:Address example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/address:Address example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/address:Address")]
     public partial class Address : global::Pulumi.CustomResource
@@ -117,13 +143,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -131,7 +157,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Fully qualified domain name
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Output("fqdn")]
@@ -139,7 +164,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// IP address with or without CIDR notation
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Output("ipNetmask")]
@@ -147,7 +171,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Ip range
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Output("ipRange")]
@@ -155,7 +178,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// IP wildcard mask
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Output("ipWildcard")]
@@ -169,7 +191,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -238,13 +259,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -252,7 +273,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Fully qualified domain name
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Input("fqdn")]
@@ -260,7 +280,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// IP address with or without CIDR notation
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Input("ipNetmask")]
@@ -268,7 +287,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Ip range
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Input("ipRange")]
@@ -276,7 +294,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// IP wildcard mask
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Input("ipWildcard")]
@@ -290,7 +307,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -324,13 +340,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -338,7 +354,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Fully qualified domain name
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Input("fqdn")]
@@ -346,7 +361,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// IP address with or without CIDR notation
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Input("ipNetmask")]
@@ -354,7 +368,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Ip range
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Input("ipRange")]
@@ -362,7 +375,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// IP wildcard mask
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         [Input("ipWildcard")]
@@ -376,7 +388,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

@@ -13,6 +13,32 @@ import (
 )
 
 // ScepProfile resource
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/scepProfile:ScepProfile example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/scepProfile:ScepProfile example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/scepProfile:ScepProfile example ::device:id
+// ```
 type ScepProfile struct {
 	pulumi.CustomResourceState
 
@@ -23,6 +49,7 @@ type ScepProfile struct {
 	// Subject Alternative name type
 	CertificateAttributes ScepProfileCertificateAttributesPtrOutput `pulumi:"certificateAttributes"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Digest for CSR
 	Digest pulumi.StringOutput `pulumi:"digest"`
@@ -31,7 +58,6 @@ type ScepProfile struct {
 	// CA certificate fingerprint
 	Fingerprint pulumi.StringPtrOutput `pulumi:"fingerprint"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the SCEP profile
@@ -45,7 +71,6 @@ type ScepProfile struct {
 	// SCEP server URL
 	ScepUrl pulumi.StringOutput `pulumi:"scepUrl"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Subject
@@ -116,6 +141,7 @@ type scepProfileState struct {
 	// Subject Alternative name type
 	CertificateAttributes *ScepProfileCertificateAttributes `pulumi:"certificateAttributes"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Digest for CSR
 	Digest *string `pulumi:"digest"`
@@ -124,7 +150,6 @@ type scepProfileState struct {
 	// CA certificate fingerprint
 	Fingerprint *string `pulumi:"fingerprint"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the SCEP profile
@@ -138,7 +163,6 @@ type scepProfileState struct {
 	// SCEP server URL
 	ScepUrl *string `pulumi:"scepUrl"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subject
@@ -158,6 +182,7 @@ type ScepProfileState struct {
 	// Subject Alternative name type
 	CertificateAttributes ScepProfileCertificateAttributesPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Digest for CSR
 	Digest pulumi.StringPtrInput
@@ -166,7 +191,6 @@ type ScepProfileState struct {
 	// CA certificate fingerprint
 	Fingerprint pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the SCEP profile
@@ -180,7 +204,6 @@ type ScepProfileState struct {
 	// SCEP server URL
 	ScepUrl pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subject
@@ -204,13 +227,13 @@ type scepProfileArgs struct {
 	// Subject Alternative name type
 	CertificateAttributes *ScepProfileCertificateAttributes `pulumi:"certificateAttributes"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Digest for CSR
 	Digest string `pulumi:"digest"`
 	// CA certificate fingerprint
 	Fingerprint *string `pulumi:"fingerprint"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the SCEP profile
@@ -224,7 +247,6 @@ type scepProfileArgs struct {
 	// SCEP server URL
 	ScepUrl string `pulumi:"scepUrl"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subject
@@ -244,13 +266,13 @@ type ScepProfileArgs struct {
 	// Subject Alternative name type
 	CertificateAttributes ScepProfileCertificateAttributesPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Digest for CSR
 	Digest pulumi.StringInput
 	// CA certificate fingerprint
 	Fingerprint pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the SCEP profile
@@ -264,7 +286,6 @@ type ScepProfileArgs struct {
 	// SCEP server URL
 	ScepUrl pulumi.StringInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subject
@@ -378,6 +399,7 @@ func (o ScepProfileOutput) CertificateAttributes() ScepProfileCertificateAttribu
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ScepProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -398,7 +420,6 @@ func (o ScepProfileOutput) Fingerprint() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ScepProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -430,7 +451,6 @@ func (o ScepProfileOutput) ScepUrl() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ScepProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

@@ -15,19 +15,18 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfOspfv3AreaInterfaceLinkType {
     /**
      * @return Broadcast
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     private @Nullable LogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcast broadcast;
     /**
      * @return P2mp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     private @Nullable LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mp p2mp;
     /**
      * @return P2p
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
@@ -36,6 +35,7 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceLinkType {
     private LogicalRouterVrfOspfv3AreaInterfaceLinkType() {}
     /**
      * @return Broadcast
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     public Optional<LogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcast> broadcast() {
@@ -43,7 +43,6 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceLinkType {
     }
     /**
      * @return P2mp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
@@ -52,7 +51,6 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceLinkType {
     }
     /**
      * @return P2p
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */

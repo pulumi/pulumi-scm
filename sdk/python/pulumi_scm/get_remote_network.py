@@ -203,7 +203,8 @@ class AwaitableGetRemoteNetworkResult(GetRemoteNetworkResult):
             tfid=self.tfid)
 
 
-def get_remote_network(id: Optional[_builtins.str] = None,
+def get_remote_network(folder: Optional[_builtins.str] = None,
+                       id: Optional[_builtins.str] = None,
                        name: Optional[_builtins.str] = None,
                        opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetRemoteNetworkResult:
     """
@@ -225,10 +226,12 @@ def get_remote_network(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str folder: The folder that contains the remote network
     :param _builtins.str id: The UUID of the remote network
     :param _builtins.str name: The name of the remote network
     """
     __args__ = dict()
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
@@ -249,7 +252,8 @@ def get_remote_network(id: Optional[_builtins.str] = None,
         spn_name=pulumi.get(__ret__, 'spn_name'),
         subnets=pulumi.get(__ret__, 'subnets'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_remote_network_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_remote_network_output(folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                              id: Optional[pulumi.Input[_builtins.str]] = None,
                               name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRemoteNetworkResult]:
     """
@@ -271,10 +275,12 @@ def get_remote_network_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     ```
 
 
+    :param _builtins.str folder: The folder that contains the remote network
     :param _builtins.str id: The UUID of the remote network
     :param _builtins.str name: The name of the remote network
     """
     __args__ = dict()
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)

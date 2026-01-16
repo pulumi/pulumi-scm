@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfBgpAggregateRouteType {
     /**
      * @return Ipv4
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
     private GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv4 ipv4;
     /**
      * @return Ipv6
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
@@ -27,6 +27,7 @@ public final class GetLogicalRouterListDataVrfBgpAggregateRouteType {
     private GetLogicalRouterListDataVrfBgpAggregateRouteType() {}
     /**
      * @return Ipv4
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
     public GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv4 ipv4() {
@@ -34,7 +35,6 @@ public final class GetLogicalRouterListDataVrfBgpAggregateRouteType {
     }
     /**
      * @return Ipv6
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */

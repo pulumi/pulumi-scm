@@ -16,74 +16,74 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListTypeImsi {
     /**
-     * @return Auth
+     * @return IMSI Auth Config for Custom IMSI type
      * 
      */
     private @Nullable ExternalDynamicListTypeImsiAuth auth;
     /**
-     * @return Profile for authenticating client certificates
+     * @return IMSI Certificate Profile for Custom IMSI type
      * 
      */
     private @Nullable String certificateProfile;
     /**
-     * @return Description
+     * @return IMSI Description for Custom IMSI type
      * 
      */
     private @Nullable String description;
     /**
-     * @return Exception list
+     * @return IMSI Exception List for Custom IMSI type
      * 
      */
     private @Nullable List<String> exceptionLists;
     /**
-     * @return Recurring
+     * @return IMSI Recuring Config for Custom IMSI type
      * 
      */
     private ExternalDynamicListTypeImsiRecurring recurring;
     /**
-     * @return Url
+     * @return IMSI URL for Custom IMSI type
      * 
      */
     private String url;
 
     private ExternalDynamicListTypeImsi() {}
     /**
-     * @return Auth
+     * @return IMSI Auth Config for Custom IMSI type
      * 
      */
     public Optional<ExternalDynamicListTypeImsiAuth> auth() {
         return Optional.ofNullable(this.auth);
     }
     /**
-     * @return Profile for authenticating client certificates
+     * @return IMSI Certificate Profile for Custom IMSI type
      * 
      */
     public Optional<String> certificateProfile() {
         return Optional.ofNullable(this.certificateProfile);
     }
     /**
-     * @return Description
+     * @return IMSI Description for Custom IMSI type
      * 
      */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return Exception list
+     * @return IMSI Exception List for Custom IMSI type
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists == null ? List.of() : this.exceptionLists;
     }
     /**
-     * @return Recurring
+     * @return IMSI Recuring Config for Custom IMSI type
      * 
      */
     public ExternalDynamicListTypeImsiRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return Url
+     * @return IMSI URL for Custom IMSI type
      * 
      */
     public String url() {

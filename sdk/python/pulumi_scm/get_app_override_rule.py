@@ -123,27 +123,41 @@ class GetAppOverrideRuleResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
+        """
+        Disabled
+        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
+        """
+        From
+        """
         return pulumi.get(self, "froms")
 
     @_builtins.property
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> _builtins.str:
+        """
+        Group tag
+        """
         return pulumi.get(self, "group_tag")
 
     @_builtins.property
@@ -165,51 +179,82 @@ class GetAppOverrideRuleResult:
     @_builtins.property
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> _builtins.bool:
+        """
+        Negate destination
+        """
         return pulumi.get(self, "negate_destination")
 
     @_builtins.property
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> _builtins.bool:
+        """
+        Negate source
+        """
         return pulumi.get(self, "negate_source")
 
     @_builtins.property
     @pulumi.getter
     def port(self) -> _builtins.str:
+        """
+        Port
+        """
         return pulumi.get(self, "port")
 
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
+        """
+        The position of a security rule
+        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
     def protocol(self) -> _builtins.str:
+        """
+        Protocol
+        """
         return pulumi.get(self, "protocol")
 
     @_builtins.property
     @pulumi.getter(name="relativePosition")
     def relative_position(self) -> _builtins.str:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
         return pulumi.get(self, "relative_position")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
+        """
+        Source
+        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
+        """
+        Tag
+        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> _builtins.str:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
         return pulumi.get(self, "target_rule")
 
     @_builtins.property
@@ -220,6 +265,9 @@ class GetAppOverrideRuleResult:
     @_builtins.property
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
+        """
+        To
+        """
         return pulumi.get(self, "tos")
 
 
@@ -253,8 +301,11 @@ class AwaitableGetAppOverrideRuleResult(GetAppOverrideRuleResult):
             tos=self.tos)
 
 
-def get_app_override_rule(id: Optional[_builtins.str] = None,
+def get_app_override_rule(device: Optional[_builtins.str] = None,
+                          folder: Optional[_builtins.str] = None,
+                          id: Optional[_builtins.str] = None,
                           name: Optional[_builtins.str] = None,
+                          snippet: Optional[_builtins.str] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAppOverrideRuleResult:
     """
     AppOverrideRule data source
@@ -270,12 +321,21 @@ def get_app_override_rule(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getAppOverrideRule:getAppOverrideRule', __args__, opts=opts, typ=GetAppOverrideRuleResult).value
 
@@ -302,8 +362,11 @@ def get_app_override_rule(id: Optional[_builtins.str] = None,
         target_rule=pulumi.get(__ret__, 'target_rule'),
         tfid=pulumi.get(__ret__, 'tfid'),
         tos=pulumi.get(__ret__, 'tos'))
-def get_app_override_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_app_override_rule_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                 folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                 id: Optional[pulumi.Input[_builtins.str]] = None,
                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                 snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAppOverrideRuleResult]:
     """
     AppOverrideRule data source
@@ -319,12 +382,21 @@ def get_app_override_rule_output(id: Optional[pulumi.Input[_builtins.str]] = Non
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAppOverrideRule:getAppOverrideRule', __args__, opts=opts, typ=GetAppOverrideRuleResult)
     return __ret__.apply(lambda __response__: GetAppOverrideRuleResult(

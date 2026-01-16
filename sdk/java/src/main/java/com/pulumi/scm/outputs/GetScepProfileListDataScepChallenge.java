@@ -13,19 +13,18 @@ import java.util.Objects;
 public final class GetScepProfileListDataScepChallenge {
     /**
      * @return Dynamic
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     private GetScepProfileListDataScepChallengeDynamic dynamic;
     /**
      * @return Challenge to use for SCEP server on mobile clients
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     private String fixed;
     /**
      * @return No OTP
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
@@ -34,6 +33,7 @@ public final class GetScepProfileListDataScepChallenge {
     private GetScepProfileListDataScepChallenge() {}
     /**
      * @return Dynamic
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     public GetScepProfileListDataScepChallengeDynamic dynamic() {
@@ -41,7 +41,6 @@ public final class GetScepProfileListDataScepChallenge {
     }
     /**
      * @return Challenge to use for SCEP server on mobile clients
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
@@ -50,7 +49,6 @@ public final class GetScepProfileListDataScepChallenge {
     }
     /**
      * @return No OTP
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */

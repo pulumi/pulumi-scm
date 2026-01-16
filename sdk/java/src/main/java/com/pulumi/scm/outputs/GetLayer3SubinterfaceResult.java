@@ -33,26 +33,63 @@ public final class GetLayer3SubinterfaceResult {
     private GetLayer3SubinterfaceDdnsConfig ddnsConfig;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return Layer3 sub interfaces DHCP Client Object
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
+     */
     private GetLayer3SubinterfaceDhcpClient dhcpClient;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Interface management profile
+     * 
+     */
     private String interfaceManagementProfile;
+    /**
+     * @return L3 sub-interface IP Parent
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
+     */
     private List<GetLayer3SubinterfaceIp> ips;
+    /**
+     * @return MTU
+     * 
+     */
     private Integer mtu;
     /**
      * @return L3 sub-interface name
      * 
      */
     private String name;
+    /**
+     * @return Parent interface
+     * 
+     */
     private String parentInterface;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
+    /**
+     * @return VLAN tag
+     * 
+     */
     private Integer tag;
     private String tfid;
 
@@ -80,14 +117,25 @@ public final class GetLayer3SubinterfaceResult {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return Layer3 sub interfaces DHCP Client Object
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
+     */
     public GetLayer3SubinterfaceDhcpClient dhcpClient() {
         return this.dhcpClient;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -98,12 +146,25 @@ public final class GetLayer3SubinterfaceResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Interface management profile
+     * 
+     */
     public String interfaceManagementProfile() {
         return this.interfaceManagementProfile;
     }
+    /**
+     * @return L3 sub-interface IP Parent
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
+     */
     public List<GetLayer3SubinterfaceIp> ips() {
         return this.ips;
     }
+    /**
+     * @return MTU
+     * 
+     */
     public Integer mtu() {
         return this.mtu;
     }
@@ -114,12 +175,25 @@ public final class GetLayer3SubinterfaceResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return Parent interface
+     * 
+     */
     public String parentInterface() {
         return this.parentInterface;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return VLAN tag
+     * 
+     */
     public Integer tag() {
         return this.tag;
     }

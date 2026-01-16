@@ -14,19 +14,18 @@ import java.util.Objects;
 public final class GetRouteCommunityListListDataType {
     /**
      * @return Extended
+     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     private GetRouteCommunityListListDataTypeExtended extended;
     /**
      * @return Large
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     private GetRouteCommunityListListDataTypeLarge large;
     /**
      * @return Regular
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
@@ -35,6 +34,7 @@ public final class GetRouteCommunityListListDataType {
     private GetRouteCommunityListListDataType() {}
     /**
      * @return Extended
+     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     public GetRouteCommunityListListDataTypeExtended extended() {
@@ -42,7 +42,6 @@ public final class GetRouteCommunityListListDataType {
     }
     /**
      * @return Large
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
@@ -51,7 +50,6 @@ public final class GetRouteCommunityListListDataType {
     }
     /**
      * @return Regular
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */

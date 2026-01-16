@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListTypeUrlAuthResult
     {
         /// <summary>
-        /// Password
+        /// Password for Custom URL authentication
         /// </summary>
         public readonly string Password;
         /// <summary>
-        /// Username
+        /// Username for Custom URL authentication
         /// </summary>
         public readonly string Username;
 

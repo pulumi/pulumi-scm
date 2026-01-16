@@ -25,6 +25,7 @@ import * as utilities from "./utilities";
 export function getServiceConnectionGroup(args: GetServiceConnectionGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceConnectionGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", {
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -34,6 +35,10 @@ export function getServiceConnectionGroup(args: GetServiceConnectionGroupArgs, o
  * A collection of arguments for invoking getServiceConnectionGroup.
  */
 export interface GetServiceConnectionGroupArgs {
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: string;
     /**
      * The UUID of the service connection group
      */
@@ -52,6 +57,10 @@ export interface GetServiceConnectionGroupResult {
      * Disable snat
      */
     readonly disableSnat: boolean;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
     /**
      * The UUID of the service connection group
      */
@@ -91,6 +100,7 @@ export interface GetServiceConnectionGroupResult {
 export function getServiceConnectionGroupOutput(args: GetServiceConnectionGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceConnectionGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", {
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
     }, opts);
@@ -100,6 +110,10 @@ export function getServiceConnectionGroupOutput(args: GetServiceConnectionGroupO
  * A collection of arguments for invoking getServiceConnectionGroup.
  */
 export interface GetServiceConnectionGroupOutputArgs {
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: pulumi.Input<string>;
     /**
      * The UUID of the service connection group
      */

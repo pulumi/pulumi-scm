@@ -16,14 +16,14 @@ public final class ExternalDynamicListTypeDomainRecurringMonthlyArgs extends com
     public static final ExternalDynamicListTypeDomainRecurringMonthlyArgs Empty = new ExternalDynamicListTypeDomainRecurringMonthlyArgs();
 
     /**
-     * Time specification hh (e.g. 20)
+     * Monthly Time specification hh (e.g. 20) for domain
      * 
      */
     @Import(name="at", required=true)
     private Output<String> at;
 
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Monthly Time specification hh (e.g. 20) for domain
      * 
      */
     public Output<String> at() {
@@ -31,14 +31,14 @@ public final class ExternalDynamicListTypeDomainRecurringMonthlyArgs extends com
     }
 
     /**
-     * Day of month
+     * Day setting for monthly Domain updates
      * 
      */
     @Import(name="dayOfMonth", required=true)
     private Output<Integer> dayOfMonth;
 
     /**
-     * @return Day of month
+     * @return Day setting for monthly Domain updates
      * 
      */
     public Output<Integer> dayOfMonth() {
@@ -71,7 +71,7 @@ public final class ExternalDynamicListTypeDomainRecurringMonthlyArgs extends com
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Monthly Time specification hh (e.g. 20) for domain
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class ExternalDynamicListTypeDomainRecurringMonthlyArgs extends com
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Monthly Time specification hh (e.g. 20) for domain
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class ExternalDynamicListTypeDomainRecurringMonthlyArgs extends com
         }
 
         /**
-         * @param dayOfMonth Day of month
+         * @param dayOfMonth Day setting for monthly Domain updates
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class ExternalDynamicListTypeDomainRecurringMonthlyArgs extends com
         }
 
         /**
-         * @param dayOfMonth Day of month
+         * @param dayOfMonth Day setting for monthly Domain updates
          * 
          * @return builder
          * 

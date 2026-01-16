@@ -79,6 +79,21 @@ public final class SiteState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The folder in which the resource is defined
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable Output<String> folder;
+
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * The latitude coordinate for the site
      * 
      */
@@ -227,6 +242,7 @@ public final class SiteState extends com.pulumi.resources.ResourceArgs {
         this.addressLine2 = $.addressLine2;
         this.city = $.city;
         this.country = $.country;
+        this.folder = $.folder;
         this.latitude = $.latitude;
         this.licenseType = $.licenseType;
         this.longitude = $.longitude;
@@ -339,6 +355,27 @@ public final class SiteState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder country(String country) {
             return country(Output.of(country));
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable Output<String> folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
         }
 
         /**

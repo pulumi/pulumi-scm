@@ -103,6 +103,20 @@ namespace Pulumi.Scm
     public sealed class GetDecryptionRuleArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// The UUID of the decryption rule
         /// </summary>
         [Input("id", required: true)]
@@ -114,6 +128,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetDecryptionRuleArgs()
         {
         }
@@ -122,6 +143,20 @@ namespace Pulumi.Scm
 
     public sealed class GetDecryptionRuleInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the decryption rule
         /// </summary>
@@ -133,6 +168,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetDecryptionRuleInvokeArgs()
         {
@@ -166,36 +208,99 @@ namespace Pulumi.Scm
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Is the rule disabled?
+        /// </summary>
         public readonly bool Disabled;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
+        /// <summary>
+        /// The source security zone
+        /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
         /// The UUID of the decryption rule
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Log failed decryption events?
+        /// </summary>
         public readonly bool LogFail;
+        /// <summary>
+        /// The log settings of the decryption rule
+        /// </summary>
         public readonly string LogSetting;
+        /// <summary>
+        /// Log successful decryption events?
+        /// </summary>
         public readonly bool LogSuccess;
         /// <summary>
         /// The name of the decryption rule
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Negate the destination addresses?
+        /// </summary>
         public readonly bool NegateDestination;
+        /// <summary>
+        /// Negate the source addresses?
+        /// </summary>
         public readonly bool NegateSource;
+        /// <summary>
+        /// The position of a security rule
+        /// </summary>
         public readonly string Position;
+        /// <summary>
+        /// The decryption profile associated with the decryption rule
+        /// </summary>
         public readonly string Profile;
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
         public readonly string RelativePosition;
+        /// <summary>
+        /// The destination services and/or service groups
+        /// </summary>
         public readonly ImmutableArray<string> Services;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// Source hip
+        /// </summary>
         public readonly ImmutableArray<string> SourceHips;
+        /// <summary>
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
+        /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
+        /// <summary>
+        /// The source addresses
+        /// </summary>
         public readonly ImmutableArray<string> Sources;
+        /// <summary>
+        /// The tags associated with the decryption rule
+        /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
         public readonly string TargetRule;
         public readonly string Tfid;
+        /// <summary>
+        /// The destination security zone
+        /// </summary>
         public readonly ImmutableArray<string> Tos;
+        /// <summary>
+        /// The type of decryption
+        /// </summary>
         public readonly Outputs.GetDecryptionRuleTypeResult Type;
 
         [OutputConstructor]

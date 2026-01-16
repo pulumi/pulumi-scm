@@ -19,6 +19,7 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Discard
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     @Import(name="discard")
@@ -26,6 +27,7 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Discard
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     public Optional<Output<PbfRuleActionDiscardArgs>> discard() {
@@ -34,7 +36,6 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Forward
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
@@ -43,7 +44,6 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Forward
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
@@ -53,7 +53,6 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * No pbf
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
@@ -62,7 +61,6 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return No pbf
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
@@ -98,6 +96,7 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param discard Discard
+         * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
          * 
          * @return builder
          * 
@@ -109,6 +108,7 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param discard Discard
+         * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
          * 
          * @return builder
          * 
@@ -119,7 +119,6 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param forward Forward
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
          * 
          * @return builder
@@ -132,7 +131,6 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param forward Forward
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
          * 
          * @return builder
@@ -144,7 +142,6 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param noPbf No pbf
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
          * 
          * @return builder
@@ -157,7 +154,6 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param noPbf No pbf
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
          * 
          * @return builder

@@ -17,6 +17,7 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
     /**
      * Contains
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     @Import(name="contains")
@@ -24,6 +25,7 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
     /**
      * @return Contains
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     public Optional<Output<String>> contains() {
@@ -32,7 +34,6 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
     /**
      * Is
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -41,7 +42,6 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
     /**
      * @return Is
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -51,7 +51,6 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
     /**
      * Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -60,7 +59,6 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
     /**
      * @return Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -96,6 +94,7 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
         /**
          * @param contains Contains
+         * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
          * 
@@ -107,6 +106,7 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
         /**
          * @param contains Contains
+         * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
          * 
@@ -117,7 +117,6 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
         /**
          * @param is Is
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
@@ -130,7 +129,6 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
         /**
          * @param is Is
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
@@ -142,7 +140,6 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
         /**
          * @param isNot Is not
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
@@ -155,7 +152,6 @@ public final class HipObjectMobileDeviceCriteriaTagArgs extends com.pulumi.resou
 
         /**
          * @param isNot Is not
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder

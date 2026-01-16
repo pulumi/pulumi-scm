@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetBgpRouteMapRedistributionBgp {
     /**
      * @return Ospf
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
     private GetBgpRouteMapRedistributionBgpOspf ospf;
     /**
      * @return BGP Root RIB
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
@@ -27,6 +27,7 @@ public final class GetBgpRouteMapRedistributionBgp {
     private GetBgpRouteMapRedistributionBgp() {}
     /**
      * @return Ospf
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
     public GetBgpRouteMapRedistributionBgpOspf ospf() {
@@ -34,7 +35,6 @@ public final class GetBgpRouteMapRedistributionBgp {
     }
     /**
      * @return BGP Root RIB
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */

@@ -46,6 +46,32 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example ::device:id
+// ```
 type AuthenticationPortal struct {
 	pulumi.CustomResourceState
 
@@ -54,9 +80,9 @@ type AuthenticationPortal struct {
 	// The certificate profile
 	CertificateProfile pulumi.StringPtrOutput `pulumi:"certificateProfile"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The UDP port for inbound authentication prompts
@@ -66,7 +92,6 @@ type AuthenticationPortal struct {
 	// The authentication portal IP address or hostname
 	RedirectHost pulumi.StringOutput `pulumi:"redirectHost"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -114,9 +139,9 @@ type authenticationPortalState struct {
 	// The certificate profile
 	CertificateProfile *string `pulumi:"certificateProfile"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UDP port for inbound authentication prompts
@@ -126,7 +151,6 @@ type authenticationPortalState struct {
 	// The authentication portal IP address or hostname
 	RedirectHost *string `pulumi:"redirectHost"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -142,9 +166,9 @@ type AuthenticationPortalState struct {
 	// The certificate profile
 	CertificateProfile pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The UDP port for inbound authentication prompts
@@ -154,7 +178,6 @@ type AuthenticationPortalState struct {
 	// The authentication portal IP address or hostname
 	RedirectHost pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -174,9 +197,9 @@ type authenticationPortalArgs struct {
 	// The certificate profile
 	CertificateProfile *string `pulumi:"certificateProfile"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UDP port for inbound authentication prompts
@@ -186,7 +209,6 @@ type authenticationPortalArgs struct {
 	// The authentication portal IP address or hostname
 	RedirectHost string `pulumi:"redirectHost"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Timer
@@ -202,9 +224,9 @@ type AuthenticationPortalArgs struct {
 	// The certificate profile
 	CertificateProfile pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The UDP port for inbound authentication prompts
@@ -214,7 +236,6 @@ type AuthenticationPortalArgs struct {
 	// The authentication portal IP address or hostname
 	RedirectHost pulumi.StringInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Timer
@@ -321,12 +342,12 @@ func (o AuthenticationPortalOutput) CertificateProfile() pulumi.StringPtrOutput 
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationPortalOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationPortal) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationPortalOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationPortal) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -348,7 +369,6 @@ func (o AuthenticationPortalOutput) RedirectHost() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationPortalOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationPortal) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

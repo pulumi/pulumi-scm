@@ -20,14 +20,14 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
     public static final ExternalDynamicListTypeImsiArgs Empty = new ExternalDynamicListTypeImsiArgs();
 
     /**
-     * Auth
+     * IMSI Auth Config for Custom IMSI type
      * 
      */
     @Import(name="auth")
     private @Nullable Output<ExternalDynamicListTypeImsiAuthArgs> auth;
 
     /**
-     * @return Auth
+     * @return IMSI Auth Config for Custom IMSI type
      * 
      */
     public Optional<Output<ExternalDynamicListTypeImsiAuthArgs>> auth() {
@@ -35,14 +35,14 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
     }
 
     /**
-     * Profile for authenticating client certificates
+     * IMSI Certificate Profile for Custom IMSI type
      * 
      */
     @Import(name="certificateProfile")
     private @Nullable Output<String> certificateProfile;
 
     /**
-     * @return Profile for authenticating client certificates
+     * @return IMSI Certificate Profile for Custom IMSI type
      * 
      */
     public Optional<Output<String>> certificateProfile() {
@@ -50,14 +50,14 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
     }
 
     /**
-     * Description
+     * IMSI Description for Custom IMSI type
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return Description
+     * @return IMSI Description for Custom IMSI type
      * 
      */
     public Optional<Output<String>> description() {
@@ -65,14 +65,14 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
     }
 
     /**
-     * Exception list
+     * IMSI Exception List for Custom IMSI type
      * 
      */
     @Import(name="exceptionLists")
     private @Nullable Output<List<String>> exceptionLists;
 
     /**
-     * @return Exception list
+     * @return IMSI Exception List for Custom IMSI type
      * 
      */
     public Optional<Output<List<String>>> exceptionLists() {
@@ -80,14 +80,14 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
     }
 
     /**
-     * Recurring
+     * IMSI Recuring Config for Custom IMSI type
      * 
      */
     @Import(name="recurring", required=true)
     private Output<ExternalDynamicListTypeImsiRecurringArgs> recurring;
 
     /**
-     * @return Recurring
+     * @return IMSI Recuring Config for Custom IMSI type
      * 
      */
     public Output<ExternalDynamicListTypeImsiRecurringArgs> recurring() {
@@ -95,14 +95,14 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
     }
 
     /**
-     * Url
+     * IMSI URL for Custom IMSI type
      * 
      */
     @Import(name="url", required=true)
     private Output<String> url;
 
     /**
-     * @return Url
+     * @return IMSI URL for Custom IMSI type
      * 
      */
     public Output<String> url() {
@@ -139,7 +139,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param auth Auth
+         * @param auth IMSI Auth Config for Custom IMSI type
          * 
          * @return builder
          * 
@@ -150,7 +150,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param auth Auth
+         * @param auth IMSI Auth Config for Custom IMSI type
          * 
          * @return builder
          * 
@@ -160,7 +160,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param certificateProfile Profile for authenticating client certificates
+         * @param certificateProfile IMSI Certificate Profile for Custom IMSI type
          * 
          * @return builder
          * 
@@ -171,7 +171,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param certificateProfile Profile for authenticating client certificates
+         * @param certificateProfile IMSI Certificate Profile for Custom IMSI type
          * 
          * @return builder
          * 
@@ -181,7 +181,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param description Description
+         * @param description IMSI Description for Custom IMSI type
          * 
          * @return builder
          * 
@@ -192,7 +192,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param description Description
+         * @param description IMSI Description for Custom IMSI type
          * 
          * @return builder
          * 
@@ -202,7 +202,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IMSI Exception List for Custom IMSI type
          * 
          * @return builder
          * 
@@ -213,7 +213,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IMSI Exception List for Custom IMSI type
          * 
          * @return builder
          * 
@@ -223,7 +223,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IMSI Exception List for Custom IMSI type
          * 
          * @return builder
          * 
@@ -233,7 +233,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param recurring Recurring
+         * @param recurring IMSI Recuring Config for Custom IMSI type
          * 
          * @return builder
          * 
@@ -244,7 +244,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param recurring Recurring
+         * @param recurring IMSI Recuring Config for Custom IMSI type
          * 
          * @return builder
          * 
@@ -254,7 +254,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param url Url
+         * @param url IMSI URL for Custom IMSI type
          * 
          * @return builder
          * 
@@ -265,7 +265,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param url Url
+         * @param url IMSI URL for Custom IMSI type
          * 
          * @return builder
          * 

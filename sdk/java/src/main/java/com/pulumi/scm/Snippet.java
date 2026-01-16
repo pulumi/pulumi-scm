@@ -70,6 +70,16 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/snippet:Snippet example :::id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/snippet:Snippet")
 public class Snippet extends com.pulumi.resources.CustomResource {

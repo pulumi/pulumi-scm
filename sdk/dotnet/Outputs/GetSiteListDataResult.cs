@@ -30,6 +30,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Country;
         /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
         /// The UUID of the site
         /// </summary>
         public readonly string Id;
@@ -81,6 +85,8 @@ namespace Pulumi.Scm.Outputs
 
             string country,
 
+            string folder,
+
             string id,
 
             string latitude,
@@ -107,6 +113,7 @@ namespace Pulumi.Scm.Outputs
             AddressLine2 = addressLine2;
             City = city;
             Country = country;
+            Folder = folder;
             Id = id;
             Latitude = latitude;
             LicenseType = licenseType;

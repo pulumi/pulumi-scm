@@ -17,6 +17,21 @@ public final class GetRemoteNetworkArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetRemoteNetworkArgs Empty = new GetRemoteNetworkArgs();
 
     /**
+     * The folder that contains the remote network
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable Output<String> folder;
+
+    /**
+     * @return The folder that contains the remote network
+     * 
+     */
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * The UUID of the remote network
      * 
      */
@@ -49,6 +64,7 @@ public final class GetRemoteNetworkArgs extends com.pulumi.resources.InvokeArgs 
     private GetRemoteNetworkArgs() {}
 
     private GetRemoteNetworkArgs(GetRemoteNetworkArgs $) {
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
     }
@@ -69,6 +85,27 @@ public final class GetRemoteNetworkArgs extends com.pulumi.resources.InvokeArgs 
 
         public Builder(GetRemoteNetworkArgs defaults) {
             $ = new GetRemoteNetworkArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param folder The folder that contains the remote network
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable Output<String> folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
+         * @param folder The folder that contains the remote network
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
         }
 
         /**

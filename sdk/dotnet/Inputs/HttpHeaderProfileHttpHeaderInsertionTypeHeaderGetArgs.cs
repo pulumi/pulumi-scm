@@ -25,10 +25,10 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? Log { get; set; }
 
         /// <summary>
-        /// An auto-generated name (*This should be removed*)
+        /// The name of the HTTP header
         /// </summary>
-        [Input("name")]
-        public Input<string>? Name { get; set; }
+        [Input("name", required: true)]
+        public Input<string> Name { get; set; } = null!;
 
         /// <summary>
         /// The value associated with the HTTP header

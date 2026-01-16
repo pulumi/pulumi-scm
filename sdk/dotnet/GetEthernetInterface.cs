@@ -124,6 +124,20 @@ namespace Pulumi.Scm
     public sealed class GetEthernetInterfaceArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
@@ -135,6 +149,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetEthernetInterfaceArgs()
         {
         }
@@ -143,6 +164,20 @@ namespace Pulumi.Scm
 
     public sealed class GetEthernetInterfaceInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// UUID of the resource
         /// </summary>
@@ -154,6 +189,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetEthernetInterfaceInvokeArgs()
         {
@@ -167,28 +209,74 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Aggregate group
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly string AggregateGroup;
+        /// <summary>
+        /// Interface description
+        /// </summary>
         public readonly string Comment;
+        /// <summary>
+        /// Default interface assignment
+        /// </summary>
         public readonly string DefaultValue;
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Layer2
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
+        /// </summary>
         public readonly Outputs.GetEthernetInterfaceLayer2Result Layer2;
+        /// <summary>
+        /// Ethernet Interface Layer 3 configuration
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
+        /// </summary>
         public readonly Outputs.GetEthernetInterfaceLayer3Result Layer3;
+        /// <summary>
+        /// Link duplex
+        /// </summary>
         public readonly string LinkDuplex;
+        /// <summary>
+        /// Link speed
+        /// </summary>
         public readonly string LinkSpeed;
+        /// <summary>
+        /// Link state
+        /// </summary>
         public readonly string LinkState;
         /// <summary>
         /// Interface name
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Poe
+        /// </summary>
         public readonly Outputs.GetEthernetInterfacePoeResult Poe;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// Tap
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
+        /// </summary>
         public readonly Outputs.GetEthernetInterfaceTapResult Tap;
         public readonly string Tfid;
 

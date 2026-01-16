@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Ssl forward proxy
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `SslForwardProxy` and `SslInboundInspection`.
         /// </summary>
         [Input("sslForwardProxy")]
         public Input<Inputs.DecryptionRuleTypeSslForwardProxyGetArgs>? SslForwardProxy { get; set; }
 
         /// <summary>
         /// add the certificate name for SSL inbound inspection
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `SslForwardProxy` and `SslInboundInspection`.
         /// </summary>
         [Input("sslInboundInspection")]

@@ -7,28 +7,165 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 // SyslogServerProfile resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewSyslogServerProfile(ctx, "scm_syslog_server_prof_1", &scm.SyslogServerProfileArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("syslog-server-prof-base"),
+//				Servers: scm.SyslogServerProfileServerArray{
+//					&scm.SyslogServerProfileServerArgs{
+//						Name:   pulumi.String("Server-Primary"),
+//						Server: pulumi.String("192.168.1.10"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewSyslogServerProfile(ctx, "scm_syslog_server_prof_2", &scm.SyslogServerProfileArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("syslog-server-prof-mixed"),
+//				Servers: scm.SyslogServerProfileServerArray{
+//					&scm.SyslogServerProfileServerArgs{
+//						Name:      pulumi.String("Server-Mixed"),
+//						Server:    pulumi.String("10.0.0.50"),
+//						Transport: pulumi.String("TCP"),
+//						Port:      pulumi.Int(601),
+//						Format:    pulumi.String("IETF"),
+//						Facility:  pulumi.String("LOG_LOCAL4"),
+//					},
+//				},
+//				Format: &scm.SyslogServerProfileFormatArgs{
+//					Traffic:       pulumi.String("$bytes"),
+//					Threat:        pulumi.String("$app"),
+//					Globalprotect: pulumi.String("$cloud"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewSyslogServerProfile(ctx, "scm_syslog_server_prof_3", &scm.SyslogServerProfileArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("syslog-server-prof-complete"),
+//				Servers: scm.SyslogServerProfileServerArray{
+//					&scm.SyslogServerProfileServerArgs{
+//						Name:      pulumi.String("Server-A"),
+//						Server:    pulumi.String("172.16.10.1"),
+//						Transport: pulumi.String("UDP"),
+//						Port:      pulumi.Int(514),
+//						Format:    pulumi.String("BSD"),
+//						Facility:  pulumi.String("LOG_LOCAL7"),
+//					},
+//					&scm.SyslogServerProfileServerArgs{
+//						Name:      pulumi.String("Server-B"),
+//						Server:    pulumi.String("172.16.10.2"),
+//						Transport: pulumi.String("TCP"),
+//						Port:      pulumi.Int(6514),
+//						Format:    pulumi.String("IETF"),
+//						Facility:  pulumi.String("LOG_LOCAL3"),
+//					},
+//					&scm.SyslogServerProfileServerArgs{
+//						Name:      pulumi.String("Server-C"),
+//						Server:    pulumi.String("192.168.1.10"),
+//						Transport: pulumi.String("UDP"),
+//						Port:      pulumi.Int(514),
+//						Format:    pulumi.String("BSD"),
+//						Facility:  pulumi.String("LOG_USER"),
+//					},
+//				},
+//				Format: &scm.SyslogServerProfileFormatArgs{
+//					Escaping: &scm.SyslogServerProfileFormatEscapingArgs{
+//						EscapeCharacter:   pulumi.String("*"),
+//						EscapedCharacters: pulumi.String("&\\#"),
+//					},
+//					Traffic:       pulumi.String("$actionflags"),
+//					Threat:        pulumi.String("$error + $errorcode"),
+//					Wildfire:      pulumi.String("$client_os"),
+//					Url:           pulumi.String("$type"),
+//					Data:          pulumi.String("$srcregion"),
+//					Gtp:           pulumi.String("$time_generated"),
+//					Sctp:          pulumi.String("$device_name and $contenttype"),
+//					Tunnel:        pulumi.String("$tunnel_type"),
+//					Auth:          pulumi.String("$hostid + $portal"),
+//					Userid:        pulumi.String("$hostid and $location"),
+//					Iptag:         pulumi.String("dg_hier_level_1"),
+//					Decryption:    pulumi.String("dg_hier_level_2"),
+//					Config:        pulumi.String("dg_hier_level_3"),
+//					System:        pulumi.String("$vsys_name + $status"),
+//					Globalprotect: pulumi.String("default"),
+//					HipMatch:      pulumi.String("custom"),
+//					Correlation:   pulumi.String("custom"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example ::device:id
+// ```
 type SyslogServerProfile struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Format
 	Format SyslogServerProfileFormatPtrOutput `pulumi:"format"`
 	// The name of the syslog server profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Servers
-	Servers SyslogServerProfileServersPtrOutput `pulumi:"servers"`
+	// A list of syslog server configurations. At least one server is required.
+	Servers SyslogServerProfileServerArrayOutput `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -38,9 +175,12 @@ type SyslogServerProfile struct {
 func NewSyslogServerProfile(ctx *pulumi.Context,
 	name string, args *SyslogServerProfileArgs, opts ...pulumi.ResourceOption) (*SyslogServerProfile, error) {
 	if args == nil {
-		args = &SyslogServerProfileArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.Servers == nil {
+		return nil, errors.New("invalid value for required argument 'Servers'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource SyslogServerProfile
 	err := ctx.RegisterResource("scm:index/syslogServerProfile:SyslogServerProfile", name, args, &resource, opts...)
@@ -65,19 +205,18 @@ func GetSyslogServerProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering SyslogServerProfile resources.
 type syslogServerProfileState struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Format
 	Format *SyslogServerProfileFormat `pulumi:"format"`
 	// The name of the syslog server profile
 	Name *string `pulumi:"name"`
-	// Servers
-	Servers *SyslogServerProfileServers `pulumi:"servers"`
+	// A list of syslog server configurations. At least one server is required.
+	Servers []SyslogServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -85,19 +224,18 @@ type syslogServerProfileState struct {
 
 type SyslogServerProfileState struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Format
 	Format SyslogServerProfileFormatPtrInput
 	// The name of the syslog server profile
 	Name pulumi.StringPtrInput
-	// Servers
-	Servers SyslogServerProfileServersPtrInput
+	// A list of syslog server configurations. At least one server is required.
+	Servers SyslogServerProfileServerArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -109,19 +247,18 @@ func (SyslogServerProfileState) ElementType() reflect.Type {
 
 type syslogServerProfileArgs struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Format
 	Format *SyslogServerProfileFormat `pulumi:"format"`
 	// The name of the syslog server profile
 	Name *string `pulumi:"name"`
-	// Servers
-	Servers *SyslogServerProfileServers `pulumi:"servers"`
+	// A list of syslog server configurations. At least one server is required.
+	Servers []SyslogServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -129,19 +266,18 @@ type syslogServerProfileArgs struct {
 // The set of arguments for constructing a SyslogServerProfile resource.
 type SyslogServerProfileArgs struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Format
 	Format SyslogServerProfileFormatPtrInput
 	// The name of the syslog server profile
 	Name pulumi.StringPtrInput
-	// Servers
-	Servers SyslogServerProfileServersPtrInput
+	// A list of syslog server configurations. At least one server is required.
+	Servers SyslogServerProfileServerArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -234,12 +370,12 @@ func (o SyslogServerProfileOutput) ToSyslogServerProfileOutputWithContext(ctx co
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SyslogServerProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SyslogServerProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SyslogServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SyslogServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -255,13 +391,12 @@ func (o SyslogServerProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SyslogServerProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Servers
-func (o SyslogServerProfileOutput) Servers() SyslogServerProfileServersPtrOutput {
-	return o.ApplyT(func(v *SyslogServerProfile) SyslogServerProfileServersPtrOutput { return v.Servers }).(SyslogServerProfileServersPtrOutput)
+// A list of syslog server configurations. At least one server is required.
+func (o SyslogServerProfileOutput) Servers() SyslogServerProfileServerArrayOutput {
+	return o.ApplyT(func(v *SyslogServerProfile) SyslogServerProfileServerArrayOutput { return v.Servers }).(SyslogServerProfileServerArrayOutput)
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SyslogServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SyslogServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

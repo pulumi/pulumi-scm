@@ -19,6 +19,7 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
     /**
      * Adaptive
+     * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
     @Import(name="adaptive")
@@ -26,6 +27,7 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
     /**
      * @return Adaptive
+     * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
     public Optional<Output<SdwanSaasQualityProfileMonitorModeAdaptiveArgs>> adaptive() {
@@ -34,7 +36,6 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
     /**
      * Http https
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
@@ -43,7 +44,6 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
     /**
      * @return Http https
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
@@ -53,7 +53,6 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
     /**
      * Static ip
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
@@ -62,7 +61,6 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
     /**
      * @return Static ip
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
@@ -98,6 +96,7 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
         /**
          * @param adaptive Adaptive
+         * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
          * 
          * @return builder
          * 
@@ -109,6 +108,7 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
         /**
          * @param adaptive Adaptive
+         * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
          * 
          * @return builder
          * 
@@ -119,7 +119,6 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
         /**
          * @param httpHttps Http https
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
          * 
          * @return builder
@@ -132,7 +131,6 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
         /**
          * @param httpHttps Http https
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
          * 
          * @return builder
@@ -144,7 +142,6 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
         /**
          * @param staticIp Static ip
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
          * 
          * @return builder
@@ -157,7 +154,6 @@ public final class SdwanSaasQualityProfileMonitorModeArgs extends com.pulumi.res
 
         /**
          * @param staticIp Static ip
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
          * 
          * @return builder

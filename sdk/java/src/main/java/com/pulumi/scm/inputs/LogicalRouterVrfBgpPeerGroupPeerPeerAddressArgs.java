@@ -17,6 +17,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerPeerAddressArgs extends com.p
 
     /**
      * Fqdn
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
     @Import(name="fqdn")
@@ -24,6 +25,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerPeerAddressArgs extends com.p
 
     /**
      * @return Fqdn
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
     public Optional<Output<String>> fqdn() {
@@ -32,7 +34,6 @@ public final class LogicalRouterVrfBgpPeerGroupPeerPeerAddressArgs extends com.p
 
     /**
      * Ip
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
@@ -41,7 +42,6 @@ public final class LogicalRouterVrfBgpPeerGroupPeerPeerAddressArgs extends com.p
 
     /**
      * @return Ip
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
@@ -76,6 +76,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerPeerAddressArgs extends com.p
 
         /**
          * @param fqdn Fqdn
+         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
          * 
          * @return builder
          * 
@@ -87,6 +88,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerPeerAddressArgs extends com.p
 
         /**
          * @param fqdn Fqdn
+         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
          * 
          * @return builder
          * 
@@ -97,7 +99,6 @@ public final class LogicalRouterVrfBgpPeerGroupPeerPeerAddressArgs extends com.p
 
         /**
          * @param ip Ip
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
          * 
          * @return builder
@@ -110,7 +111,6 @@ public final class LogicalRouterVrfBgpPeerGroupPeerPeerAddressArgs extends com.p
 
         /**
          * @param ip Ip
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
          * 
          * @return builder

@@ -108,6 +108,32 @@ import * as utilities from "./utilities";
  *     pbfOnly: false,
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example ::device:id
+ * ```
  */
 export class ServiceConnectionGroup extends pulumi.CustomResource {
     /**
@@ -142,6 +168,10 @@ export class ServiceConnectionGroup extends pulumi.CustomResource {
      */
     declare public readonly disableSnat: pulumi.Output<boolean | undefined>;
     /**
+     * The folder in which the resource is defined
+     */
+    declare public /*out*/ readonly folder: pulumi.Output<string>;
+    /**
      * Name
      */
     declare public readonly name: pulumi.Output<string>;
@@ -169,6 +199,7 @@ export class ServiceConnectionGroup extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as ServiceConnectionGroupState | undefined;
             resourceInputs["disableSnat"] = state?.disableSnat;
+            resourceInputs["folder"] = state?.folder;
             resourceInputs["name"] = state?.name;
             resourceInputs["pbfOnly"] = state?.pbfOnly;
             resourceInputs["targets"] = state?.targets;
@@ -182,6 +213,7 @@ export class ServiceConnectionGroup extends pulumi.CustomResource {
             resourceInputs["name"] = args?.name;
             resourceInputs["pbfOnly"] = args?.pbfOnly;
             resourceInputs["targets"] = args?.targets;
+            resourceInputs["folder"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -197,6 +229,10 @@ export interface ServiceConnectionGroupState {
      * Disable snat
      */
     disableSnat?: pulumi.Input<boolean>;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder?: pulumi.Input<string>;
     /**
      * Name
      */

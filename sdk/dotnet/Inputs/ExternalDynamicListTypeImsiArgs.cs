@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeImsiArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Auth
+        /// IMSI Auth Config for Custom IMSI type
         /// </summary>
         [Input("auth")]
         public Input<Inputs.ExternalDynamicListTypeImsiAuthArgs>? Auth { get; set; }
 
         /// <summary>
-        /// Profile for authenticating client certificates
+        /// IMSI Certificate Profile for Custom IMSI type
         /// </summary>
         [Input("certificateProfile")]
         public Input<string>? CertificateProfile { get; set; }
 
         /// <summary>
-        /// Description
+        /// IMSI Description for Custom IMSI type
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _exceptionLists;
 
         /// <summary>
-        /// Exception list
+        /// IMSI Exception List for Custom IMSI type
         /// </summary>
         public InputList<string> ExceptionLists
         {
@@ -43,13 +43,13 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Recurring
+        /// IMSI Recuring Config for Custom IMSI type
         /// </summary>
         [Input("recurring", required: true)]
         public Input<Inputs.ExternalDynamicListTypeImsiRecurringArgs> Recurring { get; set; } = null!;
 
         /// <summary>
-        /// Url
+        /// IMSI URL for Custom IMSI type
         /// </summary>
         [Input("url", required: true)]
         public Input<string> Url { get; set; } = null!;

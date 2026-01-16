@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeUrlRecurringWeekly
     {
         /// <summary>
-        /// Time specification hh (e.g. 20)
+        /// Weekly Time specification hh (e.g. 20) for URL
         /// </summary>
         public readonly string At;
         /// <summary>

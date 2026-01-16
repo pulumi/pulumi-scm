@@ -54,10 +54,16 @@ func LookupSecurityRule(ctx *pulumi.Context, args *LookupSecurityRuleArgs, opts 
 
 // A collection of arguments for invoking getSecurityRule.
 type LookupSecurityRuleArgs struct {
+	// The device in which the resource is defined
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder *string `pulumi:"folder"`
 	// The UUID of the security rule
 	Id string `pulumi:"id"`
 	// The name of the security rule
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSecurityRule.
@@ -156,10 +162,16 @@ func LookupSecurityRuleOutput(ctx *pulumi.Context, args LookupSecurityRuleOutput
 
 // A collection of arguments for invoking getSecurityRule.
 type LookupSecurityRuleOutputArgs struct {
+	// The device in which the resource is defined
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the security rule
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the security rule
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupSecurityRuleOutputArgs) ElementType() reflect.Type {

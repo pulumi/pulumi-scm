@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 public final class PbfRuleFrom {
     /**
      * @return Source interfaces
+     * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      * 
      */
     private @Nullable List<String> interfaces;
     /**
      * @return Source zones
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      * 
      */
@@ -27,6 +27,7 @@ public final class PbfRuleFrom {
     private PbfRuleFrom() {}
     /**
      * @return Source interfaces
+     * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      * 
      */
     public List<String> interfaces() {
@@ -34,7 +35,6 @@ public final class PbfRuleFrom {
     }
     /**
      * @return Source zones
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      * 
      */

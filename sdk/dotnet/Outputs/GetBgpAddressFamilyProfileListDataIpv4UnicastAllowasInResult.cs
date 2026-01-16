@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Number of times the firewalls own AS can be in an AS_PATH
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Occurrence` and `Origin`.
         /// </summary>
         public readonly int Occurrence;
         /// <summary>
         /// Origin
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Occurrence` and `Origin`.
         /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastAllowasInOriginResult Origin;

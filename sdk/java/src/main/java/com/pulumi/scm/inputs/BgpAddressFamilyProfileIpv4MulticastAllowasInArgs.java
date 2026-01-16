@@ -18,6 +18,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastAllowasInArgs extends com
 
     /**
      * Number of times the firewalls own AS can be in an AS_PATH
+     * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      * 
      */
     @Import(name="occurrence")
@@ -25,6 +26,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastAllowasInArgs extends com
 
     /**
      * @return Number of times the firewalls own AS can be in an AS_PATH
+     * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      * 
      */
     public Optional<Output<Integer>> occurrence() {
@@ -33,7 +35,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastAllowasInArgs extends com
 
     /**
      * Origin
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      * 
      */
@@ -42,7 +43,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastAllowasInArgs extends com
 
     /**
      * @return Origin
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      * 
      */
@@ -77,6 +77,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastAllowasInArgs extends com
 
         /**
          * @param occurrence Number of times the firewalls own AS can be in an AS_PATH
+         * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
          * 
          * @return builder
          * 
@@ -88,6 +89,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastAllowasInArgs extends com
 
         /**
          * @param occurrence Number of times the firewalls own AS can be in an AS_PATH
+         * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
          * 
          * @return builder
          * 
@@ -98,7 +100,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastAllowasInArgs extends com
 
         /**
          * @param origin Origin
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
          * 
          * @return builder
@@ -111,7 +112,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastAllowasInArgs extends com
 
         /**
          * @param origin Origin
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
          * 
          * @return builder

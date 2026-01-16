@@ -18,6 +18,7 @@ public final class BgpRoutingRoutingPreferenceArgs extends com.pulumi.resources.
 
     /**
      * Default
+     * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
     @Import(name="default")
@@ -25,6 +26,7 @@ public final class BgpRoutingRoutingPreferenceArgs extends com.pulumi.resources.
 
     /**
      * @return Default
+     * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
     public Optional<Output<BgpRoutingRoutingPreferenceDefaultArgs>> default_() {
@@ -33,7 +35,6 @@ public final class BgpRoutingRoutingPreferenceArgs extends com.pulumi.resources.
 
     /**
      * Hot potato routing
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
@@ -42,7 +43,6 @@ public final class BgpRoutingRoutingPreferenceArgs extends com.pulumi.resources.
 
     /**
      * @return Hot potato routing
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
@@ -77,6 +77,7 @@ public final class BgpRoutingRoutingPreferenceArgs extends com.pulumi.resources.
 
         /**
          * @param default_ Default
+         * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
          * 
          * @return builder
          * 
@@ -88,6 +89,7 @@ public final class BgpRoutingRoutingPreferenceArgs extends com.pulumi.resources.
 
         /**
          * @param default_ Default
+         * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
          * 
          * @return builder
          * 
@@ -98,7 +100,6 @@ public final class BgpRoutingRoutingPreferenceArgs extends com.pulumi.resources.
 
         /**
          * @param hotPotatoRouting Hot potato routing
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
          * 
          * @return builder
@@ -111,7 +112,6 @@ public final class BgpRoutingRoutingPreferenceArgs extends com.pulumi.resources.
 
         /**
          * @param hotPotatoRouting Hot potato routing
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
          * 
          * @return builder

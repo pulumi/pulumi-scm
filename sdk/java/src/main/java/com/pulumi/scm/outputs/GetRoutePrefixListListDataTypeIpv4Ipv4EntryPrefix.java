@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetRoutePrefixListListDataTypeIpv4Ipv4EntryPrefix {
     /**
      * @return Entry
+     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */
     private GetRoutePrefixListListDataTypeIpv4Ipv4EntryPrefixEntry entry;
     /**
      * @return Network
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */
@@ -27,6 +27,7 @@ public final class GetRoutePrefixListListDataTypeIpv4Ipv4EntryPrefix {
     private GetRoutePrefixListListDataTypeIpv4Ipv4EntryPrefix() {}
     /**
      * @return Entry
+     * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */
     public GetRoutePrefixListListDataTypeIpv4Ipv4EntryPrefixEntry entry() {
@@ -34,7 +35,6 @@ public final class GetRoutePrefixListListDataTypeIpv4Ipv4EntryPrefix {
     }
     /**
      * @return Network
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      * 
      */

@@ -19,6 +19,7 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
     /**
      * Connected Static Root BGP
+     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     @Import(name="bgp")
@@ -26,6 +27,7 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
     /**
      * @return Connected Static Root BGP
+     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionConnectedStaticBgpArgs>> bgp() {
@@ -34,7 +36,6 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
     /**
      * Ospf
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
@@ -43,7 +44,6 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
     /**
      * @return Ospf
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
@@ -53,7 +53,6 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
     /**
      * Rib
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
@@ -62,7 +61,6 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
     /**
      * @return Rib
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
@@ -98,6 +96,7 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
         /**
          * @param bgp Connected Static Root BGP
+         * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
          * 
          * @return builder
          * 
@@ -109,6 +108,7 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
         /**
          * @param bgp Connected Static Root BGP
+         * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
          * 
          * @return builder
          * 
@@ -119,7 +119,6 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
         /**
          * @param ospf Ospf
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
          * 
          * @return builder
@@ -132,7 +131,6 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
         /**
          * @param ospf Ospf
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
          * 
          * @return builder
@@ -144,7 +142,6 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
         /**
          * @param rib Rib
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
          * 
          * @return builder
@@ -157,7 +154,6 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
 
         /**
          * @param rib Rib
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
          * 
          * @return builder

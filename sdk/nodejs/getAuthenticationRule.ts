@@ -23,8 +23,11 @@ import * as utilities from "./utilities";
 export function getAuthenticationRule(args: GetAuthenticationRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationRule:getAuthenticationRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -33,6 +36,16 @@ export function getAuthenticationRule(args: GetAuthenticationRuleArgs, opts?: pu
  */
 export interface GetAuthenticationRuleArgs {
     /**
+     * Device
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * Folder
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the authentication rule
      */
     id: string;
@@ -40,6 +53,11 @@ export interface GetAuthenticationRuleArgs {
      * The name of the authentication rule
      */
     name?: string;
+    /**
+     * Snippet
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -68,36 +86,99 @@ export interface GetAuthenticationRuleResult {
     readonly destinations: string[];
     /**
      * Device
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Is the authentication rule disabled?
+     */
     readonly disabled: boolean;
+    /**
+     * Folder
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
+    /**
+     * The source security zones
+     */
     readonly froms: string[];
+    /**
+     * Group tag
+     */
     readonly groupTag: string;
+    /**
+     * The source Host Integrity Profile (HIP)
+     */
     readonly hipProfiles: string[];
     /**
      * The UUID of the authentication rule
      */
     readonly id: string;
+    /**
+     * Log authentication timeouts?
+     */
     readonly logAuthenticationTimeout: boolean;
+    /**
+     * The log forwarding profile name
+     */
     readonly logSetting: string;
     /**
      * The name of the authentication rule
      */
     readonly name: string;
+    /**
+     * Are the destination addresses negated?
+     */
     readonly negateDestination: boolean;
+    /**
+     * Are the source addresses negated?
+     */
     readonly negateSource: boolean;
+    /**
+     * The relative position of the rule
+     */
     readonly position: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
     readonly relativePosition: string;
+    /**
+     * The destination ports
+     */
     readonly services: string[];
+    /**
+     * Snippet
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * The source Host Integrity Profile (HIP)
+     */
     readonly sourceHips: string[];
+    /**
+     * The source users
+     */
     readonly sourceUsers: string[];
+    /**
+     * The source addresses
+     */
     readonly sources: string[];
+    /**
+     * The authentication rule tags
+     */
     readonly tags: string[];
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
     readonly targetRule: string;
     readonly tfid: string;
+    /**
+     * The authentication session timeout (seconds)
+     */
     readonly timeout: number;
+    /**
+     * The destination security zones
+     */
     readonly tos: string[];
 }
 /**
@@ -119,8 +200,11 @@ export interface GetAuthenticationRuleResult {
 export function getAuthenticationRuleOutput(args: GetAuthenticationRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationRule:getAuthenticationRule", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -129,6 +213,16 @@ export function getAuthenticationRuleOutput(args: GetAuthenticationRuleOutputArg
  */
 export interface GetAuthenticationRuleOutputArgs {
     /**
+     * Device
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * Folder
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the authentication rule
      */
     id: pulumi.Input<string>;
@@ -136,4 +230,9 @@ export interface GetAuthenticationRuleOutputArgs {
      * The name of the authentication rule
      */
     name?: pulumi.Input<string>;
+    /**
+     * Snippet
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

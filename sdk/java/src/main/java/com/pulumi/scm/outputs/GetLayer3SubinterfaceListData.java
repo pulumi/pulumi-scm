@@ -33,18 +33,19 @@ public final class GetLayer3SubinterfaceListData {
     private GetLayer3SubinterfaceListDataDdnsConfig ddnsConfig;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
     /**
      * @return Layer3 sub interfaces DHCP Client Object
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     private GetLayer3SubinterfaceListDataDhcpClient dhcpClient;
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String folder;
@@ -60,7 +61,6 @@ public final class GetLayer3SubinterfaceListData {
     private String interfaceManagementProfile;
     /**
      * @return L3 sub-interface IP Parent
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -81,7 +81,8 @@ public final class GetLayer3SubinterfaceListData {
      */
     private String parentInterface;
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String snippet;
@@ -116,6 +117,7 @@ public final class GetLayer3SubinterfaceListData {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -123,7 +125,6 @@ public final class GetLayer3SubinterfaceListData {
     }
     /**
      * @return Layer3 sub interfaces DHCP Client Object
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -131,7 +132,8 @@ public final class GetLayer3SubinterfaceListData {
         return this.dhcpClient;
     }
     /**
-     * @return The folder of the item. Default: Shared.
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String folder() {
@@ -153,7 +155,6 @@ public final class GetLayer3SubinterfaceListData {
     }
     /**
      * @return L3 sub-interface IP Parent
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -182,7 +183,8 @@ public final class GetLayer3SubinterfaceListData {
         return this.parentInterface;
     }
     /**
-     * @return The snippet of the item.
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String snippet() {

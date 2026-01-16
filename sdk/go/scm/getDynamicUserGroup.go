@@ -59,10 +59,19 @@ func LookupDynamicUserGroup(ctx *pulumi.Context, args *LookupDynamicUserGroupArg
 
 // A collection of arguments for invoking getDynamicUserGroup.
 type LookupDynamicUserGroupArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// The UUID of the dynamic user group
 	Id string `pulumi:"id"`
 	// The name of the dynamic address group
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDynamicUserGroup.
@@ -70,16 +79,23 @@ type LookupDynamicUserGroupResult struct {
 	// The description of the dynamic address group
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The tag-based filter for the dynamic user group
 	Filter string `pulumi:"filter"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the dynamic user group
 	Id string `pulumi:"id"`
 	// The name of the dynamic address group
-	Name    string   `pulumi:"name"`
-	Snippet string   `pulumi:"snippet"`
-	Tags    []string `pulumi:"tags"`
-	Tfid    string   `pulumi:"tfid"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	// Tags associated with the dynamic user group
+	Tags []string `pulumi:"tags"`
+	Tfid string   `pulumi:"tfid"`
 }
 
 func LookupDynamicUserGroupOutput(ctx *pulumi.Context, args LookupDynamicUserGroupOutputArgs, opts ...pulumi.InvokeOption) LookupDynamicUserGroupResultOutput {
@@ -93,10 +109,19 @@ func LookupDynamicUserGroupOutput(ctx *pulumi.Context, args LookupDynamicUserGro
 
 // A collection of arguments for invoking getDynamicUserGroup.
 type LookupDynamicUserGroupOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the dynamic user group
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the dynamic address group
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupDynamicUserGroupOutputArgs) ElementType() reflect.Type {
@@ -124,14 +149,18 @@ func (o LookupDynamicUserGroupResultOutput) Description() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDynamicUserGroupResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The tag-based filter for the dynamic user group
 func (o LookupDynamicUserGroupResultOutput) Filter() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) string { return v.Filter }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDynamicUserGroupResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -146,10 +175,13 @@ func (o LookupDynamicUserGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDynamicUserGroupResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Tags associated with the dynamic user group
 func (o LookupDynamicUserGroupResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

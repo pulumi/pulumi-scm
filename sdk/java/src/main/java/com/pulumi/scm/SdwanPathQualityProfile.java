@@ -18,11 +18,38 @@ import javax.annotation.Nullable;
 /**
  * SdwanPathQualityProfile resource
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/sdwanPathQualityProfile:SdwanPathQualityProfile example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/sdwanPathQualityProfile:SdwanPathQualityProfile example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/sdwanPathQualityProfile:SdwanPathQualityProfile example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/sdwanPathQualityProfile:SdwanPathQualityProfile")
 public class SdwanPathQualityProfile extends com.pulumi.resources.CustomResource {
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -30,6 +57,7 @@ public class SdwanPathQualityProfile extends com.pulumi.resources.CustomResource
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -37,7 +65,6 @@ public class SdwanPathQualityProfile extends com.pulumi.resources.CustomResource
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -46,7 +73,6 @@ public class SdwanPathQualityProfile extends com.pulumi.resources.CustomResource
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -83,7 +109,6 @@ public class SdwanPathQualityProfile extends com.pulumi.resources.CustomResource
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -92,7 +117,6 @@ public class SdwanPathQualityProfile extends com.pulumi.resources.CustomResource
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

@@ -19,15 +19,16 @@ namespace Pulumi.Scm.Outputs
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Folder;
         /// <summary>
         /// Fully qualified domain name
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         public readonly string Fqdn;
@@ -37,19 +38,16 @@ namespace Pulumi.Scm.Outputs
         public readonly string Id;
         /// <summary>
         /// IP address with or without CIDR notation
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         public readonly string IpNetmask;
         /// <summary>
         /// Ip range
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         public readonly string IpRange;
         /// <summary>
         /// IP wildcard mask
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
         /// </summary>
         public readonly string IpWildcard;
@@ -58,7 +56,8 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Snippet;
         /// <summary>

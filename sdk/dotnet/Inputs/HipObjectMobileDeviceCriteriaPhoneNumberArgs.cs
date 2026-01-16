@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Contains
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Contains`, `Is`, and `IsNot`.
         /// </summary>
         [Input("contains")]
         public Input<string>? Contains { get; set; }
 
         /// <summary>
         /// Is
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Contains`, `Is`, and `IsNot`.
         /// </summary>
         [Input("is")]
@@ -28,7 +28,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Is not
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Contains`, `Is`, and `IsNot`.
         /// </summary>
         [Input("isNot")]

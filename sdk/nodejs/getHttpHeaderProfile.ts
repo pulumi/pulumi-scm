@@ -8,12 +8,35 @@ import * as utilities from "./utilities";
 
 /**
  * HttpHeaderProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM HTTP Header Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
+ * const scmHttpHeaderProf = scm.getHttpHeaderProfile({
+ *     id: "2733cba4-c79d-4c98-8e07-4d3cbdd0ba11",
+ * });
+ * export const scmHttpHeaderProfileDetails = {
+ *     profileId: scmHttpHeaderProf.then(scmHttpHeaderProf => scmHttpHeaderProf.id),
+ *     folder: scmHttpHeaderProf.then(scmHttpHeaderProf => scmHttpHeaderProf.folder),
+ *     name: scmHttpHeaderProf.then(scmHttpHeaderProf => scmHttpHeaderProf.name),
+ * };
+ * ```
  */
 export function getHttpHeaderProfile(args: GetHttpHeaderProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetHttpHeaderProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +45,16 @@ export function getHttpHeaderProfile(args: GetHttpHeaderProfileArgs, opts?: pulu
  */
 export interface GetHttpHeaderProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the HTTP header profile
      */
     id: string;
@@ -29,6 +62,11 @@ export interface GetHttpHeaderProfileArgs {
      * The name of the HTTP header profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -41,9 +79,17 @@ export interface GetHttpHeaderProfileResult {
     readonly description: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
+    /**
+     * A list of HTTP header profile rules
+     */
     readonly httpHeaderInsertions: outputs.GetHttpHeaderProfileHttpHeaderInsertion[];
     /**
      * The UUID of the HTTP header profile
@@ -53,17 +99,44 @@ export interface GetHttpHeaderProfileResult {
      * The name of the HTTP header profile
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * HttpHeaderProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM HTTP Header Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
+ * const scmHttpHeaderProf = scm.getHttpHeaderProfile({
+ *     id: "2733cba4-c79d-4c98-8e07-4d3cbdd0ba11",
+ * });
+ * export const scmHttpHeaderProfileDetails = {
+ *     profileId: scmHttpHeaderProf.then(scmHttpHeaderProf => scmHttpHeaderProf.id),
+ *     folder: scmHttpHeaderProf.then(scmHttpHeaderProf => scmHttpHeaderProf.folder),
+ *     name: scmHttpHeaderProf.then(scmHttpHeaderProf => scmHttpHeaderProf.name),
+ * };
+ * ```
  */
 export function getHttpHeaderProfileOutput(args: GetHttpHeaderProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHttpHeaderProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -72,6 +145,16 @@ export function getHttpHeaderProfileOutput(args: GetHttpHeaderProfileOutputArgs,
  */
 export interface GetHttpHeaderProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the HTTP header profile
      */
     id: pulumi.Input<string>;
@@ -79,4 +162,9 @@ export interface GetHttpHeaderProfileOutputArgs {
      * The name of the HTTP header profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

@@ -16,6 +16,21 @@ public final class GetRemoteNetworkPlainArgs extends com.pulumi.resources.Invoke
     public static final GetRemoteNetworkPlainArgs Empty = new GetRemoteNetworkPlainArgs();
 
     /**
+     * The folder that contains the remote network
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable String folder;
+
+    /**
+     * @return The folder that contains the remote network
+     * 
+     */
+    public Optional<String> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * The UUID of the remote network
      * 
      */
@@ -48,6 +63,7 @@ public final class GetRemoteNetworkPlainArgs extends com.pulumi.resources.Invoke
     private GetRemoteNetworkPlainArgs() {}
 
     private GetRemoteNetworkPlainArgs(GetRemoteNetworkPlainArgs $) {
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
     }
@@ -68,6 +84,17 @@ public final class GetRemoteNetworkPlainArgs extends com.pulumi.resources.Invoke
 
         public Builder(GetRemoteNetworkPlainArgs defaults) {
             $ = new GetRemoteNetworkPlainArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param folder The folder that contains the remote network
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable String folder) {
+            $.folder = folder;
+            return this;
         }
 
         /**

@@ -34,6 +34,20 @@ namespace Pulumi.Scm
     public sealed class GetBgpRouteMapRedistributionArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// BGP Route Map Redistributions UUID of the resource
         /// </summary>
         [Input("id", required: true)]
@@ -45,6 +59,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetBgpRouteMapRedistributionArgs()
         {
         }
@@ -53,6 +74,20 @@ namespace Pulumi.Scm
 
     public sealed class GetBgpRouteMapRedistributionInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// BGP Route Map Redistributions UUID of the resource
         /// </summary>
@@ -64,6 +99,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetBgpRouteMapRedistributionInvokeArgs()
         {
@@ -77,11 +119,27 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Bgp
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionBgpResult Bgp;
+        /// <summary>
+        /// Connected static
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
+        /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionConnectedStaticResult ConnectedStatic;
+        /// <summary>
+        /// BGP Route Map Redistributions Description
+        /// </summary>
         public readonly string Description;
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// BGP Route Map Redistributions UUID of the resource
@@ -91,7 +149,15 @@ namespace Pulumi.Scm
         /// BGP Route Map Redistributions Name
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Ospf
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
+        /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionOspfResult Ospf;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

@@ -15,14 +15,14 @@ public final class ExternalDynamicListTypeImsiRecurringDailyArgs extends com.pul
     public static final ExternalDynamicListTypeImsiRecurringDailyArgs Empty = new ExternalDynamicListTypeImsiRecurringDailyArgs();
 
     /**
-     * Time specification hh (e.g. 20)
+     * Daily Time specification hh (e.g. 20) for IMSI
      * 
      */
     @Import(name="at", required=true)
     private Output<String> at;
 
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Daily Time specification hh (e.g. 20) for IMSI
      * 
      */
     public Output<String> at() {
@@ -54,7 +54,7 @@ public final class ExternalDynamicListTypeImsiRecurringDailyArgs extends com.pul
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Daily Time specification hh (e.g. 20) for IMSI
          * 
          * @return builder
          * 
@@ -65,7 +65,7 @@ public final class ExternalDynamicListTypeImsiRecurringDailyArgs extends com.pul
         }
 
         /**
-         * @param at Time specification hh (e.g. 20)
+         * @param at Daily Time specification hh (e.g. 20) for IMSI
          * 
          * @return builder
          * 

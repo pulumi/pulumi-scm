@@ -18,6 +18,7 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Tcp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     @Import(name="tcp")
@@ -25,6 +26,7 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * @return Tcp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     public Optional<Output<ServiceProtocolTcpArgs>> tcp() {
@@ -33,7 +35,6 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Udp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
@@ -42,7 +43,6 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * @return Udp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
@@ -77,6 +77,7 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
 
         /**
          * @param tcp Tcp
+         * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
          * 
          * @return builder
          * 
@@ -88,6 +89,7 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
 
         /**
          * @param tcp Tcp
+         * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
          * 
          * @return builder
          * 
@@ -98,7 +100,6 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
 
         /**
          * @param udp Udp
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
          * 
          * @return builder
@@ -111,7 +112,6 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
 
         /**
          * @param udp Udp
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
          * 
          * @return builder

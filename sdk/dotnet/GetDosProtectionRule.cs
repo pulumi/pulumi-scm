@@ -34,6 +34,20 @@ namespace Pulumi.Scm
     public sealed class GetDosProtectionRuleArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// The UUID of the DNS security profile
         /// </summary>
         [Input("id", required: true)]
@@ -45,6 +59,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetDosProtectionRuleArgs()
         {
         }
@@ -53,6 +74,20 @@ namespace Pulumi.Scm
 
     public sealed class GetDosProtectionRuleInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the DNS security profile
         /// </summary>
@@ -64,6 +99,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetDosProtectionRuleInvokeArgs()
         {
@@ -89,29 +131,71 @@ namespace Pulumi.Scm
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Rule disabled?
+        /// </summary>
         public readonly bool Disabled;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
+        /// <summary>
+        /// List of source zones
+        /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
         /// The UUID of the DNS security profile
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Log forwarding profile name
+        /// </summary>
         public readonly string LogSetting;
         /// <summary>
         /// Rule name
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Position relative to local device rules
+        /// </summary>
         public readonly string Position;
+        /// <summary>
+        /// Protection
+        /// </summary>
         public readonly Outputs.GetDosProtectionRuleProtectionResult Protection;
+        /// <summary>
+        /// Schedule on which to enforce the rule
+        /// </summary>
         public readonly string Schedule;
+        /// <summary>
+        /// List of services
+        /// </summary>
         public readonly ImmutableArray<string> Services;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
+        /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
+        /// <summary>
+        /// List of source addresses
+        /// </summary>
         public readonly ImmutableArray<string> Sources;
+        /// <summary>
+        /// List of tags
+        /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
+        /// <summary>
+        /// List of destination zones
+        /// </summary>
         public readonly ImmutableArray<string> Tos;
 
         [OutputConstructor]

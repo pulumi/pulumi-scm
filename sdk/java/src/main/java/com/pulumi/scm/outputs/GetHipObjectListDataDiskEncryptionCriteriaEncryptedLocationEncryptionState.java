@@ -12,12 +12,12 @@ import java.util.Objects;
 public final class GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionState {
     /**
      * @return Is
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     private String is;
     /**
      * @return Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
@@ -26,6 +26,7 @@ public final class GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEn
     private GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionState() {}
     /**
      * @return Is
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public String is() {
@@ -33,7 +34,6 @@ public final class GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEn
     }
     /**
      * @return Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */

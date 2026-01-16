@@ -16,6 +16,20 @@ public final class GetZoneProtectionProfileArgs extends com.pulumi.resources.Inv
 
     public static final GetZoneProtectionProfileArgs Empty = new GetZoneProtectionProfileArgs();
 
+    @Import(name="device")
+    private @Nullable Output<String> device;
+
+    public Optional<Output<String>> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    @Import(name="folder")
+    private @Nullable Output<String> folder;
+
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
     @Import(name="id", required=true)
     private Output<String> id;
 
@@ -30,11 +44,21 @@ public final class GetZoneProtectionProfileArgs extends com.pulumi.resources.Inv
         return Optional.ofNullable(this.name);
     }
 
+    @Import(name="snippet")
+    private @Nullable Output<String> snippet;
+
+    public Optional<Output<String>> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetZoneProtectionProfileArgs() {}
 
     private GetZoneProtectionProfileArgs(GetZoneProtectionProfileArgs $) {
+        this.device = $.device;
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -55,6 +79,24 @@ public final class GetZoneProtectionProfileArgs extends com.pulumi.resources.Inv
             $ = new GetZoneProtectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        public Builder device(@Nullable Output<String> device) {
+            $.device = device;
+            return this;
+        }
+
+        public Builder device(String device) {
+            return device(Output.of(device));
+        }
+
+        public Builder folder(@Nullable Output<String> folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
+        }
+
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
@@ -71,6 +113,15 @@ public final class GetZoneProtectionProfileArgs extends com.pulumi.resources.Inv
 
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        public Builder snippet(@Nullable Output<String> snippet) {
+            $.snippet = snippet;
+            return this;
+        }
+
+        public Builder snippet(String snippet) {
+            return snippet(Output.of(snippet));
         }
 
         public GetZoneProtectionProfileArgs build() {

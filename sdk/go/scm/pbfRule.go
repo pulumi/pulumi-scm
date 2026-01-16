@@ -167,6 +167,32 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/pbfRule:PbfRule example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/pbfRule:PbfRule example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/pbfRule:PbfRule example ::device:id
+// ```
 type PbfRule struct {
 	pulumi.CustomResourceState
 
@@ -179,11 +205,11 @@ type PbfRule struct {
 	// Destination addresses
 	Destinations pulumi.StringArrayOutput `pulumi:"destinations"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Enforce symmetric return
 	EnforceSymmetricReturn PbfRuleEnforceSymmetricReturnPtrOutput `pulumi:"enforceSymmetricReturn"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// From
@@ -195,7 +221,6 @@ type PbfRule struct {
 	// Services
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Source users
@@ -246,11 +271,11 @@ type pbfRuleState struct {
 	// Destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Enforce symmetric return
 	EnforceSymmetricReturn *PbfRuleEnforceSymmetricReturn `pulumi:"enforceSymmetricReturn"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// From
@@ -262,7 +287,6 @@ type pbfRuleState struct {
 	// Services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source users
@@ -284,11 +308,11 @@ type PbfRuleState struct {
 	// Destination addresses
 	Destinations pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Enforce symmetric return
 	EnforceSymmetricReturn PbfRuleEnforceSymmetricReturnPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// From
@@ -300,7 +324,6 @@ type PbfRuleState struct {
 	// Services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source users
@@ -326,11 +349,11 @@ type pbfRuleArgs struct {
 	// Destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Enforce symmetric return
 	EnforceSymmetricReturn *PbfRuleEnforceSymmetricReturn `pulumi:"enforceSymmetricReturn"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// From
@@ -342,7 +365,6 @@ type pbfRuleArgs struct {
 	// Services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source users
@@ -364,11 +386,11 @@ type PbfRuleArgs struct {
 	// Destination addresses
 	Destinations pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Enforce symmetric return
 	EnforceSymmetricReturn PbfRuleEnforceSymmetricReturnPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// From
@@ -380,7 +402,6 @@ type PbfRuleArgs struct {
 	// Services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source users
@@ -499,6 +520,7 @@ func (o PbfRuleOutput) Destinations() pulumi.StringArrayOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o PbfRuleOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PbfRule) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -509,7 +531,6 @@ func (o PbfRuleOutput) EnforceSymmetricReturn() PbfRuleEnforceSymmetricReturnPtr
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o PbfRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PbfRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -536,7 +557,6 @@ func (o PbfRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o PbfRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PbfRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

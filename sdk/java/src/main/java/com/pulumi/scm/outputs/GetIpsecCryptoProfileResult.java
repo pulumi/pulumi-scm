@@ -16,45 +16,98 @@ import java.util.Objects;
 public final class GetIpsecCryptoProfileResult {
     /**
      * @return Ah
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      * 
      */
     private GetIpsecCryptoProfileAh ah;
+    /**
+     * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String device;
+    /**
+     * @return phase-2 DH group (PFS DH group)
+     * 
+     */
     private String dhGroup;
+    /**
+     * @return Esp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
+     * 
+     */
     private GetIpsecCryptoProfileEsp esp;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
+    /**
+     * @return Lifesize
+     * 
+     */
     private GetIpsecCryptoProfileLifesize lifesize;
+    /**
+     * @return Ipsec crypto profile lifetime
+     * 
+     */
     private GetIpsecCryptoProfileLifetime lifetime;
     /**
      * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
     private String tfid;
 
     private GetIpsecCryptoProfileResult() {}
     /**
      * @return Ah
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      * 
      */
     public GetIpsecCryptoProfileAh ah() {
         return this.ah;
     }
+    /**
+     * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String device() {
         return this.device;
     }
+    /**
+     * @return phase-2 DH group (PFS DH group)
+     * 
+     */
     public String dhGroup() {
         return this.dhGroup;
     }
+    /**
+     * @return Esp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
+     * 
+     */
     public GetIpsecCryptoProfileEsp esp() {
         return this.esp;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -65,9 +118,17 @@ public final class GetIpsecCryptoProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Lifesize
+     * 
+     */
     public GetIpsecCryptoProfileLifesize lifesize() {
         return this.lifesize;
     }
+    /**
+     * @return Ipsec crypto profile lifetime
+     * 
+     */
     public GetIpsecCryptoProfileLifetime lifetime() {
         return this.lifetime;
     }
@@ -78,6 +139,11 @@ public final class GetIpsecCryptoProfileResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }

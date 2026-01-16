@@ -14,26 +14,24 @@ import java.util.Objects;
 public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath {
     /**
      * @return None
+     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone none;
     /**
      * @return Prepend
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private Integer prepend;
     /**
      * @return Remove
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove remove;
     /**
      * @return Remove and prepend
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -42,6 +40,7 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath
     private GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath() {}
     /**
      * @return None
+     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone none() {
@@ -49,7 +48,6 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath
     }
     /**
      * @return Prepend
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -58,7 +56,6 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath
     }
     /**
      * @return Remove
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -67,7 +64,6 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath
     }
     /**
      * @return Remove and prepend
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */

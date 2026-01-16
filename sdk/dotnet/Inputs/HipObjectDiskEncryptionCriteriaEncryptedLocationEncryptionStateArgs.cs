@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Is
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Is` and `IsNot`.
         /// </summary>
         [Input("is")]
         public Input<string>? Is { get; set; }
 
         /// <summary>
         /// Is not
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Is` and `IsNot`.
         /// </summary>
         [Input("isNot")]

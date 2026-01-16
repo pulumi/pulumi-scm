@@ -241,6 +241,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/hipObject:HipObject example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/hipObject:HipObject example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/hipObject:HipObject example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/hipObject:HipObject")
 public class HipObject extends com.pulumi.resources.CustomResource {
@@ -249,14 +275,14 @@ public class HipObject extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="antiMalware", refs={HipObjectAntiMalware.class}, tree="[0]")
-    private Output<HipObjectAntiMalware> antiMalware;
+    private Output</* @Nullable */ HipObjectAntiMalware> antiMalware;
 
     /**
      * @return Anti malware
      * 
      */
-    public Output<HipObjectAntiMalware> antiMalware() {
-        return this.antiMalware;
+    public Output<Optional<HipObjectAntiMalware>> antiMalware() {
+        return Codegen.optional(this.antiMalware);
     }
     /**
      * Certificate
@@ -291,14 +317,14 @@ public class HipObject extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="dataLossPrevention", refs={HipObjectDataLossPrevention.class}, tree="[0]")
-    private Output<HipObjectDataLossPrevention> dataLossPrevention;
+    private Output</* @Nullable */ HipObjectDataLossPrevention> dataLossPrevention;
 
     /**
      * @return Data loss prevention
      * 
      */
-    public Output<HipObjectDataLossPrevention> dataLossPrevention() {
-        return this.dataLossPrevention;
+    public Output<Optional<HipObjectDataLossPrevention>> dataLossPrevention() {
+        return Codegen.optional(this.dataLossPrevention);
     }
     /**
      * Description
@@ -316,6 +342,7 @@ public class HipObject extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -323,6 +350,7 @@ public class HipObject extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -333,46 +361,45 @@ public class HipObject extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="diskBackup", refs={HipObjectDiskBackup.class}, tree="[0]")
-    private Output<HipObjectDiskBackup> diskBackup;
+    private Output</* @Nullable */ HipObjectDiskBackup> diskBackup;
 
     /**
      * @return Disk backup
      * 
      */
-    public Output<HipObjectDiskBackup> diskBackup() {
-        return this.diskBackup;
+    public Output<Optional<HipObjectDiskBackup>> diskBackup() {
+        return Codegen.optional(this.diskBackup);
     }
     /**
      * Disk encryption
      * 
      */
     @Export(name="diskEncryption", refs={HipObjectDiskEncryption.class}, tree="[0]")
-    private Output<HipObjectDiskEncryption> diskEncryption;
+    private Output</* @Nullable */ HipObjectDiskEncryption> diskEncryption;
 
     /**
      * @return Disk encryption
      * 
      */
-    public Output<HipObjectDiskEncryption> diskEncryption() {
-        return this.diskEncryption;
+    public Output<Optional<HipObjectDiskEncryption>> diskEncryption() {
+        return Codegen.optional(this.diskEncryption);
     }
     /**
      * Firewall
      * 
      */
     @Export(name="firewall", refs={HipObjectFirewall.class}, tree="[0]")
-    private Output<HipObjectFirewall> firewall;
+    private Output</* @Nullable */ HipObjectFirewall> firewall;
 
     /**
      * @return Firewall
      * 
      */
-    public Output<HipObjectFirewall> firewall() {
-        return this.firewall;
+    public Output<Optional<HipObjectFirewall>> firewall() {
+        return Codegen.optional(this.firewall);
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -381,7 +408,6 @@ public class HipObject extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -449,18 +475,17 @@ public class HipObject extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="patchManagement", refs={HipObjectPatchManagement.class}, tree="[0]")
-    private Output<HipObjectPatchManagement> patchManagement;
+    private Output</* @Nullable */ HipObjectPatchManagement> patchManagement;
 
     /**
      * @return Patch management
      * 
      */
-    public Output<HipObjectPatchManagement> patchManagement() {
-        return this.patchManagement;
+    public Output<Optional<HipObjectPatchManagement>> patchManagement() {
+        return Codegen.optional(this.patchManagement);
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -469,7 +494,6 @@ public class HipObject extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

@@ -52,12 +52,30 @@ public final class GetApplicationResult {
     private String description;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return Evasive behavior
+     * 
+     */
     private Boolean evasiveBehavior;
+    /**
+     * @return File type ident
+     * 
+     */
     private Boolean fileTypeIdent;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
+    /**
+     * @return Has known vulnerability
+     * 
+     */
     private Boolean hasKnownVulnerability;
     /**
      * @return The UUID of the application
@@ -69,24 +87,97 @@ public final class GetApplicationResult {
      * 
      */
     private String name;
+    /**
+     * @return No appid caching
+     * 
+     */
     private Boolean noAppidCaching;
+    /**
+     * @return Parent app
+     * 
+     */
     private String parentApp;
+    /**
+     * @return Pervasive use
+     * 
+     */
     private Boolean pervasiveUse;
+    /**
+     * @return Prone to misuse
+     * 
+     */
     private Boolean proneToMisuse;
+    /**
+     * @return Risk
+     * 
+     */
     private String risk;
+    /**
+     * @return Signature
+     * 
+     */
     private List<GetApplicationSignature> signatures;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
+    /**
+     * @return Subcategory
+     * 
+     */
     private String subcategory;
+    /**
+     * @return timeout for half-close session in seconds
+     * 
+     */
     private Integer tcpHalfClosedTimeout;
+    /**
+     * @return timeout for session in timeWait state in seconds
+     * 
+     */
     private Integer tcpTimeWaitTimeout;
+    /**
+     * @return timeout in seconds
+     * 
+     */
     private Integer tcpTimeout;
+    /**
+     * @return Technology
+     * 
+     */
     private String technology;
     private String tfid;
+    /**
+     * @return timeout in seconds
+     * 
+     */
     private Integer timeout;
+    /**
+     * @return Tunnel applications
+     * 
+     */
     private Boolean tunnelApplications;
+    /**
+     * @return Tunnel other application
+     * 
+     */
     private Boolean tunnelOtherApplication;
+    /**
+     * @return timeout in seconds
+     * 
+     */
     private Integer udpTimeout;
+    /**
+     * @return Used by malware
+     * 
+     */
     private Boolean usedByMalware;
+    /**
+     * @return Virus ident
+     * 
+     */
     private Boolean virusIdent;
 
     private GetApplicationResult() {}
@@ -141,20 +232,38 @@ public final class GetApplicationResult {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return Evasive behavior
+     * 
+     */
     public Boolean evasiveBehavior() {
         return this.evasiveBehavior;
     }
+    /**
+     * @return File type ident
+     * 
+     */
     public Boolean fileTypeIdent() {
         return this.fileTypeIdent;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
+    /**
+     * @return Has known vulnerability
+     * 
+     */
     public Boolean hasKnownVulnerability() {
         return this.hasKnownVulnerability;
     }
@@ -172,60 +281,133 @@ public final class GetApplicationResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return No appid caching
+     * 
+     */
     public Boolean noAppidCaching() {
         return this.noAppidCaching;
     }
+    /**
+     * @return Parent app
+     * 
+     */
     public String parentApp() {
         return this.parentApp;
     }
+    /**
+     * @return Pervasive use
+     * 
+     */
     public Boolean pervasiveUse() {
         return this.pervasiveUse;
     }
+    /**
+     * @return Prone to misuse
+     * 
+     */
     public Boolean proneToMisuse() {
         return this.proneToMisuse;
     }
+    /**
+     * @return Risk
+     * 
+     */
     public String risk() {
         return this.risk;
     }
+    /**
+     * @return Signature
+     * 
+     */
     public List<GetApplicationSignature> signatures() {
         return this.signatures;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return Subcategory
+     * 
+     */
     public String subcategory() {
         return this.subcategory;
     }
+    /**
+     * @return timeout for half-close session in seconds
+     * 
+     */
     public Integer tcpHalfClosedTimeout() {
         return this.tcpHalfClosedTimeout;
     }
+    /**
+     * @return timeout for session in timeWait state in seconds
+     * 
+     */
     public Integer tcpTimeWaitTimeout() {
         return this.tcpTimeWaitTimeout;
     }
+    /**
+     * @return timeout in seconds
+     * 
+     */
     public Integer tcpTimeout() {
         return this.tcpTimeout;
     }
+    /**
+     * @return Technology
+     * 
+     */
     public String technology() {
         return this.technology;
     }
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return timeout in seconds
+     * 
+     */
     public Integer timeout() {
         return this.timeout;
     }
+    /**
+     * @return Tunnel applications
+     * 
+     */
     public Boolean tunnelApplications() {
         return this.tunnelApplications;
     }
+    /**
+     * @return Tunnel other application
+     * 
+     */
     public Boolean tunnelOtherApplication() {
         return this.tunnelOtherApplication;
     }
+    /**
+     * @return timeout in seconds
+     * 
+     */
     public Integer udpTimeout() {
         return this.udpTimeout;
     }
+    /**
+     * @return Used by malware
+     * 
+     */
     public Boolean usedByMalware() {
         return this.usedByMalware;
     }
+    /**
+     * @return Virus ident
+     * 
+     */
     public Boolean virusIdent() {
         return this.virusIdent;
     }

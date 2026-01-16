@@ -25,6 +25,32 @@ import javax.annotation.Nullable;
 /**
  * DnsProxy resource
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/dnsProxy:DnsProxy example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/dnsProxy:DnsProxy example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/dnsProxy:DnsProxy example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/dnsProxy:DnsProxy")
 public class DnsProxy extends com.pulumi.resources.CustomResource {
@@ -33,14 +59,14 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="cache", refs={DnsProxyCache.class}, tree="[0]")
-    private Output<DnsProxyCache> cache;
+    private Output</* @Nullable */ DnsProxyCache> cache;
 
     /**
      * @return Cache
      * 
      */
-    public Output<DnsProxyCache> cache() {
-        return this.cache;
+    public Output<Optional<DnsProxyCache>> cache() {
+        return Codegen.optional(this.cache);
     }
     /**
      * Default
@@ -58,6 +84,7 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -65,6 +92,7 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -100,7 +128,6 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -109,7 +136,6 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -146,7 +172,6 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -155,7 +180,6 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -181,14 +205,14 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="tcpQueries", refs={DnsProxyTcpQueries.class}, tree="[0]")
-    private Output<DnsProxyTcpQueries> tcpQueries;
+    private Output</* @Nullable */ DnsProxyTcpQueries> tcpQueries;
 
     /**
      * @return Tcp queries
      * 
      */
-    public Output<DnsProxyTcpQueries> tcpQueries() {
-        return this.tcpQueries;
+    public Output<Optional<DnsProxyTcpQueries>> tcpQueries() {
+        return Codegen.optional(this.tcpQueries);
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
@@ -201,14 +225,14 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="udpQueries", refs={DnsProxyUdpQueries.class}, tree="[0]")
-    private Output<DnsProxyUdpQueries> udpQueries;
+    private Output</* @Nullable */ DnsProxyUdpQueries> udpQueries;
 
     /**
      * @return Udp queries
      * 
      */
-    public Output<DnsProxyUdpQueries> udpQueries() {
-        return this.udpQueries;
+    public Output<Optional<DnsProxyUdpQueries>> udpQueries() {
+        return Codegen.optional(this.udpQueries);
     }
 
     /**

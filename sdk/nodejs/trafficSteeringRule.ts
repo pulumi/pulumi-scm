@@ -8,6 +8,32 @@ import * as utilities from "./utilities";
 
 /**
  * TrafficSteeringRule resource
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example ::device:id
+ * ```
  */
 export class TrafficSteeringRule extends pulumi.CustomResource {
     /**

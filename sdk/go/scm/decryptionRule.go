@@ -272,11 +272,11 @@ type DecryptionRule struct {
 	// The destination addresses
 	Destinations pulumi.StringArrayOutput `pulumi:"destinations"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Is the rule disabled?
 	Disabled pulumi.BoolPtrOutput `pulumi:"disabled"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The source security zone
@@ -302,7 +302,6 @@ type DecryptionRule struct {
 	// The destination services and/or service groups
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Source hip
@@ -387,11 +386,11 @@ type decryptionRuleState struct {
 	// The destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Is the rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The source security zone
@@ -417,7 +416,6 @@ type decryptionRuleState struct {
 	// The destination services and/or service groups
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source hip
@@ -449,11 +447,11 @@ type DecryptionRuleState struct {
 	// The destination addresses
 	Destinations pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Is the rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The source security zone
@@ -479,7 +477,6 @@ type DecryptionRuleState struct {
 	// The destination services and/or service groups
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source hip
@@ -515,11 +512,11 @@ type decryptionRuleArgs struct {
 	// The destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Is the rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The source security zone
@@ -545,7 +542,6 @@ type decryptionRuleArgs struct {
 	// The destination services and/or service groups
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source hip
@@ -577,11 +573,11 @@ type DecryptionRuleArgs struct {
 	// The destination addresses
 	Destinations pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Is the rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The source security zone
@@ -607,7 +603,6 @@ type DecryptionRuleArgs struct {
 	// The destination services and/or service groups
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source hip
@@ -739,6 +734,7 @@ func (o DecryptionRuleOutput) Destinations() pulumi.StringArrayOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DecryptionRuleOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -749,7 +745,6 @@ func (o DecryptionRuleOutput) Disabled() pulumi.BoolPtrOutput {
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DecryptionRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -811,7 +806,6 @@ func (o DecryptionRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DecryptionRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

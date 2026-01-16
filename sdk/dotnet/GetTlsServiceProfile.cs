@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// TlsServiceProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM TLS Service Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
+        ///     var scmTlsServiceProf = Scm.GetTlsServiceProfile.Invoke(new()
+        ///     {
+        ///         Id = "b4d70015-5b0e-4491-a2a9-4305b01397d5",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTlsServiceProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Id) },
+        ///             { "folder", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Folder) },
+        ///             { "name", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetTlsServiceProfileResult> InvokeAsync(GetTlsServiceProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetTlsServiceProfileResult>("scm:index/getTlsServiceProfile:getTlsServiceProfile", args ?? new GetTlsServiceProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// TlsServiceProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM TLS Service Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
+        ///     var scmTlsServiceProf = Scm.GetTlsServiceProfile.Invoke(new()
+        ///     {
+        ///         Id = "b4d70015-5b0e-4491-a2a9-4305b01397d5",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTlsServiceProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Id) },
+        ///             { "folder", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Folder) },
+        ///             { "name", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTlsServiceProfileResult> Invoke(GetTlsServiceProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTlsServiceProfileResult>("scm:index/getTlsServiceProfile:getTlsServiceProfile", args ?? new GetTlsServiceProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// TlsServiceProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM TLS Service Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
+        ///     var scmTlsServiceProf = Scm.GetTlsServiceProfile.Invoke(new()
+        ///     {
+        ///         Id = "b4d70015-5b0e-4491-a2a9-4305b01397d5",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTlsServiceProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Id) },
+        ///             { "folder", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Folder) },
+        ///             { "name", scmTlsServiceProf.Apply(getTlsServiceProfileResult =&gt; getTlsServiceProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTlsServiceProfileResult> Invoke(GetTlsServiceProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetTlsServiceProfileResult>("scm:index/getTlsServiceProfile:getTlsServiceProfile", args ?? new GetTlsServiceProfileInvokeArgs(), options.WithDefaults());
@@ -33,6 +126,20 @@ namespace Pulumi.Scm
 
     public sealed class GetTlsServiceProfileArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the TLS service profile
         /// </summary>
@@ -45,6 +152,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetTlsServiceProfileArgs()
         {
         }
@@ -53,6 +167,20 @@ namespace Pulumi.Scm
 
     public sealed class GetTlsServiceProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the TLS service profile
         /// </summary>
@@ -64,6 +192,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetTlsServiceProfileInvokeArgs()
         {
@@ -81,8 +216,13 @@ namespace Pulumi.Scm
         public readonly string Certificate;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the TLS service profile
@@ -92,7 +232,14 @@ namespace Pulumi.Scm
         /// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Protocol settings
+        /// </summary>
         public readonly Outputs.GetTlsServiceProfileProtocolSettingsResult ProtocolSettings;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

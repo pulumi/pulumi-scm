@@ -146,6 +146,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/aggregateInterface:AggregateInterface example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/aggregateInterface:AggregateInterface example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/aggregateInterface:AggregateInterface example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/aggregateInterface:AggregateInterface")
 public class AggregateInterface extends com.pulumi.resources.CustomResource {
@@ -179,6 +205,7 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -186,6 +213,7 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -193,7 +221,6 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -202,7 +229,6 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -211,39 +237,35 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Layer2
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
     @Export(name="layer2", refs={AggregateInterfaceLayer2.class}, tree="[0]")
-    private Output<AggregateInterfaceLayer2> layer2;
+    private Output</* @Nullable */ AggregateInterfaceLayer2> layer2;
 
     /**
      * @return Layer2
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
-    public Output<AggregateInterfaceLayer2> layer2() {
-        return this.layer2;
+    public Output<Optional<AggregateInterfaceLayer2>> layer2() {
+        return Codegen.optional(this.layer2);
     }
     /**
      * Aggregate Interface Layer 3 configuration
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
     @Export(name="layer3", refs={AggregateInterfaceLayer3.class}, tree="[0]")
-    private Output<AggregateInterfaceLayer3> layer3;
+    private Output</* @Nullable */ AggregateInterfaceLayer3> layer3;
 
     /**
      * @return Aggregate Interface Layer 3 configuration
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
-    public Output<AggregateInterfaceLayer3> layer3() {
-        return this.layer3;
+    public Output<Optional<AggregateInterfaceLayer3>> layer3() {
+        return Codegen.optional(this.layer3);
     }
     /**
      * Aggregate interface name
@@ -261,7 +283,6 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -270,7 +291,6 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

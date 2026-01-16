@@ -80,12 +80,17 @@ class GetAggregateInterfaceResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -99,11 +104,19 @@ class GetAggregateInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def layer2(self) -> 'outputs.GetAggregateInterfaceLayer2Result':
+        """
+        Layer2
+        > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
+        """
         return pulumi.get(self, "layer2")
 
     @_builtins.property
     @pulumi.getter
     def layer3(self) -> 'outputs.GetAggregateInterfaceLayer3Result':
+        """
+        Aggregate Interface Layer 3 configuration
+        > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
+        """
         return pulumi.get(self, "layer3")
 
     @_builtins.property
@@ -117,6 +130,10 @@ class GetAggregateInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -143,8 +160,11 @@ class AwaitableGetAggregateInterfaceResult(GetAggregateInterfaceResult):
             tfid=self.tfid)
 
 
-def get_aggregate_interface(id: Optional[_builtins.str] = None,
+def get_aggregate_interface(device: Optional[_builtins.str] = None,
+                            folder: Optional[_builtins.str] = None,
+                            id: Optional[_builtins.str] = None,
                             name: Optional[_builtins.str] = None,
+                            snippet: Optional[_builtins.str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAggregateInterfaceResult:
     """
     AggregateInterface data source
@@ -167,12 +187,21 @@ def get_aggregate_interface(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Aggregate interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getAggregateInterface:getAggregateInterface', __args__, opts=opts, typ=GetAggregateInterfaceResult).value
 
@@ -187,8 +216,11 @@ def get_aggregate_interface(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_aggregate_interface_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_aggregate_interface_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                   folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                   id: Optional[pulumi.Input[_builtins.str]] = None,
                                    name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                   snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAggregateInterfaceResult]:
     """
     AggregateInterface data source
@@ -211,12 +243,21 @@ def get_aggregate_interface_output(id: Optional[pulumi.Input[_builtins.str]] = N
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+    :param _builtins.str folder: The folder in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Aggregate interface name
+    :param _builtins.str snippet: The snippet in which the resource is defined
+           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAggregateInterface:getAggregateInterface', __args__, opts=opts, typ=GetAggregateInterfaceResult)
     return __ret__.apply(lambda __response__: GetAggregateInterfaceResult(

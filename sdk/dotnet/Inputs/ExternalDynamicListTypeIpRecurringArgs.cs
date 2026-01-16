@@ -13,38 +13,35 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeIpRecurringArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Daily
+        /// Daily settings for IP recurring
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("daily")]
         public Input<Inputs.ExternalDynamicListTypeIpRecurringDailyArgs>? Daily { get; set; }
 
         /// <summary>
-        /// Five minute
-        /// 
+        /// Five minute settings for IP recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("fiveMinute")]
         public Input<Inputs.ExternalDynamicListTypeIpRecurringFiveMinuteArgs>? FiveMinute { get; set; }
 
         /// <summary>
-        /// Hourly
-        /// 
+        /// Hourly settings for IP recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("hourly")]
         public Input<Inputs.ExternalDynamicListTypeIpRecurringHourlyArgs>? Hourly { get; set; }
 
         /// <summary>
-        /// Monthly
-        /// 
+        /// Monthly settings for IP recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("monthly")]
         public Input<Inputs.ExternalDynamicListTypeIpRecurringMonthlyArgs>? Monthly { get; set; }
 
         /// <summary>
-        /// Weekly
-        /// 
+        /// Weekly settings for IP recurring
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("weekly")]

@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetBgpRoutingRoutingPreference {
     /**
      * @return Default
+     * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
     private GetBgpRoutingRoutingPreferenceDefault default_;
     /**
      * @return Hot potato routing
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
@@ -27,6 +27,7 @@ public final class GetBgpRoutingRoutingPreference {
     private GetBgpRoutingRoutingPreference() {}
     /**
      * @return Default
+     * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
     public GetBgpRoutingRoutingPreferenceDefault default_() {
@@ -34,7 +35,6 @@ public final class GetBgpRoutingRoutingPreference {
     }
     /**
      * @return Hot potato routing
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */

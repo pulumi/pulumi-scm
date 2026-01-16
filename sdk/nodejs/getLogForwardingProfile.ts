@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getLogForwardingProfile(args: GetLogForwardingProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetLogForwardingProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLogForwardingProfile:getLogForwardingProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getLogForwardingProfile(args: GetLogForwardingProfileArgs, opts?
  */
 export interface GetLogForwardingProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the log server profile
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetLogForwardingProfileArgs {
      * The name of the log forwarding profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -41,18 +59,30 @@ export interface GetLogForwardingProfileResult {
     readonly description: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the log server profile
      */
     readonly id: string;
+    /**
+     * Match list
+     */
     readonly matchLists: outputs.GetLogForwardingProfileMatchList[];
     /**
      * The name of the log forwarding profile
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -62,8 +92,11 @@ export interface GetLogForwardingProfileResult {
 export function getLogForwardingProfileOutput(args: GetLogForwardingProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLogForwardingProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLogForwardingProfile:getLogForwardingProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -72,6 +105,16 @@ export function getLogForwardingProfileOutput(args: GetLogForwardingProfileOutpu
  */
 export interface GetLogForwardingProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the log server profile
      */
     id: pulumi.Input<string>;
@@ -79,4 +122,9 @@ export interface GetLogForwardingProfileOutputArgs {
      * The name of the log forwarding profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

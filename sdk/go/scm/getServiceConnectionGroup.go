@@ -54,6 +54,8 @@ func LookupServiceConnectionGroup(ctx *pulumi.Context, args *LookupServiceConnec
 
 // A collection of arguments for invoking getServiceConnectionGroup.
 type LookupServiceConnectionGroupArgs struct {
+	// The folder in which the resource is defined
+	Folder *string `pulumi:"folder"`
 	// The UUID of the service connection group
 	Id string `pulumi:"id"`
 	// Name
@@ -64,6 +66,8 @@ type LookupServiceConnectionGroupArgs struct {
 type LookupServiceConnectionGroupResult struct {
 	// Disable snat
 	DisableSnat bool `pulumi:"disableSnat"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
 	// The UUID of the service connection group
 	Id string `pulumi:"id"`
 	// Name
@@ -86,6 +90,8 @@ func LookupServiceConnectionGroupOutput(ctx *pulumi.Context, args LookupServiceC
 
 // A collection of arguments for invoking getServiceConnectionGroup.
 type LookupServiceConnectionGroupOutputArgs struct {
+	// The folder in which the resource is defined
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the service connection group
 	Id pulumi.StringInput `pulumi:"id"`
 	// Name
@@ -114,6 +120,11 @@ func (o LookupServiceConnectionGroupResultOutput) ToLookupServiceConnectionGroup
 // Disable snat
 func (o LookupServiceConnectionGroupResultOutput) DisableSnat() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupServiceConnectionGroupResult) bool { return v.DisableSnat }).(pulumi.BoolOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupServiceConnectionGroupResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceConnectionGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
 // The UUID of the service connection group

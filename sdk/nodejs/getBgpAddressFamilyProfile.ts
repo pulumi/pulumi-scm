@@ -30,8 +30,11 @@ import * as utilities from "./utilities";
 export function getBgpAddressFamilyProfile(args: GetBgpAddressFamilyProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetBgpAddressFamilyProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getBgpAddressFamilyProfile:getBgpAddressFamilyProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -40,6 +43,16 @@ export function getBgpAddressFamilyProfile(args: GetBgpAddressFamilyProfileArgs,
  */
 export interface GetBgpAddressFamilyProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -47,6 +60,11 @@ export interface GetBgpAddressFamilyProfileArgs {
      * Name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -55,18 +73,30 @@ export interface GetBgpAddressFamilyProfileArgs {
 export interface GetBgpAddressFamilyProfileResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * IPv4 Address Family
+     */
     readonly ipv4: outputs.GetBgpAddressFamilyProfileIpv4;
     /**
      * Name
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -94,8 +124,11 @@ export interface GetBgpAddressFamilyProfileResult {
 export function getBgpAddressFamilyProfileOutput(args: GetBgpAddressFamilyProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBgpAddressFamilyProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getBgpAddressFamilyProfile:getBgpAddressFamilyProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -104,6 +137,16 @@ export function getBgpAddressFamilyProfileOutput(args: GetBgpAddressFamilyProfil
  */
 export interface GetBgpAddressFamilyProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -111,4 +154,9 @@ export interface GetBgpAddressFamilyProfileOutputArgs {
      * Name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

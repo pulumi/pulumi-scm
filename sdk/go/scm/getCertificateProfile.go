@@ -53,10 +53,19 @@ func LookupCertificateProfile(ctx *pulumi.Context, args *LookupCertificateProfil
 
 // A collection of arguments for invoking getCertificateProfile.
 type LookupCertificateProfileArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// The UUID of the certificate profile
 	Id string `pulumi:"id"`
 	// The name of the certificate profile
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getCertificateProfile.
@@ -76,19 +85,29 @@ type LookupCertificateProfileResult struct {
 	// CRL receive timeout (seconds)
 	CrlReceiveTimeout string `pulumi:"crlReceiveTimeout"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// User domain
 	Domain string `pulumi:"domain"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the certificate profile
 	Id string `pulumi:"id"`
 	// The name of the certificate profile
-	Name               string                             `pulumi:"name"`
-	OcspReceiveTimeout string                             `pulumi:"ocspReceiveTimeout"`
-	Snippet            string                             `pulumi:"snippet"`
-	Tfid               string                             `pulumi:"tfid"`
-	UseCrl             bool                               `pulumi:"useCrl"`
-	UseOcsp            bool                               `pulumi:"useOcsp"`
-	UsernameField      GetCertificateProfileUsernameField `pulumi:"usernameField"`
+	Name string `pulumi:"name"`
+	// OCSP receive timeout (seconds)
+	OcspReceiveTimeout string `pulumi:"ocspReceiveTimeout"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+	// Use CRL?
+	UseCrl bool `pulumi:"useCrl"`
+	// Use OCSP?
+	UseOcsp bool `pulumi:"useOcsp"`
+	// Certificate username field
+	UsernameField GetCertificateProfileUsernameField `pulumi:"usernameField"`
 }
 
 func LookupCertificateProfileOutput(ctx *pulumi.Context, args LookupCertificateProfileOutputArgs, opts ...pulumi.InvokeOption) LookupCertificateProfileResultOutput {
@@ -102,10 +121,19 @@ func LookupCertificateProfileOutput(ctx *pulumi.Context, args LookupCertificateP
 
 // A collection of arguments for invoking getCertificateProfile.
 type LookupCertificateProfileOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the certificate profile
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the certificate profile
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupCertificateProfileOutputArgs) ElementType() reflect.Type {
@@ -163,14 +191,18 @@ func (o LookupCertificateProfileResultOutput) CrlReceiveTimeout() pulumi.StringO
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupCertificateProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// User domain
 func (o LookupCertificateProfileResultOutput) Domain() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Domain }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupCertificateProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -185,10 +217,13 @@ func (o LookupCertificateProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// OCSP receive timeout (seconds)
 func (o LookupCertificateProfileResultOutput) OcspReceiveTimeout() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.OcspReceiveTimeout }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupCertificateProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -197,14 +232,17 @@ func (o LookupCertificateProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Use CRL?
 func (o LookupCertificateProfileResultOutput) UseCrl() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) bool { return v.UseCrl }).(pulumi.BoolOutput)
 }
 
+// Use OCSP?
 func (o LookupCertificateProfileResultOutput) UseOcsp() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) bool { return v.UseOcsp }).(pulumi.BoolOutput)
 }
 
+// Certificate username field
 func (o LookupCertificateProfileResultOutput) UsernameField() GetCertificateProfileUsernameFieldOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) GetCertificateProfileUsernameField { return v.UsernameField }).(GetCertificateProfileUsernameFieldOutput)
 }

@@ -15,14 +15,14 @@ public final class ExternalDynamicListTypeImeiAuthArgs extends com.pulumi.resour
     public static final ExternalDynamicListTypeImeiAuthArgs Empty = new ExternalDynamicListTypeImeiAuthArgs();
 
     /**
-     * Password
+     * IMEI Auth Password for Custom IMEI type
      * 
      */
     @Import(name="password", required=true)
     private Output<String> password;
 
     /**
-     * @return Password
+     * @return IMEI Auth Password for Custom IMEI type
      * 
      */
     public Output<String> password() {
@@ -30,14 +30,14 @@ public final class ExternalDynamicListTypeImeiAuthArgs extends com.pulumi.resour
     }
 
     /**
-     * Username
+     * IMEI Auth username for Custom IMEI type
      * 
      */
     @Import(name="username", required=true)
     private Output<String> username;
 
     /**
-     * @return Username
+     * @return IMEI Auth username for Custom IMEI type
      * 
      */
     public Output<String> username() {
@@ -70,7 +70,7 @@ public final class ExternalDynamicListTypeImeiAuthArgs extends com.pulumi.resour
         }
 
         /**
-         * @param password Password
+         * @param password IMEI Auth Password for Custom IMEI type
          * 
          * @return builder
          * 
@@ -81,7 +81,7 @@ public final class ExternalDynamicListTypeImeiAuthArgs extends com.pulumi.resour
         }
 
         /**
-         * @param password Password
+         * @param password IMEI Auth Password for Custom IMEI type
          * 
          * @return builder
          * 
@@ -91,7 +91,7 @@ public final class ExternalDynamicListTypeImeiAuthArgs extends com.pulumi.resour
         }
 
         /**
-         * @param username Username
+         * @param username IMEI Auth username for Custom IMEI type
          * 
          * @return builder
          * 
@@ -102,7 +102,7 @@ public final class ExternalDynamicListTypeImeiAuthArgs extends com.pulumi.resour
         }
 
         /**
-         * @param username Username
+         * @param username IMEI Auth username for Custom IMEI type
          * 
          * @return builder
          * 

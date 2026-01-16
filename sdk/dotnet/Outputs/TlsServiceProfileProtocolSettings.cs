@@ -26,10 +26,6 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool? AuthAlgoSha384;
         /// <summary>
-        /// Allow 3DES algorithm?
-        /// </summary>
-        public readonly bool? EncAlgo3des;
-        /// <summary>
         /// Allow AES-128-CBC algorithm?
         /// </summary>
         public readonly bool? EncAlgoAes128Cbc;
@@ -45,10 +41,6 @@ namespace Pulumi.Scm.Outputs
         /// Allow algorithm AES-256-GCM
         /// </summary>
         public readonly bool? EncAlgoAes256Gcm;
-        /// <summary>
-        /// Allow RC4 algorithm?
-        /// </summary>
-        public readonly bool? EncAlgoRc4;
         /// <summary>
         /// Allow DHE algorithm?
         /// </summary>
@@ -78,8 +70,6 @@ namespace Pulumi.Scm.Outputs
 
             bool? authAlgoSha384,
 
-            bool? encAlgo3des,
-
             bool? encAlgoAes128Cbc,
 
             bool? encAlgoAes128Gcm,
@@ -87,8 +77,6 @@ namespace Pulumi.Scm.Outputs
             bool? encAlgoAes256Cbc,
 
             bool? encAlgoAes256Gcm,
-
-            bool? encAlgoRc4,
 
             bool? keyxchgAlgoDhe,
 
@@ -103,12 +91,10 @@ namespace Pulumi.Scm.Outputs
             AuthAlgoSha1 = authAlgoSha1;
             AuthAlgoSha256 = authAlgoSha256;
             AuthAlgoSha384 = authAlgoSha384;
-            EncAlgo3des = encAlgo3des;
             EncAlgoAes128Cbc = encAlgoAes128Cbc;
             EncAlgoAes128Gcm = encAlgoAes128Gcm;
             EncAlgoAes256Cbc = encAlgoAes256Cbc;
             EncAlgoAes256Gcm = encAlgoAes256Gcm;
-            EncAlgoRc4 = encAlgoRc4;
             KeyxchgAlgoDhe = keyxchgAlgoDhe;
             KeyxchgAlgoEcdhe = keyxchgAlgoEcdhe;
             KeyxchgAlgoRsa = keyxchgAlgoRsa;

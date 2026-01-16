@@ -14,19 +14,18 @@ import javax.annotation.Nullable;
 public final class IkeGatewayPeerAddress {
     /**
      * @return Dynamic
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     private @Nullable IkeGatewayPeerAddressDynamic dynamic;
     /**
      * @return peer gateway FQDN name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     private @Nullable String fqdn;
     /**
      * @return peer gateway has static IP address
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
@@ -35,6 +34,7 @@ public final class IkeGatewayPeerAddress {
     private IkeGatewayPeerAddress() {}
     /**
      * @return Dynamic
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     public Optional<IkeGatewayPeerAddressDynamic> dynamic() {
@@ -42,7 +42,6 @@ public final class IkeGatewayPeerAddress {
     }
     /**
      * @return peer gateway FQDN name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
@@ -51,7 +50,6 @@ public final class IkeGatewayPeerAddress {
     }
     /**
      * @return peer gateway has static IP address
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */

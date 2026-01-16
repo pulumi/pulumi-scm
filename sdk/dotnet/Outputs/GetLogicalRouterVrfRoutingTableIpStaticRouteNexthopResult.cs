@@ -15,47 +15,41 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Discard
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscardResult Discard;
         /// <summary>
         /// Fqdn
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         public readonly string Fqdn;
         /// <summary>
         /// Ip address
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         public readonly string IpAddress;
         /// <summary>
         /// Ipv6 address
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         public readonly string Ipv6Address;
         /// <summary>
         /// Next lr
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         public readonly string NextLr;
         /// <summary>
         /// Next vr
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         public readonly string NextVr;
         /// <summary>
         /// Receive
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopReceiveResult Receive;
         /// <summary>
         /// Tunnel
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         public readonly string Tunnel;

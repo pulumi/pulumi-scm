@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetDecryptionRuleListDataType {
     /**
      * @return Ssl forward proxy
+     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     private GetDecryptionRuleListDataTypeSslForwardProxy sslForwardProxy;
     /**
      * @return add the certificate name for SSL inbound inspection
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
@@ -27,6 +27,7 @@ public final class GetDecryptionRuleListDataType {
     private GetDecryptionRuleListDataType() {}
     /**
      * @return Ssl forward proxy
+     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     public GetDecryptionRuleListDataTypeSslForwardProxy sslForwardProxy() {
@@ -34,7 +35,6 @@ public final class GetDecryptionRuleListDataType {
     }
     /**
      * @return add the certificate name for SSL inbound inspection
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */

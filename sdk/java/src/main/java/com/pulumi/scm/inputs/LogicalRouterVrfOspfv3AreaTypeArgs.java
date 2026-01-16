@@ -19,6 +19,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
     /**
      * Normal
+     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     @Import(name="normal")
@@ -26,6 +27,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
     /**
      * @return Normal
+     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AreaTypeNormalArgs>> normal() {
@@ -34,7 +36,6 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
     /**
      * Nssa
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
@@ -43,7 +44,6 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
     /**
      * @return Nssa
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
@@ -53,7 +53,6 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
     /**
      * Stub
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
@@ -62,7 +61,6 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
     /**
      * @return Stub
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
@@ -98,6 +96,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
         /**
          * @param normal Normal
+         * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
          * 
          * @return builder
          * 
@@ -109,6 +108,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
         /**
          * @param normal Normal
+         * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
          * 
          * @return builder
          * 
@@ -119,7 +119,6 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
         /**
          * @param nssa Nssa
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
          * 
          * @return builder
@@ -132,7 +131,6 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
         /**
          * @param nssa Nssa
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
          * 
          * @return builder
@@ -144,7 +142,6 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
         /**
          * @param stub Stub
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
          * 
          * @return builder
@@ -157,7 +154,6 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
         /**
          * @param stub Stub
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
          * 
          * @return builder

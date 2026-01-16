@@ -17,33 +17,30 @@ import javax.annotation.Nullable;
 public final class BgpAddressFamilyProfileIpv4UnicastSendCommunity {
     /**
      * @return All
+     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4UnicastSendCommunityAll all;
     /**
      * @return Both
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4UnicastSendCommunityBoth both;
     /**
      * @return Extended
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4UnicastSendCommunityExtended extended;
     /**
      * @return Large
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4UnicastSendCommunityLarge large;
     /**
      * @return Standard
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -52,6 +49,7 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunity {
     private BgpAddressFamilyProfileIpv4UnicastSendCommunity() {}
     /**
      * @return All
+     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public Optional<BgpAddressFamilyProfileIpv4UnicastSendCommunityAll> all() {
@@ -59,7 +57,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunity {
     }
     /**
      * @return Both
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -68,7 +65,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunity {
     }
     /**
      * @return Extended
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -77,7 +73,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunity {
     }
     /**
      * @return Large
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -86,7 +81,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunity {
     }
     /**
      * @return Standard
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */

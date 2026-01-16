@@ -8,12 +8,35 @@ import * as utilities from "./utilities";
 
 /**
  * TlsServiceProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM TLS Service Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
+ * const scmTlsServiceProf = scm.getTlsServiceProfile({
+ *     id: "b4d70015-5b0e-4491-a2a9-4305b01397d5",
+ * });
+ * export const scmTlsServiceProfileDetails = {
+ *     profileId: scmTlsServiceProf.then(scmTlsServiceProf => scmTlsServiceProf.id),
+ *     folder: scmTlsServiceProf.then(scmTlsServiceProf => scmTlsServiceProf.folder),
+ *     name: scmTlsServiceProf.then(scmTlsServiceProf => scmTlsServiceProf.name),
+ * };
+ * ```
  */
 export function getTlsServiceProfile(args: GetTlsServiceProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetTlsServiceProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTlsServiceProfile:getTlsServiceProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +45,16 @@ export function getTlsServiceProfile(args: GetTlsServiceProfileArgs, opts?: pulu
  */
 export interface GetTlsServiceProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the TLS service profile
      */
     id: string;
@@ -29,6 +62,11 @@ export interface GetTlsServiceProfileArgs {
      * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -41,8 +79,13 @@ export interface GetTlsServiceProfileResult {
     readonly certificate: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the TLS service profile
@@ -52,18 +95,48 @@ export interface GetTlsServiceProfileResult {
      * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      */
     readonly name: string;
+    /**
+     * Protocol settings
+     */
     readonly protocolSettings: outputs.GetTlsServiceProfileProtocolSettings;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * TlsServiceProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM TLS Service Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
+ * const scmTlsServiceProf = scm.getTlsServiceProfile({
+ *     id: "b4d70015-5b0e-4491-a2a9-4305b01397d5",
+ * });
+ * export const scmTlsServiceProfileDetails = {
+ *     profileId: scmTlsServiceProf.then(scmTlsServiceProf => scmTlsServiceProf.id),
+ *     folder: scmTlsServiceProf.then(scmTlsServiceProf => scmTlsServiceProf.folder),
+ *     name: scmTlsServiceProf.then(scmTlsServiceProf => scmTlsServiceProf.name),
+ * };
+ * ```
  */
 export function getTlsServiceProfileOutput(args: GetTlsServiceProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTlsServiceProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTlsServiceProfile:getTlsServiceProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -72,6 +145,16 @@ export function getTlsServiceProfileOutput(args: GetTlsServiceProfileOutputArgs,
  */
 export interface GetTlsServiceProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the TLS service profile
      */
     id: pulumi.Input<string>;
@@ -79,4 +162,9 @@ export interface GetTlsServiceProfileOutputArgs {
      * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

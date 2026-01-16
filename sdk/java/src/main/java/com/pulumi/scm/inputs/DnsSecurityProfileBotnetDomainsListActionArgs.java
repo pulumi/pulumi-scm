@@ -20,6 +20,7 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
     /**
      * Alert
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     @Import(name="alert")
@@ -27,6 +28,7 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
     /**
      * @return Alert
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     public Optional<Output<DnsSecurityProfileBotnetDomainsListActionAlertArgs>> alert() {
@@ -35,7 +37,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
     /**
      * Allow
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -44,7 +45,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
     /**
      * @return Allow
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -54,7 +54,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
     /**
      * Block
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -63,7 +62,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
     /**
      * @return Block
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -73,7 +71,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
     /**
      * Sinkhole
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -82,7 +79,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
     /**
      * @return Sinkhole
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -119,6 +115,7 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
         /**
          * @param alert Alert
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
          * 
          * @return builder
          * 
@@ -130,6 +127,7 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
         /**
          * @param alert Alert
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
          * 
          * @return builder
          * 
@@ -140,7 +138,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
         /**
          * @param allow Allow
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
          * 
          * @return builder
@@ -153,7 +150,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
         /**
          * @param allow Allow
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
          * 
          * @return builder
@@ -165,7 +161,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
         /**
          * @param block Block
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
          * 
          * @return builder
@@ -178,7 +173,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
         /**
          * @param block Block
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
          * 
          * @return builder
@@ -190,7 +184,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
         /**
          * @param sinkhole Sinkhole
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
          * 
          * @return builder
@@ -203,7 +196,6 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
 
         /**
          * @param sinkhole Sinkhole
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
          * 
          * @return builder

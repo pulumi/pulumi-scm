@@ -14,74 +14,74 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeImei {
     /**
-     * @return Auth
+     * @return IMEI Auth Cnfig for Custom IMEI type
      * 
      */
     private GetExternalDynamicListTypeImeiAuth auth;
     /**
-     * @return Profile for authenticating client certificates
+     * @return IMEI Certificate Profile for Custom IMEI type
      * 
      */
     private String certificateProfile;
     /**
-     * @return Description
+     * @return IMEI Description for Custom IMEI type
      * 
      */
     private String description;
     /**
-     * @return Exception list
+     * @return IMEI Exception List for Custom IMEI type
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return Recurring
+     * @return Recurring interval for IMEI updates
      * 
      */
     private GetExternalDynamicListTypeImeiRecurring recurring;
     /**
-     * @return Url
+     * @return IMEI URL for Custom IMEI type
      * 
      */
     private String url;
 
     private GetExternalDynamicListTypeImei() {}
     /**
-     * @return Auth
+     * @return IMEI Auth Cnfig for Custom IMEI type
      * 
      */
     public GetExternalDynamicListTypeImeiAuth auth() {
         return this.auth;
     }
     /**
-     * @return Profile for authenticating client certificates
+     * @return IMEI Certificate Profile for Custom IMEI type
      * 
      */
     public String certificateProfile() {
         return this.certificateProfile;
     }
     /**
-     * @return Description
+     * @return IMEI Description for Custom IMEI type
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return Exception list
+     * @return IMEI Exception List for Custom IMEI type
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return Recurring
+     * @return Recurring interval for IMEI updates
      * 
      */
     public GetExternalDynamicListTypeImeiRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return Url
+     * @return IMEI URL for Custom IMEI type
      * 
      */
     public String url() {

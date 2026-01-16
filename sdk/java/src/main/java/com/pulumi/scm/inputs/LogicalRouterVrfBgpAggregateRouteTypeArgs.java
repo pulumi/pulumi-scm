@@ -18,6 +18,7 @@ public final class LogicalRouterVrfBgpAggregateRouteTypeArgs extends com.pulumi.
 
     /**
      * Ipv4
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
     @Import(name="ipv4")
@@ -25,6 +26,7 @@ public final class LogicalRouterVrfBgpAggregateRouteTypeArgs extends com.pulumi.
 
     /**
      * @return Ipv4
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
     public Optional<Output<LogicalRouterVrfBgpAggregateRouteTypeIpv4Args>> ipv4() {
@@ -33,7 +35,6 @@ public final class LogicalRouterVrfBgpAggregateRouteTypeArgs extends com.pulumi.
 
     /**
      * Ipv6
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
@@ -42,7 +43,6 @@ public final class LogicalRouterVrfBgpAggregateRouteTypeArgs extends com.pulumi.
 
     /**
      * @return Ipv6
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
@@ -77,6 +77,7 @@ public final class LogicalRouterVrfBgpAggregateRouteTypeArgs extends com.pulumi.
 
         /**
          * @param ipv4 Ipv4
+         * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
          * 
          * @return builder
          * 
@@ -88,6 +89,7 @@ public final class LogicalRouterVrfBgpAggregateRouteTypeArgs extends com.pulumi.
 
         /**
          * @param ipv4 Ipv4
+         * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
          * 
          * @return builder
          * 
@@ -98,7 +100,6 @@ public final class LogicalRouterVrfBgpAggregateRouteTypeArgs extends com.pulumi.
 
         /**
          * @param ipv6 Ipv6
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
          * 
          * @return builder
@@ -111,7 +112,6 @@ public final class LogicalRouterVrfBgpAggregateRouteTypeArgs extends com.pulumi.
 
         /**
          * @param ipv6 Ipv6
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
          * 
          * @return builder

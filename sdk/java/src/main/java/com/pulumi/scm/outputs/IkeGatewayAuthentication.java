@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class IkeGatewayAuthentication {
     /**
      * @return Certificate
+     * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */
     private @Nullable IkeGatewayAuthenticationCertificate certificate;
     /**
      * @return Pre shared key
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */
@@ -28,6 +28,7 @@ public final class IkeGatewayAuthentication {
     private IkeGatewayAuthentication() {}
     /**
      * @return Certificate
+     * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */
     public Optional<IkeGatewayAuthenticationCertificate> certificate() {
@@ -35,7 +36,6 @@ public final class IkeGatewayAuthentication {
     }
     /**
      * @return Pre shared key
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */

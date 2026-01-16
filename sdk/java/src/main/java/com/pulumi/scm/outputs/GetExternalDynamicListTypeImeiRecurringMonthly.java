@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeImeiRecurringMonthly {
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Monthly Time specification hh (e.g. 20) for IMEI
      * 
      */
     private String at;
     /**
-     * @return Day of month
+     * @return Day of month for IMEI updates
      * 
      */
     private Integer dayOfMonth;
 
     private GetExternalDynamicListTypeImeiRecurringMonthly() {}
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Monthly Time specification hh (e.g. 20) for IMEI
      * 
      */
     public String at() {
         return this.at;
     }
     /**
-     * @return Day of month
+     * @return Day of month for IMEI updates
      * 
      */
     public Integer dayOfMonth() {

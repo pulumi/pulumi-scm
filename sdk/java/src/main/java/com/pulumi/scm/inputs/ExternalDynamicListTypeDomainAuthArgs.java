@@ -15,14 +15,14 @@ public final class ExternalDynamicListTypeDomainAuthArgs extends com.pulumi.reso
     public static final ExternalDynamicListTypeDomainAuthArgs Empty = new ExternalDynamicListTypeDomainAuthArgs();
 
     /**
-     * Password
+     * Password for Custom Domain authentication
      * 
      */
     @Import(name="password", required=true)
     private Output<String> password;
 
     /**
-     * @return Password
+     * @return Password for Custom Domain authentication
      * 
      */
     public Output<String> password() {
@@ -30,14 +30,14 @@ public final class ExternalDynamicListTypeDomainAuthArgs extends com.pulumi.reso
     }
 
     /**
-     * Username
+     * Username for Custom Domain authentication
      * 
      */
     @Import(name="username", required=true)
     private Output<String> username;
 
     /**
-     * @return Username
+     * @return Username for Custom Domain authentication
      * 
      */
     public Output<String> username() {
@@ -70,7 +70,7 @@ public final class ExternalDynamicListTypeDomainAuthArgs extends com.pulumi.reso
         }
 
         /**
-         * @param password Password
+         * @param password Password for Custom Domain authentication
          * 
          * @return builder
          * 
@@ -81,7 +81,7 @@ public final class ExternalDynamicListTypeDomainAuthArgs extends com.pulumi.reso
         }
 
         /**
-         * @param password Password
+         * @param password Password for Custom Domain authentication
          * 
          * @return builder
          * 
@@ -91,7 +91,7 @@ public final class ExternalDynamicListTypeDomainAuthArgs extends com.pulumi.reso
         }
 
         /**
-         * @param username Username
+         * @param username Username for Custom Domain authentication
          * 
          * @return builder
          * 
@@ -102,7 +102,7 @@ public final class ExternalDynamicListTypeDomainAuthArgs extends com.pulumi.reso
         }
 
         /**
-         * @param username Username
+         * @param username Username for Custom Domain authentication
          * 
          * @return builder
          * 

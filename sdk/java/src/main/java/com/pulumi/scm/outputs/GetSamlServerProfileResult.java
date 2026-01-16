@@ -19,28 +19,67 @@ public final class GetSamlServerProfileResult {
     private String certificate;
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return The identity provider ID
+     * 
+     */
     private String entityId;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
     /**
      * @return The UUID of the SAML server profile
      * 
      */
     private String id;
+    /**
+     * @return Maxiumum clock skew
+     * 
+     */
     private Integer maxClockSkew;
     /**
      * @return The name of the SAML server profile
      * 
      */
     private String name;
+    /**
+     * @return SAML HTTP binding for SLO requests to the identity provider
+     * 
+     */
     private String sloBindings;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
+    /**
+     * @return SAML HTTP binding for SSO requests to the identity provider
+     * 
+     */
     private String ssoBindings;
+    /**
+     * @return Identity provider SSO URL
+     * 
+     */
     private String ssoUrl;
     private String tfid;
+    /**
+     * @return Validate the identity provider certificate?
+     * 
+     */
     private Boolean validateIdpCertificate;
+    /**
+     * @return Sign SAML message to the identity provider?
+     * 
+     */
     private Boolean wantAuthRequestsSigned;
 
     private GetSamlServerProfileResult() {}
@@ -53,14 +92,24 @@ public final class GetSamlServerProfileResult {
     }
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return The identity provider ID
+     * 
+     */
     public String entityId() {
         return this.entityId;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
@@ -71,6 +120,10 @@ public final class GetSamlServerProfileResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return Maxiumum clock skew
+     * 
+     */
     public Integer maxClockSkew() {
         return this.maxClockSkew;
     }
@@ -81,24 +134,49 @@ public final class GetSamlServerProfileResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return SAML HTTP binding for SLO requests to the identity provider
+     * 
+     */
     public String sloBindings() {
         return this.sloBindings;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return SAML HTTP binding for SSO requests to the identity provider
+     * 
+     */
     public String ssoBindings() {
         return this.ssoBindings;
     }
+    /**
+     * @return Identity provider SSO URL
+     * 
+     */
     public String ssoUrl() {
         return this.ssoUrl;
     }
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return Validate the identity provider certificate?
+     * 
+     */
     public Boolean validateIdpCertificate() {
         return this.validateIdpCertificate;
     }
+    /**
+     * @return Sign SAML message to the identity provider?
+     * 
+     */
     public Boolean wantAuthRequestsSigned() {
         return this.wantAuthRequestsSigned;
     }

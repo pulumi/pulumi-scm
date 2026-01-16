@@ -24,10 +24,19 @@ func LookupRoutePathAccessList(ctx *pulumi.Context, args *LookupRoutePathAccessL
 
 // A collection of arguments for invoking getRoutePathAccessList.
 type LookupRoutePathAccessListArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// AS path access list name
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getRoutePathAccessList.
@@ -37,12 +46,17 @@ type LookupRoutePathAccessListResult struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// AS path access list name
-	Name    string `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -58,10 +72,19 @@ func LookupRoutePathAccessListOutput(ctx *pulumi.Context, args LookupRoutePathAc
 
 // A collection of arguments for invoking getRoutePathAccessList.
 type LookupRoutePathAccessListOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// AS path access list name
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupRoutePathAccessListOutputArgs) ElementType() reflect.Type {
@@ -94,10 +117,13 @@ func (o LookupRoutePathAccessListResultOutput) Description() pulumi.StringOutput
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupRoutePathAccessListResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePathAccessListResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupRoutePathAccessListResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePathAccessListResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -112,6 +138,8 @@ func (o LookupRoutePathAccessListResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePathAccessListResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupRoutePathAccessListResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePathAccessListResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

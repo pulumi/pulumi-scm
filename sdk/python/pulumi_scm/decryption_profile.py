@@ -32,12 +32,11 @@ class DecryptionProfileArgs:
         """
         The set of arguments for constructing a DecryptionProfile resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['DecryptionProfileSslForwardProxyArgs'] ssl_forward_proxy: Ssl forward proxy
         :param pulumi.Input['DecryptionProfileSslInboundProxyArgs'] ssl_inbound_proxy: Ssl inbound proxy
@@ -66,6 +65,7 @@ class DecryptionProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -78,7 +78,6 @@ class DecryptionProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -104,7 +103,6 @@ class DecryptionProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -177,12 +175,11 @@ class _DecryptionProfileState:
         """
         Input properties used for looking up and filtering DecryptionProfile resources.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['DecryptionProfileSslForwardProxyArgs'] ssl_forward_proxy: Ssl forward proxy
         :param pulumi.Input['DecryptionProfileSslInboundProxyArgs'] ssl_inbound_proxy: Ssl inbound proxy
@@ -213,6 +210,7 @@ class _DecryptionProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -225,7 +223,6 @@ class _DecryptionProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -251,7 +248,6 @@ class _DecryptionProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -468,15 +464,40 @@ class DecryptionProfile(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']] ssl_forward_proxy: Ssl forward proxy
         :param pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']] ssl_inbound_proxy: Ssl inbound proxy
@@ -624,6 +645,32 @@ class DecryptionProfile(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param DecryptionProfileArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -692,12 +739,11 @@ class DecryptionProfile(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']] ssl_forward_proxy: Ssl forward proxy
         :param pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']] ssl_inbound_proxy: Ssl inbound proxy
@@ -724,6 +770,7 @@ class DecryptionProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -732,7 +779,6 @@ class DecryptionProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -750,14 +796,13 @@ class DecryptionProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sslForwardProxy")
-    def ssl_forward_proxy(self) -> pulumi.Output['outputs.DecryptionProfileSslForwardProxy']:
+    def ssl_forward_proxy(self) -> pulumi.Output[Optional['outputs.DecryptionProfileSslForwardProxy']]:
         """
         Ssl forward proxy
         """
@@ -765,7 +810,7 @@ class DecryptionProfile(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="sslInboundProxy")
-    def ssl_inbound_proxy(self) -> pulumi.Output['outputs.DecryptionProfileSslInboundProxy']:
+    def ssl_inbound_proxy(self) -> pulumi.Output[Optional['outputs.DecryptionProfileSslInboundProxy']]:
         """
         Ssl inbound proxy
         """
@@ -773,7 +818,7 @@ class DecryptionProfile(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="sslNoProxy")
-    def ssl_no_proxy(self) -> pulumi.Output['outputs.DecryptionProfileSslNoProxy']:
+    def ssl_no_proxy(self) -> pulumi.Output[Optional['outputs.DecryptionProfileSslNoProxy']]:
         """
         Ssl no proxy
         """
@@ -781,7 +826,7 @@ class DecryptionProfile(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="sslProtocolSettings")
-    def ssl_protocol_settings(self) -> pulumi.Output['outputs.DecryptionProfileSslProtocolSettings']:
+    def ssl_protocol_settings(self) -> pulumi.Output[Optional['outputs.DecryptionProfileSslProtocolSettings']]:
         """
         Ssl protocol settings
         """

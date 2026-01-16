@@ -16,26 +16,24 @@ import javax.annotation.Nullable;
 public final class ApplicationDefault {
     /**
      * @return Ident by icmp6 type
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     private @Nullable ApplicationDefaultIdentByIcmp6Type identByIcmp6Type;
     /**
      * @return Ident by icmp type
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     private @Nullable ApplicationDefaultIdentByIcmpType identByIcmpType;
     /**
      * @return Ident by ip protocol
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     private @Nullable String identByIpProtocol;
     /**
      * @return Port
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -44,6 +42,7 @@ public final class ApplicationDefault {
     private ApplicationDefault() {}
     /**
      * @return Ident by icmp6 type
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     public Optional<ApplicationDefaultIdentByIcmp6Type> identByIcmp6Type() {
@@ -51,7 +50,6 @@ public final class ApplicationDefault {
     }
     /**
      * @return Ident by icmp type
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -60,7 +58,6 @@ public final class ApplicationDefault {
     }
     /**
      * @return Ident by ip protocol
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -69,7 +66,6 @@ public final class ApplicationDefault {
     }
     /**
      * @return Port
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */

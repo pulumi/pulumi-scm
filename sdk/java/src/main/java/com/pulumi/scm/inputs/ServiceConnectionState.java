@@ -67,6 +67,21 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
     }
 
     /**
+     * The folder in which the resource is defined
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable Output<String> folder;
+
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * Ipsec tunnel
      * 
      */
@@ -244,6 +259,7 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
         this.backupSc = $.backupSc;
         this.bgpPeer = $.bgpPeer;
         this.encryptedValues = $.encryptedValues;
+        this.folder = $.folder;
         this.ipsecTunnel = $.ipsecTunnel;
         this.name = $.name;
         this.natPool = $.natPool;
@@ -337,6 +353,27 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
          */
         public Builder encryptedValues(Map<String,String> encryptedValues) {
             return encryptedValues(Output.of(encryptedValues));
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable Output<String> folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
         }
 
         /**

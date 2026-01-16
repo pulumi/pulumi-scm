@@ -166,6 +166,32 @@ import * as utilities from "./utilities";
  *     },
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/hipObject:HipObject example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/hipObject:HipObject example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/hipObject:HipObject example ::device:id
+ * ```
  */
 export class HipObject extends pulumi.CustomResource {
     /**
@@ -198,7 +224,7 @@ export class HipObject extends pulumi.CustomResource {
     /**
      * Anti malware
      */
-    declare public readonly antiMalware: pulumi.Output<outputs.HipObjectAntiMalware>;
+    declare public readonly antiMalware: pulumi.Output<outputs.HipObjectAntiMalware | undefined>;
     /**
      * Certificate
      */
@@ -210,30 +236,30 @@ export class HipObject extends pulumi.CustomResource {
     /**
      * Data loss prevention
      */
-    declare public readonly dataLossPrevention: pulumi.Output<outputs.HipObjectDataLossPrevention>;
+    declare public readonly dataLossPrevention: pulumi.Output<outputs.HipObjectDataLossPrevention | undefined>;
     /**
      * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * Disk backup
      */
-    declare public readonly diskBackup: pulumi.Output<outputs.HipObjectDiskBackup>;
+    declare public readonly diskBackup: pulumi.Output<outputs.HipObjectDiskBackup | undefined>;
     /**
      * Disk encryption
      */
-    declare public readonly diskEncryption: pulumi.Output<outputs.HipObjectDiskEncryption>;
+    declare public readonly diskEncryption: pulumi.Output<outputs.HipObjectDiskEncryption | undefined>;
     /**
      * Firewall
      */
-    declare public readonly firewall: pulumi.Output<outputs.HipObjectFirewall>;
+    declare public readonly firewall: pulumi.Output<outputs.HipObjectFirewall | undefined>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -256,10 +282,9 @@ export class HipObject extends pulumi.CustomResource {
     /**
      * Patch management
      */
-    declare public readonly patchManagement: pulumi.Output<outputs.HipObjectPatchManagement>;
+    declare public readonly patchManagement: pulumi.Output<outputs.HipObjectPatchManagement | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -346,6 +371,7 @@ export interface HipObjectState {
     description?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -362,7 +388,6 @@ export interface HipObjectState {
     firewall?: pulumi.Input<inputs.HipObjectFirewall>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -388,7 +413,6 @@ export interface HipObjectState {
     patchManagement?: pulumi.Input<inputs.HipObjectPatchManagement>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -421,6 +445,7 @@ export interface HipObjectArgs {
     description?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -437,7 +462,6 @@ export interface HipObjectArgs {
     firewall?: pulumi.Input<inputs.HipObjectFirewall>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -463,7 +487,6 @@ export interface HipObjectArgs {
     patchManagement?: pulumi.Input<inputs.HipObjectPatchManagement>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

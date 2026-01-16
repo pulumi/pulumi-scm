@@ -15,19 +15,18 @@ import javax.annotation.Nullable;
 public final class HipObjectDiskBackupCriteriaLastBackupTime {
     /**
      * @return Not available
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
     private @Nullable HipObjectDiskBackupCriteriaLastBackupTimeNotAvailable notAvailable;
     /**
      * @return Not within
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
     private @Nullable HipObjectDiskBackupCriteriaLastBackupTimeNotWithin notWithin;
     /**
      * @return Within
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
@@ -36,6 +35,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTime {
     private HipObjectDiskBackupCriteriaLastBackupTime() {}
     /**
      * @return Not available
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
     public Optional<HipObjectDiskBackupCriteriaLastBackupTimeNotAvailable> notAvailable() {
@@ -43,7 +43,6 @@ public final class HipObjectDiskBackupCriteriaLastBackupTime {
     }
     /**
      * @return Not within
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
@@ -52,7 +51,6 @@ public final class HipObjectDiskBackupCriteriaLastBackupTime {
     }
     /**
      * @return Within
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */

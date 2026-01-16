@@ -82,23 +82,48 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/dynamicUserGroup:DynamicUserGroup example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/dynamicUserGroup:DynamicUserGroup example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/dynamicUserGroup:DynamicUserGroup example ::device:id
+// ```
 type DynamicUserGroup struct {
 	pulumi.CustomResourceState
 
 	// The description of the dynamic address group
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The tag-based filter for the dynamic user group
 	Filter pulumi.StringOutput `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the dynamic address group
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Tags associated with the dynamic user group
@@ -142,17 +167,16 @@ type dynamicUserGroupState struct {
 	// The description of the dynamic address group
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The tag-based filter for the dynamic user group
 	Filter *string `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the dynamic address group
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tags associated with the dynamic user group
@@ -164,17 +188,16 @@ type DynamicUserGroupState struct {
 	// The description of the dynamic address group
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The tag-based filter for the dynamic user group
 	Filter pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the dynamic address group
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tags associated with the dynamic user group
@@ -190,17 +213,16 @@ type dynamicUserGroupArgs struct {
 	// The description of the dynamic address group
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The tag-based filter for the dynamic user group
 	Filter string `pulumi:"filter"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the dynamic address group
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tags associated with the dynamic user group
@@ -212,17 +234,16 @@ type DynamicUserGroupArgs struct {
 	// The description of the dynamic address group
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The tag-based filter for the dynamic user group
 	Filter pulumi.StringInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the dynamic address group
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tags associated with the dynamic user group
@@ -322,6 +343,7 @@ func (o DynamicUserGroupOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DynamicUserGroupOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -332,7 +354,6 @@ func (o DynamicUserGroupOutput) Filter() pulumi.StringOutput {
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DynamicUserGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -344,7 +365,6 @@ func (o DynamicUserGroupOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DynamicUserGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

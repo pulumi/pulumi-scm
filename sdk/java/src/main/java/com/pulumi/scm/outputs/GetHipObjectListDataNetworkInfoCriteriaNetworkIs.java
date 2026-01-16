@@ -14,19 +14,18 @@ import java.util.Objects;
 public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIs {
     /**
      * @return Mobile
+     * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobile mobile;
     /**
      * @return Unknown
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknown unknown;
     /**
      * @return Wifi
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -35,6 +34,7 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIs {
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIs() {}
     /**
      * @return Mobile
+     * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobile mobile() {
@@ -42,7 +42,6 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIs {
     }
     /**
      * @return Unknown
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -51,7 +50,6 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIs {
     }
     /**
      * @return Wifi
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */

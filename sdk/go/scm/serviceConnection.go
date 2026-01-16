@@ -137,6 +137,32 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/serviceConnection:ServiceConnection example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/serviceConnection:ServiceConnection example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/serviceConnection:ServiceConnection example ::device:id
+// ```
 type ServiceConnection struct {
 	pulumi.CustomResourceState
 
@@ -146,6 +172,8 @@ type ServiceConnection struct {
 	BgpPeer ServiceConnectionBgpPeerPtrOutput `pulumi:"bgpPeer"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringOutput `pulumi:"folder"`
 	// Ipsec tunnel
 	IpsecTunnel pulumi.StringOutput `pulumi:"ipsecTunnel"`
 	// The name of the service connection
@@ -217,6 +245,8 @@ type serviceConnectionState struct {
 	BgpPeer *ServiceConnectionBgpPeer `pulumi:"bgpPeer"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
+	// The folder in which the resource is defined
+	Folder *string `pulumi:"folder"`
 	// Ipsec tunnel
 	IpsecTunnel *string `pulumi:"ipsecTunnel"`
 	// The name of the service connection
@@ -249,6 +279,8 @@ type ServiceConnectionState struct {
 	BgpPeer ServiceConnectionBgpPeerPtrInput
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
+	// The folder in which the resource is defined
+	Folder pulumi.StringPtrInput
 	// Ipsec tunnel
 	IpsecTunnel pulumi.StringPtrInput
 	// The name of the service connection
@@ -437,6 +469,11 @@ func (o ServiceConnectionOutput) BgpPeer() ServiceConnectionBgpPeerPtrOutput {
 // Map of sensitive values returned from the API.
 func (o ServiceConnectionOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
+// The folder in which the resource is defined
+func (o ServiceConnectionOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v *ServiceConnection) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
 }
 
 // Ipsec tunnel

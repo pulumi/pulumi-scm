@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class BgpRouteMapRedistributionBgp {
     /**
      * @return Ospf
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
     private @Nullable BgpRouteMapRedistributionBgpOspf ospf;
     /**
      * @return BGP Root RIB
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
@@ -28,6 +28,7 @@ public final class BgpRouteMapRedistributionBgp {
     private BgpRouteMapRedistributionBgp() {}
     /**
      * @return Ospf
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
     public Optional<BgpRouteMapRedistributionBgpOspf> ospf() {
@@ -35,7 +36,6 @@ public final class BgpRouteMapRedistributionBgp {
     }
     /**
      * @return BGP Root RIB
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */

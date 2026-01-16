@@ -25,8 +25,11 @@ import * as utilities from "./utilities";
 export function getIpsecCryptoProfile(args: GetIpsecCryptoProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetIpsecCryptoProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -35,6 +38,16 @@ export function getIpsecCryptoProfile(args: GetIpsecCryptoProfileArgs, opts?: pu
  */
 export interface GetIpsecCryptoProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -42,6 +55,11 @@ export interface GetIpsecCryptoProfileArgs {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -50,22 +68,48 @@ export interface GetIpsecCryptoProfileArgs {
 export interface GetIpsecCryptoProfileResult {
     /**
      * Ah
+     * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      */
     readonly ah: outputs.GetIpsecCryptoProfileAh;
+    /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly device: string;
+    /**
+     * phase-2 DH group (PFS DH group)
+     */
     readonly dhGroup: string;
+    /**
+     * Esp
+     * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
+     */
     readonly esp: outputs.GetIpsecCryptoProfileEsp;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Lifesize
+     */
     readonly lifesize: outputs.GetIpsecCryptoProfileLifesize;
+    /**
+     * Ipsec crypto profile lifetime
+     */
     readonly lifetime: outputs.GetIpsecCryptoProfileLifetime;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -88,8 +132,11 @@ export interface GetIpsecCryptoProfileResult {
 export function getIpsecCryptoProfileOutput(args: GetIpsecCryptoProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpsecCryptoProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -98,6 +145,16 @@ export function getIpsecCryptoProfileOutput(args: GetIpsecCryptoProfileOutputArg
  */
 export interface GetIpsecCryptoProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -105,4 +162,9 @@ export interface GetIpsecCryptoProfileOutputArgs {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

@@ -57,10 +57,19 @@ func LookupVariable(ctx *pulumi.Context, args *LookupVariableArgs, opts ...pulum
 
 // A collection of arguments for invoking getVariable.
 type LookupVariableArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the variable
 	Id string `pulumi:"id"`
 	// The name of the variable
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getVariable.
@@ -68,17 +77,25 @@ type LookupVariableResult struct {
 	// The description of the variable
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the variable
 	Id string `pulumi:"id"`
 	// The name of the variable
-	Name       string `pulumi:"name"`
-	Overridden bool   `pulumi:"overridden"`
-	Snippet    string `pulumi:"snippet"`
-	Tfid       string `pulumi:"tfid"`
-	Type       string `pulumi:"type"`
-	Value      string `pulumi:"value"`
+	Name string `pulumi:"name"`
+	// Is the variable overridden?
+	Overridden bool `pulumi:"overridden"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+	// The variable type
+	Type string `pulumi:"type"`
+	// The value of the variable
+	Value string `pulumi:"value"`
 }
 
 func LookupVariableOutput(ctx *pulumi.Context, args LookupVariableOutputArgs, opts ...pulumi.InvokeOption) LookupVariableResultOutput {
@@ -92,10 +109,19 @@ func LookupVariableOutput(ctx *pulumi.Context, args LookupVariableOutputArgs, op
 
 // A collection of arguments for invoking getVariable.
 type LookupVariableOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the variable
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the variable
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupVariableOutputArgs) ElementType() reflect.Type {
@@ -123,10 +149,13 @@ func (o LookupVariableResultOutput) Description() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupVariableResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupVariableResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -141,10 +170,13 @@ func (o LookupVariableResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Is the variable overridden?
 func (o LookupVariableResultOutput) Overridden() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupVariableResult) bool { return v.Overridden }).(pulumi.BoolOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupVariableResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -153,10 +185,12 @@ func (o LookupVariableResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// The variable type
 func (o LookupVariableResultOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Type }).(pulumi.StringOutput)
 }
 
+// The value of the variable
 func (o LookupVariableResultOutput) Value() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Value }).(pulumi.StringOutput)
 }

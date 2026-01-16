@@ -206,6 +206,32 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/authenticationRule:AuthenticationRule example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/authenticationRule:AuthenticationRule example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/authenticationRule:AuthenticationRule example ::device:id
+// ```
 type AuthenticationRule struct {
 	pulumi.CustomResourceState
 
@@ -220,11 +246,11 @@ type AuthenticationRule struct {
 	// The destination addresses
 	Destinations pulumi.StringArrayOutput `pulumi:"destinations"`
 	// Device
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Is the authentication rule disabled?
 	Disabled pulumi.BoolOutput `pulumi:"disabled"`
 	// Folder
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The source security zones
@@ -250,7 +276,6 @@ type AuthenticationRule struct {
 	// The destination ports
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// Snippet
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The source Host Integrity Profile (HIP)
@@ -326,11 +351,11 @@ type authenticationRuleState struct {
 	// The destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// Device
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Is the authentication rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// Folder
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The source security zones
@@ -356,7 +381,6 @@ type authenticationRuleState struct {
 	// The destination ports
 	Services []string `pulumi:"services"`
 	// Snippet
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The source Host Integrity Profile (HIP)
@@ -388,11 +412,11 @@ type AuthenticationRuleState struct {
 	// The destination addresses
 	Destinations pulumi.StringArrayInput
 	// Device
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Is the authentication rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// Folder
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The source security zones
@@ -418,7 +442,6 @@ type AuthenticationRuleState struct {
 	// The destination ports
 	Services pulumi.StringArrayInput
 	// Snippet
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The source Host Integrity Profile (HIP)
@@ -454,11 +477,11 @@ type authenticationRuleArgs struct {
 	// The destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// Device
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Is the authentication rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// Folder
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The source security zones
@@ -484,7 +507,6 @@ type authenticationRuleArgs struct {
 	// The destination ports
 	Services []string `pulumi:"services"`
 	// Snippet
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The source Host Integrity Profile (HIP)
@@ -516,11 +538,11 @@ type AuthenticationRuleArgs struct {
 	// The destination addresses
 	Destinations pulumi.StringArrayInput
 	// Device
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Is the authentication rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// Folder
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The source security zones
@@ -546,7 +568,6 @@ type AuthenticationRuleArgs struct {
 	// The destination ports
 	Services pulumi.StringArrayInput
 	// Snippet
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The source Host Integrity Profile (HIP)
@@ -678,6 +699,7 @@ func (o AuthenticationRuleOutput) Destinations() pulumi.StringArrayOutput {
 }
 
 // Device
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationRuleOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -688,7 +710,6 @@ func (o AuthenticationRuleOutput) Disabled() pulumi.BoolOutput {
 }
 
 // Folder
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -750,7 +771,6 @@ func (o AuthenticationRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // Snippet
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

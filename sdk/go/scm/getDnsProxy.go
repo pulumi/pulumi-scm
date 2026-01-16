@@ -24,10 +24,19 @@ func LookupDnsProxy(ctx *pulumi.Context, args *LookupDnsProxyArgs, opts ...pulum
 
 // A collection of arguments for invoking getDnsProxy.
 type LookupDnsProxyArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// DNS proxy name
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDnsProxy.
@@ -37,20 +46,31 @@ type LookupDnsProxyResult struct {
 	// Default
 	Default GetDnsProxyDefault `pulumi:"default"`
 	// The device in which the resource is defined
-	Device        string                    `pulumi:"device"`
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device string `pulumi:"device"`
+	// DNS proxy rules
 	DomainServers []GetDnsProxyDomainServer `pulumi:"domainServers"`
-	Enabled       bool                      `pulumi:"enabled"`
-	Folder        string                    `pulumi:"folder"`
+	// Enable DNS proxy?
+	Enabled bool `pulumi:"enabled"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id         string   `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Interfaces on which to enable DNS proxy service
 	Interfaces []string `pulumi:"interfaces"`
 	// DNS proxy name
-	Name          string                   `pulumi:"name"`
-	Snippet       string                   `pulumi:"snippet"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	// Static entries
 	StaticEntries []GetDnsProxyStaticEntry `pulumi:"staticEntries"`
-	TcpQueries    GetDnsProxyTcpQueries    `pulumi:"tcpQueries"`
-	Tfid          string                   `pulumi:"tfid"`
-	UdpQueries    GetDnsProxyUdpQueries    `pulumi:"udpQueries"`
+	// Tcp queries
+	TcpQueries GetDnsProxyTcpQueries `pulumi:"tcpQueries"`
+	Tfid       string                `pulumi:"tfid"`
+	// Udp queries
+	UdpQueries GetDnsProxyUdpQueries `pulumi:"udpQueries"`
 }
 
 func LookupDnsProxyOutput(ctx *pulumi.Context, args LookupDnsProxyOutputArgs, opts ...pulumi.InvokeOption) LookupDnsProxyResultOutput {
@@ -64,10 +84,19 @@ func LookupDnsProxyOutput(ctx *pulumi.Context, args LookupDnsProxyOutputArgs, op
 
 // A collection of arguments for invoking getDnsProxy.
 type LookupDnsProxyOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// DNS proxy name
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupDnsProxyOutputArgs) ElementType() reflect.Type {
@@ -100,18 +129,23 @@ func (o LookupDnsProxyResultOutput) Default() GetDnsProxyDefaultOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDnsProxyResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// DNS proxy rules
 func (o LookupDnsProxyResultOutput) DomainServers() GetDnsProxyDomainServerArrayOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) []GetDnsProxyDomainServer { return v.DomainServers }).(GetDnsProxyDomainServerArrayOutput)
 }
 
+// Enable DNS proxy?
 func (o LookupDnsProxyResultOutput) Enabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) bool { return v.Enabled }).(pulumi.BoolOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDnsProxyResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -121,6 +155,7 @@ func (o LookupDnsProxyResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Interfaces on which to enable DNS proxy service
 func (o LookupDnsProxyResultOutput) Interfaces() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) []string { return v.Interfaces }).(pulumi.StringArrayOutput)
 }
@@ -130,14 +165,18 @@ func (o LookupDnsProxyResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDnsProxyResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Static entries
 func (o LookupDnsProxyResultOutput) StaticEntries() GetDnsProxyStaticEntryArrayOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) []GetDnsProxyStaticEntry { return v.StaticEntries }).(GetDnsProxyStaticEntryArrayOutput)
 }
 
+// Tcp queries
 func (o LookupDnsProxyResultOutput) TcpQueries() GetDnsProxyTcpQueriesOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) GetDnsProxyTcpQueries { return v.TcpQueries }).(GetDnsProxyTcpQueriesOutput)
 }
@@ -146,6 +185,7 @@ func (o LookupDnsProxyResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Udp queries
 func (o LookupDnsProxyResultOutput) UdpQueries() GetDnsProxyUdpQueriesOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) GetDnsProxyUdpQueries { return v.UdpQueries }).(GetDnsProxyUdpQueriesOutput)
 }

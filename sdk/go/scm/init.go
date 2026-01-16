@@ -47,10 +47,14 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &AuthenticationRule{}
 	case "scm:index/authenticationSequence:AuthenticationSequence":
 		r = &AuthenticationSequence{}
+	case "scm:index/authenticationSetting:AuthenticationSetting":
+		r = &AuthenticationSetting{}
 	case "scm:index/autoVpnCluster:AutoVpnCluster":
 		r = &AutoVpnCluster{}
 	case "scm:index/autoVpnSetting:AutoVpnSetting":
 		r = &AutoVpnSetting{}
+	case "scm:index/bandwidthAllocation:BandwidthAllocation":
+		r = &BandwidthAllocation{}
 	case "scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile":
 		r = &BgpAddressFamilyProfile{}
 	case "scm:index/bgpAuthProfile:BgpAuthProfile":
@@ -67,12 +71,16 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &BgpRouting{}
 	case "scm:index/certificateProfile:CertificateProfile":
 		r = &CertificateProfile{}
+	case "scm:index/contentIdSetting:ContentIdSetting":
+		r = &ContentIdSetting{}
 	case "scm:index/decryptionExclusion:DecryptionExclusion":
 		r = &DecryptionExclusion{}
 	case "scm:index/decryptionProfile:DecryptionProfile":
 		r = &DecryptionProfile{}
 	case "scm:index/decryptionRule:DecryptionRule":
 		r = &DecryptionRule{}
+	case "scm:index/deviceRedistributionCollector:DeviceRedistributionCollector":
+		r = &DeviceRedistributionCollector{}
 	case "scm:index/dhcpInterface:DhcpInterface":
 		r = &DhcpInterface{}
 	case "scm:index/dnsProxy:DnsProxy":
@@ -93,6 +101,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &FileBlockingProfile{}
 	case "scm:index/folder:Folder":
 		r = &Folder{}
+	case "scm:index/generalSetting:GeneralSetting":
+		r = &GeneralSetting{}
 	case "scm:index/hipObject:HipObject":
 		r = &HipObject{}
 	case "scm:index/hipProfile:HipProfile":
@@ -125,6 +135,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &LdapServerProfile{}
 	case "scm:index/linkTag:LinkTag":
 		r = &LinkTag{}
+	case "scm:index/lldpProfile:LldpProfile":
+		r = &LldpProfile{}
 	case "scm:index/localUser:LocalUser":
 		r = &LocalUser{}
 	case "scm:index/localUserGroup:LocalUserGroup":
@@ -135,8 +147,12 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &LogicalRouter{}
 	case "scm:index/loopbackInterface:LoopbackInterface":
 		r = &LoopbackInterface{}
+	case "scm:index/managementInterface:ManagementInterface":
+		r = &ManagementInterface{}
 	case "scm:index/mfaServer:MfaServer":
 		r = &MfaServer{}
+	case "scm:index/motdBannerSetting:MotdBannerSetting":
+		r = &MotdBannerSetting{}
 	case "scm:index/natRule:NatRule":
 		r = &NatRule{}
 	case "scm:index/ospfAuthProfile:OspfAuthProfile":
@@ -189,6 +205,14 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ServiceConnectionGroup{}
 	case "scm:index/serviceGroup:ServiceGroup":
 		r = &ServiceGroup{}
+	case "scm:index/serviceRoute:ServiceRoute":
+		r = &ServiceRoute{}
+	case "scm:index/serviceSetting:ServiceSetting":
+		r = &ServiceSetting{}
+	case "scm:index/sessionSetting:SessionSetting":
+		r = &SessionSetting{}
+	case "scm:index/sessionTimeout:SessionTimeout":
+		r = &SessionTimeout{}
 	case "scm:index/site:Site":
 		r = &Site{}
 	case "scm:index/snippet:Snippet":
@@ -199,12 +223,16 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &TacacsServerProfile{}
 	case "scm:index/tag:Tag":
 		r = &Tag{}
+	case "scm:index/tcpSetting:TcpSetting":
+		r = &TcpSetting{}
 	case "scm:index/tlsServiceProfile:TlsServiceProfile":
 		r = &TlsServiceProfile{}
 	case "scm:index/trafficSteeringRule:TrafficSteeringRule":
 		r = &TrafficSteeringRule{}
 	case "scm:index/tunnelInterface:TunnelInterface":
 		r = &TunnelInterface{}
+	case "scm:index/updateSchedule:UpdateSchedule":
+		r = &UpdateSchedule{}
 	case "scm:index/urlAccessProfile:UrlAccessProfile":
 		r = &UrlAccessProfile{}
 	case "scm:index/urlCategory:UrlCategory":
@@ -213,6 +241,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &Variable{}
 	case "scm:index/vlanInterface:VlanInterface":
 		r = &VlanInterface{}
+	case "scm:index/vpnSetting:VpnSetting":
+		r = &VpnSetting{}
 	case "scm:index/vulnerabilityProtectionProfile:VulnerabilityProtectionProfile":
 		r = &VulnerabilityProtectionProfile{}
 	case "scm:index/vulnerabilityProtectionSignature:VulnerabilityProtectionSignature":
@@ -321,12 +351,22 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/authenticationSetting",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/autoVpnCluster",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/autoVpnSetting",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/bandwidthAllocation",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -371,6 +411,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/contentIdSetting",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/decryptionExclusion",
 		&module{version},
 	)
@@ -382,6 +427,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/decryptionRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/deviceRedistributionCollector",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -432,6 +482,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/folder",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/generalSetting",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -516,6 +571,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/lldpProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/localUser",
 		&module{version},
 	)
@@ -541,7 +601,17 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/managementInterface",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/mfaServer",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/motdBannerSetting",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -676,6 +746,26 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/serviceRoute",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/serviceSetting",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/sessionSetting",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/sessionTimeout",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/site",
 		&module{version},
 	)
@@ -701,6 +791,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/tcpSetting",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/tlsServiceProfile",
 		&module{version},
 	)
@@ -712,6 +807,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/tunnelInterface",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/updateSchedule",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -732,6 +832,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/vlanInterface",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/vpnSetting",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

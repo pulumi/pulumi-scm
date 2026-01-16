@@ -81,8 +81,25 @@ func Provider() tfbridge.ProviderInfo {
 		Version:           version.Version,
 		DocRules:          &tfbridge.DocRuleInfo{EditRules: editRules},
 		Config:            map[string]*tfbridge.SchemaInfo{},
-		Resources:         map[string]*tfbridge.ResourceInfo{},
-		DataSources:       map[string]*tfbridge.DataSourceInfo{},
+		Resources: map[string]*tfbridge.ResourceInfo{
+			"scm_management_interface": {
+				Tok: "scm:index/managementInterface:ManagementInterface",
+				Fields: map[string]*tfbridge.SchemaInfo{
+					"management_interface": {
+						CSharpName: "ManagementInterfaceDetails",
+					},
+				},
+			},
+			"scm_update_schedule": {
+				Tok: "scm:index/updateSchedule:UpdateSchedule",
+				Fields: map[string]*tfbridge.SchemaInfo{
+					"update_schedule": {
+						CSharpName: "UpdateScheduleDetails",
+					},
+				},
+			},
+		},
+		DataSources: map[string]*tfbridge.DataSourceInfo{},
 		JavaScript: &tfbridge.JavaScriptInfo{
 			PackageName: "@pulumi/scm",
 

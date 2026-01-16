@@ -14,19 +14,18 @@ import java.util.Objects;
 public final class GetHipObjectDiskBackupCriteriaLastBackupTime {
     /**
      * @return Not available
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
     private GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable notAvailable;
     /**
      * @return Not within
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
     private GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin notWithin;
     /**
      * @return Within
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
@@ -35,6 +34,7 @@ public final class GetHipObjectDiskBackupCriteriaLastBackupTime {
     private GetHipObjectDiskBackupCriteriaLastBackupTime() {}
     /**
      * @return Not available
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
     public GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable notAvailable() {
@@ -42,7 +42,6 @@ public final class GetHipObjectDiskBackupCriteriaLastBackupTime {
     }
     /**
      * @return Not within
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
@@ -51,7 +50,6 @@ public final class GetHipObjectDiskBackupCriteriaLastBackupTime {
     }
     /**
      * @return Within
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */

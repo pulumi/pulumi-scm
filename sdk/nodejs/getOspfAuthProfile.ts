@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getOspfAuthProfile(args: GetOspfAuthProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetOspfAuthProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getOspfAuthProfile:getOspfAuthProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getOspfAuthProfile(args: GetOspfAuthProfileArgs, opts?: pulumi.I
  */
 export interface GetOspfAuthProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetOspfAuthProfileArgs {
      * Profile name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -37,20 +55,40 @@ export interface GetOspfAuthProfileArgs {
 export interface GetOspfAuthProfileResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
     readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * MD5s
+     * > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+     */
     readonly md5s: outputs.GetOspfAuthProfileMd5[];
     /**
      * Profile name
      */
     readonly name: string;
+    /**
+     * Password
+     * > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+     */
     readonly password: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -60,8 +98,11 @@ export interface GetOspfAuthProfileResult {
 export function getOspfAuthProfileOutput(args: GetOspfAuthProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetOspfAuthProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getOspfAuthProfile:getOspfAuthProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -70,6 +111,16 @@ export function getOspfAuthProfileOutput(args: GetOspfAuthProfileOutputArgs, opt
  */
 export interface GetOspfAuthProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -77,4 +128,9 @@ export interface GetOspfAuthProfileOutputArgs {
      * Profile name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

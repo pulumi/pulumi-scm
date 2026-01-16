@@ -12,6 +12,36 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a list of SCM TLS Service Profile objects.
+//			//
+//			// Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+//			allShared, err := scm.GetTlsServiceProfileList(ctx, &scm.GetTlsServiceProfileListArgs{
+//				Folder: pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmTlsServiceProfileListAllShared", allShared.Datas)
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetTlsServiceProfileList(ctx *pulumi.Context, args *GetTlsServiceProfileListArgs, opts ...pulumi.InvokeOption) (*GetTlsServiceProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetTlsServiceProfileListResult

@@ -91,6 +91,7 @@ class ServiceConnectionGroupArgs:
 class _ServiceConnectionGroupState:
     def __init__(__self__, *,
                  disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
+                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  pbf_only: Optional[pulumi.Input[_builtins.bool]] = None,
                  targets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -98,12 +99,15 @@ class _ServiceConnectionGroupState:
         """
         Input properties used for looking up and filtering ServiceConnectionGroup resources.
         :param pulumi.Input[_builtins.bool] disable_snat: Disable snat
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.bool] pbf_only: Pbf only
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] targets: Target
         """
         if disable_snat is not None:
             pulumi.set(__self__, "disable_snat", disable_snat)
+        if folder is not None:
+            pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if pbf_only is not None:
@@ -124,6 +128,18 @@ class _ServiceConnectionGroupState:
     @disable_snat.setter
     def disable_snat(self, value: Optional[pulumi.Input[_builtins.bool]]):
         pulumi.set(self, "disable_snat", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @folder.setter
+    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
@@ -281,6 +297,32 @@ class ServiceConnectionGroup(pulumi.CustomResource):
             pbf_only=False)
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] disable_snat: Disable snat
@@ -393,6 +435,32 @@ class ServiceConnectionGroup(pulumi.CustomResource):
             pbf_only=False)
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param ServiceConnectionGroupArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -427,6 +495,7 @@ class ServiceConnectionGroup(pulumi.CustomResource):
             if targets is None and not opts.urn:
                 raise TypeError("Missing required property 'targets'")
             __props__.__dict__["targets"] = targets
+            __props__.__dict__["folder"] = None
             __props__.__dict__["tfid"] = None
         super(ServiceConnectionGroup, __self__).__init__(
             'scm:index/serviceConnectionGroup:ServiceConnectionGroup',
@@ -439,6 +508,7 @@ class ServiceConnectionGroup(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
+            folder: Optional[pulumi.Input[_builtins.str]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             pbf_only: Optional[pulumi.Input[_builtins.bool]] = None,
             targets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -451,6 +521,7 @@ class ServiceConnectionGroup(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] disable_snat: Disable snat
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.bool] pbf_only: Pbf only
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] targets: Target
@@ -460,6 +531,7 @@ class ServiceConnectionGroup(pulumi.CustomResource):
         __props__ = _ServiceConnectionGroupState.__new__(_ServiceConnectionGroupState)
 
         __props__.__dict__["disable_snat"] = disable_snat
+        __props__.__dict__["folder"] = folder
         __props__.__dict__["name"] = name
         __props__.__dict__["pbf_only"] = pbf_only
         __props__.__dict__["targets"] = targets
@@ -473,6 +545,14 @@ class ServiceConnectionGroup(pulumi.CustomResource):
         Disable snat
         """
         return pulumi.get(self, "disable_snat")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> pulumi.Output[_builtins.str]:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter

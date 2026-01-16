@@ -13,19 +13,18 @@ import java.util.Objects;
 public final class GetIkeGatewayPeerAddress {
     /**
      * @return Dynamic
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     private GetIkeGatewayPeerAddressDynamic dynamic;
     /**
      * @return peer gateway FQDN name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     private String fqdn;
     /**
      * @return peer gateway has static IP address
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
@@ -34,6 +33,7 @@ public final class GetIkeGatewayPeerAddress {
     private GetIkeGatewayPeerAddress() {}
     /**
      * @return Dynamic
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     public GetIkeGatewayPeerAddressDynamic dynamic() {
@@ -41,7 +41,6 @@ public final class GetIkeGatewayPeerAddress {
     }
     /**
      * @return peer gateway FQDN name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
@@ -50,7 +49,6 @@ public final class GetIkeGatewayPeerAddress {
     }
     /**
      * @return peer gateway has static IP address
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */

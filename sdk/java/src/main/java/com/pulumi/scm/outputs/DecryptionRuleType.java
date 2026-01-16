@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class DecryptionRuleType {
     /**
      * @return Ssl forward proxy
+     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     private @Nullable DecryptionRuleTypeSslForwardProxy sslForwardProxy;
     /**
      * @return add the certificate name for SSL inbound inspection
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
@@ -28,6 +28,7 @@ public final class DecryptionRuleType {
     private DecryptionRuleType() {}
     /**
      * @return Ssl forward proxy
+     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     public Optional<DecryptionRuleTypeSslForwardProxy> sslForwardProxy() {
@@ -35,7 +36,6 @@ public final class DecryptionRuleType {
     }
     /**
      * @return add the certificate name for SSL inbound inspection
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */

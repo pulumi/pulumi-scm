@@ -11,19 +11,157 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// SyslogServerProfile resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmSyslogServerProf1 = new Scm.SyslogServerProfile("scm_syslog_server_prof_1", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "syslog-server-prof-base",
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.SyslogServerProfileServerArgs
+    ///             {
+    ///                 Name = "Server-Primary",
+    ///                 Server = "192.168.1.10",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmSyslogServerProf2 = new Scm.SyslogServerProfile("scm_syslog_server_prof_2", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "syslog-server-prof-mixed",
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.SyslogServerProfileServerArgs
+    ///             {
+    ///                 Name = "Server-Mixed",
+    ///                 Server = "10.0.0.50",
+    ///                 Transport = "TCP",
+    ///                 Port = 601,
+    ///                 Format = "IETF",
+    ///                 Facility = "LOG_LOCAL4",
+    ///             },
+    ///         },
+    ///         Format = new Scm.Inputs.SyslogServerProfileFormatArgs
+    ///         {
+    ///             Traffic = "$bytes",
+    ///             Threat = "$app",
+    ///             Globalprotect = "$cloud",
+    ///         },
+    ///     });
+    /// 
+    ///     var scmSyslogServerProf3 = new Scm.SyslogServerProfile("scm_syslog_server_prof_3", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "syslog-server-prof-complete",
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.SyslogServerProfileServerArgs
+    ///             {
+    ///                 Name = "Server-A",
+    ///                 Server = "172.16.10.1",
+    ///                 Transport = "UDP",
+    ///                 Port = 514,
+    ///                 Format = "BSD",
+    ///                 Facility = "LOG_LOCAL7",
+    ///             },
+    ///             new Scm.Inputs.SyslogServerProfileServerArgs
+    ///             {
+    ///                 Name = "Server-B",
+    ///                 Server = "172.16.10.2",
+    ///                 Transport = "TCP",
+    ///                 Port = 6514,
+    ///                 Format = "IETF",
+    ///                 Facility = "LOG_LOCAL3",
+    ///             },
+    ///             new Scm.Inputs.SyslogServerProfileServerArgs
+    ///             {
+    ///                 Name = "Server-C",
+    ///                 Server = "192.168.1.10",
+    ///                 Transport = "UDP",
+    ///                 Port = 514,
+    ///                 Format = "BSD",
+    ///                 Facility = "LOG_USER",
+    ///             },
+    ///         },
+    ///         Format = new Scm.Inputs.SyslogServerProfileFormatArgs
+    ///         {
+    ///             Escaping = new Scm.Inputs.SyslogServerProfileFormatEscapingArgs
+    ///             {
+    ///                 EscapeCharacter = "*",
+    ///                 EscapedCharacters = "&amp;\\#",
+    ///             },
+    ///             Traffic = "$actionflags",
+    ///             Threat = "$error + $errorcode",
+    ///             Wildfire = "$client_os",
+    ///             Url = "$type",
+    ///             Data = "$srcregion",
+    ///             Gtp = "$time_generated",
+    ///             Sctp = "$device_name and $contenttype",
+    ///             Tunnel = "$tunnel_type",
+    ///             Auth = "$hostid + $portal",
+    ///             Userid = "$hostid and $location",
+    ///             Iptag = "dg_hier_level_1",
+    ///             Decryption = "dg_hier_level_2",
+    ///             Config = "dg_hier_level_3",
+    ///             System = "$vsys_name + $status",
+    ///             Globalprotect = "default",
+    ///             HipMatch = "custom",
+    ///             Correlation = "custom",
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/syslogServerProfile:SyslogServerProfile")]
     public partial class SyslogServerProfile : global::Pulumi.CustomResource
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -42,14 +180,13 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Servers
+        /// A list of syslog server configurations. At least one server is required.
         /// </summary>
         [Output("servers")]
-        public Output<Outputs.SyslogServerProfileServers?> Servers { get; private set; } = null!;
+        public Output<ImmutableArray<Outputs.SyslogServerProfileServer>> Servers { get; private set; } = null!;
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -66,7 +203,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public SyslogServerProfile(string name, SyslogServerProfileArgs? args = null, CustomResourceOptions? options = null)
+        public SyslogServerProfile(string name, SyslogServerProfileArgs args, CustomResourceOptions? options = null)
             : base("scm:index/syslogServerProfile:SyslogServerProfile", name, args ?? new SyslogServerProfileArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -106,13 +243,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -130,15 +267,20 @@ namespace Pulumi.Scm
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("servers", required: true)]
+        private InputList<Inputs.SyslogServerProfileServerArgs>? _servers;
+
         /// <summary>
-        /// Servers
+        /// A list of syslog server configurations. At least one server is required.
         /// </summary>
-        [Input("servers")]
-        public Input<Inputs.SyslogServerProfileServersArgs>? Servers { get; set; }
+        public InputList<Inputs.SyslogServerProfileServerArgs> Servers
+        {
+            get => _servers ?? (_servers = new InputList<Inputs.SyslogServerProfileServerArgs>());
+            set => _servers = value;
+        }
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -154,13 +296,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -178,15 +320,20 @@ namespace Pulumi.Scm
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// Servers
-        /// </summary>
         [Input("servers")]
-        public Input<Inputs.SyslogServerProfileServersGetArgs>? Servers { get; set; }
+        private InputList<Inputs.SyslogServerProfileServerGetArgs>? _servers;
+
+        /// <summary>
+        /// A list of syslog server configurations. At least one server is required.
+        /// </summary>
+        public InputList<Inputs.SyslogServerProfileServerGetArgs> Servers
+        {
+            get => _servers ?? (_servers = new InputList<Inputs.SyslogServerProfileServerGetArgs>());
+            set => _servers = value;
+        }
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

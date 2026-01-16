@@ -53,6 +53,32 @@ import * as utilities from "./utilities";
  *     },
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example ::device:id
+ * ```
  */
 export class AuthenticationProfile extends pulumi.CustomResource {
     /**
@@ -88,11 +114,11 @@ export class AuthenticationProfile extends pulumi.CustomResource {
     declare public readonly allowLists: pulumi.Output<string[]>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -118,7 +144,6 @@ export class AuthenticationProfile extends pulumi.CustomResource {
     declare public readonly singleSignOn: pulumi.Output<outputs.AuthenticationProfileSingleSignOn | undefined>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -187,11 +212,11 @@ export interface AuthenticationProfileState {
     allowLists?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -217,7 +242,6 @@ export interface AuthenticationProfileState {
     singleSignOn?: pulumi.Input<inputs.AuthenticationProfileSingleSignOn>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -242,11 +266,11 @@ export interface AuthenticationProfileArgs {
     allowLists?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -272,7 +296,6 @@ export interface AuthenticationProfileArgs {
     singleSignOn?: pulumi.Input<inputs.AuthenticationProfileSingleSignOn>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

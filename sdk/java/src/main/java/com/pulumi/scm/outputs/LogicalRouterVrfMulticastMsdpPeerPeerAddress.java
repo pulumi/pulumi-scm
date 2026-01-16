@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfMulticastMsdpPeerPeerAddress {
     /**
      * @return Fqdn
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
     private @Nullable String fqdn;
     /**
      * @return Ip
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
@@ -27,6 +27,7 @@ public final class LogicalRouterVrfMulticastMsdpPeerPeerAddress {
     private LogicalRouterVrfMulticastMsdpPeerPeerAddress() {}
     /**
      * @return Fqdn
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
     public Optional<String> fqdn() {
@@ -34,7 +35,6 @@ public final class LogicalRouterVrfMulticastMsdpPeerPeerAddress {
     }
     /**
      * @return Ip
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */

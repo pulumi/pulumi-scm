@@ -15,29 +15,26 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Md5
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AuthProfileAhMd5? Md5;
         /// <summary>
         /// Sha1
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AuthProfileAhSha1? Sha1;
         /// <summary>
         /// Sha256
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AuthProfileAhSha256? Sha256;
         /// <summary>
         /// Sha384
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AuthProfileAhSha384? Sha384;
         /// <summary>
         /// Sha512
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AuthProfileAhSha512? Sha512;

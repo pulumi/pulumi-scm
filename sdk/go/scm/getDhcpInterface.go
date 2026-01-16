@@ -24,25 +24,43 @@ func LookupDhcpInterface(ctx *pulumi.Context, args *LookupDhcpInterfaceArgs, opt
 
 // A collection of arguments for invoking getDhcpInterface.
 type LookupDhcpInterfaceArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Interface name
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDhcpInterface.
 type LookupDhcpInterfaceResult struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Interface name
-	Name    string                 `pulumi:"name"`
-	Relay   GetDhcpInterfaceRelay  `pulumi:"relay"`
-	Server  GetDhcpInterfaceServer `pulumi:"server"`
-	Snippet string                 `pulumi:"snippet"`
-	Tfid    string                 `pulumi:"tfid"`
+	Name string `pulumi:"name"`
+	// Relay
+	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
+	Relay GetDhcpInterfaceRelay `pulumi:"relay"`
+	// Server
+	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
+	Server GetDhcpInterfaceServer `pulumi:"server"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupDhcpInterfaceOutput(ctx *pulumi.Context, args LookupDhcpInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupDhcpInterfaceResultOutput {
@@ -56,10 +74,19 @@ func LookupDhcpInterfaceOutput(ctx *pulumi.Context, args LookupDhcpInterfaceOutp
 
 // A collection of arguments for invoking getDhcpInterface.
 type LookupDhcpInterfaceOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Interface name
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupDhcpInterfaceOutputArgs) ElementType() reflect.Type {
@@ -82,10 +109,13 @@ func (o LookupDhcpInterfaceResultOutput) ToLookupDhcpInterfaceResultOutputWithCo
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDhcpInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDhcpInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -100,14 +130,20 @@ func (o LookupDhcpInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Relay
+// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 func (o LookupDhcpInterfaceResultOutput) Relay() GetDhcpInterfaceRelayOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) GetDhcpInterfaceRelay { return v.Relay }).(GetDhcpInterfaceRelayOutput)
 }
 
+// Server
+// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 func (o LookupDhcpInterfaceResultOutput) Server() GetDhcpInterfaceServerOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) GetDhcpInterfaceServer { return v.Server }).(GetDhcpInterfaceServerOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupDhcpInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

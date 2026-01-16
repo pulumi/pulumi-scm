@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Allow
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow` and `Deny`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionAllowResult Allow;
         /// <summary>
         /// Deny
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow` and `Deny`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionDenyResult Deny;
