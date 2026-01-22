@@ -20,7 +20,6 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Ident by icmp6 type
-     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     @Import(name="identByIcmp6Type")
@@ -28,7 +27,6 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return Ident by icmp6 type
-     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     public Optional<Output<ApplicationDefaultIdentByIcmp6TypeArgs>> identByIcmp6Type() {
@@ -37,6 +35,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Ident by icmp type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -45,6 +44,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return Ident by icmp type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -54,6 +54,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Ident by ip protocol
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -62,6 +63,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return Ident by ip protocol
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -71,6 +73,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Port
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -79,6 +82,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return Port
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
@@ -115,7 +119,6 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param identByIcmp6Type Ident by icmp6 type
-         * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
          * 
          * @return builder
          * 
@@ -127,7 +130,6 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param identByIcmp6Type Ident by icmp6 type
-         * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
          * 
          * @return builder
          * 
@@ -138,6 +140,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param identByIcmpType Ident by icmp type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
          * 
          * @return builder
@@ -150,6 +153,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param identByIcmpType Ident by icmp type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
          * 
          * @return builder
@@ -161,6 +165,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param identByIpProtocol Ident by ip protocol
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
          * 
          * @return builder
@@ -173,6 +178,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param identByIpProtocol Ident by ip protocol
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
          * 
          * @return builder
@@ -184,6 +190,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param ports Port
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
          * 
          * @return builder
@@ -196,6 +203,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param ports Port
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
          * 
          * @return builder
@@ -207,6 +215,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param ports Port
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
          * 
          * @return builder

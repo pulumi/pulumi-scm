@@ -18,7 +18,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
 
     /**
      * Is
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     @Import(name="is")
@@ -26,7 +25,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
 
     /**
      * @return Is
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsArgs>> is() {
@@ -35,6 +33,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
 
     /**
      * Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
@@ -43,6 +42,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
 
     /**
      * @return Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
@@ -77,7 +77,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
 
         /**
          * @param is Is
-         * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
          * 
          * @return builder
          * 
@@ -89,7 +88,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
 
         /**
          * @param is Is
-         * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
          * 
          * @return builder
          * 
@@ -100,6 +98,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
 
         /**
          * @param isNot Is not
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
          * 
          * @return builder
@@ -112,6 +111,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
 
         /**
          * @param isNot Is not
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
          * 
          * @return builder

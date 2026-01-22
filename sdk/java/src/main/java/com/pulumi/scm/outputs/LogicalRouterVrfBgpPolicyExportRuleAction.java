@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfBgpPolicyExportRuleAction {
     /**
      * @return Allow
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyExportRuleActionAllow allow;
     /**
      * @return Deny
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
@@ -28,7 +28,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleAction {
     private LogicalRouterVrfBgpPolicyExportRuleAction() {}
     /**
      * @return Allow
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
     public Optional<LogicalRouterVrfBgpPolicyExportRuleActionAllow> allow() {
@@ -36,6 +35,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleAction {
     }
     /**
      * @return Deny
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */

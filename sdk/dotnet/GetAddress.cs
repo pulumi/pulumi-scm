@@ -197,15 +197,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -215,16 +210,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the address object
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -238,15 +226,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -256,16 +239,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the address object
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -279,56 +255,22 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetAddressResult
     {
-        /// <summary>
-        /// The description of the address object
-        /// </summary>
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// Fully qualified domain name
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
-        /// </summary>
         public readonly string Fqdn;
         /// <summary>
         /// The UUID of the address object
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// IP address with or without CIDR notation
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
-        /// </summary>
         public readonly string IpNetmask;
-        /// <summary>
-        /// Ip range
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
-        /// </summary>
         public readonly string IpRange;
-        /// <summary>
-        /// IP wildcard mask
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn`, `IpNetmask`, `IpRange`, and `IpWildcard`.
-        /// </summary>
         public readonly string IpWildcard;
-        /// <summary>
-        /// The name of the address object
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Tags assocaited with the address object
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
 

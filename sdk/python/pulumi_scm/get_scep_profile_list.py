@@ -165,6 +165,20 @@ def get_scep_profile_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM SCEP Profile objects.
+    #
+    # Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+    all_shared = scm.get_scep_profile_list(folder="All")
+    pulumi.export("scmScepProfileListAllShared", all_shared.datas)
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +217,20 @@ def get_scep_profile_list_output(device: Optional[pulumi.Input[Optional[_builtin
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetScepProfileListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM SCEP Profile objects.
+    #
+    # Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+    all_shared = scm.get_scep_profile_list(folder="All")
+    pulumi.export("scmScepProfileListAllShared", all_shared.datas)
+    ```
 
 
     :param _builtins.str device: The device of the item.

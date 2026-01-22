@@ -11,67 +11,34 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTlsServiceProfileResult {
-    /**
-     * @return Certificate name
-     * 
-     */
     private String certificate;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the TLS service profile
      * 
      */
     private String id;
-    /**
-     * @return TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
-     * 
-     */
     private String name;
-    /**
-     * @return Protocol settings
-     * 
-     */
     private GetTlsServiceProfileProtocolSettings protocolSettings;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
 
     private GetTlsServiceProfileResult() {}
-    /**
-     * @return Certificate name
-     * 
-     */
     public String certificate() {
         return this.certificate;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -82,25 +49,12 @@ public final class GetTlsServiceProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return Protocol settings
-     * 
-     */
     public GetTlsServiceProfileProtocolSettings protocolSettings() {
         return this.protocolSettings;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

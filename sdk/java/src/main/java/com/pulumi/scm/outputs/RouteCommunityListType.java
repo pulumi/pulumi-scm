@@ -15,18 +15,19 @@ import javax.annotation.Nullable;
 public final class RouteCommunityListType {
     /**
      * @return Extended
-     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     private @Nullable RouteCommunityListTypeExtended extended;
     /**
      * @return Large
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     private @Nullable RouteCommunityListTypeLarge large;
     /**
      * @return Regular
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
@@ -35,7 +36,6 @@ public final class RouteCommunityListType {
     private RouteCommunityListType() {}
     /**
      * @return Extended
-     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     public Optional<RouteCommunityListTypeExtended> extended() {
@@ -43,6 +43,7 @@ public final class RouteCommunityListType {
     }
     /**
      * @return Large
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
@@ -51,6 +52,7 @@ public final class RouteCommunityListType {
     }
     /**
      * @return Regular
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */

@@ -42,26 +42,14 @@ export function getVariable(args: GetVariableArgs, opts?: pulumi.InvokeOptions):
 export interface GetVariableArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the variable
      */
     id: string;
-    /**
-     * The name of the variable
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -69,45 +57,21 @@ export interface GetVariableArgs {
  * A collection of values returned by getVariable.
  */
 export interface GetVariableResult {
-    /**
-     * The description of the variable
-     */
     readonly description: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the variable
      */
     readonly id: string;
-    /**
-     * The name of the variable
-     */
     readonly name: string;
-    /**
-     * Is the variable overridden?
-     */
     readonly overridden: boolean;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * The variable type
-     */
     readonly type: string;
-    /**
-     * The value of the variable
-     */
     readonly value: string;
 }
 /**
@@ -148,25 +112,13 @@ export function getVariableOutput(args: GetVariableOutputArgs, opts?: pulumi.Inv
 export interface GetVariableOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the variable
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the variable
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

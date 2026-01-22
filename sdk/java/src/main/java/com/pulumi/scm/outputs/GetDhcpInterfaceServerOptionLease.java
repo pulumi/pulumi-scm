@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetDhcpInterfaceServerOptionLease {
     /**
      * @return DHCP lease timeout (minutes)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
     private Integer timeout;
     /**
      * @return Unlimited
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetDhcpInterfaceServerOptionLease {
     private GetDhcpInterfaceServerOptionLease() {}
     /**
      * @return DHCP lease timeout (minutes)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
     public Integer timeout() {
@@ -35,6 +34,7 @@ public final class GetDhcpInterfaceServerOptionLease {
     }
     /**
      * @return Unlimited
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */

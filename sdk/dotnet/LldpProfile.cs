@@ -12,6 +12,38 @@ namespace Pulumi.Scm
     /// <summary>
     /// LldpProfile resource
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Scm.LldpProfile("example", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Mode = "transmit-receive",
+    ///         Name = "lldp-profile-tf-1",
+    ///         OptionTlvs = new Scm.Inputs.LldpProfileOptionTlvsArgs
+    ///         {
+    ///             ManagementAddress = new Scm.Inputs.LldpProfileOptionTlvsManagementAddressArgs
+    ///             {
+    ///                 Enabled = true,
+    ///             },
+    ///             PortDescription = true,
+    ///             SystemCapabilities = true,
+    ///             SystemDescription = false,
+    ///             SystemName = true,
+    ///         },
+    ///         SnmpSyslogNotification = true,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
@@ -43,13 +75,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -75,6 +107,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -137,13 +170,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -169,6 +202,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -190,13 +224,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -222,6 +256,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

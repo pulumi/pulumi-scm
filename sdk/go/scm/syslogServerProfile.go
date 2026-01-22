@@ -154,9 +154,9 @@ type SyslogServerProfile struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Format
@@ -166,6 +166,7 @@ type SyslogServerProfile struct {
 	// A list of syslog server configurations. At least one server is required.
 	Servers SyslogServerProfileServerArrayOutput `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -205,9 +206,9 @@ func GetSyslogServerProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering SyslogServerProfile resources.
 type syslogServerProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Format
@@ -217,6 +218,7 @@ type syslogServerProfileState struct {
 	// A list of syslog server configurations. At least one server is required.
 	Servers []SyslogServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -224,9 +226,9 @@ type syslogServerProfileState struct {
 
 type SyslogServerProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Format
@@ -236,6 +238,7 @@ type SyslogServerProfileState struct {
 	// A list of syslog server configurations. At least one server is required.
 	Servers SyslogServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -247,9 +250,9 @@ func (SyslogServerProfileState) ElementType() reflect.Type {
 
 type syslogServerProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Format
@@ -259,6 +262,7 @@ type syslogServerProfileArgs struct {
 	// A list of syslog server configurations. At least one server is required.
 	Servers []SyslogServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -266,9 +270,9 @@ type syslogServerProfileArgs struct {
 // The set of arguments for constructing a SyslogServerProfile resource.
 type SyslogServerProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Format
@@ -278,6 +282,7 @@ type SyslogServerProfileArgs struct {
 	// A list of syslog server configurations. At least one server is required.
 	Servers SyslogServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -370,12 +375,12 @@ func (o SyslogServerProfileOutput) ToSyslogServerProfileOutputWithContext(ctx co
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SyslogServerProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SyslogServerProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SyslogServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SyslogServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -397,6 +402,7 @@ func (o SyslogServerProfileOutput) Servers() SyslogServerProfileServerArrayOutpu
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SyslogServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SyslogServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

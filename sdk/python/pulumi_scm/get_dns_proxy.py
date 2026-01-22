@@ -74,17 +74,11 @@ class GetDnsProxyResult:
     @_builtins.property
     @pulumi.getter
     def cache(self) -> 'outputs.GetDnsProxyCacheResult':
-        """
-        Cache
-        """
         return pulumi.get(self, "cache")
 
     @_builtins.property
     @pulumi.getter
     def default(self) -> 'outputs.GetDnsProxyDefaultResult':
-        """
-        Default
-        """
         return pulumi.get(self, "default")
 
     @_builtins.property
@@ -92,33 +86,22 @@ class GetDnsProxyResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="domainServers")
     def domain_servers(self) -> Sequence['outputs.GetDnsProxyDomainServerResult']:
-        """
-        DNS proxy rules
-        """
         return pulumi.get(self, "domain_servers")
 
     @_builtins.property
     @pulumi.getter
     def enabled(self) -> _builtins.bool:
-        """
-        Enable DNS proxy?
-        """
         return pulumi.get(self, "enabled")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -132,42 +115,26 @@ class GetDnsProxyResult:
     @_builtins.property
     @pulumi.getter
     def interfaces(self) -> Sequence[_builtins.str]:
-        """
-        Interfaces on which to enable DNS proxy service
-        """
         return pulumi.get(self, "interfaces")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        DNS proxy name
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="staticEntries")
     def static_entries(self) -> Sequence['outputs.GetDnsProxyStaticEntryResult']:
-        """
-        Static entries
-        """
         return pulumi.get(self, "static_entries")
 
     @_builtins.property
     @pulumi.getter(name="tcpQueries")
     def tcp_queries(self) -> 'outputs.GetDnsProxyTcpQueriesResult':
-        """
-        Tcp queries
-        """
         return pulumi.get(self, "tcp_queries")
 
     @_builtins.property
@@ -178,9 +145,6 @@ class GetDnsProxyResult:
     @_builtins.property
     @pulumi.getter(name="udpQueries")
     def udp_queries(self) -> 'outputs.GetDnsProxyUdpQueriesResult':
-        """
-        Udp queries
-        """
         return pulumi.get(self, "udp_queries")
 
 
@@ -217,13 +181,7 @@ def get_dns_proxy(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: DNS proxy name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -260,13 +218,7 @@ def get_dns_proxy_output(device: Optional[pulumi.Input[Optional[_builtins.str]]]
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: DNS proxy name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

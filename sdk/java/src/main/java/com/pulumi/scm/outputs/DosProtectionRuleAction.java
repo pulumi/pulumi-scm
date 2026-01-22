@@ -15,18 +15,19 @@ import javax.annotation.Nullable;
 public final class DosProtectionRuleAction {
     /**
      * @return Allow
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     private @Nullable DosProtectionRuleActionAllow allow;
     /**
      * @return Deny
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     private @Nullable DosProtectionRuleActionDeny deny;
     /**
      * @return Protect
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
@@ -35,7 +36,6 @@ public final class DosProtectionRuleAction {
     private DosProtectionRuleAction() {}
     /**
      * @return Allow
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     public Optional<DosProtectionRuleActionAllow> allow() {
@@ -43,6 +43,7 @@ public final class DosProtectionRuleAction {
     }
     /**
      * @return Deny
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
@@ -51,6 +52,7 @@ public final class DosProtectionRuleAction {
     }
     /**
      * @return Protect
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */

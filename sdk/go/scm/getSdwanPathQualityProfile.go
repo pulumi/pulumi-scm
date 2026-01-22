@@ -25,38 +25,25 @@ func LookupSdwanPathQualityProfile(ctx *pulumi.Context, args *LookupSdwanPathQua
 // A collection of arguments for invoking getSdwanPathQualityProfile.
 type LookupSdwanPathQualityProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Profile name
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSdwanPathQualityProfile.
 type LookupSdwanPathQualityProfileResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Metric
-	Metric GetSdwanPathQualityProfileMetric `pulumi:"metric"`
-	// Profile name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Id      string                           `pulumi:"id"`
+	Metric  GetSdwanPathQualityProfileMetric `pulumi:"metric"`
+	Name    string                           `pulumi:"name"`
+	Snippet string                           `pulumi:"snippet"`
+	Tfid    string                           `pulumi:"tfid"`
 }
 
 func LookupSdwanPathQualityProfileOutput(ctx *pulumi.Context, args LookupSdwanPathQualityProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSdwanPathQualityProfileResultOutput {
@@ -71,17 +58,11 @@ func LookupSdwanPathQualityProfileOutput(ctx *pulumi.Context, args LookupSdwanPa
 // A collection of arguments for invoking getSdwanPathQualityProfile.
 type LookupSdwanPathQualityProfileOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Profile name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -105,13 +86,10 @@ func (o LookupSdwanPathQualityProfileResultOutput) ToLookupSdwanPathQualityProfi
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanPathQualityProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanPathQualityProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -121,18 +99,14 @@ func (o LookupSdwanPathQualityProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Metric
 func (o LookupSdwanPathQualityProfileResultOutput) Metric() GetSdwanPathQualityProfileMetricOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) GetSdwanPathQualityProfileMetric { return v.Metric }).(GetSdwanPathQualityProfileMetricOutput)
 }
 
-// Profile name
 func (o LookupSdwanPathQualityProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanPathQualityProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanPathQualityProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

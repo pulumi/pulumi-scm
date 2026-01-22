@@ -45,26 +45,14 @@ export function getEthernetInterface(args: GetEthernetInterfaceArgs, opts?: pulu
 export interface GetEthernetInterfaceArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Interface name
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -72,76 +60,27 @@ export interface GetEthernetInterfaceArgs {
  * A collection of values returned by getEthernetInterface.
  */
 export interface GetEthernetInterfaceResult {
-    /**
-     * Aggregate group
-     * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-     */
     readonly aggregateGroup: string;
-    /**
-     * Interface description
-     */
     readonly comment: string;
-    /**
-     * Default interface assignment
-     */
     readonly defaultValue: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * Map of sensitive values returned from the API.
-     */
     readonly encryptedValues: {[key: string]: string};
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Layer2
-     * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-     */
     readonly layer2: outputs.GetEthernetInterfaceLayer2;
-    /**
-     * Ethernet Interface Layer 3 configuration
-     * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-     */
     readonly layer3: outputs.GetEthernetInterfaceLayer3;
-    /**
-     * Link duplex
-     */
     readonly linkDuplex: string;
-    /**
-     * Link speed
-     */
     readonly linkSpeed: string;
-    /**
-     * Link state
-     */
     readonly linkState: string;
-    /**
-     * Interface name
-     */
     readonly name: string;
-    /**
-     * Poe
-     */
     readonly poe: outputs.GetEthernetInterfacePoe;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
-    /**
-     * Tap
-     * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-     */
     readonly tap: outputs.GetEthernetInterfaceTap;
     readonly tfid: string;
 }
@@ -184,25 +123,13 @@ export function getEthernetInterfaceOutput(args: GetEthernetInterfaceOutputArgs,
 export interface GetEthernetInterfaceOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Interface name
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

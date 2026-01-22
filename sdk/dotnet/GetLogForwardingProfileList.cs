@@ -13,18 +13,96 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Log Forwarding Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+        ///     var allShared = Scm.GetLogForwardingProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogForwardingProfileListAllShared"] = allShared.Apply(getLogForwardingProfileListResult =&gt; getLogForwardingProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLogForwardingProfileListResult> InvokeAsync(GetLogForwardingProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLogForwardingProfileListResult>("scm:index/getLogForwardingProfileList:getLogForwardingProfileList", args ?? new GetLogForwardingProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Log Forwarding Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+        ///     var allShared = Scm.GetLogForwardingProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogForwardingProfileListAllShared"] = allShared.Apply(getLogForwardingProfileListResult =&gt; getLogForwardingProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLogForwardingProfileListResult> Invoke(GetLogForwardingProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLogForwardingProfileListResult>("scm:index/getLogForwardingProfileList:getLogForwardingProfileList", args ?? new GetLogForwardingProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Log Forwarding Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+        ///     var allShared = Scm.GetLogForwardingProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogForwardingProfileListAllShared"] = allShared.Apply(getLogForwardingProfileListResult =&gt; getLogForwardingProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLogForwardingProfileListResult> Invoke(GetLogForwardingProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLogForwardingProfileListResult>("scm:index/getLogForwardingProfileList:getLogForwardingProfileList", args ?? new GetLogForwardingProfileListInvokeArgs(), options.WithDefaults());

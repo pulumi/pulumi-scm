@@ -125,15 +125,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -143,16 +138,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// L3 sub-interface name
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -166,15 +154,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -184,16 +167,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// L3 sub-interface name
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -207,48 +183,22 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetTunnelInterfaceResult
     {
-        /// <summary>
-        /// Description
-        /// </summary>
         public readonly string Comment;
-        /// <summary>
-        /// Default interface assignment
-        /// </summary>
         public readonly string DefaultValue;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Interface management profile
-        /// </summary>
         public readonly string InterfaceManagementProfile;
-        /// <summary>
-        /// Tunnel Interface IP Parent
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetTunnelInterfaceIpResult> Ips;
-        /// <summary>
-        /// MTU
-        /// </summary>
+        public readonly Outputs.GetTunnelInterfaceIpv6Result Ipv6;
         public readonly int Mtu;
-        /// <summary>
-        /// L3 sub-interface name
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 
@@ -268,6 +218,8 @@ namespace Pulumi.Scm
 
             ImmutableArray<Outputs.GetTunnelInterfaceIpResult> ips,
 
+            Outputs.GetTunnelInterfaceIpv6Result ipv6,
+
             int mtu,
 
             string name,
@@ -283,6 +235,7 @@ namespace Pulumi.Scm
             Id = id;
             InterfaceManagementProfile = interfaceManagementProfile;
             Ips = ips;
+            Ipv6 = ipv6;
             Mtu = mtu;
             Name = name;
             Snippet = snippet;

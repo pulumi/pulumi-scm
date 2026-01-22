@@ -165,6 +165,20 @@ def get_dhcp_interface_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    paged_interface_list = scm.get_dhcp_interface_list(folder="All",
+        limit=10)
+    pulumi.export("fetchedInterfaceListSummary", {
+        "countOfRulesFetched": paged_interface_list.total,
+        "firstRuleName": paged_interface_list.datas,
+    })
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +217,20 @@ def get_dhcp_interface_list_output(device: Optional[pulumi.Input[Optional[_built
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDhcpInterfaceListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    paged_interface_list = scm.get_dhcp_interface_list(folder="All",
+        limit=10)
+    pulumi.export("fetchedInterfaceListSummary", {
+        "countOfRulesFetched": paged_interface_list.total,
+        "firstRuleName": paged_interface_list.datas,
+    })
+    ```
 
 
     :param _builtins.str device: The device of the item.

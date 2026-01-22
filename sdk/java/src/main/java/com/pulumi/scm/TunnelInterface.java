@@ -11,6 +11,7 @@ import com.pulumi.scm.TunnelInterfaceArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.TunnelInterfaceState;
 import com.pulumi.scm.outputs.TunnelInterfaceIp;
+import com.pulumi.scm.outputs.TunnelInterfaceIpv6;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -32,6 +33,10 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.TunnelInterface;
  * import com.pulumi.scm.TunnelInterfaceArgs;
  * import com.pulumi.scm.inputs.TunnelInterfaceIpArgs;
+ * import com.pulumi.scm.Variable;
+ * import com.pulumi.scm.VariableArgs;
+ * import com.pulumi.scm.inputs.TunnelInterfaceIpv6Args;
+ * import com.pulumi.resources.CustomResourceOptions;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -68,6 +73,38 @@ import javax.annotation.Nullable;
  *                 .name("198.18.1.2/32")
  *                 .build())
  *             .build());
+ * 
+ *         //
+ *         // Creates an ip subnet variable used in the subsequent example
+ *         //
+ *         var scmIpv6Prefix = new Variable("scmIpv6Prefix", VariableArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("$scm_ipv6_prefix")
+ *             .description("Managed by Pulumi")
+ *             .type("ip-netmask")
+ *             .value("2001:0db8:abcd:0001::/64")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a tunnel interface with ipv6 address, with default value tunnel.321
+ *         //
+ *         var scmTunnelIntf3 = new TunnelInterface("scmTunnelIntf3", TunnelInterfaceArgs.builder()
+ *             .name("$scm_tunnel_intf_3")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .defaultValue("tunnel.321")
+ *             .ipv6(TunnelInterfaceIpv6Args.builder()
+ *                 .enabled(true)
+ *                 .interfaceId("EUI-64")
+ *                 .addresses(TunnelInterfaceIpv6AddressArgs.builder()
+ *                     .name("$scm_ipv6_prefix")
+ *                     .prefix(TunnelInterfaceIpv6AddressPrefixArgs.builder()
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmIpv6Prefix)
+ *                 .build());
  * 
  *     }
  * }
@@ -133,7 +170,6 @@ public class TunnelInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -141,7 +177,6 @@ public class TunnelInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -149,6 +184,7 @@ public class TunnelInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -157,6 +193,7 @@ public class TunnelInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -192,6 +229,20 @@ public class TunnelInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.ips);
     }
     /**
+     * Tunnel Interface IPv6 Configuration
+     * 
+     */
+    @Export(name="ipv6", refs={TunnelInterfaceIpv6.class}, tree="[0]")
+    private Output</* @Nullable */ TunnelInterfaceIpv6> ipv6;
+
+    /**
+     * @return Tunnel Interface IPv6 Configuration
+     * 
+     */
+    public Output<Optional<TunnelInterfaceIpv6>> ipv6() {
+        return Codegen.optional(this.ipv6);
+    }
+    /**
      * MTU
      * 
      */
@@ -221,6 +272,7 @@ public class TunnelInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -229,6 +281,7 @@ public class TunnelInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

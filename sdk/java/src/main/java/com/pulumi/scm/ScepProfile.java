@@ -23,6 +23,138 @@ import javax.annotation.Nullable;
 /**
  * ScepProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.ScepProfile;
+ * import com.pulumi.scm.ScepProfileArgs;
+ * import com.pulumi.scm.inputs.ScepProfileScepChallengeArgs;
+ * import com.pulumi.scm.inputs.ScepProfileAlgorithmArgs;
+ * import com.pulumi.scm.inputs.ScepProfileAlgorithmRsaArgs;
+ * import com.pulumi.scm.inputs.ScepProfileCertificateAttributesArgs;
+ * import com.pulumi.scm.inputs.ScepProfileScepChallengeDynamicArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
+ *         Pulumi.run(App::stack);
+ *     }}{@code
+ * 
+ *     public static void stack(Context ctx) }{{@code
+ *         // scep profile w/ no challenge
+ *         var scmScepProfile1 = new ScepProfile("scmScepProfile1", ScepProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scep-prof-1")
+ *             .scepUrl("https://scep.example.com/")
+ *             .caIdentityName("Default")
+ *             .digest("sha1")
+ *             .subject("CN=$USERNAME")
+ *             .scepChallenge(ScepProfileScepChallengeArgs.builder()
+ *                 .fixed("123")
+ *                 .build())
+ *             .algorithm(ScepProfileAlgorithmArgs.builder()
+ *                 .rsa(ScepProfileAlgorithmRsaArgs.builder()
+ *                     .rsaNbits("1024")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         // scep profile w/ fixed challenge
+ *         var scmScepProfile2 = new ScepProfile("scmScepProfile2", ScepProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scep-prof-2")
+ *             .scepUrl("https://example.target.com/")
+ *             .caIdentityName("user-scep")
+ *             .digest("sha256")
+ *             .subject("CN=$USERNAME")
+ *             .scepCaCert("Forward-Trust-CA-ECDSA")
+ *             .scepChallenge(ScepProfileScepChallengeArgs.builder()
+ *                 .fixed("Password123!")
+ *                 .build())
+ *             .certificateAttributes(ScepProfileCertificateAttributesArgs.builder()
+ *                 .rfc822name("user}{@literal @}{@code example.com")
+ *                 .build())
+ *             .algorithm(ScepProfileAlgorithmArgs.builder()
+ *                 .rsa(ScepProfileAlgorithmRsaArgs.builder()
+ *                     .rsaNbits("2048")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         // scep profile w/ dynamic challenge
+ *         var scmScepProfile3 = new ScepProfile("scmScepProfile3", ScepProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scep-prof-3")
+ *             .scepUrl("https://example.gateway.com/")
+ *             .caIdentityName("vpn-gateway")
+ *             .digest("sha384")
+ *             .subject("CN=$CORP_VPN")
+ *             .scepCaCert("GlobalSign-Root-CA")
+ *             .fingerprint("64EC88CA00B268E5BA1A35678A1B5316D212F4F366B24772322342423123455A")
+ *             .useAsDigitalSignature(false)
+ *             .scepChallenge(ScepProfileScepChallengeArgs.builder()
+ *                 .dynamic(ScepProfileScepChallengeDynamicArgs.builder()
+ *                     .username("user123")
+ *                     .password("Password123!")
+ *                     .otpServerUrl("http://auth.com")
+ *                     .build())
+ *                 .build())
+ *             .certificateAttributes(ScepProfileCertificateAttributesArgs.builder()
+ *                 .dnsname("vpn-gateway.example.com")
+ *                 .build())
+ *             .algorithm(ScepProfileAlgorithmArgs.builder()
+ *                 .rsa(ScepProfileAlgorithmRsaArgs.builder()
+ *                     .rsaNbits("3072")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         // scep profile w/ all fields
+ *         var scmScepProfile4 = new ScepProfile("scmScepProfile4", ScepProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scep-prof-4")
+ *             .scepUrl("https://example.wifi.com/")
+ *             .caIdentityName("wifi")
+ *             .digest("sha512")
+ *             .subject("CN=$WIFI-ACCESS")
+ *             .scepCaCert("Root CA")
+ *             .scepClientCert("Forward-UnTrust-CA-ECDSA")
+ *             .fingerprint("4448CA00B268E5BU690378A1B5316D212F4F366B2477232234394I")
+ *             .useAsDigitalSignature(true)
+ *             .useForKeyEncipherment(true)
+ *             .scepChallenge(ScepProfileScepChallengeArgs.builder()
+ *                 .dynamic(ScepProfileScepChallengeDynamicArgs.builder()
+ *                     .username("admin")
+ *                     .password("Pwd}{@literal @}{@code 123")
+ *                     .otpServerUrl("http://auth.com")
+ *                     .build())
+ *                 .build())
+ *             .certificateAttributes(ScepProfileCertificateAttributesArgs.builder()
+ *                 .uniformResourceIdentifier("file:///C:/Users/Documents/report.txt")
+ *                 .build())
+ *             .algorithm(ScepProfileAlgorithmArgs.builder()
+ *                 .rsa(ScepProfileAlgorithmRsaArgs.builder()
+ *                     .rsaNbits("3072")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }}{@code
+ * }}{@code
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The following command can be used to import a resource not managed by Terraform:
@@ -67,14 +199,14 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
         return this.algorithm;
     }
     /**
-     * Certificate Authority identity
+     * Certificate Authority Identity
      * 
      */
     @Export(name="caIdentityName", refs={String.class}, tree="[0]")
     private Output<String> caIdentityName;
 
     /**
-     * @return Certificate Authority identity
+     * @return Certificate Authority Identity
      * 
      */
     public Output<String> caIdentityName() {
@@ -96,7 +228,6 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -104,7 +235,6 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -139,14 +269,14 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
         return this.encryptedValues;
     }
     /**
-     * CA certificate fingerprint
+     * CA Certificate Fingerprint
      * 
      */
     @Export(name="fingerprint", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> fingerprint;
 
     /**
-     * @return CA certificate fingerprint
+     * @return CA Certificate Fingerprint
      * 
      */
     public Output<Optional<String>> fingerprint() {
@@ -154,6 +284,7 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -162,6 +293,7 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -183,42 +315,42 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * SCEP server CA certificate
+     * SCEP Server CA Certificate
      * 
      */
     @Export(name="scepCaCert", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> scepCaCert;
 
     /**
-     * @return SCEP server CA certificate
+     * @return SCEP Server CA Certificate
      * 
      */
     public Output<Optional<String>> scepCaCert() {
         return Codegen.optional(this.scepCaCert);
     }
     /**
-     * One Time Password challenge
+     * One Time Password Challenge
      * 
      */
     @Export(name="scepChallenge", refs={ScepProfileScepChallenge.class}, tree="[0]")
     private Output<ScepProfileScepChallenge> scepChallenge;
 
     /**
-     * @return One Time Password challenge
+     * @return One Time Password Challenge
      * 
      */
     public Output<ScepProfileScepChallenge> scepChallenge() {
         return this.scepChallenge;
     }
     /**
-     * SCEP client ceertificate
+     * SCEP Client Certificate
      * 
      */
     @Export(name="scepClientCert", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> scepClientCert;
 
     /**
-     * @return SCEP client ceertificate
+     * @return SCEP Client Certificate
      * 
      */
     public Output<Optional<String>> scepClientCert() {
@@ -240,6 +372,7 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -248,6 +381,7 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

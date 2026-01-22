@@ -21,36 +21,48 @@ __all__ = ['LogForwardingProfileArgs', 'LogForwardingProfile']
 @pulumi.input_type
 class LogForwardingProfileArgs:
     def __init__(__self__, *,
+                 match_lists: pulumi.Input[Sequence[pulumi.Input['LogForwardingProfileMatchListArgs']]],
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 match_lists: Optional[pulumi.Input[Sequence[pulumi.Input['LogForwardingProfileMatchListArgs']]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a LogForwardingProfile resource.
+        :param pulumi.Input[Sequence[pulumi.Input['LogForwardingProfileMatchListArgs']]] match_lists: Match list
         :param pulumi.Input[_builtins.str] description: Log forwarding profile description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[Sequence[pulumi.Input['LogForwardingProfileMatchListArgs']]] match_lists: Match list
         :param pulumi.Input[_builtins.str] name: The name of the log forwarding profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
+        pulumi.set(__self__, "match_lists", match_lists)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if device is not None:
             pulumi.set(__self__, "device", device)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
-        if match_lists is not None:
-            pulumi.set(__self__, "match_lists", match_lists)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
+
+    @_builtins.property
+    @pulumi.getter(name="matchLists")
+    def match_lists(self) -> pulumi.Input[Sequence[pulumi.Input['LogForwardingProfileMatchListArgs']]]:
+        """
+        Match list
+        """
+        return pulumi.get(self, "match_lists")
+
+    @match_lists.setter
+    def match_lists(self, value: pulumi.Input[Sequence[pulumi.Input['LogForwardingProfileMatchListArgs']]]):
+        pulumi.set(self, "match_lists", value)
 
     @_builtins.property
     @pulumi.getter
@@ -69,7 +81,6 @@ class LogForwardingProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -82,6 +93,7 @@ class LogForwardingProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -89,18 +101,6 @@ class LogForwardingProfileArgs:
     @folder.setter
     def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "folder", value)
-
-    @_builtins.property
-    @pulumi.getter(name="matchLists")
-    def match_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LogForwardingProfileMatchListArgs']]]]:
-        """
-        Match list
-        """
-        return pulumi.get(self, "match_lists")
-
-    @match_lists.setter
-    def match_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LogForwardingProfileMatchListArgs']]]]):
-        pulumi.set(self, "match_lists", value)
 
     @_builtins.property
     @pulumi.getter
@@ -119,6 +119,7 @@ class LogForwardingProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -142,12 +143,13 @@ class _LogForwardingProfileState:
         Input properties used for looking up and filtering LogForwardingProfile resources.
         :param pulumi.Input[_builtins.str] description: Log forwarding profile description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['LogForwardingProfileMatchListArgs']]] match_lists: Match list
         :param pulumi.Input[_builtins.str] name: The name of the log forwarding profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if description is not None:
@@ -182,7 +184,6 @@ class _LogForwardingProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -195,6 +196,7 @@ class _LogForwardingProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -232,6 +234,7 @@ class _LogForwardingProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -266,6 +269,108 @@ class LogForwardingProfile(pulumi.CustomResource):
         """
         LogForwardingProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_log_forwarding_profile1 = scm.LogForwardingProfile("scm_log_forwarding_profile_1",
+            folder="All",
+            name="scm-log-fowarding-profile-1",
+            match_lists=[{
+                "name": "profile_match",
+                "log_type": "threat",
+                "filter": "(addr in 192.50.10.10) and (addr.dst notin 192.40.50.10)",
+            }])
+        scm_log_forwarding_profile2 = scm.LogForwardingProfile("scm_log_forwarding_profile_2",
+            folder="All",
+            name="scm-log-fowarding-profile-2",
+            description="Log Forwarding w/ HTTP Server Profile and Syslog Server Profile",
+            match_lists=[{
+                "name": "profile_match",
+                "log_type": "traffic",
+                "filter": "(device_name eq test_device)",
+                "send_http": ["test_http"],
+                "send_syslog": [
+                    "syslog-server-prof-mixed",
+                    "syslog-server-prof-complete",
+                ],
+            }])
+        scm_log_forwarding_profile3 = scm.LogForwardingProfile("scm_log_forwarding_profile_3",
+            folder="All",
+            name="scm-log-fowarding-profile-3",
+            description="Log Forwarding w/ All Server Profiles",
+            match_lists=[{
+                "name": "profile_match",
+                "action_desc": "all server profiles",
+                "log_type": "dns-security",
+                "filter": "All Logs",
+                "send_http": [
+                    "test_http",
+                    "t10",
+                ],
+                "send_syslog": [
+                    "syslog-server-prof-base",
+                    "syslog-server-prof-mixed",
+                    "syslog-server-prof-complete",
+                ],
+                "send_snmptrap": ["snmp_test"],
+                "send_email": [
+                    "email_test",
+                    "email_test_2",
+                ],
+            }])
+        scm_log_forwarding_profile4 = scm.LogForwardingProfile("scm_log_forwarding_profile_4",
+            folder="All",
+            name="scm-log-fowarding-profile-4",
+            description="Log Forwarding w/ Multiple Match Lists",
+            match_lists=[
+                {
+                    "name": "profile_match_1",
+                    "action_desc": "match list for url",
+                    "log_type": "url",
+                    "filter": "(sdwan_cluster contains 123)",
+                    "send_http": ["t10"],
+                    "send_syslog": ["syslog-server-prof-base"],
+                    "send_snmptrap": ["snmp_test"],
+                },
+                {
+                    "name": "profile_match_2",
+                    "log_type": "data",
+                    "filter": "(link_switch_2 neq lnk_2) or (pkts_received geq 100)",
+                    "send_http": [
+                        "t5",
+                        "t10",
+                        "t20",
+                    ],
+                    "send_syslog": ["syslog-server-prof-mixed"],
+                    "send_email": [
+                        "email_test",
+                        "email_test_2",
+                    ],
+                },
+                {
+                    "name": "profile_match_3",
+                    "action_desc": "match list for wildfire",
+                    "log_type": "wildfire",
+                    "filter": "(imei contains test_server)",
+                    "send_http": [
+                        "t5",
+                        "t10",
+                        "t20",
+                        "t22",
+                        "t24",
+                    ],
+                    "send_syslog": ["syslog-server-prof-complete"],
+                    "send_email": [
+                        "email_test",
+                        "email_test_2",
+                    ],
+                },
+            ])
+        ```
+
         ## Import
 
         The following command can be used to import a resource not managed by Terraform:
@@ -296,22 +401,125 @@ class LogForwardingProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Log forwarding profile description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict']]]] match_lists: Match list
         :param pulumi.Input[_builtins.str] name: The name of the log forwarding profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[LogForwardingProfileArgs] = None,
+                 args: LogForwardingProfileArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         LogForwardingProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_log_forwarding_profile1 = scm.LogForwardingProfile("scm_log_forwarding_profile_1",
+            folder="All",
+            name="scm-log-fowarding-profile-1",
+            match_lists=[{
+                "name": "profile_match",
+                "log_type": "threat",
+                "filter": "(addr in 192.50.10.10) and (addr.dst notin 192.40.50.10)",
+            }])
+        scm_log_forwarding_profile2 = scm.LogForwardingProfile("scm_log_forwarding_profile_2",
+            folder="All",
+            name="scm-log-fowarding-profile-2",
+            description="Log Forwarding w/ HTTP Server Profile and Syslog Server Profile",
+            match_lists=[{
+                "name": "profile_match",
+                "log_type": "traffic",
+                "filter": "(device_name eq test_device)",
+                "send_http": ["test_http"],
+                "send_syslog": [
+                    "syslog-server-prof-mixed",
+                    "syslog-server-prof-complete",
+                ],
+            }])
+        scm_log_forwarding_profile3 = scm.LogForwardingProfile("scm_log_forwarding_profile_3",
+            folder="All",
+            name="scm-log-fowarding-profile-3",
+            description="Log Forwarding w/ All Server Profiles",
+            match_lists=[{
+                "name": "profile_match",
+                "action_desc": "all server profiles",
+                "log_type": "dns-security",
+                "filter": "All Logs",
+                "send_http": [
+                    "test_http",
+                    "t10",
+                ],
+                "send_syslog": [
+                    "syslog-server-prof-base",
+                    "syslog-server-prof-mixed",
+                    "syslog-server-prof-complete",
+                ],
+                "send_snmptrap": ["snmp_test"],
+                "send_email": [
+                    "email_test",
+                    "email_test_2",
+                ],
+            }])
+        scm_log_forwarding_profile4 = scm.LogForwardingProfile("scm_log_forwarding_profile_4",
+            folder="All",
+            name="scm-log-fowarding-profile-4",
+            description="Log Forwarding w/ Multiple Match Lists",
+            match_lists=[
+                {
+                    "name": "profile_match_1",
+                    "action_desc": "match list for url",
+                    "log_type": "url",
+                    "filter": "(sdwan_cluster contains 123)",
+                    "send_http": ["t10"],
+                    "send_syslog": ["syslog-server-prof-base"],
+                    "send_snmptrap": ["snmp_test"],
+                },
+                {
+                    "name": "profile_match_2",
+                    "log_type": "data",
+                    "filter": "(link_switch_2 neq lnk_2) or (pkts_received geq 100)",
+                    "send_http": [
+                        "t5",
+                        "t10",
+                        "t20",
+                    ],
+                    "send_syslog": ["syslog-server-prof-mixed"],
+                    "send_email": [
+                        "email_test",
+                        "email_test_2",
+                    ],
+                },
+                {
+                    "name": "profile_match_3",
+                    "action_desc": "match list for wildfire",
+                    "log_type": "wildfire",
+                    "filter": "(imei contains test_server)",
+                    "send_http": [
+                        "t5",
+                        "t10",
+                        "t20",
+                        "t22",
+                        "t24",
+                    ],
+                    "send_syslog": ["syslog-server-prof-complete"],
+                    "send_email": [
+                        "email_test",
+                        "email_test_2",
+                    ],
+                },
+            ])
+        ```
 
         ## Import
 
@@ -372,6 +580,8 @@ class LogForwardingProfile(pulumi.CustomResource):
             __props__.__dict__["description"] = description
             __props__.__dict__["device"] = device
             __props__.__dict__["folder"] = folder
+            if match_lists is None and not opts.urn:
+                raise TypeError("Missing required property 'match_lists'")
             __props__.__dict__["match_lists"] = match_lists
             __props__.__dict__["name"] = name
             __props__.__dict__["snippet"] = snippet
@@ -402,12 +612,13 @@ class LogForwardingProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Log forwarding profile description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['LogForwardingProfileMatchListArgs', 'LogForwardingProfileMatchListArgsDict']]]] match_lists: Match list
         :param pulumi.Input[_builtins.str] name: The name of the log forwarding profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -436,7 +647,6 @@ class LogForwardingProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -445,13 +655,14 @@ class LogForwardingProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="matchLists")
-    def match_lists(self) -> pulumi.Output[Optional[Sequence['outputs.LogForwardingProfileMatchList']]]:
+    def match_lists(self) -> pulumi.Output[Sequence['outputs.LogForwardingProfileMatchList']]:
         """
         Match list
         """
@@ -470,6 +681,7 @@ class LogForwardingProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

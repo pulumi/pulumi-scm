@@ -84,14 +84,15 @@ type SessionTimeout struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Session timeouts
 	SessionTimeouts SessionTimeoutSessionTimeoutsPtrOutput `pulumi:"sessionTimeouts"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -128,14 +129,15 @@ func GetSessionTimeout(ctx *pulumi.Context,
 // Input properties used for looking up and filtering SessionTimeout resources.
 type sessionTimeoutState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Session timeouts
 	SessionTimeouts *SessionTimeoutSessionTimeouts `pulumi:"sessionTimeouts"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -143,14 +145,15 @@ type sessionTimeoutState struct {
 
 type SessionTimeoutState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Session timeouts
 	SessionTimeouts SessionTimeoutSessionTimeoutsPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -162,14 +165,15 @@ func (SessionTimeoutState) ElementType() reflect.Type {
 
 type sessionTimeoutArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Session timeouts
 	SessionTimeouts *SessionTimeoutSessionTimeouts `pulumi:"sessionTimeouts"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -177,14 +181,15 @@ type sessionTimeoutArgs struct {
 // The set of arguments for constructing a SessionTimeout resource.
 type SessionTimeoutArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Session timeouts
 	SessionTimeouts SessionTimeoutSessionTimeoutsPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -277,12 +282,12 @@ func (o SessionTimeoutOutput) ToSessionTimeoutOutputWithContext(ctx context.Cont
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SessionTimeoutOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SessionTimeout) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SessionTimeoutOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SessionTimeout) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -294,6 +299,7 @@ func (o SessionTimeoutOutput) SessionTimeouts() SessionTimeoutSessionTimeoutsPtr
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SessionTimeoutOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SessionTimeout) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

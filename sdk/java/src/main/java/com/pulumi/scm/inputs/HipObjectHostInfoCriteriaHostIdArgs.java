@@ -17,7 +17,6 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
     /**
      * Contains
-     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     @Import(name="contains")
@@ -25,7 +24,6 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
     /**
      * @return Contains
-     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     public Optional<Output<String>> contains() {
@@ -34,6 +32,7 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
     /**
      * Is
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -42,6 +41,7 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
     /**
      * @return Is
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -51,6 +51,7 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
     /**
      * Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -59,6 +60,7 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
     /**
      * @return Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -94,7 +96,6 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
         /**
          * @param contains Contains
-         * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
          * 
@@ -106,7 +107,6 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
         /**
          * @param contains Contains
-         * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
          * 
@@ -117,6 +117,7 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
         /**
          * @param is Is
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
@@ -129,6 +130,7 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
         /**
          * @param is Is
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
@@ -140,6 +142,7 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
         /**
          * @param isNot Is not
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder
@@ -152,6 +155,7 @@ public final class HipObjectHostInfoCriteriaHostIdArgs extends com.pulumi.resour
 
         /**
          * @param isNot Is not
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
          * 
          * @return builder

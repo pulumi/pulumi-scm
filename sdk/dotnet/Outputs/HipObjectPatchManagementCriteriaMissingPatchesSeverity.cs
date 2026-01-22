@@ -15,31 +15,35 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Greater equal
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         public readonly int? GreaterEqual;
         /// <summary>
         /// Greater than
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         public readonly int? GreaterThan;
         /// <summary>
         /// Is
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         public readonly int? Is;
         /// <summary>
         /// Is not
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         public readonly int? IsNot;
         /// <summary>
         /// Less equal
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         public readonly int? LessEqual;
         /// <summary>
         /// Less than
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, and `LessThan`.
         /// </summary>
         public readonly int? LessThan;

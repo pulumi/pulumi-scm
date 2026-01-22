@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class HipObjectMobileDeviceCriteriaLastCheckinTime {
     /**
      * @return Not within
-     * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      * 
      */
     private @Nullable HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin notWithin;
     /**
      * @return Within
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      * 
      */
@@ -28,7 +28,6 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTime {
     private HipObjectMobileDeviceCriteriaLastCheckinTime() {}
     /**
      * @return Not within
-     * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      * 
      */
     public Optional<HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin> notWithin() {
@@ -36,6 +35,7 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTime {
     }
     /**
      * @return Within
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      * 
      */

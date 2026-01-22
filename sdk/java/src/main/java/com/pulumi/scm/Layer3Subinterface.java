@@ -189,7 +189,6 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -197,7 +196,6 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -205,6 +203,7 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Layer3 sub interfaces DHCP Client Object
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -213,6 +212,7 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Layer3 sub interfaces DHCP Client Object
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -221,6 +221,7 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -229,6 +230,7 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -251,6 +253,7 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * L3 sub-interface IP Parent
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -259,6 +262,7 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return L3 sub-interface IP Parent
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -309,6 +313,7 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -317,6 +322,7 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

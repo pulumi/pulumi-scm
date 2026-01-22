@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// ScepProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM SCEP Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+        ///     var scmScepProf = Scm.GetScepProfile.Invoke(new()
+        ///     {
+        ///         Id = "06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmScepProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Id) },
+        ///             { "folder", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Folder) },
+        ///             { "name", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetScepProfileResult> InvokeAsync(GetScepProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetScepProfileResult>("scm:index/getScepProfile:getScepProfile", args ?? new GetScepProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// ScepProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM SCEP Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+        ///     var scmScepProf = Scm.GetScepProfile.Invoke(new()
+        ///     {
+        ///         Id = "06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmScepProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Id) },
+        ///             { "folder", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Folder) },
+        ///             { "name", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetScepProfileResult> Invoke(GetScepProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetScepProfileResult>("scm:index/getScepProfile:getScepProfile", args ?? new GetScepProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// ScepProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM SCEP Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+        ///     var scmScepProf = Scm.GetScepProfile.Invoke(new()
+        ///     {
+        ///         Id = "06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmScepProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Id) },
+        ///             { "folder", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Folder) },
+        ///             { "name", scmScepProf.Apply(getScepProfileResult =&gt; getScepProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetScepProfileResult> Invoke(GetScepProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetScepProfileResult>("scm:index/getScepProfile:getScepProfile", args ?? new GetScepProfileInvokeArgs(), options.WithDefaults());
@@ -35,15 +128,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -53,16 +141,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the SCEP profile
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -76,15 +157,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -94,16 +170,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the SCEP profile
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -117,81 +186,30 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetScepProfileResult
     {
-        /// <summary>
-        /// Algorithm
-        /// </summary>
         public readonly Outputs.GetScepProfileAlgorithmResult Algorithm;
-        /// <summary>
-        /// Certificate Authority identity
-        /// </summary>
         public readonly string CaIdentityName;
-        /// <summary>
-        /// Subject Alternative name type
-        /// </summary>
         public readonly Outputs.GetScepProfileCertificateAttributesResult CertificateAttributes;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Digest for CSR
-        /// </summary>
         public readonly string Digest;
-        /// <summary>
-        /// Map of sensitive values returned from the API.
-        /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
-        /// <summary>
-        /// CA certificate fingerprint
-        /// </summary>
         public readonly string Fingerprint;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the SCEP profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// The name of the SCEP profile
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// SCEP server CA certificate
-        /// </summary>
         public readonly string ScepCaCert;
-        /// <summary>
-        /// One Time Password challenge
-        /// </summary>
         public readonly Outputs.GetScepProfileScepChallengeResult ScepChallenge;
-        /// <summary>
-        /// SCEP client ceertificate
-        /// </summary>
         public readonly string ScepClientCert;
-        /// <summary>
-        /// SCEP server URL
-        /// </summary>
         public readonly string ScepUrl;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Subject
-        /// </summary>
         public readonly string Subject;
         public readonly string Tfid;
-        /// <summary>
-        /// Use as digital signature?
-        /// </summary>
         public readonly bool UseAsDigitalSignature;
-        /// <summary>
-        /// Use for key encipherment?
-        /// </summary>
         public readonly bool UseForKeyEncipherment;
 
         [OutputConstructor]

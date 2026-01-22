@@ -17,7 +17,6 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
     /**
      * specify lifesize in gigabytes(GB)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     @Import(name="gb")
@@ -25,7 +24,6 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
     /**
      * @return specify lifesize in gigabytes(GB)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     public Optional<Output<Integer>> gb() {
@@ -34,6 +32,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
     /**
      * specify lifesize in kilobytes(KB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -42,6 +41,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
     /**
      * @return specify lifesize in kilobytes(KB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -51,6 +51,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
     /**
      * specify lifesize in megabytes(MB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -59,6 +60,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
     /**
      * @return specify lifesize in megabytes(MB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -68,6 +70,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
     /**
      * specify lifesize in terabytes(TB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -76,6 +79,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
     /**
      * @return specify lifesize in terabytes(TB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -112,7 +116,6 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
         /**
          * @param gb specify lifesize in gigabytes(GB)
-         * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
          * 
          * @return builder
          * 
@@ -124,7 +127,6 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
         /**
          * @param gb specify lifesize in gigabytes(GB)
-         * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
          * 
          * @return builder
          * 
@@ -135,6 +137,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
         /**
          * @param kb specify lifesize in kilobytes(KB)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
          * 
          * @return builder
@@ -147,6 +150,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
         /**
          * @param kb specify lifesize in kilobytes(KB)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
          * 
          * @return builder
@@ -158,6 +162,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
         /**
          * @param mb specify lifesize in megabytes(MB)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
          * 
          * @return builder
@@ -170,6 +175,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
         /**
          * @param mb specify lifesize in megabytes(MB)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
          * 
          * @return builder
@@ -181,6 +187,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
         /**
          * @param tb specify lifesize in terabytes(TB)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
          * 
          * @return builder
@@ -193,6 +200,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
 
         /**
          * @param tb specify lifesize in terabytes(TB)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
          * 
          * @return builder

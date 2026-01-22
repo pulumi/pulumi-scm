@@ -60,54 +60,33 @@ func LookupAntiSpywareSignature(ctx *pulumi.Context, args *LookupAntiSpywareSign
 // A collection of arguments for invoking getAntiSpywareSignature.
 type LookupAntiSpywareSignatureArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getAntiSpywareSignature.
 type LookupAntiSpywareSignatureResult struct {
-	// Bugtraq
-	Bugtraqs []string `pulumi:"bugtraqs"`
-	// Comment
-	Comment string `pulumi:"comment"`
-	// Cve
-	Cves []string `pulumi:"cves"`
-	// anti spyware signature default action
+	Bugtraqs      []string                             `pulumi:"bugtraqs"`
+	Comment       string                               `pulumi:"comment"`
+	Cves          []string                             `pulumi:"cves"`
 	DefaultAction GetAntiSpywareSignatureDefaultAction `pulumi:"defaultAction"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// Direction
+	Device    string `pulumi:"device"`
 	Direction string `pulumi:"direction"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
+	Folder    string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Reference
-	References []string `pulumi:"references"`
-	// Severity
-	Severity string `pulumi:"severity"`
-	// anti spyware signature
-	Signature GetAntiSpywareSignatureSignature `pulumi:"signature"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// threat id range \n\n and \n\n
-	ThreatId string `pulumi:"threatId"`
-	// Threatname
-	Threatname string `pulumi:"threatname"`
-	// Vendor
-	Vendors []string `pulumi:"vendors"`
+	Id         string                           `pulumi:"id"`
+	References []string                         `pulumi:"references"`
+	Severity   string                           `pulumi:"severity"`
+	Signature  GetAntiSpywareSignatureSignature `pulumi:"signature"`
+	Snippet    string                           `pulumi:"snippet"`
+	Tfid       string                           `pulumi:"tfid"`
+	ThreatId   string                           `pulumi:"threatId"`
+	Threatname string                           `pulumi:"threatname"`
+	Vendors    []string                         `pulumi:"vendors"`
 }
 
 func LookupAntiSpywareSignatureOutput(ctx *pulumi.Context, args LookupAntiSpywareSignatureOutputArgs, opts ...pulumi.InvokeOption) LookupAntiSpywareSignatureResultOutput {
@@ -122,15 +101,10 @@ func LookupAntiSpywareSignatureOutput(ctx *pulumi.Context, args LookupAntiSpywar
 // A collection of arguments for invoking getAntiSpywareSignature.
 type LookupAntiSpywareSignatureOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -153,39 +127,31 @@ func (o LookupAntiSpywareSignatureResultOutput) ToLookupAntiSpywareSignatureResu
 	return o
 }
 
-// Bugtraq
 func (o LookupAntiSpywareSignatureResultOutput) Bugtraqs() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) []string { return v.Bugtraqs }).(pulumi.StringArrayOutput)
 }
 
-// Comment
 func (o LookupAntiSpywareSignatureResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
-// Cve
 func (o LookupAntiSpywareSignatureResultOutput) Cves() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) []string { return v.Cves }).(pulumi.StringArrayOutput)
 }
 
-// anti spyware signature default action
 func (o LookupAntiSpywareSignatureResultOutput) DefaultAction() GetAntiSpywareSignatureDefaultActionOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) GetAntiSpywareSignatureDefaultAction { return v.DefaultAction }).(GetAntiSpywareSignatureDefaultActionOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAntiSpywareSignatureResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Direction
 func (o LookupAntiSpywareSignatureResultOutput) Direction() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Direction }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAntiSpywareSignatureResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -195,23 +161,18 @@ func (o LookupAntiSpywareSignatureResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Reference
 func (o LookupAntiSpywareSignatureResultOutput) References() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) []string { return v.References }).(pulumi.StringArrayOutput)
 }
 
-// Severity
 func (o LookupAntiSpywareSignatureResultOutput) Severity() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Severity }).(pulumi.StringOutput)
 }
 
-// anti spyware signature
 func (o LookupAntiSpywareSignatureResultOutput) Signature() GetAntiSpywareSignatureSignatureOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) GetAntiSpywareSignatureSignature { return v.Signature }).(GetAntiSpywareSignatureSignatureOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAntiSpywareSignatureResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -220,17 +181,14 @@ func (o LookupAntiSpywareSignatureResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// threat id range \n\n and \n\n
 func (o LookupAntiSpywareSignatureResultOutput) ThreatId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.ThreatId }).(pulumi.StringOutput)
 }
 
-// Threatname
 func (o LookupAntiSpywareSignatureResultOutput) Threatname() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Threatname }).(pulumi.StringOutput)
 }
 
-// Vendor
 func (o LookupAntiSpywareSignatureResultOutput) Vendors() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) []string { return v.Vendors }).(pulumi.StringArrayOutput)
 }

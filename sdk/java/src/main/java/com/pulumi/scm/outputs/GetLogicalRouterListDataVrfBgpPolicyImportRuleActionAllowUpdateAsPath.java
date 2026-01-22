@@ -14,24 +14,26 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPath {
     /**
      * @return None
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone none;
     /**
      * @return Prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private Integer prepend;
     /**
      * @return Remove
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove remove;
     /**
      * @return Remove and prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -40,7 +42,6 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
     private GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPath() {}
     /**
      * @return None
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone none() {
@@ -48,6 +49,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
     }
     /**
      * @return Prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -56,6 +58,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
     }
     /**
      * @return Remove
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -64,6 +67,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
     }
     /**
      * @return Remove and prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */

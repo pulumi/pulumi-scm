@@ -8,6 +8,23 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM QoS Profile Signature objects.
+ * //
+ * // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+ * // Folder must be one of [Remote Networks, Service Connections]"
+ * const allShared = scm.getQosProfileList({
+ *     folder: "Service Connections",
+ * });
+ * export const scmQosProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getQosProfileList(args?: GetQosProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetQosProfileListResult> {
     args = args || {};
@@ -96,6 +113,23 @@ export interface GetQosProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM QoS Profile Signature objects.
+ * //
+ * // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+ * // Folder must be one of [Remote Networks, Service Connections]"
+ * const allShared = scm.getQosProfileList({
+ *     folder: "Service Connections",
+ * });
+ * export const scmQosProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getQosProfileListOutput(args?: GetQosProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetQosProfileListResult> {
     args = args || {};

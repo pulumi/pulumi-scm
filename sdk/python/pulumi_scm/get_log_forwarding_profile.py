@@ -56,9 +56,6 @@ class GetLogForwardingProfileResult:
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
-        """
-        Log forwarding profile description
-        """
         return pulumi.get(self, "description")
 
     @_builtins.property
@@ -66,17 +63,12 @@ class GetLogForwardingProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -90,26 +82,16 @@ class GetLogForwardingProfileResult:
     @_builtins.property
     @pulumi.getter(name="matchLists")
     def match_lists(self) -> Sequence['outputs.GetLogForwardingProfileMatchListResult']:
-        """
-        Match list
-        """
         return pulumi.get(self, "match_lists")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        The name of the log forwarding profile
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -143,15 +125,28 @@ def get_log_forwarding_profile(device: Optional[_builtins.str] = None,
     """
     LogForwardingProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+    scm_log_forwarding_prof = scm.get_log_forwarding_profile(id="712dc61d-94ed-45e4-82b7-b2d86669a2bf")
+    pulumi.export("scmLogForwardingProfileDetails", {
+        "profileId": scm_log_forwarding_prof.id,
+        "folder": scm_log_forwarding_prof.folder,
+        "name": scm_log_forwarding_prof.name,
+        "description": scm_log_forwarding_prof.description,
+    })
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the log server profile
-    :param _builtins.str name: The name of the log forwarding profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -180,15 +175,28 @@ def get_log_forwarding_profile_output(device: Optional[pulumi.Input[Optional[_bu
     """
     LogForwardingProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+    scm_log_forwarding_prof = scm.get_log_forwarding_profile(id="712dc61d-94ed-45e4-82b7-b2d86669a2bf")
+    pulumi.export("scmLogForwardingProfileDetails", {
+        "profileId": scm_log_forwarding_prof.id,
+        "folder": scm_log_forwarding_prof.folder,
+        "name": scm_log_forwarding_prof.name,
+        "description": scm_log_forwarding_prof.description,
+    })
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the log server profile
-    :param _builtins.str name: The name of the log forwarding profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

@@ -18,7 +18,6 @@ public final class DosProtectionRuleProtectionArgs extends com.pulumi.resources.
 
     /**
      * Aggregate
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
     @Import(name="aggregate")
@@ -26,7 +25,6 @@ public final class DosProtectionRuleProtectionArgs extends com.pulumi.resources.
 
     /**
      * @return Aggregate
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
     public Optional<Output<DosProtectionRuleProtectionAggregateArgs>> aggregate() {
@@ -35,6 +33,7 @@ public final class DosProtectionRuleProtectionArgs extends com.pulumi.resources.
 
     /**
      * Classified
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
@@ -43,6 +42,7 @@ public final class DosProtectionRuleProtectionArgs extends com.pulumi.resources.
 
     /**
      * @return Classified
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
@@ -77,7 +77,6 @@ public final class DosProtectionRuleProtectionArgs extends com.pulumi.resources.
 
         /**
          * @param aggregate Aggregate
-         * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
          * 
          * @return builder
          * 
@@ -89,7 +88,6 @@ public final class DosProtectionRuleProtectionArgs extends com.pulumi.resources.
 
         /**
          * @param aggregate Aggregate
-         * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
          * 
          * @return builder
          * 
@@ -100,6 +98,7 @@ public final class DosProtectionRuleProtectionArgs extends com.pulumi.resources.
 
         /**
          * @param classified Classified
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
          * 
          * @return builder
@@ -112,6 +111,7 @@ public final class DosProtectionRuleProtectionArgs extends com.pulumi.resources.
 
         /**
          * @param classified Classified
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
          * 
          * @return builder

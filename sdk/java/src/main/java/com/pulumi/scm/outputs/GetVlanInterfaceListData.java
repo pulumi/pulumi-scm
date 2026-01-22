@@ -38,19 +38,18 @@ public final class GetVlanInterfaceListData {
     private String defaultValue;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
     /**
      * @return Vlan interfaces DHCP Client Object
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     private GetVlanInterfaceListDataDhcpClient dhcpClient;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -66,6 +65,7 @@ public final class GetVlanInterfaceListData {
     private String interfaceManagementProfile;
     /**
      * @return VLAN Interface IP Parent
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -76,13 +76,12 @@ public final class GetVlanInterfaceListData {
      */
     private Integer mtu;
     /**
-     * @return L3 sub-interface name
+     * @return The name of the item.
      * 
      */
     private String name;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -124,7 +123,6 @@ public final class GetVlanInterfaceListData {
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -132,6 +130,7 @@ public final class GetVlanInterfaceListData {
     }
     /**
      * @return Vlan interfaces DHCP Client Object
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -139,8 +138,7 @@ public final class GetVlanInterfaceListData {
         return this.dhcpClient;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -162,6 +160,7 @@ public final class GetVlanInterfaceListData {
     }
     /**
      * @return VLAN Interface IP Parent
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -176,15 +175,14 @@ public final class GetVlanInterfaceListData {
         return this.mtu;
     }
     /**
-     * @return L3 sub-interface name
+     * @return The name of the item.
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

@@ -103,11 +103,15 @@ export class RadiusServerProfile extends pulumi.CustomResource {
 
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
+     * Map of sensitive values returned from the API.
+     */
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
+    /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -129,6 +133,7 @@ export class RadiusServerProfile extends pulumi.CustomResource {
     declare public readonly servers: pulumi.Output<outputs.RadiusServerProfileServer[]>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -152,6 +157,7 @@ export class RadiusServerProfile extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as RadiusServerProfileState | undefined;
             resourceInputs["device"] = state?.device;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["name"] = state?.name;
             resourceInputs["protocol"] = state?.protocol;
@@ -176,9 +182,12 @@ export class RadiusServerProfile extends pulumi.CustomResource {
             resourceInputs["servers"] = args?.servers;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["timeout"] = args?.timeout;
+            resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["encryptedValues"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(RadiusServerProfile.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -189,11 +198,15 @@ export class RadiusServerProfile extends pulumi.CustomResource {
 export interface RadiusServerProfileState {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
+     * Map of sensitive values returned from the API.
+     */
+    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -215,6 +228,7 @@ export interface RadiusServerProfileState {
     servers?: pulumi.Input<pulumi.Input<inputs.RadiusServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -231,11 +245,11 @@ export interface RadiusServerProfileState {
 export interface RadiusServerProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -257,6 +271,7 @@ export interface RadiusServerProfileArgs {
     servers: pulumi.Input<pulumi.Input<inputs.RadiusServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

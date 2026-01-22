@@ -136,16 +136,17 @@ export class Layer3Subinterface extends pulumi.CustomResource {
     declare public readonly ddnsConfig: pulumi.Output<outputs.Layer3SubinterfaceDdnsConfig | undefined>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * Layer3 sub interfaces DHCP Client Object
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     declare public readonly dhcpClient: pulumi.Output<outputs.Layer3SubinterfaceDhcpClient | undefined>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -155,6 +156,7 @@ export class Layer3Subinterface extends pulumi.CustomResource {
     declare public readonly interfaceManagementProfile: pulumi.Output<string | undefined>;
     /**
      * L3 sub-interface IP Parent
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     declare public readonly ips: pulumi.Output<outputs.Layer3SubinterfaceIp[] | undefined>;
@@ -172,6 +174,7 @@ export class Layer3Subinterface extends pulumi.CustomResource {
     declare public readonly parentInterface: pulumi.Output<string | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -248,16 +251,17 @@ export interface Layer3SubinterfaceState {
     ddnsConfig?: pulumi.Input<inputs.Layer3SubinterfaceDdnsConfig>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * Layer3 sub interfaces DHCP Client Object
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     dhcpClient?: pulumi.Input<inputs.Layer3SubinterfaceDhcpClient>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -267,6 +271,7 @@ export interface Layer3SubinterfaceState {
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
      * L3 sub-interface IP Parent
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceIp>[]>;
@@ -284,6 +289,7 @@ export interface Layer3SubinterfaceState {
     parentInterface?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -312,16 +318,17 @@ export interface Layer3SubinterfaceArgs {
     ddnsConfig?: pulumi.Input<inputs.Layer3SubinterfaceDdnsConfig>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * Layer3 sub interfaces DHCP Client Object
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     dhcpClient?: pulumi.Input<inputs.Layer3SubinterfaceDhcpClient>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -331,6 +338,7 @@ export interface Layer3SubinterfaceArgs {
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
      * L3 sub-interface IP Parent
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceIp>[]>;
@@ -348,6 +356,7 @@ export interface Layer3SubinterfaceArgs {
     parentInterface?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

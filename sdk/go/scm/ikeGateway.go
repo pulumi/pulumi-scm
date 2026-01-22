@@ -120,11 +120,11 @@ type IkeGateway struct {
 	// Authentication
 	Authentication IkeGatewayAuthenticationOutput `pulumi:"authentication"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Local address
@@ -142,6 +142,7 @@ type IkeGateway struct {
 	// Protocol common
 	ProtocolCommon IkeGatewayProtocolCommonOutput `pulumi:"protocolCommon"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -193,11 +194,11 @@ type ikeGatewayState struct {
 	// Authentication
 	Authentication *IkeGatewayAuthentication `pulumi:"authentication"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Local address
@@ -215,6 +216,7 @@ type ikeGatewayState struct {
 	// Protocol common
 	ProtocolCommon *IkeGatewayProtocolCommon `pulumi:"protocolCommon"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -224,11 +226,11 @@ type IkeGatewayState struct {
 	// Authentication
 	Authentication IkeGatewayAuthenticationPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Local address
@@ -246,6 +248,7 @@ type IkeGatewayState struct {
 	// Protocol common
 	ProtocolCommon IkeGatewayProtocolCommonPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -259,9 +262,9 @@ type ikeGatewayArgs struct {
 	// Authentication
 	Authentication IkeGatewayAuthentication `pulumi:"authentication"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Local address
@@ -279,6 +282,7 @@ type ikeGatewayArgs struct {
 	// Protocol common
 	ProtocolCommon *IkeGatewayProtocolCommon `pulumi:"protocolCommon"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -288,9 +292,9 @@ type IkeGatewayArgs struct {
 	// Authentication
 	Authentication IkeGatewayAuthenticationInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Local address
@@ -308,6 +312,7 @@ type IkeGatewayArgs struct {
 	// Protocol common
 	ProtocolCommon IkeGatewayProtocolCommonPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -405,7 +410,6 @@ func (o IkeGatewayOutput) Authentication() IkeGatewayAuthenticationOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IkeGatewayOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IkeGateway) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -416,6 +420,7 @@ func (o IkeGatewayOutput) EncryptedValues() pulumi.StringMapOutput {
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IkeGatewayOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IkeGateway) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -457,6 +462,7 @@ func (o IkeGatewayOutput) ProtocolCommon() IkeGatewayProtocolCommonOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IkeGatewayOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IkeGateway) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Self
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Self` and `SelfForce`.
         /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelfResult Self;
         /// <summary>
         /// Self force
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Self` and `SelfForce`.
         /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelfForceResult SelfForce;

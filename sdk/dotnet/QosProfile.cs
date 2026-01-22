@@ -12,6 +12,148 @@ namespace Pulumi.Scm
     /// <summary>
     /// QosProfile resource
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmQosProfile1 = new Scm.QosProfile("scm_qos_profile_1", new()
+    ///     {
+    ///         Folder = "Remote Networks",
+    ///         Name = "scm-qos-profile-base",
+    ///     });
+    /// 
+    ///     var scmQosProfile2 = new Scm.QosProfile("scm_qos_profile_2", new()
+    ///     {
+    ///         Folder = "Remote Networks",
+    ///         Name = "scm-qos-profile-2",
+    ///         AggregateBandwidth = new Scm.Inputs.QosProfileAggregateBandwidthArgs
+    ///         {
+    ///             EgressMax = 200,
+    ///             EgressGuaranteed = 10000,
+    ///         },
+    ///     });
+    /// 
+    ///     var scmQosProfile3 = new Scm.QosProfile("scm_qos_profile_3", new()
+    ///     {
+    ///         Folder = "Service Connections",
+    ///         Name = "scm-qos-profile-3",
+    ///         AggregateBandwidth = new Scm.Inputs.QosProfileAggregateBandwidthArgs
+    ///         {
+    ///             EgressGuaranteed = 20,
+    ///         },
+    ///         ClassBandwidthType = new Scm.Inputs.QosProfileClassBandwidthTypeArgs
+    ///         {
+    ///             Mbps = new Scm.Inputs.QosProfileClassBandwidthTypeMbpsArgs
+    ///             {
+    ///                 Classes = new[]
+    ///                 {
+    ///                     new Scm.Inputs.QosProfileClassBandwidthTypeMbpsClassArgs
+    ///                     {
+    ///                         Name = "class1",
+    ///                     },
+    ///                     new Scm.Inputs.QosProfileClassBandwidthTypeMbpsClassArgs
+    ///                     {
+    ///                         Name = "class2",
+    ///                         Priority = "high",
+    ///                     },
+    ///                     new Scm.Inputs.QosProfileClassBandwidthTypeMbpsClassArgs
+    ///                     {
+    ///                         Name = "class3",
+    ///                         Priority = "real-time",
+    ///                         ClassBandwidth = new Scm.Inputs.QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs
+    ///                         {
+    ///                             EgressMax = 500,
+    ///                         },
+    ///                     },
+    ///                     new Scm.Inputs.QosProfileClassBandwidthTypeMbpsClassArgs
+    ///                     {
+    ///                         Name = "class4",
+    ///                         Priority = "low",
+    ///                         ClassBandwidth = new Scm.Inputs.QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs
+    ///                         {
+    ///                             EgressGuaranteed = 60000,
+    ///                         },
+    ///                     },
+    ///                     new Scm.Inputs.QosProfileClassBandwidthTypeMbpsClassArgs
+    ///                     {
+    ///                         Name = "class5",
+    ///                         Priority = "medium",
+    ///                         ClassBandwidth = new Scm.Inputs.QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs
+    ///                         {
+    ///                             EgressMax = 955,
+    ///                             EgressGuaranteed = 50000,
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmQosProfile4 = new Scm.QosProfile("scm_qos_profile_4", new()
+    ///     {
+    ///         Folder = "Service Connections",
+    ///         Name = "scm-qos-profile-4",
+    ///         AggregateBandwidth = new Scm.Inputs.QosProfileAggregateBandwidthArgs
+    ///         {
+    ///             EgressMax = 1400,
+    ///         },
+    ///         ClassBandwidthType = new Scm.Inputs.QosProfileClassBandwidthTypeArgs
+    ///         {
+    ///             Percentage = new Scm.Inputs.QosProfileClassBandwidthTypePercentageArgs
+    ///             {
+    ///                 Classes = new[]
+    ///                 {
+    ///                     new Scm.Inputs.QosProfileClassBandwidthTypePercentageClassArgs
+    ///                     {
+    ///                         Name = "class1",
+    ///                     },
+    ///                     new Scm.Inputs.QosProfileClassBandwidthTypePercentageClassArgs
+    ///                     {
+    ///                         Name = "class2",
+    ///                         Priority = "low",
+    ///                     },
+    ///                     new Scm.Inputs.QosProfileClassBandwidthTypePercentageClassArgs
+    ///                     {
+    ///                         Name = "class3",
+    ///                         Priority = "real-time",
+    ///                         ClassBandwidth = new Scm.Inputs.QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs
+    ///                         {
+    ///                             EgressMax = 100,
+    ///                         },
+    ///                     },
+    ///                     new Scm.Inputs.QosProfileClassBandwidthTypePercentageClassArgs
+    ///                     {
+    ///                         Name = "class4",
+    ///                         Priority = "medium",
+    ///                         ClassBandwidth = new Scm.Inputs.QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs
+    ///                         {
+    ///                             EgressGuaranteed = 5,
+    ///                         },
+    ///                     },
+    ///                     new Scm.Inputs.QosProfileClassBandwidthTypePercentageClassArgs
+    ///                     {
+    ///                         Name = "class5",
+    ///                         Priority = "high",
+    ///                         ClassBandwidth = new Scm.Inputs.QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs
+    ///                         {
+    ///                             EgressMax = 25,
+    ///                             EgressGuaranteed = 50,
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
@@ -55,13 +197,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -75,6 +217,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -143,13 +286,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -163,6 +306,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -190,13 +334,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -210,6 +354,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// specify time in days
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Days` and `Hours`.
         /// </summary>
         [Input("days")]
         public Input<int>? Days { get; set; }
 
         /// <summary>
         /// specify time in hours
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Days` and `Hours`.
         /// </summary>
         [Input("hours")]

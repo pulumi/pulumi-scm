@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class ServiceProtocol {
     /**
      * @return Tcp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     private @Nullable ServiceProtocolTcp tcp;
     /**
      * @return Udp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
@@ -28,7 +28,6 @@ public final class ServiceProtocol {
     private ServiceProtocol() {}
     /**
      * @return Tcp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     public Optional<ServiceProtocolTcp> tcp() {
@@ -36,6 +35,7 @@ public final class ServiceProtocol {
     }
     /**
      * @return Udp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */

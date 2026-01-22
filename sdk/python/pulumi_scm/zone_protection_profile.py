@@ -66,10 +66,12 @@ class ZoneProtectionProfileArgs:
                * `bypass` — Bypass scanning on packets that contain an asymmetric path.
         :param pulumi.Input[_builtins.str] description: The description of the profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] discard_icmp_embedded_error: Discard ICMP packets that are embedded with an error message.
         :param pulumi.Input['ZoneProtectionProfileFloodArgs'] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] fragmented_traffic_discard: Discard fragmented IP packets.
         :param pulumi.Input[_builtins.bool] icmp_frag_discard: Discard packets that consist of ICMP fragments.
@@ -95,6 +97,7 @@ class ZoneProtectionProfileArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]] scans: Scan
         :param pulumi.Input[_builtins.bool] security_discard: Discard packets if the security option is defined.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] spoofed_ip_discard: Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] stream_id_discard: Discard packets if the Stream ID option is defined.
@@ -220,6 +223,7 @@ class ZoneProtectionProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -257,6 +261,7 @@ class ZoneProtectionProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -480,6 +485,7 @@ class ZoneProtectionProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -697,10 +703,12 @@ class _ZoneProtectionProfileState:
                * `bypass` — Bypass scanning on packets that contain an asymmetric path.
         :param pulumi.Input[_builtins.str] description: The description of the profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] discard_icmp_embedded_error: Discard ICMP packets that are embedded with an error message.
         :param pulumi.Input['ZoneProtectionProfileFloodArgs'] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] fragmented_traffic_discard: Discard fragmented IP packets.
         :param pulumi.Input[_builtins.bool] icmp_frag_discard: Discard packets that consist of ICMP fragments.
@@ -726,6 +734,7 @@ class _ZoneProtectionProfileState:
         :param pulumi.Input[Sequence[pulumi.Input['ZoneProtectionProfileScanArgs']]] scans: Scan
         :param pulumi.Input[_builtins.bool] security_discard: Discard packets if the security option is defined.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] spoofed_ip_discard: Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] stream_id_discard: Discard packets if the Stream ID option is defined.
@@ -853,6 +862,7 @@ class _ZoneProtectionProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -890,6 +900,7 @@ class _ZoneProtectionProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -1113,6 +1124,7 @@ class _ZoneProtectionProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -1371,10 +1383,12 @@ class ZoneProtectionProfile(pulumi.CustomResource):
                * `bypass` — Bypass scanning on packets that contain an asymmetric path.
         :param pulumi.Input[_builtins.str] description: The description of the profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] discard_icmp_embedded_error: Discard ICMP packets that are embedded with an error message.
         :param pulumi.Input[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] fragmented_traffic_discard: Discard fragmented IP packets.
         :param pulumi.Input[_builtins.bool] icmp_frag_discard: Discard packets that consist of ICMP fragments.
@@ -1400,6 +1414,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]] scans: Scan
         :param pulumi.Input[_builtins.bool] security_discard: Discard packets if the security option is defined.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] spoofed_ip_discard: Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] stream_id_discard: Discard packets if the Stream ID option is defined.
@@ -1613,10 +1628,12 @@ class ZoneProtectionProfile(pulumi.CustomResource):
                * `bypass` — Bypass scanning on packets that contain an asymmetric path.
         :param pulumi.Input[_builtins.str] description: The description of the profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] discard_icmp_embedded_error: Discard ICMP packets that are embedded with an error message.
         :param pulumi.Input[Union['ZoneProtectionProfileFloodArgs', 'ZoneProtectionProfileFloodArgsDict']] flood: Flood
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] fragmented_traffic_discard: Discard fragmented IP packets.
         :param pulumi.Input[_builtins.bool] icmp_frag_discard: Discard packets that consist of ICMP fragments.
@@ -1642,6 +1659,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneProtectionProfileScanArgs', 'ZoneProtectionProfileScanArgsDict']]]] scans: Scan
         :param pulumi.Input[_builtins.bool] security_discard: Discard packets if the security option is defined.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] spoofed_ip_discard: Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
         :param pulumi.Input[_builtins.bool] stream_id_discard: Discard packets if the Stream ID option is defined.
@@ -1728,6 +1746,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -1753,6 +1772,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -1904,6 +1924,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

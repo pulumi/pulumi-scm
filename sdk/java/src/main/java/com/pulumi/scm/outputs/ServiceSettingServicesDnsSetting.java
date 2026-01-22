@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class ServiceSettingServicesDnsSetting {
     /**
      * @return Dns proxy object
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
     private @Nullable String dnsProxyObject;
     /**
      * @return Servers
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
@@ -28,7 +28,6 @@ public final class ServiceSettingServicesDnsSetting {
     private ServiceSettingServicesDnsSetting() {}
     /**
      * @return Dns proxy object
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
     public Optional<String> dnsProxyObject() {
@@ -36,6 +35,7 @@ public final class ServiceSettingServicesDnsSetting {
     }
     /**
      * @return Servers
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */

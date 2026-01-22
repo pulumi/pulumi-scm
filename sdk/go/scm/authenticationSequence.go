@@ -87,14 +87,15 @@ type AuthenticationSequence struct {
 	// An ordered list of authentication profiles
 	AuthenticationProfiles pulumi.StringArrayOutput `pulumi:"authenticationProfiles"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the authentication sequence
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -135,14 +136,15 @@ type authenticationSequenceState struct {
 	// An ordered list of authentication profiles
 	AuthenticationProfiles []string `pulumi:"authenticationProfiles"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the authentication sequence
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -154,14 +156,15 @@ type AuthenticationSequenceState struct {
 	// An ordered list of authentication profiles
 	AuthenticationProfiles pulumi.StringArrayInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the authentication sequence
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -177,14 +180,15 @@ type authenticationSequenceArgs struct {
 	// An ordered list of authentication profiles
 	AuthenticationProfiles []string `pulumi:"authenticationProfiles"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the authentication sequence
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Use domain to determine authentication profile?
@@ -196,14 +200,15 @@ type AuthenticationSequenceArgs struct {
 	// An ordered list of authentication profiles
 	AuthenticationProfiles pulumi.StringArrayInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the authentication sequence
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Use domain to determine authentication profile?
@@ -303,12 +308,12 @@ func (o AuthenticationSequenceOutput) AuthenticationProfiles() pulumi.StringArra
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationSequenceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationSequenceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -320,6 +325,7 @@ func (o AuthenticationSequenceOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationSequenceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

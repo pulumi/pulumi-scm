@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Extended
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Extended`, `Large`, and `Regular`.
         /// </summary>
         [Input("extended")]
         public Input<Inputs.RouteCommunityListTypeExtendedGetArgs>? Extended { get; set; }
 
         /// <summary>
         /// Large
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Extended`, `Large`, and `Regular`.
         /// </summary>
         [Input("large")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Regular
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Extended`, `Large`, and `Regular`.
         /// </summary>
         [Input("regular")]

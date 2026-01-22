@@ -13,18 +13,114 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// LogForwardingProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+        ///     var scmLogForwardingProf = Scm.GetLogForwardingProfile.Invoke(new()
+        ///     {
+        ///         Id = "712dc61d-94ed-45e4-82b7-b2d86669a2bf",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogForwardingProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Id) },
+        ///             { "folder", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Folder) },
+        ///             { "name", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Name) },
+        ///             { "description", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Description) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLogForwardingProfileResult> InvokeAsync(GetLogForwardingProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLogForwardingProfileResult>("scm:index/getLogForwardingProfile:getLogForwardingProfile", args ?? new GetLogForwardingProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// LogForwardingProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+        ///     var scmLogForwardingProf = Scm.GetLogForwardingProfile.Invoke(new()
+        ///     {
+        ///         Id = "712dc61d-94ed-45e4-82b7-b2d86669a2bf",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogForwardingProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Id) },
+        ///             { "folder", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Folder) },
+        ///             { "name", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Name) },
+        ///             { "description", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Description) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLogForwardingProfileResult> Invoke(GetLogForwardingProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLogForwardingProfileResult>("scm:index/getLogForwardingProfile:getLogForwardingProfile", args ?? new GetLogForwardingProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// LogForwardingProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+        ///     var scmLogForwardingProf = Scm.GetLogForwardingProfile.Invoke(new()
+        ///     {
+        ///         Id = "712dc61d-94ed-45e4-82b7-b2d86669a2bf",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogForwardingProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Id) },
+        ///             { "folder", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Folder) },
+        ///             { "name", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Name) },
+        ///             { "description", scmLogForwardingProf.Apply(getLogForwardingProfileResult =&gt; getLogForwardingProfileResult.Description) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLogForwardingProfileResult> Invoke(GetLogForwardingProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLogForwardingProfileResult>("scm:index/getLogForwardingProfile:getLogForwardingProfile", args ?? new GetLogForwardingProfileInvokeArgs(), options.WithDefaults());
@@ -35,15 +131,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -53,16 +144,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the log forwarding profile
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -76,15 +160,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -94,16 +173,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the log forwarding profile
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -117,36 +189,18 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetLogForwardingProfileResult
     {
-        /// <summary>
-        /// Log forwarding profile description
-        /// </summary>
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the log server profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Match list
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetLogForwardingProfileMatchListResult> MatchLists;
-        /// <summary>
-        /// The name of the log forwarding profile
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

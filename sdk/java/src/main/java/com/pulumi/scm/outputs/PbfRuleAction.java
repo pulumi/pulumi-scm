@@ -15,18 +15,19 @@ import javax.annotation.Nullable;
 public final class PbfRuleAction {
     /**
      * @return Discard
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     private @Nullable PbfRuleActionDiscard discard;
     /**
      * @return Forward
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     private @Nullable PbfRuleActionForward forward;
     /**
      * @return No pbf
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
@@ -35,7 +36,6 @@ public final class PbfRuleAction {
     private PbfRuleAction() {}
     /**
      * @return Discard
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     public Optional<PbfRuleActionDiscard> discard() {
@@ -43,6 +43,7 @@ public final class PbfRuleAction {
     }
     /**
      * @return Forward
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
@@ -51,6 +52,7 @@ public final class PbfRuleAction {
     }
     /**
      * @return No pbf
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */

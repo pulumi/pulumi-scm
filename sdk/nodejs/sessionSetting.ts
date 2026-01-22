@@ -117,11 +117,11 @@ export class SessionSetting extends pulumi.CustomResource {
 
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -131,6 +131,7 @@ export class SessionSetting extends pulumi.CustomResource {
     declare public readonly sessionSettings: pulumi.Output<outputs.SessionSettingSessionSettings | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -173,11 +174,11 @@ export class SessionSetting extends pulumi.CustomResource {
 export interface SessionSettingState {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -187,6 +188,7 @@ export interface SessionSettingState {
     sessionSettings?: pulumi.Input<inputs.SessionSettingSessionSettings>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -199,11 +201,11 @@ export interface SessionSettingState {
 export interface SessionSettingArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -213,6 +215,7 @@ export interface SessionSettingArgs {
     sessionSettings?: pulumi.Input<inputs.SessionSettingSessionSettings>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

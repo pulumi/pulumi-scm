@@ -36,14 +36,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Certificate Authority identity
+     * Certificate Authority Identity
      * 
      */
     @Import(name="caIdentityName", required=true)
     private Output<String> caIdentityName;
 
     /**
-     * @return Certificate Authority identity
+     * @return Certificate Authority Identity
      * 
      */
     public Output<String> caIdentityName() {
@@ -67,7 +67,6 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -75,7 +74,6 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -98,14 +96,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * CA certificate fingerprint
+     * CA Certificate Fingerprint
      * 
      */
     @Import(name="fingerprint")
     private @Nullable Output<String> fingerprint;
 
     /**
-     * @return CA certificate fingerprint
+     * @return CA Certificate Fingerprint
      * 
      */
     public Optional<Output<String>> fingerprint() {
@@ -114,6 +112,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -122,6 +121,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -145,14 +145,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * SCEP server CA certificate
+     * SCEP Server CA Certificate
      * 
      */
     @Import(name="scepCaCert")
     private @Nullable Output<String> scepCaCert;
 
     /**
-     * @return SCEP server CA certificate
+     * @return SCEP Server CA Certificate
      * 
      */
     public Optional<Output<String>> scepCaCert() {
@@ -160,14 +160,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * One Time Password challenge
+     * One Time Password Challenge
      * 
      */
     @Import(name="scepChallenge", required=true)
     private Output<ScepProfileScepChallengeArgs> scepChallenge;
 
     /**
-     * @return One Time Password challenge
+     * @return One Time Password Challenge
      * 
      */
     public Output<ScepProfileScepChallengeArgs> scepChallenge() {
@@ -175,14 +175,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * SCEP client ceertificate
+     * SCEP Client Certificate
      * 
      */
     @Import(name="scepClientCert")
     private @Nullable Output<String> scepClientCert;
 
     /**
-     * @return SCEP client ceertificate
+     * @return SCEP Client Certificate
      * 
      */
     public Optional<Output<String>> scepClientCert() {
@@ -206,6 +206,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -214,6 +215,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -327,7 +329,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param caIdentityName Certificate Authority identity
+         * @param caIdentityName Certificate Authority Identity
          * 
          * @return builder
          * 
@@ -338,7 +340,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param caIdentityName Certificate Authority identity
+         * @param caIdentityName Certificate Authority Identity
          * 
          * @return builder
          * 
@@ -370,7 +372,6 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -382,7 +383,6 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -413,7 +413,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fingerprint CA certificate fingerprint
+         * @param fingerprint CA Certificate Fingerprint
          * 
          * @return builder
          * 
@@ -424,7 +424,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fingerprint CA certificate fingerprint
+         * @param fingerprint CA Certificate Fingerprint
          * 
          * @return builder
          * 
@@ -435,6 +435,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -447,6 +448,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -478,7 +480,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepCaCert SCEP server CA certificate
+         * @param scepCaCert SCEP Server CA Certificate
          * 
          * @return builder
          * 
@@ -489,7 +491,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepCaCert SCEP server CA certificate
+         * @param scepCaCert SCEP Server CA Certificate
          * 
          * @return builder
          * 
@@ -499,7 +501,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepChallenge One Time Password challenge
+         * @param scepChallenge One Time Password Challenge
          * 
          * @return builder
          * 
@@ -510,7 +512,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepChallenge One Time Password challenge
+         * @param scepChallenge One Time Password Challenge
          * 
          * @return builder
          * 
@@ -520,7 +522,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepClientCert SCEP client ceertificate
+         * @param scepClientCert SCEP Client Certificate
          * 
          * @return builder
          * 
@@ -531,7 +533,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepClientCert SCEP client ceertificate
+         * @param scepClientCert SCEP Client Certificate
          * 
          * @return builder
          * 
@@ -563,6 +565,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -575,6 +578,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

@@ -19,6 +19,53 @@ import javax.annotation.Nullable;
 /**
  * LldpProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.LldpProfile;
+ * import com.pulumi.scm.LldpProfileArgs;
+ * import com.pulumi.scm.inputs.LldpProfileOptionTlvsArgs;
+ * import com.pulumi.scm.inputs.LldpProfileOptionTlvsManagementAddressArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LldpProfile("example", LldpProfileArgs.builder()
+ *             .folder("All")
+ *             .mode("transmit-receive")
+ *             .name("lldp-profile-tf-1")
+ *             .optionTlvs(LldpProfileOptionTlvsArgs.builder()
+ *                 .managementAddress(LldpProfileOptionTlvsManagementAddressArgs.builder()
+ *                     .enabled(true)
+ *                     .build())
+ *                 .portDescription(true)
+ *                 .systemCapabilities(true)
+ *                 .systemDescription(false)
+ *                 .systemName(true)
+ *                 .build())
+ *             .snmpSyslogNotification(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The following command can be used to import a resource not managed by Terraform:
@@ -50,7 +97,6 @@ import javax.annotation.Nullable;
 public class LldpProfile extends com.pulumi.resources.CustomResource {
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -58,7 +104,6 @@ public class LldpProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -66,6 +111,7 @@ public class LldpProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -74,6 +120,7 @@ public class LldpProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -124,6 +171,7 @@ public class LldpProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -132,6 +180,7 @@ public class LldpProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

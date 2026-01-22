@@ -14,7 +14,6 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Fqdn
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn` and `IpAddress`.
         /// </summary>
         [Input("fqdn")]
         public Input<Inputs.SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs>? Fqdn { get; set; }
@@ -24,6 +23,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// List of IP addresses
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn` and `IpAddress`.
         /// </summary>
         public InputList<Inputs.SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs> IpAddresses

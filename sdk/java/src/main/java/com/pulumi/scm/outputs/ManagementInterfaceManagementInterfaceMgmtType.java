@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class ManagementInterfaceManagementInterfaceMgmtType {
     /**
      * @return Dhcp client
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
     private @Nullable ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient dhcpClient;
     /**
      * @return Static
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
@@ -28,7 +28,6 @@ public final class ManagementInterfaceManagementInterfaceMgmtType {
     private ManagementInterfaceManagementInterfaceMgmtType() {}
     /**
      * @return Dhcp client
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
     public Optional<ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient> dhcpClient() {
@@ -36,6 +35,7 @@ public final class ManagementInterfaceManagementInterfaceMgmtType {
     }
     /**
      * @return Static
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */

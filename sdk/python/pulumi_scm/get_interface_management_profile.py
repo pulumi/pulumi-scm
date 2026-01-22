@@ -85,41 +85,27 @@ class GetInterfaceManagementProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def http(self) -> _builtins.bool:
-        """
-        Allow HTTP?
-        """
         return pulumi.get(self, "http")
 
     @_builtins.property
     @pulumi.getter(name="httpOcsp")
     def http_ocsp(self) -> _builtins.bool:
-        """
-        Allow HTTP OCSP?
-        """
         return pulumi.get(self, "http_ocsp")
 
     @_builtins.property
     @pulumi.getter
     def https(self) -> _builtins.bool:
-        """
-        Allow HTTPS?
-        """
         return pulumi.get(self, "https")
 
     @_builtins.property
@@ -133,58 +119,36 @@ class GetInterfaceManagementProfileResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        Name
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="permittedIps")
     def permitted_ips(self) -> Sequence['outputs.GetInterfaceManagementProfilePermittedIpResult']:
-        """
-        Allowed IP address(es)
-        """
         return pulumi.get(self, "permitted_ips")
 
     @_builtins.property
     @pulumi.getter
     def ping(self) -> _builtins.bool:
-        """
-        Allow ping?
-        """
         return pulumi.get(self, "ping")
 
     @_builtins.property
     @pulumi.getter(name="responsePages")
     def response_pages(self) -> _builtins.bool:
-        """
-        Allow response pages?
-        """
         return pulumi.get(self, "response_pages")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def ssh(self) -> _builtins.bool:
-        """
-        Allow SSH?
-        """
         return pulumi.get(self, "ssh")
 
     @_builtins.property
     @pulumi.getter
     def telnet(self) -> _builtins.bool:
-        """
-        Allow telnet? Seriously, why would you do this?!?
-        """
         return pulumi.get(self, "telnet")
 
     @_builtins.property
@@ -195,25 +159,16 @@ class GetInterfaceManagementProfileResult:
     @_builtins.property
     @pulumi.getter(name="useridService")
     def userid_service(self) -> _builtins.bool:
-        """
-        Allow User-ID?
-        """
         return pulumi.get(self, "userid_service")
 
     @_builtins.property
     @pulumi.getter(name="useridSyslogListenerSsl")
     def userid_syslog_listener_ssl(self) -> _builtins.bool:
-        """
-        Allow User-ID syslog listener (SSL)?
-        """
         return pulumi.get(self, "userid_syslog_listener_ssl")
 
     @_builtins.property
     @pulumi.getter(name="useridSyslogListenerUdp")
     def userid_syslog_listener_udp(self) -> _builtins.bool:
-        """
-        Allow User-ID syslog listener (UDP)?
-        """
         return pulumi.get(self, "userid_syslog_listener_udp")
 
 
@@ -264,13 +219,7 @@ def get_interface_management_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -321,13 +270,7 @@ def get_interface_management_profile_output(device: Optional[pulumi.Input[Option
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

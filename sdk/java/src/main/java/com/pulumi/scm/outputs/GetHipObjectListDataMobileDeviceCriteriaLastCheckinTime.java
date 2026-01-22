@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetHipObjectListDataMobileDeviceCriteriaLastCheckinTime {
     /**
      * @return Not within
-     * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      * 
      */
     private GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeNotWithin notWithin;
     /**
      * @return Within
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetHipObjectListDataMobileDeviceCriteriaLastCheckinTime {
     private GetHipObjectListDataMobileDeviceCriteriaLastCheckinTime() {}
     /**
      * @return Not within
-     * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      * 
      */
     public GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeNotWithin notWithin() {
@@ -35,6 +34,7 @@ public final class GetHipObjectListDataMobileDeviceCriteriaLastCheckinTime {
     }
     /**
      * @return Within
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      * 
      */

@@ -52,34 +52,23 @@ func LookupSessionTimeout(ctx *pulumi.Context, args *LookupSessionTimeoutArgs, o
 // A collection of arguments for invoking getSessionTimeout.
 type LookupSessionTimeoutArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSessionTimeout.
 type LookupSessionTimeoutResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Session timeouts
+	Id              string                           `pulumi:"id"`
 	SessionTimeouts GetSessionTimeoutSessionTimeouts `pulumi:"sessionTimeouts"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet         string                           `pulumi:"snippet"`
+	Tfid            string                           `pulumi:"tfid"`
 }
 
 func LookupSessionTimeoutOutput(ctx *pulumi.Context, args LookupSessionTimeoutOutputArgs, opts ...pulumi.InvokeOption) LookupSessionTimeoutResultOutput {
@@ -94,15 +83,10 @@ func LookupSessionTimeoutOutput(ctx *pulumi.Context, args LookupSessionTimeoutOu
 // A collection of arguments for invoking getSessionTimeout.
 type LookupSessionTimeoutOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -126,13 +110,10 @@ func (o LookupSessionTimeoutResultOutput) ToLookupSessionTimeoutResultOutputWith
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSessionTimeoutResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionTimeoutResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSessionTimeoutResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionTimeoutResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -142,13 +123,10 @@ func (o LookupSessionTimeoutResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionTimeoutResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Session timeouts
 func (o LookupSessionTimeoutResultOutput) SessionTimeouts() GetSessionTimeoutSessionTimeoutsOutput {
 	return o.ApplyT(func(v LookupSessionTimeoutResult) GetSessionTimeoutSessionTimeouts { return v.SessionTimeouts }).(GetSessionTimeoutSessionTimeoutsOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSessionTimeoutResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSessionTimeoutResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

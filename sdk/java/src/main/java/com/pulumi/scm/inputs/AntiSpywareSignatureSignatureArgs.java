@@ -19,7 +19,6 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
 
     /**
      * anti spyware signature combination
-     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
     @Import(name="combination")
@@ -27,7 +26,6 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
 
     /**
      * @return anti spyware signature combination
-     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
     public Optional<Output<AntiSpywareSignatureSignatureCombinationArgs>> combination() {
@@ -36,6 +34,7 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
 
     /**
      * Standard
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
@@ -44,6 +43,7 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
 
     /**
      * @return Standard
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
@@ -78,7 +78,6 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
 
         /**
          * @param combination anti spyware signature combination
-         * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
          * 
          * @return builder
          * 
@@ -90,7 +89,6 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
 
         /**
          * @param combination anti spyware signature combination
-         * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
          * 
          * @return builder
          * 
@@ -101,6 +99,7 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
 
         /**
          * @param standards Standard
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
          * 
          * @return builder
@@ -113,6 +112,7 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
 
         /**
          * @param standards Standard
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
          * 
          * @return builder
@@ -124,6 +124,7 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
 
         /**
          * @param standards Standard
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
          * 
          * @return builder

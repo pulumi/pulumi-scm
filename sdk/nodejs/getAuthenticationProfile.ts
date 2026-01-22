@@ -39,26 +39,14 @@ export function getAuthenticationProfile(args: GetAuthenticationProfileArgs, opt
 export interface GetAuthenticationProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * The UUID of the authentication profile
      */
     id: string;
-    /**
-     * The name of the authentication profile
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -66,57 +54,24 @@ export interface GetAuthenticationProfileArgs {
  * A collection of values returned by getAuthenticationProfile.
  */
 export interface GetAuthenticationProfileResult {
-    /**
-     * The allowList of the authentication profile
-     */
     readonly allowLists: string[];
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * The UUID of the authentication profile
      */
     readonly id: string;
-    /**
-     * Lockout object of the authentication profile
-     */
     readonly lockout: outputs.GetAuthenticationProfileLockout;
-    /**
-     * method object of authentication profile
-     */
     readonly method: outputs.GetAuthenticationProfileMethod;
-    /**
-     * Multi factor auth
-     */
     readonly multiFactorAuth: outputs.GetAuthenticationProfileMultiFactorAuth;
-    /**
-     * The name of the authentication profile
-     */
     readonly name: string;
-    /**
-     * Single sign on
-     */
     readonly singleSignOn: outputs.GetAuthenticationProfileSingleSignOn;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * User domain
-     */
     readonly userDomain: string;
-    /**
-     * Username modifier
-     */
     readonly usernameModifier: string;
 }
 /**
@@ -152,25 +107,13 @@ export function getAuthenticationProfileOutput(args: GetAuthenticationProfileOut
 export interface GetAuthenticationProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * The UUID of the authentication profile
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the authentication profile
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

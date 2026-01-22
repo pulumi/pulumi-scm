@@ -46,26 +46,14 @@ export function getDecryptionProfile(args: GetDecryptionProfileArgs, opts?: pulu
 export interface GetDecryptionProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -75,42 +63,18 @@ export interface GetDecryptionProfileArgs {
 export interface GetDecryptionProfileResult {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
-     */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
-    /**
-     * Ssl forward proxy
-     */
     readonly sslForwardProxy: outputs.GetDecryptionProfileSslForwardProxy;
-    /**
-     * Ssl inbound proxy
-     */
     readonly sslInboundProxy: outputs.GetDecryptionProfileSslInboundProxy;
-    /**
-     * Ssl no proxy
-     */
     readonly sslNoProxy: outputs.GetDecryptionProfileSslNoProxy;
-    /**
-     * Ssl protocol settings
-     */
     readonly sslProtocolSettings: outputs.GetDecryptionProfileSslProtocolSettings;
     readonly tfid: string;
 }
@@ -154,25 +118,13 @@ export function getDecryptionProfileOutput(args: GetDecryptionProfileOutputArgs,
 export interface GetDecryptionProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

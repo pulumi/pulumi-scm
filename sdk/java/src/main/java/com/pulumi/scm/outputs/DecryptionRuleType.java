@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.DecryptionRuleTypeSslForwardProxy;
-import java.lang.String;
+import com.pulumi.scm.outputs.DecryptionRuleTypeSslInboundInspection;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,21 +14,20 @@ import javax.annotation.Nullable;
 public final class DecryptionRuleType {
     /**
      * @return Ssl forward proxy
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     private @Nullable DecryptionRuleTypeSslForwardProxy sslForwardProxy;
     /**
      * @return add the certificate name for SSL inbound inspection
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
-    private @Nullable String sslInboundInspection;
+    private @Nullable DecryptionRuleTypeSslInboundInspection sslInboundInspection;
 
     private DecryptionRuleType() {}
     /**
      * @return Ssl forward proxy
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     public Optional<DecryptionRuleTypeSslForwardProxy> sslForwardProxy() {
@@ -36,10 +35,11 @@ public final class DecryptionRuleType {
     }
     /**
      * @return add the certificate name for SSL inbound inspection
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
-    public Optional<String> sslInboundInspection() {
+    public Optional<DecryptionRuleTypeSslInboundInspection> sslInboundInspection() {
         return Optional.ofNullable(this.sslInboundInspection);
     }
 
@@ -53,7 +53,7 @@ public final class DecryptionRuleType {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable DecryptionRuleTypeSslForwardProxy sslForwardProxy;
-        private @Nullable String sslInboundInspection;
+        private @Nullable DecryptionRuleTypeSslInboundInspection sslInboundInspection;
         public Builder() {}
         public Builder(DecryptionRuleType defaults) {
     	      Objects.requireNonNull(defaults);
@@ -68,7 +68,7 @@ public final class DecryptionRuleType {
             return this;
         }
         @CustomType.Setter
-        public Builder sslInboundInspection(@Nullable String sslInboundInspection) {
+        public Builder sslInboundInspection(@Nullable DecryptionRuleTypeSslInboundInspection sslInboundInspection) {
 
             this.sslInboundInspection = sslInboundInspection;
             return this;

@@ -25,40 +25,26 @@ func LookupRouteCommunityList(ctx *pulumi.Context, args *LookupRouteCommunityLis
 // A collection of arguments for invoking getRouteCommunityList.
 type LookupRouteCommunityListArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Route community list name
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getRouteCommunityList.
 type LookupRouteCommunityListResult struct {
-	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Route community list name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// Type
-	Type GetRouteCommunityListType `pulumi:"type"`
+	Id      string                    `pulumi:"id"`
+	Name    string                    `pulumi:"name"`
+	Snippet string                    `pulumi:"snippet"`
+	Tfid    string                    `pulumi:"tfid"`
+	Type    GetRouteCommunityListType `pulumi:"type"`
 }
 
 func LookupRouteCommunityListOutput(ctx *pulumi.Context, args LookupRouteCommunityListOutputArgs, opts ...pulumi.InvokeOption) LookupRouteCommunityListResultOutput {
@@ -73,17 +59,11 @@ func LookupRouteCommunityListOutput(ctx *pulumi.Context, args LookupRouteCommuni
 // A collection of arguments for invoking getRouteCommunityList.
 type LookupRouteCommunityListOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Route community list name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -106,19 +86,15 @@ func (o LookupRouteCommunityListResultOutput) ToLookupRouteCommunityListResultOu
 	return o
 }
 
-// Description
 func (o LookupRouteCommunityListResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupRouteCommunityListResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupRouteCommunityListResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -128,13 +104,10 @@ func (o LookupRouteCommunityListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Route community list name
 func (o LookupRouteCommunityListResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupRouteCommunityListResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -143,7 +116,6 @@ func (o LookupRouteCommunityListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Type
 func (o LookupRouteCommunityListResultOutput) Type() GetRouteCommunityListTypeOutput {
 	return o.ApplyT(func(v LookupRouteCommunityListResult) GetRouteCommunityListType { return v.Type }).(GetRouteCommunityListTypeOutput)
 }

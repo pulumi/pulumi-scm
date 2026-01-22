@@ -17,36 +17,40 @@ import java.util.Objects;
 public final class GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication {
     /**
      * @return Md5
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     private GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5 md5;
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     private GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationNone none;
     /**
      * @return Sha1
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     private GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1 sha1;
     /**
      * @return Sha256
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     private GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256 sha256;
     /**
      * @return Sha384
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     private GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384 sha384;
     /**
      * @return Sha512
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
@@ -55,7 +59,6 @@ public final class GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication {
     private GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication() {}
     /**
      * @return Md5
-     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5 md5() {
@@ -63,6 +66,7 @@ public final class GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication {
     }
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
@@ -71,6 +75,7 @@ public final class GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication {
     }
     /**
      * @return Sha1
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
@@ -79,6 +84,7 @@ public final class GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication {
     }
     /**
      * @return Sha256
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
@@ -87,6 +93,7 @@ public final class GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication {
     }
     /**
      * @return Sha384
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
@@ -95,6 +102,7 @@ public final class GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication {
     }
     /**
      * @return Sha512
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */

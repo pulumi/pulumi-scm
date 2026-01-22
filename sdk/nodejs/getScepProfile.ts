@@ -8,6 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * ScepProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM SCEP Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+ * const scmScepProf = scm.getScepProfile({
+ *     id: "06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1",
+ * });
+ * export const scmScepProfileDetails = {
+ *     profileId: scmScepProf.then(scmScepProf => scmScepProf.id),
+ *     folder: scmScepProf.then(scmScepProf => scmScepProf.folder),
+ *     name: scmScepProf.then(scmScepProf => scmScepProf.name),
+ * };
+ * ```
  */
 export function getScepProfile(args: GetScepProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetScepProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -26,26 +46,14 @@ export function getScepProfile(args: GetScepProfileArgs, opts?: pulumi.InvokeOpt
 export interface GetScepProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * The UUID of the SCEP profile
      */
     id: string;
-    /**
-     * The name of the SCEP profile
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -53,85 +61,54 @@ export interface GetScepProfileArgs {
  * A collection of values returned by getScepProfile.
  */
 export interface GetScepProfileResult {
-    /**
-     * Algorithm
-     */
     readonly algorithm: outputs.GetScepProfileAlgorithm;
-    /**
-     * Certificate Authority identity
-     */
     readonly caIdentityName: string;
-    /**
-     * Subject Alternative name type
-     */
     readonly certificateAttributes: outputs.GetScepProfileCertificateAttributes;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * Digest for CSR
-     */
     readonly digest: string;
-    /**
-     * Map of sensitive values returned from the API.
-     */
     readonly encryptedValues: {[key: string]: string};
-    /**
-     * CA certificate fingerprint
-     */
     readonly fingerprint: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * The UUID of the SCEP profile
      */
     readonly id: string;
-    /**
-     * The name of the SCEP profile
-     */
     readonly name: string;
-    /**
-     * SCEP server CA certificate
-     */
     readonly scepCaCert: string;
-    /**
-     * One Time Password challenge
-     */
     readonly scepChallenge: outputs.GetScepProfileScepChallenge;
-    /**
-     * SCEP client ceertificate
-     */
     readonly scepClientCert: string;
-    /**
-     * SCEP server URL
-     */
     readonly scepUrl: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
-    /**
-     * Subject
-     */
     readonly subject: string;
     readonly tfid: string;
-    /**
-     * Use as digital signature?
-     */
     readonly useAsDigitalSignature: boolean;
-    /**
-     * Use for key encipherment?
-     */
     readonly useForKeyEncipherment: boolean;
 }
 /**
  * ScepProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM SCEP Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+ * const scmScepProf = scm.getScepProfile({
+ *     id: "06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1",
+ * });
+ * export const scmScepProfileDetails = {
+ *     profileId: scmScepProf.then(scmScepProf => scmScepProf.id),
+ *     folder: scmScepProf.then(scmScepProf => scmScepProf.folder),
+ *     name: scmScepProf.then(scmScepProf => scmScepProf.name),
+ * };
+ * ```
  */
 export function getScepProfileOutput(args: GetScepProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetScepProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -150,25 +127,13 @@ export function getScepProfileOutput(args: GetScepProfileOutputArgs, opts?: pulu
 export interface GetScepProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * The UUID of the SCEP profile
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the SCEP profile
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

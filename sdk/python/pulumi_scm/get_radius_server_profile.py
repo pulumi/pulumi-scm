@@ -27,10 +27,13 @@ class GetRadiusServerProfileResult:
     """
     A collection of values returned by getRadiusServerProfile.
     """
-    def __init__(__self__, device=None, folder=None, id=None, name=None, protocol=None, retries=None, servers=None, snippet=None, tfid=None, timeout=None):
+    def __init__(__self__, device=None, encrypted_values=None, folder=None, id=None, name=None, protocol=None, retries=None, servers=None, snippet=None, tfid=None, timeout=None):
         if device and not isinstance(device, str):
             raise TypeError("Expected argument 'device' to be a str")
         pulumi.set(__self__, "device", device)
+        if encrypted_values and not isinstance(encrypted_values, dict):
+            raise TypeError("Expected argument 'encrypted_values' to be a dict")
+        pulumi.set(__self__, "encrypted_values", encrypted_values)
         if folder and not isinstance(folder, str):
             raise TypeError("Expected argument 'folder' to be a str")
         pulumi.set(__self__, "folder", folder)
@@ -64,17 +67,17 @@ class GetRadiusServerProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
+    @pulumi.getter(name="encryptedValues")
+    def encrypted_values(self) -> Mapping[str, _builtins.str]:
+        return pulumi.get(self, "encrypted_values")
+
+    @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -88,42 +91,26 @@ class GetRadiusServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        The name of the RADIUS server profile
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def protocol(self) -> 'outputs.GetRadiusServerProfileProtocolResult':
-        """
-        The RADIUS authentication protocol
-        """
         return pulumi.get(self, "protocol")
 
     @_builtins.property
     @pulumi.getter
     def retries(self) -> _builtins.int:
-        """
-        The number of RADIUS server retries
-        """
         return pulumi.get(self, "retries")
 
     @_builtins.property
     @pulumi.getter
     def servers(self) -> Sequence['outputs.GetRadiusServerProfileServerResult']:
-        """
-        Server
-        """
         return pulumi.get(self, "servers")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -134,9 +121,6 @@ class GetRadiusServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def timeout(self) -> _builtins.int:
-        """
-        The RADIUS server authentication timeout (seconds)
-        """
         return pulumi.get(self, "timeout")
 
 
@@ -147,6 +131,7 @@ class AwaitableGetRadiusServerProfileResult(GetRadiusServerProfileResult):
             yield self
         return GetRadiusServerProfileResult(
             device=self.device,
+            encrypted_values=self.encrypted_values,
             folder=self.folder,
             id=self.id,
             name=self.name,
@@ -179,13 +164,7 @@ def get_radius_server_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the RADIUS server profile
-    :param _builtins.str name: The name of the RADIUS server profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -198,6 +177,7 @@ def get_radius_server_profile(device: Optional[_builtins.str] = None,
 
     return AwaitableGetRadiusServerProfileResult(
         device=pulumi.get(__ret__, 'device'),
+        encrypted_values=pulumi.get(__ret__, 'encrypted_values'),
         folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
@@ -228,13 +208,7 @@ def get_radius_server_profile_output(device: Optional[pulumi.Input[Optional[_bui
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the RADIUS server profile
-    :param _builtins.str name: The name of the RADIUS server profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -246,6 +220,7 @@ def get_radius_server_profile_output(device: Optional[pulumi.Input[Optional[_bui
     __ret__ = pulumi.runtime.invoke_output('scm:index/getRadiusServerProfile:getRadiusServerProfile', __args__, opts=opts, typ=GetRadiusServerProfileResult)
     return __ret__.apply(lambda __response__: GetRadiusServerProfileResult(
         device=pulumi.get(__response__, 'device'),
+        encrypted_values=pulumi.get(__response__, 'encrypted_values'),
         folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),

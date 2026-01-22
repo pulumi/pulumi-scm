@@ -6,6 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.LoopbackInterfaceIpv6Address;
 import java.lang.Boolean;
+import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,6 +24,11 @@ public final class LoopbackInterfaceIpv6 {
      * 
      */
     private @Nullable Boolean enabled;
+    /**
+     * @return Interface ID
+     * 
+     */
+    private @Nullable String interfaceId;
 
     private LoopbackInterfaceIpv6() {}
     /**
@@ -39,6 +45,13 @@ public final class LoopbackInterfaceIpv6 {
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
+    /**
+     * @return Interface ID
+     * 
+     */
+    public Optional<String> interfaceId() {
+        return Optional.ofNullable(this.interfaceId);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -51,11 +64,13 @@ public final class LoopbackInterfaceIpv6 {
     public static final class Builder {
         private @Nullable List<LoopbackInterfaceIpv6Address> addresses;
         private @Nullable Boolean enabled;
+        private @Nullable String interfaceId;
         public Builder() {}
         public Builder(LoopbackInterfaceIpv6 defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.addresses = defaults.addresses;
     	      this.enabled = defaults.enabled;
+    	      this.interfaceId = defaults.interfaceId;
         }
 
         @CustomType.Setter
@@ -73,10 +88,17 @@ public final class LoopbackInterfaceIpv6 {
             this.enabled = enabled;
             return this;
         }
+        @CustomType.Setter
+        public Builder interfaceId(@Nullable String interfaceId) {
+
+            this.interfaceId = interfaceId;
+            return this;
+        }
         public LoopbackInterfaceIpv6 build() {
             final var _resultValue = new LoopbackInterfaceIpv6();
             _resultValue.addresses = addresses;
             _resultValue.enabled = enabled;
+            _resultValue.interfaceId = interfaceId;
             return _resultValue;
         }
     }

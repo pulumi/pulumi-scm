@@ -118,41 +118,26 @@ class GetAuthenticationRuleResult:
     @_builtins.property
     @pulumi.getter(name="authenticationEnforcement")
     def authentication_enforcement(self) -> _builtins.str:
-        """
-        The authentication profile name
-        """
         return pulumi.get(self, "authentication_enforcement")
 
     @_builtins.property
     @pulumi.getter
     def categories(self) -> Sequence[_builtins.str]:
-        """
-        The destination URL categories
-        """
         return pulumi.get(self, "categories")
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
-        """
-        The description of the authentication rule
-        """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter(name="destinationHips")
     def destination_hips(self) -> Sequence[_builtins.str]:
-        """
-        The destination Host Integrity Profile (HIP)
-        """
         return pulumi.get(self, "destination_hips")
 
     @_builtins.property
     @pulumi.getter
     def destinations(self) -> Sequence[_builtins.str]:
-        """
-        The destination addresses
-        """
         return pulumi.get(self, "destinations")
 
     @_builtins.property
@@ -160,49 +145,32 @@ class GetAuthenticationRuleResult:
     def device(self) -> _builtins.str:
         """
         Device
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
-        """
-        Is the authentication rule disabled?
-        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        Folder
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
-        """
-        The source security zones
-        """
         return pulumi.get(self, "froms")
 
     @_builtins.property
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> _builtins.str:
-        """
-        Group tag
-        """
         return pulumi.get(self, "group_tag")
 
     @_builtins.property
     @pulumi.getter(name="hipProfiles")
     def hip_profiles(self) -> Sequence[_builtins.str]:
-        """
-        The source Host Integrity Profile (HIP)
-        """
         return pulumi.get(self, "hip_profiles")
 
     @_builtins.property
@@ -216,114 +184,71 @@ class GetAuthenticationRuleResult:
     @_builtins.property
     @pulumi.getter(name="logAuthenticationTimeout")
     def log_authentication_timeout(self) -> _builtins.bool:
-        """
-        Log authentication timeouts?
-        """
         return pulumi.get(self, "log_authentication_timeout")
 
     @_builtins.property
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> _builtins.str:
-        """
-        The log forwarding profile name
-        """
         return pulumi.get(self, "log_setting")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        The name of the authentication rule
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> _builtins.bool:
-        """
-        Are the destination addresses negated?
-        """
         return pulumi.get(self, "negate_destination")
 
     @_builtins.property
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> _builtins.bool:
-        """
-        Are the source addresses negated?
-        """
         return pulumi.get(self, "negate_source")
 
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
-        """
-        The relative position of the rule
-        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter(name="relativePosition")
     def relative_position(self) -> _builtins.str:
-        """
-        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-        """
         return pulumi.get(self, "relative_position")
 
     @_builtins.property
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
-        """
-        The destination ports
-        """
         return pulumi.get(self, "services")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        Snippet
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> Sequence[_builtins.str]:
-        """
-        The source Host Integrity Profile (HIP)
-        """
         return pulumi.get(self, "source_hips")
 
     @_builtins.property
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
-        """
-        The source users
-        """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
-        """
-        The source addresses
-        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
-        """
-        The authentication rule tags
-        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> _builtins.str:
-        """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
-        """
         return pulumi.get(self, "target_rule")
 
     @_builtins.property
@@ -334,17 +259,11 @@ class GetAuthenticationRuleResult:
     @_builtins.property
     @pulumi.getter
     def timeout(self) -> _builtins.int:
-        """
-        The authentication session timeout (seconds)
-        """
         return pulumi.get(self, "timeout")
 
     @_builtins.property
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
-        """
-        The destination security zones
-        """
         return pulumi.get(self, "tos")
 
 
@@ -407,13 +326,7 @@ def get_authentication_rule(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: Device
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: Folder
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the authentication rule
-    :param _builtins.str name: The name of the authentication rule
-    :param _builtins.str snippet: Snippet
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -476,13 +389,7 @@ def get_authentication_rule_output(device: Optional[pulumi.Input[Optional[_built
 
 
     :param _builtins.str device: Device
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: Folder
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the authentication rule
-    :param _builtins.str name: The name of the authentication rule
-    :param _builtins.str snippet: Snippet
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

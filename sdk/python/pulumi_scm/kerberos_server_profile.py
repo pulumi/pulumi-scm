@@ -30,11 +30,12 @@ class KerberosServerProfileArgs:
         The set of arguments for constructing a KerberosServerProfile resource.
         :param pulumi.Input[Sequence[pulumi.Input['KerberosServerProfileServerArgs']]] servers: The Kerberos server configuration
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the Kerberos server profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         pulumi.set(__self__, "servers", servers)
@@ -64,7 +65,6 @@ class KerberosServerProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -77,6 +77,7 @@ class KerberosServerProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -102,6 +103,7 @@ class KerberosServerProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -123,12 +125,13 @@ class _KerberosServerProfileState:
         """
         Input properties used for looking up and filtering KerberosServerProfile resources.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the Kerberos server profile
         :param pulumi.Input[Sequence[pulumi.Input['KerberosServerProfileServerArgs']]] servers: The Kerberos server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if device is not None:
@@ -149,7 +152,6 @@ class _KerberosServerProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -162,6 +164,7 @@ class _KerberosServerProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -199,6 +202,7 @@ class _KerberosServerProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -232,6 +236,49 @@ class KerberosServerProfile(pulumi.CustomResource):
         """
         KerberosServerProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_kerberos_server_profile1 = scm.KerberosServerProfile("scm_kerberos_server_profile_1",
+            folder="All",
+            name="kerberos-server-prof-1",
+            servers=[{
+                "name": "server_a",
+                "host": "$test_ip",
+            }])
+        scm_kerberos_server_profile2 = scm.KerberosServerProfile("scm_kerberos_server_profile_2",
+            folder="All",
+            name="kerberos-server-prof-2",
+            servers=[{
+                "name": "server_a",
+                "host": "host_a",
+                "port": 120,
+            }])
+        scm_kerberos_server_profile3 = scm.KerberosServerProfile("scm_kerberos_server_profile_3",
+            folder="All",
+            name="kerberos-server-prof-3",
+            servers=[
+                {
+                    "name": "server_a",
+                    "host": "host_a",
+                    "port": 1,
+                },
+                {
+                    "name": "server_b",
+                    "host": "host_b",
+                    "port": 65535,
+                },
+                {
+                    "name": "server_c",
+                    "host": "192.100.50.135",
+                    "port": 45,
+                },
+            ])
+        ```
+
         ## Import
 
         The following command can be used to import a resource not managed by Terraform:
@@ -261,12 +308,13 @@ class KerberosServerProfile(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the Kerberos server profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]] servers: The Kerberos server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
@@ -277,6 +325,49 @@ class KerberosServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         KerberosServerProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_kerberos_server_profile1 = scm.KerberosServerProfile("scm_kerberos_server_profile_1",
+            folder="All",
+            name="kerberos-server-prof-1",
+            servers=[{
+                "name": "server_a",
+                "host": "$test_ip",
+            }])
+        scm_kerberos_server_profile2 = scm.KerberosServerProfile("scm_kerberos_server_profile_2",
+            folder="All",
+            name="kerberos-server-prof-2",
+            servers=[{
+                "name": "server_a",
+                "host": "host_a",
+                "port": 120,
+            }])
+        scm_kerberos_server_profile3 = scm.KerberosServerProfile("scm_kerberos_server_profile_3",
+            folder="All",
+            name="kerberos-server-prof-3",
+            servers=[
+                {
+                    "name": "server_a",
+                    "host": "host_a",
+                    "port": 1,
+                },
+                {
+                    "name": "server_b",
+                    "host": "host_b",
+                    "port": 65535,
+                },
+                {
+                    "name": "server_c",
+                    "host": "192.100.50.135",
+                    "port": 45,
+                },
+            ])
+        ```
 
         ## Import
 
@@ -365,12 +456,13 @@ class KerberosServerProfile(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the Kerberos server profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]] servers: The Kerberos server configuration
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -390,7 +482,6 @@ class KerberosServerProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -399,6 +490,7 @@ class KerberosServerProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -424,6 +516,7 @@ class KerberosServerProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

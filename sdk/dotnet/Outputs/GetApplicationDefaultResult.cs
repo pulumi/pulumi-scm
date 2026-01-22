@@ -15,21 +15,23 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Ident by icmp6 type
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, and `Port`.
         /// </summary>
         public readonly Outputs.GetApplicationDefaultIdentByIcmp6TypeResult IdentByIcmp6Type;
         /// <summary>
         /// Ident by icmp type
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, and `Port`.
         /// </summary>
         public readonly Outputs.GetApplicationDefaultIdentByIcmpTypeResult IdentByIcmpType;
         /// <summary>
         /// Ident by ip protocol
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, and `Port`.
         /// </summary>
         public readonly string IdentByIpProtocol;
         /// <summary>
         /// Port
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, and `Port`.
         /// </summary>
         public readonly ImmutableArray<string> Ports;

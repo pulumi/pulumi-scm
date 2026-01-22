@@ -13,13 +13,11 @@ import java.util.Objects;
 public final class GetMotdBannerSettingListData {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -34,8 +32,7 @@ public final class GetMotdBannerSettingListData {
      */
     private GetMotdBannerSettingListDataMotdAndBanner motdAndBanner;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -44,15 +41,13 @@ public final class GetMotdBannerSettingListData {
     private GetMotdBannerSettingListData() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -73,8 +68,7 @@ public final class GetMotdBannerSettingListData {
         return this.motdAndBanner;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

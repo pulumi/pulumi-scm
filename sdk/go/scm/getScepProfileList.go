@@ -12,6 +12,36 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a list of SCM SCEP Profile objects.
+//			//
+//			// Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+//			allShared, err := scm.GetScepProfileList(ctx, &scm.GetScepProfileListArgs{
+//				Folder: pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmScepProfileListAllShared", allShared.Datas)
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetScepProfileList(ctx *pulumi.Context, args *GetScepProfileListArgs, opts ...pulumi.InvokeOption) (*GetScepProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetScepProfileListResult

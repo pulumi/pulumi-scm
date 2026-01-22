@@ -8,6 +8,18 @@ import * as utilities from "./utilities";
 
 /**
  * LldpProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const profileData = scm.getLldpProfile({
+ *     id: "e46f6246-fd4a-4211-a18f-948b09f474bd",
+ * });
+ * export const fetchedProfile = profileData;
+ * ```
  */
 export function getLldpProfile(args: GetLldpProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetLldpProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -26,26 +38,14 @@ export function getLldpProfile(args: GetLldpProfileArgs, opts?: pulumi.InvokeOpt
 export interface GetLldpProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * LLDP profile name
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -55,43 +55,34 @@ export interface GetLldpProfileArgs {
 export interface GetLldpProfileResult {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * LLDP mode
-     */
     readonly mode: string;
-    /**
-     * LLDP profile name
-     */
     readonly name: string;
-    /**
-     * Option tlvs
-     */
     readonly optionTlvs: outputs.GetLldpProfileOptionTlvs;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
-    /**
-     * SNMP syslog notification
-     */
     readonly snmpSyslogNotification: boolean;
     readonly tfid: string;
 }
 /**
  * LldpProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const profileData = scm.getLldpProfile({
+ *     id: "e46f6246-fd4a-4211-a18f-948b09f474bd",
+ * });
+ * export const fetchedProfile = profileData;
+ * ```
  */
 export function getLldpProfileOutput(args: GetLldpProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLldpProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -110,25 +101,13 @@ export function getLldpProfileOutput(args: GetLldpProfileOutputArgs, opts?: pulu
 export interface GetLldpProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * LLDP profile name
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

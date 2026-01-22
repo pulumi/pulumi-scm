@@ -6,6 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.TunnelInterfaceIpArgs;
+import com.pulumi.scm.inputs.TunnelInterfaceIpv6Args;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +51,6 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -58,7 +58,6 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -67,6 +66,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -75,6 +75,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -113,6 +114,21 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
     }
 
     /**
+     * Tunnel Interface IPv6 Configuration
+     * 
+     */
+    @Import(name="ipv6")
+    private @Nullable Output<TunnelInterfaceIpv6Args> ipv6;
+
+    /**
+     * @return Tunnel Interface IPv6 Configuration
+     * 
+     */
+    public Optional<Output<TunnelInterfaceIpv6Args>> ipv6() {
+        return Optional.ofNullable(this.ipv6);
+    }
+
+    /**
      * MTU
      * 
      */
@@ -144,6 +160,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -152,6 +169,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -175,6 +193,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         this.folder = $.folder;
         this.interfaceManagementProfile = $.interfaceManagementProfile;
         this.ips = $.ips;
+        this.ipv6 = $.ipv6;
         this.mtu = $.mtu;
         this.name = $.name;
         this.snippet = $.snippet;
@@ -243,7 +262,6 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -255,7 +273,6 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -266,6 +283,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -278,6 +296,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -340,6 +359,27 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
+         * @param ipv6 Tunnel Interface IPv6 Configuration
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6(@Nullable Output<TunnelInterfaceIpv6Args> ipv6) {
+            $.ipv6 = ipv6;
+            return this;
+        }
+
+        /**
+         * @param ipv6 Tunnel Interface IPv6 Configuration
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6(TunnelInterfaceIpv6Args ipv6) {
+            return ipv6(Output.of(ipv6));
+        }
+
+        /**
          * @param mtu MTU
          * 
          * @return builder
@@ -383,6 +423,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -395,6 +436,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

@@ -13,103 +13,46 @@ import java.util.Objects;
 
 @CustomType
 public final class GetIkeCryptoProfileResult {
-    /**
-     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
-     * 
-     */
     private Integer authenticationMultiple;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return Dh group
-     * 
-     */
     private List<String> dhGroups;
-    /**
-     * @return Encryption algorithm
-     * 
-     */
     private List<String> encryptions;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
-    /**
-     * @return Hash
-     * 
-     */
     private List<String> hashes;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Ike crypto profile lifetime
-     * 
-     */
     private GetIkeCryptoProfileLifetime lifetime;
-    /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     * 
-     */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
 
     private GetIkeCryptoProfileResult() {}
-    /**
-     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
-     * 
-     */
     public Integer authenticationMultiple() {
         return this.authenticationMultiple;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return Dh group
-     * 
-     */
     public List<String> dhGroups() {
         return this.dhGroups;
     }
-    /**
-     * @return Encryption algorithm
-     * 
-     */
     public List<String> encryptions() {
         return this.encryptions;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return Hash
-     * 
-     */
     public List<String> hashes() {
         return this.hashes;
     }
@@ -120,25 +63,12 @@ public final class GetIkeCryptoProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Ike crypto profile lifetime
-     * 
-     */
     public GetIkeCryptoProfileLifetime lifetime() {
         return this.lifetime;
     }
-    /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

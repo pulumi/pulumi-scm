@@ -15,65 +15,32 @@ import java.util.Objects;
 public final class GetSyslogServerProfileResult {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
-    /**
-     * @return Format
-     * 
-     */
     private GetSyslogServerProfileFormat format;
     /**
      * @return The UUID of the syslog server profile
      * 
      */
     private String id;
-    /**
-     * @return The name of the syslog server profile
-     * 
-     */
     private String name;
-    /**
-     * @return A list of syslog server configurations. At least one server is required.
-     * 
-     */
     private List<GetSyslogServerProfileServer> servers;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
 
     private GetSyslogServerProfileResult() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return Format
-     * 
-     */
     public GetSyslogServerProfileFormat format() {
         return this.format;
     }
@@ -84,25 +51,12 @@ public final class GetSyslogServerProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return The name of the syslog server profile
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return A list of syslog server configurations. At least one server is required.
-     * 
-     */
     public List<GetSyslogServerProfileServer> servers() {
         return this.servers;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

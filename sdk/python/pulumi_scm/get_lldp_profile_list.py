@@ -165,6 +165,19 @@ def get_lldp_profile_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    all_profiles = scm.get_lldp_profile_list(folder="All")
+    pulumi.export("fetchedProfilesListSummary", {
+        "countOfSettingsFetched": all_profiles.total,
+        "firstProfile": all_profiles.datas[0],
+    })
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +216,19 @@ def get_lldp_profile_list_output(device: Optional[pulumi.Input[Optional[_builtin
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLldpProfileListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    all_profiles = scm.get_lldp_profile_list(folder="All")
+    pulumi.export("fetchedProfilesListSummary", {
+        "countOfSettingsFetched": all_profiles.total,
+        "firstProfile": all_profiles.datas[0],
+    })
+    ```
 
 
     :param _builtins.str device: The device of the item.

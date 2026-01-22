@@ -28,6 +28,7 @@ class SamlServerProfileArgs:
                  max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
+                 slo_url: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  validate_idp_certificate: Optional[pulumi.Input[_builtins.bool]] = None,
                  want_auth_requests_signed: Optional[pulumi.Input[_builtins.bool]] = None):
@@ -38,13 +39,15 @@ class SamlServerProfileArgs:
         :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
         :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] slo_url: Identity provider SLO URL
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
         :param pulumi.Input[_builtins.bool] want_auth_requests_signed: Sign SAML message to the identity provider?
@@ -63,6 +66,8 @@ class SamlServerProfileArgs:
             pulumi.set(__self__, "name", name)
         if slo_bindings is not None:
             pulumi.set(__self__, "slo_bindings", slo_bindings)
+        if slo_url is not None:
+            pulumi.set(__self__, "slo_url", slo_url)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if validate_idp_certificate is not None:
@@ -123,7 +128,6 @@ class SamlServerProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -136,6 +140,7 @@ class SamlServerProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -181,10 +186,23 @@ class SamlServerProfileArgs:
         pulumi.set(self, "slo_bindings", value)
 
     @_builtins.property
+    @pulumi.getter(name="sloUrl")
+    def slo_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Identity provider SLO URL
+        """
+        return pulumi.get(self, "slo_url")
+
+    @slo_url.setter
+    def slo_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "slo_url", value)
+
+    @_builtins.property
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -228,6 +246,7 @@ class _SamlServerProfileState:
                  max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
+                 slo_url: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
                  sso_url: Optional[pulumi.Input[_builtins.str]] = None,
@@ -238,14 +257,16 @@ class _SamlServerProfileState:
         Input properties used for looking up and filtering SamlServerProfile resources.
         :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
         :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] slo_url: Identity provider SLO URL
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
@@ -266,6 +287,8 @@ class _SamlServerProfileState:
             pulumi.set(__self__, "name", name)
         if slo_bindings is not None:
             pulumi.set(__self__, "slo_bindings", slo_bindings)
+        if slo_url is not None:
+            pulumi.set(__self__, "slo_url", slo_url)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if sso_bindings is not None:
@@ -296,7 +319,6 @@ class _SamlServerProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -321,6 +343,7 @@ class _SamlServerProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -366,10 +389,23 @@ class _SamlServerProfileState:
         pulumi.set(self, "slo_bindings", value)
 
     @_builtins.property
+    @pulumi.getter(name="sloUrl")
+    def slo_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Identity provider SLO URL
+        """
+        return pulumi.get(self, "slo_url")
+
+    @slo_url.setter
+    def slo_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "slo_url", value)
+
+    @_builtins.property
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -449,6 +485,7 @@ class SamlServerProfile(pulumi.CustomResource):
                  max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
+                 slo_url: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
                  sso_url: Optional[pulumi.Input[_builtins.str]] = None,
@@ -457,6 +494,43 @@ class SamlServerProfile(pulumi.CustomResource):
                  __props__=None):
         """
         SamlServerProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_saml_server_profile1 = scm.SamlServerProfile("scm_saml_server_profile_1",
+            folder="All",
+            name="scm-saml-server-prof-1",
+            certificate="Global Authentication Cookie Cert",
+            entity_id="123",
+            sso_url="http://example.com",
+            sso_bindings="post")
+        scm_saml_server_profile2 = scm.SamlServerProfile("scm_saml_server_profile_2",
+            folder="All",
+            name="scm-saml-server-prof-2",
+            certificate="Global Authentication Cookie Cert",
+            entity_id="test_id",
+            max_clock_skew=100,
+            slo_bindings="redirect",
+            sso_bindings="redirect",
+            sso_url="http://target.com",
+            validate_idp_certificate=True)
+        scm_saml_server_profile3 = scm.SamlServerProfile("scm_saml_server_profile_3",
+            folder="All",
+            name="scm-saml-server-prof-3",
+            certificate="Global Authentication Cookie Cert",
+            entity_id="test_123",
+            max_clock_skew=900,
+            slo_bindings="post",
+            sso_bindings="redirect",
+            slo_url="http://auth.com",
+            sso_url="http://okta.com",
+            validate_idp_certificate=False,
+            want_auth_requests_signed=False)
+        ```
 
         ## Import
 
@@ -488,14 +562,16 @@ class SamlServerProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
         :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] slo_url: Identity provider SLO URL
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
@@ -510,6 +586,43 @@ class SamlServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         SamlServerProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_saml_server_profile1 = scm.SamlServerProfile("scm_saml_server_profile_1",
+            folder="All",
+            name="scm-saml-server-prof-1",
+            certificate="Global Authentication Cookie Cert",
+            entity_id="123",
+            sso_url="http://example.com",
+            sso_bindings="post")
+        scm_saml_server_profile2 = scm.SamlServerProfile("scm_saml_server_profile_2",
+            folder="All",
+            name="scm-saml-server-prof-2",
+            certificate="Global Authentication Cookie Cert",
+            entity_id="test_id",
+            max_clock_skew=100,
+            slo_bindings="redirect",
+            sso_bindings="redirect",
+            sso_url="http://target.com",
+            validate_idp_certificate=True)
+        scm_saml_server_profile3 = scm.SamlServerProfile("scm_saml_server_profile_3",
+            folder="All",
+            name="scm-saml-server-prof-3",
+            certificate="Global Authentication Cookie Cert",
+            entity_id="test_123",
+            max_clock_skew=900,
+            slo_bindings="post",
+            sso_bindings="redirect",
+            slo_url="http://auth.com",
+            sso_url="http://okta.com",
+            validate_idp_certificate=False,
+            want_auth_requests_signed=False)
+        ```
 
         ## Import
 
@@ -559,6 +672,7 @@ class SamlServerProfile(pulumi.CustomResource):
                  max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
+                 slo_url: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
                  sso_url: Optional[pulumi.Input[_builtins.str]] = None,
@@ -584,6 +698,7 @@ class SamlServerProfile(pulumi.CustomResource):
             __props__.__dict__["max_clock_skew"] = max_clock_skew
             __props__.__dict__["name"] = name
             __props__.__dict__["slo_bindings"] = slo_bindings
+            __props__.__dict__["slo_url"] = slo_url
             __props__.__dict__["snippet"] = snippet
             if sso_bindings is None and not opts.urn:
                 raise TypeError("Missing required property 'sso_bindings'")
@@ -611,6 +726,7 @@ class SamlServerProfile(pulumi.CustomResource):
             max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
+            slo_url: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
             sso_url: Optional[pulumi.Input[_builtins.str]] = None,
@@ -626,14 +742,16 @@ class SamlServerProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
         :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
         :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] slo_url: Identity provider SLO URL
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
@@ -651,6 +769,7 @@ class SamlServerProfile(pulumi.CustomResource):
         __props__.__dict__["max_clock_skew"] = max_clock_skew
         __props__.__dict__["name"] = name
         __props__.__dict__["slo_bindings"] = slo_bindings
+        __props__.__dict__["slo_url"] = slo_url
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["sso_bindings"] = sso_bindings
         __props__.__dict__["sso_url"] = sso_url
@@ -672,7 +791,6 @@ class SamlServerProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -689,6 +807,7 @@ class SamlServerProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -718,10 +837,19 @@ class SamlServerProfile(pulumi.CustomResource):
         return pulumi.get(self, "slo_bindings")
 
     @_builtins.property
+    @pulumi.getter(name="sloUrl")
+    def slo_url(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Identity provider SLO URL
+        """
+        return pulumi.get(self, "slo_url")
+
+    @_builtins.property
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

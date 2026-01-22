@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Self
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Self` and `SelfForce`.
         /// </summary>
         [Input("self")]
         public Input<Inputs.BgpAddressFamilyProfileIpv4UnicastNextHopSelfGetArgs>? Self { get; set; }
 
         /// <summary>
         /// Self force
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Self` and `SelfForce`.
         /// </summary>
         [Input("selfForce")]

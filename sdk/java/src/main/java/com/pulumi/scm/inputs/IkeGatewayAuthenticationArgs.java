@@ -18,7 +18,6 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
 
     /**
      * Certificate
-     * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */
     @Import(name="certificate")
@@ -26,7 +25,6 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
 
     /**
      * @return Certificate
-     * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */
     public Optional<Output<IkeGatewayAuthenticationCertificateArgs>> certificate() {
@@ -35,6 +33,7 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
 
     /**
      * Pre shared key
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */
@@ -43,6 +42,7 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
 
     /**
      * @return Pre shared key
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */
@@ -77,7 +77,6 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
 
         /**
          * @param certificate Certificate
-         * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
          * 
          * @return builder
          * 
@@ -89,7 +88,6 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
 
         /**
          * @param certificate Certificate
-         * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
          * 
          * @return builder
          * 
@@ -100,6 +98,7 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
 
         /**
          * @param preSharedKey Pre shared key
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
          * 
          * @return builder
@@ -112,6 +111,7 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
 
         /**
          * @param preSharedKey Pre shared key
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
          * 
          * @return builder

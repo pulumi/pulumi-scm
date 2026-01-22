@@ -53,50 +53,31 @@ func LookupAuthenticationProfile(ctx *pulumi.Context, args *LookupAuthentication
 // A collection of arguments for invoking getAuthenticationProfile.
 type LookupAuthenticationProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the authentication profile
-	Id string `pulumi:"id"`
-	// The name of the authentication profile
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getAuthenticationProfile.
 type LookupAuthenticationProfileResult struct {
-	// The allowList of the authentication profile
 	AllowLists []string `pulumi:"allowLists"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the authentication profile
-	Id string `pulumi:"id"`
-	// Lockout object of the authentication profile
-	Lockout GetAuthenticationProfileLockout `pulumi:"lockout"`
-	// method object of authentication profile
-	Method GetAuthenticationProfileMethod `pulumi:"method"`
-	// Multi factor auth
-	MultiFactorAuth GetAuthenticationProfileMultiFactorAuth `pulumi:"multiFactorAuth"`
-	// The name of the authentication profile
-	Name string `pulumi:"name"`
-	// Single sign on
-	SingleSignOn GetAuthenticationProfileSingleSignOn `pulumi:"singleSignOn"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// User domain
-	UserDomain string `pulumi:"userDomain"`
-	// Username modifier
-	UsernameModifier string `pulumi:"usernameModifier"`
+	Id               string                                  `pulumi:"id"`
+	Lockout          GetAuthenticationProfileLockout         `pulumi:"lockout"`
+	Method           GetAuthenticationProfileMethod          `pulumi:"method"`
+	MultiFactorAuth  GetAuthenticationProfileMultiFactorAuth `pulumi:"multiFactorAuth"`
+	Name             string                                  `pulumi:"name"`
+	SingleSignOn     GetAuthenticationProfileSingleSignOn    `pulumi:"singleSignOn"`
+	Snippet          string                                  `pulumi:"snippet"`
+	Tfid             string                                  `pulumi:"tfid"`
+	UserDomain       string                                  `pulumi:"userDomain"`
+	UsernameModifier string                                  `pulumi:"usernameModifier"`
 }
 
 func LookupAuthenticationProfileOutput(ctx *pulumi.Context, args LookupAuthenticationProfileOutputArgs, opts ...pulumi.InvokeOption) LookupAuthenticationProfileResultOutput {
@@ -111,17 +92,11 @@ func LookupAuthenticationProfileOutput(ctx *pulumi.Context, args LookupAuthentic
 // A collection of arguments for invoking getAuthenticationProfile.
 type LookupAuthenticationProfileOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the authentication profile
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the authentication profile
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -144,19 +119,15 @@ func (o LookupAuthenticationProfileResultOutput) ToLookupAuthenticationProfileRe
 	return o
 }
 
-// The allowList of the authentication profile
 func (o LookupAuthenticationProfileResultOutput) AllowLists() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) []string { return v.AllowLists }).(pulumi.StringArrayOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAuthenticationProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAuthenticationProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -166,35 +137,28 @@ func (o LookupAuthenticationProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Lockout object of the authentication profile
 func (o LookupAuthenticationProfileResultOutput) Lockout() GetAuthenticationProfileLockoutOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileLockout { return v.Lockout }).(GetAuthenticationProfileLockoutOutput)
 }
 
-// method object of authentication profile
 func (o LookupAuthenticationProfileResultOutput) Method() GetAuthenticationProfileMethodOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileMethod { return v.Method }).(GetAuthenticationProfileMethodOutput)
 }
 
-// Multi factor auth
 func (o LookupAuthenticationProfileResultOutput) MultiFactorAuth() GetAuthenticationProfileMultiFactorAuthOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileMultiFactorAuth {
 		return v.MultiFactorAuth
 	}).(GetAuthenticationProfileMultiFactorAuthOutput)
 }
 
-// The name of the authentication profile
 func (o LookupAuthenticationProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Single sign on
 func (o LookupAuthenticationProfileResultOutput) SingleSignOn() GetAuthenticationProfileSingleSignOnOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileSingleSignOn { return v.SingleSignOn }).(GetAuthenticationProfileSingleSignOnOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAuthenticationProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -203,12 +167,10 @@ func (o LookupAuthenticationProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// User domain
 func (o LookupAuthenticationProfileResultOutput) UserDomain() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.UserDomain }).(pulumi.StringOutput)
 }
 
-// Username modifier
 func (o LookupAuthenticationProfileResultOutput) UsernameModifier() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.UsernameModifier }).(pulumi.StringOutput)
 }

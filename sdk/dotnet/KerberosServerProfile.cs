@@ -12,6 +12,75 @@ namespace Pulumi.Scm
     /// <summary>
     /// KerberosServerProfile resource
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmKerberosServerProfile1 = new Scm.KerberosServerProfile("scm_kerberos_server_profile_1", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "kerberos-server-prof-1",
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.KerberosServerProfileServerArgs
+    ///             {
+    ///                 Name = "server_a",
+    ///                 Host = "$test_ip",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmKerberosServerProfile2 = new Scm.KerberosServerProfile("scm_kerberos_server_profile_2", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "kerberos-server-prof-2",
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.KerberosServerProfileServerArgs
+    ///             {
+    ///                 Name = "server_a",
+    ///                 Host = "host_a",
+    ///                 Port = 120,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmKerberosServerProfile3 = new Scm.KerberosServerProfile("scm_kerberos_server_profile_3", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "kerberos-server-prof-3",
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.KerberosServerProfileServerArgs
+    ///             {
+    ///                 Name = "server_a",
+    ///                 Host = "host_a",
+    ///                 Port = 1,
+    ///             },
+    ///             new Scm.Inputs.KerberosServerProfileServerArgs
+    ///             {
+    ///                 Name = "server_b",
+    ///                 Host = "host_b",
+    ///                 Port = 65535,
+    ///             },
+    ///             new Scm.Inputs.KerberosServerProfileServerArgs
+    ///             {
+    ///                 Name = "server_c",
+    ///                 Host = "192.100.50.135",
+    ///                 Port = 45,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
@@ -43,13 +112,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -69,6 +138,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -125,13 +195,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -157,6 +227,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -172,13 +243,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -204,6 +275,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

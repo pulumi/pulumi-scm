@@ -13,184 +13,67 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSdwanRuleResult {
-    /**
-     * @return Action
-     * 
-     */
     private GetSdwanRuleAction action;
-    /**
-     * @return List of applications
-     * 
-     */
     private List<String> applications;
-    /**
-     * @return Rule description
-     * 
-     */
     private String description;
-    /**
-     * @return List of destination addresses
-     * 
-     */
     private List<String> destinations;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return Disable rule?
-     * 
-     */
     private Boolean disabled;
-    /**
-     * @return Error correction profile
-     * 
-     */
     private String errorCorrectionProfile;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
-    /**
-     * @return List of source zones
-     * 
-     */
     private List<String> froms;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Rule name
-     * 
-     */
     private String name;
-    /**
-     * @return Negate destination address(es)?
-     * 
-     */
     private Boolean negateDestination;
-    /**
-     * @return Negate source address(es)?
-     * 
-     */
     private Boolean negateSource;
-    /**
-     * @return Path quality profile
-     * 
-     */
     private String pathQualityProfile;
-    /**
-     * @return Rule postion relative to device rules
-     * 
-     */
     private String position;
-    /**
-     * @return SaaS quality profile
-     * 
-     */
     private String saasQualityProfile;
-    /**
-     * @return List of services
-     * 
-     */
     private List<String> services;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
-    /**
-     * @return List of source users
-     * 
-     */
     private List<String> sourceUsers;
-    /**
-     * @return List of source addresses
-     * 
-     */
     private List<String> sources;
-    /**
-     * @return List of tags
-     * 
-     */
     private List<String> tags;
     private String tfid;
-    /**
-     * @return List of destination zones
-     * 
-     */
     private List<String> tos;
 
     private GetSdwanRuleResult() {}
-    /**
-     * @return Action
-     * 
-     */
     public GetSdwanRuleAction action() {
         return this.action;
     }
-    /**
-     * @return List of applications
-     * 
-     */
     public List<String> applications() {
         return this.applications;
     }
-    /**
-     * @return Rule description
-     * 
-     */
     public String description() {
         return this.description;
     }
-    /**
-     * @return List of destination addresses
-     * 
-     */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return Disable rule?
-     * 
-     */
     public Boolean disabled() {
         return this.disabled;
     }
-    /**
-     * @return Error correction profile
-     * 
-     */
     public String errorCorrectionProfile() {
         return this.errorCorrectionProfile;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return List of source zones
-     * 
-     */
     public List<String> froms() {
         return this.froms;
     }
@@ -201,91 +84,42 @@ public final class GetSdwanRuleResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Rule name
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return Negate destination address(es)?
-     * 
-     */
     public Boolean negateDestination() {
         return this.negateDestination;
     }
-    /**
-     * @return Negate source address(es)?
-     * 
-     */
     public Boolean negateSource() {
         return this.negateSource;
     }
-    /**
-     * @return Path quality profile
-     * 
-     */
     public String pathQualityProfile() {
         return this.pathQualityProfile;
     }
-    /**
-     * @return Rule postion relative to device rules
-     * 
-     */
     public String position() {
         return this.position;
     }
-    /**
-     * @return SaaS quality profile
-     * 
-     */
     public String saasQualityProfile() {
         return this.saasQualityProfile;
     }
-    /**
-     * @return List of services
-     * 
-     */
     public List<String> services() {
         return this.services;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return List of source users
-     * 
-     */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
-    /**
-     * @return List of source addresses
-     * 
-     */
     public List<String> sources() {
         return this.sources;
     }
-    /**
-     * @return List of tags
-     * 
-     */
     public List<String> tags() {
         return this.tags;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return List of destination zones
-     * 
-     */
     public List<String> tos() {
         return this.tos;
     }

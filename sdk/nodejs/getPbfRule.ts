@@ -43,26 +43,14 @@ export function getPbfRule(args: GetPbfRuleArgs, opts?: pulumi.InvokeOptions): P
 export interface GetPbfRuleArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * PBF rule name
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -70,72 +58,27 @@ export interface GetPbfRuleArgs {
  * A collection of values returned by getPbfRule.
  */
 export interface GetPbfRuleResult {
-    /**
-     * Action
-     */
     readonly action: outputs.GetPbfRuleAction;
-    /**
-     * Applications
-     */
     readonly applications: string[];
-    /**
-     * Description
-     */
     readonly description: string;
-    /**
-     * Destination addresses
-     */
     readonly destinations: string[];
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * Enforce symmetric return
-     */
     readonly enforceSymmetricReturn: outputs.GetPbfRuleEnforceSymmetricReturn;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
-    /**
-     * From
-     */
     readonly from: outputs.GetPbfRuleFrom;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * PBF rule name
-     */
     readonly name: string;
-    /**
-     * Schedule
-     */
     readonly schedule: string;
-    /**
-     * Services
-     */
     readonly services: string[];
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
-    /**
-     * Source users
-     */
     readonly sourceUsers: string[];
-    /**
-     * Source addresses
-     */
     readonly sources: string[];
-    /**
-     * Tags
-     */
     readonly tags: string[];
     readonly tfid: string;
 }
@@ -176,25 +119,13 @@ export function getPbfRuleOutput(args: GetPbfRuleOutputArgs, opts?: pulumi.Invok
 export interface GetPbfRuleOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * PBF rule name
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

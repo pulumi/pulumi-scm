@@ -10,19 +10,23 @@ import com.pulumi.scm.outputs.GetRadiusServerProfileListDataServer;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetRadiusServerProfileListData {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    private Map<String,String> encryptedValues;
+    /**
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -32,7 +36,7 @@ public final class GetRadiusServerProfileListData {
      */
     private String id;
     /**
-     * @return The name of the RADIUS server profile
+     * @return The name of the item.
      * 
      */
     private String name;
@@ -52,8 +56,7 @@ public final class GetRadiusServerProfileListData {
      */
     private List<GetRadiusServerProfileListDataServer> servers;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -67,15 +70,20 @@ public final class GetRadiusServerProfileListData {
     private GetRadiusServerProfileListData() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -89,7 +97,7 @@ public final class GetRadiusServerProfileListData {
         return this.id;
     }
     /**
-     * @return The name of the RADIUS server profile
+     * @return The name of the item.
      * 
      */
     public String name() {
@@ -117,8 +125,7 @@ public final class GetRadiusServerProfileListData {
         return this.servers;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {
@@ -145,6 +152,7 @@ public final class GetRadiusServerProfileListData {
     @CustomType.Builder
     public static final class Builder {
         private String device;
+        private Map<String,String> encryptedValues;
         private String folder;
         private String id;
         private String name;
@@ -158,6 +166,7 @@ public final class GetRadiusServerProfileListData {
         public Builder(GetRadiusServerProfileListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.device = defaults.device;
+    	      this.encryptedValues = defaults.encryptedValues;
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
@@ -175,6 +184,14 @@ public final class GetRadiusServerProfileListData {
               throw new MissingRequiredPropertyException("GetRadiusServerProfileListData", "device");
             }
             this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileListData", "encryptedValues");
+            }
+            this.encryptedValues = encryptedValues;
             return this;
         }
         @CustomType.Setter
@@ -255,6 +272,7 @@ public final class GetRadiusServerProfileListData {
         public GetRadiusServerProfileListData build() {
             final var _resultValue = new GetRadiusServerProfileListData();
             _resultValue.device = device;
+            _resultValue.encryptedValues = encryptedValues;
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;

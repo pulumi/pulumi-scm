@@ -104,15 +104,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Device
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// Folder
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -122,16 +117,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the authentication rule
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// Snippet
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -145,15 +133,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Device
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// Folder
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -163,16 +146,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the authentication rule
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// Snippet
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -186,121 +162,40 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetAuthenticationRuleResult
     {
-        /// <summary>
-        /// The authentication profile name
-        /// </summary>
         public readonly string AuthenticationEnforcement;
-        /// <summary>
-        /// The destination URL categories
-        /// </summary>
         public readonly ImmutableArray<string> Categories;
-        /// <summary>
-        /// The description of the authentication rule
-        /// </summary>
         public readonly string Description;
-        /// <summary>
-        /// The destination Host Integrity Profile (HIP)
-        /// </summary>
         public readonly ImmutableArray<string> DestinationHips;
-        /// <summary>
-        /// The destination addresses
-        /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
         /// Device
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Is the authentication rule disabled?
-        /// </summary>
         public readonly bool Disabled;
-        /// <summary>
-        /// Folder
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// The source security zones
-        /// </summary>
         public readonly ImmutableArray<string> Froms;
-        /// <summary>
-        /// Group tag
-        /// </summary>
         public readonly string GroupTag;
-        /// <summary>
-        /// The source Host Integrity Profile (HIP)
-        /// </summary>
         public readonly ImmutableArray<string> HipProfiles;
         /// <summary>
         /// The UUID of the authentication rule
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Log authentication timeouts?
-        /// </summary>
         public readonly bool LogAuthenticationTimeout;
-        /// <summary>
-        /// The log forwarding profile name
-        /// </summary>
         public readonly string LogSetting;
-        /// <summary>
-        /// The name of the authentication rule
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Are the destination addresses negated?
-        /// </summary>
         public readonly bool NegateDestination;
-        /// <summary>
-        /// Are the source addresses negated?
-        /// </summary>
         public readonly bool NegateSource;
-        /// <summary>
-        /// The relative position of the rule
-        /// </summary>
         public readonly string Position;
-        /// <summary>
-        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-        /// </summary>
         public readonly string RelativePosition;
-        /// <summary>
-        /// The destination ports
-        /// </summary>
         public readonly ImmutableArray<string> Services;
-        /// <summary>
-        /// Snippet
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// The source Host Integrity Profile (HIP)
-        /// </summary>
         public readonly ImmutableArray<string> SourceHips;
-        /// <summary>
-        /// The source users
-        /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
-        /// <summary>
-        /// The source addresses
-        /// </summary>
         public readonly ImmutableArray<string> Sources;
-        /// <summary>
-        /// The authentication rule tags
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
-        /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
-        /// </summary>
         public readonly string TargetRule;
         public readonly string Tfid;
-        /// <summary>
-        /// The authentication session timeout (seconds)
-        /// </summary>
         public readonly int Timeout;
-        /// <summary>
-        /// The destination security zones
-        /// </summary>
         public readonly ImmutableArray<string> Tos;
 
         [OutputConstructor]

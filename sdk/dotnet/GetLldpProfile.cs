@@ -13,18 +13,84 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// LldpProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var profileData = Scm.GetLldpProfile.Invoke(new()
+        ///     {
+        ///         Id = "e46f6246-fd4a-4211-a18f-948b09f474bd",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfile"] = profileData,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLldpProfileResult> InvokeAsync(GetLldpProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLldpProfileResult>("scm:index/getLldpProfile:getLldpProfile", args ?? new GetLldpProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// LldpProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var profileData = Scm.GetLldpProfile.Invoke(new()
+        ///     {
+        ///         Id = "e46f6246-fd4a-4211-a18f-948b09f474bd",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfile"] = profileData,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLldpProfileResult> Invoke(GetLldpProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLldpProfileResult>("scm:index/getLldpProfile:getLldpProfile", args ?? new GetLldpProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// LldpProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var profileData = Scm.GetLldpProfile.Invoke(new()
+        ///     {
+        ///         Id = "e46f6246-fd4a-4211-a18f-948b09f474bd",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfile"] = profileData,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLldpProfileResult> Invoke(GetLldpProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLldpProfileResult>("scm:index/getLldpProfile:getLldpProfile", args ?? new GetLldpProfileInvokeArgs(), options.WithDefaults());
@@ -35,15 +101,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -53,16 +114,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// LLDP profile name
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -76,15 +130,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -94,16 +143,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// LLDP profile name
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -119,38 +161,17 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// LLDP mode
-        /// </summary>
         public readonly string Mode;
-        /// <summary>
-        /// LLDP profile name
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Option tlvs
-        /// </summary>
         public readonly Outputs.GetLldpProfileOptionTlvsResult OptionTlvs;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// SNMP syslog notification
-        /// </summary>
         public readonly bool SnmpSyslogNotification;
         public readonly string Tfid;
 

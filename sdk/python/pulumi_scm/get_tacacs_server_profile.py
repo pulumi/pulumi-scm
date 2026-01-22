@@ -27,10 +27,13 @@ class GetTacacsServerProfileResult:
     """
     A collection of values returned by getTacacsServerProfile.
     """
-    def __init__(__self__, device=None, folder=None, id=None, name=None, protocol=None, servers=None, snippet=None, tfid=None, timeout=None, use_single_connection=None):
+    def __init__(__self__, device=None, encrypted_values=None, folder=None, id=None, name=None, protocol=None, servers=None, snippet=None, tfid=None, timeout=None, use_single_connection=None):
         if device and not isinstance(device, str):
             raise TypeError("Expected argument 'device' to be a str")
         pulumi.set(__self__, "device", device)
+        if encrypted_values and not isinstance(encrypted_values, dict):
+            raise TypeError("Expected argument 'encrypted_values' to be a dict")
+        pulumi.set(__self__, "encrypted_values", encrypted_values)
         if folder and not isinstance(folder, str):
             raise TypeError("Expected argument 'folder' to be a str")
         pulumi.set(__self__, "folder", folder)
@@ -64,17 +67,17 @@ class GetTacacsServerProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
+    @pulumi.getter(name="encryptedValues")
+    def encrypted_values(self) -> Mapping[str, _builtins.str]:
+        return pulumi.get(self, "encrypted_values")
+
+    @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -88,34 +91,21 @@ class GetTacacsServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        The name of the TACACS+ server profile
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def protocol(self) -> _builtins.str:
-        """
-        The TACACS+ authentication protocol
-        """
         return pulumi.get(self, "protocol")
 
     @_builtins.property
     @pulumi.getter
     def servers(self) -> Sequence['outputs.GetTacacsServerProfileServerResult']:
-        """
-        The TACACS+ server configuration
-        """
         return pulumi.get(self, "servers")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -126,17 +116,11 @@ class GetTacacsServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def timeout(self) -> _builtins.int:
-        """
-        The TACACS+ timeout (seconds)
-        """
         return pulumi.get(self, "timeout")
 
     @_builtins.property
     @pulumi.getter(name="useSingleConnection")
     def use_single_connection(self) -> _builtins.bool:
-        """
-        Use a single TACACS+ connection?
-        """
         return pulumi.get(self, "use_single_connection")
 
 
@@ -147,6 +131,7 @@ class AwaitableGetTacacsServerProfileResult(GetTacacsServerProfileResult):
             yield self
         return GetTacacsServerProfileResult(
             device=self.device,
+            encrypted_values=self.encrypted_values,
             folder=self.folder,
             id=self.id,
             name=self.name,
@@ -167,15 +152,26 @@ def get_tacacs_server_profile(device: Optional[_builtins.str] = None,
     """
     TacacsServerProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up the multi-tag address object by its ID.
+    scm_tacacs_server_profile5_ds = scm.get_tacacs_server_profile(id="1967a784-402b-4c20-aa48-aab64d73cc06")
+    pulumi.export("profileDataSourceResults", {
+        "name": scm_tacacs_server_profile5_ds.name,
+        "protocol": scm_tacacs_server_profile5_ds.protocol,
+        "timeout": scm_tacacs_server_profile5_ds.timeout,
+        "folder": scm_tacacs_server_profile5_ds.folder,
+        "useSingleConnection": scm_tacacs_server_profile5_ds.use_single_connection,
+    })
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the TACACS+ server profile
-    :param _builtins.str name: The name of the TACACS+ server profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -188,6 +184,7 @@ def get_tacacs_server_profile(device: Optional[_builtins.str] = None,
 
     return AwaitableGetTacacsServerProfileResult(
         device=pulumi.get(__ret__, 'device'),
+        encrypted_values=pulumi.get(__ret__, 'encrypted_values'),
         folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
@@ -206,15 +203,26 @@ def get_tacacs_server_profile_output(device: Optional[pulumi.Input[Optional[_bui
     """
     TacacsServerProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up the multi-tag address object by its ID.
+    scm_tacacs_server_profile5_ds = scm.get_tacacs_server_profile(id="1967a784-402b-4c20-aa48-aab64d73cc06")
+    pulumi.export("profileDataSourceResults", {
+        "name": scm_tacacs_server_profile5_ds.name,
+        "protocol": scm_tacacs_server_profile5_ds.protocol,
+        "timeout": scm_tacacs_server_profile5_ds.timeout,
+        "folder": scm_tacacs_server_profile5_ds.folder,
+        "useSingleConnection": scm_tacacs_server_profile5_ds.use_single_connection,
+    })
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the TACACS+ server profile
-    :param _builtins.str name: The name of the TACACS+ server profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -226,6 +234,7 @@ def get_tacacs_server_profile_output(device: Optional[pulumi.Input[Optional[_bui
     __ret__ = pulumi.runtime.invoke_output('scm:index/getTacacsServerProfile:getTacacsServerProfile', __args__, opts=opts, typ=GetTacacsServerProfileResult)
     return __ret__.apply(lambda __response__: GetTacacsServerProfileResult(
         device=pulumi.get(__response__, 'device'),
+        encrypted_values=pulumi.get(__response__, 'encrypted_values'),
         folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),

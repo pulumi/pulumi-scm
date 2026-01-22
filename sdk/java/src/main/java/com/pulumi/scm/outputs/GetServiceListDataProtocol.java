@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetServiceListDataProtocol {
     /**
      * @return Tcp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     private GetServiceListDataProtocolTcp tcp;
     /**
      * @return Udp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetServiceListDataProtocol {
     private GetServiceListDataProtocol() {}
     /**
      * @return Tcp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     public GetServiceListDataProtocolTcp tcp() {
@@ -35,6 +34,7 @@ public final class GetServiceListDataProtocol {
     }
     /**
      * @return Udp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */

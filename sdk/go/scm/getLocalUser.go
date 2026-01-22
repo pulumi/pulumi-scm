@@ -25,42 +25,27 @@ func LookupLocalUser(ctx *pulumi.Context, args *LookupLocalUserArgs, opts ...pul
 // A collection of arguments for invoking getLocalUser.
 type LookupLocalUserArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the local user
-	Id string `pulumi:"id"`
-	// The name of the local user
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLocalUser.
 type LookupLocalUserResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// Is the local user disabled?
-	Disabled bool `pulumi:"disabled"`
-	// Map of sensitive values returned from the API.
+	Device          string            `pulumi:"device"`
+	Disabled        bool              `pulumi:"disabled"`
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
+	Folder          string            `pulumi:"folder"`
 	// The UUID of the local user
-	Id string `pulumi:"id"`
-	// The name of the local user
-	Name string `pulumi:"name"`
-	// The password of the local user
+	Id       string `pulumi:"id"`
+	Name     string `pulumi:"name"`
 	Password string `pulumi:"password"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet  string `pulumi:"snippet"`
+	Tfid     string `pulumi:"tfid"`
 }
 
 func LookupLocalUserOutput(ctx *pulumi.Context, args LookupLocalUserOutputArgs, opts ...pulumi.InvokeOption) LookupLocalUserResultOutput {
@@ -75,17 +60,11 @@ func LookupLocalUserOutput(ctx *pulumi.Context, args LookupLocalUserOutputArgs, 
 // A collection of arguments for invoking getLocalUser.
 type LookupLocalUserOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the local user
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the local user
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -109,23 +88,18 @@ func (o LookupLocalUserResultOutput) ToLookupLocalUserResultOutputWithContext(ct
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLocalUserResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Is the local user disabled?
 func (o LookupLocalUserResultOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// Map of sensitive values returned from the API.
 func (o LookupLocalUserResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLocalUserResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -135,18 +109,14 @@ func (o LookupLocalUserResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the local user
 func (o LookupLocalUserResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The password of the local user
 func (o LookupLocalUserResultOutput) Password() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Password }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLocalUserResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

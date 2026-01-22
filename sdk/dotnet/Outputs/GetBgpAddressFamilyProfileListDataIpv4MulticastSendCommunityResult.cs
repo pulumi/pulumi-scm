@@ -15,26 +15,29 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// All
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `All`, `Both`, `Extended`, `Large`, and `Standard`.
         /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastSendCommunityAllResult All;
         /// <summary>
         /// Both
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `All`, `Both`, `Extended`, `Large`, and `Standard`.
         /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastSendCommunityBothResult Both;
         /// <summary>
         /// Extended
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `All`, `Both`, `Extended`, `Large`, and `Standard`.
         /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastSendCommunityExtendedResult Extended;
         /// <summary>
         /// Large
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `All`, `Both`, `Extended`, `Large`, and `Standard`.
         /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastSendCommunityLargeResult Large;
         /// <summary>
         /// Standard
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `All`, `Both`, `Extended`, `Large`, and `Standard`.
         /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4MulticastSendCommunityStandardResult Standard;

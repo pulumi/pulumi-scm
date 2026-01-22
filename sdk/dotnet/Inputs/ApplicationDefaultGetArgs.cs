@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Ident by icmp6 type
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, and `Port`.
         /// </summary>
         [Input("identByIcmp6Type")]
         public Input<Inputs.ApplicationDefaultIdentByIcmp6TypeGetArgs>? IdentByIcmp6Type { get; set; }
 
         /// <summary>
         /// Ident by icmp type
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, and `Port`.
         /// </summary>
         [Input("identByIcmpType")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ident by ip protocol
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, and `Port`.
         /// </summary>
         [Input("identByIpProtocol")]
@@ -38,6 +39,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Port
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, and `Port`.
         /// </summary>
         public InputList<string> Ports

@@ -42,9 +42,9 @@ type HttpServerProfile struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Format
@@ -54,6 +54,7 @@ type HttpServerProfile struct {
 	// Server
 	Servers HttpServerProfileServerArrayOutput `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Register tags on match
@@ -92,9 +93,9 @@ func GetHttpServerProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering HttpServerProfile resources.
 type httpServerProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Format
@@ -104,6 +105,7 @@ type httpServerProfileState struct {
 	// Server
 	Servers []HttpServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Register tags on match
@@ -113,9 +115,9 @@ type httpServerProfileState struct {
 
 type HttpServerProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Format
@@ -125,6 +127,7 @@ type HttpServerProfileState struct {
 	// Server
 	Servers HttpServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Register tags on match
@@ -138,9 +141,9 @@ func (HttpServerProfileState) ElementType() reflect.Type {
 
 type httpServerProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Format
@@ -150,6 +153,7 @@ type httpServerProfileArgs struct {
 	// Server
 	Servers []HttpServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Register tags on match
@@ -159,9 +163,9 @@ type httpServerProfileArgs struct {
 // The set of arguments for constructing a HttpServerProfile resource.
 type HttpServerProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Format
@@ -171,6 +175,7 @@ type HttpServerProfileArgs struct {
 	// Server
 	Servers HttpServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Register tags on match
@@ -265,12 +270,12 @@ func (o HttpServerProfileOutput) ToHttpServerProfileOutputWithContext(ctx contex
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HttpServerProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HttpServerProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HttpServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HttpServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -292,6 +297,7 @@ func (o HttpServerProfileOutput) Servers() HttpServerProfileServerArrayOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o HttpServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HttpServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

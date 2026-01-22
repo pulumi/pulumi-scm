@@ -12,6 +12,36 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a list of SCM Log Forwarding Profile objects.
+//			//
+//			// Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+//			allShared, err := scm.GetLogForwardingProfileList(ctx, &scm.GetLogForwardingProfileListArgs{
+//				Folder: pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmLogForwardingProfileListAllShared", allShared.Datas)
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetLogForwardingProfileList(ctx *pulumi.Context, args *GetLogForwardingProfileListArgs, opts ...pulumi.InvokeOption) (*GetLogForwardingProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetLogForwardingProfileListResult

@@ -21,20 +21,32 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// Filter match criteria
         /// </summary>
-        [Input("filter")]
-        public Input<string>? Filter { get; set; }
+        [Input("filter", required: true)]
+        public Input<string> Filter { get; set; } = null!;
 
         /// <summary>
         /// Log type
         /// </summary>
-        [Input("logType")]
-        public Input<string>? LogType { get; set; }
+        [Input("logType", required: true)]
+        public Input<string> LogType { get; set; } = null!;
 
         /// <summary>
         /// Name of the match profile
         /// </summary>
-        [Input("name")]
-        public Input<string>? Name { get; set; }
+        [Input("name", required: true)]
+        public Input<string> Name { get; set; } = null!;
+
+        [Input("sendEmails")]
+        private InputList<string>? _sendEmails;
+
+        /// <summary>
+        /// A list of email server profiles
+        /// </summary>
+        public InputList<string> SendEmails
+        {
+            get => _sendEmails ?? (_sendEmails = new InputList<string>());
+            set => _sendEmails = value;
+        }
 
         [Input("sendHttps")]
         private InputList<string>? _sendHttps;
@@ -46,6 +58,18 @@ namespace Pulumi.Scm.Inputs
         {
             get => _sendHttps ?? (_sendHttps = new InputList<string>());
             set => _sendHttps = value;
+        }
+
+        [Input("sendSnmptraps")]
+        private InputList<string>? _sendSnmptraps;
+
+        /// <summary>
+        /// A list of SNMP server profiles
+        /// </summary>
+        public InputList<string> SendSnmptraps
+        {
+            get => _sendSnmptraps ?? (_sendSnmptraps = new InputList<string>());
+            set => _sendSnmptraps = value;
         }
 
         [Input("sendSyslogs")]

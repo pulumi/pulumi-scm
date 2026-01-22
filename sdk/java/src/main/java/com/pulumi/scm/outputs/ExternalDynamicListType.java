@@ -19,42 +19,47 @@ import javax.annotation.Nullable;
 public final class ExternalDynamicListType {
     /**
      * @return Domain settings for Custom Domain type
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypeDomain domain;
     /**
      * @return IMEI Configuration settings
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypeImei imei;
     /**
      * @return IMSI Config for Custom IMSI type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypeImsi imsi;
     /**
      * @return IP settings for Custom IP type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypeIp ip;
     /**
      * @return Predefined IP settings for EDL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypePredefinedIp predefinedIp;
     /**
      * @return Predefined URL settings for EDL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypePredefinedUrl predefinedUrl;
     /**
      * @return URL settings for Custom URL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -63,7 +68,6 @@ public final class ExternalDynamicListType {
     private ExternalDynamicListType() {}
     /**
      * @return Domain settings for Custom Domain type
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public Optional<ExternalDynamicListTypeDomain> domain() {
@@ -71,6 +75,7 @@ public final class ExternalDynamicListType {
     }
     /**
      * @return IMEI Configuration settings
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -79,6 +84,7 @@ public final class ExternalDynamicListType {
     }
     /**
      * @return IMSI Config for Custom IMSI type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -87,6 +93,7 @@ public final class ExternalDynamicListType {
     }
     /**
      * @return IP settings for Custom IP type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -95,6 +102,7 @@ public final class ExternalDynamicListType {
     }
     /**
      * @return Predefined IP settings for EDL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -103,6 +111,7 @@ public final class ExternalDynamicListType {
     }
     /**
      * @return Predefined URL settings for EDL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -111,6 +120,7 @@ public final class ExternalDynamicListType {
     }
     /**
      * @return URL settings for Custom URL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */

@@ -210,7 +210,6 @@ export class EthernetInterface extends pulumi.CustomResource {
 
     /**
      * Aggregate group
-     * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     declare public readonly aggregateGroup: pulumi.Output<string | undefined>;
     /**
@@ -223,6 +222,7 @@ export class EthernetInterface extends pulumi.CustomResource {
     declare public readonly defaultValue: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
@@ -232,16 +232,19 @@ export class EthernetInterface extends pulumi.CustomResource {
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * Layer2
+     *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     declare public readonly layer2: pulumi.Output<outputs.EthernetInterfaceLayer2 | undefined>;
     /**
      * Ethernet Interface Layer 3 configuration
+     *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     declare public readonly layer3: pulumi.Output<outputs.EthernetInterfaceLayer3 | undefined>;
@@ -267,11 +270,13 @@ export class EthernetInterface extends pulumi.CustomResource {
     declare public readonly poe: pulumi.Output<outputs.EthernetInterfacePoe | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * Tap
+     *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     declare public readonly tap: pulumi.Output<outputs.EthernetInterfaceTap | undefined>;
@@ -338,7 +343,6 @@ export class EthernetInterface extends pulumi.CustomResource {
 export interface EthernetInterfaceState {
     /**
      * Aggregate group
-     * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     aggregateGroup?: pulumi.Input<string>;
     /**
@@ -351,6 +355,7 @@ export interface EthernetInterfaceState {
     defaultValue?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
@@ -360,16 +365,19 @@ export interface EthernetInterfaceState {
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
      * Layer2
+     *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     layer2?: pulumi.Input<inputs.EthernetInterfaceLayer2>;
     /**
      * Ethernet Interface Layer 3 configuration
+     *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     layer3?: pulumi.Input<inputs.EthernetInterfaceLayer3>;
@@ -395,11 +403,13 @@ export interface EthernetInterfaceState {
     poe?: pulumi.Input<inputs.EthernetInterfacePoe>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**
      * Tap
+     *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     tap?: pulumi.Input<inputs.EthernetInterfaceTap>;
@@ -412,7 +422,6 @@ export interface EthernetInterfaceState {
 export interface EthernetInterfaceArgs {
     /**
      * Aggregate group
-     * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     aggregateGroup?: pulumi.Input<string>;
     /**
@@ -425,21 +434,25 @@ export interface EthernetInterfaceArgs {
     defaultValue?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
      * Layer2
+     *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     layer2?: pulumi.Input<inputs.EthernetInterfaceLayer2>;
     /**
      * Ethernet Interface Layer 3 configuration
+     *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     layer3?: pulumi.Input<inputs.EthernetInterfaceLayer3>;
@@ -465,11 +478,13 @@ export interface EthernetInterfaceArgs {
     poe?: pulumi.Input<inputs.EthernetInterfacePoe>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**
      * Tap
+     *
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     tap?: pulumi.Input<inputs.EthernetInterfaceTap>;

@@ -52,32 +52,21 @@ func LookupContentIdSetting(ctx *pulumi.Context, args *LookupContentIdSettingArg
 // A collection of arguments for invoking getContentIdSetting.
 type LookupContentIdSettingArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getContentIdSetting.
 type LookupContentIdSettingResult struct {
-	// Content id
 	ContentId GetContentIdSettingContentId `pulumi:"contentId"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string `pulumi:"id"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -94,15 +83,10 @@ func LookupContentIdSettingOutput(ctx *pulumi.Context, args LookupContentIdSetti
 // A collection of arguments for invoking getContentIdSetting.
 type LookupContentIdSettingOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -125,19 +109,15 @@ func (o LookupContentIdSettingResultOutput) ToLookupContentIdSettingResultOutput
 	return o
 }
 
-// Content id
 func (o LookupContentIdSettingResultOutput) ContentId() GetContentIdSettingContentIdOutput {
 	return o.ApplyT(func(v LookupContentIdSettingResult) GetContentIdSettingContentId { return v.ContentId }).(GetContentIdSettingContentIdOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupContentIdSettingResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupContentIdSettingResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupContentIdSettingResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupContentIdSettingResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -147,8 +127,6 @@ func (o LookupContentIdSettingResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupContentIdSettingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupContentIdSettingResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupContentIdSettingResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

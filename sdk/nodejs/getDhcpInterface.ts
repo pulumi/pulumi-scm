@@ -8,6 +8,19 @@ import * as utilities from "./utilities";
 
 /**
  * DhcpInterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // We use the ID from the resource created above.
+ * const singleInfById = scm.getDhcpInterface({
+ *     id: "b3544acb-fc55-4c6f-921d-4128b5a1d135",
+ * });
+ * export const singleDhcpInfName = singleInfById;
+ * ```
  */
 export function getDhcpInterface(args: GetDhcpInterfaceArgs, opts?: pulumi.InvokeOptions): Promise<GetDhcpInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -26,26 +39,14 @@ export function getDhcpInterface(args: GetDhcpInterfaceArgs, opts?: pulumi.Invok
 export interface GetDhcpInterfaceArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Interface name
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -55,41 +56,34 @@ export interface GetDhcpInterfaceArgs {
 export interface GetDhcpInterfaceResult {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Interface name
-     */
     readonly name: string;
-    /**
-     * Relay
-     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
-     */
     readonly relay: outputs.GetDhcpInterfaceRelay;
-    /**
-     * Server
-     * > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
-     */
     readonly server: outputs.GetDhcpInterfaceServer;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * DhcpInterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // We use the ID from the resource created above.
+ * const singleInfById = scm.getDhcpInterface({
+ *     id: "b3544acb-fc55-4c6f-921d-4128b5a1d135",
+ * });
+ * export const singleDhcpInfName = singleInfById;
+ * ```
  */
 export function getDhcpInterfaceOutput(args: GetDhcpInterfaceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDhcpInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -108,25 +102,13 @@ export function getDhcpInterfaceOutput(args: GetDhcpInterfaceOutputArgs, opts?: 
 export interface GetDhcpInterfaceOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Interface name
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

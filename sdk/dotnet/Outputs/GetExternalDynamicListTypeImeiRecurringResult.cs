@@ -15,26 +15,29 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Daily interval settings for IMEI updates
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImeiRecurringDailyResult Daily;
         /// <summary>
         /// Five-minute interval settings for IMEI updates
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImeiRecurringFiveMinuteResult FiveMinute;
         /// <summary>
         /// Hourly interval settings for IMEI updates
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImeiRecurringHourlyResult Hourly;
         /// <summary>
         /// Monthly interval settings for IMEI updates
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImeiRecurringMonthlyResult Monthly;
         /// <summary>
         /// Weekly interval settings for IMEI updates
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImeiRecurringWeeklyResult Weekly;

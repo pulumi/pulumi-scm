@@ -13,36 +13,40 @@ import javax.annotation.Nullable;
 public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     /**
      * @return Greater equal
-     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private @Nullable Integer greaterEqual;
     /**
      * @return Greater than
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private @Nullable Integer greaterThan;
     /**
      * @return Is
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private @Nullable Integer is;
     /**
      * @return Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private @Nullable Integer isNot;
     /**
      * @return Less equal
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private @Nullable Integer lessEqual;
     /**
      * @return Less than
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -51,7 +55,6 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     private HipObjectPatchManagementCriteriaMissingPatchesSeverity() {}
     /**
      * @return Greater equal
-     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     public Optional<Integer> greaterEqual() {
@@ -59,6 +62,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     }
     /**
      * @return Greater than
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -67,6 +71,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     }
     /**
      * @return Is
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -75,6 +80,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     }
     /**
      * @return Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -83,6 +89,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     }
     /**
      * @return Less equal
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -91,6 +98,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     }
     /**
      * @return Less than
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */

@@ -16,24 +16,26 @@ import javax.annotation.Nullable;
 public final class DnsSecurityProfileBotnetDomainsListAction {
     /**
      * @return Alert
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     private @Nullable DnsSecurityProfileBotnetDomainsListActionAlert alert;
     /**
      * @return Allow
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     private @Nullable DnsSecurityProfileBotnetDomainsListActionAllow allow;
     /**
      * @return Block
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     private @Nullable DnsSecurityProfileBotnetDomainsListActionBlock block;
     /**
      * @return Sinkhole
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -42,7 +44,6 @@ public final class DnsSecurityProfileBotnetDomainsListAction {
     private DnsSecurityProfileBotnetDomainsListAction() {}
     /**
      * @return Alert
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     public Optional<DnsSecurityProfileBotnetDomainsListActionAlert> alert() {
@@ -50,6 +51,7 @@ public final class DnsSecurityProfileBotnetDomainsListAction {
     }
     /**
      * @return Allow
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -58,6 +60,7 @@ public final class DnsSecurityProfileBotnetDomainsListAction {
     }
     /**
      * @return Block
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -66,6 +69,7 @@ public final class DnsSecurityProfileBotnetDomainsListAction {
     }
     /**
      * @return Sinkhole
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */

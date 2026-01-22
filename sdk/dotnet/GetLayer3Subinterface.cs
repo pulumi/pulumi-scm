@@ -131,15 +131,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -149,16 +144,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// L3 sub-interface name
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -172,15 +160,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -190,16 +173,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// L3 sub-interface name
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -213,66 +189,25 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetLayer3SubinterfaceResult
     {
-        /// <summary>
-        /// Layer 3 sub Interfaces ARP configuration
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetLayer3SubinterfaceArpResult> Arps;
-        /// <summary>
-        /// Description
-        /// </summary>
         public readonly string Comment;
-        /// <summary>
-        /// Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
-        /// </summary>
         public readonly Outputs.GetLayer3SubinterfaceDdnsConfigResult DdnsConfig;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Layer3 sub interfaces DHCP Client Object
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
-        /// </summary>
         public readonly Outputs.GetLayer3SubinterfaceDhcpClientResult DhcpClient;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Interface management profile
-        /// </summary>
         public readonly string InterfaceManagementProfile;
-        /// <summary>
-        /// L3 sub-interface IP Parent
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetLayer3SubinterfaceIpResult> Ips;
-        /// <summary>
-        /// MTU
-        /// </summary>
         public readonly int Mtu;
-        /// <summary>
-        /// L3 sub-interface name
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Parent interface
-        /// </summary>
         public readonly string ParentInterface;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// VLAN tag
-        /// </summary>
         public readonly int Tag;
         public readonly string Tfid;
 

@@ -16,118 +16,49 @@ import java.util.Objects;
 public final class GetZoneResult {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return Device acl
-     * 
-     */
     private GetZoneDeviceAcl deviceAcl;
-    /**
-     * @return Dos log setting
-     * 
-     */
     private String dosLogSetting;
-    /**
-     * @return Dos profile
-     * 
-     */
     private String dosProfile;
-    /**
-     * @return Enable device identification
-     * 
-     */
     private Boolean enableDeviceIdentification;
-    /**
-     * @return Enable user identification
-     * 
-     */
     private Boolean enableUserIdentification;
-    /**
-     * @return Folder
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     * 
-     */
     private String name;
-    /**
-     * @return Network
-     * 
-     */
     private GetZoneNetwork network;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return User acl
-     * 
-     */
     private GetZoneUserAcl userAcl;
 
     private GetZoneResult() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return Device acl
-     * 
-     */
     public GetZoneDeviceAcl deviceAcl() {
         return this.deviceAcl;
     }
-    /**
-     * @return Dos log setting
-     * 
-     */
     public String dosLogSetting() {
         return this.dosLogSetting;
     }
-    /**
-     * @return Dos profile
-     * 
-     */
     public String dosProfile() {
         return this.dosProfile;
     }
-    /**
-     * @return Enable device identification
-     * 
-     */
     public Boolean enableDeviceIdentification() {
         return this.enableDeviceIdentification;
     }
-    /**
-     * @return Enable user identification
-     * 
-     */
     public Boolean enableUserIdentification() {
         return this.enableUserIdentification;
     }
-    /**
-     * @return Folder
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -138,35 +69,18 @@ public final class GetZoneResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return Network
-     * 
-     */
     public GetZoneNetwork network() {
         return this.network;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return User acl
-     * 
-     */
     public GetZoneUserAcl userAcl() {
         return this.userAcl;
     }

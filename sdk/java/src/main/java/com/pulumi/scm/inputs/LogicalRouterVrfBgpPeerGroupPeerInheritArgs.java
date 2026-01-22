@@ -18,7 +18,6 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
 
     /**
      * No
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
     @Import(name="no")
@@ -26,7 +25,6 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
 
     /**
      * @return No
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
     public Optional<Output<LogicalRouterVrfBgpPeerGroupPeerInheritNoArgs>> no() {
@@ -35,6 +33,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
 
     /**
      * Yes
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
@@ -43,6 +42,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
 
     /**
      * @return Yes
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
@@ -77,7 +77,6 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
 
         /**
          * @param no No
-         * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
          * 
          * @return builder
          * 
@@ -89,7 +88,6 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
 
         /**
          * @param no No
-         * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
          * 
          * @return builder
          * 
@@ -100,6 +98,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
 
         /**
          * @param yes Yes
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
          * 
          * @return builder
@@ -112,6 +111,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
 
         /**
          * @param yes Yes
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
          * 
          * @return builder

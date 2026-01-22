@@ -15,36 +15,41 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Alert
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileRuleActionAlertResult Alert;
         /// <summary>
         /// Allow
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileRuleActionAllowResult Allow;
         /// <summary>
         /// anti spyware profiles rules action block ip
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileRuleActionBlockIpResult BlockIp;
         /// <summary>
         /// Drop
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileRuleActionDropResult Drop;
         /// <summary>
         /// Reset both
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileRuleActionResetBothResult ResetBoth;
         /// <summary>
         /// Reset client
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileRuleActionResetClientResult ResetClient;
         /// <summary>
         /// Reset server
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileRuleActionResetServerResult ResetServer;

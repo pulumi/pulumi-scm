@@ -62,9 +62,6 @@ class GetDosProtectionProfileResult:
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
-        """
-        Description
-        """
         return pulumi.get(self, "description")
 
     @_builtins.property
@@ -72,25 +69,17 @@ class GetDosProtectionProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def flood(self) -> 'outputs.GetDosProtectionProfileFloodResult':
-        """
-        Flood
-        """
         return pulumi.get(self, "flood")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -104,26 +93,16 @@ class GetDosProtectionProfileResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        Profile name
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def resource(self) -> 'outputs.GetDosProtectionProfileResourceResult':
-        """
-        Resource
-        """
         return pulumi.get(self, "resource")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -134,9 +113,6 @@ class GetDosProtectionProfileResult:
     @_builtins.property
     @pulumi.getter
     def type(self) -> _builtins.str:
-        """
-        Type
-        """
         return pulumi.get(self, "type")
 
 
@@ -169,13 +145,7 @@ def get_dos_protection_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the DNS security profile
-    :param _builtins.str name: Profile name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -208,13 +178,7 @@ def get_dos_protection_profile_output(device: Optional[pulumi.Input[Optional[_bu
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the DNS security profile
-    :param _builtins.str name: Profile name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

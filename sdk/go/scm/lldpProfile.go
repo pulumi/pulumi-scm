@@ -13,6 +13,44 @@ import (
 
 // LldpProfile resource
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewLldpProfile(ctx, "example", &scm.LldpProfileArgs{
+//				Folder: pulumi.String("All"),
+//				Mode:   pulumi.String("transmit-receive"),
+//				Name:   pulumi.String("lldp-profile-tf-1"),
+//				OptionTlvs: &scm.LldpProfileOptionTlvsArgs{
+//					ManagementAddress: &scm.LldpProfileOptionTlvsManagementAddressArgs{
+//						Enabled: pulumi.Bool(true),
+//					},
+//					PortDescription:    pulumi.Bool(true),
+//					SystemCapabilities: pulumi.Bool(true),
+//					SystemDescription:  pulumi.Bool(false),
+//					SystemName:         pulumi.Bool(true),
+//				},
+//				SnmpSyslogNotification: pulumi.Bool(true),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
@@ -42,9 +80,9 @@ type LldpProfile struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// LLDP mode
@@ -54,6 +92,7 @@ type LldpProfile struct {
 	// Option tlvs
 	OptionTlvs LldpProfileOptionTlvsPtrOutput `pulumi:"optionTlvs"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// SNMP syslog notification
@@ -92,9 +131,9 @@ func GetLldpProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering LldpProfile resources.
 type lldpProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// LLDP mode
@@ -104,6 +143,7 @@ type lldpProfileState struct {
 	// Option tlvs
 	OptionTlvs *LldpProfileOptionTlvs `pulumi:"optionTlvs"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// SNMP syslog notification
@@ -113,9 +153,9 @@ type lldpProfileState struct {
 
 type LldpProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// LLDP mode
@@ -125,6 +165,7 @@ type LldpProfileState struct {
 	// Option tlvs
 	OptionTlvs LldpProfileOptionTlvsPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// SNMP syslog notification
@@ -138,9 +179,9 @@ func (LldpProfileState) ElementType() reflect.Type {
 
 type lldpProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// LLDP mode
@@ -150,6 +191,7 @@ type lldpProfileArgs struct {
 	// Option tlvs
 	OptionTlvs *LldpProfileOptionTlvs `pulumi:"optionTlvs"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// SNMP syslog notification
@@ -159,9 +201,9 @@ type lldpProfileArgs struct {
 // The set of arguments for constructing a LldpProfile resource.
 type LldpProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// LLDP mode
@@ -171,6 +213,7 @@ type LldpProfileArgs struct {
 	// Option tlvs
 	OptionTlvs LldpProfileOptionTlvsPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// SNMP syslog notification
@@ -265,12 +308,12 @@ func (o LldpProfileOutput) ToLldpProfileOutputWithContext(ctx context.Context) L
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LldpProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LldpProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LldpProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LldpProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -292,6 +335,7 @@ func (o LldpProfileOutput) OptionTlvs() LldpProfileOptionTlvsPtrOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LldpProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LldpProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

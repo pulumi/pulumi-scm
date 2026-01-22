@@ -15,8 +15,8 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// Rsa nbits
         /// </summary>
-        [Input("rsaNbits")]
-        public Input<int>? RsaNbits { get; set; }
+        [Input("rsaNbits", required: true)]
+        public Input<string> RsaNbits { get; set; } = null!;
 
         public ScepProfileAlgorithmRsaGetArgs()
         {

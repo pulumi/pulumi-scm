@@ -53,82 +53,47 @@ func LookupAuthenticationRule(ctx *pulumi.Context, args *LookupAuthenticationRul
 // A collection of arguments for invoking getAuthenticationRule.
 type LookupAuthenticationRuleArgs struct {
 	// Device
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// Folder
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the authentication rule
-	Id string `pulumi:"id"`
-	// The name of the authentication rule
-	Name *string `pulumi:"name"`
-	// Snippet
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getAuthenticationRule.
 type LookupAuthenticationRuleResult struct {
-	// The authentication profile name
-	AuthenticationEnforcement string `pulumi:"authenticationEnforcement"`
-	// The destination URL categories
-	Categories []string `pulumi:"categories"`
-	// The description of the authentication rule
-	Description string `pulumi:"description"`
-	// The destination Host Integrity Profile (HIP)
-	DestinationHips []string `pulumi:"destinationHips"`
-	// The destination addresses
-	Destinations []string `pulumi:"destinations"`
+	AuthenticationEnforcement string   `pulumi:"authenticationEnforcement"`
+	Categories                []string `pulumi:"categories"`
+	Description               string   `pulumi:"description"`
+	DestinationHips           []string `pulumi:"destinationHips"`
+	Destinations              []string `pulumi:"destinations"`
 	// Device
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// Is the authentication rule disabled?
-	Disabled bool `pulumi:"disabled"`
-	// Folder
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
-	// The source security zones
-	Froms []string `pulumi:"froms"`
-	// Group tag
-	GroupTag string `pulumi:"groupTag"`
-	// The source Host Integrity Profile (HIP)
+	Device      string   `pulumi:"device"`
+	Disabled    bool     `pulumi:"disabled"`
+	Folder      string   `pulumi:"folder"`
+	Froms       []string `pulumi:"froms"`
+	GroupTag    string   `pulumi:"groupTag"`
 	HipProfiles []string `pulumi:"hipProfiles"`
 	// The UUID of the authentication rule
-	Id string `pulumi:"id"`
-	// Log authentication timeouts?
-	LogAuthenticationTimeout bool `pulumi:"logAuthenticationTimeout"`
-	// The log forwarding profile name
-	LogSetting string `pulumi:"logSetting"`
-	// The name of the authentication rule
-	Name string `pulumi:"name"`
-	// Are the destination addresses negated?
-	NegateDestination bool `pulumi:"negateDestination"`
-	// Are the source addresses negated?
-	NegateSource bool `pulumi:"negateSource"`
-	// The relative position of the rule
-	Position string `pulumi:"position"`
-	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-	RelativePosition string `pulumi:"relativePosition"`
-	// The destination ports
-	Services []string `pulumi:"services"`
-	// Snippet
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	// The source Host Integrity Profile (HIP)
-	SourceHips []string `pulumi:"sourceHips"`
-	// The source users
-	SourceUsers []string `pulumi:"sourceUsers"`
-	// The source addresses
-	Sources []string `pulumi:"sources"`
-	// The authentication rule tags
-	Tags []string `pulumi:"tags"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
-	TargetRule string `pulumi:"targetRule"`
-	Tfid       string `pulumi:"tfid"`
-	// The authentication session timeout (seconds)
-	Timeout int `pulumi:"timeout"`
-	// The destination security zones
-	Tos []string `pulumi:"tos"`
+	Id                       string   `pulumi:"id"`
+	LogAuthenticationTimeout bool     `pulumi:"logAuthenticationTimeout"`
+	LogSetting               string   `pulumi:"logSetting"`
+	Name                     string   `pulumi:"name"`
+	NegateDestination        bool     `pulumi:"negateDestination"`
+	NegateSource             bool     `pulumi:"negateSource"`
+	Position                 string   `pulumi:"position"`
+	RelativePosition         string   `pulumi:"relativePosition"`
+	Services                 []string `pulumi:"services"`
+	Snippet                  string   `pulumi:"snippet"`
+	SourceHips               []string `pulumi:"sourceHips"`
+	SourceUsers              []string `pulumi:"sourceUsers"`
+	Sources                  []string `pulumi:"sources"`
+	Tags                     []string `pulumi:"tags"`
+	TargetRule               string   `pulumi:"targetRule"`
+	Tfid                     string   `pulumi:"tfid"`
+	Timeout                  int      `pulumi:"timeout"`
+	Tos                      []string `pulumi:"tos"`
 }
 
 func LookupAuthenticationRuleOutput(ctx *pulumi.Context, args LookupAuthenticationRuleOutputArgs, opts ...pulumi.InvokeOption) LookupAuthenticationRuleResultOutput {
@@ -143,17 +108,11 @@ func LookupAuthenticationRuleOutput(ctx *pulumi.Context, args LookupAuthenticati
 // A collection of arguments for invoking getAuthenticationRule.
 type LookupAuthenticationRuleOutputArgs struct {
 	// Device
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// Folder
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the authentication rule
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the authentication rule
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Snippet
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -176,59 +135,47 @@ func (o LookupAuthenticationRuleResultOutput) ToLookupAuthenticationRuleResultOu
 	return o
 }
 
-// The authentication profile name
 func (o LookupAuthenticationRuleResultOutput) AuthenticationEnforcement() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.AuthenticationEnforcement }).(pulumi.StringOutput)
 }
 
-// The destination URL categories
 func (o LookupAuthenticationRuleResultOutput) Categories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.Categories }).(pulumi.StringArrayOutput)
 }
 
-// The description of the authentication rule
 func (o LookupAuthenticationRuleResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The destination Host Integrity Profile (HIP)
 func (o LookupAuthenticationRuleResultOutput) DestinationHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.DestinationHips }).(pulumi.StringArrayOutput)
 }
 
-// The destination addresses
 func (o LookupAuthenticationRuleResultOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.Destinations }).(pulumi.StringArrayOutput)
 }
 
 // Device
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAuthenticationRuleResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Is the authentication rule disabled?
 func (o LookupAuthenticationRuleResultOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// Folder
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAuthenticationRuleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// The source security zones
 func (o LookupAuthenticationRuleResultOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.Froms }).(pulumi.StringArrayOutput)
 }
 
-// Group tag
 func (o LookupAuthenticationRuleResultOutput) GroupTag() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.GroupTag }).(pulumi.StringOutput)
 }
 
-// The source Host Integrity Profile (HIP)
 func (o LookupAuthenticationRuleResultOutput) HipProfiles() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.HipProfiles }).(pulumi.StringArrayOutput)
 }
@@ -238,73 +185,58 @@ func (o LookupAuthenticationRuleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Log authentication timeouts?
 func (o LookupAuthenticationRuleResultOutput) LogAuthenticationTimeout() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) bool { return v.LogAuthenticationTimeout }).(pulumi.BoolOutput)
 }
 
-// The log forwarding profile name
 func (o LookupAuthenticationRuleResultOutput) LogSetting() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.LogSetting }).(pulumi.StringOutput)
 }
 
-// The name of the authentication rule
 func (o LookupAuthenticationRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Are the destination addresses negated?
 func (o LookupAuthenticationRuleResultOutput) NegateDestination() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) bool { return v.NegateDestination }).(pulumi.BoolOutput)
 }
 
-// Are the source addresses negated?
 func (o LookupAuthenticationRuleResultOutput) NegateSource() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) bool { return v.NegateSource }).(pulumi.BoolOutput)
 }
 
-// The relative position of the rule
 func (o LookupAuthenticationRuleResultOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.Position }).(pulumi.StringOutput)
 }
 
-// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 func (o LookupAuthenticationRuleResultOutput) RelativePosition() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.RelativePosition }).(pulumi.StringOutput)
 }
 
-// The destination ports
 func (o LookupAuthenticationRuleResultOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.Services }).(pulumi.StringArrayOutput)
 }
 
-// Snippet
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAuthenticationRuleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// The source Host Integrity Profile (HIP)
 func (o LookupAuthenticationRuleResultOutput) SourceHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.SourceHips }).(pulumi.StringArrayOutput)
 }
 
-// The source users
 func (o LookupAuthenticationRuleResultOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
-// The source addresses
 func (o LookupAuthenticationRuleResultOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
-// The authentication rule tags
 func (o LookupAuthenticationRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
-// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 func (o LookupAuthenticationRuleResultOutput) TargetRule() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.TargetRule }).(pulumi.StringOutput)
 }
@@ -313,12 +245,10 @@ func (o LookupAuthenticationRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The authentication session timeout (seconds)
 func (o LookupAuthenticationRuleResultOutput) Timeout() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) int { return v.Timeout }).(pulumi.IntOutput)
 }
 
-// The destination security zones
 func (o LookupAuthenticationRuleResultOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.Tos }).(pulumi.StringArrayOutput)
 }

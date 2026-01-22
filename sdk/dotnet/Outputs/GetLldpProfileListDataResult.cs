@@ -15,12 +15,10 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -32,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Mode;
         /// <summary>
-        /// LLDP profile name
+        /// The name of the item.
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -40,8 +38,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetLldpProfileListDataOptionTlvsResult OptionTlvs;
         /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         /// <summary>

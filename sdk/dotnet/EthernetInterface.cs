@@ -235,7 +235,6 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Aggregate group
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Output("aggregateGroup")]
         public Output<string?> AggregateGroup { get; private set; } = null!;
@@ -254,6 +253,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
@@ -267,6 +267,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -274,6 +275,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Layer2
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Output("layer2")]
@@ -281,6 +283,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Output("layer3")]
@@ -318,6 +321,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -325,6 +329,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Tap
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Output("tap")]
@@ -385,7 +390,6 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Aggregate group
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("aggregateGroup")]
         public Input<string>? AggregateGroup { get; set; }
@@ -404,6 +408,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
@@ -411,6 +416,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -418,6 +424,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Layer2
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer2")]
@@ -425,6 +432,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer3")]
@@ -462,6 +470,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -469,6 +478,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Tap
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("tap")]
@@ -484,7 +494,6 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Aggregate group
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("aggregateGroup")]
         public Input<string>? AggregateGroup { get; set; }
@@ -503,6 +512,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
@@ -526,6 +536,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -533,6 +544,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Layer2
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer2")]
@@ -540,6 +552,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer3")]
@@ -577,6 +590,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -584,6 +598,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Tap
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("tap")]

@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+ * //
+ * // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+ * const allShared = scm.getKerberosServerProfileList({
+ *     folder: "All",
+ * });
+ * export const scmKerberosServerProfileAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getKerberosServerProfileList(args?: GetKerberosServerProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetKerberosServerProfileListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetKerberosServerProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+ * //
+ * // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+ * const allShared = scm.getKerberosServerProfileList({
+ *     folder: "All",
+ * });
+ * export const scmKerberosServerProfileAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getKerberosServerProfileListOutput(args?: GetKerberosServerProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetKerberosServerProfileListResult> {
     args = args || {};

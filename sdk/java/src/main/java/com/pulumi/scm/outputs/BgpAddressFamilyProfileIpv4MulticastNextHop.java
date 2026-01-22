@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class BgpAddressFamilyProfileIpv4MulticastNextHop {
     /**
      * @return Self
-     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4MulticastNextHopSelf self;
     /**
      * @return Self force
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
@@ -28,7 +28,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastNextHop {
     private BgpAddressFamilyProfileIpv4MulticastNextHop() {}
     /**
      * @return Self
-     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
     public Optional<BgpAddressFamilyProfileIpv4MulticastNextHopSelf> self() {
@@ -36,6 +35,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastNextHop {
     }
     /**
      * @return Self force
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */

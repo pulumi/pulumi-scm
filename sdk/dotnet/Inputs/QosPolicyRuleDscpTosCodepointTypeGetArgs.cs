@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Af
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         [Input("af")]
         public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeAfGetArgs>? Af { get; set; }
 
         /// <summary>
         /// Cs
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         [Input("cs")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Custom
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         [Input("custom")]
@@ -35,6 +36,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ef
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         [Input("ef")]
@@ -42,6 +44,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Tos
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         [Input("tos")]

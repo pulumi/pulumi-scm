@@ -14,63 +14,30 @@ import java.util.Objects;
 public final class GetLldpProfileResult {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return LLDP mode
-     * 
-     */
     private String mode;
-    /**
-     * @return LLDP profile name
-     * 
-     */
     private String name;
-    /**
-     * @return Option tlvs
-     * 
-     */
     private GetLldpProfileOptionTlvs optionTlvs;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
-    /**
-     * @return SNMP syslog notification
-     * 
-     */
     private Boolean snmpSyslogNotification;
     private String tfid;
 
     private GetLldpProfileResult() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -81,39 +48,18 @@ public final class GetLldpProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return LLDP mode
-     * 
-     */
     public String mode() {
         return this.mode;
     }
-    /**
-     * @return LLDP profile name
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return Option tlvs
-     * 
-     */
     public GetLldpProfileOptionTlvs optionTlvs() {
         return this.optionTlvs;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return SNMP syslog notification
-     * 
-     */
     public Boolean snmpSyslogNotification() {
         return this.snmpSyslogNotification;
     }

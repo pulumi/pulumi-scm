@@ -87,52 +87,30 @@ func LookupAddress(ctx *pulumi.Context, args *LookupAddressArgs, opts ...pulumi.
 // A collection of arguments for invoking getAddress.
 type LookupAddressArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the address object
-	Id string `pulumi:"id"`
-	// The name of the address object
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getAddress.
 type LookupAddressResult struct {
-	// The description of the address object
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
-	// Fully qualified domain name
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-	Fqdn string `pulumi:"fqdn"`
+	Fqdn   string `pulumi:"fqdn"`
 	// The UUID of the address object
-	Id string `pulumi:"id"`
-	// IP address with or without CIDR notation
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-	IpNetmask string `pulumi:"ipNetmask"`
-	// Ip range
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-	IpRange string `pulumi:"ipRange"`
-	// IP wildcard mask
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-	IpWildcard string `pulumi:"ipWildcard"`
-	// The name of the address object
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	// Tags assocaited with the address object
-	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	Id         string   `pulumi:"id"`
+	IpNetmask  string   `pulumi:"ipNetmask"`
+	IpRange    string   `pulumi:"ipRange"`
+	IpWildcard string   `pulumi:"ipWildcard"`
+	Name       string   `pulumi:"name"`
+	Snippet    string   `pulumi:"snippet"`
+	Tags       []string `pulumi:"tags"`
+	Tfid       string   `pulumi:"tfid"`
 }
 
 func LookupAddressOutput(ctx *pulumi.Context, args LookupAddressOutputArgs, opts ...pulumi.InvokeOption) LookupAddressResultOutput {
@@ -147,17 +125,11 @@ func LookupAddressOutput(ctx *pulumi.Context, args LookupAddressOutputArgs, opts
 // A collection of arguments for invoking getAddress.
 type LookupAddressOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the address object
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the address object
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -180,25 +152,19 @@ func (o LookupAddressResultOutput) ToLookupAddressResultOutputWithContext(ctx co
 	return o
 }
 
-// The description of the address object
 func (o LookupAddressResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAddressResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAddressResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// Fully qualified domain name
-// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 func (o LookupAddressResultOutput) Fqdn() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressResult) string { return v.Fqdn }).(pulumi.StringOutput)
 }
@@ -208,36 +174,26 @@ func (o LookupAddressResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// IP address with or without CIDR notation
-// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 func (o LookupAddressResultOutput) IpNetmask() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressResult) string { return v.IpNetmask }).(pulumi.StringOutput)
 }
 
-// Ip range
-// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 func (o LookupAddressResultOutput) IpRange() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressResult) string { return v.IpRange }).(pulumi.StringOutput)
 }
 
-// IP wildcard mask
-// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 func (o LookupAddressResultOutput) IpWildcard() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressResult) string { return v.IpWildcard }).(pulumi.StringOutput)
 }
 
-// The name of the address object
 func (o LookupAddressResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAddressResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// Tags assocaited with the address object
 func (o LookupAddressResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAddressResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

@@ -12,6 +12,170 @@ namespace Pulumi.Scm
     /// <summary>
     /// LogForwardingProfile resource
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmLogForwardingProfile1 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_1", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm-log-fowarding-profile-1",
+    ///         MatchLists = new[]
+    ///         {
+    ///             new Scm.Inputs.LogForwardingProfileMatchListArgs
+    ///             {
+    ///                 Name = "profile_match",
+    ///                 LogType = "threat",
+    ///                 Filter = "(addr in 192.50.10.10) and (addr.dst notin 192.40.50.10)",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmLogForwardingProfile2 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_2", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm-log-fowarding-profile-2",
+    ///         Description = "Log Forwarding w/ HTTP Server Profile and Syslog Server Profile",
+    ///         MatchLists = new[]
+    ///         {
+    ///             new Scm.Inputs.LogForwardingProfileMatchListArgs
+    ///             {
+    ///                 Name = "profile_match",
+    ///                 LogType = "traffic",
+    ///                 Filter = "(device_name eq test_device)",
+    ///                 SendHttp = new[]
+    ///                 {
+    ///                     "test_http",
+    ///                 },
+    ///                 SendSyslog = new[]
+    ///                 {
+    ///                     "syslog-server-prof-mixed",
+    ///                     "syslog-server-prof-complete",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmLogForwardingProfile3 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_3", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm-log-fowarding-profile-3",
+    ///         Description = "Log Forwarding w/ All Server Profiles",
+    ///         MatchLists = new[]
+    ///         {
+    ///             new Scm.Inputs.LogForwardingProfileMatchListArgs
+    ///             {
+    ///                 Name = "profile_match",
+    ///                 ActionDesc = "all server profiles",
+    ///                 LogType = "dns-security",
+    ///                 Filter = "All Logs",
+    ///                 SendHttp = new[]
+    ///                 {
+    ///                     "test_http",
+    ///                     "t10",
+    ///                 },
+    ///                 SendSyslog = new[]
+    ///                 {
+    ///                     "syslog-server-prof-base",
+    ///                     "syslog-server-prof-mixed",
+    ///                     "syslog-server-prof-complete",
+    ///                 },
+    ///                 SendSnmptrap = new[]
+    ///                 {
+    ///                     "snmp_test",
+    ///                 },
+    ///                 SendEmail = new[]
+    ///                 {
+    ///                     "email_test",
+    ///                     "email_test_2",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmLogForwardingProfile4 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_4", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm-log-fowarding-profile-4",
+    ///         Description = "Log Forwarding w/ Multiple Match Lists",
+    ///         MatchLists = new[]
+    ///         {
+    ///             new Scm.Inputs.LogForwardingProfileMatchListArgs
+    ///             {
+    ///                 Name = "profile_match_1",
+    ///                 ActionDesc = "match list for url",
+    ///                 LogType = "url",
+    ///                 Filter = "(sdwan_cluster contains 123)",
+    ///                 SendHttp = new[]
+    ///                 {
+    ///                     "t10",
+    ///                 },
+    ///                 SendSyslog = new[]
+    ///                 {
+    ///                     "syslog-server-prof-base",
+    ///                 },
+    ///                 SendSnmptrap = new[]
+    ///                 {
+    ///                     "snmp_test",
+    ///                 },
+    ///             },
+    ///             new Scm.Inputs.LogForwardingProfileMatchListArgs
+    ///             {
+    ///                 Name = "profile_match_2",
+    ///                 LogType = "data",
+    ///                 Filter = "(link_switch_2 neq lnk_2) or (pkts_received geq 100)",
+    ///                 SendHttp = new[]
+    ///                 {
+    ///                     "t5",
+    ///                     "t10",
+    ///                     "t20",
+    ///                 },
+    ///                 SendSyslog = new[]
+    ///                 {
+    ///                     "syslog-server-prof-mixed",
+    ///                 },
+    ///                 SendEmail = new[]
+    ///                 {
+    ///                     "email_test",
+    ///                     "email_test_2",
+    ///                 },
+    ///             },
+    ///             new Scm.Inputs.LogForwardingProfileMatchListArgs
+    ///             {
+    ///                 Name = "profile_match_3",
+    ///                 ActionDesc = "match list for wildfire",
+    ///                 LogType = "wildfire",
+    ///                 Filter = "(imei contains test_server)",
+    ///                 SendHttp = new[]
+    ///                 {
+    ///                     "t5",
+    ///                     "t10",
+    ///                     "t20",
+    ///                     "t22",
+    ///                     "t24",
+    ///                 },
+    ///                 SendSyslog = new[]
+    ///                 {
+    ///                     "syslog-server-prof-complete",
+    ///                 },
+    ///                 SendEmail = new[]
+    ///                 {
+    ///                     "email_test",
+    ///                     "email_test_2",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
@@ -49,13 +213,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -75,6 +239,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -91,7 +256,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public LogForwardingProfile(string name, LogForwardingProfileArgs? args = null, CustomResourceOptions? options = null)
+        public LogForwardingProfile(string name, LogForwardingProfileArgs args, CustomResourceOptions? options = null)
             : base("scm:index/logForwardingProfile:LogForwardingProfile", name, args ?? new LogForwardingProfileArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -137,19 +302,19 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
-        [Input("matchLists")]
+        [Input("matchLists", required: true)]
         private InputList<Inputs.LogForwardingProfileMatchListArgs>? _matchLists;
 
         /// <summary>
@@ -169,6 +334,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -190,13 +356,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -222,6 +388,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

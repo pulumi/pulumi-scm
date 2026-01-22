@@ -17,7 +17,6 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
 
     /**
      * Next hop FQDN
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     @Import(name="fqdn")
@@ -25,7 +24,6 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
 
     /**
      * @return Next hop FQDN
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public Optional<Output<String>> fqdn() {
@@ -34,6 +32,7 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
 
     /**
      * Next hop IP address
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
@@ -42,6 +41,7 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
 
     /**
      * @return Next hop IP address
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
@@ -76,7 +76,6 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
 
         /**
          * @param fqdn Next hop FQDN
-         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
          * 
          * @return builder
          * 
@@ -88,7 +87,6 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
 
         /**
          * @param fqdn Next hop FQDN
-         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
          * 
          * @return builder
          * 
@@ -99,6 +97,7 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
 
         /**
          * @param ipAddress Next hop IP address
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
          * 
          * @return builder
@@ -111,6 +110,7 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
 
         /**
          * @param ipAddress Next hop IP address
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
          * 
          * @return builder

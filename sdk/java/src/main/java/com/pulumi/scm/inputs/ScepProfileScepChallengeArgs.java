@@ -6,6 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.ScepProfileScepChallengeDynamicArgs;
+import com.pulumi.scm.inputs.ScepProfileScepChallengeNoneArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +19,6 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
     /**
      * Dynamic
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     @Import(name="dynamic")
@@ -26,7 +26,6 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
     /**
      * @return Dynamic
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     public Optional<Output<ScepProfileScepChallengeDynamicArgs>> dynamic() {
@@ -35,6 +34,7 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
     /**
      * Challenge to use for SCEP server on mobile clients
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
@@ -43,6 +43,7 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
     /**
      * @return Challenge to use for SCEP server on mobile clients
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
@@ -52,18 +53,20 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
     /**
      * No OTP
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     @Import(name="none")
-    private @Nullable Output<String> none;
+    private @Nullable Output<ScepProfileScepChallengeNoneArgs> none;
 
     /**
      * @return No OTP
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
-    public Optional<Output<String>> none() {
+    public Optional<Output<ScepProfileScepChallengeNoneArgs>> none() {
         return Optional.ofNullable(this.none);
     }
 
@@ -95,7 +98,6 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
         /**
          * @param dynamic Dynamic
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
          * 
          * @return builder
          * 
@@ -107,7 +109,6 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
         /**
          * @param dynamic Dynamic
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
          * 
          * @return builder
          * 
@@ -118,6 +119,7 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
         /**
          * @param fixed Challenge to use for SCEP server on mobile clients
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
          * 
          * @return builder
@@ -130,6 +132,7 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
         /**
          * @param fixed Challenge to use for SCEP server on mobile clients
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
          * 
          * @return builder
@@ -141,24 +144,26 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
 
         /**
          * @param none No OTP
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
          * 
          * @return builder
          * 
          */
-        public Builder none(@Nullable Output<String> none) {
+        public Builder none(@Nullable Output<ScepProfileScepChallengeNoneArgs> none) {
             $.none = none;
             return this;
         }
 
         /**
          * @param none No OTP
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
          * 
          * @return builder
          * 
          */
-        public Builder none(String none) {
+        public Builder none(ScepProfileScepChallengeNoneArgs none) {
             return none(Output.of(none));
         }
 

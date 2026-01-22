@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,45 +36,60 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
      * Filter match criteria
      * 
      */
-    @Import(name="filter")
-    private @Nullable Output<String> filter;
+    @Import(name="filter", required=true)
+    private Output<String> filter;
 
     /**
      * @return Filter match criteria
      * 
      */
-    public Optional<Output<String>> filter() {
-        return Optional.ofNullable(this.filter);
+    public Output<String> filter() {
+        return this.filter;
     }
 
     /**
      * Log type
      * 
      */
-    @Import(name="logType")
-    private @Nullable Output<String> logType;
+    @Import(name="logType", required=true)
+    private Output<String> logType;
 
     /**
      * @return Log type
      * 
      */
-    public Optional<Output<String>> logType() {
-        return Optional.ofNullable(this.logType);
+    public Output<String> logType() {
+        return this.logType;
     }
 
     /**
      * Name of the match profile
      * 
      */
-    @Import(name="name")
-    private @Nullable Output<String> name;
+    @Import(name="name", required=true)
+    private Output<String> name;
 
     /**
      * @return Name of the match profile
      * 
      */
-    public Optional<Output<String>> name() {
-        return Optional.ofNullable(this.name);
+    public Output<String> name() {
+        return this.name;
+    }
+
+    /**
+     * A list of email server profiles
+     * 
+     */
+    @Import(name="sendEmails")
+    private @Nullable Output<List<String>> sendEmails;
+
+    /**
+     * @return A list of email server profiles
+     * 
+     */
+    public Optional<Output<List<String>>> sendEmails() {
+        return Optional.ofNullable(this.sendEmails);
     }
 
     /**
@@ -89,6 +105,21 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
      */
     public Optional<Output<List<String>>> sendHttps() {
         return Optional.ofNullable(this.sendHttps);
+    }
+
+    /**
+     * A list of SNMP server profiles
+     * 
+     */
+    @Import(name="sendSnmptraps")
+    private @Nullable Output<List<String>> sendSnmptraps;
+
+    /**
+     * @return A list of SNMP server profiles
+     * 
+     */
+    public Optional<Output<List<String>>> sendSnmptraps() {
+        return Optional.ofNullable(this.sendSnmptraps);
     }
 
     /**
@@ -113,7 +144,9 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
         this.filter = $.filter;
         this.logType = $.logType;
         this.name = $.name;
+        this.sendEmails = $.sendEmails;
         this.sendHttps = $.sendHttps;
+        this.sendSnmptraps = $.sendSnmptraps;
         this.sendSyslogs = $.sendSyslogs;
     }
 
@@ -162,7 +195,7 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder filter(@Nullable Output<String> filter) {
+        public Builder filter(Output<String> filter) {
             $.filter = filter;
             return this;
         }
@@ -183,7 +216,7 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder logType(@Nullable Output<String> logType) {
+        public Builder logType(Output<String> logType) {
             $.logType = logType;
             return this;
         }
@@ -204,7 +237,7 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder name(@Nullable Output<String> name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
@@ -217,6 +250,37 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param sendEmails A list of email server profiles
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sendEmails(@Nullable Output<List<String>> sendEmails) {
+            $.sendEmails = sendEmails;
+            return this;
+        }
+
+        /**
+         * @param sendEmails A list of email server profiles
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sendEmails(List<String> sendEmails) {
+            return sendEmails(Output.of(sendEmails));
+        }
+
+        /**
+         * @param sendEmails A list of email server profiles
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sendEmails(String... sendEmails) {
+            return sendEmails(List.of(sendEmails));
         }
 
         /**
@@ -251,6 +315,37 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
         }
 
         /**
+         * @param sendSnmptraps A list of SNMP server profiles
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sendSnmptraps(@Nullable Output<List<String>> sendSnmptraps) {
+            $.sendSnmptraps = sendSnmptraps;
+            return this;
+        }
+
+        /**
+         * @param sendSnmptraps A list of SNMP server profiles
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sendSnmptraps(List<String> sendSnmptraps) {
+            return sendSnmptraps(Output.of(sendSnmptraps));
+        }
+
+        /**
+         * @param sendSnmptraps A list of SNMP server profiles
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sendSnmptraps(String... sendSnmptraps) {
+            return sendSnmptraps(List.of(sendSnmptraps));
+        }
+
+        /**
          * @param sendSyslogs A list of syslog server profiles
          * 
          * @return builder
@@ -282,6 +377,15 @@ public final class LogForwardingProfileMatchListArgs extends com.pulumi.resource
         }
 
         public LogForwardingProfileMatchListArgs build() {
+            if ($.filter == null) {
+                throw new MissingRequiredPropertyException("LogForwardingProfileMatchListArgs", "filter");
+            }
+            if ($.logType == null) {
+                throw new MissingRequiredPropertyException("LogForwardingProfileMatchListArgs", "logType");
+            }
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("LogForwardingProfileMatchListArgs", "name");
+            }
             return $;
         }
     }

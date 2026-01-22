@@ -15,8 +15,8 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// Key length (bits)
         /// </summary>
-        [Input("rsa")]
-        public Input<Inputs.ScepProfileAlgorithmRsaGetArgs>? Rsa { get; set; }
+        [Input("rsa", required: true)]
+        public Input<Inputs.ScepProfileAlgorithmRsaGetArgs> Rsa { get; set; } = null!;
 
         public ScepProfileAlgorithmGetArgs()
         {

@@ -9,6 +9,110 @@ import * as utilities from "./utilities";
 /**
  * QosProfile resource
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmQosProfile1 = new scm.QosProfile("scm_qos_profile_1", {
+ *     folder: "Remote Networks",
+ *     name: "scm-qos-profile-base",
+ * });
+ * const scmQosProfile2 = new scm.QosProfile("scm_qos_profile_2", {
+ *     folder: "Remote Networks",
+ *     name: "scm-qos-profile-2",
+ *     aggregateBandwidth: {
+ *         egressMax: 200,
+ *         egressGuaranteed: 10000,
+ *     },
+ * });
+ * const scmQosProfile3 = new scm.QosProfile("scm_qos_profile_3", {
+ *     folder: "Service Connections",
+ *     name: "scm-qos-profile-3",
+ *     aggregateBandwidth: {
+ *         egressGuaranteed: 20,
+ *     },
+ *     classBandwidthType: {
+ *         mbps: {
+ *             classes: [
+ *                 {
+ *                     name: "class1",
+ *                 },
+ *                 {
+ *                     name: "class2",
+ *                     priority: "high",
+ *                 },
+ *                 {
+ *                     name: "class3",
+ *                     priority: "real-time",
+ *                     classBandwidth: {
+ *                         egressMax: 500,
+ *                     },
+ *                 },
+ *                 {
+ *                     name: "class4",
+ *                     priority: "low",
+ *                     classBandwidth: {
+ *                         egressGuaranteed: 60000,
+ *                     },
+ *                 },
+ *                 {
+ *                     name: "class5",
+ *                     priority: "medium",
+ *                     classBandwidth: {
+ *                         egressMax: 955,
+ *                         egressGuaranteed: 50000,
+ *                     },
+ *                 },
+ *             ],
+ *         },
+ *     },
+ * });
+ * const scmQosProfile4 = new scm.QosProfile("scm_qos_profile_4", {
+ *     folder: "Service Connections",
+ *     name: "scm-qos-profile-4",
+ *     aggregateBandwidth: {
+ *         egressMax: 1400,
+ *     },
+ *     classBandwidthType: {
+ *         percentage: {
+ *             classes: [
+ *                 {
+ *                     name: "class1",
+ *                 },
+ *                 {
+ *                     name: "class2",
+ *                     priority: "low",
+ *                 },
+ *                 {
+ *                     name: "class3",
+ *                     priority: "real-time",
+ *                     classBandwidth: {
+ *                         egressMax: 100,
+ *                     },
+ *                 },
+ *                 {
+ *                     name: "class4",
+ *                     priority: "medium",
+ *                     classBandwidth: {
+ *                         egressGuaranteed: 5,
+ *                     },
+ *                 },
+ *                 {
+ *                     name: "class5",
+ *                     priority: "high",
+ *                     classBandwidth: {
+ *                         egressMax: 25,
+ *                         egressGuaranteed: 50,
+ *                     },
+ *                 },
+ *             ],
+ *         },
+ *     },
+ * });
+ * ```
+ *
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:
@@ -73,11 +177,11 @@ export class QosProfile extends pulumi.CustomResource {
     declare public readonly classBandwidthType: pulumi.Output<outputs.QosProfileClassBandwidthType | undefined>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -87,6 +191,7 @@ export class QosProfile extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -141,11 +246,11 @@ export interface QosProfileState {
     classBandwidthType?: pulumi.Input<inputs.QosProfileClassBandwidthType>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -155,6 +260,7 @@ export interface QosProfileState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -175,11 +281,11 @@ export interface QosProfileArgs {
     classBandwidthType?: pulumi.Input<inputs.QosProfileClassBandwidthType>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -189,6 +295,7 @@ export interface QosProfileArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

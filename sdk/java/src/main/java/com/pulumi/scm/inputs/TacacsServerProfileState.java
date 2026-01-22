@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,7 +22,6 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
 
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -29,7 +29,6 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -37,7 +36,23 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
+     * Map of sensitive values returned from the API.
+     * 
+     */
+    @Import(name="encryptedValues")
+    private @Nullable Output<Map<String,String>> encryptedValues;
+
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Optional<Output<Map<String,String>>> encryptedValues() {
+        return Optional.ofNullable(this.encryptedValues);
+    }
+
+    /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -46,6 +61,7 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -100,6 +116,7 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
 
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -108,6 +125,7 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -156,6 +174,7 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
 
     private TacacsServerProfileState(TacacsServerProfileState $) {
         this.device = $.device;
+        this.encryptedValues = $.encryptedValues;
         this.folder = $.folder;
         this.name = $.name;
         this.protocol = $.protocol;
@@ -186,7 +205,6 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -198,7 +216,6 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -208,7 +225,29 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
+         * @param encryptedValues Map of sensitive values returned from the API.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encryptedValues(@Nullable Output<Map<String,String>> encryptedValues) {
+            $.encryptedValues = encryptedValues;
+            return this;
+        }
+
+        /**
+         * @param encryptedValues Map of sensitive values returned from the API.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            return encryptedValues(Output.of(encryptedValues));
+        }
+
+        /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -221,6 +260,7 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -305,6 +345,7 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -317,6 +358,7 @@ public final class TacacsServerProfileState extends com.pulumi.resources.Resourc
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

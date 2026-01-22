@@ -15,24 +15,26 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath {
     /**
      * @return None
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone none;
     /**
      * @return Prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private @Nullable Integer prepend;
     /**
      * @return Remove
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove remove;
     /**
      * @return Remove and prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -41,7 +43,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     private LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath() {}
     /**
      * @return None
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public Optional<LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone> none() {
@@ -49,6 +50,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     }
     /**
      * @return Prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -57,6 +59,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     }
     /**
      * @return Remove
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -65,6 +68,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     }
     /**
      * @return Remove and prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */

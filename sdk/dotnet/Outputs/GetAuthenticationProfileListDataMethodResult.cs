@@ -15,36 +15,41 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Cloud
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodCloudResult Cloud;
         /// <summary>
         /// Kerberos
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodKerberosResult Kerberos;
         /// <summary>
         /// Ldap
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodLdapResult Ldap;
         /// <summary>
         /// Local database
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodLocalDatabaseResult LocalDatabase;
         /// <summary>
         /// Radius
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodRadiusResult Radius;
         /// <summary>
         /// Saml idp
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodSamlIdpResult SamlIdp;
         /// <summary>
         /// Tacplus
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodTacplusResult Tacplus;

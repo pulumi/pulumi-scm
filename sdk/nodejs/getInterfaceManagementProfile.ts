@@ -39,26 +39,14 @@ export function getInterfaceManagementProfile(args: GetInterfaceManagementProfil
 export interface GetInterfaceManagementProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Name
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -68,71 +56,26 @@ export interface GetInterfaceManagementProfileArgs {
 export interface GetInterfaceManagementProfileResult {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
-    /**
-     * Allow HTTP?
-     */
     readonly http: boolean;
-    /**
-     * Allow HTTP OCSP?
-     */
     readonly httpOcsp: boolean;
-    /**
-     * Allow HTTPS?
-     */
     readonly https: boolean;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Name
-     */
     readonly name: string;
-    /**
-     * Allowed IP address(es)
-     */
     readonly permittedIps: outputs.GetInterfaceManagementProfilePermittedIp[];
-    /**
-     * Allow ping?
-     */
     readonly ping: boolean;
-    /**
-     * Allow response pages?
-     */
     readonly responsePages: boolean;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
-    /**
-     * Allow SSH?
-     */
     readonly ssh: boolean;
-    /**
-     * Allow telnet? Seriously, why would you do this?!?
-     */
     readonly telnet: boolean;
     readonly tfid: string;
-    /**
-     * Allow User-ID?
-     */
     readonly useridService: boolean;
-    /**
-     * Allow User-ID syslog listener (SSL)?
-     */
     readonly useridSyslogListenerSsl: boolean;
-    /**
-     * Allow User-ID syslog listener (UDP)?
-     */
     readonly useridSyslogListenerUdp: boolean;
 }
 /**
@@ -168,25 +111,13 @@ export function getInterfaceManagementProfileOutput(args: GetInterfaceManagement
 export interface GetInterfaceManagementProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Name
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

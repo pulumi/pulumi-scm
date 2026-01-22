@@ -47,26 +47,14 @@ export function getLayer3Subinterface(args: GetLayer3SubinterfaceArgs, opts?: pu
 export interface GetLayer3SubinterfaceArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * L3 sub-interface name
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -74,66 +62,25 @@ export interface GetLayer3SubinterfaceArgs {
  * A collection of values returned by getLayer3Subinterface.
  */
 export interface GetLayer3SubinterfaceResult {
-    /**
-     * Layer 3 sub Interfaces ARP configuration
-     */
     readonly arps: outputs.GetLayer3SubinterfaceArp[];
-    /**
-     * Description
-     */
     readonly comment: string;
-    /**
-     * Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
-     */
     readonly ddnsConfig: outputs.GetLayer3SubinterfaceDdnsConfig;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * Layer3 sub interfaces DHCP Client Object
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     */
     readonly dhcpClient: outputs.GetLayer3SubinterfaceDhcpClient;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Interface management profile
-     */
     readonly interfaceManagementProfile: string;
-    /**
-     * L3 sub-interface IP Parent
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     */
     readonly ips: outputs.GetLayer3SubinterfaceIp[];
-    /**
-     * MTU
-     */
     readonly mtu: number;
-    /**
-     * L3 sub-interface name
-     */
     readonly name: string;
-    /**
-     * Parent interface
-     */
     readonly parentInterface: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
-    /**
-     * VLAN tag
-     */
     readonly tag: number;
     readonly tfid: string;
 }
@@ -178,25 +125,13 @@ export function getLayer3SubinterfaceOutput(args: GetLayer3SubinterfaceOutputArg
 export interface GetLayer3SubinterfaceOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * L3 sub-interface name
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

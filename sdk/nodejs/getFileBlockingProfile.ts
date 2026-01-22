@@ -46,26 +46,14 @@ export function getFileBlockingProfile(args: GetFileBlockingProfileArgs, opts?: 
 export interface GetFileBlockingProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * The UUID of the file blocking profile
      */
     id: string;
-    /**
-     * The name of the file blocking profile
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -73,36 +61,18 @@ export interface GetFileBlockingProfileArgs {
  * A collection of values returned by getFileBlockingProfile.
  */
 export interface GetFileBlockingProfileResult {
-    /**
-     * Description
-     */
     readonly description: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * The UUID of the file blocking profile
      */
     readonly id: string;
-    /**
-     * The name of the file blocking profile
-     */
     readonly name: string;
-    /**
-     * A list of file blocking rules
-     */
     readonly rules: outputs.GetFileBlockingProfileRule[];
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -146,25 +116,13 @@ export function getFileBlockingProfileOutput(args: GetFileBlockingProfileOutputA
 export interface GetFileBlockingProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * The UUID of the file blocking profile
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the file blocking profile
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

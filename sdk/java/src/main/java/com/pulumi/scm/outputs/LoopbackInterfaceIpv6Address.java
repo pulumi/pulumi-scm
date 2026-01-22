@@ -4,6 +4,8 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.scm.outputs.LoopbackInterfaceIpv6AddressAnycast;
+import com.pulumi.scm.outputs.LoopbackInterfaceIpv6AddressPrefix;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -13,22 +15,34 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoopbackInterfaceIpv6Address {
     /**
+     * @return Anycast
+     * 
+     */
+    private @Nullable LoopbackInterfaceIpv6AddressAnycast anycast;
+    /**
      * @return Enable Address on Interface
      * 
      */
     private @Nullable Boolean enableOnInterface;
     /**
-     * @return Interface ID
-     * 
-     */
-    private @Nullable String interfaceId;
-    /**
      * @return IPv6 Address
      * 
      */
     private @Nullable String name;
+    /**
+     * @return Use interface ID as host portion
+     * 
+     */
+    private @Nullable LoopbackInterfaceIpv6AddressPrefix prefix;
 
     private LoopbackInterfaceIpv6Address() {}
+    /**
+     * @return Anycast
+     * 
+     */
+    public Optional<LoopbackInterfaceIpv6AddressAnycast> anycast() {
+        return Optional.ofNullable(this.anycast);
+    }
     /**
      * @return Enable Address on Interface
      * 
@@ -37,18 +51,18 @@ public final class LoopbackInterfaceIpv6Address {
         return Optional.ofNullable(this.enableOnInterface);
     }
     /**
-     * @return Interface ID
-     * 
-     */
-    public Optional<String> interfaceId() {
-        return Optional.ofNullable(this.interfaceId);
-    }
-    /**
      * @return IPv6 Address
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+    /**
+     * @return Use interface ID as host portion
+     * 
+     */
+    public Optional<LoopbackInterfaceIpv6AddressPrefix> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     public static Builder builder() {
@@ -60,27 +74,29 @@ public final class LoopbackInterfaceIpv6Address {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable LoopbackInterfaceIpv6AddressAnycast anycast;
         private @Nullable Boolean enableOnInterface;
-        private @Nullable String interfaceId;
         private @Nullable String name;
+        private @Nullable LoopbackInterfaceIpv6AddressPrefix prefix;
         public Builder() {}
         public Builder(LoopbackInterfaceIpv6Address defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.anycast = defaults.anycast;
     	      this.enableOnInterface = defaults.enableOnInterface;
-    	      this.interfaceId = defaults.interfaceId;
     	      this.name = defaults.name;
+    	      this.prefix = defaults.prefix;
         }
 
+        @CustomType.Setter
+        public Builder anycast(@Nullable LoopbackInterfaceIpv6AddressAnycast anycast) {
+
+            this.anycast = anycast;
+            return this;
+        }
         @CustomType.Setter
         public Builder enableOnInterface(@Nullable Boolean enableOnInterface) {
 
             this.enableOnInterface = enableOnInterface;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder interfaceId(@Nullable String interfaceId) {
-
-            this.interfaceId = interfaceId;
             return this;
         }
         @CustomType.Setter
@@ -89,11 +105,18 @@ public final class LoopbackInterfaceIpv6Address {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
+        public Builder prefix(@Nullable LoopbackInterfaceIpv6AddressPrefix prefix) {
+
+            this.prefix = prefix;
+            return this;
+        }
         public LoopbackInterfaceIpv6Address build() {
             final var _resultValue = new LoopbackInterfaceIpv6Address();
+            _resultValue.anycast = anycast;
             _resultValue.enableOnInterface = enableOnInterface;
-            _resultValue.interfaceId = interfaceId;
             _resultValue.name = name;
+            _resultValue.prefix = prefix;
             return _resultValue;
         }
     }

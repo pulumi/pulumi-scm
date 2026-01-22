@@ -47,13 +47,13 @@ type DnsProxy struct {
 	// Default
 	Default DnsProxyDefaultOutput `pulumi:"default"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// DNS proxy rules
 	DomainServers DnsProxyDomainServerArrayOutput `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrOutput `pulumi:"enabled"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interfaces on which to enable DNS proxy service
@@ -61,6 +61,7 @@ type DnsProxy struct {
 	// DNS proxy name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Static entries
@@ -110,13 +111,13 @@ type dnsProxyState struct {
 	// Default
 	Default *DnsProxyDefault `pulumi:"default"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// DNS proxy rules
 	DomainServers []DnsProxyDomainServer `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled *bool `pulumi:"enabled"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interfaces on which to enable DNS proxy service
@@ -124,6 +125,7 @@ type dnsProxyState struct {
 	// DNS proxy name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Static entries
@@ -141,13 +143,13 @@ type DnsProxyState struct {
 	// Default
 	Default DnsProxyDefaultPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// DNS proxy rules
 	DomainServers DnsProxyDomainServerArrayInput
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interfaces on which to enable DNS proxy service
@@ -155,6 +157,7 @@ type DnsProxyState struct {
 	// DNS proxy name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Static entries
@@ -176,13 +179,13 @@ type dnsProxyArgs struct {
 	// Default
 	Default DnsProxyDefault `pulumi:"default"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// DNS proxy rules
 	DomainServers []DnsProxyDomainServer `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled *bool `pulumi:"enabled"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interfaces on which to enable DNS proxy service
@@ -190,6 +193,7 @@ type dnsProxyArgs struct {
 	// DNS proxy name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Static entries
@@ -207,13 +211,13 @@ type DnsProxyArgs struct {
 	// Default
 	Default DnsProxyDefaultInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// DNS proxy rules
 	DomainServers DnsProxyDomainServerArrayInput
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interfaces on which to enable DNS proxy service
@@ -221,6 +225,7 @@ type DnsProxyArgs struct {
 	// DNS proxy name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Static entries
@@ -329,7 +334,6 @@ func (o DnsProxyOutput) Default() DnsProxyDefaultOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DnsProxyOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DnsProxy) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -345,6 +349,7 @@ func (o DnsProxyOutput) Enabled() pulumi.BoolPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DnsProxyOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DnsProxy) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -361,6 +366,7 @@ func (o DnsProxyOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DnsProxyOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DnsProxy) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

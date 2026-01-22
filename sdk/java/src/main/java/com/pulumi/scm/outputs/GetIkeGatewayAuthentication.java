@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetIkeGatewayAuthentication {
     /**
      * @return Certificate
-     * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */
     private GetIkeGatewayAuthenticationCertificate certificate;
     /**
      * @return Pre shared key
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetIkeGatewayAuthentication {
     private GetIkeGatewayAuthentication() {}
     /**
      * @return Certificate
-     * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */
     public GetIkeGatewayAuthenticationCertificate certificate() {
@@ -35,6 +34,7 @@ public final class GetIkeGatewayAuthentication {
     }
     /**
      * @return Pre shared key
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */

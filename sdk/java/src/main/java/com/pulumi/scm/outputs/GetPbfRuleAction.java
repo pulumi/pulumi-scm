@@ -14,18 +14,19 @@ import java.util.Objects;
 public final class GetPbfRuleAction {
     /**
      * @return Discard
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     private GetPbfRuleActionDiscard discard;
     /**
      * @return Forward
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     private GetPbfRuleActionForward forward;
     /**
      * @return No pbf
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
@@ -34,7 +35,6 @@ public final class GetPbfRuleAction {
     private GetPbfRuleAction() {}
     /**
      * @return Discard
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     public GetPbfRuleActionDiscard discard() {
@@ -42,6 +42,7 @@ public final class GetPbfRuleAction {
     }
     /**
      * @return Forward
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
@@ -50,6 +51,7 @@ public final class GetPbfRuleAction {
     }
     /**
      * @return No pbf
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */

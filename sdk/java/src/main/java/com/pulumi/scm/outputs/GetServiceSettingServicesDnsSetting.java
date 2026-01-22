@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetServiceSettingServicesDnsSetting {
     /**
      * @return Dns proxy object
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
     private String dnsProxyObject;
     /**
      * @return Servers
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetServiceSettingServicesDnsSetting {
     private GetServiceSettingServicesDnsSetting() {}
     /**
      * @return Dns proxy object
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
     public String dnsProxyObject() {
@@ -35,6 +34,7 @@ public final class GetServiceSettingServicesDnsSetting {
     }
     /**
      * @return Servers
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */

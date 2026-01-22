@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Dhcp client
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Static`.
         /// </summary>
         [Input("dhcpClient")]
         public Input<Inputs.ManagementInterfaceManagementInterfaceMgmtTypeDhcpClientArgs>? DhcpClient { get; set; }
 
         /// <summary>
         /// Static
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Static`.
         /// </summary>
         [Input("static")]

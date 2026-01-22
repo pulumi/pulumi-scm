@@ -23,12 +23,10 @@ namespace Pulumi.Scm.Outputs
         public readonly string DefaultValue;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -44,16 +42,19 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<Outputs.GetTunnelInterfaceListDataIpResult> Ips;
         /// <summary>
+        /// Tunnel Interface IPv6 Configuration
+        /// </summary>
+        public readonly Outputs.GetTunnelInterfaceListDataIpv6Result Ipv6;
+        /// <summary>
         /// MTU
         /// </summary>
         public readonly int Mtu;
         /// <summary>
-        /// L3 sub-interface name
+        /// The name of the item.
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
@@ -74,6 +75,8 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<Outputs.GetTunnelInterfaceListDataIpResult> ips,
 
+            Outputs.GetTunnelInterfaceListDataIpv6Result ipv6,
+
             int mtu,
 
             string name,
@@ -89,6 +92,7 @@ namespace Pulumi.Scm.Outputs
             Id = id;
             InterfaceManagementProfile = interfaceManagementProfile;
             Ips = ips;
+            Ipv6 = ipv6;
             Mtu = mtu;
             Name = name;
             Snippet = snippet;

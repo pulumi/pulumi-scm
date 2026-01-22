@@ -19,7 +19,6 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
     /**
      * Autokey
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     @Import(name="autokey")
@@ -27,7 +26,6 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
     /**
      * @return Autokey
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     public Optional<Output<ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeAutokeyArgs>> autokey() {
@@ -36,6 +34,7 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
     /**
      * None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
@@ -44,6 +43,7 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
@@ -53,6 +53,7 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
     /**
      * Symmetric key
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
@@ -61,6 +62,7 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
     /**
      * @return Symmetric key
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
@@ -96,7 +98,6 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
         /**
          * @param autokey Autokey
-         * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
          * 
          * @return builder
          * 
@@ -108,7 +109,6 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
         /**
          * @param autokey Autokey
-         * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
          * 
          * @return builder
          * 
@@ -119,6 +119,7 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
         /**
          * @param none None
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
          * 
          * @return builder
@@ -131,6 +132,7 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
         /**
          * @param none None
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
          * 
          * @return builder
@@ -142,6 +144,7 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
         /**
          * @param symmetricKey Symmetric key
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
          * 
          * @return builder
@@ -154,6 +157,7 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
 
         /**
          * @param symmetricKey Symmetric key
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
          * 
          * @return builder

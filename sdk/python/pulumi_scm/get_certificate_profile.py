@@ -86,57 +86,36 @@ class GetCertificateProfileResult:
     @_builtins.property
     @pulumi.getter(name="blockExpiredCert")
     def block_expired_cert(self) -> _builtins.bool:
-        """
-        Block sessions with expired certificates?
-        """
         return pulumi.get(self, "block_expired_cert")
 
     @_builtins.property
     @pulumi.getter(name="blockTimeoutCert")
     def block_timeout_cert(self) -> _builtins.bool:
-        """
-        Block session if certificate status cannot be retrieved within timeout?
-        """
         return pulumi.get(self, "block_timeout_cert")
 
     @_builtins.property
     @pulumi.getter(name="blockUnauthenticatedCert")
     def block_unauthenticated_cert(self) -> _builtins.bool:
-        """
-        Block session if the certificate was not issued to the authenticating device?
-        """
         return pulumi.get(self, "block_unauthenticated_cert")
 
     @_builtins.property
     @pulumi.getter(name="blockUnknownCert")
     def block_unknown_cert(self) -> _builtins.bool:
-        """
-        Block session if certificate status is unknown?
-        """
         return pulumi.get(self, "block_unknown_cert")
 
     @_builtins.property
     @pulumi.getter(name="caCertificates")
     def ca_certificates(self) -> Sequence['outputs.GetCertificateProfileCaCertificateResult']:
-        """
-        An ordered list of CA certificates
-        """
         return pulumi.get(self, "ca_certificates")
 
     @_builtins.property
     @pulumi.getter(name="certStatusTimeout")
     def cert_status_timeout(self) -> _builtins.str:
-        """
-        Certificate status timeout
-        """
         return pulumi.get(self, "cert_status_timeout")
 
     @_builtins.property
     @pulumi.getter(name="crlReceiveTimeout")
     def crl_receive_timeout(self) -> _builtins.str:
-        """
-        CRL receive timeout (seconds)
-        """
         return pulumi.get(self, "crl_receive_timeout")
 
     @_builtins.property
@@ -144,25 +123,17 @@ class GetCertificateProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def domain(self) -> _builtins.str:
-        """
-        User domain
-        """
         return pulumi.get(self, "domain")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -176,26 +147,16 @@ class GetCertificateProfileResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        The name of the certificate profile
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="ocspReceiveTimeout")
     def ocsp_receive_timeout(self) -> _builtins.str:
-        """
-        OCSP receive timeout (seconds)
-        """
         return pulumi.get(self, "ocsp_receive_timeout")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -206,25 +167,16 @@ class GetCertificateProfileResult:
     @_builtins.property
     @pulumi.getter(name="useCrl")
     def use_crl(self) -> _builtins.bool:
-        """
-        Use CRL?
-        """
         return pulumi.get(self, "use_crl")
 
     @_builtins.property
     @pulumi.getter(name="useOcsp")
     def use_ocsp(self) -> _builtins.bool:
-        """
-        Use OCSP?
-        """
         return pulumi.get(self, "use_ocsp")
 
     @_builtins.property
     @pulumi.getter(name="usernameField")
     def username_field(self) -> 'outputs.GetCertificateProfileUsernameFieldResult':
-        """
-        Certificate username field
-        """
         return pulumi.get(self, "username_field")
 
 
@@ -277,13 +229,7 @@ def get_certificate_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the certificate profile
-    :param _builtins.str name: The name of the certificate profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -336,13 +282,7 @@ def get_certificate_profile_output(device: Optional[pulumi.Input[Optional[_built
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the certificate profile
-    :param _builtins.str name: The name of the certificate profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

@@ -14,166 +14,65 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCertificateProfileResult {
-    /**
-     * @return Block sessions with expired certificates?
-     * 
-     */
     private Boolean blockExpiredCert;
-    /**
-     * @return Block session if certificate status cannot be retrieved within timeout?
-     * 
-     */
     private Boolean blockTimeoutCert;
-    /**
-     * @return Block session if the certificate was not issued to the authenticating device?
-     * 
-     */
     private Boolean blockUnauthenticatedCert;
-    /**
-     * @return Block session if certificate status is unknown?
-     * 
-     */
     private Boolean blockUnknownCert;
-    /**
-     * @return An ordered list of CA certificates
-     * 
-     */
     private List<GetCertificateProfileCaCertificate> caCertificates;
-    /**
-     * @return Certificate status timeout
-     * 
-     */
     private String certStatusTimeout;
-    /**
-     * @return CRL receive timeout (seconds)
-     * 
-     */
     private String crlReceiveTimeout;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return User domain
-     * 
-     */
     private String domain;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the certificate profile
      * 
      */
     private String id;
-    /**
-     * @return The name of the certificate profile
-     * 
-     */
     private String name;
-    /**
-     * @return OCSP receive timeout (seconds)
-     * 
-     */
     private String ocspReceiveTimeout;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return Use CRL?
-     * 
-     */
     private Boolean useCrl;
-    /**
-     * @return Use OCSP?
-     * 
-     */
     private Boolean useOcsp;
-    /**
-     * @return Certificate username field
-     * 
-     */
     private GetCertificateProfileUsernameField usernameField;
 
     private GetCertificateProfileResult() {}
-    /**
-     * @return Block sessions with expired certificates?
-     * 
-     */
     public Boolean blockExpiredCert() {
         return this.blockExpiredCert;
     }
-    /**
-     * @return Block session if certificate status cannot be retrieved within timeout?
-     * 
-     */
     public Boolean blockTimeoutCert() {
         return this.blockTimeoutCert;
     }
-    /**
-     * @return Block session if the certificate was not issued to the authenticating device?
-     * 
-     */
     public Boolean blockUnauthenticatedCert() {
         return this.blockUnauthenticatedCert;
     }
-    /**
-     * @return Block session if certificate status is unknown?
-     * 
-     */
     public Boolean blockUnknownCert() {
         return this.blockUnknownCert;
     }
-    /**
-     * @return An ordered list of CA certificates
-     * 
-     */
     public List<GetCertificateProfileCaCertificate> caCertificates() {
         return this.caCertificates;
     }
-    /**
-     * @return Certificate status timeout
-     * 
-     */
     public String certStatusTimeout() {
         return this.certStatusTimeout;
     }
-    /**
-     * @return CRL receive timeout (seconds)
-     * 
-     */
     public String crlReceiveTimeout() {
         return this.crlReceiveTimeout;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return User domain
-     * 
-     */
     public String domain() {
         return this.domain;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -184,49 +83,24 @@ public final class GetCertificateProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return The name of the certificate profile
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return OCSP receive timeout (seconds)
-     * 
-     */
     public String ocspReceiveTimeout() {
         return this.ocspReceiveTimeout;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Use CRL?
-     * 
-     */
     public Boolean useCrl() {
         return this.useCrl;
     }
-    /**
-     * @return Use OCSP?
-     * 
-     */
     public Boolean useOcsp() {
         return this.useOcsp;
     }
-    /**
-     * @return Certificate username field
-     * 
-     */
     public GetCertificateProfileUsernameField usernameField() {
         return this.usernameField;
     }

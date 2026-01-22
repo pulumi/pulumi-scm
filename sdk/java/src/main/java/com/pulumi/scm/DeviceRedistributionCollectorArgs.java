@@ -18,7 +18,6 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -26,7 +25,6 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -35,6 +33,7 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -43,6 +42,7 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -67,6 +67,7 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -75,6 +76,7 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -111,7 +113,6 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -123,7 +124,6 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -134,6 +134,7 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -146,6 +147,7 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -178,6 +180,7 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -190,6 +193,7 @@ public final class DeviceRedistributionCollectorArgs extends com.pulumi.resource
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

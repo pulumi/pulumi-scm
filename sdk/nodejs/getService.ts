@@ -44,26 +44,14 @@ export function getService(args: GetServiceArgs, opts?: pulumi.InvokeOptions): P
 export interface GetServiceArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * The UUID of the service
      */
     id: string;
-    /**
-     * The name of the service
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -71,40 +59,19 @@ export interface GetServiceArgs {
  * A collection of values returned by getService.
  */
 export interface GetServiceResult {
-    /**
-     * Description
-     */
     readonly description: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * The UUID of the service
      */
     readonly id: string;
-    /**
-     * The name of the service
-     */
     readonly name: string;
-    /**
-     * Protocol
-     */
     readonly protocol: outputs.GetServiceProtocol;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
-    /**
-     * Tags for service object
-     */
     readonly tags: string[];
     readonly tfid: string;
 }
@@ -146,25 +113,13 @@ export function getServiceOutput(args: GetServiceOutputArgs, opts?: pulumi.Invok
 export interface GetServiceOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * The UUID of the service
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the service
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

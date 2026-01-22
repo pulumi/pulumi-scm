@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,7 +42,7 @@ public final class ServiceConnectionProtocolBgp {
      * @return Peer as
      * 
      */
-    private @Nullable String peerAs;
+    private String peerAs;
     /**
      * @return Peer ip address
      * 
@@ -98,8 +99,8 @@ public final class ServiceConnectionProtocolBgp {
      * @return Peer as
      * 
      */
-    public Optional<String> peerAs() {
-        return Optional.ofNullable(this.peerAs);
+    public String peerAs() {
+        return this.peerAs;
     }
     /**
      * @return Peer ip address
@@ -137,7 +138,7 @@ public final class ServiceConnectionProtocolBgp {
         private @Nullable Boolean fastFailover;
         private @Nullable String localIpAddress;
         private @Nullable Boolean originateDefaultRoute;
-        private @Nullable String peerAs;
+        private String peerAs;
         private @Nullable String peerIpAddress;
         private @Nullable String secret;
         private @Nullable Boolean summarizeMobileUserRoutes;
@@ -186,8 +187,10 @@ public final class ServiceConnectionProtocolBgp {
             return this;
         }
         @CustomType.Setter
-        public Builder peerAs(@Nullable String peerAs) {
-
+        public Builder peerAs(String peerAs) {
+            if (peerAs == null) {
+              throw new MissingRequiredPropertyException("ServiceConnectionProtocolBgp", "peerAs");
+            }
             this.peerAs = peerAs;
             return this;
         }

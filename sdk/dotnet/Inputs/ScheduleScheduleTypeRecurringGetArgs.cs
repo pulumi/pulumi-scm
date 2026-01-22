@@ -17,7 +17,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Daily
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily` and `Weekly`.
         /// </summary>
         public InputList<string> Dailies
         {
@@ -27,6 +26,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Weekly
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily` and `Weekly`.
         /// </summary>
         [Input("weekly")]

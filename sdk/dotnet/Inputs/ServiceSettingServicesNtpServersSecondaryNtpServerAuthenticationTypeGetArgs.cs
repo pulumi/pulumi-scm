@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Autokey
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Autokey`, `None`, and `SymmetricKey`.
         /// </summary>
         [Input("autokey")]
         public Input<Inputs.ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeAutokeyGetArgs>? Autokey { get; set; }
 
         /// <summary>
         /// None
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Autokey`, `None`, and `SymmetricKey`.
         /// </summary>
         [Input("none")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Symmetric key
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Autokey`, `None`, and `SymmetricKey`.
         /// </summary>
         [Input("symmetricKey")]

@@ -17,6 +17,7 @@ import java.util.Objects;
 public final class GetEthernetInterfaceListData {
     /**
      * @return Aggregate group
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -33,7 +34,6 @@ public final class GetEthernetInterfaceListData {
     private String defaultValue;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -43,8 +43,7 @@ public final class GetEthernetInterfaceListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -55,12 +54,14 @@ public final class GetEthernetInterfaceListData {
     private String id;
     /**
      * @return Layer2
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     private GetEthernetInterfaceListDataLayer2 layer2;
     /**
      * @return Ethernet Interface Layer 3 configuration
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -81,7 +82,7 @@ public final class GetEthernetInterfaceListData {
      */
     private String linkState;
     /**
-     * @return Interface name
+     * @return The name of the item.
      * 
      */
     private String name;
@@ -91,13 +92,13 @@ public final class GetEthernetInterfaceListData {
      */
     private GetEthernetInterfaceListDataPoe poe;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
     /**
      * @return Tap
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -107,6 +108,7 @@ public final class GetEthernetInterfaceListData {
     private GetEthernetInterfaceListData() {}
     /**
      * @return Aggregate group
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -129,7 +131,6 @@ public final class GetEthernetInterfaceListData {
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -143,8 +144,7 @@ public final class GetEthernetInterfaceListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -159,6 +159,7 @@ public final class GetEthernetInterfaceListData {
     }
     /**
      * @return Layer2
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -167,6 +168,7 @@ public final class GetEthernetInterfaceListData {
     }
     /**
      * @return Ethernet Interface Layer 3 configuration
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -195,7 +197,7 @@ public final class GetEthernetInterfaceListData {
         return this.linkState;
     }
     /**
-     * @return Interface name
+     * @return The name of the item.
      * 
      */
     public String name() {
@@ -209,8 +211,7 @@ public final class GetEthernetInterfaceListData {
         return this.poe;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {
@@ -218,6 +219,7 @@ public final class GetEthernetInterfaceListData {
     }
     /**
      * @return Tap
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */

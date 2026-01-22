@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction {
     /**
      * @return Restart
-     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
     private @Nullable BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestart restart;
     /**
      * @return Warning only
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
@@ -28,7 +28,6 @@ public final class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction {
     private BgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction() {}
     /**
      * @return Restart
-     * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */
     public Optional<BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestart> restart() {
@@ -36,6 +35,7 @@ public final class BgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction {
     }
     /**
      * @return Warning only
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      * 
      */

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.LoopbackInterfaceIpv6AddressArgs;
 import java.lang.Boolean;
+import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -47,11 +48,27 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
         return Optional.ofNullable(this.enabled);
     }
 
+    /**
+     * Interface ID
+     * 
+     */
+    @Import(name="interfaceId")
+    private @Nullable Output<String> interfaceId;
+
+    /**
+     * @return Interface ID
+     * 
+     */
+    public Optional<Output<String>> interfaceId() {
+        return Optional.ofNullable(this.interfaceId);
+    }
+
     private LoopbackInterfaceIpv6Args() {}
 
     private LoopbackInterfaceIpv6Args(LoopbackInterfaceIpv6Args $) {
         this.addresses = $.addresses;
         this.enabled = $.enabled;
+        this.interfaceId = $.interfaceId;
     }
 
     public static Builder builder() {
@@ -122,6 +139,27 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
          */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
+        }
+
+        /**
+         * @param interfaceId Interface ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder interfaceId(@Nullable Output<String> interfaceId) {
+            $.interfaceId = interfaceId;
+            return this;
+        }
+
+        /**
+         * @param interfaceId Interface ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder interfaceId(String interfaceId) {
+            return interfaceId(Output.of(interfaceId));
         }
 
         public LoopbackInterfaceIpv6Args build() {

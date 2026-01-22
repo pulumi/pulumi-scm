@@ -15,30 +15,33 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity {
     /**
      * @return Append
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private List<String> appends;
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone none;
     /**
      * @return Overwrite
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private List<String> overwrites;
     /**
      * @return Remove all
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll removeAll;
     /**
      * @return Remove regex
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -47,7 +50,6 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
     private GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity() {}
     /**
      * @return Append
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     public List<String> appends() {
@@ -55,6 +57,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
     }
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -63,6 +66,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
     }
     /**
      * @return Overwrite
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -71,6 +75,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
     }
     /**
      * @return Remove all
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -79,6 +84,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
     }
     /**
      * @return Remove regex
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */

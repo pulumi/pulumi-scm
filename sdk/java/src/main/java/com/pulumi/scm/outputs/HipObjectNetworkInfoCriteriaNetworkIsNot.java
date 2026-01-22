@@ -16,24 +16,26 @@ import javax.annotation.Nullable;
 public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
     /**
      * @return Ethernet
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotEthernet ethernet;
     /**
      * @return Mobile
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotMobile mobile;
     /**
      * @return Unknown
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotUnknown unknown;
     /**
      * @return Wifi
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -42,7 +44,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
     private HipObjectNetworkInfoCriteriaNetworkIsNot() {}
     /**
      * @return Ethernet
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetworkIsNotEthernet> ethernet() {
@@ -50,6 +51,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
     }
     /**
      * @return Mobile
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -58,6 +60,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
     }
     /**
      * @return Unknown
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -66,6 +69,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
     }
     /**
      * @return Wifi
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */

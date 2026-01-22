@@ -15,18 +15,19 @@ import javax.annotation.Nullable;
 public final class IpsecTunnelAutoKeyProxyIdV6Protocol {
     /**
      * @return IP protocol number
-     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     private @Nullable Integer number;
     /**
-     * @return IPv6 type of proxy*id protocol values for TCP protocol
+     * @return IPv6 type of proxyId protocol values for TCP protocol
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     private @Nullable IpsecTunnelAutoKeyProxyIdV6ProtocolTcp tcp;
     /**
-     * @return IPv6 type of proxy*id protocol values for UDP protocol
+     * @return IPv6 type of proxyId protocol values for UDP protocol
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
@@ -35,14 +36,14 @@ public final class IpsecTunnelAutoKeyProxyIdV6Protocol {
     private IpsecTunnelAutoKeyProxyIdV6Protocol() {}
     /**
      * @return IP protocol number
-     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     public Optional<Integer> number() {
         return Optional.ofNullable(this.number);
     }
     /**
-     * @return IPv6 type of proxy*id protocol values for TCP protocol
+     * @return IPv6 type of proxyId protocol values for TCP protocol
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
@@ -50,7 +51,8 @@ public final class IpsecTunnelAutoKeyProxyIdV6Protocol {
         return Optional.ofNullable(this.tcp);
     }
     /**
-     * @return IPv6 type of proxy*id protocol values for UDP protocol
+     * @return IPv6 type of proxyId protocol values for UDP protocol
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */

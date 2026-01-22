@@ -17,18 +17,19 @@ import java.util.Objects;
 public final class GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     /**
      * @return Daily
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     private GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily daily;
     /**
      * @return Hourly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     private GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringHourly hourly;
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -45,6 +46,7 @@ public final class GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     private Integer threshold;
     /**
      * @return Weekly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -53,7 +55,6 @@ public final class GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     private GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring() {}
     /**
      * @return Daily
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     public GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurringDaily daily() {
@@ -61,6 +62,7 @@ public final class GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     }
     /**
      * @return Hourly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -69,6 +71,7 @@ public final class GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     }
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -91,6 +94,7 @@ public final class GetUpdateScheduleListDataUpdateScheduleAntiVirusRecurring {
     }
     /**
      * @return Weekly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */

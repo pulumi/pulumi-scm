@@ -15,24 +15,26 @@ import java.util.Objects;
 public final class GetLogicalRouterVrfEcmpAlgorithm {
     /**
      * @return Balanced round robin
-     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
     private GetLogicalRouterVrfEcmpAlgorithmBalancedRoundRobin balancedRoundRobin;
     /**
      * @return Ip hash
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
     private GetLogicalRouterVrfEcmpAlgorithmIpHash ipHash;
     /**
      * @return Ip modulo
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
     private GetLogicalRouterVrfEcmpAlgorithmIpModulo ipModulo;
     /**
      * @return Weighted round robin
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
@@ -41,7 +43,6 @@ public final class GetLogicalRouterVrfEcmpAlgorithm {
     private GetLogicalRouterVrfEcmpAlgorithm() {}
     /**
      * @return Balanced round robin
-     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
     public GetLogicalRouterVrfEcmpAlgorithmBalancedRoundRobin balancedRoundRobin() {
@@ -49,6 +50,7 @@ public final class GetLogicalRouterVrfEcmpAlgorithm {
     }
     /**
      * @return Ip hash
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
@@ -57,6 +59,7 @@ public final class GetLogicalRouterVrfEcmpAlgorithm {
     }
     /**
      * @return Ip modulo
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
@@ -65,6 +68,7 @@ public final class GetLogicalRouterVrfEcmpAlgorithm {
     }
     /**
      * @return Weighted round robin
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */

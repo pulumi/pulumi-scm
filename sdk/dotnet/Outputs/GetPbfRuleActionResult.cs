@@ -15,16 +15,17 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Discard
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Forward`, and `NoPbf`.
         /// </summary>
         public readonly Outputs.GetPbfRuleActionDiscardResult Discard;
         /// <summary>
         /// Forward
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Forward`, and `NoPbf`.
         /// </summary>
         public readonly Outputs.GetPbfRuleActionForwardResult Forward;
         /// <summary>
         /// No pbf
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Forward`, and `NoPbf`.
         /// </summary>
         public readonly Outputs.GetPbfRuleActionNoPbfResult NoPbf;

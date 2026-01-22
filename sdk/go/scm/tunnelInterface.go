@@ -55,6 +55,39 @@ import (
 //			if err != nil {
 //				return err
 //			}
+//			// Creates an ip subnet variable used in the subsequent example
+//			scmIpv6Prefix, err := scm.NewVariable(ctx, "scm_ipv6_prefix", &scm.VariableArgs{
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$scm_ipv6_prefix"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("ip-netmask"),
+//				Value:       pulumi.String("2001:0db8:abcd:0001::/64"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a tunnel interface with ipv6 address, with default value tunnel.321
+//			_, err = scm.NewTunnelInterface(ctx, "scm_tunnel_intf_3", &scm.TunnelInterfaceArgs{
+//				Name:         pulumi.String("$scm_tunnel_intf_3"),
+//				Comment:      pulumi.String("Managed by Pulumi"),
+//				Folder:       pulumi.String("ngfw-shared"),
+//				DefaultValue: pulumi.String("tunnel.321"),
+//				Ipv6: &scm.TunnelInterfaceIpv6Args{
+//					Enabled:     pulumi.Bool(true),
+//					InterfaceId: pulumi.String("EUI-64"),
+//					Addresses: scm.TunnelInterfaceIpv6AddressArray{
+//						&scm.TunnelInterfaceIpv6AddressArgs{
+//							Name:   pulumi.String("$scm_ipv6_prefix"),
+//							Prefix: &scm.TunnelInterfaceIpv6AddressPrefixArgs{},
+//						},
+//					},
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmIpv6Prefix,
+//			}))
+//			if err != nil {
+//				return err
+//			}
 //			return nil
 //		})
 //	}
@@ -94,20 +127,23 @@ type TunnelInterface struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrOutput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrOutput `pulumi:"interfaceManagementProfile"`
 	// Tunnel Interface IP Parent
 	Ips TunnelInterfaceIpArrayOutput `pulumi:"ips"`
+	// Tunnel Interface IPv6 Configuration
+	Ipv6 TunnelInterfaceIpv6PtrOutput `pulumi:"ipv6"`
 	// MTU
 	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -148,20 +184,23 @@ type tunnelInterfaceState struct {
 	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// Tunnel Interface IP Parent
 	Ips []TunnelInterfaceIp `pulumi:"ips"`
+	// Tunnel Interface IPv6 Configuration
+	Ipv6 *TunnelInterfaceIpv6 `pulumi:"ipv6"`
 	// MTU
 	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -173,20 +212,23 @@ type TunnelInterfaceState struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
 	// Tunnel Interface IP Parent
 	Ips TunnelInterfaceIpArrayInput
+	// Tunnel Interface IPv6 Configuration
+	Ipv6 TunnelInterfaceIpv6PtrInput
 	// MTU
 	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -202,20 +244,23 @@ type tunnelInterfaceArgs struct {
 	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// Tunnel Interface IP Parent
 	Ips []TunnelInterfaceIp `pulumi:"ips"`
+	// Tunnel Interface IPv6 Configuration
+	Ipv6 *TunnelInterfaceIpv6 `pulumi:"ipv6"`
 	// MTU
 	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -227,20 +272,23 @@ type TunnelInterfaceArgs struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
 	// Tunnel Interface IP Parent
 	Ips TunnelInterfaceIpArrayInput
+	// Tunnel Interface IPv6 Configuration
+	Ipv6 TunnelInterfaceIpv6PtrInput
 	// MTU
 	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -343,12 +391,12 @@ func (o TunnelInterfaceOutput) DefaultValue() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TunnelInterfaceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TunnelInterface) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TunnelInterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TunnelInterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -364,6 +412,11 @@ func (o TunnelInterfaceOutput) Ips() TunnelInterfaceIpArrayOutput {
 	return o.ApplyT(func(v *TunnelInterface) TunnelInterfaceIpArrayOutput { return v.Ips }).(TunnelInterfaceIpArrayOutput)
 }
 
+// Tunnel Interface IPv6 Configuration
+func (o TunnelInterfaceOutput) Ipv6() TunnelInterfaceIpv6PtrOutput {
+	return o.ApplyT(func(v *TunnelInterface) TunnelInterfaceIpv6PtrOutput { return v.Ipv6 }).(TunnelInterfaceIpv6PtrOutput)
+}
+
 // MTU
 func (o TunnelInterfaceOutput) Mtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TunnelInterface) pulumi.IntPtrOutput { return v.Mtu }).(pulumi.IntPtrOutput)
@@ -375,6 +428,7 @@ func (o TunnelInterfaceOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TunnelInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TunnelInterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

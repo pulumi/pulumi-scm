@@ -74,9 +74,6 @@ class GetIkeGatewayResult:
     @_builtins.property
     @pulumi.getter
     def authentication(self) -> 'outputs.GetIkeGatewayAuthenticationResult':
-        """
-        Authentication
-        """
         return pulumi.get(self, "authentication")
 
     @_builtins.property
@@ -84,25 +81,17 @@ class GetIkeGatewayResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
-        """
-        Map of sensitive values returned from the API.
-        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -116,66 +105,41 @@ class GetIkeGatewayResult:
     @_builtins.property
     @pulumi.getter(name="localAddress")
     def local_address(self) -> 'outputs.GetIkeGatewayLocalAddressResult':
-        """
-        Local address
-        """
         return pulumi.get(self, "local_address")
 
     @_builtins.property
     @pulumi.getter(name="localId")
     def local_id(self) -> 'outputs.GetIkeGatewayLocalIdResult':
-        """
-        Local id
-        """
         return pulumi.get(self, "local_id")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="peerAddress")
     def peer_address(self) -> 'outputs.GetIkeGatewayPeerAddressResult':
-        """
-        Peer address
-        """
         return pulumi.get(self, "peer_address")
 
     @_builtins.property
     @pulumi.getter(name="peerId")
     def peer_id(self) -> 'outputs.GetIkeGatewayPeerIdResult':
-        """
-        Peer id
-        """
         return pulumi.get(self, "peer_id")
 
     @_builtins.property
     @pulumi.getter
     def protocol(self) -> 'outputs.GetIkeGatewayProtocolResult':
-        """
-        Protocol
-        """
         return pulumi.get(self, "protocol")
 
     @_builtins.property
     @pulumi.getter(name="protocolCommon")
     def protocol_common(self) -> 'outputs.GetIkeGatewayProtocolCommonResult':
-        """
-        Protocol common
-        """
         return pulumi.get(self, "protocol_common")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -229,13 +193,7 @@ def get_ike_gateway(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -284,13 +242,7 @@ def get_ike_gateway_output(device: Optional[pulumi.Input[Optional[_builtins.str]
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

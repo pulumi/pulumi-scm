@@ -56,6 +56,48 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
+    ///     //
+    ///     // Creates an ip subnet variable used in the subsequent example
+    ///     //
+    ///     var scmIpv6Prefix = new Scm.Variable("scm_ipv6_prefix", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$scm_ipv6_prefix",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "ip-netmask",
+    ///         Value = "2001:0db8:abcd:0001::/64",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a tunnel interface with ipv6 address, with default value tunnel.321
+    ///     //
+    ///     var scmTunnelIntf3 = new Scm.TunnelInterface("scm_tunnel_intf_3", new()
+    ///     {
+    ///         Name = "$scm_tunnel_intf_3",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         DefaultValue = "tunnel.321",
+    ///         Ipv6 = new Scm.Inputs.TunnelInterfaceIpv6Args
+    ///         {
+    ///             Enabled = true,
+    ///             InterfaceId = "EUI-64",
+    ///             Addresses = new[]
+    ///             {
+    ///                 new Scm.Inputs.TunnelInterfaceIpv6AddressArgs
+    ///                 {
+    ///                     Name = "$scm_ipv6_prefix",
+    ///                     Prefix = null,
+    ///                 },
+    ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmIpv6Prefix,
+    ///         },
+    ///     });
+    /// 
     /// });
     /// ```
     /// 
@@ -102,13 +144,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -127,6 +169,12 @@ namespace Pulumi.Scm
         public Output<ImmutableArray<Outputs.TunnelInterfaceIp>> Ips { get; private set; } = null!;
 
         /// <summary>
+        /// Tunnel Interface IPv6 Configuration
+        /// </summary>
+        [Output("ipv6")]
+        public Output<Outputs.TunnelInterfaceIpv6?> Ipv6 { get; private set; } = null!;
+
+        /// <summary>
         /// MTU
         /// </summary>
         [Output("mtu")]
@@ -140,6 +188,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -208,13 +257,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -239,6 +288,12 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
+        /// Tunnel Interface IPv6 Configuration
+        /// </summary>
+        [Input("ipv6")]
+        public Input<Inputs.TunnelInterfaceIpv6Args>? Ipv6 { get; set; }
+
+        /// <summary>
         /// MTU
         /// </summary>
         [Input("mtu")]
@@ -252,6 +307,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -279,13 +335,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -310,6 +366,12 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
+        /// Tunnel Interface IPv6 Configuration
+        /// </summary>
+        [Input("ipv6")]
+        public Input<Inputs.TunnelInterfaceIpv6GetArgs>? Ipv6 { get; set; }
+
+        /// <summary>
         /// MTU
         /// </summary>
         [Input("mtu")]
@@ -323,6 +385,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

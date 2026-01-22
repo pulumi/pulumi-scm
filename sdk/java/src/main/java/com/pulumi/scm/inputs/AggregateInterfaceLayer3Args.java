@@ -54,7 +54,6 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
     /**
      * Aggregate Ethernet DHCP Client Object
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     @Import(name="dhcpClient")
@@ -62,7 +61,6 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
     /**
      * @return Aggregate Ethernet DHCP Client Object
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Optional<Output<AggregateInterfaceLayer3DhcpClientArgs>> dhcpClient() {
@@ -86,6 +84,7 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
     /**
      * Aggregate Interface IP addresses
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -94,6 +93,7 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
     /**
      * @return Aggregate Interface IP addresses
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
@@ -215,7 +215,6 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
         /**
          * @param dhcpClient Aggregate Ethernet DHCP Client Object
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
          * 
          * @return builder
          * 
@@ -227,7 +226,6 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
         /**
          * @param dhcpClient Aggregate Ethernet DHCP Client Object
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
          * 
          * @return builder
          * 
@@ -259,6 +257,7 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
         /**
          * @param ips Aggregate Interface IP addresses
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
          * 
          * @return builder
@@ -271,6 +270,7 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
         /**
          * @param ips Aggregate Interface IP addresses
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
          * 
          * @return builder
@@ -282,6 +282,7 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
         /**
          * @param ips Aggregate Interface IP addresses
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
          * 
          * @return builder

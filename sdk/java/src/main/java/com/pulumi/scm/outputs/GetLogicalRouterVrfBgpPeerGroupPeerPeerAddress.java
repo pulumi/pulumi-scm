@@ -12,12 +12,12 @@ import java.util.Objects;
 public final class GetLogicalRouterVrfBgpPeerGroupPeerPeerAddress {
     /**
      * @return Fqdn
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
     private String fqdn;
     /**
      * @return Ip
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
@@ -26,7 +26,6 @@ public final class GetLogicalRouterVrfBgpPeerGroupPeerPeerAddress {
     private GetLogicalRouterVrfBgpPeerGroupPeerPeerAddress() {}
     /**
      * @return Fqdn
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
     public String fqdn() {
@@ -34,6 +33,7 @@ public final class GetLogicalRouterVrfBgpPeerGroupPeerPeerAddress {
     }
     /**
      * @return Ip
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */

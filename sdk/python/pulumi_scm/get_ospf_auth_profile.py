@@ -61,25 +61,17 @@ class GetOspfAuthProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
-        """
-        Map of sensitive values returned from the API.
-        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -93,36 +85,21 @@ class GetOspfAuthProfileResult:
     @_builtins.property
     @pulumi.getter
     def md5s(self) -> Sequence['outputs.GetOspfAuthProfileMd5Result']:
-        """
-        MD5s
-        > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
-        """
         return pulumi.get(self, "md5s")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        Profile name
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def password(self) -> _builtins.str:
-        """
-        Password
-        > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
-        """
         return pulumi.get(self, "password")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -159,13 +136,7 @@ def get_ospf_auth_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Profile name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -197,13 +168,7 @@ def get_ospf_auth_profile_output(device: Optional[pulumi.Input[Optional[_builtin
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Profile name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

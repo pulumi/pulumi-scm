@@ -86,41 +86,26 @@ class GetHipObjectResult:
     @_builtins.property
     @pulumi.getter(name="antiMalware")
     def anti_malware(self) -> 'outputs.GetHipObjectAntiMalwareResult':
-        """
-        Anti malware
-        """
         return pulumi.get(self, "anti_malware")
 
     @_builtins.property
     @pulumi.getter
     def certificate(self) -> 'outputs.GetHipObjectCertificateResult':
-        """
-        Certificate
-        """
         return pulumi.get(self, "certificate")
 
     @_builtins.property
     @pulumi.getter(name="customChecks")
     def custom_checks(self) -> 'outputs.GetHipObjectCustomChecksResult':
-        """
-        Custom checks
-        """
         return pulumi.get(self, "custom_checks")
 
     @_builtins.property
     @pulumi.getter(name="dataLossPrevention")
     def data_loss_prevention(self) -> 'outputs.GetHipObjectDataLossPreventionResult':
-        """
-        Data loss prevention
-        """
         return pulumi.get(self, "data_loss_prevention")
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
-        """
-        Description
-        """
         return pulumi.get(self, "description")
 
     @_builtins.property
@@ -128,49 +113,32 @@ class GetHipObjectResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="diskBackup")
     def disk_backup(self) -> 'outputs.GetHipObjectDiskBackupResult':
-        """
-        Disk backup
-        """
         return pulumi.get(self, "disk_backup")
 
     @_builtins.property
     @pulumi.getter(name="diskEncryption")
     def disk_encryption(self) -> 'outputs.GetHipObjectDiskEncryptionResult':
-        """
-        Disk encryption
-        """
         return pulumi.get(self, "disk_encryption")
 
     @_builtins.property
     @pulumi.getter
     def firewall(self) -> 'outputs.GetHipObjectFirewallResult':
-        """
-        Firewall
-        """
         return pulumi.get(self, "firewall")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="hostInfo")
     def host_info(self) -> 'outputs.GetHipObjectHostInfoResult':
-        """
-        Host info
-        """
         return pulumi.get(self, "host_info")
 
     @_builtins.property
@@ -184,42 +152,26 @@ class GetHipObjectResult:
     @_builtins.property
     @pulumi.getter(name="mobileDevice")
     def mobile_device(self) -> 'outputs.GetHipObjectMobileDeviceResult':
-        """
-        Mobile device
-        """
         return pulumi.get(self, "mobile_device")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        The name of the HIP object
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="networkInfo")
     def network_info(self) -> 'outputs.GetHipObjectNetworkInfoResult':
-        """
-        Network info
-        """
         return pulumi.get(self, "network_info")
 
     @_builtins.property
     @pulumi.getter(name="patchManagement")
     def patch_management(self) -> 'outputs.GetHipObjectPatchManagementResult':
-        """
-        Patch management
-        """
         return pulumi.get(self, "patch_management")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -276,13 +228,7 @@ def get_hip_object(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: The name of the HIP object
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -334,13 +280,7 @@ def get_hip_object_output(device: Optional[pulumi.Input[Optional[_builtins.str]]
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: The name of the HIP object
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

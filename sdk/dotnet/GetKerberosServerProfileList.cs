@@ -13,18 +13,96 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetKerberosServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmKerberosServerProfileAllShared"] = allShared.Apply(getKerberosServerProfileListResult =&gt; getKerberosServerProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetKerberosServerProfileListResult> InvokeAsync(GetKerberosServerProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetKerberosServerProfileListResult>("scm:index/getKerberosServerProfileList:getKerberosServerProfileList", args ?? new GetKerberosServerProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetKerberosServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmKerberosServerProfileAllShared"] = allShared.Apply(getKerberosServerProfileListResult =&gt; getKerberosServerProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetKerberosServerProfileListResult> Invoke(GetKerberosServerProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetKerberosServerProfileListResult>("scm:index/getKerberosServerProfileList:getKerberosServerProfileList", args ?? new GetKerberosServerProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetKerberosServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmKerberosServerProfileAllShared"] = allShared.Apply(getKerberosServerProfileListResult =&gt; getKerberosServerProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetKerberosServerProfileListResult> Invoke(GetKerberosServerProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetKerberosServerProfileListResult>("scm:index/getKerberosServerProfileList:getKerberosServerProfileList", args ?? new GetKerberosServerProfileListInvokeArgs(), options.WithDefaults());

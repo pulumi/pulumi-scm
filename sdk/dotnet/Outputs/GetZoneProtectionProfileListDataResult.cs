@@ -26,6 +26,7 @@ namespace Pulumi.Scm.Outputs
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
@@ -39,6 +40,7 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetZoneProtectionProfileListDataFloodResult Flood;
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Folder;
@@ -122,6 +124,7 @@ namespace Pulumi.Scm.Outputs
         public readonly bool SecurityDiscard;
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Snippet;

@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Certificate
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Certificate` and `PreSharedKey`.
         /// </summary>
         [Input("certificate")]
         public Input<Inputs.IkeGatewayAuthenticationCertificateArgs>? Certificate { get; set; }
 
         /// <summary>
         /// Pre shared key
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Certificate` and `PreSharedKey`.
         /// </summary>
         [Input("preSharedKey")]

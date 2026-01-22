@@ -15,21 +15,23 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Both
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Both`, `Multicast`, `NoInstall`, and `Unicast`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableBoth? Both;
         /// <summary>
         /// Multicast
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Both`, `Multicast`, `NoInstall`, and `Unicast`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticast? Multicast;
         /// <summary>
         /// No install
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Both`, `Multicast`, `NoInstall`, and `Unicast`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstall? NoInstall;
         /// <summary>
         /// Unicast
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Both`, `Multicast`, `NoInstall`, and `Unicast`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicast? Unicast;

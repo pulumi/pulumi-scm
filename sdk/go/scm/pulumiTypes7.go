@@ -13,6 +13,1998 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetVulnerabilityProtectionSignatureListDataAffectedHost struct {
+	// Client
+	Client bool `pulumi:"client"`
+	// Server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
+	Server bool `pulumi:"server"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataAffectedHostInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataAffectedHostArgs and GetVulnerabilityProtectionSignatureListDataAffectedHostOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataAffectedHostInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataAffectedHostArgs{...}
+type GetVulnerabilityProtectionSignatureListDataAffectedHostInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataAffectedHostOutput() GetVulnerabilityProtectionSignatureListDataAffectedHostOutput
+	ToGetVulnerabilityProtectionSignatureListDataAffectedHostOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataAffectedHostOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataAffectedHostArgs struct {
+	// Client
+	Client pulumi.BoolInput `pulumi:"client"`
+	// Server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
+	Server pulumi.BoolInput `pulumi:"server"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataAffectedHostArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataAffectedHost)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataAffectedHostArgs) ToGetVulnerabilityProtectionSignatureListDataAffectedHostOutput() GetVulnerabilityProtectionSignatureListDataAffectedHostOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataAffectedHostOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataAffectedHostArgs) ToGetVulnerabilityProtectionSignatureListDataAffectedHostOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataAffectedHostOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataAffectedHostOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataAffectedHostOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataAffectedHostOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataAffectedHost)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataAffectedHostOutput) ToGetVulnerabilityProtectionSignatureListDataAffectedHostOutput() GetVulnerabilityProtectionSignatureListDataAffectedHostOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataAffectedHostOutput) ToGetVulnerabilityProtectionSignatureListDataAffectedHostOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataAffectedHostOutput {
+	return o
+}
+
+// Client
+func (o GetVulnerabilityProtectionSignatureListDataAffectedHostOutput) Client() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataAffectedHost) bool { return v.Client }).(pulumi.BoolOutput)
+}
+
+// Server
+//
+// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
+func (o GetVulnerabilityProtectionSignatureListDataAffectedHostOutput) Server() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataAffectedHost) bool { return v.Server }).(pulumi.BoolOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultAction struct {
+	// Alert
+	Alert GetVulnerabilityProtectionSignatureListDataDefaultActionAlert `pulumi:"alert"`
+	// Allow
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Allow GetVulnerabilityProtectionSignatureListDataDefaultActionAllow `pulumi:"allow"`
+	// vulnerability protection bugtraq block ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	BlockIp GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp `pulumi:"blockIp"`
+	// Drop
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Drop GetVulnerabilityProtectionSignatureListDataDefaultActionDrop `pulumi:"drop"`
+	// Reset both
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetBoth GetVulnerabilityProtectionSignatureListDataDefaultActionResetBoth `pulumi:"resetBoth"`
+	// Reset client
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetClient GetVulnerabilityProtectionSignatureListDataDefaultActionResetClient `pulumi:"resetClient"`
+	// Reset server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetServer GetVulnerabilityProtectionSignatureListDataDefaultActionResetServer `pulumi:"resetServer"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataDefaultActionInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataDefaultActionArgs and GetVulnerabilityProtectionSignatureListDataDefaultActionOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataDefaultActionInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataDefaultActionArgs{...}
+type GetVulnerabilityProtectionSignatureListDataDefaultActionInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionOutput
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionArgs struct {
+	// Alert
+	Alert GetVulnerabilityProtectionSignatureListDataDefaultActionAlertInput `pulumi:"alert"`
+	// Allow
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Allow GetVulnerabilityProtectionSignatureListDataDefaultActionAllowInput `pulumi:"allow"`
+	// vulnerability protection bugtraq block ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	BlockIp GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpInput `pulumi:"blockIp"`
+	// Drop
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Drop GetVulnerabilityProtectionSignatureListDataDefaultActionDropInput `pulumi:"drop"`
+	// Reset both
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetBoth GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothInput `pulumi:"resetBoth"`
+	// Reset client
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetClient GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientInput `pulumi:"resetClient"`
+	// Reset server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetServer GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerInput `pulumi:"resetServer"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultAction)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataDefaultActionOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataDefaultActionOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultAction)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionOutput {
+	return o
+}
+
+// Alert
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) Alert() GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionAlert {
+		return v.Alert
+	}).(GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput)
+}
+
+// Allow
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) Allow() GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionAllow {
+		return v.Allow
+	}).(GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput)
+}
+
+// vulnerability protection bugtraq block ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) BlockIp() GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp {
+		return v.BlockIp
+	}).(GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput)
+}
+
+// Drop
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) Drop() GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionDrop {
+		return v.Drop
+	}).(GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput)
+}
+
+// Reset both
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) ResetBoth() GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionResetBoth {
+		return v.ResetBoth
+	}).(GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput)
+}
+
+// Reset client
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) ResetClient() GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionResetClient {
+		return v.ResetClient
+	}).(GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput)
+}
+
+// Reset server
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionOutput) ResetServer() GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultAction) GetVulnerabilityProtectionSignatureListDataDefaultActionResetServer {
+		return v.ResetServer
+	}).(GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionAlert struct {
+}
+
+// GetVulnerabilityProtectionSignatureListDataDefaultActionAlertInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataDefaultActionAlertArgs and GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataDefaultActionAlertInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataDefaultActionAlertArgs{...}
+type GetVulnerabilityProtectionSignatureListDataDefaultActionAlertInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionAlertArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionAlertArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionAlert)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionAlertArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionAlertArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionAlert)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionAllow struct {
+}
+
+// GetVulnerabilityProtectionSignatureListDataDefaultActionAllowInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataDefaultActionAllowArgs and GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataDefaultActionAllowInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataDefaultActionAllowArgs{...}
+type GetVulnerabilityProtectionSignatureListDataDefaultActionAllowInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionAllowArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionAllowArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionAllow)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionAllowArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionAllowArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionAllow)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp struct {
+	// Duration
+	Duration int `pulumi:"duration"`
+	// Track by
+	TrackBy string `pulumi:"trackBy"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpArgs and GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpArgs{...}
+type GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpArgs struct {
+	// Duration
+	Duration pulumi.IntInput `pulumi:"duration"`
+	// Track by
+	TrackBy pulumi.StringInput `pulumi:"trackBy"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput {
+	return o
+}
+
+// Duration
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput) Duration() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
+}
+
+// Track by
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput) TrackBy() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionDrop struct {
+}
+
+// GetVulnerabilityProtectionSignatureListDataDefaultActionDropInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataDefaultActionDropArgs and GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataDefaultActionDropInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataDefaultActionDropArgs{...}
+type GetVulnerabilityProtectionSignatureListDataDefaultActionDropInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionDropOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionDropArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionDropArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionDrop)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionDropArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataDefaultActionDropOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionDropArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionDropOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionDrop)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionDropOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetBoth struct {
+}
+
+// GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothArgs and GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothArgs{...}
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionResetBoth)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionResetBoth)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetClient struct {
+}
+
+// GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientArgs and GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientArgs{...}
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionResetClient)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionResetClient)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetServer struct {
+}
+
+// GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerArgs and GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerArgs{...}
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput
+	ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionResetServer)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerArgs) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionResetServer)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput() GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput) ToGetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignature struct {
+	// vulnerability protection signature combination object
+	Combination GetVulnerabilityProtectionSignatureListDataSignatureCombination `pulumi:"combination"`
+	// vulnerability protection signature standard array
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
+	Standards []GetVulnerabilityProtectionSignatureListDataSignatureStandard `pulumi:"standards"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureArgs and GetVulnerabilityProtectionSignatureListDataSignatureOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureOutput() GetVulnerabilityProtectionSignatureListDataSignatureOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureArgs struct {
+	// vulnerability protection signature combination object
+	Combination GetVulnerabilityProtectionSignatureListDataSignatureCombinationInput `pulumi:"combination"`
+	// vulnerability protection signature standard array
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
+	Standards GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayInput `pulumi:"standards"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignature)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureOutput() GetVulnerabilityProtectionSignatureListDataSignatureOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignature)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureOutput() GetVulnerabilityProtectionSignatureListDataSignatureOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureOutput {
+	return o
+}
+
+// vulnerability protection signature combination object
+func (o GetVulnerabilityProtectionSignatureListDataSignatureOutput) Combination() GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignature) GetVulnerabilityProtectionSignatureListDataSignatureCombination {
+		return v.Combination
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput)
+}
+
+// vulnerability protection signature standard array
+//
+// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
+func (o GetVulnerabilityProtectionSignatureListDataSignatureOutput) Standards() GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignature) []GetVulnerabilityProtectionSignatureListDataSignatureStandard {
+		return v.Standards
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombination struct {
+	// vulnerability protection signature combination object and condition
+	AndConditions []GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndCondition `pulumi:"andConditions"`
+	// Order free
+	OrderFree bool `pulumi:"orderFree"`
+	// Time attribute
+	TimeAttribute GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttribute `pulumi:"timeAttribute"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureCombinationInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureCombinationArgs and GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureCombinationInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureCombinationArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationArgs struct {
+	// vulnerability protection signature combination object and condition
+	AndConditions GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayInput `pulumi:"andConditions"`
+	// Order free
+	OrderFree pulumi.BoolInput `pulumi:"orderFree"`
+	// Time attribute
+	TimeAttribute GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeInput `pulumi:"timeAttribute"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombination)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombination)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput {
+	return o
+}
+
+// vulnerability protection signature combination object and condition
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput) AndConditions() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureCombination) []GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndCondition {
+		return v.AndConditions
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput)
+}
+
+// Order free
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput) OrderFree() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureCombination) bool { return v.OrderFree }).(pulumi.BoolOutput)
+}
+
+// Time attribute
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput) TimeAttribute() GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureCombination) GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttribute {
+		return v.TimeAttribute
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndCondition struct {
+	// Name
+	Name string `pulumi:"name"`
+	// vulnerability protection signature combination object and condition object or condition
+	OrConditions []GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrCondition `pulumi:"orConditions"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArgs and GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArgs struct {
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// vulnerability protection signature combination object and condition object or condition
+	OrConditions GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayInput `pulumi:"orConditions"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndCondition)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput)
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArray and GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArray{ GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArgs{...} }
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArray []GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionInput
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndCondition)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArray) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArray) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndCondition)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput {
+	return o
+}
+
+// Name
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndCondition) string {
+		return v.Name
+	}).(pulumi.StringOutput)
+}
+
+// vulnerability protection signature combination object and condition object or condition
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput) OrConditions() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndCondition) []GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrCondition {
+		return v.OrConditions
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndCondition)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndCondition {
+		return vs[0].([]GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndCondition)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrCondition struct {
+	// Name
+	Name string `pulumi:"name"`
+	// Threat id
+	ThreatId string `pulumi:"threatId"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArgs and GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArgs struct {
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Threat id
+	ThreatId pulumi.StringInput `pulumi:"threatId"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrCondition)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput)
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArray and GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArray{ GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArgs{...} }
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArray []GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionInput
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrCondition)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArray) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArray) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrCondition)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput {
+	return o
+}
+
+// Name
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrCondition) string {
+		return v.Name
+	}).(pulumi.StringOutput)
+}
+
+// Threat id
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput) ThreatId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrCondition) string {
+		return v.ThreatId
+	}).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrCondition)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrCondition {
+		return vs[0].([]GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrCondition)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttribute struct {
+	// Interval
+	Interval int `pulumi:"interval"`
+	// Threshold
+	Threshold int `pulumi:"threshold"`
+	// Track by
+	TrackBy string `pulumi:"trackBy"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeArgs and GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeArgs struct {
+	// Interval
+	Interval pulumi.IntInput `pulumi:"interval"`
+	// Threshold
+	Threshold pulumi.IntInput `pulumi:"threshold"`
+	// Track by
+	TrackBy pulumi.StringInput `pulumi:"trackBy"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttribute)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttribute)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput() GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput {
+	return o
+}
+
+// Interval
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput) Interval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttribute) int {
+		return v.Interval
+	}).(pulumi.IntOutput)
+}
+
+// Threshold
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput) Threshold() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttribute) int {
+		return v.Threshold
+	}).(pulumi.IntOutput)
+}
+
+// Track by
+func (o GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput) TrackBy() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttribute) string {
+		return v.TrackBy
+	}).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandard struct {
+	// vulnerability protection signature standard object and condition
+	AndConditions []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition `pulumi:"andConditions"`
+	// Comment
+	Comment string `pulumi:"comment"`
+	// Name
+	Name string `pulumi:"name"`
+	// Order free
+	OrderFree bool `pulumi:"orderFree"`
+	// Scope
+	Scope string `pulumi:"scope"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardArgs and GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardArgs struct {
+	// vulnerability protection signature standard object and condition
+	AndConditions GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayInput `pulumi:"andConditions"`
+	// Comment
+	Comment pulumi.StringInput `pulumi:"comment"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Order free
+	OrderFree pulumi.BoolInput `pulumi:"orderFree"`
+	// Scope
+	Scope pulumi.StringInput `pulumi:"scope"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandard)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput)
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardArray and GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardArray{ GetVulnerabilityProtectionSignatureListDataSignatureStandardArgs{...} }
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardArray []GetVulnerabilityProtectionSignatureListDataSignatureStandardInput
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandard)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandard)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput {
+	return o
+}
+
+// vulnerability protection signature standard object and condition
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput) AndConditions() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandard) []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition {
+		return v.AndConditions
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput)
+}
+
+// Comment
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput) Comment() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandard) string { return v.Comment }).(pulumi.StringOutput)
+}
+
+// Name
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandard) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Order free
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput) OrderFree() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandard) bool { return v.OrderFree }).(pulumi.BoolOutput)
+}
+
+// Scope
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput) Scope() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandard) string { return v.Scope }).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandard)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionSignatureListDataSignatureStandard {
+		return vs[0].([]GetVulnerabilityProtectionSignatureListDataSignatureStandard)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition struct {
+	// Name
+	Name string `pulumi:"name"`
+	// vulnerability protection signature standard object and condition object or condition
+	OrConditions []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrCondition `pulumi:"orConditions"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArgs and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArgs struct {
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// vulnerability protection signature standard object and condition object or condition
+	OrConditions GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayInput `pulumi:"orConditions"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput)
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArray and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArray{ GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArgs{...} }
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArray []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionInput
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput {
+	return o
+}
+
+// Name
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// vulnerability protection signature standard object and condition object or condition
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput) OrConditions() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition) []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrCondition {
+		return v.OrConditions
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition {
+		return vs[0].([]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrCondition struct {
+	// Name
+	Name string `pulumi:"name"`
+	// vulnerability protection signature standard object and condition object or condition object operators
+	Operator GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperator `pulumi:"operator"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArgs and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArgs struct {
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// vulnerability protection signature standard object and condition object or condition object operators
+	Operator GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorInput `pulumi:"operator"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrCondition)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput)
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArray and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArray{ GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArgs{...} }
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArray []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionInput
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrCondition)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrCondition)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput {
+	return o
+}
+
+// Name
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrCondition) string {
+		return v.Name
+	}).(pulumi.StringOutput)
+}
+
+// vulnerability protection signature standard object and condition object or condition object operators
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput) Operator() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrCondition) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperator {
+		return v.Operator
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrCondition)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrCondition {
+		return vs[0].([]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrCondition)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperator struct {
+	// vulnerability protection signature standard object and condition object or condition object operators equal*to
+	EqualTo GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo `pulumi:"equalTo"`
+	// vulnerability protection signature standard object and condition object or condition object operators greater*than
+	GreaterThan GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThan `pulumi:"greaterThan"`
+	// vulnerability protection signature standard object and condition object or condition object operators less*than
+	LessThan GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan `pulumi:"lessThan"`
+	// vulnerability protection signature standard object and condition object or condition object operators pattern match
+	PatternMatch GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatch `pulumi:"patternMatch"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorArgs and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorArgs struct {
+	// vulnerability protection signature standard object and condition object or condition object operators equal*to
+	EqualTo GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToInput `pulumi:"equalTo"`
+	// vulnerability protection signature standard object and condition object or condition object operators greater*than
+	GreaterThan GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanInput `pulumi:"greaterThan"`
+	// vulnerability protection signature standard object and condition object or condition object operators less*than
+	LessThan GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanInput `pulumi:"lessThan"`
+	// vulnerability protection signature standard object and condition object or condition object operators pattern match
+	PatternMatch GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchInput `pulumi:"patternMatch"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperator)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperator)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput {
+	return o
+}
+
+// vulnerability protection signature standard object and condition object or condition object operators equal*to
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput) EqualTo() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperator) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo {
+		return v.EqualTo
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput)
+}
+
+// vulnerability protection signature standard object and condition object or condition object operators greater*than
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput) GreaterThan() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperator) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThan {
+		return v.GreaterThan
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput)
+}
+
+// vulnerability protection signature standard object and condition object or condition object operators less*than
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput) LessThan() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperator) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan {
+		return v.LessThan
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput)
+}
+
+// vulnerability protection signature standard object and condition object or condition object operators pattern match
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput) PatternMatch() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperator) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatch {
+		return v.PatternMatch
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo struct {
+	// Context
+	Context string `pulumi:"context"`
+	// Negate
+	Negate bool `pulumi:"negate"`
+	// vulnerability protection signature standard object and condition object or condition object operators equal*to qualifier array
+	Qualifiers []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier `pulumi:"qualifiers"`
+	// Value
+	Value int `pulumi:"value"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToArgs and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToArgs struct {
+	// Context
+	Context pulumi.StringInput `pulumi:"context"`
+	// Negate
+	Negate pulumi.BoolInput `pulumi:"negate"`
+	// vulnerability protection signature standard object and condition object or condition object operators equal*to qualifier array
+	Qualifiers GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayInput `pulumi:"qualifiers"`
+	// Value
+	Value pulumi.IntInput `pulumi:"value"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput {
+	return o
+}
+
+// Context
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput) Context() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo) string {
+		return v.Context
+	}).(pulumi.StringOutput)
+}
+
+// Negate
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput) Negate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo) bool {
+		return v.Negate
+	}).(pulumi.BoolOutput)
+}
+
+// vulnerability protection signature standard object and condition object or condition object operators equal*to qualifier array
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput) Qualifiers() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo) []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier {
+		return v.Qualifiers
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput)
+}
+
+// Value
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput) Value() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo) int {
+		return v.Value
+	}).(pulumi.IntOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier struct {
+	// Name
+	Name string `pulumi:"name"`
+	// Value
+	Value string `pulumi:"value"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs struct {
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Value
+	Value pulumi.StringInput `pulumi:"value"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput)
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArray and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArray{ GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs{...} }
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArray []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierInput
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput {
+	return o
+}
+
+// Name
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier) string {
+		return v.Name
+	}).(pulumi.StringOutput)
+}
+
+// Value
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput) Value() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier) string {
+		return v.Value
+	}).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier {
+		return vs[0].([]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThan struct {
+	// Context
+	Context string `pulumi:"context"`
+	// vulnerability protection signature standard object and condition object or condition object operators greater*than qualifier
+	Qualifiers []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier `pulumi:"qualifiers"`
+	// Value
+	Value int `pulumi:"value"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs struct {
+	// Context
+	Context pulumi.StringInput `pulumi:"context"`
+	// vulnerability protection signature standard object and condition object or condition object operators greater*than qualifier
+	Qualifiers GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayInput `pulumi:"qualifiers"`
+	// Value
+	Value pulumi.IntInput `pulumi:"value"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThan)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThan)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput {
+	return o
+}
+
+// Context
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput) Context() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThan) string {
+		return v.Context
+	}).(pulumi.StringOutput)
+}
+
+// vulnerability protection signature standard object and condition object or condition object operators greater*than qualifier
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput) Qualifiers() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThan) []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier {
+		return v.Qualifiers
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput)
+}
+
+// Value
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput) Value() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThan) int {
+		return v.Value
+	}).(pulumi.IntOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier struct {
+	// Name
+	Name string `pulumi:"name"`
+	// Value
+	Value string `pulumi:"value"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs struct {
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Value
+	Value pulumi.StringInput `pulumi:"value"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput)
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArray and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArray{ GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs{...} }
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArray []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierInput
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput {
+	return o
+}
+
+// Name
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier) string {
+		return v.Name
+	}).(pulumi.StringOutput)
+}
+
+// Value
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput) Value() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier) string {
+		return v.Value
+	}).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier {
+		return vs[0].([]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan struct {
+	// Context
+	Context string `pulumi:"context"`
+	// vulnerability protection signature standard object and condition object or condition object operators less*than array
+	Qualifiers []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier `pulumi:"qualifiers"`
+	// Value
+	Value int `pulumi:"value"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanArgs and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanArgs struct {
+	// Context
+	Context pulumi.StringInput `pulumi:"context"`
+	// vulnerability protection signature standard object and condition object or condition object operators less*than array
+	Qualifiers GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayInput `pulumi:"qualifiers"`
+	// Value
+	Value pulumi.IntInput `pulumi:"value"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput {
+	return o
+}
+
+// Context
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput) Context() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan) string {
+		return v.Context
+	}).(pulumi.StringOutput)
+}
+
+// vulnerability protection signature standard object and condition object or condition object operators less*than array
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput) Qualifiers() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan) []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier {
+		return v.Qualifiers
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput)
+}
+
+// Value
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput) Value() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan) int {
+		return v.Value
+	}).(pulumi.IntOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier struct {
+	// Name
+	Name string `pulumi:"name"`
+	// Value
+	Value string `pulumi:"value"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs{...}
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs struct {
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Value
+	Value pulumi.StringInput `pulumi:"value"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput)
+}
+
+// GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArray and GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArray{ GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs{...} }
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput
+	ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArray []GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierInput
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArray) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput {
+	return o
+}
+
+// Name
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier) string {
+		return v.Name
+	}).(pulumi.StringOutput)
+}
+
+// Value
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput) Value() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier) string {
+		return v.Value
+	}).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput() GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput) ToGetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier {
+		return vs[0].([]GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput)
+}
+
 type GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatch struct {
 	// Context
 	Context string `pulumi:"context"`
@@ -212,9 +2204,9 @@ func (o GetVulnerabilityProtectionSignatureListDataSignatureStandardAndCondition
 
 type GetVulnerabilityProtectionSignatureSignature struct {
 	// vulnerability protection signature combination object
-	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Combination GetVulnerabilityProtectionSignatureSignatureCombination `pulumi:"combination"`
 	// vulnerability protection signature standard array
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Standards []GetVulnerabilityProtectionSignatureSignatureStandard `pulumi:"standards"`
 }
@@ -232,9 +2224,9 @@ type GetVulnerabilityProtectionSignatureSignatureInput interface {
 
 type GetVulnerabilityProtectionSignatureSignatureArgs struct {
 	// vulnerability protection signature combination object
-	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Combination GetVulnerabilityProtectionSignatureSignatureCombinationInput `pulumi:"combination"`
 	// vulnerability protection signature standard array
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Standards GetVulnerabilityProtectionSignatureSignatureStandardArrayInput `pulumi:"standards"`
 }
@@ -266,7 +2258,6 @@ func (o GetVulnerabilityProtectionSignatureSignatureOutput) ToGetVulnerabilityPr
 }
 
 // vulnerability protection signature combination object
-// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 func (o GetVulnerabilityProtectionSignatureSignatureOutput) Combination() GetVulnerabilityProtectionSignatureSignatureCombinationOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureSignature) GetVulnerabilityProtectionSignatureSignatureCombination {
 		return v.Combination
@@ -274,6 +2265,7 @@ func (o GetVulnerabilityProtectionSignatureSignatureOutput) Combination() GetVul
 }
 
 // vulnerability protection signature standard array
+//
 // > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 func (o GetVulnerabilityProtectionSignatureSignatureOutput) Standards() GetVulnerabilityProtectionSignatureSignatureStandardArrayOutput {
 	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureSignature) []GetVulnerabilityProtectionSignatureSignatureStandard {
@@ -1853,23 +3845,20 @@ type GetWildfireAntiVirusProfileListData struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Mlav exception
 	MlavExceptions []GetWildfireAntiVirusProfileListDataMlavException `pulumi:"mlavExceptions"`
-	// Name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Packet capture
 	PacketCapture bool `pulumi:"packetCapture"`
 	// Rules
 	Rules []GetWildfireAntiVirusProfileListDataRule `pulumi:"rules"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 	// Threat exception
@@ -1891,23 +3880,20 @@ type GetWildfireAntiVirusProfileListDataArgs struct {
 	// Description
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Mlav exception
 	MlavExceptions GetWildfireAntiVirusProfileListDataMlavExceptionArrayInput `pulumi:"mlavExceptions"`
-	// Name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Packet capture
 	PacketCapture pulumi.BoolInput `pulumi:"packetCapture"`
 	// Rules
 	Rules GetWildfireAntiVirusProfileListDataRuleArrayInput `pulumi:"rules"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 	// Threat exception
@@ -1971,13 +3957,11 @@ func (o GetWildfireAntiVirusProfileListDataOutput) Description() pulumi.StringOu
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetWildfireAntiVirusProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetWildfireAntiVirusProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -1994,7 +3978,7 @@ func (o GetWildfireAntiVirusProfileListDataOutput) MlavExceptions() GetWildfireA
 	}).(GetWildfireAntiVirusProfileListDataMlavExceptionArrayOutput)
 }
 
-// Name
+// The name of the item.
 func (o GetWildfireAntiVirusProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -2009,8 +3993,7 @@ func (o GetWildfireAntiVirusProfileListDataOutput) Rules() GetWildfireAntiVirusP
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) []GetWildfireAntiVirusProfileListDataRule { return v.Rules }).(GetWildfireAntiVirusProfileListDataRuleArrayOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetWildfireAntiVirusProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -2817,7 +4800,6 @@ func (o GetZoneDeviceAclOutput) IncludeLists() pulumi.StringArrayOutput {
 
 type GetZoneListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Device acl
 	DeviceAcl GetZoneListDataDeviceAcl `pulumi:"deviceAcl"`
@@ -2829,17 +4811,15 @@ type GetZoneListData struct {
 	EnableDeviceIdentification bool `pulumi:"enableDeviceIdentification"`
 	// Enable user identification
 	EnableUserIdentification bool `pulumi:"enableUserIdentification"`
-	// Folder
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Network
 	Network GetZoneListDataNetwork `pulumi:"network"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 	// User acl
@@ -2859,7 +4839,6 @@ type GetZoneListDataInput interface {
 
 type GetZoneListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Device acl
 	DeviceAcl GetZoneListDataDeviceAclInput `pulumi:"deviceAcl"`
@@ -2871,17 +4850,15 @@ type GetZoneListDataArgs struct {
 	EnableDeviceIdentification pulumi.BoolInput `pulumi:"enableDeviceIdentification"`
 	// Enable user identification
 	EnableUserIdentification pulumi.BoolInput `pulumi:"enableUserIdentification"`
-	// Folder
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Network
 	Network GetZoneListDataNetworkInput `pulumi:"network"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 	// User acl
@@ -2940,7 +4917,6 @@ func (o GetZoneListDataOutput) ToGetZoneListDataOutputWithContext(ctx context.Co
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetZoneListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -2970,8 +4946,7 @@ func (o GetZoneListDataOutput) EnableUserIdentification() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetZoneListData) bool { return v.EnableUserIdentification }).(pulumi.BoolOutput)
 }
 
-// Folder
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetZoneListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -2981,7 +4956,7 @@ func (o GetZoneListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+// The name of the item.
 func (o GetZoneListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -2991,8 +4966,7 @@ func (o GetZoneListDataOutput) Network() GetZoneListDataNetworkOutput {
 	return o.ApplyT(func(v GetZoneListData) GetZoneListDataNetwork { return v.Network }).(GetZoneListDataNetworkOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetZoneListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -4960,6 +6934,7 @@ type GetZoneProtectionProfileListData struct {
 	// The description of the profile
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Discard ICMP packets that are embedded with an error message.
@@ -4967,6 +6942,7 @@ type GetZoneProtectionProfileListData struct {
 	// Flood
 	Flood GetZoneProtectionProfileListDataFlood `pulumi:"flood"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// Discard fragmented IP packets.
@@ -5012,6 +6988,7 @@ type GetZoneProtectionProfileListData struct {
 	// Discard packets if the security option is defined.
 	SecurityDiscard bool `pulumi:"securityDiscard"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet string `pulumi:"snippet"`
 	// Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
@@ -5066,6 +7043,7 @@ type GetZoneProtectionProfileListDataArgs struct {
 	// The description of the profile
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Discard ICMP packets that are embedded with an error message.
@@ -5073,6 +7051,7 @@ type GetZoneProtectionProfileListDataArgs struct {
 	// Flood
 	Flood GetZoneProtectionProfileListDataFloodInput `pulumi:"flood"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// Discard fragmented IP packets.
@@ -5118,6 +7097,7 @@ type GetZoneProtectionProfileListDataArgs struct {
 	// Discard packets if the security option is defined.
 	SecurityDiscard pulumi.BoolInput `pulumi:"securityDiscard"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// Check that the source IP address of the ingress packet is routable and the routing interface is in the same zone as the ingress interface. If either condition is not true, discard the packet.
@@ -5217,6 +7197,7 @@ func (o GetZoneProtectionProfileListDataOutput) Description() pulumi.StringOutpu
 }
 
 // The device in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetZoneProtectionProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListData) string { return v.Device }).(pulumi.StringOutput)
@@ -5233,6 +7214,7 @@ func (o GetZoneProtectionProfileListDataOutput) Flood() GetZoneProtectionProfile
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetZoneProtectionProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListData) string { return v.Folder }).(pulumi.StringOutput)
@@ -5341,6 +7323,7 @@ func (o GetZoneProtectionProfileListDataOutput) SecurityDiscard() pulumi.BoolOut
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetZoneProtectionProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
@@ -8429,6 +10412,38 @@ func (o GetZoneUserAclOutput) IncludeLists() pulumi.StringArrayOutput {
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataAffectedHostInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataAffectedHostArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataDefaultActionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionAlertInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataDefaultActionAlertArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionAllowInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataDefaultActionAllowArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionDropInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataDefaultActionDropArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureCombinationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArrayInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArray{})
@@ -8548,6 +10563,38 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneProtectionProfileScanWhiteListInput)(nil)).Elem(), GetZoneProtectionProfileScanWhiteListArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneProtectionProfileScanWhiteListArrayInput)(nil)).Elem(), GetZoneProtectionProfileScanWhiteListArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneUserAclInput)(nil)).Elem(), GetZoneUserAclArgs{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataAffectedHostOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataDefaultActionOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataDefaultActionAllowOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataDefaultActionBlockIpOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataDefaultActionDropOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataDefaultActionResetBothOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataDefaultActionResetClientOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataDefaultActionResetServerOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureCombinationOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionArrayOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureCombinationAndConditionOrConditionArrayOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureCombinationTimeAttributeOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardArrayOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionArrayOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionArrayOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArrayOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArrayOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArrayOutput{})
 	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchOutput{})
 	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierOutput{})
 	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArrayOutput{})

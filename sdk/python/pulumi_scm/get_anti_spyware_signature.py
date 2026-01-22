@@ -80,33 +80,21 @@ class GetAntiSpywareSignatureResult:
     @_builtins.property
     @pulumi.getter
     def bugtraqs(self) -> Sequence[_builtins.str]:
-        """
-        Bugtraq
-        """
         return pulumi.get(self, "bugtraqs")
 
     @_builtins.property
     @pulumi.getter
     def comment(self) -> _builtins.str:
-        """
-        Comment
-        """
         return pulumi.get(self, "comment")
 
     @_builtins.property
     @pulumi.getter
     def cves(self) -> Sequence[_builtins.str]:
-        """
-        Cve
-        """
         return pulumi.get(self, "cves")
 
     @_builtins.property
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> 'outputs.GetAntiSpywareSignatureDefaultActionResult':
-        """
-        anti spyware signature default action
-        """
         return pulumi.get(self, "default_action")
 
     @_builtins.property
@@ -114,25 +102,17 @@ class GetAntiSpywareSignatureResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def direction(self) -> _builtins.str:
-        """
-        Direction
-        """
         return pulumi.get(self, "direction")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -146,34 +126,21 @@ class GetAntiSpywareSignatureResult:
     @_builtins.property
     @pulumi.getter
     def references(self) -> Sequence[_builtins.str]:
-        """
-        Reference
-        """
         return pulumi.get(self, "references")
 
     @_builtins.property
     @pulumi.getter
     def severity(self) -> _builtins.str:
-        """
-        Severity
-        """
         return pulumi.get(self, "severity")
 
     @_builtins.property
     @pulumi.getter
     def signature(self) -> 'outputs.GetAntiSpywareSignatureSignatureResult':
-        """
-        anti spyware signature
-        """
         return pulumi.get(self, "signature")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -184,25 +151,16 @@ class GetAntiSpywareSignatureResult:
     @_builtins.property
     @pulumi.getter(name="threatId")
     def threat_id(self) -> _builtins.str:
-        """
-        threat id range \\n\\n and \\n\\n
-        """
         return pulumi.get(self, "threat_id")
 
     @_builtins.property
     @pulumi.getter
     def threatname(self) -> _builtins.str:
-        """
-        Threatname
-        """
         return pulumi.get(self, "threatname")
 
     @_builtins.property
     @pulumi.getter
     def vendors(self) -> Sequence[_builtins.str]:
-        """
-        Vendor
-        """
         return pulumi.get(self, "vendors")
 
 
@@ -258,12 +216,7 @@ def get_anti_spyware_signature(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -318,12 +271,7 @@ def get_anti_spyware_signature_output(device: Optional[pulumi.Input[Optional[_bu
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

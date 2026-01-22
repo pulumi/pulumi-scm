@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// DHCP lease timeout (minutes)
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Timeout` and `Unlimited`.
         /// </summary>
         [Input("timeout")]
         public Input<int>? Timeout { get; set; }
 
         /// <summary>
         /// Unlimited
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Timeout` and `Unlimited`.
         /// </summary>
         [Input("unlimited")]

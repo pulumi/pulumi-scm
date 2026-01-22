@@ -33,6 +33,10 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.LoopbackInterface;
  * import com.pulumi.scm.LoopbackInterfaceArgs;
  * import com.pulumi.scm.inputs.LoopbackInterfaceIpArgs;
+ * import com.pulumi.scm.Variable;
+ * import com.pulumi.scm.VariableArgs;
+ * import com.pulumi.scm.inputs.LoopbackInterfaceIpv6Args;
+ * import com.pulumi.resources.CustomResourceOptions;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -68,6 +72,38 @@ import javax.annotation.Nullable;
  *                 .ips(LoopbackInterfaceIpArgs.builder()
  * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))
  *                     .build());
+ * 
+ *                 //
+ *                 // Creates an ip subnet variable used in the subsequent example
+ *                 //
+ *                 var scmIpv6Prefix = new Variable("scmIpv6Prefix", VariableArgs.builder()
+ *                     .folder("ngfw-shared")
+ *                     .name("$scm_ipv6_prefix")
+ *                     .description("Managed by Pulumi")
+ *                     .type("ip-netmask")
+ *                     .value("2001:0db8:abcd:0001::/64")
+ *                     .build());
+ * 
+ *                 //
+ *                 // Creates a loopback interface with ipv6 address, with default value loopback.321
+ *                 //
+ *                 var scmLoopbackIntf3 = new LoopbackInterface("scmLoopbackIntf3", LoopbackInterfaceArgs.builder()
+ *                     .name("$scm_loopback_intf3")
+ *                     .comment("Managed by Pulumi")
+ *                     .folder("ngfw-shared")
+ *                     .defaultValue("loopback.321")
+ *                     .ipv6(LoopbackInterfaceIpv6Args.builder()
+ *                         .enabled(true)
+ *                         .interfaceId("EUI-64")
+ *                         .addresses(LoopbackInterfaceIpv6AddressArgs.builder()
+ *                             .name("$scm_ipv6_prefix")
+ *                             .prefix(LoopbackInterfaceIpv6AddressPrefixArgs.builder()
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build(), CustomResourceOptions.builder()
+ *                         .dependsOn(scmIpv6Prefix)
+ *                         .build());
  * 
  *             }
  * }
@@ -133,7 +169,6 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -141,7 +176,6 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -149,6 +183,7 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -157,6 +192,7 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -235,6 +271,7 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -243,6 +280,7 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

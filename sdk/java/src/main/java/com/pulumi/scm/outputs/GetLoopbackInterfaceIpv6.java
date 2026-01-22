@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetLoopbackInterfaceIpv6Address;
 import java.lang.Boolean;
+import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,6 +23,11 @@ public final class GetLoopbackInterfaceIpv6 {
      * 
      */
     private Boolean enabled;
+    /**
+     * @return Interface ID
+     * 
+     */
+    private String interfaceId;
 
     private GetLoopbackInterfaceIpv6() {}
     /**
@@ -38,6 +44,13 @@ public final class GetLoopbackInterfaceIpv6 {
     public Boolean enabled() {
         return this.enabled;
     }
+    /**
+     * @return Interface ID
+     * 
+     */
+    public String interfaceId() {
+        return this.interfaceId;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -50,11 +63,13 @@ public final class GetLoopbackInterfaceIpv6 {
     public static final class Builder {
         private List<GetLoopbackInterfaceIpv6Address> addresses;
         private Boolean enabled;
+        private String interfaceId;
         public Builder() {}
         public Builder(GetLoopbackInterfaceIpv6 defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.addresses = defaults.addresses;
     	      this.enabled = defaults.enabled;
+    	      this.interfaceId = defaults.interfaceId;
         }
 
         @CustomType.Setter
@@ -76,10 +91,19 @@ public final class GetLoopbackInterfaceIpv6 {
             this.enabled = enabled;
             return this;
         }
+        @CustomType.Setter
+        public Builder interfaceId(String interfaceId) {
+            if (interfaceId == null) {
+              throw new MissingRequiredPropertyException("GetLoopbackInterfaceIpv6", "interfaceId");
+            }
+            this.interfaceId = interfaceId;
+            return this;
+        }
         public GetLoopbackInterfaceIpv6 build() {
             final var _resultValue = new GetLoopbackInterfaceIpv6();
             _resultValue.addresses = addresses;
             _resultValue.enabled = enabled;
+            _resultValue.interfaceId = interfaceId;
             return _resultValue;
         }
     }

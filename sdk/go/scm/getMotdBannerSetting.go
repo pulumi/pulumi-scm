@@ -52,34 +52,23 @@ func LookupMotdBannerSetting(ctx *pulumi.Context, args *LookupMotdBannerSettingA
 // A collection of arguments for invoking getMotdBannerSetting.
 type LookupMotdBannerSettingArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getMotdBannerSetting.
 type LookupMotdBannerSettingResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Motd and banner
+	Id            string                            `pulumi:"id"`
 	MotdAndBanner GetMotdBannerSettingMotdAndBanner `pulumi:"motdAndBanner"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet       string                            `pulumi:"snippet"`
+	Tfid          string                            `pulumi:"tfid"`
 }
 
 func LookupMotdBannerSettingOutput(ctx *pulumi.Context, args LookupMotdBannerSettingOutputArgs, opts ...pulumi.InvokeOption) LookupMotdBannerSettingResultOutput {
@@ -94,15 +83,10 @@ func LookupMotdBannerSettingOutput(ctx *pulumi.Context, args LookupMotdBannerSet
 // A collection of arguments for invoking getMotdBannerSetting.
 type LookupMotdBannerSettingOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -126,13 +110,10 @@ func (o LookupMotdBannerSettingResultOutput) ToLookupMotdBannerSettingResultOutp
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupMotdBannerSettingResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupMotdBannerSettingResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupMotdBannerSettingResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupMotdBannerSettingResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -142,13 +123,10 @@ func (o LookupMotdBannerSettingResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupMotdBannerSettingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Motd and banner
 func (o LookupMotdBannerSettingResultOutput) MotdAndBanner() GetMotdBannerSettingMotdAndBannerOutput {
 	return o.ApplyT(func(v LookupMotdBannerSettingResult) GetMotdBannerSettingMotdAndBanner { return v.MotdAndBanner }).(GetMotdBannerSettingMotdAndBannerOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupMotdBannerSettingResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupMotdBannerSettingResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

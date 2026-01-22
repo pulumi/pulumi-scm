@@ -30,9 +30,17 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
+        /// A list of email server profiles
+        /// </summary>
+        public readonly ImmutableArray<string> SendEmails;
+        /// <summary>
         /// A list of HTTP server profiles
         /// </summary>
         public readonly ImmutableArray<string> SendHttps;
+        /// <summary>
+        /// A list of SNMP server profiles
+        /// </summary>
+        public readonly ImmutableArray<string> SendSnmptraps;
         /// <summary>
         /// A list of syslog server profiles
         /// </summary>
@@ -48,7 +56,11 @@ namespace Pulumi.Scm.Outputs
 
             string name,
 
+            ImmutableArray<string> sendEmails,
+
             ImmutableArray<string> sendHttps,
+
+            ImmutableArray<string> sendSnmptraps,
 
             ImmutableArray<string> sendSyslogs)
         {
@@ -56,7 +68,9 @@ namespace Pulumi.Scm.Outputs
             Filter = filter;
             LogType = logType;
             Name = name;
+            SendEmails = sendEmails;
             SendHttps = sendHttps;
+            SendSnmptraps = sendSnmptraps;
             SendSyslogs = sendSyslogs;
         }
     }

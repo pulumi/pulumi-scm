@@ -5,6 +5,8 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetLoopbackInterfaceListDataIpv6AddressAnycast;
+import com.pulumi.scm.outputs.GetLoopbackInterfaceListDataIpv6AddressPrefix;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -12,22 +14,34 @@ import java.util.Objects;
 @CustomType
 public final class GetLoopbackInterfaceListDataIpv6Address {
     /**
+     * @return Anycast
+     * 
+     */
+    private GetLoopbackInterfaceListDataIpv6AddressAnycast anycast;
+    /**
      * @return Enable Address on Interface
      * 
      */
     private Boolean enableOnInterface;
     /**
-     * @return Interface ID
-     * 
-     */
-    private String interfaceId;
-    /**
      * @return IPv6 Address
      * 
      */
     private String name;
+    /**
+     * @return Use interface ID as host portion
+     * 
+     */
+    private GetLoopbackInterfaceListDataIpv6AddressPrefix prefix;
 
     private GetLoopbackInterfaceListDataIpv6Address() {}
+    /**
+     * @return Anycast
+     * 
+     */
+    public GetLoopbackInterfaceListDataIpv6AddressAnycast anycast() {
+        return this.anycast;
+    }
     /**
      * @return Enable Address on Interface
      * 
@@ -36,18 +50,18 @@ public final class GetLoopbackInterfaceListDataIpv6Address {
         return this.enableOnInterface;
     }
     /**
-     * @return Interface ID
-     * 
-     */
-    public String interfaceId() {
-        return this.interfaceId;
-    }
-    /**
      * @return IPv6 Address
      * 
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return Use interface ID as host portion
+     * 
+     */
+    public GetLoopbackInterfaceListDataIpv6AddressPrefix prefix() {
+        return this.prefix;
     }
 
     public static Builder builder() {
@@ -59,31 +73,33 @@ public final class GetLoopbackInterfaceListDataIpv6Address {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetLoopbackInterfaceListDataIpv6AddressAnycast anycast;
         private Boolean enableOnInterface;
-        private String interfaceId;
         private String name;
+        private GetLoopbackInterfaceListDataIpv6AddressPrefix prefix;
         public Builder() {}
         public Builder(GetLoopbackInterfaceListDataIpv6Address defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.anycast = defaults.anycast;
     	      this.enableOnInterface = defaults.enableOnInterface;
-    	      this.interfaceId = defaults.interfaceId;
     	      this.name = defaults.name;
+    	      this.prefix = defaults.prefix;
         }
 
+        @CustomType.Setter
+        public Builder anycast(GetLoopbackInterfaceListDataIpv6AddressAnycast anycast) {
+            if (anycast == null) {
+              throw new MissingRequiredPropertyException("GetLoopbackInterfaceListDataIpv6Address", "anycast");
+            }
+            this.anycast = anycast;
+            return this;
+        }
         @CustomType.Setter
         public Builder enableOnInterface(Boolean enableOnInterface) {
             if (enableOnInterface == null) {
               throw new MissingRequiredPropertyException("GetLoopbackInterfaceListDataIpv6Address", "enableOnInterface");
             }
             this.enableOnInterface = enableOnInterface;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder interfaceId(String interfaceId) {
-            if (interfaceId == null) {
-              throw new MissingRequiredPropertyException("GetLoopbackInterfaceListDataIpv6Address", "interfaceId");
-            }
-            this.interfaceId = interfaceId;
             return this;
         }
         @CustomType.Setter
@@ -94,11 +110,20 @@ public final class GetLoopbackInterfaceListDataIpv6Address {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
+        public Builder prefix(GetLoopbackInterfaceListDataIpv6AddressPrefix prefix) {
+            if (prefix == null) {
+              throw new MissingRequiredPropertyException("GetLoopbackInterfaceListDataIpv6Address", "prefix");
+            }
+            this.prefix = prefix;
+            return this;
+        }
         public GetLoopbackInterfaceListDataIpv6Address build() {
             final var _resultValue = new GetLoopbackInterfaceListDataIpv6Address();
+            _resultValue.anycast = anycast;
             _resultValue.enableOnInterface = enableOnInterface;
-            _resultValue.interfaceId = interfaceId;
             _resultValue.name = name;
+            _resultValue.prefix = prefix;
             return _resultValue;
         }
     }

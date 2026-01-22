@@ -13,18 +13,96 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM SAML Server Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+        ///     var allShared = Scm.GetSamlServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSamlServerProfileListAllShared"] = allShared.Apply(getSamlServerProfileListResult =&gt; getSamlServerProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetSamlServerProfileListResult> InvokeAsync(GetSamlServerProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSamlServerProfileListResult>("scm:index/getSamlServerProfileList:getSamlServerProfileList", args ?? new GetSamlServerProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM SAML Server Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+        ///     var allShared = Scm.GetSamlServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSamlServerProfileListAllShared"] = allShared.Apply(getSamlServerProfileListResult =&gt; getSamlServerProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSamlServerProfileListResult> Invoke(GetSamlServerProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSamlServerProfileListResult>("scm:index/getSamlServerProfileList:getSamlServerProfileList", args ?? new GetSamlServerProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM SAML Server Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+        ///     var allShared = Scm.GetSamlServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSamlServerProfileListAllShared"] = allShared.Apply(getSamlServerProfileListResult =&gt; getSamlServerProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSamlServerProfileListResult> Invoke(GetSamlServerProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSamlServerProfileListResult>("scm:index/getSamlServerProfileList:getSamlServerProfileList", args ?? new GetSamlServerProfileListInvokeArgs(), options.WithDefaults());

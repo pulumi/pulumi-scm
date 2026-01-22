@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Equal to
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `EqualTo`, `GreaterThan`, `LessThan`, and `PatternMatch`.
         /// </summary>
         [Input("equalTo")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorEqualToGetArgs>? EqualTo { get; set; }
 
         /// <summary>
         /// Greater than
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `EqualTo`, `GreaterThan`, `LessThan`, and `PatternMatch`.
         /// </summary>
         [Input("greaterThan")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Less than
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `EqualTo`, `GreaterThan`, `LessThan`, and `PatternMatch`.
         /// </summary>
         [Input("lessThan")]
@@ -35,6 +36,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Pattern match
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `EqualTo`, `GreaterThan`, `LessThan`, and `PatternMatch`.
         /// </summary>
         [Input("patternMatch")]

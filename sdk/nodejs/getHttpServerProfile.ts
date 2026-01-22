@@ -26,26 +26,14 @@ export function getHttpServerProfile(args: GetHttpServerProfileArgs, opts?: pulu
 export interface GetHttpServerProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * The UUID of the HTTP server profile
      */
     id: string;
-    /**
-     * The name of the profile
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -55,38 +43,17 @@ export interface GetHttpServerProfileArgs {
 export interface GetHttpServerProfileResult {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
-    /**
-     * Format
-     */
     readonly format: outputs.GetHttpServerProfileFormat;
     /**
      * The UUID of the HTTP server profile
      */
     readonly id: string;
-    /**
-     * The name of the profile
-     */
     readonly name: string;
-    /**
-     * Server
-     */
     readonly servers: outputs.GetHttpServerProfileServer[];
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
-    /**
-     * Register tags on match
-     */
     readonly tagRegistration: boolean;
     readonly tfid: string;
 }
@@ -110,25 +77,13 @@ export function getHttpServerProfileOutput(args: GetHttpServerProfileOutputArgs,
 export interface GetHttpServerProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * The UUID of the HTTP server profile
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the profile
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

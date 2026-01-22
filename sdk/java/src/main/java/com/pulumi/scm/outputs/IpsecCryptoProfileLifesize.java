@@ -13,24 +13,26 @@ import javax.annotation.Nullable;
 public final class IpsecCryptoProfileLifesize {
     /**
      * @return specify lifesize in gigabytes(GB)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     private @Nullable Integer gb;
     /**
      * @return specify lifesize in kilobytes(KB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     private @Nullable Integer kb;
     /**
      * @return specify lifesize in megabytes(MB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     private @Nullable Integer mb;
     /**
      * @return specify lifesize in terabytes(TB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -39,7 +41,6 @@ public final class IpsecCryptoProfileLifesize {
     private IpsecCryptoProfileLifesize() {}
     /**
      * @return specify lifesize in gigabytes(GB)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     public Optional<Integer> gb() {
@@ -47,6 +48,7 @@ public final class IpsecCryptoProfileLifesize {
     }
     /**
      * @return specify lifesize in kilobytes(KB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -55,6 +57,7 @@ public final class IpsecCryptoProfileLifesize {
     }
     /**
      * @return specify lifesize in megabytes(MB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -63,6 +66,7 @@ public final class IpsecCryptoProfileLifesize {
     }
     /**
      * @return specify lifesize in terabytes(TB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */

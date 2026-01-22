@@ -77,25 +77,16 @@ class GetLayer3SubinterfaceResult:
     @_builtins.property
     @pulumi.getter
     def arps(self) -> Sequence['outputs.GetLayer3SubinterfaceArpResult']:
-        """
-        Layer 3 sub Interfaces ARP configuration
-        """
         return pulumi.get(self, "arps")
 
     @_builtins.property
     @pulumi.getter
     def comment(self) -> _builtins.str:
-        """
-        Description
-        """
         return pulumi.get(self, "comment")
 
     @_builtins.property
     @pulumi.getter(name="ddnsConfig")
     def ddns_config(self) -> 'outputs.GetLayer3SubinterfaceDdnsConfigResult':
-        """
-        Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
-        """
         return pulumi.get(self, "ddns_config")
 
     @_builtins.property
@@ -103,26 +94,17 @@ class GetLayer3SubinterfaceResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="dhcpClient")
     def dhcp_client(self) -> 'outputs.GetLayer3SubinterfaceDhcpClientResult':
-        """
-        Layer3 sub interfaces DHCP Client Object
-        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
-        """
         return pulumi.get(self, "dhcp_client")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -136,59 +118,36 @@ class GetLayer3SubinterfaceResult:
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> _builtins.str:
-        """
-        Interface management profile
-        """
         return pulumi.get(self, "interface_management_profile")
 
     @_builtins.property
     @pulumi.getter
     def ips(self) -> Sequence['outputs.GetLayer3SubinterfaceIpResult']:
-        """
-        L3 sub-interface IP Parent
-        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
-        """
         return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
     def mtu(self) -> _builtins.int:
-        """
-        MTU
-        """
         return pulumi.get(self, "mtu")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        L3 sub-interface name
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="parentInterface")
     def parent_interface(self) -> _builtins.str:
-        """
-        Parent interface
-        """
         return pulumi.get(self, "parent_interface")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tag(self) -> _builtins.int:
-        """
-        VLAN tag
-        """
         return pulumi.get(self, "tag")
 
     @_builtins.property
@@ -250,13 +209,7 @@ def get_layer3_subinterface(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: L3 sub-interface name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -313,13 +266,7 @@ def get_layer3_subinterface_output(device: Optional[pulumi.Input[Optional[_built
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: L3 sub-interface name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

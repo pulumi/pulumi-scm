@@ -11924,12 +11924,82 @@ public final class ScmFunctions {
     /**
      * DhcpInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // We use the ID from the resource created above.
+     *         final var singleInfById = ScmFunctions.getDhcpInterface(GetDhcpInterfaceArgs.builder()
+     *             .id("b3544acb-fc55-4c6f-921d-4128b5a1d135")
+     *             .build());
+     * 
+     *         ctx.export("singleDhcpInfName", singleInfById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDhcpInterfaceResult> getDhcpInterface(GetDhcpInterfaceArgs args) {
         return getDhcpInterface(args, InvokeOptions.Empty);
     }
     /**
      * DhcpInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // We use the ID from the resource created above.
+     *         final var singleInfById = ScmFunctions.getDhcpInterface(GetDhcpInterfaceArgs.builder()
+     *             .id("b3544acb-fc55-4c6f-921d-4128b5a1d135")
+     *             .build());
+     * 
+     *         ctx.export("singleDhcpInfName", singleInfById);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetDhcpInterfaceResult> getDhcpInterfacePlain(GetDhcpInterfacePlainArgs args) {
@@ -11938,12 +12008,82 @@ public final class ScmFunctions {
     /**
      * DhcpInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // We use the ID from the resource created above.
+     *         final var singleInfById = ScmFunctions.getDhcpInterface(GetDhcpInterfaceArgs.builder()
+     *             .id("b3544acb-fc55-4c6f-921d-4128b5a1d135")
+     *             .build());
+     * 
+     *         ctx.export("singleDhcpInfName", singleInfById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDhcpInterfaceResult> getDhcpInterface(GetDhcpInterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getDhcpInterface:getDhcpInterface", TypeShape.of(GetDhcpInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * DhcpInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // We use the ID from the resource created above.
+     *         final var singleInfById = ScmFunctions.getDhcpInterface(GetDhcpInterfaceArgs.builder()
+     *             .id("b3544acb-fc55-4c6f-921d-4128b5a1d135")
+     *             .build());
+     * 
+     *         ctx.export("singleDhcpInfName", singleInfById);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDhcpInterfaceResult> getDhcpInterface(GetDhcpInterfaceArgs args, InvokeOutputOptions options) {
@@ -11952,12 +12092,85 @@ public final class ScmFunctions {
     /**
      * DhcpInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // We use the ID from the resource created above.
+     *         final var singleInfById = ScmFunctions.getDhcpInterface(GetDhcpInterfaceArgs.builder()
+     *             .id("b3544acb-fc55-4c6f-921d-4128b5a1d135")
+     *             .build());
+     * 
+     *         ctx.export("singleDhcpInfName", singleInfById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetDhcpInterfaceResult> getDhcpInterfacePlain(GetDhcpInterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getDhcpInterface:getDhcpInterface", TypeShape.of(GetDhcpInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedInterfaceList = ScmFunctions.getDhcpInterfaceList(GetDhcpInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedInterfaceListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedInterfaceList.total()),
+     *             Map.entry("firstRuleName", pagedInterfaceList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDhcpInterfaceListResult> getDhcpInterfaceList() {
@@ -11966,12 +12179,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedInterfaceList = ScmFunctions.getDhcpInterfaceList(GetDhcpInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedInterfaceListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedInterfaceList.total()),
+     *             Map.entry("firstRuleName", pagedInterfaceList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetDhcpInterfaceListResult> getDhcpInterfaceListPlain() {
         return getDhcpInterfaceListPlain(GetDhcpInterfaceListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedInterfaceList = ScmFunctions.getDhcpInterfaceList(GetDhcpInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedInterfaceListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedInterfaceList.total()),
+     *             Map.entry("firstRuleName", pagedInterfaceList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDhcpInterfaceListResult> getDhcpInterfaceList(GetDhcpInterfaceListArgs args) {
@@ -11980,12 +12269,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedInterfaceList = ScmFunctions.getDhcpInterfaceList(GetDhcpInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedInterfaceListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedInterfaceList.total()),
+     *             Map.entry("firstRuleName", pagedInterfaceList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetDhcpInterfaceListResult> getDhcpInterfaceListPlain(GetDhcpInterfaceListPlainArgs args) {
         return getDhcpInterfaceListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedInterfaceList = ScmFunctions.getDhcpInterfaceList(GetDhcpInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedInterfaceListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedInterfaceList.total()),
+     *             Map.entry("firstRuleName", pagedInterfaceList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDhcpInterfaceListResult> getDhcpInterfaceList(GetDhcpInterfaceListArgs args, InvokeOptions options) {
@@ -11994,12 +12359,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedInterfaceList = ScmFunctions.getDhcpInterfaceList(GetDhcpInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedInterfaceListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedInterfaceList.total()),
+     *             Map.entry("firstRuleName", pagedInterfaceList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDhcpInterfaceListResult> getDhcpInterfaceList(GetDhcpInterfaceListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getDhcpInterfaceList:getDhcpInterfaceList", TypeShape.of(GetDhcpInterfaceListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDhcpInterfaceListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedInterfaceList = ScmFunctions.getDhcpInterfaceList(GetDhcpInterfaceListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedInterfaceListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedInterfaceList.total()),
+     *             Map.entry("firstRuleName", pagedInterfaceList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetDhcpInterfaceListResult> getDhcpInterfaceListPlain(GetDhcpInterfaceListPlainArgs args, InvokeOptions options) {
@@ -19798,12 +20239,96 @@ public final class ScmFunctions {
     /**
      * KerberosServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Kerberos Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Kerberos Server Profile you want to find.
+     *         final var scmKerberosProf = ScmFunctions.getKerberosServerProfile(GetKerberosServerProfileArgs.builder()
+     *             .id("6bd818f8-9679-4031-86df-17b8b40842a0")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmKerberosProf.id()),
+     *             Map.entry("folder", scmKerberosProf.folder()),
+     *             Map.entry("name", scmKerberosProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetKerberosServerProfileResult> getKerberosServerProfile(GetKerberosServerProfileArgs args) {
         return getKerberosServerProfile(args, InvokeOptions.Empty);
     }
     /**
      * KerberosServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Kerberos Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Kerberos Server Profile you want to find.
+     *         final var scmKerberosProf = ScmFunctions.getKerberosServerProfile(GetKerberosServerProfileArgs.builder()
+     *             .id("6bd818f8-9679-4031-86df-17b8b40842a0")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmKerberosProf.id()),
+     *             Map.entry("folder", scmKerberosProf.folder()),
+     *             Map.entry("name", scmKerberosProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetKerberosServerProfileResult> getKerberosServerProfilePlain(GetKerberosServerProfilePlainArgs args) {
@@ -19812,12 +20337,96 @@ public final class ScmFunctions {
     /**
      * KerberosServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Kerberos Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Kerberos Server Profile you want to find.
+     *         final var scmKerberosProf = ScmFunctions.getKerberosServerProfile(GetKerberosServerProfileArgs.builder()
+     *             .id("6bd818f8-9679-4031-86df-17b8b40842a0")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmKerberosProf.id()),
+     *             Map.entry("folder", scmKerberosProf.folder()),
+     *             Map.entry("name", scmKerberosProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetKerberosServerProfileResult> getKerberosServerProfile(GetKerberosServerProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getKerberosServerProfile:getKerberosServerProfile", TypeShape.of(GetKerberosServerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * KerberosServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Kerberos Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Kerberos Server Profile you want to find.
+     *         final var scmKerberosProf = ScmFunctions.getKerberosServerProfile(GetKerberosServerProfileArgs.builder()
+     *             .id("6bd818f8-9679-4031-86df-17b8b40842a0")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmKerberosProf.id()),
+     *             Map.entry("folder", scmKerberosProf.folder()),
+     *             Map.entry("name", scmKerberosProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetKerberosServerProfileResult> getKerberosServerProfile(GetKerberosServerProfileArgs args, InvokeOutputOptions options) {
@@ -19826,12 +20435,92 @@ public final class ScmFunctions {
     /**
      * KerberosServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Kerberos Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Kerberos Server Profile you want to find.
+     *         final var scmKerberosProf = ScmFunctions.getKerberosServerProfile(GetKerberosServerProfileArgs.builder()
+     *             .id("6bd818f8-9679-4031-86df-17b8b40842a0")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmKerberosProf.id()),
+     *             Map.entry("folder", scmKerberosProf.folder()),
+     *             Map.entry("name", scmKerberosProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetKerberosServerProfileResult> getKerberosServerProfilePlain(GetKerberosServerProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getKerberosServerProfile:getKerberosServerProfile", TypeShape.of(GetKerberosServerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetKerberosServerProfileListResult> getKerberosServerProfileList() {
@@ -19840,12 +20529,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetKerberosServerProfileListResult> getKerberosServerProfileListPlain() {
         return getKerberosServerProfileListPlain(GetKerberosServerProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetKerberosServerProfileListResult> getKerberosServerProfileList(GetKerberosServerProfileListArgs args) {
@@ -19854,12 +20619,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetKerberosServerProfileListResult> getKerberosServerProfileListPlain(GetKerberosServerProfileListPlainArgs args) {
         return getKerberosServerProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetKerberosServerProfileListResult> getKerberosServerProfileList(GetKerberosServerProfileListArgs args, InvokeOptions options) {
@@ -19868,12 +20709,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetKerberosServerProfileListResult> getKerberosServerProfileList(GetKerberosServerProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getKerberosServerProfileList:getKerberosServerProfileList", TypeShape.of(GetKerberosServerProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmKerberosServerProfileAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetKerberosServerProfileListResult> getKerberosServerProfileListPlain(GetKerberosServerProfileListPlainArgs args, InvokeOptions options) {
@@ -20755,12 +21672,80 @@ public final class ScmFunctions {
     /**
      * LldpProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var profileData = ScmFunctions.getLldpProfile(GetLldpProfileArgs.builder()
+     *             .id("e46f6246-fd4a-4211-a18f-948b09f474bd")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfile", profileData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLldpProfileResult> getLldpProfile(GetLldpProfileArgs args) {
         return getLldpProfile(args, InvokeOptions.Empty);
     }
     /**
      * LldpProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var profileData = ScmFunctions.getLldpProfile(GetLldpProfileArgs.builder()
+     *             .id("e46f6246-fd4a-4211-a18f-948b09f474bd")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfile", profileData);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetLldpProfileResult> getLldpProfilePlain(GetLldpProfilePlainArgs args) {
@@ -20769,12 +21754,80 @@ public final class ScmFunctions {
     /**
      * LldpProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var profileData = ScmFunctions.getLldpProfile(GetLldpProfileArgs.builder()
+     *             .id("e46f6246-fd4a-4211-a18f-948b09f474bd")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfile", profileData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLldpProfileResult> getLldpProfile(GetLldpProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLldpProfile:getLldpProfile", TypeShape.of(GetLldpProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * LldpProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var profileData = ScmFunctions.getLldpProfile(GetLldpProfileArgs.builder()
+     *             .id("e46f6246-fd4a-4211-a18f-948b09f474bd")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfile", profileData);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLldpProfileResult> getLldpProfile(GetLldpProfileArgs args, InvokeOutputOptions options) {
@@ -20783,12 +21836,83 @@ public final class ScmFunctions {
     /**
      * LldpProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var profileData = ScmFunctions.getLldpProfile(GetLldpProfileArgs.builder()
+     *             .id("e46f6246-fd4a-4211-a18f-948b09f474bd")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfile", profileData);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetLldpProfileResult> getLldpProfilePlain(GetLldpProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getLldpProfile:getLldpProfile", TypeShape.of(GetLldpProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allProfiles = ScmFunctions.getLldpProfileList(GetLldpProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfilesListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allProfiles.total()),
+     *             Map.entry("firstProfile", allProfiles.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLldpProfileListResult> getLldpProfileList() {
@@ -20797,12 +21921,86 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allProfiles = ScmFunctions.getLldpProfileList(GetLldpProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfilesListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allProfiles.total()),
+     *             Map.entry("firstProfile", allProfiles.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetLldpProfileListResult> getLldpProfileListPlain() {
         return getLldpProfileListPlain(GetLldpProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allProfiles = ScmFunctions.getLldpProfileList(GetLldpProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfilesListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allProfiles.total()),
+     *             Map.entry("firstProfile", allProfiles.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLldpProfileListResult> getLldpProfileList(GetLldpProfileListArgs args) {
@@ -20811,12 +22009,86 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allProfiles = ScmFunctions.getLldpProfileList(GetLldpProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfilesListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allProfiles.total()),
+     *             Map.entry("firstProfile", allProfiles.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetLldpProfileListResult> getLldpProfileListPlain(GetLldpProfileListPlainArgs args) {
         return getLldpProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allProfiles = ScmFunctions.getLldpProfileList(GetLldpProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfilesListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allProfiles.total()),
+     *             Map.entry("firstProfile", allProfiles.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLldpProfileListResult> getLldpProfileList(GetLldpProfileListArgs args, InvokeOptions options) {
@@ -20825,12 +22097,86 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allProfiles = ScmFunctions.getLldpProfileList(GetLldpProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfilesListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allProfiles.total()),
+     *             Map.entry("firstProfile", allProfiles.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLldpProfileListResult> getLldpProfileList(GetLldpProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLldpProfileList:getLldpProfileList", TypeShape.of(GetLldpProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLldpProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allProfiles = ScmFunctions.getLldpProfileList(GetLldpProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfilesListSummary", Map.ofEntries(
+     *             Map.entry("countOfSettingsFetched", allProfiles.total()),
+     *             Map.entry("firstProfile", allProfiles.datas()[0])
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetLldpProfileListResult> getLldpProfileListPlain(GetLldpProfileListPlainArgs args, InvokeOptions options) {
@@ -21007,12 +22353,98 @@ public final class ScmFunctions {
     /**
      * LogForwardingProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+     *         final var scmLogForwardingProf = ScmFunctions.getLogForwardingProfile(GetLogForwardingProfileArgs.builder()
+     *             .id("712dc61d-94ed-45e4-82b7-b2d86669a2bf")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmLogForwardingProf.id()),
+     *             Map.entry("folder", scmLogForwardingProf.folder()),
+     *             Map.entry("name", scmLogForwardingProf.name()),
+     *             Map.entry("description", scmLogForwardingProf.description())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLogForwardingProfileResult> getLogForwardingProfile(GetLogForwardingProfileArgs args) {
         return getLogForwardingProfile(args, InvokeOptions.Empty);
     }
     /**
      * LogForwardingProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+     *         final var scmLogForwardingProf = ScmFunctions.getLogForwardingProfile(GetLogForwardingProfileArgs.builder()
+     *             .id("712dc61d-94ed-45e4-82b7-b2d86669a2bf")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmLogForwardingProf.id()),
+     *             Map.entry("folder", scmLogForwardingProf.folder()),
+     *             Map.entry("name", scmLogForwardingProf.name()),
+     *             Map.entry("description", scmLogForwardingProf.description())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetLogForwardingProfileResult> getLogForwardingProfilePlain(GetLogForwardingProfilePlainArgs args) {
@@ -21021,12 +22453,98 @@ public final class ScmFunctions {
     /**
      * LogForwardingProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+     *         final var scmLogForwardingProf = ScmFunctions.getLogForwardingProfile(GetLogForwardingProfileArgs.builder()
+     *             .id("712dc61d-94ed-45e4-82b7-b2d86669a2bf")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmLogForwardingProf.id()),
+     *             Map.entry("folder", scmLogForwardingProf.folder()),
+     *             Map.entry("name", scmLogForwardingProf.name()),
+     *             Map.entry("description", scmLogForwardingProf.description())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLogForwardingProfileResult> getLogForwardingProfile(GetLogForwardingProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLogForwardingProfile:getLogForwardingProfile", TypeShape.of(GetLogForwardingProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * LogForwardingProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+     *         final var scmLogForwardingProf = ScmFunctions.getLogForwardingProfile(GetLogForwardingProfileArgs.builder()
+     *             .id("712dc61d-94ed-45e4-82b7-b2d86669a2bf")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmLogForwardingProf.id()),
+     *             Map.entry("folder", scmLogForwardingProf.folder()),
+     *             Map.entry("name", scmLogForwardingProf.name()),
+     *             Map.entry("description", scmLogForwardingProf.description())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLogForwardingProfileResult> getLogForwardingProfile(GetLogForwardingProfileArgs args, InvokeOutputOptions options) {
@@ -21035,12 +22553,93 @@ public final class ScmFunctions {
     /**
      * LogForwardingProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+     *         final var scmLogForwardingProf = ScmFunctions.getLogForwardingProfile(GetLogForwardingProfileArgs.builder()
+     *             .id("712dc61d-94ed-45e4-82b7-b2d86669a2bf")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmLogForwardingProf.id()),
+     *             Map.entry("folder", scmLogForwardingProf.folder()),
+     *             Map.entry("name", scmLogForwardingProf.name()),
+     *             Map.entry("description", scmLogForwardingProf.description())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetLogForwardingProfileResult> getLogForwardingProfilePlain(GetLogForwardingProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getLogForwardingProfile:getLogForwardingProfile", TypeShape.of(GetLogForwardingProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Log Forwarding Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getLogForwardingProfileList(GetLogForwardingProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLogForwardingProfileListResult> getLogForwardingProfileList() {
@@ -21049,12 +22648,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Log Forwarding Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getLogForwardingProfileList(GetLogForwardingProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetLogForwardingProfileListResult> getLogForwardingProfileListPlain() {
         return getLogForwardingProfileListPlain(GetLogForwardingProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Log Forwarding Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getLogForwardingProfileList(GetLogForwardingProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLogForwardingProfileListResult> getLogForwardingProfileList(GetLogForwardingProfileListArgs args) {
@@ -21063,12 +22738,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Log Forwarding Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getLogForwardingProfileList(GetLogForwardingProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetLogForwardingProfileListResult> getLogForwardingProfileListPlain(GetLogForwardingProfileListPlainArgs args) {
         return getLogForwardingProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Log Forwarding Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getLogForwardingProfileList(GetLogForwardingProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLogForwardingProfileListResult> getLogForwardingProfileList(GetLogForwardingProfileListArgs args, InvokeOptions options) {
@@ -21077,12 +22828,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Log Forwarding Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getLogForwardingProfileList(GetLogForwardingProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLogForwardingProfileListResult> getLogForwardingProfileList(GetLogForwardingProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLogForwardingProfileList:getLogForwardingProfileList", TypeShape.of(GetLogForwardingProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogForwardingProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Log Forwarding Profile objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getLogForwardingProfileList(GetLogForwardingProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmLogForwardingProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetLogForwardingProfileListResult> getLogForwardingProfileListPlain(GetLogForwardingProfileListPlainArgs args, InvokeOptions options) {
@@ -24353,12 +26180,96 @@ public final class ScmFunctions {
     /**
      * QosProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM QoS Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the QoS Profile you want to find.
+     *         final var scmQosProf = ScmFunctions.getQosProfile(GetQosProfileArgs.builder()
+     *             .id("cffecf78-b3b1-4b01-ad31-c69bf839850b")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileDetails", Map.ofEntries(
+     *             Map.entry("id", scmQosProf.id()),
+     *             Map.entry("folder", scmQosProf.folder()),
+     *             Map.entry("name", scmQosProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetQosProfileResult> getQosProfile(GetQosProfileArgs args) {
         return getQosProfile(args, InvokeOptions.Empty);
     }
     /**
      * QosProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM QoS Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the QoS Profile you want to find.
+     *         final var scmQosProf = ScmFunctions.getQosProfile(GetQosProfileArgs.builder()
+     *             .id("cffecf78-b3b1-4b01-ad31-c69bf839850b")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileDetails", Map.ofEntries(
+     *             Map.entry("id", scmQosProf.id()),
+     *             Map.entry("folder", scmQosProf.folder()),
+     *             Map.entry("name", scmQosProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetQosProfileResult> getQosProfilePlain(GetQosProfilePlainArgs args) {
@@ -24367,12 +26278,96 @@ public final class ScmFunctions {
     /**
      * QosProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM QoS Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the QoS Profile you want to find.
+     *         final var scmQosProf = ScmFunctions.getQosProfile(GetQosProfileArgs.builder()
+     *             .id("cffecf78-b3b1-4b01-ad31-c69bf839850b")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileDetails", Map.ofEntries(
+     *             Map.entry("id", scmQosProf.id()),
+     *             Map.entry("folder", scmQosProf.folder()),
+     *             Map.entry("name", scmQosProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetQosProfileResult> getQosProfile(GetQosProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getQosProfile:getQosProfile", TypeShape.of(GetQosProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * QosProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM QoS Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the QoS Profile you want to find.
+     *         final var scmQosProf = ScmFunctions.getQosProfile(GetQosProfileArgs.builder()
+     *             .id("cffecf78-b3b1-4b01-ad31-c69bf839850b")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileDetails", Map.ofEntries(
+     *             Map.entry("id", scmQosProf.id()),
+     *             Map.entry("folder", scmQosProf.folder()),
+     *             Map.entry("name", scmQosProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetQosProfileResult> getQosProfile(GetQosProfileArgs args, InvokeOutputOptions options) {
@@ -24381,12 +26376,93 @@ public final class ScmFunctions {
     /**
      * QosProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM QoS Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the QoS Profile you want to find.
+     *         final var scmQosProf = ScmFunctions.getQosProfile(GetQosProfileArgs.builder()
+     *             .id("cffecf78-b3b1-4b01-ad31-c69bf839850b")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileDetails", Map.ofEntries(
+     *             Map.entry("id", scmQosProf.id()),
+     *             Map.entry("folder", scmQosProf.folder()),
+     *             Map.entry("name", scmQosProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetQosProfileResult> getQosProfilePlain(GetQosProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getQosProfile:getQosProfile", TypeShape.of(GetQosProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM QoS Profile Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+     *         // Folder must be one of [Remote Networks, Service Connections]"
+     *         final var allShared = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
+     *             .folder("Service Connections")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetQosProfileListResult> getQosProfileList() {
@@ -24395,12 +26471,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM QoS Profile Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+     *         // Folder must be one of [Remote Networks, Service Connections]"
+     *         final var allShared = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
+     *             .folder("Service Connections")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetQosProfileListResult> getQosProfileListPlain() {
         return getQosProfileListPlain(GetQosProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM QoS Profile Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+     *         // Folder must be one of [Remote Networks, Service Connections]"
+     *         final var allShared = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
+     *             .folder("Service Connections")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetQosProfileListResult> getQosProfileList(GetQosProfileListArgs args) {
@@ -24409,12 +26563,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM QoS Profile Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+     *         // Folder must be one of [Remote Networks, Service Connections]"
+     *         final var allShared = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
+     *             .folder("Service Connections")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetQosProfileListResult> getQosProfileListPlain(GetQosProfileListPlainArgs args) {
         return getQosProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM QoS Profile Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+     *         // Folder must be one of [Remote Networks, Service Connections]"
+     *         final var allShared = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
+     *             .folder("Service Connections")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetQosProfileListResult> getQosProfileList(GetQosProfileListArgs args, InvokeOptions options) {
@@ -24423,12 +26655,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM QoS Profile Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+     *         // Folder must be one of [Remote Networks, Service Connections]"
+     *         final var allShared = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
+     *             .folder("Service Connections")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetQosProfileListResult> getQosProfileList(GetQosProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getQosProfileList:getQosProfileList", TypeShape.of(GetQosProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM QoS Profile Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+     *         // Folder must be one of [Remote Networks, Service Connections]"
+     *         final var allShared = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
+     *             .folder("Service Connections")
+     *             .build());
+     * 
+     *         ctx.export("scmQosProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetQosProfileListResult> getQosProfileListPlain(GetQosProfileListPlainArgs args, InvokeOptions options) {
@@ -25404,12 +27714,98 @@ public final class ScmFunctions {
     /**
      * SamlServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM SAML Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
+     *         final var scmSamlServerProf = ScmFunctions.getSamlServerProfile(GetSamlServerProfileArgs.builder()
+     *             .id("a17abcfc-d37d-4b8a-bb09-102ffdc3abef")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileDetails", Map.ofEntries(
+     *             Map.entry("folder", scmSamlServerProf.folder()),
+     *             Map.entry("name", scmSamlServerProf.name()),
+     *             Map.entry("id", scmSamlServerProf.id()),
+     *             Map.entry("ssoUrl", scmSamlServerProf.ssoUrl())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSamlServerProfileResult> getSamlServerProfile(GetSamlServerProfileArgs args) {
         return getSamlServerProfile(args, InvokeOptions.Empty);
     }
     /**
      * SamlServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM SAML Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
+     *         final var scmSamlServerProf = ScmFunctions.getSamlServerProfile(GetSamlServerProfileArgs.builder()
+     *             .id("a17abcfc-d37d-4b8a-bb09-102ffdc3abef")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileDetails", Map.ofEntries(
+     *             Map.entry("folder", scmSamlServerProf.folder()),
+     *             Map.entry("name", scmSamlServerProf.name()),
+     *             Map.entry("id", scmSamlServerProf.id()),
+     *             Map.entry("ssoUrl", scmSamlServerProf.ssoUrl())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetSamlServerProfileResult> getSamlServerProfilePlain(GetSamlServerProfilePlainArgs args) {
@@ -25418,12 +27814,98 @@ public final class ScmFunctions {
     /**
      * SamlServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM SAML Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
+     *         final var scmSamlServerProf = ScmFunctions.getSamlServerProfile(GetSamlServerProfileArgs.builder()
+     *             .id("a17abcfc-d37d-4b8a-bb09-102ffdc3abef")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileDetails", Map.ofEntries(
+     *             Map.entry("folder", scmSamlServerProf.folder()),
+     *             Map.entry("name", scmSamlServerProf.name()),
+     *             Map.entry("id", scmSamlServerProf.id()),
+     *             Map.entry("ssoUrl", scmSamlServerProf.ssoUrl())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSamlServerProfileResult> getSamlServerProfile(GetSamlServerProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getSamlServerProfile:getSamlServerProfile", TypeShape.of(GetSamlServerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * SamlServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM SAML Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
+     *         final var scmSamlServerProf = ScmFunctions.getSamlServerProfile(GetSamlServerProfileArgs.builder()
+     *             .id("a17abcfc-d37d-4b8a-bb09-102ffdc3abef")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileDetails", Map.ofEntries(
+     *             Map.entry("folder", scmSamlServerProf.folder()),
+     *             Map.entry("name", scmSamlServerProf.name()),
+     *             Map.entry("id", scmSamlServerProf.id()),
+     *             Map.entry("ssoUrl", scmSamlServerProf.ssoUrl())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSamlServerProfileResult> getSamlServerProfile(GetSamlServerProfileArgs args, InvokeOutputOptions options) {
@@ -25432,12 +27914,93 @@ public final class ScmFunctions {
     /**
      * SamlServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM SAML Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
+     *         final var scmSamlServerProf = ScmFunctions.getSamlServerProfile(GetSamlServerProfileArgs.builder()
+     *             .id("a17abcfc-d37d-4b8a-bb09-102ffdc3abef")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileDetails", Map.ofEntries(
+     *             Map.entry("folder", scmSamlServerProf.folder()),
+     *             Map.entry("name", scmSamlServerProf.name()),
+     *             Map.entry("id", scmSamlServerProf.id()),
+     *             Map.entry("ssoUrl", scmSamlServerProf.ssoUrl())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetSamlServerProfileResult> getSamlServerProfilePlain(GetSamlServerProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getSamlServerProfile:getSamlServerProfile", TypeShape.of(GetSamlServerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SAML Server Profile objects.
+     *         //
+     *         // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSamlServerProfileListResult> getSamlServerProfileList() {
@@ -25446,12 +28009,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SAML Server Profile objects.
+     *         //
+     *         // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetSamlServerProfileListResult> getSamlServerProfileListPlain() {
         return getSamlServerProfileListPlain(GetSamlServerProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SAML Server Profile objects.
+     *         //
+     *         // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSamlServerProfileListResult> getSamlServerProfileList(GetSamlServerProfileListArgs args) {
@@ -25460,12 +28099,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SAML Server Profile objects.
+     *         //
+     *         // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetSamlServerProfileListResult> getSamlServerProfileListPlain(GetSamlServerProfileListPlainArgs args) {
         return getSamlServerProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SAML Server Profile objects.
+     *         //
+     *         // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSamlServerProfileListResult> getSamlServerProfileList(GetSamlServerProfileListArgs args, InvokeOptions options) {
@@ -25474,12 +28189,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SAML Server Profile objects.
+     *         //
+     *         // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSamlServerProfileListResult> getSamlServerProfileList(GetSamlServerProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getSamlServerProfileList:getSamlServerProfileList", TypeShape.of(GetSamlServerProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSamlServerProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SAML Server Profile objects.
+     *         //
+     *         // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmSamlServerProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetSamlServerProfileListResult> getSamlServerProfileListPlain(GetSamlServerProfileListPlainArgs args, InvokeOptions options) {
@@ -25488,12 +28279,96 @@ public final class ScmFunctions {
     /**
      * ScepProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM SCEP Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+     *         final var scmScepProf = ScmFunctions.getScepProfile(GetScepProfileArgs.builder()
+     *             .id("06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmScepProf.id()),
+     *             Map.entry("folder", scmScepProf.folder()),
+     *             Map.entry("name", scmScepProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetScepProfileResult> getScepProfile(GetScepProfileArgs args) {
         return getScepProfile(args, InvokeOptions.Empty);
     }
     /**
      * ScepProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM SCEP Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+     *         final var scmScepProf = ScmFunctions.getScepProfile(GetScepProfileArgs.builder()
+     *             .id("06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmScepProf.id()),
+     *             Map.entry("folder", scmScepProf.folder()),
+     *             Map.entry("name", scmScepProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetScepProfileResult> getScepProfilePlain(GetScepProfilePlainArgs args) {
@@ -25502,12 +28377,96 @@ public final class ScmFunctions {
     /**
      * ScepProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM SCEP Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+     *         final var scmScepProf = ScmFunctions.getScepProfile(GetScepProfileArgs.builder()
+     *             .id("06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmScepProf.id()),
+     *             Map.entry("folder", scmScepProf.folder()),
+     *             Map.entry("name", scmScepProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetScepProfileResult> getScepProfile(GetScepProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getScepProfile:getScepProfile", TypeShape.of(GetScepProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ScepProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM SCEP Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+     *         final var scmScepProf = ScmFunctions.getScepProfile(GetScepProfileArgs.builder()
+     *             .id("06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmScepProf.id()),
+     *             Map.entry("folder", scmScepProf.folder()),
+     *             Map.entry("name", scmScepProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetScepProfileResult> getScepProfile(GetScepProfileArgs args, InvokeOutputOptions options) {
@@ -25516,12 +28475,92 @@ public final class ScmFunctions {
     /**
      * ScepProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM SCEP Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+     *         final var scmScepProf = ScmFunctions.getScepProfile(GetScepProfileArgs.builder()
+     *             .id("06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmScepProf.id()),
+     *             Map.entry("folder", scmScepProf.folder()),
+     *             Map.entry("name", scmScepProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetScepProfileResult> getScepProfilePlain(GetScepProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getScepProfile:getScepProfile", TypeShape.of(GetScepProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SCEP Profile objects.
+     *         //
+     *         // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetScepProfileListResult> getScepProfileList() {
@@ -25530,12 +28569,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SCEP Profile objects.
+     *         //
+     *         // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetScepProfileListResult> getScepProfileListPlain() {
         return getScepProfileListPlain(GetScepProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SCEP Profile objects.
+     *         //
+     *         // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetScepProfileListResult> getScepProfileList(GetScepProfileListArgs args) {
@@ -25544,12 +28659,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SCEP Profile objects.
+     *         //
+     *         // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetScepProfileListResult> getScepProfileListPlain(GetScepProfileListPlainArgs args) {
         return getScepProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SCEP Profile objects.
+     *         //
+     *         // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetScepProfileListResult> getScepProfileList(GetScepProfileListArgs args, InvokeOptions options) {
@@ -25558,12 +28749,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SCEP Profile objects.
+     *         //
+     *         // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetScepProfileListResult> getScepProfileList(GetScepProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getScepProfileList:getScepProfileList", TypeShape.of(GetScepProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetScepProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM SCEP Profile objects.
+     *         //
+     *         // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+     *         final var allShared = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmScepProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetScepProfileListResult> getScepProfileListPlain(GetScepProfileListPlainArgs args, InvokeOptions options) {
@@ -31398,12 +34665,94 @@ public final class ScmFunctions {
     /**
      * TacacsServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTacacsServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the multi-tag address object by its ID.
+     *         final var scmTacacsServerProfile5Ds = ScmFunctions.getTacacsServerProfile(GetTacacsServerProfileArgs.builder()
+     *             .id("1967a784-402b-4c20-aa48-aab64d73cc06")
+     *             .build());
+     * 
+     *         ctx.export("profileDataSourceResults", Map.ofEntries(
+     *             Map.entry("name", scmTacacsServerProfile5Ds.name()),
+     *             Map.entry("protocol", scmTacacsServerProfile5Ds.protocol()),
+     *             Map.entry("timeout", scmTacacsServerProfile5Ds.timeout()),
+     *             Map.entry("folder", scmTacacsServerProfile5Ds.folder()),
+     *             Map.entry("useSingleConnection", scmTacacsServerProfile5Ds.useSingleConnection())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetTacacsServerProfileResult> getTacacsServerProfile(GetTacacsServerProfileArgs args) {
         return getTacacsServerProfile(args, InvokeOptions.Empty);
     }
     /**
      * TacacsServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTacacsServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the multi-tag address object by its ID.
+     *         final var scmTacacsServerProfile5Ds = ScmFunctions.getTacacsServerProfile(GetTacacsServerProfileArgs.builder()
+     *             .id("1967a784-402b-4c20-aa48-aab64d73cc06")
+     *             .build());
+     * 
+     *         ctx.export("profileDataSourceResults", Map.ofEntries(
+     *             Map.entry("name", scmTacacsServerProfile5Ds.name()),
+     *             Map.entry("protocol", scmTacacsServerProfile5Ds.protocol()),
+     *             Map.entry("timeout", scmTacacsServerProfile5Ds.timeout()),
+     *             Map.entry("folder", scmTacacsServerProfile5Ds.folder()),
+     *             Map.entry("useSingleConnection", scmTacacsServerProfile5Ds.useSingleConnection())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetTacacsServerProfileResult> getTacacsServerProfilePlain(GetTacacsServerProfilePlainArgs args) {
@@ -31412,12 +34761,94 @@ public final class ScmFunctions {
     /**
      * TacacsServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTacacsServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the multi-tag address object by its ID.
+     *         final var scmTacacsServerProfile5Ds = ScmFunctions.getTacacsServerProfile(GetTacacsServerProfileArgs.builder()
+     *             .id("1967a784-402b-4c20-aa48-aab64d73cc06")
+     *             .build());
+     * 
+     *         ctx.export("profileDataSourceResults", Map.ofEntries(
+     *             Map.entry("name", scmTacacsServerProfile5Ds.name()),
+     *             Map.entry("protocol", scmTacacsServerProfile5Ds.protocol()),
+     *             Map.entry("timeout", scmTacacsServerProfile5Ds.timeout()),
+     *             Map.entry("folder", scmTacacsServerProfile5Ds.folder()),
+     *             Map.entry("useSingleConnection", scmTacacsServerProfile5Ds.useSingleConnection())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetTacacsServerProfileResult> getTacacsServerProfile(GetTacacsServerProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getTacacsServerProfile:getTacacsServerProfile", TypeShape.of(GetTacacsServerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * TacacsServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTacacsServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the multi-tag address object by its ID.
+     *         final var scmTacacsServerProfile5Ds = ScmFunctions.getTacacsServerProfile(GetTacacsServerProfileArgs.builder()
+     *             .id("1967a784-402b-4c20-aa48-aab64d73cc06")
+     *             .build());
+     * 
+     *         ctx.export("profileDataSourceResults", Map.ofEntries(
+     *             Map.entry("name", scmTacacsServerProfile5Ds.name()),
+     *             Map.entry("protocol", scmTacacsServerProfile5Ds.protocol()),
+     *             Map.entry("timeout", scmTacacsServerProfile5Ds.timeout()),
+     *             Map.entry("folder", scmTacacsServerProfile5Ds.folder()),
+     *             Map.entry("useSingleConnection", scmTacacsServerProfile5Ds.useSingleConnection())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetTacacsServerProfileResult> getTacacsServerProfile(GetTacacsServerProfileArgs args, InvokeOutputOptions options) {
@@ -31426,12 +34857,55 @@ public final class ScmFunctions {
     /**
      * TacacsServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTacacsServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the multi-tag address object by its ID.
+     *         final var scmTacacsServerProfile5Ds = ScmFunctions.getTacacsServerProfile(GetTacacsServerProfileArgs.builder()
+     *             .id("1967a784-402b-4c20-aa48-aab64d73cc06")
+     *             .build());
+     * 
+     *         ctx.export("profileDataSourceResults", Map.ofEntries(
+     *             Map.entry("name", scmTacacsServerProfile5Ds.name()),
+     *             Map.entry("protocol", scmTacacsServerProfile5Ds.protocol()),
+     *             Map.entry("timeout", scmTacacsServerProfile5Ds.timeout()),
+     *             Map.entry("folder", scmTacacsServerProfile5Ds.folder()),
+     *             Map.entry("useSingleConnection", scmTacacsServerProfile5Ds.useSingleConnection())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetTacacsServerProfileResult> getTacacsServerProfilePlain(GetTacacsServerProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getTacacsServerProfile:getTacacsServerProfile", TypeShape.of(GetTacacsServerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetTacacsServerProfileListResult> getTacacsServerProfileList() {
@@ -31440,12 +34914,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetTacacsServerProfileListResult> getTacacsServerProfileListPlain() {
         return getTacacsServerProfileListPlain(GetTacacsServerProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetTacacsServerProfileListResult> getTacacsServerProfileList(GetTacacsServerProfileListArgs args) {
@@ -31454,12 +34932,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetTacacsServerProfileListResult> getTacacsServerProfileListPlain(GetTacacsServerProfileListPlainArgs args) {
         return getTacacsServerProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetTacacsServerProfileListResult> getTacacsServerProfileList(GetTacacsServerProfileListArgs args, InvokeOptions options) {
@@ -31468,12 +34950,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetTacacsServerProfileListResult> getTacacsServerProfileList(GetTacacsServerProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getTacacsServerProfileList:getTacacsServerProfileList", TypeShape.of(GetTacacsServerProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetTacacsServerProfileListResult> getTacacsServerProfileListPlain(GetTacacsServerProfileListPlainArgs args, InvokeOptions options) {

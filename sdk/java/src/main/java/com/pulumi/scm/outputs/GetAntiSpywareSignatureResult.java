@@ -13,135 +13,54 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAntiSpywareSignatureResult {
-    /**
-     * @return Bugtraq
-     * 
-     */
     private List<String> bugtraqs;
-    /**
-     * @return Comment
-     * 
-     */
     private String comment;
-    /**
-     * @return Cve
-     * 
-     */
     private List<String> cves;
-    /**
-     * @return anti spyware signature default action
-     * 
-     */
     private GetAntiSpywareSignatureDefaultAction defaultAction;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return Direction
-     * 
-     */
     private String direction;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Reference
-     * 
-     */
     private List<String> references;
-    /**
-     * @return Severity
-     * 
-     */
     private String severity;
-    /**
-     * @return anti spyware signature
-     * 
-     */
     private GetAntiSpywareSignatureSignature signature;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return threat id range \n\n and \n\n
-     * 
-     */
     private String threatId;
-    /**
-     * @return Threatname
-     * 
-     */
     private String threatname;
-    /**
-     * @return Vendor
-     * 
-     */
     private List<String> vendors;
 
     private GetAntiSpywareSignatureResult() {}
-    /**
-     * @return Bugtraq
-     * 
-     */
     public List<String> bugtraqs() {
         return this.bugtraqs;
     }
-    /**
-     * @return Comment
-     * 
-     */
     public String comment() {
         return this.comment;
     }
-    /**
-     * @return Cve
-     * 
-     */
     public List<String> cves() {
         return this.cves;
     }
-    /**
-     * @return anti spyware signature default action
-     * 
-     */
     public GetAntiSpywareSignatureDefaultAction defaultAction() {
         return this.defaultAction;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return Direction
-     * 
-     */
     public String direction() {
         return this.direction;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -152,56 +71,27 @@ public final class GetAntiSpywareSignatureResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Reference
-     * 
-     */
     public List<String> references() {
         return this.references;
     }
-    /**
-     * @return Severity
-     * 
-     */
     public String severity() {
         return this.severity;
     }
-    /**
-     * @return anti spyware signature
-     * 
-     */
     public GetAntiSpywareSignatureSignature signature() {
         return this.signature;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return threat id range \n\n and \n\n
-     * 
-     */
     public String threatId() {
         return this.threatId;
     }
-    /**
-     * @return Threatname
-     * 
-     */
     public String threatname() {
         return this.threatname;
     }
-    /**
-     * @return Vendor
-     * 
-     */
     public List<String> vendors() {
         return this.vendors;
     }

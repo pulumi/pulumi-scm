@@ -46,26 +46,14 @@ export function getVlanInterface(args: GetVlanInterfaceArgs, opts?: pulumi.Invok
 export interface GetVlanInterfaceArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * L3 sub-interface name
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -73,67 +61,26 @@ export interface GetVlanInterfaceArgs {
  * A collection of values returned by getVlanInterface.
  */
 export interface GetVlanInterfaceResult {
-    /**
-     * ARP configuration
-     */
     readonly arps: outputs.GetVlanInterfaceArp[];
-    /**
-     * Description
-     */
     readonly comment: string;
-    /**
-     * Dynamic DNS configuration specific to the Vlan Interfaces.
-     */
     readonly ddnsConfig: outputs.GetVlanInterfaceDdnsConfig;
-    /**
-     * Default interface assignment
-     */
     readonly defaultValue: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * Vlan interfaces DHCP Client Object
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     */
     readonly dhcpClient: outputs.GetVlanInterfaceDhcpClient;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Interface management profile
-     */
     readonly interfaceManagementProfile: string;
-    /**
-     * VLAN Interface IP Parent
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
-     */
     readonly ips: outputs.GetVlanInterfaceIp[];
-    /**
-     * MTU
-     */
     readonly mtu: number;
-    /**
-     * L3 sub-interface name
-     */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * VLAN tag
-     */
     readonly vlanTag: string;
 }
 /**
@@ -176,25 +123,13 @@ export function getVlanInterfaceOutput(args: GetVlanInterfaceOutputArgs, opts?: 
 export interface GetVlanInterfaceOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * L3 sub-interface name
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

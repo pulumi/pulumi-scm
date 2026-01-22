@@ -8,6 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * QosProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM QoS Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the QoS Profile you want to find.
+ * const scmQosProf = scm.getQosProfile({
+ *     id: "cffecf78-b3b1-4b01-ad31-c69bf839850b",
+ * });
+ * export const scmQosProfileDetails = {
+ *     id: scmQosProf.then(scmQosProf => scmQosProf.id),
+ *     folder: scmQosProf.then(scmQosProf => scmQosProf.folder),
+ *     name: scmQosProf.then(scmQosProf => scmQosProf.name),
+ * };
+ * ```
  */
 export function getQosProfile(args: GetQosProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetQosProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -26,26 +46,14 @@ export function getQosProfile(args: GetQosProfileArgs, opts?: pulumi.InvokeOptio
 export interface GetQosProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -53,41 +61,43 @@ export interface GetQosProfileArgs {
  * A collection of values returned by getQosProfile.
  */
 export interface GetQosProfileResult {
-    /**
-     * Aggregate bandwidth
-     */
     readonly aggregateBandwidth: outputs.GetQosProfileAggregateBandwidth;
-    /**
-     * Class bandwidth type
-     */
     readonly classBandwidthType: outputs.GetQosProfileClassBandwidthType;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * QosProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM QoS Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the QoS Profile you want to find.
+ * const scmQosProf = scm.getQosProfile({
+ *     id: "cffecf78-b3b1-4b01-ad31-c69bf839850b",
+ * });
+ * export const scmQosProfileDetails = {
+ *     id: scmQosProf.then(scmQosProf => scmQosProf.id),
+ *     folder: scmQosProf.then(scmQosProf => scmQosProf.folder),
+ *     name: scmQosProf.then(scmQosProf => scmQosProf.name),
+ * };
+ * ```
  */
 export function getQosProfileOutput(args: GetQosProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetQosProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -106,25 +116,13 @@ export function getQosProfileOutput(args: GetQosProfileOutputArgs, opts?: pulumi
 export interface GetQosProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

@@ -61,7 +61,6 @@ export interface AggregateInterfaceLayer3 {
     ddnsConfig?: pulumi.Input<inputs.AggregateInterfaceLayer3DdnsConfig>;
     /**
      * Aggregate Ethernet DHCP Client Object
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     dhcpClient?: pulumi.Input<inputs.AggregateInterfaceLayer3DhcpClient>;
     /**
@@ -70,6 +69,7 @@ export interface AggregateInterfaceLayer3 {
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
      * Aggregate Interface IP addresses
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips?: pulumi.Input<pulumi.Input<inputs.AggregateInterfaceLayer3Ip>[]>;
@@ -230,36 +230,41 @@ export interface AntiSpywareProfileRule {
 export interface AntiSpywareProfileRuleAction {
     /**
      * Alert
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     alert?: pulumi.Input<inputs.AntiSpywareProfileRuleActionAlert>;
     /**
      * Allow
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: pulumi.Input<inputs.AntiSpywareProfileRuleActionAllow>;
     /**
      * anti spyware profiles rules action block ip
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: pulumi.Input<inputs.AntiSpywareProfileRuleActionBlockIp>;
     /**
      * Drop
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: pulumi.Input<inputs.AntiSpywareProfileRuleActionDrop>;
     /**
      * Reset both
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: pulumi.Input<inputs.AntiSpywareProfileRuleActionResetBoth>;
     /**
      * Reset client
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: pulumi.Input<inputs.AntiSpywareProfileRuleActionResetClient>;
     /**
      * Reset server
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: pulumi.Input<inputs.AntiSpywareProfileRuleActionResetServer>;
@@ -320,41 +325,47 @@ export interface AntiSpywareProfileThreatException {
 export interface AntiSpywareProfileThreatExceptionAction {
     /**
      * Alert
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     alert?: pulumi.Input<inputs.AntiSpywareProfileThreatExceptionActionAlert>;
     /**
      * Allow
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: pulumi.Input<inputs.AntiSpywareProfileThreatExceptionActionAllow>;
     /**
      * anti spyware profiles threat exception action block ip
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: pulumi.Input<inputs.AntiSpywareProfileThreatExceptionActionBlockIp>;
     /**
      * Default
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default?: pulumi.Input<inputs.AntiSpywareProfileThreatExceptionActionDefault>;
     /**
      * Drop
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: pulumi.Input<inputs.AntiSpywareProfileThreatExceptionActionDrop>;
     /**
      * Reset both
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: pulumi.Input<inputs.AntiSpywareProfileThreatExceptionActionResetBoth>;
     /**
      * Reset client
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: pulumi.Input<inputs.AntiSpywareProfileThreatExceptionActionResetClient>;
     /**
      * Reset server
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: pulumi.Input<inputs.AntiSpywareProfileThreatExceptionActionResetServer>;
@@ -402,36 +413,41 @@ export interface AntiSpywareProfileThreatExceptionExemptIp {
 export interface AntiSpywareSignatureDefaultAction {
     /**
      * Alert
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     alert?: pulumi.Input<inputs.AntiSpywareSignatureDefaultActionAlert>;
     /**
      * Allow
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: pulumi.Input<inputs.AntiSpywareSignatureDefaultActionAllow>;
     /**
      * anti spyware signature block ip
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: pulumi.Input<inputs.AntiSpywareSignatureDefaultActionBlockIp>;
     /**
      * Drop
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: pulumi.Input<inputs.AntiSpywareSignatureDefaultActionDrop>;
     /**
      * Reset both
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: pulumi.Input<inputs.AntiSpywareSignatureDefaultActionResetBoth>;
     /**
      * Reset client
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: pulumi.Input<inputs.AntiSpywareSignatureDefaultActionResetClient>;
     /**
      * Reset server
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: pulumi.Input<inputs.AntiSpywareSignatureDefaultActionResetServer>;
@@ -469,11 +485,11 @@ export interface AntiSpywareSignatureDefaultActionResetServer {
 export interface AntiSpywareSignatureSignature {
     /**
      * anti spyware signature combination
-     * > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      */
     combination?: pulumi.Input<inputs.AntiSpywareSignatureSignatureCombination>;
     /**
      * Standard
+     *
      * > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      */
     standards?: pulumi.Input<pulumi.Input<inputs.AntiSpywareSignatureSignatureStandard>[]>;
@@ -710,21 +726,23 @@ export interface AntiSpywareSignatureSignatureStandardAndConditionOrConditionOpe
 export interface ApplicationDefault {
     /**
      * Ident by icmp6 type
-     * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     identByIcmp6Type?: pulumi.Input<inputs.ApplicationDefaultIdentByIcmp6Type>;
     /**
      * Ident by icmp type
+     *
      * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     identByIcmpType?: pulumi.Input<inputs.ApplicationDefaultIdentByIcmpType>;
     /**
      * Ident by ip protocol
+     *
      * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     identByIpProtocol?: pulumi.Input<string>;
     /**
      * Port
+     *
      * > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      */
     ports?: pulumi.Input<pulumi.Input<string>[]>;
@@ -755,11 +773,11 @@ export interface ApplicationDefaultIdentByIcmpType {
 export interface ApplicationFilterTagging {
     /**
      * No tag
-     * > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      */
     noTag?: pulumi.Input<boolean>;
     /**
      * Tag
+     *
      * > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
@@ -813,21 +831,23 @@ export interface ApplicationSignatureAndConditionOrCondition {
 export interface ApplicationSignatureAndConditionOrConditionOperator {
     /**
      * Equal to
-     * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     equalTo?: pulumi.Input<inputs.ApplicationSignatureAndConditionOrConditionOperatorEqualTo>;
     /**
      * Greater than
+     *
      * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     greaterThan?: pulumi.Input<inputs.ApplicationSignatureAndConditionOrConditionOperatorGreaterThan>;
     /**
      * Less than
+     *
      * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     lessThan?: pulumi.Input<inputs.ApplicationSignatureAndConditionOrConditionOperatorLessThan>;
     /**
      * Pattern match
+     *
      * > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      */
     patternMatch?: pulumi.Input<inputs.ApplicationSignatureAndConditionOrConditionOperatorPatternMatch>;
@@ -944,36 +964,41 @@ export interface AuthenticationProfileLockout {
 export interface AuthenticationProfileMethod {
     /**
      * Cloud
-     * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     cloud?: pulumi.Input<inputs.AuthenticationProfileMethodCloud>;
     /**
      * Kerberos
+     *
      * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     kerberos?: pulumi.Input<inputs.AuthenticationProfileMethodKerberos>;
     /**
      * Ldap
+     *
      * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     ldap?: pulumi.Input<inputs.AuthenticationProfileMethodLdap>;
     /**
      * Local database
+     *
      * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     localDatabase?: pulumi.Input<inputs.AuthenticationProfileMethodLocalDatabase>;
     /**
      * Radius
+     *
      * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     radius?: pulumi.Input<inputs.AuthenticationProfileMethodRadius>;
     /**
      * Saml idp
+     *
      * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     samlIdp?: pulumi.Input<inputs.AuthenticationProfileMethodSamlIdp>;
     /**
      * Tacplus
+     *
      * > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
      */
     tacplus?: pulumi.Input<inputs.AuthenticationProfileMethodTacplus>;
@@ -1172,11 +1197,11 @@ export interface AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNat {
 export interface AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIp {
     /**
      * FQDN
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     fqdn?: pulumi.Input<string>;
     /**
      * IP address
+     *
      * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress?: pulumi.Input<string>;
@@ -1222,11 +1247,11 @@ export interface AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNa
 export interface AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp {
     /**
      * FQDN
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     fqdn?: pulumi.Input<string>;
     /**
      * IP address
+     *
      * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress?: pulumi.Input<string>;
@@ -1311,11 +1336,11 @@ export interface AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNat {
 export interface AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIp {
     /**
      * FQDN
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     fqdn?: pulumi.Input<string>;
     /**
      * IP address
+     *
      * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress?: pulumi.Input<string>;
@@ -1361,11 +1386,11 @@ export interface AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamN
 export interface AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp {
     /**
      * FQDN
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     fqdn?: pulumi.Input<string>;
     /**
      * IP address
+     *
      * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress?: pulumi.Input<string>;
@@ -1481,11 +1506,11 @@ export interface BgpAddressFamilyProfileIpv4MulticastAddPath {
 export interface BgpAddressFamilyProfileIpv4MulticastAllowasIn {
     /**
      * Number of times the firewalls own AS can be in an AS_PATH
-     * > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      */
     occurrence?: pulumi.Input<number>;
     /**
      * Origin
+     *
      * > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      */
     origin?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4MulticastAllowasInOrigin>;
@@ -1512,11 +1537,11 @@ export interface BgpAddressFamilyProfileIpv4MulticastMaximumPrefix {
 export interface BgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction {
     /**
      * Restart
-     * > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      */
     restart?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestart>;
     /**
      * Warning only
+     *
      * > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      */
     warningOnly?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnly>;
@@ -1535,11 +1560,11 @@ export interface BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningO
 export interface BgpAddressFamilyProfileIpv4MulticastNextHop {
     /**
      * Self
-     * > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      */
     self?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4MulticastNextHopSelf>;
     /**
      * Self force
+     *
      * > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      */
     selfForce?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4MulticastNextHopSelfForce>;
@@ -1578,26 +1603,29 @@ export interface BgpAddressFamilyProfileIpv4MulticastRemovePrivateAsReplaceAs {
 export interface BgpAddressFamilyProfileIpv4MulticastSendCommunity {
     /**
      * All
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     all?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityAll>;
     /**
      * Both
+     *
      * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     both?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityBoth>;
     /**
      * Extended
+     *
      * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     extended?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityExtended>;
     /**
      * Large
+     *
      * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     large?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityLarge>;
     /**
      * Standard
+     *
      * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     standard?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4MulticastSendCommunityStandard>;
@@ -1687,11 +1715,11 @@ export interface BgpAddressFamilyProfileIpv4UnicastAddPath {
 export interface BgpAddressFamilyProfileIpv4UnicastAllowasIn {
     /**
      * Number of times the firewalls own AS can be in an AS_PATH
-     * > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      */
     occurrence?: pulumi.Input<number>;
     /**
      * Origin
+     *
      * > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      */
     origin?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4UnicastAllowasInOrigin>;
@@ -1718,11 +1746,11 @@ export interface BgpAddressFamilyProfileIpv4UnicastMaximumPrefix {
 export interface BgpAddressFamilyProfileIpv4UnicastMaximumPrefixAction {
     /**
      * Restart
-     * > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      */
     restart?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestart>;
     /**
      * Warning only
+     *
      * > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
      */
     warningOnly?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnly>;
@@ -1741,11 +1769,11 @@ export interface BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnl
 export interface BgpAddressFamilyProfileIpv4UnicastNextHop {
     /**
      * Self
-     * > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      */
     self?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4UnicastNextHopSelf>;
     /**
      * Self force
+     *
      * > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      */
     selfForce?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4UnicastNextHopSelfForce>;
@@ -1784,26 +1812,29 @@ export interface BgpAddressFamilyProfileIpv4UnicastRemovePrivateAsReplaceAs {
 export interface BgpAddressFamilyProfileIpv4UnicastSendCommunity {
     /**
      * All
-     * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     all?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4UnicastSendCommunityAll>;
     /**
      * Both
+     *
      * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     both?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4UnicastSendCommunityBoth>;
     /**
      * Extended
+     *
      * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     extended?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4UnicastSendCommunityExtended>;
     /**
      * Large
+     *
      * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     large?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4UnicastSendCommunityLarge>;
     /**
      * Standard
+     *
      * > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      */
     standard?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4UnicastSendCommunityStandard>;
@@ -2117,11 +2148,11 @@ export interface BgpRedistributionProfileIpv4UnicastStatic {
 export interface BgpRouteMapRedistributionBgp {
     /**
      * Ospf
-     * > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      */
     ospf?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpOspf>;
     /**
      * BGP Root RIB
+     *
      * > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      */
     rib?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpRib>;
@@ -2413,16 +2444,17 @@ export interface BgpRouteMapRedistributionBgpRibRouteMapSet {
 export interface BgpRouteMapRedistributionConnectedStatic {
     /**
      * Connected Static Root BGP
-     * > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      */
     bgp?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticBgp>;
     /**
      * Ospf
+     *
      * > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      */
     ospf?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticOspf>;
     /**
      * Rib
+     *
      * > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      */
     rib?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticRib>;
@@ -2782,11 +2814,11 @@ export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapSet {
 export interface BgpRouteMapRedistributionOspf {
     /**
      * OSPF Root BGP
-     * > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
      */
     bgp?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfBgp>;
     /**
      * Rib
+     *
      * > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
      */
     rib?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfRib>;
@@ -3258,11 +3290,11 @@ export interface BgpRouteMapRouteMapSetMetric {
 export interface BgpRoutingRoutingPreference {
     /**
      * Default
-     * > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      */
     default?: pulumi.Input<inputs.BgpRoutingRoutingPreferenceDefault>;
     /**
      * Hot potato routing
+     *
      * > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      */
     hotPotatoRouting?: pulumi.Input<inputs.BgpRoutingRoutingPreferenceHotPotatoRouting>;
@@ -3493,17 +3525,24 @@ export interface DecryptionProfileSslProtocolSettings {
 export interface DecryptionRuleType {
     /**
      * Ssl forward proxy
-     * > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      */
     sslForwardProxy?: pulumi.Input<inputs.DecryptionRuleTypeSslForwardProxy>;
     /**
      * add the certificate name for SSL inbound inspection
+     *
      * > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      */
-    sslInboundInspection?: pulumi.Input<string>;
+    sslInboundInspection?: pulumi.Input<inputs.DecryptionRuleTypeSslInboundInspection>;
 }
 
 export interface DecryptionRuleTypeSslForwardProxy {
+}
+
+export interface DecryptionRuleTypeSslInboundInspection {
+    /**
+     * List of certificate names for SSL inbound inspection
+     */
+    certificates?: pulumi.Input<pulumi.Input<string>[]>;
 }
 
 export interface DeviceRedistributionCollectorRedistributionCollector {
@@ -3626,11 +3665,11 @@ export interface DhcpInterfaceServerOptionInheritance {
 export interface DhcpInterfaceServerOptionLease {
     /**
      * DHCP lease timeout (minutes)
-     * > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      */
     timeout?: pulumi.Input<number>;
     /**
      * Unlimited
+     *
      * > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      */
     unlimited?: pulumi.Input<inputs.DhcpInterfaceServerOptionLeaseUnlimited>;
@@ -3885,21 +3924,23 @@ export interface DnsSecurityProfileBotnetDomainsList {
 export interface DnsSecurityProfileBotnetDomainsListAction {
     /**
      * Alert
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     alert?: pulumi.Input<inputs.DnsSecurityProfileBotnetDomainsListActionAlert>;
     /**
      * Allow
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     allow?: pulumi.Input<inputs.DnsSecurityProfileBotnetDomainsListActionAllow>;
     /**
      * Block
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     block?: pulumi.Input<inputs.DnsSecurityProfileBotnetDomainsListActionBlock>;
     /**
      * Sinkhole
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      */
     sinkhole?: pulumi.Input<inputs.DnsSecurityProfileBotnetDomainsListActionSinkhole>;
@@ -4198,16 +4239,17 @@ export interface DosProtectionProfileResourceSessions {
 export interface DosProtectionRuleAction {
     /**
      * Allow
-     * > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      */
     allow?: pulumi.Input<inputs.DosProtectionRuleActionAllow>;
     /**
      * Deny
+     *
      * > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      */
     deny?: pulumi.Input<inputs.DosProtectionRuleActionDeny>;
     /**
      * Protect
+     *
      * > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      */
     protect?: pulumi.Input<inputs.DosProtectionRuleActionProtect>;
@@ -4225,11 +4267,11 @@ export interface DosProtectionRuleActionProtect {
 export interface DosProtectionRuleProtection {
     /**
      * Aggregate
-     * > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      */
     aggregate?: pulumi.Input<inputs.DosProtectionRuleProtectionAggregate>;
     /**
      * Classified
+     *
      * > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      */
     classified?: pulumi.Input<inputs.DosProtectionRuleProtectionClassified>;
@@ -4289,7 +4331,6 @@ export interface EthernetInterfaceLayer3 {
     ddnsConfig?: pulumi.Input<inputs.EthernetInterfaceLayer3DdnsConfig>;
     /**
      * Ethernet Interfaces DHCP Client Object
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      */
     dhcpClient?: pulumi.Input<inputs.EthernetInterfaceLayer3DhcpClient>;
     /**
@@ -4298,6 +4339,7 @@ export interface EthernetInterfaceLayer3 {
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
      * Ethernet Interface IP addresses
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      */
     ips?: pulumi.Input<pulumi.Input<inputs.EthernetInterfaceLayer3Ip>[]>;
@@ -4307,6 +4349,7 @@ export interface EthernetInterfaceLayer3 {
     mtu?: pulumi.Input<number>;
     /**
      * Pppoe
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      */
     pppoe?: pulumi.Input<inputs.EthernetInterfaceLayer3Pppoe>;
@@ -4461,36 +4504,41 @@ export interface EthernetInterfaceTap {
 export interface ExternalDynamicListType {
     /**
      * Domain settings for Custom Domain type
-     * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     domain?: pulumi.Input<inputs.ExternalDynamicListTypeDomain>;
     /**
      * IMEI Configuration settings
+     *
      * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     imei?: pulumi.Input<inputs.ExternalDynamicListTypeImei>;
     /**
      * IMSI Config for Custom IMSI type
+     *
      * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     imsi?: pulumi.Input<inputs.ExternalDynamicListTypeImsi>;
     /**
      * IP settings for Custom IP type
+     *
      * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     ip?: pulumi.Input<inputs.ExternalDynamicListTypeIp>;
     /**
      * Predefined IP settings for EDL type
+     *
      * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     predefinedIp?: pulumi.Input<inputs.ExternalDynamicListTypePredefinedIp>;
     /**
      * Predefined URL settings for EDL type
+     *
      * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     predefinedUrl?: pulumi.Input<inputs.ExternalDynamicListTypePredefinedUrl>;
     /**
      * URL settings for Custom URL type
+     *
      * > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      */
     url?: pulumi.Input<inputs.ExternalDynamicListTypeUrl>;
@@ -4541,26 +4589,29 @@ export interface ExternalDynamicListTypeDomainAuth {
 export interface ExternalDynamicListTypeDomainRecurring {
     /**
      * Daily settings for Domain recurring
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     daily?: pulumi.Input<inputs.ExternalDynamicListTypeDomainRecurringDaily>;
     /**
      * Five minute settings for Domain recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute?: pulumi.Input<inputs.ExternalDynamicListTypeDomainRecurringFiveMinute>;
     /**
      * Hourly settings for Domain recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly?: pulumi.Input<inputs.ExternalDynamicListTypeDomainRecurringHourly>;
     /**
      * Monthly settings for Domain recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly?: pulumi.Input<inputs.ExternalDynamicListTypeDomainRecurringMonthly>;
     /**
      * Weekly settings for Domain recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly?: pulumi.Input<inputs.ExternalDynamicListTypeDomainRecurringWeekly>;
@@ -4642,26 +4693,29 @@ export interface ExternalDynamicListTypeImeiAuth {
 export interface ExternalDynamicListTypeImeiRecurring {
     /**
      * Daily interval settings for IMEI updates
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     daily?: pulumi.Input<inputs.ExternalDynamicListTypeImeiRecurringDaily>;
     /**
      * Five-minute interval settings for IMEI updates
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute?: pulumi.Input<inputs.ExternalDynamicListTypeImeiRecurringFiveMinute>;
     /**
      * Hourly interval settings for IMEI updates
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly?: pulumi.Input<inputs.ExternalDynamicListTypeImeiRecurringHourly>;
     /**
      * Monthly interval settings for IMEI updates
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly?: pulumi.Input<inputs.ExternalDynamicListTypeImeiRecurringMonthly>;
     /**
      * Weekly interval settings for IMEI updates
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly?: pulumi.Input<inputs.ExternalDynamicListTypeImeiRecurringWeekly>;
@@ -4743,26 +4797,29 @@ export interface ExternalDynamicListTypeImsiAuth {
 export interface ExternalDynamicListTypeImsiRecurring {
     /**
      * Daily interval settings for IMSI updates
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     daily?: pulumi.Input<inputs.ExternalDynamicListTypeImsiRecurringDaily>;
     /**
      * Five-minute interval settings for IMSI updates
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute?: pulumi.Input<inputs.ExternalDynamicListTypeImsiRecurringFiveMinute>;
     /**
      * Hourly interval settings for IMSI updates
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly?: pulumi.Input<inputs.ExternalDynamicListTypeImsiRecurringHourly>;
     /**
      * Monthly interval settings for IMSI updates
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly?: pulumi.Input<inputs.ExternalDynamicListTypeImsiRecurringMonthly>;
     /**
      * Weekly interval settings for IMSI updates
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly?: pulumi.Input<inputs.ExternalDynamicListTypeImsiRecurringWeekly>;
@@ -4844,26 +4901,29 @@ export interface ExternalDynamicListTypeIpAuth {
 export interface ExternalDynamicListTypeIpRecurring {
     /**
      * Daily settings for IP recurring
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     daily?: pulumi.Input<inputs.ExternalDynamicListTypeIpRecurringDaily>;
     /**
      * Five minute settings for IP recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute?: pulumi.Input<inputs.ExternalDynamicListTypeIpRecurringFiveMinute>;
     /**
      * Hourly settings for IP recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly?: pulumi.Input<inputs.ExternalDynamicListTypeIpRecurringHourly>;
     /**
      * Monthly settings for IP recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly?: pulumi.Input<inputs.ExternalDynamicListTypeIpRecurringMonthly>;
     /**
      * Weekly settings for IP recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly?: pulumi.Input<inputs.ExternalDynamicListTypeIpRecurringWeekly>;
@@ -4975,26 +5035,29 @@ export interface ExternalDynamicListTypeUrlAuth {
 export interface ExternalDynamicListTypeUrlRecurring {
     /**
      * Daily settings for URL recurring
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     daily?: pulumi.Input<inputs.ExternalDynamicListTypeUrlRecurringDaily>;
     /**
      * Five minute settings for URL recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     fiveMinute?: pulumi.Input<inputs.ExternalDynamicListTypeUrlRecurringFiveMinute>;
     /**
      * Hourly settings for URL recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     hourly?: pulumi.Input<inputs.ExternalDynamicListTypeUrlRecurringHourly>;
     /**
      * Monthly settings for URL recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     monthly?: pulumi.Input<inputs.ExternalDynamicListTypeUrlRecurringMonthly>;
     /**
      * Weekly settings for URL recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      */
     weekly?: pulumi.Input<inputs.ExternalDynamicListTypeUrlRecurringWeekly>;
@@ -5175,16 +5238,17 @@ export interface HipObjectAntiMalwareCriteria {
 export interface HipObjectAntiMalwareCriteriaLastScanTime {
     /**
      * Not available
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     notAvailable?: pulumi.Input<inputs.HipObjectAntiMalwareCriteriaLastScanTimeNotAvailable>;
     /**
      * Not within
+     *
      * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     notWithin?: pulumi.Input<inputs.HipObjectAntiMalwareCriteriaLastScanTimeNotWithin>;
     /**
      * Within
+     *
      * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     within?: pulumi.Input<inputs.HipObjectAntiMalwareCriteriaLastScanTimeWithin>;
@@ -5196,11 +5260,11 @@ export interface HipObjectAntiMalwareCriteriaLastScanTimeNotAvailable {
 export interface HipObjectAntiMalwareCriteriaLastScanTimeNotWithin {
     /**
      * specify time in days
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     days?: pulumi.Input<number>;
     /**
      * specify time in hours
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours?: pulumi.Input<number>;
@@ -5209,11 +5273,11 @@ export interface HipObjectAntiMalwareCriteriaLastScanTimeNotWithin {
 export interface HipObjectAntiMalwareCriteriaLastScanTimeWithin {
     /**
      * specify time in days
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     days?: pulumi.Input<number>;
     /**
      * specify time in hours
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours?: pulumi.Input<number>;
@@ -5222,46 +5286,53 @@ export interface HipObjectAntiMalwareCriteriaLastScanTimeWithin {
 export interface HipObjectAntiMalwareCriteriaProductVersion {
     /**
      * Contains
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     contains?: pulumi.Input<string>;
     /**
      * Greater equal
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     greaterEqual?: pulumi.Input<string>;
     /**
      * Greater than
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     greaterThan?: pulumi.Input<string>;
     /**
      * Is
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     is?: pulumi.Input<string>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     isNot?: pulumi.Input<string>;
     /**
      * Less equal
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     lessEqual?: pulumi.Input<string>;
     /**
      * Less than
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     lessThan?: pulumi.Input<string>;
     /**
      * Not within
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     notWithin?: pulumi.Input<inputs.HipObjectAntiMalwareCriteriaProductVersionNotWithin>;
     /**
      * Within
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
      */
     within?: pulumi.Input<inputs.HipObjectAntiMalwareCriteriaProductVersionWithin>;
@@ -5284,11 +5355,11 @@ export interface HipObjectAntiMalwareCriteriaProductVersionWithin {
 export interface HipObjectAntiMalwareCriteriaVirdefVersion {
     /**
      * Not within
-     * > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      */
     notWithin?: pulumi.Input<inputs.HipObjectAntiMalwareCriteriaVirdefVersionNotWithin>;
     /**
      * Within
+     *
      * > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      */
     within?: pulumi.Input<inputs.HipObjectAntiMalwareCriteriaVirdefVersionWithin>;
@@ -5297,11 +5368,11 @@ export interface HipObjectAntiMalwareCriteriaVirdefVersion {
 export interface HipObjectAntiMalwareCriteriaVirdefVersionNotWithin {
     /**
      * specify time in days
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
      */
     days?: pulumi.Input<number>;
     /**
      * specify versions range
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
      */
     versions?: pulumi.Input<number>;
@@ -5310,11 +5381,11 @@ export interface HipObjectAntiMalwareCriteriaVirdefVersionNotWithin {
 export interface HipObjectAntiMalwareCriteriaVirdefVersionWithin {
     /**
      * specify time in days
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
      */
     days?: pulumi.Input<number>;
     /**
      * specify versions range
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
      */
     versions?: pulumi.Input<number>;
@@ -5523,16 +5594,17 @@ export interface HipObjectDiskBackupCriteria {
 export interface HipObjectDiskBackupCriteriaLastBackupTime {
     /**
      * Not available
-     * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     notAvailable?: pulumi.Input<inputs.HipObjectDiskBackupCriteriaLastBackupTimeNotAvailable>;
     /**
      * Not within
+     *
      * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     notWithin?: pulumi.Input<inputs.HipObjectDiskBackupCriteriaLastBackupTimeNotWithin>;
     /**
      * Within
+     *
      * > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      */
     within?: pulumi.Input<inputs.HipObjectDiskBackupCriteriaLastBackupTimeWithin>;
@@ -5544,11 +5616,11 @@ export interface HipObjectDiskBackupCriteriaLastBackupTimeNotAvailable {
 export interface HipObjectDiskBackupCriteriaLastBackupTimeNotWithin {
     /**
      * specify time in days
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     days?: pulumi.Input<number>;
     /**
      * specify time in hours
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours?: pulumi.Input<number>;
@@ -5557,11 +5629,11 @@ export interface HipObjectDiskBackupCriteriaLastBackupTimeNotWithin {
 export interface HipObjectDiskBackupCriteriaLastBackupTimeWithin {
     /**
      * specify time in days
-     * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     days?: pulumi.Input<number>;
     /**
      * specify time in hours
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      */
     hours?: pulumi.Input<number>;
@@ -5618,11 +5690,11 @@ export interface HipObjectDiskEncryptionCriteriaEncryptedLocation {
 export interface HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState {
     /**
      * Is
-     * > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      */
     is?: pulumi.Input<string>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      */
     isNot?: pulumi.Input<string>;
@@ -5717,16 +5789,17 @@ export interface HipObjectHostInfoCriteria {
 export interface HipObjectHostInfoCriteriaClientVersion {
     /**
      * Contains
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     contains?: pulumi.Input<string>;
     /**
      * Is
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: pulumi.Input<string>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: pulumi.Input<string>;
@@ -5735,16 +5808,17 @@ export interface HipObjectHostInfoCriteriaClientVersion {
 export interface HipObjectHostInfoCriteriaDomain {
     /**
      * Contains
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     contains?: pulumi.Input<string>;
     /**
      * Is
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: pulumi.Input<string>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: pulumi.Input<string>;
@@ -5753,16 +5827,17 @@ export interface HipObjectHostInfoCriteriaDomain {
 export interface HipObjectHostInfoCriteriaHostId {
     /**
      * Contains
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     contains?: pulumi.Input<string>;
     /**
      * Is
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: pulumi.Input<string>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: pulumi.Input<string>;
@@ -5771,16 +5846,17 @@ export interface HipObjectHostInfoCriteriaHostId {
 export interface HipObjectHostInfoCriteriaHostName {
     /**
      * Contains
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     contains?: pulumi.Input<string>;
     /**
      * Is
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: pulumi.Input<string>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: pulumi.Input<string>;
@@ -5819,16 +5895,17 @@ export interface HipObjectHostInfoCriteriaOsContains {
 export interface HipObjectHostInfoCriteriaSerialNumber {
     /**
      * Contains
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     contains?: pulumi.Input<string>;
     /**
      * Is
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: pulumi.Input<string>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: pulumi.Input<string>;
@@ -5898,11 +5975,11 @@ export interface HipObjectMobileDeviceCriteriaApplications {
 export interface HipObjectMobileDeviceCriteriaApplicationsHasMalware {
     /**
      * No
-     * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     no?: pulumi.Input<inputs.HipObjectMobileDeviceCriteriaApplicationsHasMalwareNo>;
     /**
      * Yes
+     *
      * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     yes?: pulumi.Input<inputs.HipObjectMobileDeviceCriteriaApplicationsHasMalwareYes>;
@@ -5951,16 +6028,17 @@ export interface HipObjectMobileDeviceCriteriaApplicationsInclude {
 export interface HipObjectMobileDeviceCriteriaImei {
     /**
      * Contains
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     contains?: pulumi.Input<string>;
     /**
      * Is
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: pulumi.Input<string>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: pulumi.Input<string>;
@@ -5969,11 +6047,11 @@ export interface HipObjectMobileDeviceCriteriaImei {
 export interface HipObjectMobileDeviceCriteriaLastCheckinTime {
     /**
      * Not within
-     * > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      */
     notWithin?: pulumi.Input<inputs.HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin>;
     /**
      * Within
+     *
      * > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      */
     within?: pulumi.Input<inputs.HipObjectMobileDeviceCriteriaLastCheckinTimeWithin>;
@@ -5996,16 +6074,17 @@ export interface HipObjectMobileDeviceCriteriaLastCheckinTimeWithin {
 export interface HipObjectMobileDeviceCriteriaModel {
     /**
      * Contains
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     contains?: pulumi.Input<string>;
     /**
      * Is
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: pulumi.Input<string>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: pulumi.Input<string>;
@@ -6014,16 +6093,17 @@ export interface HipObjectMobileDeviceCriteriaModel {
 export interface HipObjectMobileDeviceCriteriaPhoneNumber {
     /**
      * Contains
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     contains?: pulumi.Input<string>;
     /**
      * Is
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: pulumi.Input<string>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: pulumi.Input<string>;
@@ -6032,16 +6112,17 @@ export interface HipObjectMobileDeviceCriteriaPhoneNumber {
 export interface HipObjectMobileDeviceCriteriaTag {
     /**
      * Contains
-     * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     contains?: pulumi.Input<string>;
     /**
      * Is
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     is?: pulumi.Input<string>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      */
     isNot?: pulumi.Input<string>;
@@ -6064,11 +6145,11 @@ export interface HipObjectNetworkInfoCriteria {
 export interface HipObjectNetworkInfoCriteriaNetwork {
     /**
      * Is
-     * > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      */
     is?: pulumi.Input<inputs.HipObjectNetworkInfoCriteriaNetworkIs>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      */
     isNot?: pulumi.Input<inputs.HipObjectNetworkInfoCriteriaNetworkIsNot>;
@@ -6077,16 +6158,17 @@ export interface HipObjectNetworkInfoCriteriaNetwork {
 export interface HipObjectNetworkInfoCriteriaNetworkIs {
     /**
      * Mobile
-     * > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      */
     mobile?: pulumi.Input<inputs.HipObjectNetworkInfoCriteriaNetworkIsMobile>;
     /**
      * Unknown
+     *
      * > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      */
     unknown?: pulumi.Input<inputs.HipObjectNetworkInfoCriteriaNetworkIsUnknown>;
     /**
      * Wifi
+     *
      * > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      */
     wifi?: pulumi.Input<inputs.HipObjectNetworkInfoCriteriaNetworkIsWifi>;
@@ -6102,21 +6184,23 @@ export interface HipObjectNetworkInfoCriteriaNetworkIsMobile {
 export interface HipObjectNetworkInfoCriteriaNetworkIsNot {
     /**
      * Ethernet
-     * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     ethernet?: pulumi.Input<inputs.HipObjectNetworkInfoCriteriaNetworkIsNotEthernet>;
     /**
      * Mobile
+     *
      * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     mobile?: pulumi.Input<inputs.HipObjectNetworkInfoCriteriaNetworkIsNotMobile>;
     /**
      * Unknown
+     *
      * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     unknown?: pulumi.Input<inputs.HipObjectNetworkInfoCriteriaNetworkIsNotUnknown>;
     /**
      * Wifi
+     *
      * > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      */
     wifi?: pulumi.Input<inputs.HipObjectNetworkInfoCriteriaNetworkIsNotWifi>;
@@ -6200,31 +6284,35 @@ export interface HipObjectPatchManagementCriteriaMissingPatches {
 export interface HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     /**
      * Greater equal
-     * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     greaterEqual?: pulumi.Input<number>;
     /**
      * Greater than
+     *
      * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     greaterThan?: pulumi.Input<number>;
     /**
      * Is
+     *
      * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     is?: pulumi.Input<number>;
     /**
      * Is not
+     *
      * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     isNot?: pulumi.Input<number>;
     /**
      * Less equal
+     *
      * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     lessEqual?: pulumi.Input<number>;
     /**
      * Less than
+     *
      * > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      */
     lessThan?: pulumi.Input<number>;
@@ -7156,21 +7244,23 @@ export interface HttpServerProfileServer {
 export interface IkeCryptoProfileLifetime {
     /**
      * specify lifetime in days
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     days?: pulumi.Input<number>;
     /**
      * specify lifetime in hours
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     hours?: pulumi.Input<number>;
     /**
      * specify lifetime in minutes
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     minutes?: pulumi.Input<number>;
     /**
      * specify lifetime in seconds
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     seconds?: pulumi.Input<number>;
@@ -7179,11 +7269,11 @@ export interface IkeCryptoProfileLifetime {
 export interface IkeGatewayAuthentication {
     /**
      * Certificate
-     * > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      */
     certificate?: pulumi.Input<inputs.IkeGatewayAuthenticationCertificate>;
     /**
      * Pre shared key
+     *
      * > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      */
     preSharedKey?: pulumi.Input<inputs.IkeGatewayAuthenticationPreSharedKey>;
@@ -7247,16 +7337,17 @@ export interface IkeGatewayLocalId {
 export interface IkeGatewayPeerAddress {
     /**
      * Dynamic
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      */
     dynamic?: pulumi.Input<inputs.IkeGatewayPeerAddressDynamic>;
     /**
      * peer gateway FQDN name
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      */
     fqdn?: pulumi.Input<string>;
     /**
      * peer gateway has static IP address
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      */
     ip?: pulumi.Input<string>;
@@ -7384,21 +7475,23 @@ export interface IpsecCryptoProfileEsp {
 export interface IpsecCryptoProfileLifesize {
     /**
      * specify lifesize in gigabytes(GB)
-     * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     gb?: pulumi.Input<number>;
     /**
      * specify lifesize in kilobytes(KB)
+     *
      * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     kb?: pulumi.Input<number>;
     /**
      * specify lifesize in megabytes(MB)
+     *
      * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     mb?: pulumi.Input<number>;
     /**
      * specify lifesize in terabytes(TB)
+     *
      * > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      */
     tb?: pulumi.Input<number>;
@@ -7407,21 +7500,23 @@ export interface IpsecCryptoProfileLifesize {
 export interface IpsecCryptoProfileLifetime {
     /**
      * specify lifetime in days
-     * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     days?: pulumi.Input<number>;
     /**
      * specify lifetime in hours
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     hours?: pulumi.Input<number>;
     /**
      * specify lifetime in minutes
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     minutes?: pulumi.Input<number>;
     /**
      * specify lifetime in seconds
+     *
      * > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      */
     seconds?: pulumi.Input<number>;
@@ -7475,16 +7570,17 @@ export interface IpsecTunnelAutoKeyProxyId {
 export interface IpsecTunnelAutoKeyProxyIdProtocol {
     /**
      * IP protocol number
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      */
     number?: pulumi.Input<number>;
     /**
-     * IPv4 type of proxy*id protocol values for TCP protocol
+     * IPv4 type of proxyId protocol values for TCP protocol
+     *
      * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      */
     tcp?: pulumi.Input<inputs.IpsecTunnelAutoKeyProxyIdProtocolTcp>;
     /**
-     * IPv6 type of proxy*id protocol values for UDP protocol
+     * IPv6 type of proxyId protocol values for UDP protocol
+     *
      * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      */
     udp?: pulumi.Input<inputs.IpsecTunnelAutoKeyProxyIdProtocolUdp>;
@@ -7534,16 +7630,17 @@ export interface IpsecTunnelAutoKeyProxyIdV6 {
 export interface IpsecTunnelAutoKeyProxyIdV6Protocol {
     /**
      * IP protocol number
-     * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      */
     number?: pulumi.Input<number>;
     /**
-     * IPv6 type of proxy*id protocol values for TCP protocol
+     * IPv6 type of proxyId protocol values for TCP protocol
+     *
      * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      */
     tcp?: pulumi.Input<inputs.IpsecTunnelAutoKeyProxyIdV6ProtocolTcp>;
     /**
-     * IPv6 type of proxy*id protocol values for UDP protocol
+     * IPv6 type of proxyId protocol values for UDP protocol
+     *
      * > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      */
     udp?: pulumi.Input<inputs.IpsecTunnelAutoKeyProxyIdV6ProtocolUdp>;
@@ -7590,11 +7687,11 @@ export interface KerberosServerProfileServer {
     /**
      * The Kerberos server IP address
      */
-    host?: pulumi.Input<string>;
+    host: pulumi.Input<string>;
     /**
      * The Kerberos server name
      */
-    name?: pulumi.Input<string>;
+    name: pulumi.Input<string>;
     /**
      * The Kerberos server port
      */
@@ -7756,19 +7853,27 @@ export interface LogForwardingProfileMatchList {
     /**
      * Filter match criteria
      */
-    filter?: pulumi.Input<string>;
+    filter: pulumi.Input<string>;
     /**
      * Log type
      */
-    logType?: pulumi.Input<string>;
+    logType: pulumi.Input<string>;
     /**
      * Name of the match profile
      */
-    name?: pulumi.Input<string>;
+    name: pulumi.Input<string>;
+    /**
+     * A list of email server profiles
+     */
+    sendEmails?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * A list of HTTP server profiles
      */
     sendHttps?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * A list of SNMP server profiles
+     */
+    sendSnmptraps?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * A list of syslog server profiles
      */
@@ -8084,11 +8189,11 @@ export interface LogicalRouterVrfBgpAggregateRoute {
 export interface LogicalRouterVrfBgpAggregateRouteType {
     /**
      * Ipv4
-     * > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      */
     ipv4?: pulumi.Input<inputs.LogicalRouterVrfBgpAggregateRouteTypeIpv4>;
     /**
      * Ipv6
+     *
      * > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      */
     ipv6?: pulumi.Input<inputs.LogicalRouterVrfBgpAggregateRouteTypeIpv6>;
@@ -8394,11 +8499,11 @@ export interface LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpCon
 export interface LogicalRouterVrfBgpPeerGroupPeerInherit {
     /**
      * No
-     * > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      */
     no?: pulumi.Input<inputs.LogicalRouterVrfBgpPeerGroupPeerInheritNo>;
     /**
      * Yes
+     *
      * > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      */
     yes?: pulumi.Input<inputs.LogicalRouterVrfBgpPeerGroupPeerInheritYes>;
@@ -8454,11 +8559,11 @@ export interface LogicalRouterVrfBgpPeerGroupPeerLocalAddress {
 export interface LogicalRouterVrfBgpPeerGroupPeerPeerAddress {
     /**
      * Fqdn
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      */
     fqdn?: pulumi.Input<string>;
     /**
      * Ip
+     *
      * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      */
     ip?: pulumi.Input<string>;
@@ -8478,21 +8583,23 @@ export interface LogicalRouterVrfBgpPeerGroupPeerSubsequentAddressFamilyIdentifi
 export interface LogicalRouterVrfBgpPeerGroupType {
     /**
      * Ebgp
-     * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ebgp?: pulumi.Input<inputs.LogicalRouterVrfBgpPeerGroupTypeEbgp>;
     /**
      * Ebgp confed
+     *
      * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ebgpConfed?: pulumi.Input<inputs.LogicalRouterVrfBgpPeerGroupTypeEbgpConfed>;
     /**
      * Ibgp
+     *
      * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ibgp?: pulumi.Input<inputs.LogicalRouterVrfBgpPeerGroupTypeIbgp>;
     /**
      * Ibgp confed
+     *
      * > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      */
     ibgpConfed?: pulumi.Input<inputs.LogicalRouterVrfBgpPeerGroupTypeIbgpConfed>;
@@ -8727,21 +8834,23 @@ export interface LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttrib
 export interface LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath {
     /**
      * None
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     none?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone>;
     /**
      * Prepend
+     *
      * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend?: pulumi.Input<number>;
     /**
      * Remove
+     *
      * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove>;
     /**
      * Remove and prepend
+     *
      * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend?: pulumi.Input<number>;
@@ -8756,26 +8865,29 @@ export interface LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttrib
 export interface LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity {
     /**
      * Append
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     appends?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone>;
     /**
      * Overwrite
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Remove all
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll>;
     /**
      * Remove regex
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: pulumi.Input<string>;
@@ -8790,26 +8902,29 @@ export interface LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttrib
 export interface LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity {
     /**
      * Append
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     appends?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNone>;
     /**
      * Overwrite
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Remove all
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAll>;
     /**
      * Remove regex
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: pulumi.Input<string>;
@@ -9154,11 +9269,11 @@ export interface LogicalRouterVrfBgpPolicyExportRule {
 export interface LogicalRouterVrfBgpPolicyExportRuleAction {
     /**
      * Allow
-     * > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      */
     allow?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyExportRuleActionAllow>;
     /**
      * Deny
+     *
      * > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      */
     deny?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyExportRuleActionDeny>;
@@ -9209,21 +9324,23 @@ export interface LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
 export interface LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath {
     /**
      * None
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     none?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNone>;
     /**
      * Prepend
+     *
      * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend?: pulumi.Input<number>;
     /**
      * Remove
+     *
      * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove>;
     /**
      * Remove and prepend
+     *
      * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend?: pulumi.Input<number>;
@@ -9238,26 +9355,29 @@ export interface LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemov
 export interface LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity {
     /**
      * Append
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     appends?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNone>;
     /**
      * Overwrite
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Remove all
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAll>;
     /**
      * Remove regex
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: pulumi.Input<string>;
@@ -9272,26 +9392,29 @@ export interface LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRe
 export interface LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity {
     /**
      * Append
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     appends?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone>;
     /**
      * Overwrite
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Remove all
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll>;
     /**
      * Remove regex
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: pulumi.Input<string>;
@@ -9414,11 +9537,11 @@ export interface LogicalRouterVrfBgpPolicyImportRule {
 export interface LogicalRouterVrfBgpPolicyImportRuleAction {
     /**
      * Allow
-     * > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      */
     allow?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyImportRuleActionAllow>;
     /**
      * Deny
+     *
      * > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      */
     deny?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyImportRuleActionDeny>;
@@ -9477,21 +9600,23 @@ export interface LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
 export interface LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath {
     /**
      * None
-     * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     none?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone>;
     /**
      * Prepend
+     *
      * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     prepend?: pulumi.Input<number>;
     /**
      * Remove
+     *
      * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     remove?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove>;
     /**
      * Remove and prepend
+     *
      * > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      */
     removeAndPrepend?: pulumi.Input<number>;
@@ -9506,26 +9631,29 @@ export interface LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemov
 export interface LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity {
     /**
      * Append
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     appends?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone>;
     /**
      * Overwrite
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Remove all
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll>;
     /**
      * Remove regex
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: pulumi.Input<string>;
@@ -9540,26 +9668,29 @@ export interface LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRe
 export interface LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity {
     /**
      * Append
-     * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     appends?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     none?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone>;
     /**
      * Overwrite
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     overwrites?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Remove all
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeAll?: pulumi.Input<inputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll>;
     /**
      * Remove regex
+     *
      * > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      */
     removeRegex?: pulumi.Input<string>;
@@ -9747,21 +9878,23 @@ export interface LogicalRouterVrfEcmp {
 export interface LogicalRouterVrfEcmpAlgorithm {
     /**
      * Balanced round robin
-     * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     balancedRoundRobin?: pulumi.Input<inputs.LogicalRouterVrfEcmpAlgorithmBalancedRoundRobin>;
     /**
      * Ip hash
+     *
      * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     ipHash?: pulumi.Input<inputs.LogicalRouterVrfEcmpAlgorithmIpHash>;
     /**
      * Ip modulo
+     *
      * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     ipModulo?: pulumi.Input<inputs.LogicalRouterVrfEcmpAlgorithmIpModulo>;
     /**
      * Weighted round robin
+     *
      * > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      */
     weightedRoundRobin?: pulumi.Input<inputs.LogicalRouterVrfEcmpAlgorithmWeightedRoundRobin>;
@@ -10177,11 +10310,11 @@ export interface LogicalRouterVrfMulticastMsdpPeerLocalAddress {
 export interface LogicalRouterVrfMulticastMsdpPeerPeerAddress {
     /**
      * Fqdn
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      */
     fqdn?: pulumi.Input<string>;
     /**
      * Ip
+     *
      * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      */
     ip?: pulumi.Input<string>;
@@ -10282,11 +10415,11 @@ export interface LogicalRouterVrfMulticastPimRpExternalRp {
 export interface LogicalRouterVrfMulticastPimRpLocalRp {
     /**
      * Candidate rp
-     * > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      */
     candidateRp?: pulumi.Input<inputs.LogicalRouterVrfMulticastPimRpLocalRpCandidateRp>;
     /**
      * Static rp
+     *
      * > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      */
     staticRp?: pulumi.Input<inputs.LogicalRouterVrfMulticastPimRpLocalRpStaticRp>;
@@ -10381,11 +10514,11 @@ export interface LogicalRouterVrfMulticastRpExternalRp {
 export interface LogicalRouterVrfMulticastRpLocalRp {
     /**
      * Candidate rp
-     * > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      */
     candidateRp?: pulumi.Input<inputs.LogicalRouterVrfMulticastRpLocalRpCandidateRp>;
     /**
      * Static rp
+     *
      * > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      */
     staticRp?: pulumi.Input<inputs.LogicalRouterVrfMulticastRpLocalRpStaticRp>;
@@ -10640,16 +10773,17 @@ export interface LogicalRouterVrfOspfAreaInterfaceBfd {
 export interface LogicalRouterVrfOspfAreaInterfaceLinkType {
     /**
      * Broadcast
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     broadcast?: pulumi.Input<inputs.LogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcast>;
     /**
      * P2mp
+     *
      * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2mp?: pulumi.Input<inputs.LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mp>;
     /**
      * P2p
+     *
      * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2p?: pulumi.Input<inputs.LogicalRouterVrfOspfAreaInterfaceLinkTypeP2p>;
@@ -10720,16 +10854,17 @@ export interface LogicalRouterVrfOspfAreaRange {
 export interface LogicalRouterVrfOspfAreaType {
     /**
      * Normal
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     normal?: pulumi.Input<inputs.LogicalRouterVrfOspfAreaTypeNormal>;
     /**
      * Nssa
+     *
      * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     nssa?: pulumi.Input<inputs.LogicalRouterVrfOspfAreaTypeNssa>;
     /**
      * Stub
+     *
      * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     stub?: pulumi.Input<inputs.LogicalRouterVrfOspfAreaTypeStub>;
@@ -10840,11 +10975,11 @@ export interface LogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginate {
 export interface LogicalRouterVrfOspfAreaTypeNssaDefaultRoute {
     /**
      * Advertise
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     advertise?: pulumi.Input<inputs.LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise>;
     /**
      * Disable
+     *
      * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable?: pulumi.Input<inputs.LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisable>;
@@ -10930,11 +11065,11 @@ export interface LogicalRouterVrfOspfAreaTypeStubAbr {
 export interface LogicalRouterVrfOspfAreaTypeStubDefaultRoute {
     /**
      * Advertise
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     advertise?: pulumi.Input<inputs.LogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertise>;
     /**
      * Disable
+     *
      * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable?: pulumi.Input<inputs.LogicalRouterVrfOspfAreaTypeStubDefaultRouteDisable>;
@@ -11322,16 +11457,17 @@ export interface LogicalRouterVrfOspfv3AreaInterfaceBfd {
 export interface LogicalRouterVrfOspfv3AreaInterfaceLinkType {
     /**
      * Broadcast
-     * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     broadcast?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcast>;
     /**
      * P2mp
+     *
      * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2mp?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mp>;
     /**
      * P2p
+     *
      * > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      */
     p2p?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2p>;
@@ -11405,16 +11541,17 @@ export interface LogicalRouterVrfOspfv3AreaRange {
 export interface LogicalRouterVrfOspfv3AreaType {
     /**
      * Normal
-     * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     normal?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AreaTypeNormal>;
     /**
      * Nssa
+     *
      * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     nssa?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AreaTypeNssa>;
     /**
      * Stub
+     *
      * > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      */
     stub?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AreaTypeStub>;
@@ -11535,11 +11672,11 @@ export interface LogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginate {
 export interface LogicalRouterVrfOspfv3AreaTypeNssaDefaultRoute {
     /**
      * Advertise
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     advertise?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertise>;
     /**
      * Disable
+     *
      * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisable>;
@@ -11629,11 +11766,11 @@ export interface LogicalRouterVrfOspfv3AreaTypeStubAbr {
 export interface LogicalRouterVrfOspfv3AreaTypeStubDefaultRoute {
     /**
      * Advertise
-     * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     advertise?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise>;
     /**
      * Disable
+     *
      * > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      */
     disable?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisable>;
@@ -11765,26 +11902,29 @@ export interface LogicalRouterVrfOspfv3AuthProfile {
 export interface LogicalRouterVrfOspfv3AuthProfileAh {
     /**
      * Md5
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     md5?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AuthProfileAhMd5>;
     /**
      * Sha1
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha1?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AuthProfileAhSha1>;
     /**
      * Sha256
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha256?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AuthProfileAhSha256>;
     /**
      * Sha384
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha384?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AuthProfileAhSha384>;
     /**
      * Sha512
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha512?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AuthProfileAhSha512>;
@@ -11839,31 +11979,35 @@ export interface LogicalRouterVrfOspfv3AuthProfileEsp {
 export interface LogicalRouterVrfOspfv3AuthProfileEspAuthentication {
     /**
      * Md5
-     * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     md5?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     none?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNone>;
     /**
      * Sha1
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha1?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1>;
     /**
      * Sha256
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha256?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256>;
     /**
      * Sha384
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha384?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384>;
     /**
      * Sha512
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
      */
     sha512?: pulumi.Input<inputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512>;
@@ -12263,41 +12407,47 @@ export interface LogicalRouterVrfRoutingTableIpStaticRouteBfd {
 export interface LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     /**
      * Discard
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     discard?: pulumi.Input<inputs.LogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscard>;
     /**
      * Fqdn
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     fqdn?: pulumi.Input<string>;
     /**
      * Ip address
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipAddress?: pulumi.Input<string>;
     /**
      * Ipv6 address
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipv6Address?: pulumi.Input<string>;
     /**
      * Next lr
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextLr?: pulumi.Input<string>;
     /**
      * Next vr
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextVr?: pulumi.Input<string>;
     /**
      * Receive
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     receive?: pulumi.Input<inputs.LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceive>;
     /**
      * Tunnel
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     tunnel?: pulumi.Input<string>;
@@ -12362,21 +12512,23 @@ export interface LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDest
 export interface LogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     /**
      * Both
-     * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     both?: pulumi.Input<inputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableBoth>;
     /**
      * Multicast
+     *
      * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     multicast?: pulumi.Input<inputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticast>;
     /**
      * No install
+     *
      * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     noInstall?: pulumi.Input<inputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstall>;
     /**
      * Unicast
+     *
      * > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      */
     unicast?: pulumi.Input<inputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicast>;
@@ -12454,36 +12606,41 @@ export interface LogicalRouterVrfRoutingTableIpv6StaticRouteBfd {
 export interface LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop {
     /**
      * Discard
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     discard?: pulumi.Input<inputs.LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscard>;
     /**
      * Fqdn
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     fqdn?: pulumi.Input<string>;
     /**
      * Ipv6 address
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     ipv6Address?: pulumi.Input<string>;
     /**
      * Next lr
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextLr?: pulumi.Input<string>;
     /**
      * Next vr
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     nextVr?: pulumi.Input<string>;
     /**
      * Receive
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     receive?: pulumi.Input<inputs.LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceive>;
     /**
      * Tunnel
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      */
     tunnel?: pulumi.Input<string>;
@@ -12641,21 +12798,35 @@ export interface LoopbackInterfaceIpv6 {
      * Enable IPv6
      */
     enabled?: pulumi.Input<boolean>;
+    /**
+     * Interface ID
+     */
+    interfaceId?: pulumi.Input<string>;
 }
 
 export interface LoopbackInterfaceIpv6Address {
+    /**
+     * Anycast
+     */
+    anycast?: pulumi.Input<inputs.LoopbackInterfaceIpv6AddressAnycast>;
     /**
      * Enable Address on Interface
      */
     enableOnInterface?: pulumi.Input<boolean>;
     /**
-     * Interface ID
-     */
-    interfaceId?: pulumi.Input<string>;
-    /**
      * IPv6 Address
      */
     name?: pulumi.Input<string>;
+    /**
+     * Use interface ID as host portion
+     */
+    prefix?: pulumi.Input<inputs.LoopbackInterfaceIpv6AddressPrefix>;
+}
+
+export interface LoopbackInterfaceIpv6AddressAnycast {
+}
+
+export interface LoopbackInterfaceIpv6AddressPrefix {
 }
 
 export interface ManagementInterfaceManagementInterface {
@@ -12684,11 +12855,11 @@ export interface ManagementInterfaceManagementInterface {
 export interface ManagementInterfaceManagementInterfaceMgmtType {
     /**
      * Dhcp client
-     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      */
     dhcpClient?: pulumi.Input<inputs.ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient>;
     /**
      * Static
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      */
     static?: pulumi.Input<inputs.ManagementInterfaceManagementInterfaceMgmtTypeStatic>;
@@ -12789,16 +12960,19 @@ export interface MfaServerMfaVendorType {
     duoSecurityV2?: pulumi.Input<inputs.MfaServerMfaVendorTypeDuoSecurityV2>;
     /**
      * Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
+     *
      * > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      */
     oktaAdaptiveV1?: pulumi.Input<inputs.MfaServerMfaVendorTypeOktaAdaptiveV1>;
     /**
      * Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
+     *
      * > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      */
     pingIdentityV1?: pulumi.Input<inputs.MfaServerMfaVendorTypePingIdentityV1>;
     /**
      * Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
+     *
      * > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      */
     rsaSecuridAccessV1?: pulumi.Input<inputs.MfaServerMfaVendorTypeRsaSecuridAccessV1>;
@@ -13103,16 +13277,17 @@ export interface OspfAuthProfileMd5 {
 export interface PbfRuleAction {
     /**
      * Discard
-     * > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      */
     discard?: pulumi.Input<inputs.PbfRuleActionDiscard>;
     /**
      * Forward
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      */
     forward?: pulumi.Input<inputs.PbfRuleActionForward>;
     /**
      * No pbf
+     *
      * > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      */
     noPbf?: pulumi.Input<inputs.PbfRuleActionNoPbf>;
@@ -13154,11 +13329,11 @@ export interface PbfRuleActionForwardMonitor {
 export interface PbfRuleActionForwardNexthop {
     /**
      * Next hop FQDN
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     fqdn?: pulumi.Input<string>;
     /**
      * Next hop IP address
+     *
      * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddress?: pulumi.Input<string>;
@@ -13188,11 +13363,11 @@ export interface PbfRuleEnforceSymmetricReturnNexthopAddressList {
 export interface PbfRuleFrom {
     /**
      * Source interfaces
-     * > ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      */
     interfaces?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Source zones
+     *
      * > ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      */
     zones?: pulumi.Input<pulumi.Input<string>[]>;
@@ -13226,26 +13401,29 @@ export interface QosPolicyRuleDscpTosCodepoint {
 export interface QosPolicyRuleDscpTosCodepointType {
     /**
      * Af
-     * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     af?: pulumi.Input<inputs.QosPolicyRuleDscpTosCodepointTypeAf>;
     /**
      * Cs
+     *
      * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     cs?: pulumi.Input<inputs.QosPolicyRuleDscpTosCodepointTypeCs>;
     /**
      * Custom
+     *
      * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     custom?: pulumi.Input<inputs.QosPolicyRuleDscpTosCodepointTypeCustom>;
     /**
      * Ef
+     *
      * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     ef?: pulumi.Input<inputs.QosPolicyRuleDscpTosCodepointTypeEf>;
     /**
      * Tos
+     *
      * > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
      */
     tos?: pulumi.Input<inputs.QosPolicyRuleDscpTosCodepointTypeTos>;
@@ -13307,11 +13485,11 @@ export interface QosProfileAggregateBandwidth {
 export interface QosProfileClassBandwidthType {
     /**
      * Mbps
-     * > ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      */
     mbps?: pulumi.Input<inputs.QosProfileClassBandwidthTypeMbps>;
     /**
      * Percentage
+     *
      * > ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      */
     percentage?: pulumi.Input<inputs.QosProfileClassBandwidthTypePercentage>;
@@ -13685,16 +13863,17 @@ export interface RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry {
 export interface RouteCommunityListType {
     /**
      * Extended
-     * > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      */
     extended?: pulumi.Input<inputs.RouteCommunityListTypeExtended>;
     /**
      * Large
+     *
      * > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      */
     large?: pulumi.Input<inputs.RouteCommunityListTypeLarge>;
     /**
      * Regular
+     *
      * > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      */
     regular?: pulumi.Input<inputs.RouteCommunityListTypeRegular>;
@@ -13813,11 +13992,11 @@ export interface RoutePrefixListTypeIpv4Ipv4Entry {
 export interface RoutePrefixListTypeIpv4Ipv4EntryPrefix {
     /**
      * Entry
-     * > ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      */
     entry?: pulumi.Input<inputs.RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry>;
     /**
      * Network
+     *
      * > ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
      */
     network?: pulumi.Input<string>;
@@ -13842,29 +14021,30 @@ export interface ScepProfileAlgorithm {
     /**
      * Key length (bits)
      */
-    rsa?: pulumi.Input<inputs.ScepProfileAlgorithmRsa>;
+    rsa: pulumi.Input<inputs.ScepProfileAlgorithmRsa>;
 }
 
 export interface ScepProfileAlgorithmRsa {
     /**
      * Rsa nbits
      */
-    rsaNbits?: pulumi.Input<number>;
+    rsaNbits: pulumi.Input<string>;
 }
 
 export interface ScepProfileCertificateAttributes {
     /**
      * Dnsname
-     * > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      */
     dnsname?: pulumi.Input<string>;
     /**
      * Rfc822name
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      */
     rfc822name?: pulumi.Input<string>;
     /**
      * Uniform resource identifier
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      */
     uniformResourceIdentifier?: pulumi.Input<string>;
@@ -13873,19 +14053,20 @@ export interface ScepProfileCertificateAttributes {
 export interface ScepProfileScepChallenge {
     /**
      * Dynamic
-     * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      */
     dynamic?: pulumi.Input<inputs.ScepProfileScepChallengeDynamic>;
     /**
      * Challenge to use for SCEP server on mobile clients
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      */
     fixed?: pulumi.Input<string>;
     /**
      * No OTP
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      */
-    none?: pulumi.Input<string>;
+    none?: pulumi.Input<inputs.ScepProfileScepChallengeNone>;
 }
 
 export interface ScepProfileScepChallengeDynamic {
@@ -13903,14 +14084,17 @@ export interface ScepProfileScepChallengeDynamic {
     username?: pulumi.Input<string>;
 }
 
+export interface ScepProfileScepChallengeNone {
+}
+
 export interface ScheduleScheduleType {
     /**
      * Non recurring
-     * > ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      */
     nonRecurrings?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Recurring
+     *
      * > ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      */
     recurring?: pulumi.Input<inputs.ScheduleScheduleTypeRecurring>;
@@ -13919,11 +14103,11 @@ export interface ScheduleScheduleType {
 export interface ScheduleScheduleTypeRecurring {
     /**
      * Daily
-     * > ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      */
     dailies?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Weekly
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      */
     weekly?: pulumi.Input<inputs.ScheduleScheduleTypeRecurringWeekly>;
@@ -13963,11 +14147,11 @@ export interface ScheduleScheduleTypeRecurringWeekly {
 export interface SdwanErrorCorrectionProfileMode {
     /**
      * Forward error correction
-     * > ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      */
     forwardErrorCorrection?: pulumi.Input<inputs.SdwanErrorCorrectionProfileModeForwardErrorCorrection>;
     /**
      * Packet duplication
+     *
      * > ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      */
     packetDuplication?: pulumi.Input<inputs.SdwanErrorCorrectionProfileModePacketDuplication>;
@@ -14049,16 +14233,17 @@ export interface SdwanRuleAction {
 export interface SdwanSaasQualityProfileMonitorMode {
     /**
      * Adaptive
-     * > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      */
     adaptive?: pulumi.Input<inputs.SdwanSaasQualityProfileMonitorModeAdaptive>;
     /**
      * Http https
+     *
      * > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      */
     httpHttps?: pulumi.Input<inputs.SdwanSaasQualityProfileMonitorModeHttpHttps>;
     /**
      * Static ip
+     *
      * > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      */
     staticIp?: pulumi.Input<inputs.SdwanSaasQualityProfileMonitorModeStaticIp>;
@@ -14081,11 +14266,11 @@ export interface SdwanSaasQualityProfileMonitorModeHttpHttps {
 export interface SdwanSaasQualityProfileMonitorModeStaticIp {
     /**
      * Fqdn
-     * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     fqdn?: pulumi.Input<inputs.SdwanSaasQualityProfileMonitorModeStaticIpFqdn>;
     /**
      * List of IP addresses
+     *
      * > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      */
     ipAddresses?: pulumi.Input<pulumi.Input<inputs.SdwanSaasQualityProfileMonitorModeStaticIpIpAddress>[]>;
@@ -14369,7 +14554,7 @@ export interface ServiceConnectionProtocolBgp {
     /**
      * Peer as
      */
-    peerAs?: pulumi.Input<string>;
+    peerAs: pulumi.Input<string>;
     /**
      * Peer ip address
      */
@@ -14398,11 +14583,11 @@ export interface ServiceConnectionQos {
 export interface ServiceProtocol {
     /**
      * Tcp
-     * > ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      */
     tcp?: pulumi.Input<inputs.ServiceProtocolTcp>;
     /**
      * Udp
+     *
      * > ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      */
     udp?: pulumi.Input<inputs.ServiceProtocolUdp>;
@@ -14584,11 +14769,11 @@ export interface ServiceSettingServices {
 export interface ServiceSettingServicesDnsSetting {
     /**
      * Dns proxy object
-     * > ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      */
     dnsProxyObject?: pulumi.Input<string>;
     /**
      * Servers
+     *
      * > ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      */
     servers?: pulumi.Input<inputs.ServiceSettingServicesDnsSettingServers>;
@@ -14630,16 +14815,17 @@ export interface ServiceSettingServicesNtpServersPrimaryNtpServer {
 export interface ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationType {
     /**
      * Autokey
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     autokey?: pulumi.Input<inputs.ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeAutokey>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     none?: pulumi.Input<inputs.ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeNone>;
     /**
      * Symmetric key
+     *
      * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     symmetricKey?: pulumi.Input<inputs.ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeSymmetricKey>;
@@ -14701,16 +14887,17 @@ export interface ServiceSettingServicesNtpServersSecondaryNtpServer {
 export interface ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationType {
     /**
      * Autokey
-     * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     autokey?: pulumi.Input<inputs.ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeAutokey>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     none?: pulumi.Input<inputs.ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNone>;
     /**
      * Symmetric key
+     *
      * > ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      */
     symmetricKey?: pulumi.Input<inputs.ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKey>;
@@ -15254,6 +15441,46 @@ export interface TunnelInterfaceIp {
     name: pulumi.Input<string>;
 }
 
+export interface TunnelInterfaceIpv6 {
+    /**
+     * IPv6 Address Parent
+     */
+    addresses?: pulumi.Input<pulumi.Input<inputs.TunnelInterfaceIpv6Address>[]>;
+    /**
+     * Enable IPv6
+     */
+    enabled?: pulumi.Input<boolean>;
+    /**
+     * Interface ID
+     */
+    interfaceId?: pulumi.Input<string>;
+}
+
+export interface TunnelInterfaceIpv6Address {
+    /**
+     * Anycast
+     */
+    anycast?: pulumi.Input<inputs.TunnelInterfaceIpv6AddressAnycast>;
+    /**
+     * Enable Address on Interface
+     */
+    enableOnInterface?: pulumi.Input<boolean>;
+    /**
+     * IPv6 Address
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * Use interface ID as host portion
+     */
+    prefix?: pulumi.Input<inputs.TunnelInterfaceIpv6AddressPrefix>;
+}
+
+export interface TunnelInterfaceIpv6AddressAnycast {
+}
+
+export interface TunnelInterfaceIpv6AddressPrefix {
+}
+
 export interface UpdateScheduleUpdateSchedule {
     /**
      * Anti virus
@@ -15279,16 +15506,17 @@ export interface UpdateScheduleUpdateScheduleAntiVirus {
 export interface UpdateScheduleUpdateScheduleAntiVirusRecurring {
     /**
      * Daily
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     daily?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleAntiVirusRecurringDaily>;
     /**
      * Hourly
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     hourly?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleAntiVirusRecurringHourly>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     none?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleAntiVirusRecurringNone>;
@@ -15302,6 +15530,7 @@ export interface UpdateScheduleUpdateScheduleAntiVirusRecurring {
     threshold?: pulumi.Input<number>;
     /**
      * Weekly
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      */
     weekly?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleAntiVirusRecurringWeekly>;
@@ -15357,16 +15586,17 @@ export interface UpdateScheduleUpdateScheduleThreats {
 export interface UpdateScheduleUpdateScheduleThreatsRecurring {
     /**
      * Daily
-     * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     daily?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleThreatsRecurringDaily>;
     /**
      * Every30 mins
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     every30Mins?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins>;
     /**
      * Hourly
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     hourly?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleThreatsRecurringHourly>;
@@ -15376,6 +15606,7 @@ export interface UpdateScheduleUpdateScheduleThreatsRecurring {
     newAppThreshold?: pulumi.Input<number>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     none?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleThreatsRecurringNone>;
@@ -15389,6 +15620,7 @@ export interface UpdateScheduleUpdateScheduleThreatsRecurring {
     threshold?: pulumi.Input<number>;
     /**
      * Weekly
+     *
      * > ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      */
     weekly?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleThreatsRecurringWeekly>;
@@ -15471,31 +15703,35 @@ export interface UpdateScheduleUpdateScheduleWildfire {
 export interface UpdateScheduleUpdateScheduleWildfireRecurring {
     /**
      * Every15 mins
-     * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     every15Mins?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleWildfireRecurringEvery15Mins>;
     /**
      * Every30 mins
+     *
      * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     every30Mins?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleWildfireRecurringEvery30Mins>;
     /**
      * Every hour
+     *
      * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     everyHour?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleWildfireRecurringEveryHour>;
     /**
      * Every min
+     *
      * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     everyMin?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleWildfireRecurringEveryMin>;
     /**
      * None
+     *
      * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     none?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleWildfireRecurringNone>;
     /**
      * Real time
+     *
      * > ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      */
     realTime?: pulumi.Input<inputs.UpdateScheduleUpdateScheduleWildfireRecurringRealTime>;
@@ -15765,41 +16001,47 @@ export interface VulnerabilityProtectionProfileRule {
 export interface VulnerabilityProtectionProfileRuleAction {
     /**
      * Alert
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     alert?: pulumi.Input<inputs.VulnerabilityProtectionProfileRuleActionAlert>;
     /**
      * Allow
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: pulumi.Input<inputs.VulnerabilityProtectionProfileRuleActionAllow>;
     /**
      * vulnerability protection block ip
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: pulumi.Input<inputs.VulnerabilityProtectionProfileRuleActionBlockIp>;
     /**
      * Default
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default?: pulumi.Input<inputs.VulnerabilityProtectionProfileRuleActionDefault>;
     /**
      * Drop
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: pulumi.Input<inputs.VulnerabilityProtectionProfileRuleActionDrop>;
     /**
      * Reset both
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: pulumi.Input<inputs.VulnerabilityProtectionProfileRuleActionResetBoth>;
     /**
      * Reset client
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: pulumi.Input<inputs.VulnerabilityProtectionProfileRuleActionResetClient>;
     /**
      * Reset server
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: pulumi.Input<inputs.VulnerabilityProtectionProfileRuleActionResetServer>;
@@ -15867,41 +16109,47 @@ export interface VulnerabilityProtectionProfileThreatException {
 export interface VulnerabilityProtectionProfileThreatExceptionAction {
     /**
      * Alert
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     alert?: pulumi.Input<inputs.VulnerabilityProtectionProfileThreatExceptionActionAlert>;
     /**
      * Allow
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: pulumi.Input<inputs.VulnerabilityProtectionProfileThreatExceptionActionAllow>;
     /**
      * vulnerability protection threat exception block ip
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: pulumi.Input<inputs.VulnerabilityProtectionProfileThreatExceptionActionBlockIp>;
     /**
      * Default
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     default?: pulumi.Input<inputs.VulnerabilityProtectionProfileThreatExceptionActionDefault>;
     /**
      * Drop
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: pulumi.Input<inputs.VulnerabilityProtectionProfileThreatExceptionActionDrop>;
     /**
      * Reset both
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: pulumi.Input<inputs.VulnerabilityProtectionProfileThreatExceptionActionResetBoth>;
     /**
      * Reset client
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: pulumi.Input<inputs.VulnerabilityProtectionProfileThreatExceptionActionResetClient>;
     /**
      * Reset server
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: pulumi.Input<inputs.VulnerabilityProtectionProfileThreatExceptionActionResetServer>;
@@ -15964,11 +16212,11 @@ export interface VulnerabilityProtectionProfileThreatExceptionTimeAttribute {
 export interface VulnerabilityProtectionSignatureAffectedHost {
     /**
      * Client
-     * > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
      */
     client?: pulumi.Input<boolean>;
     /**
      * Server
+     *
      * > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
      */
     server?: pulumi.Input<boolean>;
@@ -15977,36 +16225,41 @@ export interface VulnerabilityProtectionSignatureAffectedHost {
 export interface VulnerabilityProtectionSignatureDefaultAction {
     /**
      * Alert
-     * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     alert?: pulumi.Input<inputs.VulnerabilityProtectionSignatureDefaultActionAlert>;
     /**
      * Allow
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     allow?: pulumi.Input<inputs.VulnerabilityProtectionSignatureDefaultActionAllow>;
     /**
      * vulnerability protection bugtraq block ip
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     blockIp?: pulumi.Input<inputs.VulnerabilityProtectionSignatureDefaultActionBlockIp>;
     /**
      * Drop
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     drop?: pulumi.Input<inputs.VulnerabilityProtectionSignatureDefaultActionDrop>;
     /**
      * Reset both
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetBoth?: pulumi.Input<inputs.VulnerabilityProtectionSignatureDefaultActionResetBoth>;
     /**
      * Reset client
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetClient?: pulumi.Input<inputs.VulnerabilityProtectionSignatureDefaultActionResetClient>;
     /**
      * Reset server
+     *
      * > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      */
     resetServer?: pulumi.Input<inputs.VulnerabilityProtectionSignatureDefaultActionResetServer>;
@@ -16044,11 +16297,11 @@ export interface VulnerabilityProtectionSignatureDefaultActionResetServer {
 export interface VulnerabilityProtectionSignatureSignature {
     /**
      * vulnerability protection signature combination object
-     * > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      */
     combination?: pulumi.Input<inputs.VulnerabilityProtectionSignatureSignatureCombination>;
     /**
      * vulnerability protection signature standard array
+     *
      * > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      */
     standards?: pulumi.Input<pulumi.Input<inputs.VulnerabilityProtectionSignatureSignatureStandard>[]>;

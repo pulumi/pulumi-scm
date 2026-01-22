@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit {
     /**
      * @return No
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
     private GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritNo no;
     /**
      * @return Yes
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit {
     private GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit() {}
     /**
      * @return No
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
     public GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritNo no() {
@@ -35,6 +34,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit {
     }
     /**
      * @return Yes
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */

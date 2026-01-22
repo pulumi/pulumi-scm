@@ -6,6 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetTunnelInterfaceIp;
+import com.pulumi.scm.outputs.GetTunnelInterfaceIpv6;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,89 +14,41 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTunnelInterfaceResult {
-    /**
-     * @return Description
-     * 
-     */
     private String comment;
-    /**
-     * @return Default interface assignment
-     * 
-     */
     private String defaultValue;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Interface management profile
-     * 
-     */
     private String interfaceManagementProfile;
-    /**
-     * @return Tunnel Interface IP Parent
-     * 
-     */
     private List<GetTunnelInterfaceIp> ips;
-    /**
-     * @return MTU
-     * 
-     */
+    private GetTunnelInterfaceIpv6 ipv6;
     private Integer mtu;
-    /**
-     * @return L3 sub-interface name
-     * 
-     */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
 
     private GetTunnelInterfaceResult() {}
-    /**
-     * @return Description
-     * 
-     */
     public String comment() {
         return this.comment;
     }
-    /**
-     * @return Default interface assignment
-     * 
-     */
     public String defaultValue() {
         return this.defaultValue;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -106,39 +59,21 @@ public final class GetTunnelInterfaceResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Interface management profile
-     * 
-     */
     public String interfaceManagementProfile() {
         return this.interfaceManagementProfile;
     }
-    /**
-     * @return Tunnel Interface IP Parent
-     * 
-     */
     public List<GetTunnelInterfaceIp> ips() {
         return this.ips;
     }
-    /**
-     * @return MTU
-     * 
-     */
+    public GetTunnelInterfaceIpv6 ipv6() {
+        return this.ipv6;
+    }
     public Integer mtu() {
         return this.mtu;
     }
-    /**
-     * @return L3 sub-interface name
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
@@ -162,6 +97,7 @@ public final class GetTunnelInterfaceResult {
         private String id;
         private String interfaceManagementProfile;
         private List<GetTunnelInterfaceIp> ips;
+        private GetTunnelInterfaceIpv6 ipv6;
         private Integer mtu;
         private String name;
         private String snippet;
@@ -176,6 +112,7 @@ public final class GetTunnelInterfaceResult {
     	      this.id = defaults.id;
     	      this.interfaceManagementProfile = defaults.interfaceManagementProfile;
     	      this.ips = defaults.ips;
+    	      this.ipv6 = defaults.ipv6;
     	      this.mtu = defaults.mtu;
     	      this.name = defaults.name;
     	      this.snippet = defaults.snippet;
@@ -242,6 +179,14 @@ public final class GetTunnelInterfaceResult {
             return ips(List.of(ips));
         }
         @CustomType.Setter
+        public Builder ipv6(GetTunnelInterfaceIpv6 ipv6) {
+            if (ipv6 == null) {
+              throw new MissingRequiredPropertyException("GetTunnelInterfaceResult", "ipv6");
+            }
+            this.ipv6 = ipv6;
+            return this;
+        }
+        @CustomType.Setter
         public Builder mtu(Integer mtu) {
             if (mtu == null) {
               throw new MissingRequiredPropertyException("GetTunnelInterfaceResult", "mtu");
@@ -282,6 +227,7 @@ public final class GetTunnelInterfaceResult {
             _resultValue.id = id;
             _resultValue.interfaceManagementProfile = interfaceManagementProfile;
             _resultValue.ips = ips;
+            _resultValue.ipv6 = ipv6;
             _resultValue.mtu = mtu;
             _resultValue.name = name;
             _resultValue.snippet = snippet;

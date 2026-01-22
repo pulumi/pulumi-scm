@@ -15,36 +15,41 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Alert
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataDefaultActionAlertResult Alert;
         /// <summary>
         /// Allow
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataDefaultActionAllowResult Allow;
         /// <summary>
         /// anti spyware signature block ip
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataDefaultActionBlockIpResult BlockIp;
         /// <summary>
         /// Drop
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataDefaultActionDropResult Drop;
         /// <summary>
         /// Reset both
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataDefaultActionResetBothResult ResetBoth;
         /// <summary>
         /// Reset client
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataDefaultActionResetClientResult ResetClient;
         /// <summary>
         /// Reset server
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataDefaultActionResetServerResult ResetServer;

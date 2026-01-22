@@ -30,6 +30,12 @@ namespace Pulumi.Scm.Inputs
         [Input("enabled")]
         public Input<bool>? Enabled { get; set; }
 
+        /// <summary>
+        /// Interface ID
+        /// </summary>
+        [Input("interfaceId")]
+        public Input<string>? InterfaceId { get; set; }
+
         public LoopbackInterfaceIpv6Args()
         {
         }

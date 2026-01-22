@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetTacacsServerProfileList(ctx *pulumi.Context, args *GetTacacsServerProfileListArgs, opts ...pulumi.InvokeOption) (*GetTacacsServerProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetTacacsServerProfileListResult

@@ -15,21 +15,23 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Balanced round robin
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `BalancedRoundRobin`, `IpHash`, `IpModulo`, and `WeightedRoundRobin`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfEcmpAlgorithmBalancedRoundRobin? BalancedRoundRobin;
         /// <summary>
         /// Ip hash
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `BalancedRoundRobin`, `IpHash`, `IpModulo`, and `WeightedRoundRobin`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfEcmpAlgorithmIpHash? IpHash;
         /// <summary>
         /// Ip modulo
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `BalancedRoundRobin`, `IpHash`, `IpModulo`, and `WeightedRoundRobin`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfEcmpAlgorithmIpModulo? IpModulo;
         /// <summary>
         /// Weighted round robin
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `BalancedRoundRobin`, `IpHash`, `IpModulo`, and `WeightedRoundRobin`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfEcmpAlgorithmWeightedRoundRobin? WeightedRoundRobin;

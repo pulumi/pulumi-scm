@@ -98,14 +98,15 @@ type ManagementInterface struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Management interface
 	ManagementInterface ManagementInterfaceManagementInterfacePtrOutput `pulumi:"managementInterface"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -142,14 +143,15 @@ func GetManagementInterface(ctx *pulumi.Context,
 // Input properties used for looking up and filtering ManagementInterface resources.
 type managementInterfaceState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Management interface
 	ManagementInterface *ManagementInterfaceManagementInterface `pulumi:"managementInterface"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -157,14 +159,15 @@ type managementInterfaceState struct {
 
 type ManagementInterfaceState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Management interface
 	ManagementInterface ManagementInterfaceManagementInterfacePtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -176,14 +179,15 @@ func (ManagementInterfaceState) ElementType() reflect.Type {
 
 type managementInterfaceArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Management interface
 	ManagementInterface *ManagementInterfaceManagementInterface `pulumi:"managementInterface"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -191,14 +195,15 @@ type managementInterfaceArgs struct {
 // The set of arguments for constructing a ManagementInterface resource.
 type ManagementInterfaceArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Management interface
 	ManagementInterface ManagementInterfaceManagementInterfacePtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -291,12 +296,12 @@ func (o ManagementInterfaceOutput) ToManagementInterfaceOutputWithContext(ctx co
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ManagementInterfaceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ManagementInterface) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ManagementInterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ManagementInterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -310,6 +315,7 @@ func (o ManagementInterfaceOutput) ManagementInterface() ManagementInterfaceMana
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ManagementInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ManagementInterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

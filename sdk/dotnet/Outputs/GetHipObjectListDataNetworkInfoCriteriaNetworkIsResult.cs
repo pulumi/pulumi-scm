@@ -15,16 +15,17 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Mobile
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         public readonly Outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobileResult Mobile;
         /// <summary>
         /// Unknown
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         public readonly Outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknownResult Unknown;
         /// <summary>
         /// Wifi
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         public readonly Outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsWifiResult Wifi;

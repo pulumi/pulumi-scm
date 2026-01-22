@@ -13,6 +13,565 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetBgpFilteringProfileListDataIpv4Multicast struct {
+	// Conditional advertisement
+	ConditionalAdvertisement GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisement `pulumi:"conditionalAdvertisement"`
+	// Filter list
+	FilterList GetBgpFilteringProfileListDataIpv4MulticastFilterList `pulumi:"filterList"`
+	// Inbound network filters
+	InboundNetworkFilters GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFilters `pulumi:"inboundNetworkFilters"`
+	// Inherit from unicast
+	Inherit bool `pulumi:"inherit"`
+	// Outbound network filters
+	OutboundNetworkFilters GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFilters `pulumi:"outboundNetworkFilters"`
+	// Route maps
+	RouteMaps GetBgpFilteringProfileListDataIpv4MulticastRouteMaps `pulumi:"routeMaps"`
+	// Unsuppress map
+	UnsuppressMap string `pulumi:"unsuppressMap"`
+}
+
+// GetBgpFilteringProfileListDataIpv4MulticastInput is an input type that accepts GetBgpFilteringProfileListDataIpv4MulticastArgs and GetBgpFilteringProfileListDataIpv4MulticastOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileListDataIpv4MulticastInput` via:
+//
+//	GetBgpFilteringProfileListDataIpv4MulticastArgs{...}
+type GetBgpFilteringProfileListDataIpv4MulticastInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileListDataIpv4MulticastOutput() GetBgpFilteringProfileListDataIpv4MulticastOutput
+	ToGetBgpFilteringProfileListDataIpv4MulticastOutputWithContext(context.Context) GetBgpFilteringProfileListDataIpv4MulticastOutput
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastArgs struct {
+	// Conditional advertisement
+	ConditionalAdvertisement GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementInput `pulumi:"conditionalAdvertisement"`
+	// Filter list
+	FilterList GetBgpFilteringProfileListDataIpv4MulticastFilterListInput `pulumi:"filterList"`
+	// Inbound network filters
+	InboundNetworkFilters GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersInput `pulumi:"inboundNetworkFilters"`
+	// Inherit from unicast
+	Inherit pulumi.BoolInput `pulumi:"inherit"`
+	// Outbound network filters
+	OutboundNetworkFilters GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersInput `pulumi:"outboundNetworkFilters"`
+	// Route maps
+	RouteMaps GetBgpFilteringProfileListDataIpv4MulticastRouteMapsInput `pulumi:"routeMaps"`
+	// Unsuppress map
+	UnsuppressMap pulumi.StringInput `pulumi:"unsuppressMap"`
+}
+
+func (GetBgpFilteringProfileListDataIpv4MulticastArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4Multicast)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastArgs) ToGetBgpFilteringProfileListDataIpv4MulticastOutput() GetBgpFilteringProfileListDataIpv4MulticastOutput {
+	return i.ToGetBgpFilteringProfileListDataIpv4MulticastOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastArgs) ToGetBgpFilteringProfileListDataIpv4MulticastOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileListDataIpv4MulticastOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileListDataIpv4MulticastOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4Multicast)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutput) ToGetBgpFilteringProfileListDataIpv4MulticastOutput() GetBgpFilteringProfileListDataIpv4MulticastOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutput) ToGetBgpFilteringProfileListDataIpv4MulticastOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastOutput {
+	return o
+}
+
+// Conditional advertisement
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutput) ConditionalAdvertisement() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4Multicast) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisement {
+		return v.ConditionalAdvertisement
+	}).(GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput)
+}
+
+// Filter list
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutput) FilterList() GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4Multicast) GetBgpFilteringProfileListDataIpv4MulticastFilterList {
+		return v.FilterList
+	}).(GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput)
+}
+
+// Inbound network filters
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutput) InboundNetworkFilters() GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4Multicast) GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFilters {
+		return v.InboundNetworkFilters
+	}).(GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput)
+}
+
+// Inherit from unicast
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutput) Inherit() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4Multicast) bool { return v.Inherit }).(pulumi.BoolOutput)
+}
+
+// Outbound network filters
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutput) OutboundNetworkFilters() GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4Multicast) GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFilters {
+		return v.OutboundNetworkFilters
+	}).(GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput)
+}
+
+// Route maps
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutput) RouteMaps() GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4Multicast) GetBgpFilteringProfileListDataIpv4MulticastRouteMaps {
+		return v.RouteMaps
+	}).(GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput)
+}
+
+// Unsuppress map
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutput) UnsuppressMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4Multicast) string { return v.UnsuppressMap }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisement struct {
+	// Exist
+	Exist GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExist `pulumi:"exist"`
+	// Non exist
+	NonExist GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExist `pulumi:"nonExist"`
+}
+
+// GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementInput is an input type that accepts GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementArgs and GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementInput` via:
+//
+//	GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementArgs{...}
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput
+	ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutputWithContext(context.Context) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementArgs struct {
+	// Exist
+	Exist GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistInput `pulumi:"exist"`
+	// Non exist
+	NonExist GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistInput `pulumi:"nonExist"`
+}
+
+func (GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisement)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementArgs) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput {
+	return i.ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementArgs) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisement)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput {
+	return o
+}
+
+// Exist
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput) Exist() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisement) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExist {
+		return v.Exist
+	}).(GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput)
+}
+
+// Non exist
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput) NonExist() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisement) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExist {
+		return v.NonExist
+	}).(GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExist struct {
+	// Advertise map
+	AdvertiseMap string `pulumi:"advertiseMap"`
+	// Exist map
+	ExistMap string `pulumi:"existMap"`
+}
+
+// GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistInput is an input type that accepts GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistArgs and GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistInput` via:
+//
+//	GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistArgs{...}
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput
+	ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutputWithContext(context.Context) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistArgs struct {
+	// Advertise map
+	AdvertiseMap pulumi.StringInput `pulumi:"advertiseMap"`
+	// Exist map
+	ExistMap pulumi.StringInput `pulumi:"existMap"`
+}
+
+func (GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExist)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistArgs) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput {
+	return i.ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistArgs) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExist)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput {
+	return o
+}
+
+// Advertise map
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput) AdvertiseMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExist) string {
+		return v.AdvertiseMap
+	}).(pulumi.StringOutput)
+}
+
+// Exist map
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput) ExistMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExist) string {
+		return v.ExistMap
+	}).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExist struct {
+	// Advertise map
+	AdvertiseMap string `pulumi:"advertiseMap"`
+	// Non exist map
+	NonExistMap string `pulumi:"nonExistMap"`
+}
+
+// GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistInput is an input type that accepts GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistArgs and GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistInput` via:
+//
+//	GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistArgs{...}
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput
+	ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(context.Context) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistArgs struct {
+	// Advertise map
+	AdvertiseMap pulumi.StringInput `pulumi:"advertiseMap"`
+	// Non exist map
+	NonExistMap pulumi.StringInput `pulumi:"nonExistMap"`
+}
+
+func (GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExist)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistArgs) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput {
+	return i.ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistArgs) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExist)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput) ToGetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput {
+	return o
+}
+
+// Advertise map
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput) AdvertiseMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExist) string {
+		return v.AdvertiseMap
+	}).(pulumi.StringOutput)
+}
+
+// Non exist map
+func (o GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput) NonExistMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExist) string {
+		return v.NonExistMap
+	}).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastFilterList struct {
+	// Inbound
+	Inbound string `pulumi:"inbound"`
+	// Outbound
+	Outbound string `pulumi:"outbound"`
+}
+
+// GetBgpFilteringProfileListDataIpv4MulticastFilterListInput is an input type that accepts GetBgpFilteringProfileListDataIpv4MulticastFilterListArgs and GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileListDataIpv4MulticastFilterListInput` via:
+//
+//	GetBgpFilteringProfileListDataIpv4MulticastFilterListArgs{...}
+type GetBgpFilteringProfileListDataIpv4MulticastFilterListInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileListDataIpv4MulticastFilterListOutput() GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput
+	ToGetBgpFilteringProfileListDataIpv4MulticastFilterListOutputWithContext(context.Context) GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastFilterListArgs struct {
+	// Inbound
+	Inbound pulumi.StringInput `pulumi:"inbound"`
+	// Outbound
+	Outbound pulumi.StringInput `pulumi:"outbound"`
+}
+
+func (GetBgpFilteringProfileListDataIpv4MulticastFilterListArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastFilterList)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastFilterListArgs) ToGetBgpFilteringProfileListDataIpv4MulticastFilterListOutput() GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput {
+	return i.ToGetBgpFilteringProfileListDataIpv4MulticastFilterListOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastFilterListArgs) ToGetBgpFilteringProfileListDataIpv4MulticastFilterListOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastFilterList)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput) ToGetBgpFilteringProfileListDataIpv4MulticastFilterListOutput() GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput) ToGetBgpFilteringProfileListDataIpv4MulticastFilterListOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput {
+	return o
+}
+
+// Inbound
+func (o GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput) Inbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastFilterList) string { return v.Inbound }).(pulumi.StringOutput)
+}
+
+// Outbound
+func (o GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput) Outbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastFilterList) string { return v.Outbound }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFilters struct {
+	// Distribute list
+	DistributeList string `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList string `pulumi:"prefixList"`
+}
+
+// GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersInput is an input type that accepts GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersArgs and GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersInput` via:
+//
+//	GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersArgs{...}
+type GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput() GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput
+	ToGetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutputWithContext(context.Context) GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersArgs struct {
+	// Distribute list
+	DistributeList pulumi.StringInput `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList pulumi.StringInput `pulumi:"prefixList"`
+}
+
+func (GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFilters)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersArgs) ToGetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput() GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput {
+	return i.ToGetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersArgs) ToGetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFilters)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput) ToGetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput() GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput) ToGetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput {
+	return o
+}
+
+// Distribute list
+func (o GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput) DistributeList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFilters) string {
+		return v.DistributeList
+	}).(pulumi.StringOutput)
+}
+
+// Prefix list
+func (o GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput) PrefixList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFilters) string { return v.PrefixList }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFilters struct {
+	// Distribute list
+	DistributeList string `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList string `pulumi:"prefixList"`
+}
+
+// GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersInput is an input type that accepts GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersArgs and GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersInput` via:
+//
+//	GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersArgs{...}
+type GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput() GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput
+	ToGetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutputWithContext(context.Context) GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersArgs struct {
+	// Distribute list
+	DistributeList pulumi.StringInput `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList pulumi.StringInput `pulumi:"prefixList"`
+}
+
+func (GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFilters)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersArgs) ToGetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput() GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput {
+	return i.ToGetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersArgs) ToGetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFilters)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput) ToGetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput() GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput) ToGetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput {
+	return o
+}
+
+// Distribute list
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput) DistributeList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFilters) string {
+		return v.DistributeList
+	}).(pulumi.StringOutput)
+}
+
+// Prefix list
+func (o GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput) PrefixList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFilters) string { return v.PrefixList }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastRouteMaps struct {
+	// Inbound
+	Inbound string `pulumi:"inbound"`
+	// Outbound
+	Outbound string `pulumi:"outbound"`
+}
+
+// GetBgpFilteringProfileListDataIpv4MulticastRouteMapsInput is an input type that accepts GetBgpFilteringProfileListDataIpv4MulticastRouteMapsArgs and GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileListDataIpv4MulticastRouteMapsInput` via:
+//
+//	GetBgpFilteringProfileListDataIpv4MulticastRouteMapsArgs{...}
+type GetBgpFilteringProfileListDataIpv4MulticastRouteMapsInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput() GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput
+	ToGetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutputWithContext(context.Context) GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastRouteMapsArgs struct {
+	// Inbound
+	Inbound pulumi.StringInput `pulumi:"inbound"`
+	// Outbound
+	Outbound pulumi.StringInput `pulumi:"outbound"`
+}
+
+func (GetBgpFilteringProfileListDataIpv4MulticastRouteMapsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastRouteMaps)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastRouteMapsArgs) ToGetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput() GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput {
+	return i.ToGetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileListDataIpv4MulticastRouteMapsArgs) ToGetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastRouteMaps)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput) ToGetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput() GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput) ToGetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput {
+	return o
+}
+
+// Inbound
+func (o GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput) Inbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastRouteMaps) string { return v.Inbound }).(pulumi.StringOutput)
+}
+
+// Outbound
+func (o GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput) Outbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4MulticastRouteMaps) string { return v.Outbound }).(pulumi.StringOutput)
+}
+
 type GetBgpFilteringProfileListDataIpv4Unicast struct {
 	// Conditional advertisement
 	ConditionalAdvertisement GetBgpFilteringProfileListDataIpv4UnicastConditionalAdvertisement `pulumi:"conditionalAdvertisement"`
@@ -901,19 +1460,16 @@ func (o GetBgpRedistributionProfileIpv4UnicastStaticOutput) RouteMap() pulumi.St
 
 type GetBgpRedistributionProfileListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Ipv4
 	Ipv4 GetBgpRedistributionProfileListDataIpv4 `pulumi:"ipv4"`
-	// Name
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -931,19 +1487,16 @@ type GetBgpRedistributionProfileListDataInput interface {
 
 type GetBgpRedistributionProfileListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Ipv4
 	Ipv4 GetBgpRedistributionProfileListDataIpv4Input `pulumi:"ipv4"`
-	// Name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -1000,13 +1553,11 @@ func (o GetBgpRedistributionProfileListDataOutput) ToGetBgpRedistributionProfile
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetBgpRedistributionProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRedistributionProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetBgpRedistributionProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRedistributionProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -1021,13 +1572,12 @@ func (o GetBgpRedistributionProfileListDataOutput) Ipv4() GetBgpRedistributionPr
 	return o.ApplyT(func(v GetBgpRedistributionProfileListData) GetBgpRedistributionProfileListDataIpv4 { return v.Ipv4 }).(GetBgpRedistributionProfileListDataIpv4Output)
 }
 
-// Name
+// The name of the item.
 func (o GetBgpRedistributionProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRedistributionProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetBgpRedistributionProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRedistributionProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -1400,19 +1950,16 @@ type GetBgpRouteMapListData struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Route map
 	RouteMaps []GetBgpRouteMapListDataRouteMap `pulumi:"routeMaps"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -1432,19 +1979,16 @@ type GetBgpRouteMapListDataArgs struct {
 	// Description
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// Name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Route map
 	RouteMaps GetBgpRouteMapListDataRouteMapArrayInput `pulumi:"routeMaps"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -1506,13 +2050,11 @@ func (o GetBgpRouteMapListDataOutput) Description() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetBgpRouteMapListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRouteMapListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetBgpRouteMapListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRouteMapListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -1522,7 +2064,7 @@ func (o GetBgpRouteMapListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRouteMapListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Name
+// The name of the item.
 func (o GetBgpRouteMapListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRouteMapListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -1532,8 +2074,7 @@ func (o GetBgpRouteMapListDataOutput) RouteMaps() GetBgpRouteMapListDataRouteMap
 	return o.ApplyT(func(v GetBgpRouteMapListData) []GetBgpRouteMapListDataRouteMap { return v.RouteMaps }).(GetBgpRouteMapListDataRouteMapArrayOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetBgpRouteMapListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRouteMapListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -2479,9 +3020,9 @@ func (o GetBgpRouteMapListDataRouteMapSetMetricOutput) Value() pulumi.IntOutput 
 
 type GetBgpRouteMapRedistributionBgp struct {
 	// Ospf
-	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Ospf GetBgpRouteMapRedistributionBgpOspf `pulumi:"ospf"`
 	// BGP Root RIB
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Rib GetBgpRouteMapRedistributionBgpRib `pulumi:"rib"`
 }
@@ -2499,9 +3040,9 @@ type GetBgpRouteMapRedistributionBgpInput interface {
 
 type GetBgpRouteMapRedistributionBgpArgs struct {
 	// Ospf
-	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Ospf GetBgpRouteMapRedistributionBgpOspfInput `pulumi:"ospf"`
 	// BGP Root RIB
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Rib GetBgpRouteMapRedistributionBgpRibInput `pulumi:"rib"`
 }
@@ -2533,12 +3074,12 @@ func (o GetBgpRouteMapRedistributionBgpOutput) ToGetBgpRouteMapRedistributionBgp
 }
 
 // Ospf
-// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 func (o GetBgpRouteMapRedistributionBgpOutput) Ospf() GetBgpRouteMapRedistributionBgpOspfOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionBgp) GetBgpRouteMapRedistributionBgpOspf { return v.Ospf }).(GetBgpRouteMapRedistributionBgpOspfOutput)
 }
 
 // BGP Root RIB
+//
 // > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 func (o GetBgpRouteMapRedistributionBgpOutput) Rib() GetBgpRouteMapRedistributionBgpRibOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionBgp) GetBgpRouteMapRedistributionBgpRib { return v.Rib }).(GetBgpRouteMapRedistributionBgpRibOutput)
@@ -3919,12 +4460,13 @@ func (o GetBgpRouteMapRedistributionBgpRibRouteMapSetOutput) SourceAddress() pul
 
 type GetBgpRouteMapRedistributionConnectedStatic struct {
 	// Connected Static Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Bgp GetBgpRouteMapRedistributionConnectedStaticBgp `pulumi:"bgp"`
 	// Ospf
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Ospf GetBgpRouteMapRedistributionConnectedStaticOspf `pulumi:"ospf"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Rib GetBgpRouteMapRedistributionConnectedStaticRib `pulumi:"rib"`
 }
@@ -3942,12 +4484,13 @@ type GetBgpRouteMapRedistributionConnectedStaticInput interface {
 
 type GetBgpRouteMapRedistributionConnectedStaticArgs struct {
 	// Connected Static Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Bgp GetBgpRouteMapRedistributionConnectedStaticBgpInput `pulumi:"bgp"`
 	// Ospf
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Ospf GetBgpRouteMapRedistributionConnectedStaticOspfInput `pulumi:"ospf"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Rib GetBgpRouteMapRedistributionConnectedStaticRibInput `pulumi:"rib"`
 }
@@ -3979,7 +4522,6 @@ func (o GetBgpRouteMapRedistributionConnectedStaticOutput) ToGetBgpRouteMapRedis
 }
 
 // Connected Static Root BGP
-// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o GetBgpRouteMapRedistributionConnectedStaticOutput) Bgp() GetBgpRouteMapRedistributionConnectedStaticBgpOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionConnectedStatic) GetBgpRouteMapRedistributionConnectedStaticBgp {
 		return v.Bgp
@@ -3987,6 +4529,7 @@ func (o GetBgpRouteMapRedistributionConnectedStaticOutput) Bgp() GetBgpRouteMapR
 }
 
 // Ospf
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o GetBgpRouteMapRedistributionConnectedStaticOutput) Ospf() GetBgpRouteMapRedistributionConnectedStaticOspfOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionConnectedStatic) GetBgpRouteMapRedistributionConnectedStaticOspf {
@@ -3995,6 +4538,7 @@ func (o GetBgpRouteMapRedistributionConnectedStaticOutput) Ospf() GetBgpRouteMap
 }
 
 // Rib
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o GetBgpRouteMapRedistributionConnectedStaticOutput) Rib() GetBgpRouteMapRedistributionConnectedStaticRibOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionConnectedStatic) GetBgpRouteMapRedistributionConnectedStaticRib {
@@ -5905,28 +6449,28 @@ func (o GetBgpRouteMapRedistributionConnectedStaticRibRouteMapSetOutput) SourceA
 
 type GetBgpRouteMapRedistributionListData struct {
 	// Bgp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	Bgp GetBgpRouteMapRedistributionListDataBgp `pulumi:"bgp"`
 	// Connected static
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	ConnectedStatic GetBgpRouteMapRedistributionListDataConnectedStatic `pulumi:"connectedStatic"`
 	// BGP Route Map Redistributions Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// BGP Route Map Redistributions UUID of the resource
 	Id string `pulumi:"id"`
-	// BGP Route Map Redistributions Name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Ospf
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	Ospf GetBgpRouteMapRedistributionListDataOspf `pulumi:"ospf"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -5944,28 +6488,28 @@ type GetBgpRouteMapRedistributionListDataInput interface {
 
 type GetBgpRouteMapRedistributionListDataArgs struct {
 	// Bgp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	Bgp GetBgpRouteMapRedistributionListDataBgpInput `pulumi:"bgp"`
 	// Connected static
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	ConnectedStatic GetBgpRouteMapRedistributionListDataConnectedStaticInput `pulumi:"connectedStatic"`
 	// BGP Route Map Redistributions Description
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// BGP Route Map Redistributions UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// BGP Route Map Redistributions Name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Ospf
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	Ospf GetBgpRouteMapRedistributionListDataOspfInput `pulumi:"ospf"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -6022,12 +6566,14 @@ func (o GetBgpRouteMapRedistributionListDataOutput) ToGetBgpRouteMapRedistributi
 }
 
 // Bgp
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 func (o GetBgpRouteMapRedistributionListDataOutput) Bgp() GetBgpRouteMapRedistributionListDataBgpOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListData) GetBgpRouteMapRedistributionListDataBgp { return v.Bgp }).(GetBgpRouteMapRedistributionListDataBgpOutput)
 }
 
 // Connected static
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 func (o GetBgpRouteMapRedistributionListDataOutput) ConnectedStatic() GetBgpRouteMapRedistributionListDataConnectedStaticOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListData) GetBgpRouteMapRedistributionListDataConnectedStatic {
@@ -6041,13 +6587,11 @@ func (o GetBgpRouteMapRedistributionListDataOutput) Description() pulumi.StringO
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetBgpRouteMapRedistributionListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetBgpRouteMapRedistributionListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -6057,19 +6601,19 @@ func (o GetBgpRouteMapRedistributionListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// BGP Route Map Redistributions Name
+// The name of the item.
 func (o GetBgpRouteMapRedistributionListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
 // Ospf
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 func (o GetBgpRouteMapRedistributionListDataOutput) Ospf() GetBgpRouteMapRedistributionListDataOspfOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListData) GetBgpRouteMapRedistributionListDataOspf { return v.Ospf }).(GetBgpRouteMapRedistributionListDataOspfOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetBgpRouteMapRedistributionListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -6100,9 +6644,9 @@ func (o GetBgpRouteMapRedistributionListDataArrayOutput) Index(i pulumi.IntInput
 
 type GetBgpRouteMapRedistributionListDataBgp struct {
 	// Ospf
-	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Ospf GetBgpRouteMapRedistributionListDataBgpOspf `pulumi:"ospf"`
 	// BGP Root RIB
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Rib GetBgpRouteMapRedistributionListDataBgpRib `pulumi:"rib"`
 }
@@ -6120,9 +6664,9 @@ type GetBgpRouteMapRedistributionListDataBgpInput interface {
 
 type GetBgpRouteMapRedistributionListDataBgpArgs struct {
 	// Ospf
-	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Ospf GetBgpRouteMapRedistributionListDataBgpOspfInput `pulumi:"ospf"`
 	// BGP Root RIB
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Rib GetBgpRouteMapRedistributionListDataBgpRibInput `pulumi:"rib"`
 }
@@ -6154,7 +6698,6 @@ func (o GetBgpRouteMapRedistributionListDataBgpOutput) ToGetBgpRouteMapRedistrib
 }
 
 // Ospf
-// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 func (o GetBgpRouteMapRedistributionListDataBgpOutput) Ospf() GetBgpRouteMapRedistributionListDataBgpOspfOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListDataBgp) GetBgpRouteMapRedistributionListDataBgpOspf {
 		return v.Ospf
@@ -6162,6 +6705,7 @@ func (o GetBgpRouteMapRedistributionListDataBgpOutput) Ospf() GetBgpRouteMapRedi
 }
 
 // BGP Root RIB
+//
 // > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 func (o GetBgpRouteMapRedistributionListDataBgpOutput) Rib() GetBgpRouteMapRedistributionListDataBgpRibOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListDataBgp) GetBgpRouteMapRedistributionListDataBgpRib {
@@ -7560,12 +8104,13 @@ func (o GetBgpRouteMapRedistributionListDataBgpRibRouteMapSetOutput) SourceAddre
 
 type GetBgpRouteMapRedistributionListDataConnectedStatic struct {
 	// Connected Static Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Bgp GetBgpRouteMapRedistributionListDataConnectedStaticBgp `pulumi:"bgp"`
 	// Ospf
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Ospf GetBgpRouteMapRedistributionListDataConnectedStaticOspf `pulumi:"ospf"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Rib GetBgpRouteMapRedistributionListDataConnectedStaticRib `pulumi:"rib"`
 }
@@ -7583,12 +8128,13 @@ type GetBgpRouteMapRedistributionListDataConnectedStaticInput interface {
 
 type GetBgpRouteMapRedistributionListDataConnectedStaticArgs struct {
 	// Connected Static Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Bgp GetBgpRouteMapRedistributionListDataConnectedStaticBgpInput `pulumi:"bgp"`
 	// Ospf
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Ospf GetBgpRouteMapRedistributionListDataConnectedStaticOspfInput `pulumi:"ospf"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Rib GetBgpRouteMapRedistributionListDataConnectedStaticRibInput `pulumi:"rib"`
 }
@@ -7620,7 +8166,6 @@ func (o GetBgpRouteMapRedistributionListDataConnectedStaticOutput) ToGetBgpRoute
 }
 
 // Connected Static Root BGP
-// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o GetBgpRouteMapRedistributionListDataConnectedStaticOutput) Bgp() GetBgpRouteMapRedistributionListDataConnectedStaticBgpOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListDataConnectedStatic) GetBgpRouteMapRedistributionListDataConnectedStaticBgp {
 		return v.Bgp
@@ -7628,6 +8173,7 @@ func (o GetBgpRouteMapRedistributionListDataConnectedStaticOutput) Bgp() GetBgpR
 }
 
 // Ospf
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o GetBgpRouteMapRedistributionListDataConnectedStaticOutput) Ospf() GetBgpRouteMapRedistributionListDataConnectedStaticOspfOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListDataConnectedStatic) GetBgpRouteMapRedistributionListDataConnectedStaticOspf {
@@ -7636,6 +8182,7 @@ func (o GetBgpRouteMapRedistributionListDataConnectedStaticOutput) Ospf() GetBgp
 }
 
 // Rib
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o GetBgpRouteMapRedistributionListDataConnectedStaticOutput) Rib() GetBgpRouteMapRedistributionListDataConnectedStaticRibOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListDataConnectedStatic) GetBgpRouteMapRedistributionListDataConnectedStaticRib {
@@ -9568,9 +10115,9 @@ func (o GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapSetOutput)
 
 type GetBgpRouteMapRedistributionListDataOspf struct {
 	// OSPF Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Bgp GetBgpRouteMapRedistributionListDataOspfBgp `pulumi:"bgp"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Rib GetBgpRouteMapRedistributionListDataOspfRib `pulumi:"rib"`
 }
@@ -9588,9 +10135,9 @@ type GetBgpRouteMapRedistributionListDataOspfInput interface {
 
 type GetBgpRouteMapRedistributionListDataOspfArgs struct {
 	// OSPF Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Bgp GetBgpRouteMapRedistributionListDataOspfBgpInput `pulumi:"bgp"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Rib GetBgpRouteMapRedistributionListDataOspfRibInput `pulumi:"rib"`
 }
@@ -9622,7 +10169,6 @@ func (o GetBgpRouteMapRedistributionListDataOspfOutput) ToGetBgpRouteMapRedistri
 }
 
 // OSPF Root BGP
-// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 func (o GetBgpRouteMapRedistributionListDataOspfOutput) Bgp() GetBgpRouteMapRedistributionListDataOspfBgpOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListDataOspf) GetBgpRouteMapRedistributionListDataOspfBgp {
 		return v.Bgp
@@ -9630,6 +10176,7 @@ func (o GetBgpRouteMapRedistributionListDataOspfOutput) Bgp() GetBgpRouteMapRedi
 }
 
 // Rib
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 func (o GetBgpRouteMapRedistributionListDataOspfOutput) Rib() GetBgpRouteMapRedistributionListDataOspfRibOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionListDataOspf) GetBgpRouteMapRedistributionListDataOspfRib {
@@ -10841,9 +11388,9 @@ func (o GetBgpRouteMapRedistributionListDataOspfRibRouteMapSetOutput) SourceAddr
 
 type GetBgpRouteMapRedistributionOspf struct {
 	// OSPF Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Bgp GetBgpRouteMapRedistributionOspfBgp `pulumi:"bgp"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Rib GetBgpRouteMapRedistributionOspfRib `pulumi:"rib"`
 }
@@ -10861,9 +11408,9 @@ type GetBgpRouteMapRedistributionOspfInput interface {
 
 type GetBgpRouteMapRedistributionOspfArgs struct {
 	// OSPF Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Bgp GetBgpRouteMapRedistributionOspfBgpInput `pulumi:"bgp"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Rib GetBgpRouteMapRedistributionOspfRibInput `pulumi:"rib"`
 }
@@ -10895,12 +11442,12 @@ func (o GetBgpRouteMapRedistributionOspfOutput) ToGetBgpRouteMapRedistributionOs
 }
 
 // OSPF Root BGP
-// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 func (o GetBgpRouteMapRedistributionOspfOutput) Bgp() GetBgpRouteMapRedistributionOspfBgpOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionOspf) GetBgpRouteMapRedistributionOspfBgp { return v.Bgp }).(GetBgpRouteMapRedistributionOspfBgpOutput)
 }
 
 // Rib
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 func (o GetBgpRouteMapRedistributionOspfOutput) Rib() GetBgpRouteMapRedistributionOspfRibOutput {
 	return o.ApplyT(func(v GetBgpRouteMapRedistributionOspf) GetBgpRouteMapRedistributionOspfRib { return v.Rib }).(GetBgpRouteMapRedistributionOspfRibOutput)
@@ -13019,9 +13566,9 @@ func (o GetBgpRouteMapRouteMapSetMetricOutput) Value() pulumi.IntOutput {
 
 type GetBgpRoutingRoutingPreference struct {
 	// Default
-	// > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 	Default GetBgpRoutingRoutingPreferenceDefault `pulumi:"default"`
 	// Hot potato routing
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 	HotPotatoRouting GetBgpRoutingRoutingPreferenceHotPotatoRouting `pulumi:"hotPotatoRouting"`
 }
@@ -13039,9 +13586,9 @@ type GetBgpRoutingRoutingPreferenceInput interface {
 
 type GetBgpRoutingRoutingPreferenceArgs struct {
 	// Default
-	// > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 	Default GetBgpRoutingRoutingPreferenceDefaultInput `pulumi:"default"`
 	// Hot potato routing
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 	HotPotatoRouting GetBgpRoutingRoutingPreferenceHotPotatoRoutingInput `pulumi:"hotPotatoRouting"`
 }
@@ -13073,12 +13620,12 @@ func (o GetBgpRoutingRoutingPreferenceOutput) ToGetBgpRoutingRoutingPreferenceOu
 }
 
 // Default
-// > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 func (o GetBgpRoutingRoutingPreferenceOutput) Default() GetBgpRoutingRoutingPreferenceDefaultOutput {
 	return o.ApplyT(func(v GetBgpRoutingRoutingPreference) GetBgpRoutingRoutingPreferenceDefault { return v.Default }).(GetBgpRoutingRoutingPreferenceDefaultOutput)
 }
 
 // Hot potato routing
+//
 // > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 func (o GetBgpRoutingRoutingPreferenceOutput) HotPotatoRouting() GetBgpRoutingRoutingPreferenceHotPotatoRoutingOutput {
 	return o.ApplyT(func(v GetBgpRoutingRoutingPreference) GetBgpRoutingRoutingPreferenceHotPotatoRouting {
@@ -13312,21 +13859,18 @@ type GetCertificateProfileListData struct {
 	// CRL receive timeout (seconds)
 	CrlReceiveTimeout string `pulumi:"crlReceiveTimeout"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// User domain
 	Domain string `pulumi:"domain"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The UUID of the certificate profile
 	Id string `pulumi:"id"`
-	// The name of the certificate profile
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout string `pulumi:"ocspReceiveTimeout"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 	// Use CRL?
@@ -13364,21 +13908,18 @@ type GetCertificateProfileListDataArgs struct {
 	// CRL receive timeout (seconds)
 	CrlReceiveTimeout pulumi.StringInput `pulumi:"crlReceiveTimeout"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// User domain
 	Domain pulumi.StringInput `pulumi:"domain"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The UUID of the certificate profile
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the certificate profile
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout pulumi.StringInput `pulumi:"ocspReceiveTimeout"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 	// Use CRL?
@@ -13478,7 +14019,6 @@ func (o GetCertificateProfileListDataOutput) CrlReceiveTimeout() pulumi.StringOu
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetCertificateProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetCertificateProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -13488,8 +14028,7 @@ func (o GetCertificateProfileListDataOutput) Domain() pulumi.StringOutput {
 	return o.ApplyT(func(v GetCertificateProfileListData) string { return v.Domain }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetCertificateProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetCertificateProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -13499,7 +14038,7 @@ func (o GetCertificateProfileListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetCertificateProfileListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the certificate profile
+// The name of the item.
 func (o GetCertificateProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetCertificateProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -13509,8 +14048,7 @@ func (o GetCertificateProfileListDataOutput) OcspReceiveTimeout() pulumi.StringO
 	return o.ApplyT(func(v GetCertificateProfileListData) string { return v.OcspReceiveTimeout }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetCertificateProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetCertificateProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -13973,15 +14511,12 @@ type GetContentIdSettingListData struct {
 	// Content id
 	ContentId GetContentIdSettingListDataContentId `pulumi:"contentId"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -14001,15 +14536,12 @@ type GetContentIdSettingListDataArgs struct {
 	// Content id
 	ContentId GetContentIdSettingListDataContentIdInput `pulumi:"contentId"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -14071,13 +14603,11 @@ func (o GetContentIdSettingListDataOutput) ContentId() GetContentIdSettingListDa
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetContentIdSettingListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetContentIdSettingListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetContentIdSettingListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetContentIdSettingListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -14087,8 +14617,7 @@ func (o GetContentIdSettingListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetContentIdSettingListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetContentIdSettingListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetContentIdSettingListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -14290,17 +14819,14 @@ type GetDecryptionExclusionListData struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Name
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -14320,17 +14846,14 @@ type GetDecryptionExclusionListDataArgs struct {
 	// Description
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// Name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -14392,13 +14915,11 @@ func (o GetDecryptionExclusionListDataOutput) Description() pulumi.StringOutput 
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetDecryptionExclusionListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionExclusionListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetDecryptionExclusionListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionExclusionListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -14408,13 +14929,12 @@ func (o GetDecryptionExclusionListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionExclusionListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Name
+// The name of the item.
 func (o GetDecryptionExclusionListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionExclusionListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetDecryptionExclusionListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionExclusionListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -14445,17 +14965,14 @@ func (o GetDecryptionExclusionListDataArrayOutput) Index(i pulumi.IntInput) GetD
 
 type GetDecryptionProfileListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	// Ssl forward proxy
 	SslForwardProxy GetDecryptionProfileListDataSslForwardProxy `pulumi:"sslForwardProxy"`
@@ -14481,17 +14998,14 @@ type GetDecryptionProfileListDataInput interface {
 
 type GetDecryptionProfileListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// Ssl forward proxy
 	SslForwardProxy GetDecryptionProfileListDataSslForwardProxyInput `pulumi:"sslForwardProxy"`
@@ -14556,13 +15070,11 @@ func (o GetDecryptionProfileListDataOutput) ToGetDecryptionProfileListDataOutput
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetDecryptionProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetDecryptionProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -14572,13 +15084,12 @@ func (o GetDecryptionProfileListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionProfileListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+// The name of the item.
 func (o GetDecryptionProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetDecryptionProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -15583,12 +16094,10 @@ type GetDecryptionRuleListData struct {
 	// The destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Is the rule disabled?
 	Disabled bool `pulumi:"disabled"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The source security zone
 	Froms []string `pulumi:"froms"`
@@ -15600,7 +16109,7 @@ type GetDecryptionRuleListData struct {
 	LogSetting string `pulumi:"logSetting"`
 	// Log successful decryption events?
 	LogSuccess bool `pulumi:"logSuccess"`
-	// The name of the decryption rule
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Negate the destination addresses?
 	NegateDestination bool `pulumi:"negateDestination"`
@@ -15614,8 +16123,7 @@ type GetDecryptionRuleListData struct {
 	RelativePosition string `pulumi:"relativePosition"`
 	// The destination services and/or service groups
 	Services []string `pulumi:"services"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	// Source hip
 	SourceHips []string `pulumi:"sourceHips"`
@@ -15657,12 +16165,10 @@ type GetDecryptionRuleListDataArgs struct {
 	// The destination addresses
 	Destinations pulumi.StringArrayInput `pulumi:"destinations"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Is the rule disabled?
 	Disabled pulumi.BoolInput `pulumi:"disabled"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The source security zone
 	Froms pulumi.StringArrayInput `pulumi:"froms"`
@@ -15674,7 +16180,7 @@ type GetDecryptionRuleListDataArgs struct {
 	LogSetting pulumi.StringInput `pulumi:"logSetting"`
 	// Log successful decryption events?
 	LogSuccess pulumi.BoolInput `pulumi:"logSuccess"`
-	// The name of the decryption rule
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Negate the destination addresses?
 	NegateDestination pulumi.BoolInput `pulumi:"negateDestination"`
@@ -15688,8 +16194,7 @@ type GetDecryptionRuleListDataArgs struct {
 	RelativePosition pulumi.StringInput `pulumi:"relativePosition"`
 	// The destination services and/or service groups
 	Services pulumi.StringArrayInput `pulumi:"services"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// Source hip
 	SourceHips pulumi.StringArrayInput `pulumi:"sourceHips"`
@@ -15785,7 +16290,6 @@ func (o GetDecryptionRuleListDataOutput) Destinations() pulumi.StringArrayOutput
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetDecryptionRuleListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionRuleListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -15795,8 +16299,7 @@ func (o GetDecryptionRuleListDataOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetDecryptionRuleListData) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetDecryptionRuleListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionRuleListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -15826,7 +16329,7 @@ func (o GetDecryptionRuleListDataOutput) LogSuccess() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetDecryptionRuleListData) bool { return v.LogSuccess }).(pulumi.BoolOutput)
 }
 
-// The name of the decryption rule
+// The name of the item.
 func (o GetDecryptionRuleListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionRuleListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -15861,8 +16364,7 @@ func (o GetDecryptionRuleListDataOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetDecryptionRuleListData) []string { return v.Services }).(pulumi.StringArrayOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetDecryptionRuleListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDecryptionRuleListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -15928,11 +16430,11 @@ func (o GetDecryptionRuleListDataArrayOutput) Index(i pulumi.IntInput) GetDecryp
 
 type GetDecryptionRuleListDataType struct {
 	// Ssl forward proxy
-	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
 	SslForwardProxy GetDecryptionRuleListDataTypeSslForwardProxy `pulumi:"sslForwardProxy"`
 	// add the certificate name for SSL inbound inspection
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-	SslInboundInspection string `pulumi:"sslInboundInspection"`
+	SslInboundInspection GetDecryptionRuleListDataTypeSslInboundInspection `pulumi:"sslInboundInspection"`
 }
 
 // GetDecryptionRuleListDataTypeInput is an input type that accepts GetDecryptionRuleListDataTypeArgs and GetDecryptionRuleListDataTypeOutput values.
@@ -15948,11 +16450,11 @@ type GetDecryptionRuleListDataTypeInput interface {
 
 type GetDecryptionRuleListDataTypeArgs struct {
 	// Ssl forward proxy
-	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
 	SslForwardProxy GetDecryptionRuleListDataTypeSslForwardProxyInput `pulumi:"sslForwardProxy"`
 	// add the certificate name for SSL inbound inspection
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-	SslInboundInspection pulumi.StringInput `pulumi:"sslInboundInspection"`
+	SslInboundInspection GetDecryptionRuleListDataTypeSslInboundInspectionInput `pulumi:"sslInboundInspection"`
 }
 
 func (GetDecryptionRuleListDataTypeArgs) ElementType() reflect.Type {
@@ -15982,7 +16484,6 @@ func (o GetDecryptionRuleListDataTypeOutput) ToGetDecryptionRuleListDataTypeOutp
 }
 
 // Ssl forward proxy
-// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
 func (o GetDecryptionRuleListDataTypeOutput) SslForwardProxy() GetDecryptionRuleListDataTypeSslForwardProxyOutput {
 	return o.ApplyT(func(v GetDecryptionRuleListDataType) GetDecryptionRuleListDataTypeSslForwardProxy {
 		return v.SslForwardProxy
@@ -15990,9 +16491,12 @@ func (o GetDecryptionRuleListDataTypeOutput) SslForwardProxy() GetDecryptionRule
 }
 
 // add the certificate name for SSL inbound inspection
+//
 // > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-func (o GetDecryptionRuleListDataTypeOutput) SslInboundInspection() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDecryptionRuleListDataType) string { return v.SslInboundInspection }).(pulumi.StringOutput)
+func (o GetDecryptionRuleListDataTypeOutput) SslInboundInspection() GetDecryptionRuleListDataTypeSslInboundInspectionOutput {
+	return o.ApplyT(func(v GetDecryptionRuleListDataType) GetDecryptionRuleListDataTypeSslInboundInspection {
+		return v.SslInboundInspection
+	}).(GetDecryptionRuleListDataTypeSslInboundInspectionOutput)
 }
 
 type GetDecryptionRuleListDataTypeSslForwardProxy struct {
@@ -16038,13 +16542,65 @@ func (o GetDecryptionRuleListDataTypeSslForwardProxyOutput) ToGetDecryptionRuleL
 	return o
 }
 
+type GetDecryptionRuleListDataTypeSslInboundInspection struct {
+	// List of certificate names for SSL inbound inspection
+	Certificates []string `pulumi:"certificates"`
+}
+
+// GetDecryptionRuleListDataTypeSslInboundInspectionInput is an input type that accepts GetDecryptionRuleListDataTypeSslInboundInspectionArgs and GetDecryptionRuleListDataTypeSslInboundInspectionOutput values.
+// You can construct a concrete instance of `GetDecryptionRuleListDataTypeSslInboundInspectionInput` via:
+//
+//	GetDecryptionRuleListDataTypeSslInboundInspectionArgs{...}
+type GetDecryptionRuleListDataTypeSslInboundInspectionInput interface {
+	pulumi.Input
+
+	ToGetDecryptionRuleListDataTypeSslInboundInspectionOutput() GetDecryptionRuleListDataTypeSslInboundInspectionOutput
+	ToGetDecryptionRuleListDataTypeSslInboundInspectionOutputWithContext(context.Context) GetDecryptionRuleListDataTypeSslInboundInspectionOutput
+}
+
+type GetDecryptionRuleListDataTypeSslInboundInspectionArgs struct {
+	// List of certificate names for SSL inbound inspection
+	Certificates pulumi.StringArrayInput `pulumi:"certificates"`
+}
+
+func (GetDecryptionRuleListDataTypeSslInboundInspectionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDecryptionRuleListDataTypeSslInboundInspection)(nil)).Elem()
+}
+
+func (i GetDecryptionRuleListDataTypeSslInboundInspectionArgs) ToGetDecryptionRuleListDataTypeSslInboundInspectionOutput() GetDecryptionRuleListDataTypeSslInboundInspectionOutput {
+	return i.ToGetDecryptionRuleListDataTypeSslInboundInspectionOutputWithContext(context.Background())
+}
+
+func (i GetDecryptionRuleListDataTypeSslInboundInspectionArgs) ToGetDecryptionRuleListDataTypeSslInboundInspectionOutputWithContext(ctx context.Context) GetDecryptionRuleListDataTypeSslInboundInspectionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDecryptionRuleListDataTypeSslInboundInspectionOutput)
+}
+
+type GetDecryptionRuleListDataTypeSslInboundInspectionOutput struct{ *pulumi.OutputState }
+
+func (GetDecryptionRuleListDataTypeSslInboundInspectionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDecryptionRuleListDataTypeSslInboundInspection)(nil)).Elem()
+}
+
+func (o GetDecryptionRuleListDataTypeSslInboundInspectionOutput) ToGetDecryptionRuleListDataTypeSslInboundInspectionOutput() GetDecryptionRuleListDataTypeSslInboundInspectionOutput {
+	return o
+}
+
+func (o GetDecryptionRuleListDataTypeSslInboundInspectionOutput) ToGetDecryptionRuleListDataTypeSslInboundInspectionOutputWithContext(ctx context.Context) GetDecryptionRuleListDataTypeSslInboundInspectionOutput {
+	return o
+}
+
+// List of certificate names for SSL inbound inspection
+func (o GetDecryptionRuleListDataTypeSslInboundInspectionOutput) Certificates() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDecryptionRuleListDataTypeSslInboundInspection) []string { return v.Certificates }).(pulumi.StringArrayOutput)
+}
+
 type GetDecryptionRuleType struct {
 	// Ssl forward proxy
-	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
 	SslForwardProxy GetDecryptionRuleTypeSslForwardProxy `pulumi:"sslForwardProxy"`
 	// add the certificate name for SSL inbound inspection
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-	SslInboundInspection string `pulumi:"sslInboundInspection"`
+	SslInboundInspection GetDecryptionRuleTypeSslInboundInspection `pulumi:"sslInboundInspection"`
 }
 
 // GetDecryptionRuleTypeInput is an input type that accepts GetDecryptionRuleTypeArgs and GetDecryptionRuleTypeOutput values.
@@ -16060,11 +16616,11 @@ type GetDecryptionRuleTypeInput interface {
 
 type GetDecryptionRuleTypeArgs struct {
 	// Ssl forward proxy
-	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
 	SslForwardProxy GetDecryptionRuleTypeSslForwardProxyInput `pulumi:"sslForwardProxy"`
 	// add the certificate name for SSL inbound inspection
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-	SslInboundInspection pulumi.StringInput `pulumi:"sslInboundInspection"`
+	SslInboundInspection GetDecryptionRuleTypeSslInboundInspectionInput `pulumi:"sslInboundInspection"`
 }
 
 func (GetDecryptionRuleTypeArgs) ElementType() reflect.Type {
@@ -16094,15 +16650,15 @@ func (o GetDecryptionRuleTypeOutput) ToGetDecryptionRuleTypeOutputWithContext(ct
 }
 
 // Ssl forward proxy
-// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
 func (o GetDecryptionRuleTypeOutput) SslForwardProxy() GetDecryptionRuleTypeSslForwardProxyOutput {
 	return o.ApplyT(func(v GetDecryptionRuleType) GetDecryptionRuleTypeSslForwardProxy { return v.SslForwardProxy }).(GetDecryptionRuleTypeSslForwardProxyOutput)
 }
 
 // add the certificate name for SSL inbound inspection
+//
 // > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-func (o GetDecryptionRuleTypeOutput) SslInboundInspection() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDecryptionRuleType) string { return v.SslInboundInspection }).(pulumi.StringOutput)
+func (o GetDecryptionRuleTypeOutput) SslInboundInspection() GetDecryptionRuleTypeSslInboundInspectionOutput {
+	return o.ApplyT(func(v GetDecryptionRuleType) GetDecryptionRuleTypeSslInboundInspection { return v.SslInboundInspection }).(GetDecryptionRuleTypeSslInboundInspectionOutput)
 }
 
 type GetDecryptionRuleTypeSslForwardProxy struct {
@@ -16148,19 +16704,68 @@ func (o GetDecryptionRuleTypeSslForwardProxyOutput) ToGetDecryptionRuleTypeSslFo
 	return o
 }
 
+type GetDecryptionRuleTypeSslInboundInspection struct {
+	// List of certificate names for SSL inbound inspection
+	Certificates []string `pulumi:"certificates"`
+}
+
+// GetDecryptionRuleTypeSslInboundInspectionInput is an input type that accepts GetDecryptionRuleTypeSslInboundInspectionArgs and GetDecryptionRuleTypeSslInboundInspectionOutput values.
+// You can construct a concrete instance of `GetDecryptionRuleTypeSslInboundInspectionInput` via:
+//
+//	GetDecryptionRuleTypeSslInboundInspectionArgs{...}
+type GetDecryptionRuleTypeSslInboundInspectionInput interface {
+	pulumi.Input
+
+	ToGetDecryptionRuleTypeSslInboundInspectionOutput() GetDecryptionRuleTypeSslInboundInspectionOutput
+	ToGetDecryptionRuleTypeSslInboundInspectionOutputWithContext(context.Context) GetDecryptionRuleTypeSslInboundInspectionOutput
+}
+
+type GetDecryptionRuleTypeSslInboundInspectionArgs struct {
+	// List of certificate names for SSL inbound inspection
+	Certificates pulumi.StringArrayInput `pulumi:"certificates"`
+}
+
+func (GetDecryptionRuleTypeSslInboundInspectionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDecryptionRuleTypeSslInboundInspection)(nil)).Elem()
+}
+
+func (i GetDecryptionRuleTypeSslInboundInspectionArgs) ToGetDecryptionRuleTypeSslInboundInspectionOutput() GetDecryptionRuleTypeSslInboundInspectionOutput {
+	return i.ToGetDecryptionRuleTypeSslInboundInspectionOutputWithContext(context.Background())
+}
+
+func (i GetDecryptionRuleTypeSslInboundInspectionArgs) ToGetDecryptionRuleTypeSslInboundInspectionOutputWithContext(ctx context.Context) GetDecryptionRuleTypeSslInboundInspectionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDecryptionRuleTypeSslInboundInspectionOutput)
+}
+
+type GetDecryptionRuleTypeSslInboundInspectionOutput struct{ *pulumi.OutputState }
+
+func (GetDecryptionRuleTypeSslInboundInspectionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDecryptionRuleTypeSslInboundInspection)(nil)).Elem()
+}
+
+func (o GetDecryptionRuleTypeSslInboundInspectionOutput) ToGetDecryptionRuleTypeSslInboundInspectionOutput() GetDecryptionRuleTypeSslInboundInspectionOutput {
+	return o
+}
+
+func (o GetDecryptionRuleTypeSslInboundInspectionOutput) ToGetDecryptionRuleTypeSslInboundInspectionOutputWithContext(ctx context.Context) GetDecryptionRuleTypeSslInboundInspectionOutput {
+	return o
+}
+
+// List of certificate names for SSL inbound inspection
+func (o GetDecryptionRuleTypeSslInboundInspectionOutput) Certificates() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDecryptionRuleTypeSslInboundInspection) []string { return v.Certificates }).(pulumi.StringArrayOutput)
+}
+
 type GetDeviceRedistributionCollectorListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Redistribution collector
 	RedistributionCollector GetDeviceRedistributionCollectorListDataRedistributionCollector `pulumi:"redistributionCollector"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -16178,17 +16783,14 @@ type GetDeviceRedistributionCollectorListDataInput interface {
 
 type GetDeviceRedistributionCollectorListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Redistribution collector
 	RedistributionCollector GetDeviceRedistributionCollectorListDataRedistributionCollectorInput `pulumi:"redistributionCollector"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -16245,13 +16847,11 @@ func (o GetDeviceRedistributionCollectorListDataOutput) ToGetDeviceRedistributio
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetDeviceRedistributionCollectorListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDeviceRedistributionCollectorListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetDeviceRedistributionCollectorListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDeviceRedistributionCollectorListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -16268,8 +16868,7 @@ func (o GetDeviceRedistributionCollectorListDataOutput) RedistributionCollector(
 	}).(GetDeviceRedistributionCollectorListDataRedistributionCollectorOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetDeviceRedistributionCollectorListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDeviceRedistributionCollectorListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -16404,23 +17003,22 @@ func (o GetDeviceRedistributionCollectorRedistributionCollectorOutput) Interface
 
 type GetDhcpInterfaceListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Interface name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Relay
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Relay GetDhcpInterfaceListDataRelay `pulumi:"relay"`
 	// Server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Server GetDhcpInterfaceListDataServer `pulumi:"server"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -16438,23 +17036,22 @@ type GetDhcpInterfaceListDataInput interface {
 
 type GetDhcpInterfaceListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// Interface name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Relay
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Relay GetDhcpInterfaceListDataRelayInput `pulumi:"relay"`
 	// Server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Server GetDhcpInterfaceListDataServerInput `pulumi:"server"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -16511,13 +17108,11 @@ func (o GetDhcpInterfaceListDataOutput) ToGetDhcpInterfaceListDataOutputWithCont
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetDhcpInterfaceListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDhcpInterfaceListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetDhcpInterfaceListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDhcpInterfaceListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -16527,25 +17122,26 @@ func (o GetDhcpInterfaceListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDhcpInterfaceListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Interface name
+// The name of the item.
 func (o GetDhcpInterfaceListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDhcpInterfaceListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
 // Relay
+//
 // > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 func (o GetDhcpInterfaceListDataOutput) Relay() GetDhcpInterfaceListDataRelayOutput {
 	return o.ApplyT(func(v GetDhcpInterfaceListData) GetDhcpInterfaceListDataRelay { return v.Relay }).(GetDhcpInterfaceListDataRelayOutput)
 }
 
 // Server
+//
 // > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 func (o GetDhcpInterfaceListDataOutput) Server() GetDhcpInterfaceListDataServerOutput {
 	return o.ApplyT(func(v GetDhcpInterfaceListData) GetDhcpInterfaceListDataServer { return v.Server }).(GetDhcpInterfaceListDataServerOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetDhcpInterfaceListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDhcpInterfaceListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -17045,9 +17641,9 @@ func (o GetDhcpInterfaceListDataServerOptionInheritanceOutput) Source() pulumi.S
 
 type GetDhcpInterfaceListDataServerOptionLease struct {
 	// DHCP lease timeout (minutes)
-	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Timeout int `pulumi:"timeout"`
 	// Unlimited
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Unlimited GetDhcpInterfaceListDataServerOptionLeaseUnlimited `pulumi:"unlimited"`
 }
@@ -17065,9 +17661,9 @@ type GetDhcpInterfaceListDataServerOptionLeaseInput interface {
 
 type GetDhcpInterfaceListDataServerOptionLeaseArgs struct {
 	// DHCP lease timeout (minutes)
-	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Timeout pulumi.IntInput `pulumi:"timeout"`
 	// Unlimited
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Unlimited GetDhcpInterfaceListDataServerOptionLeaseUnlimitedInput `pulumi:"unlimited"`
 }
@@ -17099,12 +17695,12 @@ func (o GetDhcpInterfaceListDataServerOptionLeaseOutput) ToGetDhcpInterfaceListD
 }
 
 // DHCP lease timeout (minutes)
-// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 func (o GetDhcpInterfaceListDataServerOptionLeaseOutput) Timeout() pulumi.IntOutput {
 	return o.ApplyT(func(v GetDhcpInterfaceListDataServerOptionLease) int { return v.Timeout }).(pulumi.IntOutput)
 }
 
 // Unlimited
+//
 // > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 func (o GetDhcpInterfaceListDataServerOptionLeaseOutput) Unlimited() GetDhcpInterfaceListDataServerOptionLeaseUnlimitedOutput {
 	return o.ApplyT(func(v GetDhcpInterfaceListDataServerOptionLease) GetDhcpInterfaceListDataServerOptionLeaseUnlimited {
@@ -18062,9 +18658,9 @@ func (o GetDhcpInterfaceServerOptionInheritanceOutput) Source() pulumi.StringOut
 
 type GetDhcpInterfaceServerOptionLease struct {
 	// DHCP lease timeout (minutes)
-	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Timeout int `pulumi:"timeout"`
 	// Unlimited
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Unlimited GetDhcpInterfaceServerOptionLeaseUnlimited `pulumi:"unlimited"`
 }
@@ -18082,9 +18678,9 @@ type GetDhcpInterfaceServerOptionLeaseInput interface {
 
 type GetDhcpInterfaceServerOptionLeaseArgs struct {
 	// DHCP lease timeout (minutes)
-	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Timeout pulumi.IntInput `pulumi:"timeout"`
 	// Unlimited
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Unlimited GetDhcpInterfaceServerOptionLeaseUnlimitedInput `pulumi:"unlimited"`
 }
@@ -18116,12 +18712,12 @@ func (o GetDhcpInterfaceServerOptionLeaseOutput) ToGetDhcpInterfaceServerOptionL
 }
 
 // DHCP lease timeout (minutes)
-// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 func (o GetDhcpInterfaceServerOptionLeaseOutput) Timeout() pulumi.IntOutput {
 	return o.ApplyT(func(v GetDhcpInterfaceServerOptionLease) int { return v.Timeout }).(pulumi.IntOutput)
 }
 
 // Unlimited
+//
 // > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 func (o GetDhcpInterfaceServerOptionLeaseOutput) Unlimited() GetDhcpInterfaceServerOptionLeaseUnlimitedOutput {
 	return o.ApplyT(func(v GetDhcpInterfaceServerOptionLease) GetDhcpInterfaceServerOptionLeaseUnlimited {
@@ -19004,23 +19600,20 @@ type GetDnsProxyListData struct {
 	// Default
 	Default GetDnsProxyListDataDefault `pulumi:"default"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// DNS proxy rules
 	DomainServers []GetDnsProxyListDataDomainServer `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled bool `pulumi:"enabled"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Interfaces on which to enable DNS proxy service
 	Interfaces []string `pulumi:"interfaces"`
-	// DNS proxy name
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	// Static entries
 	StaticEntries []GetDnsProxyListDataStaticEntry `pulumi:"staticEntries"`
@@ -19048,23 +19641,20 @@ type GetDnsProxyListDataArgs struct {
 	// Default
 	Default GetDnsProxyListDataDefaultInput `pulumi:"default"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// DNS proxy rules
 	DomainServers GetDnsProxyListDataDomainServerArrayInput `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled pulumi.BoolInput `pulumi:"enabled"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Interfaces on which to enable DNS proxy service
 	Interfaces pulumi.StringArrayInput `pulumi:"interfaces"`
-	// DNS proxy name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// Static entries
 	StaticEntries GetDnsProxyListDataStaticEntryArrayInput `pulumi:"staticEntries"`
@@ -19137,7 +19727,6 @@ func (o GetDnsProxyListDataOutput) Default() GetDnsProxyListDataDefaultOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetDnsProxyListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDnsProxyListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -19152,8 +19741,7 @@ func (o GetDnsProxyListDataOutput) Enabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetDnsProxyListData) bool { return v.Enabled }).(pulumi.BoolOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetDnsProxyListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDnsProxyListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -19168,13 +19756,12 @@ func (o GetDnsProxyListDataOutput) Interfaces() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetDnsProxyListData) []string { return v.Interfaces }).(pulumi.StringArrayOutput)
 }
 
-// DNS proxy name
+// The name of the item.
 func (o GetDnsProxyListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDnsProxyListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetDnsProxyListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDnsProxyListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -20510,15 +21097,17 @@ func (o GetDnsSecurityProfileBotnetDomainsListArrayOutput) Index(i pulumi.IntInp
 
 type GetDnsSecurityProfileBotnetDomainsListAction struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Alert GetDnsSecurityProfileBotnetDomainsListActionAlert `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Allow GetDnsSecurityProfileBotnetDomainsListActionAllow `pulumi:"allow"`
 	// Block
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Block GetDnsSecurityProfileBotnetDomainsListActionBlock `pulumi:"block"`
 	// Sinkhole
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Sinkhole GetDnsSecurityProfileBotnetDomainsListActionSinkhole `pulumi:"sinkhole"`
 }
@@ -20536,15 +21125,17 @@ type GetDnsSecurityProfileBotnetDomainsListActionInput interface {
 
 type GetDnsSecurityProfileBotnetDomainsListActionArgs struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Alert GetDnsSecurityProfileBotnetDomainsListActionAlertInput `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Allow GetDnsSecurityProfileBotnetDomainsListActionAllowInput `pulumi:"allow"`
 	// Block
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Block GetDnsSecurityProfileBotnetDomainsListActionBlockInput `pulumi:"block"`
 	// Sinkhole
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Sinkhole GetDnsSecurityProfileBotnetDomainsListActionSinkholeInput `pulumi:"sinkhole"`
 }
@@ -20576,7 +21167,6 @@ func (o GetDnsSecurityProfileBotnetDomainsListActionOutput) ToGetDnsSecurityProf
 }
 
 // Alert
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o GetDnsSecurityProfileBotnetDomainsListActionOutput) Alert() GetDnsSecurityProfileBotnetDomainsListActionAlertOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileBotnetDomainsListAction) GetDnsSecurityProfileBotnetDomainsListActionAlert {
 		return v.Alert
@@ -20584,6 +21174,7 @@ func (o GetDnsSecurityProfileBotnetDomainsListActionOutput) Alert() GetDnsSecuri
 }
 
 // Allow
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o GetDnsSecurityProfileBotnetDomainsListActionOutput) Allow() GetDnsSecurityProfileBotnetDomainsListActionAllowOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileBotnetDomainsListAction) GetDnsSecurityProfileBotnetDomainsListActionAllow {
@@ -20592,6 +21183,7 @@ func (o GetDnsSecurityProfileBotnetDomainsListActionOutput) Allow() GetDnsSecuri
 }
 
 // Block
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o GetDnsSecurityProfileBotnetDomainsListActionOutput) Block() GetDnsSecurityProfileBotnetDomainsListActionBlockOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileBotnetDomainsListAction) GetDnsSecurityProfileBotnetDomainsListActionBlock {
@@ -20600,6 +21192,7 @@ func (o GetDnsSecurityProfileBotnetDomainsListActionOutput) Block() GetDnsSecuri
 }
 
 // Sinkhole
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o GetDnsSecurityProfileBotnetDomainsListActionOutput) Sinkhole() GetDnsSecurityProfileBotnetDomainsListActionSinkholeOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileBotnetDomainsListAction) GetDnsSecurityProfileBotnetDomainsListActionSinkhole {
@@ -20952,17 +21545,14 @@ type GetDnsSecurityProfileListData struct {
 	// The description of the DNS security profile
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The UUID of the DNS security profile
 	Id string `pulumi:"id"`
-	// The name of the DNS security profile
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -20984,17 +21574,14 @@ type GetDnsSecurityProfileListDataArgs struct {
 	// The description of the DNS security profile
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The UUID of the DNS security profile
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the DNS security profile
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -21063,13 +21650,11 @@ func (o GetDnsSecurityProfileListDataOutput) Description() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetDnsSecurityProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetDnsSecurityProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -21079,13 +21664,12 @@ func (o GetDnsSecurityProfileListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the DNS security profile
+// The name of the item.
 func (o GetDnsSecurityProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetDnsSecurityProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -21444,15 +22028,17 @@ func (o GetDnsSecurityProfileListDataBotnetDomainsListArrayOutput) Index(i pulum
 
 type GetDnsSecurityProfileListDataBotnetDomainsListAction struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Alert GetDnsSecurityProfileListDataBotnetDomainsListActionAlert `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Allow GetDnsSecurityProfileListDataBotnetDomainsListActionAllow `pulumi:"allow"`
 	// Block
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Block GetDnsSecurityProfileListDataBotnetDomainsListActionBlock `pulumi:"block"`
 	// Sinkhole
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Sinkhole GetDnsSecurityProfileListDataBotnetDomainsListActionSinkhole `pulumi:"sinkhole"`
 }
@@ -21470,15 +22056,17 @@ type GetDnsSecurityProfileListDataBotnetDomainsListActionInput interface {
 
 type GetDnsSecurityProfileListDataBotnetDomainsListActionArgs struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Alert GetDnsSecurityProfileListDataBotnetDomainsListActionAlertInput `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Allow GetDnsSecurityProfileListDataBotnetDomainsListActionAllowInput `pulumi:"allow"`
 	// Block
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Block GetDnsSecurityProfileListDataBotnetDomainsListActionBlockInput `pulumi:"block"`
 	// Sinkhole
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Sinkhole GetDnsSecurityProfileListDataBotnetDomainsListActionSinkholeInput `pulumi:"sinkhole"`
 }
@@ -21510,7 +22098,6 @@ func (o GetDnsSecurityProfileListDataBotnetDomainsListActionOutput) ToGetDnsSecu
 }
 
 // Alert
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o GetDnsSecurityProfileListDataBotnetDomainsListActionOutput) Alert() GetDnsSecurityProfileListDataBotnetDomainsListActionAlertOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileListDataBotnetDomainsListAction) GetDnsSecurityProfileListDataBotnetDomainsListActionAlert {
 		return v.Alert
@@ -21518,6 +22105,7 @@ func (o GetDnsSecurityProfileListDataBotnetDomainsListActionOutput) Alert() GetD
 }
 
 // Allow
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o GetDnsSecurityProfileListDataBotnetDomainsListActionOutput) Allow() GetDnsSecurityProfileListDataBotnetDomainsListActionAllowOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileListDataBotnetDomainsListAction) GetDnsSecurityProfileListDataBotnetDomainsListActionAllow {
@@ -21526,6 +22114,7 @@ func (o GetDnsSecurityProfileListDataBotnetDomainsListActionOutput) Allow() GetD
 }
 
 // Block
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o GetDnsSecurityProfileListDataBotnetDomainsListActionOutput) Block() GetDnsSecurityProfileListDataBotnetDomainsListActionBlockOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileListDataBotnetDomainsListAction) GetDnsSecurityProfileListDataBotnetDomainsListActionBlock {
@@ -21534,6 +22123,7 @@ func (o GetDnsSecurityProfileListDataBotnetDomainsListActionOutput) Block() GetD
 }
 
 // Sinkhole
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o GetDnsSecurityProfileListDataBotnetDomainsListActionOutput) Sinkhole() GetDnsSecurityProfileListDataBotnetDomainsListActionSinkholeOutput {
 	return o.ApplyT(func(v GetDnsSecurityProfileListDataBotnetDomainsListAction) GetDnsSecurityProfileListDataBotnetDomainsListActionSinkhole {
@@ -23082,21 +23672,18 @@ type GetDosProtectionProfileListData struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Flood
 	Flood GetDosProtectionProfileListDataFlood `pulumi:"flood"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The UUID of the DNS security profile
 	Id string `pulumi:"id"`
-	// Profile name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Resource
 	Resource GetDosProtectionProfileListDataResource `pulumi:"resource"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 	// Type
@@ -23118,21 +23705,18 @@ type GetDosProtectionProfileListDataArgs struct {
 	// Description
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Flood
 	Flood GetDosProtectionProfileListDataFloodInput `pulumi:"flood"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The UUID of the DNS security profile
 	Id pulumi.StringInput `pulumi:"id"`
-	// Profile name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Resource
 	Resource GetDosProtectionProfileListDataResourceInput `pulumi:"resource"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 	// Type
@@ -23196,7 +23780,6 @@ func (o GetDosProtectionProfileListDataOutput) Description() pulumi.StringOutput
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetDosProtectionProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDosProtectionProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -23206,8 +23789,7 @@ func (o GetDosProtectionProfileListDataOutput) Flood() GetDosProtectionProfileLi
 	return o.ApplyT(func(v GetDosProtectionProfileListData) GetDosProtectionProfileListDataFlood { return v.Flood }).(GetDosProtectionProfileListDataFloodOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetDosProtectionProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDosProtectionProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -23217,7 +23799,7 @@ func (o GetDosProtectionProfileListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDosProtectionProfileListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Profile name
+// The name of the item.
 func (o GetDosProtectionProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDosProtectionProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -23227,8 +23809,7 @@ func (o GetDosProtectionProfileListDataOutput) Resource() GetDosProtectionProfil
 	return o.ApplyT(func(v GetDosProtectionProfileListData) GetDosProtectionProfileListDataResource { return v.Resource }).(GetDosProtectionProfileListDataResourceOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetDosProtectionProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDosProtectionProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -24710,12 +25291,13 @@ func (o GetDosProtectionProfileResourceSessionsOutput) MaxConcurrentLimit() pulu
 
 type GetDosProtectionRuleAction struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Allow GetDosProtectionRuleActionAllow `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Deny GetDosProtectionRuleActionDeny `pulumi:"deny"`
 	// Protect
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Protect GetDosProtectionRuleActionProtect `pulumi:"protect"`
 }
@@ -24733,12 +25315,13 @@ type GetDosProtectionRuleActionInput interface {
 
 type GetDosProtectionRuleActionArgs struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Allow GetDosProtectionRuleActionAllowInput `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Deny GetDosProtectionRuleActionDenyInput `pulumi:"deny"`
 	// Protect
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Protect GetDosProtectionRuleActionProtectInput `pulumi:"protect"`
 }
@@ -24770,18 +25353,19 @@ func (o GetDosProtectionRuleActionOutput) ToGetDosProtectionRuleActionOutputWith
 }
 
 // Allow
-// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o GetDosProtectionRuleActionOutput) Allow() GetDosProtectionRuleActionAllowOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleAction) GetDosProtectionRuleActionAllow { return v.Allow }).(GetDosProtectionRuleActionAllowOutput)
 }
 
 // Deny
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o GetDosProtectionRuleActionOutput) Deny() GetDosProtectionRuleActionDenyOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleAction) GetDosProtectionRuleActionDeny { return v.Deny }).(GetDosProtectionRuleActionDenyOutput)
 }
 
 // Protect
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o GetDosProtectionRuleActionOutput) Protect() GetDosProtectionRuleActionProtectOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleAction) GetDosProtectionRuleActionProtect { return v.Protect }).(GetDosProtectionRuleActionProtectOutput)
@@ -24924,12 +25508,10 @@ type GetDosProtectionRuleListData struct {
 	// List of destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Rule disabled?
 	Disabled bool `pulumi:"disabled"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// List of source zones
 	Froms []string `pulumi:"froms"`
@@ -24937,7 +25519,7 @@ type GetDosProtectionRuleListData struct {
 	Id string `pulumi:"id"`
 	// Log forwarding profile name
 	LogSetting string `pulumi:"logSetting"`
-	// Rule name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Position relative to local device rules
 	Position string `pulumi:"position"`
@@ -24947,8 +25529,7 @@ type GetDosProtectionRuleListData struct {
 	Schedule string `pulumi:"schedule"`
 	// List of services
 	Services []string `pulumi:"services"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers []string `pulumi:"sourceUsers"`
@@ -24980,12 +25561,10 @@ type GetDosProtectionRuleListDataArgs struct {
 	// List of destination addresses
 	Destinations pulumi.StringArrayInput `pulumi:"destinations"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Rule disabled?
 	Disabled pulumi.BoolInput `pulumi:"disabled"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// List of source zones
 	Froms pulumi.StringArrayInput `pulumi:"froms"`
@@ -24993,7 +25572,7 @@ type GetDosProtectionRuleListDataArgs struct {
 	Id pulumi.StringInput `pulumi:"id"`
 	// Log forwarding profile name
 	LogSetting pulumi.StringInput `pulumi:"logSetting"`
-	// Rule name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Position relative to local device rules
 	Position pulumi.StringInput `pulumi:"position"`
@@ -25003,8 +25582,7 @@ type GetDosProtectionRuleListDataArgs struct {
 	Schedule pulumi.StringInput `pulumi:"schedule"`
 	// List of services
 	Services pulumi.StringArrayInput `pulumi:"services"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayInput `pulumi:"sourceUsers"`
@@ -25084,7 +25662,6 @@ func (o GetDosProtectionRuleListDataOutput) Destinations() pulumi.StringArrayOut
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetDosProtectionRuleListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -25094,8 +25671,7 @@ func (o GetDosProtectionRuleListDataOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleListData) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetDosProtectionRuleListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -25115,7 +25691,7 @@ func (o GetDosProtectionRuleListDataOutput) LogSetting() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleListData) string { return v.LogSetting }).(pulumi.StringOutput)
 }
 
-// Rule name
+// The name of the item.
 func (o GetDosProtectionRuleListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -25140,8 +25716,7 @@ func (o GetDosProtectionRuleListDataOutput) Services() pulumi.StringArrayOutput 
 	return o.ApplyT(func(v GetDosProtectionRuleListData) []string { return v.Services }).(pulumi.StringArrayOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetDosProtectionRuleListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -25192,12 +25767,13 @@ func (o GetDosProtectionRuleListDataArrayOutput) Index(i pulumi.IntInput) GetDos
 
 type GetDosProtectionRuleListDataAction struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Allow GetDosProtectionRuleListDataActionAllow `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Deny GetDosProtectionRuleListDataActionDeny `pulumi:"deny"`
 	// Protect
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Protect GetDosProtectionRuleListDataActionProtect `pulumi:"protect"`
 }
@@ -25215,12 +25791,13 @@ type GetDosProtectionRuleListDataActionInput interface {
 
 type GetDosProtectionRuleListDataActionArgs struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Allow GetDosProtectionRuleListDataActionAllowInput `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Deny GetDosProtectionRuleListDataActionDenyInput `pulumi:"deny"`
 	// Protect
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Protect GetDosProtectionRuleListDataActionProtectInput `pulumi:"protect"`
 }
@@ -25252,18 +25829,19 @@ func (o GetDosProtectionRuleListDataActionOutput) ToGetDosProtectionRuleListData
 }
 
 // Allow
-// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o GetDosProtectionRuleListDataActionOutput) Allow() GetDosProtectionRuleListDataActionAllowOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleListDataAction) GetDosProtectionRuleListDataActionAllow { return v.Allow }).(GetDosProtectionRuleListDataActionAllowOutput)
 }
 
 // Deny
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o GetDosProtectionRuleListDataActionOutput) Deny() GetDosProtectionRuleListDataActionDenyOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleListDataAction) GetDosProtectionRuleListDataActionDeny { return v.Deny }).(GetDosProtectionRuleListDataActionDenyOutput)
 }
 
 // Protect
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o GetDosProtectionRuleListDataActionOutput) Protect() GetDosProtectionRuleListDataActionProtectOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleListDataAction) GetDosProtectionRuleListDataActionProtect { return v.Protect }).(GetDosProtectionRuleListDataActionProtectOutput)
@@ -25400,9 +25978,9 @@ func (o GetDosProtectionRuleListDataActionProtectOutput) ToGetDosProtectionRuleL
 
 type GetDosProtectionRuleListDataProtection struct {
 	// Aggregate
-	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Aggregate GetDosProtectionRuleListDataProtectionAggregate `pulumi:"aggregate"`
 	// Classified
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Classified GetDosProtectionRuleListDataProtectionClassified `pulumi:"classified"`
 }
@@ -25420,9 +25998,9 @@ type GetDosProtectionRuleListDataProtectionInput interface {
 
 type GetDosProtectionRuleListDataProtectionArgs struct {
 	// Aggregate
-	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Aggregate GetDosProtectionRuleListDataProtectionAggregateInput `pulumi:"aggregate"`
 	// Classified
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Classified GetDosProtectionRuleListDataProtectionClassifiedInput `pulumi:"classified"`
 }
@@ -25454,7 +26032,6 @@ func (o GetDosProtectionRuleListDataProtectionOutput) ToGetDosProtectionRuleList
 }
 
 // Aggregate
-// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 func (o GetDosProtectionRuleListDataProtectionOutput) Aggregate() GetDosProtectionRuleListDataProtectionAggregateOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleListDataProtection) GetDosProtectionRuleListDataProtectionAggregate {
 		return v.Aggregate
@@ -25462,6 +26039,7 @@ func (o GetDosProtectionRuleListDataProtectionOutput) Aggregate() GetDosProtecti
 }
 
 // Classified
+//
 // > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 func (o GetDosProtectionRuleListDataProtectionOutput) Classified() GetDosProtectionRuleListDataProtectionClassifiedOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleListDataProtection) GetDosProtectionRuleListDataProtectionClassified {
@@ -25640,9 +26218,9 @@ func (o GetDosProtectionRuleListDataProtectionClassifiedClassificationCriteriaOu
 
 type GetDosProtectionRuleProtection struct {
 	// Aggregate
-	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Aggregate GetDosProtectionRuleProtectionAggregate `pulumi:"aggregate"`
 	// Classified
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Classified GetDosProtectionRuleProtectionClassified `pulumi:"classified"`
 }
@@ -25660,9 +26238,9 @@ type GetDosProtectionRuleProtectionInput interface {
 
 type GetDosProtectionRuleProtectionArgs struct {
 	// Aggregate
-	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Aggregate GetDosProtectionRuleProtectionAggregateInput `pulumi:"aggregate"`
 	// Classified
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Classified GetDosProtectionRuleProtectionClassifiedInput `pulumi:"classified"`
 }
@@ -25694,12 +26272,12 @@ func (o GetDosProtectionRuleProtectionOutput) ToGetDosProtectionRuleProtectionOu
 }
 
 // Aggregate
-// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 func (o GetDosProtectionRuleProtectionOutput) Aggregate() GetDosProtectionRuleProtectionAggregateOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleProtection) GetDosProtectionRuleProtectionAggregate { return v.Aggregate }).(GetDosProtectionRuleProtectionAggregateOutput)
 }
 
 // Classified
+//
 // > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 func (o GetDosProtectionRuleProtectionOutput) Classified() GetDosProtectionRuleProtectionClassifiedOutput {
 	return o.ApplyT(func(v GetDosProtectionRuleProtection) GetDosProtectionRuleProtectionClassified { return v.Classified }).(GetDosProtectionRuleProtectionClassifiedOutput)
@@ -25876,19 +26454,16 @@ type GetDynamicUserGroupListData struct {
 	// The description of the dynamic address group
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// The tag-based filter for the dynamic user group
 	Filter string `pulumi:"filter"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The UUID of the dynamic user group
 	Id string `pulumi:"id"`
-	// The name of the dynamic address group
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	// Tags associated with the dynamic user group
 	Tags []string `pulumi:"tags"`
@@ -25910,19 +26485,16 @@ type GetDynamicUserGroupListDataArgs struct {
 	// The description of the dynamic address group
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// The tag-based filter for the dynamic user group
 	Filter pulumi.StringInput `pulumi:"filter"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The UUID of the dynamic user group
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the dynamic address group
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// Tags associated with the dynamic user group
 	Tags pulumi.StringArrayInput `pulumi:"tags"`
@@ -25986,7 +26558,6 @@ func (o GetDynamicUserGroupListDataOutput) Description() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetDynamicUserGroupListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -25996,8 +26567,7 @@ func (o GetDynamicUserGroupListDataOutput) Filter() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListData) string { return v.Filter }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetDynamicUserGroupListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -26007,13 +26577,12 @@ func (o GetDynamicUserGroupListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the dynamic address group
+// The name of the item.
 func (o GetDynamicUserGroupListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetDynamicUserGroupListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -26166,16 +26735,17 @@ type GetEthernetInterfaceLayer3 struct {
 	// Dynamic DNS configuration specific to the Ethernet Interfaces.
 	DdnsConfig GetEthernetInterfaceLayer3DdnsConfig `pulumi:"ddnsConfig"`
 	// Ethernet Interfaces DHCP Client Object
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	DhcpClient GetEthernetInterfaceLayer3DhcpClient `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
 	// Ethernet Interface IP addresses
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Ips []GetEthernetInterfaceLayer3Ip `pulumi:"ips"`
 	// MTU
 	Mtu int `pulumi:"mtu"`
 	// Pppoe
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Pppoe GetEthernetInterfaceLayer3Pppoe `pulumi:"pppoe"`
 }
@@ -26197,16 +26767,17 @@ type GetEthernetInterfaceLayer3Args struct {
 	// Dynamic DNS configuration specific to the Ethernet Interfaces.
 	DdnsConfig GetEthernetInterfaceLayer3DdnsConfigInput `pulumi:"ddnsConfig"`
 	// Ethernet Interfaces DHCP Client Object
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	DhcpClient GetEthernetInterfaceLayer3DhcpClientInput `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringInput `pulumi:"interfaceManagementProfile"`
 	// Ethernet Interface IP addresses
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Ips GetEthernetInterfaceLayer3IpArrayInput `pulumi:"ips"`
 	// MTU
 	Mtu pulumi.IntInput `pulumi:"mtu"`
 	// Pppoe
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Pppoe GetEthernetInterfaceLayer3PppoeInput `pulumi:"pppoe"`
 }
@@ -26248,7 +26819,6 @@ func (o GetEthernetInterfaceLayer3Output) DdnsConfig() GetEthernetInterfaceLayer
 }
 
 // Ethernet Interfaces DHCP Client Object
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o GetEthernetInterfaceLayer3Output) DhcpClient() GetEthernetInterfaceLayer3DhcpClientOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceLayer3) GetEthernetInterfaceLayer3DhcpClient { return v.DhcpClient }).(GetEthernetInterfaceLayer3DhcpClientOutput)
 }
@@ -26259,6 +26829,7 @@ func (o GetEthernetInterfaceLayer3Output) InterfaceManagementProfile() pulumi.St
 }
 
 // Ethernet Interface IP addresses
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o GetEthernetInterfaceLayer3Output) Ips() GetEthernetInterfaceLayer3IpArrayOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceLayer3) []GetEthernetInterfaceLayer3Ip { return v.Ips }).(GetEthernetInterfaceLayer3IpArrayOutput)
@@ -26270,6 +26841,7 @@ func (o GetEthernetInterfaceLayer3Output) Mtu() pulumi.IntOutput {
 }
 
 // Pppoe
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o GetEthernetInterfaceLayer3Output) Pppoe() GetEthernetInterfaceLayer3PppoeOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceLayer3) GetEthernetInterfaceLayer3Pppoe { return v.Pppoe }).(GetEthernetInterfaceLayer3PppoeOutput)
@@ -26958,6 +27530,7 @@ func (o GetEthernetInterfaceLayer3PppoeStaticAddressOutput) Ip() pulumi.StringOu
 
 type GetEthernetInterfaceListData struct {
 	// Aggregate group
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	AggregateGroup string `pulumi:"aggregateGroup"`
 	// Interface description
@@ -26965,19 +27538,19 @@ type GetEthernetInterfaceListData struct {
 	// Default interface assignment
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Layer2
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 GetEthernetInterfaceListDataLayer2 `pulumi:"layer2"`
 	// Ethernet Interface Layer 3 configuration
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 GetEthernetInterfaceListDataLayer3 `pulumi:"layer3"`
 	// Link duplex
@@ -26986,14 +27559,14 @@ type GetEthernetInterfaceListData struct {
 	LinkSpeed string `pulumi:"linkSpeed"`
 	// Link state
 	LinkState string `pulumi:"linkState"`
-	// Interface name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Poe
 	Poe GetEthernetInterfaceListDataPoe `pulumi:"poe"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	// Tap
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap  GetEthernetInterfaceListDataTap `pulumi:"tap"`
 	Tfid string                          `pulumi:"tfid"`
@@ -27012,6 +27585,7 @@ type GetEthernetInterfaceListDataInput interface {
 
 type GetEthernetInterfaceListDataArgs struct {
 	// Aggregate group
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	AggregateGroup pulumi.StringInput `pulumi:"aggregateGroup"`
 	// Interface description
@@ -27019,19 +27593,19 @@ type GetEthernetInterfaceListDataArgs struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringInput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Layer2
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 GetEthernetInterfaceListDataLayer2Input `pulumi:"layer2"`
 	// Ethernet Interface Layer 3 configuration
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 GetEthernetInterfaceListDataLayer3Input `pulumi:"layer3"`
 	// Link duplex
@@ -27040,14 +27614,14 @@ type GetEthernetInterfaceListDataArgs struct {
 	LinkSpeed pulumi.StringInput `pulumi:"linkSpeed"`
 	// Link state
 	LinkState pulumi.StringInput `pulumi:"linkState"`
-	// Interface name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Poe
 	Poe GetEthernetInterfaceListDataPoeInput `pulumi:"poe"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// Tap
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap  GetEthernetInterfaceListDataTapInput `pulumi:"tap"`
 	Tfid pulumi.StringInput                   `pulumi:"tfid"`
@@ -27105,6 +27679,7 @@ func (o GetEthernetInterfaceListDataOutput) ToGetEthernetInterfaceListDataOutput
 }
 
 // Aggregate group
+//
 // > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 func (o GetEthernetInterfaceListDataOutput) AggregateGroup() pulumi.StringOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListData) string { return v.AggregateGroup }).(pulumi.StringOutput)
@@ -27121,7 +27696,6 @@ func (o GetEthernetInterfaceListDataOutput) DefaultValue() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetEthernetInterfaceListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -27131,8 +27705,7 @@ func (o GetEthernetInterfaceListDataOutput) EncryptedValues() pulumi.StringMapOu
 	return o.ApplyT(func(v GetEthernetInterfaceListData) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetEthernetInterfaceListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -27143,12 +27716,14 @@ func (o GetEthernetInterfaceListDataOutput) Id() pulumi.StringOutput {
 }
 
 // Layer2
+//
 // > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 func (o GetEthernetInterfaceListDataOutput) Layer2() GetEthernetInterfaceListDataLayer2Output {
 	return o.ApplyT(func(v GetEthernetInterfaceListData) GetEthernetInterfaceListDataLayer2 { return v.Layer2 }).(GetEthernetInterfaceListDataLayer2Output)
 }
 
 // Ethernet Interface Layer 3 configuration
+//
 // > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 func (o GetEthernetInterfaceListDataOutput) Layer3() GetEthernetInterfaceListDataLayer3Output {
 	return o.ApplyT(func(v GetEthernetInterfaceListData) GetEthernetInterfaceListDataLayer3 { return v.Layer3 }).(GetEthernetInterfaceListDataLayer3Output)
@@ -27169,7 +27744,7 @@ func (o GetEthernetInterfaceListDataOutput) LinkState() pulumi.StringOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListData) string { return v.LinkState }).(pulumi.StringOutput)
 }
 
-// Interface name
+// The name of the item.
 func (o GetEthernetInterfaceListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -27179,13 +27754,13 @@ func (o GetEthernetInterfaceListDataOutput) Poe() GetEthernetInterfaceListDataPo
 	return o.ApplyT(func(v GetEthernetInterfaceListData) GetEthernetInterfaceListDataPoe { return v.Poe }).(GetEthernetInterfaceListDataPoeOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetEthernetInterfaceListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 // Tap
+//
 // > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 func (o GetEthernetInterfaceListDataOutput) Tap() GetEthernetInterfaceListDataTapOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListData) GetEthernetInterfaceListDataTap { return v.Tap }).(GetEthernetInterfaceListDataTapOutput)
@@ -27334,16 +27909,17 @@ type GetEthernetInterfaceListDataLayer3 struct {
 	// Dynamic DNS configuration specific to the Ethernet Interfaces.
 	DdnsConfig GetEthernetInterfaceListDataLayer3DdnsConfig `pulumi:"ddnsConfig"`
 	// Ethernet Interfaces DHCP Client Object
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	DhcpClient GetEthernetInterfaceListDataLayer3DhcpClient `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
 	// Ethernet Interface IP addresses
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Ips []GetEthernetInterfaceListDataLayer3Ip `pulumi:"ips"`
 	// MTU
 	Mtu int `pulumi:"mtu"`
 	// Pppoe
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Pppoe GetEthernetInterfaceListDataLayer3Pppoe `pulumi:"pppoe"`
 }
@@ -27365,16 +27941,17 @@ type GetEthernetInterfaceListDataLayer3Args struct {
 	// Dynamic DNS configuration specific to the Ethernet Interfaces.
 	DdnsConfig GetEthernetInterfaceListDataLayer3DdnsConfigInput `pulumi:"ddnsConfig"`
 	// Ethernet Interfaces DHCP Client Object
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	DhcpClient GetEthernetInterfaceListDataLayer3DhcpClientInput `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringInput `pulumi:"interfaceManagementProfile"`
 	// Ethernet Interface IP addresses
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Ips GetEthernetInterfaceListDataLayer3IpArrayInput `pulumi:"ips"`
 	// MTU
 	Mtu pulumi.IntInput `pulumi:"mtu"`
 	// Pppoe
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Pppoe GetEthernetInterfaceListDataLayer3PppoeInput `pulumi:"pppoe"`
 }
@@ -27418,7 +27995,6 @@ func (o GetEthernetInterfaceListDataLayer3Output) DdnsConfig() GetEthernetInterf
 }
 
 // Ethernet Interfaces DHCP Client Object
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o GetEthernetInterfaceListDataLayer3Output) DhcpClient() GetEthernetInterfaceListDataLayer3DhcpClientOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListDataLayer3) GetEthernetInterfaceListDataLayer3DhcpClient {
 		return v.DhcpClient
@@ -27431,6 +28007,7 @@ func (o GetEthernetInterfaceListDataLayer3Output) InterfaceManagementProfile() p
 }
 
 // Ethernet Interface IP addresses
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o GetEthernetInterfaceListDataLayer3Output) Ips() GetEthernetInterfaceListDataLayer3IpArrayOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListDataLayer3) []GetEthernetInterfaceListDataLayer3Ip { return v.Ips }).(GetEthernetInterfaceListDataLayer3IpArrayOutput)
@@ -27442,6 +28019,7 @@ func (o GetEthernetInterfaceListDataLayer3Output) Mtu() pulumi.IntOutput {
 }
 
 // Pppoe
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o GetEthernetInterfaceListDataLayer3Output) Pppoe() GetEthernetInterfaceListDataLayer3PppoeOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListDataLayer3) GetEthernetInterfaceListDataLayer3Pppoe { return v.Pppoe }).(GetEthernetInterfaceListDataLayer3PppoeOutput)
@@ -28340,19 +28918,16 @@ func (o GetEthernetInterfaceTapOutput) ToGetEthernetInterfaceTapOutputWithContex
 
 type GetExternalDynamicListListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The UUID of the external dynamic list
 	Id string `pulumi:"id"`
-	// The name of the external dynamic list
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 	// Type configuration for External Dynamic List
@@ -28372,19 +28947,16 @@ type GetExternalDynamicListListDataInput interface {
 
 type GetExternalDynamicListListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The UUID of the external dynamic list
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the external dynamic list
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 	// Type configuration for External Dynamic List
@@ -28443,7 +29015,6 @@ func (o GetExternalDynamicListListDataOutput) ToGetExternalDynamicListListDataOu
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetExternalDynamicListListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -28453,8 +29024,7 @@ func (o GetExternalDynamicListListDataOutput) EncryptedValues() pulumi.StringMap
 	return o.ApplyT(func(v GetExternalDynamicListListData) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetExternalDynamicListListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -28464,13 +29034,12 @@ func (o GetExternalDynamicListListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the external dynamic list
+// The name of the item.
 func (o GetExternalDynamicListListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetExternalDynamicListListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -28506,24 +29075,29 @@ func (o GetExternalDynamicListListDataArrayOutput) Index(i pulumi.IntInput) GetE
 
 type GetExternalDynamicListListDataType struct {
 	// Domain settings for Custom Domain type
-	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Domain GetExternalDynamicListListDataTypeDomain `pulumi:"domain"`
 	// IMEI Configuration settings
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imei GetExternalDynamicListListDataTypeImei `pulumi:"imei"`
 	// IMSI Config for Custom IMSI type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imsi GetExternalDynamicListListDataTypeImsi `pulumi:"imsi"`
 	// IP settings for Custom IP type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Ip GetExternalDynamicListListDataTypeIp `pulumi:"ip"`
 	// Predefined IP settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedIp GetExternalDynamicListListDataTypePredefinedIp `pulumi:"predefinedIp"`
 	// Predefined URL settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedUrl GetExternalDynamicListListDataTypePredefinedUrl `pulumi:"predefinedUrl"`
 	// URL settings for Custom URL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Url GetExternalDynamicListListDataTypeUrl `pulumi:"url"`
 }
@@ -28541,24 +29115,29 @@ type GetExternalDynamicListListDataTypeInput interface {
 
 type GetExternalDynamicListListDataTypeArgs struct {
 	// Domain settings for Custom Domain type
-	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Domain GetExternalDynamicListListDataTypeDomainInput `pulumi:"domain"`
 	// IMEI Configuration settings
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imei GetExternalDynamicListListDataTypeImeiInput `pulumi:"imei"`
 	// IMSI Config for Custom IMSI type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imsi GetExternalDynamicListListDataTypeImsiInput `pulumi:"imsi"`
 	// IP settings for Custom IP type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Ip GetExternalDynamicListListDataTypeIpInput `pulumi:"ip"`
 	// Predefined IP settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedIp GetExternalDynamicListListDataTypePredefinedIpInput `pulumi:"predefinedIp"`
 	// Predefined URL settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedUrl GetExternalDynamicListListDataTypePredefinedUrlInput `pulumi:"predefinedUrl"`
 	// URL settings for Custom URL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Url GetExternalDynamicListListDataTypeUrlInput `pulumi:"url"`
 }
@@ -28590,30 +29169,33 @@ func (o GetExternalDynamicListListDataTypeOutput) ToGetExternalDynamicListListDa
 }
 
 // Domain settings for Custom Domain type
-// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListListDataTypeOutput) Domain() GetExternalDynamicListListDataTypeDomainOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataType) GetExternalDynamicListListDataTypeDomain { return v.Domain }).(GetExternalDynamicListListDataTypeDomainOutput)
 }
 
 // IMEI Configuration settings
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListListDataTypeOutput) Imei() GetExternalDynamicListListDataTypeImeiOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataType) GetExternalDynamicListListDataTypeImei { return v.Imei }).(GetExternalDynamicListListDataTypeImeiOutput)
 }
 
 // IMSI Config for Custom IMSI type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListListDataTypeOutput) Imsi() GetExternalDynamicListListDataTypeImsiOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataType) GetExternalDynamicListListDataTypeImsi { return v.Imsi }).(GetExternalDynamicListListDataTypeImsiOutput)
 }
 
 // IP settings for Custom IP type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListListDataTypeOutput) Ip() GetExternalDynamicListListDataTypeIpOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataType) GetExternalDynamicListListDataTypeIp { return v.Ip }).(GetExternalDynamicListListDataTypeIpOutput)
 }
 
 // Predefined IP settings for EDL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListListDataTypeOutput) PredefinedIp() GetExternalDynamicListListDataTypePredefinedIpOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataType) GetExternalDynamicListListDataTypePredefinedIp {
@@ -28622,6 +29204,7 @@ func (o GetExternalDynamicListListDataTypeOutput) PredefinedIp() GetExternalDyna
 }
 
 // Predefined URL settings for EDL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListListDataTypeOutput) PredefinedUrl() GetExternalDynamicListListDataTypePredefinedUrlOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataType) GetExternalDynamicListListDataTypePredefinedUrl {
@@ -28630,6 +29213,7 @@ func (o GetExternalDynamicListListDataTypeOutput) PredefinedUrl() GetExternalDyn
 }
 
 // URL settings for Custom URL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListListDataTypeOutput) Url() GetExternalDynamicListListDataTypeUrlOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataType) GetExternalDynamicListListDataTypeUrl { return v.Url }).(GetExternalDynamicListListDataTypeUrlOutput)
@@ -28808,18 +29392,21 @@ func (o GetExternalDynamicListListDataTypeDomainAuthOutput) Username() pulumi.St
 
 type GetExternalDynamicListListDataTypeDomainRecurring struct {
 	// Daily settings for Domain recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListListDataTypeDomainRecurringDaily `pulumi:"daily"`
 	// Five minute settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListListDataTypeDomainRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListListDataTypeDomainRecurringHourly `pulumi:"hourly"`
 	// Monthly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListListDataTypeDomainRecurringMonthly `pulumi:"monthly"`
 	// Weekly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListListDataTypeDomainRecurringWeekly `pulumi:"weekly"`
 }
@@ -28837,18 +29424,21 @@ type GetExternalDynamicListListDataTypeDomainRecurringInput interface {
 
 type GetExternalDynamicListListDataTypeDomainRecurringArgs struct {
 	// Daily settings for Domain recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListListDataTypeDomainRecurringDailyInput `pulumi:"daily"`
 	// Five minute settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListListDataTypeDomainRecurringFiveMinuteInput `pulumi:"fiveMinute"`
 	// Hourly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListListDataTypeDomainRecurringHourlyInput `pulumi:"hourly"`
 	// Monthly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListListDataTypeDomainRecurringMonthlyInput `pulumi:"monthly"`
 	// Weekly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListListDataTypeDomainRecurringWeeklyInput `pulumi:"weekly"`
 }
@@ -28880,7 +29470,6 @@ func (o GetExternalDynamicListListDataTypeDomainRecurringOutput) ToGetExternalDy
 }
 
 // Daily settings for Domain recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeDomainRecurringOutput) Daily() GetExternalDynamicListListDataTypeDomainRecurringDailyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeDomainRecurring) GetExternalDynamicListListDataTypeDomainRecurringDaily {
 		return v.Daily
@@ -28888,6 +29477,7 @@ func (o GetExternalDynamicListListDataTypeDomainRecurringOutput) Daily() GetExte
 }
 
 // Five minute settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeDomainRecurringOutput) FiveMinute() GetExternalDynamicListListDataTypeDomainRecurringFiveMinuteOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeDomainRecurring) GetExternalDynamicListListDataTypeDomainRecurringFiveMinute {
@@ -28896,6 +29486,7 @@ func (o GetExternalDynamicListListDataTypeDomainRecurringOutput) FiveMinute() Ge
 }
 
 // Hourly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeDomainRecurringOutput) Hourly() GetExternalDynamicListListDataTypeDomainRecurringHourlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeDomainRecurring) GetExternalDynamicListListDataTypeDomainRecurringHourly {
@@ -28904,6 +29495,7 @@ func (o GetExternalDynamicListListDataTypeDomainRecurringOutput) Hourly() GetExt
 }
 
 // Monthly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeDomainRecurringOutput) Monthly() GetExternalDynamicListListDataTypeDomainRecurringMonthlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeDomainRecurring) GetExternalDynamicListListDataTypeDomainRecurringMonthly {
@@ -28912,6 +29504,7 @@ func (o GetExternalDynamicListListDataTypeDomainRecurringOutput) Monthly() GetEx
 }
 
 // Weekly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeDomainRecurringOutput) Weekly() GetExternalDynamicListListDataTypeDomainRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeDomainRecurring) GetExternalDynamicListListDataTypeDomainRecurringWeekly {
@@ -29343,18 +29936,21 @@ func (o GetExternalDynamicListListDataTypeImeiAuthOutput) Username() pulumi.Stri
 
 type GetExternalDynamicListListDataTypeImeiRecurring struct {
 	// Daily interval settings for IMEI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListListDataTypeImeiRecurringDaily `pulumi:"daily"`
 	// Five-minute interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListListDataTypeImeiRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListListDataTypeImeiRecurringHourly `pulumi:"hourly"`
 	// Monthly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListListDataTypeImeiRecurringMonthly `pulumi:"monthly"`
 	// Weekly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListListDataTypeImeiRecurringWeekly `pulumi:"weekly"`
 }
@@ -29372,18 +29968,21 @@ type GetExternalDynamicListListDataTypeImeiRecurringInput interface {
 
 type GetExternalDynamicListListDataTypeImeiRecurringArgs struct {
 	// Daily interval settings for IMEI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListListDataTypeImeiRecurringDailyInput `pulumi:"daily"`
 	// Five-minute interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListListDataTypeImeiRecurringFiveMinuteInput `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListListDataTypeImeiRecurringHourlyInput `pulumi:"hourly"`
 	// Monthly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListListDataTypeImeiRecurringMonthlyInput `pulumi:"monthly"`
 	// Weekly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListListDataTypeImeiRecurringWeeklyInput `pulumi:"weekly"`
 }
@@ -29415,7 +30014,6 @@ func (o GetExternalDynamicListListDataTypeImeiRecurringOutput) ToGetExternalDyna
 }
 
 // Daily interval settings for IMEI updates
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeImeiRecurringOutput) Daily() GetExternalDynamicListListDataTypeImeiRecurringDailyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeImeiRecurring) GetExternalDynamicListListDataTypeImeiRecurringDaily {
 		return v.Daily
@@ -29423,6 +30021,7 @@ func (o GetExternalDynamicListListDataTypeImeiRecurringOutput) Daily() GetExtern
 }
 
 // Five-minute interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeImeiRecurringOutput) FiveMinute() GetExternalDynamicListListDataTypeImeiRecurringFiveMinuteOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeImeiRecurring) GetExternalDynamicListListDataTypeImeiRecurringFiveMinute {
@@ -29431,6 +30030,7 @@ func (o GetExternalDynamicListListDataTypeImeiRecurringOutput) FiveMinute() GetE
 }
 
 // Hourly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeImeiRecurringOutput) Hourly() GetExternalDynamicListListDataTypeImeiRecurringHourlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeImeiRecurring) GetExternalDynamicListListDataTypeImeiRecurringHourly {
@@ -29439,6 +30039,7 @@ func (o GetExternalDynamicListListDataTypeImeiRecurringOutput) Hourly() GetExter
 }
 
 // Monthly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeImeiRecurringOutput) Monthly() GetExternalDynamicListListDataTypeImeiRecurringMonthlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeImeiRecurring) GetExternalDynamicListListDataTypeImeiRecurringMonthly {
@@ -29447,6 +30048,7 @@ func (o GetExternalDynamicListListDataTypeImeiRecurringOutput) Monthly() GetExte
 }
 
 // Weekly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeImeiRecurringOutput) Weekly() GetExternalDynamicListListDataTypeImeiRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeImeiRecurring) GetExternalDynamicListListDataTypeImeiRecurringWeekly {
@@ -29878,18 +30480,21 @@ func (o GetExternalDynamicListListDataTypeImsiAuthOutput) Username() pulumi.Stri
 
 type GetExternalDynamicListListDataTypeImsiRecurring struct {
 	// Daily interval settings for IMSI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListListDataTypeImsiRecurringDaily `pulumi:"daily"`
 	// Five-minute interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListListDataTypeImsiRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListListDataTypeImsiRecurringHourly `pulumi:"hourly"`
 	// Monthly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListListDataTypeImsiRecurringMonthly `pulumi:"monthly"`
 	// Weekly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListListDataTypeImsiRecurringWeekly `pulumi:"weekly"`
 }
@@ -29907,18 +30512,21 @@ type GetExternalDynamicListListDataTypeImsiRecurringInput interface {
 
 type GetExternalDynamicListListDataTypeImsiRecurringArgs struct {
 	// Daily interval settings for IMSI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListListDataTypeImsiRecurringDailyInput `pulumi:"daily"`
 	// Five-minute interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListListDataTypeImsiRecurringFiveMinuteInput `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListListDataTypeImsiRecurringHourlyInput `pulumi:"hourly"`
 	// Monthly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListListDataTypeImsiRecurringMonthlyInput `pulumi:"monthly"`
 	// Weekly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListListDataTypeImsiRecurringWeeklyInput `pulumi:"weekly"`
 }
@@ -29950,7 +30558,6 @@ func (o GetExternalDynamicListListDataTypeImsiRecurringOutput) ToGetExternalDyna
 }
 
 // Daily interval settings for IMSI updates
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeImsiRecurringOutput) Daily() GetExternalDynamicListListDataTypeImsiRecurringDailyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeImsiRecurring) GetExternalDynamicListListDataTypeImsiRecurringDaily {
 		return v.Daily
@@ -29958,6 +30565,7 @@ func (o GetExternalDynamicListListDataTypeImsiRecurringOutput) Daily() GetExtern
 }
 
 // Five-minute interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeImsiRecurringOutput) FiveMinute() GetExternalDynamicListListDataTypeImsiRecurringFiveMinuteOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeImsiRecurring) GetExternalDynamicListListDataTypeImsiRecurringFiveMinute {
@@ -29966,6 +30574,7 @@ func (o GetExternalDynamicListListDataTypeImsiRecurringOutput) FiveMinute() GetE
 }
 
 // Hourly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeImsiRecurringOutput) Hourly() GetExternalDynamicListListDataTypeImsiRecurringHourlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeImsiRecurring) GetExternalDynamicListListDataTypeImsiRecurringHourly {
@@ -29974,6 +30583,7 @@ func (o GetExternalDynamicListListDataTypeImsiRecurringOutput) Hourly() GetExter
 }
 
 // Monthly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeImsiRecurringOutput) Monthly() GetExternalDynamicListListDataTypeImsiRecurringMonthlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeImsiRecurring) GetExternalDynamicListListDataTypeImsiRecurringMonthly {
@@ -29982,6 +30592,7 @@ func (o GetExternalDynamicListListDataTypeImsiRecurringOutput) Monthly() GetExte
 }
 
 // Weekly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeImsiRecurringOutput) Weekly() GetExternalDynamicListListDataTypeImsiRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeImsiRecurring) GetExternalDynamicListListDataTypeImsiRecurringWeekly {
@@ -30411,18 +31022,21 @@ func (o GetExternalDynamicListListDataTypeIpAuthOutput) Username() pulumi.String
 
 type GetExternalDynamicListListDataTypeIpRecurring struct {
 	// Daily settings for IP recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListListDataTypeIpRecurringDaily `pulumi:"daily"`
 	// Five minute settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListListDataTypeIpRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListListDataTypeIpRecurringHourly `pulumi:"hourly"`
 	// Monthly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListListDataTypeIpRecurringMonthly `pulumi:"monthly"`
 	// Weekly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListListDataTypeIpRecurringWeekly `pulumi:"weekly"`
 }
@@ -30440,18 +31054,21 @@ type GetExternalDynamicListListDataTypeIpRecurringInput interface {
 
 type GetExternalDynamicListListDataTypeIpRecurringArgs struct {
 	// Daily settings for IP recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListListDataTypeIpRecurringDailyInput `pulumi:"daily"`
 	// Five minute settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListListDataTypeIpRecurringFiveMinuteInput `pulumi:"fiveMinute"`
 	// Hourly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListListDataTypeIpRecurringHourlyInput `pulumi:"hourly"`
 	// Monthly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListListDataTypeIpRecurringMonthlyInput `pulumi:"monthly"`
 	// Weekly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListListDataTypeIpRecurringWeeklyInput `pulumi:"weekly"`
 }
@@ -30483,7 +31100,6 @@ func (o GetExternalDynamicListListDataTypeIpRecurringOutput) ToGetExternalDynami
 }
 
 // Daily settings for IP recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeIpRecurringOutput) Daily() GetExternalDynamicListListDataTypeIpRecurringDailyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeIpRecurring) GetExternalDynamicListListDataTypeIpRecurringDaily {
 		return v.Daily
@@ -30491,6 +31107,7 @@ func (o GetExternalDynamicListListDataTypeIpRecurringOutput) Daily() GetExternal
 }
 
 // Five minute settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeIpRecurringOutput) FiveMinute() GetExternalDynamicListListDataTypeIpRecurringFiveMinuteOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeIpRecurring) GetExternalDynamicListListDataTypeIpRecurringFiveMinute {
@@ -30499,6 +31116,7 @@ func (o GetExternalDynamicListListDataTypeIpRecurringOutput) FiveMinute() GetExt
 }
 
 // Hourly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeIpRecurringOutput) Hourly() GetExternalDynamicListListDataTypeIpRecurringHourlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeIpRecurring) GetExternalDynamicListListDataTypeIpRecurringHourly {
@@ -30507,6 +31125,7 @@ func (o GetExternalDynamicListListDataTypeIpRecurringOutput) Hourly() GetExterna
 }
 
 // Monthly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeIpRecurringOutput) Monthly() GetExternalDynamicListListDataTypeIpRecurringMonthlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeIpRecurring) GetExternalDynamicListListDataTypeIpRecurringMonthly {
@@ -30515,6 +31134,7 @@ func (o GetExternalDynamicListListDataTypeIpRecurringOutput) Monthly() GetExtern
 }
 
 // Weekly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeIpRecurringOutput) Weekly() GetExternalDynamicListListDataTypeIpRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeIpRecurring) GetExternalDynamicListListDataTypeIpRecurringWeekly {
@@ -31084,18 +31704,21 @@ func (o GetExternalDynamicListListDataTypeUrlAuthOutput) Username() pulumi.Strin
 
 type GetExternalDynamicListListDataTypeUrlRecurring struct {
 	// Daily settings for URL recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListListDataTypeUrlRecurringDaily `pulumi:"daily"`
 	// Five minute settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListListDataTypeUrlRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListListDataTypeUrlRecurringHourly `pulumi:"hourly"`
 	// Monthly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListListDataTypeUrlRecurringMonthly `pulumi:"monthly"`
 	// Weekly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListListDataTypeUrlRecurringWeekly `pulumi:"weekly"`
 }
@@ -31113,18 +31736,21 @@ type GetExternalDynamicListListDataTypeUrlRecurringInput interface {
 
 type GetExternalDynamicListListDataTypeUrlRecurringArgs struct {
 	// Daily settings for URL recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListListDataTypeUrlRecurringDailyInput `pulumi:"daily"`
 	// Five minute settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListListDataTypeUrlRecurringFiveMinuteInput `pulumi:"fiveMinute"`
 	// Hourly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListListDataTypeUrlRecurringHourlyInput `pulumi:"hourly"`
 	// Monthly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListListDataTypeUrlRecurringMonthlyInput `pulumi:"monthly"`
 	// Weekly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListListDataTypeUrlRecurringWeeklyInput `pulumi:"weekly"`
 }
@@ -31156,7 +31782,6 @@ func (o GetExternalDynamicListListDataTypeUrlRecurringOutput) ToGetExternalDynam
 }
 
 // Daily settings for URL recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeUrlRecurringOutput) Daily() GetExternalDynamicListListDataTypeUrlRecurringDailyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeUrlRecurring) GetExternalDynamicListListDataTypeUrlRecurringDaily {
 		return v.Daily
@@ -31164,6 +31789,7 @@ func (o GetExternalDynamicListListDataTypeUrlRecurringOutput) Daily() GetExterna
 }
 
 // Five minute settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeUrlRecurringOutput) FiveMinute() GetExternalDynamicListListDataTypeUrlRecurringFiveMinuteOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeUrlRecurring) GetExternalDynamicListListDataTypeUrlRecurringFiveMinute {
@@ -31172,6 +31798,7 @@ func (o GetExternalDynamicListListDataTypeUrlRecurringOutput) FiveMinute() GetEx
 }
 
 // Hourly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeUrlRecurringOutput) Hourly() GetExternalDynamicListListDataTypeUrlRecurringHourlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeUrlRecurring) GetExternalDynamicListListDataTypeUrlRecurringHourly {
@@ -31180,6 +31807,7 @@ func (o GetExternalDynamicListListDataTypeUrlRecurringOutput) Hourly() GetExtern
 }
 
 // Monthly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeUrlRecurringOutput) Monthly() GetExternalDynamicListListDataTypeUrlRecurringMonthlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeUrlRecurring) GetExternalDynamicListListDataTypeUrlRecurringMonthly {
@@ -31188,6 +31816,7 @@ func (o GetExternalDynamicListListDataTypeUrlRecurringOutput) Monthly() GetExter
 }
 
 // Weekly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListListDataTypeUrlRecurringOutput) Weekly() GetExternalDynamicListListDataTypeUrlRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeUrlRecurring) GetExternalDynamicListListDataTypeUrlRecurringWeekly {
@@ -31457,24 +32086,29 @@ func (o GetExternalDynamicListListDataTypeUrlRecurringWeeklyOutput) DayOfWeek() 
 
 type GetExternalDynamicListType struct {
 	// Domain settings for Custom Domain type
-	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Domain GetExternalDynamicListTypeDomain `pulumi:"domain"`
 	// IMEI Configuration settings
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imei GetExternalDynamicListTypeImei `pulumi:"imei"`
 	// IMSI Config for Custom IMSI type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imsi GetExternalDynamicListTypeImsi `pulumi:"imsi"`
 	// IP settings for Custom IP type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Ip GetExternalDynamicListTypeIp `pulumi:"ip"`
 	// Predefined IP settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedIp GetExternalDynamicListTypePredefinedIp `pulumi:"predefinedIp"`
 	// Predefined URL settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedUrl GetExternalDynamicListTypePredefinedUrl `pulumi:"predefinedUrl"`
 	// URL settings for Custom URL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Url GetExternalDynamicListTypeUrl `pulumi:"url"`
 }
@@ -31492,24 +32126,29 @@ type GetExternalDynamicListTypeInput interface {
 
 type GetExternalDynamicListTypeArgs struct {
 	// Domain settings for Custom Domain type
-	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Domain GetExternalDynamicListTypeDomainInput `pulumi:"domain"`
 	// IMEI Configuration settings
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imei GetExternalDynamicListTypeImeiInput `pulumi:"imei"`
 	// IMSI Config for Custom IMSI type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imsi GetExternalDynamicListTypeImsiInput `pulumi:"imsi"`
 	// IP settings for Custom IP type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Ip GetExternalDynamicListTypeIpInput `pulumi:"ip"`
 	// Predefined IP settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedIp GetExternalDynamicListTypePredefinedIpInput `pulumi:"predefinedIp"`
 	// Predefined URL settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedUrl GetExternalDynamicListTypePredefinedUrlInput `pulumi:"predefinedUrl"`
 	// URL settings for Custom URL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Url GetExternalDynamicListTypeUrlInput `pulumi:"url"`
 }
@@ -31541,42 +32180,47 @@ func (o GetExternalDynamicListTypeOutput) ToGetExternalDynamicListTypeOutputWith
 }
 
 // Domain settings for Custom Domain type
-// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListTypeOutput) Domain() GetExternalDynamicListTypeDomainOutput {
 	return o.ApplyT(func(v GetExternalDynamicListType) GetExternalDynamicListTypeDomain { return v.Domain }).(GetExternalDynamicListTypeDomainOutput)
 }
 
 // IMEI Configuration settings
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListTypeOutput) Imei() GetExternalDynamicListTypeImeiOutput {
 	return o.ApplyT(func(v GetExternalDynamicListType) GetExternalDynamicListTypeImei { return v.Imei }).(GetExternalDynamicListTypeImeiOutput)
 }
 
 // IMSI Config for Custom IMSI type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListTypeOutput) Imsi() GetExternalDynamicListTypeImsiOutput {
 	return o.ApplyT(func(v GetExternalDynamicListType) GetExternalDynamicListTypeImsi { return v.Imsi }).(GetExternalDynamicListTypeImsiOutput)
 }
 
 // IP settings for Custom IP type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListTypeOutput) Ip() GetExternalDynamicListTypeIpOutput {
 	return o.ApplyT(func(v GetExternalDynamicListType) GetExternalDynamicListTypeIp { return v.Ip }).(GetExternalDynamicListTypeIpOutput)
 }
 
 // Predefined IP settings for EDL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListTypeOutput) PredefinedIp() GetExternalDynamicListTypePredefinedIpOutput {
 	return o.ApplyT(func(v GetExternalDynamicListType) GetExternalDynamicListTypePredefinedIp { return v.PredefinedIp }).(GetExternalDynamicListTypePredefinedIpOutput)
 }
 
 // Predefined URL settings for EDL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListTypeOutput) PredefinedUrl() GetExternalDynamicListTypePredefinedUrlOutput {
 	return o.ApplyT(func(v GetExternalDynamicListType) GetExternalDynamicListTypePredefinedUrl { return v.PredefinedUrl }).(GetExternalDynamicListTypePredefinedUrlOutput)
 }
 
 // URL settings for Custom URL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o GetExternalDynamicListTypeOutput) Url() GetExternalDynamicListTypeUrlOutput {
 	return o.ApplyT(func(v GetExternalDynamicListType) GetExternalDynamicListTypeUrl { return v.Url }).(GetExternalDynamicListTypeUrlOutput)
@@ -31751,18 +32395,21 @@ func (o GetExternalDynamicListTypeDomainAuthOutput) Username() pulumi.StringOutp
 
 type GetExternalDynamicListTypeDomainRecurring struct {
 	// Daily settings for Domain recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListTypeDomainRecurringDaily `pulumi:"daily"`
 	// Five minute settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListTypeDomainRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListTypeDomainRecurringHourly `pulumi:"hourly"`
 	// Monthly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListTypeDomainRecurringMonthly `pulumi:"monthly"`
 	// Weekly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListTypeDomainRecurringWeekly `pulumi:"weekly"`
 }
@@ -31780,18 +32427,21 @@ type GetExternalDynamicListTypeDomainRecurringInput interface {
 
 type GetExternalDynamicListTypeDomainRecurringArgs struct {
 	// Daily settings for Domain recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListTypeDomainRecurringDailyInput `pulumi:"daily"`
 	// Five minute settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListTypeDomainRecurringFiveMinuteInput `pulumi:"fiveMinute"`
 	// Hourly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListTypeDomainRecurringHourlyInput `pulumi:"hourly"`
 	// Monthly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListTypeDomainRecurringMonthlyInput `pulumi:"monthly"`
 	// Weekly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListTypeDomainRecurringWeeklyInput `pulumi:"weekly"`
 }
@@ -31823,7 +32473,6 @@ func (o GetExternalDynamicListTypeDomainRecurringOutput) ToGetExternalDynamicLis
 }
 
 // Daily settings for Domain recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeDomainRecurringOutput) Daily() GetExternalDynamicListTypeDomainRecurringDailyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeDomainRecurring) GetExternalDynamicListTypeDomainRecurringDaily {
 		return v.Daily
@@ -31831,6 +32480,7 @@ func (o GetExternalDynamicListTypeDomainRecurringOutput) Daily() GetExternalDyna
 }
 
 // Five minute settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeDomainRecurringOutput) FiveMinute() GetExternalDynamicListTypeDomainRecurringFiveMinuteOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeDomainRecurring) GetExternalDynamicListTypeDomainRecurringFiveMinute {
@@ -31839,6 +32489,7 @@ func (o GetExternalDynamicListTypeDomainRecurringOutput) FiveMinute() GetExterna
 }
 
 // Hourly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeDomainRecurringOutput) Hourly() GetExternalDynamicListTypeDomainRecurringHourlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeDomainRecurring) GetExternalDynamicListTypeDomainRecurringHourly {
@@ -31847,6 +32498,7 @@ func (o GetExternalDynamicListTypeDomainRecurringOutput) Hourly() GetExternalDyn
 }
 
 // Monthly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeDomainRecurringOutput) Monthly() GetExternalDynamicListTypeDomainRecurringMonthlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeDomainRecurring) GetExternalDynamicListTypeDomainRecurringMonthly {
@@ -31855,6 +32507,7 @@ func (o GetExternalDynamicListTypeDomainRecurringOutput) Monthly() GetExternalDy
 }
 
 // Weekly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeDomainRecurringOutput) Weekly() GetExternalDynamicListTypeDomainRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeDomainRecurring) GetExternalDynamicListTypeDomainRecurringWeekly {
@@ -32282,18 +32935,21 @@ func (o GetExternalDynamicListTypeImeiAuthOutput) Username() pulumi.StringOutput
 
 type GetExternalDynamicListTypeImeiRecurring struct {
 	// Daily interval settings for IMEI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListTypeImeiRecurringDaily `pulumi:"daily"`
 	// Five-minute interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListTypeImeiRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListTypeImeiRecurringHourly `pulumi:"hourly"`
 	// Monthly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListTypeImeiRecurringMonthly `pulumi:"monthly"`
 	// Weekly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListTypeImeiRecurringWeekly `pulumi:"weekly"`
 }
@@ -32311,18 +32967,21 @@ type GetExternalDynamicListTypeImeiRecurringInput interface {
 
 type GetExternalDynamicListTypeImeiRecurringArgs struct {
 	// Daily interval settings for IMEI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListTypeImeiRecurringDailyInput `pulumi:"daily"`
 	// Five-minute interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListTypeImeiRecurringFiveMinuteInput `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListTypeImeiRecurringHourlyInput `pulumi:"hourly"`
 	// Monthly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListTypeImeiRecurringMonthlyInput `pulumi:"monthly"`
 	// Weekly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListTypeImeiRecurringWeeklyInput `pulumi:"weekly"`
 }
@@ -32354,7 +33013,6 @@ func (o GetExternalDynamicListTypeImeiRecurringOutput) ToGetExternalDynamicListT
 }
 
 // Daily interval settings for IMEI updates
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeImeiRecurringOutput) Daily() GetExternalDynamicListTypeImeiRecurringDailyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeImeiRecurring) GetExternalDynamicListTypeImeiRecurringDaily {
 		return v.Daily
@@ -32362,6 +33020,7 @@ func (o GetExternalDynamicListTypeImeiRecurringOutput) Daily() GetExternalDynami
 }
 
 // Five-minute interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeImeiRecurringOutput) FiveMinute() GetExternalDynamicListTypeImeiRecurringFiveMinuteOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeImeiRecurring) GetExternalDynamicListTypeImeiRecurringFiveMinute {
@@ -32370,6 +33029,7 @@ func (o GetExternalDynamicListTypeImeiRecurringOutput) FiveMinute() GetExternalD
 }
 
 // Hourly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeImeiRecurringOutput) Hourly() GetExternalDynamicListTypeImeiRecurringHourlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeImeiRecurring) GetExternalDynamicListTypeImeiRecurringHourly {
@@ -32378,6 +33038,7 @@ func (o GetExternalDynamicListTypeImeiRecurringOutput) Hourly() GetExternalDynam
 }
 
 // Monthly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeImeiRecurringOutput) Monthly() GetExternalDynamicListTypeImeiRecurringMonthlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeImeiRecurring) GetExternalDynamicListTypeImeiRecurringMonthly {
@@ -32386,6 +33047,7 @@ func (o GetExternalDynamicListTypeImeiRecurringOutput) Monthly() GetExternalDyna
 }
 
 // Weekly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeImeiRecurringOutput) Weekly() GetExternalDynamicListTypeImeiRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeImeiRecurring) GetExternalDynamicListTypeImeiRecurringWeekly {
@@ -32813,18 +33475,21 @@ func (o GetExternalDynamicListTypeImsiAuthOutput) Username() pulumi.StringOutput
 
 type GetExternalDynamicListTypeImsiRecurring struct {
 	// Daily interval settings for IMSI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListTypeImsiRecurringDaily `pulumi:"daily"`
 	// Five-minute interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListTypeImsiRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListTypeImsiRecurringHourly `pulumi:"hourly"`
 	// Monthly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListTypeImsiRecurringMonthly `pulumi:"monthly"`
 	// Weekly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListTypeImsiRecurringWeekly `pulumi:"weekly"`
 }
@@ -32842,18 +33507,21 @@ type GetExternalDynamicListTypeImsiRecurringInput interface {
 
 type GetExternalDynamicListTypeImsiRecurringArgs struct {
 	// Daily interval settings for IMSI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListTypeImsiRecurringDailyInput `pulumi:"daily"`
 	// Five-minute interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListTypeImsiRecurringFiveMinuteInput `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListTypeImsiRecurringHourlyInput `pulumi:"hourly"`
 	// Monthly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListTypeImsiRecurringMonthlyInput `pulumi:"monthly"`
 	// Weekly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListTypeImsiRecurringWeeklyInput `pulumi:"weekly"`
 }
@@ -32885,7 +33553,6 @@ func (o GetExternalDynamicListTypeImsiRecurringOutput) ToGetExternalDynamicListT
 }
 
 // Daily interval settings for IMSI updates
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeImsiRecurringOutput) Daily() GetExternalDynamicListTypeImsiRecurringDailyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeImsiRecurring) GetExternalDynamicListTypeImsiRecurringDaily {
 		return v.Daily
@@ -32893,6 +33560,7 @@ func (o GetExternalDynamicListTypeImsiRecurringOutput) Daily() GetExternalDynami
 }
 
 // Five-minute interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeImsiRecurringOutput) FiveMinute() GetExternalDynamicListTypeImsiRecurringFiveMinuteOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeImsiRecurring) GetExternalDynamicListTypeImsiRecurringFiveMinute {
@@ -32901,6 +33569,7 @@ func (o GetExternalDynamicListTypeImsiRecurringOutput) FiveMinute() GetExternalD
 }
 
 // Hourly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeImsiRecurringOutput) Hourly() GetExternalDynamicListTypeImsiRecurringHourlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeImsiRecurring) GetExternalDynamicListTypeImsiRecurringHourly {
@@ -32909,6 +33578,7 @@ func (o GetExternalDynamicListTypeImsiRecurringOutput) Hourly() GetExternalDynam
 }
 
 // Monthly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeImsiRecurringOutput) Monthly() GetExternalDynamicListTypeImsiRecurringMonthlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeImsiRecurring) GetExternalDynamicListTypeImsiRecurringMonthly {
@@ -32917,6 +33587,7 @@ func (o GetExternalDynamicListTypeImsiRecurringOutput) Monthly() GetExternalDyna
 }
 
 // Weekly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeImsiRecurringOutput) Weekly() GetExternalDynamicListTypeImsiRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeImsiRecurring) GetExternalDynamicListTypeImsiRecurringWeekly {
@@ -33344,18 +34015,21 @@ func (o GetExternalDynamicListTypeIpAuthOutput) Username() pulumi.StringOutput {
 
 type GetExternalDynamicListTypeIpRecurring struct {
 	// Daily settings for IP recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListTypeIpRecurringDaily `pulumi:"daily"`
 	// Five minute settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListTypeIpRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListTypeIpRecurringHourly `pulumi:"hourly"`
 	// Monthly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListTypeIpRecurringMonthly `pulumi:"monthly"`
 	// Weekly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListTypeIpRecurringWeekly `pulumi:"weekly"`
 }
@@ -33373,18 +34047,21 @@ type GetExternalDynamicListTypeIpRecurringInput interface {
 
 type GetExternalDynamicListTypeIpRecurringArgs struct {
 	// Daily settings for IP recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListTypeIpRecurringDailyInput `pulumi:"daily"`
 	// Five minute settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListTypeIpRecurringFiveMinuteInput `pulumi:"fiveMinute"`
 	// Hourly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListTypeIpRecurringHourlyInput `pulumi:"hourly"`
 	// Monthly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListTypeIpRecurringMonthlyInput `pulumi:"monthly"`
 	// Weekly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListTypeIpRecurringWeeklyInput `pulumi:"weekly"`
 }
@@ -33416,7 +34093,6 @@ func (o GetExternalDynamicListTypeIpRecurringOutput) ToGetExternalDynamicListTyp
 }
 
 // Daily settings for IP recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeIpRecurringOutput) Daily() GetExternalDynamicListTypeIpRecurringDailyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeIpRecurring) GetExternalDynamicListTypeIpRecurringDaily {
 		return v.Daily
@@ -33424,6 +34100,7 @@ func (o GetExternalDynamicListTypeIpRecurringOutput) Daily() GetExternalDynamicL
 }
 
 // Five minute settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeIpRecurringOutput) FiveMinute() GetExternalDynamicListTypeIpRecurringFiveMinuteOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeIpRecurring) GetExternalDynamicListTypeIpRecurringFiveMinute {
@@ -33432,6 +34109,7 @@ func (o GetExternalDynamicListTypeIpRecurringOutput) FiveMinute() GetExternalDyn
 }
 
 // Hourly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeIpRecurringOutput) Hourly() GetExternalDynamicListTypeIpRecurringHourlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeIpRecurring) GetExternalDynamicListTypeIpRecurringHourly {
@@ -33440,6 +34118,7 @@ func (o GetExternalDynamicListTypeIpRecurringOutput) Hourly() GetExternalDynamic
 }
 
 // Monthly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeIpRecurringOutput) Monthly() GetExternalDynamicListTypeIpRecurringMonthlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeIpRecurring) GetExternalDynamicListTypeIpRecurringMonthly {
@@ -33448,6 +34127,7 @@ func (o GetExternalDynamicListTypeIpRecurringOutput) Monthly() GetExternalDynami
 }
 
 // Weekly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeIpRecurringOutput) Weekly() GetExternalDynamicListTypeIpRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeIpRecurring) GetExternalDynamicListTypeIpRecurringWeekly {
@@ -34015,18 +34695,21 @@ func (o GetExternalDynamicListTypeUrlAuthOutput) Username() pulumi.StringOutput 
 
 type GetExternalDynamicListTypeUrlRecurring struct {
 	// Daily settings for URL recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListTypeUrlRecurringDaily `pulumi:"daily"`
 	// Five minute settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListTypeUrlRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListTypeUrlRecurringHourly `pulumi:"hourly"`
 	// Monthly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListTypeUrlRecurringMonthly `pulumi:"monthly"`
 	// Weekly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListTypeUrlRecurringWeekly `pulumi:"weekly"`
 }
@@ -34044,18 +34727,21 @@ type GetExternalDynamicListTypeUrlRecurringInput interface {
 
 type GetExternalDynamicListTypeUrlRecurringArgs struct {
 	// Daily settings for URL recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily GetExternalDynamicListTypeUrlRecurringDailyInput `pulumi:"daily"`
 	// Five minute settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute GetExternalDynamicListTypeUrlRecurringFiveMinuteInput `pulumi:"fiveMinute"`
 	// Hourly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly GetExternalDynamicListTypeUrlRecurringHourlyInput `pulumi:"hourly"`
 	// Monthly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly GetExternalDynamicListTypeUrlRecurringMonthlyInput `pulumi:"monthly"`
 	// Weekly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly GetExternalDynamicListTypeUrlRecurringWeeklyInput `pulumi:"weekly"`
 }
@@ -34087,7 +34773,6 @@ func (o GetExternalDynamicListTypeUrlRecurringOutput) ToGetExternalDynamicListTy
 }
 
 // Daily settings for URL recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeUrlRecurringOutput) Daily() GetExternalDynamicListTypeUrlRecurringDailyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeUrlRecurring) GetExternalDynamicListTypeUrlRecurringDaily {
 		return v.Daily
@@ -34095,6 +34780,7 @@ func (o GetExternalDynamicListTypeUrlRecurringOutput) Daily() GetExternalDynamic
 }
 
 // Five minute settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeUrlRecurringOutput) FiveMinute() GetExternalDynamicListTypeUrlRecurringFiveMinuteOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeUrlRecurring) GetExternalDynamicListTypeUrlRecurringFiveMinute {
@@ -34103,6 +34789,7 @@ func (o GetExternalDynamicListTypeUrlRecurringOutput) FiveMinute() GetExternalDy
 }
 
 // Hourly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeUrlRecurringOutput) Hourly() GetExternalDynamicListTypeUrlRecurringHourlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeUrlRecurring) GetExternalDynamicListTypeUrlRecurringHourly {
@@ -34111,6 +34798,7 @@ func (o GetExternalDynamicListTypeUrlRecurringOutput) Hourly() GetExternalDynami
 }
 
 // Monthly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeUrlRecurringOutput) Monthly() GetExternalDynamicListTypeUrlRecurringMonthlyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeUrlRecurring) GetExternalDynamicListTypeUrlRecurringMonthly {
@@ -34119,6 +34807,7 @@ func (o GetExternalDynamicListTypeUrlRecurringOutput) Monthly() GetExternalDynam
 }
 
 // Weekly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o GetExternalDynamicListTypeUrlRecurringOutput) Weekly() GetExternalDynamicListTypeUrlRecurringWeeklyOutput {
 	return o.ApplyT(func(v GetExternalDynamicListTypeUrlRecurring) GetExternalDynamicListTypeUrlRecurringWeekly {
@@ -34390,19 +35079,16 @@ type GetFileBlockingProfileListData struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The UUID of the file blocking profile
 	Id string `pulumi:"id"`
-	// The name of the file blocking profile
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// A list of file blocking rules
 	Rules []GetFileBlockingProfileListDataRule `pulumi:"rules"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -34422,19 +35108,16 @@ type GetFileBlockingProfileListDataArgs struct {
 	// Description
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The UUID of the file blocking profile
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the file blocking profile
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// A list of file blocking rules
 	Rules GetFileBlockingProfileListDataRuleArrayInput `pulumi:"rules"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -34496,13 +35179,11 @@ func (o GetFileBlockingProfileListDataOutput) Description() pulumi.StringOutput 
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetFileBlockingProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetFileBlockingProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetFileBlockingProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetFileBlockingProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -34512,7 +35193,7 @@ func (o GetFileBlockingProfileListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetFileBlockingProfileListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the file blocking profile
+// The name of the item.
 func (o GetFileBlockingProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetFileBlockingProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -34522,8 +35203,7 @@ func (o GetFileBlockingProfileListDataOutput) Rules() GetFileBlockingProfileList
 	return o.ApplyT(func(v GetFileBlockingProfileListData) []GetFileBlockingProfileListDataRule { return v.Rules }).(GetFileBlockingProfileListDataRuleArrayOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetFileBlockingProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetFileBlockingProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -35284,17 +35964,14 @@ func (o GetGeneralSettingGeneralSettingManagementOutput) EnableCertificateExpira
 
 type GetGeneralSettingListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// General
 	General GetGeneralSettingListDataGeneral `pulumi:"general"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -35312,17 +35989,14 @@ type GetGeneralSettingListDataInput interface {
 
 type GetGeneralSettingListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// General
 	General GetGeneralSettingListDataGeneralInput `pulumi:"general"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -35379,13 +36053,11 @@ func (o GetGeneralSettingListDataOutput) ToGetGeneralSettingListDataOutputWithCo
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetGeneralSettingListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetGeneralSettingListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetGeneralSettingListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetGeneralSettingListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -35400,8 +36072,7 @@ func (o GetGeneralSettingListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetGeneralSettingListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetGeneralSettingListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetGeneralSettingListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -35918,12 +36589,13 @@ func (o GetHipObjectAntiMalwareCriteriaOutput) VirdefVersion() GetHipObjectAntiM
 
 type GetHipObjectAntiMalwareCriteriaLastScanTime struct {
 	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotAvailable GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailable `pulumi:"notAvailable"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotWithin GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	Within GetHipObjectAntiMalwareCriteriaLastScanTimeWithin `pulumi:"within"`
 }
@@ -35941,12 +36613,13 @@ type GetHipObjectAntiMalwareCriteriaLastScanTimeInput interface {
 
 type GetHipObjectAntiMalwareCriteriaLastScanTimeArgs struct {
 	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotAvailable GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableInput `pulumi:"notAvailable"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotWithin GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	Within GetHipObjectAntiMalwareCriteriaLastScanTimeWithinInput `pulumi:"within"`
 }
@@ -35978,7 +36651,6 @@ func (o GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) ToGetHipObjectAntiMal
 }
 
 // Not available
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) NotAvailable() GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTime) GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailable {
 		return v.NotAvailable
@@ -35986,6 +36658,7 @@ func (o GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) NotAvailable() GetHip
 }
 
 // Not within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) NotWithin() GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTime) GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin {
@@ -35994,6 +36667,7 @@ func (o GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) NotWithin() GetHipObj
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) Within() GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTime) GetHipObjectAntiMalwareCriteriaLastScanTimeWithin {
@@ -36046,9 +36720,9 @@ func (o GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput) ToGetHipO
 
 type GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours int `pulumi:"hours"`
 }
@@ -36066,9 +36740,9 @@ type GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinInput interface {
 
 type GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 }
@@ -36100,12 +36774,12 @@ func (o GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) ToGetHipObje
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin) int { return v.Hours }).(pulumi.IntOutput)
@@ -36113,9 +36787,9 @@ func (o GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) Hours() pulu
 
 type GetHipObjectAntiMalwareCriteriaLastScanTimeWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours int `pulumi:"hours"`
 }
@@ -36133,9 +36807,9 @@ type GetHipObjectAntiMalwareCriteriaLastScanTimeWithinInput interface {
 
 type GetHipObjectAntiMalwareCriteriaLastScanTimeWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 }
@@ -36167,12 +36841,12 @@ func (o GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) ToGetHipObjectA
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTimeWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTimeWithin) int { return v.Hours }).(pulumi.IntOutput)
@@ -36180,30 +36854,37 @@ func (o GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) Hours() pulumi.
 
 type GetHipObjectAntiMalwareCriteriaProductVersion struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Contains string `pulumi:"contains"`
 	// Greater equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterEqual string `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterThan string `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	IsNot string `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessEqual string `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessThan string `pulumi:"lessThan"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	NotWithin GetHipObjectAntiMalwareCriteriaProductVersionNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Within GetHipObjectAntiMalwareCriteriaProductVersionWithin `pulumi:"within"`
 }
@@ -36221,30 +36902,37 @@ type GetHipObjectAntiMalwareCriteriaProductVersionInput interface {
 
 type GetHipObjectAntiMalwareCriteriaProductVersionArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Greater equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterEqual pulumi.StringInput `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterThan pulumi.StringInput `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessEqual pulumi.StringInput `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessThan pulumi.StringInput `pulumi:"lessThan"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	NotWithin GetHipObjectAntiMalwareCriteriaProductVersionNotWithinInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Within GetHipObjectAntiMalwareCriteriaProductVersionWithinInput `pulumi:"within"`
 }
@@ -36276,48 +36964,54 @@ func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) ToGetHipObjectAntiM
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Greater equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) GreaterEqual() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.GreaterEqual }).(pulumi.StringOutput)
 }
 
 // Greater than
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) GreaterThan() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.GreaterThan }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.IsNot }).(pulumi.StringOutput)
 }
 
 // Less equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) LessEqual() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.LessEqual }).(pulumi.StringOutput)
 }
 
 // Less than
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) LessThan() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.LessThan }).(pulumi.StringOutput)
 }
 
 // Not within
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) NotWithin() GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) GetHipObjectAntiMalwareCriteriaProductVersionNotWithin {
@@ -36326,6 +37020,7 @@ func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) NotWithin() GetHipO
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) Within() GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) GetHipObjectAntiMalwareCriteriaProductVersionWithin {
@@ -36439,9 +37134,9 @@ func (o GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput) Versions() pu
 
 type GetHipObjectAntiMalwareCriteriaVirdefVersion struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within GetHipObjectAntiMalwareCriteriaVirdefVersionWithin `pulumi:"within"`
 }
@@ -36459,9 +37154,9 @@ type GetHipObjectAntiMalwareCriteriaVirdefVersionInput interface {
 
 type GetHipObjectAntiMalwareCriteriaVirdefVersionArgs struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within GetHipObjectAntiMalwareCriteriaVirdefVersionWithinInput `pulumi:"within"`
 }
@@ -36493,7 +37188,6 @@ func (o GetHipObjectAntiMalwareCriteriaVirdefVersionOutput) ToGetHipObjectAntiMa
 }
 
 // Not within
-// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o GetHipObjectAntiMalwareCriteriaVirdefVersionOutput) NotWithin() GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersion) GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin {
 		return v.NotWithin
@@ -36501,6 +37195,7 @@ func (o GetHipObjectAntiMalwareCriteriaVirdefVersionOutput) NotWithin() GetHipOb
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o GetHipObjectAntiMalwareCriteriaVirdefVersionOutput) Within() GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersion) GetHipObjectAntiMalwareCriteriaVirdefVersionWithin {
@@ -36510,9 +37205,9 @@ func (o GetHipObjectAntiMalwareCriteriaVirdefVersionOutput) Within() GetHipObjec
 
 type GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days int `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions int `pulumi:"versions"`
 }
@@ -36530,9 +37225,9 @@ type GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinInput interface {
 
 type GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions pulumi.IntInput `pulumi:"versions"`
 }
@@ -36564,12 +37259,12 @@ func (o GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) ToGetHipObj
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify versions range
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) Versions() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin) int { return v.Versions }).(pulumi.IntOutput)
@@ -36577,9 +37272,9 @@ func (o GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) Versions() 
 
 type GetHipObjectAntiMalwareCriteriaVirdefVersionWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days int `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions int `pulumi:"versions"`
 }
@@ -36597,9 +37292,9 @@ type GetHipObjectAntiMalwareCriteriaVirdefVersionWithinInput interface {
 
 type GetHipObjectAntiMalwareCriteriaVirdefVersionWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions pulumi.IntInput `pulumi:"versions"`
 }
@@ -36631,12 +37326,12 @@ func (o GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput) ToGetHipObject
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersionWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify versions range
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput) Versions() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersionWithin) int { return v.Versions }).(pulumi.IntOutput)
@@ -38046,12 +38741,13 @@ func (o GetHipObjectDiskBackupCriteriaOutput) LastBackupTime() GetHipObjectDiskB
 
 type GetHipObjectDiskBackupCriteriaLastBackupTime struct {
 	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotAvailable GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable `pulumi:"notAvailable"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotWithin GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	Within GetHipObjectDiskBackupCriteriaLastBackupTimeWithin `pulumi:"within"`
 }
@@ -38069,12 +38765,13 @@ type GetHipObjectDiskBackupCriteriaLastBackupTimeInput interface {
 
 type GetHipObjectDiskBackupCriteriaLastBackupTimeArgs struct {
 	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotAvailable GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableInput `pulumi:"notAvailable"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotWithin GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	Within GetHipObjectDiskBackupCriteriaLastBackupTimeWithinInput `pulumi:"within"`
 }
@@ -38106,7 +38803,6 @@ func (o GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) ToGetHipObjectDiskBa
 }
 
 // Not available
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) NotAvailable() GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput {
 	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTime) GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable {
 		return v.NotAvailable
@@ -38114,6 +38810,7 @@ func (o GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) NotAvailable() GetHi
 }
 
 // Not within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) NotWithin() GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput {
 	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTime) GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin {
@@ -38122,6 +38819,7 @@ func (o GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) NotWithin() GetHipOb
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) Within() GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput {
 	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTime) GetHipObjectDiskBackupCriteriaLastBackupTimeWithin {
@@ -38174,9 +38872,9 @@ func (o GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput) ToGetHip
 
 type GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours int `pulumi:"hours"`
 }
@@ -38194,9 +38892,9 @@ type GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinInput interface {
 
 type GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 }
@@ -38228,12 +38926,12 @@ func (o GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) ToGetHipObj
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin) int { return v.Hours }).(pulumi.IntOutput)
@@ -38241,9 +38939,9 @@ func (o GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) Hours() pul
 
 type GetHipObjectDiskBackupCriteriaLastBackupTimeWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours int `pulumi:"hours"`
 }
@@ -38261,9 +38959,9 @@ type GetHipObjectDiskBackupCriteriaLastBackupTimeWithinInput interface {
 
 type GetHipObjectDiskBackupCriteriaLastBackupTimeWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 }
@@ -38295,12 +38993,12 @@ func (o GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput) ToGetHipObject
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTimeWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTimeWithin) int { return v.Hours }).(pulumi.IntOutput)
@@ -38655,9 +39353,9 @@ func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput) Index(i 
 
 type GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -38675,9 +39373,9 @@ type GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateInput int
 
 type GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -38709,12 +39407,12 @@ func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput
 }
 
 // Is
-// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState) string { return v.IsNot }).(pulumi.StringOutput)
@@ -39223,12 +39921,13 @@ func (o GetHipObjectHostInfoCriteriaOutput) SerialNumber() GetHipObjectHostInfoC
 
 type GetHipObjectHostInfoCriteriaClientVersion struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -39246,12 +39945,13 @@ type GetHipObjectHostInfoCriteriaClientVersionInput interface {
 
 type GetHipObjectHostInfoCriteriaClientVersionArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -39283,18 +39983,19 @@ func (o GetHipObjectHostInfoCriteriaClientVersionOutput) ToGetHipObjectHostInfoC
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectHostInfoCriteriaClientVersionOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaClientVersion) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectHostInfoCriteriaClientVersionOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaClientVersion) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectHostInfoCriteriaClientVersionOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaClientVersion) string { return v.IsNot }).(pulumi.StringOutput)
@@ -39302,12 +40003,13 @@ func (o GetHipObjectHostInfoCriteriaClientVersionOutput) IsNot() pulumi.StringOu
 
 type GetHipObjectHostInfoCriteriaDomain struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -39325,12 +40027,13 @@ type GetHipObjectHostInfoCriteriaDomainInput interface {
 
 type GetHipObjectHostInfoCriteriaDomainArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -39362,949 +40065,33 @@ func (o GetHipObjectHostInfoCriteriaDomainOutput) ToGetHipObjectHostInfoCriteria
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectHostInfoCriteriaDomainOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaDomain) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectHostInfoCriteriaDomainOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaDomain) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectHostInfoCriteriaDomainOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaDomain) string { return v.IsNot }).(pulumi.StringOutput)
 }
 
-type GetHipObjectHostInfoCriteriaHostId struct {
-	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Contains string `pulumi:"contains"`
-	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Is string `pulumi:"is"`
-	// Is not
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	IsNot string `pulumi:"isNot"`
-}
-
-// GetHipObjectHostInfoCriteriaHostIdInput is an input type that accepts GetHipObjectHostInfoCriteriaHostIdArgs and GetHipObjectHostInfoCriteriaHostIdOutput values.
-// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaHostIdInput` via:
-//
-//	GetHipObjectHostInfoCriteriaHostIdArgs{...}
-type GetHipObjectHostInfoCriteriaHostIdInput interface {
-	pulumi.Input
-
-	ToGetHipObjectHostInfoCriteriaHostIdOutput() GetHipObjectHostInfoCriteriaHostIdOutput
-	ToGetHipObjectHostInfoCriteriaHostIdOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaHostIdOutput
-}
-
-type GetHipObjectHostInfoCriteriaHostIdArgs struct {
-	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Contains pulumi.StringInput `pulumi:"contains"`
-	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Is pulumi.StringInput `pulumi:"is"`
-	// Is not
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	IsNot pulumi.StringInput `pulumi:"isNot"`
-}
-
-func (GetHipObjectHostInfoCriteriaHostIdArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostId)(nil)).Elem()
-}
-
-func (i GetHipObjectHostInfoCriteriaHostIdArgs) ToGetHipObjectHostInfoCriteriaHostIdOutput() GetHipObjectHostInfoCriteriaHostIdOutput {
-	return i.ToGetHipObjectHostInfoCriteriaHostIdOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectHostInfoCriteriaHostIdArgs) ToGetHipObjectHostInfoCriteriaHostIdOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaHostIdOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaHostIdOutput)
-}
-
-type GetHipObjectHostInfoCriteriaHostIdOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectHostInfoCriteriaHostIdOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostId)(nil)).Elem()
-}
-
-func (o GetHipObjectHostInfoCriteriaHostIdOutput) ToGetHipObjectHostInfoCriteriaHostIdOutput() GetHipObjectHostInfoCriteriaHostIdOutput {
-	return o
-}
-
-func (o GetHipObjectHostInfoCriteriaHostIdOutput) ToGetHipObjectHostInfoCriteriaHostIdOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaHostIdOutput {
-	return o
-}
-
-// Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaHostIdOutput) Contains() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostId) string { return v.Contains }).(pulumi.StringOutput)
-}
-
-// Is
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaHostIdOutput) Is() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostId) string { return v.Is }).(pulumi.StringOutput)
-}
-
-// Is not
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaHostIdOutput) IsNot() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostId) string { return v.IsNot }).(pulumi.StringOutput)
-}
-
-type GetHipObjectHostInfoCriteriaHostName struct {
-	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Contains string `pulumi:"contains"`
-	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Is string `pulumi:"is"`
-	// Is not
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	IsNot string `pulumi:"isNot"`
-}
-
-// GetHipObjectHostInfoCriteriaHostNameInput is an input type that accepts GetHipObjectHostInfoCriteriaHostNameArgs and GetHipObjectHostInfoCriteriaHostNameOutput values.
-// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaHostNameInput` via:
-//
-//	GetHipObjectHostInfoCriteriaHostNameArgs{...}
-type GetHipObjectHostInfoCriteriaHostNameInput interface {
-	pulumi.Input
-
-	ToGetHipObjectHostInfoCriteriaHostNameOutput() GetHipObjectHostInfoCriteriaHostNameOutput
-	ToGetHipObjectHostInfoCriteriaHostNameOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaHostNameOutput
-}
-
-type GetHipObjectHostInfoCriteriaHostNameArgs struct {
-	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Contains pulumi.StringInput `pulumi:"contains"`
-	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Is pulumi.StringInput `pulumi:"is"`
-	// Is not
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	IsNot pulumi.StringInput `pulumi:"isNot"`
-}
-
-func (GetHipObjectHostInfoCriteriaHostNameArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostName)(nil)).Elem()
-}
-
-func (i GetHipObjectHostInfoCriteriaHostNameArgs) ToGetHipObjectHostInfoCriteriaHostNameOutput() GetHipObjectHostInfoCriteriaHostNameOutput {
-	return i.ToGetHipObjectHostInfoCriteriaHostNameOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectHostInfoCriteriaHostNameArgs) ToGetHipObjectHostInfoCriteriaHostNameOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaHostNameOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaHostNameOutput)
-}
-
-type GetHipObjectHostInfoCriteriaHostNameOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectHostInfoCriteriaHostNameOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostName)(nil)).Elem()
-}
-
-func (o GetHipObjectHostInfoCriteriaHostNameOutput) ToGetHipObjectHostInfoCriteriaHostNameOutput() GetHipObjectHostInfoCriteriaHostNameOutput {
-	return o
-}
-
-func (o GetHipObjectHostInfoCriteriaHostNameOutput) ToGetHipObjectHostInfoCriteriaHostNameOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaHostNameOutput {
-	return o
-}
-
-// Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaHostNameOutput) Contains() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostName) string { return v.Contains }).(pulumi.StringOutput)
-}
-
-// Is
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaHostNameOutput) Is() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostName) string { return v.Is }).(pulumi.StringOutput)
-}
-
-// Is not
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaHostNameOutput) IsNot() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostName) string { return v.IsNot }).(pulumi.StringOutput)
-}
-
-type GetHipObjectHostInfoCriteriaOs struct {
-	// Contains
-	Contains GetHipObjectHostInfoCriteriaOsContains `pulumi:"contains"`
-}
-
-// GetHipObjectHostInfoCriteriaOsInput is an input type that accepts GetHipObjectHostInfoCriteriaOsArgs and GetHipObjectHostInfoCriteriaOsOutput values.
-// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaOsInput` via:
-//
-//	GetHipObjectHostInfoCriteriaOsArgs{...}
-type GetHipObjectHostInfoCriteriaOsInput interface {
-	pulumi.Input
-
-	ToGetHipObjectHostInfoCriteriaOsOutput() GetHipObjectHostInfoCriteriaOsOutput
-	ToGetHipObjectHostInfoCriteriaOsOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaOsOutput
-}
-
-type GetHipObjectHostInfoCriteriaOsArgs struct {
-	// Contains
-	Contains GetHipObjectHostInfoCriteriaOsContainsInput `pulumi:"contains"`
-}
-
-func (GetHipObjectHostInfoCriteriaOsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaOs)(nil)).Elem()
-}
-
-func (i GetHipObjectHostInfoCriteriaOsArgs) ToGetHipObjectHostInfoCriteriaOsOutput() GetHipObjectHostInfoCriteriaOsOutput {
-	return i.ToGetHipObjectHostInfoCriteriaOsOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectHostInfoCriteriaOsArgs) ToGetHipObjectHostInfoCriteriaOsOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaOsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaOsOutput)
-}
-
-type GetHipObjectHostInfoCriteriaOsOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectHostInfoCriteriaOsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaOs)(nil)).Elem()
-}
-
-func (o GetHipObjectHostInfoCriteriaOsOutput) ToGetHipObjectHostInfoCriteriaOsOutput() GetHipObjectHostInfoCriteriaOsOutput {
-	return o
-}
-
-func (o GetHipObjectHostInfoCriteriaOsOutput) ToGetHipObjectHostInfoCriteriaOsOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaOsOutput {
-	return o
-}
-
-// Contains
-func (o GetHipObjectHostInfoCriteriaOsOutput) Contains() GetHipObjectHostInfoCriteriaOsContainsOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOs) GetHipObjectHostInfoCriteriaOsContains { return v.Contains }).(GetHipObjectHostInfoCriteriaOsContainsOutput)
-}
-
-type GetHipObjectHostInfoCriteriaOsContains struct {
-	// Apple
-	Apple string `pulumi:"apple"`
-	// Google
-	Google string `pulumi:"google"`
-	// Linux
-	Linux string `pulumi:"linux"`
-	// Microsoft
-	Microsoft string `pulumi:"microsoft"`
-	// Other
-	Other string `pulumi:"other"`
-}
-
-// GetHipObjectHostInfoCriteriaOsContainsInput is an input type that accepts GetHipObjectHostInfoCriteriaOsContainsArgs and GetHipObjectHostInfoCriteriaOsContainsOutput values.
-// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaOsContainsInput` via:
-//
-//	GetHipObjectHostInfoCriteriaOsContainsArgs{...}
-type GetHipObjectHostInfoCriteriaOsContainsInput interface {
-	pulumi.Input
-
-	ToGetHipObjectHostInfoCriteriaOsContainsOutput() GetHipObjectHostInfoCriteriaOsContainsOutput
-	ToGetHipObjectHostInfoCriteriaOsContainsOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaOsContainsOutput
-}
-
-type GetHipObjectHostInfoCriteriaOsContainsArgs struct {
-	// Apple
-	Apple pulumi.StringInput `pulumi:"apple"`
-	// Google
-	Google pulumi.StringInput `pulumi:"google"`
-	// Linux
-	Linux pulumi.StringInput `pulumi:"linux"`
-	// Microsoft
-	Microsoft pulumi.StringInput `pulumi:"microsoft"`
-	// Other
-	Other pulumi.StringInput `pulumi:"other"`
-}
-
-func (GetHipObjectHostInfoCriteriaOsContainsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaOsContains)(nil)).Elem()
-}
-
-func (i GetHipObjectHostInfoCriteriaOsContainsArgs) ToGetHipObjectHostInfoCriteriaOsContainsOutput() GetHipObjectHostInfoCriteriaOsContainsOutput {
-	return i.ToGetHipObjectHostInfoCriteriaOsContainsOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectHostInfoCriteriaOsContainsArgs) ToGetHipObjectHostInfoCriteriaOsContainsOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaOsContainsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaOsContainsOutput)
-}
-
-type GetHipObjectHostInfoCriteriaOsContainsOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectHostInfoCriteriaOsContainsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaOsContains)(nil)).Elem()
-}
-
-func (o GetHipObjectHostInfoCriteriaOsContainsOutput) ToGetHipObjectHostInfoCriteriaOsContainsOutput() GetHipObjectHostInfoCriteriaOsContainsOutput {
-	return o
-}
-
-func (o GetHipObjectHostInfoCriteriaOsContainsOutput) ToGetHipObjectHostInfoCriteriaOsContainsOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaOsContainsOutput {
-	return o
-}
-
-// Apple
-func (o GetHipObjectHostInfoCriteriaOsContainsOutput) Apple() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOsContains) string { return v.Apple }).(pulumi.StringOutput)
-}
-
-// Google
-func (o GetHipObjectHostInfoCriteriaOsContainsOutput) Google() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOsContains) string { return v.Google }).(pulumi.StringOutput)
-}
-
-// Linux
-func (o GetHipObjectHostInfoCriteriaOsContainsOutput) Linux() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOsContains) string { return v.Linux }).(pulumi.StringOutput)
-}
-
-// Microsoft
-func (o GetHipObjectHostInfoCriteriaOsContainsOutput) Microsoft() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOsContains) string { return v.Microsoft }).(pulumi.StringOutput)
-}
-
-// Other
-func (o GetHipObjectHostInfoCriteriaOsContainsOutput) Other() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOsContains) string { return v.Other }).(pulumi.StringOutput)
-}
-
-type GetHipObjectHostInfoCriteriaSerialNumber struct {
-	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Contains string `pulumi:"contains"`
-	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Is string `pulumi:"is"`
-	// Is not
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	IsNot string `pulumi:"isNot"`
-}
-
-// GetHipObjectHostInfoCriteriaSerialNumberInput is an input type that accepts GetHipObjectHostInfoCriteriaSerialNumberArgs and GetHipObjectHostInfoCriteriaSerialNumberOutput values.
-// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaSerialNumberInput` via:
-//
-//	GetHipObjectHostInfoCriteriaSerialNumberArgs{...}
-type GetHipObjectHostInfoCriteriaSerialNumberInput interface {
-	pulumi.Input
-
-	ToGetHipObjectHostInfoCriteriaSerialNumberOutput() GetHipObjectHostInfoCriteriaSerialNumberOutput
-	ToGetHipObjectHostInfoCriteriaSerialNumberOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaSerialNumberOutput
-}
-
-type GetHipObjectHostInfoCriteriaSerialNumberArgs struct {
-	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Contains pulumi.StringInput `pulumi:"contains"`
-	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Is pulumi.StringInput `pulumi:"is"`
-	// Is not
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	IsNot pulumi.StringInput `pulumi:"isNot"`
-}
-
-func (GetHipObjectHostInfoCriteriaSerialNumberArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaSerialNumber)(nil)).Elem()
-}
-
-func (i GetHipObjectHostInfoCriteriaSerialNumberArgs) ToGetHipObjectHostInfoCriteriaSerialNumberOutput() GetHipObjectHostInfoCriteriaSerialNumberOutput {
-	return i.ToGetHipObjectHostInfoCriteriaSerialNumberOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectHostInfoCriteriaSerialNumberArgs) ToGetHipObjectHostInfoCriteriaSerialNumberOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaSerialNumberOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaSerialNumberOutput)
-}
-
-type GetHipObjectHostInfoCriteriaSerialNumberOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectHostInfoCriteriaSerialNumberOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaSerialNumber)(nil)).Elem()
-}
-
-func (o GetHipObjectHostInfoCriteriaSerialNumberOutput) ToGetHipObjectHostInfoCriteriaSerialNumberOutput() GetHipObjectHostInfoCriteriaSerialNumberOutput {
-	return o
-}
-
-func (o GetHipObjectHostInfoCriteriaSerialNumberOutput) ToGetHipObjectHostInfoCriteriaSerialNumberOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaSerialNumberOutput {
-	return o
-}
-
-// Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaSerialNumberOutput) Contains() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaSerialNumber) string { return v.Contains }).(pulumi.StringOutput)
-}
-
-// Is
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaSerialNumberOutput) Is() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaSerialNumber) string { return v.Is }).(pulumi.StringOutput)
-}
-
-// Is not
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaSerialNumberOutput) IsNot() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaSerialNumber) string { return v.IsNot }).(pulumi.StringOutput)
-}
-
-type GetHipObjectListData struct {
-	// Anti malware
-	AntiMalware GetHipObjectListDataAntiMalware `pulumi:"antiMalware"`
-	// Certificate
-	Certificate GetHipObjectListDataCertificate `pulumi:"certificate"`
-	// Custom checks
-	CustomChecks GetHipObjectListDataCustomChecks `pulumi:"customChecks"`
-	// Data loss prevention
-	DataLossPrevention GetHipObjectListDataDataLossPrevention `pulumi:"dataLossPrevention"`
-	// Description
-	Description string `pulumi:"description"`
-	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// Disk backup
-	DiskBackup GetHipObjectListDataDiskBackup `pulumi:"diskBackup"`
-	// Disk encryption
-	DiskEncryption GetHipObjectListDataDiskEncryption `pulumi:"diskEncryption"`
-	// Firewall
-	Firewall GetHipObjectListDataFirewall `pulumi:"firewall"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
-	// Host info
-	HostInfo GetHipObjectListDataHostInfo `pulumi:"hostInfo"`
-	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Mobile device
-	MobileDevice GetHipObjectListDataMobileDevice `pulumi:"mobileDevice"`
-	// The name of the HIP object
-	Name string `pulumi:"name"`
-	// Network info
-	NetworkInfo GetHipObjectListDataNetworkInfo `pulumi:"networkInfo"`
-	// Patch management
-	PatchManagement GetHipObjectListDataPatchManagement `pulumi:"patchManagement"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-}
-
-// GetHipObjectListDataInput is an input type that accepts GetHipObjectListDataArgs and GetHipObjectListDataOutput values.
-// You can construct a concrete instance of `GetHipObjectListDataInput` via:
-//
-//	GetHipObjectListDataArgs{...}
-type GetHipObjectListDataInput interface {
-	pulumi.Input
-
-	ToGetHipObjectListDataOutput() GetHipObjectListDataOutput
-	ToGetHipObjectListDataOutputWithContext(context.Context) GetHipObjectListDataOutput
-}
-
-type GetHipObjectListDataArgs struct {
-	// Anti malware
-	AntiMalware GetHipObjectListDataAntiMalwareInput `pulumi:"antiMalware"`
-	// Certificate
-	Certificate GetHipObjectListDataCertificateInput `pulumi:"certificate"`
-	// Custom checks
-	CustomChecks GetHipObjectListDataCustomChecksInput `pulumi:"customChecks"`
-	// Data loss prevention
-	DataLossPrevention GetHipObjectListDataDataLossPreventionInput `pulumi:"dataLossPrevention"`
-	// Description
-	Description pulumi.StringInput `pulumi:"description"`
-	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device pulumi.StringInput `pulumi:"device"`
-	// Disk backup
-	DiskBackup GetHipObjectListDataDiskBackupInput `pulumi:"diskBackup"`
-	// Disk encryption
-	DiskEncryption GetHipObjectListDataDiskEncryptionInput `pulumi:"diskEncryption"`
-	// Firewall
-	Firewall GetHipObjectListDataFirewallInput `pulumi:"firewall"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder pulumi.StringInput `pulumi:"folder"`
-	// Host info
-	HostInfo GetHipObjectListDataHostInfoInput `pulumi:"hostInfo"`
-	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Mobile device
-	MobileDevice GetHipObjectListDataMobileDeviceInput `pulumi:"mobileDevice"`
-	// The name of the HIP object
-	Name pulumi.StringInput `pulumi:"name"`
-	// Network info
-	NetworkInfo GetHipObjectListDataNetworkInfoInput `pulumi:"networkInfo"`
-	// Patch management
-	PatchManagement GetHipObjectListDataPatchManagementInput `pulumi:"patchManagement"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
-}
-
-func (GetHipObjectListDataArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectListData)(nil)).Elem()
-}
-
-func (i GetHipObjectListDataArgs) ToGetHipObjectListDataOutput() GetHipObjectListDataOutput {
-	return i.ToGetHipObjectListDataOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectListDataArgs) ToGetHipObjectListDataOutputWithContext(ctx context.Context) GetHipObjectListDataOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataOutput)
-}
-
-// GetHipObjectListDataArrayInput is an input type that accepts GetHipObjectListDataArray and GetHipObjectListDataArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectListDataArrayInput` via:
-//
-//	GetHipObjectListDataArray{ GetHipObjectListDataArgs{...} }
-type GetHipObjectListDataArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectListDataArrayOutput() GetHipObjectListDataArrayOutput
-	ToGetHipObjectListDataArrayOutputWithContext(context.Context) GetHipObjectListDataArrayOutput
-}
-
-type GetHipObjectListDataArray []GetHipObjectListDataInput
-
-func (GetHipObjectListDataArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectListData)(nil)).Elem()
-}
-
-func (i GetHipObjectListDataArray) ToGetHipObjectListDataArrayOutput() GetHipObjectListDataArrayOutput {
-	return i.ToGetHipObjectListDataArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectListDataArray) ToGetHipObjectListDataArrayOutputWithContext(ctx context.Context) GetHipObjectListDataArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataArrayOutput)
-}
-
-type GetHipObjectListDataOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectListDataOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectListData)(nil)).Elem()
-}
-
-func (o GetHipObjectListDataOutput) ToGetHipObjectListDataOutput() GetHipObjectListDataOutput {
-	return o
-}
-
-func (o GetHipObjectListDataOutput) ToGetHipObjectListDataOutputWithContext(ctx context.Context) GetHipObjectListDataOutput {
-	return o
-}
-
-// Anti malware
-func (o GetHipObjectListDataOutput) AntiMalware() GetHipObjectListDataAntiMalwareOutput {
-	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataAntiMalware { return v.AntiMalware }).(GetHipObjectListDataAntiMalwareOutput)
-}
-
-// Certificate
-func (o GetHipObjectListDataOutput) Certificate() GetHipObjectListDataCertificateOutput {
-	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataCertificate { return v.Certificate }).(GetHipObjectListDataCertificateOutput)
-}
-
-// Custom checks
-func (o GetHipObjectListDataOutput) CustomChecks() GetHipObjectListDataCustomChecksOutput {
-	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataCustomChecks { return v.CustomChecks }).(GetHipObjectListDataCustomChecksOutput)
-}
-
-// Data loss prevention
-func (o GetHipObjectListDataOutput) DataLossPrevention() GetHipObjectListDataDataLossPreventionOutput {
-	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataDataLossPrevention { return v.DataLossPrevention }).(GetHipObjectListDataDataLossPreventionOutput)
-}
-
-// Description
-func (o GetHipObjectListDataOutput) Description() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectListData) string { return v.Description }).(pulumi.StringOutput)
-}
-
-// The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-func (o GetHipObjectListDataOutput) Device() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectListData) string { return v.Device }).(pulumi.StringOutput)
-}
-
-// Disk backup
-func (o GetHipObjectListDataOutput) DiskBackup() GetHipObjectListDataDiskBackupOutput {
-	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataDiskBackup { return v.DiskBackup }).(GetHipObjectListDataDiskBackupOutput)
-}
-
-// Disk encryption
-func (o GetHipObjectListDataOutput) DiskEncryption() GetHipObjectListDataDiskEncryptionOutput {
-	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataDiskEncryption { return v.DiskEncryption }).(GetHipObjectListDataDiskEncryptionOutput)
-}
-
-// Firewall
-func (o GetHipObjectListDataOutput) Firewall() GetHipObjectListDataFirewallOutput {
-	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataFirewall { return v.Firewall }).(GetHipObjectListDataFirewallOutput)
-}
-
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-func (o GetHipObjectListDataOutput) Folder() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectListData) string { return v.Folder }).(pulumi.StringOutput)
-}
-
-// Host info
-func (o GetHipObjectListDataOutput) HostInfo() GetHipObjectListDataHostInfoOutput {
-	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataHostInfo { return v.HostInfo }).(GetHipObjectListDataHostInfoOutput)
-}
-
-// UUID of the resource
-func (o GetHipObjectListDataOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectListData) string { return v.Id }).(pulumi.StringOutput)
-}
-
-// Mobile device
-func (o GetHipObjectListDataOutput) MobileDevice() GetHipObjectListDataMobileDeviceOutput {
-	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataMobileDevice { return v.MobileDevice }).(GetHipObjectListDataMobileDeviceOutput)
-}
-
-// The name of the HIP object
-func (o GetHipObjectListDataOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectListData) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Network info
-func (o GetHipObjectListDataOutput) NetworkInfo() GetHipObjectListDataNetworkInfoOutput {
-	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataNetworkInfo { return v.NetworkInfo }).(GetHipObjectListDataNetworkInfoOutput)
-}
-
-// Patch management
-func (o GetHipObjectListDataOutput) PatchManagement() GetHipObjectListDataPatchManagementOutput {
-	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataPatchManagement { return v.PatchManagement }).(GetHipObjectListDataPatchManagementOutput)
-}
-
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-func (o GetHipObjectListDataOutput) Snippet() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectListData) string { return v.Snippet }).(pulumi.StringOutput)
-}
-
-func (o GetHipObjectListDataOutput) Tfid() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectListData) string { return v.Tfid }).(pulumi.StringOutput)
-}
-
-type GetHipObjectListDataArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectListDataArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectListData)(nil)).Elem()
-}
-
-func (o GetHipObjectListDataArrayOutput) ToGetHipObjectListDataArrayOutput() GetHipObjectListDataArrayOutput {
-	return o
-}
-
-func (o GetHipObjectListDataArrayOutput) ToGetHipObjectListDataArrayOutputWithContext(ctx context.Context) GetHipObjectListDataArrayOutput {
-	return o
-}
-
-func (o GetHipObjectListDataArrayOutput) Index(i pulumi.IntInput) GetHipObjectListDataOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectListData {
-		return vs[0].([]GetHipObjectListData)[vs[1].(int)]
-	}).(GetHipObjectListDataOutput)
-}
-
-type GetHipObjectListDataAntiMalware struct {
-	// Criteria
-	Criteria GetHipObjectListDataAntiMalwareCriteria `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor bool `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors []GetHipObjectListDataAntiMalwareVendor `pulumi:"vendors"`
-}
-
-// GetHipObjectListDataAntiMalwareInput is an input type that accepts GetHipObjectListDataAntiMalwareArgs and GetHipObjectListDataAntiMalwareOutput values.
-// You can construct a concrete instance of `GetHipObjectListDataAntiMalwareInput` via:
-//
-//	GetHipObjectListDataAntiMalwareArgs{...}
-type GetHipObjectListDataAntiMalwareInput interface {
-	pulumi.Input
-
-	ToGetHipObjectListDataAntiMalwareOutput() GetHipObjectListDataAntiMalwareOutput
-	ToGetHipObjectListDataAntiMalwareOutputWithContext(context.Context) GetHipObjectListDataAntiMalwareOutput
-}
-
-type GetHipObjectListDataAntiMalwareArgs struct {
-	// Criteria
-	Criteria GetHipObjectListDataAntiMalwareCriteriaInput `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor pulumi.BoolInput `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors GetHipObjectListDataAntiMalwareVendorArrayInput `pulumi:"vendors"`
-}
-
-func (GetHipObjectListDataAntiMalwareArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectListDataAntiMalware)(nil)).Elem()
-}
-
-func (i GetHipObjectListDataAntiMalwareArgs) ToGetHipObjectListDataAntiMalwareOutput() GetHipObjectListDataAntiMalwareOutput {
-	return i.ToGetHipObjectListDataAntiMalwareOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectListDataAntiMalwareArgs) ToGetHipObjectListDataAntiMalwareOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataAntiMalwareOutput)
-}
-
-type GetHipObjectListDataAntiMalwareOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectListDataAntiMalwareOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectListDataAntiMalware)(nil)).Elem()
-}
-
-func (o GetHipObjectListDataAntiMalwareOutput) ToGetHipObjectListDataAntiMalwareOutput() GetHipObjectListDataAntiMalwareOutput {
-	return o
-}
-
-func (o GetHipObjectListDataAntiMalwareOutput) ToGetHipObjectListDataAntiMalwareOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareOutput {
-	return o
-}
-
-// Criteria
-func (o GetHipObjectListDataAntiMalwareOutput) Criteria() GetHipObjectListDataAntiMalwareCriteriaOutput {
-	return o.ApplyT(func(v GetHipObjectListDataAntiMalware) GetHipObjectListDataAntiMalwareCriteria { return v.Criteria }).(GetHipObjectListDataAntiMalwareCriteriaOutput)
-}
-
-// Exclude vendor
-func (o GetHipObjectListDataAntiMalwareOutput) ExcludeVendor() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectListDataAntiMalware) bool { return v.ExcludeVendor }).(pulumi.BoolOutput)
-}
-
-// Vendor name
-func (o GetHipObjectListDataAntiMalwareOutput) Vendors() GetHipObjectListDataAntiMalwareVendorArrayOutput {
-	return o.ApplyT(func(v GetHipObjectListDataAntiMalware) []GetHipObjectListDataAntiMalwareVendor { return v.Vendors }).(GetHipObjectListDataAntiMalwareVendorArrayOutput)
-}
-
-type GetHipObjectListDataAntiMalwareCriteria struct {
-	// Is Installed
-	IsInstalled bool `pulumi:"isInstalled"`
-	// Last scan time
-	LastScanTime GetHipObjectListDataAntiMalwareCriteriaLastScanTime `pulumi:"lastScanTime"`
-	// Product version
-	ProductVersion GetHipObjectListDataAntiMalwareCriteriaProductVersion `pulumi:"productVersion"`
-	// real time protection
-	RealTimeProtection string `pulumi:"realTimeProtection"`
-	// Virdef version
-	VirdefVersion GetHipObjectListDataAntiMalwareCriteriaVirdefVersion `pulumi:"virdefVersion"`
-}
-
-// GetHipObjectListDataAntiMalwareCriteriaInput is an input type that accepts GetHipObjectListDataAntiMalwareCriteriaArgs and GetHipObjectListDataAntiMalwareCriteriaOutput values.
-// You can construct a concrete instance of `GetHipObjectListDataAntiMalwareCriteriaInput` via:
-//
-//	GetHipObjectListDataAntiMalwareCriteriaArgs{...}
-type GetHipObjectListDataAntiMalwareCriteriaInput interface {
-	pulumi.Input
-
-	ToGetHipObjectListDataAntiMalwareCriteriaOutput() GetHipObjectListDataAntiMalwareCriteriaOutput
-	ToGetHipObjectListDataAntiMalwareCriteriaOutputWithContext(context.Context) GetHipObjectListDataAntiMalwareCriteriaOutput
-}
-
-type GetHipObjectListDataAntiMalwareCriteriaArgs struct {
-	// Is Installed
-	IsInstalled pulumi.BoolInput `pulumi:"isInstalled"`
-	// Last scan time
-	LastScanTime GetHipObjectListDataAntiMalwareCriteriaLastScanTimeInput `pulumi:"lastScanTime"`
-	// Product version
-	ProductVersion GetHipObjectListDataAntiMalwareCriteriaProductVersionInput `pulumi:"productVersion"`
-	// real time protection
-	RealTimeProtection pulumi.StringInput `pulumi:"realTimeProtection"`
-	// Virdef version
-	VirdefVersion GetHipObjectListDataAntiMalwareCriteriaVirdefVersionInput `pulumi:"virdefVersion"`
-}
-
-func (GetHipObjectListDataAntiMalwareCriteriaArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteria)(nil)).Elem()
-}
-
-func (i GetHipObjectListDataAntiMalwareCriteriaArgs) ToGetHipObjectListDataAntiMalwareCriteriaOutput() GetHipObjectListDataAntiMalwareCriteriaOutput {
-	return i.ToGetHipObjectListDataAntiMalwareCriteriaOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectListDataAntiMalwareCriteriaArgs) ToGetHipObjectListDataAntiMalwareCriteriaOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataAntiMalwareCriteriaOutput)
-}
-
-type GetHipObjectListDataAntiMalwareCriteriaOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectListDataAntiMalwareCriteriaOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteria)(nil)).Elem()
-}
-
-func (o GetHipObjectListDataAntiMalwareCriteriaOutput) ToGetHipObjectListDataAntiMalwareCriteriaOutput() GetHipObjectListDataAntiMalwareCriteriaOutput {
-	return o
-}
-
-func (o GetHipObjectListDataAntiMalwareCriteriaOutput) ToGetHipObjectListDataAntiMalwareCriteriaOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaOutput {
-	return o
-}
-
-// Is Installed
-func (o GetHipObjectListDataAntiMalwareCriteriaOutput) IsInstalled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteria) bool { return v.IsInstalled }).(pulumi.BoolOutput)
-}
-
-// Last scan time
-func (o GetHipObjectListDataAntiMalwareCriteriaOutput) LastScanTime() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput {
-	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteria) GetHipObjectListDataAntiMalwareCriteriaLastScanTime {
-		return v.LastScanTime
-	}).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput)
-}
-
-// Product version
-func (o GetHipObjectListDataAntiMalwareCriteriaOutput) ProductVersion() GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput {
-	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteria) GetHipObjectListDataAntiMalwareCriteriaProductVersion {
-		return v.ProductVersion
-	}).(GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput)
-}
-
-// real time protection
-func (o GetHipObjectListDataAntiMalwareCriteriaOutput) RealTimeProtection() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteria) string { return v.RealTimeProtection }).(pulumi.StringOutput)
-}
-
-// Virdef version
-func (o GetHipObjectListDataAntiMalwareCriteriaOutput) VirdefVersion() GetHipObjectListDataAntiMalwareCriteriaVirdefVersionOutput {
-	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteria) GetHipObjectListDataAntiMalwareCriteriaVirdefVersion {
-		return v.VirdefVersion
-	}).(GetHipObjectListDataAntiMalwareCriteriaVirdefVersionOutput)
-}
-
-type GetHipObjectListDataAntiMalwareCriteriaLastScanTime struct {
-	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	NotAvailable GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailable `pulumi:"notAvailable"`
-	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	NotWithin GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithin `pulumi:"notWithin"`
-	// Within
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	Within GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithin `pulumi:"within"`
-}
-
-// GetHipObjectListDataAntiMalwareCriteriaLastScanTimeInput is an input type that accepts GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs and GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput values.
-// You can construct a concrete instance of `GetHipObjectListDataAntiMalwareCriteriaLastScanTimeInput` via:
-//
-//	GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs{...}
-type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeInput interface {
-	pulumi.Input
-
-	ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput
-	ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutputWithContext(context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput
-}
-
-type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs struct {
-	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	NotAvailable GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableInput `pulumi:"notAvailable"`
-	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	NotWithin GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinInput `pulumi:"notWithin"`
-	// Within
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	Within GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinInput `pulumi:"within"`
-}
-
-func (GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTime)(nil)).Elem()
-}
-
-func (i GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput {
-	return i.ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput)
-}
-
-type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTime)(nil)).Elem()
-}
-
-func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput {
-	return o
-}
-
-func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput {
-	return o
-}
-
-// Not available
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) NotAvailable() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
-	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaLastScanTime) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailable {
-		return v.NotAvailable
-	}).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput)
-}
-
-// Not within
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) NotWithin() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinOutput {
-	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaLastScanTime) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithin {
-		return v.NotWithin
-	}).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinOutput)
-}
-
-// Within
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) Within() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinOutput {
-	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaLastScanTime) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithin {
-		return v.Within
-	}).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinOutput)
-}
-
-type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailable struct {
-}
-
-// GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableInput is an input type that accepts GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs and GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput values.
-// You can construct a concrete instance of `GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableInput` via:
-//
-//	GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs{...}
-type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableInput interface {
-	pulumi.Input
-
-	ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput
-	ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput
-}
-
-type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs struct {
-}
-
-func (GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailable)(nil)).Elem()
-}
-
-func (i GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
-	return i.ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput)
-}
-
-type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailable)(nil)).Elem()
-}
-
-func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
-	return o
-}
-
-func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
-	return o
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4MulticastArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastFilterListInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4MulticastFilterListArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastRouteMapsInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4MulticastRouteMapsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4UnicastInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4UnicastArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4UnicastConditionalAdvertisementInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4UnicastConditionalAdvertisementArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4UnicastConditionalAdvertisementExistInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4UnicastConditionalAdvertisementExistArgs{})
@@ -40518,8 +40305,10 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionRuleListDataArrayInput)(nil)).Elem(), GetDecryptionRuleListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionRuleListDataTypeInput)(nil)).Elem(), GetDecryptionRuleListDataTypeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionRuleListDataTypeSslForwardProxyInput)(nil)).Elem(), GetDecryptionRuleListDataTypeSslForwardProxyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionRuleListDataTypeSslInboundInspectionInput)(nil)).Elem(), GetDecryptionRuleListDataTypeSslInboundInspectionArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionRuleTypeInput)(nil)).Elem(), GetDecryptionRuleTypeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionRuleTypeSslForwardProxyInput)(nil)).Elem(), GetDecryptionRuleTypeSslForwardProxyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionRuleTypeSslInboundInspectionInput)(nil)).Elem(), GetDecryptionRuleTypeSslInboundInspectionArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceRedistributionCollectorListDataInput)(nil)).Elem(), GetDeviceRedistributionCollectorListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceRedistributionCollectorListDataArrayInput)(nil)).Elem(), GetDeviceRedistributionCollectorListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceRedistributionCollectorListDataRedistributionCollectorInput)(nil)).Elem(), GetDeviceRedistributionCollectorListDataRedistributionCollectorArgs{})
@@ -40865,17 +40654,14 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaClientVersionInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaClientVersionArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaDomainInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaDomainArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostIdInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaHostIdArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostNameInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaHostNameArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaOsInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaOsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaOsContainsInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaOsContainsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaSerialNumberInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaSerialNumberArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataInput)(nil)).Elem(), GetHipObjectListDataArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataArrayInput)(nil)).Elem(), GetHipObjectListDataArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataAntiMalwareInput)(nil)).Elem(), GetHipObjectListDataAntiMalwareArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaInput)(nil)).Elem(), GetHipObjectListDataAntiMalwareCriteriaArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTimeInput)(nil)).Elem(), GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableInput)(nil)).Elem(), GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4MulticastOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementNonExistOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4MulticastFilterListOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4MulticastInboundNetworkFiltersOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4MulticastOutboundNetworkFiltersOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4MulticastRouteMapsOutput{})
 	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4UnicastOutput{})
 	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4UnicastConditionalAdvertisementOutput{})
 	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4UnicastConditionalAdvertisementExistOutput{})
@@ -41089,8 +40875,10 @@ func init() {
 	pulumi.RegisterOutputType(GetDecryptionRuleListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetDecryptionRuleListDataTypeOutput{})
 	pulumi.RegisterOutputType(GetDecryptionRuleListDataTypeSslForwardProxyOutput{})
+	pulumi.RegisterOutputType(GetDecryptionRuleListDataTypeSslInboundInspectionOutput{})
 	pulumi.RegisterOutputType(GetDecryptionRuleTypeOutput{})
 	pulumi.RegisterOutputType(GetDecryptionRuleTypeSslForwardProxyOutput{})
+	pulumi.RegisterOutputType(GetDecryptionRuleTypeSslInboundInspectionOutput{})
 	pulumi.RegisterOutputType(GetDeviceRedistributionCollectorListDataOutput{})
 	pulumi.RegisterOutputType(GetDeviceRedistributionCollectorListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetDeviceRedistributionCollectorListDataRedistributionCollectorOutput{})
@@ -41436,15 +41224,4 @@ func init() {
 	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaOutput{})
 	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaClientVersionOutput{})
 	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaDomainOutput{})
-	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaHostIdOutput{})
-	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaHostNameOutput{})
-	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaOsOutput{})
-	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaOsContainsOutput{})
-	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaSerialNumberOutput{})
-	pulumi.RegisterOutputType(GetHipObjectListDataOutput{})
-	pulumi.RegisterOutputType(GetHipObjectListDataArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectListDataAntiMalwareOutput{})
-	pulumi.RegisterOutputType(GetHipObjectListDataAntiMalwareCriteriaOutput{})
-	pulumi.RegisterOutputType(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput{})
-	pulumi.RegisterOutputType(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput{})
 }

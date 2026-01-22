@@ -544,11 +544,11 @@ type AggregateInterfaceLayer3 struct {
 	// Dynamic DNS configuration specific to the Aggregate Interface.
 	DdnsConfig *AggregateInterfaceLayer3DdnsConfig `pulumi:"ddnsConfig"`
 	// Aggregate Ethernet DHCP Client Object
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient *AggregateInterfaceLayer3DhcpClient `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// Aggregate Interface IP addresses
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips []AggregateInterfaceLayer3Ip `pulumi:"ips"`
 	// Lacp
@@ -574,11 +574,11 @@ type AggregateInterfaceLayer3Args struct {
 	// Dynamic DNS configuration specific to the Aggregate Interface.
 	DdnsConfig AggregateInterfaceLayer3DdnsConfigPtrInput `pulumi:"ddnsConfig"`
 	// Aggregate Ethernet DHCP Client Object
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient AggregateInterfaceLayer3DhcpClientPtrInput `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput `pulumi:"interfaceManagementProfile"`
 	// Aggregate Interface IP addresses
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips AggregateInterfaceLayer3IpArrayInput `pulumi:"ips"`
 	// Lacp
@@ -675,7 +675,6 @@ func (o AggregateInterfaceLayer3Output) DdnsConfig() AggregateInterfaceLayer3Ddn
 }
 
 // Aggregate Ethernet DHCP Client Object
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o AggregateInterfaceLayer3Output) DhcpClient() AggregateInterfaceLayer3DhcpClientPtrOutput {
 	return o.ApplyT(func(v AggregateInterfaceLayer3) *AggregateInterfaceLayer3DhcpClient { return v.DhcpClient }).(AggregateInterfaceLayer3DhcpClientPtrOutput)
 }
@@ -686,6 +685,7 @@ func (o AggregateInterfaceLayer3Output) InterfaceManagementProfile() pulumi.Stri
 }
 
 // Aggregate Interface IP addresses
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o AggregateInterfaceLayer3Output) Ips() AggregateInterfaceLayer3IpArrayOutput {
 	return o.ApplyT(func(v AggregateInterfaceLayer3) []AggregateInterfaceLayer3Ip { return v.Ips }).(AggregateInterfaceLayer3IpArrayOutput)
@@ -746,7 +746,6 @@ func (o AggregateInterfaceLayer3PtrOutput) DdnsConfig() AggregateInterfaceLayer3
 }
 
 // Aggregate Ethernet DHCP Client Object
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o AggregateInterfaceLayer3PtrOutput) DhcpClient() AggregateInterfaceLayer3DhcpClientPtrOutput {
 	return o.ApplyT(func(v *AggregateInterfaceLayer3) *AggregateInterfaceLayer3DhcpClient {
 		if v == nil {
@@ -767,6 +766,7 @@ func (o AggregateInterfaceLayer3PtrOutput) InterfaceManagementProfile() pulumi.S
 }
 
 // Aggregate Interface IP addresses
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o AggregateInterfaceLayer3PtrOutput) Ips() AggregateInterfaceLayer3IpArrayOutput {
 	return o.ApplyT(func(v *AggregateInterfaceLayer3) []AggregateInterfaceLayer3Ip {
@@ -2085,24 +2085,29 @@ func (o AntiSpywareProfileRuleArrayOutput) Index(i pulumi.IntInput) AntiSpywareP
 
 type AntiSpywareProfileRuleAction struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Alert *AntiSpywareProfileRuleActionAlert `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow *AntiSpywareProfileRuleActionAllow `pulumi:"allow"`
 	// anti spyware profiles rules action block ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp *AntiSpywareProfileRuleActionBlockIp `pulumi:"blockIp"`
 	// Drop
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop *AntiSpywareProfileRuleActionDrop `pulumi:"drop"`
 	// Reset both
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth *AntiSpywareProfileRuleActionResetBoth `pulumi:"resetBoth"`
 	// Reset client
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient *AntiSpywareProfileRuleActionResetClient `pulumi:"resetClient"`
 	// Reset server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer *AntiSpywareProfileRuleActionResetServer `pulumi:"resetServer"`
 }
@@ -2120,24 +2125,29 @@ type AntiSpywareProfileRuleActionInput interface {
 
 type AntiSpywareProfileRuleActionArgs struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Alert AntiSpywareProfileRuleActionAlertPtrInput `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow AntiSpywareProfileRuleActionAllowPtrInput `pulumi:"allow"`
 	// anti spyware profiles rules action block ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp AntiSpywareProfileRuleActionBlockIpPtrInput `pulumi:"blockIp"`
 	// Drop
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop AntiSpywareProfileRuleActionDropPtrInput `pulumi:"drop"`
 	// Reset both
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth AntiSpywareProfileRuleActionResetBothPtrInput `pulumi:"resetBoth"`
 	// Reset client
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient AntiSpywareProfileRuleActionResetClientPtrInput `pulumi:"resetClient"`
 	// Reset server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer AntiSpywareProfileRuleActionResetServerPtrInput `pulumi:"resetServer"`
 }
@@ -2220,42 +2230,47 @@ func (o AntiSpywareProfileRuleActionOutput) ToAntiSpywareProfileRuleActionPtrOut
 }
 
 // Alert
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionOutput) Alert() AntiSpywareProfileRuleActionAlertPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionAlert { return v.Alert }).(AntiSpywareProfileRuleActionAlertPtrOutput)
 }
 
 // Allow
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionOutput) Allow() AntiSpywareProfileRuleActionAllowPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionAllow { return v.Allow }).(AntiSpywareProfileRuleActionAllowPtrOutput)
 }
 
 // anti spyware profiles rules action block ip
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionOutput) BlockIp() AntiSpywareProfileRuleActionBlockIpPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionBlockIp { return v.BlockIp }).(AntiSpywareProfileRuleActionBlockIpPtrOutput)
 }
 
 // Drop
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionOutput) Drop() AntiSpywareProfileRuleActionDropPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionDrop { return v.Drop }).(AntiSpywareProfileRuleActionDropPtrOutput)
 }
 
 // Reset both
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionOutput) ResetBoth() AntiSpywareProfileRuleActionResetBothPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionResetBoth { return v.ResetBoth }).(AntiSpywareProfileRuleActionResetBothPtrOutput)
 }
 
 // Reset client
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionOutput) ResetClient() AntiSpywareProfileRuleActionResetClientPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionResetClient { return v.ResetClient }).(AntiSpywareProfileRuleActionResetClientPtrOutput)
 }
 
 // Reset server
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionOutput) ResetServer() AntiSpywareProfileRuleActionResetServerPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionResetServer { return v.ResetServer }).(AntiSpywareProfileRuleActionResetServerPtrOutput)
@@ -2286,7 +2301,6 @@ func (o AntiSpywareProfileRuleActionPtrOutput) Elem() AntiSpywareProfileRuleActi
 }
 
 // Alert
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionPtrOutput) Alert() AntiSpywareProfileRuleActionAlertPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionAlert {
 		if v == nil {
@@ -2297,6 +2311,7 @@ func (o AntiSpywareProfileRuleActionPtrOutput) Alert() AntiSpywareProfileRuleAct
 }
 
 // Allow
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionPtrOutput) Allow() AntiSpywareProfileRuleActionAllowPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionAllow {
@@ -2308,6 +2323,7 @@ func (o AntiSpywareProfileRuleActionPtrOutput) Allow() AntiSpywareProfileRuleAct
 }
 
 // anti spyware profiles rules action block ip
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionPtrOutput) BlockIp() AntiSpywareProfileRuleActionBlockIpPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionBlockIp {
@@ -2319,6 +2335,7 @@ func (o AntiSpywareProfileRuleActionPtrOutput) BlockIp() AntiSpywareProfileRuleA
 }
 
 // Drop
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionPtrOutput) Drop() AntiSpywareProfileRuleActionDropPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionDrop {
@@ -2330,6 +2347,7 @@ func (o AntiSpywareProfileRuleActionPtrOutput) Drop() AntiSpywareProfileRuleActi
 }
 
 // Reset both
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionPtrOutput) ResetBoth() AntiSpywareProfileRuleActionResetBothPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionResetBoth {
@@ -2341,6 +2359,7 @@ func (o AntiSpywareProfileRuleActionPtrOutput) ResetBoth() AntiSpywareProfileRul
 }
 
 // Reset client
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionPtrOutput) ResetClient() AntiSpywareProfileRuleActionResetClientPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionResetClient {
@@ -2352,6 +2371,7 @@ func (o AntiSpywareProfileRuleActionPtrOutput) ResetClient() AntiSpywareProfileR
 }
 
 // Reset server
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileRuleActionPtrOutput) ResetServer() AntiSpywareProfileRuleActionResetServerPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileRuleAction) *AntiSpywareProfileRuleActionResetServer {
@@ -3363,27 +3383,33 @@ func (o AntiSpywareProfileThreatExceptionArrayOutput) Index(i pulumi.IntInput) A
 
 type AntiSpywareProfileThreatExceptionAction struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Alert *AntiSpywareProfileThreatExceptionActionAlert `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow *AntiSpywareProfileThreatExceptionActionAllow `pulumi:"allow"`
 	// anti spyware profiles threat exception action block ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp *AntiSpywareProfileThreatExceptionActionBlockIp `pulumi:"blockIp"`
 	// Default
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Default *AntiSpywareProfileThreatExceptionActionDefault `pulumi:"default"`
 	// Drop
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop *AntiSpywareProfileThreatExceptionActionDrop `pulumi:"drop"`
 	// Reset both
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth *AntiSpywareProfileThreatExceptionActionResetBoth `pulumi:"resetBoth"`
 	// Reset client
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient *AntiSpywareProfileThreatExceptionActionResetClient `pulumi:"resetClient"`
 	// Reset server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer *AntiSpywareProfileThreatExceptionActionResetServer `pulumi:"resetServer"`
 }
@@ -3401,27 +3427,33 @@ type AntiSpywareProfileThreatExceptionActionInput interface {
 
 type AntiSpywareProfileThreatExceptionActionArgs struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Alert AntiSpywareProfileThreatExceptionActionAlertPtrInput `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow AntiSpywareProfileThreatExceptionActionAllowPtrInput `pulumi:"allow"`
 	// anti spyware profiles threat exception action block ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp AntiSpywareProfileThreatExceptionActionBlockIpPtrInput `pulumi:"blockIp"`
 	// Default
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Default AntiSpywareProfileThreatExceptionActionDefaultPtrInput `pulumi:"default"`
 	// Drop
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop AntiSpywareProfileThreatExceptionActionDropPtrInput `pulumi:"drop"`
 	// Reset both
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth AntiSpywareProfileThreatExceptionActionResetBothPtrInput `pulumi:"resetBoth"`
 	// Reset client
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient AntiSpywareProfileThreatExceptionActionResetClientPtrInput `pulumi:"resetClient"`
 	// Reset server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer AntiSpywareProfileThreatExceptionActionResetServerPtrInput `pulumi:"resetServer"`
 }
@@ -3504,7 +3536,6 @@ func (o AntiSpywareProfileThreatExceptionActionOutput) ToAntiSpywareProfileThrea
 }
 
 // Alert
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionOutput) Alert() AntiSpywareProfileThreatExceptionActionAlertPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionAlert {
 		return v.Alert
@@ -3512,6 +3543,7 @@ func (o AntiSpywareProfileThreatExceptionActionOutput) Alert() AntiSpywareProfil
 }
 
 // Allow
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionOutput) Allow() AntiSpywareProfileThreatExceptionActionAllowPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionAllow {
@@ -3520,6 +3552,7 @@ func (o AntiSpywareProfileThreatExceptionActionOutput) Allow() AntiSpywareProfil
 }
 
 // anti spyware profiles threat exception action block ip
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionOutput) BlockIp() AntiSpywareProfileThreatExceptionActionBlockIpPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionBlockIp {
@@ -3528,6 +3561,7 @@ func (o AntiSpywareProfileThreatExceptionActionOutput) BlockIp() AntiSpywareProf
 }
 
 // Default
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionOutput) Default() AntiSpywareProfileThreatExceptionActionDefaultPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionDefault {
@@ -3536,6 +3570,7 @@ func (o AntiSpywareProfileThreatExceptionActionOutput) Default() AntiSpywareProf
 }
 
 // Drop
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionOutput) Drop() AntiSpywareProfileThreatExceptionActionDropPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionDrop {
@@ -3544,6 +3579,7 @@ func (o AntiSpywareProfileThreatExceptionActionOutput) Drop() AntiSpywareProfile
 }
 
 // Reset both
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionOutput) ResetBoth() AntiSpywareProfileThreatExceptionActionResetBothPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionResetBoth {
@@ -3552,6 +3588,7 @@ func (o AntiSpywareProfileThreatExceptionActionOutput) ResetBoth() AntiSpywarePr
 }
 
 // Reset client
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionOutput) ResetClient() AntiSpywareProfileThreatExceptionActionResetClientPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionResetClient {
@@ -3560,6 +3597,7 @@ func (o AntiSpywareProfileThreatExceptionActionOutput) ResetClient() AntiSpyware
 }
 
 // Reset server
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionOutput) ResetServer() AntiSpywareProfileThreatExceptionActionResetServerPtrOutput {
 	return o.ApplyT(func(v AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionResetServer {
@@ -3592,7 +3630,6 @@ func (o AntiSpywareProfileThreatExceptionActionPtrOutput) Elem() AntiSpywareProf
 }
 
 // Alert
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionPtrOutput) Alert() AntiSpywareProfileThreatExceptionActionAlertPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionAlert {
 		if v == nil {
@@ -3603,6 +3640,7 @@ func (o AntiSpywareProfileThreatExceptionActionPtrOutput) Alert() AntiSpywarePro
 }
 
 // Allow
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionPtrOutput) Allow() AntiSpywareProfileThreatExceptionActionAllowPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionAllow {
@@ -3614,6 +3652,7 @@ func (o AntiSpywareProfileThreatExceptionActionPtrOutput) Allow() AntiSpywarePro
 }
 
 // anti spyware profiles threat exception action block ip
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionPtrOutput) BlockIp() AntiSpywareProfileThreatExceptionActionBlockIpPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionBlockIp {
@@ -3625,6 +3664,7 @@ func (o AntiSpywareProfileThreatExceptionActionPtrOutput) BlockIp() AntiSpywareP
 }
 
 // Default
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionPtrOutput) Default() AntiSpywareProfileThreatExceptionActionDefaultPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionDefault {
@@ -3636,6 +3676,7 @@ func (o AntiSpywareProfileThreatExceptionActionPtrOutput) Default() AntiSpywareP
 }
 
 // Drop
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionPtrOutput) Drop() AntiSpywareProfileThreatExceptionActionDropPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionDrop {
@@ -3647,6 +3688,7 @@ func (o AntiSpywareProfileThreatExceptionActionPtrOutput) Drop() AntiSpywareProf
 }
 
 // Reset both
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionPtrOutput) ResetBoth() AntiSpywareProfileThreatExceptionActionResetBothPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionResetBoth {
@@ -3658,6 +3700,7 @@ func (o AntiSpywareProfileThreatExceptionActionPtrOutput) ResetBoth() AntiSpywar
 }
 
 // Reset client
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionPtrOutput) ResetClient() AntiSpywareProfileThreatExceptionActionResetClientPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionResetClient {
@@ -3669,6 +3712,7 @@ func (o AntiSpywareProfileThreatExceptionActionPtrOutput) ResetClient() AntiSpyw
 }
 
 // Reset server
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareProfileThreatExceptionActionPtrOutput) ResetServer() AntiSpywareProfileThreatExceptionActionResetServerPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfileThreatExceptionAction) *AntiSpywareProfileThreatExceptionActionResetServer {
@@ -4760,24 +4804,29 @@ func (o AntiSpywareProfileThreatExceptionExemptIpArrayOutput) Index(i pulumi.Int
 
 type AntiSpywareSignatureDefaultAction struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Alert *AntiSpywareSignatureDefaultActionAlert `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow *AntiSpywareSignatureDefaultActionAllow `pulumi:"allow"`
 	// anti spyware signature block ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp *AntiSpywareSignatureDefaultActionBlockIp `pulumi:"blockIp"`
 	// Drop
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop *AntiSpywareSignatureDefaultActionDrop `pulumi:"drop"`
 	// Reset both
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth *AntiSpywareSignatureDefaultActionResetBoth `pulumi:"resetBoth"`
 	// Reset client
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient *AntiSpywareSignatureDefaultActionResetClient `pulumi:"resetClient"`
 	// Reset server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer *AntiSpywareSignatureDefaultActionResetServer `pulumi:"resetServer"`
 }
@@ -4795,24 +4844,29 @@ type AntiSpywareSignatureDefaultActionInput interface {
 
 type AntiSpywareSignatureDefaultActionArgs struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Alert AntiSpywareSignatureDefaultActionAlertPtrInput `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Allow AntiSpywareSignatureDefaultActionAllowPtrInput `pulumi:"allow"`
 	// anti spyware signature block ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	BlockIp AntiSpywareSignatureDefaultActionBlockIpPtrInput `pulumi:"blockIp"`
 	// Drop
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	Drop AntiSpywareSignatureDefaultActionDropPtrInput `pulumi:"drop"`
 	// Reset both
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetBoth AntiSpywareSignatureDefaultActionResetBothPtrInput `pulumi:"resetBoth"`
 	// Reset client
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetClient AntiSpywareSignatureDefaultActionResetClientPtrInput `pulumi:"resetClient"`
 	// Reset server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 	ResetServer AntiSpywareSignatureDefaultActionResetServerPtrInput `pulumi:"resetServer"`
 }
@@ -4895,30 +4949,33 @@ func (o AntiSpywareSignatureDefaultActionOutput) ToAntiSpywareSignatureDefaultAc
 }
 
 // Alert
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionOutput) Alert() AntiSpywareSignatureDefaultActionAlertPtrOutput {
 	return o.ApplyT(func(v AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionAlert { return v.Alert }).(AntiSpywareSignatureDefaultActionAlertPtrOutput)
 }
 
 // Allow
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionOutput) Allow() AntiSpywareSignatureDefaultActionAllowPtrOutput {
 	return o.ApplyT(func(v AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionAllow { return v.Allow }).(AntiSpywareSignatureDefaultActionAllowPtrOutput)
 }
 
 // anti spyware signature block ip
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionOutput) BlockIp() AntiSpywareSignatureDefaultActionBlockIpPtrOutput {
 	return o.ApplyT(func(v AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionBlockIp { return v.BlockIp }).(AntiSpywareSignatureDefaultActionBlockIpPtrOutput)
 }
 
 // Drop
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionOutput) Drop() AntiSpywareSignatureDefaultActionDropPtrOutput {
 	return o.ApplyT(func(v AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionDrop { return v.Drop }).(AntiSpywareSignatureDefaultActionDropPtrOutput)
 }
 
 // Reset both
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionOutput) ResetBoth() AntiSpywareSignatureDefaultActionResetBothPtrOutput {
 	return o.ApplyT(func(v AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionResetBoth {
@@ -4927,6 +4984,7 @@ func (o AntiSpywareSignatureDefaultActionOutput) ResetBoth() AntiSpywareSignatur
 }
 
 // Reset client
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionOutput) ResetClient() AntiSpywareSignatureDefaultActionResetClientPtrOutput {
 	return o.ApplyT(func(v AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionResetClient {
@@ -4935,6 +4993,7 @@ func (o AntiSpywareSignatureDefaultActionOutput) ResetClient() AntiSpywareSignat
 }
 
 // Reset server
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionOutput) ResetServer() AntiSpywareSignatureDefaultActionResetServerPtrOutput {
 	return o.ApplyT(func(v AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionResetServer {
@@ -4967,7 +5026,6 @@ func (o AntiSpywareSignatureDefaultActionPtrOutput) Elem() AntiSpywareSignatureD
 }
 
 // Alert
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionPtrOutput) Alert() AntiSpywareSignatureDefaultActionAlertPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionAlert {
 		if v == nil {
@@ -4978,6 +5036,7 @@ func (o AntiSpywareSignatureDefaultActionPtrOutput) Alert() AntiSpywareSignature
 }
 
 // Allow
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionPtrOutput) Allow() AntiSpywareSignatureDefaultActionAllowPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionAllow {
@@ -4989,6 +5048,7 @@ func (o AntiSpywareSignatureDefaultActionPtrOutput) Allow() AntiSpywareSignature
 }
 
 // anti spyware signature block ip
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionPtrOutput) BlockIp() AntiSpywareSignatureDefaultActionBlockIpPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionBlockIp {
@@ -5000,6 +5060,7 @@ func (o AntiSpywareSignatureDefaultActionPtrOutput) BlockIp() AntiSpywareSignatu
 }
 
 // Drop
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionPtrOutput) Drop() AntiSpywareSignatureDefaultActionDropPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionDrop {
@@ -5011,6 +5072,7 @@ func (o AntiSpywareSignatureDefaultActionPtrOutput) Drop() AntiSpywareSignatureD
 }
 
 // Reset both
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionPtrOutput) ResetBoth() AntiSpywareSignatureDefaultActionResetBothPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionResetBoth {
@@ -5022,6 +5084,7 @@ func (o AntiSpywareSignatureDefaultActionPtrOutput) ResetBoth() AntiSpywareSigna
 }
 
 // Reset client
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionPtrOutput) ResetClient() AntiSpywareSignatureDefaultActionResetClientPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionResetClient {
@@ -5033,6 +5096,7 @@ func (o AntiSpywareSignatureDefaultActionPtrOutput) ResetClient() AntiSpywareSig
 }
 
 // Reset server
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
 func (o AntiSpywareSignatureDefaultActionPtrOutput) ResetServer() AntiSpywareSignatureDefaultActionResetServerPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignatureDefaultAction) *AntiSpywareSignatureDefaultActionResetServer {
@@ -5909,9 +5973,9 @@ func (o AntiSpywareSignatureDefaultActionResetServerPtrOutput) Elem() AntiSpywar
 
 type AntiSpywareSignatureSignature struct {
 	// anti spyware signature combination
-	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Combination *AntiSpywareSignatureSignatureCombination `pulumi:"combination"`
 	// Standard
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Standards []AntiSpywareSignatureSignatureStandard `pulumi:"standards"`
 }
@@ -5929,9 +5993,9 @@ type AntiSpywareSignatureSignatureInput interface {
 
 type AntiSpywareSignatureSignatureArgs struct {
 	// anti spyware signature combination
-	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Combination AntiSpywareSignatureSignatureCombinationPtrInput `pulumi:"combination"`
 	// Standard
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 	Standards AntiSpywareSignatureSignatureStandardArrayInput `pulumi:"standards"`
 }
@@ -6014,12 +6078,12 @@ func (o AntiSpywareSignatureSignatureOutput) ToAntiSpywareSignatureSignaturePtrO
 }
 
 // anti spyware signature combination
-// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 func (o AntiSpywareSignatureSignatureOutput) Combination() AntiSpywareSignatureSignatureCombinationPtrOutput {
 	return o.ApplyT(func(v AntiSpywareSignatureSignature) *AntiSpywareSignatureSignatureCombination { return v.Combination }).(AntiSpywareSignatureSignatureCombinationPtrOutput)
 }
 
 // Standard
+//
 // > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 func (o AntiSpywareSignatureSignatureOutput) Standards() AntiSpywareSignatureSignatureStandardArrayOutput {
 	return o.ApplyT(func(v AntiSpywareSignatureSignature) []AntiSpywareSignatureSignatureStandard { return v.Standards }).(AntiSpywareSignatureSignatureStandardArrayOutput)
@@ -6050,7 +6114,6 @@ func (o AntiSpywareSignatureSignaturePtrOutput) Elem() AntiSpywareSignatureSigna
 }
 
 // anti spyware signature combination
-// > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 func (o AntiSpywareSignatureSignaturePtrOutput) Combination() AntiSpywareSignatureSignatureCombinationPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignatureSignature) *AntiSpywareSignatureSignatureCombination {
 		if v == nil {
@@ -6061,6 +6124,7 @@ func (o AntiSpywareSignatureSignaturePtrOutput) Combination() AntiSpywareSignatu
 }
 
 // Standard
+//
 // > ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
 func (o AntiSpywareSignatureSignaturePtrOutput) Standards() AntiSpywareSignatureSignatureStandardArrayOutput {
 	return o.ApplyT(func(v *AntiSpywareSignatureSignature) []AntiSpywareSignatureSignatureStandard {
@@ -8400,15 +8464,17 @@ func (o AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatt
 
 type ApplicationDefault struct {
 	// Ident by icmp6 type
-	// > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 	IdentByIcmp6Type *ApplicationDefaultIdentByIcmp6Type `pulumi:"identByIcmp6Type"`
 	// Ident by icmp type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 	IdentByIcmpType *ApplicationDefaultIdentByIcmpType `pulumi:"identByIcmpType"`
 	// Ident by ip protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 	IdentByIpProtocol *string `pulumi:"identByIpProtocol"`
 	// Port
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 	Ports []string `pulumi:"ports"`
 }
@@ -8426,15 +8492,17 @@ type ApplicationDefaultInput interface {
 
 type ApplicationDefaultArgs struct {
 	// Ident by icmp6 type
-	// > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 	IdentByIcmp6Type ApplicationDefaultIdentByIcmp6TypePtrInput `pulumi:"identByIcmp6Type"`
 	// Ident by icmp type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 	IdentByIcmpType ApplicationDefaultIdentByIcmpTypePtrInput `pulumi:"identByIcmpType"`
 	// Ident by ip protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 	IdentByIpProtocol pulumi.StringPtrInput `pulumi:"identByIpProtocol"`
 	// Port
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 	Ports pulumi.StringArrayInput `pulumi:"ports"`
 }
@@ -8517,24 +8585,26 @@ func (o ApplicationDefaultOutput) ToApplicationDefaultPtrOutputWithContext(ctx c
 }
 
 // Ident by icmp6 type
-// > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 func (o ApplicationDefaultOutput) IdentByIcmp6Type() ApplicationDefaultIdentByIcmp6TypePtrOutput {
 	return o.ApplyT(func(v ApplicationDefault) *ApplicationDefaultIdentByIcmp6Type { return v.IdentByIcmp6Type }).(ApplicationDefaultIdentByIcmp6TypePtrOutput)
 }
 
 // Ident by icmp type
+//
 // > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 func (o ApplicationDefaultOutput) IdentByIcmpType() ApplicationDefaultIdentByIcmpTypePtrOutput {
 	return o.ApplyT(func(v ApplicationDefault) *ApplicationDefaultIdentByIcmpType { return v.IdentByIcmpType }).(ApplicationDefaultIdentByIcmpTypePtrOutput)
 }
 
 // Ident by ip protocol
+//
 // > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 func (o ApplicationDefaultOutput) IdentByIpProtocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ApplicationDefault) *string { return v.IdentByIpProtocol }).(pulumi.StringPtrOutput)
 }
 
 // Port
+//
 // > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 func (o ApplicationDefaultOutput) Ports() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v ApplicationDefault) []string { return v.Ports }).(pulumi.StringArrayOutput)
@@ -8565,7 +8635,6 @@ func (o ApplicationDefaultPtrOutput) Elem() ApplicationDefaultOutput {
 }
 
 // Ident by icmp6 type
-// > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 func (o ApplicationDefaultPtrOutput) IdentByIcmp6Type() ApplicationDefaultIdentByIcmp6TypePtrOutput {
 	return o.ApplyT(func(v *ApplicationDefault) *ApplicationDefaultIdentByIcmp6Type {
 		if v == nil {
@@ -8576,6 +8645,7 @@ func (o ApplicationDefaultPtrOutput) IdentByIcmp6Type() ApplicationDefaultIdentB
 }
 
 // Ident by icmp type
+//
 // > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 func (o ApplicationDefaultPtrOutput) IdentByIcmpType() ApplicationDefaultIdentByIcmpTypePtrOutput {
 	return o.ApplyT(func(v *ApplicationDefault) *ApplicationDefaultIdentByIcmpType {
@@ -8587,6 +8657,7 @@ func (o ApplicationDefaultPtrOutput) IdentByIcmpType() ApplicationDefaultIdentBy
 }
 
 // Ident by ip protocol
+//
 // > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 func (o ApplicationDefaultPtrOutput) IdentByIpProtocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationDefault) *string {
@@ -8598,6 +8669,7 @@ func (o ApplicationDefaultPtrOutput) IdentByIpProtocol() pulumi.StringPtrOutput 
 }
 
 // Port
+//
 // > ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
 func (o ApplicationDefaultPtrOutput) Ports() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ApplicationDefault) []string {
@@ -8922,9 +8994,9 @@ func (o ApplicationDefaultIdentByIcmpTypePtrOutput) Type() pulumi.StringPtrOutpu
 
 type ApplicationFilterTagging struct {
 	// No tag
-	// > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
 	NoTag *bool `pulumi:"noTag"`
 	// Tag
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
 	Tags []string `pulumi:"tags"`
 }
@@ -8942,9 +9014,9 @@ type ApplicationFilterTaggingInput interface {
 
 type ApplicationFilterTaggingArgs struct {
 	// No tag
-	// > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
 	NoTag pulumi.BoolPtrInput `pulumi:"noTag"`
 	// Tag
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
 	Tags pulumi.StringArrayInput `pulumi:"tags"`
 }
@@ -9027,12 +9099,12 @@ func (o ApplicationFilterTaggingOutput) ToApplicationFilterTaggingPtrOutputWithC
 }
 
 // No tag
-// > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
 func (o ApplicationFilterTaggingOutput) NoTag() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v ApplicationFilterTagging) *bool { return v.NoTag }).(pulumi.BoolPtrOutput)
 }
 
 // Tag
+//
 // > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
 func (o ApplicationFilterTaggingOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v ApplicationFilterTagging) []string { return v.Tags }).(pulumi.StringArrayOutput)
@@ -9063,7 +9135,6 @@ func (o ApplicationFilterTaggingPtrOutput) Elem() ApplicationFilterTaggingOutput
 }
 
 // No tag
-// > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
 func (o ApplicationFilterTaggingPtrOutput) NoTag() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilterTagging) *bool {
 		if v == nil {
@@ -9074,6 +9145,7 @@ func (o ApplicationFilterTaggingPtrOutput) NoTag() pulumi.BoolPtrOutput {
 }
 
 // Tag
+//
 // > ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
 func (o ApplicationFilterTaggingPtrOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ApplicationFilterTagging) []string {
@@ -9435,15 +9507,17 @@ func (o ApplicationSignatureAndConditionOrConditionArrayOutput) Index(i pulumi.I
 
 type ApplicationSignatureAndConditionOrConditionOperator struct {
 	// Equal to
-	// > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 	EqualTo *ApplicationSignatureAndConditionOrConditionOperatorEqualTo `pulumi:"equalTo"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 	GreaterThan *ApplicationSignatureAndConditionOrConditionOperatorGreaterThan `pulumi:"greaterThan"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 	LessThan *ApplicationSignatureAndConditionOrConditionOperatorLessThan `pulumi:"lessThan"`
 	// Pattern match
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 	PatternMatch *ApplicationSignatureAndConditionOrConditionOperatorPatternMatch `pulumi:"patternMatch"`
 }
@@ -9461,15 +9535,17 @@ type ApplicationSignatureAndConditionOrConditionOperatorInput interface {
 
 type ApplicationSignatureAndConditionOrConditionOperatorArgs struct {
 	// Equal to
-	// > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 	EqualTo ApplicationSignatureAndConditionOrConditionOperatorEqualToPtrInput `pulumi:"equalTo"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 	GreaterThan ApplicationSignatureAndConditionOrConditionOperatorGreaterThanPtrInput `pulumi:"greaterThan"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 	LessThan ApplicationSignatureAndConditionOrConditionOperatorLessThanPtrInput `pulumi:"lessThan"`
 	// Pattern match
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 	PatternMatch ApplicationSignatureAndConditionOrConditionOperatorPatternMatchPtrInput `pulumi:"patternMatch"`
 }
@@ -9501,7 +9577,6 @@ func (o ApplicationSignatureAndConditionOrConditionOperatorOutput) ToApplication
 }
 
 // Equal to
-// > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 func (o ApplicationSignatureAndConditionOrConditionOperatorOutput) EqualTo() ApplicationSignatureAndConditionOrConditionOperatorEqualToPtrOutput {
 	return o.ApplyT(func(v ApplicationSignatureAndConditionOrConditionOperator) *ApplicationSignatureAndConditionOrConditionOperatorEqualTo {
 		return v.EqualTo
@@ -9509,6 +9584,7 @@ func (o ApplicationSignatureAndConditionOrConditionOperatorOutput) EqualTo() App
 }
 
 // Greater than
+//
 // > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 func (o ApplicationSignatureAndConditionOrConditionOperatorOutput) GreaterThan() ApplicationSignatureAndConditionOrConditionOperatorGreaterThanPtrOutput {
 	return o.ApplyT(func(v ApplicationSignatureAndConditionOrConditionOperator) *ApplicationSignatureAndConditionOrConditionOperatorGreaterThan {
@@ -9517,6 +9593,7 @@ func (o ApplicationSignatureAndConditionOrConditionOperatorOutput) GreaterThan()
 }
 
 // Less than
+//
 // > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 func (o ApplicationSignatureAndConditionOrConditionOperatorOutput) LessThan() ApplicationSignatureAndConditionOrConditionOperatorLessThanPtrOutput {
 	return o.ApplyT(func(v ApplicationSignatureAndConditionOrConditionOperator) *ApplicationSignatureAndConditionOrConditionOperatorLessThan {
@@ -9525,6 +9602,7 @@ func (o ApplicationSignatureAndConditionOrConditionOperatorOutput) LessThan() Ap
 }
 
 // Pattern match
+//
 // > ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
 func (o ApplicationSignatureAndConditionOrConditionOperatorOutput) PatternMatch() ApplicationSignatureAndConditionOrConditionOperatorPatternMatchPtrOutput {
 	return o.ApplyT(func(v ApplicationSignatureAndConditionOrConditionOperator) *ApplicationSignatureAndConditionOrConditionOperatorPatternMatch {
@@ -10735,24 +10813,29 @@ func (o AuthenticationProfileLockoutPtrOutput) LockoutTime() pulumi.IntPtrOutput
 
 type AuthenticationProfileMethod struct {
 	// Cloud
-	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	Cloud *AuthenticationProfileMethodCloud `pulumi:"cloud"`
 	// Kerberos
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	Kerberos *AuthenticationProfileMethodKerberos `pulumi:"kerberos"`
 	// Ldap
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	Ldap *AuthenticationProfileMethodLdap `pulumi:"ldap"`
 	// Local database
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	LocalDatabase *AuthenticationProfileMethodLocalDatabase `pulumi:"localDatabase"`
 	// Radius
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	Radius *AuthenticationProfileMethodRadius `pulumi:"radius"`
 	// Saml idp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	SamlIdp *AuthenticationProfileMethodSamlIdp `pulumi:"samlIdp"`
 	// Tacplus
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	Tacplus *AuthenticationProfileMethodTacplus `pulumi:"tacplus"`
 }
@@ -10770,24 +10853,29 @@ type AuthenticationProfileMethodInput interface {
 
 type AuthenticationProfileMethodArgs struct {
 	// Cloud
-	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	Cloud AuthenticationProfileMethodCloudPtrInput `pulumi:"cloud"`
 	// Kerberos
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	Kerberos AuthenticationProfileMethodKerberosPtrInput `pulumi:"kerberos"`
 	// Ldap
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	Ldap AuthenticationProfileMethodLdapPtrInput `pulumi:"ldap"`
 	// Local database
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	LocalDatabase AuthenticationProfileMethodLocalDatabasePtrInput `pulumi:"localDatabase"`
 	// Radius
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	Radius AuthenticationProfileMethodRadiusPtrInput `pulumi:"radius"`
 	// Saml idp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	SamlIdp AuthenticationProfileMethodSamlIdpPtrInput `pulumi:"samlIdp"`
 	// Tacplus
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 	Tacplus AuthenticationProfileMethodTacplusPtrInput `pulumi:"tacplus"`
 }
@@ -10870,42 +10958,47 @@ func (o AuthenticationProfileMethodOutput) ToAuthenticationProfileMethodPtrOutpu
 }
 
 // Cloud
-// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodOutput) Cloud() AuthenticationProfileMethodCloudPtrOutput {
 	return o.ApplyT(func(v AuthenticationProfileMethod) *AuthenticationProfileMethodCloud { return v.Cloud }).(AuthenticationProfileMethodCloudPtrOutput)
 }
 
 // Kerberos
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodOutput) Kerberos() AuthenticationProfileMethodKerberosPtrOutput {
 	return o.ApplyT(func(v AuthenticationProfileMethod) *AuthenticationProfileMethodKerberos { return v.Kerberos }).(AuthenticationProfileMethodKerberosPtrOutput)
 }
 
 // Ldap
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodOutput) Ldap() AuthenticationProfileMethodLdapPtrOutput {
 	return o.ApplyT(func(v AuthenticationProfileMethod) *AuthenticationProfileMethodLdap { return v.Ldap }).(AuthenticationProfileMethodLdapPtrOutput)
 }
 
 // Local database
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodOutput) LocalDatabase() AuthenticationProfileMethodLocalDatabasePtrOutput {
 	return o.ApplyT(func(v AuthenticationProfileMethod) *AuthenticationProfileMethodLocalDatabase { return v.LocalDatabase }).(AuthenticationProfileMethodLocalDatabasePtrOutput)
 }
 
 // Radius
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodOutput) Radius() AuthenticationProfileMethodRadiusPtrOutput {
 	return o.ApplyT(func(v AuthenticationProfileMethod) *AuthenticationProfileMethodRadius { return v.Radius }).(AuthenticationProfileMethodRadiusPtrOutput)
 }
 
 // Saml idp
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodOutput) SamlIdp() AuthenticationProfileMethodSamlIdpPtrOutput {
 	return o.ApplyT(func(v AuthenticationProfileMethod) *AuthenticationProfileMethodSamlIdp { return v.SamlIdp }).(AuthenticationProfileMethodSamlIdpPtrOutput)
 }
 
 // Tacplus
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodOutput) Tacplus() AuthenticationProfileMethodTacplusPtrOutput {
 	return o.ApplyT(func(v AuthenticationProfileMethod) *AuthenticationProfileMethodTacplus { return v.Tacplus }).(AuthenticationProfileMethodTacplusPtrOutput)
@@ -10936,7 +11029,6 @@ func (o AuthenticationProfileMethodPtrOutput) Elem() AuthenticationProfileMethod
 }
 
 // Cloud
-// > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodPtrOutput) Cloud() AuthenticationProfileMethodCloudPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfileMethod) *AuthenticationProfileMethodCloud {
 		if v == nil {
@@ -10947,6 +11039,7 @@ func (o AuthenticationProfileMethodPtrOutput) Cloud() AuthenticationProfileMetho
 }
 
 // Kerberos
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodPtrOutput) Kerberos() AuthenticationProfileMethodKerberosPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfileMethod) *AuthenticationProfileMethodKerberos {
@@ -10958,6 +11051,7 @@ func (o AuthenticationProfileMethodPtrOutput) Kerberos() AuthenticationProfileMe
 }
 
 // Ldap
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodPtrOutput) Ldap() AuthenticationProfileMethodLdapPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfileMethod) *AuthenticationProfileMethodLdap {
@@ -10969,6 +11063,7 @@ func (o AuthenticationProfileMethodPtrOutput) Ldap() AuthenticationProfileMethod
 }
 
 // Local database
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodPtrOutput) LocalDatabase() AuthenticationProfileMethodLocalDatabasePtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfileMethod) *AuthenticationProfileMethodLocalDatabase {
@@ -10980,6 +11075,7 @@ func (o AuthenticationProfileMethodPtrOutput) LocalDatabase() AuthenticationProf
 }
 
 // Radius
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodPtrOutput) Radius() AuthenticationProfileMethodRadiusPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfileMethod) *AuthenticationProfileMethodRadius {
@@ -10991,6 +11087,7 @@ func (o AuthenticationProfileMethodPtrOutput) Radius() AuthenticationProfileMeth
 }
 
 // Saml idp
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodPtrOutput) SamlIdp() AuthenticationProfileMethodSamlIdpPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfileMethod) *AuthenticationProfileMethodSamlIdp {
@@ -11002,6 +11099,7 @@ func (o AuthenticationProfileMethodPtrOutput) SamlIdp() AuthenticationProfileMet
 }
 
 // Tacplus
+//
 // > ℹ️ **Note:** You must specify exactly one of `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, and `tacplus`.
 func (o AuthenticationProfileMethodPtrOutput) Tacplus() AuthenticationProfileMethodTacplusPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfileMethod) *AuthenticationProfileMethodTacplus {
@@ -13225,9 +13323,9 @@ func (o AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatPtrOutput) Stat
 
 type AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIp struct {
 	// FQDN
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	Fqdn *string `pulumi:"fqdn"`
 	// IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddress *string `pulumi:"ipAddress"`
 }
@@ -13245,9 +13343,9 @@ type AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIpInput inte
 
 type AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgs struct {
 	// FQDN
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
 	// IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddress pulumi.StringPtrInput `pulumi:"ipAddress"`
 }
@@ -13330,12 +13428,12 @@ func (o AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIpOutput)
 }
 
 // FQDN
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIpOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string { return v.Fqdn }).(pulumi.StringPtrOutput)
 }
 
 // IP address
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIpOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string { return v.IpAddress }).(pulumi.StringPtrOutput)
@@ -13366,7 +13464,6 @@ func (o AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOutp
 }
 
 // FQDN
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
 		if v == nil {
@@ -13377,6 +13474,7 @@ func (o AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOutp
 }
 
 // IP address
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AutoVpnClusterBranchInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
@@ -13832,9 +13930,9 @@ func (o AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatPtrOutpu
 
 type AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp struct {
 	// FQDN
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	Fqdn *string `pulumi:"fqdn"`
 	// IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddress *string `pulumi:"ipAddress"`
 }
@@ -13852,9 +13950,9 @@ type AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpInp
 
 type AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgs struct {
 	// FQDN
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
 	// IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddress pulumi.StringPtrInput `pulumi:"ipAddress"`
 }
@@ -13937,7 +14035,6 @@ func (o AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp
 }
 
 // FQDN
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
 		return v.Fqdn
@@ -13945,6 +14042,7 @@ func (o AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp
 }
 
 // IP address
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
@@ -13977,7 +14075,6 @@ func (o AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp
 }
 
 // FQDN
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
 		if v == nil {
@@ -13988,6 +14085,7 @@ func (o AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp
 }
 
 // IP address
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
@@ -14612,9 +14710,9 @@ func (o AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatPtrOutput) Sta
 
 type AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIp struct {
 	// FQDN
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	Fqdn *string `pulumi:"fqdn"`
 	// IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddress *string `pulumi:"ipAddress"`
 }
@@ -14632,9 +14730,9 @@ type AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIpInput int
 
 type AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgs struct {
 	// FQDN
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
 	// IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddress pulumi.StringPtrInput `pulumi:"ipAddress"`
 }
@@ -14717,12 +14815,12 @@ func (o AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIpOutput
 }
 
 // FQDN
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIpOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string { return v.Fqdn }).(pulumi.StringPtrOutput)
 }
 
 // IP address
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIpOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string { return v.IpAddress }).(pulumi.StringPtrOutput)
@@ -14753,7 +14851,6 @@ func (o AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOut
 }
 
 // FQDN
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
 		if v == nil {
@@ -14764,6 +14861,7 @@ func (o AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOut
 }
 
 // IP address
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AutoVpnClusterGatewayInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
@@ -15219,9 +15317,9 @@ func (o AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatPtrOutp
 
 type AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp struct {
 	// FQDN
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	Fqdn *string `pulumi:"fqdn"`
 	// IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddress *string `pulumi:"ipAddress"`
 }
@@ -15239,9 +15337,9 @@ type AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpIn
 
 type AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpArgs struct {
 	// FQDN
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
 	// IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddress pulumi.StringPtrInput `pulumi:"ipAddress"`
 }
@@ -15324,7 +15422,6 @@ func (o AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticI
 }
 
 // FQDN
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
 		return v.Fqdn
@@ -15332,6 +15429,7 @@ func (o AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticI
 }
 
 // IP address
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
@@ -15364,7 +15462,6 @@ func (o AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticI
 }
 
 // FQDN
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
 		if v == nil {
@@ -15375,6 +15472,7 @@ func (o AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticI
 }
 
 // IP address
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIpPtrOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp) *string {
@@ -16426,9 +16524,9 @@ func (o BgpAddressFamilyProfileIpv4MulticastAddPathPtrOutput) TxBestpathPerAs() 
 
 type BgpAddressFamilyProfileIpv4MulticastAllowasIn struct {
 	// Number of times the firewalls own AS can be in an AS_PATH
-	// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 	Occurrence *int `pulumi:"occurrence"`
 	// Origin
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 	Origin *BgpAddressFamilyProfileIpv4MulticastAllowasInOrigin `pulumi:"origin"`
 }
@@ -16446,9 +16544,9 @@ type BgpAddressFamilyProfileIpv4MulticastAllowasInInput interface {
 
 type BgpAddressFamilyProfileIpv4MulticastAllowasInArgs struct {
 	// Number of times the firewalls own AS can be in an AS_PATH
-	// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 	Occurrence pulumi.IntPtrInput `pulumi:"occurrence"`
 	// Origin
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 	Origin BgpAddressFamilyProfileIpv4MulticastAllowasInOriginPtrInput `pulumi:"origin"`
 }
@@ -16531,12 +16629,12 @@ func (o BgpAddressFamilyProfileIpv4MulticastAllowasInOutput) ToBgpAddressFamilyP
 }
 
 // Number of times the firewalls own AS can be in an AS_PATH
-// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 func (o BgpAddressFamilyProfileIpv4MulticastAllowasInOutput) Occurrence() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4MulticastAllowasIn) *int { return v.Occurrence }).(pulumi.IntPtrOutput)
 }
 
 // Origin
+//
 // > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 func (o BgpAddressFamilyProfileIpv4MulticastAllowasInOutput) Origin() BgpAddressFamilyProfileIpv4MulticastAllowasInOriginPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4MulticastAllowasIn) *BgpAddressFamilyProfileIpv4MulticastAllowasInOrigin {
@@ -16569,7 +16667,6 @@ func (o BgpAddressFamilyProfileIpv4MulticastAllowasInPtrOutput) Elem() BgpAddres
 }
 
 // Number of times the firewalls own AS can be in an AS_PATH
-// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 func (o BgpAddressFamilyProfileIpv4MulticastAllowasInPtrOutput) Occurrence() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4MulticastAllowasIn) *int {
 		if v == nil {
@@ -16580,6 +16677,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastAllowasInPtrOutput) Occurrence() pul
 }
 
 // Origin
+//
 // > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 func (o BgpAddressFamilyProfileIpv4MulticastAllowasInPtrOutput) Origin() BgpAddressFamilyProfileIpv4MulticastAllowasInOriginPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4MulticastAllowasIn) *BgpAddressFamilyProfileIpv4MulticastAllowasInOrigin {
@@ -16887,9 +16985,9 @@ func (o BgpAddressFamilyProfileIpv4MulticastMaximumPrefixPtrOutput) Threshold() 
 
 type BgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction struct {
 	// Restart
-	// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 	Restart *BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestart `pulumi:"restart"`
 	// Warning only
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 	WarningOnly *BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnly `pulumi:"warningOnly"`
 }
@@ -16907,9 +17005,9 @@ type BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionInput interface {
 
 type BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionArgs struct {
 	// Restart
-	// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 	Restart BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestartPtrInput `pulumi:"restart"`
 	// Warning only
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 	WarningOnly BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnlyPtrInput `pulumi:"warningOnly"`
 }
@@ -16992,7 +17090,6 @@ func (o BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionOutput) ToBgpAddr
 }
 
 // Restart
-// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 func (o BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionOutput) Restart() BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestartPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction) *BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestart {
 		return v.Restart
@@ -17000,6 +17097,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionOutput) Restart()
 }
 
 // Warning only
+//
 // > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 func (o BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionOutput) WarningOnly() BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnlyPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction) *BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnly {
@@ -17032,7 +17130,6 @@ func (o BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionPtrOutput) Elem()
 }
 
 // Restart
-// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 func (o BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionPtrOutput) Restart() BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestartPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction) *BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionRestart {
 		if v == nil {
@@ -17043,6 +17140,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionPtrOutput) Restar
 }
 
 // Warning only
+//
 // > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 func (o BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionPtrOutput) WarningOnly() BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnlyPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4MulticastMaximumPrefixAction) *BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnly {
@@ -17310,9 +17408,9 @@ func (o BgpAddressFamilyProfileIpv4MulticastMaximumPrefixActionWarningOnlyPtrOut
 
 type BgpAddressFamilyProfileIpv4MulticastNextHop struct {
 	// Self
-	// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 	Self *BgpAddressFamilyProfileIpv4MulticastNextHopSelf `pulumi:"self"`
 	// Self force
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 	SelfForce *BgpAddressFamilyProfileIpv4MulticastNextHopSelfForce `pulumi:"selfForce"`
 }
@@ -17330,9 +17428,9 @@ type BgpAddressFamilyProfileIpv4MulticastNextHopInput interface {
 
 type BgpAddressFamilyProfileIpv4MulticastNextHopArgs struct {
 	// Self
-	// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 	Self BgpAddressFamilyProfileIpv4MulticastNextHopSelfPtrInput `pulumi:"self"`
 	// Self force
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 	SelfForce BgpAddressFamilyProfileIpv4MulticastNextHopSelfForcePtrInput `pulumi:"selfForce"`
 }
@@ -17415,7 +17513,6 @@ func (o BgpAddressFamilyProfileIpv4MulticastNextHopOutput) ToBgpAddressFamilyPro
 }
 
 // Self
-// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 func (o BgpAddressFamilyProfileIpv4MulticastNextHopOutput) Self() BgpAddressFamilyProfileIpv4MulticastNextHopSelfPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4MulticastNextHop) *BgpAddressFamilyProfileIpv4MulticastNextHopSelf {
 		return v.Self
@@ -17423,6 +17520,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastNextHopOutput) Self() BgpAddressFami
 }
 
 // Self force
+//
 // > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 func (o BgpAddressFamilyProfileIpv4MulticastNextHopOutput) SelfForce() BgpAddressFamilyProfileIpv4MulticastNextHopSelfForcePtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4MulticastNextHop) *BgpAddressFamilyProfileIpv4MulticastNextHopSelfForce {
@@ -17455,7 +17553,6 @@ func (o BgpAddressFamilyProfileIpv4MulticastNextHopPtrOutput) Elem() BgpAddressF
 }
 
 // Self
-// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 func (o BgpAddressFamilyProfileIpv4MulticastNextHopPtrOutput) Self() BgpAddressFamilyProfileIpv4MulticastNextHopSelfPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4MulticastNextHop) *BgpAddressFamilyProfileIpv4MulticastNextHopSelf {
 		if v == nil {
@@ -17466,6 +17563,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastNextHopPtrOutput) Self() BgpAddressF
 }
 
 // Self force
+//
 // > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 func (o BgpAddressFamilyProfileIpv4MulticastNextHopPtrOutput) SelfForce() BgpAddressFamilyProfileIpv4MulticastNextHopSelfForcePtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4MulticastNextHop) *BgpAddressFamilyProfileIpv4MulticastNextHopSelfForce {
@@ -18247,18 +18345,21 @@ func (o BgpAddressFamilyProfileIpv4MulticastRemovePrivateAsReplaceAsPtrOutput) E
 
 type BgpAddressFamilyProfileIpv4MulticastSendCommunity struct {
 	// All
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	All *BgpAddressFamilyProfileIpv4MulticastSendCommunityAll `pulumi:"all"`
 	// Both
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Both *BgpAddressFamilyProfileIpv4MulticastSendCommunityBoth `pulumi:"both"`
 	// Extended
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Extended *BgpAddressFamilyProfileIpv4MulticastSendCommunityExtended `pulumi:"extended"`
 	// Large
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Large *BgpAddressFamilyProfileIpv4MulticastSendCommunityLarge `pulumi:"large"`
 	// Standard
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Standard *BgpAddressFamilyProfileIpv4MulticastSendCommunityStandard `pulumi:"standard"`
 }
@@ -18276,18 +18377,21 @@ type BgpAddressFamilyProfileIpv4MulticastSendCommunityInput interface {
 
 type BgpAddressFamilyProfileIpv4MulticastSendCommunityArgs struct {
 	// All
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	All BgpAddressFamilyProfileIpv4MulticastSendCommunityAllPtrInput `pulumi:"all"`
 	// Both
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Both BgpAddressFamilyProfileIpv4MulticastSendCommunityBothPtrInput `pulumi:"both"`
 	// Extended
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Extended BgpAddressFamilyProfileIpv4MulticastSendCommunityExtendedPtrInput `pulumi:"extended"`
 	// Large
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Large BgpAddressFamilyProfileIpv4MulticastSendCommunityLargePtrInput `pulumi:"large"`
 	// Standard
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Standard BgpAddressFamilyProfileIpv4MulticastSendCommunityStandardPtrInput `pulumi:"standard"`
 }
@@ -18370,7 +18474,6 @@ func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityOutput) ToBgpAddressFam
 }
 
 // All
-// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityOutput) All() BgpAddressFamilyProfileIpv4MulticastSendCommunityAllPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4MulticastSendCommunity) *BgpAddressFamilyProfileIpv4MulticastSendCommunityAll {
 		return v.All
@@ -18378,6 +18481,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityOutput) All() BgpAddres
 }
 
 // Both
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityOutput) Both() BgpAddressFamilyProfileIpv4MulticastSendCommunityBothPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4MulticastSendCommunity) *BgpAddressFamilyProfileIpv4MulticastSendCommunityBoth {
@@ -18386,6 +18490,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityOutput) Both() BgpAddre
 }
 
 // Extended
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityOutput) Extended() BgpAddressFamilyProfileIpv4MulticastSendCommunityExtendedPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4MulticastSendCommunity) *BgpAddressFamilyProfileIpv4MulticastSendCommunityExtended {
@@ -18394,6 +18499,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityOutput) Extended() BgpA
 }
 
 // Large
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityOutput) Large() BgpAddressFamilyProfileIpv4MulticastSendCommunityLargePtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4MulticastSendCommunity) *BgpAddressFamilyProfileIpv4MulticastSendCommunityLarge {
@@ -18402,6 +18508,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityOutput) Large() BgpAddr
 }
 
 // Standard
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityOutput) Standard() BgpAddressFamilyProfileIpv4MulticastSendCommunityStandardPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4MulticastSendCommunity) *BgpAddressFamilyProfileIpv4MulticastSendCommunityStandard {
@@ -18434,7 +18541,6 @@ func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityPtrOutput) Elem() BgpAd
 }
 
 // All
-// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityPtrOutput) All() BgpAddressFamilyProfileIpv4MulticastSendCommunityAllPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4MulticastSendCommunity) *BgpAddressFamilyProfileIpv4MulticastSendCommunityAll {
 		if v == nil {
@@ -18445,6 +18551,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityPtrOutput) All() BgpAdd
 }
 
 // Both
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityPtrOutput) Both() BgpAddressFamilyProfileIpv4MulticastSendCommunityBothPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4MulticastSendCommunity) *BgpAddressFamilyProfileIpv4MulticastSendCommunityBoth {
@@ -18456,6 +18563,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityPtrOutput) Both() BgpAd
 }
 
 // Extended
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityPtrOutput) Extended() BgpAddressFamilyProfileIpv4MulticastSendCommunityExtendedPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4MulticastSendCommunity) *BgpAddressFamilyProfileIpv4MulticastSendCommunityExtended {
@@ -18467,6 +18575,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityPtrOutput) Extended() B
 }
 
 // Large
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityPtrOutput) Large() BgpAddressFamilyProfileIpv4MulticastSendCommunityLargePtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4MulticastSendCommunity) *BgpAddressFamilyProfileIpv4MulticastSendCommunityLarge {
@@ -18478,6 +18587,7 @@ func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityPtrOutput) Large() BgpA
 }
 
 // Standard
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4MulticastSendCommunityPtrOutput) Standard() BgpAddressFamilyProfileIpv4MulticastSendCommunityStandardPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4MulticastSendCommunity) *BgpAddressFamilyProfileIpv4MulticastSendCommunityStandard {
@@ -19613,9 +19723,9 @@ func (o BgpAddressFamilyProfileIpv4UnicastAddPathPtrOutput) TxBestpathPerAs() pu
 
 type BgpAddressFamilyProfileIpv4UnicastAllowasIn struct {
 	// Number of times the firewalls own AS can be in an AS_PATH
-	// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 	Occurrence *int `pulumi:"occurrence"`
 	// Origin
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 	Origin *BgpAddressFamilyProfileIpv4UnicastAllowasInOrigin `pulumi:"origin"`
 }
@@ -19633,9 +19743,9 @@ type BgpAddressFamilyProfileIpv4UnicastAllowasInInput interface {
 
 type BgpAddressFamilyProfileIpv4UnicastAllowasInArgs struct {
 	// Number of times the firewalls own AS can be in an AS_PATH
-	// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 	Occurrence pulumi.IntPtrInput `pulumi:"occurrence"`
 	// Origin
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 	Origin BgpAddressFamilyProfileIpv4UnicastAllowasInOriginPtrInput `pulumi:"origin"`
 }
@@ -19718,12 +19828,12 @@ func (o BgpAddressFamilyProfileIpv4UnicastAllowasInOutput) ToBgpAddressFamilyPro
 }
 
 // Number of times the firewalls own AS can be in an AS_PATH
-// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 func (o BgpAddressFamilyProfileIpv4UnicastAllowasInOutput) Occurrence() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4UnicastAllowasIn) *int { return v.Occurrence }).(pulumi.IntPtrOutput)
 }
 
 // Origin
+//
 // > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 func (o BgpAddressFamilyProfileIpv4UnicastAllowasInOutput) Origin() BgpAddressFamilyProfileIpv4UnicastAllowasInOriginPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4UnicastAllowasIn) *BgpAddressFamilyProfileIpv4UnicastAllowasInOrigin {
@@ -19756,7 +19866,6 @@ func (o BgpAddressFamilyProfileIpv4UnicastAllowasInPtrOutput) Elem() BgpAddressF
 }
 
 // Number of times the firewalls own AS can be in an AS_PATH
-// > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 func (o BgpAddressFamilyProfileIpv4UnicastAllowasInPtrOutput) Occurrence() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4UnicastAllowasIn) *int {
 		if v == nil {
@@ -19767,6 +19876,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastAllowasInPtrOutput) Occurrence() pulum
 }
 
 // Origin
+//
 // > ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
 func (o BgpAddressFamilyProfileIpv4UnicastAllowasInPtrOutput) Origin() BgpAddressFamilyProfileIpv4UnicastAllowasInOriginPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4UnicastAllowasIn) *BgpAddressFamilyProfileIpv4UnicastAllowasInOrigin {
@@ -20074,9 +20184,9 @@ func (o BgpAddressFamilyProfileIpv4UnicastMaximumPrefixPtrOutput) Threshold() pu
 
 type BgpAddressFamilyProfileIpv4UnicastMaximumPrefixAction struct {
 	// Restart
-	// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 	Restart *BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestart `pulumi:"restart"`
 	// Warning only
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 	WarningOnly *BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnly `pulumi:"warningOnly"`
 }
@@ -20094,9 +20204,9 @@ type BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionInput interface {
 
 type BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionArgs struct {
 	// Restart
-	// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 	Restart BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestartPtrInput `pulumi:"restart"`
 	// Warning only
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 	WarningOnly BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnlyPtrInput `pulumi:"warningOnly"`
 }
@@ -20179,7 +20289,6 @@ func (o BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionOutput) ToBgpAddres
 }
 
 // Restart
-// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 func (o BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionOutput) Restart() BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestartPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4UnicastMaximumPrefixAction) *BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestart {
 		return v.Restart
@@ -20187,6 +20296,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionOutput) Restart() B
 }
 
 // Warning only
+//
 // > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 func (o BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionOutput) WarningOnly() BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnlyPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4UnicastMaximumPrefixAction) *BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnly {
@@ -20219,7 +20329,6 @@ func (o BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionPtrOutput) Elem() B
 }
 
 // Restart
-// > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 func (o BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionPtrOutput) Restart() BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestartPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4UnicastMaximumPrefixAction) *BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestart {
 		if v == nil {
@@ -20230,6 +20339,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionPtrOutput) Restart(
 }
 
 // Warning only
+//
 // > ℹ️ **Note:** You must specify exactly one of `restart` and `warningOnly`.
 func (o BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionPtrOutput) WarningOnly() BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnlyPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4UnicastMaximumPrefixAction) *BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnly {
@@ -20497,9 +20607,9 @@ func (o BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionWarningOnlyPtrOutpu
 
 type BgpAddressFamilyProfileIpv4UnicastNextHop struct {
 	// Self
-	// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 	Self *BgpAddressFamilyProfileIpv4UnicastNextHopSelf `pulumi:"self"`
 	// Self force
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 	SelfForce *BgpAddressFamilyProfileIpv4UnicastNextHopSelfForce `pulumi:"selfForce"`
 }
@@ -20517,9 +20627,9 @@ type BgpAddressFamilyProfileIpv4UnicastNextHopInput interface {
 
 type BgpAddressFamilyProfileIpv4UnicastNextHopArgs struct {
 	// Self
-	// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 	Self BgpAddressFamilyProfileIpv4UnicastNextHopSelfPtrInput `pulumi:"self"`
 	// Self force
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 	SelfForce BgpAddressFamilyProfileIpv4UnicastNextHopSelfForcePtrInput `pulumi:"selfForce"`
 }
@@ -20602,7 +20712,6 @@ func (o BgpAddressFamilyProfileIpv4UnicastNextHopOutput) ToBgpAddressFamilyProfi
 }
 
 // Self
-// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 func (o BgpAddressFamilyProfileIpv4UnicastNextHopOutput) Self() BgpAddressFamilyProfileIpv4UnicastNextHopSelfPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4UnicastNextHop) *BgpAddressFamilyProfileIpv4UnicastNextHopSelf {
 		return v.Self
@@ -20610,6 +20719,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastNextHopOutput) Self() BgpAddressFamily
 }
 
 // Self force
+//
 // > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 func (o BgpAddressFamilyProfileIpv4UnicastNextHopOutput) SelfForce() BgpAddressFamilyProfileIpv4UnicastNextHopSelfForcePtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4UnicastNextHop) *BgpAddressFamilyProfileIpv4UnicastNextHopSelfForce {
@@ -20642,7 +20752,6 @@ func (o BgpAddressFamilyProfileIpv4UnicastNextHopPtrOutput) Elem() BgpAddressFam
 }
 
 // Self
-// > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 func (o BgpAddressFamilyProfileIpv4UnicastNextHopPtrOutput) Self() BgpAddressFamilyProfileIpv4UnicastNextHopSelfPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4UnicastNextHop) *BgpAddressFamilyProfileIpv4UnicastNextHopSelf {
 		if v == nil {
@@ -20653,6 +20762,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastNextHopPtrOutput) Self() BgpAddressFam
 }
 
 // Self force
+//
 // > ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
 func (o BgpAddressFamilyProfileIpv4UnicastNextHopPtrOutput) SelfForce() BgpAddressFamilyProfileIpv4UnicastNextHopSelfForcePtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4UnicastNextHop) *BgpAddressFamilyProfileIpv4UnicastNextHopSelfForce {
@@ -21434,18 +21544,21 @@ func (o BgpAddressFamilyProfileIpv4UnicastRemovePrivateAsReplaceAsPtrOutput) Ele
 
 type BgpAddressFamilyProfileIpv4UnicastSendCommunity struct {
 	// All
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	All *BgpAddressFamilyProfileIpv4UnicastSendCommunityAll `pulumi:"all"`
 	// Both
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Both *BgpAddressFamilyProfileIpv4UnicastSendCommunityBoth `pulumi:"both"`
 	// Extended
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Extended *BgpAddressFamilyProfileIpv4UnicastSendCommunityExtended `pulumi:"extended"`
 	// Large
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Large *BgpAddressFamilyProfileIpv4UnicastSendCommunityLarge `pulumi:"large"`
 	// Standard
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Standard *BgpAddressFamilyProfileIpv4UnicastSendCommunityStandard `pulumi:"standard"`
 }
@@ -21463,18 +21576,21 @@ type BgpAddressFamilyProfileIpv4UnicastSendCommunityInput interface {
 
 type BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs struct {
 	// All
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	All BgpAddressFamilyProfileIpv4UnicastSendCommunityAllPtrInput `pulumi:"all"`
 	// Both
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Both BgpAddressFamilyProfileIpv4UnicastSendCommunityBothPtrInput `pulumi:"both"`
 	// Extended
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Extended BgpAddressFamilyProfileIpv4UnicastSendCommunityExtendedPtrInput `pulumi:"extended"`
 	// Large
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Large BgpAddressFamilyProfileIpv4UnicastSendCommunityLargePtrInput `pulumi:"large"`
 	// Standard
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 	Standard BgpAddressFamilyProfileIpv4UnicastSendCommunityStandardPtrInput `pulumi:"standard"`
 }
@@ -21557,7 +21673,6 @@ func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityOutput) ToBgpAddressFamil
 }
 
 // All
-// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityOutput) All() BgpAddressFamilyProfileIpv4UnicastSendCommunityAllPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4UnicastSendCommunity) *BgpAddressFamilyProfileIpv4UnicastSendCommunityAll {
 		return v.All
@@ -21565,6 +21680,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityOutput) All() BgpAddressF
 }
 
 // Both
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityOutput) Both() BgpAddressFamilyProfileIpv4UnicastSendCommunityBothPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4UnicastSendCommunity) *BgpAddressFamilyProfileIpv4UnicastSendCommunityBoth {
@@ -21573,6 +21689,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityOutput) Both() BgpAddress
 }
 
 // Extended
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityOutput) Extended() BgpAddressFamilyProfileIpv4UnicastSendCommunityExtendedPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4UnicastSendCommunity) *BgpAddressFamilyProfileIpv4UnicastSendCommunityExtended {
@@ -21581,6 +21698,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityOutput) Extended() BgpAdd
 }
 
 // Large
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityOutput) Large() BgpAddressFamilyProfileIpv4UnicastSendCommunityLargePtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4UnicastSendCommunity) *BgpAddressFamilyProfileIpv4UnicastSendCommunityLarge {
@@ -21589,6 +21707,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityOutput) Large() BgpAddres
 }
 
 // Standard
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityOutput) Standard() BgpAddressFamilyProfileIpv4UnicastSendCommunityStandardPtrOutput {
 	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4UnicastSendCommunity) *BgpAddressFamilyProfileIpv4UnicastSendCommunityStandard {
@@ -21621,7 +21740,6 @@ func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityPtrOutput) Elem() BgpAddr
 }
 
 // All
-// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityPtrOutput) All() BgpAddressFamilyProfileIpv4UnicastSendCommunityAllPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4UnicastSendCommunity) *BgpAddressFamilyProfileIpv4UnicastSendCommunityAll {
 		if v == nil {
@@ -21632,6 +21750,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityPtrOutput) All() BgpAddre
 }
 
 // Both
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityPtrOutput) Both() BgpAddressFamilyProfileIpv4UnicastSendCommunityBothPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4UnicastSendCommunity) *BgpAddressFamilyProfileIpv4UnicastSendCommunityBoth {
@@ -21643,6 +21762,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityPtrOutput) Both() BgpAddr
 }
 
 // Extended
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityPtrOutput) Extended() BgpAddressFamilyProfileIpv4UnicastSendCommunityExtendedPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4UnicastSendCommunity) *BgpAddressFamilyProfileIpv4UnicastSendCommunityExtended {
@@ -21654,6 +21774,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityPtrOutput) Extended() Bgp
 }
 
 // Large
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityPtrOutput) Large() BgpAddressFamilyProfileIpv4UnicastSendCommunityLargePtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4UnicastSendCommunity) *BgpAddressFamilyProfileIpv4UnicastSendCommunityLarge {
@@ -21665,6 +21786,7 @@ func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityPtrOutput) Large() BgpAdd
 }
 
 // Standard
+//
 // > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
 func (o BgpAddressFamilyProfileIpv4UnicastSendCommunityPtrOutput) Standard() BgpAddressFamilyProfileIpv4UnicastSendCommunityStandardPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4UnicastSendCommunity) *BgpAddressFamilyProfileIpv4UnicastSendCommunityStandard {
@@ -25957,9 +26079,9 @@ func (o BgpRedistributionProfileIpv4UnicastStaticPtrOutput) RouteMap() pulumi.St
 
 type BgpRouteMapRedistributionBgp struct {
 	// Ospf
-	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Ospf *BgpRouteMapRedistributionBgpOspf `pulumi:"ospf"`
 	// BGP Root RIB
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Rib *BgpRouteMapRedistributionBgpRib `pulumi:"rib"`
 }
@@ -25977,9 +26099,9 @@ type BgpRouteMapRedistributionBgpInput interface {
 
 type BgpRouteMapRedistributionBgpArgs struct {
 	// Ospf
-	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Ospf BgpRouteMapRedistributionBgpOspfPtrInput `pulumi:"ospf"`
 	// BGP Root RIB
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 	Rib BgpRouteMapRedistributionBgpRibPtrInput `pulumi:"rib"`
 }
@@ -26062,12 +26184,12 @@ func (o BgpRouteMapRedistributionBgpOutput) ToBgpRouteMapRedistributionBgpPtrOut
 }
 
 // Ospf
-// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 func (o BgpRouteMapRedistributionBgpOutput) Ospf() BgpRouteMapRedistributionBgpOspfPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgp) *BgpRouteMapRedistributionBgpOspf { return v.Ospf }).(BgpRouteMapRedistributionBgpOspfPtrOutput)
 }
 
 // BGP Root RIB
+//
 // > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 func (o BgpRouteMapRedistributionBgpOutput) Rib() BgpRouteMapRedistributionBgpRibPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgp) *BgpRouteMapRedistributionBgpRib { return v.Rib }).(BgpRouteMapRedistributionBgpRibPtrOutput)
@@ -26098,7 +26220,6 @@ func (o BgpRouteMapRedistributionBgpPtrOutput) Elem() BgpRouteMapRedistributionB
 }
 
 // Ospf
-// > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 func (o BgpRouteMapRedistributionBgpPtrOutput) Ospf() BgpRouteMapRedistributionBgpOspfPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgp) *BgpRouteMapRedistributionBgpOspf {
 		if v == nil {
@@ -26109,6 +26230,7 @@ func (o BgpRouteMapRedistributionBgpPtrOutput) Ospf() BgpRouteMapRedistributionB
 }
 
 // BGP Root RIB
+//
 // > ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
 func (o BgpRouteMapRedistributionBgpPtrOutput) Rib() BgpRouteMapRedistributionBgpRibPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgp) *BgpRouteMapRedistributionBgpRib {
@@ -29097,12 +29219,13 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapSetPtrOutput) SourceAddress() pul
 
 type BgpRouteMapRedistributionConnectedStatic struct {
 	// Connected Static Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Bgp *BgpRouteMapRedistributionConnectedStaticBgp `pulumi:"bgp"`
 	// Ospf
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Ospf *BgpRouteMapRedistributionConnectedStaticOspf `pulumi:"ospf"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Rib *BgpRouteMapRedistributionConnectedStaticRib `pulumi:"rib"`
 }
@@ -29120,12 +29243,13 @@ type BgpRouteMapRedistributionConnectedStaticInput interface {
 
 type BgpRouteMapRedistributionConnectedStaticArgs struct {
 	// Connected Static Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Bgp BgpRouteMapRedistributionConnectedStaticBgpPtrInput `pulumi:"bgp"`
 	// Ospf
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Ospf BgpRouteMapRedistributionConnectedStaticOspfPtrInput `pulumi:"ospf"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 	Rib BgpRouteMapRedistributionConnectedStaticRibPtrInput `pulumi:"rib"`
 }
@@ -29208,7 +29332,6 @@ func (o BgpRouteMapRedistributionConnectedStaticOutput) ToBgpRouteMapRedistribut
 }
 
 // Connected Static Root BGP
-// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o BgpRouteMapRedistributionConnectedStaticOutput) Bgp() BgpRouteMapRedistributionConnectedStaticBgpPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStatic) *BgpRouteMapRedistributionConnectedStaticBgp {
 		return v.Bgp
@@ -29216,6 +29339,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOutput) Bgp() BgpRouteMapRedistr
 }
 
 // Ospf
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o BgpRouteMapRedistributionConnectedStaticOutput) Ospf() BgpRouteMapRedistributionConnectedStaticOspfPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStatic) *BgpRouteMapRedistributionConnectedStaticOspf {
@@ -29224,6 +29348,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOutput) Ospf() BgpRouteMapRedist
 }
 
 // Rib
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o BgpRouteMapRedistributionConnectedStaticOutput) Rib() BgpRouteMapRedistributionConnectedStaticRibPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStatic) *BgpRouteMapRedistributionConnectedStaticRib {
@@ -29256,7 +29381,6 @@ func (o BgpRouteMapRedistributionConnectedStaticPtrOutput) Elem() BgpRouteMapRed
 }
 
 // Connected Static Root BGP
-// > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o BgpRouteMapRedistributionConnectedStaticPtrOutput) Bgp() BgpRouteMapRedistributionConnectedStaticBgpPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStatic) *BgpRouteMapRedistributionConnectedStaticBgp {
 		if v == nil {
@@ -29267,6 +29391,7 @@ func (o BgpRouteMapRedistributionConnectedStaticPtrOutput) Bgp() BgpRouteMapRedi
 }
 
 // Ospf
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o BgpRouteMapRedistributionConnectedStaticPtrOutput) Ospf() BgpRouteMapRedistributionConnectedStaticOspfPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStatic) *BgpRouteMapRedistributionConnectedStaticOspf {
@@ -29278,6 +29403,7 @@ func (o BgpRouteMapRedistributionConnectedStaticPtrOutput) Ospf() BgpRouteMapRed
 }
 
 // Rib
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
 func (o BgpRouteMapRedistributionConnectedStaticPtrOutput) Rib() BgpRouteMapRedistributionConnectedStaticRibPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStatic) *BgpRouteMapRedistributionConnectedStaticRib {
@@ -33379,9 +33505,9 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapSetPtrOutput) SourceA
 
 type BgpRouteMapRedistributionOspf struct {
 	// OSPF Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Bgp *BgpRouteMapRedistributionOspfBgp `pulumi:"bgp"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Rib *BgpRouteMapRedistributionOspfRib `pulumi:"rib"`
 }
@@ -33399,9 +33525,9 @@ type BgpRouteMapRedistributionOspfInput interface {
 
 type BgpRouteMapRedistributionOspfArgs struct {
 	// OSPF Root BGP
-	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Bgp BgpRouteMapRedistributionOspfBgpPtrInput `pulumi:"bgp"`
 	// Rib
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 	Rib BgpRouteMapRedistributionOspfRibPtrInput `pulumi:"rib"`
 }
@@ -33484,12 +33610,12 @@ func (o BgpRouteMapRedistributionOspfOutput) ToBgpRouteMapRedistributionOspfPtrO
 }
 
 // OSPF Root BGP
-// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 func (o BgpRouteMapRedistributionOspfOutput) Bgp() BgpRouteMapRedistributionOspfBgpPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspf) *BgpRouteMapRedistributionOspfBgp { return v.Bgp }).(BgpRouteMapRedistributionOspfBgpPtrOutput)
 }
 
 // Rib
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 func (o BgpRouteMapRedistributionOspfOutput) Rib() BgpRouteMapRedistributionOspfRibPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspf) *BgpRouteMapRedistributionOspfRib { return v.Rib }).(BgpRouteMapRedistributionOspfRibPtrOutput)
@@ -33520,7 +33646,6 @@ func (o BgpRouteMapRedistributionOspfPtrOutput) Elem() BgpRouteMapRedistribution
 }
 
 // OSPF Root BGP
-// > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 func (o BgpRouteMapRedistributionOspfPtrOutput) Bgp() BgpRouteMapRedistributionOspfBgpPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspf) *BgpRouteMapRedistributionOspfBgp {
 		if v == nil {
@@ -33531,6 +33656,7 @@ func (o BgpRouteMapRedistributionOspfPtrOutput) Bgp() BgpRouteMapRedistributionO
 }
 
 // Rib
+//
 // > ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
 func (o BgpRouteMapRedistributionOspfPtrOutput) Rib() BgpRouteMapRedistributionOspfRibPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspf) *BgpRouteMapRedistributionOspfRib {
@@ -38122,9 +38248,9 @@ func (o BgpRouteMapRouteMapSetMetricPtrOutput) Value() pulumi.IntPtrOutput {
 
 type BgpRoutingRoutingPreference struct {
 	// Default
-	// > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 	Default *BgpRoutingRoutingPreferenceDefault `pulumi:"default"`
 	// Hot potato routing
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 	HotPotatoRouting *BgpRoutingRoutingPreferenceHotPotatoRouting `pulumi:"hotPotatoRouting"`
 }
@@ -38142,9 +38268,9 @@ type BgpRoutingRoutingPreferenceInput interface {
 
 type BgpRoutingRoutingPreferenceArgs struct {
 	// Default
-	// > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 	Default BgpRoutingRoutingPreferenceDefaultPtrInput `pulumi:"default"`
 	// Hot potato routing
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 	HotPotatoRouting BgpRoutingRoutingPreferenceHotPotatoRoutingPtrInput `pulumi:"hotPotatoRouting"`
 }
@@ -38227,12 +38353,12 @@ func (o BgpRoutingRoutingPreferenceOutput) ToBgpRoutingRoutingPreferencePtrOutpu
 }
 
 // Default
-// > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 func (o BgpRoutingRoutingPreferenceOutput) Default() BgpRoutingRoutingPreferenceDefaultPtrOutput {
 	return o.ApplyT(func(v BgpRoutingRoutingPreference) *BgpRoutingRoutingPreferenceDefault { return v.Default }).(BgpRoutingRoutingPreferenceDefaultPtrOutput)
 }
 
 // Hot potato routing
+//
 // > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 func (o BgpRoutingRoutingPreferenceOutput) HotPotatoRouting() BgpRoutingRoutingPreferenceHotPotatoRoutingPtrOutput {
 	return o.ApplyT(func(v BgpRoutingRoutingPreference) *BgpRoutingRoutingPreferenceHotPotatoRouting {
@@ -38265,7 +38391,6 @@ func (o BgpRoutingRoutingPreferencePtrOutput) Elem() BgpRoutingRoutingPreference
 }
 
 // Default
-// > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 func (o BgpRoutingRoutingPreferencePtrOutput) Default() BgpRoutingRoutingPreferenceDefaultPtrOutput {
 	return o.ApplyT(func(v *BgpRoutingRoutingPreference) *BgpRoutingRoutingPreferenceDefault {
 		if v == nil {
@@ -38276,6 +38401,7 @@ func (o BgpRoutingRoutingPreferencePtrOutput) Default() BgpRoutingRoutingPrefere
 }
 
 // Hot potato routing
+//
 // > ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
 func (o BgpRoutingRoutingPreferencePtrOutput) HotPotatoRouting() BgpRoutingRoutingPreferenceHotPotatoRoutingPtrOutput {
 	return o.ApplyT(func(v *BgpRoutingRoutingPreference) *BgpRoutingRoutingPreferenceHotPotatoRouting {
@@ -40310,11 +40436,11 @@ func (o DecryptionProfileSslProtocolSettingsPtrOutput) MinVersion() pulumi.Strin
 
 type DecryptionRuleType struct {
 	// Ssl forward proxy
-	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
 	SslForwardProxy *DecryptionRuleTypeSslForwardProxy `pulumi:"sslForwardProxy"`
 	// add the certificate name for SSL inbound inspection
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-	SslInboundInspection *string `pulumi:"sslInboundInspection"`
+	SslInboundInspection *DecryptionRuleTypeSslInboundInspection `pulumi:"sslInboundInspection"`
 }
 
 // DecryptionRuleTypeInput is an input type that accepts DecryptionRuleTypeArgs and DecryptionRuleTypeOutput values.
@@ -40330,11 +40456,11 @@ type DecryptionRuleTypeInput interface {
 
 type DecryptionRuleTypeArgs struct {
 	// Ssl forward proxy
-	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
 	SslForwardProxy DecryptionRuleTypeSslForwardProxyPtrInput `pulumi:"sslForwardProxy"`
 	// add the certificate name for SSL inbound inspection
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-	SslInboundInspection pulumi.StringPtrInput `pulumi:"sslInboundInspection"`
+	SslInboundInspection DecryptionRuleTypeSslInboundInspectionPtrInput `pulumi:"sslInboundInspection"`
 }
 
 func (DecryptionRuleTypeArgs) ElementType() reflect.Type {
@@ -40415,15 +40541,15 @@ func (o DecryptionRuleTypeOutput) ToDecryptionRuleTypePtrOutputWithContext(ctx c
 }
 
 // Ssl forward proxy
-// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
 func (o DecryptionRuleTypeOutput) SslForwardProxy() DecryptionRuleTypeSslForwardProxyPtrOutput {
 	return o.ApplyT(func(v DecryptionRuleType) *DecryptionRuleTypeSslForwardProxy { return v.SslForwardProxy }).(DecryptionRuleTypeSslForwardProxyPtrOutput)
 }
 
 // add the certificate name for SSL inbound inspection
+//
 // > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-func (o DecryptionRuleTypeOutput) SslInboundInspection() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v DecryptionRuleType) *string { return v.SslInboundInspection }).(pulumi.StringPtrOutput)
+func (o DecryptionRuleTypeOutput) SslInboundInspection() DecryptionRuleTypeSslInboundInspectionPtrOutput {
+	return o.ApplyT(func(v DecryptionRuleType) *DecryptionRuleTypeSslInboundInspection { return v.SslInboundInspection }).(DecryptionRuleTypeSslInboundInspectionPtrOutput)
 }
 
 type DecryptionRuleTypePtrOutput struct{ *pulumi.OutputState }
@@ -40451,7 +40577,6 @@ func (o DecryptionRuleTypePtrOutput) Elem() DecryptionRuleTypeOutput {
 }
 
 // Ssl forward proxy
-// > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
 func (o DecryptionRuleTypePtrOutput) SslForwardProxy() DecryptionRuleTypeSslForwardProxyPtrOutput {
 	return o.ApplyT(func(v *DecryptionRuleType) *DecryptionRuleTypeSslForwardProxy {
 		if v == nil {
@@ -40462,14 +40587,15 @@ func (o DecryptionRuleTypePtrOutput) SslForwardProxy() DecryptionRuleTypeSslForw
 }
 
 // add the certificate name for SSL inbound inspection
+//
 // > ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
-func (o DecryptionRuleTypePtrOutput) SslInboundInspection() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *DecryptionRuleType) *string {
+func (o DecryptionRuleTypePtrOutput) SslInboundInspection() DecryptionRuleTypeSslInboundInspectionPtrOutput {
+	return o.ApplyT(func(v *DecryptionRuleType) *DecryptionRuleTypeSslInboundInspection {
 		if v == nil {
 			return nil
 		}
 		return v.SslInboundInspection
-	}).(pulumi.StringPtrOutput)
+	}).(DecryptionRuleTypeSslInboundInspectionPtrOutput)
 }
 
 type DecryptionRuleTypeSslForwardProxy struct {
@@ -40588,6 +40714,143 @@ func (o DecryptionRuleTypeSslForwardProxyPtrOutput) Elem() DecryptionRuleTypeSsl
 		var ret DecryptionRuleTypeSslForwardProxy
 		return ret
 	}).(DecryptionRuleTypeSslForwardProxyOutput)
+}
+
+type DecryptionRuleTypeSslInboundInspection struct {
+	// List of certificate names for SSL inbound inspection
+	Certificates []string `pulumi:"certificates"`
+}
+
+// DecryptionRuleTypeSslInboundInspectionInput is an input type that accepts DecryptionRuleTypeSslInboundInspectionArgs and DecryptionRuleTypeSslInboundInspectionOutput values.
+// You can construct a concrete instance of `DecryptionRuleTypeSslInboundInspectionInput` via:
+//
+//	DecryptionRuleTypeSslInboundInspectionArgs{...}
+type DecryptionRuleTypeSslInboundInspectionInput interface {
+	pulumi.Input
+
+	ToDecryptionRuleTypeSslInboundInspectionOutput() DecryptionRuleTypeSslInboundInspectionOutput
+	ToDecryptionRuleTypeSslInboundInspectionOutputWithContext(context.Context) DecryptionRuleTypeSslInboundInspectionOutput
+}
+
+type DecryptionRuleTypeSslInboundInspectionArgs struct {
+	// List of certificate names for SSL inbound inspection
+	Certificates pulumi.StringArrayInput `pulumi:"certificates"`
+}
+
+func (DecryptionRuleTypeSslInboundInspectionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*DecryptionRuleTypeSslInboundInspection)(nil)).Elem()
+}
+
+func (i DecryptionRuleTypeSslInboundInspectionArgs) ToDecryptionRuleTypeSslInboundInspectionOutput() DecryptionRuleTypeSslInboundInspectionOutput {
+	return i.ToDecryptionRuleTypeSslInboundInspectionOutputWithContext(context.Background())
+}
+
+func (i DecryptionRuleTypeSslInboundInspectionArgs) ToDecryptionRuleTypeSslInboundInspectionOutputWithContext(ctx context.Context) DecryptionRuleTypeSslInboundInspectionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DecryptionRuleTypeSslInboundInspectionOutput)
+}
+
+func (i DecryptionRuleTypeSslInboundInspectionArgs) ToDecryptionRuleTypeSslInboundInspectionPtrOutput() DecryptionRuleTypeSslInboundInspectionPtrOutput {
+	return i.ToDecryptionRuleTypeSslInboundInspectionPtrOutputWithContext(context.Background())
+}
+
+func (i DecryptionRuleTypeSslInboundInspectionArgs) ToDecryptionRuleTypeSslInboundInspectionPtrOutputWithContext(ctx context.Context) DecryptionRuleTypeSslInboundInspectionPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DecryptionRuleTypeSslInboundInspectionOutput).ToDecryptionRuleTypeSslInboundInspectionPtrOutputWithContext(ctx)
+}
+
+// DecryptionRuleTypeSslInboundInspectionPtrInput is an input type that accepts DecryptionRuleTypeSslInboundInspectionArgs, DecryptionRuleTypeSslInboundInspectionPtr and DecryptionRuleTypeSslInboundInspectionPtrOutput values.
+// You can construct a concrete instance of `DecryptionRuleTypeSslInboundInspectionPtrInput` via:
+//
+//	        DecryptionRuleTypeSslInboundInspectionArgs{...}
+//
+//	or:
+//
+//	        nil
+type DecryptionRuleTypeSslInboundInspectionPtrInput interface {
+	pulumi.Input
+
+	ToDecryptionRuleTypeSslInboundInspectionPtrOutput() DecryptionRuleTypeSslInboundInspectionPtrOutput
+	ToDecryptionRuleTypeSslInboundInspectionPtrOutputWithContext(context.Context) DecryptionRuleTypeSslInboundInspectionPtrOutput
+}
+
+type decryptionRuleTypeSslInboundInspectionPtrType DecryptionRuleTypeSslInboundInspectionArgs
+
+func DecryptionRuleTypeSslInboundInspectionPtr(v *DecryptionRuleTypeSslInboundInspectionArgs) DecryptionRuleTypeSslInboundInspectionPtrInput {
+	return (*decryptionRuleTypeSslInboundInspectionPtrType)(v)
+}
+
+func (*decryptionRuleTypeSslInboundInspectionPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**DecryptionRuleTypeSslInboundInspection)(nil)).Elem()
+}
+
+func (i *decryptionRuleTypeSslInboundInspectionPtrType) ToDecryptionRuleTypeSslInboundInspectionPtrOutput() DecryptionRuleTypeSslInboundInspectionPtrOutput {
+	return i.ToDecryptionRuleTypeSslInboundInspectionPtrOutputWithContext(context.Background())
+}
+
+func (i *decryptionRuleTypeSslInboundInspectionPtrType) ToDecryptionRuleTypeSslInboundInspectionPtrOutputWithContext(ctx context.Context) DecryptionRuleTypeSslInboundInspectionPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DecryptionRuleTypeSslInboundInspectionPtrOutput)
+}
+
+type DecryptionRuleTypeSslInboundInspectionOutput struct{ *pulumi.OutputState }
+
+func (DecryptionRuleTypeSslInboundInspectionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*DecryptionRuleTypeSslInboundInspection)(nil)).Elem()
+}
+
+func (o DecryptionRuleTypeSslInboundInspectionOutput) ToDecryptionRuleTypeSslInboundInspectionOutput() DecryptionRuleTypeSslInboundInspectionOutput {
+	return o
+}
+
+func (o DecryptionRuleTypeSslInboundInspectionOutput) ToDecryptionRuleTypeSslInboundInspectionOutputWithContext(ctx context.Context) DecryptionRuleTypeSslInboundInspectionOutput {
+	return o
+}
+
+func (o DecryptionRuleTypeSslInboundInspectionOutput) ToDecryptionRuleTypeSslInboundInspectionPtrOutput() DecryptionRuleTypeSslInboundInspectionPtrOutput {
+	return o.ToDecryptionRuleTypeSslInboundInspectionPtrOutputWithContext(context.Background())
+}
+
+func (o DecryptionRuleTypeSslInboundInspectionOutput) ToDecryptionRuleTypeSslInboundInspectionPtrOutputWithContext(ctx context.Context) DecryptionRuleTypeSslInboundInspectionPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v DecryptionRuleTypeSslInboundInspection) *DecryptionRuleTypeSslInboundInspection {
+		return &v
+	}).(DecryptionRuleTypeSslInboundInspectionPtrOutput)
+}
+
+// List of certificate names for SSL inbound inspection
+func (o DecryptionRuleTypeSslInboundInspectionOutput) Certificates() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v DecryptionRuleTypeSslInboundInspection) []string { return v.Certificates }).(pulumi.StringArrayOutput)
+}
+
+type DecryptionRuleTypeSslInboundInspectionPtrOutput struct{ *pulumi.OutputState }
+
+func (DecryptionRuleTypeSslInboundInspectionPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**DecryptionRuleTypeSslInboundInspection)(nil)).Elem()
+}
+
+func (o DecryptionRuleTypeSslInboundInspectionPtrOutput) ToDecryptionRuleTypeSslInboundInspectionPtrOutput() DecryptionRuleTypeSslInboundInspectionPtrOutput {
+	return o
+}
+
+func (o DecryptionRuleTypeSslInboundInspectionPtrOutput) ToDecryptionRuleTypeSslInboundInspectionPtrOutputWithContext(ctx context.Context) DecryptionRuleTypeSslInboundInspectionPtrOutput {
+	return o
+}
+
+func (o DecryptionRuleTypeSslInboundInspectionPtrOutput) Elem() DecryptionRuleTypeSslInboundInspectionOutput {
+	return o.ApplyT(func(v *DecryptionRuleTypeSslInboundInspection) DecryptionRuleTypeSslInboundInspection {
+		if v != nil {
+			return *v
+		}
+		var ret DecryptionRuleTypeSslInboundInspection
+		return ret
+	}).(DecryptionRuleTypeSslInboundInspectionOutput)
+}
+
+// List of certificate names for SSL inbound inspection
+func (o DecryptionRuleTypeSslInboundInspectionPtrOutput) Certificates() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *DecryptionRuleTypeSslInboundInspection) []string {
+		if v == nil {
+			return nil
+		}
+		return v.Certificates
+	}).(pulumi.StringArrayOutput)
 }
 
 type DeviceRedistributionCollectorRedistributionCollector struct {
@@ -41874,9 +42137,9 @@ func (o DhcpInterfaceServerOptionInheritancePtrOutput) Source() pulumi.StringPtr
 
 type DhcpInterfaceServerOptionLease struct {
 	// DHCP lease timeout (minutes)
-	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Timeout *int `pulumi:"timeout"`
 	// Unlimited
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Unlimited *DhcpInterfaceServerOptionLeaseUnlimited `pulumi:"unlimited"`
 }
@@ -41894,9 +42157,9 @@ type DhcpInterfaceServerOptionLeaseInput interface {
 
 type DhcpInterfaceServerOptionLeaseArgs struct {
 	// DHCP lease timeout (minutes)
-	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Timeout pulumi.IntPtrInput `pulumi:"timeout"`
 	// Unlimited
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 	Unlimited DhcpInterfaceServerOptionLeaseUnlimitedPtrInput `pulumi:"unlimited"`
 }
@@ -41979,12 +42242,12 @@ func (o DhcpInterfaceServerOptionLeaseOutput) ToDhcpInterfaceServerOptionLeasePt
 }
 
 // DHCP lease timeout (minutes)
-// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 func (o DhcpInterfaceServerOptionLeaseOutput) Timeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v DhcpInterfaceServerOptionLease) *int { return v.Timeout }).(pulumi.IntPtrOutput)
 }
 
 // Unlimited
+//
 // > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 func (o DhcpInterfaceServerOptionLeaseOutput) Unlimited() DhcpInterfaceServerOptionLeaseUnlimitedPtrOutput {
 	return o.ApplyT(func(v DhcpInterfaceServerOptionLease) *DhcpInterfaceServerOptionLeaseUnlimited { return v.Unlimited }).(DhcpInterfaceServerOptionLeaseUnlimitedPtrOutput)
@@ -42015,7 +42278,6 @@ func (o DhcpInterfaceServerOptionLeasePtrOutput) Elem() DhcpInterfaceServerOptio
 }
 
 // DHCP lease timeout (minutes)
-// > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 func (o DhcpInterfaceServerOptionLeasePtrOutput) Timeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *DhcpInterfaceServerOptionLease) *int {
 		if v == nil {
@@ -42026,6 +42288,7 @@ func (o DhcpInterfaceServerOptionLeasePtrOutput) Timeout() pulumi.IntPtrOutput {
 }
 
 // Unlimited
+//
 // > ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
 func (o DhcpInterfaceServerOptionLeasePtrOutput) Unlimited() DhcpInterfaceServerOptionLeaseUnlimitedPtrOutput {
 	return o.ApplyT(func(v *DhcpInterfaceServerOptionLease) *DhcpInterfaceServerOptionLeaseUnlimited {
@@ -44660,15 +44923,17 @@ func (o DnsSecurityProfileBotnetDomainsListArrayOutput) Index(i pulumi.IntInput)
 
 type DnsSecurityProfileBotnetDomainsListAction struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Alert *DnsSecurityProfileBotnetDomainsListActionAlert `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Allow *DnsSecurityProfileBotnetDomainsListActionAllow `pulumi:"allow"`
 	// Block
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Block *DnsSecurityProfileBotnetDomainsListActionBlock `pulumi:"block"`
 	// Sinkhole
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Sinkhole *DnsSecurityProfileBotnetDomainsListActionSinkhole `pulumi:"sinkhole"`
 }
@@ -44686,15 +44951,17 @@ type DnsSecurityProfileBotnetDomainsListActionInput interface {
 
 type DnsSecurityProfileBotnetDomainsListActionArgs struct {
 	// Alert
-	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Alert DnsSecurityProfileBotnetDomainsListActionAlertPtrInput `pulumi:"alert"`
 	// Allow
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Allow DnsSecurityProfileBotnetDomainsListActionAllowPtrInput `pulumi:"allow"`
 	// Block
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Block DnsSecurityProfileBotnetDomainsListActionBlockPtrInput `pulumi:"block"`
 	// Sinkhole
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 	Sinkhole DnsSecurityProfileBotnetDomainsListActionSinkholePtrInput `pulumi:"sinkhole"`
 }
@@ -44777,7 +45044,6 @@ func (o DnsSecurityProfileBotnetDomainsListActionOutput) ToDnsSecurityProfileBot
 }
 
 // Alert
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o DnsSecurityProfileBotnetDomainsListActionOutput) Alert() DnsSecurityProfileBotnetDomainsListActionAlertPtrOutput {
 	return o.ApplyT(func(v DnsSecurityProfileBotnetDomainsListAction) *DnsSecurityProfileBotnetDomainsListActionAlert {
 		return v.Alert
@@ -44785,6 +45051,7 @@ func (o DnsSecurityProfileBotnetDomainsListActionOutput) Alert() DnsSecurityProf
 }
 
 // Allow
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o DnsSecurityProfileBotnetDomainsListActionOutput) Allow() DnsSecurityProfileBotnetDomainsListActionAllowPtrOutput {
 	return o.ApplyT(func(v DnsSecurityProfileBotnetDomainsListAction) *DnsSecurityProfileBotnetDomainsListActionAllow {
@@ -44793,6 +45060,7 @@ func (o DnsSecurityProfileBotnetDomainsListActionOutput) Allow() DnsSecurityProf
 }
 
 // Block
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o DnsSecurityProfileBotnetDomainsListActionOutput) Block() DnsSecurityProfileBotnetDomainsListActionBlockPtrOutput {
 	return o.ApplyT(func(v DnsSecurityProfileBotnetDomainsListAction) *DnsSecurityProfileBotnetDomainsListActionBlock {
@@ -44801,6 +45069,7 @@ func (o DnsSecurityProfileBotnetDomainsListActionOutput) Block() DnsSecurityProf
 }
 
 // Sinkhole
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o DnsSecurityProfileBotnetDomainsListActionOutput) Sinkhole() DnsSecurityProfileBotnetDomainsListActionSinkholePtrOutput {
 	return o.ApplyT(func(v DnsSecurityProfileBotnetDomainsListAction) *DnsSecurityProfileBotnetDomainsListActionSinkhole {
@@ -44833,7 +45102,6 @@ func (o DnsSecurityProfileBotnetDomainsListActionPtrOutput) Elem() DnsSecurityPr
 }
 
 // Alert
-// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o DnsSecurityProfileBotnetDomainsListActionPtrOutput) Alert() DnsSecurityProfileBotnetDomainsListActionAlertPtrOutput {
 	return o.ApplyT(func(v *DnsSecurityProfileBotnetDomainsListAction) *DnsSecurityProfileBotnetDomainsListActionAlert {
 		if v == nil {
@@ -44844,6 +45112,7 @@ func (o DnsSecurityProfileBotnetDomainsListActionPtrOutput) Alert() DnsSecurityP
 }
 
 // Allow
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o DnsSecurityProfileBotnetDomainsListActionPtrOutput) Allow() DnsSecurityProfileBotnetDomainsListActionAllowPtrOutput {
 	return o.ApplyT(func(v *DnsSecurityProfileBotnetDomainsListAction) *DnsSecurityProfileBotnetDomainsListActionAllow {
@@ -44855,6 +45124,7 @@ func (o DnsSecurityProfileBotnetDomainsListActionPtrOutput) Allow() DnsSecurityP
 }
 
 // Block
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o DnsSecurityProfileBotnetDomainsListActionPtrOutput) Block() DnsSecurityProfileBotnetDomainsListActionBlockPtrOutput {
 	return o.ApplyT(func(v *DnsSecurityProfileBotnetDomainsListAction) *DnsSecurityProfileBotnetDomainsListActionBlock {
@@ -44866,6 +45136,7 @@ func (o DnsSecurityProfileBotnetDomainsListActionPtrOutput) Block() DnsSecurityP
 }
 
 // Sinkhole
+//
 // > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
 func (o DnsSecurityProfileBotnetDomainsListActionPtrOutput) Sinkhole() DnsSecurityProfileBotnetDomainsListActionSinkholePtrOutput {
 	return o.ApplyT(func(v *DnsSecurityProfileBotnetDomainsListAction) *DnsSecurityProfileBotnetDomainsListActionSinkhole {
@@ -48907,12 +49178,13 @@ func (o DosProtectionProfileResourceSessionsPtrOutput) MaxConcurrentLimit() pulu
 
 type DosProtectionRuleAction struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Allow *DosProtectionRuleActionAllow `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Deny *DosProtectionRuleActionDeny `pulumi:"deny"`
 	// Protect
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Protect *DosProtectionRuleActionProtect `pulumi:"protect"`
 }
@@ -48930,12 +49202,13 @@ type DosProtectionRuleActionInput interface {
 
 type DosProtectionRuleActionArgs struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Allow DosProtectionRuleActionAllowPtrInput `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Deny DosProtectionRuleActionDenyPtrInput `pulumi:"deny"`
 	// Protect
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 	Protect DosProtectionRuleActionProtectPtrInput `pulumi:"protect"`
 }
@@ -49018,18 +49291,19 @@ func (o DosProtectionRuleActionOutput) ToDosProtectionRuleActionPtrOutputWithCon
 }
 
 // Allow
-// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o DosProtectionRuleActionOutput) Allow() DosProtectionRuleActionAllowPtrOutput {
 	return o.ApplyT(func(v DosProtectionRuleAction) *DosProtectionRuleActionAllow { return v.Allow }).(DosProtectionRuleActionAllowPtrOutput)
 }
 
 // Deny
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o DosProtectionRuleActionOutput) Deny() DosProtectionRuleActionDenyPtrOutput {
 	return o.ApplyT(func(v DosProtectionRuleAction) *DosProtectionRuleActionDeny { return v.Deny }).(DosProtectionRuleActionDenyPtrOutput)
 }
 
 // Protect
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o DosProtectionRuleActionOutput) Protect() DosProtectionRuleActionProtectPtrOutput {
 	return o.ApplyT(func(v DosProtectionRuleAction) *DosProtectionRuleActionProtect { return v.Protect }).(DosProtectionRuleActionProtectPtrOutput)
@@ -49060,7 +49334,6 @@ func (o DosProtectionRuleActionPtrOutput) Elem() DosProtectionRuleActionOutput {
 }
 
 // Allow
-// > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o DosProtectionRuleActionPtrOutput) Allow() DosProtectionRuleActionAllowPtrOutput {
 	return o.ApplyT(func(v *DosProtectionRuleAction) *DosProtectionRuleActionAllow {
 		if v == nil {
@@ -49071,6 +49344,7 @@ func (o DosProtectionRuleActionPtrOutput) Allow() DosProtectionRuleActionAllowPt
 }
 
 // Deny
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o DosProtectionRuleActionPtrOutput) Deny() DosProtectionRuleActionDenyPtrOutput {
 	return o.ApplyT(func(v *DosProtectionRuleAction) *DosProtectionRuleActionDeny {
@@ -49082,6 +49356,7 @@ func (o DosProtectionRuleActionPtrOutput) Deny() DosProtectionRuleActionDenyPtrO
 }
 
 // Protect
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
 func (o DosProtectionRuleActionPtrOutput) Protect() DosProtectionRuleActionProtectPtrOutput {
 	return o.ApplyT(func(v *DosProtectionRuleAction) *DosProtectionRuleActionProtect {
@@ -49448,9 +49723,9 @@ func (o DosProtectionRuleActionProtectPtrOutput) Elem() DosProtectionRuleActionP
 
 type DosProtectionRuleProtection struct {
 	// Aggregate
-	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Aggregate *DosProtectionRuleProtectionAggregate `pulumi:"aggregate"`
 	// Classified
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Classified *DosProtectionRuleProtectionClassified `pulumi:"classified"`
 }
@@ -49468,9 +49743,9 @@ type DosProtectionRuleProtectionInput interface {
 
 type DosProtectionRuleProtectionArgs struct {
 	// Aggregate
-	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Aggregate DosProtectionRuleProtectionAggregatePtrInput `pulumi:"aggregate"`
 	// Classified
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 	Classified DosProtectionRuleProtectionClassifiedPtrInput `pulumi:"classified"`
 }
@@ -49553,12 +49828,12 @@ func (o DosProtectionRuleProtectionOutput) ToDosProtectionRuleProtectionPtrOutpu
 }
 
 // Aggregate
-// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 func (o DosProtectionRuleProtectionOutput) Aggregate() DosProtectionRuleProtectionAggregatePtrOutput {
 	return o.ApplyT(func(v DosProtectionRuleProtection) *DosProtectionRuleProtectionAggregate { return v.Aggregate }).(DosProtectionRuleProtectionAggregatePtrOutput)
 }
 
 // Classified
+//
 // > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 func (o DosProtectionRuleProtectionOutput) Classified() DosProtectionRuleProtectionClassifiedPtrOutput {
 	return o.ApplyT(func(v DosProtectionRuleProtection) *DosProtectionRuleProtectionClassified { return v.Classified }).(DosProtectionRuleProtectionClassifiedPtrOutput)
@@ -49589,7 +49864,6 @@ func (o DosProtectionRuleProtectionPtrOutput) Elem() DosProtectionRuleProtection
 }
 
 // Aggregate
-// > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 func (o DosProtectionRuleProtectionPtrOutput) Aggregate() DosProtectionRuleProtectionAggregatePtrOutput {
 	return o.ApplyT(func(v *DosProtectionRuleProtection) *DosProtectionRuleProtectionAggregate {
 		if v == nil {
@@ -49600,6 +49874,7 @@ func (o DosProtectionRuleProtectionPtrOutput) Aggregate() DosProtectionRuleProte
 }
 
 // Classified
+//
 // > ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
 func (o DosProtectionRuleProtectionPtrOutput) Classified() DosProtectionRuleProtectionClassifiedPtrOutput {
 	return o.ApplyT(func(v *DosProtectionRuleProtection) *DosProtectionRuleProtectionClassified {
@@ -50341,16 +50616,17 @@ type EthernetInterfaceLayer3 struct {
 	// Dynamic DNS configuration specific to the Ethernet Interfaces.
 	DdnsConfig *EthernetInterfaceLayer3DdnsConfig `pulumi:"ddnsConfig"`
 	// Ethernet Interfaces DHCP Client Object
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	DhcpClient *EthernetInterfaceLayer3DhcpClient `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// Ethernet Interface IP addresses
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Ips []EthernetInterfaceLayer3Ip `pulumi:"ips"`
 	// MTU
 	Mtu *int `pulumi:"mtu"`
 	// Pppoe
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Pppoe *EthernetInterfaceLayer3Pppoe `pulumi:"pppoe"`
 }
@@ -50372,16 +50648,17 @@ type EthernetInterfaceLayer3Args struct {
 	// Dynamic DNS configuration specific to the Ethernet Interfaces.
 	DdnsConfig EthernetInterfaceLayer3DdnsConfigPtrInput `pulumi:"ddnsConfig"`
 	// Ethernet Interfaces DHCP Client Object
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	DhcpClient EthernetInterfaceLayer3DhcpClientPtrInput `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput `pulumi:"interfaceManagementProfile"`
 	// Ethernet Interface IP addresses
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Ips EthernetInterfaceLayer3IpArrayInput `pulumi:"ips"`
 	// MTU
 	Mtu pulumi.IntPtrInput `pulumi:"mtu"`
 	// Pppoe
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 	Pppoe EthernetInterfaceLayer3PppoePtrInput `pulumi:"pppoe"`
 }
@@ -50474,7 +50751,6 @@ func (o EthernetInterfaceLayer3Output) DdnsConfig() EthernetInterfaceLayer3DdnsC
 }
 
 // Ethernet Interfaces DHCP Client Object
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o EthernetInterfaceLayer3Output) DhcpClient() EthernetInterfaceLayer3DhcpClientPtrOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer3) *EthernetInterfaceLayer3DhcpClient { return v.DhcpClient }).(EthernetInterfaceLayer3DhcpClientPtrOutput)
 }
@@ -50485,6 +50761,7 @@ func (o EthernetInterfaceLayer3Output) InterfaceManagementProfile() pulumi.Strin
 }
 
 // Ethernet Interface IP addresses
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o EthernetInterfaceLayer3Output) Ips() EthernetInterfaceLayer3IpArrayOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer3) []EthernetInterfaceLayer3Ip { return v.Ips }).(EthernetInterfaceLayer3IpArrayOutput)
@@ -50496,6 +50773,7 @@ func (o EthernetInterfaceLayer3Output) Mtu() pulumi.IntPtrOutput {
 }
 
 // Pppoe
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o EthernetInterfaceLayer3Output) Pppoe() EthernetInterfaceLayer3PppoePtrOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer3) *EthernetInterfaceLayer3Pppoe { return v.Pppoe }).(EthernetInterfaceLayer3PppoePtrOutput)
@@ -50546,7 +50824,6 @@ func (o EthernetInterfaceLayer3PtrOutput) DdnsConfig() EthernetInterfaceLayer3Dd
 }
 
 // Ethernet Interfaces DHCP Client Object
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o EthernetInterfaceLayer3PtrOutput) DhcpClient() EthernetInterfaceLayer3DhcpClientPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3) *EthernetInterfaceLayer3DhcpClient {
 		if v == nil {
@@ -50567,6 +50844,7 @@ func (o EthernetInterfaceLayer3PtrOutput) InterfaceManagementProfile() pulumi.St
 }
 
 // Ethernet Interface IP addresses
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o EthernetInterfaceLayer3PtrOutput) Ips() EthernetInterfaceLayer3IpArrayOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3) []EthernetInterfaceLayer3Ip {
@@ -50588,6 +50866,7 @@ func (o EthernetInterfaceLayer3PtrOutput) Mtu() pulumi.IntPtrOutput {
 }
 
 // Pppoe
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
 func (o EthernetInterfaceLayer3PtrOutput) Pppoe() EthernetInterfaceLayer3PppoePtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3) *EthernetInterfaceLayer3Pppoe {
@@ -52245,24 +52524,29 @@ func (o EthernetInterfaceTapPtrOutput) Elem() EthernetInterfaceTapOutput {
 
 type ExternalDynamicListType struct {
 	// Domain settings for Custom Domain type
-	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Domain *ExternalDynamicListTypeDomain `pulumi:"domain"`
 	// IMEI Configuration settings
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imei *ExternalDynamicListTypeImei `pulumi:"imei"`
 	// IMSI Config for Custom IMSI type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imsi *ExternalDynamicListTypeImsi `pulumi:"imsi"`
 	// IP settings for Custom IP type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Ip *ExternalDynamicListTypeIp `pulumi:"ip"`
 	// Predefined IP settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedIp *ExternalDynamicListTypePredefinedIp `pulumi:"predefinedIp"`
 	// Predefined URL settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedUrl *ExternalDynamicListTypePredefinedUrl `pulumi:"predefinedUrl"`
 	// URL settings for Custom URL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Url *ExternalDynamicListTypeUrl `pulumi:"url"`
 }
@@ -52280,24 +52564,29 @@ type ExternalDynamicListTypeInput interface {
 
 type ExternalDynamicListTypeArgs struct {
 	// Domain settings for Custom Domain type
-	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Domain ExternalDynamicListTypeDomainPtrInput `pulumi:"domain"`
 	// IMEI Configuration settings
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imei ExternalDynamicListTypeImeiPtrInput `pulumi:"imei"`
 	// IMSI Config for Custom IMSI type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Imsi ExternalDynamicListTypeImsiPtrInput `pulumi:"imsi"`
 	// IP settings for Custom IP type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Ip ExternalDynamicListTypeIpPtrInput `pulumi:"ip"`
 	// Predefined IP settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedIp ExternalDynamicListTypePredefinedIpPtrInput `pulumi:"predefinedIp"`
 	// Predefined URL settings for EDL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	PredefinedUrl ExternalDynamicListTypePredefinedUrlPtrInput `pulumi:"predefinedUrl"`
 	// URL settings for Custom URL type
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 	Url ExternalDynamicListTypeUrlPtrInput `pulumi:"url"`
 }
@@ -52380,42 +52669,47 @@ func (o ExternalDynamicListTypeOutput) ToExternalDynamicListTypePtrOutputWithCon
 }
 
 // Domain settings for Custom Domain type
-// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypeOutput) Domain() ExternalDynamicListTypeDomainPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListType) *ExternalDynamicListTypeDomain { return v.Domain }).(ExternalDynamicListTypeDomainPtrOutput)
 }
 
 // IMEI Configuration settings
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypeOutput) Imei() ExternalDynamicListTypeImeiPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListType) *ExternalDynamicListTypeImei { return v.Imei }).(ExternalDynamicListTypeImeiPtrOutput)
 }
 
 // IMSI Config for Custom IMSI type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypeOutput) Imsi() ExternalDynamicListTypeImsiPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListType) *ExternalDynamicListTypeImsi { return v.Imsi }).(ExternalDynamicListTypeImsiPtrOutput)
 }
 
 // IP settings for Custom IP type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypeOutput) Ip() ExternalDynamicListTypeIpPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListType) *ExternalDynamicListTypeIp { return v.Ip }).(ExternalDynamicListTypeIpPtrOutput)
 }
 
 // Predefined IP settings for EDL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypeOutput) PredefinedIp() ExternalDynamicListTypePredefinedIpPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListType) *ExternalDynamicListTypePredefinedIp { return v.PredefinedIp }).(ExternalDynamicListTypePredefinedIpPtrOutput)
 }
 
 // Predefined URL settings for EDL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypeOutput) PredefinedUrl() ExternalDynamicListTypePredefinedUrlPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListType) *ExternalDynamicListTypePredefinedUrl { return v.PredefinedUrl }).(ExternalDynamicListTypePredefinedUrlPtrOutput)
 }
 
 // URL settings for Custom URL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypeOutput) Url() ExternalDynamicListTypeUrlPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListType) *ExternalDynamicListTypeUrl { return v.Url }).(ExternalDynamicListTypeUrlPtrOutput)
@@ -52446,7 +52740,6 @@ func (o ExternalDynamicListTypePtrOutput) Elem() ExternalDynamicListTypeOutput {
 }
 
 // Domain settings for Custom Domain type
-// > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypePtrOutput) Domain() ExternalDynamicListTypeDomainPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListType) *ExternalDynamicListTypeDomain {
 		if v == nil {
@@ -52457,6 +52750,7 @@ func (o ExternalDynamicListTypePtrOutput) Domain() ExternalDynamicListTypeDomain
 }
 
 // IMEI Configuration settings
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypePtrOutput) Imei() ExternalDynamicListTypeImeiPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListType) *ExternalDynamicListTypeImei {
@@ -52468,6 +52762,7 @@ func (o ExternalDynamicListTypePtrOutput) Imei() ExternalDynamicListTypeImeiPtrO
 }
 
 // IMSI Config for Custom IMSI type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypePtrOutput) Imsi() ExternalDynamicListTypeImsiPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListType) *ExternalDynamicListTypeImsi {
@@ -52479,6 +52774,7 @@ func (o ExternalDynamicListTypePtrOutput) Imsi() ExternalDynamicListTypeImsiPtrO
 }
 
 // IP settings for Custom IP type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypePtrOutput) Ip() ExternalDynamicListTypeIpPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListType) *ExternalDynamicListTypeIp {
@@ -52490,6 +52786,7 @@ func (o ExternalDynamicListTypePtrOutput) Ip() ExternalDynamicListTypeIpPtrOutpu
 }
 
 // Predefined IP settings for EDL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypePtrOutput) PredefinedIp() ExternalDynamicListTypePredefinedIpPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListType) *ExternalDynamicListTypePredefinedIp {
@@ -52501,6 +52798,7 @@ func (o ExternalDynamicListTypePtrOutput) PredefinedIp() ExternalDynamicListType
 }
 
 // Predefined URL settings for EDL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypePtrOutput) PredefinedUrl() ExternalDynamicListTypePredefinedUrlPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListType) *ExternalDynamicListTypePredefinedUrl {
@@ -52512,6 +52810,7 @@ func (o ExternalDynamicListTypePtrOutput) PredefinedUrl() ExternalDynamicListTyp
 }
 
 // URL settings for Custom URL type
+//
 // > ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
 func (o ExternalDynamicListTypePtrOutput) Url() ExternalDynamicListTypeUrlPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListType) *ExternalDynamicListTypeUrl {
@@ -52931,18 +53230,21 @@ func (o ExternalDynamicListTypeDomainAuthPtrOutput) Username() pulumi.StringPtrO
 
 type ExternalDynamicListTypeDomainRecurring struct {
 	// Daily settings for Domain recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily *ExternalDynamicListTypeDomainRecurringDaily `pulumi:"daily"`
 	// Five minute settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute *ExternalDynamicListTypeDomainRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly *ExternalDynamicListTypeDomainRecurringHourly `pulumi:"hourly"`
 	// Monthly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly *ExternalDynamicListTypeDomainRecurringMonthly `pulumi:"monthly"`
 	// Weekly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly *ExternalDynamicListTypeDomainRecurringWeekly `pulumi:"weekly"`
 }
@@ -52960,18 +53262,21 @@ type ExternalDynamicListTypeDomainRecurringInput interface {
 
 type ExternalDynamicListTypeDomainRecurringArgs struct {
 	// Daily settings for Domain recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily ExternalDynamicListTypeDomainRecurringDailyPtrInput `pulumi:"daily"`
 	// Five minute settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute ExternalDynamicListTypeDomainRecurringFiveMinutePtrInput `pulumi:"fiveMinute"`
 	// Hourly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly ExternalDynamicListTypeDomainRecurringHourlyPtrInput `pulumi:"hourly"`
 	// Monthly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly ExternalDynamicListTypeDomainRecurringMonthlyPtrInput `pulumi:"monthly"`
 	// Weekly settings for Domain recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly ExternalDynamicListTypeDomainRecurringWeeklyPtrInput `pulumi:"weekly"`
 }
@@ -53054,7 +53359,6 @@ func (o ExternalDynamicListTypeDomainRecurringOutput) ToExternalDynamicListTypeD
 }
 
 // Daily settings for Domain recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeDomainRecurringOutput) Daily() ExternalDynamicListTypeDomainRecurringDailyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeDomainRecurring) *ExternalDynamicListTypeDomainRecurringDaily {
 		return v.Daily
@@ -53062,6 +53366,7 @@ func (o ExternalDynamicListTypeDomainRecurringOutput) Daily() ExternalDynamicLis
 }
 
 // Five minute settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeDomainRecurringOutput) FiveMinute() ExternalDynamicListTypeDomainRecurringFiveMinutePtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeDomainRecurring) *ExternalDynamicListTypeDomainRecurringFiveMinute {
@@ -53070,6 +53375,7 @@ func (o ExternalDynamicListTypeDomainRecurringOutput) FiveMinute() ExternalDynam
 }
 
 // Hourly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeDomainRecurringOutput) Hourly() ExternalDynamicListTypeDomainRecurringHourlyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeDomainRecurring) *ExternalDynamicListTypeDomainRecurringHourly {
@@ -53078,6 +53384,7 @@ func (o ExternalDynamicListTypeDomainRecurringOutput) Hourly() ExternalDynamicLi
 }
 
 // Monthly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeDomainRecurringOutput) Monthly() ExternalDynamicListTypeDomainRecurringMonthlyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeDomainRecurring) *ExternalDynamicListTypeDomainRecurringMonthly {
@@ -53086,6 +53393,7 @@ func (o ExternalDynamicListTypeDomainRecurringOutput) Monthly() ExternalDynamicL
 }
 
 // Weekly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeDomainRecurringOutput) Weekly() ExternalDynamicListTypeDomainRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeDomainRecurring) *ExternalDynamicListTypeDomainRecurringWeekly {
@@ -53118,7 +53426,6 @@ func (o ExternalDynamicListTypeDomainRecurringPtrOutput) Elem() ExternalDynamicL
 }
 
 // Daily settings for Domain recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeDomainRecurringPtrOutput) Daily() ExternalDynamicListTypeDomainRecurringDailyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeDomainRecurring) *ExternalDynamicListTypeDomainRecurringDaily {
 		if v == nil {
@@ -53129,6 +53436,7 @@ func (o ExternalDynamicListTypeDomainRecurringPtrOutput) Daily() ExternalDynamic
 }
 
 // Five minute settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeDomainRecurringPtrOutput) FiveMinute() ExternalDynamicListTypeDomainRecurringFiveMinutePtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeDomainRecurring) *ExternalDynamicListTypeDomainRecurringFiveMinute {
@@ -53140,6 +53448,7 @@ func (o ExternalDynamicListTypeDomainRecurringPtrOutput) FiveMinute() ExternalDy
 }
 
 // Hourly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeDomainRecurringPtrOutput) Hourly() ExternalDynamicListTypeDomainRecurringHourlyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeDomainRecurring) *ExternalDynamicListTypeDomainRecurringHourly {
@@ -53151,6 +53460,7 @@ func (o ExternalDynamicListTypeDomainRecurringPtrOutput) Hourly() ExternalDynami
 }
 
 // Monthly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeDomainRecurringPtrOutput) Monthly() ExternalDynamicListTypeDomainRecurringMonthlyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeDomainRecurring) *ExternalDynamicListTypeDomainRecurringMonthly {
@@ -53162,6 +53472,7 @@ func (o ExternalDynamicListTypeDomainRecurringPtrOutput) Monthly() ExternalDynam
 }
 
 // Weekly settings for Domain recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeDomainRecurringPtrOutput) Weekly() ExternalDynamicListTypeDomainRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeDomainRecurring) *ExternalDynamicListTypeDomainRecurringWeekly {
@@ -54247,18 +54558,21 @@ func (o ExternalDynamicListTypeImeiAuthPtrOutput) Username() pulumi.StringPtrOut
 
 type ExternalDynamicListTypeImeiRecurring struct {
 	// Daily interval settings for IMEI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily *ExternalDynamicListTypeImeiRecurringDaily `pulumi:"daily"`
 	// Five-minute interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute *ExternalDynamicListTypeImeiRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly *ExternalDynamicListTypeImeiRecurringHourly `pulumi:"hourly"`
 	// Monthly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly *ExternalDynamicListTypeImeiRecurringMonthly `pulumi:"monthly"`
 	// Weekly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly *ExternalDynamicListTypeImeiRecurringWeekly `pulumi:"weekly"`
 }
@@ -54276,18 +54590,21 @@ type ExternalDynamicListTypeImeiRecurringInput interface {
 
 type ExternalDynamicListTypeImeiRecurringArgs struct {
 	// Daily interval settings for IMEI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily ExternalDynamicListTypeImeiRecurringDailyPtrInput `pulumi:"daily"`
 	// Five-minute interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute ExternalDynamicListTypeImeiRecurringFiveMinutePtrInput `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly ExternalDynamicListTypeImeiRecurringHourlyPtrInput `pulumi:"hourly"`
 	// Monthly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly ExternalDynamicListTypeImeiRecurringMonthlyPtrInput `pulumi:"monthly"`
 	// Weekly interval settings for IMEI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly ExternalDynamicListTypeImeiRecurringWeeklyPtrInput `pulumi:"weekly"`
 }
@@ -54370,7 +54687,6 @@ func (o ExternalDynamicListTypeImeiRecurringOutput) ToExternalDynamicListTypeIme
 }
 
 // Daily interval settings for IMEI updates
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImeiRecurringOutput) Daily() ExternalDynamicListTypeImeiRecurringDailyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeImeiRecurring) *ExternalDynamicListTypeImeiRecurringDaily {
 		return v.Daily
@@ -54378,6 +54694,7 @@ func (o ExternalDynamicListTypeImeiRecurringOutput) Daily() ExternalDynamicListT
 }
 
 // Five-minute interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImeiRecurringOutput) FiveMinute() ExternalDynamicListTypeImeiRecurringFiveMinutePtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeImeiRecurring) *ExternalDynamicListTypeImeiRecurringFiveMinute {
@@ -54386,6 +54703,7 @@ func (o ExternalDynamicListTypeImeiRecurringOutput) FiveMinute() ExternalDynamic
 }
 
 // Hourly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImeiRecurringOutput) Hourly() ExternalDynamicListTypeImeiRecurringHourlyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeImeiRecurring) *ExternalDynamicListTypeImeiRecurringHourly {
@@ -54394,6 +54712,7 @@ func (o ExternalDynamicListTypeImeiRecurringOutput) Hourly() ExternalDynamicList
 }
 
 // Monthly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImeiRecurringOutput) Monthly() ExternalDynamicListTypeImeiRecurringMonthlyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeImeiRecurring) *ExternalDynamicListTypeImeiRecurringMonthly {
@@ -54402,6 +54721,7 @@ func (o ExternalDynamicListTypeImeiRecurringOutput) Monthly() ExternalDynamicLis
 }
 
 // Weekly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImeiRecurringOutput) Weekly() ExternalDynamicListTypeImeiRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeImeiRecurring) *ExternalDynamicListTypeImeiRecurringWeekly {
@@ -54434,7 +54754,6 @@ func (o ExternalDynamicListTypeImeiRecurringPtrOutput) Elem() ExternalDynamicLis
 }
 
 // Daily interval settings for IMEI updates
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImeiRecurringPtrOutput) Daily() ExternalDynamicListTypeImeiRecurringDailyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeImeiRecurring) *ExternalDynamicListTypeImeiRecurringDaily {
 		if v == nil {
@@ -54445,6 +54764,7 @@ func (o ExternalDynamicListTypeImeiRecurringPtrOutput) Daily() ExternalDynamicLi
 }
 
 // Five-minute interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImeiRecurringPtrOutput) FiveMinute() ExternalDynamicListTypeImeiRecurringFiveMinutePtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeImeiRecurring) *ExternalDynamicListTypeImeiRecurringFiveMinute {
@@ -54456,6 +54776,7 @@ func (o ExternalDynamicListTypeImeiRecurringPtrOutput) FiveMinute() ExternalDyna
 }
 
 // Hourly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImeiRecurringPtrOutput) Hourly() ExternalDynamicListTypeImeiRecurringHourlyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeImeiRecurring) *ExternalDynamicListTypeImeiRecurringHourly {
@@ -54467,6 +54788,7 @@ func (o ExternalDynamicListTypeImeiRecurringPtrOutput) Hourly() ExternalDynamicL
 }
 
 // Monthly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImeiRecurringPtrOutput) Monthly() ExternalDynamicListTypeImeiRecurringMonthlyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeImeiRecurring) *ExternalDynamicListTypeImeiRecurringMonthly {
@@ -54478,6 +54800,7 @@ func (o ExternalDynamicListTypeImeiRecurringPtrOutput) Monthly() ExternalDynamic
 }
 
 // Weekly interval settings for IMEI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImeiRecurringPtrOutput) Weekly() ExternalDynamicListTypeImeiRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeImeiRecurring) *ExternalDynamicListTypeImeiRecurringWeekly {
@@ -55563,18 +55886,21 @@ func (o ExternalDynamicListTypeImsiAuthPtrOutput) Username() pulumi.StringPtrOut
 
 type ExternalDynamicListTypeImsiRecurring struct {
 	// Daily interval settings for IMSI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily *ExternalDynamicListTypeImsiRecurringDaily `pulumi:"daily"`
 	// Five-minute interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute *ExternalDynamicListTypeImsiRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly *ExternalDynamicListTypeImsiRecurringHourly `pulumi:"hourly"`
 	// Monthly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly *ExternalDynamicListTypeImsiRecurringMonthly `pulumi:"monthly"`
 	// Weekly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly *ExternalDynamicListTypeImsiRecurringWeekly `pulumi:"weekly"`
 }
@@ -55592,18 +55918,21 @@ type ExternalDynamicListTypeImsiRecurringInput interface {
 
 type ExternalDynamicListTypeImsiRecurringArgs struct {
 	// Daily interval settings for IMSI updates
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily ExternalDynamicListTypeImsiRecurringDailyPtrInput `pulumi:"daily"`
 	// Five-minute interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute ExternalDynamicListTypeImsiRecurringFiveMinutePtrInput `pulumi:"fiveMinute"`
 	// Hourly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly ExternalDynamicListTypeImsiRecurringHourlyPtrInput `pulumi:"hourly"`
 	// Monthly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly ExternalDynamicListTypeImsiRecurringMonthlyPtrInput `pulumi:"monthly"`
 	// Weekly interval settings for IMSI updates
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly ExternalDynamicListTypeImsiRecurringWeeklyPtrInput `pulumi:"weekly"`
 }
@@ -55686,7 +56015,6 @@ func (o ExternalDynamicListTypeImsiRecurringOutput) ToExternalDynamicListTypeIms
 }
 
 // Daily interval settings for IMSI updates
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImsiRecurringOutput) Daily() ExternalDynamicListTypeImsiRecurringDailyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeImsiRecurring) *ExternalDynamicListTypeImsiRecurringDaily {
 		return v.Daily
@@ -55694,6 +56022,7 @@ func (o ExternalDynamicListTypeImsiRecurringOutput) Daily() ExternalDynamicListT
 }
 
 // Five-minute interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImsiRecurringOutput) FiveMinute() ExternalDynamicListTypeImsiRecurringFiveMinutePtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeImsiRecurring) *ExternalDynamicListTypeImsiRecurringFiveMinute {
@@ -55702,6 +56031,7 @@ func (o ExternalDynamicListTypeImsiRecurringOutput) FiveMinute() ExternalDynamic
 }
 
 // Hourly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImsiRecurringOutput) Hourly() ExternalDynamicListTypeImsiRecurringHourlyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeImsiRecurring) *ExternalDynamicListTypeImsiRecurringHourly {
@@ -55710,6 +56040,7 @@ func (o ExternalDynamicListTypeImsiRecurringOutput) Hourly() ExternalDynamicList
 }
 
 // Monthly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImsiRecurringOutput) Monthly() ExternalDynamicListTypeImsiRecurringMonthlyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeImsiRecurring) *ExternalDynamicListTypeImsiRecurringMonthly {
@@ -55718,6 +56049,7 @@ func (o ExternalDynamicListTypeImsiRecurringOutput) Monthly() ExternalDynamicLis
 }
 
 // Weekly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImsiRecurringOutput) Weekly() ExternalDynamicListTypeImsiRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeImsiRecurring) *ExternalDynamicListTypeImsiRecurringWeekly {
@@ -55750,7 +56082,6 @@ func (o ExternalDynamicListTypeImsiRecurringPtrOutput) Elem() ExternalDynamicLis
 }
 
 // Daily interval settings for IMSI updates
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImsiRecurringPtrOutput) Daily() ExternalDynamicListTypeImsiRecurringDailyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeImsiRecurring) *ExternalDynamicListTypeImsiRecurringDaily {
 		if v == nil {
@@ -55761,6 +56092,7 @@ func (o ExternalDynamicListTypeImsiRecurringPtrOutput) Daily() ExternalDynamicLi
 }
 
 // Five-minute interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImsiRecurringPtrOutput) FiveMinute() ExternalDynamicListTypeImsiRecurringFiveMinutePtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeImsiRecurring) *ExternalDynamicListTypeImsiRecurringFiveMinute {
@@ -55772,6 +56104,7 @@ func (o ExternalDynamicListTypeImsiRecurringPtrOutput) FiveMinute() ExternalDyna
 }
 
 // Hourly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImsiRecurringPtrOutput) Hourly() ExternalDynamicListTypeImsiRecurringHourlyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeImsiRecurring) *ExternalDynamicListTypeImsiRecurringHourly {
@@ -55783,6 +56116,7 @@ func (o ExternalDynamicListTypeImsiRecurringPtrOutput) Hourly() ExternalDynamicL
 }
 
 // Monthly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImsiRecurringPtrOutput) Monthly() ExternalDynamicListTypeImsiRecurringMonthlyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeImsiRecurring) *ExternalDynamicListTypeImsiRecurringMonthly {
@@ -55794,6 +56128,7 @@ func (o ExternalDynamicListTypeImsiRecurringPtrOutput) Monthly() ExternalDynamic
 }
 
 // Weekly interval settings for IMSI updates
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeImsiRecurringPtrOutput) Weekly() ExternalDynamicListTypeImsiRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeImsiRecurring) *ExternalDynamicListTypeImsiRecurringWeekly {
@@ -56879,18 +57214,21 @@ func (o ExternalDynamicListTypeIpAuthPtrOutput) Username() pulumi.StringPtrOutpu
 
 type ExternalDynamicListTypeIpRecurring struct {
 	// Daily settings for IP recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily *ExternalDynamicListTypeIpRecurringDaily `pulumi:"daily"`
 	// Five minute settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute *ExternalDynamicListTypeIpRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly *ExternalDynamicListTypeIpRecurringHourly `pulumi:"hourly"`
 	// Monthly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly *ExternalDynamicListTypeIpRecurringMonthly `pulumi:"monthly"`
 	// Weekly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly *ExternalDynamicListTypeIpRecurringWeekly `pulumi:"weekly"`
 }
@@ -56908,18 +57246,21 @@ type ExternalDynamicListTypeIpRecurringInput interface {
 
 type ExternalDynamicListTypeIpRecurringArgs struct {
 	// Daily settings for IP recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily ExternalDynamicListTypeIpRecurringDailyPtrInput `pulumi:"daily"`
 	// Five minute settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute ExternalDynamicListTypeIpRecurringFiveMinutePtrInput `pulumi:"fiveMinute"`
 	// Hourly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly ExternalDynamicListTypeIpRecurringHourlyPtrInput `pulumi:"hourly"`
 	// Monthly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly ExternalDynamicListTypeIpRecurringMonthlyPtrInput `pulumi:"monthly"`
 	// Weekly settings for IP recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly ExternalDynamicListTypeIpRecurringWeeklyPtrInput `pulumi:"weekly"`
 }
@@ -57002,12 +57343,12 @@ func (o ExternalDynamicListTypeIpRecurringOutput) ToExternalDynamicListTypeIpRec
 }
 
 // Daily settings for IP recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeIpRecurringOutput) Daily() ExternalDynamicListTypeIpRecurringDailyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeIpRecurring) *ExternalDynamicListTypeIpRecurringDaily { return v.Daily }).(ExternalDynamicListTypeIpRecurringDailyPtrOutput)
 }
 
 // Five minute settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeIpRecurringOutput) FiveMinute() ExternalDynamicListTypeIpRecurringFiveMinutePtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeIpRecurring) *ExternalDynamicListTypeIpRecurringFiveMinute {
@@ -57016,12 +57357,14 @@ func (o ExternalDynamicListTypeIpRecurringOutput) FiveMinute() ExternalDynamicLi
 }
 
 // Hourly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeIpRecurringOutput) Hourly() ExternalDynamicListTypeIpRecurringHourlyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeIpRecurring) *ExternalDynamicListTypeIpRecurringHourly { return v.Hourly }).(ExternalDynamicListTypeIpRecurringHourlyPtrOutput)
 }
 
 // Monthly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeIpRecurringOutput) Monthly() ExternalDynamicListTypeIpRecurringMonthlyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeIpRecurring) *ExternalDynamicListTypeIpRecurringMonthly {
@@ -57030,6 +57373,7 @@ func (o ExternalDynamicListTypeIpRecurringOutput) Monthly() ExternalDynamicListT
 }
 
 // Weekly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeIpRecurringOutput) Weekly() ExternalDynamicListTypeIpRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeIpRecurring) *ExternalDynamicListTypeIpRecurringWeekly { return v.Weekly }).(ExternalDynamicListTypeIpRecurringWeeklyPtrOutput)
@@ -57060,7 +57404,6 @@ func (o ExternalDynamicListTypeIpRecurringPtrOutput) Elem() ExternalDynamicListT
 }
 
 // Daily settings for IP recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeIpRecurringPtrOutput) Daily() ExternalDynamicListTypeIpRecurringDailyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeIpRecurring) *ExternalDynamicListTypeIpRecurringDaily {
 		if v == nil {
@@ -57071,6 +57414,7 @@ func (o ExternalDynamicListTypeIpRecurringPtrOutput) Daily() ExternalDynamicList
 }
 
 // Five minute settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeIpRecurringPtrOutput) FiveMinute() ExternalDynamicListTypeIpRecurringFiveMinutePtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeIpRecurring) *ExternalDynamicListTypeIpRecurringFiveMinute {
@@ -57082,6 +57426,7 @@ func (o ExternalDynamicListTypeIpRecurringPtrOutput) FiveMinute() ExternalDynami
 }
 
 // Hourly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeIpRecurringPtrOutput) Hourly() ExternalDynamicListTypeIpRecurringHourlyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeIpRecurring) *ExternalDynamicListTypeIpRecurringHourly {
@@ -57093,6 +57438,7 @@ func (o ExternalDynamicListTypeIpRecurringPtrOutput) Hourly() ExternalDynamicLis
 }
 
 // Monthly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeIpRecurringPtrOutput) Monthly() ExternalDynamicListTypeIpRecurringMonthlyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeIpRecurring) *ExternalDynamicListTypeIpRecurringMonthly {
@@ -57104,6 +57450,7 @@ func (o ExternalDynamicListTypeIpRecurringPtrOutput) Monthly() ExternalDynamicLi
 }
 
 // Weekly settings for IP recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeIpRecurringPtrOutput) Weekly() ExternalDynamicListTypeIpRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeIpRecurring) *ExternalDynamicListTypeIpRecurringWeekly {
@@ -58539,18 +58886,21 @@ func (o ExternalDynamicListTypeUrlAuthPtrOutput) Username() pulumi.StringPtrOutp
 
 type ExternalDynamicListTypeUrlRecurring struct {
 	// Daily settings for URL recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily *ExternalDynamicListTypeUrlRecurringDaily `pulumi:"daily"`
 	// Five minute settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute *ExternalDynamicListTypeUrlRecurringFiveMinute `pulumi:"fiveMinute"`
 	// Hourly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly *ExternalDynamicListTypeUrlRecurringHourly `pulumi:"hourly"`
 	// Monthly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly *ExternalDynamicListTypeUrlRecurringMonthly `pulumi:"monthly"`
 	// Weekly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly *ExternalDynamicListTypeUrlRecurringWeekly `pulumi:"weekly"`
 }
@@ -58568,18 +58918,21 @@ type ExternalDynamicListTypeUrlRecurringInput interface {
 
 type ExternalDynamicListTypeUrlRecurringArgs struct {
 	// Daily settings for URL recurring
-	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Daily ExternalDynamicListTypeUrlRecurringDailyPtrInput `pulumi:"daily"`
 	// Five minute settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	FiveMinute ExternalDynamicListTypeUrlRecurringFiveMinutePtrInput `pulumi:"fiveMinute"`
 	// Hourly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Hourly ExternalDynamicListTypeUrlRecurringHourlyPtrInput `pulumi:"hourly"`
 	// Monthly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Monthly ExternalDynamicListTypeUrlRecurringMonthlyPtrInput `pulumi:"monthly"`
 	// Weekly settings for URL recurring
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 	Weekly ExternalDynamicListTypeUrlRecurringWeeklyPtrInput `pulumi:"weekly"`
 }
@@ -58662,12 +59015,12 @@ func (o ExternalDynamicListTypeUrlRecurringOutput) ToExternalDynamicListTypeUrlR
 }
 
 // Daily settings for URL recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeUrlRecurringOutput) Daily() ExternalDynamicListTypeUrlRecurringDailyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeUrlRecurring) *ExternalDynamicListTypeUrlRecurringDaily { return v.Daily }).(ExternalDynamicListTypeUrlRecurringDailyPtrOutput)
 }
 
 // Five minute settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeUrlRecurringOutput) FiveMinute() ExternalDynamicListTypeUrlRecurringFiveMinutePtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeUrlRecurring) *ExternalDynamicListTypeUrlRecurringFiveMinute {
@@ -58676,6 +59029,7 @@ func (o ExternalDynamicListTypeUrlRecurringOutput) FiveMinute() ExternalDynamicL
 }
 
 // Hourly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeUrlRecurringOutput) Hourly() ExternalDynamicListTypeUrlRecurringHourlyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeUrlRecurring) *ExternalDynamicListTypeUrlRecurringHourly {
@@ -58684,6 +59038,7 @@ func (o ExternalDynamicListTypeUrlRecurringOutput) Hourly() ExternalDynamicListT
 }
 
 // Monthly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeUrlRecurringOutput) Monthly() ExternalDynamicListTypeUrlRecurringMonthlyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeUrlRecurring) *ExternalDynamicListTypeUrlRecurringMonthly {
@@ -58692,6 +59047,7 @@ func (o ExternalDynamicListTypeUrlRecurringOutput) Monthly() ExternalDynamicList
 }
 
 // Weekly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeUrlRecurringOutput) Weekly() ExternalDynamicListTypeUrlRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v ExternalDynamicListTypeUrlRecurring) *ExternalDynamicListTypeUrlRecurringWeekly {
@@ -58724,7 +59080,6 @@ func (o ExternalDynamicListTypeUrlRecurringPtrOutput) Elem() ExternalDynamicList
 }
 
 // Daily settings for URL recurring
-// > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeUrlRecurringPtrOutput) Daily() ExternalDynamicListTypeUrlRecurringDailyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeUrlRecurring) *ExternalDynamicListTypeUrlRecurringDaily {
 		if v == nil {
@@ -58735,6 +59090,7 @@ func (o ExternalDynamicListTypeUrlRecurringPtrOutput) Daily() ExternalDynamicLis
 }
 
 // Five minute settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeUrlRecurringPtrOutput) FiveMinute() ExternalDynamicListTypeUrlRecurringFiveMinutePtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeUrlRecurring) *ExternalDynamicListTypeUrlRecurringFiveMinute {
@@ -58746,6 +59102,7 @@ func (o ExternalDynamicListTypeUrlRecurringPtrOutput) FiveMinute() ExternalDynam
 }
 
 // Hourly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeUrlRecurringPtrOutput) Hourly() ExternalDynamicListTypeUrlRecurringHourlyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeUrlRecurring) *ExternalDynamicListTypeUrlRecurringHourly {
@@ -58757,6 +59114,7 @@ func (o ExternalDynamicListTypeUrlRecurringPtrOutput) Hourly() ExternalDynamicLi
 }
 
 // Monthly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeUrlRecurringPtrOutput) Monthly() ExternalDynamicListTypeUrlRecurringMonthlyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeUrlRecurring) *ExternalDynamicListTypeUrlRecurringMonthly {
@@ -58768,6 +59126,7 @@ func (o ExternalDynamicListTypeUrlRecurringPtrOutput) Monthly() ExternalDynamicL
 }
 
 // Weekly settings for URL recurring
+//
 // > ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
 func (o ExternalDynamicListTypeUrlRecurringPtrOutput) Weekly() ExternalDynamicListTypeUrlRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicListTypeUrlRecurring) *ExternalDynamicListTypeUrlRecurringWeekly {
@@ -60766,12 +61125,13 @@ func (o HipObjectAntiMalwareCriteriaPtrOutput) VirdefVersion() HipObjectAntiMalw
 
 type HipObjectAntiMalwareCriteriaLastScanTime struct {
 	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotAvailable *HipObjectAntiMalwareCriteriaLastScanTimeNotAvailable `pulumi:"notAvailable"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotWithin *HipObjectAntiMalwareCriteriaLastScanTimeNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	Within *HipObjectAntiMalwareCriteriaLastScanTimeWithin `pulumi:"within"`
 }
@@ -60789,12 +61149,13 @@ type HipObjectAntiMalwareCriteriaLastScanTimeInput interface {
 
 type HipObjectAntiMalwareCriteriaLastScanTimeArgs struct {
 	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotAvailable HipObjectAntiMalwareCriteriaLastScanTimeNotAvailablePtrInput `pulumi:"notAvailable"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotWithin HipObjectAntiMalwareCriteriaLastScanTimeNotWithinPtrInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	Within HipObjectAntiMalwareCriteriaLastScanTimeWithinPtrInput `pulumi:"within"`
 }
@@ -60877,7 +61238,6 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeOutput) ToHipObjectAntiMalwareCr
 }
 
 // Not available
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimeOutput) NotAvailable() HipObjectAntiMalwareCriteriaLastScanTimeNotAvailablePtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaLastScanTime) *HipObjectAntiMalwareCriteriaLastScanTimeNotAvailable {
 		return v.NotAvailable
@@ -60885,6 +61245,7 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeOutput) NotAvailable() HipObject
 }
 
 // Not within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimeOutput) NotWithin() HipObjectAntiMalwareCriteriaLastScanTimeNotWithinPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaLastScanTime) *HipObjectAntiMalwareCriteriaLastScanTimeNotWithin {
@@ -60893,6 +61254,7 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeOutput) NotWithin() HipObjectAnt
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimeOutput) Within() HipObjectAntiMalwareCriteriaLastScanTimeWithinPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaLastScanTime) *HipObjectAntiMalwareCriteriaLastScanTimeWithin {
@@ -60925,7 +61287,6 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimePtrOutput) Elem() HipObjectAntiM
 }
 
 // Not available
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimePtrOutput) NotAvailable() HipObjectAntiMalwareCriteriaLastScanTimeNotAvailablePtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaLastScanTime) *HipObjectAntiMalwareCriteriaLastScanTimeNotAvailable {
 		if v == nil {
@@ -60936,6 +61297,7 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimePtrOutput) NotAvailable() HipObj
 }
 
 // Not within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimePtrOutput) NotWithin() HipObjectAntiMalwareCriteriaLastScanTimeNotWithinPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaLastScanTime) *HipObjectAntiMalwareCriteriaLastScanTimeNotWithin {
@@ -60947,6 +61309,7 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimePtrOutput) NotWithin() HipObject
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimePtrOutput) Within() HipObjectAntiMalwareCriteriaLastScanTimeWithinPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaLastScanTime) *HipObjectAntiMalwareCriteriaLastScanTimeWithin {
@@ -61077,9 +61440,9 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeNotAvailablePtrOutput) Elem() Hi
 
 type HipObjectAntiMalwareCriteriaLastScanTimeNotWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days *int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours *int `pulumi:"hours"`
 }
@@ -61097,9 +61460,9 @@ type HipObjectAntiMalwareCriteriaLastScanTimeNotWithinInput interface {
 
 type HipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntPtrInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntPtrInput `pulumi:"hours"`
 }
@@ -61182,12 +61545,12 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) ToHipObjectAnti
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaLastScanTimeNotWithin) *int { return v.Days }).(pulumi.IntPtrOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) Hours() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaLastScanTimeNotWithin) *int { return v.Hours }).(pulumi.IntPtrOutput)
@@ -61218,7 +61581,6 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeNotWithinPtrOutput) Elem() HipOb
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimeNotWithinPtrOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaLastScanTimeNotWithin) *int {
 		if v == nil {
@@ -61229,6 +61591,7 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeNotWithinPtrOutput) Days() pulum
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimeNotWithinPtrOutput) Hours() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaLastScanTimeNotWithin) *int {
@@ -61241,9 +61604,9 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeNotWithinPtrOutput) Hours() pulu
 
 type HipObjectAntiMalwareCriteriaLastScanTimeWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days *int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours *int `pulumi:"hours"`
 }
@@ -61261,9 +61624,9 @@ type HipObjectAntiMalwareCriteriaLastScanTimeWithinInput interface {
 
 type HipObjectAntiMalwareCriteriaLastScanTimeWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntPtrInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntPtrInput `pulumi:"hours"`
 }
@@ -61346,12 +61709,12 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) ToHipObjectAntiMal
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaLastScanTimeWithin) *int { return v.Days }).(pulumi.IntPtrOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) Hours() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaLastScanTimeWithin) *int { return v.Hours }).(pulumi.IntPtrOutput)
@@ -61382,7 +61745,6 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeWithinPtrOutput) Elem() HipObjec
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimeWithinPtrOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaLastScanTimeWithin) *int {
 		if v == nil {
@@ -61393,6 +61755,7 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeWithinPtrOutput) Days() pulumi.I
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectAntiMalwareCriteriaLastScanTimeWithinPtrOutput) Hours() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaLastScanTimeWithin) *int {
@@ -61405,30 +61768,37 @@ func (o HipObjectAntiMalwareCriteriaLastScanTimeWithinPtrOutput) Hours() pulumi.
 
 type HipObjectAntiMalwareCriteriaProductVersion struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Contains *string `pulumi:"contains"`
 	// Greater equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterEqual *string `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterThan *string `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Is *string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	IsNot *string `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessEqual *string `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessThan *string `pulumi:"lessThan"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	NotWithin *HipObjectAntiMalwareCriteriaProductVersionNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Within *HipObjectAntiMalwareCriteriaProductVersionWithin `pulumi:"within"`
 }
@@ -61446,30 +61816,37 @@ type HipObjectAntiMalwareCriteriaProductVersionInput interface {
 
 type HipObjectAntiMalwareCriteriaProductVersionArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Contains pulumi.StringPtrInput `pulumi:"contains"`
 	// Greater equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterEqual pulumi.StringPtrInput `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterThan pulumi.StringPtrInput `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Is pulumi.StringPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	IsNot pulumi.StringPtrInput `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessEqual pulumi.StringPtrInput `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessThan pulumi.StringPtrInput `pulumi:"lessThan"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	NotWithin HipObjectAntiMalwareCriteriaProductVersionNotWithinPtrInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Within HipObjectAntiMalwareCriteriaProductVersionWithinPtrInput `pulumi:"within"`
 }
@@ -61552,48 +61929,54 @@ func (o HipObjectAntiMalwareCriteriaProductVersionOutput) ToHipObjectAntiMalware
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaProductVersion) *string { return v.Contains }).(pulumi.StringPtrOutput)
 }
 
 // Greater equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionOutput) GreaterEqual() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaProductVersion) *string { return v.GreaterEqual }).(pulumi.StringPtrOutput)
 }
 
 // Greater than
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionOutput) GreaterThan() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaProductVersion) *string { return v.GreaterThan }).(pulumi.StringPtrOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaProductVersion) *string { return v.Is }).(pulumi.StringPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaProductVersion) *string { return v.IsNot }).(pulumi.StringPtrOutput)
 }
 
 // Less equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionOutput) LessEqual() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaProductVersion) *string { return v.LessEqual }).(pulumi.StringPtrOutput)
 }
 
 // Less than
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionOutput) LessThan() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaProductVersion) *string { return v.LessThan }).(pulumi.StringPtrOutput)
 }
 
 // Not within
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionOutput) NotWithin() HipObjectAntiMalwareCriteriaProductVersionNotWithinPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaProductVersion) *HipObjectAntiMalwareCriteriaProductVersionNotWithin {
@@ -61602,6 +61985,7 @@ func (o HipObjectAntiMalwareCriteriaProductVersionOutput) NotWithin() HipObjectA
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionOutput) Within() HipObjectAntiMalwareCriteriaProductVersionWithinPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaProductVersion) *HipObjectAntiMalwareCriteriaProductVersionWithin {
@@ -61634,7 +62018,6 @@ func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) Elem() HipObjectAnt
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaProductVersion) *string {
 		if v == nil {
@@ -61645,6 +62028,7 @@ func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) Contains() pulumi.S
 }
 
 // Greater equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) GreaterEqual() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaProductVersion) *string {
@@ -61656,6 +62040,7 @@ func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) GreaterEqual() pulu
 }
 
 // Greater than
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) GreaterThan() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaProductVersion) *string {
@@ -61667,6 +62052,7 @@ func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) GreaterThan() pulum
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaProductVersion) *string {
@@ -61678,6 +62064,7 @@ func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) Is() pulumi.StringP
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaProductVersion) *string {
@@ -61689,6 +62076,7 @@ func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) IsNot() pulumi.Stri
 }
 
 // Less equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) LessEqual() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaProductVersion) *string {
@@ -61700,6 +62088,7 @@ func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) LessEqual() pulumi.
 }
 
 // Less than
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) LessThan() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaProductVersion) *string {
@@ -61711,6 +62100,7 @@ func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) LessThan() pulumi.S
 }
 
 // Not within
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) NotWithin() HipObjectAntiMalwareCriteriaProductVersionNotWithinPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaProductVersion) *HipObjectAntiMalwareCriteriaProductVersionNotWithin {
@@ -61722,6 +62112,7 @@ func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) NotWithin() HipObje
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o HipObjectAntiMalwareCriteriaProductVersionPtrOutput) Within() HipObjectAntiMalwareCriteriaProductVersionWithinPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaProductVersion) *HipObjectAntiMalwareCriteriaProductVersionWithin {
@@ -62008,9 +62399,9 @@ func (o HipObjectAntiMalwareCriteriaProductVersionWithinPtrOutput) Versions() pu
 
 type HipObjectAntiMalwareCriteriaVirdefVersion struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin *HipObjectAntiMalwareCriteriaVirdefVersionNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within *HipObjectAntiMalwareCriteriaVirdefVersionWithin `pulumi:"within"`
 }
@@ -62028,9 +62419,9 @@ type HipObjectAntiMalwareCriteriaVirdefVersionInput interface {
 
 type HipObjectAntiMalwareCriteriaVirdefVersionArgs struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin HipObjectAntiMalwareCriteriaVirdefVersionNotWithinPtrInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within HipObjectAntiMalwareCriteriaVirdefVersionWithinPtrInput `pulumi:"within"`
 }
@@ -62113,7 +62504,6 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionOutput) ToHipObjectAntiMalwareC
 }
 
 // Not within
-// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionOutput) NotWithin() HipObjectAntiMalwareCriteriaVirdefVersionNotWithinPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaVirdefVersion) *HipObjectAntiMalwareCriteriaVirdefVersionNotWithin {
 		return v.NotWithin
@@ -62121,6 +62511,7 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionOutput) NotWithin() HipObjectAn
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionOutput) Within() HipObjectAntiMalwareCriteriaVirdefVersionWithinPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaVirdefVersion) *HipObjectAntiMalwareCriteriaVirdefVersionWithin {
@@ -62153,7 +62544,6 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionPtrOutput) Elem() HipObjectAnti
 }
 
 // Not within
-// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionPtrOutput) NotWithin() HipObjectAntiMalwareCriteriaVirdefVersionNotWithinPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaVirdefVersion) *HipObjectAntiMalwareCriteriaVirdefVersionNotWithin {
 		if v == nil {
@@ -62164,6 +62554,7 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionPtrOutput) NotWithin() HipObjec
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionPtrOutput) Within() HipObjectAntiMalwareCriteriaVirdefVersionWithinPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaVirdefVersion) *HipObjectAntiMalwareCriteriaVirdefVersionWithin {
@@ -62176,9 +62567,9 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionPtrOutput) Within() HipObjectAn
 
 type HipObjectAntiMalwareCriteriaVirdefVersionNotWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days *int `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions *int `pulumi:"versions"`
 }
@@ -62196,9 +62587,9 @@ type HipObjectAntiMalwareCriteriaVirdefVersionNotWithinInput interface {
 
 type HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days pulumi.IntPtrInput `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions pulumi.IntPtrInput `pulumi:"versions"`
 }
@@ -62281,12 +62672,12 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) ToHipObjectAnt
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaVirdefVersionNotWithin) *int { return v.Days }).(pulumi.IntPtrOutput)
 }
 
 // specify versions range
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) Versions() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaVirdefVersionNotWithin) *int { return v.Versions }).(pulumi.IntPtrOutput)
@@ -62317,7 +62708,6 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionNotWithinPtrOutput) Elem() HipO
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionNotWithinPtrOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaVirdefVersionNotWithin) *int {
 		if v == nil {
@@ -62328,6 +62718,7 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionNotWithinPtrOutput) Days() pulu
 }
 
 // specify versions range
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionNotWithinPtrOutput) Versions() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaVirdefVersionNotWithin) *int {
@@ -62340,9 +62731,9 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionNotWithinPtrOutput) Versions() 
 
 type HipObjectAntiMalwareCriteriaVirdefVersionWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days *int `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions *int `pulumi:"versions"`
 }
@@ -62360,9 +62751,9 @@ type HipObjectAntiMalwareCriteriaVirdefVersionWithinInput interface {
 
 type HipObjectAntiMalwareCriteriaVirdefVersionWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days pulumi.IntPtrInput `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions pulumi.IntPtrInput `pulumi:"versions"`
 }
@@ -62445,12 +62836,12 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionWithinOutput) ToHipObjectAntiMa
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionWithinOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaVirdefVersionWithin) *int { return v.Days }).(pulumi.IntPtrOutput)
 }
 
 // specify versions range
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionWithinOutput) Versions() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectAntiMalwareCriteriaVirdefVersionWithin) *int { return v.Versions }).(pulumi.IntPtrOutput)
@@ -62481,7 +62872,6 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionWithinPtrOutput) Elem() HipObje
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionWithinPtrOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaVirdefVersionWithin) *int {
 		if v == nil {
@@ -62492,6 +62882,7 @@ func (o HipObjectAntiMalwareCriteriaVirdefVersionWithinPtrOutput) Days() pulumi.
 }
 
 // specify versions range
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o HipObjectAntiMalwareCriteriaVirdefVersionWithinPtrOutput) Versions() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectAntiMalwareCriteriaVirdefVersionWithin) *int {
@@ -64674,12 +65065,13 @@ func (o HipObjectDiskBackupCriteriaPtrOutput) LastBackupTime() HipObjectDiskBack
 
 type HipObjectDiskBackupCriteriaLastBackupTime struct {
 	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotAvailable *HipObjectDiskBackupCriteriaLastBackupTimeNotAvailable `pulumi:"notAvailable"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotWithin *HipObjectDiskBackupCriteriaLastBackupTimeNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	Within *HipObjectDiskBackupCriteriaLastBackupTimeWithin `pulumi:"within"`
 }
@@ -64697,12 +65089,13 @@ type HipObjectDiskBackupCriteriaLastBackupTimeInput interface {
 
 type HipObjectDiskBackupCriteriaLastBackupTimeArgs struct {
 	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotAvailable HipObjectDiskBackupCriteriaLastBackupTimeNotAvailablePtrInput `pulumi:"notAvailable"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotWithin HipObjectDiskBackupCriteriaLastBackupTimeNotWithinPtrInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	Within HipObjectDiskBackupCriteriaLastBackupTimeWithinPtrInput `pulumi:"within"`
 }
@@ -64785,7 +65178,6 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimeOutput) ToHipObjectDiskBackupCr
 }
 
 // Not available
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimeOutput) NotAvailable() HipObjectDiskBackupCriteriaLastBackupTimeNotAvailablePtrOutput {
 	return o.ApplyT(func(v HipObjectDiskBackupCriteriaLastBackupTime) *HipObjectDiskBackupCriteriaLastBackupTimeNotAvailable {
 		return v.NotAvailable
@@ -64793,6 +65185,7 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimeOutput) NotAvailable() HipObjec
 }
 
 // Not within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimeOutput) NotWithin() HipObjectDiskBackupCriteriaLastBackupTimeNotWithinPtrOutput {
 	return o.ApplyT(func(v HipObjectDiskBackupCriteriaLastBackupTime) *HipObjectDiskBackupCriteriaLastBackupTimeNotWithin {
@@ -64801,6 +65194,7 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimeOutput) NotWithin() HipObjectDi
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimeOutput) Within() HipObjectDiskBackupCriteriaLastBackupTimeWithinPtrOutput {
 	return o.ApplyT(func(v HipObjectDiskBackupCriteriaLastBackupTime) *HipObjectDiskBackupCriteriaLastBackupTimeWithin {
@@ -64833,7 +65227,6 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimePtrOutput) Elem() HipObjectDisk
 }
 
 // Not available
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimePtrOutput) NotAvailable() HipObjectDiskBackupCriteriaLastBackupTimeNotAvailablePtrOutput {
 	return o.ApplyT(func(v *HipObjectDiskBackupCriteriaLastBackupTime) *HipObjectDiskBackupCriteriaLastBackupTimeNotAvailable {
 		if v == nil {
@@ -64844,6 +65237,7 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimePtrOutput) NotAvailable() HipOb
 }
 
 // Not within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimePtrOutput) NotWithin() HipObjectDiskBackupCriteriaLastBackupTimeNotWithinPtrOutput {
 	return o.ApplyT(func(v *HipObjectDiskBackupCriteriaLastBackupTime) *HipObjectDiskBackupCriteriaLastBackupTimeNotWithin {
@@ -64855,6 +65249,7 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimePtrOutput) NotWithin() HipObjec
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimePtrOutput) Within() HipObjectDiskBackupCriteriaLastBackupTimeWithinPtrOutput {
 	return o.ApplyT(func(v *HipObjectDiskBackupCriteriaLastBackupTime) *HipObjectDiskBackupCriteriaLastBackupTimeWithin {
@@ -64985,9 +65380,9 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimeNotAvailablePtrOutput) Elem() H
 
 type HipObjectDiskBackupCriteriaLastBackupTimeNotWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days *int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours *int `pulumi:"hours"`
 }
@@ -65005,9 +65400,9 @@ type HipObjectDiskBackupCriteriaLastBackupTimeNotWithinInput interface {
 
 type HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntPtrInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntPtrInput `pulumi:"hours"`
 }
@@ -65090,12 +65485,12 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) ToHipObjectDis
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectDiskBackupCriteriaLastBackupTimeNotWithin) *int { return v.Days }).(pulumi.IntPtrOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) Hours() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectDiskBackupCriteriaLastBackupTimeNotWithin) *int { return v.Hours }).(pulumi.IntPtrOutput)
@@ -65126,7 +65521,6 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimeNotWithinPtrOutput) Elem() HipO
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimeNotWithinPtrOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectDiskBackupCriteriaLastBackupTimeNotWithin) *int {
 		if v == nil {
@@ -65137,6 +65531,7 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimeNotWithinPtrOutput) Days() pulu
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimeNotWithinPtrOutput) Hours() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectDiskBackupCriteriaLastBackupTimeNotWithin) *int {
@@ -65149,9 +65544,9 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimeNotWithinPtrOutput) Hours() pul
 
 type HipObjectDiskBackupCriteriaLastBackupTimeWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days *int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours *int `pulumi:"hours"`
 }
@@ -65169,9 +65564,9 @@ type HipObjectDiskBackupCriteriaLastBackupTimeWithinInput interface {
 
 type HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntPtrInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntPtrInput `pulumi:"hours"`
 }
@@ -65254,12 +65649,12 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimeWithinOutput) ToHipObjectDiskBa
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimeWithinOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectDiskBackupCriteriaLastBackupTimeWithin) *int { return v.Days }).(pulumi.IntPtrOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimeWithinOutput) Hours() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectDiskBackupCriteriaLastBackupTimeWithin) *int { return v.Hours }).(pulumi.IntPtrOutput)
@@ -65290,7 +65685,6 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimeWithinPtrOutput) Elem() HipObje
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimeWithinPtrOutput) Days() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectDiskBackupCriteriaLastBackupTimeWithin) *int {
 		if v == nil {
@@ -65301,6 +65695,7 @@ func (o HipObjectDiskBackupCriteriaLastBackupTimeWithinPtrOutput) Days() pulumi.
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o HipObjectDiskBackupCriteriaLastBackupTimeWithinPtrOutput) Hours() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectDiskBackupCriteriaLastBackupTimeWithin) *int {
@@ -65860,9 +66255,9 @@ func (o HipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput) Index(i pul
 
 type HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is *string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot *string `pulumi:"isNot"`
 }
@@ -65880,9 +66275,9 @@ type HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateInput interf
 
 type HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is pulumi.StringPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot pulumi.StringPtrInput `pulumi:"isNot"`
 }
@@ -65965,12 +66360,12 @@ func (o HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) T
 }
 
 // Is
-// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState) *string { return v.Is }).(pulumi.StringPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState) *string { return v.IsNot }).(pulumi.StringPtrOutput)
@@ -66001,7 +66396,6 @@ func (o HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStatePtrOutput
 }
 
 // Is
-// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStatePtrOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState) *string {
 		if v == nil {
@@ -66012,6 +66406,7 @@ func (o HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStatePtrOutput
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStatePtrOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState) *string {
@@ -66955,12 +67350,13 @@ func (o HipObjectHostInfoCriteriaPtrOutput) SerialNumber() HipObjectHostInfoCrit
 
 type HipObjectHostInfoCriteriaClientVersion struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains *string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is *string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot *string `pulumi:"isNot"`
 }
@@ -66978,12 +67374,13 @@ type HipObjectHostInfoCriteriaClientVersionInput interface {
 
 type HipObjectHostInfoCriteriaClientVersionArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringPtrInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringPtrInput `pulumi:"isNot"`
 }
@@ -67066,18 +67463,19 @@ func (o HipObjectHostInfoCriteriaClientVersionOutput) ToHipObjectHostInfoCriteri
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaClientVersionOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaClientVersion) *string { return v.Contains }).(pulumi.StringPtrOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaClientVersionOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaClientVersion) *string { return v.Is }).(pulumi.StringPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaClientVersionOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaClientVersion) *string { return v.IsNot }).(pulumi.StringPtrOutput)
@@ -67108,7 +67506,6 @@ func (o HipObjectHostInfoCriteriaClientVersionPtrOutput) Elem() HipObjectHostInf
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaClientVersionPtrOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaClientVersion) *string {
 		if v == nil {
@@ -67119,6 +67516,7 @@ func (o HipObjectHostInfoCriteriaClientVersionPtrOutput) Contains() pulumi.Strin
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaClientVersionPtrOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaClientVersion) *string {
@@ -67130,6 +67528,7 @@ func (o HipObjectHostInfoCriteriaClientVersionPtrOutput) Is() pulumi.StringPtrOu
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaClientVersionPtrOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaClientVersion) *string {
@@ -67142,12 +67541,13 @@ func (o HipObjectHostInfoCriteriaClientVersionPtrOutput) IsNot() pulumi.StringPt
 
 type HipObjectHostInfoCriteriaDomain struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains *string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is *string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot *string `pulumi:"isNot"`
 }
@@ -67165,12 +67565,13 @@ type HipObjectHostInfoCriteriaDomainInput interface {
 
 type HipObjectHostInfoCriteriaDomainArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringPtrInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringPtrInput `pulumi:"isNot"`
 }
@@ -67253,18 +67654,19 @@ func (o HipObjectHostInfoCriteriaDomainOutput) ToHipObjectHostInfoCriteriaDomain
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaDomainOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaDomain) *string { return v.Contains }).(pulumi.StringPtrOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaDomainOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaDomain) *string { return v.Is }).(pulumi.StringPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaDomainOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaDomain) *string { return v.IsNot }).(pulumi.StringPtrOutput)
@@ -67295,7 +67697,6 @@ func (o HipObjectHostInfoCriteriaDomainPtrOutput) Elem() HipObjectHostInfoCriter
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaDomainPtrOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaDomain) *string {
 		if v == nil {
@@ -67306,6 +67707,7 @@ func (o HipObjectHostInfoCriteriaDomainPtrOutput) Contains() pulumi.StringPtrOut
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaDomainPtrOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaDomain) *string {
@@ -67317,6 +67719,7 @@ func (o HipObjectHostInfoCriteriaDomainPtrOutput) Is() pulumi.StringPtrOutput {
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaDomainPtrOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaDomain) *string {
@@ -67329,12 +67732,13 @@ func (o HipObjectHostInfoCriteriaDomainPtrOutput) IsNot() pulumi.StringPtrOutput
 
 type HipObjectHostInfoCriteriaHostId struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains *string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is *string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot *string `pulumi:"isNot"`
 }
@@ -67352,12 +67756,13 @@ type HipObjectHostInfoCriteriaHostIdInput interface {
 
 type HipObjectHostInfoCriteriaHostIdArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringPtrInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringPtrInput `pulumi:"isNot"`
 }
@@ -67440,18 +67845,19 @@ func (o HipObjectHostInfoCriteriaHostIdOutput) ToHipObjectHostInfoCriteriaHostId
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostIdOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaHostId) *string { return v.Contains }).(pulumi.StringPtrOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostIdOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaHostId) *string { return v.Is }).(pulumi.StringPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostIdOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaHostId) *string { return v.IsNot }).(pulumi.StringPtrOutput)
@@ -67482,7 +67888,6 @@ func (o HipObjectHostInfoCriteriaHostIdPtrOutput) Elem() HipObjectHostInfoCriter
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostIdPtrOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaHostId) *string {
 		if v == nil {
@@ -67493,6 +67898,7 @@ func (o HipObjectHostInfoCriteriaHostIdPtrOutput) Contains() pulumi.StringPtrOut
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostIdPtrOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaHostId) *string {
@@ -67504,6 +67910,7 @@ func (o HipObjectHostInfoCriteriaHostIdPtrOutput) Is() pulumi.StringPtrOutput {
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostIdPtrOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaHostId) *string {
@@ -67516,12 +67923,13 @@ func (o HipObjectHostInfoCriteriaHostIdPtrOutput) IsNot() pulumi.StringPtrOutput
 
 type HipObjectHostInfoCriteriaHostName struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains *string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is *string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot *string `pulumi:"isNot"`
 }
@@ -67539,12 +67947,13 @@ type HipObjectHostInfoCriteriaHostNameInput interface {
 
 type HipObjectHostInfoCriteriaHostNameArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringPtrInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringPtrInput `pulumi:"isNot"`
 }
@@ -67627,18 +68036,19 @@ func (o HipObjectHostInfoCriteriaHostNameOutput) ToHipObjectHostInfoCriteriaHost
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostNameOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaHostName) *string { return v.Contains }).(pulumi.StringPtrOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostNameOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaHostName) *string { return v.Is }).(pulumi.StringPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostNameOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaHostName) *string { return v.IsNot }).(pulumi.StringPtrOutput)
@@ -67669,7 +68079,6 @@ func (o HipObjectHostInfoCriteriaHostNamePtrOutput) Elem() HipObjectHostInfoCrit
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostNamePtrOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaHostName) *string {
 		if v == nil {
@@ -67680,6 +68089,7 @@ func (o HipObjectHostInfoCriteriaHostNamePtrOutput) Contains() pulumi.StringPtrO
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostNamePtrOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaHostName) *string {
@@ -67691,6 +68101,7 @@ func (o HipObjectHostInfoCriteriaHostNamePtrOutput) Is() pulumi.StringPtrOutput 
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaHostNamePtrOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaHostName) *string {
@@ -68053,12 +68464,13 @@ func (o HipObjectHostInfoCriteriaOsContainsPtrOutput) Other() pulumi.StringPtrOu
 
 type HipObjectHostInfoCriteriaSerialNumber struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains *string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is *string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot *string `pulumi:"isNot"`
 }
@@ -68076,12 +68488,13 @@ type HipObjectHostInfoCriteriaSerialNumberInput interface {
 
 type HipObjectHostInfoCriteriaSerialNumberArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringPtrInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringPtrInput `pulumi:"isNot"`
 }
@@ -68164,18 +68577,19 @@ func (o HipObjectHostInfoCriteriaSerialNumberOutput) ToHipObjectHostInfoCriteria
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaSerialNumberOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaSerialNumber) *string { return v.Contains }).(pulumi.StringPtrOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaSerialNumberOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaSerialNumber) *string { return v.Is }).(pulumi.StringPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaSerialNumberOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectHostInfoCriteriaSerialNumber) *string { return v.IsNot }).(pulumi.StringPtrOutput)
@@ -68206,7 +68620,6 @@ func (o HipObjectHostInfoCriteriaSerialNumberPtrOutput) Elem() HipObjectHostInfo
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaSerialNumberPtrOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaSerialNumber) *string {
 		if v == nil {
@@ -68217,6 +68630,7 @@ func (o HipObjectHostInfoCriteriaSerialNumberPtrOutput) Contains() pulumi.String
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaSerialNumberPtrOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaSerialNumber) *string {
@@ -68228,6 +68642,7 @@ func (o HipObjectHostInfoCriteriaSerialNumberPtrOutput) Is() pulumi.StringPtrOut
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectHostInfoCriteriaSerialNumberPtrOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectHostInfoCriteriaSerialNumber) *string {
@@ -68849,9 +69264,9 @@ func (o HipObjectMobileDeviceCriteriaApplicationsPtrOutput) Includes() HipObject
 
 type HipObjectMobileDeviceCriteriaApplicationsHasMalware struct {
 	// No
-	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	No *HipObjectMobileDeviceCriteriaApplicationsHasMalwareNo `pulumi:"no"`
 	// Yes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	Yes *HipObjectMobileDeviceCriteriaApplicationsHasMalwareYes `pulumi:"yes"`
 }
@@ -68869,9 +69284,9 @@ type HipObjectMobileDeviceCriteriaApplicationsHasMalwareInput interface {
 
 type HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs struct {
 	// No
-	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	No HipObjectMobileDeviceCriteriaApplicationsHasMalwareNoPtrInput `pulumi:"no"`
 	// Yes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	Yes HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesPtrInput `pulumi:"yes"`
 }
@@ -68954,7 +69369,6 @@ func (o HipObjectMobileDeviceCriteriaApplicationsHasMalwareOutput) ToHipObjectMo
 }
 
 // No
-// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 func (o HipObjectMobileDeviceCriteriaApplicationsHasMalwareOutput) No() HipObjectMobileDeviceCriteriaApplicationsHasMalwareNoPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaApplicationsHasMalware) *HipObjectMobileDeviceCriteriaApplicationsHasMalwareNo {
 		return v.No
@@ -68962,6 +69376,7 @@ func (o HipObjectMobileDeviceCriteriaApplicationsHasMalwareOutput) No() HipObjec
 }
 
 // Yes
+//
 // > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 func (o HipObjectMobileDeviceCriteriaApplicationsHasMalwareOutput) Yes() HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaApplicationsHasMalware) *HipObjectMobileDeviceCriteriaApplicationsHasMalwareYes {
@@ -68994,7 +69409,6 @@ func (o HipObjectMobileDeviceCriteriaApplicationsHasMalwarePtrOutput) Elem() Hip
 }
 
 // No
-// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 func (o HipObjectMobileDeviceCriteriaApplicationsHasMalwarePtrOutput) No() HipObjectMobileDeviceCriteriaApplicationsHasMalwareNoPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaApplicationsHasMalware) *HipObjectMobileDeviceCriteriaApplicationsHasMalwareNo {
 		if v == nil {
@@ -69005,6 +69419,7 @@ func (o HipObjectMobileDeviceCriteriaApplicationsHasMalwarePtrOutput) No() HipOb
 }
 
 // Yes
+//
 // > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 func (o HipObjectMobileDeviceCriteriaApplicationsHasMalwarePtrOutput) Yes() HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaApplicationsHasMalware) *HipObjectMobileDeviceCriteriaApplicationsHasMalwareYes {
@@ -69504,12 +69919,13 @@ func (o HipObjectMobileDeviceCriteriaApplicationsIncludeArrayOutput) Index(i pul
 
 type HipObjectMobileDeviceCriteriaImei struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains *string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is *string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot *string `pulumi:"isNot"`
 }
@@ -69527,12 +69943,13 @@ type HipObjectMobileDeviceCriteriaImeiInput interface {
 
 type HipObjectMobileDeviceCriteriaImeiArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringPtrInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringPtrInput `pulumi:"isNot"`
 }
@@ -69615,18 +70032,19 @@ func (o HipObjectMobileDeviceCriteriaImeiOutput) ToHipObjectMobileDeviceCriteria
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaImeiOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaImei) *string { return v.Contains }).(pulumi.StringPtrOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaImeiOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaImei) *string { return v.Is }).(pulumi.StringPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaImeiOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaImei) *string { return v.IsNot }).(pulumi.StringPtrOutput)
@@ -69657,7 +70075,6 @@ func (o HipObjectMobileDeviceCriteriaImeiPtrOutput) Elem() HipObjectMobileDevice
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaImeiPtrOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaImei) *string {
 		if v == nil {
@@ -69668,6 +70085,7 @@ func (o HipObjectMobileDeviceCriteriaImeiPtrOutput) Contains() pulumi.StringPtrO
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaImeiPtrOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaImei) *string {
@@ -69679,6 +70097,7 @@ func (o HipObjectMobileDeviceCriteriaImeiPtrOutput) Is() pulumi.StringPtrOutput 
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaImeiPtrOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaImei) *string {
@@ -69691,9 +70110,9 @@ func (o HipObjectMobileDeviceCriteriaImeiPtrOutput) IsNot() pulumi.StringPtrOutp
 
 type HipObjectMobileDeviceCriteriaLastCheckinTime struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin *HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within *HipObjectMobileDeviceCriteriaLastCheckinTimeWithin `pulumi:"within"`
 }
@@ -69711,9 +70130,9 @@ type HipObjectMobileDeviceCriteriaLastCheckinTimeInput interface {
 
 type HipObjectMobileDeviceCriteriaLastCheckinTimeArgs struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinPtrInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within HipObjectMobileDeviceCriteriaLastCheckinTimeWithinPtrInput `pulumi:"within"`
 }
@@ -69796,7 +70215,6 @@ func (o HipObjectMobileDeviceCriteriaLastCheckinTimeOutput) ToHipObjectMobileDev
 }
 
 // Not within
-// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o HipObjectMobileDeviceCriteriaLastCheckinTimeOutput) NotWithin() HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaLastCheckinTime) *HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin {
 		return v.NotWithin
@@ -69804,6 +70222,7 @@ func (o HipObjectMobileDeviceCriteriaLastCheckinTimeOutput) NotWithin() HipObjec
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o HipObjectMobileDeviceCriteriaLastCheckinTimeOutput) Within() HipObjectMobileDeviceCriteriaLastCheckinTimeWithinPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaLastCheckinTime) *HipObjectMobileDeviceCriteriaLastCheckinTimeWithin {
@@ -69836,7 +70255,6 @@ func (o HipObjectMobileDeviceCriteriaLastCheckinTimePtrOutput) Elem() HipObjectM
 }
 
 // Not within
-// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o HipObjectMobileDeviceCriteriaLastCheckinTimePtrOutput) NotWithin() HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaLastCheckinTime) *HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin {
 		if v == nil {
@@ -69847,6 +70265,7 @@ func (o HipObjectMobileDeviceCriteriaLastCheckinTimePtrOutput) NotWithin() HipOb
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o HipObjectMobileDeviceCriteriaLastCheckinTimePtrOutput) Within() HipObjectMobileDeviceCriteriaLastCheckinTimeWithinPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaLastCheckinTime) *HipObjectMobileDeviceCriteriaLastCheckinTimeWithin {
@@ -70133,12 +70552,13 @@ func (o HipObjectMobileDeviceCriteriaLastCheckinTimeWithinPtrOutput) Days() pulu
 
 type HipObjectMobileDeviceCriteriaModel struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains *string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is *string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot *string `pulumi:"isNot"`
 }
@@ -70156,12 +70576,13 @@ type HipObjectMobileDeviceCriteriaModelInput interface {
 
 type HipObjectMobileDeviceCriteriaModelArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringPtrInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringPtrInput `pulumi:"isNot"`
 }
@@ -70244,18 +70665,19 @@ func (o HipObjectMobileDeviceCriteriaModelOutput) ToHipObjectMobileDeviceCriteri
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaModelOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaModel) *string { return v.Contains }).(pulumi.StringPtrOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaModelOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaModel) *string { return v.Is }).(pulumi.StringPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaModelOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaModel) *string { return v.IsNot }).(pulumi.StringPtrOutput)
@@ -70286,7 +70708,6 @@ func (o HipObjectMobileDeviceCriteriaModelPtrOutput) Elem() HipObjectMobileDevic
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaModelPtrOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaModel) *string {
 		if v == nil {
@@ -70297,6 +70718,7 @@ func (o HipObjectMobileDeviceCriteriaModelPtrOutput) Contains() pulumi.StringPtr
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaModelPtrOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaModel) *string {
@@ -70308,6 +70730,7 @@ func (o HipObjectMobileDeviceCriteriaModelPtrOutput) Is() pulumi.StringPtrOutput
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaModelPtrOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaModel) *string {
@@ -70320,12 +70743,13 @@ func (o HipObjectMobileDeviceCriteriaModelPtrOutput) IsNot() pulumi.StringPtrOut
 
 type HipObjectMobileDeviceCriteriaPhoneNumber struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains *string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is *string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot *string `pulumi:"isNot"`
 }
@@ -70343,12 +70767,13 @@ type HipObjectMobileDeviceCriteriaPhoneNumberInput interface {
 
 type HipObjectMobileDeviceCriteriaPhoneNumberArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringPtrInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringPtrInput `pulumi:"isNot"`
 }
@@ -70431,18 +70856,19 @@ func (o HipObjectMobileDeviceCriteriaPhoneNumberOutput) ToHipObjectMobileDeviceC
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaPhoneNumberOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaPhoneNumber) *string { return v.Contains }).(pulumi.StringPtrOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaPhoneNumberOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaPhoneNumber) *string { return v.Is }).(pulumi.StringPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaPhoneNumberOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaPhoneNumber) *string { return v.IsNot }).(pulumi.StringPtrOutput)
@@ -70473,7 +70899,6 @@ func (o HipObjectMobileDeviceCriteriaPhoneNumberPtrOutput) Elem() HipObjectMobil
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaPhoneNumberPtrOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaPhoneNumber) *string {
 		if v == nil {
@@ -70484,6 +70909,7 @@ func (o HipObjectMobileDeviceCriteriaPhoneNumberPtrOutput) Contains() pulumi.Str
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaPhoneNumberPtrOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaPhoneNumber) *string {
@@ -70495,6 +70921,7 @@ func (o HipObjectMobileDeviceCriteriaPhoneNumberPtrOutput) Is() pulumi.StringPtr
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaPhoneNumberPtrOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaPhoneNumber) *string {
@@ -70507,12 +70934,13 @@ func (o HipObjectMobileDeviceCriteriaPhoneNumberPtrOutput) IsNot() pulumi.String
 
 type HipObjectMobileDeviceCriteriaTag struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains *string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is *string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot *string `pulumi:"isNot"`
 }
@@ -70530,12 +70958,13 @@ type HipObjectMobileDeviceCriteriaTagInput interface {
 
 type HipObjectMobileDeviceCriteriaTagArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringPtrInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringPtrInput `pulumi:"isNot"`
 }
@@ -70618,18 +71047,19 @@ func (o HipObjectMobileDeviceCriteriaTagOutput) ToHipObjectMobileDeviceCriteriaT
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaTagOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaTag) *string { return v.Contains }).(pulumi.StringPtrOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaTagOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaTag) *string { return v.Is }).(pulumi.StringPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaTagOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v HipObjectMobileDeviceCriteriaTag) *string { return v.IsNot }).(pulumi.StringPtrOutput)
@@ -70660,7 +71090,6 @@ func (o HipObjectMobileDeviceCriteriaTagPtrOutput) Elem() HipObjectMobileDeviceC
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaTagPtrOutput) Contains() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaTag) *string {
 		if v == nil {
@@ -70671,6 +71100,7 @@ func (o HipObjectMobileDeviceCriteriaTagPtrOutput) Contains() pulumi.StringPtrOu
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaTagPtrOutput) Is() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaTag) *string {
@@ -70682,6 +71112,7 @@ func (o HipObjectMobileDeviceCriteriaTagPtrOutput) Is() pulumi.StringPtrOutput {
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o HipObjectMobileDeviceCriteriaTagPtrOutput) IsNot() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObjectMobileDeviceCriteriaTag) *string {
@@ -70968,9 +71399,9 @@ func (o HipObjectNetworkInfoCriteriaPtrOutput) Network() HipObjectNetworkInfoCri
 
 type HipObjectNetworkInfoCriteriaNetwork struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is *HipObjectNetworkInfoCriteriaNetworkIs `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot *HipObjectNetworkInfoCriteriaNetworkIsNot `pulumi:"isNot"`
 }
@@ -70988,9 +71419,9 @@ type HipObjectNetworkInfoCriteriaNetworkInput interface {
 
 type HipObjectNetworkInfoCriteriaNetworkArgs struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is HipObjectNetworkInfoCriteriaNetworkIsPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot HipObjectNetworkInfoCriteriaNetworkIsNotPtrInput `pulumi:"isNot"`
 }
@@ -71073,12 +71504,12 @@ func (o HipObjectNetworkInfoCriteriaNetworkOutput) ToHipObjectNetworkInfoCriteri
 }
 
 // Is
-// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o HipObjectNetworkInfoCriteriaNetworkOutput) Is() HipObjectNetworkInfoCriteriaNetworkIsPtrOutput {
 	return o.ApplyT(func(v HipObjectNetworkInfoCriteriaNetwork) *HipObjectNetworkInfoCriteriaNetworkIs { return v.Is }).(HipObjectNetworkInfoCriteriaNetworkIsPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o HipObjectNetworkInfoCriteriaNetworkOutput) IsNot() HipObjectNetworkInfoCriteriaNetworkIsNotPtrOutput {
 	return o.ApplyT(func(v HipObjectNetworkInfoCriteriaNetwork) *HipObjectNetworkInfoCriteriaNetworkIsNot { return v.IsNot }).(HipObjectNetworkInfoCriteriaNetworkIsNotPtrOutput)
@@ -71109,7 +71540,6 @@ func (o HipObjectNetworkInfoCriteriaNetworkPtrOutput) Elem() HipObjectNetworkInf
 }
 
 // Is
-// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o HipObjectNetworkInfoCriteriaNetworkPtrOutput) Is() HipObjectNetworkInfoCriteriaNetworkIsPtrOutput {
 	return o.ApplyT(func(v *HipObjectNetworkInfoCriteriaNetwork) *HipObjectNetworkInfoCriteriaNetworkIs {
 		if v == nil {
@@ -71120,6 +71550,7 @@ func (o HipObjectNetworkInfoCriteriaNetworkPtrOutput) Is() HipObjectNetworkInfoC
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o HipObjectNetworkInfoCriteriaNetworkPtrOutput) IsNot() HipObjectNetworkInfoCriteriaNetworkIsNotPtrOutput {
 	return o.ApplyT(func(v *HipObjectNetworkInfoCriteriaNetwork) *HipObjectNetworkInfoCriteriaNetworkIsNot {
@@ -71132,12 +71563,13 @@ func (o HipObjectNetworkInfoCriteriaNetworkPtrOutput) IsNot() HipObjectNetworkIn
 
 type HipObjectNetworkInfoCriteriaNetworkIs struct {
 	// Mobile
-	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Mobile *HipObjectNetworkInfoCriteriaNetworkIsMobile `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Unknown *HipObjectNetworkInfoCriteriaNetworkIsUnknown `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Wifi *HipObjectNetworkInfoCriteriaNetworkIsWifi `pulumi:"wifi"`
 }
@@ -71155,12 +71587,13 @@ type HipObjectNetworkInfoCriteriaNetworkIsInput interface {
 
 type HipObjectNetworkInfoCriteriaNetworkIsArgs struct {
 	// Mobile
-	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Mobile HipObjectNetworkInfoCriteriaNetworkIsMobilePtrInput `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Unknown HipObjectNetworkInfoCriteriaNetworkIsUnknownPtrInput `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Wifi HipObjectNetworkInfoCriteriaNetworkIsWifiPtrInput `pulumi:"wifi"`
 }
@@ -71243,7 +71676,6 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsOutput) ToHipObjectNetworkInfoCrite
 }
 
 // Mobile
-// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsOutput) Mobile() HipObjectNetworkInfoCriteriaNetworkIsMobilePtrOutput {
 	return o.ApplyT(func(v HipObjectNetworkInfoCriteriaNetworkIs) *HipObjectNetworkInfoCriteriaNetworkIsMobile {
 		return v.Mobile
@@ -71251,6 +71683,7 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsOutput) Mobile() HipObjectNetworkIn
 }
 
 // Unknown
+//
 // > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsOutput) Unknown() HipObjectNetworkInfoCriteriaNetworkIsUnknownPtrOutput {
 	return o.ApplyT(func(v HipObjectNetworkInfoCriteriaNetworkIs) *HipObjectNetworkInfoCriteriaNetworkIsUnknown {
@@ -71259,6 +71692,7 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsOutput) Unknown() HipObjectNetworkI
 }
 
 // Wifi
+//
 // > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsOutput) Wifi() HipObjectNetworkInfoCriteriaNetworkIsWifiPtrOutput {
 	return o.ApplyT(func(v HipObjectNetworkInfoCriteriaNetworkIs) *HipObjectNetworkInfoCriteriaNetworkIsWifi {
@@ -71291,7 +71725,6 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsPtrOutput) Elem() HipObjectNetworkI
 }
 
 // Mobile
-// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsPtrOutput) Mobile() HipObjectNetworkInfoCriteriaNetworkIsMobilePtrOutput {
 	return o.ApplyT(func(v *HipObjectNetworkInfoCriteriaNetworkIs) *HipObjectNetworkInfoCriteriaNetworkIsMobile {
 		if v == nil {
@@ -71302,6 +71735,7 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsPtrOutput) Mobile() HipObjectNetwor
 }
 
 // Unknown
+//
 // > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsPtrOutput) Unknown() HipObjectNetworkInfoCriteriaNetworkIsUnknownPtrOutput {
 	return o.ApplyT(func(v *HipObjectNetworkInfoCriteriaNetworkIs) *HipObjectNetworkInfoCriteriaNetworkIsUnknown {
@@ -71313,6 +71747,7 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsPtrOutput) Unknown() HipObjectNetwo
 }
 
 // Wifi
+//
 // > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsPtrOutput) Wifi() HipObjectNetworkInfoCriteriaNetworkIsWifiPtrOutput {
 	return o.ApplyT(func(v *HipObjectNetworkInfoCriteriaNetworkIs) *HipObjectNetworkInfoCriteriaNetworkIsWifi {
@@ -71462,15 +71897,17 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsMobilePtrOutput) Carrier() pulumi.S
 
 type HipObjectNetworkInfoCriteriaNetworkIsNot struct {
 	// Ethernet
-	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Ethernet *HipObjectNetworkInfoCriteriaNetworkIsNotEthernet `pulumi:"ethernet"`
 	// Mobile
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Mobile *HipObjectNetworkInfoCriteriaNetworkIsNotMobile `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Unknown *HipObjectNetworkInfoCriteriaNetworkIsNotUnknown `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Wifi *HipObjectNetworkInfoCriteriaNetworkIsNotWifi `pulumi:"wifi"`
 }
@@ -71488,15 +71925,17 @@ type HipObjectNetworkInfoCriteriaNetworkIsNotInput interface {
 
 type HipObjectNetworkInfoCriteriaNetworkIsNotArgs struct {
 	// Ethernet
-	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Ethernet HipObjectNetworkInfoCriteriaNetworkIsNotEthernetPtrInput `pulumi:"ethernet"`
 	// Mobile
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Mobile HipObjectNetworkInfoCriteriaNetworkIsNotMobilePtrInput `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Unknown HipObjectNetworkInfoCriteriaNetworkIsNotUnknownPtrInput `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Wifi HipObjectNetworkInfoCriteriaNetworkIsNotWifiPtrInput `pulumi:"wifi"`
 }
@@ -71579,7 +72018,6 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsNotOutput) ToHipObjectNetworkInfoCr
 }
 
 // Ethernet
-// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsNotOutput) Ethernet() HipObjectNetworkInfoCriteriaNetworkIsNotEthernetPtrOutput {
 	return o.ApplyT(func(v HipObjectNetworkInfoCriteriaNetworkIsNot) *HipObjectNetworkInfoCriteriaNetworkIsNotEthernet {
 		return v.Ethernet
@@ -71587,6 +72025,7 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsNotOutput) Ethernet() HipObjectNetw
 }
 
 // Mobile
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsNotOutput) Mobile() HipObjectNetworkInfoCriteriaNetworkIsNotMobilePtrOutput {
 	return o.ApplyT(func(v HipObjectNetworkInfoCriteriaNetworkIsNot) *HipObjectNetworkInfoCriteriaNetworkIsNotMobile {
@@ -71595,6 +72034,7 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsNotOutput) Mobile() HipObjectNetwor
 }
 
 // Unknown
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsNotOutput) Unknown() HipObjectNetworkInfoCriteriaNetworkIsNotUnknownPtrOutput {
 	return o.ApplyT(func(v HipObjectNetworkInfoCriteriaNetworkIsNot) *HipObjectNetworkInfoCriteriaNetworkIsNotUnknown {
@@ -71603,6 +72043,7 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsNotOutput) Unknown() HipObjectNetwo
 }
 
 // Wifi
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsNotOutput) Wifi() HipObjectNetworkInfoCriteriaNetworkIsNotWifiPtrOutput {
 	return o.ApplyT(func(v HipObjectNetworkInfoCriteriaNetworkIsNot) *HipObjectNetworkInfoCriteriaNetworkIsNotWifi {
@@ -71635,7 +72076,6 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsNotPtrOutput) Elem() HipObjectNetwo
 }
 
 // Ethernet
-// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsNotPtrOutput) Ethernet() HipObjectNetworkInfoCriteriaNetworkIsNotEthernetPtrOutput {
 	return o.ApplyT(func(v *HipObjectNetworkInfoCriteriaNetworkIsNot) *HipObjectNetworkInfoCriteriaNetworkIsNotEthernet {
 		if v == nil {
@@ -71646,6 +72086,7 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsNotPtrOutput) Ethernet() HipObjectN
 }
 
 // Mobile
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsNotPtrOutput) Mobile() HipObjectNetworkInfoCriteriaNetworkIsNotMobilePtrOutput {
 	return o.ApplyT(func(v *HipObjectNetworkInfoCriteriaNetworkIsNot) *HipObjectNetworkInfoCriteriaNetworkIsNotMobile {
@@ -71657,6 +72098,7 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsNotPtrOutput) Mobile() HipObjectNet
 }
 
 // Unknown
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsNotPtrOutput) Unknown() HipObjectNetworkInfoCriteriaNetworkIsNotUnknownPtrOutput {
 	return o.ApplyT(func(v *HipObjectNetworkInfoCriteriaNetworkIsNot) *HipObjectNetworkInfoCriteriaNetworkIsNotUnknown {
@@ -71668,6 +72110,7 @@ func (o HipObjectNetworkInfoCriteriaNetworkIsNotPtrOutput) Unknown() HipObjectNe
 }
 
 // Wifi
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o HipObjectNetworkInfoCriteriaNetworkIsNotPtrOutput) Wifi() HipObjectNetworkInfoCriteriaNetworkIsNotWifiPtrOutput {
 	return o.ApplyT(func(v *HipObjectNetworkInfoCriteriaNetworkIsNot) *HipObjectNetworkInfoCriteriaNetworkIsNotWifi {
@@ -72974,21 +73417,25 @@ func (o HipObjectPatchManagementCriteriaMissingPatchesPtrOutput) Severity() HipO
 
 type HipObjectPatchManagementCriteriaMissingPatchesSeverity struct {
 	// Greater equal
-	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterEqual *int `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterThan *int `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	Is *int `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	IsNot *int `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessEqual *int `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessThan *int `pulumi:"lessThan"`
 }
@@ -73006,21 +73453,25 @@ type HipObjectPatchManagementCriteriaMissingPatchesSeverityInput interface {
 
 type HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs struct {
 	// Greater equal
-	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterEqual pulumi.IntPtrInput `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterThan pulumi.IntPtrInput `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	Is pulumi.IntPtrInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	IsNot pulumi.IntPtrInput `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessEqual pulumi.IntPtrInput `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessThan pulumi.IntPtrInput `pulumi:"lessThan"`
 }
@@ -73103,36 +73554,40 @@ func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) ToHipObjec
 }
 
 // Greater equal
-// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) GreaterEqual() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int { return v.GreaterEqual }).(pulumi.IntPtrOutput)
 }
 
 // Greater than
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) GreaterThan() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int { return v.GreaterThan }).(pulumi.IntPtrOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) Is() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int { return v.Is }).(pulumi.IntPtrOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) IsNot() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int { return v.IsNot }).(pulumi.IntPtrOutput)
 }
 
 // Less equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) LessEqual() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int { return v.LessEqual }).(pulumi.IntPtrOutput)
 }
 
 // Less than
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) LessThan() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int { return v.LessThan }).(pulumi.IntPtrOutput)
@@ -73163,7 +73618,6 @@ func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) Elem() 
 }
 
 // Greater equal
-// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) GreaterEqual() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int {
 		if v == nil {
@@ -73174,6 +73628,7 @@ func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) Greater
 }
 
 // Greater than
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) GreaterThan() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int {
@@ -73185,6 +73640,7 @@ func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) Greater
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) Is() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int {
@@ -73196,6 +73652,7 @@ func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) Is() pu
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) IsNot() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int {
@@ -73207,6 +73664,7 @@ func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) IsNot()
 }
 
 // Less equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) LessEqual() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int {
@@ -73218,6 +73676,7 @@ func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) LessEqu
 }
 
 // Less than
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o HipObjectPatchManagementCriteriaMissingPatchesSeverityPtrOutput) LessThan() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *HipObjectPatchManagementCriteriaMissingPatchesSeverity) *int {
@@ -79868,112 +80327,6 @@ func (o HttpServerProfileFormatTunnelPtrOutput) UrlFormat() pulumi.StringPtrOutp
 	}).(pulumi.StringPtrOutput)
 }
 
-type HttpServerProfileFormatTunnelHeader struct {
-	// Header name
-	Name *string `pulumi:"name"`
-	// Header value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatTunnelHeaderInput is an input type that accepts HttpServerProfileFormatTunnelHeaderArgs and HttpServerProfileFormatTunnelHeaderOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatTunnelHeaderInput` via:
-//
-//	HttpServerProfileFormatTunnelHeaderArgs{...}
-type HttpServerProfileFormatTunnelHeaderInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatTunnelHeaderOutput() HttpServerProfileFormatTunnelHeaderOutput
-	ToHttpServerProfileFormatTunnelHeaderOutputWithContext(context.Context) HttpServerProfileFormatTunnelHeaderOutput
-}
-
-type HttpServerProfileFormatTunnelHeaderArgs struct {
-	// Header name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Header value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatTunnelHeaderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatTunnelHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatTunnelHeaderArgs) ToHttpServerProfileFormatTunnelHeaderOutput() HttpServerProfileFormatTunnelHeaderOutput {
-	return i.ToHttpServerProfileFormatTunnelHeaderOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatTunnelHeaderArgs) ToHttpServerProfileFormatTunnelHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatTunnelHeaderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTunnelHeaderOutput)
-}
-
-// HttpServerProfileFormatTunnelHeaderArrayInput is an input type that accepts HttpServerProfileFormatTunnelHeaderArray and HttpServerProfileFormatTunnelHeaderArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatTunnelHeaderArrayInput` via:
-//
-//	HttpServerProfileFormatTunnelHeaderArray{ HttpServerProfileFormatTunnelHeaderArgs{...} }
-type HttpServerProfileFormatTunnelHeaderArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatTunnelHeaderArrayOutput() HttpServerProfileFormatTunnelHeaderArrayOutput
-	ToHttpServerProfileFormatTunnelHeaderArrayOutputWithContext(context.Context) HttpServerProfileFormatTunnelHeaderArrayOutput
-}
-
-type HttpServerProfileFormatTunnelHeaderArray []HttpServerProfileFormatTunnelHeaderInput
-
-func (HttpServerProfileFormatTunnelHeaderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatTunnelHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatTunnelHeaderArray) ToHttpServerProfileFormatTunnelHeaderArrayOutput() HttpServerProfileFormatTunnelHeaderArrayOutput {
-	return i.ToHttpServerProfileFormatTunnelHeaderArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatTunnelHeaderArray) ToHttpServerProfileFormatTunnelHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatTunnelHeaderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTunnelHeaderArrayOutput)
-}
-
-type HttpServerProfileFormatTunnelHeaderOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatTunnelHeaderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatTunnelHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatTunnelHeaderOutput) ToHttpServerProfileFormatTunnelHeaderOutput() HttpServerProfileFormatTunnelHeaderOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTunnelHeaderOutput) ToHttpServerProfileFormatTunnelHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatTunnelHeaderOutput {
-	return o
-}
-
-// Header name
-func (o HttpServerProfileFormatTunnelHeaderOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTunnelHeader) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Header value
-func (o HttpServerProfileFormatTunnelHeaderOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTunnelHeader) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatTunnelHeaderArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatTunnelHeaderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatTunnelHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatTunnelHeaderArrayOutput) ToHttpServerProfileFormatTunnelHeaderArrayOutput() HttpServerProfileFormatTunnelHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTunnelHeaderArrayOutput) ToHttpServerProfileFormatTunnelHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatTunnelHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTunnelHeaderArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatTunnelHeaderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatTunnelHeader {
-		return vs[0].([]HttpServerProfileFormatTunnelHeader)[vs[1].(int)]
-	}).(HttpServerProfileFormatTunnelHeaderOutput)
-}
-
 func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*AddressGroupDynamicInput)(nil)).Elem(), AddressGroupDynamicArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AddressGroupDynamicPtrInput)(nil)).Elem(), AddressGroupDynamicArgs{})
@@ -80476,6 +80829,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*DecryptionRuleTypePtrInput)(nil)).Elem(), DecryptionRuleTypeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*DecryptionRuleTypeSslForwardProxyInput)(nil)).Elem(), DecryptionRuleTypeSslForwardProxyArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*DecryptionRuleTypeSslForwardProxyPtrInput)(nil)).Elem(), DecryptionRuleTypeSslForwardProxyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DecryptionRuleTypeSslInboundInspectionInput)(nil)).Elem(), DecryptionRuleTypeSslInboundInspectionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DecryptionRuleTypeSslInboundInspectionPtrInput)(nil)).Elem(), DecryptionRuleTypeSslInboundInspectionArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*DeviceRedistributionCollectorRedistributionCollectorInput)(nil)).Elem(), DeviceRedistributionCollectorRedistributionCollectorArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*DeviceRedistributionCollectorRedistributionCollectorPtrInput)(nil)).Elem(), DeviceRedistributionCollectorRedistributionCollectorArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*DhcpInterfaceRelayInput)(nil)).Elem(), DhcpInterfaceRelayArgs{})
@@ -80972,8 +81327,6 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTrafficParamArrayInput)(nil)).Elem(), HttpServerProfileFormatTrafficParamArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTunnelInput)(nil)).Elem(), HttpServerProfileFormatTunnelArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTunnelPtrInput)(nil)).Elem(), HttpServerProfileFormatTunnelArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTunnelHeaderInput)(nil)).Elem(), HttpServerProfileFormatTunnelHeaderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTunnelHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatTunnelHeaderArray{})
 	pulumi.RegisterOutputType(AddressGroupDynamicOutput{})
 	pulumi.RegisterOutputType(AddressGroupDynamicPtrOutput{})
 	pulumi.RegisterOutputType(AggregateInterfaceLayer2Output{})
@@ -81475,6 +81828,8 @@ func init() {
 	pulumi.RegisterOutputType(DecryptionRuleTypePtrOutput{})
 	pulumi.RegisterOutputType(DecryptionRuleTypeSslForwardProxyOutput{})
 	pulumi.RegisterOutputType(DecryptionRuleTypeSslForwardProxyPtrOutput{})
+	pulumi.RegisterOutputType(DecryptionRuleTypeSslInboundInspectionOutput{})
+	pulumi.RegisterOutputType(DecryptionRuleTypeSslInboundInspectionPtrOutput{})
 	pulumi.RegisterOutputType(DeviceRedistributionCollectorRedistributionCollectorOutput{})
 	pulumi.RegisterOutputType(DeviceRedistributionCollectorRedistributionCollectorPtrOutput{})
 	pulumi.RegisterOutputType(DhcpInterfaceRelayOutput{})
@@ -81971,6 +82326,4 @@ func init() {
 	pulumi.RegisterOutputType(HttpServerProfileFormatTrafficParamArrayOutput{})
 	pulumi.RegisterOutputType(HttpServerProfileFormatTunnelOutput{})
 	pulumi.RegisterOutputType(HttpServerProfileFormatTunnelPtrOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatTunnelHeaderOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatTunnelHeaderArrayOutput{})
 }

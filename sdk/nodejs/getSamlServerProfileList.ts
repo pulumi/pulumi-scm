@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM SAML Server Profile objects.
+ * //
+ * // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+ * const allShared = scm.getSamlServerProfileList({
+ *     folder: "All",
+ * });
+ * export const scmSamlServerProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getSamlServerProfileList(args?: GetSamlServerProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetSamlServerProfileListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetSamlServerProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM SAML Server Profile objects.
+ * //
+ * // Fetch a list of all SCM SAML Server Profile in the "All" folder.
+ * const allShared = scm.getSamlServerProfileList({
+ *     folder: "All",
+ * });
+ * export const scmSamlServerProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getSamlServerProfileListOutput(args?: GetSamlServerProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSamlServerProfileListResult> {
     args = args || {};

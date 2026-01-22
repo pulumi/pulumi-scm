@@ -14,18 +14,19 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfOspfv3AreaType {
     /**
      * @return Normal
-     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfv3AreaTypeNormal normal;
     /**
      * @return Nssa
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfv3AreaTypeNssa nssa;
     /**
      * @return Stub
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
@@ -34,7 +35,6 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaType {
     private GetLogicalRouterListDataVrfOspfv3AreaType() {}
     /**
      * @return Normal
-     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     public GetLogicalRouterListDataVrfOspfv3AreaTypeNormal normal() {
@@ -42,6 +42,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaType {
     }
     /**
      * @return Nssa
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
@@ -50,6 +51,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaType {
     }
     /**
      * @return Stub
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */

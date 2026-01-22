@@ -45,26 +45,14 @@ export function getLoopbackInterface(args: GetLoopbackInterfaceArgs, opts?: pulu
 export interface GetLoopbackInterfaceArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Loopback Interface name
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -72,52 +60,22 @@ export interface GetLoopbackInterfaceArgs {
  * A collection of values returned by getLoopbackInterface.
  */
 export interface GetLoopbackInterfaceResult {
-    /**
-     * Description
-     */
     readonly comment: string;
-    /**
-     * Default interface assignment
-     */
     readonly defaultValue: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Interface management profile
-     */
     readonly interfaceManagementProfile: string;
-    /**
-     * Loopback IP Parent
-     */
     readonly ips: outputs.GetLoopbackInterfaceIp[];
-    /**
-     * Loopback IPv6 Configuration
-     */
     readonly ipv6: outputs.GetLoopbackInterfaceIpv6;
-    /**
-     * MTU
-     */
     readonly mtu: number;
-    /**
-     * Loopback Interface name
-     */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -160,25 +118,13 @@ export function getLoopbackInterfaceOutput(args: GetLoopbackInterfaceOutputArgs,
 export interface GetLoopbackInterfaceOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Loopback Interface name
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

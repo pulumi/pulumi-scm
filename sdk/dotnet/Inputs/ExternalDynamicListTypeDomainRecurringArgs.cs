@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Daily settings for Domain recurring
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("daily")]
         public Input<Inputs.ExternalDynamicListTypeDomainRecurringDailyArgs>? Daily { get; set; }
 
         /// <summary>
         /// Five minute settings for Domain recurring
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("fiveMinute")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Hourly settings for Domain recurring
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("hourly")]
@@ -35,6 +36,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Monthly settings for Domain recurring
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("monthly")]
@@ -42,6 +44,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Weekly settings for Domain recurring
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("weekly")]

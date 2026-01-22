@@ -19,13 +19,11 @@ public final class GetAuthenticationSequenceListData {
     private List<String> authenticationProfiles;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -35,13 +33,12 @@ public final class GetAuthenticationSequenceListData {
      */
     private String id;
     /**
-     * @return The name of the authentication sequence
+     * @return The name of the item.
      * 
      */
     private String name;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -62,15 +59,13 @@ public final class GetAuthenticationSequenceListData {
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -84,15 +79,14 @@ public final class GetAuthenticationSequenceListData {
         return this.id;
     }
     /**
-     * @return The name of the authentication sequence
+     * @return The name of the item.
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

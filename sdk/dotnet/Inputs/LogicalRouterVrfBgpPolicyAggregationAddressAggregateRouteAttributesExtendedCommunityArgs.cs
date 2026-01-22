@@ -17,7 +17,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Append
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         public InputList<string> Appends
         {
@@ -27,6 +26,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// None
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         [Input("none")]
@@ -37,6 +37,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Overwrite
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         public InputList<string> Overwrites
@@ -47,6 +48,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Remove all
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         [Input("removeAll")]
@@ -54,6 +56,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Remove regex
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         [Input("removeRegex")]

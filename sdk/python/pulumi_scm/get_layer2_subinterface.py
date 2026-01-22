@@ -58,9 +58,6 @@ class GetLayer2SubinterfaceResult:
     @_builtins.property
     @pulumi.getter
     def comment(self) -> _builtins.str:
-        """
-        Description
-        """
         return pulumi.get(self, "comment")
 
     @_builtins.property
@@ -68,17 +65,12 @@ class GetLayer2SubinterfaceResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -92,26 +84,16 @@ class GetLayer2SubinterfaceResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        L2 sub-interface name
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="parentInterface")
     def parent_interface(self) -> _builtins.str:
-        """
-        Parent interface
-        """
         return pulumi.get(self, "parent_interface")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -122,9 +104,6 @@ class GetLayer2SubinterfaceResult:
     @_builtins.property
     @pulumi.getter(name="vlanTag")
     def vlan_tag(self) -> _builtins.str:
-        """
-        VLAN tag
-        """
         return pulumi.get(self, "vlan_tag")
 
 
@@ -174,13 +153,7 @@ def get_layer2_subinterface(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: L2 sub-interface name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -230,13 +203,7 @@ def get_layer2_subinterface_output(device: Optional[pulumi.Input[Optional[_built
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: L2 sub-interface name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

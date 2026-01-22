@@ -39,26 +39,14 @@ export function getHipObject(args: GetHipObjectArgs, opts?: pulumi.InvokeOptions
 export interface GetHipObjectArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * The name of the HIP object
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -66,76 +54,28 @@ export interface GetHipObjectArgs {
  * A collection of values returned by getHipObject.
  */
 export interface GetHipObjectResult {
-    /**
-     * Anti malware
-     */
     readonly antiMalware: outputs.GetHipObjectAntiMalware;
-    /**
-     * Certificate
-     */
     readonly certificate: outputs.GetHipObjectCertificate;
-    /**
-     * Custom checks
-     */
     readonly customChecks: outputs.GetHipObjectCustomChecks;
-    /**
-     * Data loss prevention
-     */
     readonly dataLossPrevention: outputs.GetHipObjectDataLossPrevention;
-    /**
-     * Description
-     */
     readonly description: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * Disk backup
-     */
     readonly diskBackup: outputs.GetHipObjectDiskBackup;
-    /**
-     * Disk encryption
-     */
     readonly diskEncryption: outputs.GetHipObjectDiskEncryption;
-    /**
-     * Firewall
-     */
     readonly firewall: outputs.GetHipObjectFirewall;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
-    /**
-     * Host info
-     */
     readonly hostInfo: outputs.GetHipObjectHostInfo;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Mobile device
-     */
     readonly mobileDevice: outputs.GetHipObjectMobileDevice;
-    /**
-     * The name of the HIP object
-     */
     readonly name: string;
-    /**
-     * Network info
-     */
     readonly networkInfo: outputs.GetHipObjectNetworkInfo;
-    /**
-     * Patch management
-     */
     readonly patchManagement: outputs.GetHipObjectPatchManagement;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -172,25 +112,13 @@ export function getHipObjectOutput(args: GetHipObjectOutputArgs, opts?: pulumi.I
 export interface GetHipObjectOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the HIP object
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

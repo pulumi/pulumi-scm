@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfBgpAggregateRouteType {
     /**
      * @return Ipv4
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpAggregateRouteTypeIpv4 ipv4;
     /**
      * @return Ipv6
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
@@ -28,7 +28,6 @@ public final class LogicalRouterVrfBgpAggregateRouteType {
     private LogicalRouterVrfBgpAggregateRouteType() {}
     /**
      * @return Ipv4
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
     public Optional<LogicalRouterVrfBgpAggregateRouteTypeIpv4> ipv4() {
@@ -36,6 +35,7 @@ public final class LogicalRouterVrfBgpAggregateRouteType {
     }
     /**
      * @return Ipv6
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */

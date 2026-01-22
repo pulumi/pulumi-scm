@@ -17,30 +17,33 @@ import javax.annotation.Nullable;
 public final class ExternalDynamicListTypeUrlRecurring {
     /**
      * @return Daily settings for URL recurring
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeUrlRecurringDaily daily;
     /**
      * @return Five minute settings for URL recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeUrlRecurringFiveMinute fiveMinute;
     /**
      * @return Hourly settings for URL recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeUrlRecurringHourly hourly;
     /**
      * @return Monthly settings for URL recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeUrlRecurringMonthly monthly;
     /**
      * @return Weekly settings for URL recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -49,7 +52,6 @@ public final class ExternalDynamicListTypeUrlRecurring {
     private ExternalDynamicListTypeUrlRecurring() {}
     /**
      * @return Daily settings for URL recurring
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<ExternalDynamicListTypeUrlRecurringDaily> daily() {
@@ -57,6 +59,7 @@ public final class ExternalDynamicListTypeUrlRecurring {
     }
     /**
      * @return Five minute settings for URL recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -65,6 +68,7 @@ public final class ExternalDynamicListTypeUrlRecurring {
     }
     /**
      * @return Hourly settings for URL recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -73,6 +77,7 @@ public final class ExternalDynamicListTypeUrlRecurring {
     }
     /**
      * @return Monthly settings for URL recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -81,6 +86,7 @@ public final class ExternalDynamicListTypeUrlRecurring {
     }
     /**
      * @return Weekly settings for URL recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */

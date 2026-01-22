@@ -15,7 +15,6 @@ import java.util.Objects;
 public final class GetOspfAuthProfileListData {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -25,8 +24,7 @@ public final class GetOspfAuthProfileListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -37,24 +35,25 @@ public final class GetOspfAuthProfileListData {
     private String id;
     /**
      * @return MD5s
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      * 
      */
     private List<GetOspfAuthProfileListDataMd5> md5s;
     /**
-     * @return Profile name
+     * @return The name of the item.
      * 
      */
     private String name;
     /**
      * @return Password
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      * 
      */
     private String password;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -63,7 +62,6 @@ public final class GetOspfAuthProfileListData {
     private GetOspfAuthProfileListData() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -77,8 +75,7 @@ public final class GetOspfAuthProfileListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -93,6 +90,7 @@ public final class GetOspfAuthProfileListData {
     }
     /**
      * @return MD5s
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      * 
      */
@@ -100,7 +98,7 @@ public final class GetOspfAuthProfileListData {
         return this.md5s;
     }
     /**
-     * @return Profile name
+     * @return The name of the item.
      * 
      */
     public String name() {
@@ -108,6 +106,7 @@ public final class GetOspfAuthProfileListData {
     }
     /**
      * @return Password
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      * 
      */
@@ -115,8 +114,7 @@ public final class GetOspfAuthProfileListData {
         return this.password;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

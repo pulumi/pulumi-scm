@@ -15,18 +15,19 @@ import javax.annotation.Nullable;
 public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationType {
     /**
      * @return Autokey
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     private @Nullable ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeAutokey autokey;
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     private @Nullable ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeNone none;
     /**
      * @return Symmetric key
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
@@ -35,7 +36,6 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
     private ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationType() {}
     /**
      * @return Autokey
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     public Optional<ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeAutokey> autokey() {
@@ -43,6 +43,7 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
     }
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
@@ -51,6 +52,7 @@ public final class ServiceSettingServicesNtpServersPrimaryNtpServerAuthenticatio
     }
     /**
      * @return Symmetric key
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */

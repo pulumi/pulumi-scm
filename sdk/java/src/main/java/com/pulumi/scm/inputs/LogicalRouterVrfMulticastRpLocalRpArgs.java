@@ -18,7 +18,6 @@ public final class LogicalRouterVrfMulticastRpLocalRpArgs extends com.pulumi.res
 
     /**
      * Candidate rp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
     @Import(name="candidateRp")
@@ -26,7 +25,6 @@ public final class LogicalRouterVrfMulticastRpLocalRpArgs extends com.pulumi.res
 
     /**
      * @return Candidate rp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
     public Optional<Output<LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs>> candidateRp() {
@@ -35,6 +33,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpArgs extends com.pulumi.res
 
     /**
      * Static rp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
@@ -43,6 +42,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpArgs extends com.pulumi.res
 
     /**
      * @return Static rp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
@@ -77,7 +77,6 @@ public final class LogicalRouterVrfMulticastRpLocalRpArgs extends com.pulumi.res
 
         /**
          * @param candidateRp Candidate rp
-         * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
          * 
          * @return builder
          * 
@@ -89,7 +88,6 @@ public final class LogicalRouterVrfMulticastRpLocalRpArgs extends com.pulumi.res
 
         /**
          * @param candidateRp Candidate rp
-         * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
          * 
          * @return builder
          * 
@@ -100,6 +98,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpArgs extends com.pulumi.res
 
         /**
          * @param staticRp Static rp
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
          * 
          * @return builder
@@ -112,6 +111,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpArgs extends com.pulumi.res
 
         /**
          * @param staticRp Static rp
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
          * 
          * @return builder

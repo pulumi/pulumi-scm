@@ -35,15 +35,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -53,16 +48,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// Rule name
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -76,15 +64,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -94,16 +77,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// Rule name
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -117,97 +93,34 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetSdwanRuleResult
     {
-        /// <summary>
-        /// Action
-        /// </summary>
         public readonly Outputs.GetSdwanRuleActionResult Action;
-        /// <summary>
-        /// List of applications
-        /// </summary>
         public readonly ImmutableArray<string> Applications;
-        /// <summary>
-        /// Rule description
-        /// </summary>
         public readonly string Description;
-        /// <summary>
-        /// List of destination addresses
-        /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Disable rule?
-        /// </summary>
         public readonly bool Disabled;
-        /// <summary>
-        /// Error correction profile
-        /// </summary>
         public readonly string ErrorCorrectionProfile;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// List of source zones
-        /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Rule name
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Negate destination address(es)?
-        /// </summary>
         public readonly bool NegateDestination;
-        /// <summary>
-        /// Negate source address(es)?
-        /// </summary>
         public readonly bool NegateSource;
-        /// <summary>
-        /// Path quality profile
-        /// </summary>
         public readonly string PathQualityProfile;
-        /// <summary>
-        /// Rule postion relative to device rules
-        /// </summary>
         public readonly string Position;
-        /// <summary>
-        /// SaaS quality profile
-        /// </summary>
         public readonly string SaasQualityProfile;
-        /// <summary>
-        /// List of services
-        /// </summary>
         public readonly ImmutableArray<string> Services;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// List of source users
-        /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
-        /// <summary>
-        /// List of source addresses
-        /// </summary>
         public readonly ImmutableArray<string> Sources;
-        /// <summary>
-        /// List of tags
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
-        /// <summary>
-        /// List of destination zones
-        /// </summary>
         public readonly ImmutableArray<string> Tos;
 
         [OutputConstructor]

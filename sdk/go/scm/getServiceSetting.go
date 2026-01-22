@@ -68,36 +68,24 @@ func LookupServiceSetting(ctx *pulumi.Context, args *LookupServiceSettingArgs, o
 // A collection of arguments for invoking getServiceSetting.
 type LookupServiceSettingArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getServiceSetting.
 type LookupServiceSettingResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// Map of sensitive values returned from the API.
+	Device          string            `pulumi:"device"`
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
+	Folder          string            `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Services
+	Id       string                    `pulumi:"id"`
 	Services GetServiceSettingServices `pulumi:"services"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet  string                    `pulumi:"snippet"`
+	Tfid     string                    `pulumi:"tfid"`
 }
 
 func LookupServiceSettingOutput(ctx *pulumi.Context, args LookupServiceSettingOutputArgs, opts ...pulumi.InvokeOption) LookupServiceSettingResultOutput {
@@ -112,15 +100,10 @@ func LookupServiceSettingOutput(ctx *pulumi.Context, args LookupServiceSettingOu
 // A collection of arguments for invoking getServiceSetting.
 type LookupServiceSettingOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -144,18 +127,14 @@ func (o LookupServiceSettingResultOutput) ToLookupServiceSettingResultOutputWith
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupServiceSettingResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Map of sensitive values returned from the API.
 func (o LookupServiceSettingResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupServiceSettingResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -165,13 +144,10 @@ func (o LookupServiceSettingResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Services
 func (o LookupServiceSettingResultOutput) Services() GetServiceSettingServicesOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) GetServiceSettingServices { return v.Services }).(GetServiceSettingServicesOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupServiceSettingResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceSettingResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

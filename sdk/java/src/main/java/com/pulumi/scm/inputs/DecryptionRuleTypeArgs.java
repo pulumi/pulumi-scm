@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.DecryptionRuleTypeSslForwardProxyArgs;
-import java.lang.String;
+import com.pulumi.scm.inputs.DecryptionRuleTypeSslInboundInspectionArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +18,6 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Ssl forward proxy
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     @Import(name="sslForwardProxy")
@@ -26,7 +25,6 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return Ssl forward proxy
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     public Optional<Output<DecryptionRuleTypeSslForwardProxyArgs>> sslForwardProxy() {
@@ -35,18 +33,20 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
 
     /**
      * add the certificate name for SSL inbound inspection
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     @Import(name="sslInboundInspection")
-    private @Nullable Output<String> sslInboundInspection;
+    private @Nullable Output<DecryptionRuleTypeSslInboundInspectionArgs> sslInboundInspection;
 
     /**
      * @return add the certificate name for SSL inbound inspection
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
-    public Optional<Output<String>> sslInboundInspection() {
+    public Optional<Output<DecryptionRuleTypeSslInboundInspectionArgs>> sslInboundInspection() {
         return Optional.ofNullable(this.sslInboundInspection);
     }
 
@@ -77,7 +77,6 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param sslForwardProxy Ssl forward proxy
-         * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
          * 
          * @return builder
          * 
@@ -89,7 +88,6 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param sslForwardProxy Ssl forward proxy
-         * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
          * 
          * @return builder
          * 
@@ -100,24 +98,26 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param sslInboundInspection add the certificate name for SSL inbound inspection
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
          * 
          * @return builder
          * 
          */
-        public Builder sslInboundInspection(@Nullable Output<String> sslInboundInspection) {
+        public Builder sslInboundInspection(@Nullable Output<DecryptionRuleTypeSslInboundInspectionArgs> sslInboundInspection) {
             $.sslInboundInspection = sslInboundInspection;
             return this;
         }
 
         /**
          * @param sslInboundInspection add the certificate name for SSL inbound inspection
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
          * 
          * @return builder
          * 
          */
-        public Builder sslInboundInspection(String sslInboundInspection) {
+        public Builder sslInboundInspection(DecryptionRuleTypeSslInboundInspectionArgs sslInboundInspection) {
             return sslInboundInspection(Output.of(sslInboundInspection));
         }
 

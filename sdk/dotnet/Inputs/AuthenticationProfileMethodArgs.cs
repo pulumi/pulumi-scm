@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Cloud
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("cloud")]
         public Input<Inputs.AuthenticationProfileMethodCloudArgs>? Cloud { get; set; }
 
         /// <summary>
         /// Kerberos
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("kerberos")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ldap
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("ldap")]
@@ -35,6 +36,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Local database
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("localDatabase")]
@@ -42,6 +44,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Radius
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("radius")]
@@ -49,6 +52,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Saml idp
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("samlIdp")]
@@ -56,6 +60,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Tacplus
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("tacplus")]

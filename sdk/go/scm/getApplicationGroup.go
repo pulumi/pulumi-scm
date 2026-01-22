@@ -58,38 +58,25 @@ func LookupApplicationGroup(ctx *pulumi.Context, args *LookupApplicationGroupArg
 // A collection of arguments for invoking getApplicationGroup.
 type LookupApplicationGroupArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getApplicationGroup.
 type LookupApplicationGroupResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Members
+	Id      string   `pulumi:"id"`
 	Members []string `pulumi:"members"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Name    string   `pulumi:"name"`
+	Snippet string   `pulumi:"snippet"`
+	Tfid    string   `pulumi:"tfid"`
 }
 
 func LookupApplicationGroupOutput(ctx *pulumi.Context, args LookupApplicationGroupOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationGroupResultOutput {
@@ -104,17 +91,11 @@ func LookupApplicationGroupOutput(ctx *pulumi.Context, args LookupApplicationGro
 // A collection of arguments for invoking getApplicationGroup.
 type LookupApplicationGroupOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -138,13 +119,10 @@ func (o LookupApplicationGroupResultOutput) ToLookupApplicationGroupResultOutput
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupApplicationGroupResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupApplicationGroupResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -154,18 +132,14 @@ func (o LookupApplicationGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Members
 func (o LookupApplicationGroupResultOutput) Members() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) []string { return v.Members }).(pulumi.StringArrayOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]
 func (o LookupApplicationGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupApplicationGroupResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

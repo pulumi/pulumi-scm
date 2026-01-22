@@ -15,31 +15,35 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Every15 mins
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery15MinsResult Every15Mins;
         /// <summary>
         /// Every30 mins
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEvery30MinsResult Every30Mins;
         /// <summary>
         /// Every hour
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryHourResult EveryHour;
         /// <summary>
         /// Every min
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringEveryMinResult EveryMin;
         /// <summary>
         /// None
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringNoneResult None;
         /// <summary>
         /// Real time
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         public readonly Outputs.GetUpdateScheduleListDataUpdateScheduleWildfireRecurringRealTimeResult RealTime;

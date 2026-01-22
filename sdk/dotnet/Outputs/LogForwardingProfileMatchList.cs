@@ -20,19 +20,27 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Filter match criteria
         /// </summary>
-        public readonly string? Filter;
+        public readonly string Filter;
         /// <summary>
         /// Log type
         /// </summary>
-        public readonly string? LogType;
+        public readonly string LogType;
         /// <summary>
         /// Name of the match profile
         /// </summary>
-        public readonly string? Name;
+        public readonly string Name;
+        /// <summary>
+        /// A list of email server profiles
+        /// </summary>
+        public readonly ImmutableArray<string> SendEmails;
         /// <summary>
         /// A list of HTTP server profiles
         /// </summary>
         public readonly ImmutableArray<string> SendHttps;
+        /// <summary>
+        /// A list of SNMP server profiles
+        /// </summary>
+        public readonly ImmutableArray<string> SendSnmptraps;
         /// <summary>
         /// A list of syslog server profiles
         /// </summary>
@@ -42,13 +50,17 @@ namespace Pulumi.Scm.Outputs
         private LogForwardingProfileMatchList(
             string? actionDesc,
 
-            string? filter,
+            string filter,
 
-            string? logType,
+            string logType,
 
-            string? name,
+            string name,
+
+            ImmutableArray<string> sendEmails,
 
             ImmutableArray<string> sendHttps,
+
+            ImmutableArray<string> sendSnmptraps,
 
             ImmutableArray<string> sendSyslogs)
         {
@@ -56,7 +68,9 @@ namespace Pulumi.Scm.Outputs
             Filter = filter;
             LogType = logType;
             Name = name;
+            SendEmails = sendEmails;
             SendHttps = sendHttps;
+            SendSnmptraps = sendSnmptraps;
             SendSyslogs = sendSyslogs;
         }
     }

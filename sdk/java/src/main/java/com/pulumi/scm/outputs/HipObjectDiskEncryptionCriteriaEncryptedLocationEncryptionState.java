@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState {
     /**
      * @return Is
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     private @Nullable String is;
     /**
      * @return Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
@@ -27,7 +27,6 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
     private HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState() {}
     /**
      * @return Is
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public Optional<String> is() {
@@ -35,6 +34,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
     }
     /**
      * @return Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */

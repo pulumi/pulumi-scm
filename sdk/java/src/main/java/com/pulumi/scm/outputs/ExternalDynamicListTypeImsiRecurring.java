@@ -17,30 +17,33 @@ import javax.annotation.Nullable;
 public final class ExternalDynamicListTypeImsiRecurring {
     /**
      * @return Daily interval settings for IMSI updates
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeImsiRecurringDaily daily;
     /**
      * @return Five-minute interval settings for IMSI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeImsiRecurringFiveMinute fiveMinute;
     /**
      * @return Hourly interval settings for IMSI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeImsiRecurringHourly hourly;
     /**
      * @return Monthly interval settings for IMSI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeImsiRecurringMonthly monthly;
     /**
      * @return Weekly interval settings for IMSI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -49,7 +52,6 @@ public final class ExternalDynamicListTypeImsiRecurring {
     private ExternalDynamicListTypeImsiRecurring() {}
     /**
      * @return Daily interval settings for IMSI updates
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<ExternalDynamicListTypeImsiRecurringDaily> daily() {
@@ -57,6 +59,7 @@ public final class ExternalDynamicListTypeImsiRecurring {
     }
     /**
      * @return Five-minute interval settings for IMSI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -65,6 +68,7 @@ public final class ExternalDynamicListTypeImsiRecurring {
     }
     /**
      * @return Hourly interval settings for IMSI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -73,6 +77,7 @@ public final class ExternalDynamicListTypeImsiRecurring {
     }
     /**
      * @return Monthly interval settings for IMSI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -81,6 +86,7 @@ public final class ExternalDynamicListTypeImsiRecurring {
     }
     /**
      * @return Weekly interval settings for IMSI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */

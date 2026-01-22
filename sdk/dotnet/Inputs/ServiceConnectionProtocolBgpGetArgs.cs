@@ -45,8 +45,8 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// Peer as
         /// </summary>
-        [Input("peerAs")]
-        public Input<string>? PeerAs { get; set; }
+        [Input("peerAs", required: true)]
+        public Input<string> PeerAs { get; set; } = null!;
 
         /// <summary>
         /// Peer ip address

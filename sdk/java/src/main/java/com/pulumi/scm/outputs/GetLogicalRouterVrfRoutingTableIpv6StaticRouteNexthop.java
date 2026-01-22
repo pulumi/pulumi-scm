@@ -14,42 +14,47 @@ import java.util.Objects;
 public final class GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop {
     /**
      * @return Discard
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     private GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscard discard;
     /**
      * @return Fqdn
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     private String fqdn;
     /**
      * @return Ipv6 address
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     private String ipv6Address;
     /**
      * @return Next lr
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     private String nextLr;
     /**
      * @return Next vr
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     private String nextVr;
     /**
      * @return Receive
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     private GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceive receive;
     /**
      * @return Tunnel
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
@@ -58,7 +63,6 @@ public final class GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop {
     private GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop() {}
     /**
      * @return Discard
-     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
     public GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscard discard() {
@@ -66,6 +70,7 @@ public final class GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop {
     }
     /**
      * @return Fqdn
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
@@ -74,6 +79,7 @@ public final class GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop {
     }
     /**
      * @return Ipv6 address
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
@@ -82,6 +88,7 @@ public final class GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop {
     }
     /**
      * @return Next lr
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
@@ -90,6 +97,7 @@ public final class GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop {
     }
     /**
      * @return Next vr
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
@@ -98,6 +106,7 @@ public final class GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop {
     }
     /**
      * @return Receive
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */
@@ -106,6 +115,7 @@ public final class GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop {
     }
     /**
      * @return Tunnel
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
      * 
      */

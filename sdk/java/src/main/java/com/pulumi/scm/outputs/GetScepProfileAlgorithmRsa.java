@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Integer;
+import java.lang.String;
 import java.util.Objects;
 
 @CustomType
@@ -14,14 +14,14 @@ public final class GetScepProfileAlgorithmRsa {
      * @return Rsa nbits
      * 
      */
-    private Integer rsaNbits;
+    private String rsaNbits;
 
     private GetScepProfileAlgorithmRsa() {}
     /**
      * @return Rsa nbits
      * 
      */
-    public Integer rsaNbits() {
+    public String rsaNbits() {
         return this.rsaNbits;
     }
 
@@ -34,7 +34,7 @@ public final class GetScepProfileAlgorithmRsa {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Integer rsaNbits;
+        private String rsaNbits;
         public Builder() {}
         public Builder(GetScepProfileAlgorithmRsa defaults) {
     	      Objects.requireNonNull(defaults);
@@ -42,7 +42,7 @@ public final class GetScepProfileAlgorithmRsa {
         }
 
         @CustomType.Setter
-        public Builder rsaNbits(Integer rsaNbits) {
+        public Builder rsaNbits(String rsaNbits) {
             if (rsaNbits == null) {
               throw new MissingRequiredPropertyException("GetScepProfileAlgorithmRsa", "rsaNbits");
             }

@@ -95,57 +95,36 @@ class GetUrlAccessProfileResult:
     @_builtins.property
     @pulumi.getter
     def alerts(self) -> Sequence[_builtins.str]:
-        """
-        Alert
-        """
         return pulumi.get(self, "alerts")
 
     @_builtins.property
     @pulumi.getter
     def allows(self) -> Sequence[_builtins.str]:
-        """
-        Allow
-        """
         return pulumi.get(self, "allows")
 
     @_builtins.property
     @pulumi.getter
     def blocks(self) -> Sequence[_builtins.str]:
-        """
-        Block
-        """
         return pulumi.get(self, "blocks")
 
     @_builtins.property
     @pulumi.getter(name="cloudInlineCat")
     def cloud_inline_cat(self) -> _builtins.bool:
-        """
-        Cloud inline cat
-        """
         return pulumi.get(self, "cloud_inline_cat")
 
     @_builtins.property
     @pulumi.getter
     def continues(self) -> Sequence[_builtins.str]:
-        """
-        Continue
-        """
         return pulumi.get(self, "continues")
 
     @_builtins.property
     @pulumi.getter(name="credentialEnforcement")
     def credential_enforcement(self) -> 'outputs.GetUrlAccessProfileCredentialEnforcementResult':
-        """
-        Credential enforcement
-        """
         return pulumi.get(self, "credential_enforcement")
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
-        """
-        Description
-        """
         return pulumi.get(self, "description")
 
     @_builtins.property
@@ -153,17 +132,12 @@ class GetUrlAccessProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -177,82 +151,51 @@ class GetUrlAccessProfileResult:
     @_builtins.property
     @pulumi.getter(name="localInlineCat")
     def local_inline_cat(self) -> _builtins.bool:
-        """
-        Local inline cat
-        """
         return pulumi.get(self, "local_inline_cat")
 
     @_builtins.property
     @pulumi.getter(name="logContainerPageOnly")
     def log_container_page_only(self) -> _builtins.bool:
-        """
-        Log container page only
-        """
         return pulumi.get(self, "log_container_page_only")
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrReferer")
     def log_http_hdr_referer(self) -> _builtins.bool:
-        """
-        Log http hdr referer
-        """
         return pulumi.get(self, "log_http_hdr_referer")
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrUserAgent")
     def log_http_hdr_user_agent(self) -> _builtins.bool:
-        """
-        Log http hdr user agent
-        """
         return pulumi.get(self, "log_http_hdr_user_agent")
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrXff")
     def log_http_hdr_xff(self) -> _builtins.bool:
-        """
-        Log http hdr xff
-        """
         return pulumi.get(self, "log_http_hdr_xff")
 
     @_builtins.property
     @pulumi.getter(name="mlavCategoryExceptions")
     def mlav_category_exceptions(self) -> Sequence[_builtins.str]:
-        """
-        Mlav category exception
-        """
         return pulumi.get(self, "mlav_category_exceptions")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        Name
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def redirects(self) -> Sequence[_builtins.str]:
-        """
-        Redirect
-        """
         return pulumi.get(self, "redirects")
 
     @_builtins.property
     @pulumi.getter(name="safeSearchEnforcement")
     def safe_search_enforcement(self) -> _builtins.bool:
-        """
-        Safe search enforcement
-        """
         return pulumi.get(self, "safe_search_enforcement")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -315,13 +258,7 @@ def get_url_access_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -379,13 +316,7 @@ def get_url_access_profile_output(device: Optional[pulumi.Input[Optional[_builti
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

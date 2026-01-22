@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class DosProtectionRuleProtection {
     /**
      * @return Aggregate
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
     private @Nullable DosProtectionRuleProtectionAggregate aggregate;
     /**
      * @return Classified
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
@@ -28,7 +28,6 @@ public final class DosProtectionRuleProtection {
     private DosProtectionRuleProtection() {}
     /**
      * @return Aggregate
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
     public Optional<DosProtectionRuleProtectionAggregate> aggregate() {
@@ -36,6 +35,7 @@ public final class DosProtectionRuleProtection {
     }
     /**
      * @return Classified
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */

@@ -35,6 +35,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.DecryptionRuleArgs;
  * import com.pulumi.scm.inputs.DecryptionRuleTypeArgs;
  * import com.pulumi.scm.inputs.DecryptionRuleTypeSslForwardProxyArgs;
+ * import com.pulumi.scm.inputs.DecryptionRuleTypeSslInboundInspectionArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -166,6 +167,33 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .build());
  * 
+ *         var decryptionRuleSslInboundInspection = new DecryptionRule("decryptionRuleSslInboundInspection", DecryptionRuleArgs.builder()
+ *             .name("ssl_inbound_inspection_rule")
+ *             .description("Decryption Rule with SSL Inbound Set")
+ *             .folder("All")
+ *             .position("pre")
+ *             .action("decrypt")
+ *             .froms("trust")
+ *             .tos("untrust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .services("service-https")
+ *             .categories("high-risk")
+ *             .sourceUsers("any")
+ *             .type(DecryptionRuleTypeArgs.builder()
+ *                 .sslInboundInspection(DecryptionRuleTypeSslInboundInspectionArgs.builder()
+ *                     .certificates("Authentication Cookie CA")
+ *                     .build())
+ *                 .build())
+ *             .destinationHips("any")
+ *             .tags(decryptionPositionTag.name())
+ *             .logSuccess(true)
+ *             .logFail(true)
+ *             .disabled(false)
+ *             .negateSource(false)
+ *             .negateDestination(false)
+ *             .build());
+ * 
  *     }
  * }
  * }
@@ -272,7 +300,6 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -280,7 +307,6 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -302,6 +328,7 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -310,6 +337,7 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -472,6 +500,7 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -480,6 +509,7 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

@@ -12,6 +12,37 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a list of SCM QoS Profile Signature objects.
+//			//
+//			// Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+//			// Folder must be one of [Remote Networks, Service Connections]"
+//			allShared, err := scm.GetQosProfileList(ctx, &scm.GetQosProfileListArgs{
+//				Folder: pulumi.StringRef("Service Connections"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmQosProfileListAllShared", allShared.Datas)
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetQosProfileList(ctx *pulumi.Context, args *GetQosProfileListArgs, opts ...pulumi.InvokeOption) (*GetQosProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetQosProfileListResult

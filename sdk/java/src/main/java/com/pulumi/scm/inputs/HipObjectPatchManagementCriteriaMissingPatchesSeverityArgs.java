@@ -17,7 +17,6 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * Greater equal
-     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     @Import(name="greaterEqual")
@@ -25,7 +24,6 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * @return Greater equal
-     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     public Optional<Output<Integer>> greaterEqual() {
@@ -34,6 +32,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * Greater than
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -42,6 +41,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * @return Greater than
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -51,6 +51,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * Is
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -59,6 +60,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * @return Is
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -68,6 +70,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -76,6 +79,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * @return Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -85,6 +89,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * Less equal
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -93,6 +98,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * @return Less equal
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -102,6 +108,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * Less than
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -110,6 +117,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
     /**
      * @return Less than
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
@@ -148,7 +156,6 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param greaterEqual Greater equal
-         * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder
          * 
@@ -160,7 +167,6 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param greaterEqual Greater equal
-         * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder
          * 
@@ -171,6 +177,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param greaterThan Greater than
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder
@@ -183,6 +190,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param greaterThan Greater than
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder
@@ -194,6 +202,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param is Is
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder
@@ -206,6 +215,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param is Is
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder
@@ -217,6 +227,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param isNot Is not
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder
@@ -229,6 +240,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param isNot Is not
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder
@@ -240,6 +252,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param lessEqual Less equal
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder
@@ -252,6 +265,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param lessEqual Less equal
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder
@@ -263,6 +277,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param lessThan Less than
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder
@@ -275,6 +290,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
 
         /**
          * @param lessThan Less than
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
          * 
          * @return builder

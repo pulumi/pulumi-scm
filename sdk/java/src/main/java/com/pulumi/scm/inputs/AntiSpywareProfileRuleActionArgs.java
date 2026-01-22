@@ -23,7 +23,6 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * Alert
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     @Import(name="alert")
@@ -31,7 +30,6 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * @return Alert
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareProfileRuleActionAlertArgs>> alert() {
@@ -40,6 +38,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * Allow
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -48,6 +47,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * @return Allow
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -57,6 +57,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * anti spyware profiles rules action block ip
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -65,6 +66,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * @return anti spyware profiles rules action block ip
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -74,6 +76,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * Drop
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -82,6 +85,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * @return Drop
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -91,6 +95,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * Reset both
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -99,6 +104,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * @return Reset both
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -108,6 +114,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * Reset client
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -116,6 +123,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * @return Reset client
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -125,6 +133,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * Reset server
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -133,6 +142,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
     /**
      * @return Reset server
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
@@ -172,7 +182,6 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param alert Alert
-         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -184,7 +193,6 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param alert Alert
-         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -195,6 +203,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param allow Allow
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
@@ -207,6 +216,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param allow Allow
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
@@ -218,6 +228,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param blockIp anti spyware profiles rules action block ip
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
@@ -230,6 +241,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param blockIp anti spyware profiles rules action block ip
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
@@ -241,6 +253,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param drop Drop
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
@@ -253,6 +266,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param drop Drop
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
@@ -264,6 +278,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param resetBoth Reset both
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
@@ -276,6 +291,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param resetBoth Reset both
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
@@ -287,6 +303,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param resetClient Reset client
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
@@ -299,6 +316,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param resetClient Reset client
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
@@ -310,6 +328,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param resetServer Reset server
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
@@ -322,6 +341,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
 
         /**
          * @param resetServer Reset server
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder

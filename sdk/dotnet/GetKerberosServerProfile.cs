@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// KerberosServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Kerberos Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Kerberos Server Profile you want to find.
+        ///     var scmKerberosProf = Scm.GetKerberosServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "6bd818f8-9679-4031-86df-17b8b40842a0",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmKerberosServerProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Id) },
+        ///             { "folder", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Folder) },
+        ///             { "name", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetKerberosServerProfileResult> InvokeAsync(GetKerberosServerProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetKerberosServerProfileResult>("scm:index/getKerberosServerProfile:getKerberosServerProfile", args ?? new GetKerberosServerProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// KerberosServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Kerberos Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Kerberos Server Profile you want to find.
+        ///     var scmKerberosProf = Scm.GetKerberosServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "6bd818f8-9679-4031-86df-17b8b40842a0",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmKerberosServerProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Id) },
+        ///             { "folder", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Folder) },
+        ///             { "name", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetKerberosServerProfileResult> Invoke(GetKerberosServerProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetKerberosServerProfileResult>("scm:index/getKerberosServerProfile:getKerberosServerProfile", args ?? new GetKerberosServerProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// KerberosServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Kerberos Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Kerberos Server Profile you want to find.
+        ///     var scmKerberosProf = Scm.GetKerberosServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "6bd818f8-9679-4031-86df-17b8b40842a0",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmKerberosServerProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Id) },
+        ///             { "folder", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Folder) },
+        ///             { "name", scmKerberosProf.Apply(getKerberosServerProfileResult =&gt; getKerberosServerProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetKerberosServerProfileResult> Invoke(GetKerberosServerProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetKerberosServerProfileResult>("scm:index/getKerberosServerProfile:getKerberosServerProfile", args ?? new GetKerberosServerProfileInvokeArgs(), options.WithDefaults());
@@ -35,15 +128,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -53,16 +141,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the Kerberos server profile
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -76,15 +157,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -94,16 +170,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the Kerberos server profile
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -119,30 +188,15 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the Kerberos server profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// The name of the Kerberos server profile
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The Kerberos server configuration
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetKerberosServerProfileServerResult> Servers;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

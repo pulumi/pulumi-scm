@@ -39,26 +39,14 @@ export function getIkeCryptoProfile(args: GetIkeCryptoProfileArgs, opts?: pulumi
 export interface GetIkeCryptoProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -66,48 +54,21 @@ export interface GetIkeCryptoProfileArgs {
  * A collection of values returned by getIkeCryptoProfile.
  */
 export interface GetIkeCryptoProfileResult {
-    /**
-     * IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
-     */
     readonly authenticationMultiple: number;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * Dh group
-     */
     readonly dhGroups: string[];
-    /**
-     * Encryption algorithm
-     */
     readonly encryptions: string[];
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
-    /**
-     * Hash
-     */
     readonly hashes: string[];
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Ike crypto profile lifetime
-     */
     readonly lifetime: outputs.GetIkeCryptoProfileLifetime;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -144,25 +105,13 @@ export function getIkeCryptoProfileOutput(args: GetIkeCryptoProfileOutputArgs, o
 export interface GetIkeCryptoProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

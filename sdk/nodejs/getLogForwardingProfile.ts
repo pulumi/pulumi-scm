@@ -8,6 +8,27 @@ import * as utilities from "./utilities";
 
 /**
  * LogForwardingProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+ * const scmLogForwardingProf = scm.getLogForwardingProfile({
+ *     id: "712dc61d-94ed-45e4-82b7-b2d86669a2bf",
+ * });
+ * export const scmLogForwardingProfileDetails = {
+ *     profileId: scmLogForwardingProf.then(scmLogForwardingProf => scmLogForwardingProf.id),
+ *     folder: scmLogForwardingProf.then(scmLogForwardingProf => scmLogForwardingProf.folder),
+ *     name: scmLogForwardingProf.then(scmLogForwardingProf => scmLogForwardingProf.name),
+ *     description: scmLogForwardingProf.then(scmLogForwardingProf => scmLogForwardingProf.description),
+ * };
+ * ```
  */
 export function getLogForwardingProfile(args: GetLogForwardingProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetLogForwardingProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -26,26 +47,14 @@ export function getLogForwardingProfile(args: GetLogForwardingProfileArgs, opts?
 export interface GetLogForwardingProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * The UUID of the log server profile
      */
     id: string;
-    /**
-     * The name of the log forwarding profile
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -53,41 +62,44 @@ export interface GetLogForwardingProfileArgs {
  * A collection of values returned by getLogForwardingProfile.
  */
 export interface GetLogForwardingProfileResult {
-    /**
-     * Log forwarding profile description
-     */
     readonly description: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * The UUID of the log server profile
      */
     readonly id: string;
-    /**
-     * Match list
-     */
     readonly matchLists: outputs.GetLogForwardingProfileMatchList[];
-    /**
-     * The name of the log forwarding profile
-     */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * LogForwardingProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+ * const scmLogForwardingProf = scm.getLogForwardingProfile({
+ *     id: "712dc61d-94ed-45e4-82b7-b2d86669a2bf",
+ * });
+ * export const scmLogForwardingProfileDetails = {
+ *     profileId: scmLogForwardingProf.then(scmLogForwardingProf => scmLogForwardingProf.id),
+ *     folder: scmLogForwardingProf.then(scmLogForwardingProf => scmLogForwardingProf.folder),
+ *     name: scmLogForwardingProf.then(scmLogForwardingProf => scmLogForwardingProf.name),
+ *     description: scmLogForwardingProf.then(scmLogForwardingProf => scmLogForwardingProf.description),
+ * };
+ * ```
  */
 export function getLogForwardingProfileOutput(args: GetLogForwardingProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLogForwardingProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -106,25 +118,13 @@ export function getLogForwardingProfileOutput(args: GetLogForwardingProfileOutpu
 export interface GetLogForwardingProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * The UUID of the log server profile
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the log forwarding profile
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

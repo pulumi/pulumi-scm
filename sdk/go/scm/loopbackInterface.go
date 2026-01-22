@@ -56,6 +56,39 @@ import (
 //			if err != nil {
 //				return err
 //			}
+//			// Creates an ip subnet variable used in the subsequent example
+//			scmIpv6Prefix, err := scm.NewVariable(ctx, "scm_ipv6_prefix", &scm.VariableArgs{
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$scm_ipv6_prefix"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("ip-netmask"),
+//				Value:       pulumi.String("2001:0db8:abcd:0001::/64"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a loopback interface with ipv6 address, with default value loopback.321
+//			_, err = scm.NewLoopbackInterface(ctx, "scm_loopback_intf_3", &scm.LoopbackInterfaceArgs{
+//				Name:         pulumi.String("$scm_loopback_intf3"),
+//				Comment:      pulumi.String("Managed by Pulumi"),
+//				Folder:       pulumi.String("ngfw-shared"),
+//				DefaultValue: pulumi.String("loopback.321"),
+//				Ipv6: &scm.LoopbackInterfaceIpv6Args{
+//					Enabled:     pulumi.Bool(true),
+//					InterfaceId: pulumi.String("EUI-64"),
+//					Addresses: scm.LoopbackInterfaceIpv6AddressArray{
+//						&scm.LoopbackInterfaceIpv6AddressArgs{
+//							Name:   pulumi.String("$scm_ipv6_prefix"),
+//							Prefix: &scm.LoopbackInterfaceIpv6AddressPrefixArgs{},
+//						},
+//					},
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmIpv6Prefix,
+//			}))
+//			if err != nil {
+//				return err
+//			}
 //			return nil
 //		})
 //	}
@@ -95,9 +128,9 @@ type LoopbackInterface struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrOutput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interface management profile
@@ -111,6 +144,7 @@ type LoopbackInterface struct {
 	// Loopback Interface name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -151,9 +185,9 @@ type loopbackInterfaceState struct {
 	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
@@ -167,6 +201,7 @@ type loopbackInterfaceState struct {
 	// Loopback Interface name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -178,9 +213,9 @@ type LoopbackInterfaceState struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile
@@ -194,6 +229,7 @@ type LoopbackInterfaceState struct {
 	// Loopback Interface name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -209,9 +245,9 @@ type loopbackInterfaceArgs struct {
 	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
@@ -225,6 +261,7 @@ type loopbackInterfaceArgs struct {
 	// Loopback Interface name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -236,9 +273,9 @@ type LoopbackInterfaceArgs struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile
@@ -252,6 +289,7 @@ type LoopbackInterfaceArgs struct {
 	// Loopback Interface name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -354,12 +392,12 @@ func (o LoopbackInterfaceOutput) DefaultValue() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LoopbackInterfaceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LoopbackInterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -391,6 +429,7 @@ func (o LoopbackInterfaceOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LoopbackInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

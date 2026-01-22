@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfOspfAreaTypeNssaDefaultRoute {
     /**
      * @return Advertise
-     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     private @Nullable LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise advertise;
     /**
      * @return Disable
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
@@ -28,7 +28,6 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultRoute {
     private LogicalRouterVrfOspfAreaTypeNssaDefaultRoute() {}
     /**
      * @return Advertise
-     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     public Optional<LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise> advertise() {
@@ -36,6 +35,7 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultRoute {
     }
     /**
      * @return Disable
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */

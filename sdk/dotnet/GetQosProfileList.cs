@@ -13,18 +13,99 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM QoS Profile Signature objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+        ///     // Folder must be one of [Remote Networks, Service Connections]"
+        ///     var allShared = Scm.GetQosProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "Service Connections",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmQosProfileListAllShared"] = allShared.Apply(getQosProfileListResult =&gt; getQosProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetQosProfileListResult> InvokeAsync(GetQosProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetQosProfileListResult>("scm:index/getQosProfileList:getQosProfileList", args ?? new GetQosProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM QoS Profile Signature objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+        ///     // Folder must be one of [Remote Networks, Service Connections]"
+        ///     var allShared = Scm.GetQosProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "Service Connections",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmQosProfileListAllShared"] = allShared.Apply(getQosProfileListResult =&gt; getQosProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetQosProfileListResult> Invoke(GetQosProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosProfileListResult>("scm:index/getQosProfileList:getQosProfileList", args ?? new GetQosProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM QoS Profile Signature objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
+        ///     // Folder must be one of [Remote Networks, Service Connections]"
+        ///     var allShared = Scm.GetQosProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "Service Connections",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmQosProfileListAllShared"] = allShared.Apply(getQosProfileListResult =&gt; getQosProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetQosProfileListResult> Invoke(GetQosProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosProfileListResult>("scm:index/getQosProfileList:getQosProfileList", args ?? new GetQosProfileListInvokeArgs(), options.WithDefaults());

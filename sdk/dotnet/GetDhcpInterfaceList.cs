@@ -13,18 +13,99 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var pagedInterfaceList = Scm.GetDhcpInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///         Limit = 10,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedInterfaceListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Total) },
+        ///             { "firstRuleName", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetDhcpInterfaceListResult> InvokeAsync(GetDhcpInterfaceListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDhcpInterfaceListResult>("scm:index/getDhcpInterfaceList:getDhcpInterfaceList", args ?? new GetDhcpInterfaceListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var pagedInterfaceList = Scm.GetDhcpInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///         Limit = 10,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedInterfaceListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Total) },
+        ///             { "firstRuleName", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDhcpInterfaceListResult> Invoke(GetDhcpInterfaceListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDhcpInterfaceListResult>("scm:index/getDhcpInterfaceList:getDhcpInterfaceList", args ?? new GetDhcpInterfaceListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var pagedInterfaceList = Scm.GetDhcpInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///         Limit = 10,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedInterfaceListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Total) },
+        ///             { "firstRuleName", pagedInterfaceList.Apply(getDhcpInterfaceListResult =&gt; getDhcpInterfaceListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDhcpInterfaceListResult> Invoke(GetDhcpInterfaceListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetDhcpInterfaceListResult>("scm:index/getDhcpInterfaceList:getDhcpInterfaceList", args ?? new GetDhcpInterfaceListInvokeArgs(), options.WithDefaults());

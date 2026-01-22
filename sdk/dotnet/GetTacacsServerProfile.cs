@@ -13,18 +13,108 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// TacacsServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up the multi-tag address object by its ID.
+        ///     var scmTacacsServerProfile5Ds = Scm.GetTacacsServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "1967a784-402b-4c20-aa48-aab64d73cc06",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["profileDataSourceResults"] = 
+        ///         {
+        ///             { "name", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Name) },
+        ///             { "protocol", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Protocol) },
+        ///             { "timeout", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Timeout) },
+        ///             { "folder", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Folder) },
+        ///             { "useSingleConnection", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.UseSingleConnection) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetTacacsServerProfileResult> InvokeAsync(GetTacacsServerProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetTacacsServerProfileResult>("scm:index/getTacacsServerProfile:getTacacsServerProfile", args ?? new GetTacacsServerProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// TacacsServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up the multi-tag address object by its ID.
+        ///     var scmTacacsServerProfile5Ds = Scm.GetTacacsServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "1967a784-402b-4c20-aa48-aab64d73cc06",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["profileDataSourceResults"] = 
+        ///         {
+        ///             { "name", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Name) },
+        ///             { "protocol", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Protocol) },
+        ///             { "timeout", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Timeout) },
+        ///             { "folder", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Folder) },
+        ///             { "useSingleConnection", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.UseSingleConnection) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTacacsServerProfileResult> Invoke(GetTacacsServerProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTacacsServerProfileResult>("scm:index/getTacacsServerProfile:getTacacsServerProfile", args ?? new GetTacacsServerProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// TacacsServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up the multi-tag address object by its ID.
+        ///     var scmTacacsServerProfile5Ds = Scm.GetTacacsServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "1967a784-402b-4c20-aa48-aab64d73cc06",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["profileDataSourceResults"] = 
+        ///         {
+        ///             { "name", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Name) },
+        ///             { "protocol", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Protocol) },
+        ///             { "timeout", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Timeout) },
+        ///             { "folder", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.Folder) },
+        ///             { "useSingleConnection", scmTacacsServerProfile5Ds.Apply(getTacacsServerProfileResult =&gt; getTacacsServerProfileResult.UseSingleConnection) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTacacsServerProfileResult> Invoke(GetTacacsServerProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetTacacsServerProfileResult>("scm:index/getTacacsServerProfile:getTacacsServerProfile", args ?? new GetTacacsServerProfileInvokeArgs(), options.WithDefaults());
@@ -35,15 +125,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -53,16 +138,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the TACACS+ server profile
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -76,15 +154,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -94,16 +167,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the TACACS+ server profile
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -119,48 +185,27 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
         public readonly string Folder;
         /// <summary>
         /// The UUID of the TACACS+ server profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// The name of the TACACS+ server profile
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The TACACS+ authentication protocol
-        /// </summary>
         public readonly string Protocol;
-        /// <summary>
-        /// The TACACS+ server configuration
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetTacacsServerProfileServerResult> Servers;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// The TACACS+ timeout (seconds)
-        /// </summary>
         public readonly int Timeout;
-        /// <summary>
-        /// Use a single TACACS+ connection?
-        /// </summary>
         public readonly bool UseSingleConnection;
 
         [OutputConstructor]
         private GetTacacsServerProfileResult(
             string device,
+
+            ImmutableDictionary<string, string> encryptedValues,
 
             string folder,
 
@@ -181,6 +226,7 @@ namespace Pulumi.Scm
             bool useSingleConnection)
         {
             Device = device;
+            EncryptedValues = encryptedValues;
             Folder = folder;
             Id = id;
             Name = name;

@@ -19,7 +19,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
     /**
      * Mobile
-     * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
     @Import(name="mobile")
@@ -27,7 +26,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
     /**
      * @return Mobile
-     * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
     public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsMobileArgs>> mobile() {
@@ -36,6 +34,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
     /**
      * Unknown
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -44,6 +43,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
     /**
      * @return Unknown
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -53,6 +53,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
     /**
      * Wifi
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -61,6 +62,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
     /**
      * @return Wifi
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -96,7 +98,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
         /**
          * @param mobile Mobile
-         * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
          * 
@@ -108,7 +109,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
         /**
          * @param mobile Mobile
-         * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
          * 
@@ -119,6 +119,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
         /**
          * @param unknown Unknown
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
@@ -131,6 +132,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
         /**
          * @param unknown Unknown
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
@@ -142,6 +144,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
         /**
          * @param wifi Wifi
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
@@ -154,6 +157,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
 
         /**
          * @param wifi Wifi
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder

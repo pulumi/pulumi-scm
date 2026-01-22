@@ -5,6 +5,8 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.LoopbackInterfaceIpv6AddressAnycastArgs;
+import com.pulumi.scm.inputs.LoopbackInterfaceIpv6AddressPrefixArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,6 +17,21 @@ import javax.annotation.Nullable;
 public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final LoopbackInterfaceIpv6AddressArgs Empty = new LoopbackInterfaceIpv6AddressArgs();
+
+    /**
+     * Anycast
+     * 
+     */
+    @Import(name="anycast")
+    private @Nullable Output<LoopbackInterfaceIpv6AddressAnycastArgs> anycast;
+
+    /**
+     * @return Anycast
+     * 
+     */
+    public Optional<Output<LoopbackInterfaceIpv6AddressAnycastArgs>> anycast() {
+        return Optional.ofNullable(this.anycast);
+    }
 
     /**
      * Enable Address on Interface
@@ -32,21 +49,6 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
     }
 
     /**
-     * Interface ID
-     * 
-     */
-    @Import(name="interfaceId")
-    private @Nullable Output<String> interfaceId;
-
-    /**
-     * @return Interface ID
-     * 
-     */
-    public Optional<Output<String>> interfaceId() {
-        return Optional.ofNullable(this.interfaceId);
-    }
-
-    /**
      * IPv6 Address
      * 
      */
@@ -61,12 +63,28 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Use interface ID as host portion
+     * 
+     */
+    @Import(name="prefix")
+    private @Nullable Output<LoopbackInterfaceIpv6AddressPrefixArgs> prefix;
+
+    /**
+     * @return Use interface ID as host portion
+     * 
+     */
+    public Optional<Output<LoopbackInterfaceIpv6AddressPrefixArgs>> prefix() {
+        return Optional.ofNullable(this.prefix);
+    }
+
     private LoopbackInterfaceIpv6AddressArgs() {}
 
     private LoopbackInterfaceIpv6AddressArgs(LoopbackInterfaceIpv6AddressArgs $) {
+        this.anycast = $.anycast;
         this.enableOnInterface = $.enableOnInterface;
-        this.interfaceId = $.interfaceId;
         this.name = $.name;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
@@ -85,6 +103,27 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
 
         public Builder(LoopbackInterfaceIpv6AddressArgs defaults) {
             $ = new LoopbackInterfaceIpv6AddressArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param anycast Anycast
+         * 
+         * @return builder
+         * 
+         */
+        public Builder anycast(@Nullable Output<LoopbackInterfaceIpv6AddressAnycastArgs> anycast) {
+            $.anycast = anycast;
+            return this;
+        }
+
+        /**
+         * @param anycast Anycast
+         * 
+         * @return builder
+         * 
+         */
+        public Builder anycast(LoopbackInterfaceIpv6AddressAnycastArgs anycast) {
+            return anycast(Output.of(anycast));
         }
 
         /**
@@ -109,27 +148,6 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
         }
 
         /**
-         * @param interfaceId Interface ID
-         * 
-         * @return builder
-         * 
-         */
-        public Builder interfaceId(@Nullable Output<String> interfaceId) {
-            $.interfaceId = interfaceId;
-            return this;
-        }
-
-        /**
-         * @param interfaceId Interface ID
-         * 
-         * @return builder
-         * 
-         */
-        public Builder interfaceId(String interfaceId) {
-            return interfaceId(Output.of(interfaceId));
-        }
-
-        /**
          * @param name IPv6 Address
          * 
          * @return builder
@@ -148,6 +166,27 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param prefix Use interface ID as host portion
+         * 
+         * @return builder
+         * 
+         */
+        public Builder prefix(@Nullable Output<LoopbackInterfaceIpv6AddressPrefixArgs> prefix) {
+            $.prefix = prefix;
+            return this;
+        }
+
+        /**
+         * @param prefix Use interface ID as host portion
+         * 
+         * @return builder
+         * 
+         */
+        public Builder prefix(LoopbackInterfaceIpv6AddressPrefixArgs prefix) {
+            return prefix(Output.of(prefix));
         }
 
         public LoopbackInterfaceIpv6AddressArgs build() {

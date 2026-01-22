@@ -20,7 +20,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
     /**
      * Ethernet
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     @Import(name="ethernet")
@@ -28,7 +27,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
     /**
      * @return Ethernet
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsNotEthernetArgs>> ethernet() {
@@ -37,6 +35,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
     /**
      * Mobile
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -45,6 +44,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
     /**
      * @return Mobile
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -54,6 +54,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
     /**
      * Unknown
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -62,6 +63,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
     /**
      * @return Unknown
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -71,6 +73,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
     /**
      * Wifi
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -79,6 +82,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
     /**
      * @return Wifi
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -115,7 +119,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
         /**
          * @param ethernet Ethernet
-         * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
          * 
@@ -127,7 +130,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
         /**
          * @param ethernet Ethernet
-         * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
          * 
@@ -138,6 +140,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
         /**
          * @param mobile Mobile
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
@@ -150,6 +153,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
         /**
          * @param mobile Mobile
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
@@ -161,6 +165,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
         /**
          * @param unknown Unknown
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
@@ -173,6 +178,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
         /**
          * @param unknown Unknown
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
@@ -184,6 +190,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
         /**
          * @param wifi Wifi
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder
@@ -196,6 +203,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
 
         /**
          * @param wifi Wifi
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
          * 
          * @return builder

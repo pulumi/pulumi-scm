@@ -248,7 +248,6 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * Device
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -256,7 +255,6 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Device
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -278,6 +276,7 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * Folder
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -286,6 +285,7 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Folder
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -448,6 +448,7 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * Snippet
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -456,6 +457,7 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Snippet
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

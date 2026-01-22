@@ -15,21 +15,23 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// specify lifetime in days
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Days`, `Hours`, `Minutes`, and `Seconds`.
         /// </summary>
         public readonly int? Days;
         /// <summary>
         /// specify lifetime in hours
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Days`, `Hours`, `Minutes`, and `Seconds`.
         /// </summary>
         public readonly int? Hours;
         /// <summary>
         /// specify lifetime in minutes
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Days`, `Hours`, `Minutes`, and `Seconds`.
         /// </summary>
         public readonly int? Minutes;
         /// <summary>
         /// specify lifetime in seconds
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Days`, `Hours`, `Minutes`, and `Seconds`.
         /// </summary>
         public readonly int? Seconds;

@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetBgpAddressFamilyProfileIpv4UnicastAllowasIn {
     /**
      * @return Number of times the firewalls own AS can be in an AS_PATH
-     * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      * 
      */
     private Integer occurrence;
     /**
      * @return Origin
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetBgpAddressFamilyProfileIpv4UnicastAllowasIn {
     private GetBgpAddressFamilyProfileIpv4UnicastAllowasIn() {}
     /**
      * @return Number of times the firewalls own AS can be in an AS_PATH
-     * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      * 
      */
     public Integer occurrence() {
@@ -35,6 +34,7 @@ public final class GetBgpAddressFamilyProfileIpv4UnicastAllowasIn {
     }
     /**
      * @return Origin
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `occurrence` and `origin`.
      * 
      */

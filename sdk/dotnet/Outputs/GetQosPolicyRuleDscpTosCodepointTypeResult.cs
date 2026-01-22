@@ -15,26 +15,29 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Af
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosCodepointTypeAfResult Af;
         /// <summary>
         /// Cs
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosCodepointTypeCsResult Cs;
         /// <summary>
         /// Custom
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosCodepointTypeCustomResult Custom;
         /// <summary>
         /// Ef
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosCodepointTypeEfResult Ef;
         /// <summary>
         /// Tos
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosCodepointTypeTosResult Tos;

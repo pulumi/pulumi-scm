@@ -23,7 +23,6 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
     /**
      * Daily
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     @Import(name="daily")
@@ -31,7 +30,6 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
     /**
      * @return Daily
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     public Optional<Output<UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs>> daily() {
@@ -40,6 +38,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
     /**
      * Hourly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -48,6 +47,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
     /**
      * @return Hourly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -57,6 +57,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
     /**
      * None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -65,6 +66,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -104,6 +106,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
     /**
      * Weekly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -112,6 +115,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
     /**
      * @return Weekly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -150,7 +154,6 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
         /**
          * @param daily Daily
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder
          * 
@@ -162,7 +165,6 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
         /**
          * @param daily Daily
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder
          * 
@@ -173,6 +175,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
         /**
          * @param hourly Hourly
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder
@@ -185,6 +188,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
         /**
          * @param hourly Hourly
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder
@@ -196,6 +200,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
         /**
          * @param none None
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder
@@ -208,6 +213,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
         /**
          * @param none None
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder
@@ -261,6 +267,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
         /**
          * @param weekly Weekly
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder
@@ -273,6 +280,7 @@ public final class UpdateScheduleUpdateScheduleAntiVirusRecurringArgs extends co
 
         /**
          * @param weekly Weekly
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
          * 
          * @return builder

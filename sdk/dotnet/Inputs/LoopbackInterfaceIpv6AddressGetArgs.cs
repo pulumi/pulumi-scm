@@ -13,22 +13,28 @@ namespace Pulumi.Scm.Inputs
     public sealed class LoopbackInterfaceIpv6AddressGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Anycast
+        /// </summary>
+        [Input("anycast")]
+        public Input<Inputs.LoopbackInterfaceIpv6AddressAnycastGetArgs>? Anycast { get; set; }
+
+        /// <summary>
         /// Enable Address on Interface
         /// </summary>
         [Input("enableOnInterface")]
         public Input<bool>? EnableOnInterface { get; set; }
 
         /// <summary>
-        /// Interface ID
-        /// </summary>
-        [Input("interfaceId")]
-        public Input<string>? InterfaceId { get; set; }
-
-        /// <summary>
         /// IPv6 Address
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// Use interface ID as host portion
+        /// </summary>
+        [Input("prefix")]
+        public Input<Inputs.LoopbackInterfaceIpv6AddressPrefixGetArgs>? Prefix { get; set; }
 
         public LoopbackInterfaceIpv6AddressGetArgs()
         {

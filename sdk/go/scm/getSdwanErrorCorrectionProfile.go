@@ -25,40 +25,26 @@ func LookupSdwanErrorCorrectionProfile(ctx *pulumi.Context, args *LookupSdwanErr
 // A collection of arguments for invoking getSdwanErrorCorrectionProfile.
 type LookupSdwanErrorCorrectionProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Name
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSdwanErrorCorrectionProfile.
 type LookupSdwanErrorCorrectionProfileResult struct {
-	// Activation threshold
 	ActivationThreshold int `pulumi:"activationThreshold"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Mode
-	Mode GetSdwanErrorCorrectionProfileMode `pulumi:"mode"`
-	// Name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Id      string                             `pulumi:"id"`
+	Mode    GetSdwanErrorCorrectionProfileMode `pulumi:"mode"`
+	Name    string                             `pulumi:"name"`
+	Snippet string                             `pulumi:"snippet"`
+	Tfid    string                             `pulumi:"tfid"`
 }
 
 func LookupSdwanErrorCorrectionProfileOutput(ctx *pulumi.Context, args LookupSdwanErrorCorrectionProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSdwanErrorCorrectionProfileResultOutput {
@@ -73,17 +59,11 @@ func LookupSdwanErrorCorrectionProfileOutput(ctx *pulumi.Context, args LookupSdw
 // A collection of arguments for invoking getSdwanErrorCorrectionProfile.
 type LookupSdwanErrorCorrectionProfileOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -106,19 +86,15 @@ func (o LookupSdwanErrorCorrectionProfileResultOutput) ToLookupSdwanErrorCorrect
 	return o
 }
 
-// Activation threshold
 func (o LookupSdwanErrorCorrectionProfileResultOutput) ActivationThreshold() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) int { return v.ActivationThreshold }).(pulumi.IntOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanErrorCorrectionProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanErrorCorrectionProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -128,18 +104,14 @@ func (o LookupSdwanErrorCorrectionProfileResultOutput) Id() pulumi.StringOutput 
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Mode
 func (o LookupSdwanErrorCorrectionProfileResultOutput) Mode() GetSdwanErrorCorrectionProfileModeOutput {
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) GetSdwanErrorCorrectionProfileMode { return v.Mode }).(GetSdwanErrorCorrectionProfileModeOutput)
 }
 
-// Name
 func (o LookupSdwanErrorCorrectionProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSdwanErrorCorrectionProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

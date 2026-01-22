@@ -21,15 +21,22 @@ namespace Pulumi.Scm.Outputs
         /// Enable IPv6
         /// </summary>
         public readonly bool Enabled;
+        /// <summary>
+        /// Interface ID
+        /// </summary>
+        public readonly string InterfaceId;
 
         [OutputConstructor]
         private GetLoopbackInterfaceIpv6Result(
             ImmutableArray<Outputs.GetLoopbackInterfaceIpv6AddressResult> addresses,
 
-            bool enabled)
+            bool enabled,
+
+            string interfaceId)
         {
             Addresses = addresses;
             Enabled = enabled;
+            InterfaceId = interfaceId;
         }
     }
 }

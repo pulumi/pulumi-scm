@@ -38,16 +38,19 @@ class EthernetInterfaceArgs:
         """
         The set of arguments for constructing a EthernetInterface resource.
         :param pulumi.Input[_builtins.str] aggregate_group: Aggregate group
-               > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[_builtins.str] comment: Interface description
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['EthernetInterfaceLayer2Args'] layer2: Layer2
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input['EthernetInterfaceLayer3Args'] layer3: Ethernet Interface Layer 3 configuration
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[_builtins.str] link_duplex: Link duplex
         :param pulumi.Input[_builtins.str] link_speed: Link speed
@@ -55,8 +58,10 @@ class EthernetInterfaceArgs:
         :param pulumi.Input[_builtins.str] name: Interface name
         :param pulumi.Input['EthernetInterfacePoeArgs'] poe: Poe
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['EthernetInterfaceTapArgs'] tap: Tap
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         if aggregate_group is not None:
@@ -93,7 +98,6 @@ class EthernetInterfaceArgs:
     def aggregate_group(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Aggregate group
-        > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "aggregate_group")
 
@@ -130,6 +134,7 @@ class EthernetInterfaceArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -143,6 +148,7 @@ class EthernetInterfaceArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -156,6 +162,7 @@ class EthernetInterfaceArgs:
     def layer2(self) -> Optional[pulumi.Input['EthernetInterfaceLayer2Args']]:
         """
         Layer2
+
         > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "layer2")
@@ -169,6 +176,7 @@ class EthernetInterfaceArgs:
     def layer3(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3Args']]:
         """
         Ethernet Interface Layer 3 configuration
+
         > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "layer3")
@@ -242,6 +250,7 @@ class EthernetInterfaceArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -255,6 +264,7 @@ class EthernetInterfaceArgs:
     def tap(self) -> Optional[pulumi.Input['EthernetInterfaceTapArgs']]:
         """
         Tap
+
         > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "tap")
@@ -286,17 +296,20 @@ class _EthernetInterfaceState:
         """
         Input properties used for looking up and filtering EthernetInterface resources.
         :param pulumi.Input[_builtins.str] aggregate_group: Aggregate group
-               > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[_builtins.str] comment: Interface description
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['EthernetInterfaceLayer2Args'] layer2: Layer2
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input['EthernetInterfaceLayer3Args'] layer3: Ethernet Interface Layer 3 configuration
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[_builtins.str] link_duplex: Link duplex
         :param pulumi.Input[_builtins.str] link_speed: Link speed
@@ -304,8 +317,10 @@ class _EthernetInterfaceState:
         :param pulumi.Input[_builtins.str] name: Interface name
         :param pulumi.Input['EthernetInterfacePoeArgs'] poe: Poe
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['EthernetInterfaceTapArgs'] tap: Tap
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         if aggregate_group is not None:
@@ -346,7 +361,6 @@ class _EthernetInterfaceState:
     def aggregate_group(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Aggregate group
-        > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "aggregate_group")
 
@@ -383,6 +397,7 @@ class _EthernetInterfaceState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -408,6 +423,7 @@ class _EthernetInterfaceState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -421,6 +437,7 @@ class _EthernetInterfaceState:
     def layer2(self) -> Optional[pulumi.Input['EthernetInterfaceLayer2Args']]:
         """
         Layer2
+
         > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "layer2")
@@ -434,6 +451,7 @@ class _EthernetInterfaceState:
     def layer3(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3Args']]:
         """
         Ethernet Interface Layer 3 configuration
+
         > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "layer3")
@@ -507,6 +525,7 @@ class _EthernetInterfaceState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -520,6 +539,7 @@ class _EthernetInterfaceState:
     def tap(self) -> Optional[pulumi.Input['EthernetInterfaceTapArgs']]:
         """
         Tap
+
         > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "tap")
@@ -724,16 +744,19 @@ class EthernetInterface(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] aggregate_group: Aggregate group
-               > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[_builtins.str] comment: Interface description
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']] layer2: Layer2
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']] layer3: Ethernet Interface Layer 3 configuration
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[_builtins.str] link_duplex: Link duplex
         :param pulumi.Input[_builtins.str] link_speed: Link speed
@@ -741,8 +764,10 @@ class EthernetInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: Interface name
         :param pulumi.Input[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']] poe: Poe
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']] tap: Tap
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         ...
@@ -1003,17 +1028,20 @@ class EthernetInterface(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] aggregate_group: Aggregate group
-               > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[_builtins.str] comment: Interface description
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']] layer2: Layer2
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']] layer3: Ethernet Interface Layer 3 configuration
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         :param pulumi.Input[_builtins.str] link_duplex: Link duplex
         :param pulumi.Input[_builtins.str] link_speed: Link speed
@@ -1021,8 +1049,10 @@ class EthernetInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: Interface name
         :param pulumi.Input[Union['EthernetInterfacePoeArgs', 'EthernetInterfacePoeArgsDict']] poe: Poe
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']] tap: Tap
+               
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -1052,7 +1082,6 @@ class EthernetInterface(pulumi.CustomResource):
     def aggregate_group(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Aggregate group
-        > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "aggregate_group")
 
@@ -1077,6 +1106,7 @@ class EthernetInterface(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
@@ -1094,6 +1124,7 @@ class EthernetInterface(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -1103,6 +1134,7 @@ class EthernetInterface(pulumi.CustomResource):
     def layer2(self) -> pulumi.Output[Optional['outputs.EthernetInterfaceLayer2']]:
         """
         Layer2
+
         > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "layer2")
@@ -1112,6 +1144,7 @@ class EthernetInterface(pulumi.CustomResource):
     def layer3(self) -> pulumi.Output[Optional['outputs.EthernetInterfaceLayer3']]:
         """
         Ethernet Interface Layer 3 configuration
+
         > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "layer3")
@@ -1161,6 +1194,7 @@ class EthernetInterface(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -1170,6 +1204,7 @@ class EthernetInterface(pulumi.CustomResource):
     def tap(self) -> pulumi.Output[Optional['outputs.EthernetInterfaceTap']]:
         """
         Tap
+
         > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
         """
         return pulumi.get(self, "tap")

@@ -14,18 +14,19 @@ import java.util.Objects;
 public final class GetDosProtectionRuleListDataAction {
     /**
      * @return Allow
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     private GetDosProtectionRuleListDataActionAllow allow;
     /**
      * @return Deny
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     private GetDosProtectionRuleListDataActionDeny deny;
     /**
      * @return Protect
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
@@ -34,7 +35,6 @@ public final class GetDosProtectionRuleListDataAction {
     private GetDosProtectionRuleListDataAction() {}
     /**
      * @return Allow
-     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     public GetDosProtectionRuleListDataActionAllow allow() {
@@ -42,6 +42,7 @@ public final class GetDosProtectionRuleListDataAction {
     }
     /**
      * @return Deny
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
@@ -50,6 +51,7 @@ public final class GetDosProtectionRuleListDataAction {
     }
     /**
      * @return Protect
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */

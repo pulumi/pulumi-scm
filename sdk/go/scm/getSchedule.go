@@ -25,38 +25,25 @@ func LookupSchedule(ctx *pulumi.Context, args *LookupScheduleArgs, opts ...pulum
 // A collection of arguments for invoking getSchedule.
 type LookupScheduleArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the schedule
-	Id string `pulumi:"id"`
-	// The name of the schedule
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSchedule.
 type LookupScheduleResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the schedule
-	Id string `pulumi:"id"`
-	// The name of the schedule
-	Name string `pulumi:"name"`
-	// Schedule type
+	Id           string                  `pulumi:"id"`
+	Name         string                  `pulumi:"name"`
 	ScheduleType GetScheduleScheduleType `pulumi:"scheduleType"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet      string                  `pulumi:"snippet"`
+	Tfid         string                  `pulumi:"tfid"`
 }
 
 func LookupScheduleOutput(ctx *pulumi.Context, args LookupScheduleOutputArgs, opts ...pulumi.InvokeOption) LookupScheduleResultOutput {
@@ -71,17 +58,11 @@ func LookupScheduleOutput(ctx *pulumi.Context, args LookupScheduleOutputArgs, op
 // A collection of arguments for invoking getSchedule.
 type LookupScheduleOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the schedule
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the schedule
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -105,13 +86,10 @@ func (o LookupScheduleResultOutput) ToLookupScheduleResultOutputWithContext(ctx 
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupScheduleResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScheduleResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupScheduleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScheduleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -121,18 +99,14 @@ func (o LookupScheduleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScheduleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the schedule
 func (o LookupScheduleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScheduleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Schedule type
 func (o LookupScheduleResultOutput) ScheduleType() GetScheduleScheduleTypeOutput {
 	return o.ApplyT(func(v LookupScheduleResult) GetScheduleScheduleType { return v.ScheduleType }).(GetScheduleScheduleTypeOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupScheduleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScheduleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

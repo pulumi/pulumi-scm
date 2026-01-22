@@ -19,6 +19,89 @@ import javax.annotation.Nullable;
 /**
  * DhcpInterface resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.DhcpInterface;
+ * import com.pulumi.scm.DhcpInterfaceArgs;
+ * import com.pulumi.scm.inputs.DhcpInterfaceServerArgs;
+ * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionArgs;
+ * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionDnsArgs;
+ * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionLeaseArgs;
+ * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionNtpArgs;
+ * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionWinsArgs;
+ * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionNisArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dhcpServerExample = new DhcpInterface("dhcpServerExample", DhcpInterfaceArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("$test-interface-must-exist")
+ *             .server(DhcpInterfaceServerArgs.builder()
+ *                 .ipPools("10.10.10.10-10.10.10.200")
+ *                 .mode("auto")
+ *                 .probeIp(true)
+ *                 .option(DhcpInterfaceServerOptionArgs.builder()
+ *                     .dns(DhcpInterfaceServerOptionDnsArgs.builder()
+ *                         .primary("8.8.8.8")
+ *                         .secondary("1.1.1.1")
+ *                         .build())
+ *                     .dnsSuffix("example.local")
+ *                     .gateway("10.10.10.1")
+ *                     .subnetMask("255.255.255.0")
+ *                     .pop3Server("192.0.2.25")
+ *                     .smtpServer("192.0.2.26")
+ *                     .lease(DhcpInterfaceServerOptionLeaseArgs.builder()
+ *                         .timeout(3600)
+ *                         .build())
+ *                     .ntp(DhcpInterfaceServerOptionNtpArgs.builder()
+ *                         .primary("129.6.15.28")
+ *                         .secondary("132.163.96.1")
+ *                         .build())
+ *                     .wins(DhcpInterfaceServerOptionWinsArgs.builder()
+ *                         .primary("192.168.1.1")
+ *                         .secondary("192.168.1.2")
+ *                         .build())
+ *                     .nis(DhcpInterfaceServerOptionNisArgs.builder()
+ *                         .primary("192.0.2.10")
+ *                         .secondary("192.0.2.11")
+ *                         .build())
+ *                     .userDefineds(DhcpInterfaceServerOptionUserDefinedArgs.builder()
+ *                         .inherited(true)
+ *                         .name("option-foo")
+ *                         .code(224)
+ *                         .ip(List.of("192.0.2.10"))
+ *                         .build())
+ *                     .build())
+ *                 .reserveds(DhcpInterfaceServerReservedArgs.builder()
+ *                     .description("Reserved lease for printer")
+ *                     .mac("aa:bb:cc:dd:ee:ff")
+ *                     .name("10.10.10.50")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The following command can be used to import a resource not managed by Terraform:
@@ -50,7 +133,6 @@ import javax.annotation.Nullable;
 public class DhcpInterface extends com.pulumi.resources.CustomResource {
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -58,7 +140,6 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -66,6 +147,7 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -74,6 +156,7 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -96,6 +179,7 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Relay
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      * 
      */
@@ -104,6 +188,7 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Relay
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      * 
      */
@@ -112,6 +197,7 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Server
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      * 
      */
@@ -120,6 +206,7 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Server
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      * 
      */
@@ -128,6 +215,7 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -136,6 +224,7 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

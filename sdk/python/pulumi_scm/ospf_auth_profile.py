@@ -30,15 +30,18 @@ class OspfAuthProfileArgs:
         """
         The set of arguments for constructing a OspfAuthProfile resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['OspfAuthProfileMd5Args']]] md5s: MD5s
+               
                > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] password: Password
+               
                > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if device is not None:
@@ -59,7 +62,6 @@ class OspfAuthProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -72,6 +74,7 @@ class OspfAuthProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -85,6 +88,7 @@ class OspfAuthProfileArgs:
     def md5s(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['OspfAuthProfileMd5Args']]]]:
         """
         MD5s
+
         > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         """
         return pulumi.get(self, "md5s")
@@ -110,6 +114,7 @@ class OspfAuthProfileArgs:
     def password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Password
+
         > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         """
         return pulumi.get(self, "password")
@@ -123,6 +128,7 @@ class OspfAuthProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -146,16 +152,19 @@ class _OspfAuthProfileState:
         """
         Input properties used for looking up and filtering OspfAuthProfile resources.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['OspfAuthProfileMd5Args']]] md5s: MD5s
+               
                > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] password: Password
+               
                > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if device is not None:
@@ -180,7 +189,6 @@ class _OspfAuthProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -205,6 +213,7 @@ class _OspfAuthProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -218,6 +227,7 @@ class _OspfAuthProfileState:
     def md5s(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['OspfAuthProfileMd5Args']]]]:
         """
         MD5s
+
         > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         """
         return pulumi.get(self, "md5s")
@@ -243,6 +253,7 @@ class _OspfAuthProfileState:
     def password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Password
+
         > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         """
         return pulumi.get(self, "password")
@@ -256,6 +267,7 @@ class _OspfAuthProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -319,15 +331,18 @@ class OspfAuthProfile(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict']]]] md5s: MD5s
+               
                > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] password: Password
+               
                > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
@@ -431,16 +446,19 @@ class OspfAuthProfile(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['OspfAuthProfileMd5Args', 'OspfAuthProfileMd5ArgsDict']]]] md5s: MD5s
+               
                > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] password: Password
+               
                > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -462,7 +480,6 @@ class OspfAuthProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -479,6 +496,7 @@ class OspfAuthProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -488,6 +506,7 @@ class OspfAuthProfile(pulumi.CustomResource):
     def md5s(self) -> pulumi.Output[Optional[Sequence['outputs.OspfAuthProfileMd5']]]:
         """
         MD5s
+
         > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         """
         return pulumi.get(self, "md5s")
@@ -505,6 +524,7 @@ class OspfAuthProfile(pulumi.CustomResource):
     def password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Password
+
         > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
         """
         return pulumi.get(self, "password")
@@ -514,6 +534,7 @@ class OspfAuthProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

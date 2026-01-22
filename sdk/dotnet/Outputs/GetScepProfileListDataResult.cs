@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetScepProfileListDataAlgorithmResult Algorithm;
         /// <summary>
-        /// Certificate Authority identity
+        /// Certificate Authority Identity
         /// </summary>
         public readonly string CaIdentityName;
         /// <summary>
@@ -27,7 +27,6 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetScepProfileListDataCertificateAttributesResult CertificateAttributes;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
@@ -39,12 +38,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
         /// <summary>
-        /// CA certificate fingerprint
+        /// CA Certificate Fingerprint
         /// </summary>
         public readonly string Fingerprint;
         /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -52,19 +50,19 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The name of the SCEP profile
+        /// The name of the item.
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// SCEP server CA certificate
+        /// SCEP Server CA Certificate
         /// </summary>
         public readonly string ScepCaCert;
         /// <summary>
-        /// One Time Password challenge
+        /// One Time Password Challenge
         /// </summary>
         public readonly Outputs.GetScepProfileListDataScepChallengeResult ScepChallenge;
         /// <summary>
-        /// SCEP client ceertificate
+        /// SCEP Client Certificate
         /// </summary>
         public readonly string ScepClientCert;
         /// <summary>
@@ -72,8 +70,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string ScepUrl;
         /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         /// <summary>

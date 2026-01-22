@@ -52,33 +52,22 @@ func LookupUpdateSchedule(ctx *pulumi.Context, args *LookupUpdateScheduleArgs, o
 // A collection of arguments for invoking getUpdateSchedule.
 type LookupUpdateScheduleArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getUpdateSchedule.
 type LookupUpdateScheduleResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// Update schedule
+	Id             string                          `pulumi:"id"`
+	Snippet        string                          `pulumi:"snippet"`
+	Tfid           string                          `pulumi:"tfid"`
 	UpdateSchedule GetUpdateScheduleUpdateSchedule `pulumi:"updateSchedule"`
 }
 
@@ -94,15 +83,10 @@ func LookupUpdateScheduleOutput(ctx *pulumi.Context, args LookupUpdateScheduleOu
 // A collection of arguments for invoking getUpdateSchedule.
 type LookupUpdateScheduleOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -126,13 +110,10 @@ func (o LookupUpdateScheduleResultOutput) ToLookupUpdateScheduleResultOutputWith
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupUpdateScheduleResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupUpdateScheduleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -142,8 +123,6 @@ func (o LookupUpdateScheduleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupUpdateScheduleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -152,7 +131,6 @@ func (o LookupUpdateScheduleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Update schedule
 func (o LookupUpdateScheduleResultOutput) UpdateSchedule() GetUpdateScheduleUpdateScheduleOutput {
 	return o.ApplyT(func(v LookupUpdateScheduleResult) GetUpdateScheduleUpdateSchedule { return v.UpdateSchedule }).(GetUpdateScheduleUpdateScheduleOutput)
 }

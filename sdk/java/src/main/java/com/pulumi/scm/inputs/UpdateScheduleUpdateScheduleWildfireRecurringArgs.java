@@ -22,7 +22,6 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * Every15 mins
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
     @Import(name="every15Mins")
@@ -30,7 +29,6 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * @return Every15 mins
-     * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
     public Optional<Output<UpdateScheduleUpdateScheduleWildfireRecurringEvery15MinsArgs>> every15Mins() {
@@ -39,6 +37,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * Every30 mins
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
@@ -47,6 +46,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * @return Every30 mins
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
@@ -56,6 +56,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * Every hour
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
@@ -64,6 +65,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * @return Every hour
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
@@ -73,6 +75,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * Every min
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
@@ -81,6 +84,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * @return Every min
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
@@ -90,6 +94,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
@@ -98,6 +103,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
@@ -107,6 +113,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * Real time
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
@@ -115,6 +122,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
     /**
      * @return Real time
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
      * 
      */
@@ -153,7 +161,6 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param every15Mins Every15 mins
-         * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder
          * 
@@ -165,7 +172,6 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param every15Mins Every15 mins
-         * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder
          * 
@@ -176,6 +182,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param every30Mins Every30 mins
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder
@@ -188,6 +195,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param every30Mins Every30 mins
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder
@@ -199,6 +207,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param everyHour Every hour
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder
@@ -211,6 +220,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param everyHour Every hour
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder
@@ -222,6 +232,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param everyMin Every min
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder
@@ -234,6 +245,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param everyMin Every min
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder
@@ -245,6 +257,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param none None
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder
@@ -257,6 +270,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param none None
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder
@@ -268,6 +282,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param realTime Real time
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder
@@ -280,6 +295,7 @@ public final class UpdateScheduleUpdateScheduleWildfireRecurringArgs extends com
 
         /**
          * @param realTime Real time
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `every15Mins`, `every30Mins`, `everyHour`, `everyMin`, `none`, and `realTime`.
          * 
          * @return builder

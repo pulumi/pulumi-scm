@@ -16,11 +16,11 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// The Kerberos server IP address
         /// </summary>
-        public readonly string? Host;
+        public readonly string Host;
         /// <summary>
         /// The Kerberos server name
         /// </summary>
-        public readonly string? Name;
+        public readonly string Name;
         /// <summary>
         /// The Kerberos server port
         /// </summary>
@@ -28,9 +28,9 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private KerberosServerProfileServer(
-            string? host,
+            string host,
 
-            string? name,
+            string name,
 
             int? port)
         {

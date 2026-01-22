@@ -12,6 +12,36 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a list of SCM SAML Server Profile objects.
+//			//
+//			// Fetch a list of all SCM SAML Server Profile in the "All" folder.
+//			allShared, err := scm.GetSamlServerProfileList(ctx, &scm.GetSamlServerProfileListArgs{
+//				Folder: pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmSamlServerProfileListAllShared", allShared.Datas)
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetSamlServerProfileList(ctx *pulumi.Context, args *GetSamlServerProfileListArgs, opts ...pulumi.InvokeOption) (*GetSamlServerProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetSamlServerProfileListResult

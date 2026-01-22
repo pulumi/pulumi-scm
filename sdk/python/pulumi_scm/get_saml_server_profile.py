@@ -26,7 +26,7 @@ class GetSamlServerProfileResult:
     """
     A collection of values returned by getSamlServerProfile.
     """
-    def __init__(__self__, certificate=None, device=None, entity_id=None, folder=None, id=None, max_clock_skew=None, name=None, slo_bindings=None, snippet=None, sso_bindings=None, sso_url=None, tfid=None, validate_idp_certificate=None, want_auth_requests_signed=None):
+    def __init__(__self__, certificate=None, device=None, entity_id=None, folder=None, id=None, max_clock_skew=None, name=None, slo_bindings=None, slo_url=None, snippet=None, sso_bindings=None, sso_url=None, tfid=None, validate_idp_certificate=None, want_auth_requests_signed=None):
         if certificate and not isinstance(certificate, str):
             raise TypeError("Expected argument 'certificate' to be a str")
         pulumi.set(__self__, "certificate", certificate)
@@ -51,6 +51,9 @@ class GetSamlServerProfileResult:
         if slo_bindings and not isinstance(slo_bindings, str):
             raise TypeError("Expected argument 'slo_bindings' to be a str")
         pulumi.set(__self__, "slo_bindings", slo_bindings)
+        if slo_url and not isinstance(slo_url, str):
+            raise TypeError("Expected argument 'slo_url' to be a str")
+        pulumi.set(__self__, "slo_url", slo_url)
         if snippet and not isinstance(snippet, str):
             raise TypeError("Expected argument 'snippet' to be a str")
         pulumi.set(__self__, "snippet", snippet)
@@ -73,9 +76,6 @@ class GetSamlServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def certificate(self) -> _builtins.str:
-        """
-        The identity provider certificate
-        """
         return pulumi.get(self, "certificate")
 
     @_builtins.property
@@ -83,25 +83,17 @@ class GetSamlServerProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="entityId")
     def entity_id(self) -> _builtins.str:
-        """
-        The identity provider ID
-        """
         return pulumi.get(self, "entity_id")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -115,50 +107,36 @@ class GetSamlServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="maxClockSkew")
     def max_clock_skew(self) -> _builtins.int:
-        """
-        Maxiumum clock skew
-        """
         return pulumi.get(self, "max_clock_skew")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        The name of the SAML server profile
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="sloBindings")
     def slo_bindings(self) -> _builtins.str:
-        """
-        SAML HTTP binding for SLO requests to the identity provider
-        """
         return pulumi.get(self, "slo_bindings")
+
+    @_builtins.property
+    @pulumi.getter(name="sloUrl")
+    def slo_url(self) -> _builtins.str:
+        return pulumi.get(self, "slo_url")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="ssoBindings")
     def sso_bindings(self) -> _builtins.str:
-        """
-        SAML HTTP binding for SSO requests to the identity provider
-        """
         return pulumi.get(self, "sso_bindings")
 
     @_builtins.property
     @pulumi.getter(name="ssoUrl")
     def sso_url(self) -> _builtins.str:
-        """
-        Identity provider SSO URL
-        """
         return pulumi.get(self, "sso_url")
 
     @_builtins.property
@@ -169,17 +147,11 @@ class GetSamlServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="validateIdpCertificate")
     def validate_idp_certificate(self) -> _builtins.bool:
-        """
-        Validate the identity provider certificate?
-        """
         return pulumi.get(self, "validate_idp_certificate")
 
     @_builtins.property
     @pulumi.getter(name="wantAuthRequestsSigned")
     def want_auth_requests_signed(self) -> _builtins.bool:
-        """
-        Sign SAML message to the identity provider?
-        """
         return pulumi.get(self, "want_auth_requests_signed")
 
 
@@ -197,6 +169,7 @@ class AwaitableGetSamlServerProfileResult(GetSamlServerProfileResult):
             max_clock_skew=self.max_clock_skew,
             name=self.name,
             slo_bindings=self.slo_bindings,
+            slo_url=self.slo_url,
             snippet=self.snippet,
             sso_bindings=self.sso_bindings,
             sso_url=self.sso_url,
@@ -214,15 +187,28 @@ def get_saml_server_profile(device: Optional[_builtins.str] = None,
     """
     SamlServerProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM SAML Server Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
+    scm_saml_server_prof = scm.get_saml_server_profile(id="a17abcfc-d37d-4b8a-bb09-102ffdc3abef")
+    pulumi.export("scmSamlServerProfileDetails", {
+        "folder": scm_saml_server_prof.folder,
+        "name": scm_saml_server_prof.name,
+        "id": scm_saml_server_prof.id,
+        "ssoUrl": scm_saml_server_prof.sso_url,
+    })
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the SAML server profile
-    :param _builtins.str name: The name of the SAML server profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -242,6 +228,7 @@ def get_saml_server_profile(device: Optional[_builtins.str] = None,
         max_clock_skew=pulumi.get(__ret__, 'max_clock_skew'),
         name=pulumi.get(__ret__, 'name'),
         slo_bindings=pulumi.get(__ret__, 'slo_bindings'),
+        slo_url=pulumi.get(__ret__, 'slo_url'),
         snippet=pulumi.get(__ret__, 'snippet'),
         sso_bindings=pulumi.get(__ret__, 'sso_bindings'),
         sso_url=pulumi.get(__ret__, 'sso_url'),
@@ -257,15 +244,28 @@ def get_saml_server_profile_output(device: Optional[pulumi.Input[Optional[_built
     """
     SamlServerProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM SAML Server Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
+    scm_saml_server_prof = scm.get_saml_server_profile(id="a17abcfc-d37d-4b8a-bb09-102ffdc3abef")
+    pulumi.export("scmSamlServerProfileDetails", {
+        "folder": scm_saml_server_prof.folder,
+        "name": scm_saml_server_prof.name,
+        "id": scm_saml_server_prof.id,
+        "ssoUrl": scm_saml_server_prof.sso_url,
+    })
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the SAML server profile
-    :param _builtins.str name: The name of the SAML server profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -284,6 +284,7 @@ def get_saml_server_profile_output(device: Optional[pulumi.Input[Optional[_built
         max_clock_skew=pulumi.get(__response__, 'max_clock_skew'),
         name=pulumi.get(__response__, 'name'),
         slo_bindings=pulumi.get(__response__, 'slo_bindings'),
+        slo_url=pulumi.get(__response__, 'slo_url'),
         snippet=pulumi.get(__response__, 'snippet'),
         sso_bindings=pulumi.get(__response__, 'sso_bindings'),
         sso_url=pulumi.get(__response__, 'sso_url'),
