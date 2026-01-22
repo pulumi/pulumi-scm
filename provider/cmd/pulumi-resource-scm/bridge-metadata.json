@@ -616,6 +616,17 @@
                     },
                     "to": {
                         "maxItemsOne": false
+                    },
+                    "type": {
+                        "fields": {
+                            "ssl_inbound_inspection": {
+                                "fields": {
+                                    "certificates": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -1416,7 +1427,13 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
+                                "send_email": {
+                                    "maxItemsOne": false
+                                },
                                 "send_http": {
+                                    "maxItemsOne": false
+                                },
+                                "send_snmptrap": {
                                     "maxItemsOne": false
                                 },
                                 "send_syslog": {
@@ -2736,6 +2753,13 @@
                 "fields": {
                     "ip": {
                         "maxItemsOne": false
+                    },
+                    "ipv6": {
+                        "fields": {
+                            "address": {
+                                "maxItemsOne": false
+                            }
+                        }
                     }
                 }
             },
@@ -4361,6 +4385,17 @@
                     },
                     "to": {
                         "maxItemsOne": false
+                    },
+                    "type": {
+                        "fields": {
+                            "ssl_inbound_inspection": {
+                                "fields": {
+                                    "certificates": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -4401,6 +4436,17 @@
                                 },
                                 "to": {
                                     "maxItemsOne": false
+                                },
+                                "type": {
+                                    "fields": {
+                                        "ssl_inbound_inspection": {
+                                            "fields": {
+                                                "certificates": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -6167,7 +6213,13 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
+                                "send_email": {
+                                    "maxItemsOne": false
+                                },
                                 "send_http": {
+                                    "maxItemsOne": false
+                                },
+                                "send_snmptrap": {
                                     "maxItemsOne": false
                                 },
                                 "send_syslog": {
@@ -6190,7 +6242,13 @@
                                     "maxItemsOne": false,
                                     "elem": {
                                         "fields": {
+                                            "send_email": {
+                                                "maxItemsOne": false
+                                            },
                                             "send_http": {
+                                                "maxItemsOne": false
+                                            },
+                                            "send_snmptrap": {
                                                 "maxItemsOne": false
                                             },
                                             "send_syslog": {
@@ -9080,6 +9138,13 @@
                 "fields": {
                     "ip": {
                         "maxItemsOne": false
+                    },
+                    "ipv6": {
+                        "fields": {
+                            "address": {
+                                "maxItemsOne": false
+                            }
+                        }
                     }
                 }
             },
@@ -9093,6 +9158,13 @@
                             "fields": {
                                 "ip": {
                                     "maxItemsOne": false
+                                },
+                                "ipv6": {
+                                    "fields": {
+                                        "address": {
+                                            "maxItemsOne": false
+                                        }
+                                    }
                                 }
                             }
                         }
