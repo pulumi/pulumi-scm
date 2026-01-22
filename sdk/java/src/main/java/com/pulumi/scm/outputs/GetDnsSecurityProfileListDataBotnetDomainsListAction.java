@@ -15,24 +15,26 @@ import java.util.Objects;
 public final class GetDnsSecurityProfileListDataBotnetDomainsListAction {
     /**
      * @return Alert
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     private GetDnsSecurityProfileListDataBotnetDomainsListActionAlert alert;
     /**
      * @return Allow
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     private GetDnsSecurityProfileListDataBotnetDomainsListActionAllow allow;
     /**
      * @return Block
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     private GetDnsSecurityProfileListDataBotnetDomainsListActionBlock block;
     /**
      * @return Sinkhole
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -41,7 +43,6 @@ public final class GetDnsSecurityProfileListDataBotnetDomainsListAction {
     private GetDnsSecurityProfileListDataBotnetDomainsListAction() {}
     /**
      * @return Alert
-     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     public GetDnsSecurityProfileListDataBotnetDomainsListActionAlert alert() {
@@ -49,6 +50,7 @@ public final class GetDnsSecurityProfileListDataBotnetDomainsListAction {
     }
     /**
      * @return Allow
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -57,6 +59,7 @@ public final class GetDnsSecurityProfileListDataBotnetDomainsListAction {
     }
     /**
      * @return Block
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -65,6 +68,7 @@ public final class GetDnsSecurityProfileListDataBotnetDomainsListAction {
     }
     /**
      * @return Sinkhole
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */

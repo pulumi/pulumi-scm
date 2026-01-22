@@ -53,38 +53,24 @@ func LookupHipProfile(ctx *pulumi.Context, args *LookupHipProfileArgs, opts ...p
 // A collection of arguments for invoking getHipProfile.
 type LookupHipProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The name of the HIP profile
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getHipProfile.
 type LookupHipProfileResult struct {
-	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Match
-	Match string `pulumi:"match"`
-	// The name of the HIP profile
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string `pulumi:"id"`
+	Match   string `pulumi:"match"`
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -101,17 +87,11 @@ func LookupHipProfileOutput(ctx *pulumi.Context, args LookupHipProfileOutputArgs
 // A collection of arguments for invoking getHipProfile.
 type LookupHipProfileOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the HIP profile
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -134,19 +114,15 @@ func (o LookupHipProfileResultOutput) ToLookupHipProfileResultOutputWithContext(
 	return o
 }
 
-// Description
 func (o LookupHipProfileResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupHipProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupHipProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -156,18 +132,14 @@ func (o LookupHipProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Match
 func (o LookupHipProfileResultOutput) Match() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Match }).(pulumi.StringOutput)
 }
 
-// The name of the HIP profile
 func (o LookupHipProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupHipProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

@@ -62,49 +62,30 @@ func LookupZone(ctx *pulumi.Context, args *LookupZoneArgs, opts ...pulumi.Invoke
 // A collection of arguments for invoking getZone.
 type LookupZoneArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// Folder
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getZone.
 type LookupZoneResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// Device acl
-	DeviceAcl GetZoneDeviceAcl `pulumi:"deviceAcl"`
-	// Dos log setting
-	DosLogSetting string `pulumi:"dosLogSetting"`
-	// Dos profile
-	DosProfile string `pulumi:"dosProfile"`
-	// Enable device identification
-	EnableDeviceIdentification bool `pulumi:"enableDeviceIdentification"`
-	// Enable user identification
-	EnableUserIdentification bool `pulumi:"enableUserIdentification"`
-	// Folder
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
+	Device                     string           `pulumi:"device"`
+	DeviceAcl                  GetZoneDeviceAcl `pulumi:"deviceAcl"`
+	DosLogSetting              string           `pulumi:"dosLogSetting"`
+	DosProfile                 string           `pulumi:"dosProfile"`
+	EnableDeviceIdentification bool             `pulumi:"enableDeviceIdentification"`
+	EnableUserIdentification   bool             `pulumi:"enableUserIdentification"`
+	Folder                     string           `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-	Name string `pulumi:"name"`
-	// Network
+	Id      string         `pulumi:"id"`
+	Name    string         `pulumi:"name"`
 	Network GetZoneNetwork `pulumi:"network"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// User acl
+	Snippet string         `pulumi:"snippet"`
+	Tfid    string         `pulumi:"tfid"`
 	UserAcl GetZoneUserAcl `pulumi:"userAcl"`
 }
 
@@ -120,17 +101,11 @@ func LookupZoneOutput(ctx *pulumi.Context, args LookupZoneOutputArgs, opts ...pu
 // A collection of arguments for invoking getZone.
 type LookupZoneOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// Folder
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -154,38 +129,30 @@ func (o LookupZoneResultOutput) ToLookupZoneResultOutputWithContext(ctx context.
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupZoneResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupZoneResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Device acl
 func (o LookupZoneResultOutput) DeviceAcl() GetZoneDeviceAclOutput {
 	return o.ApplyT(func(v LookupZoneResult) GetZoneDeviceAcl { return v.DeviceAcl }).(GetZoneDeviceAclOutput)
 }
 
-// Dos log setting
 func (o LookupZoneResultOutput) DosLogSetting() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupZoneResult) string { return v.DosLogSetting }).(pulumi.StringOutput)
 }
 
-// Dos profile
 func (o LookupZoneResultOutput) DosProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupZoneResult) string { return v.DosProfile }).(pulumi.StringOutput)
 }
 
-// Enable device identification
 func (o LookupZoneResultOutput) EnableDeviceIdentification() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupZoneResult) bool { return v.EnableDeviceIdentification }).(pulumi.BoolOutput)
 }
 
-// Enable user identification
 func (o LookupZoneResultOutput) EnableUserIdentification() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupZoneResult) bool { return v.EnableUserIdentification }).(pulumi.BoolOutput)
 }
 
-// Folder
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupZoneResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupZoneResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -195,18 +162,14 @@ func (o LookupZoneResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupZoneResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o LookupZoneResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupZoneResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Network
 func (o LookupZoneResultOutput) Network() GetZoneNetworkOutput {
 	return o.ApplyT(func(v LookupZoneResult) GetZoneNetwork { return v.Network }).(GetZoneNetworkOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupZoneResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupZoneResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -215,7 +178,6 @@ func (o LookupZoneResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupZoneResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// User acl
 func (o LookupZoneResultOutput) UserAcl() GetZoneUserAclOutput {
 	return o.ApplyT(func(v LookupZoneResult) GetZoneUserAcl { return v.UserAcl }).(GetZoneUserAclOutput)
 }

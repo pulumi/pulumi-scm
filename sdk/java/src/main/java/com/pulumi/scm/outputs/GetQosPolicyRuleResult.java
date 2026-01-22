@@ -12,106 +12,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetQosPolicyRuleResult {
-    /**
-     * @return Action
-     * 
-     */
     private GetQosPolicyRuleAction action;
-    /**
-     * @return Description
-     * 
-     */
     private String description;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return Dscp tos
-     * 
-     */
     private GetQosPolicyRuleDscpTos dscpTos;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Name
-     * 
-     */
     private String name;
-    /**
-     * @return The relative position of the rule
-     * 
-     */
     private String position;
-    /**
-     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
-     * 
-     */
     private String relativePosition;
-    /**
-     * @return Schedule
-     * 
-     */
     private String schedule;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
-    /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
-     * 
-     */
     private String targetRule;
     private String tfid;
 
     private GetQosPolicyRuleResult() {}
-    /**
-     * @return Action
-     * 
-     */
     public GetQosPolicyRuleAction action() {
         return this.action;
     }
-    /**
-     * @return Description
-     * 
-     */
     public String description() {
         return this.description;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return Dscp tos
-     * 
-     */
     public GetQosPolicyRuleDscpTos dscpTos() {
         return this.dscpTos;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -122,46 +61,21 @@ public final class GetQosPolicyRuleResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Name
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return The relative position of the rule
-     * 
-     */
     public String position() {
         return this.position;
     }
-    /**
-     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
-     * 
-     */
     public String relativePosition() {
         return this.relativePosition;
     }
-    /**
-     * @return Schedule
-     * 
-     */
     public String schedule() {
         return this.schedule;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
-     * 
-     */
     public String targetRule() {
         return this.targetRule;
     }

@@ -6,6 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetScepProfileListDataScepChallengeDynamic;
+import com.pulumi.scm.outputs.GetScepProfileListDataScepChallengeNone;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,27 +14,27 @@ import java.util.Objects;
 public final class GetScepProfileListDataScepChallenge {
     /**
      * @return Dynamic
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     private GetScepProfileListDataScepChallengeDynamic dynamic;
     /**
      * @return Challenge to use for SCEP server on mobile clients
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     private String fixed;
     /**
      * @return No OTP
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
-    private String none;
+    private GetScepProfileListDataScepChallengeNone none;
 
     private GetScepProfileListDataScepChallenge() {}
     /**
      * @return Dynamic
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     public GetScepProfileListDataScepChallengeDynamic dynamic() {
@@ -41,6 +42,7 @@ public final class GetScepProfileListDataScepChallenge {
     }
     /**
      * @return Challenge to use for SCEP server on mobile clients
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
@@ -49,10 +51,11 @@ public final class GetScepProfileListDataScepChallenge {
     }
     /**
      * @return No OTP
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
-    public String none() {
+    public GetScepProfileListDataScepChallengeNone none() {
         return this.none;
     }
 
@@ -67,7 +70,7 @@ public final class GetScepProfileListDataScepChallenge {
     public static final class Builder {
         private GetScepProfileListDataScepChallengeDynamic dynamic;
         private String fixed;
-        private String none;
+        private GetScepProfileListDataScepChallengeNone none;
         public Builder() {}
         public Builder(GetScepProfileListDataScepChallenge defaults) {
     	      Objects.requireNonNull(defaults);
@@ -93,7 +96,7 @@ public final class GetScepProfileListDataScepChallenge {
             return this;
         }
         @CustomType.Setter
-        public Builder none(String none) {
+        public Builder none(GetScepProfileListDataScepChallengeNone none) {
             if (none == null) {
               throw new MissingRequiredPropertyException("GetScepProfileListDataScepChallenge", "none");
             }

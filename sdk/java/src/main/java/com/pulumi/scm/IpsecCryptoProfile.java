@@ -105,7 +105,6 @@ import javax.annotation.Nullable;
 public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
     /**
      * Ah
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      * 
      */
     @Export(name="ah", refs={IpsecCryptoProfileAh.class}, tree="[0]")
@@ -113,7 +112,6 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Ah
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      * 
      */
     public Output<Optional<IpsecCryptoProfileAh>> ah() {
@@ -121,6 +119,7 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -129,6 +128,7 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -151,6 +151,7 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * Esp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      * 
      */
@@ -159,6 +160,7 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Esp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      * 
      */
@@ -167,6 +169,7 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -175,6 +178,7 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -225,6 +229,7 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -233,6 +238,7 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

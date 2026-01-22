@@ -59,46 +59,30 @@ func LookupTunnelInterface(ctx *pulumi.Context, args *LookupTunnelInterfaceArgs,
 // A collection of arguments for invoking getTunnelInterface.
 type LookupTunnelInterfaceArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// L3 sub-interface name
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getTunnelInterface.
 type LookupTunnelInterfaceResult struct {
-	// Description
-	Comment string `pulumi:"comment"`
-	// Default interface assignment
+	Comment      string `pulumi:"comment"`
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Interface management profile
-	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
-	// Tunnel Interface IP Parent
-	Ips []GetTunnelInterfaceIp `pulumi:"ips"`
-	// MTU
-	Mtu int `pulumi:"mtu"`
-	// L3 sub-interface name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Id                         string                 `pulumi:"id"`
+	InterfaceManagementProfile string                 `pulumi:"interfaceManagementProfile"`
+	Ips                        []GetTunnelInterfaceIp `pulumi:"ips"`
+	Ipv6                       GetTunnelInterfaceIpv6 `pulumi:"ipv6"`
+	Mtu                        int                    `pulumi:"mtu"`
+	Name                       string                 `pulumi:"name"`
+	Snippet                    string                 `pulumi:"snippet"`
+	Tfid                       string                 `pulumi:"tfid"`
 }
 
 func LookupTunnelInterfaceOutput(ctx *pulumi.Context, args LookupTunnelInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupTunnelInterfaceResultOutput {
@@ -113,17 +97,11 @@ func LookupTunnelInterfaceOutput(ctx *pulumi.Context, args LookupTunnelInterface
 // A collection of arguments for invoking getTunnelInterface.
 type LookupTunnelInterfaceOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// L3 sub-interface name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -146,24 +124,19 @@ func (o LookupTunnelInterfaceResultOutput) ToLookupTunnelInterfaceResultOutputWi
 	return o
 }
 
-// Description
 func (o LookupTunnelInterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
-// Default interface assignment
 func (o LookupTunnelInterfaceResultOutput) DefaultValue() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTunnelInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTunnelInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -173,28 +146,26 @@ func (o LookupTunnelInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Interface management profile
 func (o LookupTunnelInterfaceResultOutput) InterfaceManagementProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
 }
 
-// Tunnel Interface IP Parent
 func (o LookupTunnelInterfaceResultOutput) Ips() GetTunnelInterfaceIpArrayOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) []GetTunnelInterfaceIp { return v.Ips }).(GetTunnelInterfaceIpArrayOutput)
 }
 
-// MTU
+func (o LookupTunnelInterfaceResultOutput) Ipv6() GetTunnelInterfaceIpv6Output {
+	return o.ApplyT(func(v LookupTunnelInterfaceResult) GetTunnelInterfaceIpv6 { return v.Ipv6 }).(GetTunnelInterfaceIpv6Output)
+}
+
 func (o LookupTunnelInterfaceResultOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) int { return v.Mtu }).(pulumi.IntOutput)
 }
 
-// L3 sub-interface name
 func (o LookupTunnelInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTunnelInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

@@ -15,21 +15,23 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Alert
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `Block`, and `Sinkhole`.
         /// </summary>
         public readonly Outputs.GetDnsSecurityProfileBotnetDomainsListActionAlertResult Alert;
         /// <summary>
         /// Allow
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `Block`, and `Sinkhole`.
         /// </summary>
         public readonly Outputs.GetDnsSecurityProfileBotnetDomainsListActionAllowResult Allow;
         /// <summary>
         /// Block
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `Block`, and `Sinkhole`.
         /// </summary>
         public readonly Outputs.GetDnsSecurityProfileBotnetDomainsListActionBlockResult Block;
         /// <summary>
         /// Sinkhole
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `Block`, and `Sinkhole`.
         /// </summary>
         public readonly Outputs.GetDnsSecurityProfileBotnetDomainsListActionSinkholeResult Sinkhole;

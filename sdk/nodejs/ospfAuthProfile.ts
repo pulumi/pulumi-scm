@@ -65,7 +65,6 @@ export class OspfAuthProfile extends pulumi.CustomResource {
 
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -74,11 +73,13 @@ export class OspfAuthProfile extends pulumi.CustomResource {
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * MD5s
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      */
     declare public readonly md5s: pulumi.Output<outputs.OspfAuthProfileMd5[] | undefined>;
@@ -88,11 +89,13 @@ export class OspfAuthProfile extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * Password
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      */
     declare public readonly password: pulumi.Output<string | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -143,7 +146,6 @@ export class OspfAuthProfile extends pulumi.CustomResource {
 export interface OspfAuthProfileState {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -152,11 +154,13 @@ export interface OspfAuthProfileState {
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
      * MD5s
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      */
     md5s?: pulumi.Input<pulumi.Input<inputs.OspfAuthProfileMd5>[]>;
@@ -166,11 +170,13 @@ export interface OspfAuthProfileState {
     name?: pulumi.Input<string>;
     /**
      * Password
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      */
     password?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -183,16 +189,17 @@ export interface OspfAuthProfileState {
 export interface OspfAuthProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
      * MD5s
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      */
     md5s?: pulumi.Input<pulumi.Input<inputs.OspfAuthProfileMd5>[]>;
@@ -202,11 +209,13 @@ export interface OspfAuthProfileArgs {
     name?: pulumi.Input<string>;
     /**
      * Password
+     *
      * > ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
      */
     password?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

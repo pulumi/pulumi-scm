@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class DhcpInterfaceServerOptionLease {
     /**
      * @return DHCP lease timeout (minutes)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
     private @Nullable Integer timeout;
     /**
      * @return Unlimited
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
@@ -28,7 +28,6 @@ public final class DhcpInterfaceServerOptionLease {
     private DhcpInterfaceServerOptionLease() {}
     /**
      * @return DHCP lease timeout (minutes)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
     public Optional<Integer> timeout() {
@@ -36,6 +35,7 @@ public final class DhcpInterfaceServerOptionLease {
     }
     /**
      * @return Unlimited
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */

@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Daily
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         [Input("daily")]
         public Input<Inputs.UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs>? Daily { get; set; }
 
         /// <summary>
         /// Hourly
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         [Input("hourly")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// None
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         [Input("none")]
@@ -47,6 +48,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Weekly
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `Hourly`, `None`, and `Weekly`.
         /// </summary>
         [Input("weekly")]

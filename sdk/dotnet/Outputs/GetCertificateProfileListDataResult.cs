@@ -43,7 +43,6 @@ namespace Pulumi.Scm.Outputs
         public readonly string CrlReceiveTimeout;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
@@ -51,8 +50,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Domain;
         /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -60,7 +58,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The name of the certificate profile
+        /// The name of the item.
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -68,8 +66,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string OcspReceiveTimeout;
         /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;

@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// specify lifesize in gigabytes(GB)
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Gb`, `Kb`, `Mb`, and `Tb`.
         /// </summary>
         [Input("gb")]
         public Input<int>? Gb { get; set; }
 
         /// <summary>
         /// specify lifesize in kilobytes(KB)
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Gb`, `Kb`, `Mb`, and `Tb`.
         /// </summary>
         [Input("kb")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// specify lifesize in megabytes(MB)
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Gb`, `Kb`, `Mb`, and `Tb`.
         /// </summary>
         [Input("mb")]
@@ -35,6 +36,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// specify lifesize in terabytes(TB)
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Gb`, `Kb`, `Mb`, and `Tb`.
         /// </summary>
         [Input("tb")]

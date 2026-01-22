@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetLogicalRouterVrfOspfAreaTypeStubDefaultRoute {
     /**
      * @return Advertise
-     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     private GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertise advertise;
     /**
      * @return Disable
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetLogicalRouterVrfOspfAreaTypeStubDefaultRoute {
     private GetLogicalRouterVrfOspfAreaTypeStubDefaultRoute() {}
     /**
      * @return Advertise
-     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     public GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertise advertise() {
@@ -35,6 +34,7 @@ public final class GetLogicalRouterVrfOspfAreaTypeStubDefaultRoute {
     }
     /**
      * @return Disable
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */

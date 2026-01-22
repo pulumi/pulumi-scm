@@ -59,40 +59,26 @@ func LookupTlsServiceProfile(ctx *pulumi.Context, args *LookupTlsServiceProfileA
 // A collection of arguments for invoking getTlsServiceProfile.
 type LookupTlsServiceProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the TLS service profile
-	Id string `pulumi:"id"`
-	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getTlsServiceProfile.
 type LookupTlsServiceProfileResult struct {
-	// Certificate name
 	Certificate string `pulumi:"certificate"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the TLS service profile
-	Id string `pulumi:"id"`
-	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
-	Name string `pulumi:"name"`
-	// Protocol settings
+	Id               string                               `pulumi:"id"`
+	Name             string                               `pulumi:"name"`
 	ProtocolSettings GetTlsServiceProfileProtocolSettings `pulumi:"protocolSettings"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet          string                               `pulumi:"snippet"`
+	Tfid             string                               `pulumi:"tfid"`
 }
 
 func LookupTlsServiceProfileOutput(ctx *pulumi.Context, args LookupTlsServiceProfileOutputArgs, opts ...pulumi.InvokeOption) LookupTlsServiceProfileResultOutput {
@@ -107,17 +93,11 @@ func LookupTlsServiceProfileOutput(ctx *pulumi.Context, args LookupTlsServicePro
 // A collection of arguments for invoking getTlsServiceProfile.
 type LookupTlsServiceProfileOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the TLS service profile
-	Id pulumi.StringInput `pulumi:"id"`
-	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -140,19 +120,15 @@ func (o LookupTlsServiceProfileResultOutput) ToLookupTlsServiceProfileResultOutp
 	return o
 }
 
-// Certificate name
 func (o LookupTlsServiceProfileResultOutput) Certificate() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Certificate }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTlsServiceProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTlsServiceProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -162,18 +138,14 @@ func (o LookupTlsServiceProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
 func (o LookupTlsServiceProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Protocol settings
 func (o LookupTlsServiceProfileResultOutput) ProtocolSettings() GetTlsServiceProfileProtocolSettingsOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) GetTlsServiceProfileProtocolSettings { return v.ProtocolSettings }).(GetTlsServiceProfileProtocolSettingsOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupTlsServiceProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

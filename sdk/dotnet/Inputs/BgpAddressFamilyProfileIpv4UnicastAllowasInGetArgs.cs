@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Number of times the firewalls own AS can be in an AS_PATH
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Occurrence` and `Origin`.
         /// </summary>
         [Input("occurrence")]
         public Input<int>? Occurrence { get; set; }
 
         /// <summary>
         /// Origin
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Occurrence` and `Origin`.
         /// </summary>
         [Input("origin")]

@@ -6,28 +6,27 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetDecryptionRuleListDataTypeSslForwardProxy;
-import java.lang.String;
+import com.pulumi.scm.outputs.GetDecryptionRuleListDataTypeSslInboundInspection;
 import java.util.Objects;
 
 @CustomType
 public final class GetDecryptionRuleListDataType {
     /**
      * @return Ssl forward proxy
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     private GetDecryptionRuleListDataTypeSslForwardProxy sslForwardProxy;
     /**
      * @return add the certificate name for SSL inbound inspection
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
-    private String sslInboundInspection;
+    private GetDecryptionRuleListDataTypeSslInboundInspection sslInboundInspection;
 
     private GetDecryptionRuleListDataType() {}
     /**
      * @return Ssl forward proxy
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     public GetDecryptionRuleListDataTypeSslForwardProxy sslForwardProxy() {
@@ -35,10 +34,11 @@ public final class GetDecryptionRuleListDataType {
     }
     /**
      * @return add the certificate name for SSL inbound inspection
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
-    public String sslInboundInspection() {
+    public GetDecryptionRuleListDataTypeSslInboundInspection sslInboundInspection() {
         return this.sslInboundInspection;
     }
 
@@ -52,7 +52,7 @@ public final class GetDecryptionRuleListDataType {
     @CustomType.Builder
     public static final class Builder {
         private GetDecryptionRuleListDataTypeSslForwardProxy sslForwardProxy;
-        private String sslInboundInspection;
+        private GetDecryptionRuleListDataTypeSslInboundInspection sslInboundInspection;
         public Builder() {}
         public Builder(GetDecryptionRuleListDataType defaults) {
     	      Objects.requireNonNull(defaults);
@@ -69,7 +69,7 @@ public final class GetDecryptionRuleListDataType {
             return this;
         }
         @CustomType.Setter
-        public Builder sslInboundInspection(String sslInboundInspection) {
+        public Builder sslInboundInspection(GetDecryptionRuleListDataTypeSslInboundInspection sslInboundInspection) {
             if (sslInboundInspection == null) {
               throw new MissingRequiredPropertyException("GetDecryptionRuleListDataType", "sslInboundInspection");
             }

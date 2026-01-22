@@ -45,9 +45,9 @@ type SdwanErrorCorrectionProfile struct {
 	// Activation threshold
 	ActivationThreshold pulumi.IntOutput `pulumi:"activationThreshold"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Mode
@@ -55,6 +55,7 @@ type SdwanErrorCorrectionProfile struct {
 	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -99,9 +100,9 @@ type sdwanErrorCorrectionProfileState struct {
 	// Activation threshold
 	ActivationThreshold *int `pulumi:"activationThreshold"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Mode
@@ -109,6 +110,7 @@ type sdwanErrorCorrectionProfileState struct {
 	// Name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -118,9 +120,9 @@ type SdwanErrorCorrectionProfileState struct {
 	// Activation threshold
 	ActivationThreshold pulumi.IntPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Mode
@@ -128,6 +130,7 @@ type SdwanErrorCorrectionProfileState struct {
 	// Name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -141,9 +144,9 @@ type sdwanErrorCorrectionProfileArgs struct {
 	// Activation threshold
 	ActivationThreshold int `pulumi:"activationThreshold"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Mode
@@ -151,6 +154,7 @@ type sdwanErrorCorrectionProfileArgs struct {
 	// Name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -160,9 +164,9 @@ type SdwanErrorCorrectionProfileArgs struct {
 	// Activation threshold
 	ActivationThreshold pulumi.IntInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Mode
@@ -170,6 +174,7 @@ type SdwanErrorCorrectionProfileArgs struct {
 	// Name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -267,12 +272,12 @@ func (o SdwanErrorCorrectionProfileOutput) ActivationThreshold() pulumi.IntOutpu
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SdwanErrorCorrectionProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SdwanErrorCorrectionProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SdwanErrorCorrectionProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SdwanErrorCorrectionProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -289,6 +294,7 @@ func (o SdwanErrorCorrectionProfileOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SdwanErrorCorrectionProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SdwanErrorCorrectionProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

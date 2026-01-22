@@ -4,10 +4,9 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Integer;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class ScepProfileAlgorithmRsa {
@@ -15,15 +14,15 @@ public final class ScepProfileAlgorithmRsa {
      * @return Rsa nbits
      * 
      */
-    private @Nullable Integer rsaNbits;
+    private String rsaNbits;
 
     private ScepProfileAlgorithmRsa() {}
     /**
      * @return Rsa nbits
      * 
      */
-    public Optional<Integer> rsaNbits() {
-        return Optional.ofNullable(this.rsaNbits);
+    public String rsaNbits() {
+        return this.rsaNbits;
     }
 
     public static Builder builder() {
@@ -35,7 +34,7 @@ public final class ScepProfileAlgorithmRsa {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Integer rsaNbits;
+        private String rsaNbits;
         public Builder() {}
         public Builder(ScepProfileAlgorithmRsa defaults) {
     	      Objects.requireNonNull(defaults);
@@ -43,8 +42,10 @@ public final class ScepProfileAlgorithmRsa {
         }
 
         @CustomType.Setter
-        public Builder rsaNbits(@Nullable Integer rsaNbits) {
-
+        public Builder rsaNbits(String rsaNbits) {
+            if (rsaNbits == null) {
+              throw new MissingRequiredPropertyException("ScepProfileAlgorithmRsa", "rsaNbits");
+            }
             this.rsaNbits = rsaNbits;
             return this;
         }

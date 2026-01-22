@@ -14,7 +14,6 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// No tag
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `NoTag` and `Tag`.
         /// </summary>
         [Input("noTag")]
         public Input<bool>? NoTag { get; set; }
@@ -24,6 +23,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Tag
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `NoTag` and `Tag`.
         /// </summary>
         public InputList<string> Tags

@@ -14,18 +14,19 @@ import java.util.Objects;
 public final class GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationType {
     /**
      * @return Autokey
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     private GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeAutokey autokey;
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     private GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeNone none;
     /**
      * @return Symmetric key
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
@@ -34,7 +35,6 @@ public final class GetServiceSettingServicesNtpServersPrimaryNtpServerAuthentica
     private GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationType() {}
     /**
      * @return Autokey
-     * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
     public GetServiceSettingServicesNtpServersPrimaryNtpServerAuthenticationTypeAutokey autokey() {
@@ -42,6 +42,7 @@ public final class GetServiceSettingServicesNtpServersPrimaryNtpServerAuthentica
     }
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */
@@ -50,6 +51,7 @@ public final class GetServiceSettingServicesNtpServersPrimaryNtpServerAuthentica
     }
     /**
      * @return Symmetric key
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `autokey`, `none`, and `symmetricKey`.
      * 
      */

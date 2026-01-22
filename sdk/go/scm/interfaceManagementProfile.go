@@ -87,9 +87,9 @@ type InterfaceManagementProfile struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Allow HTTP?
@@ -107,6 +107,7 @@ type InterfaceManagementProfile struct {
 	// Allow response pages?
 	ResponsePages pulumi.BoolPtrOutput `pulumi:"responsePages"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Allow SSH?
@@ -153,9 +154,9 @@ func GetInterfaceManagementProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering InterfaceManagementProfile resources.
 type interfaceManagementProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Allow HTTP?
@@ -173,6 +174,7 @@ type interfaceManagementProfileState struct {
 	// Allow response pages?
 	ResponsePages *bool `pulumi:"responsePages"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Allow SSH?
@@ -190,9 +192,9 @@ type interfaceManagementProfileState struct {
 
 type InterfaceManagementProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Allow HTTP?
@@ -210,6 +212,7 @@ type InterfaceManagementProfileState struct {
 	// Allow response pages?
 	ResponsePages pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Allow SSH?
@@ -231,9 +234,9 @@ func (InterfaceManagementProfileState) ElementType() reflect.Type {
 
 type interfaceManagementProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Allow HTTP?
@@ -251,6 +254,7 @@ type interfaceManagementProfileArgs struct {
 	// Allow response pages?
 	ResponsePages *bool `pulumi:"responsePages"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Allow SSH?
@@ -268,9 +272,9 @@ type interfaceManagementProfileArgs struct {
 // The set of arguments for constructing a InterfaceManagementProfile resource.
 type InterfaceManagementProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Allow HTTP?
@@ -288,6 +292,7 @@ type InterfaceManagementProfileArgs struct {
 	// Allow response pages?
 	ResponsePages pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Allow SSH?
@@ -390,12 +395,12 @@ func (o InterfaceManagementProfileOutput) ToInterfaceManagementProfileOutputWith
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o InterfaceManagementProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o InterfaceManagementProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -439,6 +444,7 @@ func (o InterfaceManagementProfileOutput) ResponsePages() pulumi.BoolPtrOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o InterfaceManagementProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

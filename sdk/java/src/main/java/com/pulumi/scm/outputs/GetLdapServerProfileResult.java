@@ -15,140 +15,55 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLdapServerProfileResult {
-    /**
-     * @return The base DN
-     * 
-     */
     private String base;
-    /**
-     * @return The bind DN
-     * 
-     */
     private String bindDn;
-    /**
-     * @return The bind password
-     * 
-     */
     private String bindPassword;
-    /**
-     * @return The bind timeout (seconds)
-     * 
-     */
     private String bindTimelimit;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return Map of sensitive values returned from the API.
-     * 
-     */
     private Map<String,String> encryptedValues;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the LDAP server profile
      * 
      */
     private String id;
-    /**
-     * @return The LDAP server time
-     * 
-     */
     private String ldapType;
-    /**
-     * @return The name of the LDAP server profile
-     * 
-     */
     private String name;
-    /**
-     * @return The search retry interval (seconds)
-     * 
-     */
     private Integer retryInterval;
-    /**
-     * @return The LDAP server configuration
-     * 
-     */
     private List<GetLdapServerProfileServer> servers;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
-    /**
-     * @return Require SSL/TLS secured connection?
-     * 
-     */
     private Boolean ssl;
     private String tfid;
-    /**
-     * @return The search timeout (seconds)
-     * 
-     */
     private Integer timelimit;
-    /**
-     * @return Verify server certificate for SSL sessions?
-     * 
-     */
     private Boolean verifyServerCertificate;
 
     private GetLdapServerProfileResult() {}
-    /**
-     * @return The base DN
-     * 
-     */
     public String base() {
         return this.base;
     }
-    /**
-     * @return The bind DN
-     * 
-     */
     public String bindDn() {
         return this.bindDn;
     }
-    /**
-     * @return The bind password
-     * 
-     */
     public String bindPassword() {
         return this.bindPassword;
     }
-    /**
-     * @return The bind timeout (seconds)
-     * 
-     */
     public String bindTimelimit() {
         return this.bindTimelimit;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return Map of sensitive values returned from the API.
-     * 
-     */
     public Map<String,String> encryptedValues() {
         return this.encryptedValues;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -159,63 +74,30 @@ public final class GetLdapServerProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return The LDAP server time
-     * 
-     */
     public String ldapType() {
         return this.ldapType;
     }
-    /**
-     * @return The name of the LDAP server profile
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return The search retry interval (seconds)
-     * 
-     */
     public Integer retryInterval() {
         return this.retryInterval;
     }
-    /**
-     * @return The LDAP server configuration
-     * 
-     */
     public List<GetLdapServerProfileServer> servers() {
         return this.servers;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Require SSL/TLS secured connection?
-     * 
-     */
     public Boolean ssl() {
         return this.ssl;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return The search timeout (seconds)
-     * 
-     */
     public Integer timelimit() {
         return this.timelimit;
     }
-    /**
-     * @return Verify server certificate for SSL sessions?
-     * 
-     */
     public Boolean verifyServerCertificate() {
         return this.verifyServerCertificate;
     }

@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// specify lifetime in days
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Days`, `Hours`, `Minutes`, and `Seconds`.
         /// </summary>
         [Input("days")]
         public Input<int>? Days { get; set; }
 
         /// <summary>
         /// specify lifetime in hours
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Days`, `Hours`, `Minutes`, and `Seconds`.
         /// </summary>
         [Input("hours")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// specify lifetime in minutes
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Days`, `Hours`, `Minutes`, and `Seconds`.
         /// </summary>
         [Input("minutes")]
@@ -35,6 +36,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// specify lifetime in seconds
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Days`, `Hours`, `Minutes`, and `Seconds`.
         /// </summary>
         [Input("seconds")]

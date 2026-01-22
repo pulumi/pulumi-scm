@@ -18,7 +18,6 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
 
     /**
      * Mbps
-     * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      * 
      */
     @Import(name="mbps")
@@ -26,7 +25,6 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
 
     /**
      * @return Mbps
-     * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      * 
      */
     public Optional<Output<QosProfileClassBandwidthTypeMbpsArgs>> mbps() {
@@ -35,6 +33,7 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
 
     /**
      * Percentage
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      * 
      */
@@ -43,6 +42,7 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
 
     /**
      * @return Percentage
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      * 
      */
@@ -77,7 +77,6 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
 
         /**
          * @param mbps Mbps
-         * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
          * 
          * @return builder
          * 
@@ -89,7 +88,6 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
 
         /**
          * @param mbps Mbps
-         * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
          * 
          * @return builder
          * 
@@ -100,6 +98,7 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
 
         /**
          * @param percentage Percentage
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
          * 
          * @return builder
@@ -112,6 +111,7 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
 
         /**
          * @param percentage Percentage
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
          * 
          * @return builder

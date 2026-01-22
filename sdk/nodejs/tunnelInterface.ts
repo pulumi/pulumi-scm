@@ -37,6 +37,35 @@ import * as utilities from "./utilities";
  *         name: "198.18.1.2/32",
  *     }],
  * });
+ * //
+ * // Creates an ip subnet variable used in the subsequent example
+ * //
+ * const scmIpv6Prefix = new scm.Variable("scm_ipv6_prefix", {
+ *     folder: "ngfw-shared",
+ *     name: "$scm_ipv6_prefix",
+ *     description: "Managed by Pulumi",
+ *     type: "ip-netmask",
+ *     value: "2001:0db8:abcd:0001::/64",
+ * });
+ * //
+ * // Creates a tunnel interface with ipv6 address, with default value tunnel.321
+ * //
+ * const scmTunnelIntf3 = new scm.TunnelInterface("scm_tunnel_intf_3", {
+ *     name: "$scm_tunnel_intf_3",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     defaultValue: "tunnel.321",
+ *     ipv6: {
+ *         enabled: true,
+ *         interfaceId: "EUI-64",
+ *         addresses: [{
+ *             name: "$scm_ipv6_prefix",
+ *             prefix: {},
+ *         }],
+ *     },
+ * }, {
+ *     dependsOn: [scmIpv6Prefix],
+ * });
  * ```
  *
  * ## Import
@@ -103,11 +132,11 @@ export class TunnelInterface extends pulumi.CustomResource {
     declare public readonly defaultValue: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -120,6 +149,10 @@ export class TunnelInterface extends pulumi.CustomResource {
      */
     declare public readonly ips: pulumi.Output<outputs.TunnelInterfaceIp[] | undefined>;
     /**
+     * Tunnel Interface IPv6 Configuration
+     */
+    declare public readonly ipv6: pulumi.Output<outputs.TunnelInterfaceIpv6 | undefined>;
+    /**
      * MTU
      */
     declare public readonly mtu: pulumi.Output<number | undefined>;
@@ -129,6 +162,7 @@ export class TunnelInterface extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -153,6 +187,7 @@ export class TunnelInterface extends pulumi.CustomResource {
             resourceInputs["folder"] = state?.folder;
             resourceInputs["interfaceManagementProfile"] = state?.interfaceManagementProfile;
             resourceInputs["ips"] = state?.ips;
+            resourceInputs["ipv6"] = state?.ipv6;
             resourceInputs["mtu"] = state?.mtu;
             resourceInputs["name"] = state?.name;
             resourceInputs["snippet"] = state?.snippet;
@@ -165,6 +200,7 @@ export class TunnelInterface extends pulumi.CustomResource {
             resourceInputs["folder"] = args?.folder;
             resourceInputs["interfaceManagementProfile"] = args?.interfaceManagementProfile;
             resourceInputs["ips"] = args?.ips;
+            resourceInputs["ipv6"] = args?.ipv6;
             resourceInputs["mtu"] = args?.mtu;
             resourceInputs["name"] = args?.name;
             resourceInputs["snippet"] = args?.snippet;
@@ -189,11 +225,11 @@ export interface TunnelInterfaceState {
     defaultValue?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -206,6 +242,10 @@ export interface TunnelInterfaceState {
      */
     ips?: pulumi.Input<pulumi.Input<inputs.TunnelInterfaceIp>[]>;
     /**
+     * Tunnel Interface IPv6 Configuration
+     */
+    ipv6?: pulumi.Input<inputs.TunnelInterfaceIpv6>;
+    /**
      * MTU
      */
     mtu?: pulumi.Input<number>;
@@ -215,6 +255,7 @@ export interface TunnelInterfaceState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -235,11 +276,11 @@ export interface TunnelInterfaceArgs {
     defaultValue?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -252,6 +293,10 @@ export interface TunnelInterfaceArgs {
      */
     ips?: pulumi.Input<pulumi.Input<inputs.TunnelInterfaceIp>[]>;
     /**
+     * Tunnel Interface IPv6 Configuration
+     */
+    ipv6?: pulumi.Input<inputs.TunnelInterfaceIpv6>;
+    /**
      * MTU
      */
     mtu?: pulumi.Input<number>;
@@ -261,6 +306,7 @@ export interface TunnelInterfaceArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

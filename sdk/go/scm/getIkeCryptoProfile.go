@@ -53,46 +53,29 @@ func LookupIkeCryptoProfile(ctx *pulumi.Context, args *LookupIkeCryptoProfileArg
 // A collection of arguments for invoking getIkeCryptoProfile.
 type LookupIkeCryptoProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getIkeCryptoProfile.
 type LookupIkeCryptoProfileResult struct {
-	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple int `pulumi:"authenticationMultiple"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// Dh group
-	DhGroups []string `pulumi:"dhGroups"`
-	// Encryption algorithm
+	Device      string   `pulumi:"device"`
+	DhGroups    []string `pulumi:"dhGroups"`
 	Encryptions []string `pulumi:"encryptions"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
-	// Hash
-	Hashes []string `pulumi:"hashes"`
+	Folder      string   `pulumi:"folder"`
+	Hashes      []string `pulumi:"hashes"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Ike crypto profile lifetime
+	Id       string                      `pulumi:"id"`
 	Lifetime GetIkeCryptoProfileLifetime `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Name     string                      `pulumi:"name"`
+	Snippet  string                      `pulumi:"snippet"`
+	Tfid     string                      `pulumi:"tfid"`
 }
 
 func LookupIkeCryptoProfileOutput(ctx *pulumi.Context, args LookupIkeCryptoProfileOutputArgs, opts ...pulumi.InvokeOption) LookupIkeCryptoProfileResultOutput {
@@ -107,17 +90,11 @@ func LookupIkeCryptoProfileOutput(ctx *pulumi.Context, args LookupIkeCryptoProfi
 // A collection of arguments for invoking getIkeCryptoProfile.
 type LookupIkeCryptoProfileOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -140,34 +117,27 @@ func (o LookupIkeCryptoProfileResultOutput) ToLookupIkeCryptoProfileResultOutput
 	return o
 }
 
-// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 func (o LookupIkeCryptoProfileResultOutput) AuthenticationMultiple() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) int { return v.AuthenticationMultiple }).(pulumi.IntOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupIkeCryptoProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Dh group
 func (o LookupIkeCryptoProfileResultOutput) DhGroups() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.DhGroups }).(pulumi.StringArrayOutput)
 }
 
-// Encryption algorithm
 func (o LookupIkeCryptoProfileResultOutput) Encryptions() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.Encryptions }).(pulumi.StringArrayOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupIkeCryptoProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// Hash
 func (o LookupIkeCryptoProfileResultOutput) Hashes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.Hashes }).(pulumi.StringArrayOutput)
 }
@@ -177,18 +147,14 @@ func (o LookupIkeCryptoProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Ike crypto profile lifetime
 func (o LookupIkeCryptoProfileResultOutput) Lifetime() GetIkeCryptoProfileLifetimeOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) GetIkeCryptoProfileLifetime { return v.Lifetime }).(GetIkeCryptoProfileLifetimeOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o LookupIkeCryptoProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupIkeCryptoProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

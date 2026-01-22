@@ -257,6 +257,66 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
+    ///     var decryptionRuleSslInboundInspection = new Scm.DecryptionRule("decryption_rule_ssl_inbound_inspection", new()
+    ///     {
+    ///         Name = "ssl_inbound_inspection_rule",
+    ///         Description = "Decryption Rule with SSL Inbound Set",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         Action = "decrypt",
+    ///         Froms = new[]
+    ///         {
+    ///             "trust",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-https",
+    ///         },
+    ///         Categories = new[]
+    ///         {
+    ///             "high-risk",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
+    ///         {
+    ///             SslInboundInspection = new Scm.Inputs.DecryptionRuleTypeSslInboundInspectionArgs
+    ///             {
+    ///                 Certificates = new[]
+    ///                 {
+    ///                     "Authentication Cookie CA",
+    ///                 },
+    ///             },
+    ///         },
+    ///         DestinationHips = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tags = new[]
+    ///         {
+    ///             decryptionPositionTag.Name,
+    ///         },
+    ///         LogSuccess = true,
+    ///         LogFail = true,
+    ///         Disabled = false,
+    ///         NegateSource = false,
+    ///         NegateDestination = false,
+    ///     });
+    /// 
     /// });
     /// ```
     /// 
@@ -321,7 +381,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
@@ -334,6 +393,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -407,6 +467,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -553,7 +614,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -566,6 +626,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -651,6 +712,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -786,7 +848,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -799,6 +860,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -884,6 +946,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

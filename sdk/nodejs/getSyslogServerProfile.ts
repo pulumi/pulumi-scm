@@ -46,26 +46,14 @@ export function getSyslogServerProfile(args: GetSyslogServerProfileArgs, opts?: 
 export interface GetSyslogServerProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * The UUID of the syslog server profile
      */
     id: string;
-    /**
-     * The name of the syslog server profile
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -75,34 +63,16 @@ export interface GetSyslogServerProfileArgs {
 export interface GetSyslogServerProfileResult {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
-    /**
-     * Format
-     */
     readonly format: outputs.GetSyslogServerProfileFormat;
     /**
      * The UUID of the syslog server profile
      */
     readonly id: string;
-    /**
-     * The name of the syslog server profile
-     */
     readonly name: string;
-    /**
-     * A list of syslog server configurations. At least one server is required.
-     */
     readonly servers: outputs.GetSyslogServerProfileServer[];
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -146,25 +116,13 @@ export function getSyslogServerProfileOutput(args: GetSyslogServerProfileOutputA
 export interface GetSyslogServerProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * The UUID of the syslog server profile
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the syslog server profile
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

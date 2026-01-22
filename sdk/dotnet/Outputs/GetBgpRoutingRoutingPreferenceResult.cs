@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Default
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Default` and `HotPotatoRouting`.
         /// </summary>
         public readonly Outputs.GetBgpRoutingRoutingPreferenceDefaultResult Default;
         /// <summary>
         /// Hot potato routing
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Default` and `HotPotatoRouting`.
         /// </summary>
         public readonly Outputs.GetBgpRoutingRoutingPreferenceHotPotatoRoutingResult HotPotatoRouting;

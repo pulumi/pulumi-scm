@@ -24,26 +24,14 @@ export function getProfileGroup(args: GetProfileGroupArgs, opts?: pulumi.InvokeO
 export interface GetProfileGroupArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * The UUID of the profile group
      */
     id: string;
-    /**
-     * The name of the profile group
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -51,65 +39,26 @@ export interface GetProfileGroupArgs {
  * A collection of values returned by getProfileGroup.
  */
 export interface GetProfileGroupResult {
-    /**
-     * Ai security
-     */
     readonly aiSecurities: string[];
-    /**
-     * Data filtering
-     */
     readonly dataFilterings: string[];
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * Dns security
-     */
     readonly dnsSecurities: string[];
-    /**
-     * File blocking
-     */
     readonly fileBlockings: string[];
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * The UUID of the profile group
      */
     readonly id: string;
-    /**
-     * The name of the profile group
-     */
     readonly name: string;
-    /**
-     * Saas security
-     */
     readonly saasSecurities: string[];
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
-    /**
-     * Spyware
-     */
     readonly spywares: string[];
     readonly tfid: string;
-    /**
-     * Url filtering
-     */
     readonly urlFilterings: string[];
-    /**
-     * Virus and wildfire analysis
-     */
     readonly virusAndWildfireAnalyses: string[];
-    /**
-     * Vulnerability
-     */
     readonly vulnerabilities: string[];
 }
 /**
@@ -132,25 +81,13 @@ export function getProfileGroupOutput(args: GetProfileGroupOutputArgs, opts?: pu
 export interface GetProfileGroupOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * The UUID of the profile group
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the profile group
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

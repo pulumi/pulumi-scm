@@ -12,6 +12,33 @@ import (
 )
 
 // LldpProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			profileData, err := scm.LookupLldpProfile(ctx, &scm.LookupLldpProfileArgs{
+//				Id: "e46f6246-fd4a-4211-a18f-948b09f474bd",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("fetchedProfile", profileData)
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupLldpProfile(ctx *pulumi.Context, args *LookupLldpProfileArgs, opts ...pulumi.InvokeOption) (*LookupLldpProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupLldpProfileResult
@@ -25,42 +52,27 @@ func LookupLldpProfile(ctx *pulumi.Context, args *LookupLldpProfileArgs, opts ..
 // A collection of arguments for invoking getLldpProfile.
 type LookupLldpProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// LLDP profile name
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLldpProfile.
 type LookupLldpProfileResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// LLDP mode
-	Mode string `pulumi:"mode"`
-	// LLDP profile name
-	Name string `pulumi:"name"`
-	// Option tlvs
-	OptionTlvs GetLldpProfileOptionTlvs `pulumi:"optionTlvs"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	// SNMP syslog notification
-	SnmpSyslogNotification bool   `pulumi:"snmpSyslogNotification"`
-	Tfid                   string `pulumi:"tfid"`
+	Id                     string                   `pulumi:"id"`
+	Mode                   string                   `pulumi:"mode"`
+	Name                   string                   `pulumi:"name"`
+	OptionTlvs             GetLldpProfileOptionTlvs `pulumi:"optionTlvs"`
+	Snippet                string                   `pulumi:"snippet"`
+	SnmpSyslogNotification bool                     `pulumi:"snmpSyslogNotification"`
+	Tfid                   string                   `pulumi:"tfid"`
 }
 
 func LookupLldpProfileOutput(ctx *pulumi.Context, args LookupLldpProfileOutputArgs, opts ...pulumi.InvokeOption) LookupLldpProfileResultOutput {
@@ -75,17 +87,11 @@ func LookupLldpProfileOutput(ctx *pulumi.Context, args LookupLldpProfileOutputAr
 // A collection of arguments for invoking getLldpProfile.
 type LookupLldpProfileOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// LLDP profile name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -109,13 +115,10 @@ func (o LookupLldpProfileResultOutput) ToLookupLldpProfileResultOutputWithContex
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLldpProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLldpProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -125,28 +128,22 @@ func (o LookupLldpProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// LLDP mode
 func (o LookupLldpProfileResultOutput) Mode() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Mode }).(pulumi.StringOutput)
 }
 
-// LLDP profile name
 func (o LookupLldpProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Option tlvs
 func (o LookupLldpProfileResultOutput) OptionTlvs() GetLldpProfileOptionTlvsOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) GetLldpProfileOptionTlvs { return v.OptionTlvs }).(GetLldpProfileOptionTlvsOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLldpProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// SNMP syslog notification
 func (o LookupLldpProfileResultOutput) SnmpSyslogNotification() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupLldpProfileResult) bool { return v.SnmpSyslogNotification }).(pulumi.BoolOutput)
 }

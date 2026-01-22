@@ -19,7 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly ImmutableArray<string> Categories;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
@@ -35,8 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Excludes;
         /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -52,7 +50,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool IsSaas;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]
+        /// The name of the item.
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -80,8 +78,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> SaasRisks;
         /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         /// <summary>

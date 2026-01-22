@@ -58,40 +58,26 @@ func LookupBgpRouteMap(ctx *pulumi.Context, args *LookupBgpRouteMapArgs, opts ..
 // A collection of arguments for invoking getBgpRouteMap.
 type LookupBgpRouteMapArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Name
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getBgpRouteMap.
 type LookupBgpRouteMapResult struct {
-	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Name
-	Name string `pulumi:"name"`
-	// Route map
+	Id        string                   `pulumi:"id"`
+	Name      string                   `pulumi:"name"`
 	RouteMaps []GetBgpRouteMapRouteMap `pulumi:"routeMaps"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet   string                   `pulumi:"snippet"`
+	Tfid      string                   `pulumi:"tfid"`
 }
 
 func LookupBgpRouteMapOutput(ctx *pulumi.Context, args LookupBgpRouteMapOutputArgs, opts ...pulumi.InvokeOption) LookupBgpRouteMapResultOutput {
@@ -106,17 +92,11 @@ func LookupBgpRouteMapOutput(ctx *pulumi.Context, args LookupBgpRouteMapOutputAr
 // A collection of arguments for invoking getBgpRouteMap.
 type LookupBgpRouteMapOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -139,19 +119,15 @@ func (o LookupBgpRouteMapResultOutput) ToLookupBgpRouteMapResultOutputWithContex
 	return o
 }
 
-// Description
 func (o LookupBgpRouteMapResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpRouteMapResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpRouteMapResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -161,18 +137,14 @@ func (o LookupBgpRouteMapResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Name
 func (o LookupBgpRouteMapResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Route map
 func (o LookupBgpRouteMapResultOutput) RouteMaps() GetBgpRouteMapRouteMapArrayOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapResult) []GetBgpRouteMapRouteMap { return v.RouteMaps }).(GetBgpRouteMapRouteMapArrayOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpRouteMapResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

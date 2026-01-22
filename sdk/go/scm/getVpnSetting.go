@@ -52,34 +52,23 @@ func LookupVpnSetting(ctx *pulumi.Context, args *LookupVpnSettingArgs, opts ...p
 // A collection of arguments for invoking getVpnSetting.
 type LookupVpnSettingArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getVpnSetting.
 type LookupVpnSettingResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// Vpn
-	Vpn GetVpnSettingVpn `pulumi:"vpn"`
+	Id      string           `pulumi:"id"`
+	Snippet string           `pulumi:"snippet"`
+	Tfid    string           `pulumi:"tfid"`
+	Vpn     GetVpnSettingVpn `pulumi:"vpn"`
 }
 
 func LookupVpnSettingOutput(ctx *pulumi.Context, args LookupVpnSettingOutputArgs, opts ...pulumi.InvokeOption) LookupVpnSettingResultOutput {
@@ -94,15 +83,10 @@ func LookupVpnSettingOutput(ctx *pulumi.Context, args LookupVpnSettingOutputArgs
 // A collection of arguments for invoking getVpnSetting.
 type LookupVpnSettingOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -126,13 +110,10 @@ func (o LookupVpnSettingResultOutput) ToLookupVpnSettingResultOutputWithContext(
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupVpnSettingResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupVpnSettingResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -142,8 +123,6 @@ func (o LookupVpnSettingResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupVpnSettingResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -152,7 +131,6 @@ func (o LookupVpnSettingResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Vpn
 func (o LookupVpnSettingResultOutput) Vpn() GetVpnSettingVpnOutput {
 	return o.ApplyT(func(v LookupVpnSettingResult) GetVpnSettingVpn { return v.Vpn }).(GetVpnSettingVpnOutput)
 }

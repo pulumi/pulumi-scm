@@ -13,18 +13,87 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// DhcpInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // We use the ID from the resource created above.
+        ///     var singleInfById = Scm.GetDhcpInterface.Invoke(new()
+        ///     {
+        ///         Id = "b3544acb-fc55-4c6f-921d-4128b5a1d135",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleDhcpInfName"] = singleInfById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetDhcpInterfaceResult> InvokeAsync(GetDhcpInterfaceArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDhcpInterfaceResult>("scm:index/getDhcpInterface:getDhcpInterface", args ?? new GetDhcpInterfaceArgs(), options.WithDefaults());
 
         /// <summary>
         /// DhcpInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // We use the ID from the resource created above.
+        ///     var singleInfById = Scm.GetDhcpInterface.Invoke(new()
+        ///     {
+        ///         Id = "b3544acb-fc55-4c6f-921d-4128b5a1d135",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleDhcpInfName"] = singleInfById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDhcpInterfaceResult> Invoke(GetDhcpInterfaceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDhcpInterfaceResult>("scm:index/getDhcpInterface:getDhcpInterface", args ?? new GetDhcpInterfaceInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// DhcpInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // We use the ID from the resource created above.
+        ///     var singleInfById = Scm.GetDhcpInterface.Invoke(new()
+        ///     {
+        ///         Id = "b3544acb-fc55-4c6f-921d-4128b5a1d135",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleDhcpInfName"] = singleInfById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDhcpInterfaceResult> Invoke(GetDhcpInterfaceInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetDhcpInterfaceResult>("scm:index/getDhcpInterface:getDhcpInterface", args ?? new GetDhcpInterfaceInvokeArgs(), options.WithDefaults());
@@ -35,15 +104,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -53,16 +117,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// Interface name
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -76,15 +133,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -94,16 +146,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// Interface name
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -119,36 +164,16 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Interface name
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Relay
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
-        /// </summary>
         public readonly Outputs.GetDhcpInterfaceRelayResult Relay;
-        /// <summary>
-        /// Server
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
-        /// </summary>
         public readonly Outputs.GetDhcpInterfaceServerResult Server;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

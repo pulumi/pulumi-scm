@@ -15,11 +15,69 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * TacacsServerProfile resource
+ * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.TacacsServerProfile;
+ * import com.pulumi.scm.TacacsServerProfileArgs;
+ * import com.pulumi.scm.inputs.TacacsServerProfileServerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iseTacacsExample = new TacacsServerProfile("iseTacacsExample", TacacsServerProfileArgs.builder()
+ *             .name("ISE-TACACS11")
+ *             .protocol("PAP")
+ *             .timeout(3)
+ *             .folder("All")
+ *             .useSingleConnection(true)
+ *             .servers(            
+ *                 TacacsServerProfileServerArgs.builder()
+ *                     .name("Server-1")
+ *                     .address("10.10.10.10")
+ *                     .port(49)
+ *                     .secret("Test Secret1")
+ *                     .build(),
+ *                 TacacsServerProfileServerArgs.builder()
+ *                     .name("Server-2")
+ *                     .address("10.10.10.10")
+ *                     .port(49)
+ *                     .secret("Test Secret1")
+ *                     .build(),
+ *                 TacacsServerProfileServerArgs.builder()
+ *                     .name("Server-3")
+ *                     .address("10.10.10.10")
+ *                     .port(49)
+ *                     .secret("Test Secret1")
+ *                     .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  * ## Import
  * 
@@ -52,7 +110,6 @@ import javax.annotation.Nullable;
 public class TacacsServerProfile extends com.pulumi.resources.CustomResource {
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -60,14 +117,28 @@ public class TacacsServerProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
+     * Map of sensitive values returned from the API.
+     * 
+     */
+    @Export(name="encryptedValues", refs={Map.class,String.class}, tree="[0,1,1]")
+    private Output<Map<String,String>> encryptedValues;
+
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Output<Map<String,String>> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -76,6 +147,7 @@ public class TacacsServerProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -126,6 +198,7 @@ public class TacacsServerProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -134,6 +207,7 @@ public class TacacsServerProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -214,6 +288,9 @@ public class TacacsServerProfile extends com.pulumi.resources.CustomResource {
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "encryptedValues"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

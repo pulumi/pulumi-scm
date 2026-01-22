@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,22 +22,32 @@ public final class LogForwardingProfileMatchList {
      * @return Filter match criteria
      * 
      */
-    private @Nullable String filter;
+    private String filter;
     /**
      * @return Log type
      * 
      */
-    private @Nullable String logType;
+    private String logType;
     /**
      * @return Name of the match profile
      * 
      */
-    private @Nullable String name;
+    private String name;
+    /**
+     * @return A list of email server profiles
+     * 
+     */
+    private @Nullable List<String> sendEmails;
     /**
      * @return A list of HTTP server profiles
      * 
      */
     private @Nullable List<String> sendHttps;
+    /**
+     * @return A list of SNMP server profiles
+     * 
+     */
+    private @Nullable List<String> sendSnmptraps;
     /**
      * @return A list of syslog server profiles
      * 
@@ -55,22 +66,29 @@ public final class LogForwardingProfileMatchList {
      * @return Filter match criteria
      * 
      */
-    public Optional<String> filter() {
-        return Optional.ofNullable(this.filter);
+    public String filter() {
+        return this.filter;
     }
     /**
      * @return Log type
      * 
      */
-    public Optional<String> logType() {
-        return Optional.ofNullable(this.logType);
+    public String logType() {
+        return this.logType;
     }
     /**
      * @return Name of the match profile
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public String name() {
+        return this.name;
+    }
+    /**
+     * @return A list of email server profiles
+     * 
+     */
+    public List<String> sendEmails() {
+        return this.sendEmails == null ? List.of() : this.sendEmails;
     }
     /**
      * @return A list of HTTP server profiles
@@ -78,6 +96,13 @@ public final class LogForwardingProfileMatchList {
      */
     public List<String> sendHttps() {
         return this.sendHttps == null ? List.of() : this.sendHttps;
+    }
+    /**
+     * @return A list of SNMP server profiles
+     * 
+     */
+    public List<String> sendSnmptraps() {
+        return this.sendSnmptraps == null ? List.of() : this.sendSnmptraps;
     }
     /**
      * @return A list of syslog server profiles
@@ -97,10 +122,12 @@ public final class LogForwardingProfileMatchList {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String actionDesc;
-        private @Nullable String filter;
-        private @Nullable String logType;
-        private @Nullable String name;
+        private String filter;
+        private String logType;
+        private String name;
+        private @Nullable List<String> sendEmails;
         private @Nullable List<String> sendHttps;
+        private @Nullable List<String> sendSnmptraps;
         private @Nullable List<String> sendSyslogs;
         public Builder() {}
         public Builder(LogForwardingProfileMatchList defaults) {
@@ -109,7 +136,9 @@ public final class LogForwardingProfileMatchList {
     	      this.filter = defaults.filter;
     	      this.logType = defaults.logType;
     	      this.name = defaults.name;
+    	      this.sendEmails = defaults.sendEmails;
     	      this.sendHttps = defaults.sendHttps;
+    	      this.sendSnmptraps = defaults.sendSnmptraps;
     	      this.sendSyslogs = defaults.sendSyslogs;
         }
 
@@ -120,22 +149,37 @@ public final class LogForwardingProfileMatchList {
             return this;
         }
         @CustomType.Setter
-        public Builder filter(@Nullable String filter) {
-
+        public Builder filter(String filter) {
+            if (filter == null) {
+              throw new MissingRequiredPropertyException("LogForwardingProfileMatchList", "filter");
+            }
             this.filter = filter;
             return this;
         }
         @CustomType.Setter
-        public Builder logType(@Nullable String logType) {
-
+        public Builder logType(String logType) {
+            if (logType == null) {
+              throw new MissingRequiredPropertyException("LogForwardingProfileMatchList", "logType");
+            }
             this.logType = logType;
             return this;
         }
         @CustomType.Setter
-        public Builder name(@Nullable String name) {
-
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("LogForwardingProfileMatchList", "name");
+            }
             this.name = name;
             return this;
+        }
+        @CustomType.Setter
+        public Builder sendEmails(@Nullable List<String> sendEmails) {
+
+            this.sendEmails = sendEmails;
+            return this;
+        }
+        public Builder sendEmails(String... sendEmails) {
+            return sendEmails(List.of(sendEmails));
         }
         @CustomType.Setter
         public Builder sendHttps(@Nullable List<String> sendHttps) {
@@ -145,6 +189,15 @@ public final class LogForwardingProfileMatchList {
         }
         public Builder sendHttps(String... sendHttps) {
             return sendHttps(List.of(sendHttps));
+        }
+        @CustomType.Setter
+        public Builder sendSnmptraps(@Nullable List<String> sendSnmptraps) {
+
+            this.sendSnmptraps = sendSnmptraps;
+            return this;
+        }
+        public Builder sendSnmptraps(String... sendSnmptraps) {
+            return sendSnmptraps(List.of(sendSnmptraps));
         }
         @CustomType.Setter
         public Builder sendSyslogs(@Nullable List<String> sendSyslogs) {
@@ -161,7 +214,9 @@ public final class LogForwardingProfileMatchList {
             _resultValue.filter = filter;
             _resultValue.logType = logType;
             _resultValue.name = name;
+            _resultValue.sendEmails = sendEmails;
             _resultValue.sendHttps = sendHttps;
+            _resultValue.sendSnmptraps = sendSnmptraps;
             _resultValue.sendSyslogs = sendSyslogs;
             return _resultValue;
         }

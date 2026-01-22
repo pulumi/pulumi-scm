@@ -15,20 +15,20 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Ssl forward proxy
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `SslForwardProxy` and `SslInboundInspection`.
         /// </summary>
         public readonly Outputs.GetDecryptionRuleTypeSslForwardProxyResult SslForwardProxy;
         /// <summary>
         /// add the certificate name for SSL inbound inspection
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `SslForwardProxy` and `SslInboundInspection`.
         /// </summary>
-        public readonly string SslInboundInspection;
+        public readonly Outputs.GetDecryptionRuleTypeSslInboundInspectionResult SslInboundInspection;
 
         [OutputConstructor]
         private GetDecryptionRuleTypeResult(
             Outputs.GetDecryptionRuleTypeSslForwardProxyResult sslForwardProxy,
 
-            string sslInboundInspection)
+            Outputs.GetDecryptionRuleTypeSslInboundInspectionResult sslInboundInspection)
         {
             SslForwardProxy = sslForwardProxy;
             SslInboundInspection = sslInboundInspection;

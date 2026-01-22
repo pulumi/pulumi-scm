@@ -5,10 +5,9 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Integer;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class ScepProfileAlgorithmRsaArgs extends com.pulumi.resources.ResourceArgs {
@@ -19,15 +18,15 @@ public final class ScepProfileAlgorithmRsaArgs extends com.pulumi.resources.Reso
      * Rsa nbits
      * 
      */
-    @Import(name="rsaNbits")
-    private @Nullable Output<Integer> rsaNbits;
+    @Import(name="rsaNbits", required=true)
+    private Output<String> rsaNbits;
 
     /**
      * @return Rsa nbits
      * 
      */
-    public Optional<Output<Integer>> rsaNbits() {
-        return Optional.ofNullable(this.rsaNbits);
+    public Output<String> rsaNbits() {
+        return this.rsaNbits;
     }
 
     private ScepProfileAlgorithmRsaArgs() {}
@@ -60,7 +59,7 @@ public final class ScepProfileAlgorithmRsaArgs extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder rsaNbits(@Nullable Output<Integer> rsaNbits) {
+        public Builder rsaNbits(Output<String> rsaNbits) {
             $.rsaNbits = rsaNbits;
             return this;
         }
@@ -71,11 +70,14 @@ public final class ScepProfileAlgorithmRsaArgs extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder rsaNbits(Integer rsaNbits) {
+        public Builder rsaNbits(String rsaNbits) {
             return rsaNbits(Output.of(rsaNbits));
         }
 
         public ScepProfileAlgorithmRsaArgs build() {
+            if ($.rsaNbits == null) {
+                throw new MissingRequiredPropertyException("ScepProfileAlgorithmRsaArgs", "rsaNbits");
+            }
             return $;
         }
     }

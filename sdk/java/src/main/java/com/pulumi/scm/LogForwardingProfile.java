@@ -19,6 +19,129 @@ import javax.annotation.Nullable;
 /**
  * LogForwardingProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.LogForwardingProfile;
+ * import com.pulumi.scm.LogForwardingProfileArgs;
+ * import com.pulumi.scm.inputs.LogForwardingProfileMatchListArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmLogForwardingProfile1 = new LogForwardingProfile("scmLogForwardingProfile1", LogForwardingProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scm-log-fowarding-profile-1")
+ *             .matchLists(LogForwardingProfileMatchListArgs.builder()
+ *                 .name("profile_match")
+ *                 .logType("threat")
+ *                 .filter("(addr in 192.50.10.10) and (addr.dst notin 192.40.50.10)")
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmLogForwardingProfile2 = new LogForwardingProfile("scmLogForwardingProfile2", LogForwardingProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scm-log-fowarding-profile-2")
+ *             .description("Log Forwarding w/ HTTP Server Profile and Syslog Server Profile")
+ *             .matchLists(LogForwardingProfileMatchListArgs.builder()
+ *                 .name("profile_match")
+ *                 .logType("traffic")
+ *                 .filter("(device_name eq test_device)")
+ *                 .sendHttp(List.of("test_http"))
+ *                 .sendSyslog(List.of(                
+ *                     "syslog-server-prof-mixed",
+ *                     "syslog-server-prof-complete"))
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmLogForwardingProfile3 = new LogForwardingProfile("scmLogForwardingProfile3", LogForwardingProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scm-log-fowarding-profile-3")
+ *             .description("Log Forwarding w/ All Server Profiles")
+ *             .matchLists(LogForwardingProfileMatchListArgs.builder()
+ *                 .name("profile_match")
+ *                 .actionDesc("all server profiles")
+ *                 .logType("dns-security")
+ *                 .filter("All Logs")
+ *                 .sendHttp(List.of(                
+ *                     "test_http",
+ *                     "t10"))
+ *                 .sendSyslog(List.of(                
+ *                     "syslog-server-prof-base",
+ *                     "syslog-server-prof-mixed",
+ *                     "syslog-server-prof-complete"))
+ *                 .sendSnmptrap(List.of("snmp_test"))
+ *                 .sendEmail(List.of(                
+ *                     "email_test",
+ *                     "email_test_2"))
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmLogForwardingProfile4 = new LogForwardingProfile("scmLogForwardingProfile4", LogForwardingProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scm-log-fowarding-profile-4")
+ *             .description("Log Forwarding w/ Multiple Match Lists")
+ *             .matchLists(            
+ *                 LogForwardingProfileMatchListArgs.builder()
+ *                     .name("profile_match_1")
+ *                     .actionDesc("match list for url")
+ *                     .logType("url")
+ *                     .filter("(sdwan_cluster contains 123)")
+ *                     .sendHttp(List.of("t10"))
+ *                     .sendSyslog(List.of("syslog-server-prof-base"))
+ *                     .sendSnmptrap(List.of("snmp_test"))
+ *                     .build(),
+ *                 LogForwardingProfileMatchListArgs.builder()
+ *                     .name("profile_match_2")
+ *                     .logType("data")
+ *                     .filter("(link_switch_2 neq lnk_2) or (pkts_received geq 100)")
+ *                     .sendHttp(List.of(                    
+ *                         "t5",
+ *                         "t10",
+ *                         "t20"))
+ *                     .sendSyslog(List.of("syslog-server-prof-mixed"))
+ *                     .sendEmail(List.of(                    
+ *                         "email_test",
+ *                         "email_test_2"))
+ *                     .build(),
+ *                 LogForwardingProfileMatchListArgs.builder()
+ *                     .name("profile_match_3")
+ *                     .actionDesc("match list for wildfire")
+ *                     .logType("wildfire")
+ *                     .filter("(imei contains test_server)")
+ *                     .sendHttp(List.of(                    
+ *                         "t5",
+ *                         "t10",
+ *                         "t20",
+ *                         "t22",
+ *                         "t24"))
+ *                     .sendSyslog(List.of("syslog-server-prof-complete"))
+ *                     .sendEmail(List.of(                    
+ *                         "email_test",
+ *                         "email_test_2"))
+ *                     .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The following command can be used to import a resource not managed by Terraform:
@@ -64,7 +187,6 @@ public class LogForwardingProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -72,7 +194,6 @@ public class LogForwardingProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -80,6 +201,7 @@ public class LogForwardingProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -88,6 +210,7 @@ public class LogForwardingProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -99,14 +222,14 @@ public class LogForwardingProfile extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="matchLists", refs={List.class,LogForwardingProfileMatchList.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<LogForwardingProfileMatchList>> matchLists;
+    private Output<List<LogForwardingProfileMatchList>> matchLists;
 
     /**
      * @return Match list
      * 
      */
-    public Output<Optional<List<LogForwardingProfileMatchList>>> matchLists() {
-        return Codegen.optional(this.matchLists);
+    public Output<List<LogForwardingProfileMatchList>> matchLists() {
+        return this.matchLists;
     }
     /**
      * The name of the log forwarding profile
@@ -124,6 +247,7 @@ public class LogForwardingProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -132,6 +256,7 @@ public class LogForwardingProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -157,7 +282,7 @@ public class LogForwardingProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public LogForwardingProfile(java.lang.String name, @Nullable LogForwardingProfileArgs args) {
+    public LogForwardingProfile(java.lang.String name, LogForwardingProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -166,7 +291,7 @@ public class LogForwardingProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LogForwardingProfile(java.lang.String name, @Nullable LogForwardingProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public LogForwardingProfile(java.lang.String name, LogForwardingProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/logForwardingProfile:LogForwardingProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -174,7 +299,7 @@ public class LogForwardingProfile extends com.pulumi.resources.CustomResource {
         super("scm:index/logForwardingProfile:LogForwardingProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static LogForwardingProfileArgs makeArgs(@Nullable LogForwardingProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static LogForwardingProfileArgs makeArgs(LogForwardingProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

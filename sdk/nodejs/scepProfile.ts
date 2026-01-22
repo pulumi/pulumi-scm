@@ -9,6 +9,108 @@ import * as utilities from "./utilities";
 /**
  * ScepProfile resource
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // scep profile w/ no challenge
+ * const scmScepProfile1 = new scm.ScepProfile("scm_scep_profile_1", {
+ *     folder: "All",
+ *     name: "scep-prof-1",
+ *     scepUrl: "https://scep.example.com/",
+ *     caIdentityName: "Default",
+ *     digest: "sha1",
+ *     subject: "CN=$USERNAME",
+ *     scepChallenge: {
+ *         fixed: "123",
+ *     },
+ *     algorithm: {
+ *         rsa: {
+ *             rsaNbits: "1024",
+ *         },
+ *     },
+ * });
+ * // scep profile w/ fixed challenge
+ * const scmScepProfile2 = new scm.ScepProfile("scm_scep_profile_2", {
+ *     folder: "All",
+ *     name: "scep-prof-2",
+ *     scepUrl: "https://example.target.com/",
+ *     caIdentityName: "user-scep",
+ *     digest: "sha256",
+ *     subject: "CN=$USERNAME",
+ *     scepCaCert: "Forward-Trust-CA-ECDSA",
+ *     scepChallenge: {
+ *         fixed: "Password123!",
+ *     },
+ *     certificateAttributes: {
+ *         rfc822name: "user@example.com",
+ *     },
+ *     algorithm: {
+ *         rsa: {
+ *             rsaNbits: "2048",
+ *         },
+ *     },
+ * });
+ * // scep profile w/ dynamic challenge
+ * const scmScepProfile3 = new scm.ScepProfile("scm_scep_profile_3", {
+ *     folder: "All",
+ *     name: "scep-prof-3",
+ *     scepUrl: "https://example.gateway.com/",
+ *     caIdentityName: "vpn-gateway",
+ *     digest: "sha384",
+ *     subject: "CN=$CORP_VPN",
+ *     scepCaCert: "GlobalSign-Root-CA",
+ *     fingerprint: "64EC88CA00B268E5BA1A35678A1B5316D212F4F366B24772322342423123455A",
+ *     useAsDigitalSignature: false,
+ *     scepChallenge: {
+ *         dynamic: {
+ *             username: "user123",
+ *             password: "Password123!",
+ *             otpServerUrl: "http://auth.com",
+ *         },
+ *     },
+ *     certificateAttributes: {
+ *         dnsname: "vpn-gateway.example.com",
+ *     },
+ *     algorithm: {
+ *         rsa: {
+ *             rsaNbits: "3072",
+ *         },
+ *     },
+ * });
+ * // scep profile w/ all fields
+ * const scmScepProfile4 = new scm.ScepProfile("scm_scep_profile_4", {
+ *     folder: "All",
+ *     name: "scep-prof-4",
+ *     scepUrl: "https://example.wifi.com/",
+ *     caIdentityName: "wifi",
+ *     digest: "sha512",
+ *     subject: "CN=$WIFI-ACCESS",
+ *     scepCaCert: "Root CA",
+ *     scepClientCert: "Forward-UnTrust-CA-ECDSA",
+ *     fingerprint: "4448CA00B268E5BU690378A1B5316D212F4F366B2477232234394I",
+ *     useAsDigitalSignature: true,
+ *     useForKeyEncipherment: true,
+ *     scepChallenge: {
+ *         dynamic: {
+ *             username: "admin",
+ *             password: "Pwd@123",
+ *             otpServerUrl: "http://auth.com",
+ *         },
+ *     },
+ *     certificateAttributes: {
+ *         uniformResourceIdentifier: "file:///C:/Users/Documents/report.txt",
+ *     },
+ *     algorithm: {
+ *         rsa: {
+ *             rsaNbits: "3072",
+ *         },
+ *     },
+ * });
+ * ```
+ *
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:
@@ -68,7 +170,7 @@ export class ScepProfile extends pulumi.CustomResource {
      */
     declare public readonly algorithm: pulumi.Output<outputs.ScepProfileAlgorithm>;
     /**
-     * Certificate Authority identity
+     * Certificate Authority Identity
      */
     declare public readonly caIdentityName: pulumi.Output<string>;
     /**
@@ -77,7 +179,6 @@ export class ScepProfile extends pulumi.CustomResource {
     declare public readonly certificateAttributes: pulumi.Output<outputs.ScepProfileCertificateAttributes | undefined>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -89,11 +190,12 @@ export class ScepProfile extends pulumi.CustomResource {
      */
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
-     * CA certificate fingerprint
+     * CA Certificate Fingerprint
      */
     declare public readonly fingerprint: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -102,15 +204,15 @@ export class ScepProfile extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * SCEP server CA certificate
+     * SCEP Server CA Certificate
      */
     declare public readonly scepCaCert: pulumi.Output<string | undefined>;
     /**
-     * One Time Password challenge
+     * One Time Password Challenge
      */
     declare public readonly scepChallenge: pulumi.Output<outputs.ScepProfileScepChallenge>;
     /**
-     * SCEP client ceertificate
+     * SCEP Client Certificate
      */
     declare public readonly scepClientCert: pulumi.Output<string | undefined>;
     /**
@@ -119,6 +221,7 @@ export class ScepProfile extends pulumi.CustomResource {
     declare public readonly scepUrl: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -222,7 +325,7 @@ export interface ScepProfileState {
      */
     algorithm?: pulumi.Input<inputs.ScepProfileAlgorithm>;
     /**
-     * Certificate Authority identity
+     * Certificate Authority Identity
      */
     caIdentityName?: pulumi.Input<string>;
     /**
@@ -231,7 +334,6 @@ export interface ScepProfileState {
     certificateAttributes?: pulumi.Input<inputs.ScepProfileCertificateAttributes>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -243,11 +345,12 @@ export interface ScepProfileState {
      */
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
-     * CA certificate fingerprint
+     * CA Certificate Fingerprint
      */
     fingerprint?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -256,15 +359,15 @@ export interface ScepProfileState {
      */
     name?: pulumi.Input<string>;
     /**
-     * SCEP server CA certificate
+     * SCEP Server CA Certificate
      */
     scepCaCert?: pulumi.Input<string>;
     /**
-     * One Time Password challenge
+     * One Time Password Challenge
      */
     scepChallenge?: pulumi.Input<inputs.ScepProfileScepChallenge>;
     /**
-     * SCEP client ceertificate
+     * SCEP Client Certificate
      */
     scepClientCert?: pulumi.Input<string>;
     /**
@@ -273,6 +376,7 @@ export interface ScepProfileState {
     scepUrl?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -300,7 +404,7 @@ export interface ScepProfileArgs {
      */
     algorithm: pulumi.Input<inputs.ScepProfileAlgorithm>;
     /**
-     * Certificate Authority identity
+     * Certificate Authority Identity
      */
     caIdentityName: pulumi.Input<string>;
     /**
@@ -309,7 +413,6 @@ export interface ScepProfileArgs {
     certificateAttributes?: pulumi.Input<inputs.ScepProfileCertificateAttributes>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -317,11 +420,12 @@ export interface ScepProfileArgs {
      */
     digest: pulumi.Input<string>;
     /**
-     * CA certificate fingerprint
+     * CA Certificate Fingerprint
      */
     fingerprint?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -330,15 +434,15 @@ export interface ScepProfileArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * SCEP server CA certificate
+     * SCEP Server CA Certificate
      */
     scepCaCert?: pulumi.Input<string>;
     /**
-     * One Time Password challenge
+     * One Time Password Challenge
      */
     scepChallenge: pulumi.Input<inputs.ScepProfileScepChallenge>;
     /**
-     * SCEP client ceertificate
+     * SCEP Client Certificate
      */
     scepClientCert?: pulumi.Input<string>;
     /**
@@ -347,6 +451,7 @@ export interface ScepProfileArgs {
     scepUrl: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

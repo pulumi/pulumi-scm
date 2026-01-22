@@ -44,11 +44,11 @@ type BgpAuthProfile struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Profile name
@@ -56,6 +56,7 @@ type BgpAuthProfile struct {
 	// BGP authentication key
 	Secret pulumi.StringPtrOutput `pulumi:"secret"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -100,11 +101,11 @@ func GetBgpAuthProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering BgpAuthProfile resources.
 type bgpAuthProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Profile name
@@ -112,6 +113,7 @@ type bgpAuthProfileState struct {
 	// BGP authentication key
 	Secret *string `pulumi:"secret"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -119,11 +121,11 @@ type bgpAuthProfileState struct {
 
 type BgpAuthProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Profile name
@@ -131,6 +133,7 @@ type BgpAuthProfileState struct {
 	// BGP authentication key
 	Secret pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -142,9 +145,9 @@ func (BgpAuthProfileState) ElementType() reflect.Type {
 
 type bgpAuthProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Profile name
@@ -152,6 +155,7 @@ type bgpAuthProfileArgs struct {
 	// BGP authentication key
 	Secret *string `pulumi:"secret"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -159,9 +163,9 @@ type bgpAuthProfileArgs struct {
 // The set of arguments for constructing a BgpAuthProfile resource.
 type BgpAuthProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Profile name
@@ -169,6 +173,7 @@ type BgpAuthProfileArgs struct {
 	// BGP authentication key
 	Secret pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -261,7 +266,6 @@ func (o BgpAuthProfileOutput) ToBgpAuthProfileOutputWithContext(ctx context.Cont
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpAuthProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpAuthProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -272,6 +276,7 @@ func (o BgpAuthProfileOutput) EncryptedValues() pulumi.StringMapOutput {
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpAuthProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpAuthProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -288,6 +293,7 @@ func (o BgpAuthProfileOutput) Secret() pulumi.StringPtrOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpAuthProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpAuthProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

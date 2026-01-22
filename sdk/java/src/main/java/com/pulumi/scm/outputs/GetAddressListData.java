@@ -18,18 +18,17 @@ public final class GetAddressListData {
     private String description;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
     /**
      * @return Fully qualified domain name
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -41,30 +40,32 @@ public final class GetAddressListData {
     private String id;
     /**
      * @return IP address with or without CIDR notation
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
     private String ipNetmask;
     /**
      * @return Ip range
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
     private String ipRange;
     /**
      * @return IP wildcard mask
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
     private String ipWildcard;
     /**
-     * @return The name of the address object
+     * @return The name of the item.
      * 
      */
     private String name;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -85,15 +86,13 @@ public final class GetAddressListData {
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -101,6 +100,7 @@ public final class GetAddressListData {
     }
     /**
      * @return Fully qualified domain name
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -116,6 +116,7 @@ public final class GetAddressListData {
     }
     /**
      * @return IP address with or without CIDR notation
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -124,6 +125,7 @@ public final class GetAddressListData {
     }
     /**
      * @return Ip range
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -132,6 +134,7 @@ public final class GetAddressListData {
     }
     /**
      * @return IP wildcard mask
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
      * 
      */
@@ -139,15 +142,14 @@ public final class GetAddressListData {
         return this.ipWildcard;
     }
     /**
-     * @return The name of the address object
+     * @return The name of the item.
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

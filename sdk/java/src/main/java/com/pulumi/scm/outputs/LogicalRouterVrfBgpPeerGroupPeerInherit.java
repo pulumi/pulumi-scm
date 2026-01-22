@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfBgpPeerGroupPeerInherit {
     /**
      * @return No
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPeerGroupPeerInheritNo no;
     /**
      * @return Yes
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
@@ -28,7 +28,6 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInherit {
     private LogicalRouterVrfBgpPeerGroupPeerInherit() {}
     /**
      * @return No
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
     public Optional<LogicalRouterVrfBgpPeerGroupPeerInheritNo> no() {
@@ -36,6 +35,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInherit {
     }
     /**
      * @return Yes
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */

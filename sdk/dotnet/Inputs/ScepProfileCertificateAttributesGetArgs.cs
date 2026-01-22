@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Dnsname
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dnsname`, `Rfc822name`, and `UniformResourceIdentifier`.
         /// </summary>
         [Input("dnsname")]
         public Input<string>? Dnsname { get; set; }
 
         /// <summary>
         /// Rfc822name
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Dnsname`, `Rfc822name`, and `UniformResourceIdentifier`.
         /// </summary>
         [Input("rfc822name")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Uniform resource identifier
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Dnsname`, `Rfc822name`, and `UniformResourceIdentifier`.
         /// </summary>
         [Input("uniformResourceIdentifier")]

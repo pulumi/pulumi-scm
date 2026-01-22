@@ -13,6 +13,134 @@ import (
 
 // QosProfile resource
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewQosProfile(ctx, "scm_qos_profile_1", &scm.QosProfileArgs{
+//				Folder: pulumi.String("Remote Networks"),
+//				Name:   pulumi.String("scm-qos-profile-base"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewQosProfile(ctx, "scm_qos_profile_2", &scm.QosProfileArgs{
+//				Folder: pulumi.String("Remote Networks"),
+//				Name:   pulumi.String("scm-qos-profile-2"),
+//				AggregateBandwidth: &scm.QosProfileAggregateBandwidthArgs{
+//					EgressMax:        pulumi.Int(200),
+//					EgressGuaranteed: pulumi.Int(10000),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewQosProfile(ctx, "scm_qos_profile_3", &scm.QosProfileArgs{
+//				Folder: pulumi.String("Service Connections"),
+//				Name:   pulumi.String("scm-qos-profile-3"),
+//				AggregateBandwidth: &scm.QosProfileAggregateBandwidthArgs{
+//					EgressGuaranteed: pulumi.Int(20),
+//				},
+//				ClassBandwidthType: &scm.QosProfileClassBandwidthTypeArgs{
+//					Mbps: &scm.QosProfileClassBandwidthTypeMbpsArgs{
+//						Classes: scm.QosProfileClassBandwidthTypeMbpsClassArray{
+//							&scm.QosProfileClassBandwidthTypeMbpsClassArgs{
+//								Name: pulumi.String("class1"),
+//							},
+//							&scm.QosProfileClassBandwidthTypeMbpsClassArgs{
+//								Name:     pulumi.String("class2"),
+//								Priority: pulumi.String("high"),
+//							},
+//							&scm.QosProfileClassBandwidthTypeMbpsClassArgs{
+//								Name:     pulumi.String("class3"),
+//								Priority: pulumi.String("real-time"),
+//								ClassBandwidth: &scm.QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs{
+//									EgressMax: pulumi.Int(500),
+//								},
+//							},
+//							&scm.QosProfileClassBandwidthTypeMbpsClassArgs{
+//								Name:     pulumi.String("class4"),
+//								Priority: pulumi.String("low"),
+//								ClassBandwidth: &scm.QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs{
+//									EgressGuaranteed: pulumi.Int(60000),
+//								},
+//							},
+//							&scm.QosProfileClassBandwidthTypeMbpsClassArgs{
+//								Name:     pulumi.String("class5"),
+//								Priority: pulumi.String("medium"),
+//								ClassBandwidth: &scm.QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs{
+//									EgressMax:        pulumi.Int(955),
+//									EgressGuaranteed: pulumi.Int(50000),
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewQosProfile(ctx, "scm_qos_profile_4", &scm.QosProfileArgs{
+//				Folder: pulumi.String("Service Connections"),
+//				Name:   pulumi.String("scm-qos-profile-4"),
+//				AggregateBandwidth: &scm.QosProfileAggregateBandwidthArgs{
+//					EgressMax: pulumi.Int(1400),
+//				},
+//				ClassBandwidthType: &scm.QosProfileClassBandwidthTypeArgs{
+//					Percentage: &scm.QosProfileClassBandwidthTypePercentageArgs{
+//						Classes: scm.QosProfileClassBandwidthTypePercentageClassArray{
+//							&scm.QosProfileClassBandwidthTypePercentageClassArgs{
+//								Name: pulumi.String("class1"),
+//							},
+//							&scm.QosProfileClassBandwidthTypePercentageClassArgs{
+//								Name:     pulumi.String("class2"),
+//								Priority: pulumi.String("low"),
+//							},
+//							&scm.QosProfileClassBandwidthTypePercentageClassArgs{
+//								Name:     pulumi.String("class3"),
+//								Priority: pulumi.String("real-time"),
+//								ClassBandwidth: &scm.QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs{
+//									EgressMax: pulumi.Int(100),
+//								},
+//							},
+//							&scm.QosProfileClassBandwidthTypePercentageClassArgs{
+//								Name:     pulumi.String("class4"),
+//								Priority: pulumi.String("medium"),
+//								ClassBandwidth: &scm.QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs{
+//									EgressGuaranteed: pulumi.Int(5),
+//								},
+//							},
+//							&scm.QosProfileClassBandwidthTypePercentageClassArgs{
+//								Name:     pulumi.String("class5"),
+//								Priority: pulumi.String("high"),
+//								ClassBandwidth: &scm.QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs{
+//									EgressMax:        pulumi.Int(25),
+//									EgressGuaranteed: pulumi.Int(50),
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
@@ -46,14 +174,15 @@ type QosProfile struct {
 	// Class bandwidth type
 	ClassBandwidthType QosProfileClassBandwidthTypePtrOutput `pulumi:"classBandwidthType"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -94,14 +223,15 @@ type qosProfileState struct {
 	// Class bandwidth type
 	ClassBandwidthType *QosProfileClassBandwidthType `pulumi:"classBandwidthType"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -113,14 +243,15 @@ type QosProfileState struct {
 	// Class bandwidth type
 	ClassBandwidthType QosProfileClassBandwidthTypePtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -136,14 +267,15 @@ type qosProfileArgs struct {
 	// Class bandwidth type
 	ClassBandwidthType *QosProfileClassBandwidthType `pulumi:"classBandwidthType"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -155,14 +287,15 @@ type QosProfileArgs struct {
 	// Class bandwidth type
 	ClassBandwidthType QosProfileClassBandwidthTypePtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -265,12 +398,12 @@ func (o QosProfileOutput) ClassBandwidthType() QosProfileClassBandwidthTypePtrOu
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o QosProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o QosProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -282,6 +415,7 @@ func (o QosProfileOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o QosProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

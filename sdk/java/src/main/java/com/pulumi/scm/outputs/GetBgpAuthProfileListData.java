@@ -13,7 +13,6 @@ import java.util.Objects;
 public final class GetBgpAuthProfileListData {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -23,8 +22,7 @@ public final class GetBgpAuthProfileListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -34,7 +32,7 @@ public final class GetBgpAuthProfileListData {
      */
     private String id;
     /**
-     * @return Profile name
+     * @return The name of the item.
      * 
      */
     private String name;
@@ -44,8 +42,7 @@ public final class GetBgpAuthProfileListData {
      */
     private String secret;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -54,7 +51,6 @@ public final class GetBgpAuthProfileListData {
     private GetBgpAuthProfileListData() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -68,8 +64,7 @@ public final class GetBgpAuthProfileListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -83,7 +78,7 @@ public final class GetBgpAuthProfileListData {
         return this.id;
     }
     /**
-     * @return Profile name
+     * @return The name of the item.
      * 
      */
     public String name() {
@@ -97,8 +92,7 @@ public final class GetBgpAuthProfileListData {
         return this.secret;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

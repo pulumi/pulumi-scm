@@ -13,18 +13,96 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allProfiles = Scm.GetLldpProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfilesListSummary"] = 
+        ///         {
+        ///             { "countOfSettingsFetched", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Total) },
+        ///             { "firstProfile", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Datas[0]) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLldpProfileListResult> InvokeAsync(GetLldpProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLldpProfileListResult>("scm:index/getLldpProfileList:getLldpProfileList", args ?? new GetLldpProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allProfiles = Scm.GetLldpProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfilesListSummary"] = 
+        ///         {
+        ///             { "countOfSettingsFetched", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Total) },
+        ///             { "firstProfile", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Datas[0]) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLldpProfileListResult> Invoke(GetLldpProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLldpProfileListResult>("scm:index/getLldpProfileList:getLldpProfileList", args ?? new GetLldpProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allProfiles = Scm.GetLldpProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfilesListSummary"] = 
+        ///         {
+        ///             { "countOfSettingsFetched", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Total) },
+        ///             { "firstProfile", allProfiles.Apply(getLldpProfileListResult =&gt; getLldpProfileListResult.Datas[0]) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLldpProfileListResult> Invoke(GetLldpProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLldpProfileListResult>("scm:index/getLldpProfileList:getLldpProfileList", args ?? new GetLldpProfileListInvokeArgs(), options.WithDefaults());

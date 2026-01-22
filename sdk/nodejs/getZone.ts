@@ -48,26 +48,14 @@ export function getZone(args: GetZoneArgs, opts?: pulumi.InvokeOptions): Promise
 export interface GetZoneArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * Folder
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -77,55 +65,22 @@ export interface GetZoneArgs {
 export interface GetZoneResult {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * Device acl
-     */
     readonly deviceAcl: outputs.GetZoneDeviceAcl;
-    /**
-     * Dos log setting
-     */
     readonly dosLogSetting: string;
-    /**
-     * Dos profile
-     */
     readonly dosProfile: string;
-    /**
-     * Enable device identification
-     */
     readonly enableDeviceIdentification: boolean;
-    /**
-     * Enable user identification
-     */
     readonly enableUserIdentification: boolean;
-    /**
-     * Folder
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     readonly name: string;
-    /**
-     * Network
-     */
     readonly network: outputs.GetZoneNetwork;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * User acl
-     */
     readonly userAcl: outputs.GetZoneUserAcl;
 }
 /**
@@ -170,25 +125,13 @@ export function getZoneOutput(args: GetZoneOutputArgs, opts?: pulumi.InvokeOutpu
 export interface GetZoneOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * Folder
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

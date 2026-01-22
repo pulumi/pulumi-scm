@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const pagedInterfaceList = scm.getDhcpInterfaceList({
+ *     folder: "All",
+ *     limit: 10,
+ * });
+ * export const fetchedInterfaceListSummary = {
+ *     countOfRulesFetched: pagedInterfaceList.then(pagedInterfaceList => pagedInterfaceList.total),
+ *     firstRuleName: pagedInterfaceList.then(pagedInterfaceList => pagedInterfaceList.datas),
+ * };
+ * ```
  */
 export function getDhcpInterfaceList(args?: GetDhcpInterfaceListArgs, opts?: pulumi.InvokeOptions): Promise<GetDhcpInterfaceListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetDhcpInterfaceListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const pagedInterfaceList = scm.getDhcpInterfaceList({
+ *     folder: "All",
+ *     limit: 10,
+ * });
+ * export const fetchedInterfaceListSummary = {
+ *     countOfRulesFetched: pagedInterfaceList.then(pagedInterfaceList => pagedInterfaceList.total),
+ *     firstRuleName: pagedInterfaceList.then(pagedInterfaceList => pagedInterfaceList.datas),
+ * };
+ * ```
  */
 export function getDhcpInterfaceListOutput(args?: GetDhcpInterfaceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDhcpInterfaceListResult> {
     args = args || {};

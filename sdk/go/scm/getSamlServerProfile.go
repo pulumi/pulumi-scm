@@ -12,6 +12,41 @@ import (
 )
 
 // SamlServerProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a single SCM SAML Server Profile object by its ID.
+//			//
+//			// Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
+//			scmSamlServerProf, err := scm.LookupSamlServerProfile(ctx, &scm.LookupSamlServerProfileArgs{
+//				Id: "a17abcfc-d37d-4b8a-bb09-102ffdc3abef",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmSamlServerProfileDetails", pulumi.StringMap{
+//				"folder": scmSamlServerProf.Folder,
+//				"name":   scmSamlServerProf.Name,
+//				"id":     scmSamlServerProf.Id,
+//				"ssoUrl": scmSamlServerProf.SsoUrl,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupSamlServerProfile(ctx *pulumi.Context, args *LookupSamlServerProfileArgs, opts ...pulumi.InvokeOption) (*LookupSamlServerProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupSamlServerProfileResult
@@ -25,52 +60,33 @@ func LookupSamlServerProfile(ctx *pulumi.Context, args *LookupSamlServerProfileA
 // A collection of arguments for invoking getSamlServerProfile.
 type LookupSamlServerProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the SAML server profile
-	Id string `pulumi:"id"`
-	// The name of the SAML server profile
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSamlServerProfile.
 type LookupSamlServerProfileResult struct {
-	// The identity provider certificate
 	Certificate string `pulumi:"certificate"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// The identity provider ID
+	Device   string `pulumi:"device"`
 	EntityId string `pulumi:"entityId"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
+	Folder   string `pulumi:"folder"`
 	// The UUID of the SAML server profile
-	Id string `pulumi:"id"`
-	// Maxiumum clock skew
-	MaxClockSkew int `pulumi:"maxClockSkew"`
-	// The name of the SAML server profile
-	Name string `pulumi:"name"`
-	// SAML HTTP binding for SLO requests to the identity provider
-	SloBindings string `pulumi:"sloBindings"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	// SAML HTTP binding for SSO requests to the identity provider
-	SsoBindings string `pulumi:"ssoBindings"`
-	// Identity provider SSO URL
-	SsoUrl string `pulumi:"ssoUrl"`
-	Tfid   string `pulumi:"tfid"`
-	// Validate the identity provider certificate?
-	ValidateIdpCertificate bool `pulumi:"validateIdpCertificate"`
-	// Sign SAML message to the identity provider?
-	WantAuthRequestsSigned bool `pulumi:"wantAuthRequestsSigned"`
+	Id                     string `pulumi:"id"`
+	MaxClockSkew           int    `pulumi:"maxClockSkew"`
+	Name                   string `pulumi:"name"`
+	SloBindings            string `pulumi:"sloBindings"`
+	SloUrl                 string `pulumi:"sloUrl"`
+	Snippet                string `pulumi:"snippet"`
+	SsoBindings            string `pulumi:"ssoBindings"`
+	SsoUrl                 string `pulumi:"ssoUrl"`
+	Tfid                   string `pulumi:"tfid"`
+	ValidateIdpCertificate bool   `pulumi:"validateIdpCertificate"`
+	WantAuthRequestsSigned bool   `pulumi:"wantAuthRequestsSigned"`
 }
 
 func LookupSamlServerProfileOutput(ctx *pulumi.Context, args LookupSamlServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSamlServerProfileResultOutput {
@@ -85,17 +101,11 @@ func LookupSamlServerProfileOutput(ctx *pulumi.Context, args LookupSamlServerPro
 // A collection of arguments for invoking getSamlServerProfile.
 type LookupSamlServerProfileOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the SAML server profile
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the SAML server profile
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -118,24 +128,19 @@ func (o LookupSamlServerProfileResultOutput) ToLookupSamlServerProfileResultOutp
 	return o
 }
 
-// The identity provider certificate
 func (o LookupSamlServerProfileResultOutput) Certificate() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Certificate }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSamlServerProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The identity provider ID
 func (o LookupSamlServerProfileResultOutput) EntityId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.EntityId }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupSamlServerProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -145,33 +150,30 @@ func (o LookupSamlServerProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Maxiumum clock skew
 func (o LookupSamlServerProfileResultOutput) MaxClockSkew() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) int { return v.MaxClockSkew }).(pulumi.IntOutput)
 }
 
-// The name of the SAML server profile
 func (o LookupSamlServerProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// SAML HTTP binding for SLO requests to the identity provider
 func (o LookupSamlServerProfileResultOutput) SloBindings() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.SloBindings }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+func (o LookupSamlServerProfileResultOutput) SloUrl() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.SloUrl }).(pulumi.StringOutput)
+}
+
 func (o LookupSamlServerProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// SAML HTTP binding for SSO requests to the identity provider
 func (o LookupSamlServerProfileResultOutput) SsoBindings() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.SsoBindings }).(pulumi.StringOutput)
 }
 
-// Identity provider SSO URL
 func (o LookupSamlServerProfileResultOutput) SsoUrl() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.SsoUrl }).(pulumi.StringOutput)
 }
@@ -180,12 +182,10 @@ func (o LookupSamlServerProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Validate the identity provider certificate?
 func (o LookupSamlServerProfileResultOutput) ValidateIdpCertificate() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) bool { return v.ValidateIdpCertificate }).(pulumi.BoolOutput)
 }
 
-// Sign SAML message to the identity provider?
 func (o LookupSamlServerProfileResultOutput) WantAuthRequestsSigned() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) bool { return v.WantAuthRequestsSigned }).(pulumi.BoolOutput)
 }

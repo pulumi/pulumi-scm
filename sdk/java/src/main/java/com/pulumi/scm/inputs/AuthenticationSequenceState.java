@@ -34,7 +34,6 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -42,7 +41,6 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -51,6 +49,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -59,6 +58,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -83,6 +83,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -91,6 +92,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -183,7 +185,6 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -195,7 +196,6 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -206,6 +206,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -218,6 +219,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -250,6 +252,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -262,6 +265,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

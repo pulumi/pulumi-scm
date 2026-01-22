@@ -15,24 +15,26 @@ import java.util.Objects;
 public final class GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     /**
      * @return Both
-     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     private GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableBoth both;
     /**
      * @return Multicast
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     private GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticast multicast;
     /**
      * @return No install
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     private GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstall noInstall;
     /**
      * @return Unicast
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -41,7 +43,6 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     private GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable() {}
     /**
      * @return Both
-     * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
     public GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableBoth both() {
@@ -49,6 +50,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     }
     /**
      * @return Multicast
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -57,6 +59,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     }
     /**
      * @return No install
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */
@@ -65,6 +68,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable {
     }
     /**
      * @return Unicast
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
      * 
      */

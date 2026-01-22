@@ -15,16 +15,17 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Autokey
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Autokey`, `None`, and `SymmetricKey`.
         /// </summary>
         public readonly Outputs.GetServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeAutokeyResult Autokey;
         /// <summary>
         /// None
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Autokey`, `None`, and `SymmetricKey`.
         /// </summary>
         public readonly Outputs.GetServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeNoneResult None;
         /// <summary>
         /// Symmetric key
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Autokey`, `None`, and `SymmetricKey`.
         /// </summary>
         public readonly Outputs.GetServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyResult SymmetricKey;

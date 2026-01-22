@@ -59,46 +59,28 @@ func LookupAddressGroup(ctx *pulumi.Context, args *LookupAddressGroupArgs, opts 
 // A collection of arguments for invoking getAddressGroup.
 type LookupAddressGroupArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the address group
-	Id string `pulumi:"id"`
-	// The name of the address group
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getAddressGroup.
 type LookupAddressGroupResult struct {
-	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// Dynamic
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
+	Device  string                 `pulumi:"device"`
 	Dynamic GetAddressGroupDynamic `pulumi:"dynamic"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
+	Folder  string                 `pulumi:"folder"`
 	// The UUID of the address group
-	Id string `pulumi:"id"`
-	// The name of the address group
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	// Static
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
+	Id      string   `pulumi:"id"`
+	Name    string   `pulumi:"name"`
+	Snippet string   `pulumi:"snippet"`
 	Statics []string `pulumi:"statics"`
-	// Tags for address group object
-	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	Tags    []string `pulumi:"tags"`
+	Tfid    string   `pulumi:"tfid"`
 }
 
 func LookupAddressGroupOutput(ctx *pulumi.Context, args LookupAddressGroupOutputArgs, opts ...pulumi.InvokeOption) LookupAddressGroupResultOutput {
@@ -113,17 +95,11 @@ func LookupAddressGroupOutput(ctx *pulumi.Context, args LookupAddressGroupOutput
 // A collection of arguments for invoking getAddressGroup.
 type LookupAddressGroupOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the address group
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the address group
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -146,25 +122,19 @@ func (o LookupAddressGroupResultOutput) ToLookupAddressGroupResultOutputWithCont
 	return o
 }
 
-// Description
 func (o LookupAddressGroupResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAddressGroupResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Dynamic
-// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 func (o LookupAddressGroupResultOutput) Dynamic() GetAddressGroupDynamicOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) GetAddressGroupDynamic { return v.Dynamic }).(GetAddressGroupDynamicOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAddressGroupResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -174,24 +144,18 @@ func (o LookupAddressGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the address group
 func (o LookupAddressGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAddressGroupResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// Static
-// > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
 func (o LookupAddressGroupResultOutput) Statics() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) []string { return v.Statics }).(pulumi.StringArrayOutput)
 }
 
-// Tags for address group object
 func (o LookupAddressGroupResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

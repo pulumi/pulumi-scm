@@ -13,18 +13,96 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM SCEP Profile objects.
+        ///     //
+        ///     // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+        ///     var allShared = Scm.GetScepProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmScepProfileListAllShared"] = allShared.Apply(getScepProfileListResult =&gt; getScepProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetScepProfileListResult> InvokeAsync(GetScepProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetScepProfileListResult>("scm:index/getScepProfileList:getScepProfileList", args ?? new GetScepProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM SCEP Profile objects.
+        ///     //
+        ///     // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+        ///     var allShared = Scm.GetScepProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmScepProfileListAllShared"] = allShared.Apply(getScepProfileListResult =&gt; getScepProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetScepProfileListResult> Invoke(GetScepProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetScepProfileListResult>("scm:index/getScepProfileList:getScepProfileList", args ?? new GetScepProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM SCEP Profile objects.
+        ///     //
+        ///     // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+        ///     var allShared = Scm.GetScepProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmScepProfileListAllShared"] = allShared.Apply(getScepProfileListResult =&gt; getScepProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetScepProfileListResult> Invoke(GetScepProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetScepProfileListResult>("scm:index/getScepProfileList:getScepProfileList", args ?? new GetScepProfileListInvokeArgs(), options.WithDefaults());

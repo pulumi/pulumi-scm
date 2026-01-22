@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetSdwanErrorCorrectionProfileListDataMode {
     /**
      * @return Forward error correction
-     * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      * 
      */
     private GetSdwanErrorCorrectionProfileListDataModeForwardErrorCorrection forwardErrorCorrection;
     /**
      * @return Packet duplication
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetSdwanErrorCorrectionProfileListDataMode {
     private GetSdwanErrorCorrectionProfileListDataMode() {}
     /**
      * @return Forward error correction
-     * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      * 
      */
     public GetSdwanErrorCorrectionProfileListDataModeForwardErrorCorrection forwardErrorCorrection() {
@@ -35,6 +34,7 @@ public final class GetSdwanErrorCorrectionProfileListDataMode {
     }
     /**
      * @return Packet duplication
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      * 
      */

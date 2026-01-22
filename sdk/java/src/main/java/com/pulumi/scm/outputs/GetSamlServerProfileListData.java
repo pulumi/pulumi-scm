@@ -19,7 +19,6 @@ public final class GetSamlServerProfileListData {
     private String certificate;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -29,8 +28,7 @@ public final class GetSamlServerProfileListData {
      */
     private String entityId;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -45,7 +43,7 @@ public final class GetSamlServerProfileListData {
      */
     private Integer maxClockSkew;
     /**
-     * @return The name of the SAML server profile
+     * @return The name of the item.
      * 
      */
     private String name;
@@ -55,8 +53,12 @@ public final class GetSamlServerProfileListData {
      */
     private String sloBindings;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return Identity provider SLO URL
+     * 
+     */
+    private String sloUrl;
+    /**
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -92,7 +94,6 @@ public final class GetSamlServerProfileListData {
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -106,8 +107,7 @@ public final class GetSamlServerProfileListData {
         return this.entityId;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -128,7 +128,7 @@ public final class GetSamlServerProfileListData {
         return this.maxClockSkew;
     }
     /**
-     * @return The name of the SAML server profile
+     * @return The name of the item.
      * 
      */
     public String name() {
@@ -142,8 +142,14 @@ public final class GetSamlServerProfileListData {
         return this.sloBindings;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return Identity provider SLO URL
+     * 
+     */
+    public String sloUrl() {
+        return this.sloUrl;
+    }
+    /**
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {
@@ -198,6 +204,7 @@ public final class GetSamlServerProfileListData {
         private Integer maxClockSkew;
         private String name;
         private String sloBindings;
+        private String sloUrl;
         private String snippet;
         private String ssoBindings;
         private String ssoUrl;
@@ -215,6 +222,7 @@ public final class GetSamlServerProfileListData {
     	      this.maxClockSkew = defaults.maxClockSkew;
     	      this.name = defaults.name;
     	      this.sloBindings = defaults.sloBindings;
+    	      this.sloUrl = defaults.sloUrl;
     	      this.snippet = defaults.snippet;
     	      this.ssoBindings = defaults.ssoBindings;
     	      this.ssoUrl = defaults.ssoUrl;
@@ -288,6 +296,14 @@ public final class GetSamlServerProfileListData {
             return this;
         }
         @CustomType.Setter
+        public Builder sloUrl(String sloUrl) {
+            if (sloUrl == null) {
+              throw new MissingRequiredPropertyException("GetSamlServerProfileListData", "sloUrl");
+            }
+            this.sloUrl = sloUrl;
+            return this;
+        }
+        @CustomType.Setter
         public Builder snippet(String snippet) {
             if (snippet == null) {
               throw new MissingRequiredPropertyException("GetSamlServerProfileListData", "snippet");
@@ -345,6 +361,7 @@ public final class GetSamlServerProfileListData {
             _resultValue.maxClockSkew = maxClockSkew;
             _resultValue.name = name;
             _resultValue.sloBindings = sloBindings;
+            _resultValue.sloUrl = sloUrl;
             _resultValue.snippet = snippet;
             _resultValue.ssoBindings = ssoBindings;
             _resultValue.ssoUrl = ssoUrl;

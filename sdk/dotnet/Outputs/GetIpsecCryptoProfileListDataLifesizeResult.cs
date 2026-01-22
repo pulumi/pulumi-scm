@@ -15,21 +15,23 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// specify lifesize in gigabytes(GB)
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Gb`, `Kb`, `Mb`, and `Tb`.
         /// </summary>
         public readonly int Gb;
         /// <summary>
         /// specify lifesize in kilobytes(KB)
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Gb`, `Kb`, `Mb`, and `Tb`.
         /// </summary>
         public readonly int Kb;
         /// <summary>
         /// specify lifesize in megabytes(MB)
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Gb`, `Kb`, `Mb`, and `Tb`.
         /// </summary>
         public readonly int Mb;
         /// <summary>
         /// specify lifesize in terabytes(TB)
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Gb`, `Kb`, `Mb`, and `Tb`.
         /// </summary>
         public readonly int Tb;

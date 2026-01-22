@@ -26,26 +26,14 @@ export function getWildfireAntiVirusProfile(args: GetWildfireAntiVirusProfileArg
 export interface GetWildfireAntiVirusProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Name
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -53,49 +41,22 @@ export interface GetWildfireAntiVirusProfileArgs {
  * A collection of values returned by getWildfireAntiVirusProfile.
  */
 export interface GetWildfireAntiVirusProfileResult {
-    /**
-     * Description
-     */
     readonly description: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Mlav exception
-     */
     readonly mlavExceptions: outputs.GetWildfireAntiVirusProfileMlavException[];
-    /**
-     * Name
-     */
     readonly name: string;
-    /**
-     * Packet capture
-     */
     readonly packetCapture: boolean;
-    /**
-     * Rules
-     */
     readonly rules: outputs.GetWildfireAntiVirusProfileRule[];
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * Threat exception
-     */
     readonly threatExceptions: outputs.GetWildfireAntiVirusProfileThreatException[];
 }
 /**
@@ -118,25 +79,13 @@ export function getWildfireAntiVirusProfileOutput(args: GetWildfireAntiVirusProf
 export interface GetWildfireAntiVirusProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Name
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

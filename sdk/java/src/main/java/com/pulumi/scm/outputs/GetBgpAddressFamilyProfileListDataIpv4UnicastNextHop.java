@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetBgpAddressFamilyProfileListDataIpv4UnicastNextHop {
     /**
      * @return Self
-     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
     private GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelf self;
     /**
      * @return Self force
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetBgpAddressFamilyProfileListDataIpv4UnicastNextHop {
     private GetBgpAddressFamilyProfileListDataIpv4UnicastNextHop() {}
     /**
      * @return Self
-     * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */
     public GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelf self() {
@@ -35,6 +34,7 @@ public final class GetBgpAddressFamilyProfileListDataIpv4UnicastNextHop {
     }
     /**
      * @return Self force
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `self` and `selfForce`.
      * 
      */

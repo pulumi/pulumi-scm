@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Forward error correction
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `ForwardErrorCorrection` and `PacketDuplication`.
         /// </summary>
         public readonly Outputs.SdwanErrorCorrectionProfileModeForwardErrorCorrection? ForwardErrorCorrection;
         /// <summary>
         /// Packet duplication
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `ForwardErrorCorrection` and `PacketDuplication`.
         /// </summary>
         public readonly Outputs.SdwanErrorCorrectionProfileModePacketDuplication? PacketDuplication;

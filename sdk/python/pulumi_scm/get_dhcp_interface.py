@@ -58,17 +58,12 @@ class GetDhcpInterfaceResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -82,36 +77,21 @@ class GetDhcpInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        Interface name
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def relay(self) -> 'outputs.GetDhcpInterfaceRelayResult':
-        """
-        Relay
-        > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
-        """
         return pulumi.get(self, "relay")
 
     @_builtins.property
     @pulumi.getter
     def server(self) -> 'outputs.GetDhcpInterfaceServerResult':
-        """
-        Server
-        > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
-        """
         return pulumi.get(self, "server")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -145,15 +125,20 @@ def get_dhcp_interface(device: Optional[_builtins.str] = None,
     """
     DhcpInterface data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # We use the ID from the resource created above.
+    single_inf_by_id = scm.get_dhcp_interface(id="b3544acb-fc55-4c6f-921d-4128b5a1d135")
+    pulumi.export("singleDhcpInfName", single_inf_by_id)
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Interface name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -182,15 +167,20 @@ def get_dhcp_interface_output(device: Optional[pulumi.Input[Optional[_builtins.s
     """
     DhcpInterface data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # We use the ID from the resource created above.
+    single_inf_by_id = scm.get_dhcp_interface(id="b3544acb-fc55-4c6f-921d-4128b5a1d135")
+    pulumi.export("singleDhcpInfName", single_inf_by_id)
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Interface name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

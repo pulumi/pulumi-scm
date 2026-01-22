@@ -65,9 +65,6 @@ class GetIkeCryptoProfileResult:
     @_builtins.property
     @pulumi.getter(name="authenticationMultiple")
     def authentication_multiple(self) -> _builtins.int:
-        """
-        IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
-        """
         return pulumi.get(self, "authentication_multiple")
 
     @_builtins.property
@@ -75,41 +72,27 @@ class GetIkeCryptoProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="dhGroups")
     def dh_groups(self) -> Sequence[_builtins.str]:
-        """
-        Dh group
-        """
         return pulumi.get(self, "dh_groups")
 
     @_builtins.property
     @pulumi.getter
     def encryptions(self) -> Sequence[_builtins.str]:
-        """
-        Encryption algorithm
-        """
         return pulumi.get(self, "encryptions")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def hashes(self) -> Sequence[_builtins.str]:
-        """
-        Hash
-        """
         return pulumi.get(self, "hashes")
 
     @_builtins.property
@@ -123,26 +106,16 @@ class GetIkeCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def lifetime(self) -> 'outputs.GetIkeCryptoProfileLifetimeResult':
-        """
-        Ike crypto profile lifetime
-        """
         return pulumi.get(self, "lifetime")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -192,13 +165,7 @@ def get_ike_crypto_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -243,13 +210,7 @@ def get_ike_crypto_profile_output(device: Optional[pulumi.Input[Optional[_builti
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

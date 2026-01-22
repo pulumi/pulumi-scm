@@ -153,13 +153,13 @@ type Application struct {
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Evasive behavior
 	EvasiveBehavior pulumi.BoolPtrOutput `pulumi:"evasiveBehavior"`
 	// File type ident
 	FileTypeIdent pulumi.BoolPtrOutput `pulumi:"fileTypeIdent"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Has known vulnerability
@@ -179,6 +179,7 @@ type Application struct {
 	// Signature
 	Signatures ApplicationSignatureArrayOutput `pulumi:"signatures"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Subcategory
@@ -257,13 +258,13 @@ type applicationState struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Evasive behavior
 	EvasiveBehavior *bool `pulumi:"evasiveBehavior"`
 	// File type ident
 	FileTypeIdent *bool `pulumi:"fileTypeIdent"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Has known vulnerability
@@ -283,6 +284,7 @@ type applicationState struct {
 	// Signature
 	Signatures []ApplicationSignature `pulumi:"signatures"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subcategory
@@ -326,13 +328,13 @@ type ApplicationState struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Evasive behavior
 	EvasiveBehavior pulumi.BoolPtrInput
 	// File type ident
 	FileTypeIdent pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Has known vulnerability
@@ -352,6 +354,7 @@ type ApplicationState struct {
 	// Signature
 	Signatures ApplicationSignatureArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subcategory
@@ -399,13 +402,13 @@ type applicationArgs struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Evasive behavior
 	EvasiveBehavior *bool `pulumi:"evasiveBehavior"`
 	// File type ident
 	FileTypeIdent *bool `pulumi:"fileTypeIdent"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Has known vulnerability
@@ -425,6 +428,7 @@ type applicationArgs struct {
 	// Signature
 	Signatures []ApplicationSignature `pulumi:"signatures"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subcategory
@@ -468,13 +472,13 @@ type ApplicationArgs struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Evasive behavior
 	EvasiveBehavior pulumi.BoolPtrInput
 	// File type ident
 	FileTypeIdent pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Has known vulnerability
@@ -494,6 +498,7 @@ type ApplicationArgs struct {
 	// Signature
 	Signatures ApplicationSignatureArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subcategory
@@ -643,7 +648,6 @@ func (o ApplicationOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -659,6 +663,7 @@ func (o ApplicationOutput) FileTypeIdent() pulumi.BoolPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -705,6 +710,7 @@ func (o ApplicationOutput) Signatures() ApplicationSignatureArrayOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

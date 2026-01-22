@@ -43,15 +43,16 @@ class PbfRuleArgs:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['PbfRuleEnforceSymmetricReturnArgs'] enforce_symmetric_return: Enforce symmetric return
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['PbfRuleFromArgs'] from_: From
         :param pulumi.Input[_builtins.str] name: PBF rule name
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: Source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source addresses
@@ -141,7 +142,6 @@ class PbfRuleArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -166,6 +166,7 @@ class PbfRuleArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -227,6 +228,7 @@ class PbfRuleArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -298,15 +300,16 @@ class _PbfRuleState:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['PbfRuleEnforceSymmetricReturnArgs'] enforce_symmetric_return: Enforce symmetric return
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['PbfRuleFromArgs'] from_: From
         :param pulumi.Input[_builtins.str] name: PBF rule name
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: Source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source addresses
@@ -398,7 +401,6 @@ class _PbfRuleState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -423,6 +425,7 @@ class _PbfRuleState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -484,6 +487,7 @@ class _PbfRuleState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -681,15 +685,16 @@ class PbfRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict']] enforce_symmetric_return: Enforce symmetric return
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict']] from_: From
         :param pulumi.Input[_builtins.str] name: PBF rule name
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: Source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source addresses
@@ -908,15 +913,16 @@ class PbfRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['PbfRuleEnforceSymmetricReturnArgs', 'PbfRuleEnforceSymmetricReturnArgsDict']] enforce_symmetric_return: Enforce symmetric return
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['PbfRuleFromArgs', 'PbfRuleFromArgsDict']] from_: From
         :param pulumi.Input[_builtins.str] name: PBF rule name
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: Source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source addresses
@@ -981,7 +987,6 @@ class PbfRule(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -998,6 +1003,7 @@ class PbfRule(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -1039,6 +1045,7 @@ class PbfRule(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

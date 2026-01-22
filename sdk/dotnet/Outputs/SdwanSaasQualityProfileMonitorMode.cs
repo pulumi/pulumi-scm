@@ -15,16 +15,17 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Adaptive
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Adaptive`, `HttpHttps`, and `StaticIp`.
         /// </summary>
         public readonly Outputs.SdwanSaasQualityProfileMonitorModeAdaptive? Adaptive;
         /// <summary>
         /// Http https
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Adaptive`, `HttpHttps`, and `StaticIp`.
         /// </summary>
         public readonly Outputs.SdwanSaasQualityProfileMonitorModeHttpHttps? HttpHttps;
         /// <summary>
         /// Static ip
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Adaptive`, `HttpHttps`, and `StaticIp`.
         /// </summary>
         public readonly Outputs.SdwanSaasQualityProfileMonitorModeStaticIp? StaticIp;

@@ -10,74 +10,42 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetTacacsServerProfileResult {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
+    private Map<String,String> encryptedValues;
     private String folder;
     /**
      * @return The UUID of the TACACS+ server profile
      * 
      */
     private String id;
-    /**
-     * @return The name of the TACACS+ server profile
-     * 
-     */
     private String name;
-    /**
-     * @return The TACACS+ authentication protocol
-     * 
-     */
     private String protocol;
-    /**
-     * @return The TACACS+ server configuration
-     * 
-     */
     private List<GetTacacsServerProfileServer> servers;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return The TACACS+ timeout (seconds)
-     * 
-     */
     private Integer timeout;
-    /**
-     * @return Use a single TACACS+ connection?
-     * 
-     */
     private Boolean useSingleConnection;
 
     private GetTacacsServerProfileResult() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
+    }
     public String folder() {
         return this.folder;
     }
@@ -88,49 +56,24 @@ public final class GetTacacsServerProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return The name of the TACACS+ server profile
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return The TACACS+ authentication protocol
-     * 
-     */
     public String protocol() {
         return this.protocol;
     }
-    /**
-     * @return The TACACS+ server configuration
-     * 
-     */
     public List<GetTacacsServerProfileServer> servers() {
         return this.servers;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return The TACACS+ timeout (seconds)
-     * 
-     */
     public Integer timeout() {
         return this.timeout;
     }
-    /**
-     * @return Use a single TACACS+ connection?
-     * 
-     */
     public Boolean useSingleConnection() {
         return this.useSingleConnection;
     }
@@ -145,6 +88,7 @@ public final class GetTacacsServerProfileResult {
     @CustomType.Builder
     public static final class Builder {
         private String device;
+        private Map<String,String> encryptedValues;
         private String folder;
         private String id;
         private String name;
@@ -158,6 +102,7 @@ public final class GetTacacsServerProfileResult {
         public Builder(GetTacacsServerProfileResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.device = defaults.device;
+    	      this.encryptedValues = defaults.encryptedValues;
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
@@ -175,6 +120,14 @@ public final class GetTacacsServerProfileResult {
               throw new MissingRequiredPropertyException("GetTacacsServerProfileResult", "device");
             }
             this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetTacacsServerProfileResult", "encryptedValues");
+            }
+            this.encryptedValues = encryptedValues;
             return this;
         }
         @CustomType.Setter
@@ -255,6 +208,7 @@ public final class GetTacacsServerProfileResult {
         public GetTacacsServerProfileResult build() {
             final var _resultValue = new GetTacacsServerProfileResult();
             _resultValue.device = device;
+            _resultValue.encryptedValues = encryptedValues;
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;

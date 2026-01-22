@@ -15,18 +15,19 @@ import javax.annotation.Nullable;
 public final class SdwanSaasQualityProfileMonitorMode {
     /**
      * @return Adaptive
-     * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
     private @Nullable SdwanSaasQualityProfileMonitorModeAdaptive adaptive;
     /**
      * @return Http https
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
     private @Nullable SdwanSaasQualityProfileMonitorModeHttpHttps httpHttps;
     /**
      * @return Static ip
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
@@ -35,7 +36,6 @@ public final class SdwanSaasQualityProfileMonitorMode {
     private SdwanSaasQualityProfileMonitorMode() {}
     /**
      * @return Adaptive
-     * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
     public Optional<SdwanSaasQualityProfileMonitorModeAdaptive> adaptive() {
@@ -43,6 +43,7 @@ public final class SdwanSaasQualityProfileMonitorMode {
     }
     /**
      * @return Http https
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */
@@ -51,6 +52,7 @@ public final class SdwanSaasQualityProfileMonitorMode {
     }
     /**
      * @return Static ip
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
      * 
      */

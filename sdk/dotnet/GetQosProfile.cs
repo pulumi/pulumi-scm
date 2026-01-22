@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// QosProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM QoS Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the QoS Profile you want to find.
+        ///     var scmQosProf = Scm.GetQosProfile.Invoke(new()
+        ///     {
+        ///         Id = "cffecf78-b3b1-4b01-ad31-c69bf839850b",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmQosProfileDetails"] = 
+        ///         {
+        ///             { "id", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Id) },
+        ///             { "folder", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Folder) },
+        ///             { "name", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetQosProfileResult> InvokeAsync(GetQosProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetQosProfileResult>("scm:index/getQosProfile:getQosProfile", args ?? new GetQosProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// QosProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM QoS Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the QoS Profile you want to find.
+        ///     var scmQosProf = Scm.GetQosProfile.Invoke(new()
+        ///     {
+        ///         Id = "cffecf78-b3b1-4b01-ad31-c69bf839850b",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmQosProfileDetails"] = 
+        ///         {
+        ///             { "id", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Id) },
+        ///             { "folder", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Folder) },
+        ///             { "name", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetQosProfileResult> Invoke(GetQosProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosProfileResult>("scm:index/getQosProfile:getQosProfile", args ?? new GetQosProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// QosProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM QoS Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the QoS Profile you want to find.
+        ///     var scmQosProf = Scm.GetQosProfile.Invoke(new()
+        ///     {
+        ///         Id = "cffecf78-b3b1-4b01-ad31-c69bf839850b",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmQosProfileDetails"] = 
+        ///         {
+        ///             { "id", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Id) },
+        ///             { "folder", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Folder) },
+        ///             { "name", scmQosProf.Apply(getQosProfileResult =&gt; getQosProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetQosProfileResult> Invoke(GetQosProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosProfileResult>("scm:index/getQosProfile:getQosProfile", args ?? new GetQosProfileInvokeArgs(), options.WithDefaults());
@@ -35,15 +128,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -53,16 +141,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -76,15 +157,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -94,16 +170,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -117,36 +186,18 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetQosProfileResult
     {
-        /// <summary>
-        /// Aggregate bandwidth
-        /// </summary>
         public readonly Outputs.GetQosProfileAggregateBandwidthResult AggregateBandwidth;
-        /// <summary>
-        /// Class bandwidth type
-        /// </summary>
         public readonly Outputs.GetQosProfileClassBandwidthTypeResult ClassBandwidthType;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

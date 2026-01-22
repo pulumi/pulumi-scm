@@ -18,7 +18,6 @@ public final class DhcpInterfaceServerOptionLeaseArgs extends com.pulumi.resourc
 
     /**
      * DHCP lease timeout (minutes)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
     @Import(name="timeout")
@@ -26,7 +25,6 @@ public final class DhcpInterfaceServerOptionLeaseArgs extends com.pulumi.resourc
 
     /**
      * @return DHCP lease timeout (minutes)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
     public Optional<Output<Integer>> timeout() {
@@ -35,6 +33,7 @@ public final class DhcpInterfaceServerOptionLeaseArgs extends com.pulumi.resourc
 
     /**
      * Unlimited
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
@@ -43,6 +42,7 @@ public final class DhcpInterfaceServerOptionLeaseArgs extends com.pulumi.resourc
 
     /**
      * @return Unlimited
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
@@ -77,7 +77,6 @@ public final class DhcpInterfaceServerOptionLeaseArgs extends com.pulumi.resourc
 
         /**
          * @param timeout DHCP lease timeout (minutes)
-         * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
          * 
          * @return builder
          * 
@@ -89,7 +88,6 @@ public final class DhcpInterfaceServerOptionLeaseArgs extends com.pulumi.resourc
 
         /**
          * @param timeout DHCP lease timeout (minutes)
-         * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
          * 
          * @return builder
          * 
@@ -100,6 +98,7 @@ public final class DhcpInterfaceServerOptionLeaseArgs extends com.pulumi.resourc
 
         /**
          * @param unlimited Unlimited
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
          * 
          * @return builder
@@ -112,6 +111,7 @@ public final class DhcpInterfaceServerOptionLeaseArgs extends com.pulumi.resourc
 
         /**
          * @param unlimited Unlimited
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
          * 
          * @return builder

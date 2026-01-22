@@ -165,6 +165,20 @@ def get_log_forwarding_profile_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM Log Forwarding Profile objects.
+    #
+    # Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+    all_shared = scm.get_log_forwarding_profile_list(folder="All")
+    pulumi.export("scmLogForwardingProfileListAllShared", all_shared.datas)
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +217,20 @@ def get_log_forwarding_profile_list_output(device: Optional[pulumi.Input[Optiona
                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLogForwardingProfileListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM Log Forwarding Profile objects.
+    #
+    # Example 1: Fetch a list of all SCM Log Forwarding Profile in the "All" folder.
+    all_shared = scm.get_log_forwarding_profile_list(folder="All")
+    pulumi.export("scmLogForwardingProfileListAllShared", all_shared.datas)
+    ```
 
 
     :param _builtins.str device: The device of the item.

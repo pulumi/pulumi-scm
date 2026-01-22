@@ -37,7 +37,6 @@ public final class GetLdapServerProfileListData {
     private String bindTimelimit;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -47,8 +46,7 @@ public final class GetLdapServerProfileListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -63,7 +61,7 @@ public final class GetLdapServerProfileListData {
      */
     private String ldapType;
     /**
-     * @return The name of the LDAP server profile
+     * @return The name of the item.
      * 
      */
     private String name;
@@ -78,8 +76,7 @@ public final class GetLdapServerProfileListData {
      */
     private List<GetLdapServerProfileListDataServer> servers;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -131,7 +128,6 @@ public final class GetLdapServerProfileListData {
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -145,8 +141,7 @@ public final class GetLdapServerProfileListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -167,7 +162,7 @@ public final class GetLdapServerProfileListData {
         return this.ldapType;
     }
     /**
-     * @return The name of the LDAP server profile
+     * @return The name of the item.
      * 
      */
     public String name() {
@@ -188,8 +183,7 @@ public final class GetLdapServerProfileListData {
         return this.servers;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

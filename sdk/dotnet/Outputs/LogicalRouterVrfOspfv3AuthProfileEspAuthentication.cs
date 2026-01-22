@@ -15,31 +15,35 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Md5
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `None`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5? Md5;
         /// <summary>
         /// None
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `None`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNone? None;
         /// <summary>
         /// Sha1
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `None`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1? Sha1;
         /// <summary>
         /// Sha256
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `None`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256? Sha256;
         /// <summary>
         /// Sha384
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `None`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384? Sha384;
         /// <summary>
         /// Sha512
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `None`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512? Sha512;

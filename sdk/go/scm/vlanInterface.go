@@ -85,17 +85,19 @@ type VlanInterface struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrOutput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Vlan interfaces DHCP Client Object
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient VlanInterfaceDhcpClientPtrOutput `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrOutput `pulumi:"interfaceManagementProfile"`
 	// VLAN Interface IP Parent
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips VlanInterfaceIpArrayOutput `pulumi:"ips"`
 	// MTU
@@ -103,6 +105,7 @@ type VlanInterface struct {
 	// L3 sub-interface name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -149,17 +152,19 @@ type vlanInterfaceState struct {
 	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Vlan interfaces DHCP Client Object
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient *VlanInterfaceDhcpClient `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// VLAN Interface IP Parent
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips []VlanInterfaceIp `pulumi:"ips"`
 	// MTU
@@ -167,6 +172,7 @@ type vlanInterfaceState struct {
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -184,17 +190,19 @@ type VlanInterfaceState struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Vlan interfaces DHCP Client Object
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient VlanInterfaceDhcpClientPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
 	// VLAN Interface IP Parent
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips VlanInterfaceIpArrayInput
 	// MTU
@@ -202,6 +210,7 @@ type VlanInterfaceState struct {
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -223,17 +232,19 @@ type vlanInterfaceArgs struct {
 	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Vlan interfaces DHCP Client Object
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient *VlanInterfaceDhcpClient `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// VLAN Interface IP Parent
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips []VlanInterfaceIp `pulumi:"ips"`
 	// MTU
@@ -241,6 +252,7 @@ type vlanInterfaceArgs struct {
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// VLAN tag
@@ -258,17 +270,19 @@ type VlanInterfaceArgs struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Vlan interfaces DHCP Client Object
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient VlanInterfaceDhcpClientPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
 	// VLAN Interface IP Parent
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips VlanInterfaceIpArrayInput
 	// MTU
@@ -276,6 +290,7 @@ type VlanInterfaceArgs struct {
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// VLAN tag
@@ -390,18 +405,19 @@ func (o VlanInterfaceOutput) DefaultValue() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o VlanInterfaceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VlanInterface) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // Vlan interfaces DHCP Client Object
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o VlanInterfaceOutput) DhcpClient() VlanInterfaceDhcpClientPtrOutput {
 	return o.ApplyT(func(v *VlanInterface) VlanInterfaceDhcpClientPtrOutput { return v.DhcpClient }).(VlanInterfaceDhcpClientPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o VlanInterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VlanInterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -413,6 +429,7 @@ func (o VlanInterfaceOutput) InterfaceManagementProfile() pulumi.StringPtrOutput
 }
 
 // VLAN Interface IP Parent
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o VlanInterfaceOutput) Ips() VlanInterfaceIpArrayOutput {
 	return o.ApplyT(func(v *VlanInterface) VlanInterfaceIpArrayOutput { return v.Ips }).(VlanInterfaceIpArrayOutput)
@@ -429,6 +446,7 @@ func (o VlanInterfaceOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o VlanInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VlanInterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

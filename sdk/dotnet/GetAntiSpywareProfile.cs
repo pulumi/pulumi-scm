@@ -125,15 +125,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -143,16 +138,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the anti-spyware profile
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -166,15 +154,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -184,16 +167,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the anti-spyware profile
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -207,57 +183,24 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetAntiSpywareProfileResult
     {
-        /// <summary>
-        /// Cloud inline analysis
-        /// </summary>
         public readonly bool CloudInlineAnalysis;
-        /// <summary>
-        /// Description
-        /// </summary>
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the anti-spyware profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Inline exception edl url
-        /// </summary>
         public readonly ImmutableArray<string> InlineExceptionEdlUrls;
-        /// <summary>
-        /// Inline exception ip address
-        /// </summary>
         public readonly ImmutableArray<string> InlineExceptionIpAddresses;
-        /// <summary>
-        /// Mica engine spyware enabled
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareProfileMicaEngineSpywareEnabledResult> MicaEngineSpywareEnableds;
-        /// <summary>
-        /// The name of the anti-spyware profile
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Rules
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareProfileRuleResult> Rules;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// Threat exception
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareProfileThreatExceptionResult> ThreatExceptions;
 
         [OutputConstructor]

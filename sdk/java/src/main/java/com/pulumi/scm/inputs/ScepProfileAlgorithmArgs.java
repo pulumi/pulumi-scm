@@ -5,10 +5,9 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.inputs.ScepProfileAlgorithmRsaArgs;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class ScepProfileAlgorithmArgs extends com.pulumi.resources.ResourceArgs {
@@ -19,15 +18,15 @@ public final class ScepProfileAlgorithmArgs extends com.pulumi.resources.Resourc
      * Key length (bits)
      * 
      */
-    @Import(name="rsa")
-    private @Nullable Output<ScepProfileAlgorithmRsaArgs> rsa;
+    @Import(name="rsa", required=true)
+    private Output<ScepProfileAlgorithmRsaArgs> rsa;
 
     /**
      * @return Key length (bits)
      * 
      */
-    public Optional<Output<ScepProfileAlgorithmRsaArgs>> rsa() {
-        return Optional.ofNullable(this.rsa);
+    public Output<ScepProfileAlgorithmRsaArgs> rsa() {
+        return this.rsa;
     }
 
     private ScepProfileAlgorithmArgs() {}
@@ -60,7 +59,7 @@ public final class ScepProfileAlgorithmArgs extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder rsa(@Nullable Output<ScepProfileAlgorithmRsaArgs> rsa) {
+        public Builder rsa(Output<ScepProfileAlgorithmRsaArgs> rsa) {
             $.rsa = rsa;
             return this;
         }
@@ -76,6 +75,9 @@ public final class ScepProfileAlgorithmArgs extends com.pulumi.resources.Resourc
         }
 
         public ScepProfileAlgorithmArgs build() {
+            if ($.rsa == null) {
+                throw new MissingRequiredPropertyException("ScepProfileAlgorithmArgs", "rsa");
+            }
             return $;
         }
     }

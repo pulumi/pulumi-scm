@@ -52,32 +52,21 @@ func LookupGeneralSetting(ctx *pulumi.Context, args *LookupGeneralSettingArgs, o
 // A collection of arguments for invoking getGeneralSetting.
 type LookupGeneralSettingArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getGeneralSetting.
 type LookupGeneralSettingResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
-	// General
+	Device  string                   `pulumi:"device"`
+	Folder  string                   `pulumi:"folder"`
 	General GetGeneralSettingGeneral `pulumi:"general"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string `pulumi:"id"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -94,15 +83,10 @@ func LookupGeneralSettingOutput(ctx *pulumi.Context, args LookupGeneralSettingOu
 // A collection of arguments for invoking getGeneralSetting.
 type LookupGeneralSettingOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -126,18 +110,14 @@ func (o LookupGeneralSettingResultOutput) ToLookupGeneralSettingResultOutputWith
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupGeneralSettingResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGeneralSettingResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupGeneralSettingResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGeneralSettingResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// General
 func (o LookupGeneralSettingResultOutput) General() GetGeneralSettingGeneralOutput {
 	return o.ApplyT(func(v LookupGeneralSettingResult) GetGeneralSettingGeneral { return v.General }).(GetGeneralSettingGeneralOutput)
 }
@@ -147,8 +127,6 @@ func (o LookupGeneralSettingResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGeneralSettingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupGeneralSettingResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupGeneralSettingResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

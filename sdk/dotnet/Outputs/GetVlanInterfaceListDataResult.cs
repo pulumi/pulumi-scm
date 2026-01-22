@@ -31,17 +31,16 @@ namespace Pulumi.Scm.Outputs
         public readonly string DefaultValue;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
         /// Vlan interfaces DHCP Client Object
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly Outputs.GetVlanInterfaceListDataDhcpClientResult DhcpClient;
         /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -54,6 +53,7 @@ namespace Pulumi.Scm.Outputs
         public readonly string InterfaceManagementProfile;
         /// <summary>
         /// VLAN Interface IP Parent
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetVlanInterfaceListDataIpResult> Ips;
@@ -62,12 +62,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int Mtu;
         /// <summary>
-        /// L3 sub-interface name
+        /// The name of the item.
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;

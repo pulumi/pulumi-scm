@@ -19,7 +19,6 @@ namespace Pulumi.Scm.Outputs
         public readonly string Certificate;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
@@ -27,8 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string EntityId;
         /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -40,7 +38,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int MaxClockSkew;
         /// <summary>
-        /// The name of the SAML server profile
+        /// The name of the item.
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -48,8 +46,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string SloBindings;
         /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// Identity provider SLO URL
+        /// </summary>
+        public readonly string SloUrl;
+        /// <summary>
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         /// <summary>
@@ -88,6 +89,8 @@ namespace Pulumi.Scm.Outputs
 
             string sloBindings,
 
+            string sloUrl,
+
             string snippet,
 
             string ssoBindings,
@@ -108,6 +111,7 @@ namespace Pulumi.Scm.Outputs
             MaxClockSkew = maxClockSkew;
             Name = name;
             SloBindings = sloBindings;
+            SloUrl = sloUrl;
             Snippet = snippet;
             SsoBindings = ssoBindings;
             SsoUrl = ssoUrl;

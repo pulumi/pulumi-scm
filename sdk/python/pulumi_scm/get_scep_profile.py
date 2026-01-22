@@ -89,25 +89,16 @@ class GetScepProfileResult:
     @_builtins.property
     @pulumi.getter
     def algorithm(self) -> 'outputs.GetScepProfileAlgorithmResult':
-        """
-        Algorithm
-        """
         return pulumi.get(self, "algorithm")
 
     @_builtins.property
     @pulumi.getter(name="caIdentityName")
     def ca_identity_name(self) -> _builtins.str:
-        """
-        Certificate Authority identity
-        """
         return pulumi.get(self, "ca_identity_name")
 
     @_builtins.property
     @pulumi.getter(name="certificateAttributes")
     def certificate_attributes(self) -> 'outputs.GetScepProfileCertificateAttributesResult':
-        """
-        Subject Alternative name type
-        """
         return pulumi.get(self, "certificate_attributes")
 
     @_builtins.property
@@ -115,41 +106,27 @@ class GetScepProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def digest(self) -> _builtins.str:
-        """
-        Digest for CSR
-        """
         return pulumi.get(self, "digest")
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
-        """
-        Map of sensitive values returned from the API.
-        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def fingerprint(self) -> _builtins.str:
-        """
-        CA certificate fingerprint
-        """
         return pulumi.get(self, "fingerprint")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -163,58 +140,36 @@ class GetScepProfileResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        The name of the SCEP profile
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="scepCaCert")
     def scep_ca_cert(self) -> _builtins.str:
-        """
-        SCEP server CA certificate
-        """
         return pulumi.get(self, "scep_ca_cert")
 
     @_builtins.property
     @pulumi.getter(name="scepChallenge")
     def scep_challenge(self) -> 'outputs.GetScepProfileScepChallengeResult':
-        """
-        One Time Password challenge
-        """
         return pulumi.get(self, "scep_challenge")
 
     @_builtins.property
     @pulumi.getter(name="scepClientCert")
     def scep_client_cert(self) -> _builtins.str:
-        """
-        SCEP client ceertificate
-        """
         return pulumi.get(self, "scep_client_cert")
 
     @_builtins.property
     @pulumi.getter(name="scepUrl")
     def scep_url(self) -> _builtins.str:
-        """
-        SCEP server URL
-        """
         return pulumi.get(self, "scep_url")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def subject(self) -> _builtins.str:
-        """
-        Subject
-        """
         return pulumi.get(self, "subject")
 
     @_builtins.property
@@ -225,17 +180,11 @@ class GetScepProfileResult:
     @_builtins.property
     @pulumi.getter(name="useAsDigitalSignature")
     def use_as_digital_signature(self) -> _builtins.bool:
-        """
-        Use as digital signature?
-        """
         return pulumi.get(self, "use_as_digital_signature")
 
     @_builtins.property
     @pulumi.getter(name="useForKeyEncipherment")
     def use_for_key_encipherment(self) -> _builtins.bool:
-        """
-        Use for key encipherment?
-        """
         return pulumi.get(self, "use_for_key_encipherment")
 
 
@@ -275,15 +224,27 @@ def get_scep_profile(device: Optional[_builtins.str] = None,
     """
     ScepProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM SCEP Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+    scm_scep_prof = scm.get_scep_profile(id="06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1")
+    pulumi.export("scmScepProfileDetails", {
+        "profileId": scm_scep_prof.id,
+        "folder": scm_scep_prof.folder,
+        "name": scm_scep_prof.name,
+    })
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the SCEP profile
-    :param _builtins.str name: The name of the SCEP profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -323,15 +284,27 @@ def get_scep_profile_output(device: Optional[pulumi.Input[Optional[_builtins.str
     """
     ScepProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM SCEP Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM SCEP Profile you want to find.
+    scm_scep_prof = scm.get_scep_profile(id="06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1")
+    pulumi.export("scmScepProfileDetails", {
+        "profileId": scm_scep_prof.id,
+        "folder": scm_scep_prof.folder,
+        "name": scm_scep_prof.name,
+    })
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: The UUID of the SCEP profile
-    :param _builtins.str name: The name of the SCEP profile
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

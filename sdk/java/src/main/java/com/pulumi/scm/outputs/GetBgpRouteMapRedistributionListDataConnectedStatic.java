@@ -14,18 +14,19 @@ import java.util.Objects;
 public final class GetBgpRouteMapRedistributionListDataConnectedStatic {
     /**
      * @return Connected Static Root BGP
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     private GetBgpRouteMapRedistributionListDataConnectedStaticBgp bgp;
     /**
      * @return Ospf
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     private GetBgpRouteMapRedistributionListDataConnectedStaticOspf ospf;
     /**
      * @return Rib
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
@@ -34,7 +35,6 @@ public final class GetBgpRouteMapRedistributionListDataConnectedStatic {
     private GetBgpRouteMapRedistributionListDataConnectedStatic() {}
     /**
      * @return Connected Static Root BGP
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
     public GetBgpRouteMapRedistributionListDataConnectedStaticBgp bgp() {
@@ -42,6 +42,7 @@ public final class GetBgpRouteMapRedistributionListDataConnectedStatic {
     }
     /**
      * @return Ospf
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */
@@ -50,6 +51,7 @@ public final class GetBgpRouteMapRedistributionListDataConnectedStatic {
     }
     /**
      * @return Rib
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `ospf`, and `rib`.
      * 
      */

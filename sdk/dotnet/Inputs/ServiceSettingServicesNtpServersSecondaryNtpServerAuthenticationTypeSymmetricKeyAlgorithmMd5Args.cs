@@ -12,11 +12,21 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmMd5Args : global::Pulumi.ResourceArgs
     {
+        [Input("authenticationKey")]
+        private Input<string>? _authenticationKey;
+
         /// <summary>
         /// Authentication key
         /// </summary>
-        [Input("authenticationKey")]
-        public Input<string>? AuthenticationKey { get; set; }
+        public Input<string>? AuthenticationKey
+        {
+            get => _authenticationKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _authenticationKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         public ServiceSettingServicesNtpServersSecondaryNtpServerAuthenticationTypeSymmetricKeyAlgorithmMd5Args()
         {

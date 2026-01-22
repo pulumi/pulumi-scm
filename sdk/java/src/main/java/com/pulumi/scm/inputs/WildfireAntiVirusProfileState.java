@@ -37,7 +37,6 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -45,7 +44,6 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -54,6 +52,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -62,6 +61,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -131,6 +131,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -139,6 +140,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -224,7 +226,6 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -236,7 +237,6 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -247,6 +247,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -259,6 +260,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -374,6 +376,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -386,6 +389,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

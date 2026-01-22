@@ -17,7 +17,6 @@ public final class GetApplicationGroupPlainArgs extends com.pulumi.resources.Inv
 
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -25,26 +24,15 @@ public final class GetApplicationGroupPlainArgs extends com.pulumi.resources.Inv
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
 
-    /**
-     * The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     @Import(name="folder")
     private @Nullable String folder;
 
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public Optional<String> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -64,34 +52,16 @@ public final class GetApplicationGroupPlainArgs extends com.pulumi.resources.Inv
         return this.id;
     }
 
-    /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]
-     * 
-     */
     @Import(name="name")
     private @Nullable String name;
 
-    /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]
-     * 
-     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
-    /**
-     * The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     @Import(name="snippet")
     private @Nullable String snippet;
 
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public Optional<String> snippet() {
         return Optional.ofNullable(this.snippet);
     }
@@ -126,7 +96,6 @@ public final class GetApplicationGroupPlainArgs extends com.pulumi.resources.Inv
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -136,13 +105,6 @@ public final class GetApplicationGroupPlainArgs extends com.pulumi.resources.Inv
             return this;
         }
 
-        /**
-         * @param folder The folder in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
-         * @return builder
-         * 
-         */
         public Builder folder(@Nullable String folder) {
             $.folder = folder;
             return this;
@@ -159,24 +121,11 @@ public final class GetApplicationGroupPlainArgs extends com.pulumi.resources.Inv
             return this;
         }
 
-        /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
-         * 
-         * @return builder
-         * 
-         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
-        /**
-         * @param snippet The snippet in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-         * 
-         * @return builder
-         * 
-         */
         public Builder snippet(@Nullable String snippet) {
             $.snippet = snippet;
             return this;

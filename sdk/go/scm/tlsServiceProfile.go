@@ -112,9 +112,9 @@ type TlsServiceProfile struct {
 	// Certificate name
 	Certificate pulumi.StringOutput `pulumi:"certificate"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
@@ -122,6 +122,7 @@ type TlsServiceProfile struct {
 	// Protocol settings
 	ProtocolSettings TlsServiceProfileProtocolSettingsOutput `pulumi:"protocolSettings"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -166,9 +167,9 @@ type tlsServiceProfileState struct {
 	// Certificate name
 	Certificate *string `pulumi:"certificate"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
@@ -176,6 +177,7 @@ type tlsServiceProfileState struct {
 	// Protocol settings
 	ProtocolSettings *TlsServiceProfileProtocolSettings `pulumi:"protocolSettings"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -185,9 +187,9 @@ type TlsServiceProfileState struct {
 	// Certificate name
 	Certificate pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
@@ -195,6 +197,7 @@ type TlsServiceProfileState struct {
 	// Protocol settings
 	ProtocolSettings TlsServiceProfileProtocolSettingsPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -208,9 +211,9 @@ type tlsServiceProfileArgs struct {
 	// Certificate name
 	Certificate string `pulumi:"certificate"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
@@ -218,6 +221,7 @@ type tlsServiceProfileArgs struct {
 	// Protocol settings
 	ProtocolSettings TlsServiceProfileProtocolSettings `pulumi:"protocolSettings"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -227,9 +231,9 @@ type TlsServiceProfileArgs struct {
 	// Certificate name
 	Certificate pulumi.StringInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
@@ -237,6 +241,7 @@ type TlsServiceProfileArgs struct {
 	// Protocol settings
 	ProtocolSettings TlsServiceProfileProtocolSettingsInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -334,12 +339,12 @@ func (o TlsServiceProfileOutput) Certificate() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TlsServiceProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsServiceProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TlsServiceProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsServiceProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -356,6 +361,7 @@ func (o TlsServiceProfileOutput) ProtocolSettings() TlsServiceProfileProtocolSet
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TlsServiceProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsServiceProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Ipv4
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ipv4` and `Ipv6`.
         /// </summary>
         [Input("ipv4")]
         public Input<Inputs.LogicalRouterVrfBgpAggregateRouteTypeIpv4Args>? Ipv4 { get; set; }
 
         /// <summary>
         /// Ipv6
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ipv4` and `Ipv6`.
         /// </summary>
         [Input("ipv6")]

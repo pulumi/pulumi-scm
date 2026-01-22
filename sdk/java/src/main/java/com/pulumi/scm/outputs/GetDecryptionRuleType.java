@@ -6,28 +6,27 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetDecryptionRuleTypeSslForwardProxy;
-import java.lang.String;
+import com.pulumi.scm.outputs.GetDecryptionRuleTypeSslInboundInspection;
 import java.util.Objects;
 
 @CustomType
 public final class GetDecryptionRuleType {
     /**
      * @return Ssl forward proxy
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     private GetDecryptionRuleTypeSslForwardProxy sslForwardProxy;
     /**
      * @return add the certificate name for SSL inbound inspection
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
-    private String sslInboundInspection;
+    private GetDecryptionRuleTypeSslInboundInspection sslInboundInspection;
 
     private GetDecryptionRuleType() {}
     /**
      * @return Ssl forward proxy
-     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     public GetDecryptionRuleTypeSslForwardProxy sslForwardProxy() {
@@ -35,10 +34,11 @@ public final class GetDecryptionRuleType {
     }
     /**
      * @return add the certificate name for SSL inbound inspection
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
-    public String sslInboundInspection() {
+    public GetDecryptionRuleTypeSslInboundInspection sslInboundInspection() {
         return this.sslInboundInspection;
     }
 
@@ -52,7 +52,7 @@ public final class GetDecryptionRuleType {
     @CustomType.Builder
     public static final class Builder {
         private GetDecryptionRuleTypeSslForwardProxy sslForwardProxy;
-        private String sslInboundInspection;
+        private GetDecryptionRuleTypeSslInboundInspection sslInboundInspection;
         public Builder() {}
         public Builder(GetDecryptionRuleType defaults) {
     	      Objects.requireNonNull(defaults);
@@ -69,7 +69,7 @@ public final class GetDecryptionRuleType {
             return this;
         }
         @CustomType.Setter
-        public Builder sslInboundInspection(String sslInboundInspection) {
+        public Builder sslInboundInspection(GetDecryptionRuleTypeSslInboundInspection sslInboundInspection) {
             if (sslInboundInspection == null) {
               throw new MissingRequiredPropertyException("GetDecryptionRuleType", "sslInboundInspection");
             }

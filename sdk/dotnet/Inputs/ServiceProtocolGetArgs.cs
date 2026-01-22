@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Tcp
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Tcp` and `Udp`.
         /// </summary>
         [Input("tcp")]
         public Input<Inputs.ServiceProtocolTcpGetArgs>? Tcp { get; set; }
 
         /// <summary>
         /// Udp
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Tcp` and `Udp`.
         /// </summary>
         [Input("udp")]

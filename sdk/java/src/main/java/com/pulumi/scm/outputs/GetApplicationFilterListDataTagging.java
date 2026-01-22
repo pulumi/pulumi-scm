@@ -14,12 +14,12 @@ import java.util.Objects;
 public final class GetApplicationFilterListDataTagging {
     /**
      * @return No tag
-     * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
     private Boolean noTag;
     /**
      * @return Tag
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
@@ -28,7 +28,6 @@ public final class GetApplicationFilterListDataTagging {
     private GetApplicationFilterListDataTagging() {}
     /**
      * @return No tag
-     * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */
     public Boolean noTag() {
@@ -36,6 +35,7 @@ public final class GetApplicationFilterListDataTagging {
     }
     /**
      * @return Tag
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `noTag` and `tag`.
      * 
      */

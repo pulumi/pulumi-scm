@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetManagementInterfaceManagementInterfaceMgmtType {
     /**
      * @return Dhcp client
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
     private GetManagementInterfaceManagementInterfaceMgmtTypeDhcpClient dhcpClient;
     /**
      * @return Static
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetManagementInterfaceManagementInterfaceMgmtType {
     private GetManagementInterfaceManagementInterfaceMgmtType() {}
     /**
      * @return Dhcp client
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
     public GetManagementInterfaceManagementInterfaceMgmtTypeDhcpClient dhcpClient() {
@@ -35,6 +34,7 @@ public final class GetManagementInterfaceManagementInterfaceMgmtType {
     }
     /**
      * @return Static
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */

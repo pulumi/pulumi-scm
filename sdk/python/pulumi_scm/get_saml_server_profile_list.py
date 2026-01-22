@@ -165,6 +165,20 @@ def get_saml_server_profile_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM SAML Server Profile objects.
+    #
+    # Fetch a list of all SCM SAML Server Profile in the "All" folder.
+    all_shared = scm.get_saml_server_profile_list(folder="All")
+    pulumi.export("scmSamlServerProfileListAllShared", all_shared.datas)
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +217,20 @@ def get_saml_server_profile_list_output(device: Optional[pulumi.Input[Optional[_
                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSamlServerProfileListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM SAML Server Profile objects.
+    #
+    # Fetch a list of all SCM SAML Server Profile in the "All" folder.
+    all_shared = scm.get_saml_server_profile_list(folder="All")
+    pulumi.export("scmSamlServerProfileListAllShared", all_shared.datas)
+    ```
 
 
     :param _builtins.str device: The device of the item.

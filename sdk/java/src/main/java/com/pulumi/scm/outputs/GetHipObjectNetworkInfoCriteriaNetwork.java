@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetHipObjectNetworkInfoCriteriaNetwork {
     /**
      * @return Is
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     private GetHipObjectNetworkInfoCriteriaNetworkIs is;
     /**
      * @return Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetHipObjectNetworkInfoCriteriaNetwork {
     private GetHipObjectNetworkInfoCriteriaNetwork() {}
     /**
      * @return Is
-     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public GetHipObjectNetworkInfoCriteriaNetworkIs is() {
@@ -35,6 +34,7 @@ public final class GetHipObjectNetworkInfoCriteriaNetwork {
     }
     /**
      * @return Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */

@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetQosProfileListDataClassBandwidthType {
     /**
      * @return Mbps
-     * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      * 
      */
     private GetQosProfileListDataClassBandwidthTypeMbps mbps;
     /**
      * @return Percentage
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetQosProfileListDataClassBandwidthType {
     private GetQosProfileListDataClassBandwidthType() {}
     /**
      * @return Mbps
-     * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      * 
      */
     public GetQosProfileListDataClassBandwidthTypeMbps mbps() {
@@ -35,6 +34,7 @@ public final class GetQosProfileListDataClassBandwidthType {
     }
     /**
      * @return Percentage
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      * 
      */

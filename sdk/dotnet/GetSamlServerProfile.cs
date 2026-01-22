@@ -13,18 +13,114 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// SamlServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM SAML Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
+        ///     var scmSamlServerProf = Scm.GetSamlServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "a17abcfc-d37d-4b8a-bb09-102ffdc3abef",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSamlServerProfileDetails"] = 
+        ///         {
+        ///             { "folder", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Folder) },
+        ///             { "name", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Name) },
+        ///             { "id", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Id) },
+        ///             { "ssoUrl", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.SsoUrl) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetSamlServerProfileResult> InvokeAsync(GetSamlServerProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSamlServerProfileResult>("scm:index/getSamlServerProfile:getSamlServerProfile", args ?? new GetSamlServerProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// SamlServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM SAML Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
+        ///     var scmSamlServerProf = Scm.GetSamlServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "a17abcfc-d37d-4b8a-bb09-102ffdc3abef",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSamlServerProfileDetails"] = 
+        ///         {
+        ///             { "folder", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Folder) },
+        ///             { "name", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Name) },
+        ///             { "id", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Id) },
+        ///             { "ssoUrl", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.SsoUrl) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSamlServerProfileResult> Invoke(GetSamlServerProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSamlServerProfileResult>("scm:index/getSamlServerProfile:getSamlServerProfile", args ?? new GetSamlServerProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// SamlServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM SAML Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
+        ///     var scmSamlServerProf = Scm.GetSamlServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "a17abcfc-d37d-4b8a-bb09-102ffdc3abef",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSamlServerProfileDetails"] = 
+        ///         {
+        ///             { "folder", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Folder) },
+        ///             { "name", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Name) },
+        ///             { "id", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.Id) },
+        ///             { "ssoUrl", scmSamlServerProf.Apply(getSamlServerProfileResult =&gt; getSamlServerProfileResult.SsoUrl) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSamlServerProfileResult> Invoke(GetSamlServerProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSamlServerProfileResult>("scm:index/getSamlServerProfile:getSamlServerProfile", args ?? new GetSamlServerProfileInvokeArgs(), options.WithDefaults());
@@ -35,15 +131,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -53,16 +144,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the SAML server profile
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -76,15 +160,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -94,16 +173,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the SAML server profile
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -117,61 +189,26 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetSamlServerProfileResult
     {
-        /// <summary>
-        /// The identity provider certificate
-        /// </summary>
         public readonly string Certificate;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The identity provider ID
-        /// </summary>
         public readonly string EntityId;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the SAML server profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Maxiumum clock skew
-        /// </summary>
         public readonly int MaxClockSkew;
-        /// <summary>
-        /// The name of the SAML server profile
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// SAML HTTP binding for SLO requests to the identity provider
-        /// </summary>
         public readonly string SloBindings;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
+        public readonly string SloUrl;
         public readonly string Snippet;
-        /// <summary>
-        /// SAML HTTP binding for SSO requests to the identity provider
-        /// </summary>
         public readonly string SsoBindings;
-        /// <summary>
-        /// Identity provider SSO URL
-        /// </summary>
         public readonly string SsoUrl;
         public readonly string Tfid;
-        /// <summary>
-        /// Validate the identity provider certificate?
-        /// </summary>
         public readonly bool ValidateIdpCertificate;
-        /// <summary>
-        /// Sign SAML message to the identity provider?
-        /// </summary>
         public readonly bool WantAuthRequestsSigned;
 
         [OutputConstructor]
@@ -191,6 +228,8 @@ namespace Pulumi.Scm
             string name,
 
             string sloBindings,
+
+            string sloUrl,
 
             string snippet,
 
@@ -212,6 +251,7 @@ namespace Pulumi.Scm
             MaxClockSkew = maxClockSkew;
             Name = name;
             SloBindings = sloBindings;
+            SloUrl = sloUrl;
             Snippet = snippet;
             SsoBindings = ssoBindings;
             SsoUrl = ssoUrl;

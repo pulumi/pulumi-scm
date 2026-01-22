@@ -16,10 +16,10 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Key length (bits)
         /// </summary>
-        public readonly Outputs.ScepProfileAlgorithmRsa? Rsa;
+        public readonly Outputs.ScepProfileAlgorithmRsa Rsa;
 
         [OutputConstructor]
-        private ScepProfileAlgorithm(Outputs.ScepProfileAlgorithmRsa? rsa)
+        private ScepProfileAlgorithm(Outputs.ScepProfileAlgorithmRsa rsa)
         {
             Rsa = rsa;
         }

@@ -103,9 +103,11 @@ type RadiusServerProfile struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the RADIUS server profile
@@ -117,6 +119,7 @@ type RadiusServerProfile struct {
 	// Server
 	Servers RadiusServerProfileServerArrayOutput `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -137,6 +140,10 @@ func NewRadiusServerProfile(ctx *pulumi.Context,
 	if args.Servers == nil {
 		return nil, errors.New("invalid value for required argument 'Servers'")
 	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"encryptedValues",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource RadiusServerProfile
 	err := ctx.RegisterResource("scm:index/radiusServerProfile:RadiusServerProfile", name, args, &resource, opts...)
@@ -161,9 +168,11 @@ func GetRadiusServerProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering RadiusServerProfile resources.
 type radiusServerProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the RADIUS server profile
@@ -175,6 +184,7 @@ type radiusServerProfileState struct {
 	// Server
 	Servers []RadiusServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -184,9 +194,11 @@ type radiusServerProfileState struct {
 
 type RadiusServerProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
+	// Map of sensitive values returned from the API.
+	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the RADIUS server profile
@@ -198,6 +210,7 @@ type RadiusServerProfileState struct {
 	// Server
 	Servers RadiusServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -211,9 +224,9 @@ func (RadiusServerProfileState) ElementType() reflect.Type {
 
 type radiusServerProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the RADIUS server profile
@@ -225,6 +238,7 @@ type radiusServerProfileArgs struct {
 	// Server
 	Servers []RadiusServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The RADIUS server authentication timeout (seconds)
@@ -234,9 +248,9 @@ type radiusServerProfileArgs struct {
 // The set of arguments for constructing a RadiusServerProfile resource.
 type RadiusServerProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the RADIUS server profile
@@ -248,6 +262,7 @@ type RadiusServerProfileArgs struct {
 	// Server
 	Servers RadiusServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The RADIUS server authentication timeout (seconds)
@@ -342,12 +357,17 @@ func (o RadiusServerProfileOutput) ToRadiusServerProfileOutputWithContext(ctx co
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o RadiusServerProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
+// Map of sensitive values returned from the API.
+func (o RadiusServerProfileOutput) EncryptedValues() pulumi.StringMapOutput {
+	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o RadiusServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -374,6 +394,7 @@ func (o RadiusServerProfileOutput) Servers() RadiusServerProfileServerArrayOutpu
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o RadiusServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

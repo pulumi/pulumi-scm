@@ -9,6 +9,41 @@ import * as utilities from "./utilities";
 /**
  * TacacsServerProfile resource
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const iseTacacsExample = new scm.TacacsServerProfile("ise_tacacs_example", {
+ *     name: "ISE-TACACS11",
+ *     protocol: "PAP",
+ *     timeout: 3,
+ *     folder: "All",
+ *     useSingleConnection: true,
+ *     servers: [
+ *         {
+ *             name: "Server-1",
+ *             address: "10.10.10.10",
+ *             port: 49,
+ *             secret: "Test Secret1",
+ *         },
+ *         {
+ *             name: "Server-2",
+ *             address: "10.10.10.10",
+ *             port: 49,
+ *             secret: "Test Secret1",
+ *         },
+ *         {
+ *             name: "Server-3",
+ *             address: "10.10.10.10",
+ *             port: 49,
+ *             secret: "Test Secret1",
+ *         },
+ *     ],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:
@@ -65,11 +100,15 @@ export class TacacsServerProfile extends pulumi.CustomResource {
 
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
+     * Map of sensitive values returned from the API.
+     */
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
+    /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -87,6 +126,7 @@ export class TacacsServerProfile extends pulumi.CustomResource {
     declare public readonly servers: pulumi.Output<outputs.TacacsServerProfileServer[]>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -114,6 +154,7 @@ export class TacacsServerProfile extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as TacacsServerProfileState | undefined;
             resourceInputs["device"] = state?.device;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["name"] = state?.name;
             resourceInputs["protocol"] = state?.protocol;
@@ -138,9 +179,12 @@ export class TacacsServerProfile extends pulumi.CustomResource {
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["timeout"] = args?.timeout;
             resourceInputs["useSingleConnection"] = args?.useSingleConnection;
+            resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["encryptedValues"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(TacacsServerProfile.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -151,11 +195,15 @@ export class TacacsServerProfile extends pulumi.CustomResource {
 export interface TacacsServerProfileState {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
+     * Map of sensitive values returned from the API.
+     */
+    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -173,6 +221,7 @@ export interface TacacsServerProfileState {
     servers?: pulumi.Input<pulumi.Input<inputs.TacacsServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -193,11 +242,11 @@ export interface TacacsServerProfileState {
 export interface TacacsServerProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -215,6 +264,7 @@ export interface TacacsServerProfileArgs {
     servers: pulumi.Input<pulumi.Input<inputs.TacacsServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

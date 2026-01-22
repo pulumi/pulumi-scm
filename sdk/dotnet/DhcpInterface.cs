@@ -12,6 +12,88 @@ namespace Pulumi.Scm
     /// <summary>
     /// DhcpInterface resource
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var dhcpServerExample = new Scm.DhcpInterface("dhcp_server_example", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$test-interface-must-exist",
+    ///         Server = new Scm.Inputs.DhcpInterfaceServerArgs
+    ///         {
+    ///             IpPools = new[]
+    ///             {
+    ///                 "10.10.10.10-10.10.10.200",
+    ///             },
+    ///             Mode = "auto",
+    ///             ProbeIp = true,
+    ///             Option = new Scm.Inputs.DhcpInterfaceServerOptionArgs
+    ///             {
+    ///                 Dns = new Scm.Inputs.DhcpInterfaceServerOptionDnsArgs
+    ///                 {
+    ///                     Primary = "8.8.8.8",
+    ///                     Secondary = "1.1.1.1",
+    ///                 },
+    ///                 DnsSuffix = "example.local",
+    ///                 Gateway = "10.10.10.1",
+    ///                 SubnetMask = "255.255.255.0",
+    ///                 Pop3Server = "192.0.2.25",
+    ///                 SmtpServer = "192.0.2.26",
+    ///                 Lease = new Scm.Inputs.DhcpInterfaceServerOptionLeaseArgs
+    ///                 {
+    ///                     Timeout = 3600,
+    ///                 },
+    ///                 Ntp = new Scm.Inputs.DhcpInterfaceServerOptionNtpArgs
+    ///                 {
+    ///                     Primary = "129.6.15.28",
+    ///                     Secondary = "132.163.96.1",
+    ///                 },
+    ///                 Wins = new Scm.Inputs.DhcpInterfaceServerOptionWinsArgs
+    ///                 {
+    ///                     Primary = "192.168.1.1",
+    ///                     Secondary = "192.168.1.2",
+    ///                 },
+    ///                 Nis = new Scm.Inputs.DhcpInterfaceServerOptionNisArgs
+    ///                 {
+    ///                     Primary = "192.0.2.10",
+    ///                     Secondary = "192.0.2.11",
+    ///                 },
+    ///                 UserDefineds = new[]
+    ///                 {
+    ///                     new Scm.Inputs.DhcpInterfaceServerOptionUserDefinedArgs
+    ///                     {
+    ///                         Inherited = true,
+    ///                         Name = "option-foo",
+    ///                         Code = 224,
+    ///                         Ip = new[]
+    ///                         {
+    ///                             "192.0.2.10",
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///             Reserveds = new[]
+    ///             {
+    ///                 new Scm.Inputs.DhcpInterfaceServerReservedArgs
+    ///                 {
+    ///                     Description = "Reserved lease for printer",
+    ///                     Mac = "aa:bb:cc:dd:ee:ff",
+    ///                     Name = "10.10.10.50",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
@@ -43,13 +125,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -63,6 +145,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Relay
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Output("relay")]
@@ -70,6 +153,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Server
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Output("server")]
@@ -77,6 +161,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -133,13 +218,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -153,6 +238,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Relay
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Input("relay")]
@@ -160,6 +246,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Server
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Input("server")]
@@ -167,6 +254,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -182,13 +270,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -202,6 +290,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Relay
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Input("relay")]
@@ -209,6 +298,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// Server
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         [Input("server")]
@@ -216,6 +306,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

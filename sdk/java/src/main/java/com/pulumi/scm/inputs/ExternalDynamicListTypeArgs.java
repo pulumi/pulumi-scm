@@ -23,7 +23,6 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * Domain settings for Custom Domain type
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     @Import(name="domain")
@@ -31,7 +30,6 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * @return Domain settings for Custom Domain type
-     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public Optional<Output<ExternalDynamicListTypeDomainArgs>> domain() {
@@ -40,6 +38,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * IMEI Configuration settings
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -48,6 +47,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * @return IMEI Configuration settings
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -57,6 +57,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * IMSI Config for Custom IMSI type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -65,6 +66,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * @return IMSI Config for Custom IMSI type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -74,6 +76,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * IP settings for Custom IP type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -82,6 +85,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * @return IP settings for Custom IP type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -91,6 +95,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * Predefined IP settings for EDL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -99,6 +104,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * @return Predefined IP settings for EDL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -108,6 +114,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * Predefined URL settings for EDL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -116,6 +123,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * @return Predefined URL settings for EDL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -125,6 +133,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * URL settings for Custom URL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -133,6 +142,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
     /**
      * @return URL settings for Custom URL type
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
@@ -172,7 +182,6 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param domain Domain settings for Custom Domain type
-         * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
          * 
@@ -184,7 +193,6 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param domain Domain settings for Custom Domain type
-         * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
          * 
@@ -195,6 +203,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param imei IMEI Configuration settings
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
@@ -207,6 +216,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param imei IMEI Configuration settings
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
@@ -218,6 +228,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param imsi IMSI Config for Custom IMSI type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
@@ -230,6 +241,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param imsi IMSI Config for Custom IMSI type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
@@ -241,6 +253,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param ip IP settings for Custom IP type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
@@ -253,6 +266,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param ip IP settings for Custom IP type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
@@ -264,6 +278,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param predefinedIp Predefined IP settings for EDL type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
@@ -276,6 +291,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param predefinedIp Predefined IP settings for EDL type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
@@ -287,6 +303,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param predefinedUrl Predefined URL settings for EDL type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
@@ -299,6 +316,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param predefinedUrl Predefined URL settings for EDL type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
@@ -310,6 +328,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param url URL settings for Custom URL type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder
@@ -322,6 +341,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
 
         /**
          * @param url URL settings for Custom URL type
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
          * 
          * @return builder

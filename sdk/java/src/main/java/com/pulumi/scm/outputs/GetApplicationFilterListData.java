@@ -21,7 +21,6 @@ public final class GetApplicationFilterListData {
     private List<String> categories;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -41,8 +40,7 @@ public final class GetApplicationFilterListData {
      */
     private List<String> excludes;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -62,7 +60,7 @@ public final class GetApplicationFilterListData {
      */
     private Boolean isSaas;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]
+     * @return The name of the item.
      * 
      */
     private String name;
@@ -97,8 +95,7 @@ public final class GetApplicationFilterListData {
      */
     private List<String> saasRisks;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -144,7 +141,6 @@ public final class GetApplicationFilterListData {
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -172,8 +168,7 @@ public final class GetApplicationFilterListData {
         return this.excludes;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -201,7 +196,7 @@ public final class GetApplicationFilterListData {
         return this.isSaas;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]
+     * @return The name of the item.
      * 
      */
     public String name() {
@@ -250,8 +245,7 @@ public final class GetApplicationFilterListData {
         return this.saasRisks;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

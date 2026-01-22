@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Candidate rp
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `CandidateRp` and `StaticRp`.
         /// </summary>
         [Input("candidateRp")]
         public Input<Inputs.LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs>? CandidateRp { get; set; }
 
         /// <summary>
         /// Static rp
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `CandidateRp` and `StaticRp`.
         /// </summary>
         [Input("staticRp")]

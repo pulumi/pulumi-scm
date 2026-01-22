@@ -15,24 +15,26 @@ import java.util.Objects;
 public final class GetHipObjectNetworkInfoCriteriaNetworkIsNot {
     /**
      * @return Ethernet
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     private GetHipObjectNetworkInfoCriteriaNetworkIsNotEthernet ethernet;
     /**
      * @return Mobile
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     private GetHipObjectNetworkInfoCriteriaNetworkIsNotMobile mobile;
     /**
      * @return Unknown
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     private GetHipObjectNetworkInfoCriteriaNetworkIsNotUnknown unknown;
     /**
      * @return Wifi
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -41,7 +43,6 @@ public final class GetHipObjectNetworkInfoCriteriaNetworkIsNot {
     private GetHipObjectNetworkInfoCriteriaNetworkIsNot() {}
     /**
      * @return Ethernet
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     public GetHipObjectNetworkInfoCriteriaNetworkIsNotEthernet ethernet() {
@@ -49,6 +50,7 @@ public final class GetHipObjectNetworkInfoCriteriaNetworkIsNot {
     }
     /**
      * @return Mobile
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -57,6 +59,7 @@ public final class GetHipObjectNetworkInfoCriteriaNetworkIsNot {
     }
     /**
      * @return Unknown
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -65,6 +68,7 @@ public final class GetHipObjectNetworkInfoCriteriaNetworkIsNot {
     }
     /**
      * @return Wifi
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */

@@ -46,26 +46,14 @@ export function getHttpHeaderProfile(args: GetHttpHeaderProfileArgs, opts?: pulu
 export interface GetHttpHeaderProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * The UUID of the HTTP header profile
      */
     id: string;
-    /**
-     * The name of the HTTP header profile
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -73,36 +61,18 @@ export interface GetHttpHeaderProfileArgs {
  * A collection of values returned by getHttpHeaderProfile.
  */
 export interface GetHttpHeaderProfileResult {
-    /**
-     * The description of the HTTP header profile
-     */
     readonly description: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
-    /**
-     * A list of HTTP header profile rules
-     */
     readonly httpHeaderInsertions: outputs.GetHttpHeaderProfileHttpHeaderInsertion[];
     /**
      * The UUID of the HTTP header profile
      */
     readonly id: string;
-    /**
-     * The name of the HTTP header profile
-     */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -146,25 +116,13 @@ export function getHttpHeaderProfileOutput(args: GetHttpHeaderProfileOutputArgs,
 export interface GetHttpHeaderProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * The UUID of the HTTP header profile
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the HTTP header profile
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

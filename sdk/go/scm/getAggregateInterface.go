@@ -59,46 +59,28 @@ func LookupAggregateInterface(ctx *pulumi.Context, args *LookupAggregateInterfac
 // A collection of arguments for invoking getAggregateInterface.
 type LookupAggregateInterfaceArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Aggregate interface name
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getAggregateInterface.
 type LookupAggregateInterfaceResult struct {
-	// Aggregate interface description
-	Comment string `pulumi:"comment"`
-	// Default interface assignment
+	Comment      string `pulumi:"comment"`
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Layer2
-	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
-	Layer2 GetAggregateInterfaceLayer2 `pulumi:"layer2"`
-	// Aggregate Interface Layer 3 configuration
-	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
-	Layer3 GetAggregateInterfaceLayer3 `pulumi:"layer3"`
-	// Aggregate interface name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Id      string                      `pulumi:"id"`
+	Layer2  GetAggregateInterfaceLayer2 `pulumi:"layer2"`
+	Layer3  GetAggregateInterfaceLayer3 `pulumi:"layer3"`
+	Name    string                      `pulumi:"name"`
+	Snippet string                      `pulumi:"snippet"`
+	Tfid    string                      `pulumi:"tfid"`
 }
 
 func LookupAggregateInterfaceOutput(ctx *pulumi.Context, args LookupAggregateInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupAggregateInterfaceResultOutput {
@@ -113,17 +95,11 @@ func LookupAggregateInterfaceOutput(ctx *pulumi.Context, args LookupAggregateInt
 // A collection of arguments for invoking getAggregateInterface.
 type LookupAggregateInterfaceOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Aggregate interface name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -146,24 +122,19 @@ func (o LookupAggregateInterfaceResultOutput) ToLookupAggregateInterfaceResultOu
 	return o
 }
 
-// Aggregate interface description
 func (o LookupAggregateInterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
-// Default interface assignment
 func (o LookupAggregateInterfaceResultOutput) DefaultValue() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAggregateInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAggregateInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -173,25 +144,18 @@ func (o LookupAggregateInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Layer2
-// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 func (o LookupAggregateInterfaceResultOutput) Layer2() GetAggregateInterfaceLayer2Output {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) GetAggregateInterfaceLayer2 { return v.Layer2 }).(GetAggregateInterfaceLayer2Output)
 }
 
-// Aggregate Interface Layer 3 configuration
-// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 func (o LookupAggregateInterfaceResultOutput) Layer3() GetAggregateInterfaceLayer3Output {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) GetAggregateInterfaceLayer3 { return v.Layer3 }).(GetAggregateInterfaceLayer3Output)
 }
 
-// Aggregate interface name
 func (o LookupAggregateInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupAggregateInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

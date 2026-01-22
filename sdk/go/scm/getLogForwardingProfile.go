@@ -12,6 +12,41 @@ import (
 )
 
 // LogForwardingProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
+//			//
+//			// Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
+//			scmLogForwardingProf, err := scm.LookupLogForwardingProfile(ctx, &scm.LookupLogForwardingProfileArgs{
+//				Id: "712dc61d-94ed-45e4-82b7-b2d86669a2bf",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmLogForwardingProfileDetails", pulumi.StringMap{
+//				"profileId":   scmLogForwardingProf.Id,
+//				"folder":      scmLogForwardingProf.Folder,
+//				"name":        scmLogForwardingProf.Name,
+//				"description": scmLogForwardingProf.Description,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupLogForwardingProfile(ctx *pulumi.Context, args *LookupLogForwardingProfileArgs, opts ...pulumi.InvokeOption) (*LookupLogForwardingProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupLogForwardingProfileResult
@@ -25,40 +60,26 @@ func LookupLogForwardingProfile(ctx *pulumi.Context, args *LookupLogForwardingPr
 // A collection of arguments for invoking getLogForwardingProfile.
 type LookupLogForwardingProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the log server profile
-	Id string `pulumi:"id"`
-	// The name of the log forwarding profile
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLogForwardingProfile.
 type LookupLogForwardingProfileResult struct {
-	// Log forwarding profile description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the log server profile
-	Id string `pulumi:"id"`
-	// Match list
+	Id         string                             `pulumi:"id"`
 	MatchLists []GetLogForwardingProfileMatchList `pulumi:"matchLists"`
-	// The name of the log forwarding profile
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Name       string                             `pulumi:"name"`
+	Snippet    string                             `pulumi:"snippet"`
+	Tfid       string                             `pulumi:"tfid"`
 }
 
 func LookupLogForwardingProfileOutput(ctx *pulumi.Context, args LookupLogForwardingProfileOutputArgs, opts ...pulumi.InvokeOption) LookupLogForwardingProfileResultOutput {
@@ -73,17 +94,11 @@ func LookupLogForwardingProfileOutput(ctx *pulumi.Context, args LookupLogForward
 // A collection of arguments for invoking getLogForwardingProfile.
 type LookupLogForwardingProfileOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the log server profile
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the log forwarding profile
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -106,19 +121,15 @@ func (o LookupLogForwardingProfileResultOutput) ToLookupLogForwardingProfileResu
 	return o
 }
 
-// Log forwarding profile description
 func (o LookupLogForwardingProfileResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLogForwardingProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLogForwardingProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -128,18 +139,14 @@ func (o LookupLogForwardingProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Match list
 func (o LookupLogForwardingProfileResultOutput) MatchLists() GetLogForwardingProfileMatchListArrayOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) []GetLogForwardingProfileMatchList { return v.MatchLists }).(GetLogForwardingProfileMatchListArrayOutput)
 }
 
-// The name of the log forwarding profile
 func (o LookupLogForwardingProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLogForwardingProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

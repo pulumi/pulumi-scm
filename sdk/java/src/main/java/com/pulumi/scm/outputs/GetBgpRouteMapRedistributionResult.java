@@ -13,96 +13,42 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBgpRouteMapRedistributionResult {
-    /**
-     * @return Bgp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
-     * 
-     */
     private GetBgpRouteMapRedistributionBgp bgp;
-    /**
-     * @return Connected static
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
-     * 
-     */
     private GetBgpRouteMapRedistributionConnectedStatic connectedStatic;
-    /**
-     * @return BGP Route Map Redistributions Description
-     * 
-     */
     private String description;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return BGP Route Map Redistributions UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return BGP Route Map Redistributions Name
-     * 
-     */
     private String name;
-    /**
-     * @return Ospf
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
-     * 
-     */
     private GetBgpRouteMapRedistributionOspf ospf;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
 
     private GetBgpRouteMapRedistributionResult() {}
-    /**
-     * @return Bgp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
-     * 
-     */
     public GetBgpRouteMapRedistributionBgp bgp() {
         return this.bgp;
     }
-    /**
-     * @return Connected static
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
-     * 
-     */
     public GetBgpRouteMapRedistributionConnectedStatic connectedStatic() {
         return this.connectedStatic;
     }
-    /**
-     * @return BGP Route Map Redistributions Description
-     * 
-     */
     public String description() {
         return this.description;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -113,26 +59,12 @@ public final class GetBgpRouteMapRedistributionResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return BGP Route Map Redistributions Name
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return Ospf
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
-     * 
-     */
     public GetBgpRouteMapRedistributionOspf ospf() {
         return this.ospf;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

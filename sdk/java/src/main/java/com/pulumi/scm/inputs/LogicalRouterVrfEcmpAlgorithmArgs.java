@@ -20,7 +20,6 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
     /**
      * Balanced round robin
-     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
     @Import(name="balancedRoundRobin")
@@ -28,7 +27,6 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
     /**
      * @return Balanced round robin
-     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
     public Optional<Output<LogicalRouterVrfEcmpAlgorithmBalancedRoundRobinArgs>> balancedRoundRobin() {
@@ -37,6 +35,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
     /**
      * Ip hash
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
@@ -45,6 +44,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
     /**
      * @return Ip hash
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
@@ -54,6 +54,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
     /**
      * Ip modulo
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
@@ -62,6 +63,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
     /**
      * @return Ip modulo
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
@@ -71,6 +73,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
     /**
      * Weighted round robin
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
@@ -79,6 +82,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
     /**
      * @return Weighted round robin
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
@@ -115,7 +119,6 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
         /**
          * @param balancedRoundRobin Balanced round robin
-         * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
          * 
          * @return builder
          * 
@@ -127,7 +130,6 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
         /**
          * @param balancedRoundRobin Balanced round robin
-         * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
          * 
          * @return builder
          * 
@@ -138,6 +140,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
         /**
          * @param ipHash Ip hash
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
          * 
          * @return builder
@@ -150,6 +153,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
         /**
          * @param ipHash Ip hash
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
          * 
          * @return builder
@@ -161,6 +165,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
         /**
          * @param ipModulo Ip modulo
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
          * 
          * @return builder
@@ -173,6 +178,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
         /**
          * @param ipModulo Ip modulo
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
          * 
          * @return builder
@@ -184,6 +190,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
         /**
          * @param weightedRoundRobin Weighted round robin
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
          * 
          * @return builder
@@ -196,6 +203,7 @@ public final class LogicalRouterVrfEcmpAlgorithmArgs extends com.pulumi.resource
 
         /**
          * @param weightedRoundRobin Weighted round robin
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
          * 
          * @return builder

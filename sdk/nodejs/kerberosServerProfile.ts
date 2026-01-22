@@ -9,6 +9,52 @@ import * as utilities from "./utilities";
 /**
  * KerberosServerProfile resource
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmKerberosServerProfile1 = new scm.KerberosServerProfile("scm_kerberos_server_profile_1", {
+ *     folder: "All",
+ *     name: "kerberos-server-prof-1",
+ *     servers: [{
+ *         name: "server_a",
+ *         host: "$test_ip",
+ *     }],
+ * });
+ * const scmKerberosServerProfile2 = new scm.KerberosServerProfile("scm_kerberos_server_profile_2", {
+ *     folder: "All",
+ *     name: "kerberos-server-prof-2",
+ *     servers: [{
+ *         name: "server_a",
+ *         host: "host_a",
+ *         port: 120,
+ *     }],
+ * });
+ * const scmKerberosServerProfile3 = new scm.KerberosServerProfile("scm_kerberos_server_profile_3", {
+ *     folder: "All",
+ *     name: "kerberos-server-prof-3",
+ *     servers: [
+ *         {
+ *             name: "server_a",
+ *             host: "host_a",
+ *             port: 1,
+ *         },
+ *         {
+ *             name: "server_b",
+ *             host: "host_b",
+ *             port: 65535,
+ *         },
+ *         {
+ *             name: "server_c",
+ *             host: "192.100.50.135",
+ *             port: 45,
+ *         },
+ *     ],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:
@@ -65,11 +111,11 @@ export class KerberosServerProfile extends pulumi.CustomResource {
 
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -83,6 +129,7 @@ export class KerberosServerProfile extends pulumi.CustomResource {
     declare public readonly servers: pulumi.Output<outputs.KerberosServerProfileServer[]>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -130,11 +177,11 @@ export class KerberosServerProfile extends pulumi.CustomResource {
 export interface KerberosServerProfileState {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -148,6 +195,7 @@ export interface KerberosServerProfileState {
     servers?: pulumi.Input<pulumi.Input<inputs.KerberosServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -160,11 +208,11 @@ export interface KerberosServerProfileState {
 export interface KerberosServerProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -178,6 +226,7 @@ export interface KerberosServerProfileArgs {
     servers: pulumi.Input<pulumi.Input<inputs.KerberosServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

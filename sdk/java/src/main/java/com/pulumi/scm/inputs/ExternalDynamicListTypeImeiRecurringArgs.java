@@ -21,7 +21,6 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
     /**
      * Daily interval settings for IMEI updates
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     @Import(name="daily")
@@ -29,7 +28,6 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
     /**
      * @return Daily interval settings for IMEI updates
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<Output<ExternalDynamicListTypeImeiRecurringDailyArgs>> daily() {
@@ -38,6 +36,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
     /**
      * Five-minute interval settings for IMEI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -46,6 +45,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
     /**
      * @return Five-minute interval settings for IMEI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -55,6 +55,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
     /**
      * Hourly interval settings for IMEI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -63,6 +64,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
     /**
      * @return Hourly interval settings for IMEI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -72,6 +74,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
     /**
      * Monthly interval settings for IMEI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -80,6 +83,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
     /**
      * @return Monthly interval settings for IMEI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -89,6 +93,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
     /**
      * Weekly interval settings for IMEI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -97,6 +102,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
     /**
      * @return Weekly interval settings for IMEI updates
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -134,7 +140,6 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
         /**
          * @param daily Daily interval settings for IMEI updates
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 
@@ -146,7 +151,6 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
         /**
          * @param daily Daily interval settings for IMEI updates
-         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 
@@ -157,6 +161,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
         /**
          * @param fiveMinute Five-minute interval settings for IMEI updates
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -169,6 +174,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
         /**
          * @param fiveMinute Five-minute interval settings for IMEI updates
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -180,6 +186,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
         /**
          * @param hourly Hourly interval settings for IMEI updates
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -192,6 +199,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
         /**
          * @param hourly Hourly interval settings for IMEI updates
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -203,6 +211,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
         /**
          * @param monthly Monthly interval settings for IMEI updates
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -215,6 +224,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
         /**
          * @param monthly Monthly interval settings for IMEI updates
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -226,6 +236,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
         /**
          * @param weekly Weekly interval settings for IMEI updates
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
@@ -238,6 +249,7 @@ public final class ExternalDynamicListTypeImeiRecurringArgs extends com.pulumi.r
 
         /**
          * @param weekly Weekly interval settings for IMEI updates
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder

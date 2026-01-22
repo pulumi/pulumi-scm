@@ -21,173 +21,68 @@ import java.util.Objects;
 
 @CustomType
 public final class GetHipObjectResult {
-    /**
-     * @return Anti malware
-     * 
-     */
     private GetHipObjectAntiMalware antiMalware;
-    /**
-     * @return Certificate
-     * 
-     */
     private GetHipObjectCertificate certificate;
-    /**
-     * @return Custom checks
-     * 
-     */
     private GetHipObjectCustomChecks customChecks;
-    /**
-     * @return Data loss prevention
-     * 
-     */
     private GetHipObjectDataLossPrevention dataLossPrevention;
-    /**
-     * @return Description
-     * 
-     */
     private String description;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return Disk backup
-     * 
-     */
     private GetHipObjectDiskBackup diskBackup;
-    /**
-     * @return Disk encryption
-     * 
-     */
     private GetHipObjectDiskEncryption diskEncryption;
-    /**
-     * @return Firewall
-     * 
-     */
     private GetHipObjectFirewall firewall;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
-    /**
-     * @return Host info
-     * 
-     */
     private GetHipObjectHostInfo hostInfo;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Mobile device
-     * 
-     */
     private GetHipObjectMobileDevice mobileDevice;
-    /**
-     * @return The name of the HIP object
-     * 
-     */
     private String name;
-    /**
-     * @return Network info
-     * 
-     */
     private GetHipObjectNetworkInfo networkInfo;
-    /**
-     * @return Patch management
-     * 
-     */
     private GetHipObjectPatchManagement patchManagement;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
 
     private GetHipObjectResult() {}
-    /**
-     * @return Anti malware
-     * 
-     */
     public GetHipObjectAntiMalware antiMalware() {
         return this.antiMalware;
     }
-    /**
-     * @return Certificate
-     * 
-     */
     public GetHipObjectCertificate certificate() {
         return this.certificate;
     }
-    /**
-     * @return Custom checks
-     * 
-     */
     public GetHipObjectCustomChecks customChecks() {
         return this.customChecks;
     }
-    /**
-     * @return Data loss prevention
-     * 
-     */
     public GetHipObjectDataLossPrevention dataLossPrevention() {
         return this.dataLossPrevention;
     }
-    /**
-     * @return Description
-     * 
-     */
     public String description() {
         return this.description;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return Disk backup
-     * 
-     */
     public GetHipObjectDiskBackup diskBackup() {
         return this.diskBackup;
     }
-    /**
-     * @return Disk encryption
-     * 
-     */
     public GetHipObjectDiskEncryption diskEncryption() {
         return this.diskEncryption;
     }
-    /**
-     * @return Firewall
-     * 
-     */
     public GetHipObjectFirewall firewall() {
         return this.firewall;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return Host info
-     * 
-     */
     public GetHipObjectHostInfo hostInfo() {
         return this.hostInfo;
     }
@@ -198,39 +93,18 @@ public final class GetHipObjectResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Mobile device
-     * 
-     */
     public GetHipObjectMobileDevice mobileDevice() {
         return this.mobileDevice;
     }
-    /**
-     * @return The name of the HIP object
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return Network info
-     * 
-     */
     public GetHipObjectNetworkInfo networkInfo() {
         return this.networkInfo;
     }
-    /**
-     * @return Patch management
-     * 
-     */
     public GetHipObjectPatchManagement patchManagement() {
         return this.patchManagement;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

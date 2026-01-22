@@ -40,26 +40,14 @@ export function getIkeGateway(args: GetIkeGatewayArgs, opts?: pulumi.InvokeOptio
 export interface GetIkeGatewayArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -67,60 +55,24 @@ export interface GetIkeGatewayArgs {
  * A collection of values returned by getIkeGateway.
  */
 export interface GetIkeGatewayResult {
-    /**
-     * Authentication
-     */
     readonly authentication: outputs.GetIkeGatewayAuthentication;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * Map of sensitive values returned from the API.
-     */
     readonly encryptedValues: {[key: string]: string};
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Local address
-     */
     readonly localAddress: outputs.GetIkeGatewayLocalAddress;
-    /**
-     * Local id
-     */
     readonly localId: outputs.GetIkeGatewayLocalId;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     readonly name: string;
-    /**
-     * Peer address
-     */
     readonly peerAddress: outputs.GetIkeGatewayPeerAddress;
-    /**
-     * Peer id
-     */
     readonly peerId: outputs.GetIkeGatewayPeerId;
-    /**
-     * Protocol
-     */
     readonly protocol: outputs.GetIkeGatewayProtocol;
-    /**
-     * Protocol common
-     */
     readonly protocolCommon: outputs.GetIkeGatewayProtocolCommon;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -158,25 +110,13 @@ export function getIkeGatewayOutput(args: GetIkeGatewayOutputArgs, opts?: pulumi
 export interface GetIkeGatewayOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

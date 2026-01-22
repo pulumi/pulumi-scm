@@ -9,6 +9,29 @@ import * as utilities from "./utilities";
 /**
  * LldpProfile resource
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const example = new scm.LldpProfile("example", {
+ *     folder: "All",
+ *     mode: "transmit-receive",
+ *     name: "lldp-profile-tf-1",
+ *     optionTlvs: {
+ *         managementAddress: {
+ *             enabled: true,
+ *         },
+ *         portDescription: true,
+ *         systemCapabilities: true,
+ *         systemDescription: false,
+ *         systemName: true,
+ *     },
+ *     snmpSyslogNotification: true,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:
@@ -65,11 +88,11 @@ export class LldpProfile extends pulumi.CustomResource {
 
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -87,6 +110,7 @@ export class LldpProfile extends pulumi.CustomResource {
     declare public readonly optionTlvs: pulumi.Output<outputs.LldpProfileOptionTlvs | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -139,11 +163,11 @@ export class LldpProfile extends pulumi.CustomResource {
 export interface LldpProfileState {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -161,6 +185,7 @@ export interface LldpProfileState {
     optionTlvs?: pulumi.Input<inputs.LldpProfileOptionTlvs>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -177,11 +202,11 @@ export interface LldpProfileState {
 export interface LldpProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -199,6 +224,7 @@ export interface LldpProfileArgs {
     optionTlvs?: pulumi.Input<inputs.LldpProfileOptionTlvs>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

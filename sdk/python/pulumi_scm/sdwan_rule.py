@@ -56,16 +56,17 @@ class SdwanRuleArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: List of destination zones
         :param pulumi.Input[_builtins.str] description: Rule description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] disabled: Disable rule?
         :param pulumi.Input[_builtins.str] error_correction_profile: Error correction profile
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Rule name
         :param pulumi.Input[_builtins.bool] negate_destination: Negate destination address(es)?
         :param pulumi.Input[_builtins.bool] negate_source: Negate source address(es)?
         :param pulumi.Input[_builtins.str] saas_quality_profile: SaaS quality profile
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: List of tags
         """
@@ -239,7 +240,6 @@ class SdwanRuleArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -276,6 +276,7 @@ class SdwanRuleArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -337,6 +338,7 @@ class SdwanRuleArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -390,10 +392,10 @@ class _SdwanRuleState:
         :param pulumi.Input[_builtins.str] description: Rule description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] disabled: Disable rule?
         :param pulumi.Input[_builtins.str] error_correction_profile: Error correction profile
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] name: Rule name
@@ -404,6 +406,7 @@ class _SdwanRuleState:
         :param pulumi.Input[_builtins.str] saas_quality_profile: SaaS quality profile
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
@@ -508,7 +511,6 @@ class _SdwanRuleState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -545,6 +547,7 @@ class _SdwanRuleState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -654,6 +657,7 @@ class _SdwanRuleState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -784,10 +788,10 @@ class SdwanRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Rule description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] disabled: Disable rule?
         :param pulumi.Input[_builtins.str] error_correction_profile: Error correction profile
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] name: Rule name
@@ -798,6 +802,7 @@ class SdwanRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] saas_quality_profile: SaaS quality profile
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
@@ -970,10 +975,10 @@ class SdwanRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Rule description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] disabled: Disable rule?
         :param pulumi.Input[_builtins.str] error_correction_profile: Error correction profile
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] name: Rule name
@@ -984,6 +989,7 @@ class SdwanRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] saas_quality_profile: SaaS quality profile
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
@@ -1055,7 +1061,6 @@ class SdwanRule(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -1080,6 +1085,7 @@ class SdwanRule(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -1153,6 +1159,7 @@ class SdwanRule(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

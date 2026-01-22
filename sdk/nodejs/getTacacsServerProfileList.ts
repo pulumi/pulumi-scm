@@ -8,6 +8,20 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up the multi-tag address object by its ID.
+ * const scmTacacsServerProfiles = scm.getTacacsServerProfileList({
+ *     folder: "All",
+ * });
+ * export const profileDataSourceResults = scmTacacsServerProfiles.then(scmTacacsServerProfiles => scmTacacsServerProfiles.datas);
+ * export const profileNames = scmTacacsServerProfiles.then(scmTacacsServerProfiles => .map(profile => (profile.name)));
+ * ```
  */
 export function getTacacsServerProfileList(args?: GetTacacsServerProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetTacacsServerProfileListResult> {
     args = args || {};
@@ -96,6 +110,20 @@ export interface GetTacacsServerProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up the multi-tag address object by its ID.
+ * const scmTacacsServerProfiles = scm.getTacacsServerProfileList({
+ *     folder: "All",
+ * });
+ * export const profileDataSourceResults = scmTacacsServerProfiles.then(scmTacacsServerProfiles => scmTacacsServerProfiles.datas);
+ * export const profileNames = scmTacacsServerProfiles.then(scmTacacsServerProfiles => .map(profile => (profile.name)));
+ * ```
  */
 export function getTacacsServerProfileListOutput(args?: GetTacacsServerProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTacacsServerProfileListResult> {
     args = args || {};

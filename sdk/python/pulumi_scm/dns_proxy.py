@@ -38,14 +38,15 @@ class DnsProxyArgs:
         :param pulumi.Input['DnsProxyDefaultArgs'] default: Default
         :param pulumi.Input['DnsProxyCacheArgs'] cache: Cache
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['DnsProxyDomainServerArgs']]] domain_servers: DNS proxy rules
         :param pulumi.Input[_builtins.bool] enabled: Enable DNS proxy?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] interfaces: Interfaces on which to enable DNS proxy service
         :param pulumi.Input[_builtins.str] name: DNS proxy name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['DnsProxyStaticEntryArgs']]] static_entries: Static entries
         :param pulumi.Input['DnsProxyTcpQueriesArgs'] tcp_queries: Tcp queries
@@ -104,7 +105,6 @@ class DnsProxyArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -141,6 +141,7 @@ class DnsProxyArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -178,6 +179,7 @@ class DnsProxyArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -244,14 +246,15 @@ class _DnsProxyState:
         :param pulumi.Input['DnsProxyCacheArgs'] cache: Cache
         :param pulumi.Input['DnsProxyDefaultArgs'] default: Default
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['DnsProxyDomainServerArgs']]] domain_servers: DNS proxy rules
         :param pulumi.Input[_builtins.bool] enabled: Enable DNS proxy?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] interfaces: Interfaces on which to enable DNS proxy service
         :param pulumi.Input[_builtins.str] name: DNS proxy name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['DnsProxyStaticEntryArgs']]] static_entries: Static entries
         :param pulumi.Input['DnsProxyTcpQueriesArgs'] tcp_queries: Tcp queries
@@ -313,7 +316,6 @@ class _DnsProxyState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -350,6 +352,7 @@ class _DnsProxyState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -387,6 +390,7 @@ class _DnsProxyState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -494,14 +498,15 @@ class DnsProxy(pulumi.CustomResource):
         :param pulumi.Input[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict']] cache: Cache
         :param pulumi.Input[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict']] default: Default
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict']]]] domain_servers: DNS proxy rules
         :param pulumi.Input[_builtins.bool] enabled: Enable DNS proxy?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] interfaces: Interfaces on which to enable DNS proxy service
         :param pulumi.Input[_builtins.str] name: DNS proxy name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict']]]] static_entries: Static entries
         :param pulumi.Input[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict']] tcp_queries: Tcp queries
@@ -626,14 +631,15 @@ class DnsProxy(pulumi.CustomResource):
         :param pulumi.Input[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict']] cache: Cache
         :param pulumi.Input[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict']] default: Default
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict']]]] domain_servers: DNS proxy rules
         :param pulumi.Input[_builtins.bool] enabled: Enable DNS proxy?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] interfaces: Interfaces on which to enable DNS proxy service
         :param pulumi.Input[_builtins.str] name: DNS proxy name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyStaticEntryArgs', 'DnsProxyStaticEntryArgsDict']]]] static_entries: Static entries
         :param pulumi.Input[Union['DnsProxyTcpQueriesArgs', 'DnsProxyTcpQueriesArgsDict']] tcp_queries: Tcp queries
@@ -679,7 +685,6 @@ class DnsProxy(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -704,6 +709,7 @@ class DnsProxy(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -729,6 +735,7 @@ class DnsProxy(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Aggregate
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Aggregate` and `Classified`.
         /// </summary>
         public readonly Outputs.DosProtectionRuleProtectionAggregate? Aggregate;
         /// <summary>
         /// Classified
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Aggregate` and `Classified`.
         /// </summary>
         public readonly Outputs.DosProtectionRuleProtectionClassified? Classified;

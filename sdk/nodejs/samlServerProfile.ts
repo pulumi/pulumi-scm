@@ -7,6 +7,46 @@ import * as utilities from "./utilities";
 /**
  * SamlServerProfile resource
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmSamlServerProfile1 = new scm.SamlServerProfile("scm_saml_server_profile_1", {
+ *     folder: "All",
+ *     name: "scm-saml-server-prof-1",
+ *     certificate: "Global Authentication Cookie Cert",
+ *     entityId: "123",
+ *     ssoUrl: "http://example.com",
+ *     ssoBindings: "post",
+ * });
+ * const scmSamlServerProfile2 = new scm.SamlServerProfile("scm_saml_server_profile_2", {
+ *     folder: "All",
+ *     name: "scm-saml-server-prof-2",
+ *     certificate: "Global Authentication Cookie Cert",
+ *     entityId: "test_id",
+ *     maxClockSkew: 100,
+ *     sloBindings: "redirect",
+ *     ssoBindings: "redirect",
+ *     ssoUrl: "http://target.com",
+ *     validateIdpCertificate: true,
+ * });
+ * const scmSamlServerProfile3 = new scm.SamlServerProfile("scm_saml_server_profile_3", {
+ *     folder: "All",
+ *     name: "scm-saml-server-prof-3",
+ *     certificate: "Global Authentication Cookie Cert",
+ *     entityId: "test_123",
+ *     maxClockSkew: 900,
+ *     sloBindings: "post",
+ *     ssoBindings: "redirect",
+ *     sloUrl: "http://auth.com",
+ *     ssoUrl: "http://okta.com",
+ *     validateIdpCertificate: false,
+ *     wantAuthRequestsSigned: false,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:
@@ -67,7 +107,6 @@ export class SamlServerProfile extends pulumi.CustomResource {
     declare public readonly certificate: pulumi.Output<string>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -76,6 +115,7 @@ export class SamlServerProfile extends pulumi.CustomResource {
     declare public readonly entityId: pulumi.Output<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -92,7 +132,12 @@ export class SamlServerProfile extends pulumi.CustomResource {
      */
     declare public readonly sloBindings: pulumi.Output<string | undefined>;
     /**
+     * Identity provider SLO URL
+     */
+    declare public readonly sloUrl: pulumi.Output<string | undefined>;
+    /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -134,6 +179,7 @@ export class SamlServerProfile extends pulumi.CustomResource {
             resourceInputs["maxClockSkew"] = state?.maxClockSkew;
             resourceInputs["name"] = state?.name;
             resourceInputs["sloBindings"] = state?.sloBindings;
+            resourceInputs["sloUrl"] = state?.sloUrl;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["ssoBindings"] = state?.ssoBindings;
             resourceInputs["ssoUrl"] = state?.ssoUrl;
@@ -161,6 +207,7 @@ export class SamlServerProfile extends pulumi.CustomResource {
             resourceInputs["maxClockSkew"] = args?.maxClockSkew;
             resourceInputs["name"] = args?.name;
             resourceInputs["sloBindings"] = args?.sloBindings;
+            resourceInputs["sloUrl"] = args?.sloUrl;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["ssoBindings"] = args?.ssoBindings;
             resourceInputs["ssoUrl"] = args?.ssoUrl;
@@ -183,7 +230,6 @@ export interface SamlServerProfileState {
     certificate?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -192,6 +238,7 @@ export interface SamlServerProfileState {
     entityId?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -208,7 +255,12 @@ export interface SamlServerProfileState {
      */
     sloBindings?: pulumi.Input<string>;
     /**
+     * Identity provider SLO URL
+     */
+    sloUrl?: pulumi.Input<string>;
+    /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -241,7 +293,6 @@ export interface SamlServerProfileArgs {
     certificate: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -250,6 +301,7 @@ export interface SamlServerProfileArgs {
     entityId: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -266,7 +318,12 @@ export interface SamlServerProfileArgs {
      */
     sloBindings?: pulumi.Input<string>;
     /**
+     * Identity provider SLO URL
+     */
+    sloUrl?: pulumi.Input<string>;
+    /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

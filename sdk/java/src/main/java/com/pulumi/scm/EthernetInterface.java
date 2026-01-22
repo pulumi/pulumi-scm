@@ -243,7 +243,6 @@ import javax.annotation.Nullable;
 public class EthernetInterface extends com.pulumi.resources.CustomResource {
     /**
      * Aggregate group
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     @Export(name="aggregateGroup", refs={String.class}, tree="[0]")
@@ -251,7 +250,6 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Aggregate group
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     public Output<Optional<String>> aggregateGroup() {
@@ -287,6 +285,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -295,6 +294,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -317,6 +317,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -325,6 +326,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -333,6 +335,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Layer2
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -341,6 +344,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Layer2
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -349,6 +353,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Ethernet Interface Layer 3 configuration
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -357,6 +362,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Ethernet Interface Layer 3 configuration
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -435,6 +441,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -443,6 +450,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -451,6 +459,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Tap
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
@@ -459,6 +468,7 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Tap
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */

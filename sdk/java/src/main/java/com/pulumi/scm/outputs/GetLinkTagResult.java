@@ -10,74 +10,37 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLinkTagResult {
-    /**
-     * @return The color of the link tag
-     * 
-     */
     private String color;
-    /**
-     * @return Description of the link tag
-     * 
-     */
     private String comments;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the link tag
      * 
      */
     private String id;
-    /**
-     * @return The name of the link tag
-     * 
-     */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
 
     private GetLinkTagResult() {}
-    /**
-     * @return The color of the link tag
-     * 
-     */
     public String color() {
         return this.color;
     }
-    /**
-     * @return Description of the link tag
-     * 
-     */
     public String comments() {
         return this.comments;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -88,18 +51,9 @@ public final class GetLinkTagResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return The name of the link tag
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

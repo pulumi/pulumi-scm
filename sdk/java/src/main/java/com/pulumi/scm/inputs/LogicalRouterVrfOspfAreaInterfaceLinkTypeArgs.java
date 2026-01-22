@@ -19,7 +19,6 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
     /**
      * Broadcast
-     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     @Import(name="broadcast")
@@ -27,7 +26,6 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
     /**
      * @return Broadcast
-     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcastArgs>> broadcast() {
@@ -36,6 +34,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
     /**
      * P2mp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
@@ -44,6 +43,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
     /**
      * @return P2mp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
@@ -53,6 +53,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
     /**
      * P2p
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
@@ -61,6 +62,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
     /**
      * @return P2p
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
@@ -96,7 +98,6 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
         /**
          * @param broadcast Broadcast
-         * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
          * 
          * @return builder
          * 
@@ -108,7 +109,6 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
         /**
          * @param broadcast Broadcast
-         * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
          * 
          * @return builder
          * 
@@ -119,6 +119,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
         /**
          * @param p2mp P2mp
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
          * 
          * @return builder
@@ -131,6 +132,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
         /**
          * @param p2mp P2mp
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
          * 
          * @return builder
@@ -142,6 +144,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
         /**
          * @param p2p P2p
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
          * 
          * @return builder
@@ -154,6 +157,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs extends com.pul
 
         /**
          * @param p2p P2p
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
          * 
          * @return builder

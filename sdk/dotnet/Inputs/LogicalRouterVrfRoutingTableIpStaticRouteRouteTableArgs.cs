@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Both
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Both`, `Multicast`, `NoInstall`, and `Unicast`.
         /// </summary>
         [Input("both")]
         public Input<Inputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableBothArgs>? Both { get; set; }
 
         /// <summary>
         /// Multicast
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Both`, `Multicast`, `NoInstall`, and `Unicast`.
         /// </summary>
         [Input("multicast")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// No install
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Both`, `Multicast`, `NoInstall`, and `Unicast`.
         /// </summary>
         [Input("noInstall")]
@@ -35,6 +36,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Unicast
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Both`, `Multicast`, `NoInstall`, and `Unicast`.
         /// </summary>
         [Input("unicast")]

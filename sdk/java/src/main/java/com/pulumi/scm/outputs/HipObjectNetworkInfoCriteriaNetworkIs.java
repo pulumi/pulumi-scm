@@ -15,18 +15,19 @@ import javax.annotation.Nullable;
 public final class HipObjectNetworkInfoCriteriaNetworkIs {
     /**
      * @return Mobile
-     * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsMobile mobile;
     /**
      * @return Unknown
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsUnknown unknown;
     /**
      * @return Wifi
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -35,7 +36,6 @@ public final class HipObjectNetworkInfoCriteriaNetworkIs {
     private HipObjectNetworkInfoCriteriaNetworkIs() {}
     /**
      * @return Mobile
-     * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetworkIsMobile> mobile() {
@@ -43,6 +43,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIs {
     }
     /**
      * @return Unknown
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
@@ -51,6 +52,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIs {
     }
     /**
      * @return Wifi
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */

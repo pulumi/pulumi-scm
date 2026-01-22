@@ -101,15 +101,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -119,16 +114,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -142,15 +130,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -160,16 +143,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -183,101 +159,35 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetApplicationFilterResult
     {
-        /// <summary>
-        /// Category
-        /// </summary>
         public readonly ImmutableArray<string> Categories;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool Evasive;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool ExcessiveBandwidthUse;
-        /// <summary>
-        /// Exclude
-        /// </summary>
         public readonly ImmutableArray<string> Excludes;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool HasKnownVulnerabilities;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool IsSaas;
-        /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool NewAppid;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool Pervasive;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool ProneToMisuse;
-        /// <summary>
-        /// Risk
-        /// </summary>
         public readonly ImmutableArray<int> Risks;
-        /// <summary>
-        /// Saas certifications
-        /// </summary>
         public readonly ImmutableArray<string> SaasCertifications;
-        /// <summary>
-        /// Saas risk
-        /// </summary>
         public readonly ImmutableArray<string> SaasRisks;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Subcategory
-        /// </summary>
         public readonly ImmutableArray<string> Subcategories;
-        /// <summary>
-        /// Tagging
-        /// </summary>
         public readonly Outputs.GetApplicationFilterTaggingResult Tagging;
-        /// <summary>
-        /// Technology
-        /// </summary>
         public readonly ImmutableArray<string> Technologies;
         public readonly string Tfid;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool TransfersFiles;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool TunnelsOtherApps;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool UsedByMalware;
 
         [OutputConstructor]

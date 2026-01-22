@@ -46,26 +46,14 @@ export function getDnsSecurityProfile(args: GetDnsSecurityProfileArgs, opts?: pu
 export interface GetDnsSecurityProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * The UUID of the DNS security profile
      */
     id: string;
-    /**
-     * The name of the DNS security profile
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -73,36 +61,18 @@ export interface GetDnsSecurityProfileArgs {
  * A collection of values returned by getDnsSecurityProfile.
  */
 export interface GetDnsSecurityProfileResult {
-    /**
-     * Botnet domains
-     */
     readonly botnetDomains: outputs.GetDnsSecurityProfileBotnetDomains;
-    /**
-     * The description of the DNS security profile
-     */
     readonly description: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * The UUID of the DNS security profile
      */
     readonly id: string;
-    /**
-     * The name of the DNS security profile
-     */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -146,25 +116,13 @@ export function getDnsSecurityProfileOutput(args: GetDnsSecurityProfileOutputArg
 export interface GetDnsSecurityProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * The UUID of the DNS security profile
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the DNS security profile
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

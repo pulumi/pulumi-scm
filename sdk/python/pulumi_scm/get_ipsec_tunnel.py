@@ -68,25 +68,16 @@ class GetIpsecTunnelResult:
     @_builtins.property
     @pulumi.getter(name="antiReplay")
     def anti_replay(self) -> _builtins.bool:
-        """
-        Enable Anti-Replay check on this tunnel
-        """
         return pulumi.get(self, "anti_replay")
 
     @_builtins.property
     @pulumi.getter(name="autoKey")
     def auto_key(self) -> 'outputs.GetIpsecTunnelAutoKeyResult':
-        """
-        Auto key
-        """
         return pulumi.get(self, "auto_key")
 
     @_builtins.property
     @pulumi.getter(name="copyTos")
     def copy_tos(self) -> _builtins.bool:
-        """
-        Copy IP TOS bits from inner packet to IPSec packet (not recommended)
-        """
         return pulumi.get(self, "copy_tos")
 
     @_builtins.property
@@ -94,25 +85,17 @@ class GetIpsecTunnelResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="enableGreEncapsulation")
     def enable_gre_encapsulation(self) -> _builtins.bool:
-        """
-        allow GRE over IPSec
-        """
         return pulumi.get(self, "enable_gre_encapsulation")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -126,18 +109,11 @@ class GetIpsecTunnelResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -148,17 +124,11 @@ class GetIpsecTunnelResult:
     @_builtins.property
     @pulumi.getter(name="tunnelInterface")
     def tunnel_interface(self) -> _builtins.str:
-        """
-        Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
-        """
         return pulumi.get(self, "tunnel_interface")
 
     @_builtins.property
     @pulumi.getter(name="tunnelMonitor")
     def tunnel_monitor(self) -> 'outputs.GetIpsecTunnelTunnelMonitorResult':
-        """
-        Tunnel monitor
-        """
         return pulumi.get(self, "tunnel_monitor")
 
 
@@ -204,13 +174,7 @@ def get_ipsec_tunnel(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -256,13 +220,7 @@ def get_ipsec_tunnel_output(device: Optional[pulumi.Input[Optional[_builtins.str
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

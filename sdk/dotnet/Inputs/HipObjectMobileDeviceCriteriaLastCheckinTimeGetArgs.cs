@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Not within
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `NotWithin` and `Within`.
         /// </summary>
         [Input("notWithin")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinGetArgs>? NotWithin { get; set; }
 
         /// <summary>
         /// Within
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `NotWithin` and `Within`.
         /// </summary>
         [Input("within")]

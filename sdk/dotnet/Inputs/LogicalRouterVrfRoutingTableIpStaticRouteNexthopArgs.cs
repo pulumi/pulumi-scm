@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Discard
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("discard")]
         public Input<Inputs.LogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscardArgs>? Discard { get; set; }
 
         /// <summary>
         /// Fqdn
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("fqdn")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ip address
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("ipAddress")]
@@ -35,6 +36,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ipv6 address
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("ipv6Address")]
@@ -42,6 +44,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Next lr
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("nextLr")]
@@ -49,6 +52,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Next vr
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("nextVr")]
@@ -56,6 +60,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Receive
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("receive")]
@@ -63,6 +68,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Tunnel
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("tunnel")]

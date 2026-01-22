@@ -35,7 +35,6 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -43,7 +42,6 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -67,6 +65,7 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -75,6 +74,7 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -128,7 +128,23 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
+     * Identity provider SLO URL
+     * 
+     */
+    @Import(name="sloUrl")
+    private @Nullable Output<String> sloUrl;
+
+    /**
+     * @return Identity provider SLO URL
+     * 
+     */
+    public Optional<Output<String>> sloUrl() {
+        return Optional.ofNullable(this.sloUrl);
+    }
+
+    /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -137,6 +153,7 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -214,6 +231,7 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
         this.maxClockSkew = $.maxClockSkew;
         this.name = $.name;
         this.sloBindings = $.sloBindings;
+        this.sloUrl = $.sloUrl;
         this.snippet = $.snippet;
         this.ssoBindings = $.ssoBindings;
         this.ssoUrl = $.ssoUrl;
@@ -262,7 +280,6 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -274,7 +291,6 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -306,6 +322,7 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -318,6 +335,7 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -391,7 +409,29 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
+         * @param sloUrl Identity provider SLO URL
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sloUrl(@Nullable Output<String> sloUrl) {
+            $.sloUrl = sloUrl;
+            return this;
+        }
+
+        /**
+         * @param sloUrl Identity provider SLO URL
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sloUrl(String sloUrl) {
+            return sloUrl(Output.of(sloUrl));
+        }
+
+        /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -404,6 +444,7 @@ public final class SamlServerProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

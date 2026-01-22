@@ -57,6 +57,48 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
+    ///     //
+    ///     // Creates an ip subnet variable used in the subsequent example
+    ///     //
+    ///     var scmIpv6Prefix = new Scm.Variable("scm_ipv6_prefix", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$scm_ipv6_prefix",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "ip-netmask",
+    ///         Value = "2001:0db8:abcd:0001::/64",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a loopback interface with ipv6 address, with default value loopback.321
+    ///     //
+    ///     var scmLoopbackIntf3 = new Scm.LoopbackInterface("scm_loopback_intf_3", new()
+    ///     {
+    ///         Name = "$scm_loopback_intf3",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         DefaultValue = "loopback.321",
+    ///         Ipv6 = new Scm.Inputs.LoopbackInterfaceIpv6Args
+    ///         {
+    ///             Enabled = true,
+    ///             InterfaceId = "EUI-64",
+    ///             Addresses = new[]
+    ///             {
+    ///                 new Scm.Inputs.LoopbackInterfaceIpv6AddressArgs
+    ///                 {
+    ///                     Name = "$scm_ipv6_prefix",
+    ///                     Prefix = null,
+    ///                 },
+    ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmIpv6Prefix,
+    ///         },
+    ///     });
+    /// 
     /// });
     /// ```
     /// 
@@ -103,13 +145,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -147,6 +189,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -215,13 +258,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -265,6 +308,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -292,13 +336,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -342,6 +386,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

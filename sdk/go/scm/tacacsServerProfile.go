@@ -14,6 +14,56 @@ import (
 
 // TacacsServerProfile resource
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewTacacsServerProfile(ctx, "ise_tacacs_example", &scm.TacacsServerProfileArgs{
+//				Name:                pulumi.String("ISE-TACACS11"),
+//				Protocol:            pulumi.String("PAP"),
+//				Timeout:             pulumi.Int(3),
+//				Folder:              pulumi.String("All"),
+//				UseSingleConnection: pulumi.Bool(true),
+//				Servers: scm.TacacsServerProfileServerArray{
+//					&scm.TacacsServerProfileServerArgs{
+//						Name:    pulumi.String("Server-1"),
+//						Address: pulumi.String("10.10.10.10"),
+//						Port:    pulumi.Int(49),
+//						Secret:  pulumi.String("Test Secret1"),
+//					},
+//					&scm.TacacsServerProfileServerArgs{
+//						Name:    pulumi.String("Server-2"),
+//						Address: pulumi.String("10.10.10.10"),
+//						Port:    pulumi.Int(49),
+//						Secret:  pulumi.String("Test Secret1"),
+//					},
+//					&scm.TacacsServerProfileServerArgs{
+//						Name:    pulumi.String("Server-3"),
+//						Address: pulumi.String("10.10.10.10"),
+//						Port:    pulumi.Int(49),
+//						Secret:  pulumi.String("Test Secret1"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
@@ -43,9 +93,11 @@ type TacacsServerProfile struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the TACACS+ server profile
@@ -55,6 +107,7 @@ type TacacsServerProfile struct {
 	// The TACACS+ server configuration
 	Servers TacacsServerProfileServerArrayOutput `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -77,6 +130,10 @@ func NewTacacsServerProfile(ctx *pulumi.Context,
 	if args.Servers == nil {
 		return nil, errors.New("invalid value for required argument 'Servers'")
 	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"encryptedValues",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TacacsServerProfile
 	err := ctx.RegisterResource("scm:index/tacacsServerProfile:TacacsServerProfile", name, args, &resource, opts...)
@@ -101,9 +158,11 @@ func GetTacacsServerProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering TacacsServerProfile resources.
 type tacacsServerProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the TACACS+ server profile
@@ -113,6 +172,7 @@ type tacacsServerProfileState struct {
 	// The TACACS+ server configuration
 	Servers []TacacsServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -124,9 +184,11 @@ type tacacsServerProfileState struct {
 
 type TacacsServerProfileState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
+	// Map of sensitive values returned from the API.
+	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the TACACS+ server profile
@@ -136,6 +198,7 @@ type TacacsServerProfileState struct {
 	// The TACACS+ server configuration
 	Servers TacacsServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -151,9 +214,9 @@ func (TacacsServerProfileState) ElementType() reflect.Type {
 
 type tacacsServerProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the TACACS+ server profile
@@ -163,6 +226,7 @@ type tacacsServerProfileArgs struct {
 	// The TACACS+ server configuration
 	Servers []TacacsServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The TACACS+ timeout (seconds)
@@ -174,9 +238,9 @@ type tacacsServerProfileArgs struct {
 // The set of arguments for constructing a TacacsServerProfile resource.
 type TacacsServerProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the TACACS+ server profile
@@ -186,6 +250,7 @@ type TacacsServerProfileArgs struct {
 	// The TACACS+ server configuration
 	Servers TacacsServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The TACACS+ timeout (seconds)
@@ -282,12 +347,17 @@ func (o TacacsServerProfileOutput) ToTacacsServerProfileOutputWithContext(ctx co
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TacacsServerProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
+// Map of sensitive values returned from the API.
+func (o TacacsServerProfileOutput) EncryptedValues() pulumi.StringMapOutput {
+	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TacacsServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -309,6 +379,7 @@ func (o TacacsServerProfileOutput) Servers() TacacsServerProfileServerArrayOutpu
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TacacsServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

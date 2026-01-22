@@ -9,6 +9,112 @@ import * as utilities from "./utilities";
 /**
  * LogForwardingProfile resource
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmLogForwardingProfile1 = new scm.LogForwardingProfile("scm_log_forwarding_profile_1", {
+ *     folder: "All",
+ *     name: "scm-log-fowarding-profile-1",
+ *     matchLists: [{
+ *         name: "profile_match",
+ *         logType: "threat",
+ *         filter: "(addr in 192.50.10.10) and (addr.dst notin 192.40.50.10)",
+ *     }],
+ * });
+ * const scmLogForwardingProfile2 = new scm.LogForwardingProfile("scm_log_forwarding_profile_2", {
+ *     folder: "All",
+ *     name: "scm-log-fowarding-profile-2",
+ *     description: "Log Forwarding w/ HTTP Server Profile and Syslog Server Profile",
+ *     matchLists: [{
+ *         name: "profile_match",
+ *         logType: "traffic",
+ *         filter: "(device_name eq test_device)",
+ *         sendHttp: ["test_http"],
+ *         sendSyslog: [
+ *             "syslog-server-prof-mixed",
+ *             "syslog-server-prof-complete",
+ *         ],
+ *     }],
+ * });
+ * const scmLogForwardingProfile3 = new scm.LogForwardingProfile("scm_log_forwarding_profile_3", {
+ *     folder: "All",
+ *     name: "scm-log-fowarding-profile-3",
+ *     description: "Log Forwarding w/ All Server Profiles",
+ *     matchLists: [{
+ *         name: "profile_match",
+ *         actionDesc: "all server profiles",
+ *         logType: "dns-security",
+ *         filter: "All Logs",
+ *         sendHttp: [
+ *             "test_http",
+ *             "t10",
+ *         ],
+ *         sendSyslog: [
+ *             "syslog-server-prof-base",
+ *             "syslog-server-prof-mixed",
+ *             "syslog-server-prof-complete",
+ *         ],
+ *         sendSnmptrap: ["snmp_test"],
+ *         sendEmail: [
+ *             "email_test",
+ *             "email_test_2",
+ *         ],
+ *     }],
+ * });
+ * const scmLogForwardingProfile4 = new scm.LogForwardingProfile("scm_log_forwarding_profile_4", {
+ *     folder: "All",
+ *     name: "scm-log-fowarding-profile-4",
+ *     description: "Log Forwarding w/ Multiple Match Lists",
+ *     matchLists: [
+ *         {
+ *             name: "profile_match_1",
+ *             actionDesc: "match list for url",
+ *             logType: "url",
+ *             filter: "(sdwan_cluster contains 123)",
+ *             sendHttp: ["t10"],
+ *             sendSyslog: ["syslog-server-prof-base"],
+ *             sendSnmptrap: ["snmp_test"],
+ *         },
+ *         {
+ *             name: "profile_match_2",
+ *             logType: "data",
+ *             filter: "(link_switch_2 neq lnk_2) or (pkts_received geq 100)",
+ *             sendHttp: [
+ *                 "t5",
+ *                 "t10",
+ *                 "t20",
+ *             ],
+ *             sendSyslog: ["syslog-server-prof-mixed"],
+ *             sendEmail: [
+ *                 "email_test",
+ *                 "email_test_2",
+ *             ],
+ *         },
+ *         {
+ *             name: "profile_match_3",
+ *             actionDesc: "match list for wildfire",
+ *             logType: "wildfire",
+ *             filter: "(imei contains test_server)",
+ *             sendHttp: [
+ *                 "t5",
+ *                 "t10",
+ *                 "t20",
+ *                 "t22",
+ *                 "t24",
+ *             ],
+ *             sendSyslog: ["syslog-server-prof-complete"],
+ *             sendEmail: [
+ *                 "email_test",
+ *                 "email_test_2",
+ *             ],
+ *         },
+ *     ],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:
@@ -69,24 +175,25 @@ export class LogForwardingProfile extends pulumi.CustomResource {
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * Match list
      */
-    declare public readonly matchLists: pulumi.Output<outputs.LogForwardingProfileMatchList[] | undefined>;
+    declare public readonly matchLists: pulumi.Output<outputs.LogForwardingProfileMatchList[]>;
     /**
      * The name of the log forwarding profile
      */
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -99,7 +206,7 @@ export class LogForwardingProfile extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: LogForwardingProfileArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: LogForwardingProfileArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: LogForwardingProfileArgs | LogForwardingProfileState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -114,6 +221,9 @@ export class LogForwardingProfile extends pulumi.CustomResource {
             resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as LogForwardingProfileArgs | undefined;
+            if (args?.matchLists === undefined && !opts.urn) {
+                throw new Error("Missing required property 'matchLists'");
+            }
             resourceInputs["description"] = args?.description;
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
@@ -137,11 +247,11 @@ export interface LogForwardingProfileState {
     description?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -155,6 +265,7 @@ export interface LogForwardingProfileState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -171,24 +282,25 @@ export interface LogForwardingProfileArgs {
     description?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
      * Match list
      */
-    matchLists?: pulumi.Input<pulumi.Input<inputs.LogForwardingProfileMatchList>[]>;
+    matchLists: pulumi.Input<pulumi.Input<inputs.LogForwardingProfileMatchList>[]>;
     /**
      * The name of the log forwarding profile
      */
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

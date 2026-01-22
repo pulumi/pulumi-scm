@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,30 +21,30 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
      * The Kerberos server IP address
      * 
      */
-    @Import(name="host")
-    private @Nullable Output<String> host;
+    @Import(name="host", required=true)
+    private Output<String> host;
 
     /**
      * @return The Kerberos server IP address
      * 
      */
-    public Optional<Output<String>> host() {
-        return Optional.ofNullable(this.host);
+    public Output<String> host() {
+        return this.host;
     }
 
     /**
      * The Kerberos server name
      * 
      */
-    @Import(name="name")
-    private @Nullable Output<String> name;
+    @Import(name="name", required=true)
+    private Output<String> name;
 
     /**
      * @return The Kerberos server name
      * 
      */
-    public Optional<Output<String>> name() {
-        return Optional.ofNullable(this.name);
+    public Output<String> name() {
+        return this.name;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder host(@Nullable Output<String> host) {
+        public Builder host(Output<String> host) {
             $.host = host;
             return this;
         }
@@ -114,7 +115,7 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder name(@Nullable Output<String> name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
@@ -151,6 +152,12 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
         }
 
         public KerberosServerProfileServerArgs build() {
+            if ($.host == null) {
+                throw new MissingRequiredPropertyException("KerberosServerProfileServerArgs", "host");
+            }
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("KerberosServerProfileServerArgs", "name");
+            }
             return $;
         }
     }

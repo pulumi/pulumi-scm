@@ -165,6 +165,18 @@ def get_tacacs_server_profile_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up the multi-tag address object by its ID.
+    scm_tacacs_server_profiles = scm.get_tacacs_server_profile_list(folder="All")
+    pulumi.export("profileDataSourceResults", scm_tacacs_server_profiles.datas)
+    pulumi.export("profileNames", [profile.name for profile in scm_tacacs_server_profiles.datas])
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +215,18 @@ def get_tacacs_server_profile_list_output(device: Optional[pulumi.Input[Optional
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTacacsServerProfileListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up the multi-tag address object by its ID.
+    scm_tacacs_server_profiles = scm.get_tacacs_server_profile_list(folder="All")
+    pulumi.export("profileDataSourceResults", scm_tacacs_server_profiles.datas)
+    pulumi.export("profileNames", [profile.name for profile in scm_tacacs_server_profiles.datas])
+    ```
 
 
     :param _builtins.str device: The device of the item.

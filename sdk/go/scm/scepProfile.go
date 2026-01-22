@@ -14,6 +14,132 @@ import (
 
 // ScepProfile resource
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// scep profile w/ no challenge
+//			_, err := scm.NewScepProfile(ctx, "scm_scep_profile_1", &scm.ScepProfileArgs{
+//				Folder:         pulumi.String("All"),
+//				Name:           pulumi.String("scep-prof-1"),
+//				ScepUrl:        pulumi.String("https://scep.example.com/"),
+//				CaIdentityName: pulumi.String("Default"),
+//				Digest:         pulumi.String("sha1"),
+//				Subject:        pulumi.String("CN=$USERNAME"),
+//				ScepChallenge: &scm.ScepProfileScepChallengeArgs{
+//					Fixed: pulumi.String("123"),
+//				},
+//				Algorithm: &scm.ScepProfileAlgorithmArgs{
+//					Rsa: &scm.ScepProfileAlgorithmRsaArgs{
+//						RsaNbits: pulumi.String("1024"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// scep profile w/ fixed challenge
+//			_, err = scm.NewScepProfile(ctx, "scm_scep_profile_2", &scm.ScepProfileArgs{
+//				Folder:         pulumi.String("All"),
+//				Name:           pulumi.String("scep-prof-2"),
+//				ScepUrl:        pulumi.String("https://example.target.com/"),
+//				CaIdentityName: pulumi.String("user-scep"),
+//				Digest:         pulumi.String("sha256"),
+//				Subject:        pulumi.String("CN=$USERNAME"),
+//				ScepCaCert:     pulumi.String("Forward-Trust-CA-ECDSA"),
+//				ScepChallenge: &scm.ScepProfileScepChallengeArgs{
+//					Fixed: pulumi.String("Password123!"),
+//				},
+//				CertificateAttributes: &scm.ScepProfileCertificateAttributesArgs{
+//					Rfc822name: pulumi.String("user@example.com"),
+//				},
+//				Algorithm: &scm.ScepProfileAlgorithmArgs{
+//					Rsa: &scm.ScepProfileAlgorithmRsaArgs{
+//						RsaNbits: pulumi.String("2048"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// scep profile w/ dynamic challenge
+//			_, err = scm.NewScepProfile(ctx, "scm_scep_profile_3", &scm.ScepProfileArgs{
+//				Folder:                pulumi.String("All"),
+//				Name:                  pulumi.String("scep-prof-3"),
+//				ScepUrl:               pulumi.String("https://example.gateway.com/"),
+//				CaIdentityName:        pulumi.String("vpn-gateway"),
+//				Digest:                pulumi.String("sha384"),
+//				Subject:               pulumi.String("CN=$CORP_VPN"),
+//				ScepCaCert:            pulumi.String("GlobalSign-Root-CA"),
+//				Fingerprint:           pulumi.String("64EC88CA00B268E5BA1A35678A1B5316D212F4F366B24772322342423123455A"),
+//				UseAsDigitalSignature: pulumi.Bool(false),
+//				ScepChallenge: &scm.ScepProfileScepChallengeArgs{
+//					Dynamic: &scm.ScepProfileScepChallengeDynamicArgs{
+//						Username:     pulumi.String("user123"),
+//						Password:     pulumi.String("Password123!"),
+//						OtpServerUrl: pulumi.String("http://auth.com"),
+//					},
+//				},
+//				CertificateAttributes: &scm.ScepProfileCertificateAttributesArgs{
+//					Dnsname: pulumi.String("vpn-gateway.example.com"),
+//				},
+//				Algorithm: &scm.ScepProfileAlgorithmArgs{
+//					Rsa: &scm.ScepProfileAlgorithmRsaArgs{
+//						RsaNbits: pulumi.String("3072"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// scep profile w/ all fields
+//			_, err = scm.NewScepProfile(ctx, "scm_scep_profile_4", &scm.ScepProfileArgs{
+//				Folder:                pulumi.String("All"),
+//				Name:                  pulumi.String("scep-prof-4"),
+//				ScepUrl:               pulumi.String("https://example.wifi.com/"),
+//				CaIdentityName:        pulumi.String("wifi"),
+//				Digest:                pulumi.String("sha512"),
+//				Subject:               pulumi.String("CN=$WIFI-ACCESS"),
+//				ScepCaCert:            pulumi.String("Root CA"),
+//				ScepClientCert:        pulumi.String("Forward-UnTrust-CA-ECDSA"),
+//				Fingerprint:           pulumi.String("4448CA00B268E5BU690378A1B5316D212F4F366B2477232234394I"),
+//				UseAsDigitalSignature: pulumi.Bool(true),
+//				UseForKeyEncipherment: pulumi.Bool(true),
+//				ScepChallenge: &scm.ScepProfileScepChallengeArgs{
+//					Dynamic: &scm.ScepProfileScepChallengeDynamicArgs{
+//						Username:     pulumi.String("admin"),
+//						Password:     pulumi.String("Pwd@123"),
+//						OtpServerUrl: pulumi.String("http://auth.com"),
+//					},
+//				},
+//				CertificateAttributes: &scm.ScepProfileCertificateAttributesArgs{
+//					UniformResourceIdentifier: pulumi.String("file:///C:/Users/Documents/report.txt"),
+//				},
+//				Algorithm: &scm.ScepProfileAlgorithmArgs{
+//					Rsa: &scm.ScepProfileAlgorithmRsaArgs{
+//						RsaNbits: pulumi.String("3072"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
@@ -44,33 +170,34 @@ type ScepProfile struct {
 
 	// Algorithm
 	Algorithm ScepProfileAlgorithmOutput `pulumi:"algorithm"`
-	// Certificate Authority identity
+	// Certificate Authority Identity
 	CaIdentityName pulumi.StringOutput `pulumi:"caIdentityName"`
 	// Subject Alternative name type
 	CertificateAttributes ScepProfileCertificateAttributesPtrOutput `pulumi:"certificateAttributes"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Digest for CSR
 	Digest pulumi.StringOutput `pulumi:"digest"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
-	// CA certificate fingerprint
+	// CA Certificate Fingerprint
 	Fingerprint pulumi.StringPtrOutput `pulumi:"fingerprint"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the SCEP profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// SCEP server CA certificate
+	// SCEP Server CA Certificate
 	ScepCaCert pulumi.StringPtrOutput `pulumi:"scepCaCert"`
-	// One Time Password challenge
+	// One Time Password Challenge
 	ScepChallenge ScepProfileScepChallengeOutput `pulumi:"scepChallenge"`
-	// SCEP client ceertificate
+	// SCEP Client Certificate
 	ScepClientCert pulumi.StringPtrOutput `pulumi:"scepClientCert"`
 	// SCEP server URL
 	ScepUrl pulumi.StringOutput `pulumi:"scepUrl"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Subject
@@ -136,33 +263,34 @@ func GetScepProfile(ctx *pulumi.Context,
 type scepProfileState struct {
 	// Algorithm
 	Algorithm *ScepProfileAlgorithm `pulumi:"algorithm"`
-	// Certificate Authority identity
+	// Certificate Authority Identity
 	CaIdentityName *string `pulumi:"caIdentityName"`
 	// Subject Alternative name type
 	CertificateAttributes *ScepProfileCertificateAttributes `pulumi:"certificateAttributes"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Digest for CSR
 	Digest *string `pulumi:"digest"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// CA certificate fingerprint
+	// CA Certificate Fingerprint
 	Fingerprint *string `pulumi:"fingerprint"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the SCEP profile
 	Name *string `pulumi:"name"`
-	// SCEP server CA certificate
+	// SCEP Server CA Certificate
 	ScepCaCert *string `pulumi:"scepCaCert"`
-	// One Time Password challenge
+	// One Time Password Challenge
 	ScepChallenge *ScepProfileScepChallenge `pulumi:"scepChallenge"`
-	// SCEP client ceertificate
+	// SCEP Client Certificate
 	ScepClientCert *string `pulumi:"scepClientCert"`
 	// SCEP server URL
 	ScepUrl *string `pulumi:"scepUrl"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subject
@@ -177,33 +305,34 @@ type scepProfileState struct {
 type ScepProfileState struct {
 	// Algorithm
 	Algorithm ScepProfileAlgorithmPtrInput
-	// Certificate Authority identity
+	// Certificate Authority Identity
 	CaIdentityName pulumi.StringPtrInput
 	// Subject Alternative name type
 	CertificateAttributes ScepProfileCertificateAttributesPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Digest for CSR
 	Digest pulumi.StringPtrInput
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
-	// CA certificate fingerprint
+	// CA Certificate Fingerprint
 	Fingerprint pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the SCEP profile
 	Name pulumi.StringPtrInput
-	// SCEP server CA certificate
+	// SCEP Server CA Certificate
 	ScepCaCert pulumi.StringPtrInput
-	// One Time Password challenge
+	// One Time Password Challenge
 	ScepChallenge ScepProfileScepChallengePtrInput
-	// SCEP client ceertificate
+	// SCEP Client Certificate
 	ScepClientCert pulumi.StringPtrInput
 	// SCEP server URL
 	ScepUrl pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subject
@@ -222,31 +351,32 @@ func (ScepProfileState) ElementType() reflect.Type {
 type scepProfileArgs struct {
 	// Algorithm
 	Algorithm ScepProfileAlgorithm `pulumi:"algorithm"`
-	// Certificate Authority identity
+	// Certificate Authority Identity
 	CaIdentityName string `pulumi:"caIdentityName"`
 	// Subject Alternative name type
 	CertificateAttributes *ScepProfileCertificateAttributes `pulumi:"certificateAttributes"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Digest for CSR
 	Digest string `pulumi:"digest"`
-	// CA certificate fingerprint
+	// CA Certificate Fingerprint
 	Fingerprint *string `pulumi:"fingerprint"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the SCEP profile
 	Name *string `pulumi:"name"`
-	// SCEP server CA certificate
+	// SCEP Server CA Certificate
 	ScepCaCert *string `pulumi:"scepCaCert"`
-	// One Time Password challenge
+	// One Time Password Challenge
 	ScepChallenge ScepProfileScepChallenge `pulumi:"scepChallenge"`
-	// SCEP client ceertificate
+	// SCEP Client Certificate
 	ScepClientCert *string `pulumi:"scepClientCert"`
 	// SCEP server URL
 	ScepUrl string `pulumi:"scepUrl"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subject
@@ -261,31 +391,32 @@ type scepProfileArgs struct {
 type ScepProfileArgs struct {
 	// Algorithm
 	Algorithm ScepProfileAlgorithmInput
-	// Certificate Authority identity
+	// Certificate Authority Identity
 	CaIdentityName pulumi.StringInput
 	// Subject Alternative name type
 	CertificateAttributes ScepProfileCertificateAttributesPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Digest for CSR
 	Digest pulumi.StringInput
-	// CA certificate fingerprint
+	// CA Certificate Fingerprint
 	Fingerprint pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the SCEP profile
 	Name pulumi.StringPtrInput
-	// SCEP server CA certificate
+	// SCEP Server CA Certificate
 	ScepCaCert pulumi.StringPtrInput
-	// One Time Password challenge
+	// One Time Password Challenge
 	ScepChallenge ScepProfileScepChallengeInput
-	// SCEP client ceertificate
+	// SCEP Client Certificate
 	ScepClientCert pulumi.StringPtrInput
 	// SCEP server URL
 	ScepUrl pulumi.StringInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subject
@@ -388,7 +519,7 @@ func (o ScepProfileOutput) Algorithm() ScepProfileAlgorithmOutput {
 	return o.ApplyT(func(v *ScepProfile) ScepProfileAlgorithmOutput { return v.Algorithm }).(ScepProfileAlgorithmOutput)
 }
 
-// Certificate Authority identity
+// Certificate Authority Identity
 func (o ScepProfileOutput) CaIdentityName() pulumi.StringOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringOutput { return v.CaIdentityName }).(pulumi.StringOutput)
 }
@@ -399,7 +530,6 @@ func (o ScepProfileOutput) CertificateAttributes() ScepProfileCertificateAttribu
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ScepProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -414,12 +544,13 @@ func (o ScepProfileOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// CA certificate fingerprint
+// CA Certificate Fingerprint
 func (o ScepProfileOutput) Fingerprint() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.Fingerprint }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ScepProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -430,17 +561,17 @@ func (o ScepProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// SCEP server CA certificate
+// SCEP Server CA Certificate
 func (o ScepProfileOutput) ScepCaCert() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.ScepCaCert }).(pulumi.StringPtrOutput)
 }
 
-// One Time Password challenge
+// One Time Password Challenge
 func (o ScepProfileOutput) ScepChallenge() ScepProfileScepChallengeOutput {
 	return o.ApplyT(func(v *ScepProfile) ScepProfileScepChallengeOutput { return v.ScepChallenge }).(ScepProfileScepChallengeOutput)
 }
 
-// SCEP client ceertificate
+// SCEP Client Certificate
 func (o ScepProfileOutput) ScepClientCert() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.ScepClientCert }).(pulumi.StringPtrOutput)
 }
@@ -451,6 +582,7 @@ func (o ScepProfileOutput) ScepUrl() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ScepProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

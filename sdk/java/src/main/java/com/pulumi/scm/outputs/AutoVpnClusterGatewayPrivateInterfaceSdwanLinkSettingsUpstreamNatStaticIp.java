@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 public final class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp {
     /**
      * @return FQDN
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     private @Nullable String fqdn;
     /**
      * @return IP address
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
@@ -27,7 +27,6 @@ public final class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstrea
     private AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp() {}
     /**
      * @return FQDN
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public Optional<String> fqdn() {
@@ -35,6 +34,7 @@ public final class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstrea
     }
     /**
      * @return IP address
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */

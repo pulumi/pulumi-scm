@@ -15,18 +15,19 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfOspfAreaType {
     /**
      * @return Normal
-     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     private @Nullable LogicalRouterVrfOspfAreaTypeNormal normal;
     /**
      * @return Nssa
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     private @Nullable LogicalRouterVrfOspfAreaTypeNssa nssa;
     /**
      * @return Stub
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
@@ -35,7 +36,6 @@ public final class LogicalRouterVrfOspfAreaType {
     private LogicalRouterVrfOspfAreaType() {}
     /**
      * @return Normal
-     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     public Optional<LogicalRouterVrfOspfAreaTypeNormal> normal() {
@@ -43,6 +43,7 @@ public final class LogicalRouterVrfOspfAreaType {
     }
     /**
      * @return Nssa
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
@@ -51,6 +52,7 @@ public final class LogicalRouterVrfOspfAreaType {
     }
     /**
      * @return Stub
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */

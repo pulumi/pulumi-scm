@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Mobile
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         [Input("mobile")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsMobileArgs>? Mobile { get; set; }
 
         /// <summary>
         /// Unknown
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         [Input("unknown")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Wifi
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         [Input("wifi")]

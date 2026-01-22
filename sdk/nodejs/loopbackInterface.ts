@@ -38,6 +38,35 @@ import * as utilities from "./utilities";
  *         name: "198.18.1.2/32",
  *     }],
  * });
+ * //
+ * // Creates an ip subnet variable used in the subsequent example
+ * //
+ * const scmIpv6Prefix = new scm.Variable("scm_ipv6_prefix", {
+ *     folder: "ngfw-shared",
+ *     name: "$scm_ipv6_prefix",
+ *     description: "Managed by Pulumi",
+ *     type: "ip-netmask",
+ *     value: "2001:0db8:abcd:0001::/64",
+ * });
+ * //
+ * // Creates a loopback interface with ipv6 address, with default value loopback.321
+ * //
+ * const scmLoopbackIntf3 = new scm.LoopbackInterface("scm_loopback_intf_3", {
+ *     name: "$scm_loopback_intf3",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     defaultValue: "loopback.321",
+ *     ipv6: {
+ *         enabled: true,
+ *         interfaceId: "EUI-64",
+ *         addresses: [{
+ *             name: "$scm_ipv6_prefix",
+ *             prefix: {},
+ *         }],
+ *     },
+ * }, {
+ *     dependsOn: [scmIpv6Prefix],
+ * });
  * ```
  *
  * ## Import
@@ -104,11 +133,11 @@ export class LoopbackInterface extends pulumi.CustomResource {
     declare public readonly defaultValue: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -134,6 +163,7 @@ export class LoopbackInterface extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -196,11 +226,11 @@ export interface LoopbackInterfaceState {
     defaultValue?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -226,6 +256,7 @@ export interface LoopbackInterfaceState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -246,11 +277,11 @@ export interface LoopbackInterfaceArgs {
     defaultValue?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -276,6 +307,7 @@ export interface LoopbackInterfaceArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

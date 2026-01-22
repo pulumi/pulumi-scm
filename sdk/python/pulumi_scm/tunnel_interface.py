@@ -27,6 +27,7 @@ class TunnelInterfaceArgs:
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]] = None,
+                 ipv6: Optional[pulumi.Input['TunnelInterfaceIpv6Args']] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
@@ -35,14 +36,16 @@ class TunnelInterfaceArgs:
         :param pulumi.Input[_builtins.str] comment: Description
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]] ips: Tunnel Interface IP Parent
+        :param pulumi.Input['TunnelInterfaceIpv6Args'] ipv6: Tunnel Interface IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if comment is not None:
@@ -57,6 +60,8 @@ class TunnelInterfaceArgs:
             pulumi.set(__self__, "interface_management_profile", interface_management_profile)
         if ips is not None:
             pulumi.set(__self__, "ips", ips)
+        if ipv6 is not None:
+            pulumi.set(__self__, "ipv6", ipv6)
         if mtu is not None:
             pulumi.set(__self__, "mtu", mtu)
         if name is not None:
@@ -93,7 +98,6 @@ class TunnelInterfaceArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -106,6 +110,7 @@ class TunnelInterfaceArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -140,6 +145,18 @@ class TunnelInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
+    def ipv6(self) -> Optional[pulumi.Input['TunnelInterfaceIpv6Args']]:
+        """
+        Tunnel Interface IPv6 Configuration
+        """
+        return pulumi.get(self, "ipv6")
+
+    @ipv6.setter
+    def ipv6(self, value: Optional[pulumi.Input['TunnelInterfaceIpv6Args']]):
+        pulumi.set(self, "ipv6", value)
+
+    @_builtins.property
+    @pulumi.getter
     def mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         MTU
@@ -167,6 +184,7 @@ class TunnelInterfaceArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -185,6 +203,7 @@ class _TunnelInterfaceState:
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]]] = None,
+                 ipv6: Optional[pulumi.Input['TunnelInterfaceIpv6Args']] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -194,14 +213,16 @@ class _TunnelInterfaceState:
         :param pulumi.Input[_builtins.str] comment: Description
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpArgs']]] ips: Tunnel Interface IP Parent
+        :param pulumi.Input['TunnelInterfaceIpv6Args'] ipv6: Tunnel Interface IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if comment is not None:
@@ -216,6 +237,8 @@ class _TunnelInterfaceState:
             pulumi.set(__self__, "interface_management_profile", interface_management_profile)
         if ips is not None:
             pulumi.set(__self__, "ips", ips)
+        if ipv6 is not None:
+            pulumi.set(__self__, "ipv6", ipv6)
         if mtu is not None:
             pulumi.set(__self__, "mtu", mtu)
         if name is not None:
@@ -254,7 +277,6 @@ class _TunnelInterfaceState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -267,6 +289,7 @@ class _TunnelInterfaceState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -301,6 +324,18 @@ class _TunnelInterfaceState:
 
     @_builtins.property
     @pulumi.getter
+    def ipv6(self) -> Optional[pulumi.Input['TunnelInterfaceIpv6Args']]:
+        """
+        Tunnel Interface IPv6 Configuration
+        """
+        return pulumi.get(self, "ipv6")
+
+    @ipv6.setter
+    def ipv6(self, value: Optional[pulumi.Input['TunnelInterfaceIpv6Args']]):
+        pulumi.set(self, "ipv6", value)
+
+    @_builtins.property
+    @pulumi.getter
     def mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         MTU
@@ -328,6 +363,7 @@ class _TunnelInterfaceState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -358,6 +394,7 @@ class TunnelInterface(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
+                 ipv6: Optional[pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -391,6 +428,32 @@ class TunnelInterface(pulumi.CustomResource):
             ips=[{
                 "name": "198.18.1.2/32",
             }])
+        #
+        # Creates an ip subnet variable used in the subsequent example
+        #
+        scm_ipv6_prefix = scm.Variable("scm_ipv6_prefix",
+            folder="ngfw-shared",
+            name="$scm_ipv6_prefix",
+            description="Managed by Pulumi",
+            type="ip-netmask",
+            value="2001:0db8:abcd:0001::/64")
+        #
+        # Creates a tunnel interface with ipv6 address, with default value tunnel.321
+        #
+        scm_tunnel_intf3 = scm.TunnelInterface("scm_tunnel_intf_3",
+            name="$scm_tunnel_intf_3",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            default_value="tunnel.321",
+            ipv6={
+                "enabled": True,
+                "interface_id": "EUI-64",
+                "addresses": [{
+                    "name": "$scm_ipv6_prefix",
+                    "prefix": {},
+                }],
+            },
+            opts = pulumi.ResourceOptions(depends_on=[scm_ipv6_prefix]))
         ```
 
         ## Import
@@ -424,14 +487,16 @@ class TunnelInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] comment: Description
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]] ips: Tunnel Interface IP Parent
+        :param pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']] ipv6: Tunnel Interface IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
@@ -469,6 +534,32 @@ class TunnelInterface(pulumi.CustomResource):
             ips=[{
                 "name": "198.18.1.2/32",
             }])
+        #
+        # Creates an ip subnet variable used in the subsequent example
+        #
+        scm_ipv6_prefix = scm.Variable("scm_ipv6_prefix",
+            folder="ngfw-shared",
+            name="$scm_ipv6_prefix",
+            description="Managed by Pulumi",
+            type="ip-netmask",
+            value="2001:0db8:abcd:0001::/64")
+        #
+        # Creates a tunnel interface with ipv6 address, with default value tunnel.321
+        #
+        scm_tunnel_intf3 = scm.TunnelInterface("scm_tunnel_intf_3",
+            name="$scm_tunnel_intf_3",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            default_value="tunnel.321",
+            ipv6={
+                "enabled": True,
+                "interface_id": "EUI-64",
+                "addresses": [{
+                    "name": "$scm_ipv6_prefix",
+                    "prefix": {},
+                }],
+            },
+            opts = pulumi.ResourceOptions(depends_on=[scm_ipv6_prefix]))
         ```
 
         ## Import
@@ -518,6 +609,7 @@ class TunnelInterface(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
+                 ipv6: Optional[pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -536,6 +628,7 @@ class TunnelInterface(pulumi.CustomResource):
             __props__.__dict__["folder"] = folder
             __props__.__dict__["interface_management_profile"] = interface_management_profile
             __props__.__dict__["ips"] = ips
+            __props__.__dict__["ipv6"] = ipv6
             __props__.__dict__["mtu"] = mtu
             __props__.__dict__["name"] = name
             __props__.__dict__["snippet"] = snippet
@@ -556,6 +649,7 @@ class TunnelInterface(pulumi.CustomResource):
             folder: Optional[pulumi.Input[_builtins.str]] = None,
             interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
             ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]]] = None,
+            ipv6: Optional[pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']]] = None,
             mtu: Optional[pulumi.Input[_builtins.int]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -570,14 +664,16 @@ class TunnelInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] comment: Description
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['TunnelInterfaceIpArgs', 'TunnelInterfaceIpArgsDict']]]] ips: Tunnel Interface IP Parent
+        :param pulumi.Input[Union['TunnelInterfaceIpv6Args', 'TunnelInterfaceIpv6ArgsDict']] ipv6: Tunnel Interface IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -590,6 +686,7 @@ class TunnelInterface(pulumi.CustomResource):
         __props__.__dict__["folder"] = folder
         __props__.__dict__["interface_management_profile"] = interface_management_profile
         __props__.__dict__["ips"] = ips
+        __props__.__dict__["ipv6"] = ipv6
         __props__.__dict__["mtu"] = mtu
         __props__.__dict__["name"] = name
         __props__.__dict__["snippet"] = snippet
@@ -617,7 +714,6 @@ class TunnelInterface(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -626,6 +722,7 @@ class TunnelInterface(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -648,6 +745,14 @@ class TunnelInterface(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
+    def ipv6(self) -> pulumi.Output[Optional['outputs.TunnelInterfaceIpv6']]:
+        """
+        Tunnel Interface IPv6 Configuration
+        """
+        return pulumi.get(self, "ipv6")
+
+    @_builtins.property
+    @pulumi.getter
     def mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
         MTU
@@ -667,6 +772,7 @@ class TunnelInterface(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

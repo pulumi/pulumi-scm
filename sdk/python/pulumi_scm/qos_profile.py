@@ -32,11 +32,12 @@ class QosProfileArgs:
         :param pulumi.Input['QosProfileAggregateBandwidthArgs'] aggregate_bandwidth: Aggregate bandwidth
         :param pulumi.Input['QosProfileClassBandwidthTypeArgs'] class_bandwidth_type: Class bandwidth type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if aggregate_bandwidth is not None:
@@ -81,7 +82,6 @@ class QosProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -94,6 +94,7 @@ class QosProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -119,6 +120,7 @@ class QosProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -143,11 +145,12 @@ class _QosProfileState:
         :param pulumi.Input['QosProfileAggregateBandwidthArgs'] aggregate_bandwidth: Aggregate bandwidth
         :param pulumi.Input['QosProfileClassBandwidthTypeArgs'] class_bandwidth_type: Class bandwidth type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if aggregate_bandwidth is not None:
@@ -194,7 +197,6 @@ class _QosProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -207,6 +209,7 @@ class _QosProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -232,6 +235,7 @@ class _QosProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -266,6 +270,106 @@ class QosProfile(pulumi.CustomResource):
         """
         QosProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_qos_profile1 = scm.QosProfile("scm_qos_profile_1",
+            folder="Remote Networks",
+            name="scm-qos-profile-base")
+        scm_qos_profile2 = scm.QosProfile("scm_qos_profile_2",
+            folder="Remote Networks",
+            name="scm-qos-profile-2",
+            aggregate_bandwidth={
+                "egress_max": 200,
+                "egress_guaranteed": 10000,
+            })
+        scm_qos_profile3 = scm.QosProfile("scm_qos_profile_3",
+            folder="Service Connections",
+            name="scm-qos-profile-3",
+            aggregate_bandwidth={
+                "egress_guaranteed": 20,
+            },
+            class_bandwidth_type={
+                "mbps": {
+                    "classes": [
+                        {
+                            "name": "class1",
+                        },
+                        {
+                            "name": "class2",
+                            "priority": "high",
+                        },
+                        {
+                            "name": "class3",
+                            "priority": "real-time",
+                            "class_bandwidth": {
+                                "egress_max": 500,
+                            },
+                        },
+                        {
+                            "name": "class4",
+                            "priority": "low",
+                            "class_bandwidth": {
+                                "egress_guaranteed": 60000,
+                            },
+                        },
+                        {
+                            "name": "class5",
+                            "priority": "medium",
+                            "class_bandwidth": {
+                                "egress_max": 955,
+                                "egress_guaranteed": 50000,
+                            },
+                        },
+                    ],
+                },
+            })
+        scm_qos_profile4 = scm.QosProfile("scm_qos_profile_4",
+            folder="Service Connections",
+            name="scm-qos-profile-4",
+            aggregate_bandwidth={
+                "egress_max": 1400,
+            },
+            class_bandwidth_type={
+                "percentage": {
+                    "classes": [
+                        {
+                            "name": "class1",
+                        },
+                        {
+                            "name": "class2",
+                            "priority": "low",
+                        },
+                        {
+                            "name": "class3",
+                            "priority": "real-time",
+                            "class_bandwidth": {
+                                "egress_max": 100,
+                            },
+                        },
+                        {
+                            "name": "class4",
+                            "priority": "medium",
+                            "class_bandwidth": {
+                                "egress_guaranteed": 5,
+                            },
+                        },
+                        {
+                            "name": "class5",
+                            "priority": "high",
+                            "class_bandwidth": {
+                                "egress_max": 25,
+                                "egress_guaranteed": 50,
+                            },
+                        },
+                    ],
+                },
+            })
+        ```
+
         ## Import
 
         The following command can be used to import a resource not managed by Terraform:
@@ -297,11 +401,12 @@ class QosProfile(pulumi.CustomResource):
         :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']] aggregate_bandwidth: Aggregate bandwidth
         :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']] class_bandwidth_type: Class bandwidth type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
@@ -312,6 +417,106 @@ class QosProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         QosProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_qos_profile1 = scm.QosProfile("scm_qos_profile_1",
+            folder="Remote Networks",
+            name="scm-qos-profile-base")
+        scm_qos_profile2 = scm.QosProfile("scm_qos_profile_2",
+            folder="Remote Networks",
+            name="scm-qos-profile-2",
+            aggregate_bandwidth={
+                "egress_max": 200,
+                "egress_guaranteed": 10000,
+            })
+        scm_qos_profile3 = scm.QosProfile("scm_qos_profile_3",
+            folder="Service Connections",
+            name="scm-qos-profile-3",
+            aggregate_bandwidth={
+                "egress_guaranteed": 20,
+            },
+            class_bandwidth_type={
+                "mbps": {
+                    "classes": [
+                        {
+                            "name": "class1",
+                        },
+                        {
+                            "name": "class2",
+                            "priority": "high",
+                        },
+                        {
+                            "name": "class3",
+                            "priority": "real-time",
+                            "class_bandwidth": {
+                                "egress_max": 500,
+                            },
+                        },
+                        {
+                            "name": "class4",
+                            "priority": "low",
+                            "class_bandwidth": {
+                                "egress_guaranteed": 60000,
+                            },
+                        },
+                        {
+                            "name": "class5",
+                            "priority": "medium",
+                            "class_bandwidth": {
+                                "egress_max": 955,
+                                "egress_guaranteed": 50000,
+                            },
+                        },
+                    ],
+                },
+            })
+        scm_qos_profile4 = scm.QosProfile("scm_qos_profile_4",
+            folder="Service Connections",
+            name="scm-qos-profile-4",
+            aggregate_bandwidth={
+                "egress_max": 1400,
+            },
+            class_bandwidth_type={
+                "percentage": {
+                    "classes": [
+                        {
+                            "name": "class1",
+                        },
+                        {
+                            "name": "class2",
+                            "priority": "low",
+                        },
+                        {
+                            "name": "class3",
+                            "priority": "real-time",
+                            "class_bandwidth": {
+                                "egress_max": 100,
+                            },
+                        },
+                        {
+                            "name": "class4",
+                            "priority": "medium",
+                            "class_bandwidth": {
+                                "egress_guaranteed": 5,
+                            },
+                        },
+                        {
+                            "name": "class5",
+                            "priority": "high",
+                            "class_bandwidth": {
+                                "egress_max": 25,
+                                "egress_guaranteed": 50,
+                            },
+                        },
+                    ],
+                },
+            })
+        ```
 
         ## Import
 
@@ -403,11 +608,12 @@ class QosProfile(pulumi.CustomResource):
         :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']] aggregate_bandwidth: Aggregate bandwidth
         :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']] class_bandwidth_type: Class bandwidth type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -444,7 +650,6 @@ class QosProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -453,6 +658,7 @@ class QosProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -470,6 +676,7 @@ class QosProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

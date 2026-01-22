@@ -52,34 +52,23 @@ func LookupManagementInterface(ctx *pulumi.Context, args *LookupManagementInterf
 // A collection of arguments for invoking getManagementInterface.
 type LookupManagementInterfaceArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getManagementInterface.
 type LookupManagementInterfaceResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Management interface
+	Id                  string                                    `pulumi:"id"`
 	ManagementInterface GetManagementInterfaceManagementInterface `pulumi:"managementInterface"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet             string                                    `pulumi:"snippet"`
+	Tfid                string                                    `pulumi:"tfid"`
 }
 
 func LookupManagementInterfaceOutput(ctx *pulumi.Context, args LookupManagementInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupManagementInterfaceResultOutput {
@@ -94,15 +83,10 @@ func LookupManagementInterfaceOutput(ctx *pulumi.Context, args LookupManagementI
 // A collection of arguments for invoking getManagementInterface.
 type LookupManagementInterfaceOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -126,13 +110,10 @@ func (o LookupManagementInterfaceResultOutput) ToLookupManagementInterfaceResult
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupManagementInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupManagementInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupManagementInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupManagementInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -142,15 +123,12 @@ func (o LookupManagementInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupManagementInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Management interface
 func (o LookupManagementInterfaceResultOutput) ManagementInterface() GetManagementInterfaceManagementInterfaceOutput {
 	return o.ApplyT(func(v LookupManagementInterfaceResult) GetManagementInterfaceManagementInterface {
 		return v.ManagementInterface
 	}).(GetManagementInterfaceManagementInterfaceOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupManagementInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupManagementInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

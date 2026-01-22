@@ -13,6 +13,83 @@ import (
 
 // DhcpInterface resource
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewDhcpInterface(ctx, "dhcp_server_example", &scm.DhcpInterfaceArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("$test-interface-must-exist"),
+//				Server: &scm.DhcpInterfaceServerArgs{
+//					IpPools: pulumi.StringArray{
+//						pulumi.String("10.10.10.10-10.10.10.200"),
+//					},
+//					Mode:    pulumi.String("auto"),
+//					ProbeIp: pulumi.Bool(true),
+//					Option: &scm.DhcpInterfaceServerOptionArgs{
+//						Dns: &scm.DhcpInterfaceServerOptionDnsArgs{
+//							Primary:   pulumi.String("8.8.8.8"),
+//							Secondary: pulumi.String("1.1.1.1"),
+//						},
+//						DnsSuffix:  pulumi.String("example.local"),
+//						Gateway:    pulumi.String("10.10.10.1"),
+//						SubnetMask: pulumi.String("255.255.255.0"),
+//						Pop3Server: pulumi.String("192.0.2.25"),
+//						SmtpServer: pulumi.String("192.0.2.26"),
+//						Lease: &scm.DhcpInterfaceServerOptionLeaseArgs{
+//							Timeout: pulumi.Int(3600),
+//						},
+//						Ntp: &scm.DhcpInterfaceServerOptionNtpArgs{
+//							Primary:   pulumi.String("129.6.15.28"),
+//							Secondary: pulumi.String("132.163.96.1"),
+//						},
+//						Wins: &scm.DhcpInterfaceServerOptionWinsArgs{
+//							Primary:   pulumi.String("192.168.1.1"),
+//							Secondary: pulumi.String("192.168.1.2"),
+//						},
+//						Nis: &scm.DhcpInterfaceServerOptionNisArgs{
+//							Primary:   pulumi.String("192.0.2.10"),
+//							Secondary: pulumi.String("192.0.2.11"),
+//						},
+//						UserDefineds: scm.DhcpInterfaceServerOptionUserDefinedArray{
+//							&scm.DhcpInterfaceServerOptionUserDefinedArgs{
+//								Inherited: pulumi.Bool(true),
+//								Name:      pulumi.String("option-foo"),
+//								Code:      pulumi.Int(224),
+//								Ip: []string{
+//									"192.0.2.10",
+//								},
+//							},
+//						},
+//					},
+//					Reserveds: scm.DhcpInterfaceServerReservedArray{
+//						&scm.DhcpInterfaceServerReservedArgs{
+//							Description: pulumi.String("Reserved lease for printer"),
+//							Mac:         pulumi.String("aa:bb:cc:dd:ee:ff"),
+//							Name:        pulumi.String("10.10.10.50"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
@@ -42,20 +119,23 @@ type DhcpInterface struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interface name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Relay
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Relay DhcpInterfaceRelayPtrOutput `pulumi:"relay"`
 	// Server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Server DhcpInterfaceServerPtrOutput `pulumi:"server"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -92,20 +172,23 @@ func GetDhcpInterface(ctx *pulumi.Context,
 // Input properties used for looking up and filtering DhcpInterface resources.
 type dhcpInterfaceState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface name
 	Name *string `pulumi:"name"`
 	// Relay
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Relay *DhcpInterfaceRelay `pulumi:"relay"`
 	// Server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Server *DhcpInterfaceServer `pulumi:"server"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -113,20 +196,23 @@ type dhcpInterfaceState struct {
 
 type DhcpInterfaceState struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface name
 	Name pulumi.StringPtrInput
 	// Relay
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Relay DhcpInterfaceRelayPtrInput
 	// Server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Server DhcpInterfaceServerPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -138,20 +224,23 @@ func (DhcpInterfaceState) ElementType() reflect.Type {
 
 type dhcpInterfaceArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interface name
 	Name *string `pulumi:"name"`
 	// Relay
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Relay *DhcpInterfaceRelay `pulumi:"relay"`
 	// Server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Server *DhcpInterfaceServer `pulumi:"server"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -159,20 +248,23 @@ type dhcpInterfaceArgs struct {
 // The set of arguments for constructing a DhcpInterface resource.
 type DhcpInterfaceArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interface name
 	Name pulumi.StringPtrInput
 	// Relay
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Relay DhcpInterfaceRelayPtrInput
 	// Server
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 	Server DhcpInterfaceServerPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -265,12 +357,12 @@ func (o DhcpInterfaceOutput) ToDhcpInterfaceOutputWithContext(ctx context.Contex
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DhcpInterfaceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DhcpInterface) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DhcpInterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DhcpInterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -282,18 +374,21 @@ func (o DhcpInterfaceOutput) Name() pulumi.StringOutput {
 }
 
 // Relay
+//
 // > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 func (o DhcpInterfaceOutput) Relay() DhcpInterfaceRelayPtrOutput {
 	return o.ApplyT(func(v *DhcpInterface) DhcpInterfaceRelayPtrOutput { return v.Relay }).(DhcpInterfaceRelayPtrOutput)
 }
 
 // Server
+//
 // > ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
 func (o DhcpInterfaceOutput) Server() DhcpInterfaceServerPtrOutput {
 	return o.ApplyT(func(v *DhcpInterface) DhcpInterfaceServerPtrOutput { return v.Server }).(DhcpInterfaceServerPtrOutput)
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DhcpInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DhcpInterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

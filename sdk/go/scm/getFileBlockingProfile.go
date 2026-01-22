@@ -59,40 +59,26 @@ func LookupFileBlockingProfile(ctx *pulumi.Context, args *LookupFileBlockingProf
 // A collection of arguments for invoking getFileBlockingProfile.
 type LookupFileBlockingProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The UUID of the file blocking profile
-	Id string `pulumi:"id"`
-	// The name of the file blocking profile
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getFileBlockingProfile.
 type LookupFileBlockingProfileResult struct {
-	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the file blocking profile
-	Id string `pulumi:"id"`
-	// The name of the file blocking profile
-	Name string `pulumi:"name"`
-	// A list of file blocking rules
-	Rules []GetFileBlockingProfileRule `pulumi:"rules"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Id      string                       `pulumi:"id"`
+	Name    string                       `pulumi:"name"`
+	Rules   []GetFileBlockingProfileRule `pulumi:"rules"`
+	Snippet string                       `pulumi:"snippet"`
+	Tfid    string                       `pulumi:"tfid"`
 }
 
 func LookupFileBlockingProfileOutput(ctx *pulumi.Context, args LookupFileBlockingProfileOutputArgs, opts ...pulumi.InvokeOption) LookupFileBlockingProfileResultOutput {
@@ -107,17 +93,11 @@ func LookupFileBlockingProfileOutput(ctx *pulumi.Context, args LookupFileBlockin
 // A collection of arguments for invoking getFileBlockingProfile.
 type LookupFileBlockingProfileOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the file blocking profile
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the file blocking profile
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -140,19 +120,15 @@ func (o LookupFileBlockingProfileResultOutput) ToLookupFileBlockingProfileResult
 	return o
 }
 
-// Description
 func (o LookupFileBlockingProfileResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupFileBlockingProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupFileBlockingProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -162,18 +138,14 @@ func (o LookupFileBlockingProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the file blocking profile
 func (o LookupFileBlockingProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// A list of file blocking rules
 func (o LookupFileBlockingProfileResultOutput) Rules() GetFileBlockingProfileRuleArrayOutput {
 	return o.ApplyT(func(v LookupFileBlockingProfileResult) []GetFileBlockingProfileRule { return v.Rules }).(GetFileBlockingProfileRuleArrayOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupFileBlockingProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

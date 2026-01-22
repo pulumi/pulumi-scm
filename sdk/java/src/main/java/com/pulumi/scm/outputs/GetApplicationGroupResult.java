@@ -13,53 +13,28 @@ import java.util.Objects;
 public final class GetApplicationGroupResult {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Members
-     * 
-     */
     private List<String> members;
-    /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]
-     * 
-     */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
 
     private GetApplicationGroupResult() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -70,25 +45,12 @@ public final class GetApplicationGroupResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Members
-     * 
-     */
     public List<String> members() {
         return this.members;
     }
-    /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

@@ -12,6 +12,52 @@ namespace Pulumi.Scm
     /// <summary>
     /// TacacsServerProfile resource
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var iseTacacsExample = new Scm.TacacsServerProfile("ise_tacacs_example", new()
+    ///     {
+    ///         Name = "ISE-TACACS11",
+    ///         Protocol = "PAP",
+    ///         Timeout = 3,
+    ///         Folder = "All",
+    ///         UseSingleConnection = true,
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.TacacsServerProfileServerArgs
+    ///             {
+    ///                 Name = "Server-1",
+    ///                 Address = "10.10.10.10",
+    ///                 Port = 49,
+    ///                 Secret = "Test Secret1",
+    ///             },
+    ///             new Scm.Inputs.TacacsServerProfileServerArgs
+    ///             {
+    ///                 Name = "Server-2",
+    ///                 Address = "10.10.10.10",
+    ///                 Port = 49,
+    ///                 Secret = "Test Secret1",
+    ///             },
+    ///             new Scm.Inputs.TacacsServerProfileServerArgs
+    ///             {
+    ///                 Name = "Server-3",
+    ///                 Address = "10.10.10.10",
+    ///                 Port = 49,
+    ///                 Secret = "Test Secret1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
@@ -43,13 +89,19 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        [Output("encryptedValues")]
+        public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
+
+        /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -75,6 +127,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -118,6 +171,10 @@ namespace Pulumi.Scm
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
+                AdditionalSecretOutputs =
+                {
+                    "encryptedValues",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -143,13 +200,13 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -181,6 +238,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -208,13 +266,29 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        [Input("encryptedValues")]
+        private InputMap<string>? _encryptedValues;
+
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public InputMap<string> EncryptedValues
+        {
+            get => _encryptedValues ?? (_encryptedValues = new InputMap<string>());
+            set
+            {
+                var emptySecret = Output.CreateSecret(ImmutableDictionary.Create<string, string>());
+                _encryptedValues = Output.All(value, emptySecret).Apply(v => v[0]);
+            }
+        }
+
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -246,6 +320,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

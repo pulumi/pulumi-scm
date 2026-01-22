@@ -14,29 +14,36 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetLoopbackInterfaceIpv6AddressResult
     {
         /// <summary>
+        /// Anycast
+        /// </summary>
+        public readonly Outputs.GetLoopbackInterfaceIpv6AddressAnycastResult Anycast;
+        /// <summary>
         /// Enable Address on Interface
         /// </summary>
         public readonly bool EnableOnInterface;
         /// <summary>
-        /// Interface ID
-        /// </summary>
-        public readonly string InterfaceId;
-        /// <summary>
         /// IPv6 Address
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Use interface ID as host portion
+        /// </summary>
+        public readonly Outputs.GetLoopbackInterfaceIpv6AddressPrefixResult Prefix;
 
         [OutputConstructor]
         private GetLoopbackInterfaceIpv6AddressResult(
+            Outputs.GetLoopbackInterfaceIpv6AddressAnycastResult anycast,
+
             bool enableOnInterface,
 
-            string interfaceId,
+            string name,
 
-            string name)
+            Outputs.GetLoopbackInterfaceIpv6AddressPrefixResult prefix)
         {
+            Anycast = anycast;
             EnableOnInterface = enableOnInterface;
-            InterfaceId = interfaceId;
             Name = name;
+            Prefix = prefix;
         }
     }
 }

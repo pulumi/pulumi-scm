@@ -15,14 +15,14 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// The Kerberos server IP address
         /// </summary>
-        [Input("host")]
-        public Input<string>? Host { get; set; }
+        [Input("host", required: true)]
+        public Input<string> Host { get; set; } = null!;
 
         /// <summary>
         /// The Kerberos server name
         /// </summary>
-        [Input("name")]
-        public Input<string>? Name { get; set; }
+        [Input("name", required: true)]
+        public Input<string> Name { get; set; } = null!;
 
         /// <summary>
         /// The Kerberos server port

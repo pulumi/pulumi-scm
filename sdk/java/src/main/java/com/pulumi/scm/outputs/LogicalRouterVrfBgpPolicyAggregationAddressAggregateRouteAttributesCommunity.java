@@ -16,30 +16,33 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity {
     /**
      * @return Append
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private @Nullable List<String> appends;
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone none;
     /**
      * @return Overwrite
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private @Nullable List<String> overwrites;
     /**
      * @return Remove all
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll removeAll;
     /**
      * @return Remove regex
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -48,7 +51,6 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     private LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity() {}
     /**
      * @return Append
-     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     public List<String> appends() {
@@ -56,6 +58,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     }
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -64,6 +67,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     }
     /**
      * @return Overwrite
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -72,6 +76,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     }
     /**
      * @return Remove all
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -80,6 +85,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     }
     /**
      * @return Remove regex
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */

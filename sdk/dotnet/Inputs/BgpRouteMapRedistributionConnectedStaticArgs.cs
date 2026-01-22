@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Connected Static Root BGP
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `Ospf`, and `Rib`.
         /// </summary>
         [Input("bgp")]
         public Input<Inputs.BgpRouteMapRedistributionConnectedStaticBgpArgs>? Bgp { get; set; }
 
         /// <summary>
         /// Ospf
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `Ospf`, and `Rib`.
         /// </summary>
         [Input("ospf")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Rib
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `Ospf`, and `Rib`.
         /// </summary>
         [Input("rib")]

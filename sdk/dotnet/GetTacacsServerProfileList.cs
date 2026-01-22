@@ -13,18 +13,99 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up the multi-tag address object by its ID.
+        ///     var scmTacacsServerProfiles = Scm.GetTacacsServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["profileDataSourceResults"] = scmTacacsServerProfiles.Apply(getTacacsServerProfileListResult =&gt; getTacacsServerProfileListResult.Datas),
+        ///         ["profileNames"] = .Select(profile =&gt; 
+        ///         {
+        ///             return profile.Name;
+        ///         }).ToList(),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetTacacsServerProfileListResult> InvokeAsync(GetTacacsServerProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetTacacsServerProfileListResult>("scm:index/getTacacsServerProfileList:getTacacsServerProfileList", args ?? new GetTacacsServerProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up the multi-tag address object by its ID.
+        ///     var scmTacacsServerProfiles = Scm.GetTacacsServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["profileDataSourceResults"] = scmTacacsServerProfiles.Apply(getTacacsServerProfileListResult =&gt; getTacacsServerProfileListResult.Datas),
+        ///         ["profileNames"] = .Select(profile =&gt; 
+        ///         {
+        ///             return profile.Name;
+        ///         }).ToList(),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTacacsServerProfileListResult> Invoke(GetTacacsServerProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTacacsServerProfileListResult>("scm:index/getTacacsServerProfileList:getTacacsServerProfileList", args ?? new GetTacacsServerProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up the multi-tag address object by its ID.
+        ///     var scmTacacsServerProfiles = Scm.GetTacacsServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["profileDataSourceResults"] = scmTacacsServerProfiles.Apply(getTacacsServerProfileListResult =&gt; getTacacsServerProfileListResult.Datas),
+        ///         ["profileNames"] = .Select(profile =&gt; 
+        ///         {
+        ///             return profile.Name;
+        ///         }).ToList(),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTacacsServerProfileListResult> Invoke(GetTacacsServerProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetTacacsServerProfileListResult>("scm:index/getTacacsServerProfileList:getTacacsServerProfileList", args ?? new GetTacacsServerProfileListInvokeArgs(), options.WithDefaults());

@@ -12,6 +12,138 @@ namespace Pulumi.Scm
     /// <summary>
     /// ScepProfile resource
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // scep profile w/ no challenge
+    ///     var scmScepProfile1 = new Scm.ScepProfile("scm_scep_profile_1", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scep-prof-1",
+    ///         ScepUrl = "https://scep.example.com/",
+    ///         CaIdentityName = "Default",
+    ///         Digest = "sha1",
+    ///         Subject = "CN=$USERNAME",
+    ///         ScepChallenge = new Scm.Inputs.ScepProfileScepChallengeArgs
+    ///         {
+    ///             Fixed = "123",
+    ///         },
+    ///         Algorithm = new Scm.Inputs.ScepProfileAlgorithmArgs
+    ///         {
+    ///             Rsa = new Scm.Inputs.ScepProfileAlgorithmRsaArgs
+    ///             {
+    ///                 RsaNbits = "1024",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     // scep profile w/ fixed challenge
+    ///     var scmScepProfile2 = new Scm.ScepProfile("scm_scep_profile_2", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scep-prof-2",
+    ///         ScepUrl = "https://example.target.com/",
+    ///         CaIdentityName = "user-scep",
+    ///         Digest = "sha256",
+    ///         Subject = "CN=$USERNAME",
+    ///         ScepCaCert = "Forward-Trust-CA-ECDSA",
+    ///         ScepChallenge = new Scm.Inputs.ScepProfileScepChallengeArgs
+    ///         {
+    ///             Fixed = "Password123!",
+    ///         },
+    ///         CertificateAttributes = new Scm.Inputs.ScepProfileCertificateAttributesArgs
+    ///         {
+    ///             Rfc822name = "user@example.com",
+    ///         },
+    ///         Algorithm = new Scm.Inputs.ScepProfileAlgorithmArgs
+    ///         {
+    ///             Rsa = new Scm.Inputs.ScepProfileAlgorithmRsaArgs
+    ///             {
+    ///                 RsaNbits = "2048",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     // scep profile w/ dynamic challenge
+    ///     var scmScepProfile3 = new Scm.ScepProfile("scm_scep_profile_3", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scep-prof-3",
+    ///         ScepUrl = "https://example.gateway.com/",
+    ///         CaIdentityName = "vpn-gateway",
+    ///         Digest = "sha384",
+    ///         Subject = "CN=$CORP_VPN",
+    ///         ScepCaCert = "GlobalSign-Root-CA",
+    ///         Fingerprint = "64EC88CA00B268E5BA1A35678A1B5316D212F4F366B24772322342423123455A",
+    ///         UseAsDigitalSignature = false,
+    ///         ScepChallenge = new Scm.Inputs.ScepProfileScepChallengeArgs
+    ///         {
+    ///             Dynamic = new Scm.Inputs.ScepProfileScepChallengeDynamicArgs
+    ///             {
+    ///                 Username = "user123",
+    ///                 Password = "Password123!",
+    ///                 OtpServerUrl = "http://auth.com",
+    ///             },
+    ///         },
+    ///         CertificateAttributes = new Scm.Inputs.ScepProfileCertificateAttributesArgs
+    ///         {
+    ///             Dnsname = "vpn-gateway.example.com",
+    ///         },
+    ///         Algorithm = new Scm.Inputs.ScepProfileAlgorithmArgs
+    ///         {
+    ///             Rsa = new Scm.Inputs.ScepProfileAlgorithmRsaArgs
+    ///             {
+    ///                 RsaNbits = "3072",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     // scep profile w/ all fields
+    ///     var scmScepProfile4 = new Scm.ScepProfile("scm_scep_profile_4", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scep-prof-4",
+    ///         ScepUrl = "https://example.wifi.com/",
+    ///         CaIdentityName = "wifi",
+    ///         Digest = "sha512",
+    ///         Subject = "CN=$WIFI-ACCESS",
+    ///         ScepCaCert = "Root CA",
+    ///         ScepClientCert = "Forward-UnTrust-CA-ECDSA",
+    ///         Fingerprint = "4448CA00B268E5BU690378A1B5316D212F4F366B2477232234394I",
+    ///         UseAsDigitalSignature = true,
+    ///         UseForKeyEncipherment = true,
+    ///         ScepChallenge = new Scm.Inputs.ScepProfileScepChallengeArgs
+    ///         {
+    ///             Dynamic = new Scm.Inputs.ScepProfileScepChallengeDynamicArgs
+    ///             {
+    ///                 Username = "admin",
+    ///                 Password = "Pwd@123",
+    ///                 OtpServerUrl = "http://auth.com",
+    ///             },
+    ///         },
+    ///         CertificateAttributes = new Scm.Inputs.ScepProfileCertificateAttributesArgs
+    ///         {
+    ///             UniformResourceIdentifier = "file:///C:/Users/Documents/report.txt",
+    ///         },
+    ///         Algorithm = new Scm.Inputs.ScepProfileAlgorithmArgs
+    ///         {
+    ///             Rsa = new Scm.Inputs.ScepProfileAlgorithmRsaArgs
+    ///             {
+    ///                 RsaNbits = "3072",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
@@ -48,7 +180,7 @@ namespace Pulumi.Scm
         public Output<Outputs.ScepProfileAlgorithm> Algorithm { get; private set; } = null!;
 
         /// <summary>
-        /// Certificate Authority identity
+        /// Certificate Authority Identity
         /// </summary>
         [Output("caIdentityName")]
         public Output<string> CaIdentityName { get; private set; } = null!;
@@ -61,7 +193,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
@@ -79,13 +210,14 @@ namespace Pulumi.Scm
         public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
 
         /// <summary>
-        /// CA certificate fingerprint
+        /// CA Certificate Fingerprint
         /// </summary>
         [Output("fingerprint")]
         public Output<string?> Fingerprint { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -98,19 +230,19 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// SCEP server CA certificate
+        /// SCEP Server CA Certificate
         /// </summary>
         [Output("scepCaCert")]
         public Output<string?> ScepCaCert { get; private set; } = null!;
 
         /// <summary>
-        /// One Time Password challenge
+        /// One Time Password Challenge
         /// </summary>
         [Output("scepChallenge")]
         public Output<Outputs.ScepProfileScepChallenge> ScepChallenge { get; private set; } = null!;
 
         /// <summary>
-        /// SCEP client ceertificate
+        /// SCEP Client Certificate
         /// </summary>
         [Output("scepClientCert")]
         public Output<string?> ScepClientCert { get; private set; } = null!;
@@ -123,6 +255,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -206,7 +339,7 @@ namespace Pulumi.Scm
         public Input<Inputs.ScepProfileAlgorithmArgs> Algorithm { get; set; } = null!;
 
         /// <summary>
-        /// Certificate Authority identity
+        /// Certificate Authority Identity
         /// </summary>
         [Input("caIdentityName", required: true)]
         public Input<string> CaIdentityName { get; set; } = null!;
@@ -219,7 +352,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -231,13 +363,14 @@ namespace Pulumi.Scm
         public Input<string> Digest { get; set; } = null!;
 
         /// <summary>
-        /// CA certificate fingerprint
+        /// CA Certificate Fingerprint
         /// </summary>
         [Input("fingerprint")]
         public Input<string>? Fingerprint { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -250,19 +383,19 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// SCEP server CA certificate
+        /// SCEP Server CA Certificate
         /// </summary>
         [Input("scepCaCert")]
         public Input<string>? ScepCaCert { get; set; }
 
         /// <summary>
-        /// One Time Password challenge
+        /// One Time Password Challenge
         /// </summary>
         [Input("scepChallenge", required: true)]
         public Input<Inputs.ScepProfileScepChallengeArgs> ScepChallenge { get; set; } = null!;
 
         /// <summary>
-        /// SCEP client ceertificate
+        /// SCEP Client Certificate
         /// </summary>
         [Input("scepClientCert")]
         public Input<string>? ScepClientCert { get; set; }
@@ -275,6 +408,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -313,7 +447,7 @@ namespace Pulumi.Scm
         public Input<Inputs.ScepProfileAlgorithmGetArgs>? Algorithm { get; set; }
 
         /// <summary>
-        /// Certificate Authority identity
+        /// Certificate Authority Identity
         /// </summary>
         [Input("caIdentityName")]
         public Input<string>? CaIdentityName { get; set; }
@@ -326,7 +460,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -354,13 +487,14 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// CA certificate fingerprint
+        /// CA Certificate Fingerprint
         /// </summary>
         [Input("fingerprint")]
         public Input<string>? Fingerprint { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -373,19 +507,19 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// SCEP server CA certificate
+        /// SCEP Server CA Certificate
         /// </summary>
         [Input("scepCaCert")]
         public Input<string>? ScepCaCert { get; set; }
 
         /// <summary>
-        /// One Time Password challenge
+        /// One Time Password Challenge
         /// </summary>
         [Input("scepChallenge")]
         public Input<Inputs.ScepProfileScepChallengeGetArgs>? ScepChallenge { get; set; }
 
         /// <summary>
-        /// SCEP client ceertificate
+        /// SCEP Client Certificate
         /// </summary>
         [Input("scepClientCert")]
         public Input<string>? ScepClientCert { get; set; }
@@ -398,6 +532,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

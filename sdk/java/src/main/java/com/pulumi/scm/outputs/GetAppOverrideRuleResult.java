@@ -12,172 +12,63 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAppOverrideRuleResult {
-    /**
-     * @return Application
-     * 
-     */
     private String application;
-    /**
-     * @return Description
-     * 
-     */
     private String description;
-    /**
-     * @return Destination
-     * 
-     */
     private List<String> destinations;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return Disabled
-     * 
-     */
     private Boolean disabled;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
-    /**
-     * @return From
-     * 
-     */
     private List<String> froms;
-    /**
-     * @return Group tag
-     * 
-     */
     private String groupTag;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Name
-     * 
-     */
     private String name;
-    /**
-     * @return Negate destination
-     * 
-     */
     private Boolean negateDestination;
-    /**
-     * @return Negate source
-     * 
-     */
     private Boolean negateSource;
-    /**
-     * @return Port
-     * 
-     */
     private String port;
-    /**
-     * @return The position of a security rule
-     * 
-     */
     private String position;
-    /**
-     * @return Protocol
-     * 
-     */
     private String protocol;
-    /**
-     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
-     * 
-     */
     private String relativePosition;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
-    /**
-     * @return Source
-     * 
-     */
     private List<String> sources;
-    /**
-     * @return Tag
-     * 
-     */
     private List<String> tags;
-    /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
-     * 
-     */
     private String targetRule;
     private String tfid;
-    /**
-     * @return To
-     * 
-     */
     private List<String> tos;
 
     private GetAppOverrideRuleResult() {}
-    /**
-     * @return Application
-     * 
-     */
     public String application() {
         return this.application;
     }
-    /**
-     * @return Description
-     * 
-     */
     public String description() {
         return this.description;
     }
-    /**
-     * @return Destination
-     * 
-     */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return Disabled
-     * 
-     */
     public Boolean disabled() {
         return this.disabled;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return From
-     * 
-     */
     public List<String> froms() {
         return this.froms;
     }
-    /**
-     * @return Group tag
-     * 
-     */
     public String groupTag() {
         return this.groupTag;
     }
@@ -188,91 +79,42 @@ public final class GetAppOverrideRuleResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Name
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return Negate destination
-     * 
-     */
     public Boolean negateDestination() {
         return this.negateDestination;
     }
-    /**
-     * @return Negate source
-     * 
-     */
     public Boolean negateSource() {
         return this.negateSource;
     }
-    /**
-     * @return Port
-     * 
-     */
     public String port() {
         return this.port;
     }
-    /**
-     * @return The position of a security rule
-     * 
-     */
     public String position() {
         return this.position;
     }
-    /**
-     * @return Protocol
-     * 
-     */
     public String protocol() {
         return this.protocol;
     }
-    /**
-     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
-     * 
-     */
     public String relativePosition() {
         return this.relativePosition;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Source
-     * 
-     */
     public List<String> sources() {
         return this.sources;
     }
-    /**
-     * @return Tag
-     * 
-     */
     public List<String> tags() {
         return this.tags;
     }
-    /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
-     * 
-     */
     public String targetRule() {
         return this.targetRule;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return To
-     * 
-     */
     public List<String> tos() {
         return this.tos;
     }

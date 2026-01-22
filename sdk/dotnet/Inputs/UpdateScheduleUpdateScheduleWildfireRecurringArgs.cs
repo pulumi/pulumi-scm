@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Every15 mins
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         [Input("every15Mins")]
         public Input<Inputs.UpdateScheduleUpdateScheduleWildfireRecurringEvery15MinsArgs>? Every15Mins { get; set; }
 
         /// <summary>
         /// Every30 mins
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         [Input("every30Mins")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Every hour
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         [Input("everyHour")]
@@ -35,6 +36,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Every min
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         [Input("everyMin")]
@@ -42,6 +44,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// None
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         [Input("none")]
@@ -49,6 +52,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Real time
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Every15Mins`, `Every30Mins`, `EveryHour`, `EveryMin`, `None`, and `RealTime`.
         /// </summary>
         [Input("realTime")]

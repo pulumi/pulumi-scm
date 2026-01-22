@@ -19,7 +19,6 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -27,7 +26,6 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -36,6 +34,7 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -44,6 +43,7 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -83,6 +83,7 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -91,6 +92,7 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -136,7 +138,6 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -148,7 +149,6 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -159,6 +159,7 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -171,6 +172,7 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -234,6 +236,7 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -246,6 +249,7 @@ public final class KerberosServerProfileState extends com.pulumi.resources.Resou
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

@@ -20,18 +20,19 @@ import javax.annotation.Nullable;
 public final class UpdateScheduleUpdateScheduleThreatsRecurring {
     /**
      * @return Daily
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     private @Nullable UpdateScheduleUpdateScheduleThreatsRecurringDaily daily;
     /**
      * @return Every30 mins
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     private @Nullable UpdateScheduleUpdateScheduleThreatsRecurringEvery30Mins every30Mins;
     /**
      * @return Hourly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -43,6 +44,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurring {
     private @Nullable Integer newAppThreshold;
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -59,6 +61,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurring {
     private @Nullable Integer threshold;
     /**
      * @return Weekly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -67,7 +70,6 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurring {
     private UpdateScheduleUpdateScheduleThreatsRecurring() {}
     /**
      * @return Daily
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
     public Optional<UpdateScheduleUpdateScheduleThreatsRecurringDaily> daily() {
@@ -75,6 +77,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurring {
     }
     /**
      * @return Every30 mins
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -83,6 +86,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurring {
     }
     /**
      * @return Hourly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -98,6 +102,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurring {
     }
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -120,6 +125,7 @@ public final class UpdateScheduleUpdateScheduleThreatsRecurring {
     }
     /**
      * @return Weekly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `every30Mins`, `hourly`, `none`, and `weekly`.
      * 
      */

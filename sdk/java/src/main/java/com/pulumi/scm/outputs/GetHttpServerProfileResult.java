@@ -16,70 +16,33 @@ import java.util.Objects;
 public final class GetHttpServerProfileResult {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
-    /**
-     * @return Format
-     * 
-     */
     private GetHttpServerProfileFormat format;
     /**
      * @return The UUID of the HTTP server profile
      * 
      */
     private String id;
-    /**
-     * @return The name of the profile
-     * 
-     */
     private String name;
-    /**
-     * @return Server
-     * 
-     */
     private List<GetHttpServerProfileServer> servers;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
-    /**
-     * @return Register tags on match
-     * 
-     */
     private Boolean tagRegistration;
     private String tfid;
 
     private GetHttpServerProfileResult() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return Format
-     * 
-     */
     public GetHttpServerProfileFormat format() {
         return this.format;
     }
@@ -90,32 +53,15 @@ public final class GetHttpServerProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return The name of the profile
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return Server
-     * 
-     */
     public List<GetHttpServerProfileServer> servers() {
         return this.servers;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Register tags on match
-     * 
-     */
     public Boolean tagRegistration() {
         return this.tagRegistration;
     }

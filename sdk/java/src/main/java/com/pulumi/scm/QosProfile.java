@@ -19,6 +19,137 @@ import javax.annotation.Nullable;
 /**
  * QosProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.QosProfile;
+ * import com.pulumi.scm.QosProfileArgs;
+ * import com.pulumi.scm.inputs.QosProfileAggregateBandwidthArgs;
+ * import com.pulumi.scm.inputs.QosProfileClassBandwidthTypeArgs;
+ * import com.pulumi.scm.inputs.QosProfileClassBandwidthTypeMbpsArgs;
+ * import com.pulumi.scm.inputs.QosProfileClassBandwidthTypePercentageArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmQosProfile1 = new QosProfile("scmQosProfile1", QosProfileArgs.builder()
+ *             .folder("Remote Networks")
+ *             .name("scm-qos-profile-base")
+ *             .build());
+ * 
+ *         var scmQosProfile2 = new QosProfile("scmQosProfile2", QosProfileArgs.builder()
+ *             .folder("Remote Networks")
+ *             .name("scm-qos-profile-2")
+ *             .aggregateBandwidth(QosProfileAggregateBandwidthArgs.builder()
+ *                 .egressMax(200)
+ *                 .egressGuaranteed(10000)
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmQosProfile3 = new QosProfile("scmQosProfile3", QosProfileArgs.builder()
+ *             .folder("Service Connections")
+ *             .name("scm-qos-profile-3")
+ *             .aggregateBandwidth(QosProfileAggregateBandwidthArgs.builder()
+ *                 .egressGuaranteed(20)
+ *                 .build())
+ *             .classBandwidthType(QosProfileClassBandwidthTypeArgs.builder()
+ *                 .mbps(QosProfileClassBandwidthTypeMbpsArgs.builder()
+ *                     .classes(                    
+ *                         QosProfileClassBandwidthTypeMbpsClassArgs.builder()
+ *                             .name("class1")
+ *                             .build(),
+ *                         QosProfileClassBandwidthTypeMbpsClassArgs.builder()
+ *                             .name("class2")
+ *                             .priority("high")
+ *                             .build(),
+ *                         QosProfileClassBandwidthTypeMbpsClassArgs.builder()
+ *                             .name("class3")
+ *                             .priority("real-time")
+ *                             .classBandwidth(QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs.builder()
+ *                                 .egressMax(500)
+ *                                 .build())
+ *                             .build(),
+ *                         QosProfileClassBandwidthTypeMbpsClassArgs.builder()
+ *                             .name("class4")
+ *                             .priority("low")
+ *                             .classBandwidth(QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs.builder()
+ *                                 .egressGuaranteed(60000)
+ *                                 .build())
+ *                             .build(),
+ *                         QosProfileClassBandwidthTypeMbpsClassArgs.builder()
+ *                             .name("class5")
+ *                             .priority("medium")
+ *                             .classBandwidth(QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs.builder()
+ *                                 .egressMax(955)
+ *                                 .egressGuaranteed(50000)
+ *                                 .build())
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmQosProfile4 = new QosProfile("scmQosProfile4", QosProfileArgs.builder()
+ *             .folder("Service Connections")
+ *             .name("scm-qos-profile-4")
+ *             .aggregateBandwidth(QosProfileAggregateBandwidthArgs.builder()
+ *                 .egressMax(1400)
+ *                 .build())
+ *             .classBandwidthType(QosProfileClassBandwidthTypeArgs.builder()
+ *                 .percentage(QosProfileClassBandwidthTypePercentageArgs.builder()
+ *                     .classes(                    
+ *                         QosProfileClassBandwidthTypePercentageClassArgs.builder()
+ *                             .name("class1")
+ *                             .build(),
+ *                         QosProfileClassBandwidthTypePercentageClassArgs.builder()
+ *                             .name("class2")
+ *                             .priority("low")
+ *                             .build(),
+ *                         QosProfileClassBandwidthTypePercentageClassArgs.builder()
+ *                             .name("class3")
+ *                             .priority("real-time")
+ *                             .classBandwidth(QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs.builder()
+ *                                 .egressMax(100)
+ *                                 .build())
+ *                             .build(),
+ *                         QosProfileClassBandwidthTypePercentageClassArgs.builder()
+ *                             .name("class4")
+ *                             .priority("medium")
+ *                             .classBandwidth(QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs.builder()
+ *                                 .egressGuaranteed(5)
+ *                                 .build())
+ *                             .build(),
+ *                         QosProfileClassBandwidthTypePercentageClassArgs.builder()
+ *                             .name("class5")
+ *                             .priority("high")
+ *                             .classBandwidth(QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs.builder()
+ *                                 .egressMax(25)
+ *                                 .egressGuaranteed(50)
+ *                                 .build())
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The following command can be used to import a resource not managed by Terraform:
@@ -78,7 +209,6 @@ public class QosProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -86,7 +216,6 @@ public class QosProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -94,6 +223,7 @@ public class QosProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -102,6 +232,7 @@ public class QosProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -124,6 +255,7 @@ public class QosProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -132,6 +264,7 @@ public class QosProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

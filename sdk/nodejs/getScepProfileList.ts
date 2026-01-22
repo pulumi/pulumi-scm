@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM SCEP Profile objects.
+ * //
+ * // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+ * const allShared = scm.getScepProfileList({
+ *     folder: "All",
+ * });
+ * export const scmScepProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getScepProfileList(args?: GetScepProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetScepProfileListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetScepProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM SCEP Profile objects.
+ * //
+ * // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
+ * const allShared = scm.getScepProfileList({
+ *     folder: "All",
+ * });
+ * export const scmScepProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getScepProfileListOutput(args?: GetScepProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetScepProfileListResult> {
     args = args || {};

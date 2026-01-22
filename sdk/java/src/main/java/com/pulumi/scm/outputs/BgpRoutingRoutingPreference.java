@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class BgpRoutingRoutingPreference {
     /**
      * @return Default
-     * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
     private @Nullable BgpRoutingRoutingPreferenceDefault default_;
     /**
      * @return Hot potato routing
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
@@ -28,7 +28,6 @@ public final class BgpRoutingRoutingPreference {
     private BgpRoutingRoutingPreference() {}
     /**
      * @return Default
-     * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */
     public Optional<BgpRoutingRoutingPreferenceDefault> default_() {
@@ -36,6 +35,7 @@ public final class BgpRoutingRoutingPreference {
     }
     /**
      * @return Hot potato routing
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `default` and `hotPotatoRouting`.
      * 
      */

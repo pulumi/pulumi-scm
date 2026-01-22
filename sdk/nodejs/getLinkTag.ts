@@ -24,26 +24,14 @@ export function getLinkTag(args: GetLinkTagArgs, opts?: pulumi.InvokeOptions): P
 export interface GetLinkTagArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the link tag
      */
     id: string;
-    /**
-     * The name of the link tag
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -51,36 +39,18 @@ export interface GetLinkTagArgs {
  * A collection of values returned by getLinkTag.
  */
 export interface GetLinkTagResult {
-    /**
-     * The color of the link tag
-     */
     readonly color: string;
-    /**
-     * Description of the link tag
-     */
     readonly comments: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the link tag
      */
     readonly id: string;
-    /**
-     * The name of the link tag
-     */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -104,25 +74,13 @@ export function getLinkTagOutput(args: GetLinkTagOutputArgs, opts?: pulumi.Invok
 export interface GetLinkTagOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the link tag
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the link tag
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

@@ -17,7 +17,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Non recurring
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `NonRecurring` and `Recurring`.
         /// </summary>
         public InputList<string> NonRecurrings
         {
@@ -27,6 +26,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Recurring
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `NonRecurring` and `Recurring`.
         /// </summary>
         [Input("recurring")]

@@ -16,10 +16,10 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Rsa nbits
         /// </summary>
-        public readonly int RsaNbits;
+        public readonly string RsaNbits;
 
         [OutputConstructor]
-        private GetScepProfileAlgorithmRsaResult(int rsaNbits)
+        private GetScepProfileAlgorithmRsaResult(string rsaNbits)
         {
             RsaNbits = rsaNbits;
         }

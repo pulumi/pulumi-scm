@@ -17,7 +17,6 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
 
     /**
      * specify time in days
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
     @Import(name="days")
@@ -25,7 +24,6 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
 
     /**
      * @return specify time in days
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
     public Optional<Output<Integer>> days() {
@@ -34,6 +32,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
 
     /**
      * specify time in hours
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
@@ -42,6 +41,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
 
     /**
      * @return specify time in hours
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
      * 
      */
@@ -76,7 +76,6 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
 
         /**
          * @param days specify time in days
-         * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
          * 
          * @return builder
          * 
@@ -88,7 +87,6 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
 
         /**
          * @param days specify time in days
-         * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
          * 
          * @return builder
          * 
@@ -99,6 +97,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
 
         /**
          * @param hours specify time in hours
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
          * 
          * @return builder
@@ -111,6 +110,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
 
         /**
          * @param hours specify time in hours
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
          * 
          * @return builder

@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetServiceProtocol {
     /**
      * @return Tcp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     private GetServiceProtocolTcp tcp;
     /**
      * @return Udp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetServiceProtocol {
     private GetServiceProtocol() {}
     /**
      * @return Tcp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     public GetServiceProtocolTcp tcp() {
@@ -35,6 +34,7 @@ public final class GetServiceProtocol {
     }
     /**
      * @return Udp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */

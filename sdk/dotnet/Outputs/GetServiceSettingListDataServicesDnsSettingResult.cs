@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Dns proxy object
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DnsProxyObject` and `Servers`.
         /// </summary>
         public readonly string DnsProxyObject;
         /// <summary>
         /// Servers
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DnsProxyObject` and `Servers`.
         /// </summary>
         public readonly Outputs.GetServiceSettingListDataServicesDnsSettingServersResult Servers;

@@ -8,6 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * KerberosServerProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM Kerberos Server Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM Kerberos Server Profile you want to find.
+ * const scmKerberosProf = scm.getKerberosServerProfile({
+ *     id: "6bd818f8-9679-4031-86df-17b8b40842a0",
+ * });
+ * export const scmKerberosServerProfileDetails = {
+ *     profileId: scmKerberosProf.then(scmKerberosProf => scmKerberosProf.id),
+ *     folder: scmKerberosProf.then(scmKerberosProf => scmKerberosProf.folder),
+ *     name: scmKerberosProf.then(scmKerberosProf => scmKerberosProf.name),
+ * };
+ * ```
  */
 export function getKerberosServerProfile(args: GetKerberosServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetKerberosServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -26,26 +46,14 @@ export function getKerberosServerProfile(args: GetKerberosServerProfileArgs, opt
 export interface GetKerberosServerProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * The UUID of the Kerberos server profile
      */
     id: string;
-    /**
-     * The name of the Kerberos server profile
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -55,35 +63,40 @@ export interface GetKerberosServerProfileArgs {
 export interface GetKerberosServerProfileResult {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * The UUID of the Kerberos server profile
      */
     readonly id: string;
-    /**
-     * The name of the Kerberos server profile
-     */
     readonly name: string;
-    /**
-     * The Kerberos server configuration
-     */
     readonly servers: outputs.GetKerberosServerProfileServer[];
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * KerberosServerProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM Kerberos Server Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM Kerberos Server Profile you want to find.
+ * const scmKerberosProf = scm.getKerberosServerProfile({
+ *     id: "6bd818f8-9679-4031-86df-17b8b40842a0",
+ * });
+ * export const scmKerberosServerProfileDetails = {
+ *     profileId: scmKerberosProf.then(scmKerberosProf => scmKerberosProf.id),
+ *     folder: scmKerberosProf.then(scmKerberosProf => scmKerberosProf.folder),
+ *     name: scmKerberosProf.then(scmKerberosProf => scmKerberosProf.name),
+ * };
+ * ```
  */
 export function getKerberosServerProfileOutput(args: GetKerberosServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetKerberosServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -102,25 +115,13 @@ export function getKerberosServerProfileOutput(args: GetKerberosServerProfileOut
 export interface GetKerberosServerProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * The UUID of the Kerberos server profile
      */
     id: pulumi.Input<string>;
-    /**
-     * The name of the Kerberos server profile
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

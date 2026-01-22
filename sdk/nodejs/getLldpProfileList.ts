@@ -8,6 +8,21 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allProfiles = scm.getLldpProfileList({
+ *     folder: "All",
+ * });
+ * export const fetchedProfilesListSummary = {
+ *     countOfSettingsFetched: allProfiles.then(allProfiles => allProfiles.total),
+ *     firstProfile: allProfiles.then(allProfiles => allProfiles.datas?.[0]),
+ * };
+ * ```
  */
 export function getLldpProfileList(args?: GetLldpProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetLldpProfileListResult> {
     args = args || {};
@@ -96,6 +111,21 @@ export interface GetLldpProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allProfiles = scm.getLldpProfileList({
+ *     folder: "All",
+ * });
+ * export const fetchedProfilesListSummary = {
+ *     countOfSettingsFetched: allProfiles.then(allProfiles => allProfiles.total),
+ *     firstProfile: allProfiles.then(allProfiles => allProfiles.datas?.[0]),
+ * };
+ * ```
  */
 export function getLldpProfileListOutput(args?: GetLldpProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLldpProfileListResult> {
     args = args || {};

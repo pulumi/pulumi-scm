@@ -18,7 +18,6 @@ public final class ServiceSettingServicesDnsSettingArgs extends com.pulumi.resou
 
     /**
      * Dns proxy object
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
     @Import(name="dnsProxyObject")
@@ -26,7 +25,6 @@ public final class ServiceSettingServicesDnsSettingArgs extends com.pulumi.resou
 
     /**
      * @return Dns proxy object
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
     public Optional<Output<String>> dnsProxyObject() {
@@ -35,6 +33,7 @@ public final class ServiceSettingServicesDnsSettingArgs extends com.pulumi.resou
 
     /**
      * Servers
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
@@ -43,6 +42,7 @@ public final class ServiceSettingServicesDnsSettingArgs extends com.pulumi.resou
 
     /**
      * @return Servers
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
      * 
      */
@@ -77,7 +77,6 @@ public final class ServiceSettingServicesDnsSettingArgs extends com.pulumi.resou
 
         /**
          * @param dnsProxyObject Dns proxy object
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
          * 
          * @return builder
          * 
@@ -89,7 +88,6 @@ public final class ServiceSettingServicesDnsSettingArgs extends com.pulumi.resou
 
         /**
          * @param dnsProxyObject Dns proxy object
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
          * 
          * @return builder
          * 
@@ -100,6 +98,7 @@ public final class ServiceSettingServicesDnsSettingArgs extends com.pulumi.resou
 
         /**
          * @param servers Servers
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
          * 
          * @return builder
@@ -112,6 +111,7 @@ public final class ServiceSettingServicesDnsSettingArgs extends com.pulumi.resou
 
         /**
          * @param servers Servers
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dnsProxyObject` and `servers`.
          * 
          * @return builder

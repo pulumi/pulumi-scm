@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -95,15 +96,15 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
      * Peer as
      * 
      */
-    @Import(name="peerAs")
-    private @Nullable Output<String> peerAs;
+    @Import(name="peerAs", required=true)
+    private Output<String> peerAs;
 
     /**
      * @return Peer as
      * 
      */
-    public Optional<Output<String>> peerAs() {
-        return Optional.ofNullable(this.peerAs);
+    public Output<String> peerAs() {
+        return this.peerAs;
     }
 
     /**
@@ -294,7 +295,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder peerAs(@Nullable Output<String> peerAs) {
+        public Builder peerAs(Output<String> peerAs) {
             $.peerAs = peerAs;
             return this;
         }
@@ -373,6 +374,9 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         public ServiceConnectionProtocolBgpArgs build() {
+            if ($.peerAs == null) {
+                throw new MissingRequiredPropertyException("ServiceConnectionProtocolBgpArgs", "peerAs");
+            }
             return $;
         }
     }

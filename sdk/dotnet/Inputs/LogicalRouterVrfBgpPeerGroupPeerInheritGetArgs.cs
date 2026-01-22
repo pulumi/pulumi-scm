@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// No
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ipv4`, `No`, and `Yes`.
         /// </summary>
         [Input("no")]
         public Input<Inputs.LogicalRouterVrfBgpPeerGroupPeerInheritNoGetArgs>? No { get; set; }
 
         /// <summary>
         /// Yes
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ipv4`, `No`, and `Yes`.
         /// </summary>
         [Input("yes")]

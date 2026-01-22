@@ -49,7 +49,6 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -57,7 +56,6 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -66,6 +64,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -74,6 +73,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -83,6 +83,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
     /**
      * Layer2
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
@@ -91,6 +92,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
     /**
      * @return Layer2
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
@@ -100,6 +102,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
     /**
      * Aggregate Interface Layer 3 configuration
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
@@ -108,6 +111,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
     /**
      * @return Aggregate Interface Layer 3 configuration
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
@@ -132,6 +136,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -140,6 +145,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -230,7 +236,6 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -242,7 +247,6 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -253,6 +257,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -265,6 +270,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -276,6 +282,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
         /**
          * @param layer2 Layer2
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
          * 
          * @return builder
@@ -288,6 +295,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
         /**
          * @param layer2 Layer2
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
          * 
          * @return builder
@@ -299,6 +307,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
         /**
          * @param layer3 Aggregate Interface Layer 3 configuration
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
          * 
          * @return builder
@@ -311,6 +320,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
         /**
          * @param layer3 Aggregate Interface Layer 3 configuration
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
          * 
          * @return builder
@@ -343,6 +353,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -355,6 +366,7 @@ public final class AggregateInterfaceState extends com.pulumi.resources.Resource
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

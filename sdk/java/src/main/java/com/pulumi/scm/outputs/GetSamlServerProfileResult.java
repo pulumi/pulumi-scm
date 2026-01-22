@@ -12,104 +12,44 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSamlServerProfileResult {
-    /**
-     * @return The identity provider certificate
-     * 
-     */
     private String certificate;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The identity provider ID
-     * 
-     */
     private String entityId;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the SAML server profile
      * 
      */
     private String id;
-    /**
-     * @return Maxiumum clock skew
-     * 
-     */
     private Integer maxClockSkew;
-    /**
-     * @return The name of the SAML server profile
-     * 
-     */
     private String name;
-    /**
-     * @return SAML HTTP binding for SLO requests to the identity provider
-     * 
-     */
     private String sloBindings;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
+    private String sloUrl;
     private String snippet;
-    /**
-     * @return SAML HTTP binding for SSO requests to the identity provider
-     * 
-     */
     private String ssoBindings;
-    /**
-     * @return Identity provider SSO URL
-     * 
-     */
     private String ssoUrl;
     private String tfid;
-    /**
-     * @return Validate the identity provider certificate?
-     * 
-     */
     private Boolean validateIdpCertificate;
-    /**
-     * @return Sign SAML message to the identity provider?
-     * 
-     */
     private Boolean wantAuthRequestsSigned;
 
     private GetSamlServerProfileResult() {}
-    /**
-     * @return The identity provider certificate
-     * 
-     */
     public String certificate() {
         return this.certificate;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The identity provider ID
-     * 
-     */
     public String entityId() {
         return this.entityId;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -120,63 +60,33 @@ public final class GetSamlServerProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Maxiumum clock skew
-     * 
-     */
     public Integer maxClockSkew() {
         return this.maxClockSkew;
     }
-    /**
-     * @return The name of the SAML server profile
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return SAML HTTP binding for SLO requests to the identity provider
-     * 
-     */
     public String sloBindings() {
         return this.sloBindings;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
+    public String sloUrl() {
+        return this.sloUrl;
+    }
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return SAML HTTP binding for SSO requests to the identity provider
-     * 
-     */
     public String ssoBindings() {
         return this.ssoBindings;
     }
-    /**
-     * @return Identity provider SSO URL
-     * 
-     */
     public String ssoUrl() {
         return this.ssoUrl;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Validate the identity provider certificate?
-     * 
-     */
     public Boolean validateIdpCertificate() {
         return this.validateIdpCertificate;
     }
-    /**
-     * @return Sign SAML message to the identity provider?
-     * 
-     */
     public Boolean wantAuthRequestsSigned() {
         return this.wantAuthRequestsSigned;
     }
@@ -198,6 +108,7 @@ public final class GetSamlServerProfileResult {
         private Integer maxClockSkew;
         private String name;
         private String sloBindings;
+        private String sloUrl;
         private String snippet;
         private String ssoBindings;
         private String ssoUrl;
@@ -215,6 +126,7 @@ public final class GetSamlServerProfileResult {
     	      this.maxClockSkew = defaults.maxClockSkew;
     	      this.name = defaults.name;
     	      this.sloBindings = defaults.sloBindings;
+    	      this.sloUrl = defaults.sloUrl;
     	      this.snippet = defaults.snippet;
     	      this.ssoBindings = defaults.ssoBindings;
     	      this.ssoUrl = defaults.ssoUrl;
@@ -288,6 +200,14 @@ public final class GetSamlServerProfileResult {
             return this;
         }
         @CustomType.Setter
+        public Builder sloUrl(String sloUrl) {
+            if (sloUrl == null) {
+              throw new MissingRequiredPropertyException("GetSamlServerProfileResult", "sloUrl");
+            }
+            this.sloUrl = sloUrl;
+            return this;
+        }
+        @CustomType.Setter
         public Builder snippet(String snippet) {
             if (snippet == null) {
               throw new MissingRequiredPropertyException("GetSamlServerProfileResult", "snippet");
@@ -345,6 +265,7 @@ public final class GetSamlServerProfileResult {
             _resultValue.maxClockSkew = maxClockSkew;
             _resultValue.name = name;
             _resultValue.sloBindings = sloBindings;
+            _resultValue.sloUrl = sloUrl;
             _resultValue.snippet = snippet;
             _resultValue.ssoBindings = ssoBindings;
             _resultValue.ssoUrl = ssoUrl;

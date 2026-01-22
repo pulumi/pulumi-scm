@@ -69,7 +69,6 @@ export class DosProtectionProfile extends pulumi.CustomResource {
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -78,6 +77,7 @@ export class DosProtectionProfile extends pulumi.CustomResource {
     declare public readonly flood: pulumi.Output<outputs.DosProtectionProfileFlood | undefined>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -91,6 +91,7 @@ export class DosProtectionProfile extends pulumi.CustomResource {
     declare public readonly resource: pulumi.Output<outputs.DosProtectionProfileResource | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -152,7 +153,6 @@ export interface DosProtectionProfileState {
     description?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -161,6 +161,7 @@ export interface DosProtectionProfileState {
     flood?: pulumi.Input<inputs.DosProtectionProfileFlood>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -174,6 +175,7 @@ export interface DosProtectionProfileState {
     resource?: pulumi.Input<inputs.DosProtectionProfileResource>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -194,7 +196,6 @@ export interface DosProtectionProfileArgs {
     description?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -203,6 +204,7 @@ export interface DosProtectionProfileArgs {
     flood?: pulumi.Input<inputs.DosProtectionProfileFlood>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -216,6 +218,7 @@ export interface DosProtectionProfileArgs {
     resource?: pulumi.Input<inputs.DosProtectionProfileResource>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

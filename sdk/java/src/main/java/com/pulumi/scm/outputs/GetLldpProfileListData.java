@@ -14,13 +14,11 @@ import java.util.Objects;
 public final class GetLldpProfileListData {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -35,7 +33,7 @@ public final class GetLldpProfileListData {
      */
     private String mode;
     /**
-     * @return LLDP profile name
+     * @return The name of the item.
      * 
      */
     private String name;
@@ -45,8 +43,7 @@ public final class GetLldpProfileListData {
      */
     private GetLldpProfileListDataOptionTlvs optionTlvs;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -60,15 +57,13 @@ public final class GetLldpProfileListData {
     private GetLldpProfileListData() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -89,7 +84,7 @@ public final class GetLldpProfileListData {
         return this.mode;
     }
     /**
-     * @return LLDP profile name
+     * @return The name of the item.
      * 
      */
     public String name() {
@@ -103,8 +98,7 @@ public final class GetLldpProfileListData {
         return this.optionTlvs;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

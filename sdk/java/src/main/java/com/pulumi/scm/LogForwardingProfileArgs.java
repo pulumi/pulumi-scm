@@ -5,6 +5,7 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.inputs.LogForwardingProfileMatchListArgs;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,6 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -42,7 +42,6 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -51,6 +50,7 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -59,6 +59,7 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -70,15 +71,15 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
      * Match list
      * 
      */
-    @Import(name="matchLists")
-    private @Nullable Output<List<LogForwardingProfileMatchListArgs>> matchLists;
+    @Import(name="matchLists", required=true)
+    private Output<List<LogForwardingProfileMatchListArgs>> matchLists;
 
     /**
      * @return Match list
      * 
      */
-    public Optional<Output<List<LogForwardingProfileMatchListArgs>>> matchLists() {
-        return Optional.ofNullable(this.matchLists);
+    public Output<List<LogForwardingProfileMatchListArgs>> matchLists() {
+        return this.matchLists;
     }
 
     /**
@@ -98,6 +99,7 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -106,6 +108,7 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -165,7 +168,6 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -177,7 +179,6 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
         /**
          * @param device The device in which the resource is defined
-         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -188,6 +189,7 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -200,6 +202,7 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -215,7 +218,7 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder matchLists(@Nullable Output<List<LogForwardingProfileMatchListArgs>> matchLists) {
+        public Builder matchLists(Output<List<LogForwardingProfileMatchListArgs>> matchLists) {
             $.matchLists = matchLists;
             return this;
         }
@@ -263,6 +266,7 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -275,6 +279,7 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -285,6 +290,9 @@ public final class LogForwardingProfileArgs extends com.pulumi.resources.Resourc
         }
 
         public LogForwardingProfileArgs build() {
+            if ($.matchLists == null) {
+                throw new MissingRequiredPropertyException("LogForwardingProfileArgs", "matchLists");
+            }
             return $;
         }
     }

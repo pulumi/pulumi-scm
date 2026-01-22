@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Dns proxy object
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DnsProxyObject` and `Servers`.
         /// </summary>
         [Input("dnsProxyObject")]
         public Input<string>? DnsProxyObject { get; set; }
 
         /// <summary>
         /// Servers
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DnsProxyObject` and `Servers`.
         /// </summary>
         [Input("servers")]

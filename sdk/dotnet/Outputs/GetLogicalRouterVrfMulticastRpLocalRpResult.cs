@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Candidate rp
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `CandidateRp` and `StaticRp`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterVrfMulticastRpLocalRpCandidateRpResult CandidateRp;
         /// <summary>
         /// Static rp
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `CandidateRp` and `StaticRp`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterVrfMulticastRpLocalRpStaticRpResult StaticRp;

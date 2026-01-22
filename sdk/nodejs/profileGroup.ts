@@ -71,7 +71,6 @@ export class ProfileGroup extends pulumi.CustomResource {
     declare public readonly dataFilterings: pulumi.Output<string[] | undefined>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -84,6 +83,7 @@ export class ProfileGroup extends pulumi.CustomResource {
     declare public readonly fileBlockings: pulumi.Output<string[] | undefined>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -97,6 +97,7 @@ export class ProfileGroup extends pulumi.CustomResource {
     declare public readonly saasSecurities: pulumi.Output<string[] | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -181,7 +182,6 @@ export interface ProfileGroupState {
     dataFilterings?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -194,6 +194,7 @@ export interface ProfileGroupState {
     fileBlockings?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -207,6 +208,7 @@ export interface ProfileGroupState {
     saasSecurities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -243,7 +245,6 @@ export interface ProfileGroupArgs {
     dataFilterings?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -256,6 +257,7 @@ export interface ProfileGroupArgs {
     fileBlockings?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The folder in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -269,6 +271,7 @@ export interface ProfileGroupArgs {
     saasSecurities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The snippet in which the resource is defined
+     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

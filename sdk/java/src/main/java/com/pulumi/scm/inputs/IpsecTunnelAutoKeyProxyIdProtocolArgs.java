@@ -19,7 +19,6 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
 
     /**
      * IP protocol number
-     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     @Import(name="number")
@@ -27,7 +26,6 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
 
     /**
      * @return IP protocol number
-     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     public Optional<Output<Integer>> number() {
@@ -35,7 +33,8 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
     }
 
     /**
-     * IPv4 type of proxy*id protocol values for TCP protocol
+     * IPv4 type of proxyId protocol values for TCP protocol
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
@@ -43,7 +42,8 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
     private @Nullable Output<IpsecTunnelAutoKeyProxyIdProtocolTcpArgs> tcp;
 
     /**
-     * @return IPv4 type of proxy*id protocol values for TCP protocol
+     * @return IPv4 type of proxyId protocol values for TCP protocol
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
@@ -52,7 +52,8 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
     }
 
     /**
-     * IPv6 type of proxy*id protocol values for UDP protocol
+     * IPv6 type of proxyId protocol values for UDP protocol
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
@@ -60,7 +61,8 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
     private @Nullable Output<IpsecTunnelAutoKeyProxyIdProtocolUdpArgs> udp;
 
     /**
-     * @return IPv6 type of proxy*id protocol values for UDP protocol
+     * @return IPv6 type of proxyId protocol values for UDP protocol
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
@@ -96,7 +98,6 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
 
         /**
          * @param number IP protocol number
-         * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
          * 
          * @return builder
          * 
@@ -108,7 +109,6 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
 
         /**
          * @param number IP protocol number
-         * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
          * 
          * @return builder
          * 
@@ -118,7 +118,8 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
         }
 
         /**
-         * @param tcp IPv4 type of proxy*id protocol values for TCP protocol
+         * @param tcp IPv4 type of proxyId protocol values for TCP protocol
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
          * 
          * @return builder
@@ -130,7 +131,8 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
         }
 
         /**
-         * @param tcp IPv4 type of proxy*id protocol values for TCP protocol
+         * @param tcp IPv4 type of proxyId protocol values for TCP protocol
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
          * 
          * @return builder
@@ -141,7 +143,8 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
         }
 
         /**
-         * @param udp IPv6 type of proxy*id protocol values for UDP protocol
+         * @param udp IPv6 type of proxyId protocol values for UDP protocol
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
          * 
          * @return builder
@@ -153,7 +156,8 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
         }
 
         /**
-         * @param udp IPv6 type of proxy*id protocol values for UDP protocol
+         * @param udp IPv6 type of proxyId protocol values for UDP protocol
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
          * 
          * @return builder

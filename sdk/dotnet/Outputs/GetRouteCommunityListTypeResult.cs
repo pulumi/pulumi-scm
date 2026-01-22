@@ -15,16 +15,17 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Extended
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Extended`, `Large`, and `Regular`.
         /// </summary>
         public readonly Outputs.GetRouteCommunityListTypeExtendedResult Extended;
         /// <summary>
         /// Large
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Extended`, `Large`, and `Regular`.
         /// </summary>
         public readonly Outputs.GetRouteCommunityListTypeLargeResult Large;
         /// <summary>
         /// Regular
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Extended`, `Large`, and `Regular`.
         /// </summary>
         public readonly Outputs.GetRouteCommunityListTypeRegularResult Regular;

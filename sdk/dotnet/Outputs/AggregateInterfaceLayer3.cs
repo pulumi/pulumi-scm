@@ -23,7 +23,6 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.AggregateInterfaceLayer3DdnsConfig? DdnsConfig;
         /// <summary>
         /// Aggregate Ethernet DHCP Client Object
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly Outputs.AggregateInterfaceLayer3DhcpClient? DhcpClient;
         /// <summary>
@@ -32,6 +31,7 @@ namespace Pulumi.Scm.Outputs
         public readonly string? InterfaceManagementProfile;
         /// <summary>
         /// Aggregate Interface IP addresses
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly ImmutableArray<Outputs.AggregateInterfaceLayer3Ip> Ips;

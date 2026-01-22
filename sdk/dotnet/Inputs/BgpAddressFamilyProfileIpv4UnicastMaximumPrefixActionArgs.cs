@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Restart
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Restart` and `WarningOnly`.
         /// </summary>
         [Input("restart")]
         public Input<Inputs.BgpAddressFamilyProfileIpv4UnicastMaximumPrefixActionRestartArgs>? Restart { get; set; }
 
         /// <summary>
         /// Warning only
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Restart` and `WarningOnly`.
         /// </summary>
         [Input("warningOnly")]

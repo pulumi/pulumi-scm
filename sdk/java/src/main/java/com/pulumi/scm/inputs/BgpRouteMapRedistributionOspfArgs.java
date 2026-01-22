@@ -18,7 +18,6 @@ public final class BgpRouteMapRedistributionOspfArgs extends com.pulumi.resource
 
     /**
      * OSPF Root BGP
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
      * 
      */
     @Import(name="bgp")
@@ -26,7 +25,6 @@ public final class BgpRouteMapRedistributionOspfArgs extends com.pulumi.resource
 
     /**
      * @return OSPF Root BGP
-     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionOspfBgpArgs>> bgp() {
@@ -35,6 +33,7 @@ public final class BgpRouteMapRedistributionOspfArgs extends com.pulumi.resource
 
     /**
      * Rib
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
      * 
      */
@@ -43,6 +42,7 @@ public final class BgpRouteMapRedistributionOspfArgs extends com.pulumi.resource
 
     /**
      * @return Rib
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
      * 
      */
@@ -77,7 +77,6 @@ public final class BgpRouteMapRedistributionOspfArgs extends com.pulumi.resource
 
         /**
          * @param bgp OSPF Root BGP
-         * &gt; ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
          * 
          * @return builder
          * 
@@ -89,7 +88,6 @@ public final class BgpRouteMapRedistributionOspfArgs extends com.pulumi.resource
 
         /**
          * @param bgp OSPF Root BGP
-         * &gt; ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
          * 
          * @return builder
          * 
@@ -100,6 +98,7 @@ public final class BgpRouteMapRedistributionOspfArgs extends com.pulumi.resource
 
         /**
          * @param rib Rib
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
          * 
          * @return builder
@@ -112,6 +111,7 @@ public final class BgpRouteMapRedistributionOspfArgs extends com.pulumi.resource
 
         /**
          * @param rib Rib
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `bgp` and `rib`.
          * 
          * @return builder

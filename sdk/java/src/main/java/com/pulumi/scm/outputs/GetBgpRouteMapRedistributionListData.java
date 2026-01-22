@@ -15,12 +15,14 @@ import java.util.Objects;
 public final class GetBgpRouteMapRedistributionListData {
     /**
      * @return Bgp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
     private GetBgpRouteMapRedistributionListDataBgp bgp;
     /**
      * @return Connected static
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
@@ -32,13 +34,11 @@ public final class GetBgpRouteMapRedistributionListData {
     private String description;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -48,19 +48,19 @@ public final class GetBgpRouteMapRedistributionListData {
      */
     private String id;
     /**
-     * @return BGP Route Map Redistributions Name
+     * @return The name of the item.
      * 
      */
     private String name;
     /**
      * @return Ospf
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
     private GetBgpRouteMapRedistributionListDataOspf ospf;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -69,6 +69,7 @@ public final class GetBgpRouteMapRedistributionListData {
     private GetBgpRouteMapRedistributionListData() {}
     /**
      * @return Bgp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
@@ -77,6 +78,7 @@ public final class GetBgpRouteMapRedistributionListData {
     }
     /**
      * @return Connected static
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
@@ -92,15 +94,13 @@ public final class GetBgpRouteMapRedistributionListData {
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -114,7 +114,7 @@ public final class GetBgpRouteMapRedistributionListData {
         return this.id;
     }
     /**
-     * @return BGP Route Map Redistributions Name
+     * @return The name of the item.
      * 
      */
     public String name() {
@@ -122,6 +122,7 @@ public final class GetBgpRouteMapRedistributionListData {
     }
     /**
      * @return Ospf
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
      * 
      */
@@ -129,8 +130,7 @@ public final class GetBgpRouteMapRedistributionListData {
         return this.ospf;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

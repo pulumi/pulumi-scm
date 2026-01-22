@@ -15,24 +15,26 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfBgpPeerGroupType {
     /**
      * @return Ebgp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     private GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgp ebgp;
     /**
      * @return Ebgp confed
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     private GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpConfed ebgpConfed;
     /**
      * @return Ibgp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     private GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgp ibgp;
     /**
      * @return Ibgp confed
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -41,7 +43,6 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupType {
     private GetLogicalRouterListDataVrfBgpPeerGroupType() {}
     /**
      * @return Ebgp
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
     public GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgp ebgp() {
@@ -49,6 +50,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupType {
     }
     /**
      * @return Ebgp confed
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -57,6 +59,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupType {
     }
     /**
      * @return Ibgp
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */
@@ -65,6 +68,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupType {
     }
     /**
      * @return Ibgp confed
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
      * 
      */

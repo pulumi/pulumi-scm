@@ -205,7 +205,6 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -213,7 +212,6 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -221,6 +219,7 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -229,6 +228,7 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -237,6 +237,7 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Layer2
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
@@ -245,6 +246,7 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Layer2
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
@@ -253,6 +255,7 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * Aggregate Interface Layer 3 configuration
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
@@ -261,6 +264,7 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Aggregate Interface Layer 3 configuration
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
@@ -283,6 +287,7 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -291,6 +296,7 @@ public class AggregateInterface extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

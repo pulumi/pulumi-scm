@@ -12,24 +12,26 @@ import java.util.Objects;
 public final class GetIpsecCryptoProfileListDataLifesize {
     /**
      * @return specify lifesize in gigabytes(GB)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     private Integer gb;
     /**
      * @return specify lifesize in kilobytes(KB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     private Integer kb;
     /**
      * @return specify lifesize in megabytes(MB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     private Integer mb;
     /**
      * @return specify lifesize in terabytes(TB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -38,7 +40,6 @@ public final class GetIpsecCryptoProfileListDataLifesize {
     private GetIpsecCryptoProfileListDataLifesize() {}
     /**
      * @return specify lifesize in gigabytes(GB)
-     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     public Integer gb() {
@@ -46,6 +47,7 @@ public final class GetIpsecCryptoProfileListDataLifesize {
     }
     /**
      * @return specify lifesize in kilobytes(KB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -54,6 +56,7 @@ public final class GetIpsecCryptoProfileListDataLifesize {
     }
     /**
      * @return specify lifesize in megabytes(MB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
@@ -62,6 +65,7 @@ public final class GetIpsecCryptoProfileListDataLifesize {
     }
     /**
      * @return specify lifesize in terabytes(TB)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */

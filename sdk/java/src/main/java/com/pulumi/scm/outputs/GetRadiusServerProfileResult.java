@@ -10,74 +10,42 @@ import com.pulumi.scm.outputs.GetRadiusServerProfileServer;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetRadiusServerProfileResult {
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
+    private Map<String,String> encryptedValues;
     private String folder;
     /**
      * @return The UUID of the RADIUS server profile
      * 
      */
     private String id;
-    /**
-     * @return The name of the RADIUS server profile
-     * 
-     */
     private String name;
-    /**
-     * @return The RADIUS authentication protocol
-     * 
-     */
     private GetRadiusServerProfileProtocol protocol;
-    /**
-     * @return The number of RADIUS server retries
-     * 
-     */
     private Integer retries;
-    /**
-     * @return Server
-     * 
-     */
     private List<GetRadiusServerProfileServer> servers;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return The RADIUS server authentication timeout (seconds)
-     * 
-     */
     private Integer timeout;
 
     private GetRadiusServerProfileResult() {}
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
+    }
     public String folder() {
         return this.folder;
     }
@@ -88,49 +56,24 @@ public final class GetRadiusServerProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return The name of the RADIUS server profile
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return The RADIUS authentication protocol
-     * 
-     */
     public GetRadiusServerProfileProtocol protocol() {
         return this.protocol;
     }
-    /**
-     * @return The number of RADIUS server retries
-     * 
-     */
     public Integer retries() {
         return this.retries;
     }
-    /**
-     * @return Server
-     * 
-     */
     public List<GetRadiusServerProfileServer> servers() {
         return this.servers;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return The RADIUS server authentication timeout (seconds)
-     * 
-     */
     public Integer timeout() {
         return this.timeout;
     }
@@ -145,6 +88,7 @@ public final class GetRadiusServerProfileResult {
     @CustomType.Builder
     public static final class Builder {
         private String device;
+        private Map<String,String> encryptedValues;
         private String folder;
         private String id;
         private String name;
@@ -158,6 +102,7 @@ public final class GetRadiusServerProfileResult {
         public Builder(GetRadiusServerProfileResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.device = defaults.device;
+    	      this.encryptedValues = defaults.encryptedValues;
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
@@ -175,6 +120,14 @@ public final class GetRadiusServerProfileResult {
               throw new MissingRequiredPropertyException("GetRadiusServerProfileResult", "device");
             }
             this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileResult", "encryptedValues");
+            }
+            this.encryptedValues = encryptedValues;
             return this;
         }
         @CustomType.Setter
@@ -255,6 +208,7 @@ public final class GetRadiusServerProfileResult {
         public GetRadiusServerProfileResult build() {
             final var _resultValue = new GetRadiusServerProfileResult();
             _resultValue.device = device;
+            _resultValue.encryptedValues = encryptedValues;
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;

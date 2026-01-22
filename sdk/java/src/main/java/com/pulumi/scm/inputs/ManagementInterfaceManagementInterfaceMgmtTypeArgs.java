@@ -18,7 +18,6 @@ public final class ManagementInterfaceManagementInterfaceMgmtTypeArgs extends co
 
     /**
      * Dhcp client
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
     @Import(name="dhcpClient")
@@ -26,7 +25,6 @@ public final class ManagementInterfaceManagementInterfaceMgmtTypeArgs extends co
 
     /**
      * @return Dhcp client
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
     public Optional<Output<ManagementInterfaceManagementInterfaceMgmtTypeDhcpClientArgs>> dhcpClient() {
@@ -35,6 +33,7 @@ public final class ManagementInterfaceManagementInterfaceMgmtTypeArgs extends co
 
     /**
      * Static
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
@@ -43,6 +42,7 @@ public final class ManagementInterfaceManagementInterfaceMgmtTypeArgs extends co
 
     /**
      * @return Static
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
      * 
      */
@@ -77,7 +77,6 @@ public final class ManagementInterfaceManagementInterfaceMgmtTypeArgs extends co
 
         /**
          * @param dhcpClient Dhcp client
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
          * 
          * @return builder
          * 
@@ -89,7 +88,6 @@ public final class ManagementInterfaceManagementInterfaceMgmtTypeArgs extends co
 
         /**
          * @param dhcpClient Dhcp client
-         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
          * 
          * @return builder
          * 
@@ -100,6 +98,7 @@ public final class ManagementInterfaceManagementInterfaceMgmtTypeArgs extends co
 
         /**
          * @param static_ Static
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
          * 
          * @return builder
@@ -112,6 +111,7 @@ public final class ManagementInterfaceManagementInterfaceMgmtTypeArgs extends co
 
         /**
          * @param static_ Static
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
          * 
          * @return builder

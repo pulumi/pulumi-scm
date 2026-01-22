@@ -11,99 +11,41 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAddressResult {
-    /**
-     * @return The description of the address object
-     * 
-     */
     private String description;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
-    /**
-     * @return Fully qualified domain name
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
-     */
     private String fqdn;
     /**
      * @return The UUID of the address object
      * 
      */
     private String id;
-    /**
-     * @return IP address with or without CIDR notation
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
-     */
     private String ipNetmask;
-    /**
-     * @return Ip range
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
-     */
     private String ipRange;
-    /**
-     * @return IP wildcard mask
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
-     */
     private String ipWildcard;
-    /**
-     * @return The name of the address object
-     * 
-     */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
-    /**
-     * @return Tags assocaited with the address object
-     * 
-     */
     private List<String> tags;
     private String tfid;
 
     private GetAddressResult() {}
-    /**
-     * @return The description of the address object
-     * 
-     */
     public String description() {
         return this.description;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return Fully qualified domain name
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
-     */
     public String fqdn() {
         return this.fqdn;
     }
@@ -114,49 +56,21 @@ public final class GetAddressResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return IP address with or without CIDR notation
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
-     */
     public String ipNetmask() {
         return this.ipNetmask;
     }
-    /**
-     * @return Ip range
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
-     */
     public String ipRange() {
         return this.ipRange;
     }
-    /**
-     * @return IP wildcard mask
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
-     * 
-     */
     public String ipWildcard() {
         return this.ipWildcard;
     }
-    /**
-     * @return The name of the address object
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Tags assocaited with the address object
-     * 
-     */
     public List<String> tags() {
         return this.tags;
     }

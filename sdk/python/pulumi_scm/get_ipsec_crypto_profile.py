@@ -65,10 +65,6 @@ class GetIpsecCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def ah(self) -> 'outputs.GetIpsecCryptoProfileAhResult':
-        """
-        Ah
-        > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
-        """
         return pulumi.get(self, "ah")
 
     @_builtins.property
@@ -76,34 +72,22 @@ class GetIpsecCryptoProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="dhGroup")
     def dh_group(self) -> _builtins.str:
-        """
-        phase-2 DH group (PFS DH group)
-        """
         return pulumi.get(self, "dh_group")
 
     @_builtins.property
     @pulumi.getter
     def esp(self) -> 'outputs.GetIpsecCryptoProfileEspResult':
-        """
-        Esp
-        > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
-        """
         return pulumi.get(self, "esp")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -117,34 +101,21 @@ class GetIpsecCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def lifesize(self) -> 'outputs.GetIpsecCryptoProfileLifesizeResult':
-        """
-        Lifesize
-        """
         return pulumi.get(self, "lifesize")
 
     @_builtins.property
     @pulumi.getter
     def lifetime(self) -> 'outputs.GetIpsecCryptoProfileLifetimeResult':
-        """
-        Ipsec crypto profile lifetime
-        """
         return pulumi.get(self, "lifetime")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -194,13 +165,7 @@ def get_ipsec_crypto_profile(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -245,13 +210,7 @@ def get_ipsec_crypto_profile_output(device: Optional[pulumi.Input[Optional[_buil
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

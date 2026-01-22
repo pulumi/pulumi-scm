@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.ScepProfileScepChallengeDynamic;
+import com.pulumi.scm.outputs.ScepProfileScepChallengeNone;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,27 +15,27 @@ import javax.annotation.Nullable;
 public final class ScepProfileScepChallenge {
     /**
      * @return Dynamic
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     private @Nullable ScepProfileScepChallengeDynamic dynamic;
     /**
      * @return Challenge to use for SCEP server on mobile clients
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     private @Nullable String fixed;
     /**
      * @return No OTP
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
-    private @Nullable String none;
+    private @Nullable ScepProfileScepChallengeNone none;
 
     private ScepProfileScepChallenge() {}
     /**
      * @return Dynamic
-     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     public Optional<ScepProfileScepChallengeDynamic> dynamic() {
@@ -42,6 +43,7 @@ public final class ScepProfileScepChallenge {
     }
     /**
      * @return Challenge to use for SCEP server on mobile clients
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
@@ -50,10 +52,11 @@ public final class ScepProfileScepChallenge {
     }
     /**
      * @return No OTP
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
-    public Optional<String> none() {
+    public Optional<ScepProfileScepChallengeNone> none() {
         return Optional.ofNullable(this.none);
     }
 
@@ -68,7 +71,7 @@ public final class ScepProfileScepChallenge {
     public static final class Builder {
         private @Nullable ScepProfileScepChallengeDynamic dynamic;
         private @Nullable String fixed;
-        private @Nullable String none;
+        private @Nullable ScepProfileScepChallengeNone none;
         public Builder() {}
         public Builder(ScepProfileScepChallenge defaults) {
     	      Objects.requireNonNull(defaults);
@@ -90,7 +93,7 @@ public final class ScepProfileScepChallenge {
             return this;
         }
         @CustomType.Setter
-        public Builder none(@Nullable String none) {
+        public Builder none(@Nullable ScepProfileScepChallengeNone none) {
 
             this.none = none;
             return this;

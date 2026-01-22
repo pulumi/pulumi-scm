@@ -50,7 +50,6 @@ import javax.annotation.Nullable;
 public class SdwanTrafficDistributionProfile extends com.pulumi.resources.CustomResource {
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -58,7 +57,6 @@ public class SdwanTrafficDistributionProfile extends com.pulumi.resources.Custom
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -66,6 +64,7 @@ public class SdwanTrafficDistributionProfile extends com.pulumi.resources.Custom
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -74,6 +73,7 @@ public class SdwanTrafficDistributionProfile extends com.pulumi.resources.Custom
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -110,6 +110,7 @@ public class SdwanTrafficDistributionProfile extends com.pulumi.resources.Custom
     }
     /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -118,6 +119,7 @@ public class SdwanTrafficDistributionProfile extends com.pulumi.resources.Custom
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

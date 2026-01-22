@@ -47,13 +47,14 @@ class CertificateProfileArgs:
         :param pulumi.Input[_builtins.str] cert_status_timeout: Certificate status timeout
         :param pulumi.Input[_builtins.str] crl_receive_timeout: CRL receive timeout (seconds)
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] domain: User domain
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the certificate profile
         :param pulumi.Input[_builtins.str] ocsp_receive_timeout: OCSP receive timeout (seconds)
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] use_crl: Use CRL?
         :param pulumi.Input[_builtins.bool] use_ocsp: Use OCSP?
@@ -180,7 +181,6 @@ class CertificateProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -205,6 +205,7 @@ class CertificateProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -242,6 +243,7 @@ class CertificateProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -317,13 +319,14 @@ class _CertificateProfileState:
         :param pulumi.Input[_builtins.str] cert_status_timeout: Certificate status timeout
         :param pulumi.Input[_builtins.str] crl_receive_timeout: CRL receive timeout (seconds)
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] domain: User domain
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the certificate profile
         :param pulumi.Input[_builtins.str] ocsp_receive_timeout: OCSP receive timeout (seconds)
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] use_crl: Use CRL?
         :param pulumi.Input[_builtins.bool] use_ocsp: Use OCSP?
@@ -453,7 +456,6 @@ class _CertificateProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -478,6 +480,7 @@ class _CertificateProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -515,6 +518,7 @@ class _CertificateProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -661,13 +665,14 @@ class CertificateProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] cert_status_timeout: Certificate status timeout
         :param pulumi.Input[_builtins.str] crl_receive_timeout: CRL receive timeout (seconds)
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] domain: User domain
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the certificate profile
         :param pulumi.Input[_builtins.str] ocsp_receive_timeout: OCSP receive timeout (seconds)
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] use_crl: Use CRL?
         :param pulumi.Input[_builtins.bool] use_ocsp: Use OCSP?
@@ -839,13 +844,14 @@ class CertificateProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] cert_status_timeout: Certificate status timeout
         :param pulumi.Input[_builtins.str] crl_receive_timeout: CRL receive timeout (seconds)
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] domain: User domain
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the certificate profile
         :param pulumi.Input[_builtins.str] ocsp_receive_timeout: OCSP receive timeout (seconds)
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] use_crl: Use CRL?
         :param pulumi.Input[_builtins.bool] use_ocsp: Use OCSP?
@@ -935,7 +941,6 @@ class CertificateProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -952,6 +957,7 @@ class CertificateProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -977,6 +983,7 @@ class CertificateProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

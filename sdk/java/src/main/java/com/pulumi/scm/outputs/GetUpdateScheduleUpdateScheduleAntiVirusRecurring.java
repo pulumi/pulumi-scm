@@ -17,18 +17,19 @@ import java.util.Objects;
 public final class GetUpdateScheduleUpdateScheduleAntiVirusRecurring {
     /**
      * @return Daily
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     private GetUpdateScheduleUpdateScheduleAntiVirusRecurringDaily daily;
     /**
      * @return Hourly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     private GetUpdateScheduleUpdateScheduleAntiVirusRecurringHourly hourly;
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -45,6 +46,7 @@ public final class GetUpdateScheduleUpdateScheduleAntiVirusRecurring {
     private Integer threshold;
     /**
      * @return Weekly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -53,7 +55,6 @@ public final class GetUpdateScheduleUpdateScheduleAntiVirusRecurring {
     private GetUpdateScheduleUpdateScheduleAntiVirusRecurring() {}
     /**
      * @return Daily
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
     public GetUpdateScheduleUpdateScheduleAntiVirusRecurringDaily daily() {
@@ -61,6 +62,7 @@ public final class GetUpdateScheduleUpdateScheduleAntiVirusRecurring {
     }
     /**
      * @return Hourly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -69,6 +71,7 @@ public final class GetUpdateScheduleUpdateScheduleAntiVirusRecurring {
     }
     /**
      * @return None
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */
@@ -91,6 +94,7 @@ public final class GetUpdateScheduleUpdateScheduleAntiVirusRecurring {
     }
     /**
      * @return Weekly
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `hourly`, `none`, and `weekly`.
      * 
      */

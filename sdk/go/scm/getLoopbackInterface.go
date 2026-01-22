@@ -59,48 +59,30 @@ func LookupLoopbackInterface(ctx *pulumi.Context, args *LookupLoopbackInterfaceA
 // A collection of arguments for invoking getLoopbackInterface.
 type LookupLoopbackInterfaceArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Loopback Interface name
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLoopbackInterface.
 type LookupLoopbackInterfaceResult struct {
-	// Description
-	Comment string `pulumi:"comment"`
-	// Default interface assignment
+	Comment      string `pulumi:"comment"`
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Interface management profile
-	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
-	// Loopback IP Parent
-	Ips []GetLoopbackInterfaceIp `pulumi:"ips"`
-	// Loopback IPv6 Configuration
-	Ipv6 GetLoopbackInterfaceIpv6 `pulumi:"ipv6"`
-	// MTU
-	Mtu int `pulumi:"mtu"`
-	// Loopback Interface name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Id                         string                   `pulumi:"id"`
+	InterfaceManagementProfile string                   `pulumi:"interfaceManagementProfile"`
+	Ips                        []GetLoopbackInterfaceIp `pulumi:"ips"`
+	Ipv6                       GetLoopbackInterfaceIpv6 `pulumi:"ipv6"`
+	Mtu                        int                      `pulumi:"mtu"`
+	Name                       string                   `pulumi:"name"`
+	Snippet                    string                   `pulumi:"snippet"`
+	Tfid                       string                   `pulumi:"tfid"`
 }
 
 func LookupLoopbackInterfaceOutput(ctx *pulumi.Context, args LookupLoopbackInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupLoopbackInterfaceResultOutput {
@@ -115,17 +97,11 @@ func LookupLoopbackInterfaceOutput(ctx *pulumi.Context, args LookupLoopbackInter
 // A collection of arguments for invoking getLoopbackInterface.
 type LookupLoopbackInterfaceOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Loopback Interface name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -148,24 +124,19 @@ func (o LookupLoopbackInterfaceResultOutput) ToLookupLoopbackInterfaceResultOutp
 	return o
 }
 
-// Description
 func (o LookupLoopbackInterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
-// Default interface assignment
 func (o LookupLoopbackInterfaceResultOutput) DefaultValue() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLoopbackInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLoopbackInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -175,33 +146,26 @@ func (o LookupLoopbackInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Interface management profile
 func (o LookupLoopbackInterfaceResultOutput) InterfaceManagementProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
 }
 
-// Loopback IP Parent
 func (o LookupLoopbackInterfaceResultOutput) Ips() GetLoopbackInterfaceIpArrayOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) []GetLoopbackInterfaceIp { return v.Ips }).(GetLoopbackInterfaceIpArrayOutput)
 }
 
-// Loopback IPv6 Configuration
 func (o LookupLoopbackInterfaceResultOutput) Ipv6() GetLoopbackInterfaceIpv6Output {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) GetLoopbackInterfaceIpv6 { return v.Ipv6 }).(GetLoopbackInterfaceIpv6Output)
 }
 
-// MTU
 func (o LookupLoopbackInterfaceResultOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) int { return v.Mtu }).(pulumi.IntOutput)
 }
 
-// Loopback Interface name
 func (o LookupLoopbackInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLoopbackInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

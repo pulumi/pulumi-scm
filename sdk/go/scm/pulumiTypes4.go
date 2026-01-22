@@ -13,11 +13,939 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetHipObjectHostInfoCriteriaHostId struct {
+	// Contains
+	Contains string `pulumi:"contains"`
+	// Is
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	Is string `pulumi:"is"`
+	// Is not
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	IsNot string `pulumi:"isNot"`
+}
+
+// GetHipObjectHostInfoCriteriaHostIdInput is an input type that accepts GetHipObjectHostInfoCriteriaHostIdArgs and GetHipObjectHostInfoCriteriaHostIdOutput values.
+// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaHostIdInput` via:
+//
+//	GetHipObjectHostInfoCriteriaHostIdArgs{...}
+type GetHipObjectHostInfoCriteriaHostIdInput interface {
+	pulumi.Input
+
+	ToGetHipObjectHostInfoCriteriaHostIdOutput() GetHipObjectHostInfoCriteriaHostIdOutput
+	ToGetHipObjectHostInfoCriteriaHostIdOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaHostIdOutput
+}
+
+type GetHipObjectHostInfoCriteriaHostIdArgs struct {
+	// Contains
+	Contains pulumi.StringInput `pulumi:"contains"`
+	// Is
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	Is pulumi.StringInput `pulumi:"is"`
+	// Is not
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	IsNot pulumi.StringInput `pulumi:"isNot"`
+}
+
+func (GetHipObjectHostInfoCriteriaHostIdArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostId)(nil)).Elem()
+}
+
+func (i GetHipObjectHostInfoCriteriaHostIdArgs) ToGetHipObjectHostInfoCriteriaHostIdOutput() GetHipObjectHostInfoCriteriaHostIdOutput {
+	return i.ToGetHipObjectHostInfoCriteriaHostIdOutputWithContext(context.Background())
+}
+
+func (i GetHipObjectHostInfoCriteriaHostIdArgs) ToGetHipObjectHostInfoCriteriaHostIdOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaHostIdOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaHostIdOutput)
+}
+
+type GetHipObjectHostInfoCriteriaHostIdOutput struct{ *pulumi.OutputState }
+
+func (GetHipObjectHostInfoCriteriaHostIdOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostId)(nil)).Elem()
+}
+
+func (o GetHipObjectHostInfoCriteriaHostIdOutput) ToGetHipObjectHostInfoCriteriaHostIdOutput() GetHipObjectHostInfoCriteriaHostIdOutput {
+	return o
+}
+
+func (o GetHipObjectHostInfoCriteriaHostIdOutput) ToGetHipObjectHostInfoCriteriaHostIdOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaHostIdOutput {
+	return o
+}
+
+// Contains
+func (o GetHipObjectHostInfoCriteriaHostIdOutput) Contains() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostId) string { return v.Contains }).(pulumi.StringOutput)
+}
+
+// Is
+//
+// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+func (o GetHipObjectHostInfoCriteriaHostIdOutput) Is() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostId) string { return v.Is }).(pulumi.StringOutput)
+}
+
+// Is not
+//
+// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+func (o GetHipObjectHostInfoCriteriaHostIdOutput) IsNot() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostId) string { return v.IsNot }).(pulumi.StringOutput)
+}
+
+type GetHipObjectHostInfoCriteriaHostName struct {
+	// Contains
+	Contains string `pulumi:"contains"`
+	// Is
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	Is string `pulumi:"is"`
+	// Is not
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	IsNot string `pulumi:"isNot"`
+}
+
+// GetHipObjectHostInfoCriteriaHostNameInput is an input type that accepts GetHipObjectHostInfoCriteriaHostNameArgs and GetHipObjectHostInfoCriteriaHostNameOutput values.
+// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaHostNameInput` via:
+//
+//	GetHipObjectHostInfoCriteriaHostNameArgs{...}
+type GetHipObjectHostInfoCriteriaHostNameInput interface {
+	pulumi.Input
+
+	ToGetHipObjectHostInfoCriteriaHostNameOutput() GetHipObjectHostInfoCriteriaHostNameOutput
+	ToGetHipObjectHostInfoCriteriaHostNameOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaHostNameOutput
+}
+
+type GetHipObjectHostInfoCriteriaHostNameArgs struct {
+	// Contains
+	Contains pulumi.StringInput `pulumi:"contains"`
+	// Is
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	Is pulumi.StringInput `pulumi:"is"`
+	// Is not
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	IsNot pulumi.StringInput `pulumi:"isNot"`
+}
+
+func (GetHipObjectHostInfoCriteriaHostNameArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostName)(nil)).Elem()
+}
+
+func (i GetHipObjectHostInfoCriteriaHostNameArgs) ToGetHipObjectHostInfoCriteriaHostNameOutput() GetHipObjectHostInfoCriteriaHostNameOutput {
+	return i.ToGetHipObjectHostInfoCriteriaHostNameOutputWithContext(context.Background())
+}
+
+func (i GetHipObjectHostInfoCriteriaHostNameArgs) ToGetHipObjectHostInfoCriteriaHostNameOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaHostNameOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaHostNameOutput)
+}
+
+type GetHipObjectHostInfoCriteriaHostNameOutput struct{ *pulumi.OutputState }
+
+func (GetHipObjectHostInfoCriteriaHostNameOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostName)(nil)).Elem()
+}
+
+func (o GetHipObjectHostInfoCriteriaHostNameOutput) ToGetHipObjectHostInfoCriteriaHostNameOutput() GetHipObjectHostInfoCriteriaHostNameOutput {
+	return o
+}
+
+func (o GetHipObjectHostInfoCriteriaHostNameOutput) ToGetHipObjectHostInfoCriteriaHostNameOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaHostNameOutput {
+	return o
+}
+
+// Contains
+func (o GetHipObjectHostInfoCriteriaHostNameOutput) Contains() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostName) string { return v.Contains }).(pulumi.StringOutput)
+}
+
+// Is
+//
+// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+func (o GetHipObjectHostInfoCriteriaHostNameOutput) Is() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostName) string { return v.Is }).(pulumi.StringOutput)
+}
+
+// Is not
+//
+// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+func (o GetHipObjectHostInfoCriteriaHostNameOutput) IsNot() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaHostName) string { return v.IsNot }).(pulumi.StringOutput)
+}
+
+type GetHipObjectHostInfoCriteriaOs struct {
+	// Contains
+	Contains GetHipObjectHostInfoCriteriaOsContains `pulumi:"contains"`
+}
+
+// GetHipObjectHostInfoCriteriaOsInput is an input type that accepts GetHipObjectHostInfoCriteriaOsArgs and GetHipObjectHostInfoCriteriaOsOutput values.
+// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaOsInput` via:
+//
+//	GetHipObjectHostInfoCriteriaOsArgs{...}
+type GetHipObjectHostInfoCriteriaOsInput interface {
+	pulumi.Input
+
+	ToGetHipObjectHostInfoCriteriaOsOutput() GetHipObjectHostInfoCriteriaOsOutput
+	ToGetHipObjectHostInfoCriteriaOsOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaOsOutput
+}
+
+type GetHipObjectHostInfoCriteriaOsArgs struct {
+	// Contains
+	Contains GetHipObjectHostInfoCriteriaOsContainsInput `pulumi:"contains"`
+}
+
+func (GetHipObjectHostInfoCriteriaOsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaOs)(nil)).Elem()
+}
+
+func (i GetHipObjectHostInfoCriteriaOsArgs) ToGetHipObjectHostInfoCriteriaOsOutput() GetHipObjectHostInfoCriteriaOsOutput {
+	return i.ToGetHipObjectHostInfoCriteriaOsOutputWithContext(context.Background())
+}
+
+func (i GetHipObjectHostInfoCriteriaOsArgs) ToGetHipObjectHostInfoCriteriaOsOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaOsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaOsOutput)
+}
+
+type GetHipObjectHostInfoCriteriaOsOutput struct{ *pulumi.OutputState }
+
+func (GetHipObjectHostInfoCriteriaOsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaOs)(nil)).Elem()
+}
+
+func (o GetHipObjectHostInfoCriteriaOsOutput) ToGetHipObjectHostInfoCriteriaOsOutput() GetHipObjectHostInfoCriteriaOsOutput {
+	return o
+}
+
+func (o GetHipObjectHostInfoCriteriaOsOutput) ToGetHipObjectHostInfoCriteriaOsOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaOsOutput {
+	return o
+}
+
+// Contains
+func (o GetHipObjectHostInfoCriteriaOsOutput) Contains() GetHipObjectHostInfoCriteriaOsContainsOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOs) GetHipObjectHostInfoCriteriaOsContains { return v.Contains }).(GetHipObjectHostInfoCriteriaOsContainsOutput)
+}
+
+type GetHipObjectHostInfoCriteriaOsContains struct {
+	// Apple
+	Apple string `pulumi:"apple"`
+	// Google
+	Google string `pulumi:"google"`
+	// Linux
+	Linux string `pulumi:"linux"`
+	// Microsoft
+	Microsoft string `pulumi:"microsoft"`
+	// Other
+	Other string `pulumi:"other"`
+}
+
+// GetHipObjectHostInfoCriteriaOsContainsInput is an input type that accepts GetHipObjectHostInfoCriteriaOsContainsArgs and GetHipObjectHostInfoCriteriaOsContainsOutput values.
+// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaOsContainsInput` via:
+//
+//	GetHipObjectHostInfoCriteriaOsContainsArgs{...}
+type GetHipObjectHostInfoCriteriaOsContainsInput interface {
+	pulumi.Input
+
+	ToGetHipObjectHostInfoCriteriaOsContainsOutput() GetHipObjectHostInfoCriteriaOsContainsOutput
+	ToGetHipObjectHostInfoCriteriaOsContainsOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaOsContainsOutput
+}
+
+type GetHipObjectHostInfoCriteriaOsContainsArgs struct {
+	// Apple
+	Apple pulumi.StringInput `pulumi:"apple"`
+	// Google
+	Google pulumi.StringInput `pulumi:"google"`
+	// Linux
+	Linux pulumi.StringInput `pulumi:"linux"`
+	// Microsoft
+	Microsoft pulumi.StringInput `pulumi:"microsoft"`
+	// Other
+	Other pulumi.StringInput `pulumi:"other"`
+}
+
+func (GetHipObjectHostInfoCriteriaOsContainsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaOsContains)(nil)).Elem()
+}
+
+func (i GetHipObjectHostInfoCriteriaOsContainsArgs) ToGetHipObjectHostInfoCriteriaOsContainsOutput() GetHipObjectHostInfoCriteriaOsContainsOutput {
+	return i.ToGetHipObjectHostInfoCriteriaOsContainsOutputWithContext(context.Background())
+}
+
+func (i GetHipObjectHostInfoCriteriaOsContainsArgs) ToGetHipObjectHostInfoCriteriaOsContainsOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaOsContainsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaOsContainsOutput)
+}
+
+type GetHipObjectHostInfoCriteriaOsContainsOutput struct{ *pulumi.OutputState }
+
+func (GetHipObjectHostInfoCriteriaOsContainsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaOsContains)(nil)).Elem()
+}
+
+func (o GetHipObjectHostInfoCriteriaOsContainsOutput) ToGetHipObjectHostInfoCriteriaOsContainsOutput() GetHipObjectHostInfoCriteriaOsContainsOutput {
+	return o
+}
+
+func (o GetHipObjectHostInfoCriteriaOsContainsOutput) ToGetHipObjectHostInfoCriteriaOsContainsOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaOsContainsOutput {
+	return o
+}
+
+// Apple
+func (o GetHipObjectHostInfoCriteriaOsContainsOutput) Apple() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOsContains) string { return v.Apple }).(pulumi.StringOutput)
+}
+
+// Google
+func (o GetHipObjectHostInfoCriteriaOsContainsOutput) Google() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOsContains) string { return v.Google }).(pulumi.StringOutput)
+}
+
+// Linux
+func (o GetHipObjectHostInfoCriteriaOsContainsOutput) Linux() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOsContains) string { return v.Linux }).(pulumi.StringOutput)
+}
+
+// Microsoft
+func (o GetHipObjectHostInfoCriteriaOsContainsOutput) Microsoft() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOsContains) string { return v.Microsoft }).(pulumi.StringOutput)
+}
+
+// Other
+func (o GetHipObjectHostInfoCriteriaOsContainsOutput) Other() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaOsContains) string { return v.Other }).(pulumi.StringOutput)
+}
+
+type GetHipObjectHostInfoCriteriaSerialNumber struct {
+	// Contains
+	Contains string `pulumi:"contains"`
+	// Is
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	Is string `pulumi:"is"`
+	// Is not
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	IsNot string `pulumi:"isNot"`
+}
+
+// GetHipObjectHostInfoCriteriaSerialNumberInput is an input type that accepts GetHipObjectHostInfoCriteriaSerialNumberArgs and GetHipObjectHostInfoCriteriaSerialNumberOutput values.
+// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaSerialNumberInput` via:
+//
+//	GetHipObjectHostInfoCriteriaSerialNumberArgs{...}
+type GetHipObjectHostInfoCriteriaSerialNumberInput interface {
+	pulumi.Input
+
+	ToGetHipObjectHostInfoCriteriaSerialNumberOutput() GetHipObjectHostInfoCriteriaSerialNumberOutput
+	ToGetHipObjectHostInfoCriteriaSerialNumberOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaSerialNumberOutput
+}
+
+type GetHipObjectHostInfoCriteriaSerialNumberArgs struct {
+	// Contains
+	Contains pulumi.StringInput `pulumi:"contains"`
+	// Is
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	Is pulumi.StringInput `pulumi:"is"`
+	// Is not
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+	IsNot pulumi.StringInput `pulumi:"isNot"`
+}
+
+func (GetHipObjectHostInfoCriteriaSerialNumberArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaSerialNumber)(nil)).Elem()
+}
+
+func (i GetHipObjectHostInfoCriteriaSerialNumberArgs) ToGetHipObjectHostInfoCriteriaSerialNumberOutput() GetHipObjectHostInfoCriteriaSerialNumberOutput {
+	return i.ToGetHipObjectHostInfoCriteriaSerialNumberOutputWithContext(context.Background())
+}
+
+func (i GetHipObjectHostInfoCriteriaSerialNumberArgs) ToGetHipObjectHostInfoCriteriaSerialNumberOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaSerialNumberOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaSerialNumberOutput)
+}
+
+type GetHipObjectHostInfoCriteriaSerialNumberOutput struct{ *pulumi.OutputState }
+
+func (GetHipObjectHostInfoCriteriaSerialNumberOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaSerialNumber)(nil)).Elem()
+}
+
+func (o GetHipObjectHostInfoCriteriaSerialNumberOutput) ToGetHipObjectHostInfoCriteriaSerialNumberOutput() GetHipObjectHostInfoCriteriaSerialNumberOutput {
+	return o
+}
+
+func (o GetHipObjectHostInfoCriteriaSerialNumberOutput) ToGetHipObjectHostInfoCriteriaSerialNumberOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaSerialNumberOutput {
+	return o
+}
+
+// Contains
+func (o GetHipObjectHostInfoCriteriaSerialNumberOutput) Contains() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaSerialNumber) string { return v.Contains }).(pulumi.StringOutput)
+}
+
+// Is
+//
+// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+func (o GetHipObjectHostInfoCriteriaSerialNumberOutput) Is() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaSerialNumber) string { return v.Is }).(pulumi.StringOutput)
+}
+
+// Is not
+//
+// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+func (o GetHipObjectHostInfoCriteriaSerialNumberOutput) IsNot() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaSerialNumber) string { return v.IsNot }).(pulumi.StringOutput)
+}
+
+type GetHipObjectListData struct {
+	// Anti malware
+	AntiMalware GetHipObjectListDataAntiMalware `pulumi:"antiMalware"`
+	// Certificate
+	Certificate GetHipObjectListDataCertificate `pulumi:"certificate"`
+	// Custom checks
+	CustomChecks GetHipObjectListDataCustomChecks `pulumi:"customChecks"`
+	// Data loss prevention
+	DataLossPrevention GetHipObjectListDataDataLossPrevention `pulumi:"dataLossPrevention"`
+	// Description
+	Description string `pulumi:"description"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Disk backup
+	DiskBackup GetHipObjectListDataDiskBackup `pulumi:"diskBackup"`
+	// Disk encryption
+	DiskEncryption GetHipObjectListDataDiskEncryption `pulumi:"diskEncryption"`
+	// Firewall
+	Firewall GetHipObjectListDataFirewall `pulumi:"firewall"`
+	// The folder of the item. Default: Shared.
+	Folder string `pulumi:"folder"`
+	// Host info
+	HostInfo GetHipObjectListDataHostInfo `pulumi:"hostInfo"`
+	// UUID of the resource
+	Id string `pulumi:"id"`
+	// Mobile device
+	MobileDevice GetHipObjectListDataMobileDevice `pulumi:"mobileDevice"`
+	// The name of the item.
+	Name string `pulumi:"name"`
+	// Network info
+	NetworkInfo GetHipObjectListDataNetworkInfo `pulumi:"networkInfo"`
+	// Patch management
+	PatchManagement GetHipObjectListDataPatchManagement `pulumi:"patchManagement"`
+	// The snippet of the item.
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+}
+
+// GetHipObjectListDataInput is an input type that accepts GetHipObjectListDataArgs and GetHipObjectListDataOutput values.
+// You can construct a concrete instance of `GetHipObjectListDataInput` via:
+//
+//	GetHipObjectListDataArgs{...}
+type GetHipObjectListDataInput interface {
+	pulumi.Input
+
+	ToGetHipObjectListDataOutput() GetHipObjectListDataOutput
+	ToGetHipObjectListDataOutputWithContext(context.Context) GetHipObjectListDataOutput
+}
+
+type GetHipObjectListDataArgs struct {
+	// Anti malware
+	AntiMalware GetHipObjectListDataAntiMalwareInput `pulumi:"antiMalware"`
+	// Certificate
+	Certificate GetHipObjectListDataCertificateInput `pulumi:"certificate"`
+	// Custom checks
+	CustomChecks GetHipObjectListDataCustomChecksInput `pulumi:"customChecks"`
+	// Data loss prevention
+	DataLossPrevention GetHipObjectListDataDataLossPreventionInput `pulumi:"dataLossPrevention"`
+	// Description
+	Description pulumi.StringInput `pulumi:"description"`
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// Disk backup
+	DiskBackup GetHipObjectListDataDiskBackupInput `pulumi:"diskBackup"`
+	// Disk encryption
+	DiskEncryption GetHipObjectListDataDiskEncryptionInput `pulumi:"diskEncryption"`
+	// Firewall
+	Firewall GetHipObjectListDataFirewallInput `pulumi:"firewall"`
+	// The folder of the item. Default: Shared.
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// Host info
+	HostInfo GetHipObjectListDataHostInfoInput `pulumi:"hostInfo"`
+	// UUID of the resource
+	Id pulumi.StringInput `pulumi:"id"`
+	// Mobile device
+	MobileDevice GetHipObjectListDataMobileDeviceInput `pulumi:"mobileDevice"`
+	// The name of the item.
+	Name pulumi.StringInput `pulumi:"name"`
+	// Network info
+	NetworkInfo GetHipObjectListDataNetworkInfoInput `pulumi:"networkInfo"`
+	// Patch management
+	PatchManagement GetHipObjectListDataPatchManagementInput `pulumi:"patchManagement"`
+	// The snippet of the item.
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	Tfid    pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetHipObjectListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectListData)(nil)).Elem()
+}
+
+func (i GetHipObjectListDataArgs) ToGetHipObjectListDataOutput() GetHipObjectListDataOutput {
+	return i.ToGetHipObjectListDataOutputWithContext(context.Background())
+}
+
+func (i GetHipObjectListDataArgs) ToGetHipObjectListDataOutputWithContext(ctx context.Context) GetHipObjectListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataOutput)
+}
+
+// GetHipObjectListDataArrayInput is an input type that accepts GetHipObjectListDataArray and GetHipObjectListDataArrayOutput values.
+// You can construct a concrete instance of `GetHipObjectListDataArrayInput` via:
+//
+//	GetHipObjectListDataArray{ GetHipObjectListDataArgs{...} }
+type GetHipObjectListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetHipObjectListDataArrayOutput() GetHipObjectListDataArrayOutput
+	ToGetHipObjectListDataArrayOutputWithContext(context.Context) GetHipObjectListDataArrayOutput
+}
+
+type GetHipObjectListDataArray []GetHipObjectListDataInput
+
+func (GetHipObjectListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetHipObjectListData)(nil)).Elem()
+}
+
+func (i GetHipObjectListDataArray) ToGetHipObjectListDataArrayOutput() GetHipObjectListDataArrayOutput {
+	return i.ToGetHipObjectListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetHipObjectListDataArray) ToGetHipObjectListDataArrayOutputWithContext(ctx context.Context) GetHipObjectListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataArrayOutput)
+}
+
+type GetHipObjectListDataOutput struct{ *pulumi.OutputState }
+
+func (GetHipObjectListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectListData)(nil)).Elem()
+}
+
+func (o GetHipObjectListDataOutput) ToGetHipObjectListDataOutput() GetHipObjectListDataOutput {
+	return o
+}
+
+func (o GetHipObjectListDataOutput) ToGetHipObjectListDataOutputWithContext(ctx context.Context) GetHipObjectListDataOutput {
+	return o
+}
+
+// Anti malware
+func (o GetHipObjectListDataOutput) AntiMalware() GetHipObjectListDataAntiMalwareOutput {
+	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataAntiMalware { return v.AntiMalware }).(GetHipObjectListDataAntiMalwareOutput)
+}
+
+// Certificate
+func (o GetHipObjectListDataOutput) Certificate() GetHipObjectListDataCertificateOutput {
+	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataCertificate { return v.Certificate }).(GetHipObjectListDataCertificateOutput)
+}
+
+// Custom checks
+func (o GetHipObjectListDataOutput) CustomChecks() GetHipObjectListDataCustomChecksOutput {
+	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataCustomChecks { return v.CustomChecks }).(GetHipObjectListDataCustomChecksOutput)
+}
+
+// Data loss prevention
+func (o GetHipObjectListDataOutput) DataLossPrevention() GetHipObjectListDataDataLossPreventionOutput {
+	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataDataLossPrevention { return v.DataLossPrevention }).(GetHipObjectListDataDataLossPreventionOutput)
+}
+
+// Description
+func (o GetHipObjectListDataOutput) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectListData) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// The device in which the resource is defined
+func (o GetHipObjectListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Disk backup
+func (o GetHipObjectListDataOutput) DiskBackup() GetHipObjectListDataDiskBackupOutput {
+	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataDiskBackup { return v.DiskBackup }).(GetHipObjectListDataDiskBackupOutput)
+}
+
+// Disk encryption
+func (o GetHipObjectListDataOutput) DiskEncryption() GetHipObjectListDataDiskEncryptionOutput {
+	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataDiskEncryption { return v.DiskEncryption }).(GetHipObjectListDataDiskEncryptionOutput)
+}
+
+// Firewall
+func (o GetHipObjectListDataOutput) Firewall() GetHipObjectListDataFirewallOutput {
+	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataFirewall { return v.Firewall }).(GetHipObjectListDataFirewallOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetHipObjectListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// Host info
+func (o GetHipObjectListDataOutput) HostInfo() GetHipObjectListDataHostInfoOutput {
+	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataHostInfo { return v.HostInfo }).(GetHipObjectListDataHostInfoOutput)
+}
+
+// UUID of the resource
+func (o GetHipObjectListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Mobile device
+func (o GetHipObjectListDataOutput) MobileDevice() GetHipObjectListDataMobileDeviceOutput {
+	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataMobileDevice { return v.MobileDevice }).(GetHipObjectListDataMobileDeviceOutput)
+}
+
+// The name of the item.
+func (o GetHipObjectListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Network info
+func (o GetHipObjectListDataOutput) NetworkInfo() GetHipObjectListDataNetworkInfoOutput {
+	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataNetworkInfo { return v.NetworkInfo }).(GetHipObjectListDataNetworkInfoOutput)
+}
+
+// Patch management
+func (o GetHipObjectListDataOutput) PatchManagement() GetHipObjectListDataPatchManagementOutput {
+	return o.ApplyT(func(v GetHipObjectListData) GetHipObjectListDataPatchManagement { return v.PatchManagement }).(GetHipObjectListDataPatchManagementOutput)
+}
+
+// The snippet of the item.
+func (o GetHipObjectListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+func (o GetHipObjectListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetHipObjectListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetHipObjectListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetHipObjectListData)(nil)).Elem()
+}
+
+func (o GetHipObjectListDataArrayOutput) ToGetHipObjectListDataArrayOutput() GetHipObjectListDataArrayOutput {
+	return o
+}
+
+func (o GetHipObjectListDataArrayOutput) ToGetHipObjectListDataArrayOutputWithContext(ctx context.Context) GetHipObjectListDataArrayOutput {
+	return o
+}
+
+func (o GetHipObjectListDataArrayOutput) Index(i pulumi.IntInput) GetHipObjectListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectListData {
+		return vs[0].([]GetHipObjectListData)[vs[1].(int)]
+	}).(GetHipObjectListDataOutput)
+}
+
+type GetHipObjectListDataAntiMalware struct {
+	// Criteria
+	Criteria GetHipObjectListDataAntiMalwareCriteria `pulumi:"criteria"`
+	// Exclude vendor
+	ExcludeVendor bool `pulumi:"excludeVendor"`
+	// Vendor name
+	Vendors []GetHipObjectListDataAntiMalwareVendor `pulumi:"vendors"`
+}
+
+// GetHipObjectListDataAntiMalwareInput is an input type that accepts GetHipObjectListDataAntiMalwareArgs and GetHipObjectListDataAntiMalwareOutput values.
+// You can construct a concrete instance of `GetHipObjectListDataAntiMalwareInput` via:
+//
+//	GetHipObjectListDataAntiMalwareArgs{...}
+type GetHipObjectListDataAntiMalwareInput interface {
+	pulumi.Input
+
+	ToGetHipObjectListDataAntiMalwareOutput() GetHipObjectListDataAntiMalwareOutput
+	ToGetHipObjectListDataAntiMalwareOutputWithContext(context.Context) GetHipObjectListDataAntiMalwareOutput
+}
+
+type GetHipObjectListDataAntiMalwareArgs struct {
+	// Criteria
+	Criteria GetHipObjectListDataAntiMalwareCriteriaInput `pulumi:"criteria"`
+	// Exclude vendor
+	ExcludeVendor pulumi.BoolInput `pulumi:"excludeVendor"`
+	// Vendor name
+	Vendors GetHipObjectListDataAntiMalwareVendorArrayInput `pulumi:"vendors"`
+}
+
+func (GetHipObjectListDataAntiMalwareArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectListDataAntiMalware)(nil)).Elem()
+}
+
+func (i GetHipObjectListDataAntiMalwareArgs) ToGetHipObjectListDataAntiMalwareOutput() GetHipObjectListDataAntiMalwareOutput {
+	return i.ToGetHipObjectListDataAntiMalwareOutputWithContext(context.Background())
+}
+
+func (i GetHipObjectListDataAntiMalwareArgs) ToGetHipObjectListDataAntiMalwareOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataAntiMalwareOutput)
+}
+
+type GetHipObjectListDataAntiMalwareOutput struct{ *pulumi.OutputState }
+
+func (GetHipObjectListDataAntiMalwareOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectListDataAntiMalware)(nil)).Elem()
+}
+
+func (o GetHipObjectListDataAntiMalwareOutput) ToGetHipObjectListDataAntiMalwareOutput() GetHipObjectListDataAntiMalwareOutput {
+	return o
+}
+
+func (o GetHipObjectListDataAntiMalwareOutput) ToGetHipObjectListDataAntiMalwareOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareOutput {
+	return o
+}
+
+// Criteria
+func (o GetHipObjectListDataAntiMalwareOutput) Criteria() GetHipObjectListDataAntiMalwareCriteriaOutput {
+	return o.ApplyT(func(v GetHipObjectListDataAntiMalware) GetHipObjectListDataAntiMalwareCriteria { return v.Criteria }).(GetHipObjectListDataAntiMalwareCriteriaOutput)
+}
+
+// Exclude vendor
+func (o GetHipObjectListDataAntiMalwareOutput) ExcludeVendor() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetHipObjectListDataAntiMalware) bool { return v.ExcludeVendor }).(pulumi.BoolOutput)
+}
+
+// Vendor name
+func (o GetHipObjectListDataAntiMalwareOutput) Vendors() GetHipObjectListDataAntiMalwareVendorArrayOutput {
+	return o.ApplyT(func(v GetHipObjectListDataAntiMalware) []GetHipObjectListDataAntiMalwareVendor { return v.Vendors }).(GetHipObjectListDataAntiMalwareVendorArrayOutput)
+}
+
+type GetHipObjectListDataAntiMalwareCriteria struct {
+	// Is Installed
+	IsInstalled bool `pulumi:"isInstalled"`
+	// Last scan time
+	LastScanTime GetHipObjectListDataAntiMalwareCriteriaLastScanTime `pulumi:"lastScanTime"`
+	// Product version
+	ProductVersion GetHipObjectListDataAntiMalwareCriteriaProductVersion `pulumi:"productVersion"`
+	// real time protection
+	RealTimeProtection string `pulumi:"realTimeProtection"`
+	// Virdef version
+	VirdefVersion GetHipObjectListDataAntiMalwareCriteriaVirdefVersion `pulumi:"virdefVersion"`
+}
+
+// GetHipObjectListDataAntiMalwareCriteriaInput is an input type that accepts GetHipObjectListDataAntiMalwareCriteriaArgs and GetHipObjectListDataAntiMalwareCriteriaOutput values.
+// You can construct a concrete instance of `GetHipObjectListDataAntiMalwareCriteriaInput` via:
+//
+//	GetHipObjectListDataAntiMalwareCriteriaArgs{...}
+type GetHipObjectListDataAntiMalwareCriteriaInput interface {
+	pulumi.Input
+
+	ToGetHipObjectListDataAntiMalwareCriteriaOutput() GetHipObjectListDataAntiMalwareCriteriaOutput
+	ToGetHipObjectListDataAntiMalwareCriteriaOutputWithContext(context.Context) GetHipObjectListDataAntiMalwareCriteriaOutput
+}
+
+type GetHipObjectListDataAntiMalwareCriteriaArgs struct {
+	// Is Installed
+	IsInstalled pulumi.BoolInput `pulumi:"isInstalled"`
+	// Last scan time
+	LastScanTime GetHipObjectListDataAntiMalwareCriteriaLastScanTimeInput `pulumi:"lastScanTime"`
+	// Product version
+	ProductVersion GetHipObjectListDataAntiMalwareCriteriaProductVersionInput `pulumi:"productVersion"`
+	// real time protection
+	RealTimeProtection pulumi.StringInput `pulumi:"realTimeProtection"`
+	// Virdef version
+	VirdefVersion GetHipObjectListDataAntiMalwareCriteriaVirdefVersionInput `pulumi:"virdefVersion"`
+}
+
+func (GetHipObjectListDataAntiMalwareCriteriaArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteria)(nil)).Elem()
+}
+
+func (i GetHipObjectListDataAntiMalwareCriteriaArgs) ToGetHipObjectListDataAntiMalwareCriteriaOutput() GetHipObjectListDataAntiMalwareCriteriaOutput {
+	return i.ToGetHipObjectListDataAntiMalwareCriteriaOutputWithContext(context.Background())
+}
+
+func (i GetHipObjectListDataAntiMalwareCriteriaArgs) ToGetHipObjectListDataAntiMalwareCriteriaOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataAntiMalwareCriteriaOutput)
+}
+
+type GetHipObjectListDataAntiMalwareCriteriaOutput struct{ *pulumi.OutputState }
+
+func (GetHipObjectListDataAntiMalwareCriteriaOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteria)(nil)).Elem()
+}
+
+func (o GetHipObjectListDataAntiMalwareCriteriaOutput) ToGetHipObjectListDataAntiMalwareCriteriaOutput() GetHipObjectListDataAntiMalwareCriteriaOutput {
+	return o
+}
+
+func (o GetHipObjectListDataAntiMalwareCriteriaOutput) ToGetHipObjectListDataAntiMalwareCriteriaOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaOutput {
+	return o
+}
+
+// Is Installed
+func (o GetHipObjectListDataAntiMalwareCriteriaOutput) IsInstalled() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteria) bool { return v.IsInstalled }).(pulumi.BoolOutput)
+}
+
+// Last scan time
+func (o GetHipObjectListDataAntiMalwareCriteriaOutput) LastScanTime() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput {
+	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteria) GetHipObjectListDataAntiMalwareCriteriaLastScanTime {
+		return v.LastScanTime
+	}).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput)
+}
+
+// Product version
+func (o GetHipObjectListDataAntiMalwareCriteriaOutput) ProductVersion() GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput {
+	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteria) GetHipObjectListDataAntiMalwareCriteriaProductVersion {
+		return v.ProductVersion
+	}).(GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput)
+}
+
+// real time protection
+func (o GetHipObjectListDataAntiMalwareCriteriaOutput) RealTimeProtection() pulumi.StringOutput {
+	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteria) string { return v.RealTimeProtection }).(pulumi.StringOutput)
+}
+
+// Virdef version
+func (o GetHipObjectListDataAntiMalwareCriteriaOutput) VirdefVersion() GetHipObjectListDataAntiMalwareCriteriaVirdefVersionOutput {
+	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteria) GetHipObjectListDataAntiMalwareCriteriaVirdefVersion {
+		return v.VirdefVersion
+	}).(GetHipObjectListDataAntiMalwareCriteriaVirdefVersionOutput)
+}
+
+type GetHipObjectListDataAntiMalwareCriteriaLastScanTime struct {
+	// Not available
+	NotAvailable GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailable `pulumi:"notAvailable"`
+	// Not within
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
+	NotWithin GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithin `pulumi:"notWithin"`
+	// Within
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
+	Within GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithin `pulumi:"within"`
+}
+
+// GetHipObjectListDataAntiMalwareCriteriaLastScanTimeInput is an input type that accepts GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs and GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput values.
+// You can construct a concrete instance of `GetHipObjectListDataAntiMalwareCriteriaLastScanTimeInput` via:
+//
+//	GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs{...}
+type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeInput interface {
+	pulumi.Input
+
+	ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput
+	ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutputWithContext(context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput
+}
+
+type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs struct {
+	// Not available
+	NotAvailable GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableInput `pulumi:"notAvailable"`
+	// Not within
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
+	NotWithin GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinInput `pulumi:"notWithin"`
+	// Within
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
+	Within GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinInput `pulumi:"within"`
+}
+
+func (GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTime)(nil)).Elem()
+}
+
+func (i GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput {
+	return i.ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutputWithContext(context.Background())
+}
+
+func (i GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput)
+}
+
+type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput struct{ *pulumi.OutputState }
+
+func (GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTime)(nil)).Elem()
+}
+
+func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput {
+	return o
+}
+
+func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput {
+	return o
+}
+
+// Not available
+func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) NotAvailable() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
+	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaLastScanTime) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailable {
+		return v.NotAvailable
+	}).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput)
+}
+
+// Not within
+//
+// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
+func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) NotWithin() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinOutput {
+	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaLastScanTime) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithin {
+		return v.NotWithin
+	}).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinOutput)
+}
+
+// Within
+//
+// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
+func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput) Within() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinOutput {
+	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaLastScanTime) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithin {
+		return v.Within
+	}).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinOutput)
+}
+
+type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailable struct {
+}
+
+// GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableInput is an input type that accepts GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs and GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput values.
+// You can construct a concrete instance of `GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableInput` via:
+//
+//	GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs{...}
+type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableInput interface {
+	pulumi.Input
+
+	ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput
+	ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput
+}
+
+type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs struct {
+}
+
+func (GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailable)(nil)).Elem()
+}
+
+func (i GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
+	return i.ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(context.Background())
+}
+
+func (i GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput)
+}
+
+type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput struct{ *pulumi.OutputState }
+
+func (GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailable)(nil)).Elem()
+}
+
+func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput() GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
+	return o
+}
+
+func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput) ToGetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(ctx context.Context) GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
+	return o
+}
+
 type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours int `pulumi:"hours"`
 }
@@ -35,9 +963,9 @@ type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinInput interface
 
 type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 }
@@ -69,12 +997,12 @@ func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinOutput) ToGe
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithin) int { return v.Hours }).(pulumi.IntOutput)
@@ -82,9 +1010,9 @@ func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinOutput) Hour
 
 type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours int `pulumi:"hours"`
 }
@@ -102,9 +1030,9 @@ type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinInput interface {
 
 type GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 }
@@ -136,12 +1064,12 @@ func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinOutput) ToGetHi
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithin) int { return v.Hours }).(pulumi.IntOutput)
@@ -149,30 +1077,37 @@ func (o GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinOutput) Hours()
 
 type GetHipObjectListDataAntiMalwareCriteriaProductVersion struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Contains string `pulumi:"contains"`
 	// Greater equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterEqual string `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterThan string `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	IsNot string `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessEqual string `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessThan string `pulumi:"lessThan"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	NotWithin GetHipObjectListDataAntiMalwareCriteriaProductVersionNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Within GetHipObjectListDataAntiMalwareCriteriaProductVersionWithin `pulumi:"within"`
 }
@@ -190,30 +1125,37 @@ type GetHipObjectListDataAntiMalwareCriteriaProductVersionInput interface {
 
 type GetHipObjectListDataAntiMalwareCriteriaProductVersionArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Greater equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterEqual pulumi.StringInput `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	GreaterThan pulumi.StringInput `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessEqual pulumi.StringInput `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	LessThan pulumi.StringInput `pulumi:"lessThan"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	NotWithin GetHipObjectListDataAntiMalwareCriteriaProductVersionNotWithinInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 	Within GetHipObjectListDataAntiMalwareCriteriaProductVersionWithinInput `pulumi:"within"`
 }
@@ -245,48 +1187,54 @@ func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput) ToGetHipObj
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaProductVersion) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Greater equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput) GreaterEqual() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaProductVersion) string { return v.GreaterEqual }).(pulumi.StringOutput)
 }
 
 // Greater than
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput) GreaterThan() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaProductVersion) string { return v.GreaterThan }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaProductVersion) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaProductVersion) string { return v.IsNot }).(pulumi.StringOutput)
 }
 
 // Less equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput) LessEqual() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaProductVersion) string { return v.LessEqual }).(pulumi.StringOutput)
 }
 
 // Less than
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput) LessThan() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaProductVersion) string { return v.LessThan }).(pulumi.StringOutput)
 }
 
 // Not within
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput) NotWithin() GetHipObjectListDataAntiMalwareCriteriaProductVersionNotWithinOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaProductVersion) GetHipObjectListDataAntiMalwareCriteriaProductVersionNotWithin {
@@ -295,6 +1243,7 @@ func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput) NotWithin()
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
 func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput) Within() GetHipObjectListDataAntiMalwareCriteriaProductVersionWithinOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaProductVersion) GetHipObjectListDataAntiMalwareCriteriaProductVersionWithin {
@@ -408,9 +1357,9 @@ func (o GetHipObjectListDataAntiMalwareCriteriaProductVersionWithinOutput) Versi
 
 type GetHipObjectListDataAntiMalwareCriteriaVirdefVersion struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithin `pulumi:"within"`
 }
@@ -428,9 +1377,9 @@ type GetHipObjectListDataAntiMalwareCriteriaVirdefVersionInput interface {
 
 type GetHipObjectListDataAntiMalwareCriteriaVirdefVersionArgs struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithinInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithinInput `pulumi:"within"`
 }
@@ -462,7 +1411,6 @@ func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionOutput) ToGetHipObje
 }
 
 // Not within
-// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionOutput) NotWithin() GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithinOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaVirdefVersion) GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithin {
 		return v.NotWithin
@@ -470,6 +1418,7 @@ func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionOutput) NotWithin() 
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionOutput) Within() GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithinOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaVirdefVersion) GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithin {
@@ -479,9 +1428,9 @@ func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionOutput) Within() Get
 
 type GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days int `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions int `pulumi:"versions"`
 }
@@ -499,9 +1448,9 @@ type GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithinInput interfac
 
 type GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions pulumi.IntInput `pulumi:"versions"`
 }
@@ -533,12 +1482,12 @@ func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithinOutput) ToG
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify versions range
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithinOutput) Versions() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithin) int { return v.Versions }).(pulumi.IntOutput)
@@ -546,9 +1495,9 @@ func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionNotWithinOutput) Ver
 
 type GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days int `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions int `pulumi:"versions"`
 }
@@ -566,9 +1515,9 @@ type GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithinInput interface {
 
 type GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify versions range
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 	Versions pulumi.IntInput `pulumi:"versions"`
 }
@@ -600,12 +1549,12 @@ func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithinOutput) ToGetH
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify versions range
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
 func (o GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithinOutput) Versions() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataAntiMalwareCriteriaVirdefVersionWithin) int { return v.Versions }).(pulumi.IntOutput)
@@ -2021,12 +2970,13 @@ func (o GetHipObjectListDataDiskBackupCriteriaOutput) LastBackupTime() GetHipObj
 
 type GetHipObjectListDataDiskBackupCriteriaLastBackupTime struct {
 	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotAvailable GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotAvailable `pulumi:"notAvailable"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotWithin GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	Within GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithin `pulumi:"within"`
 }
@@ -2044,12 +2994,13 @@ type GetHipObjectListDataDiskBackupCriteriaLastBackupTimeInput interface {
 
 type GetHipObjectListDataDiskBackupCriteriaLastBackupTimeArgs struct {
 	// Not available
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotAvailable GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotAvailableInput `pulumi:"notAvailable"`
 	// Not within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	NotWithin GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithinInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 	Within GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithinInput `pulumi:"within"`
 }
@@ -2081,7 +3032,6 @@ func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeOutput) ToGetHipObje
 }
 
 // Not available
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeOutput) NotAvailable() GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotAvailableOutput {
 	return o.ApplyT(func(v GetHipObjectListDataDiskBackupCriteriaLastBackupTime) GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotAvailable {
 		return v.NotAvailable
@@ -2089,6 +3039,7 @@ func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeOutput) NotAvailable
 }
 
 // Not within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeOutput) NotWithin() GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithinOutput {
 	return o.ApplyT(func(v GetHipObjectListDataDiskBackupCriteriaLastBackupTime) GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithin {
@@ -2097,6 +3048,7 @@ func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeOutput) NotWithin() 
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
 func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeOutput) Within() GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithinOutput {
 	return o.ApplyT(func(v GetHipObjectListDataDiskBackupCriteriaLastBackupTime) GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithin {
@@ -2149,9 +3101,9 @@ func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotAvailableOutput) 
 
 type GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours int `pulumi:"hours"`
 }
@@ -2169,9 +3121,9 @@ type GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithinInput interfac
 
 type GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 }
@@ -2203,12 +3155,12 @@ func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithinOutput) ToG
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithinOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithin) int { return v.Hours }).(pulumi.IntOutput)
@@ -2216,9 +3168,9 @@ func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithinOutput) Hou
 
 type GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithin struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days int `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours int `pulumi:"hours"`
 }
@@ -2236,9 +3188,9 @@ type GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithinInput interface {
 
 type GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithinArgs struct {
 	// specify time in days
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify time in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 }
@@ -2270,12 +3222,12 @@ func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithinOutput) ToGetH
 }
 
 // specify time in days
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithinOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithin) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify time in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
 func (o GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithinOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithin) int { return v.Hours }).(pulumi.IntOutput)
@@ -2634,9 +3586,9 @@ func (o GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationArrayOutput) 
 
 type GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionState struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -2654,9 +3606,9 @@ type GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionStateI
 
 type GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -2688,12 +3640,12 @@ func (o GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionSta
 }
 
 // Is
-// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionState) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionState) string {
@@ -3214,12 +4166,13 @@ func (o GetHipObjectListDataHostInfoCriteriaOutput) SerialNumber() GetHipObjectL
 
 type GetHipObjectListDataHostInfoCriteriaClientVersion struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -3237,12 +4190,13 @@ type GetHipObjectListDataHostInfoCriteriaClientVersionInput interface {
 
 type GetHipObjectListDataHostInfoCriteriaClientVersionArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -3274,18 +4228,19 @@ func (o GetHipObjectListDataHostInfoCriteriaClientVersionOutput) ToGetHipObjectL
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaClientVersionOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaClientVersion) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaClientVersionOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaClientVersion) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaClientVersionOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaClientVersion) string { return v.IsNot }).(pulumi.StringOutput)
@@ -3293,12 +4248,13 @@ func (o GetHipObjectListDataHostInfoCriteriaClientVersionOutput) IsNot() pulumi.
 
 type GetHipObjectListDataHostInfoCriteriaDomain struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -3316,12 +4272,13 @@ type GetHipObjectListDataHostInfoCriteriaDomainInput interface {
 
 type GetHipObjectListDataHostInfoCriteriaDomainArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -3353,18 +4310,19 @@ func (o GetHipObjectListDataHostInfoCriteriaDomainOutput) ToGetHipObjectListData
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaDomainOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaDomain) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaDomainOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaDomain) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaDomainOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaDomain) string { return v.IsNot }).(pulumi.StringOutput)
@@ -3372,12 +4330,13 @@ func (o GetHipObjectListDataHostInfoCriteriaDomainOutput) IsNot() pulumi.StringO
 
 type GetHipObjectListDataHostInfoCriteriaHostId struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -3395,12 +4354,13 @@ type GetHipObjectListDataHostInfoCriteriaHostIdInput interface {
 
 type GetHipObjectListDataHostInfoCriteriaHostIdArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -3432,18 +4392,19 @@ func (o GetHipObjectListDataHostInfoCriteriaHostIdOutput) ToGetHipObjectListData
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaHostIdOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaHostId) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaHostIdOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaHostId) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaHostIdOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaHostId) string { return v.IsNot }).(pulumi.StringOutput)
@@ -3451,12 +4412,13 @@ func (o GetHipObjectListDataHostInfoCriteriaHostIdOutput) IsNot() pulumi.StringO
 
 type GetHipObjectListDataHostInfoCriteriaHostName struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -3474,12 +4436,13 @@ type GetHipObjectListDataHostInfoCriteriaHostNameInput interface {
 
 type GetHipObjectListDataHostInfoCriteriaHostNameArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -3511,18 +4474,19 @@ func (o GetHipObjectListDataHostInfoCriteriaHostNameOutput) ToGetHipObjectListDa
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaHostNameOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaHostName) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaHostNameOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaHostName) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaHostNameOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaHostName) string { return v.IsNot }).(pulumi.StringOutput)
@@ -3672,12 +4636,13 @@ func (o GetHipObjectListDataHostInfoCriteriaOsContainsOutput) Other() pulumi.Str
 
 type GetHipObjectListDataHostInfoCriteriaSerialNumber struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -3695,12 +4660,13 @@ type GetHipObjectListDataHostInfoCriteriaSerialNumberInput interface {
 
 type GetHipObjectListDataHostInfoCriteriaSerialNumberArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -3732,18 +4698,19 @@ func (o GetHipObjectListDataHostInfoCriteriaSerialNumberOutput) ToGetHipObjectLi
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaSerialNumberOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaSerialNumber) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaSerialNumberOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaSerialNumber) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataHostInfoCriteriaSerialNumberOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataHostInfoCriteriaSerialNumber) string { return v.IsNot }).(pulumi.StringOutput)
@@ -4013,9 +4980,9 @@ func (o GetHipObjectListDataMobileDeviceCriteriaApplicationsOutput) Includes() G
 
 type GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalware struct {
 	// No
-	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	No GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareNo `pulumi:"no"`
 	// Yes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	Yes GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareYes `pulumi:"yes"`
 }
@@ -4033,9 +5000,9 @@ type GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareInput interfa
 
 type GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareArgs struct {
 	// No
-	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	No GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareNoInput `pulumi:"no"`
 	// Yes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	Yes GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareYesInput `pulumi:"yes"`
 }
@@ -4067,7 +5034,6 @@ func (o GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareOutput) To
 }
 
 // No
-// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 func (o GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareOutput) No() GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareNoOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalware) GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareNo {
 		return v.No
@@ -4075,6 +5041,7 @@ func (o GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareOutput) No
 }
 
 // Yes
+//
 // > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 func (o GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareOutput) Yes() GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareYesOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalware) GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalwareYes {
@@ -4413,12 +5380,13 @@ func (o GetHipObjectListDataMobileDeviceCriteriaApplicationsIncludeArrayOutput) 
 
 type GetHipObjectListDataMobileDeviceCriteriaImei struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -4436,12 +5404,13 @@ type GetHipObjectListDataMobileDeviceCriteriaImeiInput interface {
 
 type GetHipObjectListDataMobileDeviceCriteriaImeiArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -4473,18 +5442,19 @@ func (o GetHipObjectListDataMobileDeviceCriteriaImeiOutput) ToGetHipObjectListDa
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaImeiOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaImei) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaImeiOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaImei) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaImeiOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaImei) string { return v.IsNot }).(pulumi.StringOutput)
@@ -4492,9 +5462,9 @@ func (o GetHipObjectListDataMobileDeviceCriteriaImeiOutput) IsNot() pulumi.Strin
 
 type GetHipObjectListDataMobileDeviceCriteriaLastCheckinTime struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeWithin `pulumi:"within"`
 }
@@ -4512,9 +5482,9 @@ type GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeInput interface {
 
 type GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeArgs struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeNotWithinInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeWithinInput `pulumi:"within"`
 }
@@ -4546,7 +5516,6 @@ func (o GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeOutput) ToGetHipO
 }
 
 // Not within
-// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeOutput) NotWithin() GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeNotWithinOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaLastCheckinTime) GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeNotWithin {
 		return v.NotWithin
@@ -4554,6 +5523,7 @@ func (o GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeOutput) NotWithin
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeOutput) Within() GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeWithinOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaLastCheckinTime) GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeWithin {
@@ -4667,12 +5637,13 @@ func (o GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeWithinOutput) Day
 
 type GetHipObjectListDataMobileDeviceCriteriaModel struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -4690,12 +5661,13 @@ type GetHipObjectListDataMobileDeviceCriteriaModelInput interface {
 
 type GetHipObjectListDataMobileDeviceCriteriaModelArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -4727,18 +5699,19 @@ func (o GetHipObjectListDataMobileDeviceCriteriaModelOutput) ToGetHipObjectListD
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaModelOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaModel) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaModelOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaModel) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaModelOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaModel) string { return v.IsNot }).(pulumi.StringOutput)
@@ -4746,12 +5719,13 @@ func (o GetHipObjectListDataMobileDeviceCriteriaModelOutput) IsNot() pulumi.Stri
 
 type GetHipObjectListDataMobileDeviceCriteriaPhoneNumber struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -4769,12 +5743,13 @@ type GetHipObjectListDataMobileDeviceCriteriaPhoneNumberInput interface {
 
 type GetHipObjectListDataMobileDeviceCriteriaPhoneNumberArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -4806,18 +5781,19 @@ func (o GetHipObjectListDataMobileDeviceCriteriaPhoneNumberOutput) ToGetHipObjec
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaPhoneNumberOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaPhoneNumber) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaPhoneNumberOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaPhoneNumber) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaPhoneNumberOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaPhoneNumber) string { return v.IsNot }).(pulumi.StringOutput)
@@ -4825,12 +5801,13 @@ func (o GetHipObjectListDataMobileDeviceCriteriaPhoneNumberOutput) IsNot() pulum
 
 type GetHipObjectListDataMobileDeviceCriteriaTag struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -4848,12 +5825,13 @@ type GetHipObjectListDataMobileDeviceCriteriaTagInput interface {
 
 type GetHipObjectListDataMobileDeviceCriteriaTagArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -4885,18 +5863,19 @@ func (o GetHipObjectListDataMobileDeviceCriteriaTagOutput) ToGetHipObjectListDat
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaTagOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaTag) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaTagOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaTag) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectListDataMobileDeviceCriteriaTagOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListDataMobileDeviceCriteriaTag) string { return v.IsNot }).(pulumi.StringOutput)
@@ -5010,9 +5989,9 @@ func (o GetHipObjectListDataNetworkInfoCriteriaOutput) Network() GetHipObjectLis
 
 type GetHipObjectListDataNetworkInfoCriteriaNetwork struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is GetHipObjectListDataNetworkInfoCriteriaNetworkIs `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot `pulumi:"isNot"`
 }
@@ -5030,9 +6009,9 @@ type GetHipObjectListDataNetworkInfoCriteriaNetworkInput interface {
 
 type GetHipObjectListDataNetworkInfoCriteriaNetworkArgs struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is GetHipObjectListDataNetworkInfoCriteriaNetworkIsInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotInput `pulumi:"isNot"`
 }
@@ -5064,7 +6043,6 @@ func (o GetHipObjectListDataNetworkInfoCriteriaNetworkOutput) ToGetHipObjectList
 }
 
 // Is
-// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o GetHipObjectListDataNetworkInfoCriteriaNetworkOutput) Is() GetHipObjectListDataNetworkInfoCriteriaNetworkIsOutput {
 	return o.ApplyT(func(v GetHipObjectListDataNetworkInfoCriteriaNetwork) GetHipObjectListDataNetworkInfoCriteriaNetworkIs {
 		return v.Is
@@ -5072,6 +6050,7 @@ func (o GetHipObjectListDataNetworkInfoCriteriaNetworkOutput) Is() GetHipObjectL
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o GetHipObjectListDataNetworkInfoCriteriaNetworkOutput) IsNot() GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotOutput {
 	return o.ApplyT(func(v GetHipObjectListDataNetworkInfoCriteriaNetwork) GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
@@ -5081,12 +6060,13 @@ func (o GetHipObjectListDataNetworkInfoCriteriaNetworkOutput) IsNot() GetHipObje
 
 type GetHipObjectListDataNetworkInfoCriteriaNetworkIs struct {
 	// Mobile
-	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Mobile GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobile `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Unknown GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknown `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Wifi GetHipObjectListDataNetworkInfoCriteriaNetworkIsWifi `pulumi:"wifi"`
 }
@@ -5104,12 +6084,13 @@ type GetHipObjectListDataNetworkInfoCriteriaNetworkIsInput interface {
 
 type GetHipObjectListDataNetworkInfoCriteriaNetworkIsArgs struct {
 	// Mobile
-	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Mobile GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobileInput `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Unknown GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknownInput `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Wifi GetHipObjectListDataNetworkInfoCriteriaNetworkIsWifiInput `pulumi:"wifi"`
 }
@@ -5141,7 +6122,6 @@ func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsOutput) ToGetHipObjectLi
 }
 
 // Mobile
-// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsOutput) Mobile() GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobileOutput {
 	return o.ApplyT(func(v GetHipObjectListDataNetworkInfoCriteriaNetworkIs) GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobile {
 		return v.Mobile
@@ -5149,6 +6129,7 @@ func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsOutput) Mobile() GetHipO
 }
 
 // Unknown
+//
 // > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsOutput) Unknown() GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknownOutput {
 	return o.ApplyT(func(v GetHipObjectListDataNetworkInfoCriteriaNetworkIs) GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknown {
@@ -5157,6 +6138,7 @@ func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsOutput) Unknown() GetHip
 }
 
 // Wifi
+//
 // > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsOutput) Wifi() GetHipObjectListDataNetworkInfoCriteriaNetworkIsWifiOutput {
 	return o.ApplyT(func(v GetHipObjectListDataNetworkInfoCriteriaNetworkIs) GetHipObjectListDataNetworkInfoCriteriaNetworkIsWifi {
@@ -5218,15 +6200,17 @@ func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobileOutput) Carrier() 
 
 type GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot struct {
 	// Ethernet
-	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Ethernet GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernet `pulumi:"ethernet"`
 	// Mobile
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Mobile GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobile `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Unknown GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknown `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Wifi GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifi `pulumi:"wifi"`
 }
@@ -5244,15 +6228,17 @@ type GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotInput interface {
 
 type GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotArgs struct {
 	// Ethernet
-	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Ethernet GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernetInput `pulumi:"ethernet"`
 	// Mobile
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Mobile GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobileInput `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Unknown GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknownInput `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Wifi GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifiInput `pulumi:"wifi"`
 }
@@ -5284,7 +6270,6 @@ func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotOutput) ToGetHipObjec
 }
 
 // Ethernet
-// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotOutput) Ethernet() GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernetOutput {
 	return o.ApplyT(func(v GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot) GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernet {
 		return v.Ethernet
@@ -5292,6 +6277,7 @@ func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotOutput) Ethernet() Ge
 }
 
 // Mobile
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotOutput) Mobile() GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobileOutput {
 	return o.ApplyT(func(v GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot) GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobile {
@@ -5300,6 +6286,7 @@ func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotOutput) Mobile() GetH
 }
 
 // Unknown
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotOutput) Unknown() GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknownOutput {
 	return o.ApplyT(func(v GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot) GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknown {
@@ -5308,6 +6295,7 @@ func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotOutput) Unknown() Get
 }
 
 // Wifi
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotOutput) Wifi() GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifiOutput {
 	return o.ApplyT(func(v GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot) GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifi {
@@ -5820,21 +6808,25 @@ func (o GetHipObjectListDataPatchManagementCriteriaMissingPatchesOutput) Severit
 
 type GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverity struct {
 	// Greater equal
-	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterEqual int `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterThan int `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	Is int `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	IsNot int `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessEqual int `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessThan int `pulumi:"lessThan"`
 }
@@ -5852,21 +6844,25 @@ type GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverityInput inte
 
 type GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverityArgs struct {
 	// Greater equal
-	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterEqual pulumi.IntInput `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterThan pulumi.IntInput `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	Is pulumi.IntInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	IsNot pulumi.IntInput `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessEqual pulumi.IntInput `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessThan pulumi.IntInput `pulumi:"lessThan"`
 }
@@ -5898,36 +6894,40 @@ func (o GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverityOutput)
 }
 
 // Greater equal
-// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverityOutput) GreaterEqual() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverity) int { return v.GreaterEqual }).(pulumi.IntOutput)
 }
 
 // Greater than
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverityOutput) GreaterThan() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverity) int { return v.GreaterThan }).(pulumi.IntOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverityOutput) Is() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverity) int { return v.Is }).(pulumi.IntOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverityOutput) IsNot() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverity) int { return v.IsNot }).(pulumi.IntOutput)
 }
 
 // Less equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverityOutput) LessEqual() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverity) int { return v.LessEqual }).(pulumi.IntOutput)
 }
 
 // Less than
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverityOutput) LessThan() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverity) int { return v.LessThan }).(pulumi.IntOutput)
@@ -6297,9 +7297,9 @@ func (o GetHipObjectMobileDeviceCriteriaApplicationsOutput) Includes() GetHipObj
 
 type GetHipObjectMobileDeviceCriteriaApplicationsHasMalware struct {
 	// No
-	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	No GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareNo `pulumi:"no"`
 	// Yes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	Yes GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareYes `pulumi:"yes"`
 }
@@ -6317,9 +7317,9 @@ type GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareInput interface {
 
 type GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs struct {
 	// No
-	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	No GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareNoInput `pulumi:"no"`
 	// Yes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	Yes GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareYesInput `pulumi:"yes"`
 }
@@ -6351,7 +7351,6 @@ func (o GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareOutput) ToGetHipOb
 }
 
 // No
-// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 func (o GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareOutput) No() GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareNoOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaApplicationsHasMalware) GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareNo {
 		return v.No
@@ -6359,6 +7358,7 @@ func (o GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareOutput) No() GetHi
 }
 
 // Yes
+//
 // > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 func (o GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareOutput) Yes() GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareYesOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaApplicationsHasMalware) GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareYes {
@@ -6695,12 +7695,13 @@ func (o GetHipObjectMobileDeviceCriteriaApplicationsIncludeArrayOutput) Index(i 
 
 type GetHipObjectMobileDeviceCriteriaImei struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -6718,12 +7719,13 @@ type GetHipObjectMobileDeviceCriteriaImeiInput interface {
 
 type GetHipObjectMobileDeviceCriteriaImeiArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -6755,18 +7757,19 @@ func (o GetHipObjectMobileDeviceCriteriaImeiOutput) ToGetHipObjectMobileDeviceCr
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaImeiOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaImei) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaImeiOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaImei) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaImeiOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaImei) string { return v.IsNot }).(pulumi.StringOutput)
@@ -6774,9 +7777,9 @@ func (o GetHipObjectMobileDeviceCriteriaImeiOutput) IsNot() pulumi.StringOutput 
 
 type GetHipObjectMobileDeviceCriteriaLastCheckinTime struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin GetHipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within GetHipObjectMobileDeviceCriteriaLastCheckinTimeWithin `pulumi:"within"`
 }
@@ -6794,9 +7797,9 @@ type GetHipObjectMobileDeviceCriteriaLastCheckinTimeInput interface {
 
 type GetHipObjectMobileDeviceCriteriaLastCheckinTimeArgs struct {
 	// Not within
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	NotWithin GetHipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinInput `pulumi:"notWithin"`
 	// Within
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 	Within GetHipObjectMobileDeviceCriteriaLastCheckinTimeWithinInput `pulumi:"within"`
 }
@@ -6828,7 +7831,6 @@ func (o GetHipObjectMobileDeviceCriteriaLastCheckinTimeOutput) ToGetHipObjectMob
 }
 
 // Not within
-// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o GetHipObjectMobileDeviceCriteriaLastCheckinTimeOutput) NotWithin() GetHipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaLastCheckinTime) GetHipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin {
 		return v.NotWithin
@@ -6836,6 +7838,7 @@ func (o GetHipObjectMobileDeviceCriteriaLastCheckinTimeOutput) NotWithin() GetHi
 }
 
 // Within
+//
 // > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
 func (o GetHipObjectMobileDeviceCriteriaLastCheckinTimeOutput) Within() GetHipObjectMobileDeviceCriteriaLastCheckinTimeWithinOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaLastCheckinTime) GetHipObjectMobileDeviceCriteriaLastCheckinTimeWithin {
@@ -6949,12 +7952,13 @@ func (o GetHipObjectMobileDeviceCriteriaLastCheckinTimeWithinOutput) Days() pulu
 
 type GetHipObjectMobileDeviceCriteriaModel struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -6972,12 +7976,13 @@ type GetHipObjectMobileDeviceCriteriaModelInput interface {
 
 type GetHipObjectMobileDeviceCriteriaModelArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -7009,18 +8014,19 @@ func (o GetHipObjectMobileDeviceCriteriaModelOutput) ToGetHipObjectMobileDeviceC
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaModelOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaModel) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaModelOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaModel) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaModelOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaModel) string { return v.IsNot }).(pulumi.StringOutput)
@@ -7028,12 +8034,13 @@ func (o GetHipObjectMobileDeviceCriteriaModelOutput) IsNot() pulumi.StringOutput
 
 type GetHipObjectMobileDeviceCriteriaPhoneNumber struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -7051,12 +8058,13 @@ type GetHipObjectMobileDeviceCriteriaPhoneNumberInput interface {
 
 type GetHipObjectMobileDeviceCriteriaPhoneNumberArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -7088,18 +8096,19 @@ func (o GetHipObjectMobileDeviceCriteriaPhoneNumberOutput) ToGetHipObjectMobileD
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaPhoneNumberOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaPhoneNumber) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaPhoneNumberOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaPhoneNumber) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaPhoneNumberOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaPhoneNumber) string { return v.IsNot }).(pulumi.StringOutput)
@@ -7107,12 +8116,13 @@ func (o GetHipObjectMobileDeviceCriteriaPhoneNumberOutput) IsNot() pulumi.String
 
 type GetHipObjectMobileDeviceCriteriaTag struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains string `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is string `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot string `pulumi:"isNot"`
 }
@@ -7130,12 +8140,13 @@ type GetHipObjectMobileDeviceCriteriaTagInput interface {
 
 type GetHipObjectMobileDeviceCriteriaTagArgs struct {
 	// Contains
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Contains pulumi.StringInput `pulumi:"contains"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	Is pulumi.StringInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 	IsNot pulumi.StringInput `pulumi:"isNot"`
 }
@@ -7167,18 +8178,19 @@ func (o GetHipObjectMobileDeviceCriteriaTagOutput) ToGetHipObjectMobileDeviceCri
 }
 
 // Contains
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaTagOutput) Contains() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaTag) string { return v.Contains }).(pulumi.StringOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaTagOutput) Is() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaTag) string { return v.Is }).(pulumi.StringOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
 func (o GetHipObjectMobileDeviceCriteriaTagOutput) IsNot() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectMobileDeviceCriteriaTag) string { return v.IsNot }).(pulumi.StringOutput)
@@ -7290,9 +8302,9 @@ func (o GetHipObjectNetworkInfoCriteriaOutput) Network() GetHipObjectNetworkInfo
 
 type GetHipObjectNetworkInfoCriteriaNetwork struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is GetHipObjectNetworkInfoCriteriaNetworkIs `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot GetHipObjectNetworkInfoCriteriaNetworkIsNot `pulumi:"isNot"`
 }
@@ -7310,9 +8322,9 @@ type GetHipObjectNetworkInfoCriteriaNetworkInput interface {
 
 type GetHipObjectNetworkInfoCriteriaNetworkArgs struct {
 	// Is
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	Is GetHipObjectNetworkInfoCriteriaNetworkIsInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 	IsNot GetHipObjectNetworkInfoCriteriaNetworkIsNotInput `pulumi:"isNot"`
 }
@@ -7344,12 +8356,12 @@ func (o GetHipObjectNetworkInfoCriteriaNetworkOutput) ToGetHipObjectNetworkInfoC
 }
 
 // Is
-// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o GetHipObjectNetworkInfoCriteriaNetworkOutput) Is() GetHipObjectNetworkInfoCriteriaNetworkIsOutput {
 	return o.ApplyT(func(v GetHipObjectNetworkInfoCriteriaNetwork) GetHipObjectNetworkInfoCriteriaNetworkIs { return v.Is }).(GetHipObjectNetworkInfoCriteriaNetworkIsOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
 func (o GetHipObjectNetworkInfoCriteriaNetworkOutput) IsNot() GetHipObjectNetworkInfoCriteriaNetworkIsNotOutput {
 	return o.ApplyT(func(v GetHipObjectNetworkInfoCriteriaNetwork) GetHipObjectNetworkInfoCriteriaNetworkIsNot {
@@ -7359,12 +8371,13 @@ func (o GetHipObjectNetworkInfoCriteriaNetworkOutput) IsNot() GetHipObjectNetwor
 
 type GetHipObjectNetworkInfoCriteriaNetworkIs struct {
 	// Mobile
-	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Mobile GetHipObjectNetworkInfoCriteriaNetworkIsMobile `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Unknown GetHipObjectNetworkInfoCriteriaNetworkIsUnknown `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Wifi GetHipObjectNetworkInfoCriteriaNetworkIsWifi `pulumi:"wifi"`
 }
@@ -7382,12 +8395,13 @@ type GetHipObjectNetworkInfoCriteriaNetworkIsInput interface {
 
 type GetHipObjectNetworkInfoCriteriaNetworkIsArgs struct {
 	// Mobile
-	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Mobile GetHipObjectNetworkInfoCriteriaNetworkIsMobileInput `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Unknown GetHipObjectNetworkInfoCriteriaNetworkIsUnknownInput `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 	Wifi GetHipObjectNetworkInfoCriteriaNetworkIsWifiInput `pulumi:"wifi"`
 }
@@ -7419,7 +8433,6 @@ func (o GetHipObjectNetworkInfoCriteriaNetworkIsOutput) ToGetHipObjectNetworkInf
 }
 
 // Mobile
-// > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectNetworkInfoCriteriaNetworkIsOutput) Mobile() GetHipObjectNetworkInfoCriteriaNetworkIsMobileOutput {
 	return o.ApplyT(func(v GetHipObjectNetworkInfoCriteriaNetworkIs) GetHipObjectNetworkInfoCriteriaNetworkIsMobile {
 		return v.Mobile
@@ -7427,6 +8440,7 @@ func (o GetHipObjectNetworkInfoCriteriaNetworkIsOutput) Mobile() GetHipObjectNet
 }
 
 // Unknown
+//
 // > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectNetworkInfoCriteriaNetworkIsOutput) Unknown() GetHipObjectNetworkInfoCriteriaNetworkIsUnknownOutput {
 	return o.ApplyT(func(v GetHipObjectNetworkInfoCriteriaNetworkIs) GetHipObjectNetworkInfoCriteriaNetworkIsUnknown {
@@ -7435,6 +8449,7 @@ func (o GetHipObjectNetworkInfoCriteriaNetworkIsOutput) Unknown() GetHipObjectNe
 }
 
 // Wifi
+//
 // > ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectNetworkInfoCriteriaNetworkIsOutput) Wifi() GetHipObjectNetworkInfoCriteriaNetworkIsWifiOutput {
 	return o.ApplyT(func(v GetHipObjectNetworkInfoCriteriaNetworkIs) GetHipObjectNetworkInfoCriteriaNetworkIsWifi {
@@ -7496,15 +8511,17 @@ func (o GetHipObjectNetworkInfoCriteriaNetworkIsMobileOutput) Carrier() pulumi.S
 
 type GetHipObjectNetworkInfoCriteriaNetworkIsNot struct {
 	// Ethernet
-	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Ethernet GetHipObjectNetworkInfoCriteriaNetworkIsNotEthernet `pulumi:"ethernet"`
 	// Mobile
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Mobile GetHipObjectNetworkInfoCriteriaNetworkIsNotMobile `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Unknown GetHipObjectNetworkInfoCriteriaNetworkIsNotUnknown `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Wifi GetHipObjectNetworkInfoCriteriaNetworkIsNotWifi `pulumi:"wifi"`
 }
@@ -7522,15 +8539,17 @@ type GetHipObjectNetworkInfoCriteriaNetworkIsNotInput interface {
 
 type GetHipObjectNetworkInfoCriteriaNetworkIsNotArgs struct {
 	// Ethernet
-	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Ethernet GetHipObjectNetworkInfoCriteriaNetworkIsNotEthernetInput `pulumi:"ethernet"`
 	// Mobile
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Mobile GetHipObjectNetworkInfoCriteriaNetworkIsNotMobileInput `pulumi:"mobile"`
 	// Unknown
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Unknown GetHipObjectNetworkInfoCriteriaNetworkIsNotUnknownInput `pulumi:"unknown"`
 	// Wifi
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 	Wifi GetHipObjectNetworkInfoCriteriaNetworkIsNotWifiInput `pulumi:"wifi"`
 }
@@ -7562,7 +8581,6 @@ func (o GetHipObjectNetworkInfoCriteriaNetworkIsNotOutput) ToGetHipObjectNetwork
 }
 
 // Ethernet
-// > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectNetworkInfoCriteriaNetworkIsNotOutput) Ethernet() GetHipObjectNetworkInfoCriteriaNetworkIsNotEthernetOutput {
 	return o.ApplyT(func(v GetHipObjectNetworkInfoCriteriaNetworkIsNot) GetHipObjectNetworkInfoCriteriaNetworkIsNotEthernet {
 		return v.Ethernet
@@ -7570,6 +8588,7 @@ func (o GetHipObjectNetworkInfoCriteriaNetworkIsNotOutput) Ethernet() GetHipObje
 }
 
 // Mobile
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectNetworkInfoCriteriaNetworkIsNotOutput) Mobile() GetHipObjectNetworkInfoCriteriaNetworkIsNotMobileOutput {
 	return o.ApplyT(func(v GetHipObjectNetworkInfoCriteriaNetworkIsNot) GetHipObjectNetworkInfoCriteriaNetworkIsNotMobile {
@@ -7578,6 +8597,7 @@ func (o GetHipObjectNetworkInfoCriteriaNetworkIsNotOutput) Mobile() GetHipObject
 }
 
 // Unknown
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectNetworkInfoCriteriaNetworkIsNotOutput) Unknown() GetHipObjectNetworkInfoCriteriaNetworkIsNotUnknownOutput {
 	return o.ApplyT(func(v GetHipObjectNetworkInfoCriteriaNetworkIsNot) GetHipObjectNetworkInfoCriteriaNetworkIsNotUnknown {
@@ -7586,6 +8606,7 @@ func (o GetHipObjectNetworkInfoCriteriaNetworkIsNotOutput) Unknown() GetHipObjec
 }
 
 // Wifi
+//
 // > ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
 func (o GetHipObjectNetworkInfoCriteriaNetworkIsNotOutput) Wifi() GetHipObjectNetworkInfoCriteriaNetworkIsNotWifiOutput {
 	return o.ApplyT(func(v GetHipObjectNetworkInfoCriteriaNetworkIsNot) GetHipObjectNetworkInfoCriteriaNetworkIsNotWifi {
@@ -8094,21 +9115,25 @@ func (o GetHipObjectPatchManagementCriteriaMissingPatchesOutput) Severity() GetH
 
 type GetHipObjectPatchManagementCriteriaMissingPatchesSeverity struct {
 	// Greater equal
-	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterEqual int `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterThan int `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	Is int `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	IsNot int `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessEqual int `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessThan int `pulumi:"lessThan"`
 }
@@ -8126,21 +9151,25 @@ type GetHipObjectPatchManagementCriteriaMissingPatchesSeverityInput interface {
 
 type GetHipObjectPatchManagementCriteriaMissingPatchesSeverityArgs struct {
 	// Greater equal
-	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterEqual pulumi.IntInput `pulumi:"greaterEqual"`
 	// Greater than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	GreaterThan pulumi.IntInput `pulumi:"greaterThan"`
 	// Is
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	Is pulumi.IntInput `pulumi:"is"`
 	// Is not
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	IsNot pulumi.IntInput `pulumi:"isNot"`
 	// Less equal
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessEqual pulumi.IntInput `pulumi:"lessEqual"`
 	// Less than
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 	LessThan pulumi.IntInput `pulumi:"lessThan"`
 }
@@ -8172,36 +9201,40 @@ func (o GetHipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) ToGetHi
 }
 
 // Greater equal
-// > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) GreaterEqual() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectPatchManagementCriteriaMissingPatchesSeverity) int { return v.GreaterEqual }).(pulumi.IntOutput)
 }
 
 // Greater than
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) GreaterThan() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectPatchManagementCriteriaMissingPatchesSeverity) int { return v.GreaterThan }).(pulumi.IntOutput)
 }
 
 // Is
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) Is() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectPatchManagementCriteriaMissingPatchesSeverity) int { return v.Is }).(pulumi.IntOutput)
 }
 
 // Is not
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) IsNot() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectPatchManagementCriteriaMissingPatchesSeverity) int { return v.IsNot }).(pulumi.IntOutput)
 }
 
 // Less equal
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) LessEqual() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectPatchManagementCriteriaMissingPatchesSeverity) int { return v.LessEqual }).(pulumi.IntOutput)
 }
 
 // Less than
+//
 // > ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
 func (o GetHipObjectPatchManagementCriteriaMissingPatchesSeverityOutput) LessThan() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectPatchManagementCriteriaMissingPatchesSeverity) int { return v.LessThan }).(pulumi.IntOutput)
@@ -8317,19 +9350,16 @@ type GetHipProfileListData struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Match
 	Match string `pulumi:"match"`
-	// The name of the HIP profile
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -8349,19 +9379,16 @@ type GetHipProfileListDataArgs struct {
 	// Description
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Match
 	Match pulumi.StringInput `pulumi:"match"`
-	// The name of the HIP profile
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -8423,13 +9450,11 @@ func (o GetHipProfileListDataOutput) Description() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetHipProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetHipProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -8444,13 +9469,12 @@ func (o GetHipProfileListDataOutput) Match() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipProfileListData) string { return v.Match }).(pulumi.StringOutput)
 }
 
-// The name of the HIP profile
+// The name of the item.
 func (o GetHipProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetHipProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -8832,19 +9856,16 @@ type GetHttpHeaderProfileListData struct {
 	// The description of the HTTP header profile
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// A list of HTTP header profile rules
 	HttpHeaderInsertions []GetHttpHeaderProfileListDataHttpHeaderInsertion `pulumi:"httpHeaderInsertions"`
 	// The UUID of the HTTP header profile
 	Id string `pulumi:"id"`
-	// The name of the HTTP header profile
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -8864,19 +9885,16 @@ type GetHttpHeaderProfileListDataArgs struct {
 	// The description of the HTTP header profile
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// A list of HTTP header profile rules
 	HttpHeaderInsertions GetHttpHeaderProfileListDataHttpHeaderInsertionArrayInput `pulumi:"httpHeaderInsertions"`
 	// The UUID of the HTTP header profile
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the HTTP header profile
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -8938,13 +9956,11 @@ func (o GetHttpHeaderProfileListDataOutput) Description() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetHttpHeaderProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHttpHeaderProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetHttpHeaderProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHttpHeaderProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -8961,13 +9977,12 @@ func (o GetHttpHeaderProfileListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHttpHeaderProfileListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the HTTP header profile
+// The name of the item.
 func (o GetHttpHeaderProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHttpHeaderProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetHttpHeaderProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHttpHeaderProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -14659,21 +15674,18 @@ func (o GetHttpServerProfileFormatWildfireParamArrayOutput) Index(i pulumi.IntIn
 
 type GetHttpServerProfileListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// Format
 	Format GetHttpServerProfileListDataFormat `pulumi:"format"`
 	// The UUID of the HTTP server profile
 	Id string `pulumi:"id"`
-	// The name of the profile
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Server
 	Servers []GetHttpServerProfileListDataServer `pulumi:"servers"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	// Register tags on match
 	TagRegistration bool   `pulumi:"tagRegistration"`
@@ -14693,21 +15705,18 @@ type GetHttpServerProfileListDataInput interface {
 
 type GetHttpServerProfileListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// Format
 	Format GetHttpServerProfileListDataFormatInput `pulumi:"format"`
 	// The UUID of the HTTP server profile
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the profile
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Server
 	Servers GetHttpServerProfileListDataServerArrayInput `pulumi:"servers"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// Register tags on match
 	TagRegistration pulumi.BoolInput   `pulumi:"tagRegistration"`
@@ -14766,13 +15775,11 @@ func (o GetHttpServerProfileListDataOutput) ToGetHttpServerProfileListDataOutput
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetHttpServerProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHttpServerProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetHttpServerProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHttpServerProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -14787,7 +15794,7 @@ func (o GetHttpServerProfileListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHttpServerProfileListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the profile
+// The name of the item.
 func (o GetHttpServerProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHttpServerProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -14797,8 +15804,7 @@ func (o GetHttpServerProfileListDataOutput) Servers() GetHttpServerProfileListDa
 	return o.ApplyT(func(v GetHttpServerProfileListData) []GetHttpServerProfileListDataServer { return v.Servers }).(GetHttpServerProfileListDataServerArrayOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetHttpServerProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHttpServerProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -20510,15 +21516,17 @@ func (o GetHttpServerProfileServerArrayOutput) Index(i pulumi.IntInput) GetHttpS
 
 type GetIkeCryptoProfileLifetime struct {
 	// specify lifetime in days
-	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Days int `pulumi:"days"`
 	// specify lifetime in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Hours int `pulumi:"hours"`
 	// specify lifetime in minutes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Minutes int `pulumi:"minutes"`
 	// specify lifetime in seconds
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Seconds int `pulumi:"seconds"`
 }
@@ -20536,15 +21544,17 @@ type GetIkeCryptoProfileLifetimeInput interface {
 
 type GetIkeCryptoProfileLifetimeArgs struct {
 	// specify lifetime in days
-	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify lifetime in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 	// specify lifetime in minutes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Minutes pulumi.IntInput `pulumi:"minutes"`
 	// specify lifetime in seconds
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Seconds pulumi.IntInput `pulumi:"seconds"`
 }
@@ -20576,24 +21586,26 @@ func (o GetIkeCryptoProfileLifetimeOutput) ToGetIkeCryptoProfileLifetimeOutputWi
 }
 
 // specify lifetime in days
-// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIkeCryptoProfileLifetimeOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileLifetime) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify lifetime in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIkeCryptoProfileLifetimeOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileLifetime) int { return v.Hours }).(pulumi.IntOutput)
 }
 
 // specify lifetime in minutes
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIkeCryptoProfileLifetimeOutput) Minutes() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileLifetime) int { return v.Minutes }).(pulumi.IntOutput)
 }
 
 // specify lifetime in seconds
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIkeCryptoProfileLifetimeOutput) Seconds() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileLifetime) int { return v.Seconds }).(pulumi.IntOutput)
@@ -20603,14 +21615,12 @@ type GetIkeCryptoProfileListData struct {
 	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple int `pulumi:"authenticationMultiple"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Dh group
 	DhGroups []string `pulumi:"dhGroups"`
 	// Encryption algorithm
 	Encryptions []string `pulumi:"encryptions"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// Hash
 	Hashes []string `pulumi:"hashes"`
@@ -20618,10 +21628,9 @@ type GetIkeCryptoProfileListData struct {
 	Id string `pulumi:"id"`
 	// Ike crypto profile lifetime
 	Lifetime GetIkeCryptoProfileListDataLifetime `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -20641,14 +21650,12 @@ type GetIkeCryptoProfileListDataArgs struct {
 	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple pulumi.IntInput `pulumi:"authenticationMultiple"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Dh group
 	DhGroups pulumi.StringArrayInput `pulumi:"dhGroups"`
 	// Encryption algorithm
 	Encryptions pulumi.StringArrayInput `pulumi:"encryptions"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// Hash
 	Hashes pulumi.StringArrayInput `pulumi:"hashes"`
@@ -20656,10 +21663,9 @@ type GetIkeCryptoProfileListDataArgs struct {
 	Id pulumi.StringInput `pulumi:"id"`
 	// Ike crypto profile lifetime
 	Lifetime GetIkeCryptoProfileListDataLifetimeInput `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -20721,7 +21727,6 @@ func (o GetIkeCryptoProfileListDataOutput) AuthenticationMultiple() pulumi.IntOu
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetIkeCryptoProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -20736,8 +21741,7 @@ func (o GetIkeCryptoProfileListDataOutput) Encryptions() pulumi.StringArrayOutpu
 	return o.ApplyT(func(v GetIkeCryptoProfileListData) []string { return v.Encryptions }).(pulumi.StringArrayOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetIkeCryptoProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -20757,13 +21761,12 @@ func (o GetIkeCryptoProfileListDataOutput) Lifetime() GetIkeCryptoProfileListDat
 	return o.ApplyT(func(v GetIkeCryptoProfileListData) GetIkeCryptoProfileListDataLifetime { return v.Lifetime }).(GetIkeCryptoProfileListDataLifetimeOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+// The name of the item.
 func (o GetIkeCryptoProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetIkeCryptoProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -20794,15 +21797,17 @@ func (o GetIkeCryptoProfileListDataArrayOutput) Index(i pulumi.IntInput) GetIkeC
 
 type GetIkeCryptoProfileListDataLifetime struct {
 	// specify lifetime in days
-	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Days int `pulumi:"days"`
 	// specify lifetime in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Hours int `pulumi:"hours"`
 	// specify lifetime in minutes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Minutes int `pulumi:"minutes"`
 	// specify lifetime in seconds
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Seconds int `pulumi:"seconds"`
 }
@@ -20820,15 +21825,17 @@ type GetIkeCryptoProfileListDataLifetimeInput interface {
 
 type GetIkeCryptoProfileListDataLifetimeArgs struct {
 	// specify lifetime in days
-	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify lifetime in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 	// specify lifetime in minutes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Minutes pulumi.IntInput `pulumi:"minutes"`
 	// specify lifetime in seconds
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Seconds pulumi.IntInput `pulumi:"seconds"`
 }
@@ -20860,24 +21867,26 @@ func (o GetIkeCryptoProfileListDataLifetimeOutput) ToGetIkeCryptoProfileListData
 }
 
 // specify lifetime in days
-// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIkeCryptoProfileListDataLifetimeOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileListDataLifetime) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify lifetime in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIkeCryptoProfileListDataLifetimeOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileListDataLifetime) int { return v.Hours }).(pulumi.IntOutput)
 }
 
 // specify lifetime in minutes
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIkeCryptoProfileListDataLifetimeOutput) Minutes() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileListDataLifetime) int { return v.Minutes }).(pulumi.IntOutput)
 }
 
 // specify lifetime in seconds
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIkeCryptoProfileListDataLifetimeOutput) Seconds() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIkeCryptoProfileListDataLifetime) int { return v.Seconds }).(pulumi.IntOutput)
@@ -20885,9 +21894,9 @@ func (o GetIkeCryptoProfileListDataLifetimeOutput) Seconds() pulumi.IntOutput {
 
 type GetIkeGatewayAuthentication struct {
 	// Certificate
-	// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 	Certificate GetIkeGatewayAuthenticationCertificate `pulumi:"certificate"`
 	// Pre shared key
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 	PreSharedKey GetIkeGatewayAuthenticationPreSharedKey `pulumi:"preSharedKey"`
 }
@@ -20905,9 +21914,9 @@ type GetIkeGatewayAuthenticationInput interface {
 
 type GetIkeGatewayAuthenticationArgs struct {
 	// Certificate
-	// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 	Certificate GetIkeGatewayAuthenticationCertificateInput `pulumi:"certificate"`
 	// Pre shared key
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 	PreSharedKey GetIkeGatewayAuthenticationPreSharedKeyInput `pulumi:"preSharedKey"`
 }
@@ -20939,12 +21948,12 @@ func (o GetIkeGatewayAuthenticationOutput) ToGetIkeGatewayAuthenticationOutputWi
 }
 
 // Certificate
-// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 func (o GetIkeGatewayAuthenticationOutput) Certificate() GetIkeGatewayAuthenticationCertificateOutput {
 	return o.ApplyT(func(v GetIkeGatewayAuthentication) GetIkeGatewayAuthenticationCertificate { return v.Certificate }).(GetIkeGatewayAuthenticationCertificateOutput)
 }
 
 // Pre shared key
+//
 // > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 func (o GetIkeGatewayAuthenticationOutput) PreSharedKey() GetIkeGatewayAuthenticationPreSharedKeyOutput {
 	return o.ApplyT(func(v GetIkeGatewayAuthentication) GetIkeGatewayAuthenticationPreSharedKey { return v.PreSharedKey }).(GetIkeGatewayAuthenticationPreSharedKeyOutput)
@@ -21148,12 +22157,10 @@ type GetIkeGatewayListData struct {
 	// Authentication
 	Authentication GetIkeGatewayListDataAuthentication `pulumi:"authentication"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
@@ -21161,7 +22168,7 @@ type GetIkeGatewayListData struct {
 	LocalAddress GetIkeGatewayListDataLocalAddress `pulumi:"localAddress"`
 	// Local id
 	LocalId GetIkeGatewayListDataLocalId `pulumi:"localId"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Peer address
 	PeerAddress GetIkeGatewayListDataPeerAddress `pulumi:"peerAddress"`
@@ -21171,8 +22178,7 @@ type GetIkeGatewayListData struct {
 	Protocol GetIkeGatewayListDataProtocol `pulumi:"protocol"`
 	// Protocol common
 	ProtocolCommon GetIkeGatewayListDataProtocolCommon `pulumi:"protocolCommon"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -21192,12 +22198,10 @@ type GetIkeGatewayListDataArgs struct {
 	// Authentication
 	Authentication GetIkeGatewayListDataAuthenticationInput `pulumi:"authentication"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
@@ -21205,7 +22209,7 @@ type GetIkeGatewayListDataArgs struct {
 	LocalAddress GetIkeGatewayListDataLocalAddressInput `pulumi:"localAddress"`
 	// Local id
 	LocalId GetIkeGatewayListDataLocalIdInput `pulumi:"localId"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Peer address
 	PeerAddress GetIkeGatewayListDataPeerAddressInput `pulumi:"peerAddress"`
@@ -21215,8 +22219,7 @@ type GetIkeGatewayListDataArgs struct {
 	Protocol GetIkeGatewayListDataProtocolInput `pulumi:"protocol"`
 	// Protocol common
 	ProtocolCommon GetIkeGatewayListDataProtocolCommonInput `pulumi:"protocolCommon"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -21278,7 +22281,6 @@ func (o GetIkeGatewayListDataOutput) Authentication() GetIkeGatewayListDataAuthe
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetIkeGatewayListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -21288,8 +22290,7 @@ func (o GetIkeGatewayListDataOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v GetIkeGatewayListData) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetIkeGatewayListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -21309,7 +22310,7 @@ func (o GetIkeGatewayListDataOutput) LocalId() GetIkeGatewayListDataLocalIdOutpu
 	return o.ApplyT(func(v GetIkeGatewayListData) GetIkeGatewayListDataLocalId { return v.LocalId }).(GetIkeGatewayListDataLocalIdOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+// The name of the item.
 func (o GetIkeGatewayListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -21334,8 +22335,7 @@ func (o GetIkeGatewayListDataOutput) ProtocolCommon() GetIkeGatewayListDataProto
 	return o.ApplyT(func(v GetIkeGatewayListData) GetIkeGatewayListDataProtocolCommon { return v.ProtocolCommon }).(GetIkeGatewayListDataProtocolCommonOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetIkeGatewayListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -21366,9 +22366,9 @@ func (o GetIkeGatewayListDataArrayOutput) Index(i pulumi.IntInput) GetIkeGateway
 
 type GetIkeGatewayListDataAuthentication struct {
 	// Certificate
-	// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 	Certificate GetIkeGatewayListDataAuthenticationCertificate `pulumi:"certificate"`
 	// Pre shared key
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 	PreSharedKey GetIkeGatewayListDataAuthenticationPreSharedKey `pulumi:"preSharedKey"`
 }
@@ -21386,9 +22386,9 @@ type GetIkeGatewayListDataAuthenticationInput interface {
 
 type GetIkeGatewayListDataAuthenticationArgs struct {
 	// Certificate
-	// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 	Certificate GetIkeGatewayListDataAuthenticationCertificateInput `pulumi:"certificate"`
 	// Pre shared key
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 	PreSharedKey GetIkeGatewayListDataAuthenticationPreSharedKeyInput `pulumi:"preSharedKey"`
 }
@@ -21420,7 +22420,6 @@ func (o GetIkeGatewayListDataAuthenticationOutput) ToGetIkeGatewayListDataAuthen
 }
 
 // Certificate
-// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 func (o GetIkeGatewayListDataAuthenticationOutput) Certificate() GetIkeGatewayListDataAuthenticationCertificateOutput {
 	return o.ApplyT(func(v GetIkeGatewayListDataAuthentication) GetIkeGatewayListDataAuthenticationCertificate {
 		return v.Certificate
@@ -21428,6 +22427,7 @@ func (o GetIkeGatewayListDataAuthenticationOutput) Certificate() GetIkeGatewayLi
 }
 
 // Pre shared key
+//
 // > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
 func (o GetIkeGatewayListDataAuthenticationOutput) PreSharedKey() GetIkeGatewayListDataAuthenticationPreSharedKeyOutput {
 	return o.ApplyT(func(v GetIkeGatewayListDataAuthentication) GetIkeGatewayListDataAuthenticationPreSharedKey {
@@ -21746,12 +22746,13 @@ func (o GetIkeGatewayListDataLocalIdOutput) Type() pulumi.StringOutput {
 
 type GetIkeGatewayListDataPeerAddress struct {
 	// Dynamic
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Dynamic GetIkeGatewayListDataPeerAddressDynamic `pulumi:"dynamic"`
 	// peer gateway FQDN name
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Fqdn string `pulumi:"fqdn"`
 	// peer gateway has static IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Ip string `pulumi:"ip"`
 }
@@ -21769,12 +22770,13 @@ type GetIkeGatewayListDataPeerAddressInput interface {
 
 type GetIkeGatewayListDataPeerAddressArgs struct {
 	// Dynamic
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Dynamic GetIkeGatewayListDataPeerAddressDynamicInput `pulumi:"dynamic"`
 	// peer gateway FQDN name
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Fqdn pulumi.StringInput `pulumi:"fqdn"`
 	// peer gateway has static IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Ip pulumi.StringInput `pulumi:"ip"`
 }
@@ -21806,18 +22808,19 @@ func (o GetIkeGatewayListDataPeerAddressOutput) ToGetIkeGatewayListDataPeerAddre
 }
 
 // Dynamic
-// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 func (o GetIkeGatewayListDataPeerAddressOutput) Dynamic() GetIkeGatewayListDataPeerAddressDynamicOutput {
 	return o.ApplyT(func(v GetIkeGatewayListDataPeerAddress) GetIkeGatewayListDataPeerAddressDynamic { return v.Dynamic }).(GetIkeGatewayListDataPeerAddressDynamicOutput)
 }
 
 // peer gateway FQDN name
+//
 // > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 func (o GetIkeGatewayListDataPeerAddressOutput) Fqdn() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayListDataPeerAddress) string { return v.Fqdn }).(pulumi.StringOutput)
 }
 
 // peer gateway has static IP address
+//
 // > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 func (o GetIkeGatewayListDataPeerAddressOutput) Ip() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayListDataPeerAddress) string { return v.Ip }).(pulumi.StringOutput)
@@ -22516,12 +23519,13 @@ func (o GetIkeGatewayLocalIdOutput) Type() pulumi.StringOutput {
 
 type GetIkeGatewayPeerAddress struct {
 	// Dynamic
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Dynamic GetIkeGatewayPeerAddressDynamic `pulumi:"dynamic"`
 	// peer gateway FQDN name
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Fqdn string `pulumi:"fqdn"`
 	// peer gateway has static IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Ip string `pulumi:"ip"`
 }
@@ -22539,12 +23543,13 @@ type GetIkeGatewayPeerAddressInput interface {
 
 type GetIkeGatewayPeerAddressArgs struct {
 	// Dynamic
-	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Dynamic GetIkeGatewayPeerAddressDynamicInput `pulumi:"dynamic"`
 	// peer gateway FQDN name
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Fqdn pulumi.StringInput `pulumi:"fqdn"`
 	// peer gateway has static IP address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 	Ip pulumi.StringInput `pulumi:"ip"`
 }
@@ -22576,18 +23581,19 @@ func (o GetIkeGatewayPeerAddressOutput) ToGetIkeGatewayPeerAddressOutputWithCont
 }
 
 // Dynamic
-// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 func (o GetIkeGatewayPeerAddressOutput) Dynamic() GetIkeGatewayPeerAddressDynamicOutput {
 	return o.ApplyT(func(v GetIkeGatewayPeerAddress) GetIkeGatewayPeerAddressDynamic { return v.Dynamic }).(GetIkeGatewayPeerAddressDynamicOutput)
 }
 
 // peer gateway FQDN name
+//
 // > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 func (o GetIkeGatewayPeerAddressOutput) Fqdn() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayPeerAddress) string { return v.Fqdn }).(pulumi.StringOutput)
 }
 
 // peer gateway has static IP address
+//
 // > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
 func (o GetIkeGatewayPeerAddressOutput) Ip() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayPeerAddress) string { return v.Ip }).(pulumi.StringOutput)
@@ -23169,10 +24175,8 @@ func (o GetIkeGatewayProtocolIkev2DpdOutput) Enable() pulumi.BoolOutput {
 
 type GetInterfaceManagementProfileListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// Allow HTTP?
 	Http bool `pulumi:"http"`
@@ -23182,7 +24186,7 @@ type GetInterfaceManagementProfileListData struct {
 	Https bool `pulumi:"https"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Allowed IP address(es)
 	PermittedIps []GetInterfaceManagementProfileListDataPermittedIp `pulumi:"permittedIps"`
@@ -23190,8 +24194,7 @@ type GetInterfaceManagementProfileListData struct {
 	Ping bool `pulumi:"ping"`
 	// Allow response pages?
 	ResponsePages bool `pulumi:"responsePages"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	// Allow SSH?
 	Ssh bool `pulumi:"ssh"`
@@ -23219,10 +24222,8 @@ type GetInterfaceManagementProfileListDataInput interface {
 
 type GetInterfaceManagementProfileListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// Allow HTTP?
 	Http pulumi.BoolInput `pulumi:"http"`
@@ -23232,7 +24233,7 @@ type GetInterfaceManagementProfileListDataArgs struct {
 	Https pulumi.BoolInput `pulumi:"https"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// Name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Allowed IP address(es)
 	PermittedIps GetInterfaceManagementProfileListDataPermittedIpArrayInput `pulumi:"permittedIps"`
@@ -23240,8 +24241,7 @@ type GetInterfaceManagementProfileListDataArgs struct {
 	Ping pulumi.BoolInput `pulumi:"ping"`
 	// Allow response pages?
 	ResponsePages pulumi.BoolInput `pulumi:"responsePages"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// Allow SSH?
 	Ssh pulumi.BoolInput `pulumi:"ssh"`
@@ -23308,13 +24308,11 @@ func (o GetInterfaceManagementProfileListDataOutput) ToGetInterfaceManagementPro
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetInterfaceManagementProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetInterfaceManagementProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetInterfaceManagementProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetInterfaceManagementProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -23339,7 +24337,7 @@ func (o GetInterfaceManagementProfileListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetInterfaceManagementProfileListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Name
+// The name of the item.
 func (o GetInterfaceManagementProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetInterfaceManagementProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -23361,8 +24359,7 @@ func (o GetInterfaceManagementProfileListDataOutput) ResponsePages() pulumi.Bool
 	return o.ApplyT(func(v GetInterfaceManagementProfileListData) bool { return v.ResponsePages }).(pulumi.BoolOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetInterfaceManagementProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetInterfaceManagementProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -23725,15 +24722,17 @@ func (o GetIpsecCryptoProfileEspOutput) Encryptions() pulumi.StringArrayOutput {
 
 type GetIpsecCryptoProfileLifesize struct {
 	// specify lifesize in gigabytes(GB)
-	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Gb int `pulumi:"gb"`
 	// specify lifesize in kilobytes(KB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Kb int `pulumi:"kb"`
 	// specify lifesize in megabytes(MB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Mb int `pulumi:"mb"`
 	// specify lifesize in terabytes(TB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Tb int `pulumi:"tb"`
 }
@@ -23751,15 +24750,17 @@ type GetIpsecCryptoProfileLifesizeInput interface {
 
 type GetIpsecCryptoProfileLifesizeArgs struct {
 	// specify lifesize in gigabytes(GB)
-	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Gb pulumi.IntInput `pulumi:"gb"`
 	// specify lifesize in kilobytes(KB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Kb pulumi.IntInput `pulumi:"kb"`
 	// specify lifesize in megabytes(MB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Mb pulumi.IntInput `pulumi:"mb"`
 	// specify lifesize in terabytes(TB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Tb pulumi.IntInput `pulumi:"tb"`
 }
@@ -23791,24 +24792,26 @@ func (o GetIpsecCryptoProfileLifesizeOutput) ToGetIpsecCryptoProfileLifesizeOutp
 }
 
 // specify lifesize in gigabytes(GB)
-// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o GetIpsecCryptoProfileLifesizeOutput) Gb() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileLifesize) int { return v.Gb }).(pulumi.IntOutput)
 }
 
 // specify lifesize in kilobytes(KB)
+//
 // > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o GetIpsecCryptoProfileLifesizeOutput) Kb() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileLifesize) int { return v.Kb }).(pulumi.IntOutput)
 }
 
 // specify lifesize in megabytes(MB)
+//
 // > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o GetIpsecCryptoProfileLifesizeOutput) Mb() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileLifesize) int { return v.Mb }).(pulumi.IntOutput)
 }
 
 // specify lifesize in terabytes(TB)
+//
 // > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o GetIpsecCryptoProfileLifesizeOutput) Tb() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileLifesize) int { return v.Tb }).(pulumi.IntOutput)
@@ -23816,15 +24819,17 @@ func (o GetIpsecCryptoProfileLifesizeOutput) Tb() pulumi.IntOutput {
 
 type GetIpsecCryptoProfileLifetime struct {
 	// specify lifetime in days
-	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Days int `pulumi:"days"`
 	// specify lifetime in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Hours int `pulumi:"hours"`
 	// specify lifetime in minutes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Minutes int `pulumi:"minutes"`
 	// specify lifetime in seconds
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Seconds int `pulumi:"seconds"`
 }
@@ -23842,15 +24847,17 @@ type GetIpsecCryptoProfileLifetimeInput interface {
 
 type GetIpsecCryptoProfileLifetimeArgs struct {
 	// specify lifetime in days
-	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify lifetime in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 	// specify lifetime in minutes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Minutes pulumi.IntInput `pulumi:"minutes"`
 	// specify lifetime in seconds
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Seconds pulumi.IntInput `pulumi:"seconds"`
 }
@@ -23882,24 +24889,26 @@ func (o GetIpsecCryptoProfileLifetimeOutput) ToGetIpsecCryptoProfileLifetimeOutp
 }
 
 // specify lifetime in days
-// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIpsecCryptoProfileLifetimeOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileLifetime) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify lifetime in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIpsecCryptoProfileLifetimeOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileLifetime) int { return v.Hours }).(pulumi.IntOutput)
 }
 
 // specify lifetime in minutes
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIpsecCryptoProfileLifetimeOutput) Minutes() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileLifetime) int { return v.Minutes }).(pulumi.IntOutput)
 }
 
 // specify lifetime in seconds
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIpsecCryptoProfileLifetimeOutput) Seconds() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileLifetime) int { return v.Seconds }).(pulumi.IntOutput)
@@ -23907,18 +24916,18 @@ func (o GetIpsecCryptoProfileLifetimeOutput) Seconds() pulumi.IntOutput {
 
 type GetIpsecCryptoProfileListData struct {
 	// Ah
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Ah GetIpsecCryptoProfileListDataAh `pulumi:"ah"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// phase-2 DH group (PFS DH group)
 	DhGroup string `pulumi:"dhGroup"`
 	// Esp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Esp GetIpsecCryptoProfileListDataEsp `pulumi:"esp"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
@@ -23926,10 +24935,9 @@ type GetIpsecCryptoProfileListData struct {
 	Lifesize GetIpsecCryptoProfileListDataLifesize `pulumi:"lifesize"`
 	// Ipsec crypto profile lifetime
 	Lifetime GetIpsecCryptoProfileListDataLifetime `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -23947,18 +24955,18 @@ type GetIpsecCryptoProfileListDataInput interface {
 
 type GetIpsecCryptoProfileListDataArgs struct {
 	// Ah
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Ah GetIpsecCryptoProfileListDataAhInput `pulumi:"ah"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// phase-2 DH group (PFS DH group)
 	DhGroup pulumi.StringInput `pulumi:"dhGroup"`
 	// Esp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 	Esp GetIpsecCryptoProfileListDataEspInput `pulumi:"esp"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
@@ -23966,10 +24974,9 @@ type GetIpsecCryptoProfileListDataArgs struct {
 	Lifesize GetIpsecCryptoProfileListDataLifesizeInput `pulumi:"lifesize"`
 	// Ipsec crypto profile lifetime
 	Lifetime GetIpsecCryptoProfileListDataLifetimeInput `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -24026,13 +25033,13 @@ func (o GetIpsecCryptoProfileListDataOutput) ToGetIpsecCryptoProfileListDataOutp
 }
 
 // Ah
+//
 // > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 func (o GetIpsecCryptoProfileListDataOutput) Ah() GetIpsecCryptoProfileListDataAhOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListData) GetIpsecCryptoProfileListDataAh { return v.Ah }).(GetIpsecCryptoProfileListDataAhOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetIpsecCryptoProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -24043,13 +25050,13 @@ func (o GetIpsecCryptoProfileListDataOutput) DhGroup() pulumi.StringOutput {
 }
 
 // Esp
+//
 // > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
 func (o GetIpsecCryptoProfileListDataOutput) Esp() GetIpsecCryptoProfileListDataEspOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListData) GetIpsecCryptoProfileListDataEsp { return v.Esp }).(GetIpsecCryptoProfileListDataEspOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetIpsecCryptoProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -24069,13 +25076,12 @@ func (o GetIpsecCryptoProfileListDataOutput) Lifetime() GetIpsecCryptoProfileLis
 	return o.ApplyT(func(v GetIpsecCryptoProfileListData) GetIpsecCryptoProfileListDataLifetime { return v.Lifetime }).(GetIpsecCryptoProfileListDataLifetimeOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+// The name of the item.
 func (o GetIpsecCryptoProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetIpsecCryptoProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -24219,15 +25225,17 @@ func (o GetIpsecCryptoProfileListDataEspOutput) Encryptions() pulumi.StringArray
 
 type GetIpsecCryptoProfileListDataLifesize struct {
 	// specify lifesize in gigabytes(GB)
-	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Gb int `pulumi:"gb"`
 	// specify lifesize in kilobytes(KB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Kb int `pulumi:"kb"`
 	// specify lifesize in megabytes(MB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Mb int `pulumi:"mb"`
 	// specify lifesize in terabytes(TB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Tb int `pulumi:"tb"`
 }
@@ -24245,15 +25253,17 @@ type GetIpsecCryptoProfileListDataLifesizeInput interface {
 
 type GetIpsecCryptoProfileListDataLifesizeArgs struct {
 	// specify lifesize in gigabytes(GB)
-	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Gb pulumi.IntInput `pulumi:"gb"`
 	// specify lifesize in kilobytes(KB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Kb pulumi.IntInput `pulumi:"kb"`
 	// specify lifesize in megabytes(MB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Mb pulumi.IntInput `pulumi:"mb"`
 	// specify lifesize in terabytes(TB)
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Tb pulumi.IntInput `pulumi:"tb"`
 }
@@ -24285,24 +25295,26 @@ func (o GetIpsecCryptoProfileListDataLifesizeOutput) ToGetIpsecCryptoProfileList
 }
 
 // specify lifesize in gigabytes(GB)
-// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o GetIpsecCryptoProfileListDataLifesizeOutput) Gb() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListDataLifesize) int { return v.Gb }).(pulumi.IntOutput)
 }
 
 // specify lifesize in kilobytes(KB)
+//
 // > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o GetIpsecCryptoProfileListDataLifesizeOutput) Kb() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListDataLifesize) int { return v.Kb }).(pulumi.IntOutput)
 }
 
 // specify lifesize in megabytes(MB)
+//
 // > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o GetIpsecCryptoProfileListDataLifesizeOutput) Mb() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListDataLifesize) int { return v.Mb }).(pulumi.IntOutput)
 }
 
 // specify lifesize in terabytes(TB)
+//
 // > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o GetIpsecCryptoProfileListDataLifesizeOutput) Tb() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListDataLifesize) int { return v.Tb }).(pulumi.IntOutput)
@@ -24310,15 +25322,17 @@ func (o GetIpsecCryptoProfileListDataLifesizeOutput) Tb() pulumi.IntOutput {
 
 type GetIpsecCryptoProfileListDataLifetime struct {
 	// specify lifetime in days
-	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Days int `pulumi:"days"`
 	// specify lifetime in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Hours int `pulumi:"hours"`
 	// specify lifetime in minutes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Minutes int `pulumi:"minutes"`
 	// specify lifetime in seconds
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Seconds int `pulumi:"seconds"`
 }
@@ -24336,15 +25350,17 @@ type GetIpsecCryptoProfileListDataLifetimeInput interface {
 
 type GetIpsecCryptoProfileListDataLifetimeArgs struct {
 	// specify lifetime in days
-	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Days pulumi.IntInput `pulumi:"days"`
 	// specify lifetime in hours
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Hours pulumi.IntInput `pulumi:"hours"`
 	// specify lifetime in minutes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Minutes pulumi.IntInput `pulumi:"minutes"`
 	// specify lifetime in seconds
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Seconds pulumi.IntInput `pulumi:"seconds"`
 }
@@ -24376,24 +25392,26 @@ func (o GetIpsecCryptoProfileListDataLifetimeOutput) ToGetIpsecCryptoProfileList
 }
 
 // specify lifetime in days
-// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIpsecCryptoProfileListDataLifetimeOutput) Days() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListDataLifetime) int { return v.Days }).(pulumi.IntOutput)
 }
 
 // specify lifetime in hours
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIpsecCryptoProfileListDataLifetimeOutput) Hours() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListDataLifetime) int { return v.Hours }).(pulumi.IntOutput)
 }
 
 // specify lifetime in minutes
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIpsecCryptoProfileListDataLifetimeOutput) Minutes() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListDataLifetime) int { return v.Minutes }).(pulumi.IntOutput)
 }
 
 // specify lifetime in seconds
+//
 // > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o GetIpsecCryptoProfileListDataLifetimeOutput) Seconds() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListDataLifetime) int { return v.Seconds }).(pulumi.IntOutput)
@@ -24701,12 +25719,13 @@ func (o GetIpsecTunnelAutoKeyProxyIdArrayOutput) Index(i pulumi.IntInput) GetIps
 
 type GetIpsecTunnelAutoKeyProxyIdProtocol struct {
 	// IP protocol number
-	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Number int `pulumi:"number"`
-	// IPv4 type of proxy*id protocol values for TCP protocol
+	// IPv4 type of proxyId protocol values for TCP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp GetIpsecTunnelAutoKeyProxyIdProtocolTcp `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp GetIpsecTunnelAutoKeyProxyIdProtocolUdp `pulumi:"udp"`
 }
@@ -24724,12 +25743,13 @@ type GetIpsecTunnelAutoKeyProxyIdProtocolInput interface {
 
 type GetIpsecTunnelAutoKeyProxyIdProtocolArgs struct {
 	// IP protocol number
-	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Number pulumi.IntInput `pulumi:"number"`
-	// IPv4 type of proxy*id protocol values for TCP protocol
+	// IPv4 type of proxyId protocol values for TCP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp GetIpsecTunnelAutoKeyProxyIdProtocolTcpInput `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp GetIpsecTunnelAutoKeyProxyIdProtocolUdpInput `pulumi:"udp"`
 }
@@ -24761,18 +25781,19 @@ func (o GetIpsecTunnelAutoKeyProxyIdProtocolOutput) ToGetIpsecTunnelAutoKeyProxy
 }
 
 // IP protocol number
-// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelAutoKeyProxyIdProtocolOutput) Number() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecTunnelAutoKeyProxyIdProtocol) int { return v.Number }).(pulumi.IntOutput)
 }
 
-// IPv4 type of proxy*id protocol values for TCP protocol
+// IPv4 type of proxyId protocol values for TCP protocol
+//
 // > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelAutoKeyProxyIdProtocolOutput) Tcp() GetIpsecTunnelAutoKeyProxyIdProtocolTcpOutput {
 	return o.ApplyT(func(v GetIpsecTunnelAutoKeyProxyIdProtocol) GetIpsecTunnelAutoKeyProxyIdProtocolTcp { return v.Tcp }).(GetIpsecTunnelAutoKeyProxyIdProtocolTcpOutput)
 }
 
-// IPv6 type of proxy*id protocol values for UDP protocol
+// IPv6 type of proxyId protocol values for UDP protocol
+//
 // > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelAutoKeyProxyIdProtocolOutput) Udp() GetIpsecTunnelAutoKeyProxyIdProtocolUdpOutput {
 	return o.ApplyT(func(v GetIpsecTunnelAutoKeyProxyIdProtocol) GetIpsecTunnelAutoKeyProxyIdProtocolUdp { return v.Udp }).(GetIpsecTunnelAutoKeyProxyIdProtocolUdpOutput)
@@ -25026,12 +26047,13 @@ func (o GetIpsecTunnelAutoKeyProxyIdV6ArrayOutput) Index(i pulumi.IntInput) GetI
 
 type GetIpsecTunnelAutoKeyProxyIdV6Protocol struct {
 	// IP protocol number
-	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Number int `pulumi:"number"`
-	// IPv6 type of proxy*id protocol values for TCP protocol
+	// IPv6 type of proxyId protocol values for TCP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp GetIpsecTunnelAutoKeyProxyIdV6ProtocolTcp `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp GetIpsecTunnelAutoKeyProxyIdV6ProtocolUdp `pulumi:"udp"`
 }
@@ -25049,12 +26071,13 @@ type GetIpsecTunnelAutoKeyProxyIdV6ProtocolInput interface {
 
 type GetIpsecTunnelAutoKeyProxyIdV6ProtocolArgs struct {
 	// IP protocol number
-	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Number pulumi.IntInput `pulumi:"number"`
-	// IPv6 type of proxy*id protocol values for TCP protocol
+	// IPv6 type of proxyId protocol values for TCP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp GetIpsecTunnelAutoKeyProxyIdV6ProtocolTcpInput `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp GetIpsecTunnelAutoKeyProxyIdV6ProtocolUdpInput `pulumi:"udp"`
 }
@@ -25086,18 +26109,19 @@ func (o GetIpsecTunnelAutoKeyProxyIdV6ProtocolOutput) ToGetIpsecTunnelAutoKeyPro
 }
 
 // IP protocol number
-// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelAutoKeyProxyIdV6ProtocolOutput) Number() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecTunnelAutoKeyProxyIdV6Protocol) int { return v.Number }).(pulumi.IntOutput)
 }
 
-// IPv6 type of proxy*id protocol values for TCP protocol
+// IPv6 type of proxyId protocol values for TCP protocol
+//
 // > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelAutoKeyProxyIdV6ProtocolOutput) Tcp() GetIpsecTunnelAutoKeyProxyIdV6ProtocolTcpOutput {
 	return o.ApplyT(func(v GetIpsecTunnelAutoKeyProxyIdV6Protocol) GetIpsecTunnelAutoKeyProxyIdV6ProtocolTcp { return v.Tcp }).(GetIpsecTunnelAutoKeyProxyIdV6ProtocolTcpOutput)
 }
 
-// IPv6 type of proxy*id protocol values for UDP protocol
+// IPv6 type of proxyId protocol values for UDP protocol
+//
 // > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelAutoKeyProxyIdV6ProtocolOutput) Udp() GetIpsecTunnelAutoKeyProxyIdV6ProtocolUdpOutput {
 	return o.ApplyT(func(v GetIpsecTunnelAutoKeyProxyIdV6Protocol) GetIpsecTunnelAutoKeyProxyIdV6ProtocolUdp { return v.Udp }).(GetIpsecTunnelAutoKeyProxyIdV6ProtocolUdpOutput)
@@ -25233,19 +26257,16 @@ type GetIpsecTunnelListData struct {
 	// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
 	CopyTos bool `pulumi:"copyTos"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// allow GRE over IPSec
 	EnableGreEncapsulation bool `pulumi:"enableGreEncapsulation"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
@@ -25273,19 +26294,16 @@ type GetIpsecTunnelListDataArgs struct {
 	// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
 	CopyTos pulumi.BoolInput `pulumi:"copyTos"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// allow GRE over IPSec
 	EnableGreEncapsulation pulumi.BoolInput `pulumi:"enableGreEncapsulation"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
@@ -25361,7 +26379,6 @@ func (o GetIpsecTunnelListDataOutput) CopyTos() pulumi.BoolOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetIpsecTunnelListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecTunnelListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -25371,8 +26388,7 @@ func (o GetIpsecTunnelListDataOutput) EnableGreEncapsulation() pulumi.BoolOutput
 	return o.ApplyT(func(v GetIpsecTunnelListData) bool { return v.EnableGreEncapsulation }).(pulumi.BoolOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetIpsecTunnelListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecTunnelListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -25382,13 +26398,12 @@ func (o GetIpsecTunnelListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecTunnelListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+// The name of the item.
 func (o GetIpsecTunnelListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecTunnelListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetIpsecTunnelListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecTunnelListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -25731,12 +26746,13 @@ func (o GetIpsecTunnelListDataAutoKeyProxyIdArrayOutput) Index(i pulumi.IntInput
 
 type GetIpsecTunnelListDataAutoKeyProxyIdProtocol struct {
 	// IP protocol number
-	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Number int `pulumi:"number"`
-	// IPv4 type of proxy*id protocol values for TCP protocol
+	// IPv4 type of proxyId protocol values for TCP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp GetIpsecTunnelListDataAutoKeyProxyIdProtocolTcp `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp GetIpsecTunnelListDataAutoKeyProxyIdProtocolUdp `pulumi:"udp"`
 }
@@ -25754,12 +26770,13 @@ type GetIpsecTunnelListDataAutoKeyProxyIdProtocolInput interface {
 
 type GetIpsecTunnelListDataAutoKeyProxyIdProtocolArgs struct {
 	// IP protocol number
-	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Number pulumi.IntInput `pulumi:"number"`
-	// IPv4 type of proxy*id protocol values for TCP protocol
+	// IPv4 type of proxyId protocol values for TCP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp GetIpsecTunnelListDataAutoKeyProxyIdProtocolTcpInput `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp GetIpsecTunnelListDataAutoKeyProxyIdProtocolUdpInput `pulumi:"udp"`
 }
@@ -25791,12 +26808,12 @@ func (o GetIpsecTunnelListDataAutoKeyProxyIdProtocolOutput) ToGetIpsecTunnelList
 }
 
 // IP protocol number
-// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelListDataAutoKeyProxyIdProtocolOutput) Number() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecTunnelListDataAutoKeyProxyIdProtocol) int { return v.Number }).(pulumi.IntOutput)
 }
 
-// IPv4 type of proxy*id protocol values for TCP protocol
+// IPv4 type of proxyId protocol values for TCP protocol
+//
 // > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelListDataAutoKeyProxyIdProtocolOutput) Tcp() GetIpsecTunnelListDataAutoKeyProxyIdProtocolTcpOutput {
 	return o.ApplyT(func(v GetIpsecTunnelListDataAutoKeyProxyIdProtocol) GetIpsecTunnelListDataAutoKeyProxyIdProtocolTcp {
@@ -25804,7 +26821,8 @@ func (o GetIpsecTunnelListDataAutoKeyProxyIdProtocolOutput) Tcp() GetIpsecTunnel
 	}).(GetIpsecTunnelListDataAutoKeyProxyIdProtocolTcpOutput)
 }
 
-// IPv6 type of proxy*id protocol values for UDP protocol
+// IPv6 type of proxyId protocol values for UDP protocol
+//
 // > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelListDataAutoKeyProxyIdProtocolOutput) Udp() GetIpsecTunnelListDataAutoKeyProxyIdProtocolUdpOutput {
 	return o.ApplyT(func(v GetIpsecTunnelListDataAutoKeyProxyIdProtocol) GetIpsecTunnelListDataAutoKeyProxyIdProtocolUdp {
@@ -26062,12 +27080,13 @@ func (o GetIpsecTunnelListDataAutoKeyProxyIdV6ArrayOutput) Index(i pulumi.IntInp
 
 type GetIpsecTunnelListDataAutoKeyProxyIdV6Protocol struct {
 	// IP protocol number
-	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Number int `pulumi:"number"`
-	// IPv6 type of proxy*id protocol values for TCP protocol
+	// IPv6 type of proxyId protocol values for TCP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolTcp `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolUdp `pulumi:"udp"`
 }
@@ -26085,12 +27104,13 @@ type GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolInput interface {
 
 type GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolArgs struct {
 	// IP protocol number
-	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Number pulumi.IntInput `pulumi:"number"`
-	// IPv6 type of proxy*id protocol values for TCP protocol
+	// IPv6 type of proxyId protocol values for TCP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolTcpInput `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolUdpInput `pulumi:"udp"`
 }
@@ -26122,12 +27142,12 @@ func (o GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolOutput) ToGetIpsecTunnelLi
 }
 
 // IP protocol number
-// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolOutput) Number() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecTunnelListDataAutoKeyProxyIdV6Protocol) int { return v.Number }).(pulumi.IntOutput)
 }
 
-// IPv6 type of proxy*id protocol values for TCP protocol
+// IPv6 type of proxyId protocol values for TCP protocol
+//
 // > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolOutput) Tcp() GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolTcpOutput {
 	return o.ApplyT(func(v GetIpsecTunnelListDataAutoKeyProxyIdV6Protocol) GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolTcp {
@@ -26135,7 +27155,8 @@ func (o GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolOutput) Tcp() GetIpsecTunn
 	}).(GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolTcpOutput)
 }
 
-// IPv6 type of proxy*id protocol values for UDP protocol
+// IPv6 type of proxyId protocol values for UDP protocol
+//
 // > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolOutput) Udp() GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolUdpOutput {
 	return o.ApplyT(func(v GetIpsecTunnelListDataAutoKeyProxyIdV6Protocol) GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolUdp {
@@ -26407,19 +27428,16 @@ func (o GetIpsecTunnelTunnelMonitorOutput) ProxyId() pulumi.StringOutput {
 
 type GetKerberosServerProfileListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The UUID of the Kerberos server profile
 	Id string `pulumi:"id"`
-	// The name of the Kerberos server profile
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// The Kerberos server configuration
 	Servers []GetKerberosServerProfileListDataServer `pulumi:"servers"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -26437,19 +27455,16 @@ type GetKerberosServerProfileListDataInput interface {
 
 type GetKerberosServerProfileListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The UUID of the Kerberos server profile
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the Kerberos server profile
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// The Kerberos server configuration
 	Servers GetKerberosServerProfileListDataServerArrayInput `pulumi:"servers"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -26506,13 +27521,11 @@ func (o GetKerberosServerProfileListDataOutput) ToGetKerberosServerProfileListDa
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetKerberosServerProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetKerberosServerProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetKerberosServerProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetKerberosServerProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -26522,7 +27535,7 @@ func (o GetKerberosServerProfileListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetKerberosServerProfileListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the Kerberos server profile
+// The name of the item.
 func (o GetKerberosServerProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetKerberosServerProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -26532,8 +27545,7 @@ func (o GetKerberosServerProfileListDataOutput) Servers() GetKerberosServerProfi
 	return o.ApplyT(func(v GetKerberosServerProfileListData) []GetKerberosServerProfileListDataServer { return v.Servers }).(GetKerberosServerProfileListDataServerArrayOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetKerberosServerProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetKerberosServerProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -26917,19 +27929,16 @@ type GetLayer2SubinterfaceListData struct {
 	// Description
 	Comment string `pulumi:"comment"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// L2 sub-interface name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Parent interface
 	ParentInterface string `pulumi:"parentInterface"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 	// VLAN tag
@@ -26951,19 +27960,16 @@ type GetLayer2SubinterfaceListDataArgs struct {
 	// Description
 	Comment pulumi.StringInput `pulumi:"comment"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// L2 sub-interface name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Parent interface
 	ParentInterface pulumi.StringInput `pulumi:"parentInterface"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 	// VLAN tag
@@ -27027,13 +28033,11 @@ func (o GetLayer2SubinterfaceListDataOutput) Comment() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetLayer2SubinterfaceListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLayer2SubinterfaceListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetLayer2SubinterfaceListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLayer2SubinterfaceListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -27043,7 +28047,7 @@ func (o GetLayer2SubinterfaceListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLayer2SubinterfaceListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// L2 sub-interface name
+// The name of the item.
 func (o GetLayer2SubinterfaceListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLayer2SubinterfaceListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -27053,8 +28057,7 @@ func (o GetLayer2SubinterfaceListDataOutput) ParentInterface() pulumi.StringOutp
 	return o.ApplyT(func(v GetLayer2SubinterfaceListData) string { return v.ParentInterface }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetLayer2SubinterfaceListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLayer2SubinterfaceListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -27547,29 +28550,28 @@ type GetLayer3SubinterfaceListData struct {
 	// Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
 	DdnsConfig GetLayer3SubinterfaceListDataDdnsConfig `pulumi:"ddnsConfig"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Layer3 sub interfaces DHCP Client Object
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient GetLayer3SubinterfaceListDataDhcpClient `pulumi:"dhcpClient"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Interface management profile
 	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
 	// L3 sub-interface IP Parent
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips []GetLayer3SubinterfaceListDataIp `pulumi:"ips"`
 	// MTU
 	Mtu int `pulumi:"mtu"`
-	// L3 sub-interface name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Parent interface
 	ParentInterface string `pulumi:"parentInterface"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	// VLAN tag
 	Tag  int    `pulumi:"tag"`
@@ -27595,29 +28597,28 @@ type GetLayer3SubinterfaceListDataArgs struct {
 	// Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
 	DdnsConfig GetLayer3SubinterfaceListDataDdnsConfigInput `pulumi:"ddnsConfig"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Layer3 sub interfaces DHCP Client Object
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	DhcpClient GetLayer3SubinterfaceListDataDhcpClientInput `pulumi:"dhcpClient"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringInput `pulumi:"interfaceManagementProfile"`
 	// L3 sub-interface IP Parent
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 	Ips GetLayer3SubinterfaceListDataIpArrayInput `pulumi:"ips"`
 	// MTU
 	Mtu pulumi.IntInput `pulumi:"mtu"`
-	// L3 sub-interface name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Parent interface
 	ParentInterface pulumi.StringInput `pulumi:"parentInterface"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// VLAN tag
 	Tag  pulumi.IntInput    `pulumi:"tag"`
@@ -27691,19 +28692,18 @@ func (o GetLayer3SubinterfaceListDataOutput) DdnsConfig() GetLayer3SubinterfaceL
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetLayer3SubinterfaceListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLayer3SubinterfaceListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
 // Layer3 sub interfaces DHCP Client Object
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o GetLayer3SubinterfaceListDataOutput) DhcpClient() GetLayer3SubinterfaceListDataDhcpClientOutput {
 	return o.ApplyT(func(v GetLayer3SubinterfaceListData) GetLayer3SubinterfaceListDataDhcpClient { return v.DhcpClient }).(GetLayer3SubinterfaceListDataDhcpClientOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetLayer3SubinterfaceListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLayer3SubinterfaceListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -27719,6 +28719,7 @@ func (o GetLayer3SubinterfaceListDataOutput) InterfaceManagementProfile() pulumi
 }
 
 // L3 sub-interface IP Parent
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
 func (o GetLayer3SubinterfaceListDataOutput) Ips() GetLayer3SubinterfaceListDataIpArrayOutput {
 	return o.ApplyT(func(v GetLayer3SubinterfaceListData) []GetLayer3SubinterfaceListDataIp { return v.Ips }).(GetLayer3SubinterfaceListDataIpArrayOutput)
@@ -27729,7 +28730,7 @@ func (o GetLayer3SubinterfaceListDataOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLayer3SubinterfaceListData) int { return v.Mtu }).(pulumi.IntOutput)
 }
 
-// L3 sub-interface name
+// The name of the item.
 func (o GetLayer3SubinterfaceListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLayer3SubinterfaceListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -27739,8 +28740,7 @@ func (o GetLayer3SubinterfaceListDataOutput) ParentInterface() pulumi.StringOutp
 	return o.ApplyT(func(v GetLayer3SubinterfaceListData) string { return v.ParentInterface }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetLayer3SubinterfaceListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLayer3SubinterfaceListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -28235,25 +29235,22 @@ type GetLdapServerProfileListData struct {
 	// The bind timeout (seconds)
 	BindTimelimit string `pulumi:"bindTimelimit"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The UUID of the LDAP server profile
 	Id string `pulumi:"id"`
 	// The LDAP server time
 	LdapType string `pulumi:"ldapType"`
-	// The name of the LDAP server profile
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// The search retry interval (seconds)
 	RetryInterval int `pulumi:"retryInterval"`
 	// The LDAP server configuration
 	Servers []GetLdapServerProfileListDataServer `pulumi:"servers"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	// Require SSL/TLS secured connection?
 	Ssl  bool   `pulumi:"ssl"`
@@ -28285,25 +29282,22 @@ type GetLdapServerProfileListDataArgs struct {
 	// The bind timeout (seconds)
 	BindTimelimit pulumi.StringInput `pulumi:"bindTimelimit"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The UUID of the LDAP server profile
 	Id pulumi.StringInput `pulumi:"id"`
 	// The LDAP server time
 	LdapType pulumi.StringInput `pulumi:"ldapType"`
-	// The name of the LDAP server profile
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// The search retry interval (seconds)
 	RetryInterval pulumi.IntInput `pulumi:"retryInterval"`
 	// The LDAP server configuration
 	Servers GetLdapServerProfileListDataServerArrayInput `pulumi:"servers"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// Require SSL/TLS secured connection?
 	Ssl  pulumi.BoolInput   `pulumi:"ssl"`
@@ -28386,7 +29380,6 @@ func (o GetLdapServerProfileListDataOutput) BindTimelimit() pulumi.StringOutput 
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetLdapServerProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLdapServerProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -28396,8 +29389,7 @@ func (o GetLdapServerProfileListDataOutput) EncryptedValues() pulumi.StringMapOu
 	return o.ApplyT(func(v GetLdapServerProfileListData) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetLdapServerProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLdapServerProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -28412,7 +29404,7 @@ func (o GetLdapServerProfileListDataOutput) LdapType() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLdapServerProfileListData) string { return v.LdapType }).(pulumi.StringOutput)
 }
 
-// The name of the LDAP server profile
+// The name of the item.
 func (o GetLdapServerProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLdapServerProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -28427,8 +29419,7 @@ func (o GetLdapServerProfileListDataOutput) Servers() GetLdapServerProfileListDa
 	return o.ApplyT(func(v GetLdapServerProfileListData) []GetLdapServerProfileListDataServer { return v.Servers }).(GetLdapServerProfileListDataServerArrayOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetLdapServerProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLdapServerProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -28708,17 +29699,14 @@ type GetLinkTagListData struct {
 	// Description of the link tag
 	Comments string `pulumi:"comments"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the link tag
 	Id string `pulumi:"id"`
-	// The name of the link tag
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -28740,17 +29728,14 @@ type GetLinkTagListDataArgs struct {
 	// Description of the link tag
 	Comments pulumi.StringInput `pulumi:"comments"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the link tag
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the link tag
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -28817,13 +29802,11 @@ func (o GetLinkTagListDataOutput) Comments() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetLinkTagListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLinkTagListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetLinkTagListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLinkTagListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -28833,13 +29816,12 @@ func (o GetLinkTagListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLinkTagListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the link tag
+// The name of the item.
 func (o GetLinkTagListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLinkTagListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetLinkTagListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLinkTagListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -28870,21 +29852,18 @@ func (o GetLinkTagListDataArrayOutput) Index(i pulumi.IntInput) GetLinkTagListDa
 
 type GetLldpProfileListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// LLDP mode
 	Mode string `pulumi:"mode"`
-	// LLDP profile name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Option tlvs
 	OptionTlvs GetLldpProfileListDataOptionTlvs `pulumi:"optionTlvs"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	// SNMP syslog notification
 	SnmpSyslogNotification bool   `pulumi:"snmpSyslogNotification"`
@@ -28904,21 +29883,18 @@ type GetLldpProfileListDataInput interface {
 
 type GetLldpProfileListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// LLDP mode
 	Mode pulumi.StringInput `pulumi:"mode"`
-	// LLDP profile name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Option tlvs
 	OptionTlvs GetLldpProfileListDataOptionTlvsInput `pulumi:"optionTlvs"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// SNMP syslog notification
 	SnmpSyslogNotification pulumi.BoolInput   `pulumi:"snmpSyslogNotification"`
@@ -28977,13 +29953,11 @@ func (o GetLldpProfileListDataOutput) ToGetLldpProfileListDataOutputWithContext(
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetLldpProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLldpProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetLldpProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLldpProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -28998,7 +29972,7 @@ func (o GetLldpProfileListDataOutput) Mode() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLldpProfileListData) string { return v.Mode }).(pulumi.StringOutput)
 }
 
-// LLDP profile name
+// The name of the item.
 func (o GetLldpProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLldpProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -29008,8 +29982,7 @@ func (o GetLldpProfileListDataOutput) OptionTlvs() GetLldpProfileListDataOptionT
 	return o.ApplyT(func(v GetLldpProfileListData) GetLldpProfileListDataOptionTlvs { return v.OptionTlvs }).(GetLldpProfileListDataOptionTlvsOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetLldpProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLldpProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -29597,17 +30570,14 @@ func (o GetLldpProfileOptionTlvsManagementAddressIplistArrayOutput) Index(i pulu
 
 type GetLocalUserGroupListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The UUID of the local user group
 	Id string `pulumi:"id"`
-	// The name of the local user group
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 	// The local user group users
@@ -29627,17 +30597,14 @@ type GetLocalUserGroupListDataInput interface {
 
 type GetLocalUserGroupListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The UUID of the local user group
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the local user group
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 	// The local user group users
@@ -29696,13 +30663,11 @@ func (o GetLocalUserGroupListDataOutput) ToGetLocalUserGroupListDataOutputWithCo
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetLocalUserGroupListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLocalUserGroupListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetLocalUserGroupListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLocalUserGroupListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -29712,13 +30677,12 @@ func (o GetLocalUserGroupListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLocalUserGroupListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the local user group
+// The name of the item.
 func (o GetLocalUserGroupListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLocalUserGroupListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetLocalUserGroupListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLocalUserGroupListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -29754,23 +30718,20 @@ func (o GetLocalUserGroupListDataArrayOutput) Index(i pulumi.IntInput) GetLocalU
 
 type GetLocalUserListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
 	// Is the local user disabled?
 	Disabled bool `pulumi:"disabled"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The UUID of the local user
 	Id string `pulumi:"id"`
-	// The name of the local user
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// The password of the local user
 	Password string `pulumi:"password"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -29788,23 +30749,20 @@ type GetLocalUserListDataInput interface {
 
 type GetLocalUserListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
 	// Is the local user disabled?
 	Disabled pulumi.BoolInput `pulumi:"disabled"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The UUID of the local user
 	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the local user
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// The password of the local user
 	Password pulumi.StringInput `pulumi:"password"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -29861,7 +30819,6 @@ func (o GetLocalUserListDataOutput) ToGetLocalUserListDataOutputWithContext(ctx 
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetLocalUserListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLocalUserListData) string { return v.Device }).(pulumi.StringOutput)
 }
@@ -29876,8 +30833,7 @@ func (o GetLocalUserListDataOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v GetLocalUserListData) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetLocalUserListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLocalUserListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -29887,7 +30843,7 @@ func (o GetLocalUserListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLocalUserListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the local user
+// The name of the item.
 func (o GetLocalUserListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLocalUserListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -29897,8 +30853,7 @@ func (o GetLocalUserListDataOutput) Password() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLocalUserListData) string { return v.Password }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetLocalUserListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLocalUserListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -29931,19 +30886,16 @@ type GetLogForwardingProfileListData struct {
 	// Log forwarding profile description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// The UUID of the log server profile
 	Id string `pulumi:"id"`
 	// Match list
 	MatchLists []GetLogForwardingProfileListDataMatchList `pulumi:"matchLists"`
-	// The name of the log forwarding profile
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -29963,19 +30915,16 @@ type GetLogForwardingProfileListDataArgs struct {
 	// Log forwarding profile description
 	Description pulumi.StringInput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// The UUID of the log server profile
 	Id pulumi.StringInput `pulumi:"id"`
 	// Match list
 	MatchLists GetLogForwardingProfileListDataMatchListArrayInput `pulumi:"matchLists"`
-	// The name of the log forwarding profile
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -30037,13 +30986,11 @@ func (o GetLogForwardingProfileListDataOutput) Description() pulumi.StringOutput
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetLogForwardingProfileListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogForwardingProfileListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetLogForwardingProfileListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogForwardingProfileListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -30060,13 +31007,12 @@ func (o GetLogForwardingProfileListDataOutput) MatchLists() GetLogForwardingProf
 	}).(GetLogForwardingProfileListDataMatchListArrayOutput)
 }
 
-// The name of the log forwarding profile
+// The name of the item.
 func (o GetLogForwardingProfileListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogForwardingProfileListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetLogForwardingProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogForwardingProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -30104,8 +31050,12 @@ type GetLogForwardingProfileListDataMatchList struct {
 	LogType string `pulumi:"logType"`
 	// Name of the match profile
 	Name string `pulumi:"name"`
+	// A list of email server profiles
+	SendEmails []string `pulumi:"sendEmails"`
 	// A list of HTTP server profiles
 	SendHttps []string `pulumi:"sendHttps"`
+	// A list of SNMP server profiles
+	SendSnmptraps []string `pulumi:"sendSnmptraps"`
 	// A list of syslog server profiles
 	SendSyslogs []string `pulumi:"sendSyslogs"`
 }
@@ -30130,8 +31080,12 @@ type GetLogForwardingProfileListDataMatchListArgs struct {
 	LogType pulumi.StringInput `pulumi:"logType"`
 	// Name of the match profile
 	Name pulumi.StringInput `pulumi:"name"`
+	// A list of email server profiles
+	SendEmails pulumi.StringArrayInput `pulumi:"sendEmails"`
 	// A list of HTTP server profiles
 	SendHttps pulumi.StringArrayInput `pulumi:"sendHttps"`
+	// A list of SNMP server profiles
+	SendSnmptraps pulumi.StringArrayInput `pulumi:"sendSnmptraps"`
 	// A list of syslog server profiles
 	SendSyslogs pulumi.StringArrayInput `pulumi:"sendSyslogs"`
 }
@@ -30207,9 +31161,19 @@ func (o GetLogForwardingProfileListDataMatchListOutput) Name() pulumi.StringOutp
 	return o.ApplyT(func(v GetLogForwardingProfileListDataMatchList) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// A list of email server profiles
+func (o GetLogForwardingProfileListDataMatchListOutput) SendEmails() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetLogForwardingProfileListDataMatchList) []string { return v.SendEmails }).(pulumi.StringArrayOutput)
+}
+
 // A list of HTTP server profiles
 func (o GetLogForwardingProfileListDataMatchListOutput) SendHttps() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogForwardingProfileListDataMatchList) []string { return v.SendHttps }).(pulumi.StringArrayOutput)
+}
+
+// A list of SNMP server profiles
+func (o GetLogForwardingProfileListDataMatchListOutput) SendSnmptraps() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetLogForwardingProfileListDataMatchList) []string { return v.SendSnmptraps }).(pulumi.StringArrayOutput)
 }
 
 // A list of syslog server profiles
@@ -30246,8 +31210,12 @@ type GetLogForwardingProfileMatchList struct {
 	LogType string `pulumi:"logType"`
 	// Name of the match profile
 	Name string `pulumi:"name"`
+	// A list of email server profiles
+	SendEmails []string `pulumi:"sendEmails"`
 	// A list of HTTP server profiles
 	SendHttps []string `pulumi:"sendHttps"`
+	// A list of SNMP server profiles
+	SendSnmptraps []string `pulumi:"sendSnmptraps"`
 	// A list of syslog server profiles
 	SendSyslogs []string `pulumi:"sendSyslogs"`
 }
@@ -30272,8 +31240,12 @@ type GetLogForwardingProfileMatchListArgs struct {
 	LogType pulumi.StringInput `pulumi:"logType"`
 	// Name of the match profile
 	Name pulumi.StringInput `pulumi:"name"`
+	// A list of email server profiles
+	SendEmails pulumi.StringArrayInput `pulumi:"sendEmails"`
 	// A list of HTTP server profiles
 	SendHttps pulumi.StringArrayInput `pulumi:"sendHttps"`
+	// A list of SNMP server profiles
+	SendSnmptraps pulumi.StringArrayInput `pulumi:"sendSnmptraps"`
 	// A list of syslog server profiles
 	SendSyslogs pulumi.StringArrayInput `pulumi:"sendSyslogs"`
 }
@@ -30349,9 +31321,19 @@ func (o GetLogForwardingProfileMatchListOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogForwardingProfileMatchList) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// A list of email server profiles
+func (o GetLogForwardingProfileMatchListOutput) SendEmails() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetLogForwardingProfileMatchList) []string { return v.SendEmails }).(pulumi.StringArrayOutput)
+}
+
 // A list of HTTP server profiles
 func (o GetLogForwardingProfileMatchListOutput) SendHttps() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogForwardingProfileMatchList) []string { return v.SendHttps }).(pulumi.StringArrayOutput)
+}
+
+// A list of SNMP server profiles
+func (o GetLogForwardingProfileMatchListOutput) SendSnmptraps() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetLogForwardingProfileMatchList) []string { return v.SendSnmptraps }).(pulumi.StringArrayOutput)
 }
 
 // A list of syslog server profiles
@@ -30381,19 +31363,16 @@ func (o GetLogForwardingProfileMatchListArrayOutput) Index(i pulumi.IntInput) Ge
 
 type GetLogicalRouterListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Name
+	// The name of the item.
 	Name string `pulumi:"name"`
 	// Routing stack
 	RoutingStack string `pulumi:"routingStack"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 	// Vrf
@@ -30413,19 +31392,16 @@ type GetLogicalRouterListDataInput interface {
 
 type GetLogicalRouterListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// Name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
 	// Routing stack
 	RoutingStack pulumi.StringInput `pulumi:"routingStack"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 	// Vrf
@@ -30484,13 +31460,11 @@ func (o GetLogicalRouterListDataOutput) ToGetLogicalRouterListDataOutputWithCont
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetLogicalRouterListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetLogicalRouterListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -30500,7 +31474,7 @@ func (o GetLogicalRouterListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Name
+// The name of the item.
 func (o GetLogicalRouterListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListData) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -30510,8 +31484,7 @@ func (o GetLogicalRouterListDataOutput) RoutingStack() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListData) string { return v.RoutingStack }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetLogicalRouterListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -31798,9 +32771,9 @@ func (o GetLogicalRouterListDataVrfBgpAggregateRouteArrayOutput) Index(i pulumi.
 
 type GetLogicalRouterListDataVrfBgpAggregateRouteType struct {
 	// Ipv4
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 	Ipv4 GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv4 `pulumi:"ipv4"`
 	// Ipv6
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 	Ipv6 GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv6 `pulumi:"ipv6"`
 }
@@ -31818,9 +32791,9 @@ type GetLogicalRouterListDataVrfBgpAggregateRouteTypeInput interface {
 
 type GetLogicalRouterListDataVrfBgpAggregateRouteTypeArgs struct {
 	// Ipv4
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 	Ipv4 GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv4Input `pulumi:"ipv4"`
 	// Ipv6
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 	Ipv6 GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv6Input `pulumi:"ipv6"`
 }
@@ -31852,7 +32825,6 @@ func (o GetLogicalRouterListDataVrfBgpAggregateRouteTypeOutput) ToGetLogicalRout
 }
 
 // Ipv4
-// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 func (o GetLogicalRouterListDataVrfBgpAggregateRouteTypeOutput) Ipv4() GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv4Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpAggregateRouteType) GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv4 {
 		return v.Ipv4
@@ -31860,6 +32832,7 @@ func (o GetLogicalRouterListDataVrfBgpAggregateRouteTypeOutput) Ipv4() GetLogica
 }
 
 // Ipv6
+//
 // > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 func (o GetLogicalRouterListDataVrfBgpAggregateRouteTypeOutput) Ipv6() GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv6Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpAggregateRouteType) GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv6 {
@@ -33209,9 +34182,9 @@ func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpC
 
 type GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit struct {
 	// No
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 	No GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritNo `pulumi:"no"`
 	// Yes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 	Yes GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYes `pulumi:"yes"`
 }
@@ -33229,9 +34202,9 @@ type GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritInput interface {
 
 type GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritArgs struct {
 	// No
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 	No GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritNoInput `pulumi:"no"`
 	// Yes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 	Yes GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYesInput `pulumi:"yes"`
 }
@@ -33263,7 +34236,6 @@ func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritOutput) ToGetLogicalRo
 }
 
 // No
-// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritOutput) No() GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritNoOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit) GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritNo {
 		return v.No
@@ -33271,6 +34243,7 @@ func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritOutput) No() GetLogica
 }
 
 // Yes
+//
 // > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritOutput) Yes() GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYesOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit) GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYes {
@@ -33571,9 +34544,9 @@ func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerLocalAddressOutput) Ip() pulu
 
 type GetLogicalRouterListDataVrfBgpPeerGroupPeerPeerAddress struct {
 	// Fqdn
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Fqdn string `pulumi:"fqdn"`
 	// Ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip string `pulumi:"ip"`
 }
@@ -33591,9 +34564,9 @@ type GetLogicalRouterListDataVrfBgpPeerGroupPeerPeerAddressInput interface {
 
 type GetLogicalRouterListDataVrfBgpPeerGroupPeerPeerAddressArgs struct {
 	// Fqdn
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Fqdn pulumi.StringInput `pulumi:"fqdn"`
 	// Ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip pulumi.StringInput `pulumi:"ip"`
 }
@@ -33625,12 +34598,12 @@ func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerPeerAddressOutput) ToGetLogic
 }
 
 // Fqdn
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerPeerAddressOutput) Fqdn() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPeerGroupPeerPeerAddress) string { return v.Fqdn }).(pulumi.StringOutput)
 }
 
 // Ip
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerPeerAddressOutput) Ip() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPeerGroupPeerPeerAddress) string { return v.Ip }).(pulumi.StringOutput)
@@ -33703,15 +34676,17 @@ func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerSubsequentAddressFamilyIdenti
 
 type GetLogicalRouterListDataVrfBgpPeerGroupType struct {
 	// Ebgp
-	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	Ebgp GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgp `pulumi:"ebgp"`
 	// Ebgp confed
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	EbgpConfed GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpConfed `pulumi:"ebgpConfed"`
 	// Ibgp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	Ibgp GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgp `pulumi:"ibgp"`
 	// Ibgp confed
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	IbgpConfed GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgpConfed `pulumi:"ibgpConfed"`
 }
@@ -33729,15 +34704,17 @@ type GetLogicalRouterListDataVrfBgpPeerGroupTypeInput interface {
 
 type GetLogicalRouterListDataVrfBgpPeerGroupTypeArgs struct {
 	// Ebgp
-	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	Ebgp GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpInput `pulumi:"ebgp"`
 	// Ebgp confed
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	EbgpConfed GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpConfedInput `pulumi:"ebgpConfed"`
 	// Ibgp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	Ibgp GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgpInput `pulumi:"ibgp"`
 	// Ibgp confed
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	IbgpConfed GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgpConfedInput `pulumi:"ibgpConfed"`
 }
@@ -33769,7 +34746,6 @@ func (o GetLogicalRouterListDataVrfBgpPeerGroupTypeOutput) ToGetLogicalRouterLis
 }
 
 // Ebgp
-// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o GetLogicalRouterListDataVrfBgpPeerGroupTypeOutput) Ebgp() GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPeerGroupType) GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgp {
 		return v.Ebgp
@@ -33777,6 +34753,7 @@ func (o GetLogicalRouterListDataVrfBgpPeerGroupTypeOutput) Ebgp() GetLogicalRout
 }
 
 // Ebgp confed
+//
 // > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o GetLogicalRouterListDataVrfBgpPeerGroupTypeOutput) EbgpConfed() GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpConfedOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPeerGroupType) GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpConfed {
@@ -33785,6 +34762,7 @@ func (o GetLogicalRouterListDataVrfBgpPeerGroupTypeOutput) EbgpConfed() GetLogic
 }
 
 // Ibgp
+//
 // > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o GetLogicalRouterListDataVrfBgpPeerGroupTypeOutput) Ibgp() GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgpOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPeerGroupType) GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgp {
@@ -33793,6 +34771,7 @@ func (o GetLogicalRouterListDataVrfBgpPeerGroupTypeOutput) Ibgp() GetLogicalRout
 }
 
 // Ibgp confed
+//
 // > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o GetLogicalRouterListDataVrfBgpPeerGroupTypeOutput) IbgpConfed() GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgpConfedOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPeerGroupType) GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgpConfed {
@@ -35017,15 +35996,17 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
 type GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend int `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend int `pulumi:"removeAndPrepend"`
 }
@@ -35043,15 +36024,17 @@ type GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttribu
 
 type GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathArgs struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNoneInput `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend pulumi.IntInput `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemoveInput `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend pulumi.IntInput `pulumi:"removeAndPrepend"`
 }
@@ -35083,7 +36066,6 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // None
-// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathOutput) None() GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone {
 		return v.None
@@ -35091,6 +36073,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // Prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathOutput) Prepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) int {
@@ -35099,6 +36082,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // Remove
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathOutput) Remove() GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemoveOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove {
@@ -35107,6 +36091,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // Remove and prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathOutput) RemoveAndPrepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) int {
@@ -35202,18 +36187,21 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
 type GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -35231,18 +36219,21 @@ type GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttribu
 
 type GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -35274,7 +36265,6 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) []string {
 		return v.Appends
@@ -35282,6 +36272,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) None() GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone {
@@ -35290,6 +36281,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) []string {
@@ -35298,6 +36290,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) RemoveAll() GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll {
@@ -35306,6 +36299,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) string {
@@ -35401,18 +36395,21 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 
 type GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -35430,18 +36427,21 @@ type GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttribu
 
 type GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -35473,7 +36473,6 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) []string {
 		return v.Appends
@@ -35481,6 +36480,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) None() GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNone {
@@ -35489,6 +36489,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) []string {
@@ -35497,6 +36498,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) RemoveAll() GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAll {
@@ -35505,6 +36507,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttr
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) string {
@@ -37612,9 +38615,9 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleArrayOutput) Index(i pulum
 
 type GetLogicalRouterListDataVrfBgpPolicyExportRuleAction struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Allow GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllow `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny GetLogicalRouterListDataVrfBgpPolicyExportRuleActionDeny `pulumi:"deny"`
 }
@@ -37632,9 +38635,9 @@ type GetLogicalRouterListDataVrfBgpPolicyExportRuleActionInput interface {
 
 type GetLogicalRouterListDataVrfBgpPolicyExportRuleActionArgs struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Allow GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowInput `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny GetLogicalRouterListDataVrfBgpPolicyExportRuleActionDenyInput `pulumi:"deny"`
 }
@@ -37666,7 +38669,6 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionOutput) ToGetLogical
 }
 
 // Allow
-// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionOutput) Allow() GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleAction) GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllow {
 		return v.Allow
@@ -37674,6 +38676,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionOutput) Allow() GetL
 }
 
 // Deny
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionOutput) Deny() GetLogicalRouterListDataVrfBgpPolicyExportRuleActionDenyOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleAction) GetLogicalRouterListDataVrfBgpPolicyExportRuleActionDeny {
@@ -37858,15 +38861,17 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateOutput) O
 
 type GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPath struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathNone `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend int `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend int `pulumi:"removeAndPrepend"`
 }
@@ -37884,15 +38889,17 @@ type GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathInput 
 
 type GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgs struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathNoneInput `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend pulumi.IntInput `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveInput `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend pulumi.IntInput `pulumi:"removeAndPrepend"`
 }
@@ -37924,7 +38931,6 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathOut
 }
 
 // None
-// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) None() GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPath) GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathNone {
 		return v.None
@@ -37932,12 +38938,14 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathOut
 }
 
 // Prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) Prepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPath) int { return v.Prepend }).(pulumi.IntOutput)
 }
 
 // Remove
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) Remove() GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPath) GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove {
@@ -37946,6 +38954,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathOut
 }
 
 // Remove and prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) RemoveAndPrepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPath) int {
@@ -38041,18 +39050,21 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathRem
 
 type GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -38070,18 +39082,21 @@ type GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityInp
 
 type GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -38113,7 +39128,6 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity) []string {
 		return v.Appends
@@ -38121,6 +39135,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) None() GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity) GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityNone {
@@ -38129,6 +39144,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity) []string {
@@ -38137,6 +39153,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) RemoveAll() GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity) GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAll {
@@ -38145,6 +39162,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity) string {
@@ -38240,18 +39258,21 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateCommunity
 
 type GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -38269,18 +39290,21 @@ type GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedComm
 
 type GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -38312,7 +39336,6 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedC
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) []string {
 		return v.Appends
@@ -38320,6 +39343,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedC
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) None() GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone {
@@ -38328,6 +39352,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedC
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) []string {
@@ -38336,6 +39361,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedC
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) RemoveAll() GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll {
@@ -38344,6 +39370,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedC
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) string {
@@ -39076,9 +40103,9 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleArrayOutput) Index(i pulum
 
 type GetLogicalRouterListDataVrfBgpPolicyImportRuleAction struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Allow GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllow `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny GetLogicalRouterListDataVrfBgpPolicyImportRuleActionDeny `pulumi:"deny"`
 }
@@ -39096,9 +40123,9 @@ type GetLogicalRouterListDataVrfBgpPolicyImportRuleActionInput interface {
 
 type GetLogicalRouterListDataVrfBgpPolicyImportRuleActionArgs struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Allow GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowInput `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny GetLogicalRouterListDataVrfBgpPolicyImportRuleActionDenyInput `pulumi:"deny"`
 }
@@ -39130,7 +40157,6 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionOutput) ToGetLogical
 }
 
 // Allow
-// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionOutput) Allow() GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleAction) GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllow {
 		return v.Allow
@@ -39138,6 +40164,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionOutput) Allow() GetL
 }
 
 // Deny
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionOutput) Deny() GetLogicalRouterListDataVrfBgpPolicyImportRuleActionDenyOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleAction) GetLogicalRouterListDataVrfBgpPolicyImportRuleActionDeny {
@@ -39340,15 +40367,17 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateOutput) W
 
 type GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPath struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend int `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend int `pulumi:"removeAndPrepend"`
 }
@@ -39366,15 +40395,17 @@ type GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathInput 
 
 type GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgs struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathNoneInput `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend pulumi.IntInput `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemoveInput `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend pulumi.IntInput `pulumi:"removeAndPrepend"`
 }
@@ -39406,7 +40437,6 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathOut
 }
 
 // None
-// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) None() GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPath) GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone {
 		return v.None
@@ -39414,12 +40444,14 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathOut
 }
 
 // Prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) Prepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPath) int { return v.Prepend }).(pulumi.IntOutput)
 }
 
 // Remove
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) Remove() GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemoveOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPath) GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove {
@@ -39428,6 +40460,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathOut
 }
 
 // Remove and prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) RemoveAndPrepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPath) int {
@@ -39523,18 +40556,21 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathRem
 
 type GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -39552,18 +40588,21 @@ type GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityInp
 
 type GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -39595,7 +40634,6 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity) []string {
 		return v.Appends
@@ -39603,6 +40641,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) None() GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity) GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone {
@@ -39611,6 +40650,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity) []string {
@@ -39619,6 +40659,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) RemoveAll() GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity) GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll {
@@ -39627,6 +40668,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity) string {
@@ -39722,18 +40764,21 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
 type GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -39751,18 +40796,21 @@ type GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedComm
 
 type GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -39794,7 +40842,6 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedC
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) []string {
 		return v.Appends
@@ -39802,6 +40849,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedC
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) None() GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone {
@@ -39810,6 +40858,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedC
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) []string {
@@ -39818,6 +40867,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedC
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) RemoveAll() GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll {
@@ -39826,6 +40876,7 @@ func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedC
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) string {
@@ -40811,15 +41862,17 @@ func (o GetLogicalRouterListDataVrfEcmpOutput) SymmetricReturn() pulumi.BoolOutp
 
 type GetLogicalRouterListDataVrfEcmpAlgorithm struct {
 	// Balanced round robin
-	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	BalancedRoundRobin GetLogicalRouterListDataVrfEcmpAlgorithmBalancedRoundRobin `pulumi:"balancedRoundRobin"`
 	// Ip hash
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpHash GetLogicalRouterListDataVrfEcmpAlgorithmIpHash `pulumi:"ipHash"`
 	// Ip modulo
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpModulo GetLogicalRouterListDataVrfEcmpAlgorithmIpModulo `pulumi:"ipModulo"`
 	// Weighted round robin
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	WeightedRoundRobin GetLogicalRouterListDataVrfEcmpAlgorithmWeightedRoundRobin `pulumi:"weightedRoundRobin"`
 }
@@ -40837,15 +41890,17 @@ type GetLogicalRouterListDataVrfEcmpAlgorithmInput interface {
 
 type GetLogicalRouterListDataVrfEcmpAlgorithmArgs struct {
 	// Balanced round robin
-	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	BalancedRoundRobin GetLogicalRouterListDataVrfEcmpAlgorithmBalancedRoundRobinInput `pulumi:"balancedRoundRobin"`
 	// Ip hash
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpHash GetLogicalRouterListDataVrfEcmpAlgorithmIpHashInput `pulumi:"ipHash"`
 	// Ip modulo
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpModulo GetLogicalRouterListDataVrfEcmpAlgorithmIpModuloInput `pulumi:"ipModulo"`
 	// Weighted round robin
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	WeightedRoundRobin GetLogicalRouterListDataVrfEcmpAlgorithmWeightedRoundRobinInput `pulumi:"weightedRoundRobin"`
 }
@@ -40877,7 +41932,6 @@ func (o GetLogicalRouterListDataVrfEcmpAlgorithmOutput) ToGetLogicalRouterListDa
 }
 
 // Balanced round robin
-// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o GetLogicalRouterListDataVrfEcmpAlgorithmOutput) BalancedRoundRobin() GetLogicalRouterListDataVrfEcmpAlgorithmBalancedRoundRobinOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfEcmpAlgorithm) GetLogicalRouterListDataVrfEcmpAlgorithmBalancedRoundRobin {
 		return v.BalancedRoundRobin
@@ -40885,6 +41939,7 @@ func (o GetLogicalRouterListDataVrfEcmpAlgorithmOutput) BalancedRoundRobin() Get
 }
 
 // Ip hash
+//
 // > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o GetLogicalRouterListDataVrfEcmpAlgorithmOutput) IpHash() GetLogicalRouterListDataVrfEcmpAlgorithmIpHashOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfEcmpAlgorithm) GetLogicalRouterListDataVrfEcmpAlgorithmIpHash {
@@ -40893,6 +41948,7 @@ func (o GetLogicalRouterListDataVrfEcmpAlgorithmOutput) IpHash() GetLogicalRoute
 }
 
 // Ip modulo
+//
 // > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o GetLogicalRouterListDataVrfEcmpAlgorithmOutput) IpModulo() GetLogicalRouterListDataVrfEcmpAlgorithmIpModuloOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfEcmpAlgorithm) GetLogicalRouterListDataVrfEcmpAlgorithmIpModulo {
@@ -40901,6 +41957,7 @@ func (o GetLogicalRouterListDataVrfEcmpAlgorithmOutput) IpModulo() GetLogicalRou
 }
 
 // Weighted round robin
+//
 // > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o GetLogicalRouterListDataVrfEcmpAlgorithmOutput) WeightedRoundRobin() GetLogicalRouterListDataVrfEcmpAlgorithmWeightedRoundRobinOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfEcmpAlgorithm) GetLogicalRouterListDataVrfEcmpAlgorithmWeightedRoundRobin {
@@ -42997,9 +44054,9 @@ func (o GetLogicalRouterListDataVrfMulticastMsdpPeerLocalAddressOutput) Ip() pul
 
 type GetLogicalRouterListDataVrfMulticastMsdpPeerPeerAddress struct {
 	// Fqdn
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Fqdn string `pulumi:"fqdn"`
 	// Ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip string `pulumi:"ip"`
 }
@@ -43017,9 +44074,9 @@ type GetLogicalRouterListDataVrfMulticastMsdpPeerPeerAddressInput interface {
 
 type GetLogicalRouterListDataVrfMulticastMsdpPeerPeerAddressArgs struct {
 	// Fqdn
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Fqdn pulumi.StringInput `pulumi:"fqdn"`
 	// Ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip pulumi.StringInput `pulumi:"ip"`
 }
@@ -43051,12 +44108,12 @@ func (o GetLogicalRouterListDataVrfMulticastMsdpPeerPeerAddressOutput) ToGetLogi
 }
 
 // Fqdn
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o GetLogicalRouterListDataVrfMulticastMsdpPeerPeerAddressOutput) Fqdn() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastMsdpPeerPeerAddress) string { return v.Fqdn }).(pulumi.StringOutput)
 }
 
 // Ip
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o GetLogicalRouterListDataVrfMulticastMsdpPeerPeerAddressOutput) Ip() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastMsdpPeerPeerAddress) string { return v.Ip }).(pulumi.StringOutput)
@@ -43516,9 +44573,9 @@ func (o GetLogicalRouterListDataVrfMulticastPimRpExternalRpArrayOutput) Index(i 
 
 type GetLogicalRouterListDataVrfMulticastPimRpLocalRp struct {
 	// Candidate rp
-	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	CandidateRp GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp `pulumi:"candidateRp"`
 	// Static rp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp GetLogicalRouterListDataVrfMulticastPimRpLocalRpStaticRp `pulumi:"staticRp"`
 }
@@ -43536,9 +44593,9 @@ type GetLogicalRouterListDataVrfMulticastPimRpLocalRpInput interface {
 
 type GetLogicalRouterListDataVrfMulticastPimRpLocalRpArgs struct {
 	// Candidate rp
-	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	CandidateRp GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRpInput `pulumi:"candidateRp"`
 	// Static rp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp GetLogicalRouterListDataVrfMulticastPimRpLocalRpStaticRpInput `pulumi:"staticRp"`
 }
@@ -43570,7 +44627,6 @@ func (o GetLogicalRouterListDataVrfMulticastPimRpLocalRpOutput) ToGetLogicalRout
 }
 
 // Candidate rp
-// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o GetLogicalRouterListDataVrfMulticastPimRpLocalRpOutput) CandidateRp() GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRpOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastPimRpLocalRp) GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp {
 		return v.CandidateRp
@@ -43578,6 +44634,7 @@ func (o GetLogicalRouterListDataVrfMulticastPimRpLocalRpOutput) CandidateRp() Ge
 }
 
 // Static rp
+//
 // > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o GetLogicalRouterListDataVrfMulticastPimRpLocalRpOutput) StaticRp() GetLogicalRouterListDataVrfMulticastPimRpLocalRpStaticRpOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastPimRpLocalRp) GetLogicalRouterListDataVrfMulticastPimRpLocalRpStaticRp {
@@ -44094,9 +45151,9 @@ func (o GetLogicalRouterListDataVrfMulticastRpExternalRpArrayOutput) Index(i pul
 
 type GetLogicalRouterListDataVrfMulticastRpLocalRp struct {
 	// Candidate rp
-	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	CandidateRp GetLogicalRouterListDataVrfMulticastRpLocalRpCandidateRp `pulumi:"candidateRp"`
 	// Static rp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp `pulumi:"staticRp"`
 }
@@ -44114,9 +45171,9 @@ type GetLogicalRouterListDataVrfMulticastRpLocalRpInput interface {
 
 type GetLogicalRouterListDataVrfMulticastRpLocalRpArgs struct {
 	// Candidate rp
-	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	CandidateRp GetLogicalRouterListDataVrfMulticastRpLocalRpCandidateRpInput `pulumi:"candidateRp"`
 	// Static rp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpInput `pulumi:"staticRp"`
 }
@@ -44148,7 +45205,6 @@ func (o GetLogicalRouterListDataVrfMulticastRpLocalRpOutput) ToGetLogicalRouterL
 }
 
 // Candidate rp
-// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o GetLogicalRouterListDataVrfMulticastRpLocalRpOutput) CandidateRp() GetLogicalRouterListDataVrfMulticastRpLocalRpCandidateRpOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastRpLocalRp) GetLogicalRouterListDataVrfMulticastRpLocalRpCandidateRp {
 		return v.CandidateRp
@@ -44156,6 +45212,7 @@ func (o GetLogicalRouterListDataVrfMulticastRpLocalRpOutput) CandidateRp() GetLo
 }
 
 // Static rp
+//
 // > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o GetLogicalRouterListDataVrfMulticastRpLocalRpOutput) StaticRp() GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastRpLocalRp) GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp {
@@ -44251,1169 +45308,18 @@ func (o GetLogicalRouterListDataVrfMulticastRpLocalRpCandidateRpOutput) Priority
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastRpLocalRpCandidateRp) int { return v.Priority }).(pulumi.IntOutput)
 }
 
-type GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp struct {
-	// Address
-	Address string `pulumi:"address"`
-	// Group addresses
-	GroupAddresses []string `pulumi:"groupAddresses"`
-	// Interface
-	Interface string `pulumi:"interface"`
-	// Override
-	Override bool `pulumi:"override"`
-}
-
-// GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpInput is an input type that accepts GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs and GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpInput` via:
-//
-//	GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs{...}
-type GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput() GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput
-	ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput
-}
-
-type GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs struct {
-	// Address
-	Address pulumi.StringInput `pulumi:"address"`
-	// Group addresses
-	GroupAddresses pulumi.StringArrayInput `pulumi:"groupAddresses"`
-	// Interface
-	Interface pulumi.StringInput `pulumi:"interface"`
-	// Override
-	Override pulumi.BoolInput `pulumi:"override"`
-}
-
-func (GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs) ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput() GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput {
-	return i.ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs) ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput() GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput {
-	return o
-}
-
-// Address
-func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) Address() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp) string { return v.Address }).(pulumi.StringOutput)
-}
-
-// Group addresses
-func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) GroupAddresses() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp) []string { return v.GroupAddresses }).(pulumi.StringArrayOutput)
-}
-
-// Interface
-func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) Interface() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp) string { return v.Interface }).(pulumi.StringOutput)
-}
-
-// Override
-func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) Override() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp) bool { return v.Override }).(pulumi.BoolOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastSptThreshold struct {
-	// Name
-	Name string `pulumi:"name"`
-	// Threshold
-	Threshold string `pulumi:"threshold"`
-}
-
-// GetLogicalRouterListDataVrfMulticastSptThresholdInput is an input type that accepts GetLogicalRouterListDataVrfMulticastSptThresholdArgs and GetLogicalRouterListDataVrfMulticastSptThresholdOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastSptThresholdInput` via:
-//
-//	GetLogicalRouterListDataVrfMulticastSptThresholdArgs{...}
-type GetLogicalRouterListDataVrfMulticastSptThresholdInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfMulticastSptThresholdOutput() GetLogicalRouterListDataVrfMulticastSptThresholdOutput
-	ToGetLogicalRouterListDataVrfMulticastSptThresholdOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdOutput
-}
-
-type GetLogicalRouterListDataVrfMulticastSptThresholdArgs struct {
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Threshold
-	Threshold pulumi.StringInput `pulumi:"threshold"`
-}
-
-func (GetLogicalRouterListDataVrfMulticastSptThresholdArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSptThreshold)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfMulticastSptThresholdArgs) ToGetLogicalRouterListDataVrfMulticastSptThresholdOutput() GetLogicalRouterListDataVrfMulticastSptThresholdOutput {
-	return i.ToGetLogicalRouterListDataVrfMulticastSptThresholdOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfMulticastSptThresholdArgs) ToGetLogicalRouterListDataVrfMulticastSptThresholdOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastSptThresholdOutput)
-}
-
-// GetLogicalRouterListDataVrfMulticastSptThresholdArrayInput is an input type that accepts GetLogicalRouterListDataVrfMulticastSptThresholdArray and GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastSptThresholdArrayInput` via:
-//
-//	GetLogicalRouterListDataVrfMulticastSptThresholdArray{ GetLogicalRouterListDataVrfMulticastSptThresholdArgs{...} }
-type GetLogicalRouterListDataVrfMulticastSptThresholdArrayInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput() GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput
-	ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput
-}
-
-type GetLogicalRouterListDataVrfMulticastSptThresholdArray []GetLogicalRouterListDataVrfMulticastSptThresholdInput
-
-func (GetLogicalRouterListDataVrfMulticastSptThresholdArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastSptThreshold)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfMulticastSptThresholdArray) ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput() GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput {
-	return i.ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfMulticastSptThresholdArray) ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastSptThresholdOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfMulticastSptThresholdOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSptThreshold)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfMulticastSptThresholdOutput) ToGetLogicalRouterListDataVrfMulticastSptThresholdOutput() GetLogicalRouterListDataVrfMulticastSptThresholdOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfMulticastSptThresholdOutput) ToGetLogicalRouterListDataVrfMulticastSptThresholdOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdOutput {
-	return o
-}
-
-// Name
-func (o GetLogicalRouterListDataVrfMulticastSptThresholdOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastSptThreshold) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Threshold
-func (o GetLogicalRouterListDataVrfMulticastSptThresholdOutput) Threshold() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastSptThreshold) string { return v.Threshold }).(pulumi.StringOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastSptThreshold)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput) ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput() GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput) ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput) Index(i pulumi.IntInput) GetLogicalRouterListDataVrfMulticastSptThresholdOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetLogicalRouterListDataVrfMulticastSptThreshold {
-		return vs[0].([]GetLogicalRouterListDataVrfMulticastSptThreshold)[vs[1].(int)]
-	}).(GetLogicalRouterListDataVrfMulticastSptThresholdOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastSsmAddressSpace struct {
-	// Group address
-	GroupAddress string `pulumi:"groupAddress"`
-	// Included
-	Included bool `pulumi:"included"`
-	// Name
-	Name string `pulumi:"name"`
-}
-
-// GetLogicalRouterListDataVrfMulticastSsmAddressSpaceInput is an input type that accepts GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs and GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastSsmAddressSpaceInput` via:
-//
-//	GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs{...}
-type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput
-	ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput
-}
-
-type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs struct {
-	// Group address
-	GroupAddress pulumi.StringInput `pulumi:"groupAddress"`
-	// Included
-	Included pulumi.BoolInput `pulumi:"included"`
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSsmAddressSpace)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput {
-	return i.ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput)
-}
-
-// GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayInput is an input type that accepts GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray and GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayInput` via:
-//
-//	GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray{ GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs{...} }
-type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput
-	ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput
-}
-
-type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray []GetLogicalRouterListDataVrfMulticastSsmAddressSpaceInput
-
-func (GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastSsmAddressSpace)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput {
-	return i.ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSsmAddressSpace)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput {
-	return o
-}
-
-// Group address
-func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) GroupAddress() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastSsmAddressSpace) string { return v.GroupAddress }).(pulumi.StringOutput)
-}
-
-// Included
-func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) Included() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastSsmAddressSpace) bool { return v.Included }).(pulumi.BoolOutput)
-}
-
-// Name
-func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastSsmAddressSpace) string { return v.Name }).(pulumi.StringOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastSsmAddressSpace)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput) Index(i pulumi.IntInput) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetLogicalRouterListDataVrfMulticastSsmAddressSpace {
-		return vs[0].([]GetLogicalRouterListDataVrfMulticastSsmAddressSpace)[vs[1].(int)]
-	}).(GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastStaticRoute struct {
-	// Destination
-	Destination string `pulumi:"destination"`
-	// Interface
-	Interface string `pulumi:"interface"`
-	// Name
-	Name string `pulumi:"name"`
-	// Nexthop
-	Nexthop GetLogicalRouterListDataVrfMulticastStaticRouteNexthop `pulumi:"nexthop"`
-	// Preference
-	Preference int `pulumi:"preference"`
-}
-
-// GetLogicalRouterListDataVrfMulticastStaticRouteInput is an input type that accepts GetLogicalRouterListDataVrfMulticastStaticRouteArgs and GetLogicalRouterListDataVrfMulticastStaticRouteOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastStaticRouteInput` via:
-//
-//	GetLogicalRouterListDataVrfMulticastStaticRouteArgs{...}
-type GetLogicalRouterListDataVrfMulticastStaticRouteInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfMulticastStaticRouteOutput() GetLogicalRouterListDataVrfMulticastStaticRouteOutput
-	ToGetLogicalRouterListDataVrfMulticastStaticRouteOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteOutput
-}
-
-type GetLogicalRouterListDataVrfMulticastStaticRouteArgs struct {
-	// Destination
-	Destination pulumi.StringInput `pulumi:"destination"`
-	// Interface
-	Interface pulumi.StringInput `pulumi:"interface"`
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Nexthop
-	Nexthop GetLogicalRouterListDataVrfMulticastStaticRouteNexthopInput `pulumi:"nexthop"`
-	// Preference
-	Preference pulumi.IntInput `pulumi:"preference"`
-}
-
-func (GetLogicalRouterListDataVrfMulticastStaticRouteArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRoute)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfMulticastStaticRouteArgs) ToGetLogicalRouterListDataVrfMulticastStaticRouteOutput() GetLogicalRouterListDataVrfMulticastStaticRouteOutput {
-	return i.ToGetLogicalRouterListDataVrfMulticastStaticRouteOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfMulticastStaticRouteArgs) ToGetLogicalRouterListDataVrfMulticastStaticRouteOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastStaticRouteOutput)
-}
-
-// GetLogicalRouterListDataVrfMulticastStaticRouteArrayInput is an input type that accepts GetLogicalRouterListDataVrfMulticastStaticRouteArray and GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastStaticRouteArrayInput` via:
-//
-//	GetLogicalRouterListDataVrfMulticastStaticRouteArray{ GetLogicalRouterListDataVrfMulticastStaticRouteArgs{...} }
-type GetLogicalRouterListDataVrfMulticastStaticRouteArrayInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput() GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput
-	ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput
-}
-
-type GetLogicalRouterListDataVrfMulticastStaticRouteArray []GetLogicalRouterListDataVrfMulticastStaticRouteInput
-
-func (GetLogicalRouterListDataVrfMulticastStaticRouteArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastStaticRoute)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfMulticastStaticRouteArray) ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput() GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput {
-	return i.ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfMulticastStaticRouteArray) ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastStaticRouteOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfMulticastStaticRouteOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRoute)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteOutput() GetLogicalRouterListDataVrfMulticastStaticRouteOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteOutput {
-	return o
-}
-
-// Destination
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) Destination() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRoute) string { return v.Destination }).(pulumi.StringOutput)
-}
-
-// Interface
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) Interface() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRoute) string { return v.Interface }).(pulumi.StringOutput)
-}
-
-// Name
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRoute) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Nexthop
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) Nexthop() GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRoute) GetLogicalRouterListDataVrfMulticastStaticRouteNexthop {
-		return v.Nexthop
-	}).(GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput)
-}
-
-// Preference
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) Preference() pulumi.IntOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRoute) int { return v.Preference }).(pulumi.IntOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastStaticRoute)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput() GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput) Index(i pulumi.IntInput) GetLogicalRouterListDataVrfMulticastStaticRouteOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetLogicalRouterListDataVrfMulticastStaticRoute {
-		return vs[0].([]GetLogicalRouterListDataVrfMulticastStaticRoute)[vs[1].(int)]
-	}).(GetLogicalRouterListDataVrfMulticastStaticRouteOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastStaticRouteNexthop struct {
-	// Ip address
-	IpAddress string `pulumi:"ipAddress"`
-}
-
-// GetLogicalRouterListDataVrfMulticastStaticRouteNexthopInput is an input type that accepts GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs and GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastStaticRouteNexthopInput` via:
-//
-//	GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs{...}
-type GetLogicalRouterListDataVrfMulticastStaticRouteNexthopInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput() GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput
-	ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput
-}
-
-type GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs struct {
-	// Ip address
-	IpAddress pulumi.StringInput `pulumi:"ipAddress"`
-}
-
-func (GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRouteNexthop)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs) ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput() GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput {
-	return i.ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs) ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput)
-}
-
-type GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRouteNexthop)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput() GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput {
-	return o
-}
-
-// Ip address
-func (o GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput) IpAddress() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRouteNexthop) string { return v.IpAddress }).(pulumi.StringOutput)
-}
-
-type GetLogicalRouterListDataVrfOspf struct {
-	// Allow redist default route
-	AllowRedistDefaultRoute bool `pulumi:"allowRedistDefaultRoute"`
-	// Area
-	Areas []GetLogicalRouterListDataVrfOspfArea `pulumi:"areas"`
-	// Auth profile
-	AuthProfiles []GetLogicalRouterListDataVrfOspfAuthProfile `pulumi:"authProfiles"`
-	// Enable
-	Enable bool `pulumi:"enable"`
-	// Export rules
-	ExportRules []GetLogicalRouterListDataVrfOspfExportRule `pulumi:"exportRules"`
-	// Flood prevention
-	FloodPrevention GetLogicalRouterListDataVrfOspfFloodPrevention `pulumi:"floodPrevention"`
-	// Global bfd
-	GlobalBfd GetLogicalRouterListDataVrfOspfGlobalBfd `pulumi:"globalBfd"`
-	// Global if timer
-	GlobalIfTimer string `pulumi:"globalIfTimer"`
-	// Graceful restart
-	GracefulRestart GetLogicalRouterListDataVrfOspfGracefulRestart `pulumi:"gracefulRestart"`
-	// Redistribution profile
-	RedistributionProfile string `pulumi:"redistributionProfile"`
-	// Reject default route
-	RejectDefaultRoute bool `pulumi:"rejectDefaultRoute"`
-	// Rfc1583
-	Rfc1583 bool `pulumi:"rfc1583"`
-	// Router id
-	RouterId string `pulumi:"routerId"`
-	// Spf timer
-	SpfTimer string `pulumi:"spfTimer"`
-	// Vr timers
-	VrTimers GetLogicalRouterListDataVrfOspfVrTimers `pulumi:"vrTimers"`
-}
-
-// GetLogicalRouterListDataVrfOspfInput is an input type that accepts GetLogicalRouterListDataVrfOspfArgs and GetLogicalRouterListDataVrfOspfOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfInput` via:
-//
-//	GetLogicalRouterListDataVrfOspfArgs{...}
-type GetLogicalRouterListDataVrfOspfInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfOspfOutput() GetLogicalRouterListDataVrfOspfOutput
-	ToGetLogicalRouterListDataVrfOspfOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfOutput
-}
-
-type GetLogicalRouterListDataVrfOspfArgs struct {
-	// Allow redist default route
-	AllowRedistDefaultRoute pulumi.BoolInput `pulumi:"allowRedistDefaultRoute"`
-	// Area
-	Areas GetLogicalRouterListDataVrfOspfAreaArrayInput `pulumi:"areas"`
-	// Auth profile
-	AuthProfiles GetLogicalRouterListDataVrfOspfAuthProfileArrayInput `pulumi:"authProfiles"`
-	// Enable
-	Enable pulumi.BoolInput `pulumi:"enable"`
-	// Export rules
-	ExportRules GetLogicalRouterListDataVrfOspfExportRuleArrayInput `pulumi:"exportRules"`
-	// Flood prevention
-	FloodPrevention GetLogicalRouterListDataVrfOspfFloodPreventionInput `pulumi:"floodPrevention"`
-	// Global bfd
-	GlobalBfd GetLogicalRouterListDataVrfOspfGlobalBfdInput `pulumi:"globalBfd"`
-	// Global if timer
-	GlobalIfTimer pulumi.StringInput `pulumi:"globalIfTimer"`
-	// Graceful restart
-	GracefulRestart GetLogicalRouterListDataVrfOspfGracefulRestartInput `pulumi:"gracefulRestart"`
-	// Redistribution profile
-	RedistributionProfile pulumi.StringInput `pulumi:"redistributionProfile"`
-	// Reject default route
-	RejectDefaultRoute pulumi.BoolInput `pulumi:"rejectDefaultRoute"`
-	// Rfc1583
-	Rfc1583 pulumi.BoolInput `pulumi:"rfc1583"`
-	// Router id
-	RouterId pulumi.StringInput `pulumi:"routerId"`
-	// Spf timer
-	SpfTimer pulumi.StringInput `pulumi:"spfTimer"`
-	// Vr timers
-	VrTimers GetLogicalRouterListDataVrfOspfVrTimersInput `pulumi:"vrTimers"`
-}
-
-func (GetLogicalRouterListDataVrfOspfArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspf)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfOspfArgs) ToGetLogicalRouterListDataVrfOspfOutput() GetLogicalRouterListDataVrfOspfOutput {
-	return i.ToGetLogicalRouterListDataVrfOspfOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfOspfArgs) ToGetLogicalRouterListDataVrfOspfOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfOutput)
-}
-
-type GetLogicalRouterListDataVrfOspfOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfOspfOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspf)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfOspfOutput) ToGetLogicalRouterListDataVrfOspfOutput() GetLogicalRouterListDataVrfOspfOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfOspfOutput) ToGetLogicalRouterListDataVrfOspfOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfOutput {
-	return o
-}
-
-// Allow redist default route
-func (o GetLogicalRouterListDataVrfOspfOutput) AllowRedistDefaultRoute() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) bool { return v.AllowRedistDefaultRoute }).(pulumi.BoolOutput)
-}
-
-// Area
-func (o GetLogicalRouterListDataVrfOspfOutput) Areas() GetLogicalRouterListDataVrfOspfAreaArrayOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) []GetLogicalRouterListDataVrfOspfArea { return v.Areas }).(GetLogicalRouterListDataVrfOspfAreaArrayOutput)
-}
-
-// Auth profile
-func (o GetLogicalRouterListDataVrfOspfOutput) AuthProfiles() GetLogicalRouterListDataVrfOspfAuthProfileArrayOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) []GetLogicalRouterListDataVrfOspfAuthProfile {
-		return v.AuthProfiles
-	}).(GetLogicalRouterListDataVrfOspfAuthProfileArrayOutput)
-}
-
-// Enable
-func (o GetLogicalRouterListDataVrfOspfOutput) Enable() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) bool { return v.Enable }).(pulumi.BoolOutput)
-}
-
-// Export rules
-func (o GetLogicalRouterListDataVrfOspfOutput) ExportRules() GetLogicalRouterListDataVrfOspfExportRuleArrayOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) []GetLogicalRouterListDataVrfOspfExportRule {
-		return v.ExportRules
-	}).(GetLogicalRouterListDataVrfOspfExportRuleArrayOutput)
-}
-
-// Flood prevention
-func (o GetLogicalRouterListDataVrfOspfOutput) FloodPrevention() GetLogicalRouterListDataVrfOspfFloodPreventionOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) GetLogicalRouterListDataVrfOspfFloodPrevention {
-		return v.FloodPrevention
-	}).(GetLogicalRouterListDataVrfOspfFloodPreventionOutput)
-}
-
-// Global bfd
-func (o GetLogicalRouterListDataVrfOspfOutput) GlobalBfd() GetLogicalRouterListDataVrfOspfGlobalBfdOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) GetLogicalRouterListDataVrfOspfGlobalBfd { return v.GlobalBfd }).(GetLogicalRouterListDataVrfOspfGlobalBfdOutput)
-}
-
-// Global if timer
-func (o GetLogicalRouterListDataVrfOspfOutput) GlobalIfTimer() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) string { return v.GlobalIfTimer }).(pulumi.StringOutput)
-}
-
-// Graceful restart
-func (o GetLogicalRouterListDataVrfOspfOutput) GracefulRestart() GetLogicalRouterListDataVrfOspfGracefulRestartOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) GetLogicalRouterListDataVrfOspfGracefulRestart {
-		return v.GracefulRestart
-	}).(GetLogicalRouterListDataVrfOspfGracefulRestartOutput)
-}
-
-// Redistribution profile
-func (o GetLogicalRouterListDataVrfOspfOutput) RedistributionProfile() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) string { return v.RedistributionProfile }).(pulumi.StringOutput)
-}
-
-// Reject default route
-func (o GetLogicalRouterListDataVrfOspfOutput) RejectDefaultRoute() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) bool { return v.RejectDefaultRoute }).(pulumi.BoolOutput)
-}
-
-// Rfc1583
-func (o GetLogicalRouterListDataVrfOspfOutput) Rfc1583() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) bool { return v.Rfc1583 }).(pulumi.BoolOutput)
-}
-
-// Router id
-func (o GetLogicalRouterListDataVrfOspfOutput) RouterId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) string { return v.RouterId }).(pulumi.StringOutput)
-}
-
-// Spf timer
-func (o GetLogicalRouterListDataVrfOspfOutput) SpfTimer() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) string { return v.SpfTimer }).(pulumi.StringOutput)
-}
-
-// Vr timers
-func (o GetLogicalRouterListDataVrfOspfOutput) VrTimers() GetLogicalRouterListDataVrfOspfVrTimersOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) GetLogicalRouterListDataVrfOspfVrTimers { return v.VrTimers }).(GetLogicalRouterListDataVrfOspfVrTimersOutput)
-}
-
-type GetLogicalRouterListDataVrfOspfArea struct {
-	// Authentication
-	Authentication string `pulumi:"authentication"`
-	// Interface
-	Interfaces []GetLogicalRouterListDataVrfOspfAreaInterface `pulumi:"interfaces"`
-	// Name
-	Name string `pulumi:"name"`
-	// Range
-	Ranges []GetLogicalRouterListDataVrfOspfAreaRange `pulumi:"ranges"`
-	// Type
-	Type GetLogicalRouterListDataVrfOspfAreaType `pulumi:"type"`
-	// Virtual link
-	VirtualLinks []GetLogicalRouterListDataVrfOspfAreaVirtualLink `pulumi:"virtualLinks"`
-	// Vr range
-	VrRanges []GetLogicalRouterListDataVrfOspfAreaVrRange `pulumi:"vrRanges"`
-}
-
-// GetLogicalRouterListDataVrfOspfAreaInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaArgs and GetLogicalRouterListDataVrfOspfAreaOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaInput` via:
-//
-//	GetLogicalRouterListDataVrfOspfAreaArgs{...}
-type GetLogicalRouterListDataVrfOspfAreaInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfOspfAreaOutput() GetLogicalRouterListDataVrfOspfAreaOutput
-	ToGetLogicalRouterListDataVrfOspfAreaOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaOutput
-}
-
-type GetLogicalRouterListDataVrfOspfAreaArgs struct {
-	// Authentication
-	Authentication pulumi.StringInput `pulumi:"authentication"`
-	// Interface
-	Interfaces GetLogicalRouterListDataVrfOspfAreaInterfaceArrayInput `pulumi:"interfaces"`
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Range
-	Ranges GetLogicalRouterListDataVrfOspfAreaRangeArrayInput `pulumi:"ranges"`
-	// Type
-	Type GetLogicalRouterListDataVrfOspfAreaTypeInput `pulumi:"type"`
-	// Virtual link
-	VirtualLinks GetLogicalRouterListDataVrfOspfAreaVirtualLinkArrayInput `pulumi:"virtualLinks"`
-	// Vr range
-	VrRanges GetLogicalRouterListDataVrfOspfAreaVrRangeArrayInput `pulumi:"vrRanges"`
-}
-
-func (GetLogicalRouterListDataVrfOspfAreaArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfArea)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaArgs) ToGetLogicalRouterListDataVrfOspfAreaOutput() GetLogicalRouterListDataVrfOspfAreaOutput {
-	return i.ToGetLogicalRouterListDataVrfOspfAreaOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaArgs) ToGetLogicalRouterListDataVrfOspfAreaOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaOutput)
-}
-
-// GetLogicalRouterListDataVrfOspfAreaArrayInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaArray and GetLogicalRouterListDataVrfOspfAreaArrayOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaArrayInput` via:
-//
-//	GetLogicalRouterListDataVrfOspfAreaArray{ GetLogicalRouterListDataVrfOspfAreaArgs{...} }
-type GetLogicalRouterListDataVrfOspfAreaArrayInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfOspfAreaArrayOutput() GetLogicalRouterListDataVrfOspfAreaArrayOutput
-	ToGetLogicalRouterListDataVrfOspfAreaArrayOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaArrayOutput
-}
-
-type GetLogicalRouterListDataVrfOspfAreaArray []GetLogicalRouterListDataVrfOspfAreaInput
-
-func (GetLogicalRouterListDataVrfOspfAreaArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfOspfArea)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaArray) ToGetLogicalRouterListDataVrfOspfAreaArrayOutput() GetLogicalRouterListDataVrfOspfAreaArrayOutput {
-	return i.ToGetLogicalRouterListDataVrfOspfAreaArrayOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaArray) ToGetLogicalRouterListDataVrfOspfAreaArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaArrayOutput)
-}
-
-type GetLogicalRouterListDataVrfOspfAreaOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfOspfAreaOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfArea)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaOutput) ToGetLogicalRouterListDataVrfOspfAreaOutput() GetLogicalRouterListDataVrfOspfAreaOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaOutput) ToGetLogicalRouterListDataVrfOspfAreaOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaOutput {
-	return o
-}
-
-// Authentication
-func (o GetLogicalRouterListDataVrfOspfAreaOutput) Authentication() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) string { return v.Authentication }).(pulumi.StringOutput)
-}
-
-// Interface
-func (o GetLogicalRouterListDataVrfOspfAreaOutput) Interfaces() GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) []GetLogicalRouterListDataVrfOspfAreaInterface {
-		return v.Interfaces
-	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput)
-}
-
-// Name
-func (o GetLogicalRouterListDataVrfOspfAreaOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Range
-func (o GetLogicalRouterListDataVrfOspfAreaOutput) Ranges() GetLogicalRouterListDataVrfOspfAreaRangeArrayOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) []GetLogicalRouterListDataVrfOspfAreaRange {
-		return v.Ranges
-	}).(GetLogicalRouterListDataVrfOspfAreaRangeArrayOutput)
-}
-
-// Type
-func (o GetLogicalRouterListDataVrfOspfAreaOutput) Type() GetLogicalRouterListDataVrfOspfAreaTypeOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) GetLogicalRouterListDataVrfOspfAreaType { return v.Type }).(GetLogicalRouterListDataVrfOspfAreaTypeOutput)
-}
-
-// Virtual link
-func (o GetLogicalRouterListDataVrfOspfAreaOutput) VirtualLinks() GetLogicalRouterListDataVrfOspfAreaVirtualLinkArrayOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) []GetLogicalRouterListDataVrfOspfAreaVirtualLink {
-		return v.VirtualLinks
-	}).(GetLogicalRouterListDataVrfOspfAreaVirtualLinkArrayOutput)
-}
-
-// Vr range
-func (o GetLogicalRouterListDataVrfOspfAreaOutput) VrRanges() GetLogicalRouterListDataVrfOspfAreaVrRangeArrayOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) []GetLogicalRouterListDataVrfOspfAreaVrRange {
-		return v.VrRanges
-	}).(GetLogicalRouterListDataVrfOspfAreaVrRangeArrayOutput)
-}
-
-type GetLogicalRouterListDataVrfOspfAreaArrayOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfOspfAreaArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfOspfArea)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaArrayOutput) ToGetLogicalRouterListDataVrfOspfAreaArrayOutput() GetLogicalRouterListDataVrfOspfAreaArrayOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaArrayOutput) ToGetLogicalRouterListDataVrfOspfAreaArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaArrayOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaArrayOutput) Index(i pulumi.IntInput) GetLogicalRouterListDataVrfOspfAreaOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetLogicalRouterListDataVrfOspfArea {
-		return vs[0].([]GetLogicalRouterListDataVrfOspfArea)[vs[1].(int)]
-	}).(GetLogicalRouterListDataVrfOspfAreaOutput)
-}
-
-type GetLogicalRouterListDataVrfOspfAreaInterface struct {
-	// Authentication
-	Authentication string `pulumi:"authentication"`
-	// Bfd
-	Bfd GetLogicalRouterListDataVrfOspfAreaInterfaceBfd `pulumi:"bfd"`
-	// Enable
-	Enable bool `pulumi:"enable"`
-	// Link type
-	LinkType GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType `pulumi:"linkType"`
-	// Metric
-	Metric int `pulumi:"metric"`
-	// Mtu ignore
-	MtuIgnore bool `pulumi:"mtuIgnore"`
-	// Name
-	Name string `pulumi:"name"`
-	// Passive
-	Passive bool `pulumi:"passive"`
-	// Priority
-	Priority int `pulumi:"priority"`
-	// Timing
-	Timing string `pulumi:"timing"`
-	// Vr timing
-	VrTiming GetLogicalRouterListDataVrfOspfAreaInterfaceVrTiming `pulumi:"vrTiming"`
-}
-
-// GetLogicalRouterListDataVrfOspfAreaInterfaceInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaInterfaceArgs and GetLogicalRouterListDataVrfOspfAreaInterfaceOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaInterfaceInput` via:
-//
-//	GetLogicalRouterListDataVrfOspfAreaInterfaceArgs{...}
-type GetLogicalRouterListDataVrfOspfAreaInterfaceInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceOutput
-	ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceOutput
-}
-
-type GetLogicalRouterListDataVrfOspfAreaInterfaceArgs struct {
-	// Authentication
-	Authentication pulumi.StringInput `pulumi:"authentication"`
-	// Bfd
-	Bfd GetLogicalRouterListDataVrfOspfAreaInterfaceBfdInput `pulumi:"bfd"`
-	// Enable
-	Enable pulumi.BoolInput `pulumi:"enable"`
-	// Link type
-	LinkType GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeInput `pulumi:"linkType"`
-	// Metric
-	Metric pulumi.IntInput `pulumi:"metric"`
-	// Mtu ignore
-	MtuIgnore pulumi.BoolInput `pulumi:"mtuIgnore"`
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Passive
-	Passive pulumi.BoolInput `pulumi:"passive"`
-	// Priority
-	Priority pulumi.IntInput `pulumi:"priority"`
-	// Timing
-	Timing pulumi.StringInput `pulumi:"timing"`
-	// Vr timing
-	VrTiming GetLogicalRouterListDataVrfOspfAreaInterfaceVrTimingInput `pulumi:"vrTiming"`
-}
-
-func (GetLogicalRouterListDataVrfOspfAreaInterfaceArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterface)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaInterfaceArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceOutput {
-	return i.ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaInterfaceArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaInterfaceOutput)
-}
-
-// GetLogicalRouterListDataVrfOspfAreaInterfaceArrayInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaInterfaceArray and GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaInterfaceArrayInput` via:
-//
-//	GetLogicalRouterListDataVrfOspfAreaInterfaceArray{ GetLogicalRouterListDataVrfOspfAreaInterfaceArgs{...} }
-type GetLogicalRouterListDataVrfOspfAreaInterfaceArrayInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput
-	ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput
-}
-
-type GetLogicalRouterListDataVrfOspfAreaInterfaceArray []GetLogicalRouterListDataVrfOspfAreaInterfaceInput
-
-func (GetLogicalRouterListDataVrfOspfAreaInterfaceArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfOspfAreaInterface)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaInterfaceArray) ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput {
-	return i.ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaInterfaceArray) ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput)
-}
-
-type GetLogicalRouterListDataVrfOspfAreaInterfaceOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterface)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceOutput {
-	return o
-}
-
-// Authentication
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Authentication() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) string { return v.Authentication }).(pulumi.StringOutput)
-}
-
-// Bfd
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Bfd() GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) GetLogicalRouterListDataVrfOspfAreaInterfaceBfd {
-		return v.Bfd
-	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput)
-}
-
-// Enable
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Enable() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) bool { return v.Enable }).(pulumi.BoolOutput)
-}
-
-// Link type
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) LinkType() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType {
-		return v.LinkType
-	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput)
-}
-
-// Metric
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Metric() pulumi.IntOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) int { return v.Metric }).(pulumi.IntOutput)
-}
-
-// Mtu ignore
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) MtuIgnore() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) bool { return v.MtuIgnore }).(pulumi.BoolOutput)
-}
-
-// Name
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Passive
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Passive() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) bool { return v.Passive }).(pulumi.BoolOutput)
-}
-
-// Priority
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Priority() pulumi.IntOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) int { return v.Priority }).(pulumi.IntOutput)
-}
-
-// Timing
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Timing() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) string { return v.Timing }).(pulumi.StringOutput)
-}
-
-// Vr timing
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) VrTiming() GetLogicalRouterListDataVrfOspfAreaInterfaceVrTimingOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) GetLogicalRouterListDataVrfOspfAreaInterfaceVrTiming {
-		return v.VrTiming
-	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceVrTimingOutput)
-}
-
-type GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfOspfAreaInterface)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput) Index(i pulumi.IntInput) GetLogicalRouterListDataVrfOspfAreaInterfaceOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetLogicalRouterListDataVrfOspfAreaInterface {
-		return vs[0].([]GetLogicalRouterListDataVrfOspfAreaInterface)[vs[1].(int)]
-	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceOutput)
-}
-
-type GetLogicalRouterListDataVrfOspfAreaInterfaceBfd struct {
-	// Profile
-	Profile string `pulumi:"profile"`
-}
-
-// GetLogicalRouterListDataVrfOspfAreaInterfaceBfdInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs and GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaInterfaceBfdInput` via:
-//
-//	GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs{...}
-type GetLogicalRouterListDataVrfOspfAreaInterfaceBfdInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput
-	ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput
-}
-
-type GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs struct {
-	// Profile
-	Profile pulumi.StringInput `pulumi:"profile"`
-}
-
-func (GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceBfd)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput {
-	return i.ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput)
-}
-
-type GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceBfd)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput {
-	return o
-}
-
-// Profile
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput) Profile() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterfaceBfd) string { return v.Profile }).(pulumi.StringOutput)
-}
-
-type GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType struct {
-	// Broadcast
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-	Broadcast GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcast `pulumi:"broadcast"`
-	// P2mp
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-	P2mp GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mp `pulumi:"p2mp"`
-	// P2p
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-	P2p GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2p `pulumi:"p2p"`
-}
-
-// GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs and GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput values.
-// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeInput` via:
-//
-//	GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs{...}
-type GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeInput interface {
-	pulumi.Input
-
-	ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput
-	ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput
-}
-
-type GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs struct {
-	// Broadcast
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-	Broadcast GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcastInput `pulumi:"broadcast"`
-	// P2mp
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-	P2mp GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpInput `pulumi:"p2mp"`
-	// P2p
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-	P2p GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2pInput `pulumi:"p2p"`
-}
-
-func (GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType)(nil)).Elem()
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput {
-	return i.ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutputWithContext(context.Background())
-}
-
-func (i GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput)
-}
-
-type GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput struct{ *pulumi.OutputState }
-
-func (GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType)(nil)).Elem()
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput {
-	return o
-}
-
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput {
-	return o
-}
-
-// Broadcast
-// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) Broadcast() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcastOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcast {
-		return v.Broadcast
-	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcastOutput)
-}
-
-// P2mp
-// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) P2mp() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mp {
-		return v.P2mp
-	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpOutput)
-}
-
-// P2p
-// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
-func (o GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) P2p() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2pOutput {
-	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2p {
-		return v.P2p
-	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2pOutput)
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostIdInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaHostIdArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaHostNameInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaHostNameArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaOsInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaOsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaOsContainsInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaOsContainsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaSerialNumberInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaSerialNumberArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataInput)(nil)).Elem(), GetHipObjectListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataArrayInput)(nil)).Elem(), GetHipObjectListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataAntiMalwareInput)(nil)).Elem(), GetHipObjectListDataAntiMalwareArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaInput)(nil)).Elem(), GetHipObjectListDataAntiMalwareCriteriaArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTimeInput)(nil)).Elem(), GetHipObjectListDataAntiMalwareCriteriaLastScanTimeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableInput)(nil)).Elem(), GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinInput)(nil)).Elem(), GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinInput)(nil)).Elem(), GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectListDataAntiMalwareCriteriaProductVersionInput)(nil)).Elem(), GetHipObjectListDataAntiMalwareCriteriaProductVersionArgs{})
@@ -46070,21 +45976,17 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastRpExternalRpArrayInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastRpExternalRpArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastRpLocalRpInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastRpLocalRpArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastRpLocalRpCandidateRpInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastRpLocalRpCandidateRpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSptThresholdInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastSptThresholdArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSptThresholdArrayInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastSptThresholdArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSsmAddressSpaceInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRouteInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastStaticRouteArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRouteArrayInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastStaticRouteArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRouteNexthopInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaArrayInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaInterfaceArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceArrayInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaInterfaceArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceBfdInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs{})
+	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaHostIdOutput{})
+	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaHostNameOutput{})
+	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaOsOutput{})
+	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaOsContainsOutput{})
+	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaSerialNumberOutput{})
+	pulumi.RegisterOutputType(GetHipObjectListDataOutput{})
+	pulumi.RegisterOutputType(GetHipObjectListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetHipObjectListDataAntiMalwareOutput{})
+	pulumi.RegisterOutputType(GetHipObjectListDataAntiMalwareCriteriaOutput{})
+	pulumi.RegisterOutputType(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeOutput{})
+	pulumi.RegisterOutputType(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotAvailableOutput{})
 	pulumi.RegisterOutputType(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeNotWithinOutput{})
 	pulumi.RegisterOutputType(GetHipObjectListDataAntiMalwareCriteriaLastScanTimeWithinOutput{})
 	pulumi.RegisterOutputType(GetHipObjectListDataAntiMalwareCriteriaProductVersionOutput{})
@@ -46741,19 +46643,4 @@ func init() {
 	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastRpExternalRpArrayOutput{})
 	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastRpLocalRpOutput{})
 	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastRpLocalRpCandidateRpOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastSptThresholdOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastStaticRouteOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaArrayOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaInterfaceOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput{})
-	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput{})
 }

@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetDosProtectionRuleProtection {
     /**
      * @return Aggregate
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
     private GetDosProtectionRuleProtectionAggregate aggregate;
     /**
      * @return Classified
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
@@ -27,7 +27,6 @@ public final class GetDosProtectionRuleProtection {
     private GetDosProtectionRuleProtection() {}
     /**
      * @return Aggregate
-     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
     public GetDosProtectionRuleProtectionAggregate aggregate() {
@@ -35,6 +34,7 @@ public final class GetDosProtectionRuleProtection {
     }
     /**
      * @return Classified
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */

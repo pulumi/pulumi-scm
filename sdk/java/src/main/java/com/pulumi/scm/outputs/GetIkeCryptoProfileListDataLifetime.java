@@ -12,24 +12,26 @@ import java.util.Objects;
 public final class GetIkeCryptoProfileListDataLifetime {
     /**
      * @return specify lifetime in days
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     private Integer days;
     /**
      * @return specify lifetime in hours
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     private Integer hours;
     /**
      * @return specify lifetime in minutes
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     private Integer minutes;
     /**
      * @return specify lifetime in seconds
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -38,7 +40,6 @@ public final class GetIkeCryptoProfileListDataLifetime {
     private GetIkeCryptoProfileListDataLifetime() {}
     /**
      * @return specify lifetime in days
-     * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
     public Integer days() {
@@ -46,6 +47,7 @@ public final class GetIkeCryptoProfileListDataLifetime {
     }
     /**
      * @return specify lifetime in hours
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -54,6 +56,7 @@ public final class GetIkeCryptoProfileListDataLifetime {
     }
     /**
      * @return specify lifetime in minutes
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */
@@ -62,6 +65,7 @@ public final class GetIkeCryptoProfileListDataLifetime {
     }
     /**
      * @return specify lifetime in seconds
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
      * 
      */

@@ -12,6 +12,36 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a list of SCM Kerberos Server Profile objects.
+//			//
+//			// Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+//			allShared, err := scm.GetKerberosServerProfileList(ctx, &scm.GetKerberosServerProfileListArgs{
+//				Folder: pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmKerberosServerProfileAllShared", allShared.Datas)
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetKerberosServerProfileList(ctx *pulumi.Context, args *GetKerberosServerProfileListArgs, opts ...pulumi.InvokeOption) (*GetKerberosServerProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetKerberosServerProfileListResult

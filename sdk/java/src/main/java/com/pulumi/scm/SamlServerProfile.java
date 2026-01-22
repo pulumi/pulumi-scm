@@ -19,6 +19,70 @@ import javax.annotation.Nullable;
 /**
  * SamlServerProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.SamlServerProfile;
+ * import com.pulumi.scm.SamlServerProfileArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmSamlServerProfile1 = new SamlServerProfile("scmSamlServerProfile1", SamlServerProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scm-saml-server-prof-1")
+ *             .certificate("Global Authentication Cookie Cert")
+ *             .entityId("123")
+ *             .ssoUrl("http://example.com")
+ *             .ssoBindings("post")
+ *             .build());
+ * 
+ *         var scmSamlServerProfile2 = new SamlServerProfile("scmSamlServerProfile2", SamlServerProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scm-saml-server-prof-2")
+ *             .certificate("Global Authentication Cookie Cert")
+ *             .entityId("test_id")
+ *             .maxClockSkew(100)
+ *             .sloBindings("redirect")
+ *             .ssoBindings("redirect")
+ *             .ssoUrl("http://target.com")
+ *             .validateIdpCertificate(true)
+ *             .build());
+ * 
+ *         var scmSamlServerProfile3 = new SamlServerProfile("scmSamlServerProfile3", SamlServerProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scm-saml-server-prof-3")
+ *             .certificate("Global Authentication Cookie Cert")
+ *             .entityId("test_123")
+ *             .maxClockSkew(900)
+ *             .sloBindings("post")
+ *             .ssoBindings("redirect")
+ *             .sloUrl("http://auth.com")
+ *             .ssoUrl("http://okta.com")
+ *             .validateIdpCertificate(false)
+ *             .wantAuthRequestsSigned(false)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The following command can be used to import a resource not managed by Terraform:
@@ -64,7 +128,6 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
@@ -72,7 +135,6 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -94,6 +156,7 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
     }
     /**
      * The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -102,6 +165,7 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The folder in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -151,7 +215,22 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.sloBindings);
     }
     /**
+     * Identity provider SLO URL
+     * 
+     */
+    @Export(name="sloUrl", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> sloUrl;
+
+    /**
+     * @return Identity provider SLO URL
+     * 
+     */
+    public Output<Optional<String>> sloUrl() {
+        return Codegen.optional(this.sloUrl);
+    }
+    /**
      * The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -160,6 +239,7 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */

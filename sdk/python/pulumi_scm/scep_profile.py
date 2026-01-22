@@ -40,21 +40,22 @@ class ScepProfileArgs:
         """
         The set of arguments for constructing a ScepProfile resource.
         :param pulumi.Input['ScepProfileAlgorithmArgs'] algorithm: Algorithm
-        :param pulumi.Input[_builtins.str] ca_identity_name: Certificate Authority identity
+        :param pulumi.Input[_builtins.str] ca_identity_name: Certificate Authority Identity
         :param pulumi.Input[_builtins.str] digest: Digest for CSR
-        :param pulumi.Input['ScepProfileScepChallengeArgs'] scep_challenge: One Time Password challenge
+        :param pulumi.Input['ScepProfileScepChallengeArgs'] scep_challenge: One Time Password Challenge
         :param pulumi.Input[_builtins.str] scep_url: SCEP server URL
         :param pulumi.Input[_builtins.str] subject: Subject
         :param pulumi.Input['ScepProfileCertificateAttributesArgs'] certificate_attributes: Subject Alternative name type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] fingerprint: CA certificate fingerprint
+        :param pulumi.Input[_builtins.str] fingerprint: CA Certificate Fingerprint
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the SCEP profile
-        :param pulumi.Input[_builtins.str] scep_ca_cert: SCEP server CA certificate
-        :param pulumi.Input[_builtins.str] scep_client_cert: SCEP client ceertificate
+        :param pulumi.Input[_builtins.str] scep_ca_cert: SCEP Server CA Certificate
+        :param pulumi.Input[_builtins.str] scep_client_cert: SCEP Client Certificate
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] use_as_digital_signature: Use as digital signature?
         :param pulumi.Input[_builtins.bool] use_for_key_encipherment: Use for key encipherment?
@@ -102,7 +103,7 @@ class ScepProfileArgs:
     @pulumi.getter(name="caIdentityName")
     def ca_identity_name(self) -> pulumi.Input[_builtins.str]:
         """
-        Certificate Authority identity
+        Certificate Authority Identity
         """
         return pulumi.get(self, "ca_identity_name")
 
@@ -126,7 +127,7 @@ class ScepProfileArgs:
     @pulumi.getter(name="scepChallenge")
     def scep_challenge(self) -> pulumi.Input['ScepProfileScepChallengeArgs']:
         """
-        One Time Password challenge
+        One Time Password Challenge
         """
         return pulumi.get(self, "scep_challenge")
 
@@ -175,7 +176,6 @@ class ScepProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -187,7 +187,7 @@ class ScepProfileArgs:
     @pulumi.getter
     def fingerprint(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        CA certificate fingerprint
+        CA Certificate Fingerprint
         """
         return pulumi.get(self, "fingerprint")
 
@@ -200,6 +200,7 @@ class ScepProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -224,7 +225,7 @@ class ScepProfileArgs:
     @pulumi.getter(name="scepCaCert")
     def scep_ca_cert(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        SCEP server CA certificate
+        SCEP Server CA Certificate
         """
         return pulumi.get(self, "scep_ca_cert")
 
@@ -236,7 +237,7 @@ class ScepProfileArgs:
     @pulumi.getter(name="scepClientCert")
     def scep_client_cert(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        SCEP client ceertificate
+        SCEP Client Certificate
         """
         return pulumi.get(self, "scep_client_cert")
 
@@ -249,6 +250,7 @@ class ScepProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -306,21 +308,22 @@ class _ScepProfileState:
         """
         Input properties used for looking up and filtering ScepProfile resources.
         :param pulumi.Input['ScepProfileAlgorithmArgs'] algorithm: Algorithm
-        :param pulumi.Input[_builtins.str] ca_identity_name: Certificate Authority identity
+        :param pulumi.Input[_builtins.str] ca_identity_name: Certificate Authority Identity
         :param pulumi.Input['ScepProfileCertificateAttributesArgs'] certificate_attributes: Subject Alternative name type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] digest: Digest for CSR
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
-        :param pulumi.Input[_builtins.str] fingerprint: CA certificate fingerprint
+        :param pulumi.Input[_builtins.str] fingerprint: CA Certificate Fingerprint
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the SCEP profile
-        :param pulumi.Input[_builtins.str] scep_ca_cert: SCEP server CA certificate
-        :param pulumi.Input['ScepProfileScepChallengeArgs'] scep_challenge: One Time Password challenge
-        :param pulumi.Input[_builtins.str] scep_client_cert: SCEP client ceertificate
+        :param pulumi.Input[_builtins.str] scep_ca_cert: SCEP Server CA Certificate
+        :param pulumi.Input['ScepProfileScepChallengeArgs'] scep_challenge: One Time Password Challenge
+        :param pulumi.Input[_builtins.str] scep_client_cert: SCEP Client Certificate
         :param pulumi.Input[_builtins.str] scep_url: SCEP server URL
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] subject: Subject
         :param pulumi.Input[_builtins.bool] use_as_digital_signature: Use as digital signature?
@@ -379,7 +382,7 @@ class _ScepProfileState:
     @pulumi.getter(name="caIdentityName")
     def ca_identity_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Certificate Authority identity
+        Certificate Authority Identity
         """
         return pulumi.get(self, "ca_identity_name")
 
@@ -404,7 +407,6 @@ class _ScepProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -440,7 +442,7 @@ class _ScepProfileState:
     @pulumi.getter
     def fingerprint(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        CA certificate fingerprint
+        CA Certificate Fingerprint
         """
         return pulumi.get(self, "fingerprint")
 
@@ -453,6 +455,7 @@ class _ScepProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -477,7 +480,7 @@ class _ScepProfileState:
     @pulumi.getter(name="scepCaCert")
     def scep_ca_cert(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        SCEP server CA certificate
+        SCEP Server CA Certificate
         """
         return pulumi.get(self, "scep_ca_cert")
 
@@ -489,7 +492,7 @@ class _ScepProfileState:
     @pulumi.getter(name="scepChallenge")
     def scep_challenge(self) -> Optional[pulumi.Input['ScepProfileScepChallengeArgs']]:
         """
-        One Time Password challenge
+        One Time Password Challenge
         """
         return pulumi.get(self, "scep_challenge")
 
@@ -501,7 +504,7 @@ class _ScepProfileState:
     @pulumi.getter(name="scepClientCert")
     def scep_client_cert(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        SCEP client ceertificate
+        SCEP Client Certificate
         """
         return pulumi.get(self, "scep_client_cert")
 
@@ -526,6 +529,7 @@ class _ScepProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -606,6 +610,104 @@ class ScepProfile(pulumi.CustomResource):
         """
         ScepProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # scep profile w/ no challenge
+        scm_scep_profile1 = scm.ScepProfile("scm_scep_profile_1",
+            folder="All",
+            name="scep-prof-1",
+            scep_url="https://scep.example.com/",
+            ca_identity_name="Default",
+            digest="sha1",
+            subject="CN=$USERNAME",
+            scep_challenge={
+                "fixed": "123",
+            },
+            algorithm={
+                "rsa": {
+                    "rsa_nbits": "1024",
+                },
+            })
+        # scep profile w/ fixed challenge
+        scm_scep_profile2 = scm.ScepProfile("scm_scep_profile_2",
+            folder="All",
+            name="scep-prof-2",
+            scep_url="https://example.target.com/",
+            ca_identity_name="user-scep",
+            digest="sha256",
+            subject="CN=$USERNAME",
+            scep_ca_cert="Forward-Trust-CA-ECDSA",
+            scep_challenge={
+                "fixed": "Password123!",
+            },
+            certificate_attributes={
+                "rfc822name": "user@example.com",
+            },
+            algorithm={
+                "rsa": {
+                    "rsa_nbits": "2048",
+                },
+            })
+        # scep profile w/ dynamic challenge
+        scm_scep_profile3 = scm.ScepProfile("scm_scep_profile_3",
+            folder="All",
+            name="scep-prof-3",
+            scep_url="https://example.gateway.com/",
+            ca_identity_name="vpn-gateway",
+            digest="sha384",
+            subject="CN=$CORP_VPN",
+            scep_ca_cert="GlobalSign-Root-CA",
+            fingerprint="64EC88CA00B268E5BA1A35678A1B5316D212F4F366B24772322342423123455A",
+            use_as_digital_signature=False,
+            scep_challenge={
+                "dynamic": {
+                    "username": "user123",
+                    "password": "Password123!",
+                    "otp_server_url": "http://auth.com",
+                },
+            },
+            certificate_attributes={
+                "dnsname": "vpn-gateway.example.com",
+            },
+            algorithm={
+                "rsa": {
+                    "rsa_nbits": "3072",
+                },
+            })
+        # scep profile w/ all fields
+        scm_scep_profile4 = scm.ScepProfile("scm_scep_profile_4",
+            folder="All",
+            name="scep-prof-4",
+            scep_url="https://example.wifi.com/",
+            ca_identity_name="wifi",
+            digest="sha512",
+            subject="CN=$WIFI-ACCESS",
+            scep_ca_cert="Root CA",
+            scep_client_cert="Forward-UnTrust-CA-ECDSA",
+            fingerprint="4448CA00B268E5BU690378A1B5316D212F4F366B2477232234394I",
+            use_as_digital_signature=True,
+            use_for_key_encipherment=True,
+            scep_challenge={
+                "dynamic": {
+                    "username": "admin",
+                    "password": "Pwd@123",
+                    "otp_server_url": "http://auth.com",
+                },
+            },
+            certificate_attributes={
+                "uniform_resource_identifier": "file:///C:/Users/Documents/report.txt",
+            },
+            algorithm={
+                "rsa": {
+                    "rsa_nbits": "3072",
+                },
+            })
+        ```
+
         ## Import
 
         The following command can be used to import a resource not managed by Terraform:
@@ -635,20 +737,21 @@ class ScepProfile(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']] algorithm: Algorithm
-        :param pulumi.Input[_builtins.str] ca_identity_name: Certificate Authority identity
+        :param pulumi.Input[_builtins.str] ca_identity_name: Certificate Authority Identity
         :param pulumi.Input[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']] certificate_attributes: Subject Alternative name type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] digest: Digest for CSR
-        :param pulumi.Input[_builtins.str] fingerprint: CA certificate fingerprint
+        :param pulumi.Input[_builtins.str] fingerprint: CA Certificate Fingerprint
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the SCEP profile
-        :param pulumi.Input[_builtins.str] scep_ca_cert: SCEP server CA certificate
-        :param pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']] scep_challenge: One Time Password challenge
-        :param pulumi.Input[_builtins.str] scep_client_cert: SCEP client ceertificate
+        :param pulumi.Input[_builtins.str] scep_ca_cert: SCEP Server CA Certificate
+        :param pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']] scep_challenge: One Time Password Challenge
+        :param pulumi.Input[_builtins.str] scep_client_cert: SCEP Client Certificate
         :param pulumi.Input[_builtins.str] scep_url: SCEP server URL
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] subject: Subject
         :param pulumi.Input[_builtins.bool] use_as_digital_signature: Use as digital signature?
@@ -662,6 +765,104 @@ class ScepProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ScepProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # scep profile w/ no challenge
+        scm_scep_profile1 = scm.ScepProfile("scm_scep_profile_1",
+            folder="All",
+            name="scep-prof-1",
+            scep_url="https://scep.example.com/",
+            ca_identity_name="Default",
+            digest="sha1",
+            subject="CN=$USERNAME",
+            scep_challenge={
+                "fixed": "123",
+            },
+            algorithm={
+                "rsa": {
+                    "rsa_nbits": "1024",
+                },
+            })
+        # scep profile w/ fixed challenge
+        scm_scep_profile2 = scm.ScepProfile("scm_scep_profile_2",
+            folder="All",
+            name="scep-prof-2",
+            scep_url="https://example.target.com/",
+            ca_identity_name="user-scep",
+            digest="sha256",
+            subject="CN=$USERNAME",
+            scep_ca_cert="Forward-Trust-CA-ECDSA",
+            scep_challenge={
+                "fixed": "Password123!",
+            },
+            certificate_attributes={
+                "rfc822name": "user@example.com",
+            },
+            algorithm={
+                "rsa": {
+                    "rsa_nbits": "2048",
+                },
+            })
+        # scep profile w/ dynamic challenge
+        scm_scep_profile3 = scm.ScepProfile("scm_scep_profile_3",
+            folder="All",
+            name="scep-prof-3",
+            scep_url="https://example.gateway.com/",
+            ca_identity_name="vpn-gateway",
+            digest="sha384",
+            subject="CN=$CORP_VPN",
+            scep_ca_cert="GlobalSign-Root-CA",
+            fingerprint="64EC88CA00B268E5BA1A35678A1B5316D212F4F366B24772322342423123455A",
+            use_as_digital_signature=False,
+            scep_challenge={
+                "dynamic": {
+                    "username": "user123",
+                    "password": "Password123!",
+                    "otp_server_url": "http://auth.com",
+                },
+            },
+            certificate_attributes={
+                "dnsname": "vpn-gateway.example.com",
+            },
+            algorithm={
+                "rsa": {
+                    "rsa_nbits": "3072",
+                },
+            })
+        # scep profile w/ all fields
+        scm_scep_profile4 = scm.ScepProfile("scm_scep_profile_4",
+            folder="All",
+            name="scep-prof-4",
+            scep_url="https://example.wifi.com/",
+            ca_identity_name="wifi",
+            digest="sha512",
+            subject="CN=$WIFI-ACCESS",
+            scep_ca_cert="Root CA",
+            scep_client_cert="Forward-UnTrust-CA-ECDSA",
+            fingerprint="4448CA00B268E5BU690378A1B5316D212F4F366B2477232234394I",
+            use_as_digital_signature=True,
+            use_for_key_encipherment=True,
+            scep_challenge={
+                "dynamic": {
+                    "username": "admin",
+                    "password": "Pwd@123",
+                    "otp_server_url": "http://auth.com",
+                },
+            },
+            certificate_attributes={
+                "uniform_resource_identifier": "file:///C:/Users/Documents/report.txt",
+            },
+            algorithm={
+                "rsa": {
+                    "rsa_nbits": "3072",
+                },
+            })
+        ```
 
         ## Import
 
@@ -797,21 +998,22 @@ class ScepProfile(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']] algorithm: Algorithm
-        :param pulumi.Input[_builtins.str] ca_identity_name: Certificate Authority identity
+        :param pulumi.Input[_builtins.str] ca_identity_name: Certificate Authority Identity
         :param pulumi.Input[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']] certificate_attributes: Subject Alternative name type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] digest: Digest for CSR
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
-        :param pulumi.Input[_builtins.str] fingerprint: CA certificate fingerprint
+        :param pulumi.Input[_builtins.str] fingerprint: CA Certificate Fingerprint
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the SCEP profile
-        :param pulumi.Input[_builtins.str] scep_ca_cert: SCEP server CA certificate
-        :param pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']] scep_challenge: One Time Password challenge
-        :param pulumi.Input[_builtins.str] scep_client_cert: SCEP client ceertificate
+        :param pulumi.Input[_builtins.str] scep_ca_cert: SCEP Server CA Certificate
+        :param pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']] scep_challenge: One Time Password Challenge
+        :param pulumi.Input[_builtins.str] scep_client_cert: SCEP Client Certificate
         :param pulumi.Input[_builtins.str] scep_url: SCEP server URL
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] subject: Subject
         :param pulumi.Input[_builtins.bool] use_as_digital_signature: Use as digital signature?
@@ -853,7 +1055,7 @@ class ScepProfile(pulumi.CustomResource):
     @pulumi.getter(name="caIdentityName")
     def ca_identity_name(self) -> pulumi.Output[_builtins.str]:
         """
-        Certificate Authority identity
+        Certificate Authority Identity
         """
         return pulumi.get(self, "ca_identity_name")
 
@@ -870,7 +1072,6 @@ class ScepProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -894,7 +1095,7 @@ class ScepProfile(pulumi.CustomResource):
     @pulumi.getter
     def fingerprint(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        CA certificate fingerprint
+        CA Certificate Fingerprint
         """
         return pulumi.get(self, "fingerprint")
 
@@ -903,6 +1104,7 @@ class ScepProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -919,7 +1121,7 @@ class ScepProfile(pulumi.CustomResource):
     @pulumi.getter(name="scepCaCert")
     def scep_ca_cert(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        SCEP server CA certificate
+        SCEP Server CA Certificate
         """
         return pulumi.get(self, "scep_ca_cert")
 
@@ -927,7 +1129,7 @@ class ScepProfile(pulumi.CustomResource):
     @pulumi.getter(name="scepChallenge")
     def scep_challenge(self) -> pulumi.Output['outputs.ScepProfileScepChallenge']:
         """
-        One Time Password challenge
+        One Time Password Challenge
         """
         return pulumi.get(self, "scep_challenge")
 
@@ -935,7 +1137,7 @@ class ScepProfile(pulumi.CustomResource):
     @pulumi.getter(name="scepClientCert")
     def scep_client_cert(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        SCEP client ceertificate
+        SCEP Client Certificate
         """
         return pulumi.get(self, "scep_client_cert")
 
@@ -952,6 +1154,7 @@ class ScepProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

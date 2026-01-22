@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Entry
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Entry` and `Network`.
         /// </summary>
         [Input("entry")]
         public Input<Inputs.RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs>? Entry { get; set; }
 
         /// <summary>
         /// Network
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Entry` and `Network`.
         /// </summary>
         [Input("network")]

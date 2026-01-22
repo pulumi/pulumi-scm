@@ -12,6 +12,57 @@ namespace Pulumi.Scm
     /// <summary>
     /// SamlServerProfile resource
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmSamlServerProfile1 = new Scm.SamlServerProfile("scm_saml_server_profile_1", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm-saml-server-prof-1",
+    ///         Certificate = "Global Authentication Cookie Cert",
+    ///         EntityId = "123",
+    ///         SsoUrl = "http://example.com",
+    ///         SsoBindings = "post",
+    ///     });
+    /// 
+    ///     var scmSamlServerProfile2 = new Scm.SamlServerProfile("scm_saml_server_profile_2", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm-saml-server-prof-2",
+    ///         Certificate = "Global Authentication Cookie Cert",
+    ///         EntityId = "test_id",
+    ///         MaxClockSkew = 100,
+    ///         SloBindings = "redirect",
+    ///         SsoBindings = "redirect",
+    ///         SsoUrl = "http://target.com",
+    ///         ValidateIdpCertificate = true,
+    ///     });
+    /// 
+    ///     var scmSamlServerProfile3 = new Scm.SamlServerProfile("scm_saml_server_profile_3", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm-saml-server-prof-3",
+    ///         Certificate = "Global Authentication Cookie Cert",
+    ///         EntityId = "test_123",
+    ///         MaxClockSkew = 900,
+    ///         SloBindings = "post",
+    ///         SsoBindings = "redirect",
+    ///         SloUrl = "http://auth.com",
+    ///         SsoUrl = "http://okta.com",
+    ///         ValidateIdpCertificate = false,
+    ///         WantAuthRequestsSigned = false,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
@@ -49,7 +100,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
@@ -62,6 +112,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -86,7 +137,14 @@ namespace Pulumi.Scm
         public Output<string?> SloBindings { get; private set; } = null!;
 
         /// <summary>
+        /// Identity provider SLO URL
+        /// </summary>
+        [Output("sloUrl")]
+        public Output<string?> SloUrl { get; private set; } = null!;
+
+        /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -173,7 +231,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -186,6 +243,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -210,7 +268,14 @@ namespace Pulumi.Scm
         public Input<string>? SloBindings { get; set; }
 
         /// <summary>
+        /// Identity provider SLO URL
+        /// </summary>
+        [Input("sloUrl")]
+        public Input<string>? SloUrl { get; set; }
+
+        /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -256,7 +321,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -269,6 +333,7 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -293,7 +358,14 @@ namespace Pulumi.Scm
         public Input<string>? SloBindings { get; set; }
 
         /// <summary>
+        /// Identity provider SLO URL
+        /// </summary>
+        [Input("sloUrl")]
+        public Input<string>? SloUrl { get; set; }
+
+        /// <summary>
         /// The snippet in which the resource is defined
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

@@ -36,7 +36,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Peer as
         /// </summary>
-        public readonly string? PeerAs;
+        public readonly string PeerAs;
         /// <summary>
         /// Peer ip address
         /// </summary>
@@ -62,7 +62,7 @@ namespace Pulumi.Scm.Outputs
 
             bool? originateDefaultRoute,
 
-            string? peerAs,
+            string peerAs,
 
             string? peerIpAddress,
 

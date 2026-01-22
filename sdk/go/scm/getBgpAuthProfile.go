@@ -58,38 +58,24 @@ func LookupBgpAuthProfile(ctx *pulumi.Context, args *LookupBgpAuthProfileArgs, o
 // A collection of arguments for invoking getBgpAuthProfile.
 type LookupBgpAuthProfileArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Profile name
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getBgpAuthProfile.
 type LookupBgpAuthProfileResult struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// Map of sensitive values returned from the API.
+	Device          string            `pulumi:"device"`
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
+	Folder          string            `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Profile name
-	Name string `pulumi:"name"`
-	// BGP authentication key
-	Secret string `pulumi:"secret"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string `pulumi:"id"`
+	Name    string `pulumi:"name"`
+	Secret  string `pulumi:"secret"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -106,17 +92,11 @@ func LookupBgpAuthProfileOutput(ctx *pulumi.Context, args LookupBgpAuthProfileOu
 // A collection of arguments for invoking getBgpAuthProfile.
 type LookupBgpAuthProfileOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Profile name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -140,18 +120,14 @@ func (o LookupBgpAuthProfileResultOutput) ToLookupBgpAuthProfileResultOutputWith
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpAuthProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Map of sensitive values returned from the API.
 func (o LookupBgpAuthProfileResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpAuthProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -161,18 +137,14 @@ func (o LookupBgpAuthProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Profile name
 func (o LookupBgpAuthProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// BGP authentication key
 func (o LookupBgpAuthProfileResultOutput) Secret() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Secret }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpAuthProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

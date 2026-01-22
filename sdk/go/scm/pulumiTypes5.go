@@ -13,6 +13,1171 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp struct {
+	// Address
+	Address string `pulumi:"address"`
+	// Group addresses
+	GroupAddresses []string `pulumi:"groupAddresses"`
+	// Interface
+	Interface string `pulumi:"interface"`
+	// Override
+	Override bool `pulumi:"override"`
+}
+
+// GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpInput is an input type that accepts GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs and GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpInput` via:
+//
+//	GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs{...}
+type GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput() GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput
+	ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput
+}
+
+type GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs struct {
+	// Address
+	Address pulumi.StringInput `pulumi:"address"`
+	// Group addresses
+	GroupAddresses pulumi.StringArrayInput `pulumi:"groupAddresses"`
+	// Interface
+	Interface pulumi.StringInput `pulumi:"interface"`
+	// Override
+	Override pulumi.BoolInput `pulumi:"override"`
+}
+
+func (GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs) ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput() GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput {
+	return i.ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs) ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput() GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) ToGetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput {
+	return o
+}
+
+// Address
+func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp) string { return v.Address }).(pulumi.StringOutput)
+}
+
+// Group addresses
+func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) GroupAddresses() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp) []string { return v.GroupAddresses }).(pulumi.StringArrayOutput)
+}
+
+// Interface
+func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) Interface() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp) string { return v.Interface }).(pulumi.StringOutput)
+}
+
+// Override
+func (o GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput) Override() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp) bool { return v.Override }).(pulumi.BoolOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastSptThreshold struct {
+	// Name
+	Name string `pulumi:"name"`
+	// Threshold
+	Threshold string `pulumi:"threshold"`
+}
+
+// GetLogicalRouterListDataVrfMulticastSptThresholdInput is an input type that accepts GetLogicalRouterListDataVrfMulticastSptThresholdArgs and GetLogicalRouterListDataVrfMulticastSptThresholdOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastSptThresholdInput` via:
+//
+//	GetLogicalRouterListDataVrfMulticastSptThresholdArgs{...}
+type GetLogicalRouterListDataVrfMulticastSptThresholdInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfMulticastSptThresholdOutput() GetLogicalRouterListDataVrfMulticastSptThresholdOutput
+	ToGetLogicalRouterListDataVrfMulticastSptThresholdOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdOutput
+}
+
+type GetLogicalRouterListDataVrfMulticastSptThresholdArgs struct {
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Threshold
+	Threshold pulumi.StringInput `pulumi:"threshold"`
+}
+
+func (GetLogicalRouterListDataVrfMulticastSptThresholdArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSptThreshold)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfMulticastSptThresholdArgs) ToGetLogicalRouterListDataVrfMulticastSptThresholdOutput() GetLogicalRouterListDataVrfMulticastSptThresholdOutput {
+	return i.ToGetLogicalRouterListDataVrfMulticastSptThresholdOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfMulticastSptThresholdArgs) ToGetLogicalRouterListDataVrfMulticastSptThresholdOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastSptThresholdOutput)
+}
+
+// GetLogicalRouterListDataVrfMulticastSptThresholdArrayInput is an input type that accepts GetLogicalRouterListDataVrfMulticastSptThresholdArray and GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastSptThresholdArrayInput` via:
+//
+//	GetLogicalRouterListDataVrfMulticastSptThresholdArray{ GetLogicalRouterListDataVrfMulticastSptThresholdArgs{...} }
+type GetLogicalRouterListDataVrfMulticastSptThresholdArrayInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput() GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput
+	ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput
+}
+
+type GetLogicalRouterListDataVrfMulticastSptThresholdArray []GetLogicalRouterListDataVrfMulticastSptThresholdInput
+
+func (GetLogicalRouterListDataVrfMulticastSptThresholdArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastSptThreshold)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfMulticastSptThresholdArray) ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput() GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput {
+	return i.ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfMulticastSptThresholdArray) ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastSptThresholdOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfMulticastSptThresholdOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSptThreshold)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfMulticastSptThresholdOutput) ToGetLogicalRouterListDataVrfMulticastSptThresholdOutput() GetLogicalRouterListDataVrfMulticastSptThresholdOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfMulticastSptThresholdOutput) ToGetLogicalRouterListDataVrfMulticastSptThresholdOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdOutput {
+	return o
+}
+
+// Name
+func (o GetLogicalRouterListDataVrfMulticastSptThresholdOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastSptThreshold) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Threshold
+func (o GetLogicalRouterListDataVrfMulticastSptThresholdOutput) Threshold() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastSptThreshold) string { return v.Threshold }).(pulumi.StringOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastSptThreshold)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput) ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput() GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput) ToGetLogicalRouterListDataVrfMulticastSptThresholdArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput) Index(i pulumi.IntInput) GetLogicalRouterListDataVrfMulticastSptThresholdOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetLogicalRouterListDataVrfMulticastSptThreshold {
+		return vs[0].([]GetLogicalRouterListDataVrfMulticastSptThreshold)[vs[1].(int)]
+	}).(GetLogicalRouterListDataVrfMulticastSptThresholdOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastSsmAddressSpace struct {
+	// Group address
+	GroupAddress string `pulumi:"groupAddress"`
+	// Included
+	Included bool `pulumi:"included"`
+	// Name
+	Name string `pulumi:"name"`
+}
+
+// GetLogicalRouterListDataVrfMulticastSsmAddressSpaceInput is an input type that accepts GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs and GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastSsmAddressSpaceInput` via:
+//
+//	GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs{...}
+type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput
+	ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput
+}
+
+type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs struct {
+	// Group address
+	GroupAddress pulumi.StringInput `pulumi:"groupAddress"`
+	// Included
+	Included pulumi.BoolInput `pulumi:"included"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSsmAddressSpace)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput {
+	return i.ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput)
+}
+
+// GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayInput is an input type that accepts GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray and GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayInput` via:
+//
+//	GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray{ GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs{...} }
+type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput
+	ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput
+}
+
+type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray []GetLogicalRouterListDataVrfMulticastSsmAddressSpaceInput
+
+func (GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastSsmAddressSpace)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput {
+	return i.ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSsmAddressSpace)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput {
+	return o
+}
+
+// Group address
+func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) GroupAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastSsmAddressSpace) string { return v.GroupAddress }).(pulumi.StringOutput)
+}
+
+// Included
+func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) Included() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastSsmAddressSpace) bool { return v.Included }).(pulumi.BoolOutput)
+}
+
+// Name
+func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastSsmAddressSpace) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastSsmAddressSpace)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput() GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput) ToGetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput) Index(i pulumi.IntInput) GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetLogicalRouterListDataVrfMulticastSsmAddressSpace {
+		return vs[0].([]GetLogicalRouterListDataVrfMulticastSsmAddressSpace)[vs[1].(int)]
+	}).(GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastStaticRoute struct {
+	// Destination
+	Destination string `pulumi:"destination"`
+	// Interface
+	Interface string `pulumi:"interface"`
+	// Name
+	Name string `pulumi:"name"`
+	// Nexthop
+	Nexthop GetLogicalRouterListDataVrfMulticastStaticRouteNexthop `pulumi:"nexthop"`
+	// Preference
+	Preference int `pulumi:"preference"`
+}
+
+// GetLogicalRouterListDataVrfMulticastStaticRouteInput is an input type that accepts GetLogicalRouterListDataVrfMulticastStaticRouteArgs and GetLogicalRouterListDataVrfMulticastStaticRouteOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastStaticRouteInput` via:
+//
+//	GetLogicalRouterListDataVrfMulticastStaticRouteArgs{...}
+type GetLogicalRouterListDataVrfMulticastStaticRouteInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfMulticastStaticRouteOutput() GetLogicalRouterListDataVrfMulticastStaticRouteOutput
+	ToGetLogicalRouterListDataVrfMulticastStaticRouteOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteOutput
+}
+
+type GetLogicalRouterListDataVrfMulticastStaticRouteArgs struct {
+	// Destination
+	Destination pulumi.StringInput `pulumi:"destination"`
+	// Interface
+	Interface pulumi.StringInput `pulumi:"interface"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Nexthop
+	Nexthop GetLogicalRouterListDataVrfMulticastStaticRouteNexthopInput `pulumi:"nexthop"`
+	// Preference
+	Preference pulumi.IntInput `pulumi:"preference"`
+}
+
+func (GetLogicalRouterListDataVrfMulticastStaticRouteArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRoute)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfMulticastStaticRouteArgs) ToGetLogicalRouterListDataVrfMulticastStaticRouteOutput() GetLogicalRouterListDataVrfMulticastStaticRouteOutput {
+	return i.ToGetLogicalRouterListDataVrfMulticastStaticRouteOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfMulticastStaticRouteArgs) ToGetLogicalRouterListDataVrfMulticastStaticRouteOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastStaticRouteOutput)
+}
+
+// GetLogicalRouterListDataVrfMulticastStaticRouteArrayInput is an input type that accepts GetLogicalRouterListDataVrfMulticastStaticRouteArray and GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastStaticRouteArrayInput` via:
+//
+//	GetLogicalRouterListDataVrfMulticastStaticRouteArray{ GetLogicalRouterListDataVrfMulticastStaticRouteArgs{...} }
+type GetLogicalRouterListDataVrfMulticastStaticRouteArrayInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput() GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput
+	ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput
+}
+
+type GetLogicalRouterListDataVrfMulticastStaticRouteArray []GetLogicalRouterListDataVrfMulticastStaticRouteInput
+
+func (GetLogicalRouterListDataVrfMulticastStaticRouteArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastStaticRoute)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfMulticastStaticRouteArray) ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput() GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput {
+	return i.ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfMulticastStaticRouteArray) ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastStaticRouteOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfMulticastStaticRouteOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRoute)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteOutput() GetLogicalRouterListDataVrfMulticastStaticRouteOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteOutput {
+	return o
+}
+
+// Destination
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) Destination() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRoute) string { return v.Destination }).(pulumi.StringOutput)
+}
+
+// Interface
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) Interface() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRoute) string { return v.Interface }).(pulumi.StringOutput)
+}
+
+// Name
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRoute) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Nexthop
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) Nexthop() GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRoute) GetLogicalRouterListDataVrfMulticastStaticRouteNexthop {
+		return v.Nexthop
+	}).(GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput)
+}
+
+// Preference
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteOutput) Preference() pulumi.IntOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRoute) int { return v.Preference }).(pulumi.IntOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfMulticastStaticRoute)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput() GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput) Index(i pulumi.IntInput) GetLogicalRouterListDataVrfMulticastStaticRouteOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetLogicalRouterListDataVrfMulticastStaticRoute {
+		return vs[0].([]GetLogicalRouterListDataVrfMulticastStaticRoute)[vs[1].(int)]
+	}).(GetLogicalRouterListDataVrfMulticastStaticRouteOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastStaticRouteNexthop struct {
+	// Ip address
+	IpAddress string `pulumi:"ipAddress"`
+}
+
+// GetLogicalRouterListDataVrfMulticastStaticRouteNexthopInput is an input type that accepts GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs and GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfMulticastStaticRouteNexthopInput` via:
+//
+//	GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs{...}
+type GetLogicalRouterListDataVrfMulticastStaticRouteNexthopInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput() GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput
+	ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutputWithContext(context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput
+}
+
+type GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs struct {
+	// Ip address
+	IpAddress pulumi.StringInput `pulumi:"ipAddress"`
+}
+
+func (GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRouteNexthop)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs) ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput() GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput {
+	return i.ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs) ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput)
+}
+
+type GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRouteNexthop)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput() GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput) ToGetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput {
+	return o
+}
+
+// Ip address
+func (o GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput) IpAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfMulticastStaticRouteNexthop) string { return v.IpAddress }).(pulumi.StringOutput)
+}
+
+type GetLogicalRouterListDataVrfOspf struct {
+	// Allow redist default route
+	AllowRedistDefaultRoute bool `pulumi:"allowRedistDefaultRoute"`
+	// Area
+	Areas []GetLogicalRouterListDataVrfOspfArea `pulumi:"areas"`
+	// Auth profile
+	AuthProfiles []GetLogicalRouterListDataVrfOspfAuthProfile `pulumi:"authProfiles"`
+	// Enable
+	Enable bool `pulumi:"enable"`
+	// Export rules
+	ExportRules []GetLogicalRouterListDataVrfOspfExportRule `pulumi:"exportRules"`
+	// Flood prevention
+	FloodPrevention GetLogicalRouterListDataVrfOspfFloodPrevention `pulumi:"floodPrevention"`
+	// Global bfd
+	GlobalBfd GetLogicalRouterListDataVrfOspfGlobalBfd `pulumi:"globalBfd"`
+	// Global if timer
+	GlobalIfTimer string `pulumi:"globalIfTimer"`
+	// Graceful restart
+	GracefulRestart GetLogicalRouterListDataVrfOspfGracefulRestart `pulumi:"gracefulRestart"`
+	// Redistribution profile
+	RedistributionProfile string `pulumi:"redistributionProfile"`
+	// Reject default route
+	RejectDefaultRoute bool `pulumi:"rejectDefaultRoute"`
+	// Rfc1583
+	Rfc1583 bool `pulumi:"rfc1583"`
+	// Router id
+	RouterId string `pulumi:"routerId"`
+	// Spf timer
+	SpfTimer string `pulumi:"spfTimer"`
+	// Vr timers
+	VrTimers GetLogicalRouterListDataVrfOspfVrTimers `pulumi:"vrTimers"`
+}
+
+// GetLogicalRouterListDataVrfOspfInput is an input type that accepts GetLogicalRouterListDataVrfOspfArgs and GetLogicalRouterListDataVrfOspfOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfInput` via:
+//
+//	GetLogicalRouterListDataVrfOspfArgs{...}
+type GetLogicalRouterListDataVrfOspfInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfOspfOutput() GetLogicalRouterListDataVrfOspfOutput
+	ToGetLogicalRouterListDataVrfOspfOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfOutput
+}
+
+type GetLogicalRouterListDataVrfOspfArgs struct {
+	// Allow redist default route
+	AllowRedistDefaultRoute pulumi.BoolInput `pulumi:"allowRedistDefaultRoute"`
+	// Area
+	Areas GetLogicalRouterListDataVrfOspfAreaArrayInput `pulumi:"areas"`
+	// Auth profile
+	AuthProfiles GetLogicalRouterListDataVrfOspfAuthProfileArrayInput `pulumi:"authProfiles"`
+	// Enable
+	Enable pulumi.BoolInput `pulumi:"enable"`
+	// Export rules
+	ExportRules GetLogicalRouterListDataVrfOspfExportRuleArrayInput `pulumi:"exportRules"`
+	// Flood prevention
+	FloodPrevention GetLogicalRouterListDataVrfOspfFloodPreventionInput `pulumi:"floodPrevention"`
+	// Global bfd
+	GlobalBfd GetLogicalRouterListDataVrfOspfGlobalBfdInput `pulumi:"globalBfd"`
+	// Global if timer
+	GlobalIfTimer pulumi.StringInput `pulumi:"globalIfTimer"`
+	// Graceful restart
+	GracefulRestart GetLogicalRouterListDataVrfOspfGracefulRestartInput `pulumi:"gracefulRestart"`
+	// Redistribution profile
+	RedistributionProfile pulumi.StringInput `pulumi:"redistributionProfile"`
+	// Reject default route
+	RejectDefaultRoute pulumi.BoolInput `pulumi:"rejectDefaultRoute"`
+	// Rfc1583
+	Rfc1583 pulumi.BoolInput `pulumi:"rfc1583"`
+	// Router id
+	RouterId pulumi.StringInput `pulumi:"routerId"`
+	// Spf timer
+	SpfTimer pulumi.StringInput `pulumi:"spfTimer"`
+	// Vr timers
+	VrTimers GetLogicalRouterListDataVrfOspfVrTimersInput `pulumi:"vrTimers"`
+}
+
+func (GetLogicalRouterListDataVrfOspfArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspf)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfOspfArgs) ToGetLogicalRouterListDataVrfOspfOutput() GetLogicalRouterListDataVrfOspfOutput {
+	return i.ToGetLogicalRouterListDataVrfOspfOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfOspfArgs) ToGetLogicalRouterListDataVrfOspfOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfOutput)
+}
+
+type GetLogicalRouterListDataVrfOspfOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfOspfOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspf)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfOspfOutput) ToGetLogicalRouterListDataVrfOspfOutput() GetLogicalRouterListDataVrfOspfOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfOspfOutput) ToGetLogicalRouterListDataVrfOspfOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfOutput {
+	return o
+}
+
+// Allow redist default route
+func (o GetLogicalRouterListDataVrfOspfOutput) AllowRedistDefaultRoute() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) bool { return v.AllowRedistDefaultRoute }).(pulumi.BoolOutput)
+}
+
+// Area
+func (o GetLogicalRouterListDataVrfOspfOutput) Areas() GetLogicalRouterListDataVrfOspfAreaArrayOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) []GetLogicalRouterListDataVrfOspfArea { return v.Areas }).(GetLogicalRouterListDataVrfOspfAreaArrayOutput)
+}
+
+// Auth profile
+func (o GetLogicalRouterListDataVrfOspfOutput) AuthProfiles() GetLogicalRouterListDataVrfOspfAuthProfileArrayOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) []GetLogicalRouterListDataVrfOspfAuthProfile {
+		return v.AuthProfiles
+	}).(GetLogicalRouterListDataVrfOspfAuthProfileArrayOutput)
+}
+
+// Enable
+func (o GetLogicalRouterListDataVrfOspfOutput) Enable() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) bool { return v.Enable }).(pulumi.BoolOutput)
+}
+
+// Export rules
+func (o GetLogicalRouterListDataVrfOspfOutput) ExportRules() GetLogicalRouterListDataVrfOspfExportRuleArrayOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) []GetLogicalRouterListDataVrfOspfExportRule {
+		return v.ExportRules
+	}).(GetLogicalRouterListDataVrfOspfExportRuleArrayOutput)
+}
+
+// Flood prevention
+func (o GetLogicalRouterListDataVrfOspfOutput) FloodPrevention() GetLogicalRouterListDataVrfOspfFloodPreventionOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) GetLogicalRouterListDataVrfOspfFloodPrevention {
+		return v.FloodPrevention
+	}).(GetLogicalRouterListDataVrfOspfFloodPreventionOutput)
+}
+
+// Global bfd
+func (o GetLogicalRouterListDataVrfOspfOutput) GlobalBfd() GetLogicalRouterListDataVrfOspfGlobalBfdOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) GetLogicalRouterListDataVrfOspfGlobalBfd { return v.GlobalBfd }).(GetLogicalRouterListDataVrfOspfGlobalBfdOutput)
+}
+
+// Global if timer
+func (o GetLogicalRouterListDataVrfOspfOutput) GlobalIfTimer() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) string { return v.GlobalIfTimer }).(pulumi.StringOutput)
+}
+
+// Graceful restart
+func (o GetLogicalRouterListDataVrfOspfOutput) GracefulRestart() GetLogicalRouterListDataVrfOspfGracefulRestartOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) GetLogicalRouterListDataVrfOspfGracefulRestart {
+		return v.GracefulRestart
+	}).(GetLogicalRouterListDataVrfOspfGracefulRestartOutput)
+}
+
+// Redistribution profile
+func (o GetLogicalRouterListDataVrfOspfOutput) RedistributionProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) string { return v.RedistributionProfile }).(pulumi.StringOutput)
+}
+
+// Reject default route
+func (o GetLogicalRouterListDataVrfOspfOutput) RejectDefaultRoute() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) bool { return v.RejectDefaultRoute }).(pulumi.BoolOutput)
+}
+
+// Rfc1583
+func (o GetLogicalRouterListDataVrfOspfOutput) Rfc1583() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) bool { return v.Rfc1583 }).(pulumi.BoolOutput)
+}
+
+// Router id
+func (o GetLogicalRouterListDataVrfOspfOutput) RouterId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) string { return v.RouterId }).(pulumi.StringOutput)
+}
+
+// Spf timer
+func (o GetLogicalRouterListDataVrfOspfOutput) SpfTimer() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) string { return v.SpfTimer }).(pulumi.StringOutput)
+}
+
+// Vr timers
+func (o GetLogicalRouterListDataVrfOspfOutput) VrTimers() GetLogicalRouterListDataVrfOspfVrTimersOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspf) GetLogicalRouterListDataVrfOspfVrTimers { return v.VrTimers }).(GetLogicalRouterListDataVrfOspfVrTimersOutput)
+}
+
+type GetLogicalRouterListDataVrfOspfArea struct {
+	// Authentication
+	Authentication string `pulumi:"authentication"`
+	// Interface
+	Interfaces []GetLogicalRouterListDataVrfOspfAreaInterface `pulumi:"interfaces"`
+	// Name
+	Name string `pulumi:"name"`
+	// Range
+	Ranges []GetLogicalRouterListDataVrfOspfAreaRange `pulumi:"ranges"`
+	// Type
+	Type GetLogicalRouterListDataVrfOspfAreaType `pulumi:"type"`
+	// Virtual link
+	VirtualLinks []GetLogicalRouterListDataVrfOspfAreaVirtualLink `pulumi:"virtualLinks"`
+	// Vr range
+	VrRanges []GetLogicalRouterListDataVrfOspfAreaVrRange `pulumi:"vrRanges"`
+}
+
+// GetLogicalRouterListDataVrfOspfAreaInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaArgs and GetLogicalRouterListDataVrfOspfAreaOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaInput` via:
+//
+//	GetLogicalRouterListDataVrfOspfAreaArgs{...}
+type GetLogicalRouterListDataVrfOspfAreaInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfOspfAreaOutput() GetLogicalRouterListDataVrfOspfAreaOutput
+	ToGetLogicalRouterListDataVrfOspfAreaOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaOutput
+}
+
+type GetLogicalRouterListDataVrfOspfAreaArgs struct {
+	// Authentication
+	Authentication pulumi.StringInput `pulumi:"authentication"`
+	// Interface
+	Interfaces GetLogicalRouterListDataVrfOspfAreaInterfaceArrayInput `pulumi:"interfaces"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Range
+	Ranges GetLogicalRouterListDataVrfOspfAreaRangeArrayInput `pulumi:"ranges"`
+	// Type
+	Type GetLogicalRouterListDataVrfOspfAreaTypeInput `pulumi:"type"`
+	// Virtual link
+	VirtualLinks GetLogicalRouterListDataVrfOspfAreaVirtualLinkArrayInput `pulumi:"virtualLinks"`
+	// Vr range
+	VrRanges GetLogicalRouterListDataVrfOspfAreaVrRangeArrayInput `pulumi:"vrRanges"`
+}
+
+func (GetLogicalRouterListDataVrfOspfAreaArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfArea)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaArgs) ToGetLogicalRouterListDataVrfOspfAreaOutput() GetLogicalRouterListDataVrfOspfAreaOutput {
+	return i.ToGetLogicalRouterListDataVrfOspfAreaOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaArgs) ToGetLogicalRouterListDataVrfOspfAreaOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaOutput)
+}
+
+// GetLogicalRouterListDataVrfOspfAreaArrayInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaArray and GetLogicalRouterListDataVrfOspfAreaArrayOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaArrayInput` via:
+//
+//	GetLogicalRouterListDataVrfOspfAreaArray{ GetLogicalRouterListDataVrfOspfAreaArgs{...} }
+type GetLogicalRouterListDataVrfOspfAreaArrayInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfOspfAreaArrayOutput() GetLogicalRouterListDataVrfOspfAreaArrayOutput
+	ToGetLogicalRouterListDataVrfOspfAreaArrayOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaArrayOutput
+}
+
+type GetLogicalRouterListDataVrfOspfAreaArray []GetLogicalRouterListDataVrfOspfAreaInput
+
+func (GetLogicalRouterListDataVrfOspfAreaArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfOspfArea)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaArray) ToGetLogicalRouterListDataVrfOspfAreaArrayOutput() GetLogicalRouterListDataVrfOspfAreaArrayOutput {
+	return i.ToGetLogicalRouterListDataVrfOspfAreaArrayOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaArray) ToGetLogicalRouterListDataVrfOspfAreaArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaArrayOutput)
+}
+
+type GetLogicalRouterListDataVrfOspfAreaOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfOspfAreaOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfArea)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaOutput) ToGetLogicalRouterListDataVrfOspfAreaOutput() GetLogicalRouterListDataVrfOspfAreaOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaOutput) ToGetLogicalRouterListDataVrfOspfAreaOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaOutput {
+	return o
+}
+
+// Authentication
+func (o GetLogicalRouterListDataVrfOspfAreaOutput) Authentication() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) string { return v.Authentication }).(pulumi.StringOutput)
+}
+
+// Interface
+func (o GetLogicalRouterListDataVrfOspfAreaOutput) Interfaces() GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) []GetLogicalRouterListDataVrfOspfAreaInterface {
+		return v.Interfaces
+	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput)
+}
+
+// Name
+func (o GetLogicalRouterListDataVrfOspfAreaOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Range
+func (o GetLogicalRouterListDataVrfOspfAreaOutput) Ranges() GetLogicalRouterListDataVrfOspfAreaRangeArrayOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) []GetLogicalRouterListDataVrfOspfAreaRange {
+		return v.Ranges
+	}).(GetLogicalRouterListDataVrfOspfAreaRangeArrayOutput)
+}
+
+// Type
+func (o GetLogicalRouterListDataVrfOspfAreaOutput) Type() GetLogicalRouterListDataVrfOspfAreaTypeOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) GetLogicalRouterListDataVrfOspfAreaType { return v.Type }).(GetLogicalRouterListDataVrfOspfAreaTypeOutput)
+}
+
+// Virtual link
+func (o GetLogicalRouterListDataVrfOspfAreaOutput) VirtualLinks() GetLogicalRouterListDataVrfOspfAreaVirtualLinkArrayOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) []GetLogicalRouterListDataVrfOspfAreaVirtualLink {
+		return v.VirtualLinks
+	}).(GetLogicalRouterListDataVrfOspfAreaVirtualLinkArrayOutput)
+}
+
+// Vr range
+func (o GetLogicalRouterListDataVrfOspfAreaOutput) VrRanges() GetLogicalRouterListDataVrfOspfAreaVrRangeArrayOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfArea) []GetLogicalRouterListDataVrfOspfAreaVrRange {
+		return v.VrRanges
+	}).(GetLogicalRouterListDataVrfOspfAreaVrRangeArrayOutput)
+}
+
+type GetLogicalRouterListDataVrfOspfAreaArrayOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfOspfAreaArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfOspfArea)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaArrayOutput) ToGetLogicalRouterListDataVrfOspfAreaArrayOutput() GetLogicalRouterListDataVrfOspfAreaArrayOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaArrayOutput) ToGetLogicalRouterListDataVrfOspfAreaArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaArrayOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaArrayOutput) Index(i pulumi.IntInput) GetLogicalRouterListDataVrfOspfAreaOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetLogicalRouterListDataVrfOspfArea {
+		return vs[0].([]GetLogicalRouterListDataVrfOspfArea)[vs[1].(int)]
+	}).(GetLogicalRouterListDataVrfOspfAreaOutput)
+}
+
+type GetLogicalRouterListDataVrfOspfAreaInterface struct {
+	// Authentication
+	Authentication string `pulumi:"authentication"`
+	// Bfd
+	Bfd GetLogicalRouterListDataVrfOspfAreaInterfaceBfd `pulumi:"bfd"`
+	// Enable
+	Enable bool `pulumi:"enable"`
+	// Link type
+	LinkType GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType `pulumi:"linkType"`
+	// Metric
+	Metric int `pulumi:"metric"`
+	// Mtu ignore
+	MtuIgnore bool `pulumi:"mtuIgnore"`
+	// Name
+	Name string `pulumi:"name"`
+	// Passive
+	Passive bool `pulumi:"passive"`
+	// Priority
+	Priority int `pulumi:"priority"`
+	// Timing
+	Timing string `pulumi:"timing"`
+	// Vr timing
+	VrTiming GetLogicalRouterListDataVrfOspfAreaInterfaceVrTiming `pulumi:"vrTiming"`
+}
+
+// GetLogicalRouterListDataVrfOspfAreaInterfaceInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaInterfaceArgs and GetLogicalRouterListDataVrfOspfAreaInterfaceOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaInterfaceInput` via:
+//
+//	GetLogicalRouterListDataVrfOspfAreaInterfaceArgs{...}
+type GetLogicalRouterListDataVrfOspfAreaInterfaceInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceOutput
+	ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceOutput
+}
+
+type GetLogicalRouterListDataVrfOspfAreaInterfaceArgs struct {
+	// Authentication
+	Authentication pulumi.StringInput `pulumi:"authentication"`
+	// Bfd
+	Bfd GetLogicalRouterListDataVrfOspfAreaInterfaceBfdInput `pulumi:"bfd"`
+	// Enable
+	Enable pulumi.BoolInput `pulumi:"enable"`
+	// Link type
+	LinkType GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeInput `pulumi:"linkType"`
+	// Metric
+	Metric pulumi.IntInput `pulumi:"metric"`
+	// Mtu ignore
+	MtuIgnore pulumi.BoolInput `pulumi:"mtuIgnore"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Passive
+	Passive pulumi.BoolInput `pulumi:"passive"`
+	// Priority
+	Priority pulumi.IntInput `pulumi:"priority"`
+	// Timing
+	Timing pulumi.StringInput `pulumi:"timing"`
+	// Vr timing
+	VrTiming GetLogicalRouterListDataVrfOspfAreaInterfaceVrTimingInput `pulumi:"vrTiming"`
+}
+
+func (GetLogicalRouterListDataVrfOspfAreaInterfaceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterface)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaInterfaceArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceOutput {
+	return i.ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaInterfaceArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaInterfaceOutput)
+}
+
+// GetLogicalRouterListDataVrfOspfAreaInterfaceArrayInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaInterfaceArray and GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaInterfaceArrayInput` via:
+//
+//	GetLogicalRouterListDataVrfOspfAreaInterfaceArray{ GetLogicalRouterListDataVrfOspfAreaInterfaceArgs{...} }
+type GetLogicalRouterListDataVrfOspfAreaInterfaceArrayInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput
+	ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput
+}
+
+type GetLogicalRouterListDataVrfOspfAreaInterfaceArray []GetLogicalRouterListDataVrfOspfAreaInterfaceInput
+
+func (GetLogicalRouterListDataVrfOspfAreaInterfaceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfOspfAreaInterface)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaInterfaceArray) ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput {
+	return i.ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaInterfaceArray) ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput)
+}
+
+type GetLogicalRouterListDataVrfOspfAreaInterfaceOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterface)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceOutput {
+	return o
+}
+
+// Authentication
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Authentication() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) string { return v.Authentication }).(pulumi.StringOutput)
+}
+
+// Bfd
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Bfd() GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) GetLogicalRouterListDataVrfOspfAreaInterfaceBfd {
+		return v.Bfd
+	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput)
+}
+
+// Enable
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Enable() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) bool { return v.Enable }).(pulumi.BoolOutput)
+}
+
+// Link type
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) LinkType() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType {
+		return v.LinkType
+	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput)
+}
+
+// Metric
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Metric() pulumi.IntOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) int { return v.Metric }).(pulumi.IntOutput)
+}
+
+// Mtu ignore
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) MtuIgnore() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) bool { return v.MtuIgnore }).(pulumi.BoolOutput)
+}
+
+// Name
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Passive
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Passive() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) bool { return v.Passive }).(pulumi.BoolOutput)
+}
+
+// Priority
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Priority() pulumi.IntOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) int { return v.Priority }).(pulumi.IntOutput)
+}
+
+// Timing
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) Timing() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) string { return v.Timing }).(pulumi.StringOutput)
+}
+
+// Vr timing
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceOutput) VrTiming() GetLogicalRouterListDataVrfOspfAreaInterfaceVrTimingOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterface) GetLogicalRouterListDataVrfOspfAreaInterfaceVrTiming {
+		return v.VrTiming
+	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceVrTimingOutput)
+}
+
+type GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetLogicalRouterListDataVrfOspfAreaInterface)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput) Index(i pulumi.IntInput) GetLogicalRouterListDataVrfOspfAreaInterfaceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetLogicalRouterListDataVrfOspfAreaInterface {
+		return vs[0].([]GetLogicalRouterListDataVrfOspfAreaInterface)[vs[1].(int)]
+	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceOutput)
+}
+
+type GetLogicalRouterListDataVrfOspfAreaInterfaceBfd struct {
+	// Profile
+	Profile string `pulumi:"profile"`
+}
+
+// GetLogicalRouterListDataVrfOspfAreaInterfaceBfdInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs and GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaInterfaceBfdInput` via:
+//
+//	GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs{...}
+type GetLogicalRouterListDataVrfOspfAreaInterfaceBfdInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput
+	ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput
+}
+
+type GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs struct {
+	// Profile
+	Profile pulumi.StringInput `pulumi:"profile"`
+}
+
+func (GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceBfd)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput {
+	return i.ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput)
+}
+
+type GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceBfd)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput {
+	return o
+}
+
+// Profile
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput) Profile() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterfaceBfd) string { return v.Profile }).(pulumi.StringOutput)
+}
+
+type GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType struct {
+	// Broadcast
+	Broadcast GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcast `pulumi:"broadcast"`
+	// P2mp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
+	P2mp GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mp `pulumi:"p2mp"`
+	// P2p
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
+	P2p GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2p `pulumi:"p2p"`
+}
+
+// GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeInput is an input type that accepts GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs and GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput values.
+// You can construct a concrete instance of `GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeInput` via:
+//
+//	GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs{...}
+type GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeInput interface {
+	pulumi.Input
+
+	ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput
+	ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutputWithContext(context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput
+}
+
+type GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs struct {
+	// Broadcast
+	Broadcast GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcastInput `pulumi:"broadcast"`
+	// P2mp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
+	P2mp GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpInput `pulumi:"p2mp"`
+	// P2p
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
+	P2p GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2pInput `pulumi:"p2p"`
+}
+
+func (GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType)(nil)).Elem()
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput {
+	return i.ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutputWithContext(context.Background())
+}
+
+func (i GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs) ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput)
+}
+
+type GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput struct{ *pulumi.OutputState }
+
+func (GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType)(nil)).Elem()
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput {
+	return o
+}
+
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) ToGetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutputWithContext(ctx context.Context) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput {
+	return o
+}
+
+// Broadcast
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) Broadcast() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcastOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcast {
+		return v.Broadcast
+	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcastOutput)
+}
+
+// P2mp
+//
+// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) P2mp() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mp {
+		return v.P2mp
+	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpOutput)
+}
+
+// P2p
+//
+// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
+func (o GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput) P2p() GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2pOutput {
+	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType) GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2p {
+		return v.P2p
+	}).(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2pOutput)
+}
+
 type GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcast struct {
 }
 
@@ -464,12 +1629,13 @@ func (o GetLogicalRouterListDataVrfOspfAreaRangeArrayOutput) Index(i pulumi.IntI
 
 type GetLogicalRouterListDataVrfOspfAreaType struct {
 	// Normal
-	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Normal GetLogicalRouterListDataVrfOspfAreaTypeNormal `pulumi:"normal"`
 	// Nssa
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa GetLogicalRouterListDataVrfOspfAreaTypeNssa `pulumi:"nssa"`
 	// Stub
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub GetLogicalRouterListDataVrfOspfAreaTypeStub `pulumi:"stub"`
 }
@@ -487,12 +1653,13 @@ type GetLogicalRouterListDataVrfOspfAreaTypeInput interface {
 
 type GetLogicalRouterListDataVrfOspfAreaTypeArgs struct {
 	// Normal
-	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Normal GetLogicalRouterListDataVrfOspfAreaTypeNormalInput `pulumi:"normal"`
 	// Nssa
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa GetLogicalRouterListDataVrfOspfAreaTypeNssaInput `pulumi:"nssa"`
 	// Stub
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub GetLogicalRouterListDataVrfOspfAreaTypeStubInput `pulumi:"stub"`
 }
@@ -524,7 +1691,6 @@ func (o GetLogicalRouterListDataVrfOspfAreaTypeOutput) ToGetLogicalRouterListDat
 }
 
 // Normal
-// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterListDataVrfOspfAreaTypeOutput) Normal() GetLogicalRouterListDataVrfOspfAreaTypeNormalOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaType) GetLogicalRouterListDataVrfOspfAreaTypeNormal {
 		return v.Normal
@@ -532,6 +1698,7 @@ func (o GetLogicalRouterListDataVrfOspfAreaTypeOutput) Normal() GetLogicalRouter
 }
 
 // Nssa
+//
 // > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterListDataVrfOspfAreaTypeOutput) Nssa() GetLogicalRouterListDataVrfOspfAreaTypeNssaOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaType) GetLogicalRouterListDataVrfOspfAreaTypeNssa {
@@ -540,6 +1707,7 @@ func (o GetLogicalRouterListDataVrfOspfAreaTypeOutput) Nssa() GetLogicalRouterLi
 }
 
 // Stub
+//
 // > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterListDataVrfOspfAreaTypeOutput) Stub() GetLogicalRouterListDataVrfOspfAreaTypeStubOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaType) GetLogicalRouterListDataVrfOspfAreaTypeStub {
@@ -1055,9 +2223,9 @@ func (o GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultInformationOriginateOu
 
 type GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRoute struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteDisable `pulumi:"disable"`
 }
@@ -1075,9 +2243,9 @@ type GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteInput interface {
 
 type GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteArgs struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteAdvertiseInput `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteDisableInput `pulumi:"disable"`
 }
@@ -1109,7 +2277,6 @@ func (o GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteOutput) ToGetLogi
 }
 
 // Advertise
-// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteOutput) Advertise() GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteAdvertiseOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRoute) GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteAdvertise {
 		return v.Advertise
@@ -1117,6 +2284,7 @@ func (o GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteOutput) Advertise
 }
 
 // Disable
+//
 // > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteOutput) Disable() GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteDisableOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRoute) GetLogicalRouterListDataVrfOspfAreaTypeNssaDefaultRouteDisable {
@@ -1606,9 +2774,9 @@ func (o GetLogicalRouterListDataVrfOspfAreaTypeStubAbrOutput) OutboundFilterList
 
 type GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRoute struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteDisable `pulumi:"disable"`
 }
@@ -1626,9 +2794,9 @@ type GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteInput interface {
 
 type GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteArgs struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteAdvertiseInput `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteDisableInput `pulumi:"disable"`
 }
@@ -1660,7 +2828,6 @@ func (o GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteOutput) ToGetLogi
 }
 
 // Advertise
-// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteOutput) Advertise() GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteAdvertiseOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRoute) GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteAdvertise {
 		return v.Advertise
@@ -1668,6 +2835,7 @@ func (o GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteOutput) Advertise
 }
 
 // Disable
+//
 // > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteOutput) Disable() GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteDisableOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRoute) GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRouteDisable {
@@ -3644,12 +4812,13 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaInterfaceBfdOutput) Profile() pulum
 
 type GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkType struct {
 	// Broadcast
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	Broadcast GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeBroadcast `pulumi:"broadcast"`
 	// P2mp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2mp GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeP2mp `pulumi:"p2mp"`
 	// P2p
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2p GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeP2p `pulumi:"p2p"`
 }
@@ -3667,12 +4836,13 @@ type GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeInput interface {
 
 type GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeArgs struct {
 	// Broadcast
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	Broadcast GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeBroadcastInput `pulumi:"broadcast"`
 	// P2mp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2mp GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeP2mpInput `pulumi:"p2mp"`
 	// P2p
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2p GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeP2pInput `pulumi:"p2p"`
 }
@@ -3704,7 +4874,6 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeOutput) ToGetLogic
 }
 
 // Broadcast
-// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeOutput) Broadcast() GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeBroadcastOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkType) GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeBroadcast {
 		return v.Broadcast
@@ -3712,6 +4881,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeOutput) Broadcast(
 }
 
 // P2mp
+//
 // > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeOutput) P2mp() GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeP2mpOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkType) GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeP2mp {
@@ -3720,6 +4890,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeOutput) P2mp() Get
 }
 
 // P2p
+//
 // > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeOutput) P2p() GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeP2pOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkType) GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkTypeP2p {
@@ -4266,12 +5437,13 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaRangeArrayOutput) Index(i pulumi.In
 
 type GetLogicalRouterListDataVrfOspfv3AreaType struct {
 	// Normal
-	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Normal GetLogicalRouterListDataVrfOspfv3AreaTypeNormal `pulumi:"normal"`
 	// Nssa
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa GetLogicalRouterListDataVrfOspfv3AreaTypeNssa `pulumi:"nssa"`
 	// Stub
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub GetLogicalRouterListDataVrfOspfv3AreaTypeStub `pulumi:"stub"`
 }
@@ -4289,12 +5461,13 @@ type GetLogicalRouterListDataVrfOspfv3AreaTypeInput interface {
 
 type GetLogicalRouterListDataVrfOspfv3AreaTypeArgs struct {
 	// Normal
-	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Normal GetLogicalRouterListDataVrfOspfv3AreaTypeNormalInput `pulumi:"normal"`
 	// Nssa
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa GetLogicalRouterListDataVrfOspfv3AreaTypeNssaInput `pulumi:"nssa"`
 	// Stub
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub GetLogicalRouterListDataVrfOspfv3AreaTypeStubInput `pulumi:"stub"`
 }
@@ -4326,7 +5499,6 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaTypeOutput) ToGetLogicalRouterListD
 }
 
 // Normal
-// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterListDataVrfOspfv3AreaTypeOutput) Normal() GetLogicalRouterListDataVrfOspfv3AreaTypeNormalOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AreaType) GetLogicalRouterListDataVrfOspfv3AreaTypeNormal {
 		return v.Normal
@@ -4334,6 +5506,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaTypeOutput) Normal() GetLogicalRout
 }
 
 // Nssa
+//
 // > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterListDataVrfOspfv3AreaTypeOutput) Nssa() GetLogicalRouterListDataVrfOspfv3AreaTypeNssaOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AreaType) GetLogicalRouterListDataVrfOspfv3AreaTypeNssa {
@@ -4342,6 +5515,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaTypeOutput) Nssa() GetLogicalRouter
 }
 
 // Stub
+//
 // > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterListDataVrfOspfv3AreaTypeOutput) Stub() GetLogicalRouterListDataVrfOspfv3AreaTypeStubOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AreaType) GetLogicalRouterListDataVrfOspfv3AreaTypeStub {
@@ -4956,9 +6130,9 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultInformationOriginate
 
 type GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRoute struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteDisable `pulumi:"disable"`
 }
@@ -4976,9 +6150,9 @@ type GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteInput interface {
 
 type GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteArgs struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseInput `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteDisableInput `pulumi:"disable"`
 }
@@ -5010,7 +6184,6 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteOutput) ToGetLo
 }
 
 // Advertise
-// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteOutput) Advertise() GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRoute) GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteAdvertise {
 		return v.Advertise
@@ -5018,6 +6191,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteOutput) Adverti
 }
 
 // Disable
+//
 // > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteOutput) Disable() GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteDisableOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRoute) GetLogicalRouterListDataVrfOspfv3AreaTypeNssaDefaultRouteDisable {
@@ -5516,9 +6690,9 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaTypeStubAbrOutput) OutboundFilterLi
 
 type GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRoute struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteDisable `pulumi:"disable"`
 }
@@ -5536,9 +6710,9 @@ type GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteInput interface {
 
 type GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteArgs struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteAdvertiseInput `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteDisableInput `pulumi:"disable"`
 }
@@ -5570,7 +6744,6 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteOutput) ToGetLo
 }
 
 // Advertise
-// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteOutput) Advertise() GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteAdvertiseOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRoute) GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteAdvertise {
 		return v.Advertise
@@ -5578,6 +6751,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteOutput) Adverti
 }
 
 // Disable
+//
 // > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteOutput) Disable() GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteDisableOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRoute) GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteDisable {
@@ -6337,18 +7511,21 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileArrayOutput) Index(i pulumi.
 
 type GetLogicalRouterListDataVrfOspfv3AuthProfileAh struct {
 	// Md5
-	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Md5 GetLogicalRouterListDataVrfOspfv3AuthProfileAhMd5 `pulumi:"md5"`
 	// Sha1
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha1 `pulumi:"sha1"`
 	// Sha256
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha256 `pulumi:"sha256"`
 	// Sha384
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha384 `pulumi:"sha384"`
 	// Sha512
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha512 `pulumi:"sha512"`
 }
@@ -6366,18 +7543,21 @@ type GetLogicalRouterListDataVrfOspfv3AuthProfileAhInput interface {
 
 type GetLogicalRouterListDataVrfOspfv3AuthProfileAhArgs struct {
 	// Md5
-	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Md5 GetLogicalRouterListDataVrfOspfv3AuthProfileAhMd5Input `pulumi:"md5"`
 	// Sha1
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha1Input `pulumi:"sha1"`
 	// Sha256
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha256Input `pulumi:"sha256"`
 	// Sha384
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha384Input `pulumi:"sha384"`
 	// Sha512
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha512Input `pulumi:"sha512"`
 }
@@ -6409,7 +7589,6 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileAhOutput) ToGetLogicalRouter
 }
 
 // Md5
-// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterListDataVrfOspfv3AuthProfileAhOutput) Md5() GetLogicalRouterListDataVrfOspfv3AuthProfileAhMd5Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AuthProfileAh) GetLogicalRouterListDataVrfOspfv3AuthProfileAhMd5 {
 		return v.Md5
@@ -6417,6 +7596,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileAhOutput) Md5() GetLogicalRo
 }
 
 // Sha1
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterListDataVrfOspfv3AuthProfileAhOutput) Sha1() GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha1Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AuthProfileAh) GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha1 {
@@ -6425,6 +7605,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileAhOutput) Sha1() GetLogicalR
 }
 
 // Sha256
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterListDataVrfOspfv3AuthProfileAhOutput) Sha256() GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha256Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AuthProfileAh) GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha256 {
@@ -6433,6 +7614,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileAhOutput) Sha256() GetLogica
 }
 
 // Sha384
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterListDataVrfOspfv3AuthProfileAhOutput) Sha384() GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha384Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AuthProfileAh) GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha384 {
@@ -6441,6 +7623,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileAhOutput) Sha384() GetLogica
 }
 
 // Sha512
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterListDataVrfOspfv3AuthProfileAhOutput) Sha512() GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha512Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AuthProfileAh) GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha512 {
@@ -6775,21 +7958,25 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspOutput) Encryption() GetL
 
 type GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthentication struct {
 	// Md5
-	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Md5 GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationMd5 `pulumi:"md5"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	None GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationNone `pulumi:"none"`
 	// Sha1
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha1 `pulumi:"sha1"`
 	// Sha256
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha256 `pulumi:"sha256"`
 	// Sha384
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha384 `pulumi:"sha384"`
 	// Sha512
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha512 `pulumi:"sha512"`
 }
@@ -6807,21 +7994,25 @@ type GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationInput interfac
 
 type GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationArgs struct {
 	// Md5
-	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Md5 GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationMd5Input `pulumi:"md5"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	None GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationNoneInput `pulumi:"none"`
 	// Sha1
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha1Input `pulumi:"sha1"`
 	// Sha256
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha256Input `pulumi:"sha256"`
 	// Sha384
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha384Input `pulumi:"sha384"`
 	// Sha512
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha512Input `pulumi:"sha512"`
 }
@@ -6853,7 +8044,6 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) ToG
 }
 
 // Md5
-// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) Md5() GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationMd5Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationMd5 {
 		return v.Md5
@@ -6861,6 +8051,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) Md5
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) None() GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationNone {
@@ -6869,6 +8060,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) Non
 }
 
 // Sha1
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) Sha1() GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha1Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha1 {
@@ -6877,6 +8069,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) Sha
 }
 
 // Sha256
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) Sha256() GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha256Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha256 {
@@ -6885,6 +8078,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) Sha
 }
 
 // Sha384
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) Sha384() GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha384Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha384 {
@@ -6893,6 +8087,7 @@ func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) Sha
 }
 
 // Sha512
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationOutput) Sha512() GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha512Output {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterListDataVrfOspfv3AuthProfileEspAuthenticationSha512 {
@@ -9153,27 +10348,33 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteBfdOutput) Profile()
 
 type GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthop struct {
 	// Discard
-	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Discard GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopDiscard `pulumi:"discard"`
 	// Fqdn
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn string `pulumi:"fqdn"`
 	// Ip address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	IpAddress string `pulumi:"ipAddress"`
 	// Ipv6 address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address string `pulumi:"ipv6Address"`
 	// Next lr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr string `pulumi:"nextLr"`
 	// Next vr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr string `pulumi:"nextVr"`
 	// Receive
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopReceive `pulumi:"receive"`
 	// Tunnel
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel string `pulumi:"tunnel"`
 }
@@ -9191,27 +10392,33 @@ type GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopInput interface 
 
 type GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopArgs struct {
 	// Discard
-	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Discard GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopDiscardInput `pulumi:"discard"`
 	// Fqdn
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn pulumi.StringInput `pulumi:"fqdn"`
 	// Ip address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	IpAddress pulumi.StringInput `pulumi:"ipAddress"`
 	// Ipv6 address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address pulumi.StringInput `pulumi:"ipv6Address"`
 	// Next lr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr pulumi.StringInput `pulumi:"nextLr"`
 	// Next vr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr pulumi.StringInput `pulumi:"nextVr"`
 	// Receive
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopReceiveInput `pulumi:"receive"`
 	// Tunnel
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel pulumi.StringInput `pulumi:"tunnel"`
 }
@@ -9243,7 +10450,6 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopOutput) ToGet
 }
 
 // Discard
-// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopOutput) Discard() GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopDiscardOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthop) GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopDiscard {
 		return v.Discard
@@ -9251,36 +10457,42 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopOutput) Disca
 }
 
 // Fqdn
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopOutput) Fqdn() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthop) string { return v.Fqdn }).(pulumi.StringOutput)
 }
 
 // Ip address
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopOutput) IpAddress() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthop) string { return v.IpAddress }).(pulumi.StringOutput)
 }
 
 // Ipv6 address
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopOutput) Ipv6Address() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthop) string { return v.Ipv6Address }).(pulumi.StringOutput)
 }
 
 // Next lr
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopOutput) NextLr() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthop) string { return v.NextLr }).(pulumi.StringOutput)
 }
 
 // Next vr
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopOutput) NextVr() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthop) string { return v.NextVr }).(pulumi.StringOutput)
 }
 
 // Receive
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopOutput) Receive() GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopReceiveOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthop) GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopReceive {
@@ -9289,6 +10501,7 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopOutput) Recei
 }
 
 // Tunnel
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthopOutput) Tunnel() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthop) string { return v.Tunnel }).(pulumi.StringOutput)
@@ -9630,15 +10843,17 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
 
 type GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTable struct {
 	// Both
-	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Both GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableBoth `pulumi:"both"`
 	// Multicast
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Multicast GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableMulticast `pulumi:"multicast"`
 	// No install
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	NoInstall GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableNoInstall `pulumi:"noInstall"`
 	// Unicast
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Unicast GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableUnicast `pulumi:"unicast"`
 }
@@ -9656,15 +10871,17 @@ type GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableInput interfa
 
 type GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableArgs struct {
 	// Both
-	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Both GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableBothInput `pulumi:"both"`
 	// Multicast
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Multicast GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableMulticastInput `pulumi:"multicast"`
 	// No install
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	NoInstall GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableNoInstallInput `pulumi:"noInstall"`
 	// Unicast
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Unicast GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableUnicastInput `pulumi:"unicast"`
 }
@@ -9696,7 +10913,6 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableOutput) To
 }
 
 // Both
-// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableOutput) Both() GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableBothOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTable) GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableBoth {
 		return v.Both
@@ -9704,6 +10920,7 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableOutput) Bo
 }
 
 // Multicast
+//
 // > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableOutput) Multicast() GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableMulticastOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTable) GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableMulticast {
@@ -9712,6 +10929,7 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableOutput) Mu
 }
 
 // No install
+//
 // > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableOutput) NoInstall() GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableNoInstallOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTable) GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableNoInstall {
@@ -9720,6 +10938,7 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableOutput) No
 }
 
 // Unicast
+//
 // > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableOutput) Unicast() GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableUnicastOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTable) GetLogicalRouterListDataVrfRoutingTableIpStaticRouteRouteTableUnicast {
@@ -10195,24 +11414,29 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteBfdOutput) Profile
 
 type GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthop struct {
 	// Discard
-	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Discard GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopDiscard `pulumi:"discard"`
 	// Fqdn
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn string `pulumi:"fqdn"`
 	// Ipv6 address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address string `pulumi:"ipv6Address"`
 	// Next lr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr string `pulumi:"nextLr"`
 	// Next vr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr string `pulumi:"nextVr"`
 	// Receive
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopReceive `pulumi:"receive"`
 	// Tunnel
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel string `pulumi:"tunnel"`
 }
@@ -10230,24 +11454,29 @@ type GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopInput interfac
 
 type GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopArgs struct {
 	// Discard
-	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Discard GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopDiscardInput `pulumi:"discard"`
 	// Fqdn
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn pulumi.StringInput `pulumi:"fqdn"`
 	// Ipv6 address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address pulumi.StringInput `pulumi:"ipv6Address"`
 	// Next lr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr pulumi.StringInput `pulumi:"nextLr"`
 	// Next vr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr pulumi.StringInput `pulumi:"nextVr"`
 	// Receive
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopReceiveInput `pulumi:"receive"`
 	// Tunnel
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel pulumi.StringInput `pulumi:"tunnel"`
 }
@@ -10279,7 +11508,6 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopOutput) ToG
 }
 
 // Discard
-// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopOutput) Discard() GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopDiscardOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthop) GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopDiscard {
 		return v.Discard
@@ -10287,30 +11515,35 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopOutput) Dis
 }
 
 // Fqdn
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopOutput) Fqdn() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthop) string { return v.Fqdn }).(pulumi.StringOutput)
 }
 
 // Ipv6 address
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopOutput) Ipv6Address() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthop) string { return v.Ipv6Address }).(pulumi.StringOutput)
 }
 
 // Next lr
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopOutput) NextLr() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthop) string { return v.NextLr }).(pulumi.StringOutput)
 }
 
 // Next vr
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopOutput) NextVr() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthop) string { return v.NextVr }).(pulumi.StringOutput)
 }
 
 // Receive
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopOutput) Receive() GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopReceiveOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthop) GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopReceive {
@@ -10319,6 +11552,7 @@ func (o GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopOutput) Rec
 }
 
 // Tunnel
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthopOutput) Tunnel() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfRoutingTableIpv6StaticRouteNexthop) string { return v.Tunnel }).(pulumi.StringOutput)
@@ -12381,9 +13615,9 @@ func (o GetLogicalRouterVrfBgpAggregateRouteArrayOutput) Index(i pulumi.IntInput
 
 type GetLogicalRouterVrfBgpAggregateRouteType struct {
 	// Ipv4
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 	Ipv4 GetLogicalRouterVrfBgpAggregateRouteTypeIpv4 `pulumi:"ipv4"`
 	// Ipv6
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 	Ipv6 GetLogicalRouterVrfBgpAggregateRouteTypeIpv6 `pulumi:"ipv6"`
 }
@@ -12401,9 +13635,9 @@ type GetLogicalRouterVrfBgpAggregateRouteTypeInput interface {
 
 type GetLogicalRouterVrfBgpAggregateRouteTypeArgs struct {
 	// Ipv4
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 	Ipv4 GetLogicalRouterVrfBgpAggregateRouteTypeIpv4Input `pulumi:"ipv4"`
 	// Ipv6
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 	Ipv6 GetLogicalRouterVrfBgpAggregateRouteTypeIpv6Input `pulumi:"ipv6"`
 }
@@ -12435,7 +13669,6 @@ func (o GetLogicalRouterVrfBgpAggregateRouteTypeOutput) ToGetLogicalRouterVrfBgp
 }
 
 // Ipv4
-// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 func (o GetLogicalRouterVrfBgpAggregateRouteTypeOutput) Ipv4() GetLogicalRouterVrfBgpAggregateRouteTypeIpv4Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpAggregateRouteType) GetLogicalRouterVrfBgpAggregateRouteTypeIpv4 {
 		return v.Ipv4
@@ -12443,6 +13676,7 @@ func (o GetLogicalRouterVrfBgpAggregateRouteTypeOutput) Ipv4() GetLogicalRouterV
 }
 
 // Ipv6
+//
 // > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 func (o GetLogicalRouterVrfBgpAggregateRouteTypeOutput) Ipv6() GetLogicalRouterVrfBgpAggregateRouteTypeIpv6Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpAggregateRouteType) GetLogicalRouterVrfBgpAggregateRouteTypeIpv6 {
@@ -13780,9 +15014,9 @@ func (o GetLogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnectio
 
 type GetLogicalRouterVrfBgpPeerGroupPeerInherit struct {
 	// No
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 	No GetLogicalRouterVrfBgpPeerGroupPeerInheritNo `pulumi:"no"`
 	// Yes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 	Yes GetLogicalRouterVrfBgpPeerGroupPeerInheritYes `pulumi:"yes"`
 }
@@ -13800,9 +15034,9 @@ type GetLogicalRouterVrfBgpPeerGroupPeerInheritInput interface {
 
 type GetLogicalRouterVrfBgpPeerGroupPeerInheritArgs struct {
 	// No
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 	No GetLogicalRouterVrfBgpPeerGroupPeerInheritNoInput `pulumi:"no"`
 	// Yes
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 	Yes GetLogicalRouterVrfBgpPeerGroupPeerInheritYesInput `pulumi:"yes"`
 }
@@ -13834,7 +15068,6 @@ func (o GetLogicalRouterVrfBgpPeerGroupPeerInheritOutput) ToGetLogicalRouterVrfB
 }
 
 // No
-// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 func (o GetLogicalRouterVrfBgpPeerGroupPeerInheritOutput) No() GetLogicalRouterVrfBgpPeerGroupPeerInheritNoOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPeerGroupPeerInherit) GetLogicalRouterVrfBgpPeerGroupPeerInheritNo {
 		return v.No
@@ -13842,6 +15075,7 @@ func (o GetLogicalRouterVrfBgpPeerGroupPeerInheritOutput) No() GetLogicalRouterV
 }
 
 // Yes
+//
 // > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 func (o GetLogicalRouterVrfBgpPeerGroupPeerInheritOutput) Yes() GetLogicalRouterVrfBgpPeerGroupPeerInheritYesOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPeerGroupPeerInherit) GetLogicalRouterVrfBgpPeerGroupPeerInheritYes {
@@ -14142,9 +15376,9 @@ func (o GetLogicalRouterVrfBgpPeerGroupPeerLocalAddressOutput) Ip() pulumi.Strin
 
 type GetLogicalRouterVrfBgpPeerGroupPeerPeerAddress struct {
 	// Fqdn
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Fqdn string `pulumi:"fqdn"`
 	// Ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip string `pulumi:"ip"`
 }
@@ -14162,9 +15396,9 @@ type GetLogicalRouterVrfBgpPeerGroupPeerPeerAddressInput interface {
 
 type GetLogicalRouterVrfBgpPeerGroupPeerPeerAddressArgs struct {
 	// Fqdn
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Fqdn pulumi.StringInput `pulumi:"fqdn"`
 	// Ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip pulumi.StringInput `pulumi:"ip"`
 }
@@ -14196,12 +15430,12 @@ func (o GetLogicalRouterVrfBgpPeerGroupPeerPeerAddressOutput) ToGetLogicalRouter
 }
 
 // Fqdn
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o GetLogicalRouterVrfBgpPeerGroupPeerPeerAddressOutput) Fqdn() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPeerGroupPeerPeerAddress) string { return v.Fqdn }).(pulumi.StringOutput)
 }
 
 // Ip
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o GetLogicalRouterVrfBgpPeerGroupPeerPeerAddressOutput) Ip() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPeerGroupPeerPeerAddress) string { return v.Ip }).(pulumi.StringOutput)
@@ -14270,15 +15504,17 @@ func (o GetLogicalRouterVrfBgpPeerGroupPeerSubsequentAddressFamilyIdentifierOutp
 
 type GetLogicalRouterVrfBgpPeerGroupType struct {
 	// Ebgp
-	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	Ebgp GetLogicalRouterVrfBgpPeerGroupTypeEbgp `pulumi:"ebgp"`
 	// Ebgp confed
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	EbgpConfed GetLogicalRouterVrfBgpPeerGroupTypeEbgpConfed `pulumi:"ebgpConfed"`
 	// Ibgp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	Ibgp GetLogicalRouterVrfBgpPeerGroupTypeIbgp `pulumi:"ibgp"`
 	// Ibgp confed
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	IbgpConfed GetLogicalRouterVrfBgpPeerGroupTypeIbgpConfed `pulumi:"ibgpConfed"`
 }
@@ -14296,15 +15532,17 @@ type GetLogicalRouterVrfBgpPeerGroupTypeInput interface {
 
 type GetLogicalRouterVrfBgpPeerGroupTypeArgs struct {
 	// Ebgp
-	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	Ebgp GetLogicalRouterVrfBgpPeerGroupTypeEbgpInput `pulumi:"ebgp"`
 	// Ebgp confed
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	EbgpConfed GetLogicalRouterVrfBgpPeerGroupTypeEbgpConfedInput `pulumi:"ebgpConfed"`
 	// Ibgp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	Ibgp GetLogicalRouterVrfBgpPeerGroupTypeIbgpInput `pulumi:"ibgp"`
 	// Ibgp confed
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	IbgpConfed GetLogicalRouterVrfBgpPeerGroupTypeIbgpConfedInput `pulumi:"ibgpConfed"`
 }
@@ -14336,12 +15574,12 @@ func (o GetLogicalRouterVrfBgpPeerGroupTypeOutput) ToGetLogicalRouterVrfBgpPeerG
 }
 
 // Ebgp
-// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o GetLogicalRouterVrfBgpPeerGroupTypeOutput) Ebgp() GetLogicalRouterVrfBgpPeerGroupTypeEbgpOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPeerGroupType) GetLogicalRouterVrfBgpPeerGroupTypeEbgp { return v.Ebgp }).(GetLogicalRouterVrfBgpPeerGroupTypeEbgpOutput)
 }
 
 // Ebgp confed
+//
 // > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o GetLogicalRouterVrfBgpPeerGroupTypeOutput) EbgpConfed() GetLogicalRouterVrfBgpPeerGroupTypeEbgpConfedOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPeerGroupType) GetLogicalRouterVrfBgpPeerGroupTypeEbgpConfed {
@@ -14350,12 +15588,14 @@ func (o GetLogicalRouterVrfBgpPeerGroupTypeOutput) EbgpConfed() GetLogicalRouter
 }
 
 // Ibgp
+//
 // > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o GetLogicalRouterVrfBgpPeerGroupTypeOutput) Ibgp() GetLogicalRouterVrfBgpPeerGroupTypeIbgpOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPeerGroupType) GetLogicalRouterVrfBgpPeerGroupTypeIbgp { return v.Ibgp }).(GetLogicalRouterVrfBgpPeerGroupTypeIbgpOutput)
 }
 
 // Ibgp confed
+//
 // > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o GetLogicalRouterVrfBgpPeerGroupTypeOutput) IbgpConfed() GetLogicalRouterVrfBgpPeerGroupTypeIbgpConfedOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPeerGroupType) GetLogicalRouterVrfBgpPeerGroupTypeIbgpConfed {
@@ -15560,15 +16800,17 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesOu
 
 type GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend int `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend int `pulumi:"removeAndPrepend"`
 }
@@ -15586,15 +16828,17 @@ type GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPat
 
 type GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathArgs struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNoneInput `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend pulumi.IntInput `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemoveInput `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend pulumi.IntInput `pulumi:"removeAndPrepend"`
 }
@@ -15626,7 +16870,6 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAs
 }
 
 // None
-// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathOutput) None() GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone {
 		return v.None
@@ -15634,6 +16877,7 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAs
 }
 
 // Prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathOutput) Prepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) int {
@@ -15642,6 +16886,7 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAs
 }
 
 // Remove
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathOutput) Remove() GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemoveOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove {
@@ -15650,6 +16895,7 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAs
 }
 
 // Remove and prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathOutput) RemoveAndPrepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) int {
@@ -15745,18 +16991,21 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAs
 
 type GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -15774,18 +17023,21 @@ type GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommu
 
 type GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -15817,7 +17069,6 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCo
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) []string {
 		return v.Appends
@@ -15825,6 +17076,7 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCo
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) None() GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone {
@@ -15833,6 +17085,7 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCo
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) []string {
@@ -15841,6 +17094,7 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCo
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) RemoveAll() GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll {
@@ -15849,6 +17103,7 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCo
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) string {
@@ -15944,18 +17199,21 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCo
 
 type GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -15973,18 +17231,21 @@ type GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExten
 
 type GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -16016,7 +17277,6 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesEx
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) []string {
 		return v.Appends
@@ -16024,6 +17284,7 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesEx
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) None() GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNone {
@@ -16032,6 +17293,7 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesEx
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) []string {
@@ -16040,6 +17302,7 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesEx
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) RemoveAll() GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAll {
@@ -16048,6 +17311,7 @@ func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesEx
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) string {
@@ -18139,9 +19403,9 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleArrayOutput) Index(i pulumi.IntInp
 
 type GetLogicalRouterVrfBgpPolicyExportRuleAction struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Allow GetLogicalRouterVrfBgpPolicyExportRuleActionAllow `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny GetLogicalRouterVrfBgpPolicyExportRuleActionDeny `pulumi:"deny"`
 }
@@ -18159,9 +19423,9 @@ type GetLogicalRouterVrfBgpPolicyExportRuleActionInput interface {
 
 type GetLogicalRouterVrfBgpPolicyExportRuleActionArgs struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Allow GetLogicalRouterVrfBgpPolicyExportRuleActionAllowInput `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny GetLogicalRouterVrfBgpPolicyExportRuleActionDenyInput `pulumi:"deny"`
 }
@@ -18193,7 +19457,6 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionOutput) ToGetLogicalRouterVr
 }
 
 // Allow
-// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionOutput) Allow() GetLogicalRouterVrfBgpPolicyExportRuleActionAllowOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleAction) GetLogicalRouterVrfBgpPolicyExportRuleActionAllow {
 		return v.Allow
@@ -18201,6 +19464,7 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionOutput) Allow() GetLogicalRo
 }
 
 // Deny
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionOutput) Deny() GetLogicalRouterVrfBgpPolicyExportRuleActionDenyOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleAction) GetLogicalRouterVrfBgpPolicyExportRuleActionDeny {
@@ -18385,15 +19649,17 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateOutput) Origin() 
 
 type GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNone `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend int `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend int `pulumi:"removeAndPrepend"`
 }
@@ -18411,15 +19677,17 @@ type GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathInput interfac
 
 type GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgs struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNoneInput `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend pulumi.IntInput `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveInput `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend pulumi.IntInput `pulumi:"removeAndPrepend"`
 }
@@ -18451,7 +19719,6 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) ToG
 }
 
 // None
-// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) None() GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath) GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNone {
 		return v.None
@@ -18459,12 +19726,14 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) Non
 }
 
 // Prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) Prepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath) int { return v.Prepend }).(pulumi.IntOutput)
 }
 
 // Remove
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) Remove() GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath) GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove {
@@ -18473,6 +19742,7 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) Rem
 }
 
 // Remove and prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) RemoveAndPrepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath) int { return v.RemoveAndPrepend }).(pulumi.IntOutput)
@@ -18566,18 +19836,21 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveOutpu
 
 type GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -18595,18 +19868,21 @@ type GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityInput inter
 
 type GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -18638,12 +19914,12 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) 
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) []string { return v.Appends }).(pulumi.StringArrayOutput)
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) None() GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNone {
@@ -18652,12 +19928,14 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) 
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) []string { return v.Overwrites }).(pulumi.StringArrayOutput)
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) RemoveAll() GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAll {
@@ -18666,6 +19944,7 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) 
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) string { return v.RemoveRegex }).(pulumi.StringOutput)
@@ -18759,18 +20038,21 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAl
 
 type GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -18788,18 +20070,21 @@ type GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityInp
 
 type GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -18831,7 +20116,6 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) []string {
 		return v.Appends
@@ -18839,6 +20123,7 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) None() GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone {
@@ -18847,6 +20132,7 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) []string {
@@ -18855,6 +20141,7 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) RemoveAll() GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll {
@@ -18863,6 +20150,7 @@ func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) string {
@@ -19593,9 +20881,9 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleArrayOutput) Index(i pulumi.IntInp
 
 type GetLogicalRouterVrfBgpPolicyImportRuleAction struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Allow GetLogicalRouterVrfBgpPolicyImportRuleActionAllow `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny GetLogicalRouterVrfBgpPolicyImportRuleActionDeny `pulumi:"deny"`
 }
@@ -19613,9 +20901,9 @@ type GetLogicalRouterVrfBgpPolicyImportRuleActionInput interface {
 
 type GetLogicalRouterVrfBgpPolicyImportRuleActionArgs struct {
 	// Allow
-	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Allow GetLogicalRouterVrfBgpPolicyImportRuleActionAllowInput `pulumi:"allow"`
 	// Deny
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny GetLogicalRouterVrfBgpPolicyImportRuleActionDenyInput `pulumi:"deny"`
 }
@@ -19647,7 +20935,6 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionOutput) ToGetLogicalRouterVr
 }
 
 // Allow
-// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionOutput) Allow() GetLogicalRouterVrfBgpPolicyImportRuleActionAllowOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleAction) GetLogicalRouterVrfBgpPolicyImportRuleActionAllow {
 		return v.Allow
@@ -19655,6 +20942,7 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionOutput) Allow() GetLogicalRo
 }
 
 // Deny
+//
 // > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionOutput) Deny() GetLogicalRouterVrfBgpPolicyImportRuleActionDenyOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleAction) GetLogicalRouterVrfBgpPolicyImportRuleActionDeny {
@@ -19857,15 +21145,17 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateOutput) Weight() 
 
 type GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend int `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend int `pulumi:"removeAndPrepend"`
 }
@@ -19883,15 +21173,17 @@ type GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathInput interfac
 
 type GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgs struct {
 	// None
-	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	None GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNoneInput `pulumi:"none"`
 	// Prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend pulumi.IntInput `pulumi:"prepend"`
 	// Remove
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemoveInput `pulumi:"remove"`
 	// Remove and prepend
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend pulumi.IntInput `pulumi:"removeAndPrepend"`
 }
@@ -19923,7 +21215,6 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) ToG
 }
 
 // None
-// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) None() GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath) GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone {
 		return v.None
@@ -19931,12 +21222,14 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) Non
 }
 
 // Prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) Prepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath) int { return v.Prepend }).(pulumi.IntOutput)
 }
 
 // Remove
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) Remove() GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemoveOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath) GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove {
@@ -19945,6 +21238,7 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) Rem
 }
 
 // Remove and prepend
+//
 // > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) RemoveAndPrepend() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath) int { return v.RemoveAndPrepend }).(pulumi.IntOutput)
@@ -20038,18 +21332,21 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemoveOutpu
 
 type GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -20067,18 +21364,21 @@ type GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityInput inter
 
 type GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -20110,12 +21410,12 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) 
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) []string { return v.Appends }).(pulumi.StringArrayOutput)
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) None() GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone {
@@ -20124,12 +21424,14 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) 
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) []string { return v.Overwrites }).(pulumi.StringArrayOutput)
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) RemoveAll() GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll {
@@ -20138,6 +21440,7 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) 
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) string { return v.RemoveRegex }).(pulumi.StringOutput)
@@ -20231,18 +21534,21 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAl
 
 type GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends []string `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex string `pulumi:"removeRegex"`
 }
@@ -20260,18 +21566,21 @@ type GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityInp
 
 type GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityArgs struct {
 	// Append
-	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNoneInput `pulumi:"none"`
 	// Overwrite
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAllInput `pulumi:"removeAll"`
 	// Remove regex
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringInput `pulumi:"removeRegex"`
 }
@@ -20303,7 +21612,6 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity
 }
 
 // Append
-// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) Appends() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) []string {
 		return v.Appends
@@ -20311,6 +21619,7 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) None() GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone {
@@ -20319,6 +21628,7 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity
 }
 
 // Overwrite
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) []string {
@@ -20327,6 +21637,7 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity
 }
 
 // Remove all
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) RemoveAll() GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAllOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll {
@@ -20335,6 +21646,7 @@ func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity
 }
 
 // Remove regex
+//
 // > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) RemoveRegex() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) string {
@@ -21320,15 +22632,17 @@ func (o GetLogicalRouterVrfEcmpOutput) SymmetricReturn() pulumi.BoolOutput {
 
 type GetLogicalRouterVrfEcmpAlgorithm struct {
 	// Balanced round robin
-	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	BalancedRoundRobin GetLogicalRouterVrfEcmpAlgorithmBalancedRoundRobin `pulumi:"balancedRoundRobin"`
 	// Ip hash
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpHash GetLogicalRouterVrfEcmpAlgorithmIpHash `pulumi:"ipHash"`
 	// Ip modulo
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpModulo GetLogicalRouterVrfEcmpAlgorithmIpModulo `pulumi:"ipModulo"`
 	// Weighted round robin
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	WeightedRoundRobin GetLogicalRouterVrfEcmpAlgorithmWeightedRoundRobin `pulumi:"weightedRoundRobin"`
 }
@@ -21346,15 +22660,17 @@ type GetLogicalRouterVrfEcmpAlgorithmInput interface {
 
 type GetLogicalRouterVrfEcmpAlgorithmArgs struct {
 	// Balanced round robin
-	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	BalancedRoundRobin GetLogicalRouterVrfEcmpAlgorithmBalancedRoundRobinInput `pulumi:"balancedRoundRobin"`
 	// Ip hash
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpHash GetLogicalRouterVrfEcmpAlgorithmIpHashInput `pulumi:"ipHash"`
 	// Ip modulo
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpModulo GetLogicalRouterVrfEcmpAlgorithmIpModuloInput `pulumi:"ipModulo"`
 	// Weighted round robin
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	WeightedRoundRobin GetLogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInput `pulumi:"weightedRoundRobin"`
 }
@@ -21386,7 +22702,6 @@ func (o GetLogicalRouterVrfEcmpAlgorithmOutput) ToGetLogicalRouterVrfEcmpAlgorit
 }
 
 // Balanced round robin
-// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o GetLogicalRouterVrfEcmpAlgorithmOutput) BalancedRoundRobin() GetLogicalRouterVrfEcmpAlgorithmBalancedRoundRobinOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfEcmpAlgorithm) GetLogicalRouterVrfEcmpAlgorithmBalancedRoundRobin {
 		return v.BalancedRoundRobin
@@ -21394,18 +22709,21 @@ func (o GetLogicalRouterVrfEcmpAlgorithmOutput) BalancedRoundRobin() GetLogicalR
 }
 
 // Ip hash
+//
 // > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o GetLogicalRouterVrfEcmpAlgorithmOutput) IpHash() GetLogicalRouterVrfEcmpAlgorithmIpHashOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfEcmpAlgorithm) GetLogicalRouterVrfEcmpAlgorithmIpHash { return v.IpHash }).(GetLogicalRouterVrfEcmpAlgorithmIpHashOutput)
 }
 
 // Ip modulo
+//
 // > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o GetLogicalRouterVrfEcmpAlgorithmOutput) IpModulo() GetLogicalRouterVrfEcmpAlgorithmIpModuloOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfEcmpAlgorithm) GetLogicalRouterVrfEcmpAlgorithmIpModulo { return v.IpModulo }).(GetLogicalRouterVrfEcmpAlgorithmIpModuloOutput)
 }
 
 // Weighted round robin
+//
 // > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o GetLogicalRouterVrfEcmpAlgorithmOutput) WeightedRoundRobin() GetLogicalRouterVrfEcmpAlgorithmWeightedRoundRobinOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfEcmpAlgorithm) GetLogicalRouterVrfEcmpAlgorithmWeightedRoundRobin {
@@ -23494,9 +24812,9 @@ func (o GetLogicalRouterVrfMulticastMsdpPeerLocalAddressOutput) Ip() pulumi.Stri
 
 type GetLogicalRouterVrfMulticastMsdpPeerPeerAddress struct {
 	// Fqdn
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Fqdn string `pulumi:"fqdn"`
 	// Ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip string `pulumi:"ip"`
 }
@@ -23514,9 +24832,9 @@ type GetLogicalRouterVrfMulticastMsdpPeerPeerAddressInput interface {
 
 type GetLogicalRouterVrfMulticastMsdpPeerPeerAddressArgs struct {
 	// Fqdn
-	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Fqdn pulumi.StringInput `pulumi:"fqdn"`
 	// Ip
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip pulumi.StringInput `pulumi:"ip"`
 }
@@ -23548,12 +24866,12 @@ func (o GetLogicalRouterVrfMulticastMsdpPeerPeerAddressOutput) ToGetLogicalRoute
 }
 
 // Fqdn
-// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o GetLogicalRouterVrfMulticastMsdpPeerPeerAddressOutput) Fqdn() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfMulticastMsdpPeerPeerAddress) string { return v.Fqdn }).(pulumi.StringOutput)
 }
 
 // Ip
+//
 // > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o GetLogicalRouterVrfMulticastMsdpPeerPeerAddressOutput) Ip() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfMulticastMsdpPeerPeerAddress) string { return v.Ip }).(pulumi.StringOutput)
@@ -24011,9 +25329,9 @@ func (o GetLogicalRouterVrfMulticastPimRpExternalRpArrayOutput) Index(i pulumi.I
 
 type GetLogicalRouterVrfMulticastPimRpLocalRp struct {
 	// Candidate rp
-	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	CandidateRp GetLogicalRouterVrfMulticastPimRpLocalRpCandidateRp `pulumi:"candidateRp"`
 	// Static rp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp GetLogicalRouterVrfMulticastPimRpLocalRpStaticRp `pulumi:"staticRp"`
 }
@@ -24031,9 +25349,9 @@ type GetLogicalRouterVrfMulticastPimRpLocalRpInput interface {
 
 type GetLogicalRouterVrfMulticastPimRpLocalRpArgs struct {
 	// Candidate rp
-	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	CandidateRp GetLogicalRouterVrfMulticastPimRpLocalRpCandidateRpInput `pulumi:"candidateRp"`
 	// Static rp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp GetLogicalRouterVrfMulticastPimRpLocalRpStaticRpInput `pulumi:"staticRp"`
 }
@@ -24065,7 +25383,6 @@ func (o GetLogicalRouterVrfMulticastPimRpLocalRpOutput) ToGetLogicalRouterVrfMul
 }
 
 // Candidate rp
-// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o GetLogicalRouterVrfMulticastPimRpLocalRpOutput) CandidateRp() GetLogicalRouterVrfMulticastPimRpLocalRpCandidateRpOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfMulticastPimRpLocalRp) GetLogicalRouterVrfMulticastPimRpLocalRpCandidateRp {
 		return v.CandidateRp
@@ -24073,6 +25390,7 @@ func (o GetLogicalRouterVrfMulticastPimRpLocalRpOutput) CandidateRp() GetLogical
 }
 
 // Static rp
+//
 // > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o GetLogicalRouterVrfMulticastPimRpLocalRpOutput) StaticRp() GetLogicalRouterVrfMulticastPimRpLocalRpStaticRpOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfMulticastPimRpLocalRp) GetLogicalRouterVrfMulticastPimRpLocalRpStaticRp {
@@ -24585,9 +25903,9 @@ func (o GetLogicalRouterVrfMulticastRpExternalRpArrayOutput) Index(i pulumi.IntI
 
 type GetLogicalRouterVrfMulticastRpLocalRp struct {
 	// Candidate rp
-	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	CandidateRp GetLogicalRouterVrfMulticastRpLocalRpCandidateRp `pulumi:"candidateRp"`
 	// Static rp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp GetLogicalRouterVrfMulticastRpLocalRpStaticRp `pulumi:"staticRp"`
 }
@@ -24605,9 +25923,9 @@ type GetLogicalRouterVrfMulticastRpLocalRpInput interface {
 
 type GetLogicalRouterVrfMulticastRpLocalRpArgs struct {
 	// Candidate rp
-	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	CandidateRp GetLogicalRouterVrfMulticastRpLocalRpCandidateRpInput `pulumi:"candidateRp"`
 	// Static rp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp GetLogicalRouterVrfMulticastRpLocalRpStaticRpInput `pulumi:"staticRp"`
 }
@@ -24639,7 +25957,6 @@ func (o GetLogicalRouterVrfMulticastRpLocalRpOutput) ToGetLogicalRouterVrfMultic
 }
 
 // Candidate rp
-// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o GetLogicalRouterVrfMulticastRpLocalRpOutput) CandidateRp() GetLogicalRouterVrfMulticastRpLocalRpCandidateRpOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfMulticastRpLocalRp) GetLogicalRouterVrfMulticastRpLocalRpCandidateRp {
 		return v.CandidateRp
@@ -24647,6 +25964,7 @@ func (o GetLogicalRouterVrfMulticastRpLocalRpOutput) CandidateRp() GetLogicalRou
 }
 
 // Static rp
+//
 // > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o GetLogicalRouterVrfMulticastRpLocalRpOutput) StaticRp() GetLogicalRouterVrfMulticastRpLocalRpStaticRpOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfMulticastRpLocalRp) GetLogicalRouterVrfMulticastRpLocalRpStaticRp {
@@ -25803,12 +27121,13 @@ func (o GetLogicalRouterVrfOspfAreaInterfaceBfdOutput) Profile() pulumi.StringOu
 
 type GetLogicalRouterVrfOspfAreaInterfaceLinkType struct {
 	// Broadcast
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	Broadcast GetLogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcast `pulumi:"broadcast"`
 	// P2mp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2mp GetLogicalRouterVrfOspfAreaInterfaceLinkTypeP2mp `pulumi:"p2mp"`
 	// P2p
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2p GetLogicalRouterVrfOspfAreaInterfaceLinkTypeP2p `pulumi:"p2p"`
 }
@@ -25826,12 +27145,13 @@ type GetLogicalRouterVrfOspfAreaInterfaceLinkTypeInput interface {
 
 type GetLogicalRouterVrfOspfAreaInterfaceLinkTypeArgs struct {
 	// Broadcast
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	Broadcast GetLogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcastInput `pulumi:"broadcast"`
 	// P2mp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2mp GetLogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpInput `pulumi:"p2mp"`
 	// P2p
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2p GetLogicalRouterVrfOspfAreaInterfaceLinkTypeP2pInput `pulumi:"p2p"`
 }
@@ -25863,7 +27183,6 @@ func (o GetLogicalRouterVrfOspfAreaInterfaceLinkTypeOutput) ToGetLogicalRouterVr
 }
 
 // Broadcast
-// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o GetLogicalRouterVrfOspfAreaInterfaceLinkTypeOutput) Broadcast() GetLogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcastOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfAreaInterfaceLinkType) GetLogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcast {
 		return v.Broadcast
@@ -25871,6 +27190,7 @@ func (o GetLogicalRouterVrfOspfAreaInterfaceLinkTypeOutput) Broadcast() GetLogic
 }
 
 // P2mp
+//
 // > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o GetLogicalRouterVrfOspfAreaInterfaceLinkTypeOutput) P2mp() GetLogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfAreaInterfaceLinkType) GetLogicalRouterVrfOspfAreaInterfaceLinkTypeP2mp {
@@ -25879,6 +27199,7 @@ func (o GetLogicalRouterVrfOspfAreaInterfaceLinkTypeOutput) P2mp() GetLogicalRou
 }
 
 // P2p
+//
 // > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o GetLogicalRouterVrfOspfAreaInterfaceLinkTypeOutput) P2p() GetLogicalRouterVrfOspfAreaInterfaceLinkTypeP2pOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfAreaInterfaceLinkType) GetLogicalRouterVrfOspfAreaInterfaceLinkTypeP2p {
@@ -26337,12 +27658,13 @@ func (o GetLogicalRouterVrfOspfAreaRangeArrayOutput) Index(i pulumi.IntInput) Ge
 
 type GetLogicalRouterVrfOspfAreaType struct {
 	// Normal
-	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Normal GetLogicalRouterVrfOspfAreaTypeNormal `pulumi:"normal"`
 	// Nssa
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa GetLogicalRouterVrfOspfAreaTypeNssa `pulumi:"nssa"`
 	// Stub
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub GetLogicalRouterVrfOspfAreaTypeStub `pulumi:"stub"`
 }
@@ -26360,12 +27682,13 @@ type GetLogicalRouterVrfOspfAreaTypeInput interface {
 
 type GetLogicalRouterVrfOspfAreaTypeArgs struct {
 	// Normal
-	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Normal GetLogicalRouterVrfOspfAreaTypeNormalInput `pulumi:"normal"`
 	// Nssa
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa GetLogicalRouterVrfOspfAreaTypeNssaInput `pulumi:"nssa"`
 	// Stub
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub GetLogicalRouterVrfOspfAreaTypeStubInput `pulumi:"stub"`
 }
@@ -26397,18 +27720,19 @@ func (o GetLogicalRouterVrfOspfAreaTypeOutput) ToGetLogicalRouterVrfOspfAreaType
 }
 
 // Normal
-// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterVrfOspfAreaTypeOutput) Normal() GetLogicalRouterVrfOspfAreaTypeNormalOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfAreaType) GetLogicalRouterVrfOspfAreaTypeNormal { return v.Normal }).(GetLogicalRouterVrfOspfAreaTypeNormalOutput)
 }
 
 // Nssa
+//
 // > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterVrfOspfAreaTypeOutput) Nssa() GetLogicalRouterVrfOspfAreaTypeNssaOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfAreaType) GetLogicalRouterVrfOspfAreaTypeNssa { return v.Nssa }).(GetLogicalRouterVrfOspfAreaTypeNssaOutput)
 }
 
 // Stub
+//
 // > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterVrfOspfAreaTypeOutput) Stub() GetLogicalRouterVrfOspfAreaTypeStubOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfAreaType) GetLogicalRouterVrfOspfAreaTypeStub { return v.Stub }).(GetLogicalRouterVrfOspfAreaTypeStubOutput)
@@ -26916,9 +28240,9 @@ func (o GetLogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginateOutput) Me
 
 type GetLogicalRouterVrfOspfAreaTypeNssaDefaultRoute struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisable `pulumi:"disable"`
 }
@@ -26936,9 +28260,9 @@ type GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteInput interface {
 
 type GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteArgs struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertiseInput `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisableInput `pulumi:"disable"`
 }
@@ -26970,7 +28294,6 @@ func (o GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteOutput) ToGetLogicalRoute
 }
 
 // Advertise
-// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteOutput) Advertise() GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertiseOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfAreaTypeNssaDefaultRoute) GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise {
 		return v.Advertise
@@ -26978,6 +28301,7 @@ func (o GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteOutput) Advertise() GetLo
 }
 
 // Disable
+//
 // > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteOutput) Disable() GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisableOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfAreaTypeNssaDefaultRoute) GetLogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisable {
@@ -27465,9 +28789,9 @@ func (o GetLogicalRouterVrfOspfAreaTypeStubAbrOutput) OutboundFilterList() pulum
 
 type GetLogicalRouterVrfOspfAreaTypeStubDefaultRoute struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteDisable `pulumi:"disable"`
 }
@@ -27485,9 +28809,9 @@ type GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteInput interface {
 
 type GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertiseInput `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteDisableInput `pulumi:"disable"`
 }
@@ -27519,7 +28843,6 @@ func (o GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteOutput) ToGetLogicalRoute
 }
 
 // Advertise
-// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteOutput) Advertise() GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertiseOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfAreaTypeStubDefaultRoute) GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertise {
 		return v.Advertise
@@ -27527,6 +28850,7 @@ func (o GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteOutput) Advertise() GetLo
 }
 
 // Disable
+//
 // > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteOutput) Disable() GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteDisableOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfAreaTypeStubDefaultRoute) GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteDisable {
@@ -29481,12 +30805,13 @@ func (o GetLogicalRouterVrfOspfv3AreaInterfaceBfdOutput) Profile() pulumi.String
 
 type GetLogicalRouterVrfOspfv3AreaInterfaceLinkType struct {
 	// Broadcast
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	Broadcast GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcast `pulumi:"broadcast"`
 	// P2mp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2mp GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mp `pulumi:"p2mp"`
 	// P2p
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2p GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2p `pulumi:"p2p"`
 }
@@ -29504,12 +30829,13 @@ type GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeInput interface {
 
 type GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeArgs struct {
 	// Broadcast
-	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	Broadcast GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcastInput `pulumi:"broadcast"`
 	// P2mp
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2mp GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpInput `pulumi:"p2mp"`
 	// P2p
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2p GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2pInput `pulumi:"p2p"`
 }
@@ -29541,7 +30867,6 @@ func (o GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeOutput) ToGetLogicalRouter
 }
 
 // Broadcast
-// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeOutput) Broadcast() GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcastOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AreaInterfaceLinkType) GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcast {
 		return v.Broadcast
@@ -29549,6 +30874,7 @@ func (o GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeOutput) Broadcast() GetLog
 }
 
 // P2mp
+//
 // > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeOutput) P2mp() GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AreaInterfaceLinkType) GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mp {
@@ -29557,6 +30883,7 @@ func (o GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeOutput) P2mp() GetLogicalR
 }
 
 // P2p
+//
 // > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeOutput) P2p() GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2pOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AreaInterfaceLinkType) GetLogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2p {
@@ -30103,12 +31430,13 @@ func (o GetLogicalRouterVrfOspfv3AreaRangeArrayOutput) Index(i pulumi.IntInput) 
 
 type GetLogicalRouterVrfOspfv3AreaType struct {
 	// Normal
-	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Normal GetLogicalRouterVrfOspfv3AreaTypeNormal `pulumi:"normal"`
 	// Nssa
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa GetLogicalRouterVrfOspfv3AreaTypeNssa `pulumi:"nssa"`
 	// Stub
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub GetLogicalRouterVrfOspfv3AreaTypeStub `pulumi:"stub"`
 }
@@ -30126,12 +31454,13 @@ type GetLogicalRouterVrfOspfv3AreaTypeInput interface {
 
 type GetLogicalRouterVrfOspfv3AreaTypeArgs struct {
 	// Normal
-	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Normal GetLogicalRouterVrfOspfv3AreaTypeNormalInput `pulumi:"normal"`
 	// Nssa
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa GetLogicalRouterVrfOspfv3AreaTypeNssaInput `pulumi:"nssa"`
 	// Stub
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub GetLogicalRouterVrfOspfv3AreaTypeStubInput `pulumi:"stub"`
 }
@@ -30163,18 +31492,19 @@ func (o GetLogicalRouterVrfOspfv3AreaTypeOutput) ToGetLogicalRouterVrfOspfv3Area
 }
 
 // Normal
-// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterVrfOspfv3AreaTypeOutput) Normal() GetLogicalRouterVrfOspfv3AreaTypeNormalOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AreaType) GetLogicalRouterVrfOspfv3AreaTypeNormal { return v.Normal }).(GetLogicalRouterVrfOspfv3AreaTypeNormalOutput)
 }
 
 // Nssa
+//
 // > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterVrfOspfv3AreaTypeOutput) Nssa() GetLogicalRouterVrfOspfv3AreaTypeNssaOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AreaType) GetLogicalRouterVrfOspfv3AreaTypeNssa { return v.Nssa }).(GetLogicalRouterVrfOspfv3AreaTypeNssaOutput)
 }
 
 // Stub
+//
 // > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o GetLogicalRouterVrfOspfv3AreaTypeOutput) Stub() GetLogicalRouterVrfOspfv3AreaTypeStubOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AreaType) GetLogicalRouterVrfOspfv3AreaTypeStub { return v.Stub }).(GetLogicalRouterVrfOspfv3AreaTypeStubOutput)
@@ -30783,9 +32113,9 @@ func (o GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginateOutput) 
 
 type GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRoute struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisable `pulumi:"disable"`
 }
@@ -30803,9 +32133,9 @@ type GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteInput interface {
 
 type GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteArgs struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseInput `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisableInput `pulumi:"disable"`
 }
@@ -30837,7 +32167,6 @@ func (o GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteOutput) ToGetLogicalRou
 }
 
 // Advertise
-// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteOutput) Advertise() GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRoute) GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertise {
 		return v.Advertise
@@ -30845,6 +32174,7 @@ func (o GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteOutput) Advertise() Get
 }
 
 // Disable
+//
 // > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteOutput) Disable() GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisableOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRoute) GetLogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisable {
@@ -31341,9 +32671,9 @@ func (o GetLogicalRouterVrfOspfv3AreaTypeStubAbrOutput) OutboundFilterList() pul
 
 type GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRoute struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisable `pulumi:"disable"`
 }
@@ -31361,9 +32691,9 @@ type GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteInput interface {
 
 type GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteArgs struct {
 	// Advertise
-	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Advertise GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertiseInput `pulumi:"advertise"`
 	// Disable
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisableInput `pulumi:"disable"`
 }
@@ -31395,7 +32725,6 @@ func (o GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteOutput) ToGetLogicalRou
 }
 
 // Advertise
-// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteOutput) Advertise() GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertiseOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRoute) GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise {
 		return v.Advertise
@@ -31403,6 +32732,7 @@ func (o GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteOutput) Advertise() Get
 }
 
 // Disable
+//
 // > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteOutput) Disable() GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisableOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRoute) GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisable {
@@ -32158,18 +33488,21 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileArrayOutput) Index(i pulumi.IntInput
 
 type GetLogicalRouterVrfOspfv3AuthProfileAh struct {
 	// Md5
-	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Md5 GetLogicalRouterVrfOspfv3AuthProfileAhMd5 `pulumi:"md5"`
 	// Sha1
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 GetLogicalRouterVrfOspfv3AuthProfileAhSha1 `pulumi:"sha1"`
 	// Sha256
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 GetLogicalRouterVrfOspfv3AuthProfileAhSha256 `pulumi:"sha256"`
 	// Sha384
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 GetLogicalRouterVrfOspfv3AuthProfileAhSha384 `pulumi:"sha384"`
 	// Sha512
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 GetLogicalRouterVrfOspfv3AuthProfileAhSha512 `pulumi:"sha512"`
 }
@@ -32187,18 +33520,21 @@ type GetLogicalRouterVrfOspfv3AuthProfileAhInput interface {
 
 type GetLogicalRouterVrfOspfv3AuthProfileAhArgs struct {
 	// Md5
-	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Md5 GetLogicalRouterVrfOspfv3AuthProfileAhMd5Input `pulumi:"md5"`
 	// Sha1
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 GetLogicalRouterVrfOspfv3AuthProfileAhSha1Input `pulumi:"sha1"`
 	// Sha256
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 GetLogicalRouterVrfOspfv3AuthProfileAhSha256Input `pulumi:"sha256"`
 	// Sha384
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 GetLogicalRouterVrfOspfv3AuthProfileAhSha384Input `pulumi:"sha384"`
 	// Sha512
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 GetLogicalRouterVrfOspfv3AuthProfileAhSha512Input `pulumi:"sha512"`
 }
@@ -32230,12 +33566,12 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileAhOutput) ToGetLogicalRouterVrfOspfv
 }
 
 // Md5
-// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterVrfOspfv3AuthProfileAhOutput) Md5() GetLogicalRouterVrfOspfv3AuthProfileAhMd5Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AuthProfileAh) GetLogicalRouterVrfOspfv3AuthProfileAhMd5 { return v.Md5 }).(GetLogicalRouterVrfOspfv3AuthProfileAhMd5Output)
 }
 
 // Sha1
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterVrfOspfv3AuthProfileAhOutput) Sha1() GetLogicalRouterVrfOspfv3AuthProfileAhSha1Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AuthProfileAh) GetLogicalRouterVrfOspfv3AuthProfileAhSha1 {
@@ -32244,6 +33580,7 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileAhOutput) Sha1() GetLogicalRouterVrf
 }
 
 // Sha256
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterVrfOspfv3AuthProfileAhOutput) Sha256() GetLogicalRouterVrfOspfv3AuthProfileAhSha256Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AuthProfileAh) GetLogicalRouterVrfOspfv3AuthProfileAhSha256 {
@@ -32252,6 +33589,7 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileAhOutput) Sha256() GetLogicalRouterV
 }
 
 // Sha384
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterVrfOspfv3AuthProfileAhOutput) Sha384() GetLogicalRouterVrfOspfv3AuthProfileAhSha384Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AuthProfileAh) GetLogicalRouterVrfOspfv3AuthProfileAhSha384 {
@@ -32260,6 +33598,7 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileAhOutput) Sha384() GetLogicalRouterV
 }
 
 // Sha512
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterVrfOspfv3AuthProfileAhOutput) Sha512() GetLogicalRouterVrfOspfv3AuthProfileAhSha512Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AuthProfileAh) GetLogicalRouterVrfOspfv3AuthProfileAhSha512 {
@@ -32594,21 +33933,25 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileEspOutput) Encryption() GetLogicalRo
 
 type GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication struct {
 	// Md5
-	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Md5 GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5 `pulumi:"md5"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	None GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationNone `pulumi:"none"`
 	// Sha1
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1 `pulumi:"sha1"`
 	// Sha256
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256 `pulumi:"sha256"`
 	// Sha384
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384 `pulumi:"sha384"`
 	// Sha512
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512 `pulumi:"sha512"`
 }
@@ -32626,21 +33969,25 @@ type GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationInput interface {
 
 type GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs struct {
 	// Md5
-	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Md5 GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5Input `pulumi:"md5"`
 	// None
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	None GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationNoneInput `pulumi:"none"`
 	// Sha1
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1Input `pulumi:"sha1"`
 	// Sha256
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256Input `pulumi:"sha256"`
 	// Sha384
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384Input `pulumi:"sha384"`
 	// Sha512
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512Input `pulumi:"sha512"`
 }
@@ -32672,7 +34019,6 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) ToGetLogica
 }
 
 // Md5
-// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Md5() GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5 {
 		return v.Md5
@@ -32680,6 +34026,7 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Md5() GetLo
 }
 
 // None
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) None() GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationNoneOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationNone {
@@ -32688,6 +34035,7 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) None() GetL
 }
 
 // Sha1
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha1() GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1 {
@@ -32696,6 +34044,7 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha1() GetL
 }
 
 // Sha256
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha256() GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256 {
@@ -32704,6 +34053,7 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha256() Ge
 }
 
 // Sha384
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha384() GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384 {
@@ -32712,6 +34062,7 @@ func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha384() Ge
 }
 
 // Sha512
+//
 // > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha512() GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512Output {
 	return o.ApplyT(func(v GetLogicalRouterVrfOspfv3AuthProfileEspAuthentication) GetLogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512 {
@@ -34950,27 +36301,33 @@ func (o GetLogicalRouterVrfRoutingTableIpStaticRouteBfdOutput) Profile() pulumi.
 
 type GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop struct {
 	// Discard
-	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Discard GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscard `pulumi:"discard"`
 	// Fqdn
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn string `pulumi:"fqdn"`
 	// Ip address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	IpAddress string `pulumi:"ipAddress"`
 	// Ipv6 address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address string `pulumi:"ipv6Address"`
 	// Next lr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr string `pulumi:"nextLr"`
 	// Next vr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr string `pulumi:"nextVr"`
 	// Receive
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopReceive `pulumi:"receive"`
 	// Tunnel
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel string `pulumi:"tunnel"`
 }
@@ -34988,27 +36345,33 @@ type GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopInput interface {
 
 type GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs struct {
 	// Discard
-	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Discard GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscardInput `pulumi:"discard"`
 	// Fqdn
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn pulumi.StringInput `pulumi:"fqdn"`
 	// Ip address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	IpAddress pulumi.StringInput `pulumi:"ipAddress"`
 	// Ipv6 address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address pulumi.StringInput `pulumi:"ipv6Address"`
 	// Next lr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr pulumi.StringInput `pulumi:"nextLr"`
 	// Next vr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr pulumi.StringInput `pulumi:"nextVr"`
 	// Receive
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopReceiveInput `pulumi:"receive"`
 	// Tunnel
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel pulumi.StringInput `pulumi:"tunnel"`
 }
@@ -35040,7 +36403,6 @@ func (o GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) ToGetLogicalR
 }
 
 // Discard
-// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Discard() GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscardOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop) GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscard {
 		return v.Discard
@@ -35048,36 +36410,42 @@ func (o GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Discard() Get
 }
 
 // Fqdn
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Fqdn() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop) string { return v.Fqdn }).(pulumi.StringOutput)
 }
 
 // Ip address
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) IpAddress() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop) string { return v.IpAddress }).(pulumi.StringOutput)
 }
 
 // Ipv6 address
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Ipv6Address() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop) string { return v.Ipv6Address }).(pulumi.StringOutput)
 }
 
 // Next lr
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) NextLr() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop) string { return v.NextLr }).(pulumi.StringOutput)
 }
 
 // Next vr
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) NextVr() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop) string { return v.NextVr }).(pulumi.StringOutput)
 }
 
 // Receive
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Receive() GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopReceiveOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop) GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopReceive {
@@ -35086,6 +36454,7 @@ func (o GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Receive() Get
 }
 
 // Tunnel
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Tunnel() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop) string { return v.Tunnel }).(pulumi.StringOutput)
@@ -35423,15 +36792,17 @@ func (o GetLogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDestinatio
 
 type GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable struct {
 	// Both
-	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Both GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableBoth `pulumi:"both"`
 	// Multicast
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Multicast GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticast `pulumi:"multicast"`
 	// No install
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	NoInstall GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstall `pulumi:"noInstall"`
 	// Unicast
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Unicast GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicast `pulumi:"unicast"`
 }
@@ -35449,15 +36820,17 @@ type GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableInput interface {
 
 type GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs struct {
 	// Both
-	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Both GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableBothInput `pulumi:"both"`
 	// Multicast
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Multicast GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticastInput `pulumi:"multicast"`
 	// No install
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	NoInstall GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstallInput `pulumi:"noInstall"`
 	// Unicast
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Unicast GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicastInput `pulumi:"unicast"`
 }
@@ -35489,7 +36862,6 @@ func (o GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) ToGetLogic
 }
 
 // Both
-// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) Both() GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableBothOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable) GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableBoth {
 		return v.Both
@@ -35497,6 +36869,7 @@ func (o GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) Both() Get
 }
 
 // Multicast
+//
 // > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) Multicast() GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticastOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable) GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticast {
@@ -35505,6 +36878,7 @@ func (o GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) Multicast(
 }
 
 // No install
+//
 // > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) NoInstall() GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstallOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable) GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstall {
@@ -35513,6 +36887,7 @@ func (o GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) NoInstall(
 }
 
 // Unicast
+//
 // > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) Unicast() GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicastOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable) GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicast {
@@ -35988,24 +37363,29 @@ func (o GetLogicalRouterVrfRoutingTableIpv6StaticRouteBfdOutput) Profile() pulum
 
 type GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop struct {
 	// Discard
-	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Discard GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscard `pulumi:"discard"`
 	// Fqdn
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn string `pulumi:"fqdn"`
 	// Ipv6 address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address string `pulumi:"ipv6Address"`
 	// Next lr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr string `pulumi:"nextLr"`
 	// Next vr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr string `pulumi:"nextVr"`
 	// Receive
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceive `pulumi:"receive"`
 	// Tunnel
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel string `pulumi:"tunnel"`
 }
@@ -36023,24 +37403,29 @@ type GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopInput interface {
 
 type GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopArgs struct {
 	// Discard
-	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Discard GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscardInput `pulumi:"discard"`
 	// Fqdn
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn pulumi.StringInput `pulumi:"fqdn"`
 	// Ipv6 address
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address pulumi.StringInput `pulumi:"ipv6Address"`
 	// Next lr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr pulumi.StringInput `pulumi:"nextLr"`
 	// Next vr
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr pulumi.StringInput `pulumi:"nextVr"`
 	// Receive
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceiveInput `pulumi:"receive"`
 	// Tunnel
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel pulumi.StringInput `pulumi:"tunnel"`
 }
@@ -36072,7 +37457,6 @@ func (o GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) ToGetLogica
 }
 
 // Discard
-// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Discard() GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscardOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscard {
 		return v.Discard
@@ -36080,30 +37464,35 @@ func (o GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Discard() G
 }
 
 // Fqdn
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Fqdn() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) string { return v.Fqdn }).(pulumi.StringOutput)
 }
 
 // Ipv6 address
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Ipv6Address() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) string { return v.Ipv6Address }).(pulumi.StringOutput)
 }
 
 // Next lr
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) NextLr() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) string { return v.NextLr }).(pulumi.StringOutput)
 }
 
 // Next vr
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) NextVr() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) string { return v.NextVr }).(pulumi.StringOutput)
 }
 
 // Receive
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Receive() GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceiveOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceive {
@@ -36112,6 +37501,7 @@ func (o GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Receive() G
 }
 
 // Tunnel
+//
 // > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Tunnel() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) string { return v.Tunnel }).(pulumi.StringOutput)
@@ -37031,6 +38421,8 @@ type GetLoopbackInterfaceIpv6 struct {
 	Addresses []GetLoopbackInterfaceIpv6Address `pulumi:"addresses"`
 	// Enable IPv6
 	Enabled bool `pulumi:"enabled"`
+	// Interface ID
+	InterfaceId string `pulumi:"interfaceId"`
 }
 
 // GetLoopbackInterfaceIpv6Input is an input type that accepts GetLoopbackInterfaceIpv6Args and GetLoopbackInterfaceIpv6Output values.
@@ -37049,6 +38441,8 @@ type GetLoopbackInterfaceIpv6Args struct {
 	Addresses GetLoopbackInterfaceIpv6AddressArrayInput `pulumi:"addresses"`
 	// Enable IPv6
 	Enabled pulumi.BoolInput `pulumi:"enabled"`
+	// Interface ID
+	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
 }
 
 func (GetLoopbackInterfaceIpv6Args) ElementType() reflect.Type {
@@ -37087,13 +38481,20 @@ func (o GetLoopbackInterfaceIpv6Output) Enabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceIpv6) bool { return v.Enabled }).(pulumi.BoolOutput)
 }
 
+// Interface ID
+func (o GetLoopbackInterfaceIpv6Output) InterfaceId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLoopbackInterfaceIpv6) string { return v.InterfaceId }).(pulumi.StringOutput)
+}
+
 type GetLoopbackInterfaceIpv6Address struct {
+	// Anycast
+	Anycast GetLoopbackInterfaceIpv6AddressAnycast `pulumi:"anycast"`
 	// Enable Address on Interface
 	EnableOnInterface bool `pulumi:"enableOnInterface"`
-	// Interface ID
-	InterfaceId string `pulumi:"interfaceId"`
 	// IPv6 Address
 	Name string `pulumi:"name"`
+	// Use interface ID as host portion
+	Prefix GetLoopbackInterfaceIpv6AddressPrefix `pulumi:"prefix"`
 }
 
 // GetLoopbackInterfaceIpv6AddressInput is an input type that accepts GetLoopbackInterfaceIpv6AddressArgs and GetLoopbackInterfaceIpv6AddressOutput values.
@@ -37108,12 +38509,14 @@ type GetLoopbackInterfaceIpv6AddressInput interface {
 }
 
 type GetLoopbackInterfaceIpv6AddressArgs struct {
+	// Anycast
+	Anycast GetLoopbackInterfaceIpv6AddressAnycastInput `pulumi:"anycast"`
 	// Enable Address on Interface
 	EnableOnInterface pulumi.BoolInput `pulumi:"enableOnInterface"`
-	// Interface ID
-	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
 	// IPv6 Address
 	Name pulumi.StringInput `pulumi:"name"`
+	// Use interface ID as host portion
+	Prefix GetLoopbackInterfaceIpv6AddressPrefixInput `pulumi:"prefix"`
 }
 
 func (GetLoopbackInterfaceIpv6AddressArgs) ElementType() reflect.Type {
@@ -37167,19 +38570,24 @@ func (o GetLoopbackInterfaceIpv6AddressOutput) ToGetLoopbackInterfaceIpv6Address
 	return o
 }
 
+// Anycast
+func (o GetLoopbackInterfaceIpv6AddressOutput) Anycast() GetLoopbackInterfaceIpv6AddressAnycastOutput {
+	return o.ApplyT(func(v GetLoopbackInterfaceIpv6Address) GetLoopbackInterfaceIpv6AddressAnycast { return v.Anycast }).(GetLoopbackInterfaceIpv6AddressAnycastOutput)
+}
+
 // Enable Address on Interface
 func (o GetLoopbackInterfaceIpv6AddressOutput) EnableOnInterface() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceIpv6Address) bool { return v.EnableOnInterface }).(pulumi.BoolOutput)
 }
 
-// Interface ID
-func (o GetLoopbackInterfaceIpv6AddressOutput) InterfaceId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLoopbackInterfaceIpv6Address) string { return v.InterfaceId }).(pulumi.StringOutput)
-}
-
 // IPv6 Address
 func (o GetLoopbackInterfaceIpv6AddressOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceIpv6Address) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Use interface ID as host portion
+func (o GetLoopbackInterfaceIpv6AddressOutput) Prefix() GetLoopbackInterfaceIpv6AddressPrefixOutput {
+	return o.ApplyT(func(v GetLoopbackInterfaceIpv6Address) GetLoopbackInterfaceIpv6AddressPrefix { return v.Prefix }).(GetLoopbackInterfaceIpv6AddressPrefixOutput)
 }
 
 type GetLoopbackInterfaceIpv6AddressArrayOutput struct{ *pulumi.OutputState }
@@ -37202,16 +38610,100 @@ func (o GetLoopbackInterfaceIpv6AddressArrayOutput) Index(i pulumi.IntInput) Get
 	}).(GetLoopbackInterfaceIpv6AddressOutput)
 }
 
+type GetLoopbackInterfaceIpv6AddressAnycast struct {
+}
+
+// GetLoopbackInterfaceIpv6AddressAnycastInput is an input type that accepts GetLoopbackInterfaceIpv6AddressAnycastArgs and GetLoopbackInterfaceIpv6AddressAnycastOutput values.
+// You can construct a concrete instance of `GetLoopbackInterfaceIpv6AddressAnycastInput` via:
+//
+//	GetLoopbackInterfaceIpv6AddressAnycastArgs{...}
+type GetLoopbackInterfaceIpv6AddressAnycastInput interface {
+	pulumi.Input
+
+	ToGetLoopbackInterfaceIpv6AddressAnycastOutput() GetLoopbackInterfaceIpv6AddressAnycastOutput
+	ToGetLoopbackInterfaceIpv6AddressAnycastOutputWithContext(context.Context) GetLoopbackInterfaceIpv6AddressAnycastOutput
+}
+
+type GetLoopbackInterfaceIpv6AddressAnycastArgs struct {
+}
+
+func (GetLoopbackInterfaceIpv6AddressAnycastArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLoopbackInterfaceIpv6AddressAnycast)(nil)).Elem()
+}
+
+func (i GetLoopbackInterfaceIpv6AddressAnycastArgs) ToGetLoopbackInterfaceIpv6AddressAnycastOutput() GetLoopbackInterfaceIpv6AddressAnycastOutput {
+	return i.ToGetLoopbackInterfaceIpv6AddressAnycastOutputWithContext(context.Background())
+}
+
+func (i GetLoopbackInterfaceIpv6AddressAnycastArgs) ToGetLoopbackInterfaceIpv6AddressAnycastOutputWithContext(ctx context.Context) GetLoopbackInterfaceIpv6AddressAnycastOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLoopbackInterfaceIpv6AddressAnycastOutput)
+}
+
+type GetLoopbackInterfaceIpv6AddressAnycastOutput struct{ *pulumi.OutputState }
+
+func (GetLoopbackInterfaceIpv6AddressAnycastOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLoopbackInterfaceIpv6AddressAnycast)(nil)).Elem()
+}
+
+func (o GetLoopbackInterfaceIpv6AddressAnycastOutput) ToGetLoopbackInterfaceIpv6AddressAnycastOutput() GetLoopbackInterfaceIpv6AddressAnycastOutput {
+	return o
+}
+
+func (o GetLoopbackInterfaceIpv6AddressAnycastOutput) ToGetLoopbackInterfaceIpv6AddressAnycastOutputWithContext(ctx context.Context) GetLoopbackInterfaceIpv6AddressAnycastOutput {
+	return o
+}
+
+type GetLoopbackInterfaceIpv6AddressPrefix struct {
+}
+
+// GetLoopbackInterfaceIpv6AddressPrefixInput is an input type that accepts GetLoopbackInterfaceIpv6AddressPrefixArgs and GetLoopbackInterfaceIpv6AddressPrefixOutput values.
+// You can construct a concrete instance of `GetLoopbackInterfaceIpv6AddressPrefixInput` via:
+//
+//	GetLoopbackInterfaceIpv6AddressPrefixArgs{...}
+type GetLoopbackInterfaceIpv6AddressPrefixInput interface {
+	pulumi.Input
+
+	ToGetLoopbackInterfaceIpv6AddressPrefixOutput() GetLoopbackInterfaceIpv6AddressPrefixOutput
+	ToGetLoopbackInterfaceIpv6AddressPrefixOutputWithContext(context.Context) GetLoopbackInterfaceIpv6AddressPrefixOutput
+}
+
+type GetLoopbackInterfaceIpv6AddressPrefixArgs struct {
+}
+
+func (GetLoopbackInterfaceIpv6AddressPrefixArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLoopbackInterfaceIpv6AddressPrefix)(nil)).Elem()
+}
+
+func (i GetLoopbackInterfaceIpv6AddressPrefixArgs) ToGetLoopbackInterfaceIpv6AddressPrefixOutput() GetLoopbackInterfaceIpv6AddressPrefixOutput {
+	return i.ToGetLoopbackInterfaceIpv6AddressPrefixOutputWithContext(context.Background())
+}
+
+func (i GetLoopbackInterfaceIpv6AddressPrefixArgs) ToGetLoopbackInterfaceIpv6AddressPrefixOutputWithContext(ctx context.Context) GetLoopbackInterfaceIpv6AddressPrefixOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLoopbackInterfaceIpv6AddressPrefixOutput)
+}
+
+type GetLoopbackInterfaceIpv6AddressPrefixOutput struct{ *pulumi.OutputState }
+
+func (GetLoopbackInterfaceIpv6AddressPrefixOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLoopbackInterfaceIpv6AddressPrefix)(nil)).Elem()
+}
+
+func (o GetLoopbackInterfaceIpv6AddressPrefixOutput) ToGetLoopbackInterfaceIpv6AddressPrefixOutput() GetLoopbackInterfaceIpv6AddressPrefixOutput {
+	return o
+}
+
+func (o GetLoopbackInterfaceIpv6AddressPrefixOutput) ToGetLoopbackInterfaceIpv6AddressPrefixOutputWithContext(ctx context.Context) GetLoopbackInterfaceIpv6AddressPrefixOutput {
+	return o
+}
+
 type GetLoopbackInterfaceListData struct {
 	// Description
 	Comment string `pulumi:"comment"`
 	// Default interface assignment
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
@@ -37223,10 +38715,9 @@ type GetLoopbackInterfaceListData struct {
 	Ipv6 GetLoopbackInterfaceListDataIpv6 `pulumi:"ipv6"`
 	// MTU
 	Mtu int `pulumi:"mtu"`
-	// Loopback Interface name
+	// The name of the item.
 	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -37248,10 +38739,8 @@ type GetLoopbackInterfaceListDataArgs struct {
 	// Default interface assignment
 	DefaultValue pulumi.StringInput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
@@ -37263,10 +38752,9 @@ type GetLoopbackInterfaceListDataArgs struct {
 	Ipv6 GetLoopbackInterfaceListDataIpv6Input `pulumi:"ipv6"`
 	// MTU
 	Mtu pulumi.IntInput `pulumi:"mtu"`
-	// Loopback Interface name
+	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -37333,13 +38821,11 @@ func (o GetLoopbackInterfaceListDataOutput) DefaultValue() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetLoopbackInterfaceListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetLoopbackInterfaceListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -37369,13 +38855,12 @@ func (o GetLoopbackInterfaceListDataOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) int { return v.Mtu }).(pulumi.IntOutput)
 }
 
-// Loopback Interface name
+// The name of the item.
 func (o GetLoopbackInterfaceListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetLoopbackInterfaceListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -37506,6 +38991,8 @@ type GetLoopbackInterfaceListDataIpv6 struct {
 	Addresses []GetLoopbackInterfaceListDataIpv6Address `pulumi:"addresses"`
 	// Enable IPv6
 	Enabled bool `pulumi:"enabled"`
+	// Interface ID
+	InterfaceId string `pulumi:"interfaceId"`
 }
 
 // GetLoopbackInterfaceListDataIpv6Input is an input type that accepts GetLoopbackInterfaceListDataIpv6Args and GetLoopbackInterfaceListDataIpv6Output values.
@@ -37524,6 +39011,8 @@ type GetLoopbackInterfaceListDataIpv6Args struct {
 	Addresses GetLoopbackInterfaceListDataIpv6AddressArrayInput `pulumi:"addresses"`
 	// Enable IPv6
 	Enabled pulumi.BoolInput `pulumi:"enabled"`
+	// Interface ID
+	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
 }
 
 func (GetLoopbackInterfaceListDataIpv6Args) ElementType() reflect.Type {
@@ -37562,13 +39051,20 @@ func (o GetLoopbackInterfaceListDataIpv6Output) Enabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6) bool { return v.Enabled }).(pulumi.BoolOutput)
 }
 
+// Interface ID
+func (o GetLoopbackInterfaceListDataIpv6Output) InterfaceId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6) string { return v.InterfaceId }).(pulumi.StringOutput)
+}
+
 type GetLoopbackInterfaceListDataIpv6Address struct {
+	// Anycast
+	Anycast GetLoopbackInterfaceListDataIpv6AddressAnycast `pulumi:"anycast"`
 	// Enable Address on Interface
 	EnableOnInterface bool `pulumi:"enableOnInterface"`
-	// Interface ID
-	InterfaceId string `pulumi:"interfaceId"`
 	// IPv6 Address
 	Name string `pulumi:"name"`
+	// Use interface ID as host portion
+	Prefix GetLoopbackInterfaceListDataIpv6AddressPrefix `pulumi:"prefix"`
 }
 
 // GetLoopbackInterfaceListDataIpv6AddressInput is an input type that accepts GetLoopbackInterfaceListDataIpv6AddressArgs and GetLoopbackInterfaceListDataIpv6AddressOutput values.
@@ -37583,12 +39079,14 @@ type GetLoopbackInterfaceListDataIpv6AddressInput interface {
 }
 
 type GetLoopbackInterfaceListDataIpv6AddressArgs struct {
+	// Anycast
+	Anycast GetLoopbackInterfaceListDataIpv6AddressAnycastInput `pulumi:"anycast"`
 	// Enable Address on Interface
 	EnableOnInterface pulumi.BoolInput `pulumi:"enableOnInterface"`
-	// Interface ID
-	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
 	// IPv6 Address
 	Name pulumi.StringInput `pulumi:"name"`
+	// Use interface ID as host portion
+	Prefix GetLoopbackInterfaceListDataIpv6AddressPrefixInput `pulumi:"prefix"`
 }
 
 func (GetLoopbackInterfaceListDataIpv6AddressArgs) ElementType() reflect.Type {
@@ -37642,19 +39140,28 @@ func (o GetLoopbackInterfaceListDataIpv6AddressOutput) ToGetLoopbackInterfaceLis
 	return o
 }
 
+// Anycast
+func (o GetLoopbackInterfaceListDataIpv6AddressOutput) Anycast() GetLoopbackInterfaceListDataIpv6AddressAnycastOutput {
+	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6Address) GetLoopbackInterfaceListDataIpv6AddressAnycast {
+		return v.Anycast
+	}).(GetLoopbackInterfaceListDataIpv6AddressAnycastOutput)
+}
+
 // Enable Address on Interface
 func (o GetLoopbackInterfaceListDataIpv6AddressOutput) EnableOnInterface() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6Address) bool { return v.EnableOnInterface }).(pulumi.BoolOutput)
 }
 
-// Interface ID
-func (o GetLoopbackInterfaceListDataIpv6AddressOutput) InterfaceId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6Address) string { return v.InterfaceId }).(pulumi.StringOutput)
-}
-
 // IPv6 Address
 func (o GetLoopbackInterfaceListDataIpv6AddressOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6Address) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Use interface ID as host portion
+func (o GetLoopbackInterfaceListDataIpv6AddressOutput) Prefix() GetLoopbackInterfaceListDataIpv6AddressPrefixOutput {
+	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6Address) GetLoopbackInterfaceListDataIpv6AddressPrefix {
+		return v.Prefix
+	}).(GetLoopbackInterfaceListDataIpv6AddressPrefixOutput)
 }
 
 type GetLoopbackInterfaceListDataIpv6AddressArrayOutput struct{ *pulumi.OutputState }
@@ -37677,19 +39184,102 @@ func (o GetLoopbackInterfaceListDataIpv6AddressArrayOutput) Index(i pulumi.IntIn
 	}).(GetLoopbackInterfaceListDataIpv6AddressOutput)
 }
 
+type GetLoopbackInterfaceListDataIpv6AddressAnycast struct {
+}
+
+// GetLoopbackInterfaceListDataIpv6AddressAnycastInput is an input type that accepts GetLoopbackInterfaceListDataIpv6AddressAnycastArgs and GetLoopbackInterfaceListDataIpv6AddressAnycastOutput values.
+// You can construct a concrete instance of `GetLoopbackInterfaceListDataIpv6AddressAnycastInput` via:
+//
+//	GetLoopbackInterfaceListDataIpv6AddressAnycastArgs{...}
+type GetLoopbackInterfaceListDataIpv6AddressAnycastInput interface {
+	pulumi.Input
+
+	ToGetLoopbackInterfaceListDataIpv6AddressAnycastOutput() GetLoopbackInterfaceListDataIpv6AddressAnycastOutput
+	ToGetLoopbackInterfaceListDataIpv6AddressAnycastOutputWithContext(context.Context) GetLoopbackInterfaceListDataIpv6AddressAnycastOutput
+}
+
+type GetLoopbackInterfaceListDataIpv6AddressAnycastArgs struct {
+}
+
+func (GetLoopbackInterfaceListDataIpv6AddressAnycastArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLoopbackInterfaceListDataIpv6AddressAnycast)(nil)).Elem()
+}
+
+func (i GetLoopbackInterfaceListDataIpv6AddressAnycastArgs) ToGetLoopbackInterfaceListDataIpv6AddressAnycastOutput() GetLoopbackInterfaceListDataIpv6AddressAnycastOutput {
+	return i.ToGetLoopbackInterfaceListDataIpv6AddressAnycastOutputWithContext(context.Background())
+}
+
+func (i GetLoopbackInterfaceListDataIpv6AddressAnycastArgs) ToGetLoopbackInterfaceListDataIpv6AddressAnycastOutputWithContext(ctx context.Context) GetLoopbackInterfaceListDataIpv6AddressAnycastOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLoopbackInterfaceListDataIpv6AddressAnycastOutput)
+}
+
+type GetLoopbackInterfaceListDataIpv6AddressAnycastOutput struct{ *pulumi.OutputState }
+
+func (GetLoopbackInterfaceListDataIpv6AddressAnycastOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLoopbackInterfaceListDataIpv6AddressAnycast)(nil)).Elem()
+}
+
+func (o GetLoopbackInterfaceListDataIpv6AddressAnycastOutput) ToGetLoopbackInterfaceListDataIpv6AddressAnycastOutput() GetLoopbackInterfaceListDataIpv6AddressAnycastOutput {
+	return o
+}
+
+func (o GetLoopbackInterfaceListDataIpv6AddressAnycastOutput) ToGetLoopbackInterfaceListDataIpv6AddressAnycastOutputWithContext(ctx context.Context) GetLoopbackInterfaceListDataIpv6AddressAnycastOutput {
+	return o
+}
+
+type GetLoopbackInterfaceListDataIpv6AddressPrefix struct {
+}
+
+// GetLoopbackInterfaceListDataIpv6AddressPrefixInput is an input type that accepts GetLoopbackInterfaceListDataIpv6AddressPrefixArgs and GetLoopbackInterfaceListDataIpv6AddressPrefixOutput values.
+// You can construct a concrete instance of `GetLoopbackInterfaceListDataIpv6AddressPrefixInput` via:
+//
+//	GetLoopbackInterfaceListDataIpv6AddressPrefixArgs{...}
+type GetLoopbackInterfaceListDataIpv6AddressPrefixInput interface {
+	pulumi.Input
+
+	ToGetLoopbackInterfaceListDataIpv6AddressPrefixOutput() GetLoopbackInterfaceListDataIpv6AddressPrefixOutput
+	ToGetLoopbackInterfaceListDataIpv6AddressPrefixOutputWithContext(context.Context) GetLoopbackInterfaceListDataIpv6AddressPrefixOutput
+}
+
+type GetLoopbackInterfaceListDataIpv6AddressPrefixArgs struct {
+}
+
+func (GetLoopbackInterfaceListDataIpv6AddressPrefixArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLoopbackInterfaceListDataIpv6AddressPrefix)(nil)).Elem()
+}
+
+func (i GetLoopbackInterfaceListDataIpv6AddressPrefixArgs) ToGetLoopbackInterfaceListDataIpv6AddressPrefixOutput() GetLoopbackInterfaceListDataIpv6AddressPrefixOutput {
+	return i.ToGetLoopbackInterfaceListDataIpv6AddressPrefixOutputWithContext(context.Background())
+}
+
+func (i GetLoopbackInterfaceListDataIpv6AddressPrefixArgs) ToGetLoopbackInterfaceListDataIpv6AddressPrefixOutputWithContext(ctx context.Context) GetLoopbackInterfaceListDataIpv6AddressPrefixOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetLoopbackInterfaceListDataIpv6AddressPrefixOutput)
+}
+
+type GetLoopbackInterfaceListDataIpv6AddressPrefixOutput struct{ *pulumi.OutputState }
+
+func (GetLoopbackInterfaceListDataIpv6AddressPrefixOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetLoopbackInterfaceListDataIpv6AddressPrefix)(nil)).Elem()
+}
+
+func (o GetLoopbackInterfaceListDataIpv6AddressPrefixOutput) ToGetLoopbackInterfaceListDataIpv6AddressPrefixOutput() GetLoopbackInterfaceListDataIpv6AddressPrefixOutput {
+	return o
+}
+
+func (o GetLoopbackInterfaceListDataIpv6AddressPrefixOutput) ToGetLoopbackInterfaceListDataIpv6AddressPrefixOutputWithContext(ctx context.Context) GetLoopbackInterfaceListDataIpv6AddressPrefixOutput {
+	return o
+}
+
 type GetManagementInterfaceListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Management interface
 	ManagementInterface GetManagementInterfaceListDataManagementInterface `pulumi:"managementInterface"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -37707,17 +39297,14 @@ type GetManagementInterfaceListDataInput interface {
 
 type GetManagementInterfaceListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Management interface
 	ManagementInterface GetManagementInterfaceListDataManagementInterfaceInput `pulumi:"managementInterface"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -37774,13 +39361,11 @@ func (o GetManagementInterfaceListDataOutput) ToGetManagementInterfaceListDataOu
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetManagementInterfaceListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetManagementInterfaceListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetManagementInterfaceListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetManagementInterfaceListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -37797,8 +39382,7 @@ func (o GetManagementInterfaceListDataOutput) ManagementInterface() GetManagemen
 	}).(GetManagementInterfaceListDataManagementInterfaceOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetManagementInterfaceListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetManagementInterfaceListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -37923,9 +39507,9 @@ func (o GetManagementInterfaceListDataManagementInterfaceOutput) SpeedDuplex() p
 
 type GetManagementInterfaceListDataManagementInterfaceMgmtType struct {
 	// Dhcp client
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 	DhcpClient GetManagementInterfaceListDataManagementInterfaceMgmtTypeDhcpClient `pulumi:"dhcpClient"`
 	// Static
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 	Static GetManagementInterfaceListDataManagementInterfaceMgmtTypeStatic `pulumi:"static"`
 }
@@ -37943,9 +39527,9 @@ type GetManagementInterfaceListDataManagementInterfaceMgmtTypeInput interface {
 
 type GetManagementInterfaceListDataManagementInterfaceMgmtTypeArgs struct {
 	// Dhcp client
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 	DhcpClient GetManagementInterfaceListDataManagementInterfaceMgmtTypeDhcpClientInput `pulumi:"dhcpClient"`
 	// Static
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 	Static GetManagementInterfaceListDataManagementInterfaceMgmtTypeStaticInput `pulumi:"static"`
 }
@@ -37977,7 +39561,6 @@ func (o GetManagementInterfaceListDataManagementInterfaceMgmtTypeOutput) ToGetMa
 }
 
 // Dhcp client
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 func (o GetManagementInterfaceListDataManagementInterfaceMgmtTypeOutput) DhcpClient() GetManagementInterfaceListDataManagementInterfaceMgmtTypeDhcpClientOutput {
 	return o.ApplyT(func(v GetManagementInterfaceListDataManagementInterfaceMgmtType) GetManagementInterfaceListDataManagementInterfaceMgmtTypeDhcpClient {
 		return v.DhcpClient
@@ -37985,6 +39568,7 @@ func (o GetManagementInterfaceListDataManagementInterfaceMgmtTypeOutput) DhcpCli
 }
 
 // Static
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 func (o GetManagementInterfaceListDataManagementInterfaceMgmtTypeOutput) Static() GetManagementInterfaceListDataManagementInterfaceMgmtTypeStaticOutput {
 	return o.ApplyT(func(v GetManagementInterfaceListDataManagementInterfaceMgmtType) GetManagementInterfaceListDataManagementInterfaceMgmtTypeStatic {
@@ -38490,9 +40074,9 @@ func (o GetManagementInterfaceManagementInterfaceOutput) SpeedDuplex() pulumi.St
 
 type GetManagementInterfaceManagementInterfaceMgmtType struct {
 	// Dhcp client
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 	DhcpClient GetManagementInterfaceManagementInterfaceMgmtTypeDhcpClient `pulumi:"dhcpClient"`
 	// Static
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 	Static GetManagementInterfaceManagementInterfaceMgmtTypeStatic `pulumi:"static"`
 }
@@ -38510,9 +40094,9 @@ type GetManagementInterfaceManagementInterfaceMgmtTypeInput interface {
 
 type GetManagementInterfaceManagementInterfaceMgmtTypeArgs struct {
 	// Dhcp client
-	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 	DhcpClient GetManagementInterfaceManagementInterfaceMgmtTypeDhcpClientInput `pulumi:"dhcpClient"`
 	// Static
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 	Static GetManagementInterfaceManagementInterfaceMgmtTypeStaticInput `pulumi:"static"`
 }
@@ -38544,7 +40128,6 @@ func (o GetManagementInterfaceManagementInterfaceMgmtTypeOutput) ToGetManagement
 }
 
 // Dhcp client
-// > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 func (o GetManagementInterfaceManagementInterfaceMgmtTypeOutput) DhcpClient() GetManagementInterfaceManagementInterfaceMgmtTypeDhcpClientOutput {
 	return o.ApplyT(func(v GetManagementInterfaceManagementInterfaceMgmtType) GetManagementInterfaceManagementInterfaceMgmtTypeDhcpClient {
 		return v.DhcpClient
@@ -38552,6 +40135,7 @@ func (o GetManagementInterfaceManagementInterfaceMgmtTypeOutput) DhcpClient() Ge
 }
 
 // Static
+//
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `static`.
 func (o GetManagementInterfaceManagementInterfaceMgmtTypeOutput) Static() GetManagementInterfaceManagementInterfaceMgmtTypeStaticOutput {
 	return o.ApplyT(func(v GetManagementInterfaceManagementInterfaceMgmtType) GetManagementInterfaceManagementInterfaceMgmtTypeStatic {
@@ -38949,17 +40533,14 @@ func (o GetManagementInterfaceManagementInterfaceServiceOutput) DisableUseridSys
 
 type GetMotdBannerSettingListData struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Motd and banner
 	MotdAndBanner GetMotdBannerSettingListDataMotdAndBanner `pulumi:"motdAndBanner"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -38977,17 +40558,14 @@ type GetMotdBannerSettingListDataInput interface {
 
 type GetMotdBannerSettingListDataArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Motd and banner
 	MotdAndBanner GetMotdBannerSettingListDataMotdAndBannerInput `pulumi:"motdAndBanner"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	Tfid    pulumi.StringInput `pulumi:"tfid"`
 }
@@ -39044,13 +40622,11 @@ func (o GetMotdBannerSettingListDataOutput) ToGetMotdBannerSettingListDataOutput
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o GetMotdBannerSettingListDataOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v GetMotdBannerSettingListData) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The folder of the item. Default: Shared.
 func (o GetMotdBannerSettingListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetMotdBannerSettingListData) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -39065,8 +40641,7 @@ func (o GetMotdBannerSettingListDataOutput) MotdAndBanner() GetMotdBannerSetting
 	return o.ApplyT(func(v GetMotdBannerSettingListData) GetMotdBannerSettingListDataMotdAndBanner { return v.MotdAndBanner }).(GetMotdBannerSettingListDataMotdAndBannerOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+// The snippet of the item.
 func (o GetMotdBannerSettingListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetMotdBannerSettingListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -39885,941 +41460,22 @@ func (o GetNatRuleListDataArrayOutput) Index(i pulumi.IntInput) GetNatRuleListDa
 	}).(GetNatRuleListDataOutput)
 }
 
-type GetNatRuleListDataDestinationTranslation struct {
-	// DNS rewrite
-	DnsRewrite GetNatRuleListDataDestinationTranslationDnsRewrite `pulumi:"dnsRewrite"`
-	// Translated destination IP address
-	TranslatedAddress string `pulumi:"translatedAddress"`
-	// Translated destination port
-	TranslatedPort int `pulumi:"translatedPort"`
-}
-
-// GetNatRuleListDataDestinationTranslationInput is an input type that accepts GetNatRuleListDataDestinationTranslationArgs and GetNatRuleListDataDestinationTranslationOutput values.
-// You can construct a concrete instance of `GetNatRuleListDataDestinationTranslationInput` via:
-//
-//	GetNatRuleListDataDestinationTranslationArgs{...}
-type GetNatRuleListDataDestinationTranslationInput interface {
-	pulumi.Input
-
-	ToGetNatRuleListDataDestinationTranslationOutput() GetNatRuleListDataDestinationTranslationOutput
-	ToGetNatRuleListDataDestinationTranslationOutputWithContext(context.Context) GetNatRuleListDataDestinationTranslationOutput
-}
-
-type GetNatRuleListDataDestinationTranslationArgs struct {
-	// DNS rewrite
-	DnsRewrite GetNatRuleListDataDestinationTranslationDnsRewriteInput `pulumi:"dnsRewrite"`
-	// Translated destination IP address
-	TranslatedAddress pulumi.StringInput `pulumi:"translatedAddress"`
-	// Translated destination port
-	TranslatedPort pulumi.IntInput `pulumi:"translatedPort"`
-}
-
-func (GetNatRuleListDataDestinationTranslationArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataDestinationTranslation)(nil)).Elem()
-}
-
-func (i GetNatRuleListDataDestinationTranslationArgs) ToGetNatRuleListDataDestinationTranslationOutput() GetNatRuleListDataDestinationTranslationOutput {
-	return i.ToGetNatRuleListDataDestinationTranslationOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleListDataDestinationTranslationArgs) ToGetNatRuleListDataDestinationTranslationOutputWithContext(ctx context.Context) GetNatRuleListDataDestinationTranslationOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleListDataDestinationTranslationOutput)
-}
-
-type GetNatRuleListDataDestinationTranslationOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleListDataDestinationTranslationOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataDestinationTranslation)(nil)).Elem()
-}
-
-func (o GetNatRuleListDataDestinationTranslationOutput) ToGetNatRuleListDataDestinationTranslationOutput() GetNatRuleListDataDestinationTranslationOutput {
-	return o
-}
-
-func (o GetNatRuleListDataDestinationTranslationOutput) ToGetNatRuleListDataDestinationTranslationOutputWithContext(ctx context.Context) GetNatRuleListDataDestinationTranslationOutput {
-	return o
-}
-
-// DNS rewrite
-func (o GetNatRuleListDataDestinationTranslationOutput) DnsRewrite() GetNatRuleListDataDestinationTranslationDnsRewriteOutput {
-	return o.ApplyT(func(v GetNatRuleListDataDestinationTranslation) GetNatRuleListDataDestinationTranslationDnsRewrite {
-		return v.DnsRewrite
-	}).(GetNatRuleListDataDestinationTranslationDnsRewriteOutput)
-}
-
-// Translated destination IP address
-func (o GetNatRuleListDataDestinationTranslationOutput) TranslatedAddress() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataDestinationTranslation) string { return v.TranslatedAddress }).(pulumi.StringOutput)
-}
-
-// Translated destination port
-func (o GetNatRuleListDataDestinationTranslationOutput) TranslatedPort() pulumi.IntOutput {
-	return o.ApplyT(func(v GetNatRuleListDataDestinationTranslation) int { return v.TranslatedPort }).(pulumi.IntOutput)
-}
-
-type GetNatRuleListDataDestinationTranslationDnsRewrite struct {
-	// Direction
-	Direction string `pulumi:"direction"`
-}
-
-// GetNatRuleListDataDestinationTranslationDnsRewriteInput is an input type that accepts GetNatRuleListDataDestinationTranslationDnsRewriteArgs and GetNatRuleListDataDestinationTranslationDnsRewriteOutput values.
-// You can construct a concrete instance of `GetNatRuleListDataDestinationTranslationDnsRewriteInput` via:
-//
-//	GetNatRuleListDataDestinationTranslationDnsRewriteArgs{...}
-type GetNatRuleListDataDestinationTranslationDnsRewriteInput interface {
-	pulumi.Input
-
-	ToGetNatRuleListDataDestinationTranslationDnsRewriteOutput() GetNatRuleListDataDestinationTranslationDnsRewriteOutput
-	ToGetNatRuleListDataDestinationTranslationDnsRewriteOutputWithContext(context.Context) GetNatRuleListDataDestinationTranslationDnsRewriteOutput
-}
-
-type GetNatRuleListDataDestinationTranslationDnsRewriteArgs struct {
-	// Direction
-	Direction pulumi.StringInput `pulumi:"direction"`
-}
-
-func (GetNatRuleListDataDestinationTranslationDnsRewriteArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataDestinationTranslationDnsRewrite)(nil)).Elem()
-}
-
-func (i GetNatRuleListDataDestinationTranslationDnsRewriteArgs) ToGetNatRuleListDataDestinationTranslationDnsRewriteOutput() GetNatRuleListDataDestinationTranslationDnsRewriteOutput {
-	return i.ToGetNatRuleListDataDestinationTranslationDnsRewriteOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleListDataDestinationTranslationDnsRewriteArgs) ToGetNatRuleListDataDestinationTranslationDnsRewriteOutputWithContext(ctx context.Context) GetNatRuleListDataDestinationTranslationDnsRewriteOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleListDataDestinationTranslationDnsRewriteOutput)
-}
-
-type GetNatRuleListDataDestinationTranslationDnsRewriteOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleListDataDestinationTranslationDnsRewriteOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataDestinationTranslationDnsRewrite)(nil)).Elem()
-}
-
-func (o GetNatRuleListDataDestinationTranslationDnsRewriteOutput) ToGetNatRuleListDataDestinationTranslationDnsRewriteOutput() GetNatRuleListDataDestinationTranslationDnsRewriteOutput {
-	return o
-}
-
-func (o GetNatRuleListDataDestinationTranslationDnsRewriteOutput) ToGetNatRuleListDataDestinationTranslationDnsRewriteOutputWithContext(ctx context.Context) GetNatRuleListDataDestinationTranslationDnsRewriteOutput {
-	return o
-}
-
-// Direction
-func (o GetNatRuleListDataDestinationTranslationDnsRewriteOutput) Direction() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataDestinationTranslationDnsRewrite) string { return v.Direction }).(pulumi.StringOutput)
-}
-
-type GetNatRuleListDataDynamicDestinationTranslation struct {
-	// Distribution method
-	Distribution string `pulumi:"distribution"`
-	// Translated destination IP address
-	TranslatedAddress string `pulumi:"translatedAddress"`
-	// Translated destination port
-	TranslatedPort int `pulumi:"translatedPort"`
-}
-
-// GetNatRuleListDataDynamicDestinationTranslationInput is an input type that accepts GetNatRuleListDataDynamicDestinationTranslationArgs and GetNatRuleListDataDynamicDestinationTranslationOutput values.
-// You can construct a concrete instance of `GetNatRuleListDataDynamicDestinationTranslationInput` via:
-//
-//	GetNatRuleListDataDynamicDestinationTranslationArgs{...}
-type GetNatRuleListDataDynamicDestinationTranslationInput interface {
-	pulumi.Input
-
-	ToGetNatRuleListDataDynamicDestinationTranslationOutput() GetNatRuleListDataDynamicDestinationTranslationOutput
-	ToGetNatRuleListDataDynamicDestinationTranslationOutputWithContext(context.Context) GetNatRuleListDataDynamicDestinationTranslationOutput
-}
-
-type GetNatRuleListDataDynamicDestinationTranslationArgs struct {
-	// Distribution method
-	Distribution pulumi.StringInput `pulumi:"distribution"`
-	// Translated destination IP address
-	TranslatedAddress pulumi.StringInput `pulumi:"translatedAddress"`
-	// Translated destination port
-	TranslatedPort pulumi.IntInput `pulumi:"translatedPort"`
-}
-
-func (GetNatRuleListDataDynamicDestinationTranslationArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataDynamicDestinationTranslation)(nil)).Elem()
-}
-
-func (i GetNatRuleListDataDynamicDestinationTranslationArgs) ToGetNatRuleListDataDynamicDestinationTranslationOutput() GetNatRuleListDataDynamicDestinationTranslationOutput {
-	return i.ToGetNatRuleListDataDynamicDestinationTranslationOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleListDataDynamicDestinationTranslationArgs) ToGetNatRuleListDataDynamicDestinationTranslationOutputWithContext(ctx context.Context) GetNatRuleListDataDynamicDestinationTranslationOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleListDataDynamicDestinationTranslationOutput)
-}
-
-type GetNatRuleListDataDynamicDestinationTranslationOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleListDataDynamicDestinationTranslationOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataDynamicDestinationTranslation)(nil)).Elem()
-}
-
-func (o GetNatRuleListDataDynamicDestinationTranslationOutput) ToGetNatRuleListDataDynamicDestinationTranslationOutput() GetNatRuleListDataDynamicDestinationTranslationOutput {
-	return o
-}
-
-func (o GetNatRuleListDataDynamicDestinationTranslationOutput) ToGetNatRuleListDataDynamicDestinationTranslationOutputWithContext(ctx context.Context) GetNatRuleListDataDynamicDestinationTranslationOutput {
-	return o
-}
-
-// Distribution method
-func (o GetNatRuleListDataDynamicDestinationTranslationOutput) Distribution() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataDynamicDestinationTranslation) string { return v.Distribution }).(pulumi.StringOutput)
-}
-
-// Translated destination IP address
-func (o GetNatRuleListDataDynamicDestinationTranslationOutput) TranslatedAddress() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataDynamicDestinationTranslation) string { return v.TranslatedAddress }).(pulumi.StringOutput)
-}
-
-// Translated destination port
-func (o GetNatRuleListDataDynamicDestinationTranslationOutput) TranslatedPort() pulumi.IntOutput {
-	return o.ApplyT(func(v GetNatRuleListDataDynamicDestinationTranslation) int { return v.TranslatedPort }).(pulumi.IntOutput)
-}
-
-type GetNatRuleListDataSourceTranslation struct {
-	// Dynamic IP
-	DynamicIp GetNatRuleListDataSourceTranslationDynamicIp `pulumi:"dynamicIp"`
-	// Dynamic IP and port
-	DynamicIpAndPort GetNatRuleListDataSourceTranslationDynamicIpAndPort `pulumi:"dynamicIpAndPort"`
-	// Static IP
-	StaticIp GetNatRuleListDataSourceTranslationStaticIp `pulumi:"staticIp"`
-}
-
-// GetNatRuleListDataSourceTranslationInput is an input type that accepts GetNatRuleListDataSourceTranslationArgs and GetNatRuleListDataSourceTranslationOutput values.
-// You can construct a concrete instance of `GetNatRuleListDataSourceTranslationInput` via:
-//
-//	GetNatRuleListDataSourceTranslationArgs{...}
-type GetNatRuleListDataSourceTranslationInput interface {
-	pulumi.Input
-
-	ToGetNatRuleListDataSourceTranslationOutput() GetNatRuleListDataSourceTranslationOutput
-	ToGetNatRuleListDataSourceTranslationOutputWithContext(context.Context) GetNatRuleListDataSourceTranslationOutput
-}
-
-type GetNatRuleListDataSourceTranslationArgs struct {
-	// Dynamic IP
-	DynamicIp GetNatRuleListDataSourceTranslationDynamicIpInput `pulumi:"dynamicIp"`
-	// Dynamic IP and port
-	DynamicIpAndPort GetNatRuleListDataSourceTranslationDynamicIpAndPortInput `pulumi:"dynamicIpAndPort"`
-	// Static IP
-	StaticIp GetNatRuleListDataSourceTranslationStaticIpInput `pulumi:"staticIp"`
-}
-
-func (GetNatRuleListDataSourceTranslationArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslation)(nil)).Elem()
-}
-
-func (i GetNatRuleListDataSourceTranslationArgs) ToGetNatRuleListDataSourceTranslationOutput() GetNatRuleListDataSourceTranslationOutput {
-	return i.ToGetNatRuleListDataSourceTranslationOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleListDataSourceTranslationArgs) ToGetNatRuleListDataSourceTranslationOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleListDataSourceTranslationOutput)
-}
-
-type GetNatRuleListDataSourceTranslationOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleListDataSourceTranslationOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslation)(nil)).Elem()
-}
-
-func (o GetNatRuleListDataSourceTranslationOutput) ToGetNatRuleListDataSourceTranslationOutput() GetNatRuleListDataSourceTranslationOutput {
-	return o
-}
-
-func (o GetNatRuleListDataSourceTranslationOutput) ToGetNatRuleListDataSourceTranslationOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationOutput {
-	return o
-}
-
-// Dynamic IP
-func (o GetNatRuleListDataSourceTranslationOutput) DynamicIp() GetNatRuleListDataSourceTranslationDynamicIpOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslation) GetNatRuleListDataSourceTranslationDynamicIp {
-		return v.DynamicIp
-	}).(GetNatRuleListDataSourceTranslationDynamicIpOutput)
-}
-
-// Dynamic IP and port
-func (o GetNatRuleListDataSourceTranslationOutput) DynamicIpAndPort() GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslation) GetNatRuleListDataSourceTranslationDynamicIpAndPort {
-		return v.DynamicIpAndPort
-	}).(GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput)
-}
-
-// Static IP
-func (o GetNatRuleListDataSourceTranslationOutput) StaticIp() GetNatRuleListDataSourceTranslationStaticIpOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslation) GetNatRuleListDataSourceTranslationStaticIp {
-		return v.StaticIp
-	}).(GetNatRuleListDataSourceTranslationStaticIpOutput)
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIp struct {
-	// Fallback
-	Fallback GetNatRuleListDataSourceTranslationDynamicIpFallback `pulumi:"fallback"`
-	// Translated IP addresses
-	TranslatedAddresses []string `pulumi:"translatedAddresses"`
-}
-
-// GetNatRuleListDataSourceTranslationDynamicIpInput is an input type that accepts GetNatRuleListDataSourceTranslationDynamicIpArgs and GetNatRuleListDataSourceTranslationDynamicIpOutput values.
-// You can construct a concrete instance of `GetNatRuleListDataSourceTranslationDynamicIpInput` via:
-//
-//	GetNatRuleListDataSourceTranslationDynamicIpArgs{...}
-type GetNatRuleListDataSourceTranslationDynamicIpInput interface {
-	pulumi.Input
-
-	ToGetNatRuleListDataSourceTranslationDynamicIpOutput() GetNatRuleListDataSourceTranslationDynamicIpOutput
-	ToGetNatRuleListDataSourceTranslationDynamicIpOutputWithContext(context.Context) GetNatRuleListDataSourceTranslationDynamicIpOutput
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpArgs struct {
-	// Fallback
-	Fallback GetNatRuleListDataSourceTranslationDynamicIpFallbackInput `pulumi:"fallback"`
-	// Translated IP addresses
-	TranslatedAddresses pulumi.StringArrayInput `pulumi:"translatedAddresses"`
-}
-
-func (GetNatRuleListDataSourceTranslationDynamicIpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIp)(nil)).Elem()
-}
-
-func (i GetNatRuleListDataSourceTranslationDynamicIpArgs) ToGetNatRuleListDataSourceTranslationDynamicIpOutput() GetNatRuleListDataSourceTranslationDynamicIpOutput {
-	return i.ToGetNatRuleListDataSourceTranslationDynamicIpOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleListDataSourceTranslationDynamicIpArgs) ToGetNatRuleListDataSourceTranslationDynamicIpOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationDynamicIpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleListDataSourceTranslationDynamicIpOutput)
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleListDataSourceTranslationDynamicIpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIp)(nil)).Elem()
-}
-
-func (o GetNatRuleListDataSourceTranslationDynamicIpOutput) ToGetNatRuleListDataSourceTranslationDynamicIpOutput() GetNatRuleListDataSourceTranslationDynamicIpOutput {
-	return o
-}
-
-func (o GetNatRuleListDataSourceTranslationDynamicIpOutput) ToGetNatRuleListDataSourceTranslationDynamicIpOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationDynamicIpOutput {
-	return o
-}
-
-// Fallback
-func (o GetNatRuleListDataSourceTranslationDynamicIpOutput) Fallback() GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIp) GetNatRuleListDataSourceTranslationDynamicIpFallback {
-		return v.Fallback
-	}).(GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput)
-}
-
-// Translated IP addresses
-func (o GetNatRuleListDataSourceTranslationDynamicIpOutput) TranslatedAddresses() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIp) []string { return v.TranslatedAddresses }).(pulumi.StringArrayOutput)
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpAndPort struct {
-	// Translated source interface
-	InterfaceAddress GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddress `pulumi:"interfaceAddress"`
-	// Translated source IP addresses
-	TranslatedAddresses []string `pulumi:"translatedAddresses"`
-}
-
-// GetNatRuleListDataSourceTranslationDynamicIpAndPortInput is an input type that accepts GetNatRuleListDataSourceTranslationDynamicIpAndPortArgs and GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput values.
-// You can construct a concrete instance of `GetNatRuleListDataSourceTranslationDynamicIpAndPortInput` via:
-//
-//	GetNatRuleListDataSourceTranslationDynamicIpAndPortArgs{...}
-type GetNatRuleListDataSourceTranslationDynamicIpAndPortInput interface {
-	pulumi.Input
-
-	ToGetNatRuleListDataSourceTranslationDynamicIpAndPortOutput() GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput
-	ToGetNatRuleListDataSourceTranslationDynamicIpAndPortOutputWithContext(context.Context) GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpAndPortArgs struct {
-	// Translated source interface
-	InterfaceAddress GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressInput `pulumi:"interfaceAddress"`
-	// Translated source IP addresses
-	TranslatedAddresses pulumi.StringArrayInput `pulumi:"translatedAddresses"`
-}
-
-func (GetNatRuleListDataSourceTranslationDynamicIpAndPortArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpAndPort)(nil)).Elem()
-}
-
-func (i GetNatRuleListDataSourceTranslationDynamicIpAndPortArgs) ToGetNatRuleListDataSourceTranslationDynamicIpAndPortOutput() GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput {
-	return i.ToGetNatRuleListDataSourceTranslationDynamicIpAndPortOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleListDataSourceTranslationDynamicIpAndPortArgs) ToGetNatRuleListDataSourceTranslationDynamicIpAndPortOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput)
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpAndPort)(nil)).Elem()
-}
-
-func (o GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput) ToGetNatRuleListDataSourceTranslationDynamicIpAndPortOutput() GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput {
-	return o
-}
-
-func (o GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput) ToGetNatRuleListDataSourceTranslationDynamicIpAndPortOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput {
-	return o
-}
-
-// Translated source interface
-func (o GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput) InterfaceAddress() GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIpAndPort) GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddress {
-		return v.InterfaceAddress
-	}).(GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput)
-}
-
-// Translated source IP addresses
-func (o GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput) TranslatedAddresses() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIpAndPort) []string { return v.TranslatedAddresses }).(pulumi.StringArrayOutput)
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddress struct {
-	// Floating IP address
-	FloatingIp string `pulumi:"floatingIp"`
-	// Interface name
-	Interface string `pulumi:"interface"`
-	// Translated source IP address
-	Ip string `pulumi:"ip"`
-}
-
-// GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressInput is an input type that accepts GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressArgs and GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput values.
-// You can construct a concrete instance of `GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressInput` via:
-//
-//	GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressArgs{...}
-type GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressInput interface {
-	pulumi.Input
-
-	ToGetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput() GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput
-	ToGetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutputWithContext(context.Context) GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressArgs struct {
-	// Floating IP address
-	FloatingIp pulumi.StringInput `pulumi:"floatingIp"`
-	// Interface name
-	Interface pulumi.StringInput `pulumi:"interface"`
-	// Translated source IP address
-	Ip pulumi.StringInput `pulumi:"ip"`
-}
-
-func (GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddress)(nil)).Elem()
-}
-
-func (i GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressArgs) ToGetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput() GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput {
-	return i.ToGetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressArgs) ToGetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput)
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddress)(nil)).Elem()
-}
-
-func (o GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput) ToGetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput() GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput {
-	return o
-}
-
-func (o GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput) ToGetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput {
-	return o
-}
-
-// Floating IP address
-func (o GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput) FloatingIp() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddress) string {
-		return v.FloatingIp
-	}).(pulumi.StringOutput)
-}
-
-// Interface name
-func (o GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput) Interface() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddress) string { return v.Interface }).(pulumi.StringOutput)
-}
-
-// Translated source IP address
-func (o GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput) Ip() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddress) string { return v.Ip }).(pulumi.StringOutput)
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpFallback struct {
-	// Fallback interface
-	InterfaceAddress GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddress `pulumi:"interfaceAddress"`
-	// Fallback IP addresses
-	TranslatedAddresses []string `pulumi:"translatedAddresses"`
-}
-
-// GetNatRuleListDataSourceTranslationDynamicIpFallbackInput is an input type that accepts GetNatRuleListDataSourceTranslationDynamicIpFallbackArgs and GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput values.
-// You can construct a concrete instance of `GetNatRuleListDataSourceTranslationDynamicIpFallbackInput` via:
-//
-//	GetNatRuleListDataSourceTranslationDynamicIpFallbackArgs{...}
-type GetNatRuleListDataSourceTranslationDynamicIpFallbackInput interface {
-	pulumi.Input
-
-	ToGetNatRuleListDataSourceTranslationDynamicIpFallbackOutput() GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput
-	ToGetNatRuleListDataSourceTranslationDynamicIpFallbackOutputWithContext(context.Context) GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpFallbackArgs struct {
-	// Fallback interface
-	InterfaceAddress GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressInput `pulumi:"interfaceAddress"`
-	// Fallback IP addresses
-	TranslatedAddresses pulumi.StringArrayInput `pulumi:"translatedAddresses"`
-}
-
-func (GetNatRuleListDataSourceTranslationDynamicIpFallbackArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpFallback)(nil)).Elem()
-}
-
-func (i GetNatRuleListDataSourceTranslationDynamicIpFallbackArgs) ToGetNatRuleListDataSourceTranslationDynamicIpFallbackOutput() GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput {
-	return i.ToGetNatRuleListDataSourceTranslationDynamicIpFallbackOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleListDataSourceTranslationDynamicIpFallbackArgs) ToGetNatRuleListDataSourceTranslationDynamicIpFallbackOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput)
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpFallback)(nil)).Elem()
-}
-
-func (o GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput) ToGetNatRuleListDataSourceTranslationDynamicIpFallbackOutput() GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput {
-	return o
-}
-
-func (o GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput) ToGetNatRuleListDataSourceTranslationDynamicIpFallbackOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput {
-	return o
-}
-
-// Fallback interface
-func (o GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput) InterfaceAddress() GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIpFallback) GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddress {
-		return v.InterfaceAddress
-	}).(GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput)
-}
-
-// Fallback IP addresses
-func (o GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput) TranslatedAddresses() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIpFallback) []string { return v.TranslatedAddresses }).(pulumi.StringArrayOutput)
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddress struct {
-	// Floating IP address
-	FloatingIp string `pulumi:"floatingIp"`
-	// Interface name
-	Interface string `pulumi:"interface"`
-	// IP address
-	Ip string `pulumi:"ip"`
-}
-
-// GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressInput is an input type that accepts GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressArgs and GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput values.
-// You can construct a concrete instance of `GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressInput` via:
-//
-//	GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressArgs{...}
-type GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressInput interface {
-	pulumi.Input
-
-	ToGetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput() GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput
-	ToGetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutputWithContext(context.Context) GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressArgs struct {
-	// Floating IP address
-	FloatingIp pulumi.StringInput `pulumi:"floatingIp"`
-	// Interface name
-	Interface pulumi.StringInput `pulumi:"interface"`
-	// IP address
-	Ip pulumi.StringInput `pulumi:"ip"`
-}
-
-func (GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddress)(nil)).Elem()
-}
-
-func (i GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressArgs) ToGetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput() GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput {
-	return i.ToGetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressArgs) ToGetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput)
-}
-
-type GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddress)(nil)).Elem()
-}
-
-func (o GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput) ToGetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput() GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput {
-	return o
-}
-
-func (o GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput) ToGetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput {
-	return o
-}
-
-// Floating IP address
-func (o GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput) FloatingIp() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddress) string {
-		return v.FloatingIp
-	}).(pulumi.StringOutput)
-}
-
-// Interface name
-func (o GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput) Interface() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddress) string {
-		return v.Interface
-	}).(pulumi.StringOutput)
-}
-
-// IP address
-func (o GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput) Ip() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddress) string { return v.Ip }).(pulumi.StringOutput)
-}
-
-type GetNatRuleListDataSourceTranslationStaticIp struct {
-	// Bi directional
-	BiDirectional string `pulumi:"biDirectional"`
-	// Translated IP address
-	TranslatedAddress string `pulumi:"translatedAddress"`
-}
-
-// GetNatRuleListDataSourceTranslationStaticIpInput is an input type that accepts GetNatRuleListDataSourceTranslationStaticIpArgs and GetNatRuleListDataSourceTranslationStaticIpOutput values.
-// You can construct a concrete instance of `GetNatRuleListDataSourceTranslationStaticIpInput` via:
-//
-//	GetNatRuleListDataSourceTranslationStaticIpArgs{...}
-type GetNatRuleListDataSourceTranslationStaticIpInput interface {
-	pulumi.Input
-
-	ToGetNatRuleListDataSourceTranslationStaticIpOutput() GetNatRuleListDataSourceTranslationStaticIpOutput
-	ToGetNatRuleListDataSourceTranslationStaticIpOutputWithContext(context.Context) GetNatRuleListDataSourceTranslationStaticIpOutput
-}
-
-type GetNatRuleListDataSourceTranslationStaticIpArgs struct {
-	// Bi directional
-	BiDirectional pulumi.StringInput `pulumi:"biDirectional"`
-	// Translated IP address
-	TranslatedAddress pulumi.StringInput `pulumi:"translatedAddress"`
-}
-
-func (GetNatRuleListDataSourceTranslationStaticIpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationStaticIp)(nil)).Elem()
-}
-
-func (i GetNatRuleListDataSourceTranslationStaticIpArgs) ToGetNatRuleListDataSourceTranslationStaticIpOutput() GetNatRuleListDataSourceTranslationStaticIpOutput {
-	return i.ToGetNatRuleListDataSourceTranslationStaticIpOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleListDataSourceTranslationStaticIpArgs) ToGetNatRuleListDataSourceTranslationStaticIpOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationStaticIpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleListDataSourceTranslationStaticIpOutput)
-}
-
-type GetNatRuleListDataSourceTranslationStaticIpOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleListDataSourceTranslationStaticIpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleListDataSourceTranslationStaticIp)(nil)).Elem()
-}
-
-func (o GetNatRuleListDataSourceTranslationStaticIpOutput) ToGetNatRuleListDataSourceTranslationStaticIpOutput() GetNatRuleListDataSourceTranslationStaticIpOutput {
-	return o
-}
-
-func (o GetNatRuleListDataSourceTranslationStaticIpOutput) ToGetNatRuleListDataSourceTranslationStaticIpOutputWithContext(ctx context.Context) GetNatRuleListDataSourceTranslationStaticIpOutput {
-	return o
-}
-
-// Bi directional
-func (o GetNatRuleListDataSourceTranslationStaticIpOutput) BiDirectional() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationStaticIp) string { return v.BiDirectional }).(pulumi.StringOutput)
-}
-
-// Translated IP address
-func (o GetNatRuleListDataSourceTranslationStaticIpOutput) TranslatedAddress() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListDataSourceTranslationStaticIp) string { return v.TranslatedAddress }).(pulumi.StringOutput)
-}
-
-type GetNatRuleSourceTranslation struct {
-	// Dynamic IP
-	DynamicIp GetNatRuleSourceTranslationDynamicIp `pulumi:"dynamicIp"`
-	// Dynamic IP and port
-	DynamicIpAndPort GetNatRuleSourceTranslationDynamicIpAndPort `pulumi:"dynamicIpAndPort"`
-	// Static IP
-	StaticIp GetNatRuleSourceTranslationStaticIp `pulumi:"staticIp"`
-}
-
-// GetNatRuleSourceTranslationInput is an input type that accepts GetNatRuleSourceTranslationArgs and GetNatRuleSourceTranslationOutput values.
-// You can construct a concrete instance of `GetNatRuleSourceTranslationInput` via:
-//
-//	GetNatRuleSourceTranslationArgs{...}
-type GetNatRuleSourceTranslationInput interface {
-	pulumi.Input
-
-	ToGetNatRuleSourceTranslationOutput() GetNatRuleSourceTranslationOutput
-	ToGetNatRuleSourceTranslationOutputWithContext(context.Context) GetNatRuleSourceTranslationOutput
-}
-
-type GetNatRuleSourceTranslationArgs struct {
-	// Dynamic IP
-	DynamicIp GetNatRuleSourceTranslationDynamicIpInput `pulumi:"dynamicIp"`
-	// Dynamic IP and port
-	DynamicIpAndPort GetNatRuleSourceTranslationDynamicIpAndPortInput `pulumi:"dynamicIpAndPort"`
-	// Static IP
-	StaticIp GetNatRuleSourceTranslationStaticIpInput `pulumi:"staticIp"`
-}
-
-func (GetNatRuleSourceTranslationArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleSourceTranslation)(nil)).Elem()
-}
-
-func (i GetNatRuleSourceTranslationArgs) ToGetNatRuleSourceTranslationOutput() GetNatRuleSourceTranslationOutput {
-	return i.ToGetNatRuleSourceTranslationOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleSourceTranslationArgs) ToGetNatRuleSourceTranslationOutputWithContext(ctx context.Context) GetNatRuleSourceTranslationOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleSourceTranslationOutput)
-}
-
-type GetNatRuleSourceTranslationOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleSourceTranslationOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleSourceTranslation)(nil)).Elem()
-}
-
-func (o GetNatRuleSourceTranslationOutput) ToGetNatRuleSourceTranslationOutput() GetNatRuleSourceTranslationOutput {
-	return o
-}
-
-func (o GetNatRuleSourceTranslationOutput) ToGetNatRuleSourceTranslationOutputWithContext(ctx context.Context) GetNatRuleSourceTranslationOutput {
-	return o
-}
-
-// Dynamic IP
-func (o GetNatRuleSourceTranslationOutput) DynamicIp() GetNatRuleSourceTranslationDynamicIpOutput {
-	return o.ApplyT(func(v GetNatRuleSourceTranslation) GetNatRuleSourceTranslationDynamicIp { return v.DynamicIp }).(GetNatRuleSourceTranslationDynamicIpOutput)
-}
-
-// Dynamic IP and port
-func (o GetNatRuleSourceTranslationOutput) DynamicIpAndPort() GetNatRuleSourceTranslationDynamicIpAndPortOutput {
-	return o.ApplyT(func(v GetNatRuleSourceTranslation) GetNatRuleSourceTranslationDynamicIpAndPort {
-		return v.DynamicIpAndPort
-	}).(GetNatRuleSourceTranslationDynamicIpAndPortOutput)
-}
-
-// Static IP
-func (o GetNatRuleSourceTranslationOutput) StaticIp() GetNatRuleSourceTranslationStaticIpOutput {
-	return o.ApplyT(func(v GetNatRuleSourceTranslation) GetNatRuleSourceTranslationStaticIp { return v.StaticIp }).(GetNatRuleSourceTranslationStaticIpOutput)
-}
-
-type GetNatRuleSourceTranslationDynamicIp struct {
-	// Fallback
-	Fallback GetNatRuleSourceTranslationDynamicIpFallback `pulumi:"fallback"`
-	// Translated IP addresses
-	TranslatedAddresses []string `pulumi:"translatedAddresses"`
-}
-
-// GetNatRuleSourceTranslationDynamicIpInput is an input type that accepts GetNatRuleSourceTranslationDynamicIpArgs and GetNatRuleSourceTranslationDynamicIpOutput values.
-// You can construct a concrete instance of `GetNatRuleSourceTranslationDynamicIpInput` via:
-//
-//	GetNatRuleSourceTranslationDynamicIpArgs{...}
-type GetNatRuleSourceTranslationDynamicIpInput interface {
-	pulumi.Input
-
-	ToGetNatRuleSourceTranslationDynamicIpOutput() GetNatRuleSourceTranslationDynamicIpOutput
-	ToGetNatRuleSourceTranslationDynamicIpOutputWithContext(context.Context) GetNatRuleSourceTranslationDynamicIpOutput
-}
-
-type GetNatRuleSourceTranslationDynamicIpArgs struct {
-	// Fallback
-	Fallback GetNatRuleSourceTranslationDynamicIpFallbackInput `pulumi:"fallback"`
-	// Translated IP addresses
-	TranslatedAddresses pulumi.StringArrayInput `pulumi:"translatedAddresses"`
-}
-
-func (GetNatRuleSourceTranslationDynamicIpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleSourceTranslationDynamicIp)(nil)).Elem()
-}
-
-func (i GetNatRuleSourceTranslationDynamicIpArgs) ToGetNatRuleSourceTranslationDynamicIpOutput() GetNatRuleSourceTranslationDynamicIpOutput {
-	return i.ToGetNatRuleSourceTranslationDynamicIpOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleSourceTranslationDynamicIpArgs) ToGetNatRuleSourceTranslationDynamicIpOutputWithContext(ctx context.Context) GetNatRuleSourceTranslationDynamicIpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleSourceTranslationDynamicIpOutput)
-}
-
-type GetNatRuleSourceTranslationDynamicIpOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleSourceTranslationDynamicIpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleSourceTranslationDynamicIp)(nil)).Elem()
-}
-
-func (o GetNatRuleSourceTranslationDynamicIpOutput) ToGetNatRuleSourceTranslationDynamicIpOutput() GetNatRuleSourceTranslationDynamicIpOutput {
-	return o
-}
-
-func (o GetNatRuleSourceTranslationDynamicIpOutput) ToGetNatRuleSourceTranslationDynamicIpOutputWithContext(ctx context.Context) GetNatRuleSourceTranslationDynamicIpOutput {
-	return o
-}
-
-// Fallback
-func (o GetNatRuleSourceTranslationDynamicIpOutput) Fallback() GetNatRuleSourceTranslationDynamicIpFallbackOutput {
-	return o.ApplyT(func(v GetNatRuleSourceTranslationDynamicIp) GetNatRuleSourceTranslationDynamicIpFallback {
-		return v.Fallback
-	}).(GetNatRuleSourceTranslationDynamicIpFallbackOutput)
-}
-
-// Translated IP addresses
-func (o GetNatRuleSourceTranslationDynamicIpOutput) TranslatedAddresses() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetNatRuleSourceTranslationDynamicIp) []string { return v.TranslatedAddresses }).(pulumi.StringArrayOutput)
-}
-
-type GetNatRuleSourceTranslationDynamicIpAndPort struct {
-	// Translated source interface
-	InterfaceAddress GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddress `pulumi:"interfaceAddress"`
-	// Translated source IP addresses
-	TranslatedAddresses []string `pulumi:"translatedAddresses"`
-}
-
-// GetNatRuleSourceTranslationDynamicIpAndPortInput is an input type that accepts GetNatRuleSourceTranslationDynamicIpAndPortArgs and GetNatRuleSourceTranslationDynamicIpAndPortOutput values.
-// You can construct a concrete instance of `GetNatRuleSourceTranslationDynamicIpAndPortInput` via:
-//
-//	GetNatRuleSourceTranslationDynamicIpAndPortArgs{...}
-type GetNatRuleSourceTranslationDynamicIpAndPortInput interface {
-	pulumi.Input
-
-	ToGetNatRuleSourceTranslationDynamicIpAndPortOutput() GetNatRuleSourceTranslationDynamicIpAndPortOutput
-	ToGetNatRuleSourceTranslationDynamicIpAndPortOutputWithContext(context.Context) GetNatRuleSourceTranslationDynamicIpAndPortOutput
-}
-
-type GetNatRuleSourceTranslationDynamicIpAndPortArgs struct {
-	// Translated source interface
-	InterfaceAddress GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressInput `pulumi:"interfaceAddress"`
-	// Translated source IP addresses
-	TranslatedAddresses pulumi.StringArrayInput `pulumi:"translatedAddresses"`
-}
-
-func (GetNatRuleSourceTranslationDynamicIpAndPortArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleSourceTranslationDynamicIpAndPort)(nil)).Elem()
-}
-
-func (i GetNatRuleSourceTranslationDynamicIpAndPortArgs) ToGetNatRuleSourceTranslationDynamicIpAndPortOutput() GetNatRuleSourceTranslationDynamicIpAndPortOutput {
-	return i.ToGetNatRuleSourceTranslationDynamicIpAndPortOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleSourceTranslationDynamicIpAndPortArgs) ToGetNatRuleSourceTranslationDynamicIpAndPortOutputWithContext(ctx context.Context) GetNatRuleSourceTranslationDynamicIpAndPortOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleSourceTranslationDynamicIpAndPortOutput)
-}
-
-type GetNatRuleSourceTranslationDynamicIpAndPortOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleSourceTranslationDynamicIpAndPortOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleSourceTranslationDynamicIpAndPort)(nil)).Elem()
-}
-
-func (o GetNatRuleSourceTranslationDynamicIpAndPortOutput) ToGetNatRuleSourceTranslationDynamicIpAndPortOutput() GetNatRuleSourceTranslationDynamicIpAndPortOutput {
-	return o
-}
-
-func (o GetNatRuleSourceTranslationDynamicIpAndPortOutput) ToGetNatRuleSourceTranslationDynamicIpAndPortOutputWithContext(ctx context.Context) GetNatRuleSourceTranslationDynamicIpAndPortOutput {
-	return o
-}
-
-// Translated source interface
-func (o GetNatRuleSourceTranslationDynamicIpAndPortOutput) InterfaceAddress() GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput {
-	return o.ApplyT(func(v GetNatRuleSourceTranslationDynamicIpAndPort) GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddress {
-		return v.InterfaceAddress
-	}).(GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput)
-}
-
-// Translated source IP addresses
-func (o GetNatRuleSourceTranslationDynamicIpAndPortOutput) TranslatedAddresses() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetNatRuleSourceTranslationDynamicIpAndPort) []string { return v.TranslatedAddresses }).(pulumi.StringArrayOutput)
-}
-
-type GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddress struct {
-	// Floating IP address
-	FloatingIp string `pulumi:"floatingIp"`
-	// Interface name
-	Interface string `pulumi:"interface"`
-	// Translated source IP address
-	Ip string `pulumi:"ip"`
-}
-
-// GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressInput is an input type that accepts GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs and GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput values.
-// You can construct a concrete instance of `GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressInput` via:
-//
-//	GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs{...}
-type GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressInput interface {
-	pulumi.Input
-
-	ToGetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput() GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput
-	ToGetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutputWithContext(context.Context) GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput
-}
-
-type GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs struct {
-	// Floating IP address
-	FloatingIp pulumi.StringInput `pulumi:"floatingIp"`
-	// Interface name
-	Interface pulumi.StringInput `pulumi:"interface"`
-	// Translated source IP address
-	Ip pulumi.StringInput `pulumi:"ip"`
-}
-
-func (GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddress)(nil)).Elem()
-}
-
-func (i GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs) ToGetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput() GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput {
-	return i.ToGetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutputWithContext(context.Background())
-}
-
-func (i GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs) ToGetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutputWithContext(ctx context.Context) GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput)
-}
-
-type GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput struct{ *pulumi.OutputState }
-
-func (GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddress)(nil)).Elem()
-}
-
-func (o GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput) ToGetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput() GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput {
-	return o
-}
-
-func (o GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput) ToGetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutputWithContext(ctx context.Context) GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput {
-	return o
-}
-
-// Floating IP address
-func (o GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput) FloatingIp() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddress) string { return v.FloatingIp }).(pulumi.StringOutput)
-}
-
-// Interface name
-func (o GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput) Interface() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddress) string { return v.Interface }).(pulumi.StringOutput)
-}
-
-// Translated source IP address
-func (o GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput) Ip() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddress) string { return v.Ip }).(pulumi.StringOutput)
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSptThresholdInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastSptThresholdArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSptThresholdArrayInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastSptThresholdArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSsmAddressSpaceInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRouteInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastStaticRouteArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRouteArrayInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastStaticRouteArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfMulticastStaticRouteNexthopInput)(nil)).Elem(), GetLogicalRouterListDataVrfMulticastStaticRouteNexthopArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaArrayInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaInterfaceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceArrayInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaInterfaceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceBfdInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaInterfaceBfdArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcastInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcastArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpNeighborInput)(nil)).Elem(), GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpNeighborArgs{})
@@ -41372,6 +42028,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceIpv6Input)(nil)).Elem(), GetLoopbackInterfaceIpv6Args{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceIpv6AddressInput)(nil)).Elem(), GetLoopbackInterfaceIpv6AddressArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceIpv6AddressArrayInput)(nil)).Elem(), GetLoopbackInterfaceIpv6AddressArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceIpv6AddressAnycastInput)(nil)).Elem(), GetLoopbackInterfaceIpv6AddressAnycastArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceIpv6AddressPrefixInput)(nil)).Elem(), GetLoopbackInterfaceIpv6AddressPrefixArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceListDataInput)(nil)).Elem(), GetLoopbackInterfaceListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceListDataArrayInput)(nil)).Elem(), GetLoopbackInterfaceListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceListDataIpInput)(nil)).Elem(), GetLoopbackInterfaceListDataIpArgs{})
@@ -41379,6 +42037,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceListDataIpv6Input)(nil)).Elem(), GetLoopbackInterfaceListDataIpv6Args{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceListDataIpv6AddressInput)(nil)).Elem(), GetLoopbackInterfaceListDataIpv6AddressArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceListDataIpv6AddressArrayInput)(nil)).Elem(), GetLoopbackInterfaceListDataIpv6AddressArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceListDataIpv6AddressAnycastInput)(nil)).Elem(), GetLoopbackInterfaceListDataIpv6AddressAnycastArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetLoopbackInterfaceListDataIpv6AddressPrefixInput)(nil)).Elem(), GetLoopbackInterfaceListDataIpv6AddressPrefixArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetManagementInterfaceListDataInput)(nil)).Elem(), GetManagementInterfaceListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetManagementInterfaceListDataArrayInput)(nil)).Elem(), GetManagementInterfaceListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetManagementInterfaceListDataManagementInterfaceInput)(nil)).Elem(), GetManagementInterfaceListDataManagementInterfaceArgs{})
@@ -41404,20 +42064,21 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleDynamicDestinationTranslationInput)(nil)).Elem(), GetNatRuleDynamicDestinationTranslationArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataInput)(nil)).Elem(), GetNatRuleListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataArrayInput)(nil)).Elem(), GetNatRuleListDataArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataDestinationTranslationInput)(nil)).Elem(), GetNatRuleListDataDestinationTranslationArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataDestinationTranslationDnsRewriteInput)(nil)).Elem(), GetNatRuleListDataDestinationTranslationDnsRewriteArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataDynamicDestinationTranslationInput)(nil)).Elem(), GetNatRuleListDataDynamicDestinationTranslationArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataSourceTranslationInput)(nil)).Elem(), GetNatRuleListDataSourceTranslationArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpInput)(nil)).Elem(), GetNatRuleListDataSourceTranslationDynamicIpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpAndPortInput)(nil)).Elem(), GetNatRuleListDataSourceTranslationDynamicIpAndPortArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressInput)(nil)).Elem(), GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpFallbackInput)(nil)).Elem(), GetNatRuleListDataSourceTranslationDynamicIpFallbackArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressInput)(nil)).Elem(), GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleListDataSourceTranslationStaticIpInput)(nil)).Elem(), GetNatRuleListDataSourceTranslationStaticIpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleSourceTranslationInput)(nil)).Elem(), GetNatRuleSourceTranslationArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleSourceTranslationDynamicIpInput)(nil)).Elem(), GetNatRuleSourceTranslationDynamicIpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleSourceTranslationDynamicIpAndPortInput)(nil)).Elem(), GetNatRuleSourceTranslationDynamicIpAndPortArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressInput)(nil)).Elem(), GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRpOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastSptThresholdOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastSptThresholdArrayOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastSsmAddressSpaceOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastSsmAddressSpaceArrayOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastStaticRouteOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastStaticRouteArrayOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfMulticastStaticRouteNexthopOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaArrayOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaInterfaceOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaInterfaceArrayOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaInterfaceBfdOutput{})
+	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeOutput{})
 	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeBroadcastOutput{})
 	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpOutput{})
 	pulumi.RegisterOutputType(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpNeighborOutput{})
@@ -41970,6 +42631,8 @@ func init() {
 	pulumi.RegisterOutputType(GetLoopbackInterfaceIpv6Output{})
 	pulumi.RegisterOutputType(GetLoopbackInterfaceIpv6AddressOutput{})
 	pulumi.RegisterOutputType(GetLoopbackInterfaceIpv6AddressArrayOutput{})
+	pulumi.RegisterOutputType(GetLoopbackInterfaceIpv6AddressAnycastOutput{})
+	pulumi.RegisterOutputType(GetLoopbackInterfaceIpv6AddressPrefixOutput{})
 	pulumi.RegisterOutputType(GetLoopbackInterfaceListDataOutput{})
 	pulumi.RegisterOutputType(GetLoopbackInterfaceListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetLoopbackInterfaceListDataIpOutput{})
@@ -41977,6 +42640,8 @@ func init() {
 	pulumi.RegisterOutputType(GetLoopbackInterfaceListDataIpv6Output{})
 	pulumi.RegisterOutputType(GetLoopbackInterfaceListDataIpv6AddressOutput{})
 	pulumi.RegisterOutputType(GetLoopbackInterfaceListDataIpv6AddressArrayOutput{})
+	pulumi.RegisterOutputType(GetLoopbackInterfaceListDataIpv6AddressAnycastOutput{})
+	pulumi.RegisterOutputType(GetLoopbackInterfaceListDataIpv6AddressPrefixOutput{})
 	pulumi.RegisterOutputType(GetManagementInterfaceListDataOutput{})
 	pulumi.RegisterOutputType(GetManagementInterfaceListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetManagementInterfaceListDataManagementInterfaceOutput{})
@@ -42002,18 +42667,4 @@ func init() {
 	pulumi.RegisterOutputType(GetNatRuleDynamicDestinationTranslationOutput{})
 	pulumi.RegisterOutputType(GetNatRuleListDataOutput{})
 	pulumi.RegisterOutputType(GetNatRuleListDataArrayOutput{})
-	pulumi.RegisterOutputType(GetNatRuleListDataDestinationTranslationOutput{})
-	pulumi.RegisterOutputType(GetNatRuleListDataDestinationTranslationDnsRewriteOutput{})
-	pulumi.RegisterOutputType(GetNatRuleListDataDynamicDestinationTranslationOutput{})
-	pulumi.RegisterOutputType(GetNatRuleListDataSourceTranslationOutput{})
-	pulumi.RegisterOutputType(GetNatRuleListDataSourceTranslationDynamicIpOutput{})
-	pulumi.RegisterOutputType(GetNatRuleListDataSourceTranslationDynamicIpAndPortOutput{})
-	pulumi.RegisterOutputType(GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddressOutput{})
-	pulumi.RegisterOutputType(GetNatRuleListDataSourceTranslationDynamicIpFallbackOutput{})
-	pulumi.RegisterOutputType(GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddressOutput{})
-	pulumi.RegisterOutputType(GetNatRuleListDataSourceTranslationStaticIpOutput{})
-	pulumi.RegisterOutputType(GetNatRuleSourceTranslationOutput{})
-	pulumi.RegisterOutputType(GetNatRuleSourceTranslationDynamicIpOutput{})
-	pulumi.RegisterOutputType(GetNatRuleSourceTranslationDynamicIpAndPortOutput{})
-	pulumi.RegisterOutputType(GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddressOutput{})
 }

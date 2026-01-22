@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Broadcast
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Broadcast`, `P2mp`, and `P2p`.
         /// </summary>
         [Input("broadcast")]
         public Input<Inputs.LogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcastGetArgs>? Broadcast { get; set; }
 
         /// <summary>
         /// P2mp
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Broadcast`, `P2mp`, and `P2p`.
         /// </summary>
         [Input("p2mp")]
@@ -28,6 +28,7 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// P2p
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Broadcast`, `P2mp`, and `P2p`.
         /// </summary>
         [Input("p2p")]

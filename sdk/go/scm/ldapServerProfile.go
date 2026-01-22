@@ -51,11 +51,11 @@ type LdapServerProfile struct {
 	// The bind timeout (seconds)
 	BindTimelimit pulumi.StringPtrOutput `pulumi:"bindTimelimit"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The LDAP server time
@@ -67,6 +67,7 @@ type LdapServerProfile struct {
 	// The LDAP server configuration
 	Servers LdapServerProfileServerArrayOutput `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Require SSL/TLS secured connection?
@@ -128,11 +129,11 @@ type ldapServerProfileState struct {
 	// The bind timeout (seconds)
 	BindTimelimit *string `pulumi:"bindTimelimit"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The LDAP server time
@@ -144,6 +145,7 @@ type ldapServerProfileState struct {
 	// The LDAP server configuration
 	Servers []LdapServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Require SSL/TLS secured connection?
@@ -165,11 +167,11 @@ type LdapServerProfileState struct {
 	// The bind timeout (seconds)
 	BindTimelimit pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The LDAP server time
@@ -181,6 +183,7 @@ type LdapServerProfileState struct {
 	// The LDAP server configuration
 	Servers LdapServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Require SSL/TLS secured connection?
@@ -206,9 +209,9 @@ type ldapServerProfileArgs struct {
 	// The bind timeout (seconds)
 	BindTimelimit *string `pulumi:"bindTimelimit"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The LDAP server time
@@ -220,6 +223,7 @@ type ldapServerProfileArgs struct {
 	// The LDAP server configuration
 	Servers []LdapServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Require SSL/TLS secured connection?
@@ -241,9 +245,9 @@ type LdapServerProfileArgs struct {
 	// The bind timeout (seconds)
 	BindTimelimit pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The LDAP server time
@@ -255,6 +259,7 @@ type LdapServerProfileArgs struct {
 	// The LDAP server configuration
 	Servers LdapServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Require SSL/TLS secured connection?
@@ -373,7 +378,6 @@ func (o LdapServerProfileOutput) BindTimelimit() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LdapServerProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LdapServerProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -384,6 +388,7 @@ func (o LdapServerProfileOutput) EncryptedValues() pulumi.StringMapOutput {
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LdapServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LdapServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -410,6 +415,7 @@ func (o LdapServerProfileOutput) Servers() LdapServerProfileServerArrayOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LdapServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LdapServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

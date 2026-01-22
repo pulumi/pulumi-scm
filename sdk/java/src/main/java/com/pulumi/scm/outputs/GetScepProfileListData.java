@@ -21,7 +21,7 @@ public final class GetScepProfileListData {
      */
     private GetScepProfileListDataAlgorithm algorithm;
     /**
-     * @return Certificate Authority identity
+     * @return Certificate Authority Identity
      * 
      */
     private String caIdentityName;
@@ -32,7 +32,6 @@ public final class GetScepProfileListData {
     private GetScepProfileListDataCertificateAttributes certificateAttributes;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -47,13 +46,12 @@ public final class GetScepProfileListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return CA certificate fingerprint
+     * @return CA Certificate Fingerprint
      * 
      */
     private String fingerprint;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -63,22 +61,22 @@ public final class GetScepProfileListData {
      */
     private String id;
     /**
-     * @return The name of the SCEP profile
+     * @return The name of the item.
      * 
      */
     private String name;
     /**
-     * @return SCEP server CA certificate
+     * @return SCEP Server CA Certificate
      * 
      */
     private String scepCaCert;
     /**
-     * @return One Time Password challenge
+     * @return One Time Password Challenge
      * 
      */
     private GetScepProfileListDataScepChallenge scepChallenge;
     /**
-     * @return SCEP client ceertificate
+     * @return SCEP Client Certificate
      * 
      */
     private String scepClientCert;
@@ -88,8 +86,7 @@ public final class GetScepProfileListData {
      */
     private String scepUrl;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -119,7 +116,7 @@ public final class GetScepProfileListData {
         return this.algorithm;
     }
     /**
-     * @return Certificate Authority identity
+     * @return Certificate Authority Identity
      * 
      */
     public String caIdentityName() {
@@ -134,7 +131,6 @@ public final class GetScepProfileListData {
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -155,15 +151,14 @@ public final class GetScepProfileListData {
         return this.encryptedValues;
     }
     /**
-     * @return CA certificate fingerprint
+     * @return CA Certificate Fingerprint
      * 
      */
     public String fingerprint() {
         return this.fingerprint;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -177,28 +172,28 @@ public final class GetScepProfileListData {
         return this.id;
     }
     /**
-     * @return The name of the SCEP profile
+     * @return The name of the item.
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return SCEP server CA certificate
+     * @return SCEP Server CA Certificate
      * 
      */
     public String scepCaCert() {
         return this.scepCaCert;
     }
     /**
-     * @return One Time Password challenge
+     * @return One Time Password Challenge
      * 
      */
     public GetScepProfileListDataScepChallenge scepChallenge() {
         return this.scepChallenge;
     }
     /**
-     * @return SCEP client ceertificate
+     * @return SCEP Client Certificate
      * 
      */
     public String scepClientCert() {
@@ -212,8 +207,7 @@ public final class GetScepProfileListData {
         return this.scepUrl;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

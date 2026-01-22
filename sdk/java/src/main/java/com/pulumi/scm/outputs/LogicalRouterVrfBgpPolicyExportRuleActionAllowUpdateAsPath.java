@@ -15,24 +15,26 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath {
     /**
      * @return None
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNone none;
     /**
      * @return Prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private @Nullable Integer prepend;
     /**
      * @return Remove
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove remove;
     /**
      * @return Remove and prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -41,7 +43,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath {
     private LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath() {}
     /**
      * @return None
-     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public Optional<LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNone> none() {
@@ -49,6 +50,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath {
     }
     /**
      * @return Prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -57,6 +59,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath {
     }
     /**
      * @return Remove
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
@@ -65,6 +68,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath {
     }
     /**
      * @return Remove and prepend
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */

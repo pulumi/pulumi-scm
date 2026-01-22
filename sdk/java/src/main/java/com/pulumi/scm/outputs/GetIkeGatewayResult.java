@@ -18,104 +18,43 @@ import java.util.Objects;
 
 @CustomType
 public final class GetIkeGatewayResult {
-    /**
-     * @return Authentication
-     * 
-     */
     private GetIkeGatewayAuthentication authentication;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return Map of sensitive values returned from the API.
-     * 
-     */
     private Map<String,String> encryptedValues;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Local address
-     * 
-     */
     private GetIkeGatewayLocalAddress localAddress;
-    /**
-     * @return Local id
-     * 
-     */
     private GetIkeGatewayLocalId localId;
-    /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     * 
-     */
     private String name;
-    /**
-     * @return Peer address
-     * 
-     */
     private GetIkeGatewayPeerAddress peerAddress;
-    /**
-     * @return Peer id
-     * 
-     */
     private GetIkeGatewayPeerId peerId;
-    /**
-     * @return Protocol
-     * 
-     */
     private GetIkeGatewayProtocol protocol;
-    /**
-     * @return Protocol common
-     * 
-     */
     private GetIkeGatewayProtocolCommon protocolCommon;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
     private String tfid;
 
     private GetIkeGatewayResult() {}
-    /**
-     * @return Authentication
-     * 
-     */
     public GetIkeGatewayAuthentication authentication() {
         return this.authentication;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return Map of sensitive values returned from the API.
-     * 
-     */
     public Map<String,String> encryptedValues() {
         return this.encryptedValues;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -126,60 +65,27 @@ public final class GetIkeGatewayResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Local address
-     * 
-     */
     public GetIkeGatewayLocalAddress localAddress() {
         return this.localAddress;
     }
-    /**
-     * @return Local id
-     * 
-     */
     public GetIkeGatewayLocalId localId() {
         return this.localId;
     }
-    /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return Peer address
-     * 
-     */
     public GetIkeGatewayPeerAddress peerAddress() {
         return this.peerAddress;
     }
-    /**
-     * @return Peer id
-     * 
-     */
     public GetIkeGatewayPeerId peerId() {
         return this.peerId;
     }
-    /**
-     * @return Protocol
-     * 
-     */
     public GetIkeGatewayProtocol protocol() {
         return this.protocol;
     }
-    /**
-     * @return Protocol common
-     * 
-     */
     public GetIkeGatewayProtocolCommon protocolCommon() {
         return this.protocolCommon;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

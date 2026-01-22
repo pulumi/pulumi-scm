@@ -56,17 +56,11 @@ class GetQosProfileResult:
     @_builtins.property
     @pulumi.getter(name="aggregateBandwidth")
     def aggregate_bandwidth(self) -> 'outputs.GetQosProfileAggregateBandwidthResult':
-        """
-        Aggregate bandwidth
-        """
         return pulumi.get(self, "aggregate_bandwidth")
 
     @_builtins.property
     @pulumi.getter(name="classBandwidthType")
     def class_bandwidth_type(self) -> 'outputs.GetQosProfileClassBandwidthTypeResult':
-        """
-        Class bandwidth type
-        """
         return pulumi.get(self, "class_bandwidth_type")
 
     @_builtins.property
@@ -74,17 +68,12 @@ class GetQosProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -98,18 +87,11 @@ class GetQosProfileResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -143,15 +125,27 @@ def get_qos_profile(device: Optional[_builtins.str] = None,
     """
     QosProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM QoS Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the QoS Profile you want to find.
+    scm_qos_prof = scm.get_qos_profile(id="cffecf78-b3b1-4b01-ad31-c69bf839850b")
+    pulumi.export("scmQosProfileDetails", {
+        "id": scm_qos_prof.id,
+        "folder": scm_qos_prof.folder,
+        "name": scm_qos_prof.name,
+    })
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -180,15 +174,27 @@ def get_qos_profile_output(device: Optional[pulumi.Input[Optional[_builtins.str]
     """
     QosProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM QoS Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the QoS Profile you want to find.
+    scm_qos_prof = scm.get_qos_profile(id="cffecf78-b3b1-4b01-ad31-c69bf839850b")
+    pulumi.export("scmQosProfileDetails", {
+        "id": scm_qos_prof.id,
+        "folder": scm_qos_prof.folder,
+        "name": scm_qos_prof.name,
+    })
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

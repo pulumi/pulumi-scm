@@ -14,155 +14,58 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDosProtectionRuleResult {
-    /**
-     * @return The action to take on rule match
-     * 
-     */
     private GetDosProtectionRuleAction action;
-    /**
-     * @return Description
-     * 
-     */
     private String description;
-    /**
-     * @return List of destination addresses
-     * 
-     */
     private List<String> destinations;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
-    /**
-     * @return Rule disabled?
-     * 
-     */
     private Boolean disabled;
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String folder;
-    /**
-     * @return List of source zones
-     * 
-     */
     private List<String> froms;
     /**
      * @return The UUID of the DNS security profile
      * 
      */
     private String id;
-    /**
-     * @return Log forwarding profile name
-     * 
-     */
     private String logSetting;
-    /**
-     * @return Rule name
-     * 
-     */
     private String name;
-    /**
-     * @return Position relative to local device rules
-     * 
-     */
     private String position;
-    /**
-     * @return Protection
-     * 
-     */
     private GetDosProtectionRuleProtection protection;
-    /**
-     * @return Schedule on which to enforce the rule
-     * 
-     */
     private String schedule;
-    /**
-     * @return List of services
-     * 
-     */
     private List<String> services;
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     private String snippet;
-    /**
-     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
-     * 
-     */
     private List<String> sourceUsers;
-    /**
-     * @return List of source addresses
-     * 
-     */
     private List<String> sources;
-    /**
-     * @return List of tags
-     * 
-     */
     private List<String> tags;
     private String tfid;
-    /**
-     * @return List of destination zones
-     * 
-     */
     private List<String> tos;
 
     private GetDosProtectionRuleResult() {}
-    /**
-     * @return The action to take on rule match
-     * 
-     */
     public GetDosProtectionRuleAction action() {
         return this.action;
     }
-    /**
-     * @return Description
-     * 
-     */
     public String description() {
         return this.description;
     }
-    /**
-     * @return List of destination addresses
-     * 
-     */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
-    /**
-     * @return Rule disabled?
-     * 
-     */
     public Boolean disabled() {
         return this.disabled;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return List of source zones
-     * 
-     */
     public List<String> froms() {
         return this.froms;
     }
@@ -173,84 +76,39 @@ public final class GetDosProtectionRuleResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Log forwarding profile name
-     * 
-     */
     public String logSetting() {
         return this.logSetting;
     }
-    /**
-     * @return Rule name
-     * 
-     */
     public String name() {
         return this.name;
     }
-    /**
-     * @return Position relative to local device rules
-     * 
-     */
     public String position() {
         return this.position;
     }
-    /**
-     * @return Protection
-     * 
-     */
     public GetDosProtectionRuleProtection protection() {
         return this.protection;
     }
-    /**
-     * @return Schedule on which to enforce the rule
-     * 
-     */
     public String schedule() {
         return this.schedule;
     }
-    /**
-     * @return List of services
-     * 
-     */
     public List<String> services() {
         return this.services;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
-     * 
-     */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
-    /**
-     * @return List of source addresses
-     * 
-     */
     public List<String> sources() {
         return this.sources;
     }
-    /**
-     * @return List of tags
-     * 
-     */
     public List<String> tags() {
         return this.tags;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return List of destination zones
-     * 
-     */
     public List<String> tos() {
         return this.tos;
     }

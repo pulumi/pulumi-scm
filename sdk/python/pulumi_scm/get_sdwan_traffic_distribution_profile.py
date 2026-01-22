@@ -58,17 +58,12 @@ class GetSdwanTrafficDistributionProfileResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -82,26 +77,16 @@ class GetSdwanTrafficDistributionProfileResult:
     @_builtins.property
     @pulumi.getter(name="linkTags")
     def link_tags(self) -> Sequence['outputs.GetSdwanTrafficDistributionProfileLinkTagResult']:
-        """
-        Link-Tags for interfaces identified by defined tags
-        """
         return pulumi.get(self, "link_tags")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        Profile name
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -112,9 +97,6 @@ class GetSdwanTrafficDistributionProfileResult:
     @_builtins.property
     @pulumi.getter(name="trafficDistribution")
     def traffic_distribution(self) -> _builtins.str:
-        """
-        Traffic distribution
-        """
         return pulumi.get(self, "traffic_distribution")
 
 
@@ -145,13 +127,7 @@ def get_sdwan_traffic_distribution_profile(device: Optional[_builtins.str] = Non
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Profile name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -182,13 +158,7 @@ def get_sdwan_traffic_distribution_profile_output(device: Optional[pulumi.Input[
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Profile name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

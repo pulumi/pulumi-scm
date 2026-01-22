@@ -213,24 +213,27 @@ type EthernetInterface struct {
 	pulumi.CustomResourceState
 
 	// Aggregate group
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	AggregateGroup pulumi.StringPtrOutput `pulumi:"aggregateGroup"`
 	// Interface description
 	Comment pulumi.StringPtrOutput `pulumi:"comment"`
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrOutput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Layer2
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 EthernetInterfaceLayer2PtrOutput `pulumi:"layer2"`
 	// Ethernet Interface Layer 3 configuration
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 EthernetInterfaceLayer3PtrOutput `pulumi:"layer3"`
 	// Link duplex
@@ -244,9 +247,11 @@ type EthernetInterface struct {
 	// Poe
 	Poe EthernetInterfacePoePtrOutput `pulumi:"poe"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Tap
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap  EthernetInterfaceTapPtrOutput `pulumi:"tap"`
 	Tfid pulumi.StringOutput           `pulumi:"tfid"`
@@ -287,24 +292,27 @@ func GetEthernetInterface(ctx *pulumi.Context,
 // Input properties used for looking up and filtering EthernetInterface resources.
 type ethernetInterfaceState struct {
 	// Aggregate group
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	AggregateGroup *string `pulumi:"aggregateGroup"`
 	// Interface description
 	Comment *string `pulumi:"comment"`
 	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Layer2
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 *EthernetInterfaceLayer2 `pulumi:"layer2"`
 	// Ethernet Interface Layer 3 configuration
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 *EthernetInterfaceLayer3 `pulumi:"layer3"`
 	// Link duplex
@@ -318,9 +326,11 @@ type ethernetInterfaceState struct {
 	// Poe
 	Poe *EthernetInterfacePoe `pulumi:"poe"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tap
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap  *EthernetInterfaceTap `pulumi:"tap"`
 	Tfid *string               `pulumi:"tfid"`
@@ -328,24 +338,27 @@ type ethernetInterfaceState struct {
 
 type EthernetInterfaceState struct {
 	// Aggregate group
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	AggregateGroup pulumi.StringPtrInput
 	// Interface description
 	Comment pulumi.StringPtrInput
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Layer2
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 EthernetInterfaceLayer2PtrInput
 	// Ethernet Interface Layer 3 configuration
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 EthernetInterfaceLayer3PtrInput
 	// Link duplex
@@ -359,9 +372,11 @@ type EthernetInterfaceState struct {
 	// Poe
 	Poe EthernetInterfacePoePtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tap
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap  EthernetInterfaceTapPtrInput
 	Tfid pulumi.StringPtrInput
@@ -373,22 +388,25 @@ func (EthernetInterfaceState) ElementType() reflect.Type {
 
 type ethernetInterfaceArgs struct {
 	// Aggregate group
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	AggregateGroup *string `pulumi:"aggregateGroup"`
 	// Interface description
 	Comment *string `pulumi:"comment"`
 	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Layer2
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 *EthernetInterfaceLayer2 `pulumi:"layer2"`
 	// Ethernet Interface Layer 3 configuration
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 *EthernetInterfaceLayer3 `pulumi:"layer3"`
 	// Link duplex
@@ -402,9 +420,11 @@ type ethernetInterfaceArgs struct {
 	// Poe
 	Poe *EthernetInterfacePoe `pulumi:"poe"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tap
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap *EthernetInterfaceTap `pulumi:"tap"`
 }
@@ -412,22 +432,25 @@ type ethernetInterfaceArgs struct {
 // The set of arguments for constructing a EthernetInterface resource.
 type EthernetInterfaceArgs struct {
 	// Aggregate group
-	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	AggregateGroup pulumi.StringPtrInput
 	// Interface description
 	Comment pulumi.StringPtrInput
 	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Layer2
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer2 EthernetInterfaceLayer2PtrInput
 	// Ethernet Interface Layer 3 configuration
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Layer3 EthernetInterfaceLayer3PtrInput
 	// Link duplex
@@ -441,9 +464,11 @@ type EthernetInterfaceArgs struct {
 	// Poe
 	Poe EthernetInterfacePoePtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tap
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 	Tap EthernetInterfaceTapPtrInput
 }
@@ -536,7 +561,6 @@ func (o EthernetInterfaceOutput) ToEthernetInterfaceOutputWithContext(ctx contex
 }
 
 // Aggregate group
-// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 func (o EthernetInterfaceOutput) AggregateGroup() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.AggregateGroup }).(pulumi.StringPtrOutput)
 }
@@ -552,6 +576,7 @@ func (o EthernetInterfaceOutput) DefaultValue() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o EthernetInterfaceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
@@ -563,18 +588,21 @@ func (o EthernetInterfaceOutput) EncryptedValues() pulumi.StringMapOutput {
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o EthernetInterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
 // Layer2
+//
 // > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 func (o EthernetInterfaceOutput) Layer2() EthernetInterfaceLayer2PtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) EthernetInterfaceLayer2PtrOutput { return v.Layer2 }).(EthernetInterfaceLayer2PtrOutput)
 }
 
 // Ethernet Interface Layer 3 configuration
+//
 // > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 func (o EthernetInterfaceOutput) Layer3() EthernetInterfaceLayer3PtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) EthernetInterfaceLayer3PtrOutput { return v.Layer3 }).(EthernetInterfaceLayer3PtrOutput)
@@ -606,12 +634,14 @@ func (o EthernetInterfaceOutput) Poe() EthernetInterfacePoePtrOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o EthernetInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
 // Tap
+//
 // > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
 func (o EthernetInterfaceOutput) Tap() EthernetInterfaceTapPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) EthernetInterfaceTapPtrOutput { return v.Tap }).(EthernetInterfaceTapPtrOutput)

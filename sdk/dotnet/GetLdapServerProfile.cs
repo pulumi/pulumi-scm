@@ -35,15 +35,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -53,16 +48,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the LDAP server profile
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -76,15 +64,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -94,16 +77,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the LDAP server profile
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -117,73 +93,28 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetLdapServerProfileResult
     {
-        /// <summary>
-        /// The base DN
-        /// </summary>
         public readonly string Base;
-        /// <summary>
-        /// The bind DN
-        /// </summary>
         public readonly string BindDn;
-        /// <summary>
-        /// The bind password
-        /// </summary>
         public readonly string BindPassword;
-        /// <summary>
-        /// The bind timeout (seconds)
-        /// </summary>
         public readonly string BindTimelimit;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Map of sensitive values returned from the API.
-        /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the LDAP server profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// The LDAP server time
-        /// </summary>
         public readonly string LdapType;
-        /// <summary>
-        /// The name of the LDAP server profile
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The search retry interval (seconds)
-        /// </summary>
         public readonly int RetryInterval;
-        /// <summary>
-        /// The LDAP server configuration
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetLdapServerProfileServerResult> Servers;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Require SSL/TLS secured connection?
-        /// </summary>
         public readonly bool Ssl;
         public readonly string Tfid;
-        /// <summary>
-        /// The search timeout (seconds)
-        /// </summary>
         public readonly int Timelimit;
-        /// <summary>
-        /// Verify server certificate for SSL sessions?
-        /// </summary>
         public readonly bool VerifyServerCertificate;
 
         [OutputConstructor]

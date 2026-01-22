@@ -12,12 +12,12 @@ import java.util.Objects;
 public final class GetAutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp {
     /**
      * @return FQDN
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     private String fqdn;
     /**
      * @return IP address
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
@@ -26,7 +26,6 @@ public final class GetAutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstr
     private GetAutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstreamNatStaticIp() {}
     /**
      * @return FQDN
-     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public String fqdn() {
@@ -34,6 +33,7 @@ public final class GetAutoVpnClusterBranchPrivateInterfaceSdwanLinkSettingsUpstr
     }
     /**
      * @return IP address
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */

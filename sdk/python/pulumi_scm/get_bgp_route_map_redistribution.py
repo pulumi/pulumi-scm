@@ -62,27 +62,16 @@ class GetBgpRouteMapRedistributionResult:
     @_builtins.property
     @pulumi.getter
     def bgp(self) -> 'outputs.GetBgpRouteMapRedistributionBgpResult':
-        """
-        Bgp
-        > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
-        """
         return pulumi.get(self, "bgp")
 
     @_builtins.property
     @pulumi.getter(name="connectedStatic")
     def connected_static(self) -> 'outputs.GetBgpRouteMapRedistributionConnectedStaticResult':
-        """
-        Connected static
-        > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
-        """
         return pulumi.get(self, "connected_static")
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
-        """
-        BGP Route Map Redistributions Description
-        """
         return pulumi.get(self, "description")
 
     @_builtins.property
@@ -90,17 +79,12 @@ class GetBgpRouteMapRedistributionResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -114,27 +98,16 @@ class GetBgpRouteMapRedistributionResult:
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        BGP Route Map Redistributions Name
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def ospf(self) -> 'outputs.GetBgpRouteMapRedistributionOspfResult':
-        """
-        Ospf
-        > ℹ️ **Note:** You must specify exactly one of `bgp`, `connected_static`, and `ospf`.
-        """
         return pulumi.get(self, "ospf")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -172,13 +145,7 @@ def get_bgp_route_map_redistribution(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: BGP Route Map Redistributions UUID of the resource
-    :param _builtins.str name: BGP Route Map Redistributions Name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -211,13 +178,7 @@ def get_bgp_route_map_redistribution_output(device: Optional[pulumi.Input[Option
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: BGP Route Map Redistributions UUID of the resource
-    :param _builtins.str name: BGP Route Map Redistributions Name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device

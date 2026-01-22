@@ -13,18 +13,19 @@ import javax.annotation.Nullable;
 public final class HipObjectMobileDeviceCriteriaPhoneNumber {
     /**
      * @return Contains
-     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     private @Nullable String contains;
     /**
      * @return Is
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     private @Nullable String is;
     /**
      * @return Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -33,7 +34,6 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumber {
     private HipObjectMobileDeviceCriteriaPhoneNumber() {}
     /**
      * @return Contains
-     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     public Optional<String> contains() {
@@ -41,6 +41,7 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumber {
     }
     /**
      * @return Is
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -49,6 +50,7 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumber {
     }
     /**
      * @return Is not
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */

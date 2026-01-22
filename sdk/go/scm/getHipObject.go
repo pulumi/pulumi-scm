@@ -53,60 +53,36 @@ func LookupHipObject(ctx *pulumi.Context, args *LookupHipObjectArgs, opts ...pul
 // A collection of arguments for invoking getHipObject.
 type LookupHipObjectArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The name of the HIP object
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getHipObject.
 type LookupHipObjectResult struct {
-	// Anti malware
-	AntiMalware GetHipObjectAntiMalware `pulumi:"antiMalware"`
-	// Certificate
-	Certificate GetHipObjectCertificate `pulumi:"certificate"`
-	// Custom checks
-	CustomChecks GetHipObjectCustomChecks `pulumi:"customChecks"`
-	// Data loss prevention
+	AntiMalware        GetHipObjectAntiMalware        `pulumi:"antiMalware"`
+	Certificate        GetHipObjectCertificate        `pulumi:"certificate"`
+	CustomChecks       GetHipObjectCustomChecks       `pulumi:"customChecks"`
 	DataLossPrevention GetHipObjectDataLossPrevention `pulumi:"dataLossPrevention"`
-	// Description
-	Description string `pulumi:"description"`
+	Description        string                         `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// Disk backup
-	DiskBackup GetHipObjectDiskBackup `pulumi:"diskBackup"`
-	// Disk encryption
+	Device         string                     `pulumi:"device"`
+	DiskBackup     GetHipObjectDiskBackup     `pulumi:"diskBackup"`
 	DiskEncryption GetHipObjectDiskEncryption `pulumi:"diskEncryption"`
-	// Firewall
-	Firewall GetHipObjectFirewall `pulumi:"firewall"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
-	// Host info
-	HostInfo GetHipObjectHostInfo `pulumi:"hostInfo"`
+	Firewall       GetHipObjectFirewall       `pulumi:"firewall"`
+	Folder         string                     `pulumi:"folder"`
+	HostInfo       GetHipObjectHostInfo       `pulumi:"hostInfo"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Mobile device
-	MobileDevice GetHipObjectMobileDevice `pulumi:"mobileDevice"`
-	// The name of the HIP object
-	Name string `pulumi:"name"`
-	// Network info
-	NetworkInfo GetHipObjectNetworkInfo `pulumi:"networkInfo"`
-	// Patch management
+	Id              string                      `pulumi:"id"`
+	MobileDevice    GetHipObjectMobileDevice    `pulumi:"mobileDevice"`
+	Name            string                      `pulumi:"name"`
+	NetworkInfo     GetHipObjectNetworkInfo     `pulumi:"networkInfo"`
 	PatchManagement GetHipObjectPatchManagement `pulumi:"patchManagement"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet         string                      `pulumi:"snippet"`
+	Tfid            string                      `pulumi:"tfid"`
 }
 
 func LookupHipObjectOutput(ctx *pulumi.Context, args LookupHipObjectOutputArgs, opts ...pulumi.InvokeOption) LookupHipObjectResultOutput {
@@ -121,17 +97,11 @@ func LookupHipObjectOutput(ctx *pulumi.Context, args LookupHipObjectOutputArgs, 
 // A collection of arguments for invoking getHipObject.
 type LookupHipObjectOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the HIP object
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -154,59 +124,47 @@ func (o LookupHipObjectResultOutput) ToLookupHipObjectResultOutputWithContext(ct
 	return o
 }
 
-// Anti malware
 func (o LookupHipObjectResultOutput) AntiMalware() GetHipObjectAntiMalwareOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectAntiMalware { return v.AntiMalware }).(GetHipObjectAntiMalwareOutput)
 }
 
-// Certificate
 func (o LookupHipObjectResultOutput) Certificate() GetHipObjectCertificateOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectCertificate { return v.Certificate }).(GetHipObjectCertificateOutput)
 }
 
-// Custom checks
 func (o LookupHipObjectResultOutput) CustomChecks() GetHipObjectCustomChecksOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectCustomChecks { return v.CustomChecks }).(GetHipObjectCustomChecksOutput)
 }
 
-// Data loss prevention
 func (o LookupHipObjectResultOutput) DataLossPrevention() GetHipObjectDataLossPreventionOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectDataLossPrevention { return v.DataLossPrevention }).(GetHipObjectDataLossPreventionOutput)
 }
 
-// Description
 func (o LookupHipObjectResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupHipObjectResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Disk backup
 func (o LookupHipObjectResultOutput) DiskBackup() GetHipObjectDiskBackupOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectDiskBackup { return v.DiskBackup }).(GetHipObjectDiskBackupOutput)
 }
 
-// Disk encryption
 func (o LookupHipObjectResultOutput) DiskEncryption() GetHipObjectDiskEncryptionOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectDiskEncryption { return v.DiskEncryption }).(GetHipObjectDiskEncryptionOutput)
 }
 
-// Firewall
 func (o LookupHipObjectResultOutput) Firewall() GetHipObjectFirewallOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectFirewall { return v.Firewall }).(GetHipObjectFirewallOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupHipObjectResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// Host info
 func (o LookupHipObjectResultOutput) HostInfo() GetHipObjectHostInfoOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectHostInfo { return v.HostInfo }).(GetHipObjectHostInfoOutput)
 }
@@ -216,28 +174,22 @@ func (o LookupHipObjectResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Mobile device
 func (o LookupHipObjectResultOutput) MobileDevice() GetHipObjectMobileDeviceOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectMobileDevice { return v.MobileDevice }).(GetHipObjectMobileDeviceOutput)
 }
 
-// The name of the HIP object
 func (o LookupHipObjectResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Network info
 func (o LookupHipObjectResultOutput) NetworkInfo() GetHipObjectNetworkInfoOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectNetworkInfo { return v.NetworkInfo }).(GetHipObjectNetworkInfoOutput)
 }
 
-// Patch management
 func (o LookupHipObjectResultOutput) PatchManagement() GetHipObjectPatchManagementOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectPatchManagement { return v.PatchManagement }).(GetHipObjectPatchManagementOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupHipObjectResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

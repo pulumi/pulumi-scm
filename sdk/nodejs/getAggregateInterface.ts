@@ -45,26 +45,14 @@ export function getAggregateInterface(args: GetAggregateInterfaceArgs, opts?: pu
 export interface GetAggregateInterfaceArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Aggregate interface name
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -72,46 +60,20 @@ export interface GetAggregateInterfaceArgs {
  * A collection of values returned by getAggregateInterface.
  */
 export interface GetAggregateInterfaceResult {
-    /**
-     * Aggregate interface description
-     */
     readonly comment: string;
-    /**
-     * Default interface assignment
-     */
     readonly defaultValue: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Layer2
-     * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
-     */
     readonly layer2: outputs.GetAggregateInterfaceLayer2;
-    /**
-     * Aggregate Interface Layer 3 configuration
-     * > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
-     */
     readonly layer3: outputs.GetAggregateInterfaceLayer3;
-    /**
-     * Aggregate interface name
-     */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -154,25 +116,13 @@ export function getAggregateInterfaceOutput(args: GetAggregateInterfaceOutputArg
 export interface GetAggregateInterfaceOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Aggregate interface name
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

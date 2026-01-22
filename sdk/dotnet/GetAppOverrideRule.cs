@@ -101,15 +101,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -119,16 +114,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// Name
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -142,15 +130,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -160,16 +143,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// Name
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -183,93 +159,33 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetAppOverrideRuleResult
     {
-        /// <summary>
-        /// Application
-        /// </summary>
         public readonly string Application;
-        /// <summary>
-        /// Description
-        /// </summary>
         public readonly string Description;
-        /// <summary>
-        /// Destination
-        /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Disabled
-        /// </summary>
         public readonly bool Disabled;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// From
-        /// </summary>
         public readonly ImmutableArray<string> Froms;
-        /// <summary>
-        /// Group tag
-        /// </summary>
         public readonly string GroupTag;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Name
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Negate destination
-        /// </summary>
         public readonly bool NegateDestination;
-        /// <summary>
-        /// Negate source
-        /// </summary>
         public readonly bool NegateSource;
-        /// <summary>
-        /// Port
-        /// </summary>
         public readonly string Port;
-        /// <summary>
-        /// The position of a security rule
-        /// </summary>
         public readonly string Position;
-        /// <summary>
-        /// Protocol
-        /// </summary>
         public readonly string Protocol;
-        /// <summary>
-        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-        /// </summary>
         public readonly string RelativePosition;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Source
-        /// </summary>
         public readonly ImmutableArray<string> Sources;
-        /// <summary>
-        /// Tag
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
-        /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
-        /// </summary>
         public readonly string TargetRule;
         public readonly string Tfid;
-        /// <summary>
-        /// To
-        /// </summary>
         public readonly ImmutableArray<string> Tos;
 
         [OutputConstructor]

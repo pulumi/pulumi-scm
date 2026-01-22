@@ -35,6 +35,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
     /**
      * Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      * 
      */
@@ -43,6 +44,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
     /**
      * @return Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      * 
      */
@@ -52,6 +54,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
     /**
      * Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      * 
      */
@@ -60,6 +63,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
     /**
      * @return Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      * 
      */
@@ -69,6 +73,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
     /**
      * Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      * 
      */
@@ -77,6 +82,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
     /**
      * @return Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
      * 
      */
@@ -134,6 +140,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
         /**
          * @param oktaAdaptiveV1 Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
          * 
          * @return builder
@@ -146,6 +153,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
         /**
          * @param oktaAdaptiveV1 Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
          * 
          * @return builder
@@ -157,6 +165,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
         /**
          * @param pingIdentityV1 Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
          * 
          * @return builder
@@ -169,6 +178,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
         /**
          * @param pingIdentityV1 Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
          * 
          * @return builder
@@ -180,6 +190,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
         /**
          * @param rsaSecuridAccessV1 Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
          * 
          * @return builder
@@ -192,6 +203,7 @@ public final class MfaServerMfaVendorTypeArgs extends com.pulumi.resources.Resou
 
         /**
          * @param rsaSecuridAccessV1 Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
+         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
          * 
          * @return builder

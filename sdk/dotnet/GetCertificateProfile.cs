@@ -107,15 +107,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
@@ -125,16 +120,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the certificate profile
-        /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
 
@@ -148,15 +136,10 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
@@ -166,16 +149,9 @@ namespace Pulumi.Scm
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
-        /// <summary>
-        /// The name of the certificate profile
-        /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
@@ -189,77 +165,29 @@ namespace Pulumi.Scm
     [OutputType]
     public sealed class GetCertificateProfileResult
     {
-        /// <summary>
-        /// Block sessions with expired certificates?
-        /// </summary>
         public readonly bool BlockExpiredCert;
-        /// <summary>
-        /// Block session if certificate status cannot be retrieved within timeout?
-        /// </summary>
         public readonly bool BlockTimeoutCert;
-        /// <summary>
-        /// Block session if the certificate was not issued to the authenticating device?
-        /// </summary>
         public readonly bool BlockUnauthenticatedCert;
-        /// <summary>
-        /// Block session if certificate status is unknown?
-        /// </summary>
         public readonly bool BlockUnknownCert;
-        /// <summary>
-        /// An ordered list of CA certificates
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetCertificateProfileCaCertificateResult> CaCertificates;
-        /// <summary>
-        /// Certificate status timeout
-        /// </summary>
         public readonly string CertStatusTimeout;
-        /// <summary>
-        /// CRL receive timeout (seconds)
-        /// </summary>
         public readonly string CrlReceiveTimeout;
         /// <summary>
         /// The device in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// User domain
-        /// </summary>
         public readonly string Domain;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the certificate profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// The name of the certificate profile
-        /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// OCSP receive timeout (seconds)
-        /// </summary>
         public readonly string OcspReceiveTimeout;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// Use CRL?
-        /// </summary>
         public readonly bool UseCrl;
-        /// <summary>
-        /// Use OCSP?
-        /// </summary>
         public readonly bool UseOcsp;
-        /// <summary>
-        /// Certificate username field
-        /// </summary>
         public readonly Outputs.GetCertificateProfileUsernameFieldResult UsernameField;
 
         [OutputConstructor]

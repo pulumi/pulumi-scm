@@ -14,6 +14,67 @@ import (
 
 // SamlServerProfile resource
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewSamlServerProfile(ctx, "scm_saml_server_profile_1", &scm.SamlServerProfileArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("scm-saml-server-prof-1"),
+//				Certificate: pulumi.String("Global Authentication Cookie Cert"),
+//				EntityId:    pulumi.String("123"),
+//				SsoUrl:      pulumi.String("http://example.com"),
+//				SsoBindings: pulumi.String("post"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewSamlServerProfile(ctx, "scm_saml_server_profile_2", &scm.SamlServerProfileArgs{
+//				Folder:                 pulumi.String("All"),
+//				Name:                   pulumi.String("scm-saml-server-prof-2"),
+//				Certificate:            pulumi.String("Global Authentication Cookie Cert"),
+//				EntityId:               pulumi.String("test_id"),
+//				MaxClockSkew:           pulumi.Int(100),
+//				SloBindings:            pulumi.String("redirect"),
+//				SsoBindings:            pulumi.String("redirect"),
+//				SsoUrl:                 pulumi.String("http://target.com"),
+//				ValidateIdpCertificate: pulumi.Bool(true),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewSamlServerProfile(ctx, "scm_saml_server_profile_3", &scm.SamlServerProfileArgs{
+//				Folder:                 pulumi.String("All"),
+//				Name:                   pulumi.String("scm-saml-server-prof-3"),
+//				Certificate:            pulumi.String("Global Authentication Cookie Cert"),
+//				EntityId:               pulumi.String("test_123"),
+//				MaxClockSkew:           pulumi.Int(900),
+//				SloBindings:            pulumi.String("post"),
+//				SsoBindings:            pulumi.String("redirect"),
+//				SloUrl:                 pulumi.String("http://auth.com"),
+//				SsoUrl:                 pulumi.String("http://okta.com"),
+//				ValidateIdpCertificate: pulumi.Bool(false),
+//				WantAuthRequestsSigned: pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
@@ -45,11 +106,11 @@ type SamlServerProfile struct {
 	// The identity provider certificate
 	Certificate pulumi.StringOutput `pulumi:"certificate"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The identity provider ID
 	EntityId pulumi.StringOutput `pulumi:"entityId"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Maxiumum clock skew
@@ -58,7 +119,10 @@ type SamlServerProfile struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// SAML HTTP binding for SLO requests to the identity provider
 	SloBindings pulumi.StringPtrOutput `pulumi:"sloBindings"`
+	// Identity provider SLO URL
+	SloUrl pulumi.StringPtrOutput `pulumi:"sloUrl"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// SAML HTTP binding for SSO requests to the identity provider
@@ -117,11 +181,11 @@ type samlServerProfileState struct {
 	// The identity provider certificate
 	Certificate *string `pulumi:"certificate"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The identity provider ID
 	EntityId *string `pulumi:"entityId"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Maxiumum clock skew
@@ -130,7 +194,10 @@ type samlServerProfileState struct {
 	Name *string `pulumi:"name"`
 	// SAML HTTP binding for SLO requests to the identity provider
 	SloBindings *string `pulumi:"sloBindings"`
+	// Identity provider SLO URL
+	SloUrl *string `pulumi:"sloUrl"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// SAML HTTP binding for SSO requests to the identity provider
@@ -148,11 +215,11 @@ type SamlServerProfileState struct {
 	// The identity provider certificate
 	Certificate pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The identity provider ID
 	EntityId pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Maxiumum clock skew
@@ -161,7 +228,10 @@ type SamlServerProfileState struct {
 	Name pulumi.StringPtrInput
 	// SAML HTTP binding for SLO requests to the identity provider
 	SloBindings pulumi.StringPtrInput
+	// Identity provider SLO URL
+	SloUrl pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// SAML HTTP binding for SSO requests to the identity provider
@@ -183,11 +253,11 @@ type samlServerProfileArgs struct {
 	// The identity provider certificate
 	Certificate string `pulumi:"certificate"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The identity provider ID
 	EntityId string `pulumi:"entityId"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Maxiumum clock skew
@@ -196,7 +266,10 @@ type samlServerProfileArgs struct {
 	Name *string `pulumi:"name"`
 	// SAML HTTP binding for SLO requests to the identity provider
 	SloBindings *string `pulumi:"sloBindings"`
+	// Identity provider SLO URL
+	SloUrl *string `pulumi:"sloUrl"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// SAML HTTP binding for SSO requests to the identity provider
@@ -214,11 +287,11 @@ type SamlServerProfileArgs struct {
 	// The identity provider certificate
 	Certificate pulumi.StringInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The identity provider ID
 	EntityId pulumi.StringInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Maxiumum clock skew
@@ -227,7 +300,10 @@ type SamlServerProfileArgs struct {
 	Name pulumi.StringPtrInput
 	// SAML HTTP binding for SLO requests to the identity provider
 	SloBindings pulumi.StringPtrInput
+	// Identity provider SLO URL
+	SloUrl pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// SAML HTTP binding for SSO requests to the identity provider
@@ -333,7 +409,6 @@ func (o SamlServerProfileOutput) Certificate() pulumi.StringOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SamlServerProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
@@ -344,6 +419,7 @@ func (o SamlServerProfileOutput) EntityId() pulumi.StringOutput {
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SamlServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -364,7 +440,13 @@ func (o SamlServerProfileOutput) SloBindings() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringPtrOutput { return v.SloBindings }).(pulumi.StringPtrOutput)
 }
 
+// Identity provider SLO URL
+func (o SamlServerProfileOutput) SloUrl() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringPtrOutput { return v.SloUrl }).(pulumi.StringPtrOutput)
+}
+
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SamlServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

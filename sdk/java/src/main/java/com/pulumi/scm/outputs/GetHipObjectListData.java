@@ -48,7 +48,6 @@ public final class GetHipObjectListData {
     private String description;
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
@@ -68,8 +67,7 @@ public final class GetHipObjectListData {
      */
     private GetHipObjectListDataFirewall firewall;
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -89,7 +87,7 @@ public final class GetHipObjectListData {
      */
     private GetHipObjectListDataMobileDevice mobileDevice;
     /**
-     * @return The name of the HIP object
+     * @return The name of the item.
      * 
      */
     private String name;
@@ -104,8 +102,7 @@ public final class GetHipObjectListData {
      */
     private GetHipObjectListDataPatchManagement patchManagement;
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -149,7 +146,6 @@ public final class GetHipObjectListData {
     }
     /**
      * @return The device in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
@@ -177,8 +173,7 @@ public final class GetHipObjectListData {
         return this.firewall;
     }
     /**
-     * @return The folder in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -206,7 +201,7 @@ public final class GetHipObjectListData {
         return this.mobileDevice;
     }
     /**
-     * @return The name of the HIP object
+     * @return The name of the item.
      * 
      */
     public String name() {
@@ -227,8 +222,7 @@ public final class GetHipObjectListData {
         return this.patchManagement;
     }
     /**
-     * @return The snippet in which the resource is defined
-     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

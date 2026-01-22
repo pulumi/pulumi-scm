@@ -32,10 +32,20 @@ public final class GetLogForwardingProfileListDataMatchList {
      */
     private String name;
     /**
+     * @return A list of email server profiles
+     * 
+     */
+    private List<String> sendEmails;
+    /**
      * @return A list of HTTP server profiles
      * 
      */
     private List<String> sendHttps;
+    /**
+     * @return A list of SNMP server profiles
+     * 
+     */
+    private List<String> sendSnmptraps;
     /**
      * @return A list of syslog server profiles
      * 
@@ -72,11 +82,25 @@ public final class GetLogForwardingProfileListDataMatchList {
         return this.name;
     }
     /**
+     * @return A list of email server profiles
+     * 
+     */
+    public List<String> sendEmails() {
+        return this.sendEmails;
+    }
+    /**
      * @return A list of HTTP server profiles
      * 
      */
     public List<String> sendHttps() {
         return this.sendHttps;
+    }
+    /**
+     * @return A list of SNMP server profiles
+     * 
+     */
+    public List<String> sendSnmptraps() {
+        return this.sendSnmptraps;
     }
     /**
      * @return A list of syslog server profiles
@@ -99,7 +123,9 @@ public final class GetLogForwardingProfileListDataMatchList {
         private String filter;
         private String logType;
         private String name;
+        private List<String> sendEmails;
         private List<String> sendHttps;
+        private List<String> sendSnmptraps;
         private List<String> sendSyslogs;
         public Builder() {}
         public Builder(GetLogForwardingProfileListDataMatchList defaults) {
@@ -108,7 +134,9 @@ public final class GetLogForwardingProfileListDataMatchList {
     	      this.filter = defaults.filter;
     	      this.logType = defaults.logType;
     	      this.name = defaults.name;
+    	      this.sendEmails = defaults.sendEmails;
     	      this.sendHttps = defaults.sendHttps;
+    	      this.sendSnmptraps = defaults.sendSnmptraps;
     	      this.sendSyslogs = defaults.sendSyslogs;
         }
 
@@ -145,6 +173,17 @@ public final class GetLogForwardingProfileListDataMatchList {
             return this;
         }
         @CustomType.Setter
+        public Builder sendEmails(List<String> sendEmails) {
+            if (sendEmails == null) {
+              throw new MissingRequiredPropertyException("GetLogForwardingProfileListDataMatchList", "sendEmails");
+            }
+            this.sendEmails = sendEmails;
+            return this;
+        }
+        public Builder sendEmails(String... sendEmails) {
+            return sendEmails(List.of(sendEmails));
+        }
+        @CustomType.Setter
         public Builder sendHttps(List<String> sendHttps) {
             if (sendHttps == null) {
               throw new MissingRequiredPropertyException("GetLogForwardingProfileListDataMatchList", "sendHttps");
@@ -154,6 +193,17 @@ public final class GetLogForwardingProfileListDataMatchList {
         }
         public Builder sendHttps(String... sendHttps) {
             return sendHttps(List.of(sendHttps));
+        }
+        @CustomType.Setter
+        public Builder sendSnmptraps(List<String> sendSnmptraps) {
+            if (sendSnmptraps == null) {
+              throw new MissingRequiredPropertyException("GetLogForwardingProfileListDataMatchList", "sendSnmptraps");
+            }
+            this.sendSnmptraps = sendSnmptraps;
+            return this;
+        }
+        public Builder sendSnmptraps(String... sendSnmptraps) {
+            return sendSnmptraps(List.of(sendSnmptraps));
         }
         @CustomType.Setter
         public Builder sendSyslogs(List<String> sendSyslogs) {
@@ -172,7 +222,9 @@ public final class GetLogForwardingProfileListDataMatchList {
             _resultValue.filter = filter;
             _resultValue.logType = logType;
             _resultValue.name = name;
+            _resultValue.sendEmails = sendEmails;
             _resultValue.sendHttps = sendHttps;
+            _resultValue.sendSnmptraps = sendSnmptraps;
             _resultValue.sendSyslogs = sendSyslogs;
             return _resultValue;
         }

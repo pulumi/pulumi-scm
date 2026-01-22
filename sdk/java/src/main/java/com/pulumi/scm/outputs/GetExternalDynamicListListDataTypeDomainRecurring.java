@@ -16,30 +16,33 @@ import java.util.Objects;
 public final class GetExternalDynamicListListDataTypeDomainRecurring {
     /**
      * @return Daily settings for Domain recurring
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListListDataTypeDomainRecurringDaily daily;
     /**
      * @return Five minute settings for Domain recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListListDataTypeDomainRecurringFiveMinute fiveMinute;
     /**
      * @return Hourly settings for Domain recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListListDataTypeDomainRecurringHourly hourly;
     /**
      * @return Monthly settings for Domain recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListListDataTypeDomainRecurringMonthly monthly;
     /**
      * @return Weekly settings for Domain recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -48,7 +51,6 @@ public final class GetExternalDynamicListListDataTypeDomainRecurring {
     private GetExternalDynamicListListDataTypeDomainRecurring() {}
     /**
      * @return Daily settings for Domain recurring
-     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public GetExternalDynamicListListDataTypeDomainRecurringDaily daily() {
@@ -56,6 +58,7 @@ public final class GetExternalDynamicListListDataTypeDomainRecurring {
     }
     /**
      * @return Five minute settings for Domain recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -64,6 +67,7 @@ public final class GetExternalDynamicListListDataTypeDomainRecurring {
     }
     /**
      * @return Hourly settings for Domain recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -72,6 +76,7 @@ public final class GetExternalDynamicListListDataTypeDomainRecurring {
     }
     /**
      * @return Monthly settings for Domain recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
@@ -80,6 +85,7 @@ public final class GetExternalDynamicListListDataTypeDomainRecurring {
     }
     /**
      * @return Weekly settings for Domain recurring
+     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */

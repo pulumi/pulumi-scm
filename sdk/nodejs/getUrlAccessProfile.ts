@@ -42,26 +42,14 @@ export function getUrlAccessProfile(args: GetUrlAccessProfileArgs, opts?: pulumi
 export interface GetUrlAccessProfileArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: string;
     /**
      * UUID of the resource
      */
     id: string;
-    /**
-     * Name
-     */
     name?: string;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: string;
 }
 
@@ -69,88 +57,31 @@ export interface GetUrlAccessProfileArgs {
  * A collection of values returned by getUrlAccessProfile.
  */
 export interface GetUrlAccessProfileResult {
-    /**
-     * Alert
-     */
     readonly alerts: string[];
-    /**
-     * Allow
-     */
     readonly allows: string[];
-    /**
-     * Block
-     */
     readonly blocks: string[];
-    /**
-     * Cloud inline cat
-     */
     readonly cloudInlineCat: boolean;
-    /**
-     * Continue
-     */
     readonly continues: string[];
-    /**
-     * Credential enforcement
-     */
     readonly credentialEnforcement: outputs.GetUrlAccessProfileCredentialEnforcement;
-    /**
-     * Description
-     */
     readonly description: string;
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Local inline cat
-     */
     readonly localInlineCat: boolean;
-    /**
-     * Log container page only
-     */
     readonly logContainerPageOnly: boolean;
-    /**
-     * Log http hdr referer
-     */
     readonly logHttpHdrReferer: boolean;
-    /**
-     * Log http hdr user agent
-     */
     readonly logHttpHdrUserAgent: boolean;
-    /**
-     * Log http hdr xff
-     */
     readonly logHttpHdrXff: boolean;
-    /**
-     * Mlav category exception
-     */
     readonly mlavCategoryExceptions: string[];
-    /**
-     * Name
-     */
     readonly name: string;
-    /**
-     * Redirect
-     */
     readonly redirects: string[];
-    /**
-     * Safe search enforcement
-     */
     readonly safeSearchEnforcement: boolean;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
@@ -190,25 +121,13 @@ export function getUrlAccessProfileOutput(args: GetUrlAccessProfileOutputArgs, o
 export interface GetUrlAccessProfileOutputArgs {
     /**
      * The device in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
-    /**
-     * The folder in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     folder?: pulumi.Input<string>;
     /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
-    /**
-     * Name
-     */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet in which the resource is defined
-     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-     */
     snippet?: pulumi.Input<string>;
 }

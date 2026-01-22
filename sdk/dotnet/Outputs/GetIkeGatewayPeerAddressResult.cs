@@ -15,16 +15,17 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Dynamic
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic`, `Fqdn`, and `Ip`.
         /// </summary>
         public readonly Outputs.GetIkeGatewayPeerAddressDynamicResult Dynamic;
         /// <summary>
         /// peer gateway FQDN name
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic`, `Fqdn`, and `Ip`.
         /// </summary>
         public readonly string Fqdn;
         /// <summary>
         /// peer gateway has static IP address
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic`, `Fqdn`, and `Ip`.
         /// </summary>
         public readonly string Ip;

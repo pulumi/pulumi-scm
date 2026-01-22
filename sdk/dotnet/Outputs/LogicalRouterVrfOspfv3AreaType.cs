@@ -15,16 +15,17 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Normal
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Normal`, `Nssa`, and `Stub`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AreaTypeNormal? Normal;
         /// <summary>
         /// Nssa
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Normal`, `Nssa`, and `Stub`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AreaTypeNssa? Nssa;
         /// <summary>
         /// Stub
+        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Normal`, `Nssa`, and `Stub`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AreaTypeStub? Stub;

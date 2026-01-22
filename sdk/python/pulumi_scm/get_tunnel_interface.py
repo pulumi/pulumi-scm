@@ -27,7 +27,7 @@ class GetTunnelInterfaceResult:
     """
     A collection of values returned by getTunnelInterface.
     """
-    def __init__(__self__, comment=None, default_value=None, device=None, folder=None, id=None, interface_management_profile=None, ips=None, mtu=None, name=None, snippet=None, tfid=None):
+    def __init__(__self__, comment=None, default_value=None, device=None, folder=None, id=None, interface_management_profile=None, ips=None, ipv6=None, mtu=None, name=None, snippet=None, tfid=None):
         if comment and not isinstance(comment, str):
             raise TypeError("Expected argument 'comment' to be a str")
         pulumi.set(__self__, "comment", comment)
@@ -49,6 +49,9 @@ class GetTunnelInterfaceResult:
         if ips and not isinstance(ips, list):
             raise TypeError("Expected argument 'ips' to be a list")
         pulumi.set(__self__, "ips", ips)
+        if ipv6 and not isinstance(ipv6, dict):
+            raise TypeError("Expected argument 'ipv6' to be a dict")
+        pulumi.set(__self__, "ipv6", ipv6)
         if mtu and not isinstance(mtu, int):
             raise TypeError("Expected argument 'mtu' to be a int")
         pulumi.set(__self__, "mtu", mtu)
@@ -65,17 +68,11 @@ class GetTunnelInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def comment(self) -> _builtins.str:
-        """
-        Description
-        """
         return pulumi.get(self, "comment")
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> _builtins.str:
-        """
-        Default interface assignment
-        """
         return pulumi.get(self, "default_value")
 
     @_builtins.property
@@ -83,17 +80,12 @@ class GetTunnelInterfaceResult:
     def device(self) -> _builtins.str:
         """
         The device in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -107,42 +99,31 @@ class GetTunnelInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> _builtins.str:
-        """
-        Interface management profile
-        """
         return pulumi.get(self, "interface_management_profile")
 
     @_builtins.property
     @pulumi.getter
     def ips(self) -> Sequence['outputs.GetTunnelInterfaceIpResult']:
-        """
-        Tunnel Interface IP Parent
-        """
         return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
+    def ipv6(self) -> 'outputs.GetTunnelInterfaceIpv6Result':
+        return pulumi.get(self, "ipv6")
+
+    @_builtins.property
+    @pulumi.getter
     def mtu(self) -> _builtins.int:
-        """
-        MTU
-        """
         return pulumi.get(self, "mtu")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
-        """
-        L3 sub-interface name
-        """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -164,6 +145,7 @@ class AwaitableGetTunnelInterfaceResult(GetTunnelInterfaceResult):
             id=self.id,
             interface_management_profile=self.interface_management_profile,
             ips=self.ips,
+            ipv6=self.ipv6,
             mtu=self.mtu,
             name=self.name,
             snippet=self.snippet,
@@ -198,13 +180,7 @@ def get_tunnel_interface(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: L3 sub-interface name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -223,6 +199,7 @@ def get_tunnel_interface(device: Optional[_builtins.str] = None,
         id=pulumi.get(__ret__, 'id'),
         interface_management_profile=pulumi.get(__ret__, 'interface_management_profile'),
         ips=pulumi.get(__ret__, 'ips'),
+        ipv6=pulumi.get(__ret__, 'ipv6'),
         mtu=pulumi.get(__ret__, 'mtu'),
         name=pulumi.get(__ret__, 'name'),
         snippet=pulumi.get(__ret__, 'snippet'),
@@ -255,13 +232,7 @@ def get_tunnel_interface_output(device: Optional[pulumi.Input[Optional[_builtins
 
 
     :param _builtins.str device: The device in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-    :param _builtins.str folder: The folder in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: L3 sub-interface name
-    :param _builtins.str snippet: The snippet in which the resource is defined
-           > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -279,6 +250,7 @@ def get_tunnel_interface_output(device: Optional[pulumi.Input[Optional[_builtins
         id=pulumi.get(__response__, 'id'),
         interface_management_profile=pulumi.get(__response__, 'interface_management_profile'),
         ips=pulumi.get(__response__, 'ips'),
+        ipv6=pulumi.get(__response__, 'ipv6'),
         mtu=pulumi.get(__response__, 'mtu'),
         name=pulumi.get(__response__, 'name'),
         snippet=pulumi.get(__response__, 'snippet'),

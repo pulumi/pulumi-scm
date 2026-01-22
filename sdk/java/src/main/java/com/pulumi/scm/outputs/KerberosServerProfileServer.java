@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,12 +17,12 @@ public final class KerberosServerProfileServer {
      * @return The Kerberos server IP address
      * 
      */
-    private @Nullable String host;
+    private String host;
     /**
      * @return The Kerberos server name
      * 
      */
-    private @Nullable String name;
+    private String name;
     /**
      * @return The Kerberos server port
      * 
@@ -33,15 +34,15 @@ public final class KerberosServerProfileServer {
      * @return The Kerberos server IP address
      * 
      */
-    public Optional<String> host() {
-        return Optional.ofNullable(this.host);
+    public String host() {
+        return this.host;
     }
     /**
      * @return The Kerberos server name
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public String name() {
+        return this.name;
     }
     /**
      * @return The Kerberos server port
@@ -60,8 +61,8 @@ public final class KerberosServerProfileServer {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String host;
-        private @Nullable String name;
+        private String host;
+        private String name;
         private @Nullable Integer port;
         public Builder() {}
         public Builder(KerberosServerProfileServer defaults) {
@@ -72,14 +73,18 @@ public final class KerberosServerProfileServer {
         }
 
         @CustomType.Setter
-        public Builder host(@Nullable String host) {
-
+        public Builder host(String host) {
+            if (host == null) {
+              throw new MissingRequiredPropertyException("KerberosServerProfileServer", "host");
+            }
             this.host = host;
             return this;
         }
         @CustomType.Setter
-        public Builder name(@Nullable String name) {
-
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("KerberosServerProfileServer", "name");
+            }
             this.name = name;
             return this;
         }

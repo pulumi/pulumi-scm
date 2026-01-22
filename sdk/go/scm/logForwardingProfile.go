@@ -7,11 +7,162 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 // LogForwardingProfile resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewLogForwardingProfile(ctx, "scm_log_forwarding_profile_1", &scm.LogForwardingProfileArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("scm-log-fowarding-profile-1"),
+//				MatchLists: scm.LogForwardingProfileMatchListArray{
+//					&scm.LogForwardingProfileMatchListArgs{
+//						Name:    pulumi.String("profile_match"),
+//						LogType: pulumi.String("threat"),
+//						Filter:  pulumi.String("(addr in 192.50.10.10) and (addr.dst notin 192.40.50.10)"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewLogForwardingProfile(ctx, "scm_log_forwarding_profile_2", &scm.LogForwardingProfileArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("scm-log-fowarding-profile-2"),
+//				Description: pulumi.String("Log Forwarding w/ HTTP Server Profile and Syslog Server Profile"),
+//				MatchLists: scm.LogForwardingProfileMatchListArray{
+//					&scm.LogForwardingProfileMatchListArgs{
+//						Name:    pulumi.String("profile_match"),
+//						LogType: pulumi.String("traffic"),
+//						Filter:  pulumi.String("(device_name eq test_device)"),
+//						SendHttp: []string{
+//							"test_http",
+//						},
+//						SendSyslog: []string{
+//							"syslog-server-prof-mixed",
+//							"syslog-server-prof-complete",
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewLogForwardingProfile(ctx, "scm_log_forwarding_profile_3", &scm.LogForwardingProfileArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("scm-log-fowarding-profile-3"),
+//				Description: pulumi.String("Log Forwarding w/ All Server Profiles"),
+//				MatchLists: scm.LogForwardingProfileMatchListArray{
+//					&scm.LogForwardingProfileMatchListArgs{
+//						Name:       pulumi.String("profile_match"),
+//						ActionDesc: pulumi.String("all server profiles"),
+//						LogType:    pulumi.String("dns-security"),
+//						Filter:     pulumi.String("All Logs"),
+//						SendHttp: []string{
+//							"test_http",
+//							"t10",
+//						},
+//						SendSyslog: []string{
+//							"syslog-server-prof-base",
+//							"syslog-server-prof-mixed",
+//							"syslog-server-prof-complete",
+//						},
+//						SendSnmptrap: []string{
+//							"snmp_test",
+//						},
+//						SendEmail: []string{
+//							"email_test",
+//							"email_test_2",
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewLogForwardingProfile(ctx, "scm_log_forwarding_profile_4", &scm.LogForwardingProfileArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("scm-log-fowarding-profile-4"),
+//				Description: pulumi.String("Log Forwarding w/ Multiple Match Lists"),
+//				MatchLists: scm.LogForwardingProfileMatchListArray{
+//					&scm.LogForwardingProfileMatchListArgs{
+//						Name:       pulumi.String("profile_match_1"),
+//						ActionDesc: pulumi.String("match list for url"),
+//						LogType:    pulumi.String("url"),
+//						Filter:     pulumi.String("(sdwan_cluster contains 123)"),
+//						SendHttp: []string{
+//							"t10",
+//						},
+//						SendSyslog: []string{
+//							"syslog-server-prof-base",
+//						},
+//						SendSnmptrap: []string{
+//							"snmp_test",
+//						},
+//					},
+//					&scm.LogForwardingProfileMatchListArgs{
+//						Name:    pulumi.String("profile_match_2"),
+//						LogType: pulumi.String("data"),
+//						Filter:  pulumi.String("(link_switch_2 neq lnk_2) or (pkts_received geq 100)"),
+//						SendHttp: []string{
+//							"t5",
+//							"t10",
+//							"t20",
+//						},
+//						SendSyslog: []string{
+//							"syslog-server-prof-mixed",
+//						},
+//						SendEmail: []string{
+//							"email_test",
+//							"email_test_2",
+//						},
+//					},
+//					&scm.LogForwardingProfileMatchListArgs{
+//						Name:       pulumi.String("profile_match_3"),
+//						ActionDesc: pulumi.String("match list for wildfire"),
+//						LogType:    pulumi.String("wildfire"),
+//						Filter:     pulumi.String("(imei contains test_server)"),
+//						SendHttp: []string{
+//							"t5",
+//							"t10",
+//							"t20",
+//							"t22",
+//							"t24",
+//						},
+//						SendSyslog: []string{
+//							"syslog-server-prof-complete",
+//						},
+//						SendEmail: []string{
+//							"email_test",
+//							"email_test_2",
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 //
 // ## Import
 //
@@ -44,9 +195,9 @@ type LogForwardingProfile struct {
 	// Log forwarding profile description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Match list
@@ -54,6 +205,7 @@ type LogForwardingProfile struct {
 	// The name of the log forwarding profile
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -63,9 +215,12 @@ type LogForwardingProfile struct {
 func NewLogForwardingProfile(ctx *pulumi.Context,
 	name string, args *LogForwardingProfileArgs, opts ...pulumi.ResourceOption) (*LogForwardingProfile, error) {
 	if args == nil {
-		args = &LogForwardingProfileArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.MatchLists == nil {
+		return nil, errors.New("invalid value for required argument 'MatchLists'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource LogForwardingProfile
 	err := ctx.RegisterResource("scm:index/logForwardingProfile:LogForwardingProfile", name, args, &resource, opts...)
@@ -92,9 +247,9 @@ type logForwardingProfileState struct {
 	// Log forwarding profile description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Match list
@@ -102,6 +257,7 @@ type logForwardingProfileState struct {
 	// The name of the log forwarding profile
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -111,9 +267,9 @@ type LogForwardingProfileState struct {
 	// Log forwarding profile description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Match list
@@ -121,6 +277,7 @@ type LogForwardingProfileState struct {
 	// The name of the log forwarding profile
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -134,9 +291,9 @@ type logForwardingProfileArgs struct {
 	// Log forwarding profile description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Match list
@@ -144,6 +301,7 @@ type logForwardingProfileArgs struct {
 	// The name of the log forwarding profile
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -153,9 +311,9 @@ type LogForwardingProfileArgs struct {
 	// Log forwarding profile description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Match list
@@ -163,6 +321,7 @@ type LogForwardingProfileArgs struct {
 	// The name of the log forwarding profile
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
@@ -260,12 +419,12 @@ func (o LogForwardingProfileOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LogForwardingProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogForwardingProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LogForwardingProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogForwardingProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -282,6 +441,7 @@ func (o LogForwardingProfileOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LogForwardingProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogForwardingProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

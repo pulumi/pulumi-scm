@@ -52,50 +52,31 @@ func LookupQosPolicyRule(ctx *pulumi.Context, args *LookupQosPolicyRuleArgs, opt
 // A collection of arguments for invoking getQosPolicyRule.
 type LookupQosPolicyRuleArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Name
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getQosPolicyRule.
 type LookupQosPolicyRuleResult struct {
-	// Action
-	Action GetQosPolicyRuleAction `pulumi:"action"`
-	// Description
-	Description string `pulumi:"description"`
+	Action      GetQosPolicyRuleAction `pulumi:"action"`
+	Description string                 `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Device string `pulumi:"device"`
-	// Dscp tos
+	Device  string                  `pulumi:"device"`
 	DscpTos GetQosPolicyRuleDscpTos `pulumi:"dscpTos"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Folder string `pulumi:"folder"`
+	Folder  string                  `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Name
-	Name string `pulumi:"name"`
-	// The relative position of the rule
-	Position string `pulumi:"position"`
-	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	Id               string `pulumi:"id"`
+	Name             string `pulumi:"name"`
+	Position         string `pulumi:"position"`
 	RelativePosition string `pulumi:"relativePosition"`
-	// Schedule
-	Schedule string `pulumi:"schedule"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
-	TargetRule string `pulumi:"targetRule"`
-	Tfid       string `pulumi:"tfid"`
+	Schedule         string `pulumi:"schedule"`
+	Snippet          string `pulumi:"snippet"`
+	TargetRule       string `pulumi:"targetRule"`
+	Tfid             string `pulumi:"tfid"`
 }
 
 func LookupQosPolicyRuleOutput(ctx *pulumi.Context, args LookupQosPolicyRuleOutputArgs, opts ...pulumi.InvokeOption) LookupQosPolicyRuleResultOutput {
@@ -110,17 +91,11 @@ func LookupQosPolicyRuleOutput(ctx *pulumi.Context, args LookupQosPolicyRuleOutp
 // A collection of arguments for invoking getQosPolicyRule.
 type LookupQosPolicyRuleOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// Name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -143,29 +118,23 @@ func (o LookupQosPolicyRuleResultOutput) ToLookupQosPolicyRuleResultOutputWithCo
 	return o
 }
 
-// Action
 func (o LookupQosPolicyRuleResultOutput) Action() GetQosPolicyRuleActionOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) GetQosPolicyRuleAction { return v.Action }).(GetQosPolicyRuleActionOutput)
 }
 
-// Description
 func (o LookupQosPolicyRuleResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupQosPolicyRuleResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Dscp tos
 func (o LookupQosPolicyRuleResultOutput) DscpTos() GetQosPolicyRuleDscpTosOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) GetQosPolicyRuleDscpTos { return v.DscpTos }).(GetQosPolicyRuleDscpTosOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupQosPolicyRuleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -175,33 +144,26 @@ func (o LookupQosPolicyRuleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Name
 func (o LookupQosPolicyRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The relative position of the rule
 func (o LookupQosPolicyRuleResultOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Position }).(pulumi.StringOutput)
 }
 
-// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 func (o LookupQosPolicyRuleResultOutput) RelativePosition() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.RelativePosition }).(pulumi.StringOutput)
 }
 
-// Schedule
 func (o LookupQosPolicyRuleResultOutput) Schedule() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Schedule }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupQosPolicyRuleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 func (o LookupQosPolicyRuleResultOutput) TargetRule() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.TargetRule }).(pulumi.StringOutput)
 }

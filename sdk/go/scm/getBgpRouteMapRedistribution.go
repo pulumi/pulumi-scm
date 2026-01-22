@@ -25,47 +25,28 @@ func LookupBgpRouteMapRedistribution(ctx *pulumi.Context, args *LookupBgpRouteMa
 // A collection of arguments for invoking getBgpRouteMapRedistribution.
 type LookupBgpRouteMapRedistributionArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// BGP Route Map Redistributions UUID of the resource
-	Id string `pulumi:"id"`
-	// BGP Route Map Redistributions Name
-	Name *string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      string  `pulumi:"id"`
+	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getBgpRouteMapRedistribution.
 type LookupBgpRouteMapRedistributionResult struct {
-	// Bgp
-	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
-	Bgp GetBgpRouteMapRedistributionBgp `pulumi:"bgp"`
-	// Connected static
-	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
+	Bgp             GetBgpRouteMapRedistributionBgp             `pulumi:"bgp"`
 	ConnectedStatic GetBgpRouteMapRedistributionConnectedStatic `pulumi:"connectedStatic"`
-	// BGP Route Map Redistributions Description
-	Description string `pulumi:"description"`
+	Description     string                                      `pulumi:"description"`
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// BGP Route Map Redistributions UUID of the resource
-	Id string `pulumi:"id"`
-	// BGP Route Map Redistributions Name
-	Name string `pulumi:"name"`
-	// Ospf
-	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
-	Ospf GetBgpRouteMapRedistributionOspf `pulumi:"ospf"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Id      string                           `pulumi:"id"`
+	Name    string                           `pulumi:"name"`
+	Ospf    GetBgpRouteMapRedistributionOspf `pulumi:"ospf"`
+	Snippet string                           `pulumi:"snippet"`
+	Tfid    string                           `pulumi:"tfid"`
 }
 
 func LookupBgpRouteMapRedistributionOutput(ctx *pulumi.Context, args LookupBgpRouteMapRedistributionOutputArgs, opts ...pulumi.InvokeOption) LookupBgpRouteMapRedistributionResultOutput {
@@ -80,17 +61,11 @@ func LookupBgpRouteMapRedistributionOutput(ctx *pulumi.Context, args LookupBgpRo
 // A collection of arguments for invoking getBgpRouteMapRedistribution.
 type LookupBgpRouteMapRedistributionOutputArgs struct {
 	// The device in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The folder in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// BGP Route Map Redistributions UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// BGP Route Map Redistributions Name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The snippet in which the resource is defined
-	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Id      pulumi.StringInput    `pulumi:"id"`
+	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -113,33 +88,25 @@ func (o LookupBgpRouteMapRedistributionResultOutput) ToLookupBgpRouteMapRedistri
 	return o
 }
 
-// Bgp
-// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 func (o LookupBgpRouteMapRedistributionResultOutput) Bgp() GetBgpRouteMapRedistributionBgpOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) GetBgpRouteMapRedistributionBgp { return v.Bgp }).(GetBgpRouteMapRedistributionBgpOutput)
 }
 
-// Connected static
-// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 func (o LookupBgpRouteMapRedistributionResultOutput) ConnectedStatic() GetBgpRouteMapRedistributionConnectedStaticOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) GetBgpRouteMapRedistributionConnectedStatic {
 		return v.ConnectedStatic
 	}).(GetBgpRouteMapRedistributionConnectedStaticOutput)
 }
 
-// BGP Route Map Redistributions Description
 func (o LookupBgpRouteMapRedistributionResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpRouteMapRedistributionResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpRouteMapRedistributionResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -149,19 +116,14 @@ func (o LookupBgpRouteMapRedistributionResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// BGP Route Map Redistributions Name
 func (o LookupBgpRouteMapRedistributionResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Ospf
-// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 func (o LookupBgpRouteMapRedistributionResultOutput) Ospf() GetBgpRouteMapRedistributionOspfOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) GetBgpRouteMapRedistributionOspf { return v.Ospf }).(GetBgpRouteMapRedistributionOspfOutput)
 }
 
-// The snippet in which the resource is defined
-// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupBgpRouteMapRedistributionResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
