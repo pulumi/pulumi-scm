@@ -594,6 +594,7 @@ class _ApplicationState:
         :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds
         :param pulumi.Input[_builtins.int] tcp_timeout: timeout in seconds
         :param pulumi.Input[_builtins.str] technology: Technology
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.int] timeout: timeout in seconds
         :param pulumi.Input[_builtins.bool] tunnel_applications: Tunnel applications
         :param pulumi.Input[_builtins.bool] tunnel_other_application: Tunnel other application
@@ -973,6 +974,9 @@ class _ApplicationState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -1165,27 +1169,11 @@ class Application(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/application:Application example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/application:Application example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/application:Application example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1306,27 +1294,11 @@ class Application(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/application:Application example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/application:Application example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/application:Application example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param ApplicationArgs args: The arguments to use to populate this resource's properties.
@@ -1497,6 +1469,7 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds
         :param pulumi.Input[_builtins.int] tcp_timeout: timeout in seconds
         :param pulumi.Input[_builtins.str] technology: Technology
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.int] timeout: timeout in seconds
         :param pulumi.Input[_builtins.bool] tunnel_applications: Tunnel applications
         :param pulumi.Input[_builtins.bool] tunnel_other_application: Tunnel other application
@@ -1749,6 +1722,9 @@ class Application(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

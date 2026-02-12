@@ -56,7 +56,8 @@ type GetSdwanTrafficDistributionProfileListResult struct {
 	Offset *int `pulumi:"offset"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// The total number of items.
 	Total int `pulumi:"total"`
 }
@@ -147,6 +148,7 @@ func (o GetSdwanTrafficDistributionProfileListResultOutput) Snippet() pulumi.Str
 	return o.ApplyT(func(v GetSdwanTrafficDistributionProfileListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o GetSdwanTrafficDistributionProfileListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSdwanTrafficDistributionProfileListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

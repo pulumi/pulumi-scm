@@ -110,27 +110,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/authenticationRule:AuthenticationRule example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/authenticationRule:AuthenticationRule example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/authenticationRule:AuthenticationRule example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class AuthenticationRule extends pulumi.CustomResource {
     /**
@@ -264,6 +248,9 @@ export class AuthenticationRule extends pulumi.CustomResource {
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     declare public readonly targetRule: pulumi.Output<string | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The authentication session timeout (seconds)
@@ -474,6 +461,9 @@ export interface AuthenticationRuleState {
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule?: pulumi.Input<string>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * The authentication session timeout (seconds)

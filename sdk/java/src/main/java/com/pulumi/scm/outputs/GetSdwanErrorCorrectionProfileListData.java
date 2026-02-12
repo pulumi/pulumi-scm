@@ -47,6 +47,10 @@ public final class GetSdwanErrorCorrectionProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetSdwanErrorCorrectionProfileListData() {}
@@ -99,6 +103,10 @@ public final class GetSdwanErrorCorrectionProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -159,27 +159,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/variable:Variable example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/variable:Variable example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/variable:Variable example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type Variable struct {
 	pulumi.CustomResourceState
 
@@ -199,7 +183,8 @@ type Variable struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// The variable type
 	Type pulumi.StringOutput `pulumi:"type"`
 	// The value of the variable
@@ -258,7 +243,8 @@ type variableState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// The variable type
 	Type *string `pulumi:"type"`
 	// The value of the variable
@@ -282,7 +268,8 @@ type VariableState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// The variable type
 	Type pulumi.StringPtrInput
 	// The value of the variable
@@ -457,6 +444,7 @@ func (o VariableOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o VariableOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

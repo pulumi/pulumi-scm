@@ -67,12 +67,6 @@ import (
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/snippet:Snippet example :::id
-// ```
 type Snippet struct {
 	pulumi.CustomResourceState
 
@@ -82,6 +76,7 @@ type Snippet struct {
 	Labels pulumi.StringArrayOutput `pulumi:"labels"`
 	// The name of the snippet
 	Name pulumi.StringOutput `pulumi:"name"`
+	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// The snippet type
 	Type pulumi.StringOutput `pulumi:"type"`
@@ -123,6 +118,7 @@ type snippetState struct {
 	Labels []string `pulumi:"labels"`
 	// The name of the snippet
 	Name *string `pulumi:"name"`
+	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
 	// The snippet type
 	Type *string `pulumi:"type"`
@@ -135,6 +131,7 @@ type SnippetState struct {
 	Labels pulumi.StringArrayInput
 	// The name of the snippet
 	Name pulumi.StringPtrInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 	// The snippet type
 	Type pulumi.StringPtrInput
@@ -265,6 +262,7 @@ func (o SnippetOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o SnippetOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

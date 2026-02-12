@@ -75,6 +75,9 @@ export interface GetFolderResult {
      * Snippets associated with the folder
      */
     readonly snippets: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**

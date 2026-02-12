@@ -65,6 +65,9 @@ namespace Pulumi.Scm.Outputs
         /// The state in which the site exists
         /// </summary>
         public readonly string State;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// The site type

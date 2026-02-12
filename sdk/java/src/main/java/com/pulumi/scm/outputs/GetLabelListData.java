@@ -25,6 +25,10 @@ public final class GetLabelListData {
      * 
      */
     private String name;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetLabelListData() {}
@@ -49,6 +53,10 @@ public final class GetLabelListData {
     public String name() {
         return this.name;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

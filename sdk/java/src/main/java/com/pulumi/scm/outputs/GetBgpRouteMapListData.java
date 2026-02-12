@@ -47,6 +47,10 @@ public final class GetBgpRouteMapListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetBgpRouteMapListData() {}
@@ -99,6 +103,10 @@ public final class GetBgpRouteMapListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

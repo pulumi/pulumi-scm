@@ -96,27 +96,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type Layer3Subinterface struct {
 	pulumi.CustomResourceState
 
@@ -153,7 +137,8 @@ type Layer3Subinterface struct {
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// VLAN tag
-	Tag  pulumi.IntPtrOutput `pulumi:"tag"`
+	Tag pulumi.IntPtrOutput `pulumi:"tag"`
+	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
@@ -220,7 +205,8 @@ type layer3SubinterfaceState struct {
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// VLAN tag
-	Tag  *int    `pulumi:"tag"`
+	Tag *int `pulumi:"tag"`
+	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
 }
 
@@ -258,7 +244,8 @@ type Layer3SubinterfaceState struct {
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// VLAN tag
-	Tag  pulumi.IntPtrInput
+	Tag pulumi.IntPtrInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 }
 
@@ -501,6 +488,7 @@ func (o Layer3SubinterfaceOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *Layer3Subinterface) pulumi.IntPtrOutput { return v.Tag }).(pulumi.IntPtrOutput)
 }
 
+// The Terraform ID.
 func (o Layer3SubinterfaceOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Layer3Subinterface) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

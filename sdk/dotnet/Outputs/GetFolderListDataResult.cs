@@ -37,6 +37,9 @@ namespace Pulumi.Scm.Outputs
         /// Snippets associated with the folder
         /// </summary>
         public readonly ImmutableArray<string> Snippets;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

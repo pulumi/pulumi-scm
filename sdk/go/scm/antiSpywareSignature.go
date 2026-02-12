@@ -73,27 +73,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type AntiSpywareSignature struct {
 	pulumi.CustomResourceState
 
@@ -123,7 +107,8 @@ type AntiSpywareSignature struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// threat id range \n\n and \n\n
 	ThreatId pulumi.StringOutput `pulumi:"threatId"`
 	// Threatname
@@ -194,7 +179,8 @@ type antiSpywareSignatureState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// threat id range \n\n and \n\n
 	ThreatId *string `pulumi:"threatId"`
 	// Threatname
@@ -230,7 +216,8 @@ type AntiSpywareSignatureState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// threat id range \n\n and \n\n
 	ThreatId pulumi.StringPtrInput
 	// Threatname
@@ -460,6 +447,7 @@ func (o AntiSpywareSignatureOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o AntiSpywareSignatureOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

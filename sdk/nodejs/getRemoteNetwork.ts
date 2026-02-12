@@ -109,6 +109,9 @@ export interface GetRemoteNetworkResult {
      * Subnets
      */
     readonly subnets: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**

@@ -173,6 +173,7 @@ class _TrafficSteeringRuleState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Service
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: Source user
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -292,6 +293,9 @@ class _TrafficSteeringRuleState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -321,27 +325,11 @@ class TrafficSteeringRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -367,27 +355,11 @@ class TrafficSteeringRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/trafficSteeringRule:TrafficSteeringRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param TrafficSteeringRuleArgs args: The arguments to use to populate this resource's properties.
@@ -470,6 +442,7 @@ class TrafficSteeringRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Service
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: Source user
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -553,5 +526,8 @@ class TrafficSteeringRule(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 

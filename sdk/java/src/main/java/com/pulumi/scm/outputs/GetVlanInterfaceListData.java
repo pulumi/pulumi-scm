@@ -85,6 +85,10 @@ public final class GetVlanInterfaceListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return VLAN tag
@@ -188,6 +192,10 @@ public final class GetVlanInterfaceListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -179,27 +179,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dnsSecurityProfile:DnsSecurityProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dnsSecurityProfile:DnsSecurityProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dnsSecurityProfile:DnsSecurityProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type DnsSecurityProfile struct {
 	pulumi.CustomResourceState
 
@@ -219,7 +203,8 @@ type DnsSecurityProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewDnsSecurityProfile registers a new resource with the given unique name, arguments, and options.
@@ -268,7 +253,8 @@ type dnsSecurityProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type DnsSecurityProfileState struct {
@@ -288,7 +274,8 @@ type DnsSecurityProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (DnsSecurityProfileState) ElementType() reflect.Type {
@@ -455,6 +442,7 @@ func (o DnsSecurityProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DnsSecurityProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o DnsSecurityProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *DnsSecurityProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

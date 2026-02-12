@@ -46,6 +46,10 @@ public final class GetDnsSecurityProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetDnsSecurityProfileListData() {}
@@ -98,6 +102,10 @@ public final class GetDnsSecurityProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -123,6 +123,9 @@ namespace Pulumi.Scm
         /// Source
         /// </summary>
         public readonly ImmutableArray<string> Sources;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

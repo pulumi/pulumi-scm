@@ -60,6 +60,10 @@ public final class GetDecryptionRuleListResult {
      * 
      */
     private @Nullable String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return The total number of items.
@@ -131,6 +135,10 @@ public final class GetDecryptionRuleListResult {
     public Optional<String> snippet() {
         return Optional.ofNullable(this.snippet);
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

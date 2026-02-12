@@ -41,6 +41,9 @@ export interface GetAutoVpnSettingResult {
      * The provider-assigned unique ID for this managed resource.
      */
     readonly id: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
     /**
      * VPN address pool

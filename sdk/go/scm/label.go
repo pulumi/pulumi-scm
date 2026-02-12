@@ -17,27 +17,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/label:Label example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/label:Label example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/label:Label example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type Label struct {
 	pulumi.CustomResourceState
 
@@ -45,6 +29,7 @@ type Label struct {
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The name of the label
 	Name pulumi.StringOutput `pulumi:"name"`
+	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
@@ -82,6 +67,7 @@ type labelState struct {
 	Description *string `pulumi:"description"`
 	// The name of the label
 	Name *string `pulumi:"name"`
+	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
 }
 
@@ -90,6 +76,7 @@ type LabelState struct {
 	Description pulumi.StringPtrInput
 	// The name of the label
 	Name pulumi.StringPtrInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 }
 
@@ -209,6 +196,7 @@ func (o LabelOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Label) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LabelOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Label) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

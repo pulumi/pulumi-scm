@@ -107,7 +107,8 @@ type LookupNatRuleResult struct {
 	Sources []string `pulumi:"sources"`
 	// NAT rule tags
 	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// Destination interface of the original packet
 	ToInterface string `pulumi:"toInterface"`
 	// Destination zone of the original packet
@@ -248,6 +249,7 @@ func (o LookupNatRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupNatRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

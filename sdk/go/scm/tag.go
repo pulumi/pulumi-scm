@@ -63,27 +63,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/tag:Tag example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/tag:Tag example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/tag:Tag example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type Tag struct {
 	pulumi.CustomResourceState
 
@@ -103,7 +87,8 @@ type Tag struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewTag registers a new resource with the given unique name, arguments, and options.
@@ -152,7 +137,8 @@ type tagState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type TagState struct {
@@ -172,7 +158,8 @@ type TagState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (TagState) ElementType() reflect.Type {
@@ -339,6 +326,7 @@ func (o TagOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Tag) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o TagOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Tag) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

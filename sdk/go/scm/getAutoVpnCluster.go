@@ -80,6 +80,7 @@ type LookupAutoVpnClusterResult struct {
 	Id string `pulumi:"id"`
 	// VPN cluster name
 	Name string `pulumi:"name"`
+	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
 	// VPN cluster type
 	Type string `pulumi:"type"`
@@ -156,6 +157,7 @@ func (o LookupAutoVpnClusterResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAutoVpnClusterResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupAutoVpnClusterResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAutoVpnClusterResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

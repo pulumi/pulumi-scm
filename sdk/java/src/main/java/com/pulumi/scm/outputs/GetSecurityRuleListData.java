@@ -213,6 +213,10 @@ public final class GetSecurityRuleListData {
      * 
      */
     private List<String> tenantRestrictions;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return The destination security zone(s)
@@ -494,6 +498,10 @@ public final class GetSecurityRuleListData {
     public List<String> tenantRestrictions() {
         return this.tenantRestrictions;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -69,19 +69,7 @@ import javax.annotation.Nullable;
  * 
  * The following command can be used to import a resource not managed by Terraform:
  * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
- * ```
- * 
  * or
- * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
- * ```
  * 
  */
 @ResourceType(type="scm:index/bgpRouting:BgpRouting")
@@ -156,9 +144,17 @@ public class BgpRouting extends com.pulumi.resources.CustomResource {
     public Output<Optional<BgpRoutingRoutingPreference>> routingPreference() {
         return Codegen.optional(this.routingPreference);
     }
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Output<String> tfid() {
         return this.tfid;
     }

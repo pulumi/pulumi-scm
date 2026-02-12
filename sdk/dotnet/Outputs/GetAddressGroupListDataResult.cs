@@ -53,6 +53,9 @@ namespace Pulumi.Scm.Outputs
         /// Tags for address group object
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

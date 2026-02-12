@@ -291,6 +291,7 @@ class _AntiSpywareSignatureState:
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] threat_id: threat id range \\n\\n and \\n\\n
         :param pulumi.Input[_builtins.str] threatname: Threatname
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: Vendor
@@ -465,6 +466,9 @@ class _AntiSpywareSignatureState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -571,27 +575,11 @@ class AntiSpywareSignature(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -662,27 +650,11 @@ class AntiSpywareSignature(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param AntiSpywareSignatureArgs args: The arguments to use to populate this resource's properties.
@@ -788,6 +760,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] threat_id: threat id range \\n\\n and \\n\\n
         :param pulumi.Input[_builtins.str] threatname: Threatname
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: Vendor
@@ -908,6 +881,9 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

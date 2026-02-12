@@ -268,6 +268,7 @@ class _ServiceConnectionState:
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel
         :param pulumi.Input[_builtins.bool] source_nat: Source nat
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if backup_sc is not None:
             pulumi.set(__self__, "backup_sc", backup_sc)
@@ -485,6 +486,9 @@ class _ServiceConnectionState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -596,27 +600,11 @@ class ServiceConnection(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/serviceConnection:ServiceConnection example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/serviceConnection:ServiceConnection example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/serviceConnection:ServiceConnection example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -724,27 +712,11 @@ class ServiceConnection(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/serviceConnection:ServiceConnection example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/serviceConnection:ServiceConnection example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/serviceConnection:ServiceConnection example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param ServiceConnectionArgs args: The arguments to use to populate this resource's properties.
@@ -853,6 +825,7 @@ class ServiceConnection(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel
         :param pulumi.Input[_builtins.bool] source_nat: Source nat
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -999,5 +972,8 @@ class ServiceConnection(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 

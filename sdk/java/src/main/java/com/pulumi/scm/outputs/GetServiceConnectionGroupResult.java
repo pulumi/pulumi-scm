@@ -42,6 +42,10 @@ public final class GetServiceConnectionGroupResult {
      * 
      */
     private List<String> targets;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetServiceConnectionGroupResult() {}
@@ -87,6 +91,10 @@ public final class GetServiceConnectionGroupResult {
     public List<String> targets() {
         return this.targets;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

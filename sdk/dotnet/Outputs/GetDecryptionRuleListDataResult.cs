@@ -117,6 +117,9 @@ namespace Pulumi.Scm.Outputs
         /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
         /// </summary>
         public readonly string TargetRule;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// The destination security zone

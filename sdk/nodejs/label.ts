@@ -11,27 +11,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/label:Label example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/label:Label example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/label:Label example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class Label extends pulumi.CustomResource {
     /**
@@ -69,6 +53,9 @@ export class Label extends pulumi.CustomResource {
      * The name of the label
      */
     declare public readonly name: pulumi.Output<string>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
@@ -110,6 +97,9 @@ export interface LabelState {
      * The name of the label
      */
     name?: pulumi.Input<string>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
 }
 

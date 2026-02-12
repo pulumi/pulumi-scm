@@ -85,7 +85,8 @@ type GetIpsecCryptoProfileListResult struct {
 	Offset *int `pulumi:"offset"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// The total number of items.
 	Total int `pulumi:"total"`
 }
@@ -174,6 +175,7 @@ func (o GetIpsecCryptoProfileListResultOutput) Snippet() pulumi.StringPtrOutput 
 	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o GetIpsecCryptoProfileListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -65,19 +65,7 @@ import javax.annotation.Nullable;
  * 
  * The following command can be used to import a resource not managed by Terraform:
  * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
- * ```
- * 
  * or
- * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
- * ```
  * 
  */
 @ResourceType(type="scm:index/autoVpnSetting:AutoVpnSetting")
@@ -110,9 +98,17 @@ public class AutoVpnSetting extends com.pulumi.resources.CustomResource {
     public Output<Optional<Boolean>> enableMeshBetweenHubs() {
         return Codegen.optional(this.enableMeshBetweenHubs);
     }
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Output<String> tfid() {
         return this.tfid;
     }

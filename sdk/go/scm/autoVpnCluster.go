@@ -87,27 +87,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type AutoVpnCluster struct {
 	pulumi.CustomResourceState
 
@@ -123,6 +107,7 @@ type AutoVpnCluster struct {
 	Gateways AutoVpnClusterGatewayArrayOutput `pulumi:"gateways"`
 	// VPN cluster name
 	Name pulumi.StringOutput `pulumi:"name"`
+	// The Terraform ID.
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// VPN cluster type
 	Type pulumi.StringOutput `pulumi:"type"`
@@ -170,6 +155,7 @@ type autoVpnClusterState struct {
 	Gateways []AutoVpnClusterGateway `pulumi:"gateways"`
 	// VPN cluster name
 	Name *string `pulumi:"name"`
+	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
 	// VPN cluster type
 	Type *string `pulumi:"type"`
@@ -188,6 +174,7 @@ type AutoVpnClusterState struct {
 	Gateways AutoVpnClusterGatewayArrayInput
 	// VPN cluster name
 	Name pulumi.StringPtrInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 	// VPN cluster type
 	Type pulumi.StringPtrInput
@@ -349,6 +336,7 @@ func (o AutoVpnClusterOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *AutoVpnCluster) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o AutoVpnClusterOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AutoVpnCluster) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

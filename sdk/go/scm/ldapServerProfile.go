@@ -18,27 +18,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type LdapServerProfile struct {
 	pulumi.CustomResourceState
 
@@ -71,8 +55,9 @@ type LdapServerProfile struct {
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Require SSL/TLS secured connection?
-	Ssl  pulumi.BoolPtrOutput `pulumi:"ssl"`
-	Tfid pulumi.StringOutput  `pulumi:"tfid"`
+	Ssl pulumi.BoolPtrOutput `pulumi:"ssl"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// The search timeout (seconds)
 	Timelimit pulumi.IntPtrOutput `pulumi:"timelimit"`
 	// Verify server certificate for SSL sessions?
@@ -149,7 +134,8 @@ type ldapServerProfileState struct {
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Require SSL/TLS secured connection?
-	Ssl  *bool   `pulumi:"ssl"`
+	Ssl *bool `pulumi:"ssl"`
+	// The Terraform ID.
 	Tfid *string `pulumi:"tfid"`
 	// The search timeout (seconds)
 	Timelimit *int `pulumi:"timelimit"`
@@ -187,7 +173,8 @@ type LdapServerProfileState struct {
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Require SSL/TLS secured connection?
-	Ssl  pulumi.BoolPtrInput
+	Ssl pulumi.BoolPtrInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 	// The search timeout (seconds)
 	Timelimit pulumi.IntPtrInput
@@ -426,6 +413,7 @@ func (o LdapServerProfileOutput) Ssl() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *LdapServerProfile) pulumi.BoolPtrOutput { return v.Ssl }).(pulumi.BoolPtrOutput)
 }
 
+// The Terraform ID.
 func (o LdapServerProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *LdapServerProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

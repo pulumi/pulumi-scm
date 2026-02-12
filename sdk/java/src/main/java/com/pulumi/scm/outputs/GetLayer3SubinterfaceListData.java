@@ -90,6 +90,10 @@ public final class GetLayer3SubinterfaceListData {
      * 
      */
     private Integer tag;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetLayer3SubinterfaceListData() {}
@@ -195,6 +199,10 @@ public final class GetLayer3SubinterfaceListData {
     public Integer tag() {
         return this.tag;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

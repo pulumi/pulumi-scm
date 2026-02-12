@@ -216,6 +216,10 @@ public final class GetZoneProtectionProfileListData {
      * 
      */
     private Boolean tcpTimestampStrip;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Discard packets with the Timestamp IP option set.
@@ -499,6 +503,10 @@ public final class GetZoneProtectionProfileListData {
     public Boolean tcpTimestampStrip() {
         return this.tcpTimestampStrip;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

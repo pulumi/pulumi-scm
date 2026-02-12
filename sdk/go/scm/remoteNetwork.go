@@ -135,27 +135,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/remoteNetwork:RemoteNetwork example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/remoteNetwork:RemoteNetwork example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/remoteNetwork:RemoteNetwork example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type RemoteNetwork struct {
 	pulumi.CustomResourceState
 
@@ -183,7 +167,8 @@ type RemoteNetwork struct {
 	SpnName pulumi.StringPtrOutput `pulumi:"spnName"`
 	// Subnets
 	Subnets pulumi.StringArrayOutput `pulumi:"subnets"`
-	Tfid    pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewRemoteNetwork registers a new resource with the given unique name, arguments, and options.
@@ -253,7 +238,8 @@ type remoteNetworkState struct {
 	SpnName *string `pulumi:"spnName"`
 	// Subnets
 	Subnets []string `pulumi:"subnets"`
-	Tfid    *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type RemoteNetworkState struct {
@@ -281,7 +267,8 @@ type RemoteNetworkState struct {
 	SpnName pulumi.StringPtrInput
 	// Subnets
 	Subnets pulumi.StringArrayInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (RemoteNetworkState) ElementType() reflect.Type {
@@ -486,6 +473,7 @@ func (o RemoteNetworkOutput) Subnets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringArrayOutput { return v.Subnets }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o RemoteNetworkOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

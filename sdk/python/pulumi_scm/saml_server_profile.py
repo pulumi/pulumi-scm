@@ -270,6 +270,7 @@ class _SamlServerProfileState:
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
         :param pulumi.Input[_builtins.bool] want_auth_requests_signed: Sign SAML message to the identity provider?
         """
@@ -441,6 +442,9 @@ class _SamlServerProfileState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -536,27 +540,11 @@ class SamlServerProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -628,27 +616,11 @@ class SamlServerProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param SamlServerProfileArgs args: The arguments to use to populate this resource's properties.
@@ -755,6 +727,7 @@ class SamlServerProfile(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
         :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
         :param pulumi.Input[_builtins.bool] want_auth_requests_signed: Sign SAML message to the identity provider?
         """
@@ -873,6 +846,9 @@ class SamlServerProfile(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

@@ -67,6 +67,9 @@ export interface GetSnippetResult {
      * The name of the snippet
      */
     readonly name: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
     /**
      * The snippet type

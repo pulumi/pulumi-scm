@@ -36,6 +36,10 @@ public final class GetTcpSettingListData {
      * 
      */
     private GetTcpSettingListDataTcp tcp;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetTcpSettingListData() {}
@@ -74,6 +78,10 @@ public final class GetTcpSettingListData {
     public GetTcpSettingListDataTcp tcp() {
         return this.tcp;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

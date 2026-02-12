@@ -100,27 +100,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/appOverrideRule:AppOverrideRule example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/appOverrideRule:AppOverrideRule example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/appOverrideRule:AppOverrideRule example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class AppOverrideRule extends pulumi.CustomResource {
     /**
@@ -230,6 +214,9 @@ export class AppOverrideRule extends pulumi.CustomResource {
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     declare public readonly targetRule: pulumi.Output<string | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * To
@@ -404,6 +391,9 @@ export interface AppOverrideRuleState {
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule?: pulumi.Input<string>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * To

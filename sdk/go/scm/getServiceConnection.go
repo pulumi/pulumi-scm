@@ -98,7 +98,8 @@ type LookupServiceConnectionResult struct {
 	SourceNat bool `pulumi:"sourceNat"`
 	// Subnets
 	Subnets []string `pulumi:"subnets"`
-	Tfid    string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupServiceConnectionOutput(ctx *pulumi.Context, args LookupServiceConnectionOutputArgs, opts ...pulumi.InvokeOption) LookupServiceConnectionResultOutput {
@@ -219,6 +220,7 @@ func (o LookupServiceConnectionResultOutput) Subnets() pulumi.StringArrayOutput 
 	return o.ApplyT(func(v LookupServiceConnectionResult) []string { return v.Subnets }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupServiceConnectionResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

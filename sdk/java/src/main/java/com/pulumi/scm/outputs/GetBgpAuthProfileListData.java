@@ -46,6 +46,10 @@ public final class GetBgpAuthProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetBgpAuthProfileListData() {}
@@ -98,6 +102,10 @@ public final class GetBgpAuthProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -69,6 +69,10 @@ public final class GetZoneListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return User acl
@@ -154,6 +158,10 @@ public final class GetZoneListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

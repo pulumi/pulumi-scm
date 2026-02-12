@@ -41,6 +41,10 @@ public final class GetRouteCommunityListListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Type
@@ -91,6 +95,10 @@ public final class GetRouteCommunityListListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

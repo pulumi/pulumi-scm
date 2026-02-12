@@ -200,6 +200,7 @@ class _AddressGroupState:
                
                > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -327,6 +328,9 @@ class _AddressGroupState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -404,27 +408,11 @@ class AddressGroup(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/addressGroup:AddressGroup example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/addressGroup:AddressGroup example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/addressGroup:AddressGroup example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -506,27 +494,11 @@ class AddressGroup(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/addressGroup:AddressGroup example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/addressGroup:AddressGroup example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/addressGroup:AddressGroup example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param AddressGroupArgs args: The arguments to use to populate this resource's properties.
@@ -611,6 +583,7 @@ class AddressGroup(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -702,5 +675,8 @@ class AddressGroup(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 

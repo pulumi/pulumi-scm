@@ -186,6 +186,7 @@ class _TacacsServerProfileState:
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.int] timeout: The TACACS+ timeout (seconds)
         :param pulumi.Input[_builtins.bool] use_single_connection: Use a single TACACS+ connection?
         """
@@ -301,6 +302,9 @@ class _TacacsServerProfileState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -388,27 +392,11 @@ class TacacsServerProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/tacacsServerProfile:TacacsServerProfile example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/tacacsServerProfile:TacacsServerProfile example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/tacacsServerProfile:TacacsServerProfile example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -472,27 +460,11 @@ class TacacsServerProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/tacacsServerProfile:TacacsServerProfile example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/tacacsServerProfile:TacacsServerProfile example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/tacacsServerProfile:TacacsServerProfile example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param TacacsServerProfileArgs args: The arguments to use to populate this resource's properties.
@@ -580,6 +552,7 @@ class TacacsServerProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.int] timeout: The TACACS+ timeout (seconds)
         :param pulumi.Input[_builtins.bool] use_single_connection: Use a single TACACS+ connection?
         """
@@ -662,6 +635,9 @@ class TacacsServerProfile(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

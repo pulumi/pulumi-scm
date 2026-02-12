@@ -166,27 +166,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type ServiceConnectionGroup struct {
 	pulumi.CustomResourceState
 
@@ -200,7 +184,8 @@ type ServiceConnectionGroup struct {
 	PbfOnly pulumi.BoolPtrOutput `pulumi:"pbfOnly"`
 	// Target
 	Targets pulumi.StringArrayOutput `pulumi:"targets"`
-	Tfid    pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewServiceConnectionGroup registers a new resource with the given unique name, arguments, and options.
@@ -246,7 +231,8 @@ type serviceConnectionGroupState struct {
 	PbfOnly *bool `pulumi:"pbfOnly"`
 	// Target
 	Targets []string `pulumi:"targets"`
-	Tfid    *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type ServiceConnectionGroupState struct {
@@ -260,7 +246,8 @@ type ServiceConnectionGroupState struct {
 	PbfOnly pulumi.BoolPtrInput
 	// Target
 	Targets pulumi.StringArrayInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (ServiceConnectionGroupState) ElementType() reflect.Type {
@@ -402,6 +389,7 @@ func (o ServiceConnectionGroupOutput) Targets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ServiceConnectionGroup) pulumi.StringArrayOutput { return v.Targets }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o ServiceConnectionGroupOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceConnectionGroup) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -99,12 +99,6 @@ import (
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/folder:Folder example :::id
-// ```
 type Folder struct {
 	pulumi.CustomResourceState
 
@@ -118,7 +112,8 @@ type Folder struct {
 	Parent pulumi.StringOutput `pulumi:"parent"`
 	// Snippets associated with the folder
 	Snippets pulumi.StringArrayOutput `pulumi:"snippets"`
-	Tfid     pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewFolder registers a new resource with the given unique name, arguments, and options.
@@ -164,7 +159,8 @@ type folderState struct {
 	Parent *string `pulumi:"parent"`
 	// Snippets associated with the folder
 	Snippets []string `pulumi:"snippets"`
-	Tfid     *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type FolderState struct {
@@ -178,7 +174,8 @@ type FolderState struct {
 	Parent pulumi.StringPtrInput
 	// Snippets associated with the folder
 	Snippets pulumi.StringArrayInput
-	Tfid     pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (FolderState) ElementType() reflect.Type {
@@ -324,6 +321,7 @@ func (o FolderOutput) Snippets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *Folder) pulumi.StringArrayOutput { return v.Snippets }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o FolderOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Folder) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

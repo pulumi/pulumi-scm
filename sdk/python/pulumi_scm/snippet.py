@@ -85,6 +85,7 @@ class _SnippetState:
         :param pulumi.Input[_builtins.str] description: The description of the snippet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels applied to the snippet
         :param pulumi.Input[_builtins.str] name: The name of the snippet
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] type: The snippet type
         """
         if description is not None:
@@ -137,6 +138,9 @@ class _SnippetState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -193,12 +197,6 @@ class Snippet(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/snippet:Snippet example :::id
-        ```
-
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the snippet
@@ -237,12 +235,6 @@ class Snippet(pulumi.CustomResource):
         ## Import
 
         The following command can be used to import a resource not managed by Terraform:
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/snippet:Snippet example :::id
-        ```
 
         :param str resource_name: The name of the resource.
         :param SnippetArgs args: The arguments to use to populate this resource's properties.
@@ -301,6 +293,7 @@ class Snippet(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the snippet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels applied to the snippet
         :param pulumi.Input[_builtins.str] name: The name of the snippet
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] type: The snippet type
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -341,6 +334,9 @@ class Snippet(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

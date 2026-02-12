@@ -103,6 +103,10 @@ public final class GetEthernetInterfaceListData {
      * 
      */
     private GetEthernetInterfaceListDataTap tap;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetEthernetInterfaceListData() {}
@@ -226,6 +230,10 @@ public final class GetEthernetInterfaceListData {
     public GetEthernetInterfaceListDataTap tap() {
         return this.tap;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

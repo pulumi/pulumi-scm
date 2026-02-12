@@ -61,6 +61,9 @@ namespace Pulumi.Scm.Outputs
         /// Identity provider SSO URL
         /// </summary>
         public readonly string SsoUrl;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// Validate the identity provider certificate?

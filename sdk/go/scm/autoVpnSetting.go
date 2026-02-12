@@ -53,19 +53,7 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
-// ```
-//
 // or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
-// ```
 type AutoVpnSetting struct {
 	pulumi.CustomResourceState
 
@@ -73,7 +61,8 @@ type AutoVpnSetting struct {
 	AsRange AutoVpnSettingAsRangeOutput `pulumi:"asRange"`
 	// Enable mesh connection between hubs?
 	EnableMeshBetweenHubs pulumi.BoolPtrOutput `pulumi:"enableMeshBetweenHubs"`
-	Tfid                  pulumi.StringOutput  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// VPN address pool
 	VpnAddressPools pulumi.StringArrayOutput `pulumi:"vpnAddressPools"`
 }
@@ -117,8 +106,9 @@ type autoVpnSettingState struct {
 	// As range
 	AsRange *AutoVpnSettingAsRange `pulumi:"asRange"`
 	// Enable mesh connection between hubs?
-	EnableMeshBetweenHubs *bool   `pulumi:"enableMeshBetweenHubs"`
-	Tfid                  *string `pulumi:"tfid"`
+	EnableMeshBetweenHubs *bool `pulumi:"enableMeshBetweenHubs"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// VPN address pool
 	VpnAddressPools []string `pulumi:"vpnAddressPools"`
 }
@@ -128,7 +118,8 @@ type AutoVpnSettingState struct {
 	AsRange AutoVpnSettingAsRangePtrInput
 	// Enable mesh connection between hubs?
 	EnableMeshBetweenHubs pulumi.BoolPtrInput
-	Tfid                  pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// VPN address pool
 	VpnAddressPools pulumi.StringArrayInput
 }
@@ -253,6 +244,7 @@ func (o AutoVpnSettingOutput) EnableMeshBetweenHubs() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *AutoVpnSetting) pulumi.BoolPtrOutput { return v.EnableMeshBetweenHubs }).(pulumi.BoolPtrOutput)
 }
 
+// The Terraform ID.
 func (o AutoVpnSettingOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AutoVpnSetting) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

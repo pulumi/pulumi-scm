@@ -78,27 +78,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/radiusServerProfile:RadiusServerProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/radiusServerProfile:RadiusServerProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/radiusServerProfile:RadiusServerProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type RadiusServerProfile struct {
 	pulumi.CustomResourceState
 
@@ -122,7 +106,8 @@ type RadiusServerProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// The RADIUS server authentication timeout (seconds)
 	Timeout pulumi.IntPtrOutput `pulumi:"timeout"`
 }
@@ -187,7 +172,8 @@ type radiusServerProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// The RADIUS server authentication timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
 }
@@ -213,7 +199,8 @@ type RadiusServerProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// The RADIUS server authentication timeout (seconds)
 	Timeout pulumi.IntPtrInput
 }
@@ -400,6 +387,7 @@ func (o RadiusServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o RadiusServerProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

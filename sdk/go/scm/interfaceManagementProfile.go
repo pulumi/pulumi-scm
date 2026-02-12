@@ -62,27 +62,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type InterfaceManagementProfile struct {
 	pulumi.CustomResourceState
 
@@ -114,7 +98,8 @@ type InterfaceManagementProfile struct {
 	Ssh pulumi.BoolPtrOutput `pulumi:"ssh"`
 	// Allow telnet? Seriously, why would you do this?!?
 	Telnet pulumi.BoolPtrOutput `pulumi:"telnet"`
-	Tfid   pulumi.StringOutput  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Allow User-ID?
 	UseridService pulumi.BoolPtrOutput `pulumi:"useridService"`
 	// Allow User-ID syslog listener (SSL)?
@@ -180,8 +165,9 @@ type interfaceManagementProfileState struct {
 	// Allow SSH?
 	Ssh *bool `pulumi:"ssh"`
 	// Allow telnet? Seriously, why would you do this?!?
-	Telnet *bool   `pulumi:"telnet"`
-	Tfid   *string `pulumi:"tfid"`
+	Telnet *bool `pulumi:"telnet"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Allow User-ID?
 	UseridService *bool `pulumi:"useridService"`
 	// Allow User-ID syslog listener (SSL)?
@@ -219,7 +205,8 @@ type InterfaceManagementProfileState struct {
 	Ssh pulumi.BoolPtrInput
 	// Allow telnet? Seriously, why would you do this?!?
 	Telnet pulumi.BoolPtrInput
-	Tfid   pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Allow User-ID?
 	UseridService pulumi.BoolPtrInput
 	// Allow User-ID syslog listener (SSL)?
@@ -460,6 +447,7 @@ func (o InterfaceManagementProfileOutput) Telnet() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.BoolPtrOutput { return v.Telnet }).(pulumi.BoolPtrOutput)
 }
 
+// The Terraform ID.
 func (o InterfaceManagementProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

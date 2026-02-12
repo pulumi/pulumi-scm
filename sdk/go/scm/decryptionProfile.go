@@ -189,27 +189,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/decryptionProfile:DecryptionProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/decryptionProfile:DecryptionProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/decryptionProfile:DecryptionProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type DecryptionProfile struct {
 	pulumi.CustomResourceState
 
@@ -233,7 +217,8 @@ type DecryptionProfile struct {
 	SslNoProxy DecryptionProfileSslNoProxyPtrOutput `pulumi:"sslNoProxy"`
 	// Ssl protocol settings
 	SslProtocolSettings DecryptionProfileSslProtocolSettingsPtrOutput `pulumi:"sslProtocolSettings"`
-	Tfid                pulumi.StringOutput                           `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewDecryptionProfile registers a new resource with the given unique name, arguments, and options.
@@ -286,7 +271,8 @@ type decryptionProfileState struct {
 	SslNoProxy *DecryptionProfileSslNoProxy `pulumi:"sslNoProxy"`
 	// Ssl protocol settings
 	SslProtocolSettings *DecryptionProfileSslProtocolSettings `pulumi:"sslProtocolSettings"`
-	Tfid                *string                               `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type DecryptionProfileState struct {
@@ -310,7 +296,8 @@ type DecryptionProfileState struct {
 	SslNoProxy DecryptionProfileSslNoProxyPtrInput
 	// Ssl protocol settings
 	SslProtocolSettings DecryptionProfileSslProtocolSettingsPtrInput
-	Tfid                pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (DecryptionProfileState) ElementType() reflect.Type {
@@ -495,6 +482,7 @@ func (o DecryptionProfileOutput) SslProtocolSettings() DecryptionProfileSslProto
 	return o.ApplyT(func(v *DecryptionProfile) DecryptionProfileSslProtocolSettingsPtrOutput { return v.SslProtocolSettings }).(DecryptionProfileSslProtocolSettingsPtrOutput)
 }
 
+// The Terraform ID.
 func (o DecryptionProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *DecryptionProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

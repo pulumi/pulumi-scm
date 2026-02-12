@@ -36,27 +36,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/lldpProfile:LldpProfile example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/lldpProfile:LldpProfile example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/lldpProfile:LldpProfile example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class LldpProfile extends pulumi.CustomResource {
     /**
@@ -118,6 +102,9 @@ export class LldpProfile extends pulumi.CustomResource {
      * SNMP syslog notification
      */
     declare public readonly snmpSyslogNotification: pulumi.Output<boolean | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
@@ -193,6 +180,9 @@ export interface LldpProfileState {
      * SNMP syslog notification
      */
     snmpSyslogNotification?: pulumi.Input<boolean>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
 }
 

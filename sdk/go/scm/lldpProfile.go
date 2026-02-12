@@ -55,27 +55,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/lldpProfile:LldpProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/lldpProfile:LldpProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/lldpProfile:LldpProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type LldpProfile struct {
 	pulumi.CustomResourceState
 
@@ -97,7 +81,8 @@ type LldpProfile struct {
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// SNMP syslog notification
 	SnmpSyslogNotification pulumi.BoolPtrOutput `pulumi:"snmpSyslogNotification"`
-	Tfid                   pulumi.StringOutput  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewLldpProfile registers a new resource with the given unique name, arguments, and options.
@@ -147,8 +132,9 @@ type lldpProfileState struct {
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// SNMP syslog notification
-	SnmpSyslogNotification *bool   `pulumi:"snmpSyslogNotification"`
-	Tfid                   *string `pulumi:"tfid"`
+	SnmpSyslogNotification *bool `pulumi:"snmpSyslogNotification"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type LldpProfileState struct {
@@ -170,7 +156,8 @@ type LldpProfileState struct {
 	Snippet pulumi.StringPtrInput
 	// SNMP syslog notification
 	SnmpSyslogNotification pulumi.BoolPtrInput
-	Tfid                   pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (LldpProfileState) ElementType() reflect.Type {
@@ -346,6 +333,7 @@ func (o LldpProfileOutput) SnmpSyslogNotification() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *LldpProfile) pulumi.BoolPtrOutput { return v.SnmpSyslogNotification }).(pulumi.BoolPtrOutput)
 }
 
+// The Terraform ID.
 func (o LldpProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *LldpProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

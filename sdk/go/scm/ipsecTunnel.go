@@ -122,27 +122,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type IpsecTunnel struct {
 	pulumi.CustomResourceState
 
@@ -166,7 +150,8 @@ type IpsecTunnel struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
 	TunnelInterface pulumi.StringOutput `pulumi:"tunnelInterface"`
 	// Tunnel monitor
@@ -226,7 +211,8 @@ type ipsecTunnelState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
 	TunnelInterface *string `pulumi:"tunnelInterface"`
 	// Tunnel monitor
@@ -254,7 +240,8 @@ type IpsecTunnelState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
 	TunnelInterface pulumi.StringPtrInput
 	// Tunnel monitor
@@ -451,6 +438,7 @@ func (o IpsecTunnelOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o IpsecTunnelOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

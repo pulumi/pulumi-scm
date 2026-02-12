@@ -116,7 +116,8 @@ type AntiSpywareProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Threat exception
 	ThreatExceptions AntiSpywareProfileThreatExceptionArrayOutput `pulumi:"threatExceptions"`
 }
@@ -175,7 +176,8 @@ type antiSpywareProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Threat exception
 	ThreatExceptions []AntiSpywareProfileThreatException `pulumi:"threatExceptions"`
 }
@@ -205,7 +207,8 @@ type AntiSpywareProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Threat exception
 	ThreatExceptions AntiSpywareProfileThreatExceptionArrayInput
 }
@@ -416,6 +419,7 @@ func (o AntiSpywareProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o AntiSpywareProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

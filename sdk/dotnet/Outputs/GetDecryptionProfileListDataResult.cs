@@ -49,6 +49,9 @@ namespace Pulumi.Scm.Outputs
         /// Ssl protocol settings
         /// </summary>
         public readonly Outputs.GetDecryptionProfileListDataSslProtocolSettingsResult SslProtocolSettings;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

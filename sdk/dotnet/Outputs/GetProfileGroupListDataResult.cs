@@ -57,6 +57,9 @@ namespace Pulumi.Scm.Outputs
         /// Spyware
         /// </summary>
         public readonly ImmutableArray<string> Spywares;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// Url filtering

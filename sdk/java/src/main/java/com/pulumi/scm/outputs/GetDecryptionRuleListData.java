@@ -143,6 +143,10 @@ public final class GetDecryptionRuleListData {
      * 
      */
     private String targetRule;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return The destination security zone
@@ -338,6 +342,10 @@ public final class GetDecryptionRuleListData {
     public String targetRule() {
         return this.targetRule;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

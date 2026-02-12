@@ -65,6 +65,10 @@ public final class GetAuthenticationProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return User domain
@@ -148,6 +152,10 @@ public final class GetAuthenticationProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

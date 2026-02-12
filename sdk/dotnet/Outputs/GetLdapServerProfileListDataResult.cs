@@ -69,6 +69,9 @@ namespace Pulumi.Scm.Outputs
         /// Require SSL/TLS secured connection?
         /// </summary>
         public readonly bool Ssl;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// The search timeout (seconds)

@@ -54,27 +54,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/applicationFilter:ApplicationFilter example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/applicationFilter:ApplicationFilter example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/applicationFilter:ApplicationFilter example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type ApplicationFilter struct {
 	pulumi.CustomResourceState
 
@@ -120,7 +104,8 @@ type ApplicationFilter struct {
 	Tagging ApplicationFilterTaggingPtrOutput `pulumi:"tagging"`
 	// Technology
 	Technologies pulumi.StringArrayOutput `pulumi:"technologies"`
-	Tfid         pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// only True is a valid value
 	TransfersFiles pulumi.BoolPtrOutput `pulumi:"transfersFiles"`
 	// only True is a valid value
@@ -201,7 +186,8 @@ type applicationFilterState struct {
 	Tagging *ApplicationFilterTagging `pulumi:"tagging"`
 	// Technology
 	Technologies []string `pulumi:"technologies"`
-	Tfid         *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// only True is a valid value
 	TransfersFiles *bool `pulumi:"transfersFiles"`
 	// only True is a valid value
@@ -253,7 +239,8 @@ type ApplicationFilterState struct {
 	Tagging ApplicationFilterTaggingPtrInput
 	// Technology
 	Technologies pulumi.StringArrayInput
-	Tfid         pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// only True is a valid value
 	TransfersFiles pulumi.BoolPtrInput
 	// only True is a valid value
@@ -555,6 +542,7 @@ func (o ApplicationFilterOutput) Technologies() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringArrayOutput { return v.Technologies }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o ApplicationFilterOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

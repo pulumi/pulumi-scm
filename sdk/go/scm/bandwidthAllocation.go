@@ -66,12 +66,6 @@ import (
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bandwidthAllocation:BandwidthAllocation example <name_value_of_the_resource>
-// ```
 type BandwidthAllocation struct {
 	pulumi.CustomResourceState
 
@@ -83,7 +77,8 @@ type BandwidthAllocation struct {
 	Qos BandwidthAllocationQosPtrOutput `pulumi:"qos"`
 	// Spn name list
 	SpnNameLists pulumi.StringArrayOutput `pulumi:"spnNameLists"`
-	Tfid         pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewBandwidthAllocation registers a new resource with the given unique name, arguments, and options.
@@ -127,7 +122,8 @@ type bandwidthAllocationState struct {
 	Qos *BandwidthAllocationQos `pulumi:"qos"`
 	// Spn name list
 	SpnNameLists []string `pulumi:"spnNameLists"`
-	Tfid         *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type BandwidthAllocationState struct {
@@ -139,7 +135,8 @@ type BandwidthAllocationState struct {
 	Qos BandwidthAllocationQosPtrInput
 	// Spn name list
 	SpnNameLists pulumi.StringArrayInput
-	Tfid         pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (BandwidthAllocationState) ElementType() reflect.Type {
@@ -276,6 +273,7 @@ func (o BandwidthAllocationOutput) SpnNameLists() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *BandwidthAllocation) pulumi.StringArrayOutput { return v.SpnNameLists }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o BandwidthAllocationOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *BandwidthAllocation) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

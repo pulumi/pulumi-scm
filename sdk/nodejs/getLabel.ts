@@ -45,6 +45,9 @@ export interface GetLabelResult {
      * The name of the label
      */
     readonly name: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**

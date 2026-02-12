@@ -141,27 +141,11 @@ import javax.annotation.Nullable;
  * 
  * The following command can be used to import a resource not managed by Terraform:
  * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/appOverrideRule:AppOverrideRule example folder:::id
- * ```
+ * or
  * 
  * or
  * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/appOverrideRule:AppOverrideRule example :snippet::id
- * ```
- * 
- * or
- * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/appOverrideRule:AppOverrideRule example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  * 
  */
 @ResourceType(type="scm:index/appOverrideRule:AppOverrideRule")
@@ -440,9 +424,17 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
     public Output<Optional<String>> targetRule() {
         return Codegen.optional(this.targetRule);
     }
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Output<String> tfid() {
         return this.tfid;
     }

@@ -61,6 +61,9 @@ namespace Pulumi.Scm.Outputs
         /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// threat id range &lt;15000-18000&gt; and &lt;6900001-7000000&gt;

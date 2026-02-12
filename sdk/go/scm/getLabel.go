@@ -38,6 +38,7 @@ type LookupLabelResult struct {
 	Id string `pulumi:"id"`
 	// The name of the label
 	Name string `pulumi:"name"`
+	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
 }
 
@@ -92,6 +93,7 @@ func (o LookupLabelResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLabelResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupLabelResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLabelResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -65,6 +65,9 @@ namespace Pulumi.Scm.Outputs
         /// Allow telnet? Seriously, why would you do this?!?
         /// </summary>
         public readonly bool Telnet;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// Allow User-ID?

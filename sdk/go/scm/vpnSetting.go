@@ -50,27 +50,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/vpnSetting:VpnSetting example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/vpnSetting:VpnSetting example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/vpnSetting:VpnSetting example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type VpnSetting struct {
 	pulumi.CustomResourceState
 
@@ -84,7 +68,8 @@ type VpnSetting struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Vpn
 	Vpn VpnSettingVpnPtrOutput `pulumi:"vpn"`
 }
@@ -129,7 +114,8 @@ type vpnSettingState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Vpn
 	Vpn *VpnSettingVpn `pulumi:"vpn"`
 }
@@ -145,7 +131,8 @@ type VpnSettingState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Vpn
 	Vpn VpnSettingVpnPtrInput
 }
@@ -291,6 +278,7 @@ func (o VpnSettingOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VpnSetting) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o VpnSettingOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *VpnSetting) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

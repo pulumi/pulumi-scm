@@ -18,27 +18,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/mfaServer:MfaServer example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/mfaServer:MfaServer example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/mfaServer:MfaServer example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type MfaServer struct {
 	pulumi.CustomResourceState
 
@@ -60,7 +44,8 @@ type MfaServer struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewMfaServer registers a new resource with the given unique name, arguments, and options.
@@ -118,7 +103,8 @@ type mfaServerState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type MfaServerState struct {
@@ -140,7 +126,8 @@ type MfaServerState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (MfaServerState) ElementType() reflect.Type {
@@ -312,6 +299,7 @@ func (o MfaServerOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *MfaServer) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o MfaServerOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *MfaServer) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -31,6 +31,10 @@ public final class GetUpdateScheduleListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Update schedule
@@ -67,6 +71,10 @@ public final class GetUpdateScheduleListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

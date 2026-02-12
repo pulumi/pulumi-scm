@@ -5245,6 +5245,9 @@ export interface GetAddressGroupListData {
      * Tags for address group object
      */
     tags: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -5308,6 +5311,9 @@ export interface GetAddressListData {
      * Tags assocaited with the address object
      */
     tags: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -5529,6 +5535,9 @@ export interface GetAggregateInterfaceListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -5754,6 +5763,9 @@ export interface GetAntiSpywareProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Threat exception
@@ -6324,6 +6336,9 @@ export interface GetAntiSpywareSignatureListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * threat id range <15000-18000> and <6900001-7000000>
@@ -6974,6 +6989,9 @@ export interface GetAppOverrideRuleListData {
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * To
@@ -7109,6 +7127,9 @@ export interface GetApplicationFilterListData {
      * Technology
      */
     technologies: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * only True is a valid value
@@ -7175,6 +7196,9 @@ export interface GetApplicationGroupListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -7283,6 +7307,9 @@ export interface GetApplicationListData {
      * Technology
      */
     technology: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * timeout in seconds
@@ -7732,6 +7759,9 @@ export interface GetAuthenticationProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * User domain
@@ -8170,6 +8200,9 @@ export interface GetAuthenticationRuleListData {
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * The authentication session timeout (seconds)
@@ -8206,6 +8239,9 @@ export interface GetAuthenticationSequenceListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Use domain to determine authentication profile?
@@ -8249,6 +8285,9 @@ export interface GetAuthenticationSettingListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -8566,6 +8605,9 @@ export interface GetAutoVpnClusterListData {
      * VPN cluster name
      */
     name: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * VPN cluster type
@@ -8871,6 +8913,9 @@ export interface GetBandwidthAllocationListData {
      * Spn name list
      */
     spnNameLists: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -9366,6 +9411,9 @@ export interface GetBgpAddressFamilyProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -9827,6 +9875,9 @@ export interface GetBgpAuthProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -10082,6 +10133,9 @@ export interface GetBgpFilteringProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -10400,6 +10454,9 @@ export interface GetBgpRedistributionProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -10499,6 +10556,9 @@ export interface GetBgpRouteMapListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -11433,6 +11493,9 @@ export interface GetBgpRouteMapRedistributionListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -12927,6 +12990,9 @@ export interface GetCertificateProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Use CRL?
@@ -13046,6 +13112,9 @@ export interface GetContentIdSettingListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -13116,6 +13185,9 @@ export interface GetDecryptionExclusionListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -13156,6 +13228,9 @@ export interface GetDecryptionProfileListData {
      * Ssl protocol settings
      */
     sslProtocolSettings: outputs.GetDecryptionProfileListDataSslProtocolSettings;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -13552,6 +13627,9 @@ export interface GetDecryptionRuleListData {
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * The destination security zone
@@ -13630,6 +13708,9 @@ export interface GetDeviceRedistributionCollectorListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -13680,6 +13761,9 @@ export interface GetDhcpInterfaceListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -14205,6 +14289,9 @@ export interface GetDnsProxyListData {
      * Tcp queries
      */
     tcpQueries: outputs.GetDnsProxyListDataTcpQueries;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Udp queries
@@ -14512,6 +14599,9 @@ export interface GetDnsSecurityProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -14898,6 +14988,9 @@ export interface GetDosProtectionProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Type
@@ -15280,6 +15373,9 @@ export interface GetDosProtectionRuleListData {
      * List of tags
      */
     tags: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * List of destination zones
@@ -15424,6 +15520,9 @@ export interface GetDynamicUserGroupListData {
      * Tags associated with the dynamic user group
      */
     tags: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -15685,6 +15784,9 @@ export interface GetEthernetInterfaceListData {
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     tap: outputs.GetEthernetInterfaceListDataTap;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -15926,6 +16028,9 @@ export interface GetExternalDynamicListListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Type configuration for External Dynamic List
@@ -17156,6 +17261,9 @@ export interface GetFileBlockingProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -17230,6 +17338,9 @@ export interface GetFolderListData {
      * Snippets associated with the folder
      */
     snippets: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -17330,6 +17441,9 @@ export interface GetGeneralSettingListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -18192,6 +18306,9 @@ export interface GetHipObjectListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -19774,6 +19891,9 @@ export interface GetHipProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -19851,6 +19971,9 @@ export interface GetHttpHeaderProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -20768,6 +20891,9 @@ export interface GetHttpServerProfileListData {
      * Register tags on match
      */
     tagRegistration: boolean;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -21735,6 +21861,9 @@ export interface GetIkeCryptoProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -21866,6 +21995,9 @@ export interface GetIkeGatewayListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -22234,6 +22366,9 @@ export interface GetInterfaceManagementProfileListData {
      * Allow telnet? Seriously, why would you do this?!?
      */
     telnet: boolean;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Allow User-ID?
@@ -22376,6 +22511,9 @@ export interface GetIpsecCryptoProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -22630,6 +22768,9 @@ export interface GetIpsecTunnelListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
@@ -22842,6 +22983,9 @@ export interface GetKerberosServerProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -22888,6 +23032,9 @@ export interface GetLabelListData {
      * The name of the label
      */
     name: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -22920,6 +23067,9 @@ export interface GetLayer2SubinterfaceListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * VLAN tag
@@ -23067,6 +23217,9 @@ export interface GetLayer3SubinterfaceListData {
      * VLAN tag
      */
     tag: number;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -23206,6 +23359,9 @@ export interface GetLdapServerProfileListData {
      * Require SSL/TLS secured connection?
      */
     ssl: boolean;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * The search timeout (seconds)
@@ -23276,6 +23432,9 @@ export interface GetLinkTagListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -23312,6 +23471,9 @@ export interface GetLldpProfileListData {
      * SNMP syslog notification
      */
     snmpSyslogNotification: boolean;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -23442,6 +23604,9 @@ export interface GetLocalUserGroupListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * The local user group users
@@ -23482,6 +23647,9 @@ export interface GetLocalUserListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -23514,6 +23682,9 @@ export interface GetLogForwardingProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -23612,6 +23783,9 @@ export interface GetLogicalRouterListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Vrf
@@ -33515,6 +33689,9 @@ export interface GetLoopbackInterfaceListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -33586,6 +33763,9 @@ export interface GetManagementInterfaceListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -33858,6 +34038,9 @@ export interface GetMotdBannerSettingListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -34081,6 +34264,9 @@ export interface GetNatRuleListData {
      * NAT rule tags
      */
     tags: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Destination interface of the original packet
@@ -34344,6 +34530,9 @@ export interface GetOspfAuthProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -34541,6 +34730,9 @@ export interface GetPbfRuleListData {
      * Tags
      */
     tags: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -34688,6 +34880,9 @@ export interface GetProfileGroupListData {
      * Spyware
      */
     spywares: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Url filtering
@@ -34850,6 +35045,9 @@ export interface GetQosPolicyRuleListData {
      * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
      */
     targetRule: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -35070,6 +35268,9 @@ export interface GetQosProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -35200,6 +35401,9 @@ export interface GetRadiusServerProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * The RADIUS server authentication timeout (seconds)
@@ -35417,6 +35621,9 @@ export interface GetRegionListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -35545,6 +35752,9 @@ export interface GetRemoteNetworkListData {
      * Subnets
      */
     subnets: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -35764,6 +35974,9 @@ export interface GetRouteAccessListListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Type
@@ -35950,6 +36163,9 @@ export interface GetRouteCommunityListListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Type
@@ -36171,6 +36387,9 @@ export interface GetRoutePathAccessListListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -36214,6 +36433,9 @@ export interface GetRoutePrefixListListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Address Family Type
@@ -36384,6 +36606,9 @@ export interface GetSamlServerProfileListData {
      * Identity provider SSO URL
      */
     ssoUrl: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Validate the identity provider certificate?
@@ -36493,6 +36718,9 @@ export interface GetScepProfileListData {
      * Subject
      */
     subject: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Use as digital signature?
@@ -36636,6 +36864,9 @@ export interface GetScheduleListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -36782,6 +37013,9 @@ export interface GetSdwanErrorCorrectionProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -36872,6 +37106,9 @@ export interface GetSdwanPathQualityProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -37063,6 +37300,9 @@ export interface GetSdwanRuleListData {
      * List of tags
      */
     tags: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * List of destination zones
@@ -37102,6 +37342,9 @@ export interface GetSdwanSaasQualityProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -37277,6 +37520,9 @@ export interface GetSdwanTrafficDistributionProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Traffic distribution
@@ -37614,6 +37860,9 @@ export interface GetSecurityRuleListData {
      * Tenant restrictions
      */
     tenantRestrictions: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * The destination security zone(s)
@@ -37889,6 +38138,9 @@ export interface GetServiceConnectionGroupListData {
      * Target
      */
     targets: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -37957,6 +38209,9 @@ export interface GetServiceConnectionListData {
      * Subnets
      */
     subnets: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -38126,6 +38381,9 @@ export interface GetServiceGroupListData {
      * Tags associated with the service group
      */
     tags: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -38162,6 +38420,9 @@ export interface GetServiceListData {
      * Tags for service object
      */
     tags: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -38316,6 +38577,9 @@ export interface GetServiceRouteListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -38484,6 +38748,9 @@ export interface GetServiceSettingListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -38968,6 +39235,9 @@ export interface GetSessionSettingListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -39284,6 +39554,9 @@ export interface GetSessionTimeoutListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -39458,6 +39731,9 @@ export interface GetSiteListData {
      * The state in which the site exists
      */
     state: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * The site type
@@ -39554,6 +39830,9 @@ export interface GetSnippetListData {
      * The name of the snippet
      */
     name: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * The snippet type
@@ -39676,6 +39955,9 @@ export interface GetSyslogServerProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -39852,6 +40134,9 @@ export interface GetTacacsServerProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * The TACACS+ timeout (seconds)
@@ -39930,6 +40215,9 @@ export interface GetTagListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -39954,6 +40242,9 @@ export interface GetTcpSettingListData {
      * Tcp
      */
     tcp: outputs.GetTcpSettingListDataTcp;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -40064,6 +40355,9 @@ export interface GetTlsServiceProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -40234,6 +40528,9 @@ export interface GetTrafficSteeringRuleListData {
      * Source
      */
     sources: string[];
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -40357,6 +40654,9 @@ export interface GetTunnelInterfaceListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -40424,6 +40724,9 @@ export interface GetUpdateScheduleListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Update schedule
@@ -41203,6 +41506,9 @@ export interface GetUrlAccessProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
 }
 
@@ -41290,6 +41596,9 @@ export interface GetUrlCategoryListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Type
@@ -41326,6 +41635,9 @@ export interface GetVariableListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * The variable type
@@ -41477,6 +41789,9 @@ export interface GetVlanInterfaceListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * VLAN tag
@@ -41584,6 +41899,9 @@ export interface GetVpnSettingListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Vpn
@@ -41664,6 +41982,9 @@ export interface GetVulnerabilityProtectionProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Threat exception
@@ -42309,6 +42630,9 @@ export interface GetVulnerabilityProtectionSignatureListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * threat id range <41000-45000> and <6800001-6900000>
@@ -42928,6 +43252,9 @@ export interface GetWildfireAntiVirusProfileListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Threat exception
@@ -43089,6 +43416,9 @@ export interface GetZoneListData {
      * The snippet of the item.
      */
     snippet: string;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * User acl
@@ -43690,6 +44020,9 @@ export interface GetZoneProtectionProfileListData {
      * Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
      */
     tcpTimestampStrip: boolean;
+    /**
+     * The Terraform ID.
+     */
     tfid: string;
     /**
      * Discard packets with the Timestamp IP option set.

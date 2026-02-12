@@ -116,6 +116,7 @@ class _DeviceRedistributionCollectorState:
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -183,6 +184,9 @@ class _DeviceRedistributionCollectorState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -233,27 +237,11 @@ class DeviceRedistributionCollector(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/deviceRedistributionCollector:DeviceRedistributionCollector example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/deviceRedistributionCollector:DeviceRedistributionCollector example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/deviceRedistributionCollector:DeviceRedistributionCollector example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -304,27 +292,11 @@ class DeviceRedistributionCollector(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/deviceRedistributionCollector:DeviceRedistributionCollector example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/deviceRedistributionCollector:DeviceRedistributionCollector example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/deviceRedistributionCollector:DeviceRedistributionCollector example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param DeviceRedistributionCollectorArgs args: The arguments to use to populate this resource's properties.
@@ -389,6 +361,7 @@ class DeviceRedistributionCollector(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -440,5 +413,8 @@ class DeviceRedistributionCollector(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 

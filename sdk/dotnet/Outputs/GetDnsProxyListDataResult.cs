@@ -61,6 +61,9 @@ namespace Pulumi.Scm.Outputs
         /// Tcp queries
         /// </summary>
         public readonly Outputs.GetDnsProxyListDataTcpQueriesResult TcpQueries;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// Udp queries

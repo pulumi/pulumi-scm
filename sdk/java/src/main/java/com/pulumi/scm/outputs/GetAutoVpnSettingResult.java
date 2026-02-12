@@ -28,6 +28,10 @@ public final class GetAutoVpnSettingResult {
      * 
      */
     private String id;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return VPN address pool
@@ -57,6 +61,10 @@ public final class GetAutoVpnSettingResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

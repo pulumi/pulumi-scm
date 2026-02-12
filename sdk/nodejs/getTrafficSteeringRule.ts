@@ -76,6 +76,9 @@ export interface GetTrafficSteeringRuleResult {
      * Source
      */
     readonly sources: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**

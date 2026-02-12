@@ -29,6 +29,9 @@ namespace Pulumi.Scm.Outputs
         /// The name of the snippet
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// The snippet type

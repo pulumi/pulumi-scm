@@ -33,19 +33,7 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
- * ```
- *
  * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
- * ```
  */
 export class BgpRouting extends pulumi.CustomResource {
     /**
@@ -95,6 +83,9 @@ export class BgpRouting extends pulumi.CustomResource {
      * Routing preference
      */
     declare public readonly routingPreference: pulumi.Output<outputs.BgpRoutingRoutingPreference | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * Withdraw static route
@@ -160,6 +151,9 @@ export interface BgpRoutingState {
      * Routing preference
      */
     routingPreference?: pulumi.Input<inputs.BgpRoutingRoutingPreference>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * Withdraw static route

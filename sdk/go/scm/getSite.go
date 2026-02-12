@@ -87,7 +87,8 @@ type LookupSiteResult struct {
 	Qos GetSiteQos `pulumi:"qos"`
 	// The state in which the site exists
 	State string `pulumi:"state"`
-	Tfid  string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// The site type
 	Type string `pulumi:"type"`
 	// The postal code in which the site exists
@@ -197,6 +198,7 @@ func (o LookupSiteResultOutput) State() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSiteResult) string { return v.State }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupSiteResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSiteResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

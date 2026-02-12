@@ -69,27 +69,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bgpFilteringProfile:BgpFilteringProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bgpFilteringProfile:BgpFilteringProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bgpFilteringProfile:BgpFilteringProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type BgpFilteringProfile struct {
 	pulumi.CustomResourceState
 
@@ -109,7 +93,8 @@ type BgpFilteringProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewBgpFilteringProfile registers a new resource with the given unique name, arguments, and options.
@@ -158,7 +143,8 @@ type bgpFilteringProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type BgpFilteringProfileState struct {
@@ -178,7 +164,8 @@ type BgpFilteringProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (BgpFilteringProfileState) ElementType() reflect.Type {
@@ -345,6 +332,7 @@ func (o BgpFilteringProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpFilteringProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o BgpFilteringProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *BgpFilteringProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -75,27 +75,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceSetting:ServiceSetting example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceSetting:ServiceSetting example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceSetting:ServiceSetting example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type ServiceSetting struct {
 	pulumi.CustomResourceState
 
@@ -113,7 +97,8 @@ type ServiceSetting struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewServiceSetting registers a new resource with the given unique name, arguments, and options.
@@ -164,7 +149,8 @@ type serviceSettingState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type ServiceSettingState struct {
@@ -182,7 +168,8 @@ type ServiceSettingState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (ServiceSettingState) ElementType() reflect.Type {
@@ -336,6 +323,7 @@ func (o ServiceSettingOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceSetting) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o ServiceSettingOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceSetting) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

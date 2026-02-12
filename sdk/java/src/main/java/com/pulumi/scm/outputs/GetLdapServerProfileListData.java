@@ -85,6 +85,10 @@ public final class GetLdapServerProfileListData {
      * 
      */
     private Boolean ssl;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return The search timeout (seconds)
@@ -196,6 +200,10 @@ public final class GetLdapServerProfileListData {
     public Boolean ssl() {
         return this.ssl;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

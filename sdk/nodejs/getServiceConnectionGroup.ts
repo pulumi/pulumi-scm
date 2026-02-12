@@ -77,6 +77,9 @@ export interface GetServiceConnectionGroupResult {
      * Target
      */
     readonly targets: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**

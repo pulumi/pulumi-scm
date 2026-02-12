@@ -38719,7 +38719,8 @@ type GetLoopbackInterfaceListData struct {
 	Name string `pulumi:"name"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetLoopbackInterfaceListDataInput is an input type that accepts GetLoopbackInterfaceListDataArgs and GetLoopbackInterfaceListDataOutput values.
@@ -38756,7 +38757,8 @@ type GetLoopbackInterfaceListDataArgs struct {
 	Name pulumi.StringInput `pulumi:"name"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetLoopbackInterfaceListDataArgs) ElementType() reflect.Type {
@@ -38865,6 +38867,7 @@ func (o GetLoopbackInterfaceListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetLoopbackInterfaceListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -39281,7 +39284,8 @@ type GetManagementInterfaceListData struct {
 	ManagementInterface GetManagementInterfaceListDataManagementInterface `pulumi:"managementInterface"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetManagementInterfaceListDataInput is an input type that accepts GetManagementInterfaceListDataArgs and GetManagementInterfaceListDataOutput values.
@@ -39306,7 +39310,8 @@ type GetManagementInterfaceListDataArgs struct {
 	ManagementInterface GetManagementInterfaceListDataManagementInterfaceInput `pulumi:"managementInterface"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetManagementInterfaceListDataArgs) ElementType() reflect.Type {
@@ -39387,6 +39392,7 @@ func (o GetManagementInterfaceListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetManagementInterfaceListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetManagementInterfaceListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetManagementInterfaceListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -40542,7 +40548,8 @@ type GetMotdBannerSettingListData struct {
 	MotdAndBanner GetMotdBannerSettingListDataMotdAndBanner `pulumi:"motdAndBanner"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetMotdBannerSettingListDataInput is an input type that accepts GetMotdBannerSettingListDataArgs and GetMotdBannerSettingListDataOutput values.
@@ -40567,7 +40574,8 @@ type GetMotdBannerSettingListDataArgs struct {
 	MotdAndBanner GetMotdBannerSettingListDataMotdAndBannerInput `pulumi:"motdAndBanner"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetMotdBannerSettingListDataArgs) ElementType() reflect.Type {
@@ -40646,6 +40654,7 @@ func (o GetMotdBannerSettingListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetMotdBannerSettingListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetMotdBannerSettingListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetMotdBannerSettingListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -41221,7 +41230,8 @@ type GetNatRuleListData struct {
 	Sources []string `pulumi:"sources"`
 	// NAT rule tags
 	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// Destination interface of the original packet
 	ToInterface string `pulumi:"toInterface"`
 	// Destination zone of the original packet
@@ -41276,7 +41286,8 @@ type GetNatRuleListDataArgs struct {
 	Sources pulumi.StringArrayInput `pulumi:"sources"`
 	// NAT rule tags
 	Tags pulumi.StringArrayInput `pulumi:"tags"`
-	Tfid pulumi.StringInput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// Destination interface of the original packet
 	ToInterface pulumi.StringInput `pulumi:"toInterface"`
 	// Destination zone of the original packet
@@ -41426,6 +41437,7 @@ func (o GetNatRuleListDataOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetNatRuleListData) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o GetNatRuleListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetNatRuleListData) string { return v.Tfid }).(pulumi.StringOutput)
 }

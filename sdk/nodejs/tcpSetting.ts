@@ -35,27 +35,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/tcpSetting:TcpSetting example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/tcpSetting:TcpSetting example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/tcpSetting:TcpSetting example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class TcpSetting extends pulumi.CustomResource {
     /**
@@ -105,6 +89,9 @@ export class TcpSetting extends pulumi.CustomResource {
      * Tcp
      */
     declare public readonly tcp: pulumi.Output<outputs.TcpSettingTcp | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
@@ -162,6 +149,9 @@ export interface TcpSettingState {
      * Tcp
      */
     tcp?: pulumi.Input<inputs.TcpSettingTcp>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
 }
 

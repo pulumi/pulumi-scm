@@ -93,6 +93,9 @@ namespace Pulumi.Scm.Outputs
         /// Technology
         /// </summary>
         public readonly ImmutableArray<string> Technologies;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// only True is a valid value

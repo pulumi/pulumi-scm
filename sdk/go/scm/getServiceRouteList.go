@@ -86,7 +86,8 @@ type GetServiceRouteListResult struct {
 	Offset *int `pulumi:"offset"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// The total number of items.
 	Total int `pulumi:"total"`
 }
@@ -175,6 +176,7 @@ func (o GetServiceRouteListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetServiceRouteListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o GetServiceRouteListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetServiceRouteListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -206,27 +206,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/logicalRouter:LogicalRouter example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/logicalRouter:LogicalRouter example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/logicalRouter:LogicalRouter example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type LogicalRouter struct {
 	pulumi.CustomResourceState
 
@@ -244,7 +228,8 @@ type LogicalRouter struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Vrf
 	Vrves LogicalRouterVrfArrayOutput `pulumi:"vrves"`
 }
@@ -293,7 +278,8 @@ type logicalRouterState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Vrf
 	Vrves []LogicalRouterVrf `pulumi:"vrves"`
 }
@@ -313,7 +299,8 @@ type LogicalRouterState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Vrf
 	Vrves LogicalRouterVrfArrayInput
 }
@@ -477,6 +464,7 @@ func (o LogicalRouterOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouter) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o LogicalRouterOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *LogicalRouter) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

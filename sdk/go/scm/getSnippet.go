@@ -73,6 +73,7 @@ type LookupSnippetResult struct {
 	Labels []string `pulumi:"labels"`
 	// The name of the snippet
 	Name string `pulumi:"name"`
+	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
 	// The snippet type
 	Type string `pulumi:"type"`
@@ -134,6 +135,7 @@ func (o LookupSnippetResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSnippetResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o LookupSnippetResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSnippetResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

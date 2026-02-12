@@ -61,7 +61,8 @@ type LookupBgpRoutingResult struct {
 	OutboundRoutesForServices []string `pulumi:"outboundRoutesForServices"`
 	// Routing preference
 	RoutingPreference GetBgpRoutingRoutingPreference `pulumi:"routingPreference"`
-	Tfid              string                         `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// Withdraw static route
 	WithdrawStaticRoute bool `pulumi:"withdrawStaticRoute"`
 }
@@ -118,6 +119,7 @@ func (o LookupBgpRoutingResultOutput) RoutingPreference() GetBgpRoutingRoutingPr
 	return o.ApplyT(func(v LookupBgpRoutingResult) GetBgpRoutingRoutingPreference { return v.RoutingPreference }).(GetBgpRoutingRoutingPreferenceOutput)
 }
 
+// The Terraform ID.
 func (o LookupBgpRoutingResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRoutingResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -121,6 +121,9 @@ export interface GetServiceConnectionResult {
      * Subnets
      */
     readonly subnets: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**

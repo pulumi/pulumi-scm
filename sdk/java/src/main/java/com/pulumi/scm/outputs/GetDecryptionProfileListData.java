@@ -59,6 +59,10 @@ public final class GetDecryptionProfileListData {
      * 
      */
     private GetDecryptionProfileListDataSslProtocolSettings sslProtocolSettings;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetDecryptionProfileListData() {}
@@ -125,6 +129,10 @@ public final class GetDecryptionProfileListData {
     public GetDecryptionProfileListDataSslProtocolSettings sslProtocolSettings() {
         return this.sslProtocolSettings;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

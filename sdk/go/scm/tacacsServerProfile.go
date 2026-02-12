@@ -68,27 +68,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/tacacsServerProfile:TacacsServerProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/tacacsServerProfile:TacacsServerProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/tacacsServerProfile:TacacsServerProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type TacacsServerProfile struct {
 	pulumi.CustomResourceState
 
@@ -110,7 +94,8 @@ type TacacsServerProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// The TACACS+ timeout (seconds)
 	Timeout pulumi.IntPtrOutput `pulumi:"timeout"`
 	// Use a single TACACS+ connection?
@@ -175,7 +160,8 @@ type tacacsServerProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// The TACACS+ timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
 	// Use a single TACACS+ connection?
@@ -201,7 +187,8 @@ type TacacsServerProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// The TACACS+ timeout (seconds)
 	Timeout pulumi.IntPtrInput
 	// Use a single TACACS+ connection?
@@ -385,6 +372,7 @@ func (o TacacsServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o TacacsServerProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -128,6 +128,9 @@ export class AntiSpywareProfile extends pulumi.CustomResource {
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * Threat exception
@@ -227,6 +230,9 @@ export interface AntiSpywareProfileState {
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * Threat exception

@@ -149,9 +149,17 @@ public class BgpAuthProfile extends com.pulumi.resources.CustomResource {
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Output<String> tfid() {
         return this.tfid;
     }

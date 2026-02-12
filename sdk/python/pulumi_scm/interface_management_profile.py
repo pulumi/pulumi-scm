@@ -311,6 +311,7 @@ class _InterfaceManagementProfileState:
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] ssh: Allow SSH?
         :param pulumi.Input[_builtins.bool] telnet: Allow telnet? Seriously, why would you do this?!?
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] userid_service: Allow User-ID?
         :param pulumi.Input[_builtins.bool] userid_syslog_listener_ssl: Allow User-ID syslog listener (SSL)?
         :param pulumi.Input[_builtins.bool] userid_syslog_listener_udp: Allow User-ID syslog listener (UDP)?
@@ -499,6 +500,9 @@ class _InterfaceManagementProfileState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -600,27 +604,11 @@ class InterfaceManagementProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -686,27 +674,11 @@ class InterfaceManagementProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param InterfaceManagementProfileArgs args: The arguments to use to populate this resource's properties.
@@ -812,6 +784,7 @@ class InterfaceManagementProfile(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] ssh: Allow SSH?
         :param pulumi.Input[_builtins.bool] telnet: Allow telnet? Seriously, why would you do this?!?
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] userid_service: Allow User-ID?
         :param pulumi.Input[_builtins.bool] userid_syslog_listener_ssl: Allow User-ID syslog listener (SSL)?
         :param pulumi.Input[_builtins.bool] userid_syslog_listener_udp: Allow User-ID syslog listener (UDP)?
@@ -941,6 +914,9 @@ class InterfaceManagementProfile(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

@@ -43,6 +43,10 @@ public final class GetBgpRoutingResult {
      * 
      */
     private GetBgpRoutingRoutingPreference routingPreference;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Withdraw static route
@@ -93,6 +97,10 @@ public final class GetBgpRoutingResult {
     public GetBgpRoutingRoutingPreference routingPreference() {
         return this.routingPreference;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

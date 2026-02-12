@@ -18,27 +18,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dnsProxy:DnsProxy example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dnsProxy:DnsProxy example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dnsProxy:DnsProxy example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type DnsProxy struct {
 	pulumi.CustomResourceState
 
@@ -68,7 +52,8 @@ type DnsProxy struct {
 	StaticEntries DnsProxyStaticEntryArrayOutput `pulumi:"staticEntries"`
 	// Tcp queries
 	TcpQueries DnsProxyTcpQueriesPtrOutput `pulumi:"tcpQueries"`
-	Tfid       pulumi.StringOutput         `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Udp queries
 	UdpQueries DnsProxyUdpQueriesPtrOutput `pulumi:"udpQueries"`
 }
@@ -132,7 +117,8 @@ type dnsProxyState struct {
 	StaticEntries []DnsProxyStaticEntry `pulumi:"staticEntries"`
 	// Tcp queries
 	TcpQueries *DnsProxyTcpQueries `pulumi:"tcpQueries"`
-	Tfid       *string             `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Udp queries
 	UdpQueries *DnsProxyUdpQueries `pulumi:"udpQueries"`
 }
@@ -164,7 +150,8 @@ type DnsProxyState struct {
 	StaticEntries DnsProxyStaticEntryArrayInput
 	// Tcp queries
 	TcpQueries DnsProxyTcpQueriesPtrInput
-	Tfid       pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Udp queries
 	UdpQueries DnsProxyUdpQueriesPtrInput
 }
@@ -382,6 +369,7 @@ func (o DnsProxyOutput) TcpQueries() DnsProxyTcpQueriesPtrOutput {
 	return o.ApplyT(func(v *DnsProxy) DnsProxyTcpQueriesPtrOutput { return v.TcpQueries }).(DnsProxyTcpQueriesPtrOutput)
 }
 
+// The Terraform ID.
 func (o DnsProxyOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *DnsProxy) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

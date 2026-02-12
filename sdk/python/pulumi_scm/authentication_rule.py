@@ -521,6 +521,7 @@ class _AuthenticationRuleState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
         :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
         """
@@ -888,6 +889,9 @@ class _AuthenticationRuleState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -1053,27 +1057,11 @@ class AuthenticationRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/authenticationRule:AuthenticationRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/authenticationRule:AuthenticationRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/authenticationRule:AuthenticationRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1215,27 +1203,11 @@ class AuthenticationRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/authenticationRule:AuthenticationRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/authenticationRule:AuthenticationRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/authenticationRule:AuthenticationRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param AuthenticationRuleArgs args: The arguments to use to populate this resource's properties.
@@ -1400,6 +1372,7 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
         :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
         """
@@ -1644,6 +1617,9 @@ class AuthenticationRule(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

@@ -36,6 +36,10 @@ public final class GetGeneralSettingListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetGeneralSettingListData() {}
@@ -74,6 +78,10 @@ public final class GetGeneralSettingListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

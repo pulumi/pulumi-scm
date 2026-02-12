@@ -48,6 +48,10 @@ public final class GetSyslogServerProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetSyslogServerProfileListData() {}
@@ -100,6 +104,10 @@ public final class GetSyslogServerProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

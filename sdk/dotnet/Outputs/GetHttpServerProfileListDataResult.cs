@@ -45,6 +45,9 @@ namespace Pulumi.Scm.Outputs
         /// Register tags on match
         /// </summary>
         public readonly bool TagRegistration;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

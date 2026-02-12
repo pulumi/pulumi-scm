@@ -143,6 +143,10 @@ public final class GetAuthenticationRuleListData {
      * 
      */
     private String targetRule;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return The authentication session timeout (seconds)
@@ -338,6 +342,10 @@ public final class GetAuthenticationRuleListData {
     public String targetRule() {
         return this.targetRule;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

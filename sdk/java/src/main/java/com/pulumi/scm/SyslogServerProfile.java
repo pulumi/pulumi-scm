@@ -136,27 +136,11 @@ import javax.annotation.Nullable;
  * 
  * The following command can be used to import a resource not managed by Terraform:
  * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example folder:::id
- * ```
+ * or
  * 
  * or
  * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example :snippet::id
- * ```
- * 
- * or
- * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  * 
  */
 @ResourceType(type="scm:index/syslogServerProfile:SyslogServerProfile")
@@ -253,9 +237,17 @@ public class SyslogServerProfile extends com.pulumi.resources.CustomResource {
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Output<String> tfid() {
         return this.tfid;
     }

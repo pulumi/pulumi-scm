@@ -51,27 +51,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/samlServerProfile:SamlServerProfile example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/samlServerProfile:SamlServerProfile example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/samlServerProfile:SamlServerProfile example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class SamlServerProfile extends pulumi.CustomResource {
     /**
@@ -149,6 +133,9 @@ export class SamlServerProfile extends pulumi.CustomResource {
      * Identity provider SSO URL
      */
     declare public readonly ssoUrl: pulumi.Output<string>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * Validate the identity provider certificate?
@@ -272,6 +259,9 @@ export interface SamlServerProfileState {
      * Identity provider SSO URL
      */
     ssoUrl?: pulumi.Input<string>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * Validate the identity provider certificate?

@@ -16,27 +16,11 @@ namespace Pulumi.Scm
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
     /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example folder:::id
-    /// ```
+    /// or
     /// 
     /// or
     /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example :snippet::id
-    /// ```
-    /// 
-    /// or
-    /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example ::device:id
-    /// ```
+    /// **Note:** Please provide just one of folder, snippet, or device for the import command.
     /// </summary>
     [ScmResourceType("scm:index/ldapServerProfile:LdapServerProfile")]
     public partial class LdapServerProfile : global::Pulumi.CustomResource
@@ -123,6 +107,9 @@ namespace Pulumi.Scm
         [Output("ssl")]
         public Output<bool?> Ssl { get; private set; } = null!;
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
@@ -409,6 +396,9 @@ namespace Pulumi.Scm
         [Input("ssl")]
         public Input<bool>? Ssl { get; set; }
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }
 

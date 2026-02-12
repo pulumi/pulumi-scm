@@ -17,27 +17,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/routeAccessList:RouteAccessList example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/routeAccessList:RouteAccessList example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/routeAccessList:RouteAccessList example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type RouteAccessList struct {
 	pulumi.CustomResourceState
 
@@ -55,7 +39,8 @@ type RouteAccessList struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Type
 	Type RouteAccessListTypePtrOutput `pulumi:"type"`
 }
@@ -104,7 +89,8 @@ type routeAccessListState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Type
 	Type *RouteAccessListType `pulumi:"type"`
 }
@@ -124,7 +110,8 @@ type RouteAccessListState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Type
 	Type RouteAccessListTypePtrInput
 }
@@ -288,6 +275,7 @@ func (o RouteAccessListOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RouteAccessList) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o RouteAccessListOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *RouteAccessList) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

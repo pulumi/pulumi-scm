@@ -134,6 +134,7 @@ class _BgpAuthProfileState:
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -229,6 +230,9 @@ class _BgpAuthProfileState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -368,6 +372,7 @@ class BgpAuthProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -437,5 +442,8 @@ class BgpAuthProfile(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 

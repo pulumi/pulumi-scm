@@ -116,27 +116,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/updateSchedule:UpdateSchedule example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/updateSchedule:UpdateSchedule example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/updateSchedule:UpdateSchedule example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type UpdateSchedule struct {
 	pulumi.CustomResourceState
 
@@ -150,7 +134,8 @@ type UpdateSchedule struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Update schedule
 	UpdateSchedule UpdateScheduleUpdateSchedulePtrOutput `pulumi:"updateSchedule"`
 }
@@ -195,7 +180,8 @@ type updateScheduleState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Update schedule
 	UpdateSchedule *UpdateScheduleUpdateSchedule `pulumi:"updateSchedule"`
 }
@@ -211,7 +197,8 @@ type UpdateScheduleState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Update schedule
 	UpdateSchedule UpdateScheduleUpdateSchedulePtrInput
 }
@@ -357,6 +344,7 @@ func (o UpdateScheduleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UpdateSchedule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o UpdateScheduleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *UpdateSchedule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

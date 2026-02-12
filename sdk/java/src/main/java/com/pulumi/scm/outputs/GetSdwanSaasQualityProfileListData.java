@@ -41,6 +41,10 @@ public final class GetSdwanSaasQualityProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetSdwanSaasQualityProfileListData() {}
@@ -86,6 +90,10 @@ public final class GetSdwanSaasQualityProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

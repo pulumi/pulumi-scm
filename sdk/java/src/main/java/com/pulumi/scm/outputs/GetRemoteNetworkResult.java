@@ -79,6 +79,10 @@ public final class GetRemoteNetworkResult {
      * 
      */
     private List<String> subnets;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetRemoteNetworkResult() {}
@@ -173,6 +177,10 @@ public final class GetRemoteNetworkResult {
     public List<String> subnets() {
         return this.subnets;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

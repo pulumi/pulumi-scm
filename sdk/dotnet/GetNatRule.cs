@@ -270,6 +270,9 @@ namespace Pulumi.Scm
         /// NAT rule tags
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// Destination interface of the original packet

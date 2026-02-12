@@ -29,6 +29,9 @@ namespace Pulumi.Scm.Outputs
         /// Spn name list
         /// </summary>
         public readonly ImmutableArray<string> SpnNameLists;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

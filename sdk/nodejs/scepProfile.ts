@@ -115,27 +115,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/scepProfile:ScepProfile example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/scepProfile:ScepProfile example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/scepProfile:ScepProfile example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class ScepProfile extends pulumi.CustomResource {
     /**
@@ -229,6 +213,9 @@ export class ScepProfile extends pulumi.CustomResource {
      * Subject
      */
     declare public readonly subject: pulumi.Output<string>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * Use as digital signature?
@@ -384,6 +371,9 @@ export interface ScepProfileState {
      * Subject
      */
     subject?: pulumi.Input<string>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * Use as digital signature?

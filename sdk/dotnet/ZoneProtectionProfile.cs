@@ -16,27 +16,11 @@ namespace Pulumi.Scm
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
     /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example folder:::id
-    /// ```
+    /// or
     /// 
     /// or
     /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example :snippet::id
-    /// ```
-    /// 
-    /// or
-    /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example ::device:id
-    /// ```
+    /// **Note:** Please provide just one of folder, snippet, or device for the import command.
     /// </summary>
     [ScmResourceType("scm:index/zoneProtectionProfile:ZoneProtectionProfile")]
     public partial class ZoneProtectionProfile : global::Pulumi.CustomResource
@@ -269,6 +253,9 @@ namespace Pulumi.Scm
         [Output("tcpTimestampStrip")]
         public Output<bool?> TcpTimestampStrip { get; private set; } = null!;
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
@@ -830,6 +817,9 @@ namespace Pulumi.Scm
         [Input("tcpTimestampStrip")]
         public Input<bool>? TcpTimestampStrip { get; set; }
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }
 

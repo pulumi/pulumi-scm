@@ -36,6 +36,10 @@ public final class GetDeviceRedistributionCollectorListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetDeviceRedistributionCollectorListData() {}
@@ -74,6 +78,10 @@ public final class GetDeviceRedistributionCollectorListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

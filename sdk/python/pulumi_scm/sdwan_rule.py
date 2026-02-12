@@ -411,6 +411,7 @@ class _SdwanRuleState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: List of tags
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: List of destination zones
         """
         if action is not None:
@@ -705,6 +706,9 @@ class _SdwanRuleState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -759,27 +763,11 @@ class SdwanRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/sdwanRule:SdwanRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/sdwanRule:SdwanRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/sdwanRule:SdwanRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -822,27 +810,11 @@ class SdwanRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/sdwanRule:SdwanRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/sdwanRule:SdwanRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/sdwanRule:SdwanRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param SdwanRuleArgs args: The arguments to use to populate this resource's properties.
@@ -994,6 +966,7 @@ class SdwanRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: List of tags
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: List of destination zones
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -1191,6 +1164,9 @@ class SdwanRule(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

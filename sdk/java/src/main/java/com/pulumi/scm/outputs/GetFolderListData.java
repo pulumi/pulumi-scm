@@ -41,6 +41,10 @@ public final class GetFolderListData {
      * 
      */
     private List<String> snippets;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetFolderListData() {}
@@ -86,6 +90,10 @@ public final class GetFolderListData {
     public List<String> snippets() {
         return this.snippets;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

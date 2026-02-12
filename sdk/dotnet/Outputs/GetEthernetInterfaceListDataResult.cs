@@ -85,6 +85,9 @@ namespace Pulumi.Scm.Outputs
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataTapResult Tap;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

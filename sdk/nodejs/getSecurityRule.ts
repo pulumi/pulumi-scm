@@ -221,6 +221,9 @@ export interface GetSecurityRuleResult {
      * Tenant restrictions
      */
     readonly tenantRestrictions: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
     /**
      * The destination security zone(s)

@@ -59,7 +59,8 @@ type BgpAuthProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewBgpAuthProfile registers a new resource with the given unique name, arguments, and options.
@@ -116,7 +117,8 @@ type bgpAuthProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type BgpAuthProfileState struct {
@@ -136,7 +138,8 @@ type BgpAuthProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (BgpAuthProfileState) ElementType() reflect.Type {
@@ -299,6 +302,7 @@ func (o BgpAuthProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpAuthProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o BgpAuthProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *BgpAuthProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

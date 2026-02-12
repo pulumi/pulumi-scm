@@ -161,12 +161,6 @@ import (
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/site:Site example :::id
-// ```
 type Site struct {
 	pulumi.CustomResourceState
 
@@ -194,7 +188,8 @@ type Site struct {
 	Qos SiteQosPtrOutput `pulumi:"qos"`
 	// The state in which the site exists
 	State pulumi.StringPtrOutput `pulumi:"state"`
-	Tfid  pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// The site type
 	Type pulumi.StringPtrOutput `pulumi:"type"`
 	// The postal code in which the site exists
@@ -255,7 +250,8 @@ type siteState struct {
 	Qos *SiteQos `pulumi:"qos"`
 	// The state in which the site exists
 	State *string `pulumi:"state"`
-	Tfid  *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// The site type
 	Type *string `pulumi:"type"`
 	// The postal code in which the site exists
@@ -287,7 +283,8 @@ type SiteState struct {
 	Qos SiteQosPtrInput
 	// The state in which the site exists
 	State pulumi.StringPtrInput
-	Tfid  pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// The site type
 	Type pulumi.StringPtrInput
 	// The postal code in which the site exists
@@ -504,6 +501,7 @@ func (o SiteOutput) State() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Site) pulumi.StringPtrOutput { return v.State }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o SiteOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Site) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

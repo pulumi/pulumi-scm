@@ -47,6 +47,10 @@ public final class GetFileBlockingProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetFileBlockingProfileListData() {}
@@ -99,6 +103,10 @@ public final class GetFileBlockingProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -45,6 +45,9 @@ namespace Pulumi.Scm.Outputs
         /// SNMP syslog notification
         /// </summary>
         public readonly bool SnmpSyslogNotification;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

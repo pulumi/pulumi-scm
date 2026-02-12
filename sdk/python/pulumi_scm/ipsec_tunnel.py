@@ -221,6 +221,7 @@ class _IpsecTunnelState:
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] tunnel_interface: Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
         :param pulumi.Input['IpsecTunnelTunnelMonitorArgs'] tunnel_monitor: Tunnel monitor
         """
@@ -350,6 +351,9 @@ class _IpsecTunnelState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -468,27 +472,11 @@ class IpsecTunnel(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -583,27 +571,11 @@ class IpsecTunnel(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param IpsecTunnelArgs args: The arguments to use to populate this resource's properties.
@@ -692,6 +664,7 @@ class IpsecTunnel(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] tunnel_interface: Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
         :param pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']] tunnel_monitor: Tunnel monitor
         """
@@ -783,6 +756,9 @@ class IpsecTunnel(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

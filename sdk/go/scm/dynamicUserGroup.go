@@ -87,27 +87,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dynamicUserGroup:DynamicUserGroup example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dynamicUserGroup:DynamicUserGroup example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dynamicUserGroup:DynamicUserGroup example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type DynamicUserGroup struct {
 	pulumi.CustomResourceState
 
@@ -129,7 +113,8 @@ type DynamicUserGroup struct {
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Tags associated with the dynamic user group
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	Tfid pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewDynamicUserGroup registers a new resource with the given unique name, arguments, and options.
@@ -183,7 +168,8 @@ type dynamicUserGroupState struct {
 	Snippet *string `pulumi:"snippet"`
 	// Tags associated with the dynamic user group
 	Tags []string `pulumi:"tags"`
-	Tfid *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type DynamicUserGroupState struct {
@@ -205,6 +191,7 @@ type DynamicUserGroupState struct {
 	Snippet pulumi.StringPtrInput
 	// Tags associated with the dynamic user group
 	Tags pulumi.StringArrayInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 }
 
@@ -381,6 +368,7 @@ func (o DynamicUserGroupOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o DynamicUserGroupOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

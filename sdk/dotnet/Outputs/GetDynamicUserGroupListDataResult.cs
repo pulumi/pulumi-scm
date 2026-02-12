@@ -45,6 +45,9 @@ namespace Pulumi.Scm.Outputs
         /// Tags associated with the dynamic user group
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

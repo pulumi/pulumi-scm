@@ -61,27 +61,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/layer2Subinterface:Layer2Subinterface example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/layer2Subinterface:Layer2Subinterface example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/layer2Subinterface:Layer2Subinterface example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type Layer2Subinterface struct {
 	pulumi.CustomResourceState
 
@@ -101,7 +85,8 @@ type Layer2Subinterface struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// VLAN tag
 	VlanTag pulumi.StringOutput `pulumi:"vlanTag"`
 }
@@ -155,7 +140,8 @@ type layer2SubinterfaceState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// VLAN tag
 	VlanTag *string `pulumi:"vlanTag"`
 }
@@ -177,7 +163,8 @@ type Layer2SubinterfaceState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// VLAN tag
 	VlanTag pulumi.StringPtrInput
 }
@@ -350,6 +337,7 @@ func (o Layer2SubinterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Layer2Subinterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o Layer2SubinterfaceOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Layer2Subinterface) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

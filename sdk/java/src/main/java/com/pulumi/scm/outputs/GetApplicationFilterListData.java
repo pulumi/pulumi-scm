@@ -114,6 +114,10 @@ public final class GetApplicationFilterListData {
      * 
      */
     private List<String> technologies;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return only True is a valid value
@@ -272,6 +276,10 @@ public final class GetApplicationFilterListData {
     public List<String> technologies() {
         return this.technologies;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

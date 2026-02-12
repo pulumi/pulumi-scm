@@ -57,6 +57,10 @@ public final class GetTrafficSteeringRuleResult {
      * 
      */
     private List<String> sources;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetTrafficSteeringRuleResult() {}
@@ -123,6 +127,10 @@ public final class GetTrafficSteeringRuleResult {
     public List<String> sources() {
         return this.sources;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

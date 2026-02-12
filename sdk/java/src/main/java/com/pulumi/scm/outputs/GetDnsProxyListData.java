@@ -78,6 +78,10 @@ public final class GetDnsProxyListData {
      * 
      */
     private GetDnsProxyListDataTcpQueries tcpQueries;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Udp queries
@@ -170,6 +174,10 @@ public final class GetDnsProxyListData {
     public GetDnsProxyListDataTcpQueries tcpQueries() {
         return this.tcpQueries;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

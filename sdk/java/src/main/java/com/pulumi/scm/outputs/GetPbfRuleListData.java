@@ -94,6 +94,10 @@ public final class GetPbfRuleListData {
      * 
      */
     private List<String> tags;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetPbfRuleListData() {}
@@ -209,6 +213,10 @@ public final class GetPbfRuleListData {
     public List<String> tags() {
         return this.tags;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

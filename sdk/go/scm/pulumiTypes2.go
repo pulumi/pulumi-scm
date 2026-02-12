@@ -28397,7 +28397,8 @@ type GetAddressGroupListData struct {
 	Statics []string `pulumi:"statics"`
 	// Tags for address group object
 	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetAddressGroupListDataInput is an input type that accepts GetAddressGroupListDataArgs and GetAddressGroupListDataOutput values.
@@ -28434,7 +28435,8 @@ type GetAddressGroupListDataArgs struct {
 	Statics pulumi.StringArrayInput `pulumi:"statics"`
 	// Tags for address group object
 	Tags pulumi.StringArrayInput `pulumi:"tags"`
-	Tfid pulumi.StringInput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetAddressGroupListDataArgs) ElementType() reflect.Type {
@@ -28537,6 +28539,7 @@ func (o GetAddressGroupListDataOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetAddressGroupListData) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o GetAddressGroupListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAddressGroupListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -28644,7 +28647,8 @@ type GetAddressListData struct {
 	Snippet string `pulumi:"snippet"`
 	// Tags assocaited with the address object
 	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetAddressListDataInput is an input type that accepts GetAddressListDataArgs and GetAddressListDataOutput values.
@@ -28689,7 +28693,8 @@ type GetAddressListDataArgs struct {
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// Tags assocaited with the address object
 	Tags pulumi.StringArrayInput `pulumi:"tags"`
-	Tfid pulumi.StringInput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetAddressListDataArgs) ElementType() reflect.Type {
@@ -28806,6 +28811,7 @@ func (o GetAddressListDataOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetAddressListData) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o GetAddressListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAddressListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -29671,7 +29677,8 @@ type GetAggregateInterfaceListData struct {
 	Name string `pulumi:"name"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetAggregateInterfaceListDataInput is an input type that accepts GetAggregateInterfaceListDataArgs and GetAggregateInterfaceListDataOutput values.
@@ -29708,7 +29715,8 @@ type GetAggregateInterfaceListDataArgs struct {
 	Name pulumi.StringInput `pulumi:"name"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetAggregateInterfaceListDataArgs) ElementType() reflect.Type {
@@ -29811,6 +29819,7 @@ func (o GetAggregateInterfaceListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAggregateInterfaceListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetAggregateInterfaceListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAggregateInterfaceListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -30680,7 +30689,8 @@ type GetAntiSpywareProfileListData struct {
 	Rules []GetAntiSpywareProfileListDataRule `pulumi:"rules"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// Threat exception
 	ThreatExceptions []GetAntiSpywareProfileListDataThreatException `pulumi:"threatExceptions"`
 }
@@ -30719,7 +30729,8 @@ type GetAntiSpywareProfileListDataArgs struct {
 	Rules GetAntiSpywareProfileListDataRuleArrayInput `pulumi:"rules"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// Threat exception
 	ThreatExceptions GetAntiSpywareProfileListDataThreatExceptionArrayInput `pulumi:"threatExceptions"`
 }
@@ -30832,6 +30843,7 @@ func (o GetAntiSpywareProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAntiSpywareProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetAntiSpywareProfileListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAntiSpywareProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -34331,7 +34343,8 @@ type GetAntiSpywareSignatureListData struct {
 	Signature GetAntiSpywareSignatureListDataSignature `pulumi:"signature"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// threat id range <15000-18000> and <6900001-7000000>
 	ThreatId string `pulumi:"threatId"`
 	// Threatname
@@ -34376,7 +34389,8 @@ type GetAntiSpywareSignatureListDataArgs struct {
 	Signature GetAntiSpywareSignatureListDataSignatureInput `pulumi:"signature"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// threat id range <15000-18000> and <6900001-7000000>
 	ThreatId pulumi.StringInput `pulumi:"threatId"`
 	// Threatname
@@ -34498,6 +34512,7 @@ func (o GetAntiSpywareSignatureListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAntiSpywareSignatureListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetAntiSpywareSignatureListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAntiSpywareSignatureListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -38323,7 +38338,8 @@ type GetAppOverrideRuleListData struct {
 	Tags []string `pulumi:"tags"`
 	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule string `pulumi:"targetRule"`
-	Tfid       string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// To
 	Tos []string `pulumi:"tos"`
 }
@@ -38380,7 +38396,8 @@ type GetAppOverrideRuleListDataArgs struct {
 	Tags pulumi.StringArrayInput `pulumi:"tags"`
 	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringInput `pulumi:"targetRule"`
-	Tfid       pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// To
 	Tos pulumi.StringArrayInput `pulumi:"tos"`
 }
@@ -38536,6 +38553,7 @@ func (o GetAppOverrideRuleListDataOutput) TargetRule() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAppOverrideRuleListData) string { return v.TargetRule }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetAppOverrideRuleListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAppOverrideRuleListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -38825,7 +38843,8 @@ type GetApplicationFilterListData struct {
 	Tagging GetApplicationFilterListDataTagging `pulumi:"tagging"`
 	// Technology
 	Technologies []string `pulumi:"technologies"`
-	Tfid         string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// only True is a valid value
 	TransfersFiles bool `pulumi:"transfersFiles"`
 	// only True is a valid value
@@ -38886,7 +38905,8 @@ type GetApplicationFilterListDataArgs struct {
 	Tagging GetApplicationFilterListDataTaggingInput `pulumi:"tagging"`
 	// Technology
 	Technologies pulumi.StringArrayInput `pulumi:"technologies"`
-	Tfid         pulumi.StringInput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// only True is a valid value
 	TransfersFiles pulumi.BoolInput `pulumi:"transfersFiles"`
 	// only True is a valid value
@@ -39046,6 +39066,7 @@ func (o GetApplicationFilterListDataOutput) Technologies() pulumi.StringArrayOut
 	return o.ApplyT(func(v GetApplicationFilterListData) []string { return v.Technologies }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o GetApplicationFilterListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetApplicationFilterListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -39232,7 +39253,8 @@ type GetApplicationGroupListData struct {
 	Name string `pulumi:"name"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetApplicationGroupListDataInput is an input type that accepts GetApplicationGroupListDataArgs and GetApplicationGroupListDataOutput values.
@@ -39259,7 +39281,8 @@ type GetApplicationGroupListDataArgs struct {
 	Name pulumi.StringInput `pulumi:"name"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetApplicationGroupListDataArgs) ElementType() reflect.Type {
@@ -39343,6 +39366,7 @@ func (o GetApplicationGroupListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetApplicationGroupListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetApplicationGroupListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetApplicationGroupListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -39420,7 +39444,8 @@ type GetApplicationListData struct {
 	TcpTimeout int `pulumi:"tcpTimeout"`
 	// Technology
 	Technology string `pulumi:"technology"`
-	Tfid       string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// timeout in seconds
 	Timeout int `pulumi:"timeout"`
 	// Tunnel applications
@@ -39499,7 +39524,8 @@ type GetApplicationListDataArgs struct {
 	TcpTimeout pulumi.IntInput `pulumi:"tcpTimeout"`
 	// Technology
 	Technology pulumi.StringInput `pulumi:"technology"`
-	Tfid       pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// timeout in seconds
 	Timeout pulumi.IntInput `pulumi:"timeout"`
 	// Tunnel applications
@@ -39695,6 +39721,7 @@ func (o GetApplicationListDataOutput) Technology() pulumi.StringOutput {
 	return o.ApplyT(func(v GetApplicationListData) string { return v.Technology }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetApplicationListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetApplicationListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -42159,7 +42186,8 @@ type GetAuthenticationProfileListData struct {
 	SingleSignOn GetAuthenticationProfileListDataSingleSignOn `pulumi:"singleSignOn"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// User domain
 	UserDomain string `pulumi:"userDomain"`
 	// Username modifier
@@ -42198,7 +42226,8 @@ type GetAuthenticationProfileListDataArgs struct {
 	SingleSignOn GetAuthenticationProfileListDataSingleSignOnInput `pulumi:"singleSignOn"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// User domain
 	UserDomain pulumi.StringInput `pulumi:"userDomain"`
 	// Username modifier
@@ -42310,6 +42339,7 @@ func (o GetAuthenticationProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAuthenticationProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetAuthenticationProfileListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAuthenticationProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -43953,7 +43983,8 @@ type GetAuthenticationRuleListData struct {
 	Tags []string `pulumi:"tags"`
 	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule string `pulumi:"targetRule"`
-	Tfid       string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// The authentication session timeout (seconds)
 	Timeout int `pulumi:"timeout"`
 	// The destination security zones
@@ -44024,7 +44055,8 @@ type GetAuthenticationRuleListDataArgs struct {
 	Tags pulumi.StringArrayInput `pulumi:"tags"`
 	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringInput `pulumi:"targetRule"`
-	Tfid       pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// The authentication session timeout (seconds)
 	Timeout pulumi.IntInput `pulumi:"timeout"`
 	// The destination security zones
@@ -44212,6 +44244,7 @@ func (o GetAuthenticationRuleListDataOutput) TargetRule() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAuthenticationRuleListData) string { return v.TargetRule }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetAuthenticationRuleListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAuthenticationRuleListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -44259,7 +44292,8 @@ type GetAuthenticationSequenceListData struct {
 	Name string `pulumi:"name"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// Use domain to determine authentication profile?
 	UseDomainFindProfile bool `pulumi:"useDomainFindProfile"`
 }
@@ -44288,7 +44322,8 @@ type GetAuthenticationSequenceListDataArgs struct {
 	Name pulumi.StringInput `pulumi:"name"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// Use domain to determine authentication profile?
 	UseDomainFindProfile pulumi.BoolInput `pulumi:"useDomainFindProfile"`
 }
@@ -44374,6 +44409,7 @@ func (o GetAuthenticationSequenceListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAuthenticationSequenceListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetAuthenticationSequenceListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAuthenticationSequenceListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -44484,7 +44520,8 @@ type GetAuthenticationSettingListData struct {
 	Id string `pulumi:"id"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetAuthenticationSettingListDataInput is an input type that accepts GetAuthenticationSettingListDataArgs and GetAuthenticationSettingListDataOutput values.
@@ -44509,7 +44546,8 @@ type GetAuthenticationSettingListDataArgs struct {
 	Id pulumi.StringInput `pulumi:"id"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetAuthenticationSettingListDataArgs) ElementType() reflect.Type {
@@ -44590,6 +44628,7 @@ func (o GetAuthenticationSettingListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAuthenticationSettingListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetAuthenticationSettingListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAuthenticationSettingListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -46277,6 +46316,7 @@ type GetAutoVpnClusterListData struct {
 	Id string `pulumi:"id"`
 	// VPN cluster name
 	Name string `pulumi:"name"`
+	// The Terraform ID.
 	Tfid string `pulumi:"tfid"`
 	// VPN cluster type
 	Type string `pulumi:"type"`
@@ -46308,6 +46348,7 @@ type GetAutoVpnClusterListDataArgs struct {
 	Id pulumi.StringInput `pulumi:"id"`
 	// VPN cluster name
 	Name pulumi.StringInput `pulumi:"name"`
+	// The Terraform ID.
 	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// VPN cluster type
 	Type pulumi.StringInput `pulumi:"type"`
@@ -46399,6 +46440,7 @@ func (o GetAutoVpnClusterListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAutoVpnClusterListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetAutoVpnClusterListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAutoVpnClusterListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -48096,7 +48138,8 @@ type GetBandwidthAllocationListData struct {
 	Qos GetBandwidthAllocationListDataQos `pulumi:"qos"`
 	// Spn name list
 	SpnNameLists []string `pulumi:"spnNameLists"`
-	Tfid         string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetBandwidthAllocationListDataInput is an input type that accepts GetBandwidthAllocationListDataArgs and GetBandwidthAllocationListDataOutput values.
@@ -48119,7 +48162,8 @@ type GetBandwidthAllocationListDataArgs struct {
 	Qos GetBandwidthAllocationListDataQosInput `pulumi:"qos"`
 	// Spn name list
 	SpnNameLists pulumi.StringArrayInput `pulumi:"spnNameLists"`
-	Tfid         pulumi.StringInput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetBandwidthAllocationListDataArgs) ElementType() reflect.Type {
@@ -48193,6 +48237,7 @@ func (o GetBandwidthAllocationListDataOutput) SpnNameLists() pulumi.StringArrayO
 	return o.ApplyT(func(v GetBandwidthAllocationListData) []string { return v.SpnNameLists }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o GetBandwidthAllocationListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBandwidthAllocationListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -51011,7 +51056,8 @@ type GetBgpAddressFamilyProfileListData struct {
 	Name string `pulumi:"name"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetBgpAddressFamilyProfileListDataInput is an input type that accepts GetBgpAddressFamilyProfileListDataArgs and GetBgpAddressFamilyProfileListDataOutput values.
@@ -51038,7 +51084,8 @@ type GetBgpAddressFamilyProfileListDataArgs struct {
 	Name pulumi.StringInput `pulumi:"name"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetBgpAddressFamilyProfileListDataArgs) ElementType() reflect.Type {
@@ -51122,6 +51169,7 @@ func (o GetBgpAddressFamilyProfileListDataOutput) Snippet() pulumi.StringOutput 
 	return o.ApplyT(func(v GetBgpAddressFamilyProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetBgpAddressFamilyProfileListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpAddressFamilyProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -53792,7 +53840,8 @@ type GetBgpAuthProfileListData struct {
 	Secret string `pulumi:"secret"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetBgpAuthProfileListDataInput is an input type that accepts GetBgpAuthProfileListDataArgs and GetBgpAuthProfileListDataOutput values.
@@ -53821,7 +53870,8 @@ type GetBgpAuthProfileListDataArgs struct {
 	Secret pulumi.StringInput `pulumi:"secret"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetBgpAuthProfileListDataArgs) ElementType() reflect.Type {
@@ -53910,6 +53960,7 @@ func (o GetBgpAuthProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetBgpAuthProfileListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -55101,7 +55152,8 @@ type GetBgpFilteringProfileListData struct {
 	Name string `pulumi:"name"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 // GetBgpFilteringProfileListDataInput is an input type that accepts GetBgpFilteringProfileListDataArgs and GetBgpFilteringProfileListDataOutput values.
@@ -55130,7 +55182,8 @@ type GetBgpFilteringProfileListDataArgs struct {
 	Name pulumi.StringInput `pulumi:"name"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 }
 
 func (GetBgpFilteringProfileListDataArgs) ElementType() reflect.Type {
@@ -55219,6 +55272,7 @@ func (o GetBgpFilteringProfileListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpFilteringProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetBgpFilteringProfileListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpFilteringProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -112,6 +112,9 @@ export interface GetApplicationGroupListResult {
      * The snippet of the item.
      */
     readonly snippet?: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
     /**
      * The total number of items.

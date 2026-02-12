@@ -307,27 +307,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/securityRule:SecurityRule example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/securityRule:SecurityRule example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/securityRule:SecurityRule example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type SecurityRule struct {
 	pulumi.CustomResourceState
 
@@ -407,7 +391,8 @@ type SecurityRule struct {
 	TargetRule pulumi.StringPtrOutput `pulumi:"targetRule"`
 	// Tenant restrictions
 	TenantRestrictions pulumi.StringArrayOutput `pulumi:"tenantRestrictions"`
-	Tfid               pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// The destination security zone(s)
 	Tos pulumi.StringArrayOutput `pulumi:"tos"`
 }
@@ -518,7 +503,8 @@ type securityRuleState struct {
 	TargetRule *string `pulumi:"targetRule"`
 	// Tenant restrictions
 	TenantRestrictions []string `pulumi:"tenantRestrictions"`
-	Tfid               *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// The destination security zone(s)
 	Tos []string `pulumi:"tos"`
 }
@@ -600,7 +586,8 @@ type SecurityRuleState struct {
 	TargetRule pulumi.StringPtrInput
 	// Tenant restrictions
 	TenantRestrictions pulumi.StringArrayInput
-	Tfid               pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// The destination security zone(s)
 	Tos pulumi.StringArrayInput
 }
@@ -1049,6 +1036,7 @@ func (o SecurityRuleOutput) TenantRestrictions() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.TenantRestrictions }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o SecurityRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

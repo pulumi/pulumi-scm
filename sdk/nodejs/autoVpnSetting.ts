@@ -31,19 +31,7 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
- * ```
- *
  * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
- * ```
  */
 export class AutoVpnSetting extends pulumi.CustomResource {
     /**
@@ -81,6 +69,9 @@ export class AutoVpnSetting extends pulumi.CustomResource {
      * Enable mesh connection between hubs?
      */
     declare public readonly enableMeshBetweenHubs: pulumi.Output<boolean | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * VPN address pool
@@ -134,6 +125,9 @@ export interface AutoVpnSettingState {
      * Enable mesh connection between hubs?
      */
     enableMeshBetweenHubs?: pulumi.Input<boolean>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * VPN address pool

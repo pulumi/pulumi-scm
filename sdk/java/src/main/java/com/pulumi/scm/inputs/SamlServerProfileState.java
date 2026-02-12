@@ -190,9 +190,17 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         return Optional.ofNullable(this.ssoUrl);
     }
 
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Import(name="tfid")
     private @Nullable Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Optional<Output<String>> tfid() {
         return Optional.ofNullable(this.tfid);
     }
@@ -503,11 +511,23 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
             return ssoUrl(Output.of(ssoUrl));
         }
 
+        /**
+         * @param tfid The Terraform ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfid(@Nullable Output<String> tfid) {
             $.tfid = tfid;
             return this;
         }
 
+        /**
+         * @param tfid The Terraform ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfid(String tfid) {
             return tfid(Output.of(tfid));
         }

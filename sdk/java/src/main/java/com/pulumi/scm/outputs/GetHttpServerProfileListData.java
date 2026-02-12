@@ -54,6 +54,10 @@ public final class GetHttpServerProfileListData {
      * 
      */
     private Boolean tagRegistration;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetHttpServerProfileListData() {}
@@ -113,6 +117,10 @@ public final class GetHttpServerProfileListData {
     public Boolean tagRegistration() {
         return this.tagRegistration;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

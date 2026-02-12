@@ -75,6 +75,9 @@ namespace Pulumi.Scm
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
@@ -241,6 +244,9 @@ namespace Pulumi.Scm
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }
 

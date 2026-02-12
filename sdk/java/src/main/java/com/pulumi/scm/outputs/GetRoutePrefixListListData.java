@@ -41,6 +41,10 @@ public final class GetRoutePrefixListListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Address Family Type
@@ -91,6 +95,10 @@ public final class GetRoutePrefixListListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

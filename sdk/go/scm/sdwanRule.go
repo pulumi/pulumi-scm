@@ -18,27 +18,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/sdwanRule:SdwanRule example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/sdwanRule:SdwanRule example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/sdwanRule:SdwanRule example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type SdwanRule struct {
 	pulumi.CustomResourceState
 
@@ -86,7 +70,8 @@ type SdwanRule struct {
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
 	// List of tags
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	Tfid pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// List of destination zones
 	Tos pulumi.StringArrayOutput `pulumi:"tos"`
 }
@@ -195,7 +180,8 @@ type sdwanRuleState struct {
 	Sources []string `pulumi:"sources"`
 	// List of tags
 	Tags []string `pulumi:"tags"`
-	Tfid *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// List of destination zones
 	Tos []string `pulumi:"tos"`
 }
@@ -245,6 +231,7 @@ type SdwanRuleState struct {
 	Sources pulumi.StringArrayInput
 	// List of tags
 	Tags pulumi.StringArrayInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 	// List of destination zones
 	Tos pulumi.StringArrayInput
@@ -544,6 +531,7 @@ func (o SdwanRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SdwanRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o SdwanRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *SdwanRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

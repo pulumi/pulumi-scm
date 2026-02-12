@@ -13,27 +13,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class ZoneProtectionProfile extends pulumi.CustomResource {
     /**
@@ -221,6 +205,9 @@ export class ZoneProtectionProfile extends pulumi.CustomResource {
      * Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
      */
     declare public readonly tcpTimestampStrip: pulumi.Output<boolean | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * Discard packets with the Timestamp IP option set.
@@ -490,6 +477,9 @@ export interface ZoneProtectionProfileState {
      * Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
      */
     tcpTimestampStrip?: pulumi.Input<boolean>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * Discard packets with the Timestamp IP option set.

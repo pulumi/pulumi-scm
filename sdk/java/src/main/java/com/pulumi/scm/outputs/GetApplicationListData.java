@@ -145,6 +145,10 @@ public final class GetApplicationListData {
      * 
      */
     private String technology;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return timeout in seconds
@@ -360,6 +364,10 @@ public final class GetApplicationListData {
     public String technology() {
         return this.technology;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

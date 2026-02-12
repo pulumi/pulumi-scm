@@ -106,12 +106,6 @@ namespace Pulumi.Scm
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
-    /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/folder:Folder example :::id
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/folder:Folder")]
     public partial class Folder : global::Pulumi.CustomResource
@@ -146,6 +140,9 @@ namespace Pulumi.Scm
         [Output("snippets")]
         public Output<ImmutableArray<string>> Snippets { get; private set; } = null!;
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
@@ -287,6 +284,9 @@ namespace Pulumi.Scm
             set => _snippets = value;
         }
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }
 

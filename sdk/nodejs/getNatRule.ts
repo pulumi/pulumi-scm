@@ -140,6 +140,9 @@ export interface GetNatRuleResult {
      * NAT rule tags
      */
     readonly tags: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
     /**
      * Destination interface of the original packet

@@ -60,6 +60,10 @@ public final class GetRadiusServerProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return The RADIUS server authentication timeout (seconds)
@@ -131,6 +135,10 @@ public final class GetRadiusServerProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

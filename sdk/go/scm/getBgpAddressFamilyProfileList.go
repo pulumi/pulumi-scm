@@ -56,7 +56,8 @@ type GetBgpAddressFamilyProfileListResult struct {
 	Offset *int `pulumi:"offset"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// The total number of items.
 	Total int `pulumi:"total"`
 }
@@ -145,6 +146,7 @@ func (o GetBgpAddressFamilyProfileListResultOutput) Snippet() pulumi.StringPtrOu
 	return o.ApplyT(func(v GetBgpAddressFamilyProfileListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o GetBgpAddressFamilyProfileListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBgpAddressFamilyProfileListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

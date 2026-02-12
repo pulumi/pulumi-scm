@@ -72,6 +72,10 @@ public final class GetSamlServerProfileListData {
      * 
      */
     private String ssoUrl;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Validate the identity provider certificate?
@@ -169,6 +173,10 @@ public final class GetSamlServerProfileListData {
     public String ssoUrl() {
         return this.ssoUrl;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

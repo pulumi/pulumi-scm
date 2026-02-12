@@ -144,27 +144,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/scepProfile:ScepProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/scepProfile:ScepProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/scepProfile:ScepProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type ScepProfile struct {
 	pulumi.CustomResourceState
 
@@ -202,7 +186,8 @@ type ScepProfile struct {
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Subject
 	Subject pulumi.StringOutput `pulumi:"subject"`
-	Tfid    pulumi.StringOutput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Use as digital signature?
 	UseAsDigitalSignature pulumi.BoolPtrOutput `pulumi:"useAsDigitalSignature"`
 	// Use for key encipherment?
@@ -295,7 +280,8 @@ type scepProfileState struct {
 	Snippet *string `pulumi:"snippet"`
 	// Subject
 	Subject *string `pulumi:"subject"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Use as digital signature?
 	UseAsDigitalSignature *bool `pulumi:"useAsDigitalSignature"`
 	// Use for key encipherment?
@@ -337,7 +323,8 @@ type ScepProfileState struct {
 	Snippet pulumi.StringPtrInput
 	// Subject
 	Subject pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Use as digital signature?
 	UseAsDigitalSignature pulumi.BoolPtrInput
 	// Use for key encipherment?
@@ -593,6 +580,7 @@ func (o ScepProfileOutput) Subject() pulumi.StringOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringOutput { return v.Subject }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o ScepProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *ScepProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
