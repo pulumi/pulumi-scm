@@ -64,6 +64,10 @@ public final class GetBgpRouteMapRedistributionListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetBgpRouteMapRedistributionListData() {}
@@ -136,6 +140,10 @@ public final class GetBgpRouteMapRedistributionListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -206,27 +206,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/natRule:NatRule example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/natRule:NatRule example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/natRule:NatRule example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type NatRule struct {
 	pulumi.CustomResourceState
 
@@ -264,7 +248,8 @@ type NatRule struct {
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
 	// NAT rule tags
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	Tfid pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Destination interface of the original packet
 	ToInterface pulumi.StringPtrOutput `pulumi:"toInterface"`
 	// Destination zone of the original packet
@@ -350,7 +335,8 @@ type natRuleState struct {
 	Sources []string `pulumi:"sources"`
 	// NAT rule tags
 	Tags []string `pulumi:"tags"`
-	Tfid *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Destination interface of the original packet
 	ToInterface *string `pulumi:"toInterface"`
 	// Destination zone of the original packet
@@ -392,6 +378,7 @@ type NatRuleState struct {
 	Sources pulumi.StringArrayInput
 	// NAT rule tags
 	Tags pulumi.StringArrayInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 	// Destination interface of the original packet
 	ToInterface pulumi.StringPtrInput
@@ -658,6 +645,7 @@ func (o NatRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o NatRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

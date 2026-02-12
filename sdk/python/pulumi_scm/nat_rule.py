@@ -367,6 +367,7 @@ class _NatRuleState:
         :param pulumi.Input['NatRuleSourceTranslationArgs'] source_translation: Source translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source address(es) of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] to_interface: Destination interface of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: Destination zone of the original packet
         """
@@ -618,6 +619,9 @@ class _NatRuleState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -794,27 +798,11 @@ class NatRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/natRule:NatRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/natRule:NatRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/natRule:NatRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -963,27 +951,11 @@ class NatRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/natRule:NatRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/natRule:NatRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/natRule:NatRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param NatRuleArgs args: The arguments to use to populate this resource's properties.
@@ -1112,6 +1084,7 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']] source_translation: Source translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source address(es) of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] to_interface: Destination interface of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: Destination zone of the original packet
         """
@@ -1280,6 +1253,9 @@ class NatRule(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

@@ -97,6 +97,9 @@ namespace Pulumi.Scm.Outputs
         /// List of tags
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// List of destination zones

@@ -118,27 +118,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/qosPolicyRule:QosPolicyRule example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/qosPolicyRule:QosPolicyRule example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/qosPolicyRule:QosPolicyRule example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type QosPolicyRule struct {
 	pulumi.CustomResourceState
 
@@ -168,7 +152,8 @@ type QosPolicyRule struct {
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrOutput `pulumi:"targetRule"`
-	Tfid       pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewQosPolicyRule registers a new resource with the given unique name, arguments, and options.
@@ -230,7 +215,8 @@ type qosPolicyRuleState struct {
 	Snippet *string `pulumi:"snippet"`
 	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule *string `pulumi:"targetRule"`
-	Tfid       *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type QosPolicyRuleState struct {
@@ -260,7 +246,8 @@ type QosPolicyRuleState struct {
 	Snippet pulumi.StringPtrInput
 	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrInput
-	Tfid       pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (QosPolicyRuleState) ElementType() reflect.Type {
@@ -472,6 +459,7 @@ func (o QosPolicyRuleOutput) TargetRule() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.TargetRule }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o QosPolicyRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

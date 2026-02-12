@@ -55,6 +55,10 @@ public final class GetTacacsServerProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return The TACACS+ timeout (seconds)
@@ -124,6 +128,10 @@ public final class GetTacacsServerProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

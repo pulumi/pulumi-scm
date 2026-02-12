@@ -77,6 +77,9 @@ namespace Pulumi.Scm.Outputs
         /// Subject
         /// </summary>
         public readonly string Subject;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// Use as digital signature?

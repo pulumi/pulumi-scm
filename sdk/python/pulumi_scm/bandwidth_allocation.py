@@ -103,6 +103,7 @@ class _BandwidthAllocationState:
         :param pulumi.Input[_builtins.str] name: name of the aggregated bandwidth region
         :param pulumi.Input['BandwidthAllocationQosArgs'] qos: Qos
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spn_name_lists: Spn name list
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if allocated_bandwidth is not None:
             pulumi.set(__self__, "allocated_bandwidth", allocated_bandwidth)
@@ -166,6 +167,9 @@ class _BandwidthAllocationState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -222,12 +226,6 @@ class BandwidthAllocation(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/bandwidthAllocation:BandwidthAllocation example <name_value_of_the_resource>
-        ```
-
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] allocated_bandwidth: bandwidth to allocate in Mbps
@@ -278,12 +276,6 @@ class BandwidthAllocation(pulumi.CustomResource):
         ## Import
 
         The following command can be used to import a resource not managed by Terraform:
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/bandwidthAllocation:BandwidthAllocation example <name_value_of_the_resource>
-        ```
 
         :param str resource_name: The name of the resource.
         :param BandwidthAllocationArgs args: The arguments to use to populate this resource's properties.
@@ -346,6 +338,7 @@ class BandwidthAllocation(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: name of the aggregated bandwidth region
         :param pulumi.Input[Union['BandwidthAllocationQosArgs', 'BandwidthAllocationQosArgsDict']] qos: Qos
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spn_name_lists: Spn name list
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -393,5 +386,8 @@ class BandwidthAllocation(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 

@@ -66,6 +66,10 @@ public final class GetProfileGroupListData {
      * 
      */
     private List<String> spywares;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Url filtering
@@ -161,6 +165,10 @@ public final class GetProfileGroupListData {
     public List<String> spywares() {
         return this.spywares;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

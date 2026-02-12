@@ -65,6 +65,9 @@ namespace Pulumi.Scm.Outputs
         /// Subnets
         /// </summary>
         public readonly ImmutableArray<string> Subnets;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

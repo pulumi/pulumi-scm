@@ -58,7 +58,8 @@ type GetApplicationGroupListResult struct {
 	Offset *int `pulumi:"offset"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// The total number of items.
 	Total int `pulumi:"total"`
 }
@@ -147,6 +148,7 @@ func (o GetApplicationGroupListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetApplicationGroupListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o GetApplicationGroupListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetApplicationGroupListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

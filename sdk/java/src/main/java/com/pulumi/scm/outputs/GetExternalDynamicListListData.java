@@ -42,6 +42,10 @@ public final class GetExternalDynamicListListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Type configuration for External Dynamic List
@@ -92,6 +96,10 @@ public final class GetExternalDynamicListListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -170,12 +170,6 @@ namespace Pulumi.Scm
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
-    /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/site:Site example :::id
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/site:Site")]
     public partial class Site : global::Pulumi.CustomResource
@@ -252,6 +246,9 @@ namespace Pulumi.Scm
         [Output("state")]
         public Output<string?> State { get; private set; } = null!;
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
@@ -483,6 +480,9 @@ namespace Pulumi.Scm
         [Input("state")]
         public Input<string>? State { get; set; }
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }
 

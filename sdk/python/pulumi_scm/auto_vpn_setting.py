@@ -83,6 +83,7 @@ class _AutoVpnSettingState:
         Input properties used for looking up and filtering AutoVpnSetting resources.
         :param pulumi.Input['AutoVpnSettingAsRangeArgs'] as_range: As range
         :param pulumi.Input[_builtins.bool] enable_mesh_between_hubs: Enable mesh connection between hubs?
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vpn_address_pools: VPN address pool
         """
         if as_range is not None:
@@ -121,6 +122,9 @@ class _AutoVpnSettingState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -174,19 +178,7 @@ class AutoVpnSetting(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
-        ```
-
         or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
-        ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -224,19 +216,7 @@ class AutoVpnSetting(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
-        ```
-
         or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
-        ```
 
         :param str resource_name: The name of the resource.
         :param AutoVpnSettingArgs args: The arguments to use to populate this resource's properties.
@@ -296,6 +276,7 @@ class AutoVpnSetting(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['AutoVpnSettingAsRangeArgs', 'AutoVpnSettingAsRangeArgsDict']] as_range: As range
         :param pulumi.Input[_builtins.bool] enable_mesh_between_hubs: Enable mesh connection between hubs?
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vpn_address_pools: VPN address pool
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -327,6 +308,9 @@ class AutoVpnSetting(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

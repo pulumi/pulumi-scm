@@ -77,6 +77,9 @@ namespace Pulumi.Scm.Outputs
         /// Tags
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

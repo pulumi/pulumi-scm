@@ -70,7 +70,8 @@ type LookupBandwidthAllocationResult struct {
 	Qos GetBandwidthAllocationQos `pulumi:"qos"`
 	// Spn name list
 	SpnNameLists []string `pulumi:"spnNameLists"`
-	Tfid         string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupBandwidthAllocationOutput(ctx *pulumi.Context, args LookupBandwidthAllocationOutputArgs, opts ...pulumi.InvokeOption) LookupBandwidthAllocationResultOutput {
@@ -132,6 +133,7 @@ func (o LookupBandwidthAllocationResultOutput) SpnNameLists() pulumi.StringArray
 	return o.ApplyT(func(v LookupBandwidthAllocationResult) []string { return v.SpnNameLists }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupBandwidthAllocationResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBandwidthAllocationResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

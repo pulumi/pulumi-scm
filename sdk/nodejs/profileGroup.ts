@@ -11,27 +11,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/profileGroup:ProfileGroup example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/profileGroup:ProfileGroup example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/profileGroup:ProfileGroup example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class ProfileGroup extends pulumi.CustomResource {
     /**
@@ -105,6 +89,9 @@ export class ProfileGroup extends pulumi.CustomResource {
      * Spyware
      */
     declare public readonly spywares: pulumi.Output<string[] | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * Url filtering
@@ -216,6 +203,9 @@ export interface ProfileGroupState {
      * Spyware
      */
     spywares?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * Url filtering

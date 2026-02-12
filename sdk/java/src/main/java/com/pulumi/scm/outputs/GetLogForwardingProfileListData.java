@@ -47,6 +47,10 @@ public final class GetLogForwardingProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetLogForwardingProfileListData() {}
@@ -99,6 +103,10 @@ public final class GetLogForwardingProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

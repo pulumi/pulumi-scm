@@ -115,6 +115,9 @@ namespace Pulumi.Scm
         /// Routing preference
         /// </summary>
         public readonly Outputs.GetBgpRoutingRoutingPreferenceResult RoutingPreference;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// Withdraw static route

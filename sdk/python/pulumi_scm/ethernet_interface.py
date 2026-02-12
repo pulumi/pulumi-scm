@@ -322,6 +322,7 @@ class _EthernetInterfaceState:
         :param pulumi.Input['EthernetInterfaceTapArgs'] tap: Tap
                
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if aggregate_group is not None:
             pulumi.set(__self__, "aggregate_group", aggregate_group)
@@ -551,6 +552,9 @@ class _EthernetInterfaceState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -719,27 +723,11 @@ class EthernetInterface(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ethernetInterface:EthernetInterface example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ethernetInterface:EthernetInterface example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ethernetInterface:EthernetInterface example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -916,27 +904,11 @@ class EthernetInterface(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ethernetInterface:EthernetInterface example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ethernetInterface:EthernetInterface example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/ethernetInterface:EthernetInterface example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param EthernetInterfaceArgs args: The arguments to use to populate this resource's properties.
@@ -1054,6 +1026,7 @@ class EthernetInterface(pulumi.CustomResource):
         :param pulumi.Input[Union['EthernetInterfaceTapArgs', 'EthernetInterfaceTapArgsDict']] tap: Tap
                
                > ℹ️ **Note:** You must specify exactly one of `aggregate_group`, `layer2`, `layer3`, and `tap`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -1212,5 +1185,8 @@ class EthernetInterface(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 

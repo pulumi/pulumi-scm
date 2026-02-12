@@ -206,9 +206,17 @@ public final class InterfaceManagementProfileState extends com.pulumi.resources.
         return Optional.ofNullable(this.telnet);
     }
 
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Import(name="tfid")
     private @Nullable Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Optional<Output<String>> tfid() {
         return Optional.ofNullable(this.tfid);
     }
@@ -567,11 +575,23 @@ public final class InterfaceManagementProfileState extends com.pulumi.resources.
             return telnet(Output.of(telnet));
         }
 
+        /**
+         * @param tfid The Terraform ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfid(@Nullable Output<String> tfid) {
             $.tfid = tfid;
             return this;
         }
 
+        /**
+         * @param tfid The Terraform ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfid(String tfid) {
             return tfid(Output.of(tfid));
         }

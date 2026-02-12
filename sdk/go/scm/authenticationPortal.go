@@ -51,27 +51,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type AuthenticationPortal struct {
 	pulumi.CustomResourceState
 
@@ -95,7 +79,8 @@ type AuthenticationPortal struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Timer
 	Timer pulumi.IntPtrOutput `pulumi:"timer"`
 	// The SSL/TLS service profile
@@ -155,7 +140,8 @@ type authenticationPortalState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Timer
 	Timer *int `pulumi:"timer"`
 	// The SSL/TLS service profile
@@ -183,7 +169,8 @@ type AuthenticationPortalState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Timer
 	Timer pulumi.IntPtrInput
 	// The SSL/TLS service profile
@@ -380,6 +367,7 @@ func (o AuthenticationPortalOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationPortal) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o AuthenticationPortalOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationPortal) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

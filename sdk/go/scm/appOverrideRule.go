@@ -179,27 +179,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/appOverrideRule:AppOverrideRule example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/appOverrideRule:AppOverrideRule example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/appOverrideRule:AppOverrideRule example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type AppOverrideRule struct {
 	pulumi.CustomResourceState
 
@@ -245,7 +229,8 @@ type AppOverrideRule struct {
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
 	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrOutput `pulumi:"targetRule"`
-	Tfid       pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// To
 	Tos pulumi.StringArrayOutput `pulumi:"tos"`
 }
@@ -343,7 +328,8 @@ type appOverrideRuleState struct {
 	Tags []string `pulumi:"tags"`
 	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule *string `pulumi:"targetRule"`
-	Tfid       *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// To
 	Tos []string `pulumi:"tos"`
 }
@@ -391,7 +377,8 @@ type AppOverrideRuleState struct {
 	Tags pulumi.StringArrayInput
 	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
 	TargetRule pulumi.StringPtrInput
-	Tfid       pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// To
 	Tos pulumi.StringArrayInput
 }
@@ -681,6 +668,7 @@ func (o AppOverrideRuleOutput) TargetRule() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.TargetRule }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o AppOverrideRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

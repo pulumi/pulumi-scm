@@ -104,6 +104,10 @@ public final class GetDosProtectionRuleListData {
      * 
      */
     private List<String> tags;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return List of destination zones
@@ -238,6 +242,10 @@ public final class GetDosProtectionRuleListData {
     public List<String> tags() {
         return this.tags;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -101,27 +101,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/addressGroup:AddressGroup example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/addressGroup:AddressGroup example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/addressGroup:AddressGroup example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type AddressGroup struct {
 	pulumi.CustomResourceState
 
@@ -149,7 +133,8 @@ type AddressGroup struct {
 	Statics pulumi.StringArrayOutput `pulumi:"statics"`
 	// Tags for address group object
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	Tfid pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewAddressGroup registers a new resource with the given unique name, arguments, and options.
@@ -206,7 +191,8 @@ type addressGroupState struct {
 	Statics []string `pulumi:"statics"`
 	// Tags for address group object
 	Tags []string `pulumi:"tags"`
-	Tfid *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type AddressGroupState struct {
@@ -234,6 +220,7 @@ type AddressGroupState struct {
 	Statics pulumi.StringArrayInput
 	// Tags for address group object
 	Tags pulumi.StringArrayInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 }
 
@@ -431,6 +418,7 @@ func (o AddressGroupOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AddressGroup) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o AddressGroupOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AddressGroup) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

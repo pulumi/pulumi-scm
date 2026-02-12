@@ -91,7 +91,8 @@ type LookupRemoteNetworkResult struct {
 	SpnName string `pulumi:"spnName"`
 	// Subnets
 	Subnets []string `pulumi:"subnets"`
-	Tfid    string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupRemoteNetworkOutput(ctx *pulumi.Context, args LookupRemoteNetworkOutputArgs, opts ...pulumi.InvokeOption) LookupRemoteNetworkResultOutput {
@@ -197,6 +198,7 @@ func (o LookupRemoteNetworkResultOutput) Subnets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) []string { return v.Subnets }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupRemoteNetworkResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

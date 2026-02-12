@@ -241,6 +241,7 @@ class _QosPolicyRuleState:
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -406,6 +407,9 @@ class _QosPolicyRuleState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -504,27 +508,11 @@ class QosPolicyRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/qosPolicyRule:QosPolicyRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/qosPolicyRule:QosPolicyRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/qosPolicyRule:QosPolicyRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -623,27 +611,11 @@ class QosPolicyRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/qosPolicyRule:QosPolicyRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/qosPolicyRule:QosPolicyRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/qosPolicyRule:QosPolicyRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param QosPolicyRuleArgs args: The arguments to use to populate this resource's properties.
@@ -738,6 +710,7 @@ class QosPolicyRule(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -852,5 +825,8 @@ class QosPolicyRule(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 

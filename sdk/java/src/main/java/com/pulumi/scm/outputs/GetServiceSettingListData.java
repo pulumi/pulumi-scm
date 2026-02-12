@@ -42,6 +42,10 @@ public final class GetServiceSettingListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetServiceSettingListData() {}
@@ -87,6 +91,10 @@ public final class GetServiceSettingListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

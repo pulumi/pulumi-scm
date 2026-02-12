@@ -105,6 +105,10 @@ public final class GetNatRuleListData {
      * 
      */
     private List<String> tags;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Destination interface of the original packet
@@ -244,6 +248,10 @@ public final class GetNatRuleListData {
     public List<String> tags() {
         return this.tags;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

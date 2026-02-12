@@ -152,27 +152,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/decryptionProfile:DecryptionProfile example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/decryptionProfile:DecryptionProfile example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/decryptionProfile:DecryptionProfile example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class DecryptionProfile extends pulumi.CustomResource {
     /**
@@ -238,6 +222,9 @@ export class DecryptionProfile extends pulumi.CustomResource {
      * Ssl protocol settings
      */
     declare public readonly sslProtocolSettings: pulumi.Output<outputs.DecryptionProfileSslProtocolSettings | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
@@ -319,6 +306,9 @@ export interface DecryptionProfileState {
      * Ssl protocol settings
      */
     sslProtocolSettings?: pulumi.Input<inputs.DecryptionProfileSslProtocolSettings>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
 }
 

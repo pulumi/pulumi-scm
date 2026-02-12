@@ -437,6 +437,7 @@ class _ApplicationFilterState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
         :param pulumi.Input['ApplicationFilterTaggingArgs'] tagging: Tagging
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value
         :param pulumi.Input[_builtins.bool] tunnels_other_apps: only True is a valid value
         :param pulumi.Input[_builtins.bool] used_by_malware: only True is a valid value
@@ -723,6 +724,9 @@ class _ApplicationFilterState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -819,27 +823,11 @@ class ApplicationFilter(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/applicationFilter:ApplicationFilter example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/applicationFilter:ApplicationFilter example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/applicationFilter:ApplicationFilter example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -900,27 +888,11 @@ class ApplicationFilter(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/applicationFilter:ApplicationFilter example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/applicationFilter:ApplicationFilter example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/applicationFilter:ApplicationFilter example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param ApplicationFilterArgs args: The arguments to use to populate this resource's properties.
@@ -1054,6 +1026,7 @@ class ApplicationFilter(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
         :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']] tagging: Tagging
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value
         :param pulumi.Input[_builtins.bool] tunnels_other_apps: only True is a valid value
         :param pulumi.Input[_builtins.bool] used_by_malware: only True is a valid value
@@ -1246,6 +1219,9 @@ class ApplicationFilter(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

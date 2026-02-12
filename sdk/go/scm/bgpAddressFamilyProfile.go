@@ -55,27 +55,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type BgpAddressFamilyProfile struct {
 	pulumi.CustomResourceState
 
@@ -93,7 +77,8 @@ type BgpAddressFamilyProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewBgpAddressFamilyProfile registers a new resource with the given unique name, arguments, and options.
@@ -140,7 +125,8 @@ type bgpAddressFamilyProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type BgpAddressFamilyProfileState struct {
@@ -158,7 +144,8 @@ type BgpAddressFamilyProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (BgpAddressFamilyProfileState) ElementType() reflect.Type {
@@ -316,6 +303,7 @@ func (o BgpAddressFamilyProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o BgpAddressFamilyProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

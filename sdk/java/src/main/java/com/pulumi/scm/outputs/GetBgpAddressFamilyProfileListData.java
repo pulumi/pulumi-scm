@@ -41,6 +41,10 @@ public final class GetBgpAddressFamilyProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetBgpAddressFamilyProfileListData() {}
@@ -86,6 +90,10 @@ public final class GetBgpAddressFamilyProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -78,6 +78,10 @@ public final class GetSiteResult {
      * 
      */
     private String state;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return The site type
@@ -182,6 +186,10 @@ public final class GetSiteResult {
     public String state() {
         return this.state;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

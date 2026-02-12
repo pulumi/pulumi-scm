@@ -17,27 +17,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type ZoneProtectionProfile struct {
 	pulumi.CustomResourceState
 
@@ -129,7 +113,8 @@ type ZoneProtectionProfile struct {
 	TcpSynackWithDataDiscard pulumi.BoolOutput `pulumi:"tcpSynackWithDataDiscard"`
 	// Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
 	TcpTimestampStrip pulumi.BoolPtrOutput `pulumi:"tcpTimestampStrip"`
-	Tfid              pulumi.StringOutput  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Discard packets with the Timestamp IP option set.
 	TimestampDiscard pulumi.BoolPtrOutput `pulumi:"timestampDiscard"`
 	// Discard packets if the class and number are unknown.
@@ -253,8 +238,9 @@ type zoneProtectionProfileState struct {
 	// Prevent a TCP session from being established if the TCP SYN-ACK packet contains data during a three-way handshake.
 	TcpSynackWithDataDiscard *bool `pulumi:"tcpSynackWithDataDiscard"`
 	// Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
-	TcpTimestampStrip *bool   `pulumi:"tcpTimestampStrip"`
-	Tfid              *string `pulumi:"tfid"`
+	TcpTimestampStrip *bool `pulumi:"tcpTimestampStrip"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Discard packets with the Timestamp IP option set.
 	TimestampDiscard *bool `pulumi:"timestampDiscard"`
 	// Discard packets if the class and number are unknown.
@@ -350,7 +336,8 @@ type ZoneProtectionProfileState struct {
 	TcpSynackWithDataDiscard pulumi.BoolPtrInput
 	// Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
 	TcpTimestampStrip pulumi.BoolPtrInput
-	Tfid              pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Discard packets with the Timestamp IP option set.
 	TimestampDiscard pulumi.BoolPtrInput
 	// Discard packets if the class and number are unknown.
@@ -834,6 +821,7 @@ func (o ZoneProtectionProfileOutput) TcpTimestampStrip() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ZoneProtectionProfile) pulumi.BoolPtrOutput { return v.TcpTimestampStrip }).(pulumi.BoolPtrOutput)
 }
 
+// The Terraform ID.
 func (o ZoneProtectionProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *ZoneProtectionProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

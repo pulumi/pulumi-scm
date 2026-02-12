@@ -42,6 +42,10 @@ public final class GetSdwanTrafficDistributionProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Traffic distribution
@@ -92,6 +96,10 @@ public final class GetSdwanTrafficDistributionProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

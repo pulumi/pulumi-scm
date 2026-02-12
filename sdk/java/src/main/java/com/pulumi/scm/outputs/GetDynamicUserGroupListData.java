@@ -51,6 +51,10 @@ public final class GetDynamicUserGroupListData {
      * 
      */
     private List<String> tags;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetDynamicUserGroupListData() {}
@@ -110,6 +114,10 @@ public final class GetDynamicUserGroupListData {
     public List<String> tags() {
         return this.tags;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

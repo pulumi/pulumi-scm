@@ -60,27 +60,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/authenticationSequence:AuthenticationSequence example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/authenticationSequence:AuthenticationSequence example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/authenticationSequence:AuthenticationSequence example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type AuthenticationSequence struct {
 	pulumi.CustomResourceState
 
@@ -98,7 +82,8 @@ type AuthenticationSequence struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Use domain to determine authentication profile?
 	UseDomainFindProfile pulumi.BoolOutput `pulumi:"useDomainFindProfile"`
 }
@@ -147,7 +132,8 @@ type authenticationSequenceState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Use domain to determine authentication profile?
 	UseDomainFindProfile *bool `pulumi:"useDomainFindProfile"`
 }
@@ -167,7 +153,8 @@ type AuthenticationSequenceState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Use domain to determine authentication profile?
 	UseDomainFindProfile pulumi.BoolPtrInput
 }
@@ -331,6 +318,7 @@ func (o AuthenticationSequenceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o AuthenticationSequenceOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

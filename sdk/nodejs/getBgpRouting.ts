@@ -53,6 +53,9 @@ export interface GetBgpRoutingResult {
      * Routing preference
      */
     readonly routingPreference: outputs.GetBgpRoutingRoutingPreference;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
     /**
      * Withdraw static route

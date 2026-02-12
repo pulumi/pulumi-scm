@@ -172,27 +172,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/pbfRule:PbfRule example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/pbfRule:PbfRule example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/pbfRule:PbfRule example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type PbfRule struct {
 	pulumi.CustomResourceState
 
@@ -230,7 +214,8 @@ type PbfRule struct {
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
 	// Tags
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	Tfid pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewPbfRule registers a new resource with the given unique name, arguments, and options.
@@ -297,7 +282,8 @@ type pbfRuleState struct {
 	Sources []string `pulumi:"sources"`
 	// Tags
 	Tags []string `pulumi:"tags"`
-	Tfid *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type PbfRuleState struct {
@@ -335,6 +321,7 @@ type PbfRuleState struct {
 	Sources pulumi.StringArrayInput
 	// Tags
 	Tags pulumi.StringArrayInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 }
 
@@ -583,6 +570,7 @@ func (o PbfRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *PbfRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o PbfRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *PbfRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

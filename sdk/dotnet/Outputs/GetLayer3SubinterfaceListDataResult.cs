@@ -73,6 +73,9 @@ namespace Pulumi.Scm.Outputs
         /// VLAN tag
         /// </summary>
         public readonly int Tag;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

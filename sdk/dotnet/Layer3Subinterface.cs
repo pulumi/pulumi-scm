@@ -102,27 +102,11 @@ namespace Pulumi.Scm
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
     /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example folder:::id
-    /// ```
+    /// or
     /// 
     /// or
     /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example :snippet::id
-    /// ```
-    /// 
-    /// or
-    /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/layer3Subinterface:Layer3Subinterface example ::device:id
-    /// ```
+    /// **Note:** Please provide just one of folder, snippet, or device for the import command.
     /// </summary>
     [ScmResourceType("scm:index/layer3Subinterface:Layer3Subinterface")]
     public partial class Layer3Subinterface : global::Pulumi.CustomResource
@@ -213,6 +197,9 @@ namespace Pulumi.Scm
         [Output("tag")]
         public Output<int?> Tag { get; private set; } = null!;
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
@@ -466,6 +453,9 @@ namespace Pulumi.Scm
         [Input("tag")]
         public Input<int>? Tag { get; set; }
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }
 

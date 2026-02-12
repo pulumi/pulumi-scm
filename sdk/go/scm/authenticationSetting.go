@@ -72,27 +72,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/authenticationSetting:AuthenticationSetting example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/authenticationSetting:AuthenticationSetting example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/authenticationSetting:AuthenticationSetting example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type AuthenticationSetting struct {
 	pulumi.CustomResourceState
 
@@ -108,7 +92,8 @@ type AuthenticationSetting struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewAuthenticationSetting registers a new resource with the given unique name, arguments, and options.
@@ -153,7 +138,8 @@ type authenticationSettingState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type AuthenticationSettingState struct {
@@ -169,7 +155,8 @@ type AuthenticationSettingState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (AuthenticationSettingState) ElementType() reflect.Type {
@@ -318,6 +305,7 @@ func (o AuthenticationSettingOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationSetting) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o AuthenticationSettingOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationSetting) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

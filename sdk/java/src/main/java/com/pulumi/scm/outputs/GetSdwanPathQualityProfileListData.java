@@ -41,6 +41,10 @@ public final class GetSdwanPathQualityProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetSdwanPathQualityProfileListData() {}
@@ -86,6 +90,10 @@ public final class GetSdwanPathQualityProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

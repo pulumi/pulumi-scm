@@ -69,6 +69,10 @@ public final class GetLoopbackInterfaceListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetLoopbackInterfaceListData() {}
@@ -149,6 +153,10 @@ public final class GetLoopbackInterfaceListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

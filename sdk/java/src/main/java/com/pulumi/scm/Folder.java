@@ -114,12 +114,6 @@ import javax.annotation.Nullable;
  * 
  * The following command can be used to import a resource not managed by Terraform:
  * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/folder:Folder example :::id
- * ```
- * 
  */
 @ResourceType(type="scm:index/folder:Folder")
 public class Folder extends com.pulumi.resources.CustomResource {
@@ -193,9 +187,17 @@ public class Folder extends com.pulumi.resources.CustomResource {
     public Output<Optional<List<String>>> snippets() {
         return Codegen.optional(this.snippets);
     }
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Output<String> tfid() {
         return this.tfid;
     }

@@ -188,6 +188,7 @@ class _DecryptionProfileState:
         :param pulumi.Input['DecryptionProfileSslInboundProxyArgs'] ssl_inbound_proxy: Ssl inbound proxy
         :param pulumi.Input['DecryptionProfileSslNoProxyArgs'] ssl_no_proxy: Ssl no proxy
         :param pulumi.Input['DecryptionProfileSslProtocolSettingsArgs'] ssl_protocol_settings: Ssl protocol settings
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -311,6 +312,9 @@ class _DecryptionProfileState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -472,27 +476,11 @@ class DecryptionProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -654,27 +642,11 @@ class DecryptionProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/decryptionProfile:DecryptionProfile example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param DecryptionProfileArgs args: The arguments to use to populate this resource's properties.
@@ -755,6 +727,7 @@ class DecryptionProfile(pulumi.CustomResource):
         :param pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']] ssl_inbound_proxy: Ssl inbound proxy
         :param pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']] ssl_no_proxy: Ssl no proxy
         :param pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']] ssl_protocol_settings: Ssl protocol settings
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -842,5 +815,8 @@ class DecryptionProfile(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 

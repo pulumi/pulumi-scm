@@ -96,6 +96,10 @@ public final class GetServiceConnectionListData {
      * 
      */
     private List<String> subnets;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetServiceConnectionListData() {}
@@ -211,6 +215,10 @@ public final class GetServiceConnectionListData {
     public List<String> subnets() {
         return this.subnets;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

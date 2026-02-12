@@ -66,6 +66,9 @@ export interface GetBandwidthAllocationResult {
      * Spn name list
      */
     readonly spnNameLists: string[];
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
 }
 /**

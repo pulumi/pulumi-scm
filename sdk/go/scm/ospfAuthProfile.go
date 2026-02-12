@@ -17,27 +17,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ospfAuthProfile:OspfAuthProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ospfAuthProfile:OspfAuthProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ospfAuthProfile:OspfAuthProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type OspfAuthProfile struct {
 	pulumi.CustomResourceState
 
@@ -63,7 +47,8 @@ type OspfAuthProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewOspfAuthProfile registers a new resource with the given unique name, arguments, and options.
@@ -126,7 +111,8 @@ type ospfAuthProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type OspfAuthProfileState struct {
@@ -152,7 +138,8 @@ type OspfAuthProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (OspfAuthProfileState) ElementType() reflect.Type {
@@ -336,6 +323,7 @@ func (o OspfAuthProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OspfAuthProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o OspfAuthProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *OspfAuthProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

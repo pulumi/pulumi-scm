@@ -43,27 +43,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/interfaceManagementProfile:InterfaceManagementProfile example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class InterfaceManagementProfile extends pulumi.CustomResource {
     /**
@@ -145,6 +129,9 @@ export class InterfaceManagementProfile extends pulumi.CustomResource {
      * Allow telnet? Seriously, why would you do this?!?
      */
     declare public readonly telnet: pulumi.Output<boolean | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * Allow User-ID?
@@ -268,6 +255,9 @@ export interface InterfaceManagementProfileState {
      * Allow telnet? Seriously, why would you do this?!?
      */
     telnet?: pulumi.Input<boolean>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * Allow User-ID?

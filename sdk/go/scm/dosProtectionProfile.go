@@ -18,27 +18,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dosProtectionProfile:DosProtectionProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dosProtectionProfile:DosProtectionProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/dosProtectionProfile:DosProtectionProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type DosProtectionProfile struct {
 	pulumi.CustomResourceState
 
@@ -60,7 +44,8 @@ type DosProtectionProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Type
 	Type pulumi.StringOutput `pulumi:"type"`
 }
@@ -116,7 +101,8 @@ type dosProtectionProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Type
 	Type *string `pulumi:"type"`
 }
@@ -140,7 +126,8 @@ type DosProtectionProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Type
 	Type pulumi.StringPtrInput
 }
@@ -322,6 +309,7 @@ func (o DosProtectionProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DosProtectionProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o DosProtectionProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *DosProtectionProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

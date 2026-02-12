@@ -137,9 +137,17 @@ public final class TrafficSteeringRuleState extends com.pulumi.resources.Resourc
         return Optional.ofNullable(this.sources);
     }
 
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Import(name="tfid")
     private @Nullable Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Optional<Output<String>> tfid() {
         return Optional.ofNullable(this.tfid);
     }
@@ -394,11 +402,23 @@ public final class TrafficSteeringRuleState extends com.pulumi.resources.Resourc
             return sources(List.of(sources));
         }
 
+        /**
+         * @param tfid The Terraform ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfid(@Nullable Output<String> tfid) {
             $.tfid = tfid;
             return this;
         }
 
+        /**
+         * @param tfid The Terraform ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfid(String tfid) {
             return tfid(Output.of(tfid));
         }

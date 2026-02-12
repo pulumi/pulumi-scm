@@ -273,6 +273,7 @@ class _ProfileGroupState:
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: Spyware
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: Url filtering
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: Virus and wildfire analysis
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vulnerabilities: Vulnerability
@@ -433,6 +434,9 @@ class _ProfileGroupState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -503,27 +507,11 @@ class ProfileGroup(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/profileGroup:ProfileGroup example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/profileGroup:ProfileGroup example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/profileGroup:ProfileGroup example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -558,27 +546,11 @@ class ProfileGroup(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/profileGroup:ProfileGroup example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/profileGroup:ProfileGroup example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/profileGroup:ProfileGroup example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param ProfileGroupArgs args: The arguments to use to populate this resource's properties.
@@ -676,6 +648,7 @@ class ProfileGroup(pulumi.CustomResource):
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: Spyware
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: Url filtering
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: Virus and wildfire analysis
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vulnerabilities: Vulnerability
@@ -787,6 +760,9 @@ class ProfileGroup(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

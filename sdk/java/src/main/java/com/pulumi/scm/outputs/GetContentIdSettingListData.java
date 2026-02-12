@@ -36,6 +36,10 @@ public final class GetContentIdSettingListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetContentIdSettingListData() {}
@@ -74,6 +78,10 @@ public final class GetContentIdSettingListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

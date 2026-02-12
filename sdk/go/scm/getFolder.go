@@ -77,7 +77,8 @@ type LookupFolderResult struct {
 	Parent string `pulumi:"parent"`
 	// Snippets associated with the folder
 	Snippets []string `pulumi:"snippets"`
-	Tfid     string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupFolderOutput(ctx *pulumi.Context, args LookupFolderOutputArgs, opts ...pulumi.InvokeOption) LookupFolderResultOutput {
@@ -146,6 +147,7 @@ func (o LookupFolderResultOutput) Snippets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupFolderResult) []string { return v.Snippets }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupFolderResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFolderResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

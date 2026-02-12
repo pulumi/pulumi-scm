@@ -70,6 +70,10 @@ public final class GetAntiSpywareProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Threat exception
@@ -155,6 +159,10 @@ public final class GetAntiSpywareProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

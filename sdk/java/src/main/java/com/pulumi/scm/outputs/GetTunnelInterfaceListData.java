@@ -69,6 +69,10 @@ public final class GetTunnelInterfaceListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetTunnelInterfaceListData() {}
@@ -149,6 +153,10 @@ public final class GetTunnelInterfaceListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

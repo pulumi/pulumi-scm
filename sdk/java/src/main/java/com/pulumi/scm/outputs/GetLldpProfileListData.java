@@ -52,6 +52,10 @@ public final class GetLldpProfileListData {
      * 
      */
     private Boolean snmpSyslogNotification;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetLldpProfileListData() {}
@@ -111,6 +115,10 @@ public final class GetLldpProfileListData {
     public Boolean snmpSyslogNotification() {
         return this.snmpSyslogNotification;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

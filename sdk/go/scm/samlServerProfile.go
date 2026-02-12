@@ -79,27 +79,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/samlServerProfile:SamlServerProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/samlServerProfile:SamlServerProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/samlServerProfile:SamlServerProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type SamlServerProfile struct {
 	pulumi.CustomResourceState
 
@@ -129,7 +113,8 @@ type SamlServerProfile struct {
 	SsoBindings pulumi.StringOutput `pulumi:"ssoBindings"`
 	// Identity provider SSO URL
 	SsoUrl pulumi.StringOutput `pulumi:"ssoUrl"`
-	Tfid   pulumi.StringOutput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Validate the identity provider certificate?
 	ValidateIdpCertificate pulumi.BoolPtrOutput `pulumi:"validateIdpCertificate"`
 	// Sign SAML message to the identity provider?
@@ -204,7 +189,8 @@ type samlServerProfileState struct {
 	SsoBindings *string `pulumi:"ssoBindings"`
 	// Identity provider SSO URL
 	SsoUrl *string `pulumi:"ssoUrl"`
-	Tfid   *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Validate the identity provider certificate?
 	ValidateIdpCertificate *bool `pulumi:"validateIdpCertificate"`
 	// Sign SAML message to the identity provider?
@@ -238,7 +224,8 @@ type SamlServerProfileState struct {
 	SsoBindings pulumi.StringPtrInput
 	// Identity provider SSO URL
 	SsoUrl pulumi.StringPtrInput
-	Tfid   pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Validate the identity provider certificate?
 	ValidateIdpCertificate pulumi.BoolPtrInput
 	// Sign SAML message to the identity provider?
@@ -462,6 +449,7 @@ func (o SamlServerProfileOutput) SsoUrl() pulumi.StringOutput {
 	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringOutput { return v.SsoUrl }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o SamlServerProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *SamlServerProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

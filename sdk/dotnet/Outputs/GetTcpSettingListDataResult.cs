@@ -33,6 +33,9 @@ namespace Pulumi.Scm.Outputs
         /// Tcp
         /// </summary>
         public readonly Outputs.GetTcpSettingListDataTcpResult Tcp;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

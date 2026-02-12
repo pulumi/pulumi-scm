@@ -18,27 +18,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/internalDnsServer:InternalDnsServer example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/internalDnsServer:InternalDnsServer example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/internalDnsServer:InternalDnsServer example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type InternalDnsServer struct {
 	pulumi.CustomResourceState
 
@@ -50,7 +34,8 @@ type InternalDnsServer struct {
 	Primary pulumi.StringOutput `pulumi:"primary"`
 	// The IP address of the secondary DNS server
 	Secondary pulumi.StringPtrOutput `pulumi:"secondary"`
-	Tfid      pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewInternalDnsServer registers a new resource with the given unique name, arguments, and options.
@@ -97,7 +82,8 @@ type internalDnsServerState struct {
 	Primary *string `pulumi:"primary"`
 	// The IP address of the secondary DNS server
 	Secondary *string `pulumi:"secondary"`
-	Tfid      *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type InternalDnsServerState struct {
@@ -109,7 +95,8 @@ type InternalDnsServerState struct {
 	Primary pulumi.StringPtrInput
 	// The IP address of the secondary DNS server
 	Secondary pulumi.StringPtrInput
-	Tfid      pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (InternalDnsServerState) ElementType() reflect.Type {
@@ -246,6 +233,7 @@ func (o InternalDnsServerOutput) Secondary() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *InternalDnsServer) pulumi.StringPtrOutput { return v.Secondary }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o InternalDnsServerOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *InternalDnsServer) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

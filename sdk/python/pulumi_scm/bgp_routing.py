@@ -139,6 +139,7 @@ class _BgpRoutingState:
         :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] outbound_routes_for_services: Outbound routes for services
         :param pulumi.Input['BgpRoutingRoutingPreferenceArgs'] routing_preference: Routing preference
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] withdraw_static_route: Withdraw static route
         """
         if accept_route_over_sc is not None:
@@ -219,6 +220,9 @@ class _BgpRoutingState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -277,19 +281,7 @@ class BgpRouting(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
-        ```
-
         or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
-        ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -332,19 +324,7 @@ class BgpRouting(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
-        ```
-
         or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
-        ```
 
         :param str resource_name: The name of the resource.
         :param BgpRoutingArgs args: The arguments to use to populate this resource's properties.
@@ -412,6 +392,7 @@ class BgpRouting(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] outbound_routes_for_services: Outbound routes for services
         :param pulumi.Input[Union['BgpRoutingRoutingPreferenceArgs', 'BgpRoutingRoutingPreferenceArgsDict']] routing_preference: Routing preference
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] withdraw_static_route: Withdraw static route
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -470,6 +451,9 @@ class BgpRouting(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

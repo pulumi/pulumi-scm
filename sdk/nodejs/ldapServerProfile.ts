@@ -13,27 +13,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class LdapServerProfile extends pulumi.CustomResource {
     /**
@@ -119,6 +103,9 @@ export class LdapServerProfile extends pulumi.CustomResource {
      * Require SSL/TLS secured connection?
      */
     declare public readonly ssl: pulumi.Output<boolean | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The search timeout (seconds)
@@ -247,6 +234,9 @@ export interface LdapServerProfileState {
      * Require SSL/TLS secured connection?
      */
     ssl?: pulumi.Input<boolean>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * The search timeout (seconds)

@@ -72,6 +72,10 @@ public final class GetQosPolicyRuleListData {
      * 
      */
     private String targetRule;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetQosPolicyRuleListData() {}
@@ -159,6 +163,10 @@ public final class GetQosPolicyRuleListData {
     public String targetRule() {
         return this.targetRule;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

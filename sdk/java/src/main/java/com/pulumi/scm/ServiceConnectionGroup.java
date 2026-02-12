@@ -168,27 +168,11 @@ import javax.annotation.Nullable;
  * 
  * The following command can be used to import a resource not managed by Terraform:
  * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example folder:::id
- * ```
+ * or
  * 
  * or
  * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example :snippet::id
- * ```
- * 
- * or
- * 
- * bash
- * 
- * ```sh
- * $ pulumi import scm:index/serviceConnectionGroup:ServiceConnectionGroup example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  * 
  */
 @ResourceType(type="scm:index/serviceConnectionGroup:ServiceConnectionGroup")
@@ -263,9 +247,17 @@ public class ServiceConnectionGroup extends com.pulumi.resources.CustomResource 
     public Output<List<String>> targets() {
         return this.targets;
     }
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Output<String> tfid() {
         return this.tfid;
     }

@@ -89,27 +89,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/kerberosServerProfile:KerberosServerProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/kerberosServerProfile:KerberosServerProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/kerberosServerProfile:KerberosServerProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type KerberosServerProfile struct {
 	pulumi.CustomResourceState
 
@@ -127,7 +111,8 @@ type KerberosServerProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewKerberosServerProfile registers a new resource with the given unique name, arguments, and options.
@@ -177,7 +162,8 @@ type kerberosServerProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type KerberosServerProfileState struct {
@@ -195,7 +181,8 @@ type KerberosServerProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (KerberosServerProfileState) ElementType() reflect.Type {
@@ -353,6 +340,7 @@ func (o KerberosServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *KerberosServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o KerberosServerProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *KerberosServerProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

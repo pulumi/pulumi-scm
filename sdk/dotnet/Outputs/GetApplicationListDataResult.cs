@@ -117,6 +117,9 @@ namespace Pulumi.Scm.Outputs
         /// Technology
         /// </summary>
         public readonly string Technology;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// timeout in seconds

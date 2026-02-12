@@ -82,6 +82,9 @@ export interface GetAutoVpnClusterResult {
      * VPN cluster name
      */
     readonly name: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
     /**
      * VPN cluster type

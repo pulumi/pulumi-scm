@@ -266,6 +266,7 @@ class _SiteState:
         :param pulumi.Input[_builtins.str] name: The name of the site
         :param pulumi.Input['SiteQosArgs'] qos: Qos
         :param pulumi.Input[_builtins.str] state: The state in which the site exists
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] type: The site type
         :param pulumi.Input[_builtins.str] zip_code: The postal code in which the site exists
         """
@@ -447,6 +448,9 @@ class _SiteState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -597,12 +601,6 @@ class Site(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/site:Site example :::id
-        ```
-
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] address_line1: The address in which the site exists
@@ -724,12 +722,6 @@ class Site(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/site:Site example :::id
-        ```
-
         :param str resource_name: The name of the resource.
         :param SiteArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -826,6 +818,7 @@ class Site(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the site
         :param pulumi.Input[Union['SiteQosArgs', 'SiteQosArgsDict']] qos: Qos
         :param pulumi.Input[_builtins.str] state: The state in which the site exists
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.str] type: The site type
         :param pulumi.Input[_builtins.str] zip_code: The postal code in which the site exists
         """
@@ -949,6 +942,9 @@ class Site(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

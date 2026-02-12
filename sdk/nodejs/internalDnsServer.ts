@@ -11,27 +11,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/internalDnsServer:InternalDnsServer example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/internalDnsServer:InternalDnsServer example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/internalDnsServer:InternalDnsServer example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class InternalDnsServer extends pulumi.CustomResource {
     /**
@@ -77,6 +61,9 @@ export class InternalDnsServer extends pulumi.CustomResource {
      * The IP address of the secondary DNS server
      */
     declare public readonly secondary: pulumi.Output<string | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
@@ -136,6 +123,9 @@ export interface InternalDnsServerState {
      * The IP address of the secondary DNS server
      */
     secondary?: pulumi.Input<string>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
 }
 

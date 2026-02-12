@@ -42,6 +42,10 @@ public final class GetKerberosServerProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetKerberosServerProfileListData() {}
@@ -87,6 +91,10 @@ public final class GetKerberosServerProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

@@ -241,6 +241,7 @@ class _AntiSpywareProfileState:
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]] threat_exceptions: Threat exception
         """
         if cloud_inline_analysis is not None:
@@ -395,6 +396,9 @@ class _AntiSpywareProfileState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -636,6 +640,7 @@ class AntiSpywareProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]] threat_exceptions: Threat exception
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -743,6 +748,9 @@ class AntiSpywareProfile(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

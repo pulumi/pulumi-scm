@@ -62,27 +62,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class AutoVpnCluster extends pulumi.CustomResource {
     /**
@@ -136,6 +120,9 @@ export class AutoVpnCluster extends pulumi.CustomResource {
      * VPN cluster name
      */
     declare public readonly name: pulumi.Output<string>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * VPN cluster type
@@ -207,6 +194,9 @@ export interface AutoVpnClusterState {
      * VPN cluster name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * VPN cluster type

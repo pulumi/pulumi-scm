@@ -76,7 +76,8 @@ type LookupServiceConnectionGroupResult struct {
 	PbfOnly bool `pulumi:"pbfOnly"`
 	// Target
 	Targets []string `pulumi:"targets"`
-	Tfid    string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupServiceConnectionGroupOutput(ctx *pulumi.Context, args LookupServiceConnectionGroupOutputArgs, opts ...pulumi.InvokeOption) LookupServiceConnectionGroupResultOutput {
@@ -147,6 +148,7 @@ func (o LookupServiceConnectionGroupResultOutput) Targets() pulumi.StringArrayOu
 	return o.ApplyT(func(v LookupServiceConnectionGroupResult) []string { return v.Targets }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupServiceConnectionGroupResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionGroupResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

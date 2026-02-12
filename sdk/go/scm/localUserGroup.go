@@ -17,27 +17,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/localUserGroup:LocalUserGroup example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/localUserGroup:LocalUserGroup example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/localUserGroup:LocalUserGroup example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type LocalUserGroup struct {
 	pulumi.CustomResourceState
 
@@ -53,7 +37,8 @@ type LocalUserGroup struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// The local user group users
 	Users pulumi.StringArrayOutput `pulumi:"users"`
 }
@@ -100,7 +85,8 @@ type localUserGroupState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// The local user group users
 	Users []string `pulumi:"users"`
 }
@@ -118,7 +104,8 @@ type LocalUserGroupState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// The local user group users
 	Users pulumi.StringArrayInput
 }
@@ -273,6 +260,7 @@ func (o LocalUserGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LocalUserGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o LocalUserGroupOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *LocalUserGroup) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

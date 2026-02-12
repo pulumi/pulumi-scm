@@ -67,27 +67,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/addressGroup:AddressGroup example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/addressGroup:AddressGroup example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/addressGroup:AddressGroup example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class AddressGroup extends pulumi.CustomResource {
     /**
@@ -157,6 +141,9 @@ export class AddressGroup extends pulumi.CustomResource {
      * Tags for address group object
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
@@ -242,6 +229,9 @@ export interface AddressGroupState {
      * Tags for address group object
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
 }
 

@@ -13,27 +13,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/dosProtectionRule:DosProtectionRule example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/dosProtectionRule:DosProtectionRule example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/dosProtectionRule:DosProtectionRule example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class DosProtectionRule extends pulumi.CustomResource {
     /**
@@ -135,6 +119,9 @@ export class DosProtectionRule extends pulumi.CustomResource {
      * List of tags
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * List of destination zones
@@ -276,6 +263,9 @@ export interface DosProtectionRuleState {
      * List of tags
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * List of destination zones

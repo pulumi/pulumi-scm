@@ -17,27 +17,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/routePathAccessList:RoutePathAccessList example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/routePathAccessList:RoutePathAccessList example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/routePathAccessList:RoutePathAccessList example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type RoutePathAccessList struct {
 	pulumi.CustomResourceState
 
@@ -57,7 +41,8 @@ type RoutePathAccessList struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewRoutePathAccessList registers a new resource with the given unique name, arguments, and options.
@@ -106,7 +91,8 @@ type routePathAccessListState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type RoutePathAccessListState struct {
@@ -126,7 +112,8 @@ type RoutePathAccessListState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (RoutePathAccessListState) ElementType() reflect.Type {
@@ -293,6 +280,7 @@ func (o RoutePathAccessListOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RoutePathAccessList) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o RoutePathAccessListOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *RoutePathAccessList) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

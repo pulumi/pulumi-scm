@@ -74,6 +74,10 @@ public final class GetAddressListData {
      * 
      */
     private List<String> tags;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetAddressListData() {}
@@ -162,6 +166,10 @@ public final class GetAddressListData {
     public List<String> tags() {
         return this.tags;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

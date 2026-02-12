@@ -161,27 +161,11 @@ namespace Pulumi.Scm
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
     /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/variable:Variable example folder:::id
-    /// ```
+    /// or
     /// 
     /// or
     /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/variable:Variable example :snippet::id
-    /// ```
-    /// 
-    /// or
-    /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/variable:Variable example ::device:id
-    /// ```
+    /// **Note:** Please provide just one of folder, snippet, or device for the import command.
     /// </summary>
     [ScmResourceType("scm:index/variable:Variable")]
     public partial class Variable : global::Pulumi.CustomResource
@@ -226,6 +210,9 @@ namespace Pulumi.Scm
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
@@ -381,6 +368,9 @@ namespace Pulumi.Scm
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }
 

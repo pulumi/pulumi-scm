@@ -36,6 +36,10 @@ public final class GetLocalUserGroupListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return The local user group users
@@ -79,6 +83,10 @@ public final class GetLocalUserGroupListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

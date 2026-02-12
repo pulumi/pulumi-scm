@@ -118,6 +118,10 @@ public final class GetSdwanRuleListData {
      * 
      */
     private List<String> tags;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return List of destination zones
@@ -273,6 +277,10 @@ public final class GetSdwanRuleListData {
     public List<String> tags() {
         return this.tags;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

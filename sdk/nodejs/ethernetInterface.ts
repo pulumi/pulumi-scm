@@ -158,27 +158,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/ethernetInterface:EthernetInterface example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/ethernetInterface:EthernetInterface example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/ethernetInterface:EthernetInterface example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class EthernetInterface extends pulumi.CustomResource {
     /**
@@ -280,6 +264,9 @@ export class EthernetInterface extends pulumi.CustomResource {
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     declare public readonly tap: pulumi.Output<outputs.EthernetInterfaceTap | undefined>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
@@ -413,6 +400,9 @@ export interface EthernetInterfaceState {
      * > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      */
     tap?: pulumi.Input<inputs.EthernetInterfaceTap>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
 }
 

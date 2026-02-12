@@ -52,7 +52,8 @@ type LookupTrafficSteeringRuleResult struct {
 	SourceUsers []string `pulumi:"sourceUsers"`
 	// Source
 	Sources []string `pulumi:"sources"`
-	Tfid    string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 }
 
 func LookupTrafficSteeringRuleOutput(ctx *pulumi.Context, args LookupTrafficSteeringRuleOutputArgs, opts ...pulumi.InvokeOption) LookupTrafficSteeringRuleResultOutput {
@@ -138,6 +139,7 @@ func (o LookupTrafficSteeringRuleResultOutput) Sources() pulumi.StringArrayOutpu
 	return o.ApplyT(func(v LookupTrafficSteeringRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupTrafficSteeringRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTrafficSteeringRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

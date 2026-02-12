@@ -48,27 +48,11 @@ namespace Pulumi.Scm
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
     /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/lldpProfile:LldpProfile example folder:::id
-    /// ```
+    /// or
     /// 
     /// or
     /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/lldpProfile:LldpProfile example :snippet::id
-    /// ```
-    /// 
-    /// or
-    /// 
-    /// bash
-    /// 
-    /// ```sh
-    /// $ pulumi import scm:index/lldpProfile:LldpProfile example ::device:id
-    /// ```
+    /// **Note:** Please provide just one of folder, snippet, or device for the import command.
     /// </summary>
     [ScmResourceType("scm:index/lldpProfile:LldpProfile")]
     public partial class LldpProfile : global::Pulumi.CustomResource
@@ -119,6 +103,9 @@ namespace Pulumi.Scm
         [Output("snmpSyslogNotification")]
         public Output<bool?> SnmpSyslogNotification { get; private set; } = null!;
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
@@ -268,6 +255,9 @@ namespace Pulumi.Scm
         [Input("snmpSyslogNotification")]
         public Input<bool>? SnmpSyslogNotification { get; set; }
 
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }
 

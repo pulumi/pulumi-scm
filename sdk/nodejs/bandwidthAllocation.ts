@@ -44,12 +44,6 @@ import * as utilities from "./utilities";
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/bandwidthAllocation:BandwidthAllocation example <name_value_of_the_resource>
- * ```
  */
 export class BandwidthAllocation extends pulumi.CustomResource {
     /**
@@ -95,6 +89,9 @@ export class BandwidthAllocation extends pulumi.CustomResource {
      * Spn name list
      */
     declare public readonly spnNameLists: pulumi.Output<string[]>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
@@ -151,6 +148,9 @@ export interface BandwidthAllocationState {
      * Spn name list
      */
     spnNameLists?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
 }
 

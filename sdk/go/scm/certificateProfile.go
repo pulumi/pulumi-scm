@@ -66,27 +66,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/certificateProfile:CertificateProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/certificateProfile:CertificateProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/certificateProfile:CertificateProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type CertificateProfile struct {
 	pulumi.CustomResourceState
 
@@ -120,7 +104,8 @@ type CertificateProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Use CRL?
 	UseCrl pulumi.BoolPtrOutput `pulumi:"useCrl"`
 	// Use OCSP?
@@ -192,7 +177,8 @@ type certificateProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Use CRL?
 	UseCrl *bool `pulumi:"useCrl"`
 	// Use OCSP?
@@ -232,7 +218,8 @@ type CertificateProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Use CRL?
 	UseCrl pulumi.BoolPtrInput
 	// Use OCSP?
@@ -480,6 +467,7 @@ func (o CertificateProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o CertificateProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

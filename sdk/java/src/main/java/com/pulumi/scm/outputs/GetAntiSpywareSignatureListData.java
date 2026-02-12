@@ -73,6 +73,10 @@ public final class GetAntiSpywareSignatureListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return threat id range &lt;15000-18000&gt; and &lt;6900001-7000000&gt;
@@ -175,6 +179,10 @@ public final class GetAntiSpywareSignatureListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

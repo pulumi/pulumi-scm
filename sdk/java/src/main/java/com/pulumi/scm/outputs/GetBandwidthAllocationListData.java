@@ -33,6 +33,10 @@ public final class GetBandwidthAllocationListData {
      * 
      */
     private List<String> spnNameLists;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetBandwidthAllocationListData() {}
@@ -64,6 +68,10 @@ public final class GetBandwidthAllocationListData {
     public List<String> spnNameLists() {
         return this.spnNameLists;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

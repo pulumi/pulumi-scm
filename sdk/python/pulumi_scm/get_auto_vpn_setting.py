@@ -71,6 +71,9 @@ class GetAutoVpnSettingResult:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

@@ -54,19 +54,7 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
-// ```
-//
 // or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
-// ```
 type BgpRouting struct {
 	pulumi.CustomResourceState
 
@@ -80,7 +68,8 @@ type BgpRouting struct {
 	OutboundRoutesForServices pulumi.StringArrayOutput `pulumi:"outboundRoutesForServices"`
 	// Routing preference
 	RoutingPreference BgpRoutingRoutingPreferencePtrOutput `pulumi:"routingPreference"`
-	Tfid              pulumi.StringOutput                  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Withdraw static route
 	WithdrawStaticRoute pulumi.BoolPtrOutput `pulumi:"withdrawStaticRoute"`
 }
@@ -125,7 +114,8 @@ type bgpRoutingState struct {
 	OutboundRoutesForServices []string `pulumi:"outboundRoutesForServices"`
 	// Routing preference
 	RoutingPreference *BgpRoutingRoutingPreference `pulumi:"routingPreference"`
-	Tfid              *string                      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Withdraw static route
 	WithdrawStaticRoute *bool `pulumi:"withdrawStaticRoute"`
 }
@@ -141,7 +131,8 @@ type BgpRoutingState struct {
 	OutboundRoutesForServices pulumi.StringArrayInput
 	// Routing preference
 	RoutingPreference BgpRoutingRoutingPreferencePtrInput
-	Tfid              pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Withdraw static route
 	WithdrawStaticRoute pulumi.BoolPtrInput
 }
@@ -293,6 +284,7 @@ func (o BgpRoutingOutput) RoutingPreference() BgpRoutingRoutingPreferencePtrOutp
 	return o.ApplyT(func(v *BgpRouting) BgpRoutingRoutingPreferencePtrOutput { return v.RoutingPreference }).(BgpRoutingRoutingPreferencePtrOutput)
 }
 
+// The Terraform ID.
 func (o BgpRoutingOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *BgpRouting) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

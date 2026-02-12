@@ -45,6 +45,10 @@ public final class GetLinkTagListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetLinkTagListData() {}
@@ -97,6 +101,10 @@ public final class GetLinkTagListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

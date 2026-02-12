@@ -229,6 +229,7 @@ class _RemoteNetworkState:
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: specify secondary ipsec_tunnel if needed
         :param pulumi.Input[_builtins.str] spn_name: spn-name is needed when license_type is FWAAS-AGGREGATE
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         if ecmp_load_balancing is not None:
             pulumi.set(__self__, "ecmp_load_balancing", ecmp_load_balancing)
@@ -404,6 +405,9 @@ class _RemoteNetworkState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -512,27 +516,11 @@ class RemoteNetwork(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -637,27 +625,11 @@ class RemoteNetwork(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/remoteNetwork:RemoteNetwork example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param RemoteNetworkArgs args: The arguments to use to populate this resource's properties.
@@ -757,6 +729,7 @@ class RemoteNetwork(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: specify secondary ipsec_tunnel if needed
         :param pulumi.Input[_builtins.str] spn_name: spn-name is needed when license_type is FWAAS-AGGREGATE
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -876,5 +849,8 @@ class RemoteNetwork(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 

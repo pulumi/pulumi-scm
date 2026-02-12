@@ -342,6 +342,9 @@ namespace Pulumi.Scm
         /// Tenant restrictions
         /// </summary>
         public readonly ImmutableArray<string> TenantRestrictions;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// The destination security zone(s)

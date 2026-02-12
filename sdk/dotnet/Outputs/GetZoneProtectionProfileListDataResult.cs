@@ -175,6 +175,9 @@ namespace Pulumi.Scm.Outputs
         /// Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
         /// </summary>
         public readonly bool TcpTimestampStrip;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// Discard packets with the Timestamp IP option set.

@@ -172,27 +172,11 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/securityRule:SecurityRule example folder:::id
- * ```
+ * or
  *
  * or
  *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/securityRule:SecurityRule example :snippet::id
- * ```
- *
- * or
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/securityRule:SecurityRule example ::device:id
- * ```
+ * **Note:** Please provide just one of folder, snippet, or device for the import command.
  */
 export class SecurityRule extends pulumi.CustomResource {
     /**
@@ -374,6 +358,9 @@ export class SecurityRule extends pulumi.CustomResource {
      * Tenant restrictions
      */
     declare public readonly tenantRestrictions: pulumi.Output<string[]>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The destination security zone(s)
@@ -637,6 +624,9 @@ export interface SecurityRuleState {
      * Tenant restrictions
      */
     tenantRestrictions?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * The destination security zone(s)

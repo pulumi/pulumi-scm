@@ -17,27 +17,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/sdwanTrafficDistributionProfile:SdwanTrafficDistributionProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/sdwanTrafficDistributionProfile:SdwanTrafficDistributionProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/sdwanTrafficDistributionProfile:SdwanTrafficDistributionProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type SdwanTrafficDistributionProfile struct {
 	pulumi.CustomResourceState
 
@@ -55,7 +39,8 @@ type SdwanTrafficDistributionProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// Traffic distribution
 	TrafficDistribution pulumi.StringOutput `pulumi:"trafficDistribution"`
 }
@@ -104,7 +89,8 @@ type sdwanTrafficDistributionProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// Traffic distribution
 	TrafficDistribution *string `pulumi:"trafficDistribution"`
 }
@@ -124,7 +110,8 @@ type SdwanTrafficDistributionProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// Traffic distribution
 	TrafficDistribution pulumi.StringPtrInput
 }
@@ -290,6 +277,7 @@ func (o SdwanTrafficDistributionProfileOutput) Snippet() pulumi.StringPtrOutput 
 	return o.ApplyT(func(v *SdwanTrafficDistributionProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o SdwanTrafficDistributionProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *SdwanTrafficDistributionProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

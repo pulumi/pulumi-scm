@@ -104,6 +104,9 @@ export interface GetSiteResult {
      * The state in which the site exists
      */
     readonly state: string;
+    /**
+     * The Terraform ID.
+     */
     readonly tfid: string;
     /**
      * The site type

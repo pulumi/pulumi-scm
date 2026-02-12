@@ -121,27 +121,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/address:Address example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/address:Address example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/address:Address example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type Address struct {
 	pulumi.CustomResourceState
 
@@ -177,7 +161,8 @@ type Address struct {
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Tags assocaited with the address object
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	Tfid pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewAddress registers a new resource with the given unique name, arguments, and options.
@@ -242,7 +227,8 @@ type addressState struct {
 	Snippet *string `pulumi:"snippet"`
 	// Tags assocaited with the address object
 	Tags []string `pulumi:"tags"`
-	Tfid *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type AddressState struct {
@@ -278,6 +264,7 @@ type AddressState struct {
 	Snippet pulumi.StringPtrInput
 	// Tags assocaited with the address object
 	Tags pulumi.StringArrayInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 }
 
@@ -505,6 +492,7 @@ func (o AddressOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *Address) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o AddressOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Address) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

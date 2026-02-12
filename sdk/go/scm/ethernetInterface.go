@@ -188,27 +188,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ethernetInterface:EthernetInterface example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ethernetInterface:EthernetInterface example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ethernetInterface:EthernetInterface example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type EthernetInterface struct {
 	pulumi.CustomResourceState
 
@@ -253,8 +237,9 @@ type EthernetInterface struct {
 	// Tap
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-	Tap  EthernetInterfaceTapPtrOutput `pulumi:"tap"`
-	Tfid pulumi.StringOutput           `pulumi:"tfid"`
+	Tap EthernetInterfaceTapPtrOutput `pulumi:"tap"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewEthernetInterface registers a new resource with the given unique name, arguments, and options.
@@ -332,8 +317,9 @@ type ethernetInterfaceState struct {
 	// Tap
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-	Tap  *EthernetInterfaceTap `pulumi:"tap"`
-	Tfid *string               `pulumi:"tfid"`
+	Tap *EthernetInterfaceTap `pulumi:"tap"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type EthernetInterfaceState struct {
@@ -378,7 +364,8 @@ type EthernetInterfaceState struct {
 	// Tap
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
-	Tap  EthernetInterfaceTapPtrInput
+	Tap EthernetInterfaceTapPtrInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 }
 
@@ -647,6 +634,7 @@ func (o EthernetInterfaceOutput) Tap() EthernetInterfaceTapPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) EthernetInterfaceTapPtrOutput { return v.Tap }).(EthernetInterfaceTapPtrOutput)
 }
 
+// The Terraform ID.
 func (o EthernetInterfaceOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

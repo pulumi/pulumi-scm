@@ -63,6 +63,10 @@ public final class GetIkeCryptoProfileListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetIkeCryptoProfileListData() {}
@@ -136,6 +140,10 @@ public final class GetIkeCryptoProfileListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

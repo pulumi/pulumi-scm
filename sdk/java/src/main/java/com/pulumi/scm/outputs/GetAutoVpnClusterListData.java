@@ -49,6 +49,10 @@ public final class GetAutoVpnClusterListData {
      * 
      */
     private String name;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return VPN cluster type
@@ -106,6 +110,10 @@ public final class GetAutoVpnClusterListData {
     public String name() {
         return this.name;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

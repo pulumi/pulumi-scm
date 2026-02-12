@@ -91,7 +91,8 @@ type GetSecurityRuleListResult struct {
 	Position string `pulumi:"position"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// The total number of items.
 	Total int `pulumi:"total"`
 }
@@ -187,6 +188,7 @@ func (o GetSecurityRuleListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetSecurityRuleListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o GetSecurityRuleListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSecurityRuleListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

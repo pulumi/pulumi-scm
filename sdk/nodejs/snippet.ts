@@ -33,12 +33,6 @@ import * as utilities from "./utilities";
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:
- *
- * bash
- *
- * ```sh
- * $ pulumi import scm:index/snippet:Snippet example :::id
- * ```
  */
 export class Snippet extends pulumi.CustomResource {
     /**
@@ -80,6 +74,9 @@ export class Snippet extends pulumi.CustomResource {
      * The name of the snippet
      */
     declare public readonly name: pulumi.Output<string>;
+    /**
+     * The Terraform ID.
+     */
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The snippet type
@@ -133,6 +130,9 @@ export interface SnippetState {
      * The name of the snippet
      */
     name?: pulumi.Input<string>;
+    /**
+     * The Terraform ID.
+     */
     tfid?: pulumi.Input<string>;
     /**
      * The snippet type

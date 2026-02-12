@@ -142,27 +142,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceConnection:ServiceConnection example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceConnection:ServiceConnection example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceConnection:ServiceConnection example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type ServiceConnection struct {
 	pulumi.CustomResourceState
 
@@ -196,7 +180,8 @@ type ServiceConnection struct {
 	SourceNat pulumi.BoolPtrOutput `pulumi:"sourceNat"`
 	// Subnets
 	Subnets pulumi.StringArrayOutput `pulumi:"subnets"`
-	Tfid    pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewServiceConnection registers a new resource with the given unique name, arguments, and options.
@@ -269,7 +254,8 @@ type serviceConnectionState struct {
 	SourceNat *bool `pulumi:"sourceNat"`
 	// Subnets
 	Subnets []string `pulumi:"subnets"`
-	Tfid    *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type ServiceConnectionState struct {
@@ -303,7 +289,8 @@ type ServiceConnectionState struct {
 	SourceNat pulumi.BoolPtrInput
 	// Subnets
 	Subnets pulumi.StringArrayInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (ServiceConnectionState) ElementType() reflect.Type {
@@ -531,6 +518,7 @@ func (o ServiceConnectionOutput) Subnets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringArrayOutput { return v.Subnets }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o ServiceConnectionOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

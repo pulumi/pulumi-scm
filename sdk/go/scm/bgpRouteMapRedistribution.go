@@ -17,27 +17,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type BgpRouteMapRedistribution struct {
 	pulumi.CustomResourceState
 
@@ -67,7 +51,8 @@ type BgpRouteMapRedistribution struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewBgpRouteMapRedistribution registers a new resource with the given unique name, arguments, and options.
@@ -126,7 +111,8 @@ type bgpRouteMapRedistributionState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type BgpRouteMapRedistributionState struct {
@@ -156,7 +142,8 @@ type BgpRouteMapRedistributionState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (BgpRouteMapRedistributionState) ElementType() reflect.Type {
@@ -361,6 +348,7 @@ func (o BgpRouteMapRedistributionOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistribution) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o BgpRouteMapRedistributionOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistribution) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

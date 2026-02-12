@@ -3860,7 +3860,8 @@ type GetWildfireAntiVirusProfileListData struct {
 	Rules []GetWildfireAntiVirusProfileListDataRule `pulumi:"rules"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// Threat exception
 	ThreatExceptions []GetWildfireAntiVirusProfileListDataThreatException `pulumi:"threatExceptions"`
 }
@@ -3895,7 +3896,8 @@ type GetWildfireAntiVirusProfileListDataArgs struct {
 	Rules GetWildfireAntiVirusProfileListDataRuleArrayInput `pulumi:"rules"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// Threat exception
 	ThreatExceptions GetWildfireAntiVirusProfileListDataThreatExceptionArrayInput `pulumi:"threatExceptions"`
 }
@@ -3998,6 +4000,7 @@ func (o GetWildfireAntiVirusProfileListDataOutput) Snippet() pulumi.StringOutput
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetWildfireAntiVirusProfileListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -4821,7 +4824,8 @@ type GetZoneListData struct {
 	Network GetZoneListDataNetwork `pulumi:"network"`
 	// The snippet of the item.
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// User acl
 	UserAcl GetZoneListDataUserAcl `pulumi:"userAcl"`
 }
@@ -4860,7 +4864,8 @@ type GetZoneListDataArgs struct {
 	Network GetZoneListDataNetworkInput `pulumi:"network"`
 	// The snippet of the item.
 	Snippet pulumi.StringInput `pulumi:"snippet"`
-	Tfid    pulumi.StringInput `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// User acl
 	UserAcl GetZoneListDataUserAclInput `pulumi:"userAcl"`
 }
@@ -4971,6 +4976,7 @@ func (o GetZoneListDataOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneListData) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// The Terraform ID.
 func (o GetZoneListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneListData) string { return v.Tfid }).(pulumi.StringOutput)
 }
@@ -7015,8 +7021,9 @@ type GetZoneProtectionProfileListData struct {
 	// Prevent a TCP session from being established if the TCP SYN-ACK packet contains data during a three-way handshake.
 	TcpSynackWithDataDiscard bool `pulumi:"tcpSynackWithDataDiscard"`
 	// Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
-	TcpTimestampStrip bool   `pulumi:"tcpTimestampStrip"`
-	Tfid              string `pulumi:"tfid"`
+	TcpTimestampStrip bool `pulumi:"tcpTimestampStrip"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// Discard packets with the Timestamp IP option set.
 	TimestampDiscard bool `pulumi:"timestampDiscard"`
 	// Discard packets if the class and number are unknown.
@@ -7124,8 +7131,9 @@ type GetZoneProtectionProfileListDataArgs struct {
 	// Prevent a TCP session from being established if the TCP SYN-ACK packet contains data during a three-way handshake.
 	TcpSynackWithDataDiscard pulumi.BoolInput `pulumi:"tcpSynackWithDataDiscard"`
 	// Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
-	TcpTimestampStrip pulumi.BoolInput   `pulumi:"tcpTimestampStrip"`
-	Tfid              pulumi.StringInput `pulumi:"tfid"`
+	TcpTimestampStrip pulumi.BoolInput `pulumi:"tcpTimestampStrip"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
 	// Discard packets with the Timestamp IP option set.
 	TimestampDiscard pulumi.BoolInput `pulumi:"timestampDiscard"`
 	// Discard packets if the class and number are unknown.
@@ -7387,6 +7395,7 @@ func (o GetZoneProtectionProfileListDataOutput) TcpTimestampStrip() pulumi.BoolO
 	return o.ApplyT(func(v GetZoneProtectionProfileListData) bool { return v.TcpTimestampStrip }).(pulumi.BoolOutput)
 }
 
+// The Terraform ID.
 func (o GetZoneProtectionProfileListDataOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneProtectionProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
 }

@@ -73,27 +73,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/managementInterface:ManagementInterface example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/managementInterface:ManagementInterface example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/managementInterface:ManagementInterface example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type ManagementInterface struct {
 	pulumi.CustomResourceState
 
@@ -109,7 +93,8 @@ type ManagementInterface struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewManagementInterface registers a new resource with the given unique name, arguments, and options.
@@ -154,7 +139,8 @@ type managementInterfaceState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type ManagementInterfaceState struct {
@@ -170,7 +156,8 @@ type ManagementInterfaceState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (ManagementInterfaceState) ElementType() reflect.Type {
@@ -321,6 +308,7 @@ func (o ManagementInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ManagementInterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o ManagementInterfaceOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *ManagementInterface) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

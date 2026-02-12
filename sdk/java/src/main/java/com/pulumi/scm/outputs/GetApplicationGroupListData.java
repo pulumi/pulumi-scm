@@ -41,6 +41,10 @@ public final class GetApplicationGroupListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetApplicationGroupListData() {}
@@ -86,6 +90,10 @@ public final class GetApplicationGroupListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

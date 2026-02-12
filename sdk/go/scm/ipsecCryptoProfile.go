@@ -63,27 +63,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type IpsecCryptoProfile struct {
 	pulumi.CustomResourceState
 
@@ -113,7 +97,8 @@ type IpsecCryptoProfile struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewIpsecCryptoProfile registers a new resource with the given unique name, arguments, and options.
@@ -175,7 +160,8 @@ type ipsecCryptoProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type IpsecCryptoProfileState struct {
@@ -205,7 +191,8 @@ type IpsecCryptoProfileState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (IpsecCryptoProfileState) ElementType() reflect.Type {
@@ -411,6 +398,7 @@ func (o IpsecCryptoProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o IpsecCryptoProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

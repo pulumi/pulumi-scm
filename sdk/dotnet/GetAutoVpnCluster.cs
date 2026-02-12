@@ -193,6 +193,9 @@ namespace Pulumi.Scm
         /// VPN cluster name
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// VPN cluster type

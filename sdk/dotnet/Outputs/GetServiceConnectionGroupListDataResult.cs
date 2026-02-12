@@ -37,6 +37,9 @@ namespace Pulumi.Scm.Outputs
         /// Target
         /// </summary>
         public readonly ImmutableArray<string> Targets;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

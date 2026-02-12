@@ -31,6 +31,10 @@ public final class GetSnippetListData {
      * 
      */
     private String name;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return The snippet type
@@ -67,6 +71,10 @@ public final class GetSnippetListData {
     public String name() {
         return this.name;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

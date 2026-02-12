@@ -94,27 +94,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceGroup:ServiceGroup example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceGroup:ServiceGroup example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/serviceGroup:ServiceGroup example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type ServiceGroup struct {
 	pulumi.CustomResourceState
 
@@ -134,7 +118,8 @@ type ServiceGroup struct {
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Tags associated with the service group
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	Tfid pulumi.StringOutput      `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewServiceGroup registers a new resource with the given unique name, arguments, and options.
@@ -186,7 +171,8 @@ type serviceGroupState struct {
 	Snippet *string `pulumi:"snippet"`
 	// Tags associated with the service group
 	Tags []string `pulumi:"tags"`
-	Tfid *string  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type ServiceGroupState struct {
@@ -206,6 +192,7 @@ type ServiceGroupState struct {
 	Snippet pulumi.StringPtrInput
 	// Tags associated with the service group
 	Tags pulumi.StringArrayInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 }
 
@@ -373,6 +360,7 @@ func (o ServiceGroupOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ServiceGroup) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o ServiceGroupOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceGroup) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

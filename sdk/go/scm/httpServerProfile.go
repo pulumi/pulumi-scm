@@ -17,27 +17,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/httpServerProfile:HttpServerProfile example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/httpServerProfile:HttpServerProfile example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/httpServerProfile:HttpServerProfile example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type HttpServerProfile struct {
 	pulumi.CustomResourceState
 
@@ -59,7 +43,8 @@ type HttpServerProfile struct {
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Register tags on match
 	TagRegistration pulumi.BoolPtrOutput `pulumi:"tagRegistration"`
-	Tfid            pulumi.StringOutput  `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewHttpServerProfile registers a new resource with the given unique name, arguments, and options.
@@ -109,8 +94,9 @@ type httpServerProfileState struct {
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Register tags on match
-	TagRegistration *bool   `pulumi:"tagRegistration"`
-	Tfid            *string `pulumi:"tfid"`
+	TagRegistration *bool `pulumi:"tagRegistration"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type HttpServerProfileState struct {
@@ -132,7 +118,8 @@ type HttpServerProfileState struct {
 	Snippet pulumi.StringPtrInput
 	// Register tags on match
 	TagRegistration pulumi.BoolPtrInput
-	Tfid            pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 }
 
 func (HttpServerProfileState) ElementType() reflect.Type {
@@ -308,6 +295,7 @@ func (o HttpServerProfileOutput) TagRegistration() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *HttpServerProfile) pulumi.BoolPtrOutput { return v.TagRegistration }).(pulumi.BoolPtrOutput)
 }
 
+// The Terraform ID.
 func (o HttpServerProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *HttpServerProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

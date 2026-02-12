@@ -146,7 +146,8 @@ type LookupSecurityRuleResult struct {
 	TargetRule string `pulumi:"targetRule"`
 	// Tenant restrictions
 	TenantRestrictions []string `pulumi:"tenantRestrictions"`
-	Tfid               string   `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
 	// The destination security zone(s)
 	Tos []string `pulumi:"tos"`
 }
@@ -390,6 +391,7 @@ func (o LookupSecurityRuleResultOutput) TenantRestrictions() pulumi.StringArrayO
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.TenantRestrictions }).(pulumi.StringArrayOutput)
 }
 
+// The Terraform ID.
 func (o LookupSecurityRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }

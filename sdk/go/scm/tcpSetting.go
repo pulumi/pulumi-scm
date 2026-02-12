@@ -54,27 +54,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/tcpSetting:TcpSetting example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/tcpSetting:TcpSetting example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/tcpSetting:TcpSetting example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type TcpSetting struct {
 	pulumi.CustomResourceState
 
@@ -89,8 +73,9 @@ type TcpSetting struct {
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Tcp
-	Tcp  TcpSettingTcpPtrOutput `pulumi:"tcp"`
-	Tfid pulumi.StringOutput    `pulumi:"tfid"`
+	Tcp TcpSettingTcpPtrOutput `pulumi:"tcp"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewTcpSetting registers a new resource with the given unique name, arguments, and options.
@@ -134,8 +119,9 @@ type tcpSettingState struct {
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tcp
-	Tcp  *TcpSettingTcp `pulumi:"tcp"`
-	Tfid *string        `pulumi:"tfid"`
+	Tcp *TcpSettingTcp `pulumi:"tcp"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 }
 
 type TcpSettingState struct {
@@ -150,7 +136,8 @@ type TcpSettingState struct {
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tcp
-	Tcp  TcpSettingTcpPtrInput
+	Tcp TcpSettingTcpPtrInput
+	// The Terraform ID.
 	Tfid pulumi.StringPtrInput
 }
 
@@ -300,6 +287,7 @@ func (o TcpSettingOutput) Tcp() TcpSettingTcpPtrOutput {
 	return o.ApplyT(func(v *TcpSetting) TcpSettingTcpPtrOutput { return v.Tcp }).(TcpSettingTcpPtrOutput)
 }
 
+// The Terraform ID.
 func (o TcpSettingOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *TcpSetting) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

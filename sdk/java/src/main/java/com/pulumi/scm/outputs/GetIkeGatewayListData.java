@@ -83,6 +83,10 @@ public final class GetIkeGatewayListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetIkeGatewayListData() {}
@@ -177,6 +181,10 @@ public final class GetIkeGatewayListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

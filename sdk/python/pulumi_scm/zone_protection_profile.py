@@ -750,6 +750,7 @@ class _ZoneProtectionProfileState:
         :param pulumi.Input[_builtins.bool] tcp_syn_with_data_discard: Prevent a TCP session from being established if the TCP SYN packet contains data during a three-way handshake.
         :param pulumi.Input[_builtins.bool] tcp_synack_with_data_discard: Prevent a TCP session from being established if the TCP SYN-ACK packet contains data during a three-way handshake.
         :param pulumi.Input[_builtins.bool] tcp_timestamp_strip: Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] timestamp_discard: Discard packets with the Timestamp IP option set.
         :param pulumi.Input[_builtins.bool] unknown_option_discard: Discard packets if the class and number are unknown.
         """
@@ -1271,6 +1272,9 @@ class _ZoneProtectionProfileState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -1353,27 +1357,11 @@ class ZoneProtectionProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1446,27 +1434,11 @@ class ZoneProtectionProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param ZoneProtectionProfileArgs args: The arguments to use to populate this resource's properties.
@@ -1675,6 +1647,7 @@ class ZoneProtectionProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] tcp_syn_with_data_discard: Prevent a TCP session from being established if the TCP SYN packet contains data during a three-way handshake.
         :param pulumi.Input[_builtins.bool] tcp_synack_with_data_discard: Prevent a TCP session from being established if the TCP SYN-ACK packet contains data during a three-way handshake.
         :param pulumi.Input[_builtins.bool] tcp_timestamp_strip: Determine whether the packet has a TCP timestamp in the header and, if it does, strip the timestamp from the header.
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[_builtins.bool] timestamp_discard: Discard packets with the Timestamp IP option set.
         :param pulumi.Input[_builtins.bool] unknown_option_discard: Discard packets if the class and number are unknown.
         """
@@ -2023,6 +1996,9 @@ class ZoneProtectionProfile(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property

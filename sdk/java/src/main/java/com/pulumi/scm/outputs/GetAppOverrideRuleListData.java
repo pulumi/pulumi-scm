@@ -112,6 +112,10 @@ public final class GetAppOverrideRuleListData {
      * 
      */
     private String targetRule;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return To
@@ -260,6 +264,10 @@ public final class GetAppOverrideRuleListData {
     public String targetRule() {
         return this.targetRule;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

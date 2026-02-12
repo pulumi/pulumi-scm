@@ -106,6 +106,10 @@ public final class GetHipObjectListData {
      * 
      */
     private String snippet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
 
     private GetHipObjectListData() {}
@@ -228,6 +232,10 @@ public final class GetHipObjectListData {
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

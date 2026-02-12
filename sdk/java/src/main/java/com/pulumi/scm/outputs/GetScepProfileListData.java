@@ -95,6 +95,10 @@ public final class GetScepProfileListData {
      * 
      */
     private String subject;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Use as digital signature?
@@ -220,6 +224,10 @@ public final class GetScepProfileListData {
     public String subject() {
         return this.subject;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

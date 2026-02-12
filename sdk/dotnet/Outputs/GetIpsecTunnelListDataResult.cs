@@ -49,6 +49,9 @@ namespace Pulumi.Scm.Outputs
         /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
         /// <summary>
         /// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.

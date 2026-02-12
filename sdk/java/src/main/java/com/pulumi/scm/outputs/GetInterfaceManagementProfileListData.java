@@ -78,6 +78,10 @@ public final class GetInterfaceManagementProfileListData {
      * 
      */
     private Boolean telnet;
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     private String tfid;
     /**
      * @return Allow User-ID?
@@ -187,6 +191,10 @@ public final class GetInterfaceManagementProfileListData {
     public Boolean telnet() {
         return this.telnet;
     }
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public String tfid() {
         return this.tfid;
     }

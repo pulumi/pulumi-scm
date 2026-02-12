@@ -198,9 +198,17 @@ public final class SiteState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.state);
     }
 
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Import(name="tfid")
     private @Nullable Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Optional<Output<String>> tfid() {
         return Optional.ofNullable(this.tfid);
     }
@@ -535,11 +543,23 @@ public final class SiteState extends com.pulumi.resources.ResourceArgs {
             return state(Output.of(state));
         }
 
+        /**
+         * @param tfid The Terraform ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfid(@Nullable Output<String> tfid) {
             $.tfid = tfid;
             return this;
         }
 
+        /**
+         * @param tfid The Terraform ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfid(String tfid) {
             return tfid(Output.of(tfid));
         }

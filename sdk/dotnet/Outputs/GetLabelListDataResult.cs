@@ -25,6 +25,9 @@ namespace Pulumi.Scm.Outputs
         /// The name of the label
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The Terraform ID.
+        /// </summary>
         public readonly string Tfid;
 
         [OutputConstructor]

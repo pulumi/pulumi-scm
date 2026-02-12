@@ -310,9 +310,17 @@ public final class AppOverrideRuleState extends com.pulumi.resources.ResourceArg
         return Optional.ofNullable(this.targetRule);
     }
 
+    /**
+     * The Terraform ID.
+     * 
+     */
     @Import(name="tfid")
     private @Nullable Output<String> tfid;
 
+    /**
+     * @return The Terraform ID.
+     * 
+     */
     public Optional<Output<String>> tfid() {
         return Optional.ofNullable(this.tfid);
     }
@@ -823,11 +831,23 @@ public final class AppOverrideRuleState extends com.pulumi.resources.ResourceArg
             return targetRule(Output.of(targetRule));
         }
 
+        /**
+         * @param tfid The Terraform ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfid(@Nullable Output<String> tfid) {
             $.tfid = tfid;
             return this;
         }
 
+        /**
+         * @param tfid The Terraform ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfid(String tfid) {
             return tfid(Output.of(tfid));
         }

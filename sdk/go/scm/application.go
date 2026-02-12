@@ -114,27 +114,11 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/application:Application example folder:::id
-// ```
+// or
 //
 // or
 //
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/application:Application example :snippet::id
-// ```
-//
-// or
-//
-// bash
-//
-// ```sh
-// $ pulumi import scm:index/application:Application example ::device:id
-// ```
+// **Note:** Please provide just one of folder, snippet, or device for the import command.
 type Application struct {
 	pulumi.CustomResourceState
 
@@ -192,7 +176,8 @@ type Application struct {
 	TcpTimeout pulumi.IntPtrOutput `pulumi:"tcpTimeout"`
 	// Technology
 	Technology pulumi.StringPtrOutput `pulumi:"technology"`
-	Tfid       pulumi.StringOutput    `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// timeout in seconds
 	Timeout pulumi.IntPtrOutput `pulumi:"timeout"`
 	// Tunnel applications
@@ -297,7 +282,8 @@ type applicationState struct {
 	TcpTimeout *int `pulumi:"tcpTimeout"`
 	// Technology
 	Technology *string `pulumi:"technology"`
-	Tfid       *string `pulumi:"tfid"`
+	// The Terraform ID.
+	Tfid *string `pulumi:"tfid"`
 	// timeout in seconds
 	Timeout *int `pulumi:"timeout"`
 	// Tunnel applications
@@ -367,7 +353,8 @@ type ApplicationState struct {
 	TcpTimeout pulumi.IntPtrInput
 	// Technology
 	Technology pulumi.StringPtrInput
-	Tfid       pulumi.StringPtrInput
+	// The Terraform ID.
+	Tfid pulumi.StringPtrInput
 	// timeout in seconds
 	Timeout pulumi.IntPtrInput
 	// Tunnel applications
@@ -741,6 +728,7 @@ func (o ApplicationOutput) Technology() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Technology }).(pulumi.StringPtrOutput)
 }
 
+// The Terraform ID.
 func (o ApplicationOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }

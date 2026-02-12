@@ -733,6 +733,7 @@ class _SecurityRuleState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
         :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
         """
         if action is not None:
@@ -1275,6 +1276,9 @@ class _SecurityRuleState:
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @tfid.setter
@@ -1498,27 +1502,11 @@ class SecurityRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/securityRule:SecurityRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/securityRule:SecurityRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/securityRule:SecurityRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1726,27 +1714,11 @@ class SecurityRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/securityRule:SecurityRule example folder:::id
-        ```
+        or
 
         or
 
-        bash
-
-        ```sh
-        $ pulumi import scm:index/securityRule:SecurityRule example :snippet::id
-        ```
-
-        or
-
-        bash
-
-        ```sh
-        $ pulumi import scm:index/securityRule:SecurityRule example ::device:id
-        ```
+        **Note:** Please provide just one of folder, snippet, or device for the import command.
 
         :param str resource_name: The name of the resource.
         :param SecurityRuleArgs args: The arguments to use to populate this resource's properties.
@@ -1946,6 +1918,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
         :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
+        :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -2301,6 +2274,9 @@ class SecurityRule(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
+        """
+        The Terraform ID.
+        """
         return pulumi.get(self, "tfid")
 
     @_builtins.property
