@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const scmApplicationFilter1 = new scm.ApplicationFilter("scm_application_filter_1", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_application_filter_1",
  *     categories: ["business-systems"],
  *     risks: [1],

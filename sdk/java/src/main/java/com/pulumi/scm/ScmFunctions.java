@@ -9544,7 +9544,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Fetch a list of all certificate profile objects from the "Shared" folder.
+     *         // Fetch a list of all certificate profile objects from the "All" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -9586,7 +9586,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Fetch a list of all certificate profile objects from the "Shared" folder.
+     *         // Fetch a list of all certificate profile objects from the "All" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -9628,7 +9628,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Fetch a list of all certificate profile objects from the "Shared" folder.
+     *         // Fetch a list of all certificate profile objects from the "All" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -9670,7 +9670,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Fetch a list of all certificate profile objects from the "Shared" folder.
+     *         // Fetch a list of all certificate profile objects from the "All" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -9712,7 +9712,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Fetch a list of all certificate profile objects from the "Shared" folder.
+     *         // Fetch a list of all certificate profile objects from the "All" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -9754,7 +9754,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Fetch a list of all certificate profile objects from the "Shared" folder.
+     *         // Fetch a list of all certificate profile objects from the "All" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -9796,7 +9796,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Fetch a list of all certificate profile objects from the "Shared" folder.
+     *         // Fetch a list of all certificate profile objects from the "All" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -10683,7 +10683,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Decryption Profile objects.
      *         //
-     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM Decryption Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -10728,7 +10728,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Decryption Profile objects.
      *         //
-     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM Decryption Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -10773,7 +10773,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Decryption Profile objects.
      *         //
-     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM Decryption Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -10818,7 +10818,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Decryption Profile objects.
      *         //
-     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM Decryption Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -10863,7 +10863,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Decryption Profile objects.
      *         //
-     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM Decryption Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -10908,7 +10908,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Decryption Profile objects.
      *         //
-     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM Decryption Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -10953,7 +10953,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Decryption Profile objects.
      *         //
-     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM Decryption Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -12805,7 +12805,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM DNS Security Profile objects.
      *         //
-     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM DNS Security Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -12850,7 +12850,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM DNS Security Profile objects.
      *         //
-     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM DNS Security Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -12895,7 +12895,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM DNS Security Profile objects.
      *         //
-     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM DNS Security Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -12940,7 +12940,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM DNS Security Profile objects.
      *         //
-     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM DNS Security Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -12985,7 +12985,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM DNS Security Profile objects.
      *         //
-     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM DNS Security Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -13030,7 +13030,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM DNS Security Profile objects.
      *         //
-     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM DNS Security Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -13075,7 +13075,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM DNS Security Profile objects.
      *         //
-     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM DNS Security Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14141,7 +14141,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Data source to fetch all external dynamic lists in the "Shared" folder.
+     *         // Data source to fetch all external dynamic lists in the "All" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14195,7 +14195,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Data source to fetch all external dynamic lists in the "Shared" folder.
+     *         // Data source to fetch all external dynamic lists in the "All" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14249,7 +14249,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Data source to fetch all external dynamic lists in the "Shared" folder.
+     *         // Data source to fetch all external dynamic lists in the "All" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14303,7 +14303,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Data source to fetch all external dynamic lists in the "Shared" folder.
+     *         // Data source to fetch all external dynamic lists in the "All" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14357,7 +14357,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Data source to fetch all external dynamic lists in the "Shared" folder.
+     *         // Data source to fetch all external dynamic lists in the "All" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14411,7 +14411,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Data source to fetch all external dynamic lists in the "Shared" folder.
+     *         // Data source to fetch all external dynamic lists in the "All" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14465,7 +14465,7 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         // Data source to fetch all external dynamic lists in the "Shared" folder.
+     *         // Data source to fetch all external dynamic lists in the "All" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14767,7 +14767,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM File Blocking Profile objects.
      *         //
-     *         // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM File Blocking Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14812,7 +14812,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM File Blocking Profile objects.
      *         //
-     *         // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM File Blocking Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14857,7 +14857,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM File Blocking Profile objects.
      *         //
-     *         // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM File Blocking Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14902,7 +14902,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM File Blocking Profile objects.
      *         //
-     *         // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM File Blocking Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14947,7 +14947,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM File Blocking Profile objects.
      *         //
-     *         // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM File Blocking Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -14992,7 +14992,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM File Blocking Profile objects.
      *         //
-     *         // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM File Blocking Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -15037,7 +15037,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM File Blocking Profile objects.
      *         //
-     *         // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+     *         // Fetch a list of all SCM File Blocking Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -17244,7 +17244,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -17289,7 +17289,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -17334,7 +17334,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -17379,7 +17379,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -17424,7 +17424,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -17469,7 +17469,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -17514,7 +17514,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM HTTP Header Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -18368,7 +18368,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to retrieve a list of IKE Gateways.
      *         // You can filter the list by folder, snippet, or device.
-     *         // This example retrieves all gateways in the "Shared" folder.
+     *         // This example retrieves all gateways in the "All" folder.
      *         final var exampleListIkeGatewayDs = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
      *             .folder("Remote Networks")
      *             .build());
@@ -18413,7 +18413,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to retrieve a list of IKE Gateways.
      *         // You can filter the list by folder, snippet, or device.
-     *         // This example retrieves all gateways in the "Shared" folder.
+     *         // This example retrieves all gateways in the "All" folder.
      *         final var exampleListIkeGatewayDs = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
      *             .folder("Remote Networks")
      *             .build());
@@ -18458,7 +18458,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to retrieve a list of IKE Gateways.
      *         // You can filter the list by folder, snippet, or device.
-     *         // This example retrieves all gateways in the "Shared" folder.
+     *         // This example retrieves all gateways in the "All" folder.
      *         final var exampleListIkeGatewayDs = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
      *             .folder("Remote Networks")
      *             .build());
@@ -18503,7 +18503,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to retrieve a list of IKE Gateways.
      *         // You can filter the list by folder, snippet, or device.
-     *         // This example retrieves all gateways in the "Shared" folder.
+     *         // This example retrieves all gateways in the "All" folder.
      *         final var exampleListIkeGatewayDs = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
      *             .folder("Remote Networks")
      *             .build());
@@ -18548,7 +18548,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to retrieve a list of IKE Gateways.
      *         // You can filter the list by folder, snippet, or device.
-     *         // This example retrieves all gateways in the "Shared" folder.
+     *         // This example retrieves all gateways in the "All" folder.
      *         final var exampleListIkeGatewayDs = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
      *             .folder("Remote Networks")
      *             .build());
@@ -18593,7 +18593,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to retrieve a list of IKE Gateways.
      *         // You can filter the list by folder, snippet, or device.
-     *         // This example retrieves all gateways in the "Shared" folder.
+     *         // This example retrieves all gateways in the "All" folder.
      *         final var exampleListIkeGatewayDs = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
      *             .folder("Remote Networks")
      *             .build());
@@ -18638,7 +18638,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to retrieve a list of IKE Gateways.
      *         // You can filter the list by folder, snippet, or device.
-     *         // This example retrieves all gateways in the "Shared" folder.
+     *         // This example retrieves all gateways in the "All" folder.
      *         final var exampleListIkeGatewayDs = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
      *             .folder("Remote Networks")
      *             .build());
@@ -20511,7 +20511,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -20556,7 +20556,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -20601,7 +20601,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -20646,7 +20646,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -20691,7 +20691,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -20736,7 +20736,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -20781,7 +20781,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Kerberos Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -34377,7 +34377,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -34422,7 +34422,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -34467,7 +34467,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -34512,7 +34512,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -34557,7 +34557,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -34602,7 +34602,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -34647,7 +34647,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Syslog Server Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getSyslogServerProfileList(GetSyslogServerProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -36294,7 +36294,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM TLS Service Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -36339,7 +36339,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM TLS Service Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -36384,7 +36384,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM TLS Service Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -36429,7 +36429,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM TLS Service Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -36474,7 +36474,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM TLS Service Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -36519,7 +36519,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM TLS Service Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -36564,7 +36564,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM TLS Service Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -37734,7 +37734,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Access Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Access Profiles in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -37779,7 +37779,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Access Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Access Profiles in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -37824,7 +37824,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Access Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Access Profiles in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -37869,7 +37869,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Access Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Access Profiles in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -37914,7 +37914,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Access Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Access Profiles in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -37959,7 +37959,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Access Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Access Profiles in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -38004,7 +38004,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Access Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Access Profiles in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -38274,7 +38274,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Category objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Categories in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -38327,7 +38327,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Category objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Categories in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -38380,7 +38380,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Category objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Categories in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -38433,7 +38433,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Category objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Categories in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -38486,7 +38486,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Category objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Categories in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -38539,7 +38539,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Category objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Categories in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -38592,7 +38592,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of URL Category objects.
      *         //
-     *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+     *         // Example 1: Fetch a list of all URL Categories in the "All" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40317,7 +40317,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40362,7 +40362,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40407,7 +40407,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40452,7 +40452,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40497,7 +40497,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40542,7 +40542,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40587,7 +40587,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Profile objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40877,7 +40877,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40922,7 +40922,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -40967,7 +40967,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -41012,7 +41012,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -41057,7 +41057,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -41102,7 +41102,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
      *             .folder("All")
      *             .build());
@@ -41147,7 +41147,7 @@ public final class ScmFunctions {
      *         //
      *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
      *         //
-     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "All" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
      *             .folder("All")
      *             .build());

@@ -27,7 +27,7 @@ namespace Pulumi.Scm
     ///     // corrected provider schema now supports.
     ///     var scmHipObject1 = new Scm.HipObject("scm_hip_object_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_hip_object_1",
     ///         Description = "HIP object with multiple advanced criteria configured",
     ///         AntiMalware = new Scm.Inputs.HipObjectAntiMalwareArgs

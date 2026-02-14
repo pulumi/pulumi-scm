@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *         // Creates a custom URL Category object.
  *         //
  *         var example = new UrlCategory("example", UrlCategoryArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("example_url_category")
  *             .description("Test URL Category for create API")
  *             .lists(            

@@ -17,11 +17,19 @@ namespace Pulumi.Scm.Outputs
         /// Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
         /// </summary>
         public readonly string? Interface;
+        /// <summary>
+        /// IP Prefix of the assigned interface
+        /// </summary>
+        public readonly string? Ip;
 
         [OutputConstructor]
-        private IkeGatewayLocalAddress(string? @interface)
+        private IkeGatewayLocalAddress(
+            string? @interface,
+
+            string? ip)
         {
             Interface = @interface;
+            Ip = ip;
         }
     }
 }

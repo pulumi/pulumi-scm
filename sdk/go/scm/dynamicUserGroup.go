@@ -57,7 +57,7 @@ import (
 //			}
 //			// Create the dynamic user group that references the tags above.
 //			_, err = scm.NewDynamicUserGroup(ctx, "scm_dug_1", &scm.DynamicUserGroupArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_dug_1"),
 //				Description: pulumi.String("DUG created for Terraform"),
 //				Filter: pulumi.All(scmDugTag1.Name, scmDugTag2.Name, scmDugTag3.Name).ApplyT(func(_args []interface{}) (string, error) {

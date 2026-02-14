@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Data source to fetch all external dynamic lists in the "Shared" folder.
+ * // Data source to fetch all external dynamic lists in the "All" folder.
  * const allSharedEdls = scm.getExternalDynamicListList({
  *     folder: "All",
  * });
@@ -130,7 +130,7 @@ export interface GetExternalDynamicListListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Data source to fetch all external dynamic lists in the "Shared" folder.
+ * // Data source to fetch all external dynamic lists in the "All" folder.
  * const allSharedEdls = scm.getExternalDynamicListList({
  *     folder: "All",
  * });

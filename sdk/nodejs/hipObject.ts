@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * // This showcases the use of nested objects and lists of objects that the
  * // corrected provider schema now supports.
  * const scmHipObject1 = new scm.HipObject("scm_hip_object_1", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_hip_object_1",
  *     description: "HIP object with multiple advanced criteria configured",
  *     antiMalware: {

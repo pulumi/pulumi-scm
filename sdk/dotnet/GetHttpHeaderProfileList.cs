@@ -27,7 +27,7 @@ namespace Pulumi.Scm
         ///     //
         ///     // Data source to retrieve a list of SCM HTTP Header Profile objects.
         ///     //
-        ///     // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+        ///     // Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
         ///     var allShared = Scm.GetHttpHeaderProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -59,7 +59,7 @@ namespace Pulumi.Scm
         ///     //
         ///     // Data source to retrieve a list of SCM HTTP Header Profile objects.
         ///     //
-        ///     // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+        ///     // Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
         ///     var allShared = Scm.GetHttpHeaderProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -91,7 +91,7 @@ namespace Pulumi.Scm
         ///     //
         ///     // Data source to retrieve a list of SCM HTTP Header Profile objects.
         ///     //
-        ///     // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+        ///     // Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
         ///     var allShared = Scm.GetHttpHeaderProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",

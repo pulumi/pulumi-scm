@@ -177,7 +177,7 @@ def get_dns_security_profile_list(device: Optional[_builtins.str] = None,
     #
     # Data source to retrieve a list of SCM DNS Security Profile objects.
     #
-    # Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+    # Fetch a list of all SCM DNS Security Profile in the "All" folder.
     all_shared = scm.get_dns_security_profile_list(folder="All")
     pulumi.export("scmDnsSecurityProfileListAllShared", all_shared.datas)
     ```
@@ -230,7 +230,7 @@ def get_dns_security_profile_list_output(device: Optional[pulumi.Input[Optional[
     #
     # Data source to retrieve a list of SCM DNS Security Profile objects.
     #
-    # Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+    # Fetch a list of all SCM DNS Security Profile in the "All" folder.
     all_shared = scm.get_dns_security_profile_list(folder="All")
     pulumi.export("scmDnsSecurityProfileListAllShared", all_shared.datas)
     ```

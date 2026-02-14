@@ -27,7 +27,7 @@ namespace Pulumi.Scm
     ///     //
     ///     var example = new Scm.UrlCategory("example", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "example_url_category",
     ///         Description = "Test URL Category for create API",
     ///         Lists = new[]

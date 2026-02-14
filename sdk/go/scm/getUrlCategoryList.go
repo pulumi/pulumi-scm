@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to retrieve a list of URL Category objects.
 //			//
-//			// Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+//			// Example 1: Fetch a list of all URL Categories in the "All" folder.
 //			allShared, err := scm.GetUrlCategoryList(ctx, &scm.GetUrlCategoryListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

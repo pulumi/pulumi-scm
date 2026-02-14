@@ -174,7 +174,7 @@ def get_certificate_profile_list(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # Fetch a list of all certificate profile objects from the "Shared" folder.
+    # Fetch a list of all certificate profile objects from the "All" folder.
     all_profiles = scm.get_certificate_profile_list(folder="All")
     pulumi.export("certificateProfilesList", all_profiles.datas)
     ```
@@ -224,7 +224,7 @@ def get_certificate_profile_list_output(device: Optional[pulumi.Input[Optional[_
     import pulumi
     import pulumi_scm as scm
 
-    # Fetch a list of all certificate profile objects from the "Shared" folder.
+    # Fetch a list of all certificate profile objects from the "All" folder.
     all_profiles = scm.get_certificate_profile_list(folder="All")
     pulumi.export("certificateProfilesList", all_profiles.datas)
     ```

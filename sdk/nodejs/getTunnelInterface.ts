@@ -49,7 +49,7 @@ export interface GetTunnelInterfaceArgs {
     device?: string;
     folder?: string;
     /**
-     * UUID of the resource
+     * UUID of the resource for tunnel interface
      */
     id: string;
     name?: string;
@@ -68,7 +68,7 @@ export interface GetTunnelInterfaceResult {
     readonly device: string;
     readonly folder: string;
     /**
-     * UUID of the resource
+     * UUID of the resource for tunnel interface
      */
     readonly id: string;
     readonly interfaceManagementProfile: string;
@@ -122,7 +122,7 @@ export interface GetTunnelInterfaceOutputArgs {
     device?: pulumi.Input<string>;
     folder?: pulumi.Input<string>;
     /**
-     * UUID of the resource
+     * UUID of the resource for tunnel interface
      */
     id: pulumi.Input<string>;
     name?: pulumi.Input<string>;

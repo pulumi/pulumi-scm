@@ -177,7 +177,7 @@ def get_http_header_profile_list(device: Optional[_builtins.str] = None,
     #
     # Data source to retrieve a list of SCM HTTP Header Profile objects.
     #
-    # Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+    # Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
     all_shared = scm.get_http_header_profile_list(folder="All")
     pulumi.export("scmHttpHeaderProfileListAllShared", all_shared.datas)
     ```
@@ -230,7 +230,7 @@ def get_http_header_profile_list_output(device: Optional[pulumi.Input[Optional[_
     #
     # Data source to retrieve a list of SCM HTTP Header Profile objects.
     #
-    # Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+    # Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
     all_shared = scm.get_http_header_profile_list(folder="All")
     pulumi.export("scmHttpHeaderProfileListAllShared", all_shared.datas)
     ```

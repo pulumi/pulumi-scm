@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TunnelInterfaceIpv6Address {
     /**
-     * @return Anycast
+     * @return Anycast for tunnel interface
      * 
      */
     private @Nullable TunnelInterfaceIpv6AddressAnycast anycast;
     /**
-     * @return Enable Address on Interface
+     * @return Enable Address on Interface for tunnel interface
      * 
      */
     private @Nullable Boolean enableOnInterface;
     /**
-     * @return IPv6 Address
+     * @return IPv6 Address for tunnel interface
      * 
      */
     private @Nullable String name;
     /**
-     * @return Use interface ID as host portion
+     * @return Use interface ID as host portion for tunnel interface
      * 
      */
     private @Nullable TunnelInterfaceIpv6AddressPrefix prefix;
 
     private TunnelInterfaceIpv6Address() {}
     /**
-     * @return Anycast
+     * @return Anycast for tunnel interface
      * 
      */
     public Optional<TunnelInterfaceIpv6AddressAnycast> anycast() {
         return Optional.ofNullable(this.anycast);
     }
     /**
-     * @return Enable Address on Interface
+     * @return Enable Address on Interface for tunnel interface
      * 
      */
     public Optional<Boolean> enableOnInterface() {
         return Optional.ofNullable(this.enableOnInterface);
     }
     /**
-     * @return IPv6 Address
+     * @return IPv6 Address for tunnel interface
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return Use interface ID as host portion
+     * @return Use interface ID as host portion for tunnel interface
      * 
      */
     public Optional<TunnelInterfaceIpv6AddressPrefix> prefix() {

@@ -713,7 +713,7 @@ class UrlAccessProfile(pulumi.CustomResource):
         # Creates a URL Access Profile object.
         #
         example = scm.UrlAccessProfile("example",
-            folder="Shared",
+            folder="Prisma Access",
             name="example_url_access_profile",
             description="Test URL Access Profile for create API",
             blocks=[
@@ -781,7 +781,7 @@ class UrlAccessProfile(pulumi.CustomResource):
         # Creates a URL Access Profile object.
         #
         example = scm.UrlAccessProfile("example",
-            folder="Shared",
+            folder="Prisma Access",
             name="example_url_access_profile",
             description="Test URL Access Profile for create API",
             blocks=[

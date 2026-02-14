@@ -107,11 +107,11 @@ export class TunnelInterface extends pulumi.CustomResource {
     }
 
     /**
-     * Description
+     * Description for tunnel interface
      */
     declare public readonly comment: pulumi.Output<string | undefined>;
     /**
-     * Default interface assignment
+     * Default interface assignment for tunnel interface
      */
     declare public readonly defaultValue: pulumi.Output<string | undefined>;
     /**
@@ -125,7 +125,7 @@ export class TunnelInterface extends pulumi.CustomResource {
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Interface management profile
+     * Interface management profile for tunnel interface
      */
     declare public readonly interfaceManagementProfile: pulumi.Output<string | undefined>;
     /**
@@ -137,11 +137,11 @@ export class TunnelInterface extends pulumi.CustomResource {
      */
     declare public readonly ipv6: pulumi.Output<outputs.TunnelInterfaceIpv6 | undefined>;
     /**
-     * MTU
+     * MTU for tunnel interface
      */
     declare public readonly mtu: pulumi.Output<number | undefined>;
     /**
-     * L3 sub-interface name
+     * L3 sub-interface name for tunnel interface
      */
     declare public readonly name: pulumi.Output<string>;
     /**
@@ -203,11 +203,11 @@ export class TunnelInterface extends pulumi.CustomResource {
  */
 export interface TunnelInterfaceState {
     /**
-     * Description
+     * Description for tunnel interface
      */
     comment?: pulumi.Input<string>;
     /**
-     * Default interface assignment
+     * Default interface assignment for tunnel interface
      */
     defaultValue?: pulumi.Input<string>;
     /**
@@ -221,7 +221,7 @@ export interface TunnelInterfaceState {
      */
     folder?: pulumi.Input<string>;
     /**
-     * Interface management profile
+     * Interface management profile for tunnel interface
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
@@ -233,11 +233,11 @@ export interface TunnelInterfaceState {
      */
     ipv6?: pulumi.Input<inputs.TunnelInterfaceIpv6>;
     /**
-     * MTU
+     * MTU for tunnel interface
      */
     mtu?: pulumi.Input<number>;
     /**
-     * L3 sub-interface name
+     * L3 sub-interface name for tunnel interface
      */
     name?: pulumi.Input<string>;
     /**
@@ -257,11 +257,11 @@ export interface TunnelInterfaceState {
  */
 export interface TunnelInterfaceArgs {
     /**
-     * Description
+     * Description for tunnel interface
      */
     comment?: pulumi.Input<string>;
     /**
-     * Default interface assignment
+     * Default interface assignment for tunnel interface
      */
     defaultValue?: pulumi.Input<string>;
     /**
@@ -275,7 +275,7 @@ export interface TunnelInterfaceArgs {
      */
     folder?: pulumi.Input<string>;
     /**
-     * Interface management profile
+     * Interface management profile for tunnel interface
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
@@ -287,11 +287,11 @@ export interface TunnelInterfaceArgs {
      */
     ipv6?: pulumi.Input<inputs.TunnelInterfaceIpv6>;
     /**
-     * MTU
+     * MTU for tunnel interface
      */
     mtu?: pulumi.Input<number>;
     /**
-     * L3 sub-interface name
+     * L3 sub-interface name for tunnel interface
      */
     name?: pulumi.Input<string>;
     /**

@@ -19,14 +19,14 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
     public static final LoopbackInterfaceIpv6Args Empty = new LoopbackInterfaceIpv6Args();
 
     /**
-     * IPv6 Address Parent
+     * IPv6 Address Parent for loopback interface
      * 
      */
     @Import(name="addresses")
     private @Nullable Output<List<LoopbackInterfaceIpv6AddressArgs>> addresses;
 
     /**
-     * @return IPv6 Address Parent
+     * @return IPv6 Address Parent for loopback interface
      * 
      */
     public Optional<Output<List<LoopbackInterfaceIpv6AddressArgs>>> addresses() {
@@ -34,14 +34,14 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
     }
 
     /**
-     * Enable IPv6
+     * Enable IPv6 for loopback interface
      * 
      */
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
     /**
-     * @return Enable IPv6
+     * @return Enable IPv6 for loopback interface
      * 
      */
     public Optional<Output<Boolean>> enabled() {
@@ -49,14 +49,14 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
     }
 
     /**
-     * Interface ID
+     * Interface ID for loopback interface
      * 
      */
     @Import(name="interfaceId")
     private @Nullable Output<String> interfaceId;
 
     /**
-     * @return Interface ID
+     * @return Interface ID for loopback interface
      * 
      */
     public Optional<Output<String>> interfaceId() {
@@ -90,7 +90,7 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param addresses IPv6 Address Parent
+         * @param addresses IPv6 Address Parent for loopback interface
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param addresses IPv6 Address Parent
+         * @param addresses IPv6 Address Parent for loopback interface
          * 
          * @return builder
          * 
@@ -111,7 +111,7 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param addresses IPv6 Address Parent
+         * @param addresses IPv6 Address Parent for loopback interface
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param enabled Enable IPv6
+         * @param enabled Enable IPv6 for loopback interface
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param enabled Enable IPv6
+         * @param enabled Enable IPv6 for loopback interface
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param interfaceId Interface ID
+         * @param interfaceId Interface ID for loopback interface
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class LoopbackInterfaceIpv6Args extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param interfaceId Interface ID
+         * @param interfaceId Interface ID for loopback interface
          * 
          * @return builder
          * 

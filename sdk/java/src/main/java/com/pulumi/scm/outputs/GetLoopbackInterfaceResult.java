@@ -23,7 +23,7 @@ public final class GetLoopbackInterfaceResult {
     private String device;
     private String folder;
     /**
-     * @return UUID of the resource
+     * @return UUID of the resource loopback interface
      * 
      */
     private String id;
@@ -53,7 +53,7 @@ public final class GetLoopbackInterfaceResult {
         return this.folder;
     }
     /**
-     * @return UUID of the resource
+     * @return UUID of the resource loopback interface
      * 
      */
     public String id() {

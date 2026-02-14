@@ -174,7 +174,7 @@ def get_application_group_list(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
+    # 1. Use a single data block to fetch ALL application groups in the "All" folder.
     all_shared = scm.get_application_group_list(folder="All")
     pulumi.export("applicationGroupsDataSourceResultsFromList", {group.id: group for group in all_shared.datas})
     # Example of using pagination to get a subset of application groups.
@@ -233,7 +233,7 @@ def get_application_group_list_output(device: Optional[pulumi.Input[Optional[_bu
     import pulumi
     import pulumi_scm as scm
 
-    # 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
+    # 1. Use a single data block to fetch ALL application groups in the "All" folder.
     all_shared = scm.get_application_group_list(folder="All")
     pulumi.export("applicationGroupsDataSourceResultsFromList", {group.id: group for group in all_shared.datas})
     # Example of using pagination to get a subset of application groups.

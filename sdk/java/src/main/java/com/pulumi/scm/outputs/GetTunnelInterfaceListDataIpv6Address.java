@@ -14,50 +14,50 @@ import java.util.Objects;
 @CustomType
 public final class GetTunnelInterfaceListDataIpv6Address {
     /**
-     * @return Anycast
+     * @return Anycast for tunnel interface
      * 
      */
     private GetTunnelInterfaceListDataIpv6AddressAnycast anycast;
     /**
-     * @return Enable Address on Interface
+     * @return Enable Address on Interface for tunnel interface
      * 
      */
     private Boolean enableOnInterface;
     /**
-     * @return IPv6 Address
+     * @return IPv6 Address for tunnel interface
      * 
      */
     private String name;
     /**
-     * @return Use interface ID as host portion
+     * @return Use interface ID as host portion for tunnel interface
      * 
      */
     private GetTunnelInterfaceListDataIpv6AddressPrefix prefix;
 
     private GetTunnelInterfaceListDataIpv6Address() {}
     /**
-     * @return Anycast
+     * @return Anycast for tunnel interface
      * 
      */
     public GetTunnelInterfaceListDataIpv6AddressAnycast anycast() {
         return this.anycast;
     }
     /**
-     * @return Enable Address on Interface
+     * @return Enable Address on Interface for tunnel interface
      * 
      */
     public Boolean enableOnInterface() {
         return this.enableOnInterface;
     }
     /**
-     * @return IPv6 Address
+     * @return IPv6 Address for tunnel interface
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Use interface ID as host portion
+     * @return Use interface ID as host portion for tunnel interface
      * 
      */
     public GetTunnelInterfaceListDataIpv6AddressPrefix prefix() {

@@ -5160,11 +5160,11 @@ export interface GeneralSettingGeneralGeoLocation {
     /**
      * Latitude
      */
-    latitude: pulumi.Input<string>;
+    latitude?: pulumi.Input<string>;
     /**
      * Longitude
      */
-    longitude: pulumi.Input<string>;
+    longitude?: pulumi.Input<string>;
 }
 
 export interface GeneralSettingGeneralSetting {
@@ -7321,6 +7321,10 @@ export interface IkeGatewayLocalAddress {
      * Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
      */
     interface?: pulumi.Input<string>;
+    /**
+     * IP Prefix of the assigned interface
+     */
+    ip?: pulumi.Input<string>;
 }
 
 export interface IkeGatewayLocalId {
@@ -8504,7 +8508,7 @@ export interface LogicalRouterVrfBgpPeerGroupPeerInherit {
     /**
      * Yes
      *
-     * > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+     * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     yes?: pulumi.Input<inputs.LogicalRouterVrfBgpPeerGroupPeerInheritYes>;
 }
@@ -12791,34 +12795,34 @@ export interface LoopbackInterfaceIp {
 
 export interface LoopbackInterfaceIpv6 {
     /**
-     * IPv6 Address Parent
+     * IPv6 Address Parent for loopback interface
      */
     addresses?: pulumi.Input<pulumi.Input<inputs.LoopbackInterfaceIpv6Address>[]>;
     /**
-     * Enable IPv6
+     * Enable IPv6 for loopback interface
      */
     enabled?: pulumi.Input<boolean>;
     /**
-     * Interface ID
+     * Interface ID for loopback interface
      */
     interfaceId?: pulumi.Input<string>;
 }
 
 export interface LoopbackInterfaceIpv6Address {
     /**
-     * Anycast
+     * Anycast for loopback interface
      */
     anycast?: pulumi.Input<inputs.LoopbackInterfaceIpv6AddressAnycast>;
     /**
-     * Enable Address on Interface
+     * Enable Address on Interface for loopback interface
      */
     enableOnInterface?: pulumi.Input<boolean>;
     /**
-     * IPv6 Address
+     * IPv6 Address for loopback interface
      */
     name?: pulumi.Input<string>;
     /**
-     * Use interface ID as host portion
+     * Use interface ID as host portion for loopback interface
      */
     prefix?: pulumi.Input<inputs.LoopbackInterfaceIpv6AddressPrefix>;
 }
@@ -15443,34 +15447,34 @@ export interface TunnelInterfaceIp {
 
 export interface TunnelInterfaceIpv6 {
     /**
-     * IPv6 Address Parent
+     * IPv6 Address Parent for tunnel interface
      */
     addresses?: pulumi.Input<pulumi.Input<inputs.TunnelInterfaceIpv6Address>[]>;
     /**
-     * Enable IPv6
+     * Enable IPv6 for tunnel interface
      */
     enabled?: pulumi.Input<boolean>;
     /**
-     * Interface ID
+     * Interface ID for tunnel interface
      */
     interfaceId?: pulumi.Input<string>;
 }
 
 export interface TunnelInterfaceIpv6Address {
     /**
-     * Anycast
+     * Anycast for tunnel interface
      */
     anycast?: pulumi.Input<inputs.TunnelInterfaceIpv6AddressAnycast>;
     /**
-     * Enable Address on Interface
+     * Enable Address on Interface for tunnel interface
      */
     enableOnInterface?: pulumi.Input<boolean>;
     /**
-     * IPv6 Address
+     * IPv6 Address for tunnel interface
      */
     name?: pulumi.Input<string>;
     /**
-     * Use interface ID as host portion
+     * Use interface ID as host portion for tunnel interface
      */
     prefix?: pulumi.Input<inputs.TunnelInterfaceIpv6AddressPrefix>;
 }

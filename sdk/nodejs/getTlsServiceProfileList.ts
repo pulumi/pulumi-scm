@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * //
  * // Data source to retrieve a list of SCM TLS Service Profile objects.
  * //
- * // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+ * // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
  * const allShared = scm.getTlsServiceProfileList({
  *     folder: "All",
  * });
@@ -125,7 +125,7 @@ export interface GetTlsServiceProfileListResult {
  * //
  * // Data source to retrieve a list of SCM TLS Service Profile objects.
  * //
- * // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+ * // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
  * const allShared = scm.getTlsServiceProfileList({
  *     folder: "All",
  * });

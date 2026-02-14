@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetTunnelInterfaceIpv6 {
     /**
-     * @return IPv6 Address Parent
+     * @return IPv6 Address Parent for tunnel interface
      * 
      */
     private List<GetTunnelInterfaceIpv6Address> addresses;
     /**
-     * @return Enable IPv6
+     * @return Enable IPv6 for tunnel interface
      * 
      */
     private Boolean enabled;
     /**
-     * @return Interface ID
+     * @return Interface ID for tunnel interface
      * 
      */
     private String interfaceId;
 
     private GetTunnelInterfaceIpv6() {}
     /**
-     * @return IPv6 Address Parent
+     * @return IPv6 Address Parent for tunnel interface
      * 
      */
     public List<GetTunnelInterfaceIpv6Address> addresses() {
         return this.addresses;
     }
     /**
-     * @return Enable IPv6
+     * @return Enable IPv6 for tunnel interface
      * 
      */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * @return Interface ID
+     * @return Interface ID for tunnel interface
      * 
      */
     public String interfaceId() {

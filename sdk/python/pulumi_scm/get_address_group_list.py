@@ -175,8 +175,8 @@ def get_address_group_list(device: Optional[_builtins.str] = None,
     import pulumi_scm as scm
 
     # This data source will call the "ListAddresses" API endpoint
-    # and return all filters in the "Shared" folder.
-    # 1. Use a single data block to fetch ALL addresses in the "Shared" folder.
+    # and return all filters in the "All" folder.
+    # 1. Use a single data block to fetch ALL addresses in the "All" folder.
     all_shared = scm.get_address_group_list(folder="All")
     pulumi.export("addressGroupsDataSourceResultsFromList", {addr.id: addr for addr in all_shared.datas})
     paginated_address_groups_example = scm.get_address_group_list(folder="All",
@@ -235,8 +235,8 @@ def get_address_group_list_output(device: Optional[pulumi.Input[Optional[_builti
     import pulumi_scm as scm
 
     # This data source will call the "ListAddresses" API endpoint
-    # and return all filters in the "Shared" folder.
-    # 1. Use a single data block to fetch ALL addresses in the "Shared" folder.
+    # and return all filters in the "All" folder.
+    # 1. Use a single data block to fetch ALL addresses in the "All" folder.
     all_shared = scm.get_address_group_list(folder="All")
     pulumi.export("addressGroupsDataSourceResultsFromList", {addr.id: addr for addr in all_shared.datas})
     paginated_address_groups_example = scm.get_address_group_list(folder="All",

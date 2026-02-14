@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var scmCp1 = new Scm.CertificateProfile("scm_cp_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_cp_1",
     ///         Domain = "test",
     ///         UseCrl = true,

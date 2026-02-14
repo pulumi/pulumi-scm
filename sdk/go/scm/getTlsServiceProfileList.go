@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to retrieve a list of SCM TLS Service Profile objects.
 //			//
-//			// Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+//			// Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
 //			allShared, err := scm.GetTlsServiceProfileList(ctx, &scm.GetTlsServiceProfileListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

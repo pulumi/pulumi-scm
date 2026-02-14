@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			// Data source to fetch all external dynamic lists in the "Shared" folder.
+//			// Data source to fetch all external dynamic lists in the "All" folder.
 //			allSharedEdls, err := scm.GetExternalDynamicListList(ctx, &scm.GetExternalDynamicListListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

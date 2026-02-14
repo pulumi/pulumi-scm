@@ -34,7 +34,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
     /**
      * Yes
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+     * &gt; ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      * 
      */
     @Import(name="yes")
@@ -43,7 +43,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
     /**
      * @return Yes
      * 
-     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+     * &gt; ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      * 
      */
     public Optional<Output<LogicalRouterVrfBgpPeerGroupPeerInheritYesArgs>> yes() {
@@ -99,7 +99,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
         /**
          * @param yes Yes
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+         * &gt; ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
          * 
          * @return builder
          * 
@@ -112,7 +112,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInheritArgs extends com.pulum
         /**
          * @param yes Yes
          * 
-         * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+         * &gt; ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
          * 
          * @return builder
          * 

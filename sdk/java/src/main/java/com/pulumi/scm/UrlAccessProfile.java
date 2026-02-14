@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  *         // Creates a URL Access Profile object.
  *         //
  *         var example = new UrlAccessProfile("example", UrlAccessProfileArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("example_url_access_profile")
  *             .description("Test URL Access Profile for create API")
  *             .blocks(            

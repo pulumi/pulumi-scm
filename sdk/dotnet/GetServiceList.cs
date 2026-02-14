@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Data source to fetch all services in the "Shared" folder.
+        ///     // Data source to fetch all services in the "All" folder.
         ///     var allSharedServices = Scm.GetServiceList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -68,7 +68,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Data source to fetch all services in the "Shared" folder.
+        ///     // Data source to fetch all services in the "All" folder.
         ///     var allSharedServices = Scm.GetServiceList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -112,7 +112,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Data source to fetch all services in the "Shared" folder.
+        ///     // Data source to fetch all services in the "All" folder.
         ///     var allSharedServices = Scm.GetServiceList.Invoke(new()
         ///     {
         ///         Folder = "All",

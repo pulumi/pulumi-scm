@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  *
  * // First, create some applications that will be used in the application group.
  * const scmAgApp1 = new scm.Application("scm_ag_app_1", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_ag_app_1",
  *     description: "First test application",
  *     category: "business-systems",
@@ -24,7 +24,7 @@ import * as utilities from "./utilities";
  *     risk: "3",
  * });
  * const scmAgApp2 = new scm.Application("scm_ag_app_2", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_ag_app_2",
  *     description: "Second test application",
  *     category: "business-systems",
@@ -34,7 +34,7 @@ import * as utilities from "./utilities";
  * });
  * // Create the application group that references the applications above.
  * const scmAppGroup1 = new scm.ApplicationGroup("scm_app_group_1", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_app_group_1",
  *     members: [
  *         scmAgApp1.name,

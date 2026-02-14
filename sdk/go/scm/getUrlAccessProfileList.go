@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to retrieve a list of URL Access Profile objects.
 //			//
-//			// Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
+//			// Example 1: Fetch a list of all URL Access Profiles in the "All" folder.
 //			allShared, err := scm.GetUrlAccessProfileList(ctx, &scm.GetUrlAccessProfileListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

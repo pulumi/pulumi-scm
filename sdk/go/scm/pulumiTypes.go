@@ -60227,9 +60227,9 @@ func (o GeneralSettingGeneralPtrOutput) Timezone() pulumi.StringPtrOutput {
 
 type GeneralSettingGeneralGeoLocation struct {
 	// Latitude
-	Latitude string `pulumi:"latitude"`
+	Latitude *string `pulumi:"latitude"`
 	// Longitude
-	Longitude string `pulumi:"longitude"`
+	Longitude *string `pulumi:"longitude"`
 }
 
 // GeneralSettingGeneralGeoLocationInput is an input type that accepts GeneralSettingGeneralGeoLocationArgs and GeneralSettingGeneralGeoLocationOutput values.
@@ -60245,9 +60245,9 @@ type GeneralSettingGeneralGeoLocationInput interface {
 
 type GeneralSettingGeneralGeoLocationArgs struct {
 	// Latitude
-	Latitude pulumi.StringInput `pulumi:"latitude"`
+	Latitude pulumi.StringPtrInput `pulumi:"latitude"`
 	// Longitude
-	Longitude pulumi.StringInput `pulumi:"longitude"`
+	Longitude pulumi.StringPtrInput `pulumi:"longitude"`
 }
 
 func (GeneralSettingGeneralGeoLocationArgs) ElementType() reflect.Type {
@@ -60328,13 +60328,13 @@ func (o GeneralSettingGeneralGeoLocationOutput) ToGeneralSettingGeneralGeoLocati
 }
 
 // Latitude
-func (o GeneralSettingGeneralGeoLocationOutput) Latitude() pulumi.StringOutput {
-	return o.ApplyT(func(v GeneralSettingGeneralGeoLocation) string { return v.Latitude }).(pulumi.StringOutput)
+func (o GeneralSettingGeneralGeoLocationOutput) Latitude() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GeneralSettingGeneralGeoLocation) *string { return v.Latitude }).(pulumi.StringPtrOutput)
 }
 
 // Longitude
-func (o GeneralSettingGeneralGeoLocationOutput) Longitude() pulumi.StringOutput {
-	return o.ApplyT(func(v GeneralSettingGeneralGeoLocation) string { return v.Longitude }).(pulumi.StringOutput)
+func (o GeneralSettingGeneralGeoLocationOutput) Longitude() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GeneralSettingGeneralGeoLocation) *string { return v.Longitude }).(pulumi.StringPtrOutput)
 }
 
 type GeneralSettingGeneralGeoLocationPtrOutput struct{ *pulumi.OutputState }
@@ -60367,7 +60367,7 @@ func (o GeneralSettingGeneralGeoLocationPtrOutput) Latitude() pulumi.StringPtrOu
 		if v == nil {
 			return nil
 		}
-		return &v.Latitude
+		return v.Latitude
 	}).(pulumi.StringPtrOutput)
 }
 
@@ -60377,7 +60377,7 @@ func (o GeneralSettingGeneralGeoLocationPtrOutput) Longitude() pulumi.StringPtrO
 		if v == nil {
 			return nil
 		}
-		return &v.Longitude
+		return v.Longitude
 	}).(pulumi.StringPtrOutput)
 }
 

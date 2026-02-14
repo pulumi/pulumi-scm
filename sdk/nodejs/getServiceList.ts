@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Data source to fetch all services in the "Shared" folder.
+ * // Data source to fetch all services in the "All" folder.
  * const allSharedServices = scm.getServiceList({
  *     folder: "All",
  * });
@@ -131,7 +131,7 @@ export interface GetServiceListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Data source to fetch all services in the "Shared" folder.
+ * // Data source to fetch all services in the "All" folder.
  * const allSharedServices = scm.getServiceList({
  *     folder: "All",
  * });

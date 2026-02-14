@@ -23,7 +23,7 @@ public final class GetTunnelInterfaceResult {
     private String device;
     private String folder;
     /**
-     * @return UUID of the resource
+     * @return UUID of the resource for tunnel interface
      * 
      */
     private String id;
@@ -53,7 +53,7 @@ public final class GetTunnelInterfaceResult {
         return this.folder;
     }
     /**
-     * @return UUID of the resource
+     * @return UUID of the resource for tunnel interface
      * 
      */
     public String id() {

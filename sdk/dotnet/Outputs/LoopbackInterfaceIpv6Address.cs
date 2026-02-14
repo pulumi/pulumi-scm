@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class LoopbackInterfaceIpv6Address
     {
         /// <summary>
-        /// Anycast
+        /// Anycast for loopback interface
         /// </summary>
         public readonly Outputs.LoopbackInterfaceIpv6AddressAnycast? Anycast;
         /// <summary>
-        /// Enable Address on Interface
+        /// Enable Address on Interface for loopback interface
         /// </summary>
         public readonly bool? EnableOnInterface;
         /// <summary>
-        /// IPv6 Address
+        /// IPv6 Address for loopback interface
         /// </summary>
         public readonly string? Name;
         /// <summary>
-        /// Use interface ID as host portion
+        /// Use interface ID as host portion for loopback interface
         /// </summary>
         public readonly Outputs.LoopbackInterfaceIpv6AddressPrefix? Prefix;
 

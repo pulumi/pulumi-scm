@@ -315,7 +315,7 @@ class UrlCategory(pulumi.CustomResource):
         # Creates a custom URL Category object.
         #
         example = scm.UrlCategory("example",
-            folder="Shared",
+            folder="Prisma Access",
             name="example_url_category",
             description="Test URL Category for create API",
             lists=[
@@ -368,7 +368,7 @@ class UrlCategory(pulumi.CustomResource):
         # Creates a custom URL Category object.
         #
         example = scm.UrlCategory("example",
-            folder="Shared",
+            folder="Prisma Access",
             name="example_url_category",
             description="Test URL Category for create API",
             lists=[

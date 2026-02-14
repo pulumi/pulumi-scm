@@ -9208,11 +9208,11 @@ func (o TunnelInterfaceIpArrayOutput) Index(i pulumi.IntInput) TunnelInterfaceIp
 }
 
 type TunnelInterfaceIpv6 struct {
-	// IPv6 Address Parent
+	// IPv6 Address Parent for tunnel interface
 	Addresses []TunnelInterfaceIpv6Address `pulumi:"addresses"`
-	// Enable IPv6
+	// Enable IPv6 for tunnel interface
 	Enabled *bool `pulumi:"enabled"`
-	// Interface ID
+	// Interface ID for tunnel interface
 	InterfaceId *string `pulumi:"interfaceId"`
 }
 
@@ -9228,11 +9228,11 @@ type TunnelInterfaceIpv6Input interface {
 }
 
 type TunnelInterfaceIpv6Args struct {
-	// IPv6 Address Parent
+	// IPv6 Address Parent for tunnel interface
 	Addresses TunnelInterfaceIpv6AddressArrayInput `pulumi:"addresses"`
-	// Enable IPv6
+	// Enable IPv6 for tunnel interface
 	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
-	// Interface ID
+	// Interface ID for tunnel interface
 	InterfaceId pulumi.StringPtrInput `pulumi:"interfaceId"`
 }
 
@@ -9313,17 +9313,17 @@ func (o TunnelInterfaceIpv6Output) ToTunnelInterfaceIpv6PtrOutputWithContext(ctx
 	}).(TunnelInterfaceIpv6PtrOutput)
 }
 
-// IPv6 Address Parent
+// IPv6 Address Parent for tunnel interface
 func (o TunnelInterfaceIpv6Output) Addresses() TunnelInterfaceIpv6AddressArrayOutput {
 	return o.ApplyT(func(v TunnelInterfaceIpv6) []TunnelInterfaceIpv6Address { return v.Addresses }).(TunnelInterfaceIpv6AddressArrayOutput)
 }
 
-// Enable IPv6
+// Enable IPv6 for tunnel interface
 func (o TunnelInterfaceIpv6Output) Enabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v TunnelInterfaceIpv6) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
 }
 
-// Interface ID
+// Interface ID for tunnel interface
 func (o TunnelInterfaceIpv6Output) InterfaceId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TunnelInterfaceIpv6) *string { return v.InterfaceId }).(pulumi.StringPtrOutput)
 }
@@ -9352,7 +9352,7 @@ func (o TunnelInterfaceIpv6PtrOutput) Elem() TunnelInterfaceIpv6Output {
 	}).(TunnelInterfaceIpv6Output)
 }
 
-// IPv6 Address Parent
+// IPv6 Address Parent for tunnel interface
 func (o TunnelInterfaceIpv6PtrOutput) Addresses() TunnelInterfaceIpv6AddressArrayOutput {
 	return o.ApplyT(func(v *TunnelInterfaceIpv6) []TunnelInterfaceIpv6Address {
 		if v == nil {
@@ -9362,7 +9362,7 @@ func (o TunnelInterfaceIpv6PtrOutput) Addresses() TunnelInterfaceIpv6AddressArra
 	}).(TunnelInterfaceIpv6AddressArrayOutput)
 }
 
-// Enable IPv6
+// Enable IPv6 for tunnel interface
 func (o TunnelInterfaceIpv6PtrOutput) Enabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TunnelInterfaceIpv6) *bool {
 		if v == nil {
@@ -9372,7 +9372,7 @@ func (o TunnelInterfaceIpv6PtrOutput) Enabled() pulumi.BoolPtrOutput {
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Interface ID
+// Interface ID for tunnel interface
 func (o TunnelInterfaceIpv6PtrOutput) InterfaceId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TunnelInterfaceIpv6) *string {
 		if v == nil {
@@ -9383,13 +9383,13 @@ func (o TunnelInterfaceIpv6PtrOutput) InterfaceId() pulumi.StringPtrOutput {
 }
 
 type TunnelInterfaceIpv6Address struct {
-	// Anycast
+	// Anycast for tunnel interface
 	Anycast *TunnelInterfaceIpv6AddressAnycast `pulumi:"anycast"`
-	// Enable Address on Interface
+	// Enable Address on Interface for tunnel interface
 	EnableOnInterface *bool `pulumi:"enableOnInterface"`
-	// IPv6 Address
+	// IPv6 Address for tunnel interface
 	Name *string `pulumi:"name"`
-	// Use interface ID as host portion
+	// Use interface ID as host portion for tunnel interface
 	Prefix *TunnelInterfaceIpv6AddressPrefix `pulumi:"prefix"`
 }
 
@@ -9405,13 +9405,13 @@ type TunnelInterfaceIpv6AddressInput interface {
 }
 
 type TunnelInterfaceIpv6AddressArgs struct {
-	// Anycast
+	// Anycast for tunnel interface
 	Anycast TunnelInterfaceIpv6AddressAnycastPtrInput `pulumi:"anycast"`
-	// Enable Address on Interface
+	// Enable Address on Interface for tunnel interface
 	EnableOnInterface pulumi.BoolPtrInput `pulumi:"enableOnInterface"`
-	// IPv6 Address
+	// IPv6 Address for tunnel interface
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Use interface ID as host portion
+	// Use interface ID as host portion for tunnel interface
 	Prefix TunnelInterfaceIpv6AddressPrefixPtrInput `pulumi:"prefix"`
 }
 
@@ -9466,22 +9466,22 @@ func (o TunnelInterfaceIpv6AddressOutput) ToTunnelInterfaceIpv6AddressOutputWith
 	return o
 }
 
-// Anycast
+// Anycast for tunnel interface
 func (o TunnelInterfaceIpv6AddressOutput) Anycast() TunnelInterfaceIpv6AddressAnycastPtrOutput {
 	return o.ApplyT(func(v TunnelInterfaceIpv6Address) *TunnelInterfaceIpv6AddressAnycast { return v.Anycast }).(TunnelInterfaceIpv6AddressAnycastPtrOutput)
 }
 
-// Enable Address on Interface
+// Enable Address on Interface for tunnel interface
 func (o TunnelInterfaceIpv6AddressOutput) EnableOnInterface() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v TunnelInterfaceIpv6Address) *bool { return v.EnableOnInterface }).(pulumi.BoolPtrOutput)
 }
 
-// IPv6 Address
+// IPv6 Address for tunnel interface
 func (o TunnelInterfaceIpv6AddressOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v TunnelInterfaceIpv6Address) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// Use interface ID as host portion
+// Use interface ID as host portion for tunnel interface
 func (o TunnelInterfaceIpv6AddressOutput) Prefix() TunnelInterfaceIpv6AddressPrefixPtrOutput {
 	return o.ApplyT(func(v TunnelInterfaceIpv6Address) *TunnelInterfaceIpv6AddressPrefix { return v.Prefix }).(TunnelInterfaceIpv6AddressPrefixPtrOutput)
 }

@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const scmCp1 = new scm.CertificateProfile("scm_cp_1", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_cp_1",
  *     domain: "test",
  *     useCrl: true,

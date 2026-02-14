@@ -30,7 +30,7 @@ import (
 //			// This file is embedded using go:embed
 //			// First, create some addresses that will be used in the address group
 //			scmAddressAg1, err := scm.NewAddress(ctx, "scm_address_ag_1", &scm.AddressArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_address_ag_1"),
 //				Description: pulumi.String("First test address"),
 //				IpNetmask:   pulumi.String("192.168.1.1/32"),
@@ -39,7 +39,7 @@ import (
 //				return err
 //			}
 //			scmAddressAg2, err := scm.NewAddress(ctx, "scm_address_ag_2", &scm.AddressArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_address_ag_2"),
 //				Description: pulumi.String("Second test address"),
 //				IpNetmask:   pulumi.String("192.168.1.2/32"),
@@ -49,7 +49,7 @@ import (
 //			}
 //			// Create the address group that references the addresses above
 //			_, err = scm.NewAddressGroup(ctx, "scm_address_group_1", &scm.AddressGroupArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_address_group_1"),
 //				Description: pulumi.String("Sample address group created with Terraform"),
 //				Statics: pulumi.StringArray{
@@ -81,7 +81,7 @@ import (
 //			}
 //			// Create a dynamic addressgroup that matches both tags
 //			_, err = scm.NewAddressGroup(ctx, "scm_addressgroup_dynamic", &scm.AddressGroupArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_addressgroup_dynamic"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Dynamic: &scm.AddressGroupDynamicArgs{

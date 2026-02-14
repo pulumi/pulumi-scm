@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetLoopbackInterfaceIpv6Result
     {
         /// <summary>
-        /// IPv6 Address Parent
+        /// IPv6 Address Parent for loopback interface
         /// </summary>
         public readonly ImmutableArray<Outputs.GetLoopbackInterfaceIpv6AddressResult> Addresses;
         /// <summary>
-        /// Enable IPv6
+        /// Enable IPv6 for loopback interface
         /// </summary>
         public readonly bool Enabled;
         /// <summary>
-        /// Interface ID
+        /// Interface ID for loopback interface
         /// </summary>
         public readonly string InterfaceId;
 

@@ -38,14 +38,14 @@ public final class GetTunnelInterfacePlainArgs extends com.pulumi.resources.Invo
     }
 
     /**
-     * UUID of the resource
+     * UUID of the resource for tunnel interface
      * 
      */
     @Import(name="id", required=true)
     private String id;
 
     /**
-     * @return UUID of the resource
+     * @return UUID of the resource for tunnel interface
      * 
      */
     public String id() {
@@ -111,7 +111,7 @@ public final class GetTunnelInterfacePlainArgs extends com.pulumi.resources.Invo
         }
 
         /**
-         * @param id UUID of the resource
+         * @param id UUID of the resource for tunnel interface
          * 
          * @return builder
          * 

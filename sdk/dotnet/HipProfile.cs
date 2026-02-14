@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     // This resource creates a new HIP Profile.
     ///     var scmHipProfile1 = new Scm.HipProfile("scm_hip_profile_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_hip_profile_1",
     ///         Description = "A HIP profile created by Terraform",
     ///         Match = "\"is-win\" and \"is-anti-malware-and-rtp-enabled\"",

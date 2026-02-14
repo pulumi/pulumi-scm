@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to retrieve a list of SCM HTTP Header Profile objects.
 //			//
-//			// Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+//			// Example 1: Fetch a list of all SCM HTTP Header Profile in the "All" folder.
 //			allShared, err := scm.GetHttpHeaderProfileList(ctx, &scm.GetHttpHeaderProfileListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

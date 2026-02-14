@@ -31,35 +31,35 @@ import * as utilities from "./utilities";
  * });
  * // IP Netmask
  * const scmAddress1 = new scm.Address("scm_address_1", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_address_1",
  *     description: "Made by Pulumi",
  *     ipNetmask: "10.2.3.4",
  * });
  * // IP Range
  * const scmAddress2 = new scm.Address("scm_address_2", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_address_2",
  *     description: "Small IP range test",
  *     ipRange: "192.168.1.10-192.168.1.20",
  * });
  * // FQDN
  * const scmAddress3 = new scm.Address("scm_address_3", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_address_3",
  *     description: "Simple FQDN test",
  *     fqdn: "example.com",
  * });
  * // Class C wildcard
  * const scmAddress4 = new scm.Address("scm_address_4", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_address_4",
  *     description: "Class C wildcard test",
  *     ipWildcard: "192.168.1.0/0.0.0.255",
  * });
  * // Multiple tags
  * const scmAddress5 = new scm.Address("scm_address_5", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_address_5",
  *     description: "Multiple tags test",
  *     ipNetmask: "10.10.10.2/32",

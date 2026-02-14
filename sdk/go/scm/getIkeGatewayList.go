@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to retrieve a list of IKE Gateways.
 //			// You can filter the list by folder, snippet, or device.
-//			// This example retrieves all gateways in the "Shared" folder.
+//			// This example retrieves all gateways in the "All" folder.
 //			exampleListIkeGatewayDs, err := scm.GetIkeGatewayList(ctx, &scm.GetIkeGatewayListArgs{
 //				Folder: pulumi.StringRef("Remote Networks"),
 //			}, nil)

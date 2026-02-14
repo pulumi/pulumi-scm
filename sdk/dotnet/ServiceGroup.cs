@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     // TCP Service with multiple destination ports custom timeout
     ///     var scmServiceTcpPorts = new Scm.Service("scm_service_tcp_ports", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_service_tcp_ports",
     ///         Description = "Managed by Pulumi",
     ///         Protocol = new Scm.Inputs.ServiceProtocolArgs
@@ -44,7 +44,7 @@ namespace Pulumi.Scm
     ///     // UDP Service with single destination port
     ///     var scmServiceUdpPort = new Scm.Service("scm_service_udp_port", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_service_udp_port",
     ///         Description = "Managed by Pulumi",
     ///         Protocol = new Scm.Inputs.ServiceProtocolArgs

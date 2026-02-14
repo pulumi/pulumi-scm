@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			// Fetch a list of all certificate profile objects from the "Shared" folder.
+//			// Fetch a list of all certificate profile objects from the "All" folder.
 //			allProfiles, err := scm.GetCertificateProfileList(ctx, &scm.GetCertificateProfileListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

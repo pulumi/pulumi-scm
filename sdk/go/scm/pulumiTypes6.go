@@ -31390,11 +31390,11 @@ func (o GetTunnelInterfaceIpArrayOutput) Index(i pulumi.IntInput) GetTunnelInter
 }
 
 type GetTunnelInterfaceIpv6 struct {
-	// IPv6 Address Parent
+	// IPv6 Address Parent for tunnel interface
 	Addresses []GetTunnelInterfaceIpv6Address `pulumi:"addresses"`
-	// Enable IPv6
+	// Enable IPv6 for tunnel interface
 	Enabled bool `pulumi:"enabled"`
-	// Interface ID
+	// Interface ID for tunnel interface
 	InterfaceId string `pulumi:"interfaceId"`
 }
 
@@ -31410,11 +31410,11 @@ type GetTunnelInterfaceIpv6Input interface {
 }
 
 type GetTunnelInterfaceIpv6Args struct {
-	// IPv6 Address Parent
+	// IPv6 Address Parent for tunnel interface
 	Addresses GetTunnelInterfaceIpv6AddressArrayInput `pulumi:"addresses"`
-	// Enable IPv6
+	// Enable IPv6 for tunnel interface
 	Enabled pulumi.BoolInput `pulumi:"enabled"`
-	// Interface ID
+	// Interface ID for tunnel interface
 	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
 }
 
@@ -31444,29 +31444,29 @@ func (o GetTunnelInterfaceIpv6Output) ToGetTunnelInterfaceIpv6OutputWithContext(
 	return o
 }
 
-// IPv6 Address Parent
+// IPv6 Address Parent for tunnel interface
 func (o GetTunnelInterfaceIpv6Output) Addresses() GetTunnelInterfaceIpv6AddressArrayOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceIpv6) []GetTunnelInterfaceIpv6Address { return v.Addresses }).(GetTunnelInterfaceIpv6AddressArrayOutput)
 }
 
-// Enable IPv6
+// Enable IPv6 for tunnel interface
 func (o GetTunnelInterfaceIpv6Output) Enabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceIpv6) bool { return v.Enabled }).(pulumi.BoolOutput)
 }
 
-// Interface ID
+// Interface ID for tunnel interface
 func (o GetTunnelInterfaceIpv6Output) InterfaceId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceIpv6) string { return v.InterfaceId }).(pulumi.StringOutput)
 }
 
 type GetTunnelInterfaceIpv6Address struct {
-	// Anycast
+	// Anycast for tunnel interface
 	Anycast GetTunnelInterfaceIpv6AddressAnycast `pulumi:"anycast"`
-	// Enable Address on Interface
+	// Enable Address on Interface for tunnel interface
 	EnableOnInterface bool `pulumi:"enableOnInterface"`
-	// IPv6 Address
+	// IPv6 Address for tunnel interface
 	Name string `pulumi:"name"`
-	// Use interface ID as host portion
+	// Use interface ID as host portion for tunnel interface
 	Prefix GetTunnelInterfaceIpv6AddressPrefix `pulumi:"prefix"`
 }
 
@@ -31482,13 +31482,13 @@ type GetTunnelInterfaceIpv6AddressInput interface {
 }
 
 type GetTunnelInterfaceIpv6AddressArgs struct {
-	// Anycast
+	// Anycast for tunnel interface
 	Anycast GetTunnelInterfaceIpv6AddressAnycastInput `pulumi:"anycast"`
-	// Enable Address on Interface
+	// Enable Address on Interface for tunnel interface
 	EnableOnInterface pulumi.BoolInput `pulumi:"enableOnInterface"`
-	// IPv6 Address
+	// IPv6 Address for tunnel interface
 	Name pulumi.StringInput `pulumi:"name"`
-	// Use interface ID as host portion
+	// Use interface ID as host portion for tunnel interface
 	Prefix GetTunnelInterfaceIpv6AddressPrefixInput `pulumi:"prefix"`
 }
 
@@ -31543,22 +31543,22 @@ func (o GetTunnelInterfaceIpv6AddressOutput) ToGetTunnelInterfaceIpv6AddressOutp
 	return o
 }
 
-// Anycast
+// Anycast for tunnel interface
 func (o GetTunnelInterfaceIpv6AddressOutput) Anycast() GetTunnelInterfaceIpv6AddressAnycastOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceIpv6Address) GetTunnelInterfaceIpv6AddressAnycast { return v.Anycast }).(GetTunnelInterfaceIpv6AddressAnycastOutput)
 }
 
-// Enable Address on Interface
+// Enable Address on Interface for tunnel interface
 func (o GetTunnelInterfaceIpv6AddressOutput) EnableOnInterface() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceIpv6Address) bool { return v.EnableOnInterface }).(pulumi.BoolOutput)
 }
 
-// IPv6 Address
+// IPv6 Address for tunnel interface
 func (o GetTunnelInterfaceIpv6AddressOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceIpv6Address) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Use interface ID as host portion
+// Use interface ID as host portion for tunnel interface
 func (o GetTunnelInterfaceIpv6AddressOutput) Prefix() GetTunnelInterfaceIpv6AddressPrefixOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceIpv6Address) GetTunnelInterfaceIpv6AddressPrefix { return v.Prefix }).(GetTunnelInterfaceIpv6AddressPrefixOutput)
 }
@@ -31670,23 +31670,23 @@ func (o GetTunnelInterfaceIpv6AddressPrefixOutput) ToGetTunnelInterfaceIpv6Addre
 }
 
 type GetTunnelInterfaceListData struct {
-	// Description
+	// Description for tunnel interface
 	Comment string `pulumi:"comment"`
-	// Default interface assignment
+	// Default interface assignment for tunnel interface
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
 	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
-	// UUID of the resource
+	// UUID of the resource for tunnel interface
 	Id string `pulumi:"id"`
-	// Interface management profile
+	// Interface management profile for tunnel interface
 	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
 	// Tunnel Interface IP Parent
 	Ips []GetTunnelInterfaceListDataIp `pulumi:"ips"`
 	// Tunnel Interface IPv6 Configuration
 	Ipv6 GetTunnelInterfaceListDataIpv6 `pulumi:"ipv6"`
-	// MTU
+	// MTU for tunnel interface
 	Mtu int `pulumi:"mtu"`
 	// The name of the item.
 	Name string `pulumi:"name"`
@@ -31708,23 +31708,23 @@ type GetTunnelInterfaceListDataInput interface {
 }
 
 type GetTunnelInterfaceListDataArgs struct {
-	// Description
+	// Description for tunnel interface
 	Comment pulumi.StringInput `pulumi:"comment"`
-	// Default interface assignment
+	// Default interface assignment for tunnel interface
 	DefaultValue pulumi.StringInput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device pulumi.StringInput `pulumi:"device"`
 	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
-	// UUID of the resource
+	// UUID of the resource for tunnel interface
 	Id pulumi.StringInput `pulumi:"id"`
-	// Interface management profile
+	// Interface management profile for tunnel interface
 	InterfaceManagementProfile pulumi.StringInput `pulumi:"interfaceManagementProfile"`
 	// Tunnel Interface IP Parent
 	Ips GetTunnelInterfaceListDataIpArrayInput `pulumi:"ips"`
 	// Tunnel Interface IPv6 Configuration
 	Ipv6 GetTunnelInterfaceListDataIpv6Input `pulumi:"ipv6"`
-	// MTU
+	// MTU for tunnel interface
 	Mtu pulumi.IntInput `pulumi:"mtu"`
 	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
@@ -31785,12 +31785,12 @@ func (o GetTunnelInterfaceListDataOutput) ToGetTunnelInterfaceListDataOutputWith
 	return o
 }
 
-// Description
+// Description for tunnel interface
 func (o GetTunnelInterfaceListDataOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.Comment }).(pulumi.StringOutput)
 }
 
-// Default interface assignment
+// Default interface assignment for tunnel interface
 func (o GetTunnelInterfaceListDataOutput) DefaultValue() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
@@ -31805,12 +31805,12 @@ func (o GetTunnelInterfaceListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// UUID of the resource
+// UUID of the resource for tunnel interface
 func (o GetTunnelInterfaceListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Interface management profile
+// Interface management profile for tunnel interface
 func (o GetTunnelInterfaceListDataOutput) InterfaceManagementProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListData) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
 }
@@ -31825,7 +31825,7 @@ func (o GetTunnelInterfaceListDataOutput) Ipv6() GetTunnelInterfaceListDataIpv6O
 	return o.ApplyT(func(v GetTunnelInterfaceListData) GetTunnelInterfaceListDataIpv6 { return v.Ipv6 }).(GetTunnelInterfaceListDataIpv6Output)
 }
 
-// MTU
+// MTU for tunnel interface
 func (o GetTunnelInterfaceListDataOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListData) int { return v.Mtu }).(pulumi.IntOutput)
 }
@@ -31963,11 +31963,11 @@ func (o GetTunnelInterfaceListDataIpArrayOutput) Index(i pulumi.IntInput) GetTun
 }
 
 type GetTunnelInterfaceListDataIpv6 struct {
-	// IPv6 Address Parent
+	// IPv6 Address Parent for tunnel interface
 	Addresses []GetTunnelInterfaceListDataIpv6Address `pulumi:"addresses"`
-	// Enable IPv6
+	// Enable IPv6 for tunnel interface
 	Enabled bool `pulumi:"enabled"`
-	// Interface ID
+	// Interface ID for tunnel interface
 	InterfaceId string `pulumi:"interfaceId"`
 }
 
@@ -31983,11 +31983,11 @@ type GetTunnelInterfaceListDataIpv6Input interface {
 }
 
 type GetTunnelInterfaceListDataIpv6Args struct {
-	// IPv6 Address Parent
+	// IPv6 Address Parent for tunnel interface
 	Addresses GetTunnelInterfaceListDataIpv6AddressArrayInput `pulumi:"addresses"`
-	// Enable IPv6
+	// Enable IPv6 for tunnel interface
 	Enabled pulumi.BoolInput `pulumi:"enabled"`
-	// Interface ID
+	// Interface ID for tunnel interface
 	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
 }
 
@@ -32017,29 +32017,29 @@ func (o GetTunnelInterfaceListDataIpv6Output) ToGetTunnelInterfaceListDataIpv6Ou
 	return o
 }
 
-// IPv6 Address Parent
+// IPv6 Address Parent for tunnel interface
 func (o GetTunnelInterfaceListDataIpv6Output) Addresses() GetTunnelInterfaceListDataIpv6AddressArrayOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6) []GetTunnelInterfaceListDataIpv6Address { return v.Addresses }).(GetTunnelInterfaceListDataIpv6AddressArrayOutput)
 }
 
-// Enable IPv6
+// Enable IPv6 for tunnel interface
 func (o GetTunnelInterfaceListDataIpv6Output) Enabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6) bool { return v.Enabled }).(pulumi.BoolOutput)
 }
 
-// Interface ID
+// Interface ID for tunnel interface
 func (o GetTunnelInterfaceListDataIpv6Output) InterfaceId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6) string { return v.InterfaceId }).(pulumi.StringOutput)
 }
 
 type GetTunnelInterfaceListDataIpv6Address struct {
-	// Anycast
+	// Anycast for tunnel interface
 	Anycast GetTunnelInterfaceListDataIpv6AddressAnycast `pulumi:"anycast"`
-	// Enable Address on Interface
+	// Enable Address on Interface for tunnel interface
 	EnableOnInterface bool `pulumi:"enableOnInterface"`
-	// IPv6 Address
+	// IPv6 Address for tunnel interface
 	Name string `pulumi:"name"`
-	// Use interface ID as host portion
+	// Use interface ID as host portion for tunnel interface
 	Prefix GetTunnelInterfaceListDataIpv6AddressPrefix `pulumi:"prefix"`
 }
 
@@ -32055,13 +32055,13 @@ type GetTunnelInterfaceListDataIpv6AddressInput interface {
 }
 
 type GetTunnelInterfaceListDataIpv6AddressArgs struct {
-	// Anycast
+	// Anycast for tunnel interface
 	Anycast GetTunnelInterfaceListDataIpv6AddressAnycastInput `pulumi:"anycast"`
-	// Enable Address on Interface
+	// Enable Address on Interface for tunnel interface
 	EnableOnInterface pulumi.BoolInput `pulumi:"enableOnInterface"`
-	// IPv6 Address
+	// IPv6 Address for tunnel interface
 	Name pulumi.StringInput `pulumi:"name"`
-	// Use interface ID as host portion
+	// Use interface ID as host portion for tunnel interface
 	Prefix GetTunnelInterfaceListDataIpv6AddressPrefixInput `pulumi:"prefix"`
 }
 
@@ -32116,24 +32116,24 @@ func (o GetTunnelInterfaceListDataIpv6AddressOutput) ToGetTunnelInterfaceListDat
 	return o
 }
 
-// Anycast
+// Anycast for tunnel interface
 func (o GetTunnelInterfaceListDataIpv6AddressOutput) Anycast() GetTunnelInterfaceListDataIpv6AddressAnycastOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6Address) GetTunnelInterfaceListDataIpv6AddressAnycast {
 		return v.Anycast
 	}).(GetTunnelInterfaceListDataIpv6AddressAnycastOutput)
 }
 
-// Enable Address on Interface
+// Enable Address on Interface for tunnel interface
 func (o GetTunnelInterfaceListDataIpv6AddressOutput) EnableOnInterface() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6Address) bool { return v.EnableOnInterface }).(pulumi.BoolOutput)
 }
 
-// IPv6 Address
+// IPv6 Address for tunnel interface
 func (o GetTunnelInterfaceListDataIpv6AddressOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6Address) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Use interface ID as host portion
+// Use interface ID as host portion for tunnel interface
 func (o GetTunnelInterfaceListDataIpv6AddressOutput) Prefix() GetTunnelInterfaceListDataIpv6AddressPrefixOutput {
 	return o.ApplyT(func(v GetTunnelInterfaceListDataIpv6Address) GetTunnelInterfaceListDataIpv6AddressPrefix {
 		return v.Prefix

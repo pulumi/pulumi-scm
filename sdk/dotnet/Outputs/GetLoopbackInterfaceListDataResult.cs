@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetLoopbackInterfaceListDataResult
     {
         /// <summary>
-        /// Description
+        /// Description for loopback interface
         /// </summary>
         public readonly string Comment;
         /// <summary>
-        /// Default interface assignment
+        /// Default interface assignment for loopback interface
         /// </summary>
         public readonly string DefaultValue;
         /// <summary>
@@ -30,11 +30,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Folder;
         /// <summary>
-        /// UUID of the resource
+        /// UUID of the resource loopback interface
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Interface management profile
+        /// Interface management profile for loopback interface
         /// </summary>
         public readonly string InterfaceManagementProfile;
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetLoopbackInterfaceListDataIpv6Result Ipv6;
         /// <summary>
-        /// MTU
+        /// MTU for loopback interface
         /// </summary>
         public readonly int Mtu;
         /// <summary>

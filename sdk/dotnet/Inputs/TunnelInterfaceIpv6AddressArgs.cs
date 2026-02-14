@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class TunnelInterfaceIpv6AddressArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Anycast
+        /// Anycast for tunnel interface
         /// </summary>
         [Input("anycast")]
         public Input<Inputs.TunnelInterfaceIpv6AddressAnycastArgs>? Anycast { get; set; }
 
         /// <summary>
-        /// Enable Address on Interface
+        /// Enable Address on Interface for tunnel interface
         /// </summary>
         [Input("enableOnInterface")]
         public Input<bool>? EnableOnInterface { get; set; }
 
         /// <summary>
-        /// IPv6 Address
+        /// IPv6 Address for tunnel interface
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Use interface ID as host portion
+        /// Use interface ID as host portion for tunnel interface
         /// </summary>
         [Input("prefix")]
         public Input<Inputs.TunnelInterfaceIpv6AddressPrefixArgs>? Prefix { get; set; }

@@ -30,7 +30,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// This resource creates a new HIP Profile.
 //			_, err := scm.NewHipProfile(ctx, "scm_hip_profile_1", &scm.HipProfileArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_hip_profile_1"),
 //				Description: pulumi.String("A HIP profile created by Terraform"),
 //				Match:       pulumi.String("\"is-win\" and \"is-anti-malware-and-rtp-enabled\""),

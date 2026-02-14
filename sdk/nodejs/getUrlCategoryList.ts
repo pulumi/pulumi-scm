@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * //
  * // Data source to retrieve a list of URL Category objects.
  * //
- * // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+ * // Example 1: Fetch a list of all URL Categories in the "All" folder.
  * const allShared = scm.getUrlCategoryList({
  *     folder: "All",
  * });
@@ -132,7 +132,7 @@ export interface GetUrlCategoryListResult {
  * //
  * // Data source to retrieve a list of URL Category objects.
  * //
- * // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+ * // Example 1: Fetch a list of all URL Categories in the "All" folder.
  * const allShared = scm.getUrlCategoryList({
  *     folder: "All",
  * });

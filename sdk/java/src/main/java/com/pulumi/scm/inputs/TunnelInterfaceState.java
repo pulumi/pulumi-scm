@@ -20,14 +20,14 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
     public static final TunnelInterfaceState Empty = new TunnelInterfaceState();
 
     /**
-     * Description
+     * Description for tunnel interface
      * 
      */
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
     /**
-     * @return Description
+     * @return Description for tunnel interface
      * 
      */
     public Optional<Output<String>> comment() {
@@ -35,14 +35,14 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Default interface assignment
+     * Default interface assignment for tunnel interface
      * 
      */
     @Import(name="defaultValue")
     private @Nullable Output<String> defaultValue;
 
     /**
-     * @return Default interface assignment
+     * @return Default interface assignment for tunnel interface
      * 
      */
     public Optional<Output<String>> defaultValue() {
@@ -84,14 +84,14 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Interface management profile
+     * Interface management profile for tunnel interface
      * 
      */
     @Import(name="interfaceManagementProfile")
     private @Nullable Output<String> interfaceManagementProfile;
 
     /**
-     * @return Interface management profile
+     * @return Interface management profile for tunnel interface
      * 
      */
     public Optional<Output<String>> interfaceManagementProfile() {
@@ -129,14 +129,14 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * MTU
+     * MTU for tunnel interface
      * 
      */
     @Import(name="mtu")
     private @Nullable Output<Integer> mtu;
 
     /**
-     * @return MTU
+     * @return MTU for tunnel interface
      * 
      */
     public Optional<Output<Integer>> mtu() {
@@ -144,14 +144,14 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * L3 sub-interface name
+     * L3 sub-interface name for tunnel interface
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return L3 sub-interface name
+     * @return L3 sub-interface name for tunnel interface
      * 
      */
     public Optional<Output<String>> name() {
@@ -227,7 +227,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param comment Description
+         * @param comment Description for tunnel interface
          * 
          * @return builder
          * 
@@ -238,7 +238,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param comment Description
+         * @param comment Description for tunnel interface
          * 
          * @return builder
          * 
@@ -248,7 +248,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param defaultValue Default interface assignment
+         * @param defaultValue Default interface assignment for tunnel interface
          * 
          * @return builder
          * 
@@ -259,7 +259,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param defaultValue Default interface assignment
+         * @param defaultValue Default interface assignment for tunnel interface
          * 
          * @return builder
          * 
@@ -315,7 +315,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param interfaceManagementProfile Interface management profile
+         * @param interfaceManagementProfile Interface management profile for tunnel interface
          * 
          * @return builder
          * 
@@ -326,7 +326,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param interfaceManagementProfile Interface management profile
+         * @param interfaceManagementProfile Interface management profile for tunnel interface
          * 
          * @return builder
          * 
@@ -388,7 +388,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param mtu MTU
+         * @param mtu MTU for tunnel interface
          * 
          * @return builder
          * 
@@ -399,7 +399,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param mtu MTU
+         * @param mtu MTU for tunnel interface
          * 
          * @return builder
          * 
@@ -409,7 +409,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param name L3 sub-interface name
+         * @param name L3 sub-interface name for tunnel interface
          * 
          * @return builder
          * 
@@ -420,7 +420,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param name L3 sub-interface name
+         * @param name L3 sub-interface name for tunnel interface
          * 
          * @return builder
          * 

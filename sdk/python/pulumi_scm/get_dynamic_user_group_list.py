@@ -174,7 +174,7 @@ def get_dynamic_user_group_list(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
+    # 1. Use a single data block to fetch ALL dynamic user groups in the "All" folder. [cite: 2]
     all_shared_dugs = scm.get_dynamic_user_group_list(folder="All")
     pulumi.export("dugResultsFromList", {group.id: group for group in all_shared_dugs.datas})
     # This data source block shows an example of pagination.
@@ -233,7 +233,7 @@ def get_dynamic_user_group_list_output(device: Optional[pulumi.Input[Optional[_b
     import pulumi
     import pulumi_scm as scm
 
-    # 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
+    # 1. Use a single data block to fetch ALL dynamic user groups in the "All" folder. [cite: 2]
     all_shared_dugs = scm.get_dynamic_user_group_list(folder="All")
     pulumi.export("dugResultsFromList", {group.id: group for group in all_shared_dugs.datas})
     # This data source block shows an example of pagination.

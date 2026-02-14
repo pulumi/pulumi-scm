@@ -14,50 +14,50 @@ import java.util.Objects;
 @CustomType
 public final class GetLoopbackInterfaceIpv6Address {
     /**
-     * @return Anycast
+     * @return Anycast for loopback interface
      * 
      */
     private GetLoopbackInterfaceIpv6AddressAnycast anycast;
     /**
-     * @return Enable Address on Interface
+     * @return Enable Address on Interface for loopback interface
      * 
      */
     private Boolean enableOnInterface;
     /**
-     * @return IPv6 Address
+     * @return IPv6 Address for loopback interface
      * 
      */
     private String name;
     /**
-     * @return Use interface ID as host portion
+     * @return Use interface ID as host portion for loopback interface
      * 
      */
     private GetLoopbackInterfaceIpv6AddressPrefix prefix;
 
     private GetLoopbackInterfaceIpv6Address() {}
     /**
-     * @return Anycast
+     * @return Anycast for loopback interface
      * 
      */
     public GetLoopbackInterfaceIpv6AddressAnycast anycast() {
         return this.anycast;
     }
     /**
-     * @return Enable Address on Interface
+     * @return Enable Address on Interface for loopback interface
      * 
      */
     public Boolean enableOnInterface() {
         return this.enableOnInterface;
     }
     /**
-     * @return IPv6 Address
+     * @return IPv6 Address for loopback interface
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Use interface ID as host portion
+     * @return Use interface ID as host portion for loopback interface
      * 
      */
     public GetLoopbackInterfaceIpv6AddressPrefix prefix() {

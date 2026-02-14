@@ -174,7 +174,7 @@ def get_service_list(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # Data source to fetch all services in the "Shared" folder.
+    # Data source to fetch all services in the "All" folder.
     all_shared_services = scm.get_service_list(folder="All")
     pulumi.export("allSharedServicesMap", {svc.name: svc for svc in all_shared_services.datas})
     # Example of using pagination to get the first 5 services.
@@ -234,7 +234,7 @@ def get_service_list_output(device: Optional[pulumi.Input[Optional[_builtins.str
     import pulumi
     import pulumi_scm as scm
 
-    # Data source to fetch all services in the "Shared" folder.
+    # Data source to fetch all services in the "All" folder.
     all_shared_services = scm.get_service_list(folder="All")
     pulumi.export("allSharedServicesMap", {svc.name: svc for svc in all_shared_services.datas})
     # Example of using pagination to get the first 5 services.

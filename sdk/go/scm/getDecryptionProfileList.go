@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to retrieve a list of SCM Decryption Profile objects.
 //			//
-//			// Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+//			// Fetch a list of all SCM Decryption Profile in the "All" folder.
 //			allShared, err := scm.GetDecryptionProfileList(ctx, &scm.GetDecryptionProfileListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

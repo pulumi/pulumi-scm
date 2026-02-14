@@ -21,7 +21,7 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// Yes
         /// 
-        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ipv4`, `No`, and `Yes`.
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `No` and `Yes`.
         /// </summary>
         [Input("yes")]
         public Input<Inputs.LogicalRouterVrfBgpPeerGroupPeerInheritYesGetArgs>? Yes { get; set; }

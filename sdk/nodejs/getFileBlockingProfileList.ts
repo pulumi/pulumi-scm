@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * //
  * // Data source to retrieve a list of SCM File Blocking Profile objects.
  * //
- * // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+ * // Fetch a list of all SCM File Blocking Profile in the "All" folder.
  * const allShared = scm.getFileBlockingProfileList({
  *     folder: "All",
  * });
@@ -125,7 +125,7 @@ export interface GetFileBlockingProfileListResult {
  * //
  * // Data source to retrieve a list of SCM File Blocking Profile objects.
  * //
- * // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+ * // Fetch a list of all SCM File Blocking Profile in the "All" folder.
  * const allShared = scm.getFileBlockingProfileList({
  *     folder: "All",
  * });

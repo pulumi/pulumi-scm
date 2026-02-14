@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Creates a URL Access Profile object.
 //			_, err := scm.NewUrlAccessProfile(ctx, "example", &scm.UrlAccessProfileArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("example_url_access_profile"),
 //				Description: pulumi.String("Test URL Access Profile for create API"),
 //				Blocks: pulumi.StringArray{

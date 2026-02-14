@@ -16,6 +16,11 @@ public final class IkeGatewayLocalAddress {
      * 
      */
     private @Nullable String interface_;
+    /**
+     * @return IP Prefix of the assigned interface
+     * 
+     */
+    private @Nullable String ip;
 
     private IkeGatewayLocalAddress() {}
     /**
@@ -24,6 +29,13 @@ public final class IkeGatewayLocalAddress {
      */
     public Optional<String> interface_() {
         return Optional.ofNullable(this.interface_);
+    }
+    /**
+     * @return IP Prefix of the assigned interface
+     * 
+     */
+    public Optional<String> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
     public static Builder builder() {
@@ -36,10 +48,12 @@ public final class IkeGatewayLocalAddress {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String interface_;
+        private @Nullable String ip;
         public Builder() {}
         public Builder(IkeGatewayLocalAddress defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.interface_ = defaults.interface_;
+    	      this.ip = defaults.ip;
         }
 
         @CustomType.Setter("interface")
@@ -48,9 +62,16 @@ public final class IkeGatewayLocalAddress {
             this.interface_ = interface_;
             return this;
         }
+        @CustomType.Setter
+        public Builder ip(@Nullable String ip) {
+
+            this.ip = ip;
+            return this;
+        }
         public IkeGatewayLocalAddress build() {
             final var _resultValue = new IkeGatewayLocalAddress();
             _resultValue.interface_ = interface_;
+            _resultValue.ip = ip;
             return _resultValue;
         }
     }

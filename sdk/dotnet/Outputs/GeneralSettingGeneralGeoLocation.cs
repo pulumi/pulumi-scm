@@ -16,17 +16,17 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Latitude
         /// </summary>
-        public readonly string Latitude;
+        public readonly string? Latitude;
         /// <summary>
         /// Longitude
         /// </summary>
-        public readonly string Longitude;
+        public readonly string? Longitude;
 
         [OutputConstructor]
         private GeneralSettingGeneralGeoLocation(
-            string latitude,
+            string? latitude,
 
-            string longitude)
+            string? longitude)
         {
             Latitude = latitude;
             Longitude = longitude;

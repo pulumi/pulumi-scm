@@ -177,7 +177,7 @@ def get_kerberos_server_profile_list(device: Optional[_builtins.str] = None,
     #
     # Data source to retrieve a list of SCM Kerberos Server Profile objects.
     #
-    # Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+    # Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
     all_shared = scm.get_kerberos_server_profile_list(folder="All")
     pulumi.export("scmKerberosServerProfileAllShared", all_shared.datas)
     ```
@@ -230,7 +230,7 @@ def get_kerberos_server_profile_list_output(device: Optional[pulumi.Input[Option
     #
     # Data source to retrieve a list of SCM Kerberos Server Profile objects.
     #
-    # Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+    # Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
     all_shared = scm.get_kerberos_server_profile_list(folder="All")
     pulumi.export("scmKerberosServerProfileAllShared", all_shared.datas)
     ```

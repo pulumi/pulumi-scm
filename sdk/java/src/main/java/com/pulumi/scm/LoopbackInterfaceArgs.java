@@ -20,14 +20,14 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
     public static final LoopbackInterfaceArgs Empty = new LoopbackInterfaceArgs();
 
     /**
-     * Description
+     * Description for loopback interface
      * 
      */
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
     /**
-     * @return Description
+     * @return Description for loopback interface
      * 
      */
     public Optional<Output<String>> comment() {
@@ -35,14 +35,14 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Default interface assignment
+     * Default interface assignment for loopback interface
      * 
      */
     @Import(name="defaultValue")
     private @Nullable Output<String> defaultValue;
 
     /**
-     * @return Default interface assignment
+     * @return Default interface assignment for loopback interface
      * 
      */
     public Optional<Output<String>> defaultValue() {
@@ -84,14 +84,14 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Interface management profile
+     * Interface management profile for loopback interface
      * 
      */
     @Import(name="interfaceManagementProfile")
     private @Nullable Output<String> interfaceManagementProfile;
 
     /**
-     * @return Interface management profile
+     * @return Interface management profile for loopback interface
      * 
      */
     public Optional<Output<String>> interfaceManagementProfile() {
@@ -129,14 +129,14 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * MTU
+     * MTU for loopback interface
      * 
      */
     @Import(name="mtu")
     private @Nullable Output<Integer> mtu;
 
     /**
-     * @return MTU
+     * @return MTU for loopback interface
      * 
      */
     public Optional<Output<Integer>> mtu() {
@@ -211,7 +211,7 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param comment Description
+         * @param comment Description for loopback interface
          * 
          * @return builder
          * 
@@ -222,7 +222,7 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param comment Description
+         * @param comment Description for loopback interface
          * 
          * @return builder
          * 
@@ -232,7 +232,7 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param defaultValue Default interface assignment
+         * @param defaultValue Default interface assignment for loopback interface
          * 
          * @return builder
          * 
@@ -243,7 +243,7 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param defaultValue Default interface assignment
+         * @param defaultValue Default interface assignment for loopback interface
          * 
          * @return builder
          * 
@@ -299,7 +299,7 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param interfaceManagementProfile Interface management profile
+         * @param interfaceManagementProfile Interface management profile for loopback interface
          * 
          * @return builder
          * 
@@ -310,7 +310,7 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param interfaceManagementProfile Interface management profile
+         * @param interfaceManagementProfile Interface management profile for loopback interface
          * 
          * @return builder
          * 
@@ -372,7 +372,7 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param mtu MTU
+         * @param mtu MTU for loopback interface
          * 
          * @return builder
          * 
@@ -383,7 +383,7 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param mtu MTU
+         * @param mtu MTU for loopback interface
          * 
          * @return builder
          * 

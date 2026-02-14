@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetLoopbackInterfaceListDataIpv6 {
     /**
-     * @return IPv6 Address Parent
+     * @return IPv6 Address Parent for loopback interface
      * 
      */
     private List<GetLoopbackInterfaceListDataIpv6Address> addresses;
     /**
-     * @return Enable IPv6
+     * @return Enable IPv6 for loopback interface
      * 
      */
     private Boolean enabled;
     /**
-     * @return Interface ID
+     * @return Interface ID for loopback interface
      * 
      */
     private String interfaceId;
 
     private GetLoopbackInterfaceListDataIpv6() {}
     /**
-     * @return IPv6 Address Parent
+     * @return IPv6 Address Parent for loopback interface
      * 
      */
     public List<GetLoopbackInterfaceListDataIpv6Address> addresses() {
         return this.addresses;
     }
     /**
-     * @return Enable IPv6
+     * @return Enable IPv6 for loopback interface
      * 
      */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * @return Interface ID
+     * @return Interface ID for loopback interface
      * 
      */
     public String interfaceId() {

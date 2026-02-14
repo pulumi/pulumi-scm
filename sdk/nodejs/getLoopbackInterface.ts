@@ -49,7 +49,7 @@ export interface GetLoopbackInterfaceArgs {
     device?: string;
     folder?: string;
     /**
-     * UUID of the resource
+     * UUID of the resource loopback interface
      */
     id: string;
     name?: string;
@@ -68,7 +68,7 @@ export interface GetLoopbackInterfaceResult {
     readonly device: string;
     readonly folder: string;
     /**
-     * UUID of the resource
+     * UUID of the resource loopback interface
      */
     readonly id: string;
     readonly interfaceManagementProfile: string;
@@ -122,7 +122,7 @@ export interface GetLoopbackInterfaceOutputArgs {
     device?: pulumi.Input<string>;
     folder?: pulumi.Input<string>;
     /**
-     * UUID of the resource
+     * UUID of the resource loopback interface
      */
     id: pulumi.Input<string>;
     name?: pulumi.Input<string>;

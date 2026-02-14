@@ -15,6 +15,11 @@ public final class GetIkeGatewayListDataLocalAddress {
      * 
      */
     private String interface_;
+    /**
+     * @return IP Prefix of the assigned interface
+     * 
+     */
+    private String ip;
 
     private GetIkeGatewayListDataLocalAddress() {}
     /**
@@ -23,6 +28,13 @@ public final class GetIkeGatewayListDataLocalAddress {
      */
     public String interface_() {
         return this.interface_;
+    }
+    /**
+     * @return IP Prefix of the assigned interface
+     * 
+     */
+    public String ip() {
+        return this.ip;
     }
 
     public static Builder builder() {
@@ -35,10 +47,12 @@ public final class GetIkeGatewayListDataLocalAddress {
     @CustomType.Builder
     public static final class Builder {
         private String interface_;
+        private String ip;
         public Builder() {}
         public Builder(GetIkeGatewayListDataLocalAddress defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.interface_ = defaults.interface_;
+    	      this.ip = defaults.ip;
         }
 
         @CustomType.Setter("interface")
@@ -49,9 +63,18 @@ public final class GetIkeGatewayListDataLocalAddress {
             this.interface_ = interface_;
             return this;
         }
+        @CustomType.Setter
+        public Builder ip(String ip) {
+            if (ip == null) {
+              throw new MissingRequiredPropertyException("GetIkeGatewayListDataLocalAddress", "ip");
+            }
+            this.ip = ip;
+            return this;
+        }
         public GetIkeGatewayListDataLocalAddress build() {
             final var _resultValue = new GetIkeGatewayListDataLocalAddress();
             _resultValue.interface_ = interface_;
+            _resultValue.ip = ip;
             return _resultValue;
         }
     }

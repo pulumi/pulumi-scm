@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.TunnelInterfaceIpv6AddressGetArgs>? _addresses;
 
         /// <summary>
-        /// IPv6 Address Parent
+        /// IPv6 Address Parent for tunnel interface
         /// </summary>
         public InputList<Inputs.TunnelInterfaceIpv6AddressGetArgs> Addresses
         {
@@ -25,13 +25,13 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Enable IPv6
+        /// Enable IPv6 for tunnel interface
         /// </summary>
         [Input("enabled")]
         public Input<bool>? Enabled { get; set; }
 
         /// <summary>
-        /// Interface ID
+        /// Interface ID for tunnel interface
         /// </summary>
         [Input("interfaceId")]
         public Input<string>? InterfaceId { get; set; }

@@ -125,28 +125,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/tunnelInterface:TunnelInterface")
 public class TunnelInterface extends com.pulumi.resources.CustomResource {
     /**
-     * Description
+     * Description for tunnel interface
      * 
      */
     @Export(name="comment", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> comment;
 
     /**
-     * @return Description
+     * @return Description for tunnel interface
      * 
      */
     public Output<Optional<String>> comment() {
         return Codegen.optional(this.comment);
     }
     /**
-     * Default interface assignment
+     * Default interface assignment for tunnel interface
      * 
      */
     @Export(name="defaultValue", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultValue;
 
     /**
-     * @return Default interface assignment
+     * @return Default interface assignment for tunnel interface
      * 
      */
     public Output<Optional<String>> defaultValue() {
@@ -185,14 +185,14 @@ public class TunnelInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.folder);
     }
     /**
-     * Interface management profile
+     * Interface management profile for tunnel interface
      * 
      */
     @Export(name="interfaceManagementProfile", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> interfaceManagementProfile;
 
     /**
-     * @return Interface management profile
+     * @return Interface management profile for tunnel interface
      * 
      */
     public Output<Optional<String>> interfaceManagementProfile() {
@@ -227,28 +227,28 @@ public class TunnelInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.ipv6);
     }
     /**
-     * MTU
+     * MTU for tunnel interface
      * 
      */
     @Export(name="mtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> mtu;
 
     /**
-     * @return MTU
+     * @return MTU for tunnel interface
      * 
      */
     public Output<Optional<Integer>> mtu() {
         return Codegen.optional(this.mtu);
     }
     /**
-     * L3 sub-interface name
+     * L3 sub-interface name for tunnel interface
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return L3 sub-interface name
+     * @return L3 sub-interface name for tunnel interface
      * 
      */
     public Output<String> name() {

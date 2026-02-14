@@ -51,14 +51,14 @@ import javax.annotation.Nullable;
  *         // This file is embedded using go:embed
  *         // First, create some addresses that will be used in the address group
  *         var scmAddressAg1 = new Address("scmAddressAg1", AddressArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_address_ag_1")
  *             .description("First test address")
  *             .ipNetmask("192.168.1.1/32")
  *             .build());
  * 
  *         var scmAddressAg2 = new Address("scmAddressAg2", AddressArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_address_ag_2")
  *             .description("Second test address")
  *             .ipNetmask("192.168.1.2/32")
@@ -66,7 +66,7 @@ import javax.annotation.Nullable;
  * 
  *         // Create the address group that references the addresses above
  *         var scmAddressGroup1 = new AddressGroup("scmAddressGroup1", AddressGroupArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_address_group_1")
  *             .description("Sample address group created with Terraform")
  *             .statics(            
@@ -91,7 +91,7 @@ import javax.annotation.Nullable;
  * 
  *         // Create a dynamic addressgroup that matches both tags
  *         var scmAddressgroupDynamic = new AddressGroup("scmAddressgroupDynamic", AddressGroupArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_addressgroup_dynamic")
  *             .description("Managed by Pulumi")
  *             .dynamic(AddressGroupDynamicArgs.builder()

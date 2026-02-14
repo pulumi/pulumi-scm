@@ -91,7 +91,7 @@ import javax.annotation.Nullable;
  *         // This showcases the use of nested objects and lists of objects that the
  *         // corrected provider schema now supports.
  *         var scmHipObject1 = new HipObject("scmHipObject1", HipObjectArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_hip_object_1")
  *             .description("HIP object with multiple advanced criteria configured")
  *             .antiMalware(HipObjectAntiMalwareArgs.builder()

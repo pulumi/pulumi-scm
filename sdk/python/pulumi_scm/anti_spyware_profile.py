@@ -453,7 +453,7 @@ class AntiSpywareProfile(pulumi.CustomResource):
             cloud_inline_analysis=True)
         # Required object that will be referenced in examples
         scm_address1 = scm.Address("scm_address_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_1",
             description="Made by Pulumi",
             ip_netmask="10.2.3.4")
@@ -522,7 +522,7 @@ class AntiSpywareProfile(pulumi.CustomResource):
             cloud_inline_analysis=True)
         # Required object that will be referenced in examples
         scm_address1 = scm.Address("scm_address_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_1",
             description="Made by Pulumi",
             ip_netmask="10.2.3.4")

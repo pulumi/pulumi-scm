@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  * // Creates a custom URL Category object.
  * //
  * const example = new scm.UrlCategory("example", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "example_url_category",
  *     description: "Test URL Category for create API",
  *     lists: [

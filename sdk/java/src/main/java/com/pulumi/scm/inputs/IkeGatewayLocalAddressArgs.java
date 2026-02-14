@@ -30,10 +30,26 @@ public final class IkeGatewayLocalAddressArgs extends com.pulumi.resources.Resou
         return Optional.ofNullable(this.interface_);
     }
 
+    /**
+     * IP Prefix of the assigned interface
+     * 
+     */
+    @Import(name="ip")
+    private @Nullable Output<String> ip;
+
+    /**
+     * @return IP Prefix of the assigned interface
+     * 
+     */
+    public Optional<Output<String>> ip() {
+        return Optional.ofNullable(this.ip);
+    }
+
     private IkeGatewayLocalAddressArgs() {}
 
     private IkeGatewayLocalAddressArgs(IkeGatewayLocalAddressArgs $) {
         this.interface_ = $.interface_;
+        this.ip = $.ip;
     }
 
     public static Builder builder() {
@@ -73,6 +89,27 @@ public final class IkeGatewayLocalAddressArgs extends com.pulumi.resources.Resou
          */
         public Builder interface_(String interface_) {
             return interface_(Output.of(interface_));
+        }
+
+        /**
+         * @param ip IP Prefix of the assigned interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ip(@Nullable Output<String> ip) {
+            $.ip = ip;
+            return this;
+        }
+
+        /**
+         * @param ip IP Prefix of the assigned interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ip(String ip) {
+            return ip(Output.of(ip));
         }
 
         public IkeGatewayLocalAddressArgs build() {

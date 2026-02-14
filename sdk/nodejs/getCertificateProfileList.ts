@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Fetch a list of all certificate profile objects from the "Shared" folder.
+ * // Fetch a list of all certificate profile objects from the "All" folder.
  * const allProfiles = scm.getCertificateProfileList({
  *     folder: "All",
  * });
@@ -119,7 +119,7 @@ export interface GetCertificateProfileListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Fetch a list of all certificate profile objects from the "Shared" folder.
+ * // Fetch a list of all certificate profile objects from the "All" folder.
  * const allProfiles = scm.getCertificateProfileList({
  *     folder: "All",
  * });

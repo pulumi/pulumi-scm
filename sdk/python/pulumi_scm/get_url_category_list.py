@@ -177,7 +177,7 @@ def get_url_category_list(device: Optional[_builtins.str] = None,
     #
     # Data source to retrieve a list of URL Category objects.
     #
-    # Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+    # Example 1: Fetch a list of all URL Categories in the "All" folder.
     all_shared = scm.get_url_category_list(folder="All")
     pulumi.export("urlCategoriesListAllShared", all_shared.datas)
     # Example 2: Use pagination to get the first 5 URL Categories by name.
@@ -235,7 +235,7 @@ def get_url_category_list_output(device: Optional[pulumi.Input[Optional[_builtin
     #
     # Data source to retrieve a list of URL Category objects.
     #
-    # Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+    # Example 1: Fetch a list of all URL Categories in the "All" folder.
     all_shared = scm.get_url_category_list(folder="All")
     pulumi.export("urlCategoriesListAllShared", all_shared.datas)
     # Example 2: Use pagination to get the first 5 URL Categories by name.

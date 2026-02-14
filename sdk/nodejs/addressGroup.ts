@@ -18,20 +18,20 @@ import * as utilities from "./utilities";
  * // This file is embedded using go:embed
  * // First, create some addresses that will be used in the address group
  * const scmAddressAg1 = new scm.Address("scm_address_ag_1", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_address_ag_1",
  *     description: "First test address",
  *     ipNetmask: "192.168.1.1/32",
  * });
  * const scmAddressAg2 = new scm.Address("scm_address_ag_2", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_address_ag_2",
  *     description: "Second test address",
  *     ipNetmask: "192.168.1.2/32",
  * });
  * // Create the address group that references the addresses above
  * const scmAddressGroup1 = new scm.AddressGroup("scm_address_group_1", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_address_group_1",
  *     description: "Sample address group created with Terraform",
  *     statics: [
@@ -54,7 +54,7 @@ import * as utilities from "./utilities";
  * });
  * // Create a dynamic addressgroup that matches both tags
  * const scmAddressgroupDynamic = new scm.AddressGroup("scm_addressgroup_dynamic", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_addressgroup_dynamic",
  *     description: "Managed by Pulumi",
  *     dynamic: {

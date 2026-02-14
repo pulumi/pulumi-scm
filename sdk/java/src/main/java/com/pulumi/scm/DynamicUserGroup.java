@@ -66,7 +66,7 @@ import javax.annotation.Nullable;
  * 
  *         // Create the dynamic user group that references the tags above.
  *         var scmDug1 = new DynamicUserGroup("scmDug1", DynamicUserGroupArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_dug_1")
  *             .description("DUG created for Terraform")
  *             .filter(Output.tuple(scmDugTag1.name(), scmDugTag2.name(), scmDugTag3.name()).applyValue(values -> {

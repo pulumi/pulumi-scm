@@ -133,7 +133,7 @@ namespace Pulumi.Scm
         public string? Folder { get; set; }
 
         /// <summary>
-        /// UUID of the resource
+        /// UUID of the resource loopback interface
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
@@ -162,7 +162,7 @@ namespace Pulumi.Scm
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// UUID of the resource
+        /// UUID of the resource loopback interface
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
@@ -191,7 +191,7 @@ namespace Pulumi.Scm
         public readonly string Device;
         public readonly string Folder;
         /// <summary>
-        /// UUID of the resource
+        /// UUID of the resource loopback interface
         /// </summary>
         public readonly string Id;
         public readonly string InterfaceManagementProfile;

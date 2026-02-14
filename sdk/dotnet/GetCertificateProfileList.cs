@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Fetch a list of all certificate profile objects from the "Shared" folder.
+        ///     // Fetch a list of all certificate profile objects from the "All" folder.
         ///     var allProfiles = Scm.GetCertificateProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -53,7 +53,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Fetch a list of all certificate profile objects from the "Shared" folder.
+        ///     // Fetch a list of all certificate profile objects from the "All" folder.
         ///     var allProfiles = Scm.GetCertificateProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -82,7 +82,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Fetch a list of all certificate profile objects from the "Shared" folder.
+        ///     // Fetch a list of all certificate profile objects from the "All" folder.
         ///     var allProfiles = Scm.GetCertificateProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",

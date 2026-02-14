@@ -29,7 +29,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewCertificateProfile(ctx, "scm_cp_1", &scm.CertificateProfileArgs{
-//				Folder:                   pulumi.String("Shared"),
+//				Folder:                   pulumi.String("Prisma Access"),
 //				Name:                     pulumi.String("scm_cp_1"),
 //				Domain:                   pulumi.String("test"),
 //				UseCrl:                   pulumi.Bool(true),
