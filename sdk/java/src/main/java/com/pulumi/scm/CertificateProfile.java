@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var scmCp1 = new CertificateProfile("scmCp1", CertificateProfileArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_cp_1")
  *             .domain("test")
  *             .useCrl(true)

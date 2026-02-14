@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Creates a custom URL Category object.
 //			_, err := scm.NewUrlCategory(ctx, "example", &scm.UrlCategoryArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("example_url_category"),
 //				Description: pulumi.String("Test URL Category for create API"),
 //				Lists: pulumi.StringArray{

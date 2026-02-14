@@ -50,7 +50,7 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         // TCP Service with multiple destination ports custom timeout
  *         var scmServiceTcpPorts = new Service("scmServiceTcpPorts", ServiceArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_service_tcp_ports")
  *             .description("Managed by Pulumi")
  *             .protocol(ServiceProtocolArgs.builder()
@@ -65,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  *         // UDP Service with single destination port
  *         var scmServiceUdpPort = new Service("scmServiceUdpPort", ServiceArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_service_udp_port")
  *             .description("Managed by Pulumi")
  *             .protocol(ServiceProtocolArgs.builder()

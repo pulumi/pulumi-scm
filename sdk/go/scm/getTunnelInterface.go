@@ -61,7 +61,7 @@ type LookupTunnelInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	Folder *string `pulumi:"folder"`
-	// UUID of the resource
+	// UUID of the resource for tunnel interface
 	Id      string  `pulumi:"id"`
 	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
@@ -74,7 +74,7 @@ type LookupTunnelInterfaceResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
 	Folder string `pulumi:"folder"`
-	// UUID of the resource
+	// UUID of the resource for tunnel interface
 	Id                         string                 `pulumi:"id"`
 	InterfaceManagementProfile string                 `pulumi:"interfaceManagementProfile"`
 	Ips                        []GetTunnelInterfaceIp `pulumi:"ips"`
@@ -99,7 +99,7 @@ type LookupTunnelInterfaceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// UUID of the resource
+	// UUID of the resource for tunnel interface
 	Id      pulumi.StringInput    `pulumi:"id"`
 	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
@@ -141,7 +141,7 @@ func (o LookupTunnelInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// UUID of the resource
+// UUID of the resource for tunnel interface
 func (o LookupTunnelInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }

@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * //
  * // Data source to retrieve a list of SCM Decryption Profile objects.
  * //
- * // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+ * // Fetch a list of all SCM Decryption Profile in the "All" folder.
  * const allShared = scm.getDecryptionProfileList({
  *     folder: "All",
  * });
@@ -125,7 +125,7 @@ export interface GetDecryptionProfileListResult {
  * //
  * // Data source to retrieve a list of SCM Decryption Profile objects.
  * //
- * // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+ * // Fetch a list of all SCM Decryption Profile in the "All" folder.
  * const allShared = scm.getDecryptionProfileList({
  *     folder: "All",
  * });

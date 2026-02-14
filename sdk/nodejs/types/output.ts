@@ -5160,11 +5160,11 @@ export interface GeneralSettingGeneralGeoLocation {
     /**
      * Latitude
      */
-    latitude: string;
+    latitude?: string;
     /**
      * Longitude
      */
-    longitude: string;
+    longitude?: string;
 }
 
 export interface GeneralSettingGeneralSetting {
@@ -22056,6 +22056,10 @@ export interface GetIkeGatewayListDataLocalAddress {
      * Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
      */
     interface: string;
+    /**
+     * IP Prefix of the assigned interface
+     */
+    ip: string;
 }
 
 export interface GetIkeGatewayListDataLocalId {
@@ -22187,6 +22191,10 @@ export interface GetIkeGatewayLocalAddress {
      * Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
      */
     interface: string;
+    /**
+     * IP Prefix of the assigned interface
+     */
+    ip: string;
 }
 
 export interface GetIkeGatewayLocalId {
@@ -24417,7 +24425,7 @@ export interface GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit {
     /**
      * Yes
      *
-     * > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+     * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     yes: outputs.GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYes;
 }
@@ -29319,7 +29327,7 @@ export interface GetLogicalRouterVrfBgpPeerGroupPeerInherit {
     /**
      * Yes
      *
-     * > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+     * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     yes: outputs.GetLogicalRouterVrfBgpPeerGroupPeerInheritYes;
 }
@@ -33606,34 +33614,34 @@ export interface GetLoopbackInterfaceIp {
 
 export interface GetLoopbackInterfaceIpv6 {
     /**
-     * IPv6 Address Parent
+     * IPv6 Address Parent for loopback interface
      */
     addresses: outputs.GetLoopbackInterfaceIpv6Address[];
     /**
-     * Enable IPv6
+     * Enable IPv6 for loopback interface
      */
     enabled: boolean;
     /**
-     * Interface ID
+     * Interface ID for loopback interface
      */
     interfaceId: string;
 }
 
 export interface GetLoopbackInterfaceIpv6Address {
     /**
-     * Anycast
+     * Anycast for loopback interface
      */
     anycast: outputs.GetLoopbackInterfaceIpv6AddressAnycast;
     /**
-     * Enable Address on Interface
+     * Enable Address on Interface for loopback interface
      */
     enableOnInterface: boolean;
     /**
-     * IPv6 Address
+     * IPv6 Address for loopback interface
      */
     name: string;
     /**
-     * Use interface ID as host portion
+     * Use interface ID as host portion for loopback interface
      */
     prefix: outputs.GetLoopbackInterfaceIpv6AddressPrefix;
 }
@@ -33646,11 +33654,11 @@ export interface GetLoopbackInterfaceIpv6AddressPrefix {
 
 export interface GetLoopbackInterfaceListData {
     /**
-     * Description
+     * Description for loopback interface
      */
     comment: string;
     /**
-     * Default interface assignment
+     * Default interface assignment for loopback interface
      */
     defaultValue: string;
     /**
@@ -33662,11 +33670,11 @@ export interface GetLoopbackInterfaceListData {
      */
     folder: string;
     /**
-     * UUID of the resource
+     * UUID of the resource loopback interface
      */
     id: string;
     /**
-     * Interface management profile
+     * Interface management profile for loopback interface
      */
     interfaceManagementProfile: string;
     /**
@@ -33678,7 +33686,7 @@ export interface GetLoopbackInterfaceListData {
      */
     ipv6: outputs.GetLoopbackInterfaceListDataIpv6;
     /**
-     * MTU
+     * MTU for loopback interface
      */
     mtu: number;
     /**
@@ -33704,34 +33712,34 @@ export interface GetLoopbackInterfaceListDataIp {
 
 export interface GetLoopbackInterfaceListDataIpv6 {
     /**
-     * IPv6 Address Parent
+     * IPv6 Address Parent for loopback interface
      */
     addresses: outputs.GetLoopbackInterfaceListDataIpv6Address[];
     /**
-     * Enable IPv6
+     * Enable IPv6 for loopback interface
      */
     enabled: boolean;
     /**
-     * Interface ID
+     * Interface ID for loopback interface
      */
     interfaceId: string;
 }
 
 export interface GetLoopbackInterfaceListDataIpv6Address {
     /**
-     * Anycast
+     * Anycast for loopback interface
      */
     anycast: outputs.GetLoopbackInterfaceListDataIpv6AddressAnycast;
     /**
-     * Enable Address on Interface
+     * Enable Address on Interface for loopback interface
      */
     enableOnInterface: boolean;
     /**
-     * IPv6 Address
+     * IPv6 Address for loopback interface
      */
     name: string;
     /**
-     * Use interface ID as host portion
+     * Use interface ID as host portion for loopback interface
      */
     prefix: outputs.GetLoopbackInterfaceListDataIpv6AddressPrefix;
 }
@@ -40571,34 +40579,34 @@ export interface GetTunnelInterfaceIp {
 
 export interface GetTunnelInterfaceIpv6 {
     /**
-     * IPv6 Address Parent
+     * IPv6 Address Parent for tunnel interface
      */
     addresses: outputs.GetTunnelInterfaceIpv6Address[];
     /**
-     * Enable IPv6
+     * Enable IPv6 for tunnel interface
      */
     enabled: boolean;
     /**
-     * Interface ID
+     * Interface ID for tunnel interface
      */
     interfaceId: string;
 }
 
 export interface GetTunnelInterfaceIpv6Address {
     /**
-     * Anycast
+     * Anycast for tunnel interface
      */
     anycast: outputs.GetTunnelInterfaceIpv6AddressAnycast;
     /**
-     * Enable Address on Interface
+     * Enable Address on Interface for tunnel interface
      */
     enableOnInterface: boolean;
     /**
-     * IPv6 Address
+     * IPv6 Address for tunnel interface
      */
     name: string;
     /**
-     * Use interface ID as host portion
+     * Use interface ID as host portion for tunnel interface
      */
     prefix: outputs.GetTunnelInterfaceIpv6AddressPrefix;
 }
@@ -40611,11 +40619,11 @@ export interface GetTunnelInterfaceIpv6AddressPrefix {
 
 export interface GetTunnelInterfaceListData {
     /**
-     * Description
+     * Description for tunnel interface
      */
     comment: string;
     /**
-     * Default interface assignment
+     * Default interface assignment for tunnel interface
      */
     defaultValue: string;
     /**
@@ -40627,11 +40635,11 @@ export interface GetTunnelInterfaceListData {
      */
     folder: string;
     /**
-     * UUID of the resource
+     * UUID of the resource for tunnel interface
      */
     id: string;
     /**
-     * Interface management profile
+     * Interface management profile for tunnel interface
      */
     interfaceManagementProfile: string;
     /**
@@ -40643,7 +40651,7 @@ export interface GetTunnelInterfaceListData {
      */
     ipv6: outputs.GetTunnelInterfaceListDataIpv6;
     /**
-     * MTU
+     * MTU for tunnel interface
      */
     mtu: number;
     /**
@@ -40669,34 +40677,34 @@ export interface GetTunnelInterfaceListDataIp {
 
 export interface GetTunnelInterfaceListDataIpv6 {
     /**
-     * IPv6 Address Parent
+     * IPv6 Address Parent for tunnel interface
      */
     addresses: outputs.GetTunnelInterfaceListDataIpv6Address[];
     /**
-     * Enable IPv6
+     * Enable IPv6 for tunnel interface
      */
     enabled: boolean;
     /**
-     * Interface ID
+     * Interface ID for tunnel interface
      */
     interfaceId: string;
 }
 
 export interface GetTunnelInterfaceListDataIpv6Address {
     /**
-     * Anycast
+     * Anycast for tunnel interface
      */
     anycast: outputs.GetTunnelInterfaceListDataIpv6AddressAnycast;
     /**
-     * Enable Address on Interface
+     * Enable Address on Interface for tunnel interface
      */
     enableOnInterface: boolean;
     /**
-     * IPv6 Address
+     * IPv6 Address for tunnel interface
      */
     name: string;
     /**
-     * Use interface ID as host portion
+     * Use interface ID as host portion for tunnel interface
      */
     prefix: outputs.GetTunnelInterfaceListDataIpv6AddressPrefix;
 }
@@ -46710,6 +46718,10 @@ export interface IkeGatewayLocalAddress {
      * Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
      */
     interface: string;
+    /**
+     * IP Prefix of the assigned interface
+     */
+    ip: string;
 }
 
 export interface IkeGatewayLocalId {
@@ -47893,7 +47905,7 @@ export interface LogicalRouterVrfBgpPeerGroupPeerInherit {
     /**
      * Yes
      *
-     * > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+     * > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
      */
     yes?: outputs.LogicalRouterVrfBgpPeerGroupPeerInheritYes;
 }
@@ -52180,34 +52192,34 @@ export interface LoopbackInterfaceIp {
 
 export interface LoopbackInterfaceIpv6 {
     /**
-     * IPv6 Address Parent
+     * IPv6 Address Parent for loopback interface
      */
     addresses?: outputs.LoopbackInterfaceIpv6Address[];
     /**
-     * Enable IPv6
+     * Enable IPv6 for loopback interface
      */
     enabled: boolean;
     /**
-     * Interface ID
+     * Interface ID for loopback interface
      */
     interfaceId: string;
 }
 
 export interface LoopbackInterfaceIpv6Address {
     /**
-     * Anycast
+     * Anycast for loopback interface
      */
     anycast?: outputs.LoopbackInterfaceIpv6AddressAnycast;
     /**
-     * Enable Address on Interface
+     * Enable Address on Interface for loopback interface
      */
     enableOnInterface: boolean;
     /**
-     * IPv6 Address
+     * IPv6 Address for loopback interface
      */
     name?: string;
     /**
-     * Use interface ID as host portion
+     * Use interface ID as host portion for loopback interface
      */
     prefix?: outputs.LoopbackInterfaceIpv6AddressPrefix;
 }
@@ -54832,34 +54844,34 @@ export interface TunnelInterfaceIp {
 
 export interface TunnelInterfaceIpv6 {
     /**
-     * IPv6 Address Parent
+     * IPv6 Address Parent for tunnel interface
      */
     addresses?: outputs.TunnelInterfaceIpv6Address[];
     /**
-     * Enable IPv6
+     * Enable IPv6 for tunnel interface
      */
     enabled: boolean;
     /**
-     * Interface ID
+     * Interface ID for tunnel interface
      */
     interfaceId: string;
 }
 
 export interface TunnelInterfaceIpv6Address {
     /**
-     * Anycast
+     * Anycast for tunnel interface
      */
     anycast?: outputs.TunnelInterfaceIpv6AddressAnycast;
     /**
-     * Enable Address on Interface
+     * Enable Address on Interface for tunnel interface
      */
     enableOnInterface: boolean;
     /**
-     * IPv6 Address
+     * IPv6 Address for tunnel interface
      */
     name?: string;
     /**
-     * Use interface ID as host portion
+     * Use interface ID as host portion for tunnel interface
      */
     prefix?: outputs.TunnelInterfaceIpv6AddressPrefix;
 }

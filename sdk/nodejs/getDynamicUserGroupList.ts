@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
+ * // 1. Use a single data block to fetch ALL dynamic user groups in the "All" folder. [cite: 2]
  * const allSharedDugs = scm.getDynamicUserGroupList({
  *     folder: "All",
  * });
@@ -130,7 +130,7 @@ export interface GetDynamicUserGroupListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
+ * // 1. Use a single data block to fetch ALL dynamic user groups in the "All" folder. [cite: 2]
  * const allSharedDugs = scm.getDynamicUserGroupList({
  *     folder: "All",
  * });

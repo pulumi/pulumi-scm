@@ -60,7 +60,7 @@ import javax.annotation.Nullable;
  * 
  *         // Required object that will be referenced in examples
  *         var scmAddress1 = new Address("scmAddress1", AddressArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_address_1")
  *             .description("Made by Pulumi")
  *             .ipNetmask("10.2.3.4")

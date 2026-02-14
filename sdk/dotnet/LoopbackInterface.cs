@@ -116,13 +116,13 @@ namespace Pulumi.Scm
     public partial class LoopbackInterface : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Description
+        /// Description for loopback interface
         /// </summary>
         [Output("comment")]
         public Output<string?> Comment { get; private set; } = null!;
 
         /// <summary>
-        /// Default interface assignment
+        /// Default interface assignment for loopback interface
         /// </summary>
         [Output("defaultValue")]
         public Output<string?> DefaultValue { get; private set; } = null!;
@@ -142,7 +142,7 @@ namespace Pulumi.Scm
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Interface management profile
+        /// Interface management profile for loopback interface
         /// </summary>
         [Output("interfaceManagementProfile")]
         public Output<string?> InterfaceManagementProfile { get; private set; } = null!;
@@ -160,7 +160,7 @@ namespace Pulumi.Scm
         public Output<Outputs.LoopbackInterfaceIpv6?> Ipv6 { get; private set; } = null!;
 
         /// <summary>
-        /// MTU
+        /// MTU for loopback interface
         /// </summary>
         [Output("mtu")]
         public Output<int?> Mtu { get; private set; } = null!;
@@ -232,13 +232,13 @@ namespace Pulumi.Scm
     public sealed class LoopbackInterfaceArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Description
+        /// Description for loopback interface
         /// </summary>
         [Input("comment")]
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// Default interface assignment
+        /// Default interface assignment for loopback interface
         /// </summary>
         [Input("defaultValue")]
         public Input<string>? DefaultValue { get; set; }
@@ -258,7 +258,7 @@ namespace Pulumi.Scm
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Interface management profile
+        /// Interface management profile for loopback interface
         /// </summary>
         [Input("interfaceManagementProfile")]
         public Input<string>? InterfaceManagementProfile { get; set; }
@@ -282,7 +282,7 @@ namespace Pulumi.Scm
         public Input<Inputs.LoopbackInterfaceIpv6Args>? Ipv6 { get; set; }
 
         /// <summary>
-        /// MTU
+        /// MTU for loopback interface
         /// </summary>
         [Input("mtu")]
         public Input<int>? Mtu { get; set; }
@@ -310,13 +310,13 @@ namespace Pulumi.Scm
     public sealed class LoopbackInterfaceState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Description
+        /// Description for loopback interface
         /// </summary>
         [Input("comment")]
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// Default interface assignment
+        /// Default interface assignment for loopback interface
         /// </summary>
         [Input("defaultValue")]
         public Input<string>? DefaultValue { get; set; }
@@ -336,7 +336,7 @@ namespace Pulumi.Scm
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Interface management profile
+        /// Interface management profile for loopback interface
         /// </summary>
         [Input("interfaceManagementProfile")]
         public Input<string>? InterfaceManagementProfile { get; set; }
@@ -360,7 +360,7 @@ namespace Pulumi.Scm
         public Input<Inputs.LoopbackInterfaceIpv6GetArgs>? Ipv6 { get; set; }
 
         /// <summary>
-        /// MTU
+        /// MTU for loopback interface
         /// </summary>
         [Input("mtu")]
         public Input<int>? Mtu { get; set; }

@@ -4,9 +4,10 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class GeneralSettingGeneralGeoLocation {
@@ -14,27 +15,27 @@ public final class GeneralSettingGeneralGeoLocation {
      * @return Latitude
      * 
      */
-    private String latitude;
+    private @Nullable String latitude;
     /**
      * @return Longitude
      * 
      */
-    private String longitude;
+    private @Nullable String longitude;
 
     private GeneralSettingGeneralGeoLocation() {}
     /**
      * @return Latitude
      * 
      */
-    public String latitude() {
-        return this.latitude;
+    public Optional<String> latitude() {
+        return Optional.ofNullable(this.latitude);
     }
     /**
      * @return Longitude
      * 
      */
-    public String longitude() {
-        return this.longitude;
+    public Optional<String> longitude() {
+        return Optional.ofNullable(this.longitude);
     }
 
     public static Builder builder() {
@@ -46,8 +47,8 @@ public final class GeneralSettingGeneralGeoLocation {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String latitude;
-        private String longitude;
+        private @Nullable String latitude;
+        private @Nullable String longitude;
         public Builder() {}
         public Builder(GeneralSettingGeneralGeoLocation defaults) {
     	      Objects.requireNonNull(defaults);
@@ -56,18 +57,14 @@ public final class GeneralSettingGeneralGeoLocation {
         }
 
         @CustomType.Setter
-        public Builder latitude(String latitude) {
-            if (latitude == null) {
-              throw new MissingRequiredPropertyException("GeneralSettingGeneralGeoLocation", "latitude");
-            }
+        public Builder latitude(@Nullable String latitude) {
+
             this.latitude = latitude;
             return this;
         }
         @CustomType.Setter
-        public Builder longitude(String longitude) {
-            if (longitude == null) {
-              throw new MissingRequiredPropertyException("GeneralSettingGeneralGeoLocation", "longitude");
-            }
+        public Builder longitude(@Nullable String longitude) {
+
             this.longitude = longitude;
             return this;
         }

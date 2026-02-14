@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoopbackInterfaceIpv6 {
     /**
-     * @return IPv6 Address Parent
+     * @return IPv6 Address Parent for loopback interface
      * 
      */
     private @Nullable List<LoopbackInterfaceIpv6Address> addresses;
     /**
-     * @return Enable IPv6
+     * @return Enable IPv6 for loopback interface
      * 
      */
     private @Nullable Boolean enabled;
     /**
-     * @return Interface ID
+     * @return Interface ID for loopback interface
      * 
      */
     private @Nullable String interfaceId;
 
     private LoopbackInterfaceIpv6() {}
     /**
-     * @return IPv6 Address Parent
+     * @return IPv6 Address Parent for loopback interface
      * 
      */
     public List<LoopbackInterfaceIpv6Address> addresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
     /**
-     * @return Enable IPv6
+     * @return Enable IPv6 for loopback interface
      * 
      */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * @return Interface ID
+     * @return Interface ID for loopback interface
      * 
      */
     public Optional<String> interfaceId() {

@@ -614,7 +614,7 @@ class HipObject(pulumi.CustomResource):
         # This showcases the use of nested objects and lists of objects that the
         # corrected provider schema now supports.
         scm_hip_object1 = scm.HipObject("scm_hip_object_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_hip_object_1",
             description="HIP object with multiple advanced criteria configured",
             anti_malware={
@@ -813,7 +813,7 @@ class HipObject(pulumi.CustomResource):
         # This showcases the use of nested objects and lists of objects that the
         # corrected provider schema now supports.
         scm_hip_object1 = scm.HipObject("scm_hip_object_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_hip_object_1",
             description="HIP object with multiple advanced criteria configured",
             anti_malware={

@@ -15,12 +15,12 @@ import java.util.Objects;
 @CustomType
 public final class GetLoopbackInterfaceListData {
     /**
-     * @return Description
+     * @return Description for loopback interface
      * 
      */
     private String comment;
     /**
-     * @return Default interface assignment
+     * @return Default interface assignment for loopback interface
      * 
      */
     private String defaultValue;
@@ -35,12 +35,12 @@ public final class GetLoopbackInterfaceListData {
      */
     private String folder;
     /**
-     * @return UUID of the resource
+     * @return UUID of the resource loopback interface
      * 
      */
     private String id;
     /**
-     * @return Interface management profile
+     * @return Interface management profile for loopback interface
      * 
      */
     private String interfaceManagementProfile;
@@ -55,7 +55,7 @@ public final class GetLoopbackInterfaceListData {
      */
     private GetLoopbackInterfaceListDataIpv6 ipv6;
     /**
-     * @return MTU
+     * @return MTU for loopback interface
      * 
      */
     private Integer mtu;
@@ -77,14 +77,14 @@ public final class GetLoopbackInterfaceListData {
 
     private GetLoopbackInterfaceListData() {}
     /**
-     * @return Description
+     * @return Description for loopback interface
      * 
      */
     public String comment() {
         return this.comment;
     }
     /**
-     * @return Default interface assignment
+     * @return Default interface assignment for loopback interface
      * 
      */
     public String defaultValue() {
@@ -105,14 +105,14 @@ public final class GetLoopbackInterfaceListData {
         return this.folder;
     }
     /**
-     * @return UUID of the resource
+     * @return UUID of the resource loopback interface
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Interface management profile
+     * @return Interface management profile for loopback interface
      * 
      */
     public String interfaceManagementProfile() {
@@ -133,7 +133,7 @@ public final class GetLoopbackInterfaceListData {
         return this.ipv6;
     }
     /**
-     * @return MTU
+     * @return MTU for loopback interface
      * 
      */
     public Integer mtu() {

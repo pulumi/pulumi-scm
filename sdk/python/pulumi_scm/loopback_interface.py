@@ -33,16 +33,16 @@ class LoopbackInterfaceArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a LoopbackInterface resource.
-        :param pulumi.Input[_builtins.str] comment: Description
-        :param pulumi.Input[_builtins.str] default_value: Default interface assignment
+        :param pulumi.Input[_builtins.str] comment: Description for loopback interface
+        :param pulumi.Input[_builtins.str] default_value: Default interface assignment for loopback interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
+        :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for loopback interface
         :param pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpArgs']]] ips: Loopback IP Parent
         :param pulumi.Input['LoopbackInterfaceIpv6Args'] ipv6: Loopback IPv6 Configuration
-        :param pulumi.Input[_builtins.int] mtu: MTU
+        :param pulumi.Input[_builtins.int] mtu: MTU for loopback interface
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -73,7 +73,7 @@ class LoopbackInterfaceArgs:
     @pulumi.getter
     def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Description
+        Description for loopback interface
         """
         return pulumi.get(self, "comment")
 
@@ -85,7 +85,7 @@ class LoopbackInterfaceArgs:
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default interface assignment
+        Default interface assignment for loopback interface
         """
         return pulumi.get(self, "default_value")
 
@@ -123,7 +123,7 @@ class LoopbackInterfaceArgs:
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface management profile
+        Interface management profile for loopback interface
         """
         return pulumi.get(self, "interface_management_profile")
 
@@ -159,7 +159,7 @@ class LoopbackInterfaceArgs:
     @pulumi.getter
     def mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        MTU
+        MTU for loopback interface
         """
         return pulumi.get(self, "mtu")
 
@@ -210,16 +210,16 @@ class _LoopbackInterfaceState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering LoopbackInterface resources.
-        :param pulumi.Input[_builtins.str] comment: Description
-        :param pulumi.Input[_builtins.str] default_value: Default interface assignment
+        :param pulumi.Input[_builtins.str] comment: Description for loopback interface
+        :param pulumi.Input[_builtins.str] default_value: Default interface assignment for loopback interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
+        :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for loopback interface
         :param pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpArgs']]] ips: Loopback IP Parent
         :param pulumi.Input['LoopbackInterfaceIpv6Args'] ipv6: Loopback IPv6 Configuration
-        :param pulumi.Input[_builtins.int] mtu: MTU
+        :param pulumi.Input[_builtins.int] mtu: MTU for loopback interface
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -253,7 +253,7 @@ class _LoopbackInterfaceState:
     @pulumi.getter
     def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Description
+        Description for loopback interface
         """
         return pulumi.get(self, "comment")
 
@@ -265,7 +265,7 @@ class _LoopbackInterfaceState:
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default interface assignment
+        Default interface assignment for loopback interface
         """
         return pulumi.get(self, "default_value")
 
@@ -303,7 +303,7 @@ class _LoopbackInterfaceState:
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface management profile
+        Interface management profile for loopback interface
         """
         return pulumi.get(self, "interface_management_profile")
 
@@ -339,7 +339,7 @@ class _LoopbackInterfaceState:
     @pulumi.getter
     def mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        MTU
+        MTU for loopback interface
         """
         return pulumi.get(self, "mtu")
 
@@ -473,16 +473,16 @@ class LoopbackInterface(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] comment: Description
-        :param pulumi.Input[_builtins.str] default_value: Default interface assignment
+        :param pulumi.Input[_builtins.str] comment: Description for loopback interface
+        :param pulumi.Input[_builtins.str] default_value: Default interface assignment for loopback interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
+        :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for loopback interface
         :param pulumi.Input[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict']]]] ips: Loopback IP Parent
         :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']] ipv6: Loopback IPv6 Configuration
-        :param pulumi.Input[_builtins.int] mtu: MTU
+        :param pulumi.Input[_builtins.int] mtu: MTU for loopback interface
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -635,16 +635,16 @@ class LoopbackInterface(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] comment: Description
-        :param pulumi.Input[_builtins.str] default_value: Default interface assignment
+        :param pulumi.Input[_builtins.str] comment: Description for loopback interface
+        :param pulumi.Input[_builtins.str] default_value: Default interface assignment for loopback interface
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
-        :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
+        :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile for loopback interface
         :param pulumi.Input[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict']]]] ips: Loopback IP Parent
         :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']] ipv6: Loopback IPv6 Configuration
-        :param pulumi.Input[_builtins.int] mtu: MTU
+        :param pulumi.Input[_builtins.int] mtu: MTU for loopback interface
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -672,7 +672,7 @@ class LoopbackInterface(pulumi.CustomResource):
     @pulumi.getter
     def comment(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Description
+        Description for loopback interface
         """
         return pulumi.get(self, "comment")
 
@@ -680,7 +680,7 @@ class LoopbackInterface(pulumi.CustomResource):
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Default interface assignment
+        Default interface assignment for loopback interface
         """
         return pulumi.get(self, "default_value")
 
@@ -706,7 +706,7 @@ class LoopbackInterface(pulumi.CustomResource):
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Interface management profile
+        Interface management profile for loopback interface
         """
         return pulumi.get(self, "interface_management_profile")
 
@@ -730,7 +730,7 @@ class LoopbackInterface(pulumi.CustomResource):
     @pulumi.getter
     def mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        MTU
+        MTU for loopback interface
         """
         return pulumi.get(self, "mtu")
 

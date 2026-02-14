@@ -54,7 +54,7 @@ import (
 //			}
 //			// IP Netmask
 //			_, err = scm.NewAddress(ctx, "scm_address_1", &scm.AddressArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_address_1"),
 //				Description: pulumi.String("Made by Pulumi"),
 //				IpNetmask:   pulumi.String("10.2.3.4"),
@@ -64,7 +64,7 @@ import (
 //			}
 //			// IP Range
 //			_, err = scm.NewAddress(ctx, "scm_address_2", &scm.AddressArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_address_2"),
 //				Description: pulumi.String("Small IP range test"),
 //				IpRange:     pulumi.String("192.168.1.10-192.168.1.20"),
@@ -74,7 +74,7 @@ import (
 //			}
 //			// FQDN
 //			_, err = scm.NewAddress(ctx, "scm_address_3", &scm.AddressArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_address_3"),
 //				Description: pulumi.String("Simple FQDN test"),
 //				Fqdn:        pulumi.String("example.com"),
@@ -84,7 +84,7 @@ import (
 //			}
 //			// Class C wildcard
 //			_, err = scm.NewAddress(ctx, "scm_address_4", &scm.AddressArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_address_4"),
 //				Description: pulumi.String("Class C wildcard test"),
 //				IpWildcard:  pulumi.String("192.168.1.0/0.0.0.255"),
@@ -94,7 +94,7 @@ import (
 //			}
 //			// Multiple tags
 //			_, err = scm.NewAddress(ctx, "scm_address_5", &scm.AddressArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_address_5"),
 //				Description: pulumi.String("Multiple tags test"),
 //				IpNetmask:   pulumi.String("10.10.10.2/32"),

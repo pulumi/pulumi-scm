@@ -325,7 +325,7 @@ class DynamicUserGroup(pulumi.CustomResource):
             color="Green")
         # Create the dynamic user group that references the tags above.
         scm_dug1 = scm.DynamicUserGroup("scm_dug_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_dug_1",
             description="DUG created for Terraform",
             filter=pulumi.Output.all(
@@ -396,7 +396,7 @@ class DynamicUserGroup(pulumi.CustomResource):
             color="Green")
         # Create the dynamic user group that references the tags above.
         scm_dug1 = scm.DynamicUserGroup("scm_dug_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_dug_1",
             description="DUG created for Terraform",
             filter=pulumi.Output.all(

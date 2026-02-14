@@ -66,7 +66,7 @@ import javax.annotation.Nullable;
  * 
  *         // IP Netmask
  *         var scmAddress1 = new Address("scmAddress1", AddressArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_address_1")
  *             .description("Made by Pulumi")
  *             .ipNetmask("10.2.3.4")
@@ -74,7 +74,7 @@ import javax.annotation.Nullable;
  * 
  *         // IP Range
  *         var scmAddress2 = new Address("scmAddress2", AddressArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_address_2")
  *             .description("Small IP range test")
  *             .ipRange("192.168.1.10-192.168.1.20")
@@ -82,7 +82,7 @@ import javax.annotation.Nullable;
  * 
  *         // FQDN
  *         var scmAddress3 = new Address("scmAddress3", AddressArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_address_3")
  *             .description("Simple FQDN test")
  *             .fqdn("example.com")
@@ -90,7 +90,7 @@ import javax.annotation.Nullable;
  * 
  *         // Class C wildcard
  *         var scmAddress4 = new Address("scmAddress4", AddressArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_address_4")
  *             .description("Class C wildcard test")
  *             .ipWildcard("192.168.1.0/0.0.0.255")
@@ -98,7 +98,7 @@ import javax.annotation.Nullable;
  * 
  *         // Multiple tags
  *         var scmAddress5 = new Address("scmAddress5", AddressArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_address_5")
  *             .description("Multiple tags test")
  *             .ipNetmask("10.10.10.2/32")

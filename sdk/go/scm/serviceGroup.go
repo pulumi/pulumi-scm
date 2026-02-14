@@ -30,7 +30,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// TCP Service with multiple destination ports custom timeout
 //			scmServiceTcpPorts, err := scm.NewService(ctx, "scm_service_tcp_ports", &scm.ServiceArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_service_tcp_ports"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Protocol: &scm.ServiceProtocolArgs{
@@ -47,7 +47,7 @@ import (
 //			}
 //			// UDP Service with single destination port
 //			scmServiceUdpPort, err := scm.NewService(ctx, "scm_service_udp_port", &scm.ServiceArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_service_udp_port"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Protocol: &scm.ServiceProtocolArgs{

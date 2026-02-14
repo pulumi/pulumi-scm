@@ -39,14 +39,14 @@ public final class GetLoopbackInterfaceArgs extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * UUID of the resource
+     * UUID of the resource loopback interface
      * 
      */
     @Import(name="id", required=true)
     private Output<String> id;
 
     /**
-     * @return UUID of the resource
+     * @return UUID of the resource loopback interface
      * 
      */
     public Output<String> id() {
@@ -126,7 +126,7 @@ public final class GetLoopbackInterfaceArgs extends com.pulumi.resources.InvokeA
         }
 
         /**
-         * @param id UUID of the resource
+         * @param id UUID of the resource loopback interface
          * 
          * @return builder
          * 
@@ -137,7 +137,7 @@ public final class GetLoopbackInterfaceArgs extends com.pulumi.resources.InvokeA
         }
 
         /**
-         * @param id UUID of the resource
+         * @param id UUID of the resource loopback interface
          * 
          * @return builder
          * 

@@ -31,7 +31,7 @@ import (
 //			// This showcases the use of nested objects and lists of objects that the
 //			// corrected provider schema now supports.
 //			_, err := scm.NewHipObject(ctx, "scm_hip_object_1", &scm.HipObjectArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_hip_object_1"),
 //				Description: pulumi.String("HIP object with multiple advanced criteria configured"),
 //				AntiMalware: &scm.HipObjectAntiMalwareArgs{

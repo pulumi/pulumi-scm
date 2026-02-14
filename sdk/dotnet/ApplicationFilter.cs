@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var scmApplicationFilter1 = new Scm.ApplicationFilter("scm_application_filter_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_application_filter_1",
     ///         Categories = new[]
     ///         {

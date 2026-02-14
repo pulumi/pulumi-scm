@@ -177,7 +177,7 @@ def get_decryption_profile_list(device: Optional[_builtins.str] = None,
     #
     # Data source to retrieve a list of SCM Decryption Profile objects.
     #
-    # Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+    # Fetch a list of all SCM Decryption Profile in the "All" folder.
     all_shared = scm.get_decryption_profile_list(folder="All")
     pulumi.export("scmDecryptionProfileListAllShared", all_shared.datas)
     ```
@@ -230,7 +230,7 @@ def get_decryption_profile_list_output(device: Optional[pulumi.Input[Optional[_b
     #
     # Data source to retrieve a list of SCM Decryption Profile objects.
     #
-    # Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+    # Fetch a list of all SCM Decryption Profile in the "All" folder.
     all_shared = scm.get_decryption_profile_list(folder="All")
     pulumi.export("scmDecryptionProfileListAllShared", all_shared.datas)
     ```

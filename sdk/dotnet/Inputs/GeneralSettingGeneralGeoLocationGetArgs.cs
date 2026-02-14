@@ -15,14 +15,14 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// Latitude
         /// </summary>
-        [Input("latitude", required: true)]
-        public Input<string> Latitude { get; set; } = null!;
+        [Input("latitude")]
+        public Input<string>? Latitude { get; set; }
 
         /// <summary>
         /// Longitude
         /// </summary>
-        [Input("longitude", required: true)]
-        public Input<string> Longitude { get; set; } = null!;
+        [Input("longitude")]
+        public Input<string>? Longitude { get; set; }
 
         public GeneralSettingGeneralGeoLocationGetArgs()
         {

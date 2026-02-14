@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to retrieve a list of SCM Kerberos Server Profile objects.
 //			//
-//			// Example 1: Fetch a list of all SCM Kerberos Server Profile in the "Shared" folder.
+//			// Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
 //			allShared, err := scm.GetKerberosServerProfileList(ctx, &scm.GetKerberosServerProfileListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

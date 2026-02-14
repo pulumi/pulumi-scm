@@ -92,7 +92,7 @@ class GetTunnelInterfaceResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        UUID of the resource
+        UUID of the resource for tunnel interface
         """
         return pulumi.get(self, "id")
 
@@ -180,7 +180,7 @@ def get_tunnel_interface(device: Optional[_builtins.str] = None,
 
 
     :param _builtins.str device: The device in which the resource is defined
-    :param _builtins.str id: UUID of the resource
+    :param _builtins.str id: UUID of the resource for tunnel interface
     """
     __args__ = dict()
     __args__['device'] = device
@@ -232,7 +232,7 @@ def get_tunnel_interface_output(device: Optional[pulumi.Input[Optional[_builtins
 
 
     :param _builtins.str device: The device in which the resource is defined
-    :param _builtins.str id: UUID of the resource
+    :param _builtins.str id: UUID of the resource for tunnel interface
     """
     __args__ = dict()
     __args__['device'] = device

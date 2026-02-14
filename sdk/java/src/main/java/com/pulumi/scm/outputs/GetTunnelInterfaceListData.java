@@ -15,12 +15,12 @@ import java.util.Objects;
 @CustomType
 public final class GetTunnelInterfaceListData {
     /**
-     * @return Description
+     * @return Description for tunnel interface
      * 
      */
     private String comment;
     /**
-     * @return Default interface assignment
+     * @return Default interface assignment for tunnel interface
      * 
      */
     private String defaultValue;
@@ -35,12 +35,12 @@ public final class GetTunnelInterfaceListData {
      */
     private String folder;
     /**
-     * @return UUID of the resource
+     * @return UUID of the resource for tunnel interface
      * 
      */
     private String id;
     /**
-     * @return Interface management profile
+     * @return Interface management profile for tunnel interface
      * 
      */
     private String interfaceManagementProfile;
@@ -55,7 +55,7 @@ public final class GetTunnelInterfaceListData {
      */
     private GetTunnelInterfaceListDataIpv6 ipv6;
     /**
-     * @return MTU
+     * @return MTU for tunnel interface
      * 
      */
     private Integer mtu;
@@ -77,14 +77,14 @@ public final class GetTunnelInterfaceListData {
 
     private GetTunnelInterfaceListData() {}
     /**
-     * @return Description
+     * @return Description for tunnel interface
      * 
      */
     public String comment() {
         return this.comment;
     }
     /**
-     * @return Default interface assignment
+     * @return Default interface assignment for tunnel interface
      * 
      */
     public String defaultValue() {
@@ -105,14 +105,14 @@ public final class GetTunnelInterfaceListData {
         return this.folder;
     }
     /**
-     * @return UUID of the resource
+     * @return UUID of the resource for tunnel interface
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Interface management profile
+     * @return Interface management profile for tunnel interface
      * 
      */
     public String interfaceManagementProfile() {
@@ -133,7 +133,7 @@ public final class GetTunnelInterfaceListData {
         return this.ipv6;
     }
     /**
-     * @return MTU
+     * @return MTU for tunnel interface
      * 
      */
     public Integer mtu() {

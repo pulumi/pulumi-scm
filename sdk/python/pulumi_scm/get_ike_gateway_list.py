@@ -176,7 +176,7 @@ def get_ike_gateway_list(device: Optional[_builtins.str] = None,
 
     # Data source to retrieve a list of IKE Gateways.
     # You can filter the list by folder, snippet, or device.
-    # This example retrieves all gateways in the "Shared" folder.
+    # This example retrieves all gateways in the "All" folder.
     example_list_ike_gateway_ds = scm.get_ike_gateway_list(folder="Remote Networks")
     pulumi.export("ikeGatewayListTotal", example_list_ike_gateway_ds.total)
     pulumi.export("ikeGatewayListData", example_list_ike_gateway_ds.datas)
@@ -229,7 +229,7 @@ def get_ike_gateway_list_output(device: Optional[pulumi.Input[Optional[_builtins
 
     # Data source to retrieve a list of IKE Gateways.
     # You can filter the list by folder, snippet, or device.
-    # This example retrieves all gateways in the "Shared" folder.
+    # This example retrieves all gateways in the "All" folder.
     example_list_ike_gateway_ds = scm.get_ike_gateway_list(folder="Remote Networks")
     pulumi.export("ikeGatewayListTotal", example_list_ike_gateway_ds.total)
     pulumi.export("ikeGatewayListData", example_list_ike_gateway_ds.datas)

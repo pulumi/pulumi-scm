@@ -31,7 +31,7 @@ import * as utilities from "./utilities";
  * });
  * // Create the dynamic user group that references the tags above.
  * const scmDug1 = new scm.DynamicUserGroup("scm_dug_1", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_dug_1",
  *     description: "DUG created for Terraform",
  *     filter: pulumi.interpolate`'${scmDugTag1.name}' or '${scmDugTag2.name}' and '${scmDugTag3.name}'`,

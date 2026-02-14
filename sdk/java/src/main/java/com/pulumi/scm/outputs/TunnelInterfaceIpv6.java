@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TunnelInterfaceIpv6 {
     /**
-     * @return IPv6 Address Parent
+     * @return IPv6 Address Parent for tunnel interface
      * 
      */
     private @Nullable List<TunnelInterfaceIpv6Address> addresses;
     /**
-     * @return Enable IPv6
+     * @return Enable IPv6 for tunnel interface
      * 
      */
     private @Nullable Boolean enabled;
     /**
-     * @return Interface ID
+     * @return Interface ID for tunnel interface
      * 
      */
     private @Nullable String interfaceId;
 
     private TunnelInterfaceIpv6() {}
     /**
-     * @return IPv6 Address Parent
+     * @return IPv6 Address Parent for tunnel interface
      * 
      */
     public List<TunnelInterfaceIpv6Address> addresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
     /**
-     * @return Enable IPv6
+     * @return Enable IPv6 for tunnel interface
      * 
      */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * @return Interface ID
+     * @return Interface ID for tunnel interface
      * 
      */
     public Optional<String> interfaceId() {

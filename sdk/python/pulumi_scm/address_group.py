@@ -365,18 +365,18 @@ class AddressGroup(pulumi.CustomResource):
         # This file is embedded using go:embed
         # First, create some addresses that will be used in the address group
         scm_address_ag1 = scm.Address("scm_address_ag_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_ag_1",
             description="First test address",
             ip_netmask="192.168.1.1/32")
         scm_address_ag2 = scm.Address("scm_address_ag_2",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_ag_2",
             description="Second test address",
             ip_netmask="192.168.1.2/32")
         # Create the address group that references the addresses above
         scm_address_group1 = scm.AddressGroup("scm_address_group_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_group_1",
             description="Sample address group created with Terraform",
             statics=[
@@ -396,7 +396,7 @@ class AddressGroup(pulumi.CustomResource):
             color="Blue")
         # Create a dynamic addressgroup that matches both tags
         scm_addressgroup_dynamic = scm.AddressGroup("scm_addressgroup_dynamic",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_addressgroup_dynamic",
             description="Managed by Pulumi",
             dynamic={
@@ -451,18 +451,18 @@ class AddressGroup(pulumi.CustomResource):
         # This file is embedded using go:embed
         # First, create some addresses that will be used in the address group
         scm_address_ag1 = scm.Address("scm_address_ag_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_ag_1",
             description="First test address",
             ip_netmask="192.168.1.1/32")
         scm_address_ag2 = scm.Address("scm_address_ag_2",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_ag_2",
             description="Second test address",
             ip_netmask="192.168.1.2/32")
         # Create the address group that references the addresses above
         scm_address_group1 = scm.AddressGroup("scm_address_group_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_group_1",
             description="Sample address group created with Terraform",
             statics=[
@@ -482,7 +482,7 @@ class AddressGroup(pulumi.CustomResource):
             color="Blue")
         # Create a dynamic addressgroup that matches both tags
         scm_addressgroup_dynamic = scm.AddressGroup("scm_addressgroup_dynamic",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_addressgroup_dynamic",
             description="Managed by Pulumi",
             dynamic={

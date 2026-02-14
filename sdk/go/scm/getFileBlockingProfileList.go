@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to retrieve a list of SCM File Blocking Profile objects.
 //			//
-//			// Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+//			// Fetch a list of all SCM File Blocking Profile in the "All" folder.
 //			allShared, err := scm.GetFileBlockingProfileList(ctx, &scm.GetFileBlockingProfileListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

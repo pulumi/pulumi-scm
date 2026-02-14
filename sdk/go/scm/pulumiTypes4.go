@@ -22652,6 +22652,8 @@ func (o GetIkeGatewayListDataAuthenticationPreSharedKeyOutput) Key() pulumi.Stri
 type GetIkeGatewayListDataLocalAddress struct {
 	// Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
 	Interface string `pulumi:"interface"`
+	// IP Prefix of the assigned interface
+	Ip string `pulumi:"ip"`
 }
 
 // GetIkeGatewayListDataLocalAddressInput is an input type that accepts GetIkeGatewayListDataLocalAddressArgs and GetIkeGatewayListDataLocalAddressOutput values.
@@ -22668,6 +22670,8 @@ type GetIkeGatewayListDataLocalAddressInput interface {
 type GetIkeGatewayListDataLocalAddressArgs struct {
 	// Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
 	Interface pulumi.StringInput `pulumi:"interface"`
+	// IP Prefix of the assigned interface
+	Ip pulumi.StringInput `pulumi:"ip"`
 }
 
 func (GetIkeGatewayListDataLocalAddressArgs) ElementType() reflect.Type {
@@ -22699,6 +22703,11 @@ func (o GetIkeGatewayListDataLocalAddressOutput) ToGetIkeGatewayListDataLocalAdd
 // Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
 func (o GetIkeGatewayListDataLocalAddressOutput) Interface() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayListDataLocalAddress) string { return v.Interface }).(pulumi.StringOutput)
+}
+
+// IP Prefix of the assigned interface
+func (o GetIkeGatewayListDataLocalAddressOutput) Ip() pulumi.StringOutput {
+	return o.ApplyT(func(v GetIkeGatewayListDataLocalAddress) string { return v.Ip }).(pulumi.StringOutput)
 }
 
 type GetIkeGatewayListDataLocalId struct {
@@ -23425,6 +23434,8 @@ func (o GetIkeGatewayListDataProtocolIkev2DpdOutput) Enable() pulumi.BoolOutput 
 type GetIkeGatewayLocalAddress struct {
 	// Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
 	Interface string `pulumi:"interface"`
+	// IP Prefix of the assigned interface
+	Ip string `pulumi:"ip"`
 }
 
 // GetIkeGatewayLocalAddressInput is an input type that accepts GetIkeGatewayLocalAddressArgs and GetIkeGatewayLocalAddressOutput values.
@@ -23441,6 +23452,8 @@ type GetIkeGatewayLocalAddressInput interface {
 type GetIkeGatewayLocalAddressArgs struct {
 	// Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
 	Interface pulumi.StringInput `pulumi:"interface"`
+	// IP Prefix of the assigned interface
+	Ip pulumi.StringInput `pulumi:"ip"`
 }
 
 func (GetIkeGatewayLocalAddressArgs) ElementType() reflect.Type {
@@ -23472,6 +23485,11 @@ func (o GetIkeGatewayLocalAddressOutput) ToGetIkeGatewayLocalAddressOutputWithCo
 // Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
 func (o GetIkeGatewayLocalAddressOutput) Interface() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayLocalAddress) string { return v.Interface }).(pulumi.StringOutput)
+}
+
+// IP Prefix of the assigned interface
+func (o GetIkeGatewayLocalAddressOutput) Ip() pulumi.StringOutput {
+	return o.ApplyT(func(v GetIkeGatewayLocalAddress) string { return v.Ip }).(pulumi.StringOutput)
 }
 
 type GetIkeGatewayLocalId struct {
@@ -34245,7 +34263,7 @@ type GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit struct {
 	No GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritNo `pulumi:"no"`
 	// Yes
 	//
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	Yes GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYes `pulumi:"yes"`
 }
 
@@ -34265,7 +34283,7 @@ type GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritArgs struct {
 	No GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritNoInput `pulumi:"no"`
 	// Yes
 	//
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	Yes GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYesInput `pulumi:"yes"`
 }
 
@@ -34304,7 +34322,7 @@ func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritOutput) No() GetLogica
 
 // Yes
 //
-// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 func (o GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritOutput) Yes() GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYesOutput {
 	return o.ApplyT(func(v GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit) GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYes {
 		return v.Yes

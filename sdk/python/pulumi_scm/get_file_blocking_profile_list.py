@@ -177,7 +177,7 @@ def get_file_blocking_profile_list(device: Optional[_builtins.str] = None,
     #
     # Data source to retrieve a list of SCM File Blocking Profile objects.
     #
-    # Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+    # Fetch a list of all SCM File Blocking Profile in the "All" folder.
     all_shared = scm.get_file_blocking_profile_list(folder="All")
     pulumi.export("scmFileBlockingProfileAllShared", all_shared.datas)
     ```
@@ -230,7 +230,7 @@ def get_file_blocking_profile_list_output(device: Optional[pulumi.Input[Optional
     #
     # Data source to retrieve a list of SCM File Blocking Profile objects.
     #
-    # Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+    # Fetch a list of all SCM File Blocking Profile in the "All" folder.
     all_shared = scm.get_file_blocking_profile_list(folder="All")
     pulumi.export("scmFileBlockingProfileAllShared", all_shared.datas)
     ```

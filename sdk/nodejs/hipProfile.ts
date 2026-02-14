@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  *
  * // This resource creates a new HIP Profile.
  * const scmHipProfile1 = new scm.HipProfile("scm_hip_profile_1", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_hip_profile_1",
  *     description: "A HIP profile created by Terraform",
  *     match: "\"is-win\" and \"is-anti-malware-and-rtp-enabled\"",

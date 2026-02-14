@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * //
  * // Data source to retrieve a list of SCM DNS Security Profile objects.
  * //
- * // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+ * // Fetch a list of all SCM DNS Security Profile in the "All" folder.
  * const allShared = scm.getDnsSecurityProfileList({
  *     folder: "All",
  * });
@@ -125,7 +125,7 @@ export interface GetDnsSecurityProfileListResult {
  * //
  * // Data source to retrieve a list of SCM DNS Security Profile objects.
  * //
- * // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+ * // Fetch a list of all SCM DNS Security Profile in the "All" folder.
  * const allShared = scm.getDnsSecurityProfileList({
  *     folder: "All",
  * });

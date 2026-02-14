@@ -47,7 +47,7 @@ namespace Pulumi.Scm
     ///     // IP Netmask
     ///     var scmAddress1 = new Scm.Address("scm_address_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_address_1",
     ///         Description = "Made by Pulumi",
     ///         IpNetmask = "10.2.3.4",
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
     ///     // IP Range
     ///     var scmAddress2 = new Scm.Address("scm_address_2", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_address_2",
     ///         Description = "Small IP range test",
     ///         IpRange = "192.168.1.10-192.168.1.20",
@@ -65,7 +65,7 @@ namespace Pulumi.Scm
     ///     // FQDN
     ///     var scmAddress3 = new Scm.Address("scm_address_3", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_address_3",
     ///         Description = "Simple FQDN test",
     ///         Fqdn = "example.com",
@@ -74,7 +74,7 @@ namespace Pulumi.Scm
     ///     // Class C wildcard
     ///     var scmAddress4 = new Scm.Address("scm_address_4", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_address_4",
     ///         Description = "Class C wildcard test",
     ///         IpWildcard = "192.168.1.0/0.0.0.255",
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
     ///     // Multiple tags
     ///     var scmAddress5 = new Scm.Address("scm_address_5", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_address_5",
     ///         Description = "Multiple tags test",
     ///         IpNetmask = "10.10.10.2/32",

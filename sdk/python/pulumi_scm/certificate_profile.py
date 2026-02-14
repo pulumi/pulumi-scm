@@ -610,7 +610,7 @@ class CertificateProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_cp1 = scm.CertificateProfile("scm_cp_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_cp_1",
             domain="test",
             use_crl=True,
@@ -682,7 +682,7 @@ class CertificateProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_cp1 = scm.CertificateProfile("scm_cp_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_cp_1",
             domain="test",
             use_crl=True,

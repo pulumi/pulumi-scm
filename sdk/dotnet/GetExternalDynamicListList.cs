@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Data source to fetch all external dynamic lists in the "Shared" folder.
+        ///     // Data source to fetch all external dynamic lists in the "All" folder.
         ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -67,7 +67,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Data source to fetch all external dynamic lists in the "Shared" folder.
+        ///     // Data source to fetch all external dynamic lists in the "All" folder.
         ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -110,7 +110,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Data source to fetch all external dynamic lists in the "Shared" folder.
+        ///     // Data source to fetch all external dynamic lists in the "All" folder.
         ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "All",

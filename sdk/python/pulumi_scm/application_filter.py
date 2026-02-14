@@ -809,7 +809,7 @@ class ApplicationFilter(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_application_filter1 = scm.ApplicationFilter("scm_application_filter_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_application_filter_1",
             categories=["business-systems"],
             risks=[1],
@@ -874,7 +874,7 @@ class ApplicationFilter(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_application_filter1 = scm.ApplicationFilter("scm_application_filter_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_application_filter_1",
             categories=["business-systems"],
             risks=[1],

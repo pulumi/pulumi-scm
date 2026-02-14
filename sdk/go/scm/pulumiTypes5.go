@@ -15017,7 +15017,7 @@ type GetLogicalRouterVrfBgpPeerGroupPeerInherit struct {
 	No GetLogicalRouterVrfBgpPeerGroupPeerInheritNo `pulumi:"no"`
 	// Yes
 	//
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	Yes GetLogicalRouterVrfBgpPeerGroupPeerInheritYes `pulumi:"yes"`
 }
 
@@ -15037,7 +15037,7 @@ type GetLogicalRouterVrfBgpPeerGroupPeerInheritArgs struct {
 	No GetLogicalRouterVrfBgpPeerGroupPeerInheritNoInput `pulumi:"no"`
 	// Yes
 	//
-	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+	// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 	Yes GetLogicalRouterVrfBgpPeerGroupPeerInheritYesInput `pulumi:"yes"`
 }
 
@@ -15076,7 +15076,7 @@ func (o GetLogicalRouterVrfBgpPeerGroupPeerInheritOutput) No() GetLogicalRouterV
 
 // Yes
 //
-// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+// > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
 func (o GetLogicalRouterVrfBgpPeerGroupPeerInheritOutput) Yes() GetLogicalRouterVrfBgpPeerGroupPeerInheritYesOutput {
 	return o.ApplyT(func(v GetLogicalRouterVrfBgpPeerGroupPeerInherit) GetLogicalRouterVrfBgpPeerGroupPeerInheritYes {
 		return v.Yes
@@ -38417,11 +38417,11 @@ func (o GetLoopbackInterfaceIpArrayOutput) Index(i pulumi.IntInput) GetLoopbackI
 }
 
 type GetLoopbackInterfaceIpv6 struct {
-	// IPv6 Address Parent
+	// IPv6 Address Parent for loopback interface
 	Addresses []GetLoopbackInterfaceIpv6Address `pulumi:"addresses"`
-	// Enable IPv6
+	// Enable IPv6 for loopback interface
 	Enabled bool `pulumi:"enabled"`
-	// Interface ID
+	// Interface ID for loopback interface
 	InterfaceId string `pulumi:"interfaceId"`
 }
 
@@ -38437,11 +38437,11 @@ type GetLoopbackInterfaceIpv6Input interface {
 }
 
 type GetLoopbackInterfaceIpv6Args struct {
-	// IPv6 Address Parent
+	// IPv6 Address Parent for loopback interface
 	Addresses GetLoopbackInterfaceIpv6AddressArrayInput `pulumi:"addresses"`
-	// Enable IPv6
+	// Enable IPv6 for loopback interface
 	Enabled pulumi.BoolInput `pulumi:"enabled"`
-	// Interface ID
+	// Interface ID for loopback interface
 	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
 }
 
@@ -38471,29 +38471,29 @@ func (o GetLoopbackInterfaceIpv6Output) ToGetLoopbackInterfaceIpv6OutputWithCont
 	return o
 }
 
-// IPv6 Address Parent
+// IPv6 Address Parent for loopback interface
 func (o GetLoopbackInterfaceIpv6Output) Addresses() GetLoopbackInterfaceIpv6AddressArrayOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceIpv6) []GetLoopbackInterfaceIpv6Address { return v.Addresses }).(GetLoopbackInterfaceIpv6AddressArrayOutput)
 }
 
-// Enable IPv6
+// Enable IPv6 for loopback interface
 func (o GetLoopbackInterfaceIpv6Output) Enabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceIpv6) bool { return v.Enabled }).(pulumi.BoolOutput)
 }
 
-// Interface ID
+// Interface ID for loopback interface
 func (o GetLoopbackInterfaceIpv6Output) InterfaceId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceIpv6) string { return v.InterfaceId }).(pulumi.StringOutput)
 }
 
 type GetLoopbackInterfaceIpv6Address struct {
-	// Anycast
+	// Anycast for loopback interface
 	Anycast GetLoopbackInterfaceIpv6AddressAnycast `pulumi:"anycast"`
-	// Enable Address on Interface
+	// Enable Address on Interface for loopback interface
 	EnableOnInterface bool `pulumi:"enableOnInterface"`
-	// IPv6 Address
+	// IPv6 Address for loopback interface
 	Name string `pulumi:"name"`
-	// Use interface ID as host portion
+	// Use interface ID as host portion for loopback interface
 	Prefix GetLoopbackInterfaceIpv6AddressPrefix `pulumi:"prefix"`
 }
 
@@ -38509,13 +38509,13 @@ type GetLoopbackInterfaceIpv6AddressInput interface {
 }
 
 type GetLoopbackInterfaceIpv6AddressArgs struct {
-	// Anycast
+	// Anycast for loopback interface
 	Anycast GetLoopbackInterfaceIpv6AddressAnycastInput `pulumi:"anycast"`
-	// Enable Address on Interface
+	// Enable Address on Interface for loopback interface
 	EnableOnInterface pulumi.BoolInput `pulumi:"enableOnInterface"`
-	// IPv6 Address
+	// IPv6 Address for loopback interface
 	Name pulumi.StringInput `pulumi:"name"`
-	// Use interface ID as host portion
+	// Use interface ID as host portion for loopback interface
 	Prefix GetLoopbackInterfaceIpv6AddressPrefixInput `pulumi:"prefix"`
 }
 
@@ -38570,22 +38570,22 @@ func (o GetLoopbackInterfaceIpv6AddressOutput) ToGetLoopbackInterfaceIpv6Address
 	return o
 }
 
-// Anycast
+// Anycast for loopback interface
 func (o GetLoopbackInterfaceIpv6AddressOutput) Anycast() GetLoopbackInterfaceIpv6AddressAnycastOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceIpv6Address) GetLoopbackInterfaceIpv6AddressAnycast { return v.Anycast }).(GetLoopbackInterfaceIpv6AddressAnycastOutput)
 }
 
-// Enable Address on Interface
+// Enable Address on Interface for loopback interface
 func (o GetLoopbackInterfaceIpv6AddressOutput) EnableOnInterface() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceIpv6Address) bool { return v.EnableOnInterface }).(pulumi.BoolOutput)
 }
 
-// IPv6 Address
+// IPv6 Address for loopback interface
 func (o GetLoopbackInterfaceIpv6AddressOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceIpv6Address) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Use interface ID as host portion
+// Use interface ID as host portion for loopback interface
 func (o GetLoopbackInterfaceIpv6AddressOutput) Prefix() GetLoopbackInterfaceIpv6AddressPrefixOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceIpv6Address) GetLoopbackInterfaceIpv6AddressPrefix { return v.Prefix }).(GetLoopbackInterfaceIpv6AddressPrefixOutput)
 }
@@ -38697,23 +38697,23 @@ func (o GetLoopbackInterfaceIpv6AddressPrefixOutput) ToGetLoopbackInterfaceIpv6A
 }
 
 type GetLoopbackInterfaceListData struct {
-	// Description
+	// Description for loopback interface
 	Comment string `pulumi:"comment"`
-	// Default interface assignment
+	// Default interface assignment for loopback interface
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
 	// The folder of the item. Default: Shared.
 	Folder string `pulumi:"folder"`
-	// UUID of the resource
+	// UUID of the resource loopback interface
 	Id string `pulumi:"id"`
-	// Interface management profile
+	// Interface management profile for loopback interface
 	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
 	// Loopback IP Parent
 	Ips []GetLoopbackInterfaceListDataIp `pulumi:"ips"`
 	// Loopback IPv6 Configuration
 	Ipv6 GetLoopbackInterfaceListDataIpv6 `pulumi:"ipv6"`
-	// MTU
+	// MTU for loopback interface
 	Mtu int `pulumi:"mtu"`
 	// The name of the item.
 	Name string `pulumi:"name"`
@@ -38735,23 +38735,23 @@ type GetLoopbackInterfaceListDataInput interface {
 }
 
 type GetLoopbackInterfaceListDataArgs struct {
-	// Description
+	// Description for loopback interface
 	Comment pulumi.StringInput `pulumi:"comment"`
-	// Default interface assignment
+	// Default interface assignment for loopback interface
 	DefaultValue pulumi.StringInput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device pulumi.StringInput `pulumi:"device"`
 	// The folder of the item. Default: Shared.
 	Folder pulumi.StringInput `pulumi:"folder"`
-	// UUID of the resource
+	// UUID of the resource loopback interface
 	Id pulumi.StringInput `pulumi:"id"`
-	// Interface management profile
+	// Interface management profile for loopback interface
 	InterfaceManagementProfile pulumi.StringInput `pulumi:"interfaceManagementProfile"`
 	// Loopback IP Parent
 	Ips GetLoopbackInterfaceListDataIpArrayInput `pulumi:"ips"`
 	// Loopback IPv6 Configuration
 	Ipv6 GetLoopbackInterfaceListDataIpv6Input `pulumi:"ipv6"`
-	// MTU
+	// MTU for loopback interface
 	Mtu pulumi.IntInput `pulumi:"mtu"`
 	// The name of the item.
 	Name pulumi.StringInput `pulumi:"name"`
@@ -38812,12 +38812,12 @@ func (o GetLoopbackInterfaceListDataOutput) ToGetLoopbackInterfaceListDataOutput
 	return o
 }
 
-// Description
+// Description for loopback interface
 func (o GetLoopbackInterfaceListDataOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) string { return v.Comment }).(pulumi.StringOutput)
 }
 
-// Default interface assignment
+// Default interface assignment for loopback interface
 func (o GetLoopbackInterfaceListDataOutput) DefaultValue() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
@@ -38832,12 +38832,12 @@ func (o GetLoopbackInterfaceListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// UUID of the resource
+// UUID of the resource loopback interface
 func (o GetLoopbackInterfaceListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Interface management profile
+// Interface management profile for loopback interface
 func (o GetLoopbackInterfaceListDataOutput) InterfaceManagementProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
 }
@@ -38852,7 +38852,7 @@ func (o GetLoopbackInterfaceListDataOutput) Ipv6() GetLoopbackInterfaceListDataI
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) GetLoopbackInterfaceListDataIpv6 { return v.Ipv6 }).(GetLoopbackInterfaceListDataIpv6Output)
 }
 
-// MTU
+// MTU for loopback interface
 func (o GetLoopbackInterfaceListDataOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListData) int { return v.Mtu }).(pulumi.IntOutput)
 }
@@ -38990,11 +38990,11 @@ func (o GetLoopbackInterfaceListDataIpArrayOutput) Index(i pulumi.IntInput) GetL
 }
 
 type GetLoopbackInterfaceListDataIpv6 struct {
-	// IPv6 Address Parent
+	// IPv6 Address Parent for loopback interface
 	Addresses []GetLoopbackInterfaceListDataIpv6Address `pulumi:"addresses"`
-	// Enable IPv6
+	// Enable IPv6 for loopback interface
 	Enabled bool `pulumi:"enabled"`
-	// Interface ID
+	// Interface ID for loopback interface
 	InterfaceId string `pulumi:"interfaceId"`
 }
 
@@ -39010,11 +39010,11 @@ type GetLoopbackInterfaceListDataIpv6Input interface {
 }
 
 type GetLoopbackInterfaceListDataIpv6Args struct {
-	// IPv6 Address Parent
+	// IPv6 Address Parent for loopback interface
 	Addresses GetLoopbackInterfaceListDataIpv6AddressArrayInput `pulumi:"addresses"`
-	// Enable IPv6
+	// Enable IPv6 for loopback interface
 	Enabled pulumi.BoolInput `pulumi:"enabled"`
-	// Interface ID
+	// Interface ID for loopback interface
 	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
 }
 
@@ -39044,29 +39044,29 @@ func (o GetLoopbackInterfaceListDataIpv6Output) ToGetLoopbackInterfaceListDataIp
 	return o
 }
 
-// IPv6 Address Parent
+// IPv6 Address Parent for loopback interface
 func (o GetLoopbackInterfaceListDataIpv6Output) Addresses() GetLoopbackInterfaceListDataIpv6AddressArrayOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6) []GetLoopbackInterfaceListDataIpv6Address { return v.Addresses }).(GetLoopbackInterfaceListDataIpv6AddressArrayOutput)
 }
 
-// Enable IPv6
+// Enable IPv6 for loopback interface
 func (o GetLoopbackInterfaceListDataIpv6Output) Enabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6) bool { return v.Enabled }).(pulumi.BoolOutput)
 }
 
-// Interface ID
+// Interface ID for loopback interface
 func (o GetLoopbackInterfaceListDataIpv6Output) InterfaceId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6) string { return v.InterfaceId }).(pulumi.StringOutput)
 }
 
 type GetLoopbackInterfaceListDataIpv6Address struct {
-	// Anycast
+	// Anycast for loopback interface
 	Anycast GetLoopbackInterfaceListDataIpv6AddressAnycast `pulumi:"anycast"`
-	// Enable Address on Interface
+	// Enable Address on Interface for loopback interface
 	EnableOnInterface bool `pulumi:"enableOnInterface"`
-	// IPv6 Address
+	// IPv6 Address for loopback interface
 	Name string `pulumi:"name"`
-	// Use interface ID as host portion
+	// Use interface ID as host portion for loopback interface
 	Prefix GetLoopbackInterfaceListDataIpv6AddressPrefix `pulumi:"prefix"`
 }
 
@@ -39082,13 +39082,13 @@ type GetLoopbackInterfaceListDataIpv6AddressInput interface {
 }
 
 type GetLoopbackInterfaceListDataIpv6AddressArgs struct {
-	// Anycast
+	// Anycast for loopback interface
 	Anycast GetLoopbackInterfaceListDataIpv6AddressAnycastInput `pulumi:"anycast"`
-	// Enable Address on Interface
+	// Enable Address on Interface for loopback interface
 	EnableOnInterface pulumi.BoolInput `pulumi:"enableOnInterface"`
-	// IPv6 Address
+	// IPv6 Address for loopback interface
 	Name pulumi.StringInput `pulumi:"name"`
-	// Use interface ID as host portion
+	// Use interface ID as host portion for loopback interface
 	Prefix GetLoopbackInterfaceListDataIpv6AddressPrefixInput `pulumi:"prefix"`
 }
 
@@ -39143,24 +39143,24 @@ func (o GetLoopbackInterfaceListDataIpv6AddressOutput) ToGetLoopbackInterfaceLis
 	return o
 }
 
-// Anycast
+// Anycast for loopback interface
 func (o GetLoopbackInterfaceListDataIpv6AddressOutput) Anycast() GetLoopbackInterfaceListDataIpv6AddressAnycastOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6Address) GetLoopbackInterfaceListDataIpv6AddressAnycast {
 		return v.Anycast
 	}).(GetLoopbackInterfaceListDataIpv6AddressAnycastOutput)
 }
 
-// Enable Address on Interface
+// Enable Address on Interface for loopback interface
 func (o GetLoopbackInterfaceListDataIpv6AddressOutput) EnableOnInterface() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6Address) bool { return v.EnableOnInterface }).(pulumi.BoolOutput)
 }
 
-// IPv6 Address
+// IPv6 Address for loopback interface
 func (o GetLoopbackInterfaceListDataIpv6AddressOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6Address) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Use interface ID as host portion
+// Use interface ID as host portion for loopback interface
 func (o GetLoopbackInterfaceListDataIpv6AddressOutput) Prefix() GetLoopbackInterfaceListDataIpv6AddressPrefixOutput {
 	return o.ApplyT(func(v GetLoopbackInterfaceListDataIpv6Address) GetLoopbackInterfaceListDataIpv6AddressPrefix {
 		return v.Prefix

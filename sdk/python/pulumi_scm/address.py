@@ -457,31 +457,31 @@ class Address(pulumi.CustomResource):
             color="Orange")
         # IP Netmask
         scm_address1 = scm.Address("scm_address_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_1",
             description="Made by Pulumi",
             ip_netmask="10.2.3.4")
         # IP Range
         scm_address2 = scm.Address("scm_address_2",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_2",
             description="Small IP range test",
             ip_range="192.168.1.10-192.168.1.20")
         # FQDN
         scm_address3 = scm.Address("scm_address_3",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_3",
             description="Simple FQDN test",
             fqdn="example.com")
         # Class C wildcard
         scm_address4 = scm.Address("scm_address_4",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_4",
             description="Class C wildcard test",
             ip_wildcard="192.168.1.0/0.0.0.255")
         # Multiple tags
         scm_address5 = scm.Address("scm_address_5",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_5",
             description="Multiple tags test",
             ip_netmask="10.10.10.2/32",
@@ -562,31 +562,31 @@ class Address(pulumi.CustomResource):
             color="Orange")
         # IP Netmask
         scm_address1 = scm.Address("scm_address_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_1",
             description="Made by Pulumi",
             ip_netmask="10.2.3.4")
         # IP Range
         scm_address2 = scm.Address("scm_address_2",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_2",
             description="Small IP range test",
             ip_range="192.168.1.10-192.168.1.20")
         # FQDN
         scm_address3 = scm.Address("scm_address_3",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_3",
             description="Simple FQDN test",
             fqdn="example.com")
         # Class C wildcard
         scm_address4 = scm.Address("scm_address_4",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_4",
             description="Class C wildcard test",
             ip_wildcard="192.168.1.0/0.0.0.255")
         # Multiple tags
         scm_address5 = scm.Address("scm_address_5",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_address_5",
             description="Multiple tags test",
             ip_netmask="10.10.10.2/32",

@@ -5,9 +5,10 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GeneralSettingGeneralGeoLocationArgs extends com.pulumi.resources.ResourceArgs {
@@ -18,30 +19,30 @@ public final class GeneralSettingGeneralGeoLocationArgs extends com.pulumi.resou
      * Latitude
      * 
      */
-    @Import(name="latitude", required=true)
-    private Output<String> latitude;
+    @Import(name="latitude")
+    private @Nullable Output<String> latitude;
 
     /**
      * @return Latitude
      * 
      */
-    public Output<String> latitude() {
-        return this.latitude;
+    public Optional<Output<String>> latitude() {
+        return Optional.ofNullable(this.latitude);
     }
 
     /**
      * Longitude
      * 
      */
-    @Import(name="longitude", required=true)
-    private Output<String> longitude;
+    @Import(name="longitude")
+    private @Nullable Output<String> longitude;
 
     /**
      * @return Longitude
      * 
      */
-    public Output<String> longitude() {
-        return this.longitude;
+    public Optional<Output<String>> longitude() {
+        return Optional.ofNullable(this.longitude);
     }
 
     private GeneralSettingGeneralGeoLocationArgs() {}
@@ -75,7 +76,7 @@ public final class GeneralSettingGeneralGeoLocationArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder latitude(Output<String> latitude) {
+        public Builder latitude(@Nullable Output<String> latitude) {
             $.latitude = latitude;
             return this;
         }
@@ -96,7 +97,7 @@ public final class GeneralSettingGeneralGeoLocationArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder longitude(Output<String> longitude) {
+        public Builder longitude(@Nullable Output<String> longitude) {
             $.longitude = longitude;
             return this;
         }
@@ -112,12 +113,6 @@ public final class GeneralSettingGeneralGeoLocationArgs extends com.pulumi.resou
         }
 
         public GeneralSettingGeneralGeoLocationArgs build() {
-            if ($.latitude == null) {
-                throw new MissingRequiredPropertyException("GeneralSettingGeneralGeoLocationArgs", "latitude");
-            }
-            if ($.longitude == null) {
-                throw new MissingRequiredPropertyException("GeneralSettingGeneralGeoLocationArgs", "longitude");
-            }
             return $;
         }
     }

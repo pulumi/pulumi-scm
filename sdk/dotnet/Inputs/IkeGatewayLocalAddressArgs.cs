@@ -18,6 +18,12 @@ namespace Pulumi.Scm.Inputs
         [Input("interface")]
         public Input<string>? Interface { get; set; }
 
+        /// <summary>
+        /// IP Prefix of the assigned interface
+        /// </summary>
+        [Input("ip")]
+        public Input<string>? Ip { get; set; }
+
         public IkeGatewayLocalAddressArgs()
         {
         }

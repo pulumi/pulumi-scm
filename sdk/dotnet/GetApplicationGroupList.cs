@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
+        ///     // 1. Use a single data block to fetch ALL application groups in the "All" folder.
         ///     var allShared = Scm.GetApplicationGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -67,7 +67,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
+        ///     // 1. Use a single data block to fetch ALL application groups in the "All" folder.
         ///     var allShared = Scm.GetApplicationGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -110,7 +110,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
+        ///     // 1. Use a single data block to fetch ALL application groups in the "All" folder.
         ///     var allShared = Scm.GetApplicationGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",

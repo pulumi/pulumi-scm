@@ -25412,11 +25412,11 @@ class GeneralSettingGeneralArgs:
 
 
 class GeneralSettingGeneralGeoLocationArgsDict(TypedDict):
-    latitude: pulumi.Input[_builtins.str]
+    latitude: NotRequired[pulumi.Input[_builtins.str]]
     """
     Latitude
     """
-    longitude: pulumi.Input[_builtins.str]
+    longitude: NotRequired[pulumi.Input[_builtins.str]]
     """
     Longitude
     """
@@ -25424,37 +25424,39 @@ class GeneralSettingGeneralGeoLocationArgsDict(TypedDict):
 @pulumi.input_type
 class GeneralSettingGeneralGeoLocationArgs:
     def __init__(__self__, *,
-                 latitude: pulumi.Input[_builtins.str],
-                 longitude: pulumi.Input[_builtins.str]):
+                 latitude: Optional[pulumi.Input[_builtins.str]] = None,
+                 longitude: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] latitude: Latitude
         :param pulumi.Input[_builtins.str] longitude: Longitude
         """
-        pulumi.set(__self__, "latitude", latitude)
-        pulumi.set(__self__, "longitude", longitude)
+        if latitude is not None:
+            pulumi.set(__self__, "latitude", latitude)
+        if longitude is not None:
+            pulumi.set(__self__, "longitude", longitude)
 
     @_builtins.property
     @pulumi.getter
-    def latitude(self) -> pulumi.Input[_builtins.str]:
+    def latitude(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Latitude
         """
         return pulumi.get(self, "latitude")
 
     @latitude.setter
-    def latitude(self, value: pulumi.Input[_builtins.str]):
+    def latitude(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "latitude", value)
 
     @_builtins.property
     @pulumi.getter
-    def longitude(self) -> pulumi.Input[_builtins.str]:
+    def longitude(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Longitude
         """
         return pulumi.get(self, "longitude")
 
     @longitude.setter
-    def longitude(self, value: pulumi.Input[_builtins.str]):
+    def longitude(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "longitude", value)
 
 
@@ -35088,16 +35090,24 @@ class IkeGatewayLocalAddressArgsDict(TypedDict):
     """
     Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
     """
+    ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IP Prefix of the assigned interface
+    """
 
 @pulumi.input_type
 class IkeGatewayLocalAddressArgs:
     def __init__(__self__, *,
-                 interface: Optional[pulumi.Input[_builtins.str]] = None):
+                 interface: Optional[pulumi.Input[_builtins.str]] = None,
+                 ip: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] interface: Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
+        :param pulumi.Input[_builtins.str] ip: IP Prefix of the assigned interface
         """
         if interface is not None:
             pulumi.set(__self__, "interface", interface)
+        if ip is not None:
+            pulumi.set(__self__, "ip", ip)
 
     @_builtins.property
     @pulumi.getter
@@ -35110,6 +35120,18 @@ class IkeGatewayLocalAddressArgs:
     @interface.setter
     def interface(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "interface", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        IP Prefix of the assigned interface
+        """
+        return pulumi.get(self, "ip")
+
+    @ip.setter
+    def ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ip", value)
 
 
 class IkeGatewayLocalIdArgsDict(TypedDict):
@@ -40519,7 +40541,7 @@ class LogicalRouterVrfBgpPeerGroupPeerInheritArgsDict(TypedDict):
     """
     Yes
 
-    > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+    > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
     """
 
 @pulumi.input_type
@@ -40531,7 +40553,7 @@ class LogicalRouterVrfBgpPeerGroupPeerInheritArgs:
         :param pulumi.Input['LogicalRouterVrfBgpPeerGroupPeerInheritNoArgs'] no: No
         :param pulumi.Input['LogicalRouterVrfBgpPeerGroupPeerInheritYesArgs'] yes: Yes
                
-               > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+               > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
         """
         if no is not None:
             pulumi.set(__self__, "no", no)
@@ -40556,7 +40578,7 @@ class LogicalRouterVrfBgpPeerGroupPeerInheritArgs:
         """
         Yes
 
-        > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+        > ℹ️ **Note:** You must specify exactly one of `no` and `yes`.
         """
         return pulumi.get(self, "yes")
 
@@ -59856,15 +59878,15 @@ class LoopbackInterfaceIpArgs:
 class LoopbackInterfaceIpv6ArgsDict(TypedDict):
     addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpv6AddressArgsDict']]]]
     """
-    IPv6 Address Parent
+    IPv6 Address Parent for loopback interface
     """
     enabled: NotRequired[pulumi.Input[_builtins.bool]]
     """
-    Enable IPv6
+    Enable IPv6 for loopback interface
     """
     interface_id: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Interface ID
+    Interface ID for loopback interface
     """
 
 @pulumi.input_type
@@ -59874,9 +59896,9 @@ class LoopbackInterfaceIpv6Args:
                  enabled: Optional[pulumi.Input[_builtins.bool]] = None,
                  interface_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpv6AddressArgs']]] addresses: IPv6 Address Parent
-        :param pulumi.Input[_builtins.bool] enabled: Enable IPv6
-        :param pulumi.Input[_builtins.str] interface_id: Interface ID
+        :param pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpv6AddressArgs']]] addresses: IPv6 Address Parent for loopback interface
+        :param pulumi.Input[_builtins.bool] enabled: Enable IPv6 for loopback interface
+        :param pulumi.Input[_builtins.str] interface_id: Interface ID for loopback interface
         """
         if addresses is not None:
             pulumi.set(__self__, "addresses", addresses)
@@ -59889,7 +59911,7 @@ class LoopbackInterfaceIpv6Args:
     @pulumi.getter
     def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpv6AddressArgs']]]]:
         """
-        IPv6 Address Parent
+        IPv6 Address Parent for loopback interface
         """
         return pulumi.get(self, "addresses")
 
@@ -59901,7 +59923,7 @@ class LoopbackInterfaceIpv6Args:
     @pulumi.getter
     def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable IPv6
+        Enable IPv6 for loopback interface
         """
         return pulumi.get(self, "enabled")
 
@@ -59913,7 +59935,7 @@ class LoopbackInterfaceIpv6Args:
     @pulumi.getter(name="interfaceId")
     def interface_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface ID
+        Interface ID for loopback interface
         """
         return pulumi.get(self, "interface_id")
 
@@ -59925,19 +59947,19 @@ class LoopbackInterfaceIpv6Args:
 class LoopbackInterfaceIpv6AddressArgsDict(TypedDict):
     anycast: NotRequired[pulumi.Input['LoopbackInterfaceIpv6AddressAnycastArgsDict']]
     """
-    Anycast
+    Anycast for loopback interface
     """
     enable_on_interface: NotRequired[pulumi.Input[_builtins.bool]]
     """
-    Enable Address on Interface
+    Enable Address on Interface for loopback interface
     """
     name: NotRequired[pulumi.Input[_builtins.str]]
     """
-    IPv6 Address
+    IPv6 Address for loopback interface
     """
     prefix: NotRequired[pulumi.Input['LoopbackInterfaceIpv6AddressPrefixArgsDict']]
     """
-    Use interface ID as host portion
+    Use interface ID as host portion for loopback interface
     """
 
 @pulumi.input_type
@@ -59948,10 +59970,10 @@ class LoopbackInterfaceIpv6AddressArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix: Optional[pulumi.Input['LoopbackInterfaceIpv6AddressPrefixArgs']] = None):
         """
-        :param pulumi.Input['LoopbackInterfaceIpv6AddressAnycastArgs'] anycast: Anycast
-        :param pulumi.Input[_builtins.bool] enable_on_interface: Enable Address on Interface
-        :param pulumi.Input[_builtins.str] name: IPv6 Address
-        :param pulumi.Input['LoopbackInterfaceIpv6AddressPrefixArgs'] prefix: Use interface ID as host portion
+        :param pulumi.Input['LoopbackInterfaceIpv6AddressAnycastArgs'] anycast: Anycast for loopback interface
+        :param pulumi.Input[_builtins.bool] enable_on_interface: Enable Address on Interface for loopback interface
+        :param pulumi.Input[_builtins.str] name: IPv6 Address for loopback interface
+        :param pulumi.Input['LoopbackInterfaceIpv6AddressPrefixArgs'] prefix: Use interface ID as host portion for loopback interface
         """
         if anycast is not None:
             pulumi.set(__self__, "anycast", anycast)
@@ -59966,7 +59988,7 @@ class LoopbackInterfaceIpv6AddressArgs:
     @pulumi.getter
     def anycast(self) -> Optional[pulumi.Input['LoopbackInterfaceIpv6AddressAnycastArgs']]:
         """
-        Anycast
+        Anycast for loopback interface
         """
         return pulumi.get(self, "anycast")
 
@@ -59978,7 +60000,7 @@ class LoopbackInterfaceIpv6AddressArgs:
     @pulumi.getter(name="enableOnInterface")
     def enable_on_interface(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Address on Interface
+        Enable Address on Interface for loopback interface
         """
         return pulumi.get(self, "enable_on_interface")
 
@@ -59990,7 +60012,7 @@ class LoopbackInterfaceIpv6AddressArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IPv6 Address
+        IPv6 Address for loopback interface
         """
         return pulumi.get(self, "name")
 
@@ -60002,7 +60024,7 @@ class LoopbackInterfaceIpv6AddressArgs:
     @pulumi.getter
     def prefix(self) -> Optional[pulumi.Input['LoopbackInterfaceIpv6AddressPrefixArgs']]:
         """
-        Use interface ID as host portion
+        Use interface ID as host portion for loopback interface
         """
         return pulumi.get(self, "prefix")
 
@@ -71857,15 +71879,15 @@ class TunnelInterfaceIpArgs:
 class TunnelInterfaceIpv6ArgsDict(TypedDict):
     addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpv6AddressArgsDict']]]]
     """
-    IPv6 Address Parent
+    IPv6 Address Parent for tunnel interface
     """
     enabled: NotRequired[pulumi.Input[_builtins.bool]]
     """
-    Enable IPv6
+    Enable IPv6 for tunnel interface
     """
     interface_id: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Interface ID
+    Interface ID for tunnel interface
     """
 
 @pulumi.input_type
@@ -71875,9 +71897,9 @@ class TunnelInterfaceIpv6Args:
                  enabled: Optional[pulumi.Input[_builtins.bool]] = None,
                  interface_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpv6AddressArgs']]] addresses: IPv6 Address Parent
-        :param pulumi.Input[_builtins.bool] enabled: Enable IPv6
-        :param pulumi.Input[_builtins.str] interface_id: Interface ID
+        :param pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpv6AddressArgs']]] addresses: IPv6 Address Parent for tunnel interface
+        :param pulumi.Input[_builtins.bool] enabled: Enable IPv6 for tunnel interface
+        :param pulumi.Input[_builtins.str] interface_id: Interface ID for tunnel interface
         """
         if addresses is not None:
             pulumi.set(__self__, "addresses", addresses)
@@ -71890,7 +71912,7 @@ class TunnelInterfaceIpv6Args:
     @pulumi.getter
     def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TunnelInterfaceIpv6AddressArgs']]]]:
         """
-        IPv6 Address Parent
+        IPv6 Address Parent for tunnel interface
         """
         return pulumi.get(self, "addresses")
 
@@ -71902,7 +71924,7 @@ class TunnelInterfaceIpv6Args:
     @pulumi.getter
     def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable IPv6
+        Enable IPv6 for tunnel interface
         """
         return pulumi.get(self, "enabled")
 
@@ -71914,7 +71936,7 @@ class TunnelInterfaceIpv6Args:
     @pulumi.getter(name="interfaceId")
     def interface_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface ID
+        Interface ID for tunnel interface
         """
         return pulumi.get(self, "interface_id")
 
@@ -71926,19 +71948,19 @@ class TunnelInterfaceIpv6Args:
 class TunnelInterfaceIpv6AddressArgsDict(TypedDict):
     anycast: NotRequired[pulumi.Input['TunnelInterfaceIpv6AddressAnycastArgsDict']]
     """
-    Anycast
+    Anycast for tunnel interface
     """
     enable_on_interface: NotRequired[pulumi.Input[_builtins.bool]]
     """
-    Enable Address on Interface
+    Enable Address on Interface for tunnel interface
     """
     name: NotRequired[pulumi.Input[_builtins.str]]
     """
-    IPv6 Address
+    IPv6 Address for tunnel interface
     """
     prefix: NotRequired[pulumi.Input['TunnelInterfaceIpv6AddressPrefixArgsDict']]
     """
-    Use interface ID as host portion
+    Use interface ID as host portion for tunnel interface
     """
 
 @pulumi.input_type
@@ -71949,10 +71971,10 @@ class TunnelInterfaceIpv6AddressArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix: Optional[pulumi.Input['TunnelInterfaceIpv6AddressPrefixArgs']] = None):
         """
-        :param pulumi.Input['TunnelInterfaceIpv6AddressAnycastArgs'] anycast: Anycast
-        :param pulumi.Input[_builtins.bool] enable_on_interface: Enable Address on Interface
-        :param pulumi.Input[_builtins.str] name: IPv6 Address
-        :param pulumi.Input['TunnelInterfaceIpv6AddressPrefixArgs'] prefix: Use interface ID as host portion
+        :param pulumi.Input['TunnelInterfaceIpv6AddressAnycastArgs'] anycast: Anycast for tunnel interface
+        :param pulumi.Input[_builtins.bool] enable_on_interface: Enable Address on Interface for tunnel interface
+        :param pulumi.Input[_builtins.str] name: IPv6 Address for tunnel interface
+        :param pulumi.Input['TunnelInterfaceIpv6AddressPrefixArgs'] prefix: Use interface ID as host portion for tunnel interface
         """
         if anycast is not None:
             pulumi.set(__self__, "anycast", anycast)
@@ -71967,7 +71989,7 @@ class TunnelInterfaceIpv6AddressArgs:
     @pulumi.getter
     def anycast(self) -> Optional[pulumi.Input['TunnelInterfaceIpv6AddressAnycastArgs']]:
         """
-        Anycast
+        Anycast for tunnel interface
         """
         return pulumi.get(self, "anycast")
 
@@ -71979,7 +72001,7 @@ class TunnelInterfaceIpv6AddressArgs:
     @pulumi.getter(name="enableOnInterface")
     def enable_on_interface(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Address on Interface
+        Enable Address on Interface for tunnel interface
         """
         return pulumi.get(self, "enable_on_interface")
 
@@ -71991,7 +72013,7 @@ class TunnelInterfaceIpv6AddressArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IPv6 Address
+        IPv6 Address for tunnel interface
         """
         return pulumi.get(self, "name")
 
@@ -72003,7 +72025,7 @@ class TunnelInterfaceIpv6AddressArgs:
     @pulumi.getter
     def prefix(self) -> Optional[pulumi.Input['TunnelInterfaceIpv6AddressPrefixArgs']]:
         """
-        Use interface ID as host portion
+        Use interface ID as host portion for tunnel interface
         """
         return pulumi.get(self, "prefix")
 

@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * //
  * // Data source to retrieve a list of SCM Syslog Server Profile objects.
  * //
- * // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+ * // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
  * const allShared = scm.getSyslogServerProfileList({
  *     folder: "All",
  * });
@@ -125,7 +125,7 @@ export interface GetSyslogServerProfileListResult {
  * //
  * // Data source to retrieve a list of SCM Syslog Server Profile objects.
  * //
- * // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+ * // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
  * const allShared = scm.getSyslogServerProfileList({
  *     folder: "All",
  * });

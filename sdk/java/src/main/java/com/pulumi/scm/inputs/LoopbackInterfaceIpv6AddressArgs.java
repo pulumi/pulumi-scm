@@ -19,14 +19,14 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
     public static final LoopbackInterfaceIpv6AddressArgs Empty = new LoopbackInterfaceIpv6AddressArgs();
 
     /**
-     * Anycast
+     * Anycast for loopback interface
      * 
      */
     @Import(name="anycast")
     private @Nullable Output<LoopbackInterfaceIpv6AddressAnycastArgs> anycast;
 
     /**
-     * @return Anycast
+     * @return Anycast for loopback interface
      * 
      */
     public Optional<Output<LoopbackInterfaceIpv6AddressAnycastArgs>> anycast() {
@@ -34,14 +34,14 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
     }
 
     /**
-     * Enable Address on Interface
+     * Enable Address on Interface for loopback interface
      * 
      */
     @Import(name="enableOnInterface")
     private @Nullable Output<Boolean> enableOnInterface;
 
     /**
-     * @return Enable Address on Interface
+     * @return Enable Address on Interface for loopback interface
      * 
      */
     public Optional<Output<Boolean>> enableOnInterface() {
@@ -49,14 +49,14 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
     }
 
     /**
-     * IPv6 Address
+     * IPv6 Address for loopback interface
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return IPv6 Address
+     * @return IPv6 Address for loopback interface
      * 
      */
     public Optional<Output<String>> name() {
@@ -64,14 +64,14 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
     }
 
     /**
-     * Use interface ID as host portion
+     * Use interface ID as host portion for loopback interface
      * 
      */
     @Import(name="prefix")
     private @Nullable Output<LoopbackInterfaceIpv6AddressPrefixArgs> prefix;
 
     /**
-     * @return Use interface ID as host portion
+     * @return Use interface ID as host portion for loopback interface
      * 
      */
     public Optional<Output<LoopbackInterfaceIpv6AddressPrefixArgs>> prefix() {
@@ -106,7 +106,7 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
         }
 
         /**
-         * @param anycast Anycast
+         * @param anycast Anycast for loopback interface
          * 
          * @return builder
          * 
@@ -117,7 +117,7 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
         }
 
         /**
-         * @param anycast Anycast
+         * @param anycast Anycast for loopback interface
          * 
          * @return builder
          * 
@@ -127,7 +127,7 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
         }
 
         /**
-         * @param enableOnInterface Enable Address on Interface
+         * @param enableOnInterface Enable Address on Interface for loopback interface
          * 
          * @return builder
          * 
@@ -138,7 +138,7 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
         }
 
         /**
-         * @param enableOnInterface Enable Address on Interface
+         * @param enableOnInterface Enable Address on Interface for loopback interface
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
         }
 
         /**
-         * @param name IPv6 Address
+         * @param name IPv6 Address for loopback interface
          * 
          * @return builder
          * 
@@ -159,7 +159,7 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
         }
 
         /**
-         * @param name IPv6 Address
+         * @param name IPv6 Address for loopback interface
          * 
          * @return builder
          * 
@@ -169,7 +169,7 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
         }
 
         /**
-         * @param prefix Use interface ID as host portion
+         * @param prefix Use interface ID as host portion for loopback interface
          * 
          * @return builder
          * 
@@ -180,7 +180,7 @@ public final class LoopbackInterfaceIpv6AddressArgs extends com.pulumi.resources
         }
 
         /**
-         * @param prefix Use interface ID as host portion
+         * @param prefix Use interface ID as host portion for loopback interface
          * 
          * @return builder
          * 

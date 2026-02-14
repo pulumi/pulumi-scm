@@ -115,13 +115,13 @@ namespace Pulumi.Scm
     public partial class TunnelInterface : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Description
+        /// Description for tunnel interface
         /// </summary>
         [Output("comment")]
         public Output<string?> Comment { get; private set; } = null!;
 
         /// <summary>
-        /// Default interface assignment
+        /// Default interface assignment for tunnel interface
         /// </summary>
         [Output("defaultValue")]
         public Output<string?> DefaultValue { get; private set; } = null!;
@@ -141,7 +141,7 @@ namespace Pulumi.Scm
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Interface management profile
+        /// Interface management profile for tunnel interface
         /// </summary>
         [Output("interfaceManagementProfile")]
         public Output<string?> InterfaceManagementProfile { get; private set; } = null!;
@@ -159,13 +159,13 @@ namespace Pulumi.Scm
         public Output<Outputs.TunnelInterfaceIpv6?> Ipv6 { get; private set; } = null!;
 
         /// <summary>
-        /// MTU
+        /// MTU for tunnel interface
         /// </summary>
         [Output("mtu")]
         public Output<int?> Mtu { get; private set; } = null!;
 
         /// <summary>
-        /// L3 sub-interface name
+        /// L3 sub-interface name for tunnel interface
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
@@ -231,13 +231,13 @@ namespace Pulumi.Scm
     public sealed class TunnelInterfaceArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Description
+        /// Description for tunnel interface
         /// </summary>
         [Input("comment")]
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// Default interface assignment
+        /// Default interface assignment for tunnel interface
         /// </summary>
         [Input("defaultValue")]
         public Input<string>? DefaultValue { get; set; }
@@ -257,7 +257,7 @@ namespace Pulumi.Scm
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Interface management profile
+        /// Interface management profile for tunnel interface
         /// </summary>
         [Input("interfaceManagementProfile")]
         public Input<string>? InterfaceManagementProfile { get; set; }
@@ -281,13 +281,13 @@ namespace Pulumi.Scm
         public Input<Inputs.TunnelInterfaceIpv6Args>? Ipv6 { get; set; }
 
         /// <summary>
-        /// MTU
+        /// MTU for tunnel interface
         /// </summary>
         [Input("mtu")]
         public Input<int>? Mtu { get; set; }
 
         /// <summary>
-        /// L3 sub-interface name
+        /// L3 sub-interface name for tunnel interface
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -309,13 +309,13 @@ namespace Pulumi.Scm
     public sealed class TunnelInterfaceState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Description
+        /// Description for tunnel interface
         /// </summary>
         [Input("comment")]
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// Default interface assignment
+        /// Default interface assignment for tunnel interface
         /// </summary>
         [Input("defaultValue")]
         public Input<string>? DefaultValue { get; set; }
@@ -335,7 +335,7 @@ namespace Pulumi.Scm
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Interface management profile
+        /// Interface management profile for tunnel interface
         /// </summary>
         [Input("interfaceManagementProfile")]
         public Input<string>? InterfaceManagementProfile { get; set; }
@@ -359,13 +359,13 @@ namespace Pulumi.Scm
         public Input<Inputs.TunnelInterfaceIpv6GetArgs>? Ipv6 { get; set; }
 
         /// <summary>
-        /// MTU
+        /// MTU for tunnel interface
         /// </summary>
         [Input("mtu")]
         public Input<int>? Mtu { get; set; }
 
         /// <summary>
-        /// L3 sub-interface name
+        /// L3 sub-interface name for tunnel interface
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }

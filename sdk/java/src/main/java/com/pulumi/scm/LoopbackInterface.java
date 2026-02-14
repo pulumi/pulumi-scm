@@ -124,28 +124,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/loopbackInterface:LoopbackInterface")
 public class LoopbackInterface extends com.pulumi.resources.CustomResource {
     /**
-     * Description
+     * Description for loopback interface
      * 
      */
     @Export(name="comment", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> comment;
 
     /**
-     * @return Description
+     * @return Description for loopback interface
      * 
      */
     public Output<Optional<String>> comment() {
         return Codegen.optional(this.comment);
     }
     /**
-     * Default interface assignment
+     * Default interface assignment for loopback interface
      * 
      */
     @Export(name="defaultValue", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultValue;
 
     /**
-     * @return Default interface assignment
+     * @return Default interface assignment for loopback interface
      * 
      */
     public Output<Optional<String>> defaultValue() {
@@ -184,14 +184,14 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.folder);
     }
     /**
-     * Interface management profile
+     * Interface management profile for loopback interface
      * 
      */
     @Export(name="interfaceManagementProfile", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> interfaceManagementProfile;
 
     /**
-     * @return Interface management profile
+     * @return Interface management profile for loopback interface
      * 
      */
     public Output<Optional<String>> interfaceManagementProfile() {
@@ -226,14 +226,14 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.ipv6);
     }
     /**
-     * MTU
+     * MTU for loopback interface
      * 
      */
     @Export(name="mtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> mtu;
 
     /**
-     * @return MTU
+     * @return MTU for loopback interface
      * 
      */
     public Output<Optional<Integer>> mtu() {

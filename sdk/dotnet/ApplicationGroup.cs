@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     // First, create some applications that will be used in the application group.
     ///     var scmAgApp1 = new Scm.Application("scm_ag_app_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_ag_app_1",
     ///         Description = "First test application",
     ///         Category = "business-systems",
@@ -36,7 +36,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmAgApp2 = new Scm.Application("scm_ag_app_2", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_ag_app_2",
     ///         Description = "Second test application",
     ///         Category = "business-systems",
@@ -48,7 +48,7 @@ namespace Pulumi.Scm
     ///     // Create the application group that references the applications above.
     ///     var scmAppGroup1 = new Scm.ApplicationGroup("scm_app_group_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_app_group_1",
     ///         Members = new[]
     ///         {

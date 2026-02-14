@@ -61,7 +61,7 @@ type LookupLoopbackInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	Folder *string `pulumi:"folder"`
-	// UUID of the resource
+	// UUID of the resource loopback interface
 	Id      string  `pulumi:"id"`
 	Name    *string `pulumi:"name"`
 	Snippet *string `pulumi:"snippet"`
@@ -74,7 +74,7 @@ type LookupLoopbackInterfaceResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
 	Folder string `pulumi:"folder"`
-	// UUID of the resource
+	// UUID of the resource loopback interface
 	Id                         string                   `pulumi:"id"`
 	InterfaceManagementProfile string                   `pulumi:"interfaceManagementProfile"`
 	Ips                        []GetLoopbackInterfaceIp `pulumi:"ips"`
@@ -99,7 +99,7 @@ type LookupLoopbackInterfaceOutputArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput `pulumi:"device"`
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// UUID of the resource
+	// UUID of the resource loopback interface
 	Id      pulumi.StringInput    `pulumi:"id"`
 	Name    pulumi.StringPtrInput `pulumi:"name"`
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
@@ -141,7 +141,7 @@ func (o LookupLoopbackInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// UUID of the resource
+// UUID of the resource loopback interface
 func (o LookupLoopbackInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }

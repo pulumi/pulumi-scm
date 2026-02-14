@@ -26,7 +26,7 @@ namespace Pulumi.Scm
     ///     // First, create some addresses that will be used in the address group
     ///     var scmAddressAg1 = new Scm.Address("scm_address_ag_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_address_ag_1",
     ///         Description = "First test address",
     ///         IpNetmask = "192.168.1.1/32",
@@ -34,7 +34,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmAddressAg2 = new Scm.Address("scm_address_ag_2", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_address_ag_2",
     ///         Description = "Second test address",
     ///         IpNetmask = "192.168.1.2/32",
@@ -43,7 +43,7 @@ namespace Pulumi.Scm
     ///     // Create the address group that references the addresses above
     ///     var scmAddressGroup1 = new Scm.AddressGroup("scm_address_group_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_address_group_1",
     ///         Description = "Sample address group created with Terraform",
     ///         Statics = new[]
@@ -73,7 +73,7 @@ namespace Pulumi.Scm
     ///     // Create a dynamic addressgroup that matches both tags
     ///     var scmAddressgroupDynamic = new Scm.AddressGroup("scm_addressgroup_dynamic", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_addressgroup_dynamic",
     ///         Description = "Managed by Pulumi",
     ///         Dynamic = new Scm.Inputs.AddressGroupDynamicArgs

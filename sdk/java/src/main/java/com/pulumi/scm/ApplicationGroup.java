@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         // First, create some applications that will be used in the application group.
  *         var scmAgApp1 = new Application("scmAgApp1", ApplicationArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_ag_app_1")
  *             .description("First test application")
  *             .category("business-systems")
@@ -56,7 +56,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmAgApp2 = new Application("scmAgApp2", ApplicationArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_ag_app_2")
  *             .description("Second test application")
  *             .category("business-systems")
@@ -67,7 +67,7 @@ import javax.annotation.Nullable;
  * 
  *         // Create the application group that references the applications above.
  *         var scmAppGroup1 = new ApplicationGroup("scmAppGroup1", ApplicationGroupArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_app_group_1")
  *             .members(            
  *                 scmAgApp1.name(),

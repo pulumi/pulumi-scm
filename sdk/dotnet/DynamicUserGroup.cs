@@ -47,7 +47,7 @@ namespace Pulumi.Scm
     ///     // Create the dynamic user group that references the tags above.
     ///     var scmDug1 = new Scm.DynamicUserGroup("scm_dug_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_dug_1",
     ///         Description = "DUG created for Terraform",
     ///         Filter = Output.Tuple(scmDugTag1.Name, scmDugTag2.Name, scmDugTag3.Name).Apply(values =&gt;

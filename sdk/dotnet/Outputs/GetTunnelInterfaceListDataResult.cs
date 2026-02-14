@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetTunnelInterfaceListDataResult
     {
         /// <summary>
-        /// Description
+        /// Description for tunnel interface
         /// </summary>
         public readonly string Comment;
         /// <summary>
-        /// Default interface assignment
+        /// Default interface assignment for tunnel interface
         /// </summary>
         public readonly string DefaultValue;
         /// <summary>
@@ -30,11 +30,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Folder;
         /// <summary>
-        /// UUID of the resource
+        /// UUID of the resource for tunnel interface
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Interface management profile
+        /// Interface management profile for tunnel interface
         /// </summary>
         public readonly string InterfaceManagementProfile;
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetTunnelInterfaceListDataIpv6Result Ipv6;
         /// <summary>
-        /// MTU
+        /// MTU for tunnel interface
         /// </summary>
         public readonly int Mtu;
         /// <summary>

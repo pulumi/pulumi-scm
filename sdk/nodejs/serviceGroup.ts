@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  *
  * // TCP Service with multiple destination ports custom timeout
  * const scmServiceTcpPorts = new scm.Service("scm_service_tcp_ports", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_service_tcp_ports",
  *     description: "Managed by Pulumi",
  *     protocol: {
@@ -29,7 +29,7 @@ import * as utilities from "./utilities";
  * });
  * // UDP Service with single destination port
  * const scmServiceUdpPort = new scm.Service("scm_service_udp_port", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_service_udp_port",
  *     description: "Managed by Pulumi",
  *     protocol: {

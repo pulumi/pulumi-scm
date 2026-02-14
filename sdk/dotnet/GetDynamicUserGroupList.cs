@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
+        ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "All" folder. [cite: 2]
         ///     var allSharedDugs = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -67,7 +67,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
+        ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "All" folder. [cite: 2]
         ///     var allSharedDugs = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -110,7 +110,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
+        ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "All" folder. [cite: 2]
         ///     var allSharedDugs = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",

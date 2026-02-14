@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetTunnelInterfaceListDataIpv6AddressResult
     {
         /// <summary>
-        /// Anycast
+        /// Anycast for tunnel interface
         /// </summary>
         public readonly Outputs.GetTunnelInterfaceListDataIpv6AddressAnycastResult Anycast;
         /// <summary>
-        /// Enable Address on Interface
+        /// Enable Address on Interface for tunnel interface
         /// </summary>
         public readonly bool EnableOnInterface;
         /// <summary>
-        /// IPv6 Address
+        /// IPv6 Address for tunnel interface
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Use interface ID as host portion
+        /// Use interface ID as host portion for tunnel interface
         /// </summary>
         public readonly Outputs.GetTunnelInterfaceListDataIpv6AddressPrefixResult Prefix;
 

@@ -107,9 +107,9 @@ import (
 type LoopbackInterface struct {
 	pulumi.CustomResourceState
 
-	// Description
+	// Description for loopback interface
 	Comment pulumi.StringPtrOutput `pulumi:"comment"`
-	// Default interface assignment
+	// Default interface assignment for loopback interface
 	DefaultValue pulumi.StringPtrOutput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
@@ -117,13 +117,13 @@ type LoopbackInterface struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Interface management profile
+	// Interface management profile for loopback interface
 	InterfaceManagementProfile pulumi.StringPtrOutput `pulumi:"interfaceManagementProfile"`
 	// Loopback IP Parent
 	Ips LoopbackInterfaceIpArrayOutput `pulumi:"ips"`
 	// Loopback IPv6 Configuration
 	Ipv6 LoopbackInterfaceIpv6PtrOutput `pulumi:"ipv6"`
-	// MTU
+	// MTU for loopback interface
 	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
 	// Loopback Interface name
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -165,9 +165,9 @@ func GetLoopbackInterface(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering LoopbackInterface resources.
 type loopbackInterfaceState struct {
-	// Description
+	// Description for loopback interface
 	Comment *string `pulumi:"comment"`
-	// Default interface assignment
+	// Default interface assignment for loopback interface
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
@@ -175,13 +175,13 @@ type loopbackInterfaceState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// Interface management profile
+	// Interface management profile for loopback interface
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// Loopback IP Parent
 	Ips []LoopbackInterfaceIp `pulumi:"ips"`
 	// Loopback IPv6 Configuration
 	Ipv6 *LoopbackInterfaceIpv6 `pulumi:"ipv6"`
-	// MTU
+	// MTU for loopback interface
 	Mtu *int `pulumi:"mtu"`
 	// Loopback Interface name
 	Name *string `pulumi:"name"`
@@ -194,9 +194,9 @@ type loopbackInterfaceState struct {
 }
 
 type LoopbackInterfaceState struct {
-	// Description
+	// Description for loopback interface
 	Comment pulumi.StringPtrInput
-	// Default interface assignment
+	// Default interface assignment for loopback interface
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
@@ -204,13 +204,13 @@ type LoopbackInterfaceState struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// Interface management profile
+	// Interface management profile for loopback interface
 	InterfaceManagementProfile pulumi.StringPtrInput
 	// Loopback IP Parent
 	Ips LoopbackInterfaceIpArrayInput
 	// Loopback IPv6 Configuration
 	Ipv6 LoopbackInterfaceIpv6PtrInput
-	// MTU
+	// MTU for loopback interface
 	Mtu pulumi.IntPtrInput
 	// Loopback Interface name
 	Name pulumi.StringPtrInput
@@ -227,9 +227,9 @@ func (LoopbackInterfaceState) ElementType() reflect.Type {
 }
 
 type loopbackInterfaceArgs struct {
-	// Description
+	// Description for loopback interface
 	Comment *string `pulumi:"comment"`
-	// Default interface assignment
+	// Default interface assignment for loopback interface
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
@@ -237,13 +237,13 @@ type loopbackInterfaceArgs struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// Interface management profile
+	// Interface management profile for loopback interface
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
 	// Loopback IP Parent
 	Ips []LoopbackInterfaceIp `pulumi:"ips"`
 	// Loopback IPv6 Configuration
 	Ipv6 *LoopbackInterfaceIpv6 `pulumi:"ipv6"`
-	// MTU
+	// MTU for loopback interface
 	Mtu *int `pulumi:"mtu"`
 	// Loopback Interface name
 	Name *string `pulumi:"name"`
@@ -255,9 +255,9 @@ type loopbackInterfaceArgs struct {
 
 // The set of arguments for constructing a LoopbackInterface resource.
 type LoopbackInterfaceArgs struct {
-	// Description
+	// Description for loopback interface
 	Comment pulumi.StringPtrInput
-	// Default interface assignment
+	// Default interface assignment for loopback interface
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
@@ -265,13 +265,13 @@ type LoopbackInterfaceArgs struct {
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// Interface management profile
+	// Interface management profile for loopback interface
 	InterfaceManagementProfile pulumi.StringPtrInput
 	// Loopback IP Parent
 	Ips LoopbackInterfaceIpArrayInput
 	// Loopback IPv6 Configuration
 	Ipv6 LoopbackInterfaceIpv6PtrInput
-	// MTU
+	// MTU for loopback interface
 	Mtu pulumi.IntPtrInput
 	// Loopback Interface name
 	Name pulumi.StringPtrInput
@@ -368,12 +368,12 @@ func (o LoopbackInterfaceOutput) ToLoopbackInterfaceOutputWithContext(ctx contex
 	return o
 }
 
-// Description
+// Description for loopback interface
 func (o LoopbackInterfaceOutput) Comment() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringPtrOutput { return v.Comment }).(pulumi.StringPtrOutput)
 }
 
-// Default interface assignment
+// Default interface assignment for loopback interface
 func (o LoopbackInterfaceOutput) DefaultValue() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringPtrOutput { return v.DefaultValue }).(pulumi.StringPtrOutput)
 }
@@ -390,7 +390,7 @@ func (o LoopbackInterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Interface management profile
+// Interface management profile for loopback interface
 func (o LoopbackInterfaceOutput) InterfaceManagementProfile() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringPtrOutput { return v.InterfaceManagementProfile }).(pulumi.StringPtrOutput)
 }
@@ -405,7 +405,7 @@ func (o LoopbackInterfaceOutput) Ipv6() LoopbackInterfaceIpv6PtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) LoopbackInterfaceIpv6PtrOutput { return v.Ipv6 }).(LoopbackInterfaceIpv6PtrOutput)
 }
 
-// MTU
+// MTU for loopback interface
 func (o LoopbackInterfaceOutput) Mtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.IntPtrOutput { return v.Mtu }).(pulumi.IntPtrOutput)
 }

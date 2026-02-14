@@ -24,7 +24,7 @@ import * as utilities from "./utilities";
  * });
  * // Required object that will be referenced in examples
  * const scmAddress1 = new scm.Address("scm_address_1", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "scm_address_1",
  *     description: "Made by Pulumi",
  *     ipNetmask: "10.2.3.4",

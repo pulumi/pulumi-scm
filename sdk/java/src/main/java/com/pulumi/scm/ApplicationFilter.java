@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var scmApplicationFilter1 = new ApplicationFilter("scmApplicationFilter1", ApplicationFilterArgs.builder()
- *             .folder("Shared")
+ *             .folder("Prisma Access")
  *             .name("scm_application_filter_1")
  *             .categories("business-systems")
  *             .risks(1)

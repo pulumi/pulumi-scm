@@ -108,11 +108,11 @@ export class LoopbackInterface extends pulumi.CustomResource {
     }
 
     /**
-     * Description
+     * Description for loopback interface
      */
     declare public readonly comment: pulumi.Output<string | undefined>;
     /**
-     * Default interface assignment
+     * Default interface assignment for loopback interface
      */
     declare public readonly defaultValue: pulumi.Output<string | undefined>;
     /**
@@ -126,7 +126,7 @@ export class LoopbackInterface extends pulumi.CustomResource {
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Interface management profile
+     * Interface management profile for loopback interface
      */
     declare public readonly interfaceManagementProfile: pulumi.Output<string | undefined>;
     /**
@@ -138,7 +138,7 @@ export class LoopbackInterface extends pulumi.CustomResource {
      */
     declare public readonly ipv6: pulumi.Output<outputs.LoopbackInterfaceIpv6 | undefined>;
     /**
-     * MTU
+     * MTU for loopback interface
      */
     declare public readonly mtu: pulumi.Output<number | undefined>;
     /**
@@ -204,11 +204,11 @@ export class LoopbackInterface extends pulumi.CustomResource {
  */
 export interface LoopbackInterfaceState {
     /**
-     * Description
+     * Description for loopback interface
      */
     comment?: pulumi.Input<string>;
     /**
-     * Default interface assignment
+     * Default interface assignment for loopback interface
      */
     defaultValue?: pulumi.Input<string>;
     /**
@@ -222,7 +222,7 @@ export interface LoopbackInterfaceState {
      */
     folder?: pulumi.Input<string>;
     /**
-     * Interface management profile
+     * Interface management profile for loopback interface
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
@@ -234,7 +234,7 @@ export interface LoopbackInterfaceState {
      */
     ipv6?: pulumi.Input<inputs.LoopbackInterfaceIpv6>;
     /**
-     * MTU
+     * MTU for loopback interface
      */
     mtu?: pulumi.Input<number>;
     /**
@@ -258,11 +258,11 @@ export interface LoopbackInterfaceState {
  */
 export interface LoopbackInterfaceArgs {
     /**
-     * Description
+     * Description for loopback interface
      */
     comment?: pulumi.Input<string>;
     /**
-     * Default interface assignment
+     * Default interface assignment for loopback interface
      */
     defaultValue?: pulumi.Input<string>;
     /**
@@ -276,7 +276,7 @@ export interface LoopbackInterfaceArgs {
      */
     folder?: pulumi.Input<string>;
     /**
-     * Interface management profile
+     * Interface management profile for loopback interface
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
@@ -288,7 +288,7 @@ export interface LoopbackInterfaceArgs {
      */
     ipv6?: pulumi.Input<inputs.LoopbackInterfaceIpv6>;
     /**
-     * MTU
+     * MTU for loopback interface
      */
     mtu?: pulumi.Input<number>;
     /**

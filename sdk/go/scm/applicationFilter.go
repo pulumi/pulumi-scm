@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewApplicationFilter(ctx, "scm_application_filter_1", &scm.ApplicationFilterArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("Prisma Access"),
 //				Name:   pulumi.String("scm_application_filter_1"),
 //				Categories: pulumi.StringArray{
 //					pulumi.String("business-systems"),

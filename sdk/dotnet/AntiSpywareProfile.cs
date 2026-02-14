@@ -34,7 +34,7 @@ namespace Pulumi.Scm
     ///     // Required object that will be referenced in examples
     ///     var scmAddress1 = new Scm.Address("scm_address_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "scm_address_1",
     ///         Description = "Made by Pulumi",
     ///         IpNetmask = "10.2.3.4",

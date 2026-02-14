@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to retrieve a list of SCM DNS Security Profile objects.
 //			//
-//			// Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+//			// Fetch a list of all SCM DNS Security Profile in the "All" folder.
 //			allShared, err := scm.GetDnsSecurityProfileList(ctx, &scm.GetDnsSecurityProfileListArgs{
 //				Folder: pulumi.StringRef("All"),
 //			}, nil)

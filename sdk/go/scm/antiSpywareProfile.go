@@ -39,7 +39,7 @@ import (
 //			}
 //			// Required object that will be referenced in examples
 //			scmAddress1, err := scm.NewAddress(ctx, "scm_address_1", &scm.AddressArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_address_1"),
 //				Description: pulumi.String("Made by Pulumi"),
 //				IpNetmask:   pulumi.String("10.2.3.4"),

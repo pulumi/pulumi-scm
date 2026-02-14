@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *
  * // Data source to retrieve a list of IKE Gateways.
  * // You can filter the list by folder, snippet, or device.
- * // This example retrieves all gateways in the "Shared" folder.
+ * // This example retrieves all gateways in the "All" folder.
  * const exampleListIkeGatewayDs = scm.getIkeGatewayList({
  *     folder: "Remote Networks",
  * });
@@ -124,7 +124,7 @@ export interface GetIkeGatewayListResult {
  *
  * // Data source to retrieve a list of IKE Gateways.
  * // You can filter the list by folder, snippet, or device.
- * // This example retrieves all gateways in the "Shared" folder.
+ * // This example retrieves all gateways in the "All" folder.
  * const exampleListIkeGatewayDs = scm.getIkeGatewayList({
  *     folder: "Remote Networks",
  * });

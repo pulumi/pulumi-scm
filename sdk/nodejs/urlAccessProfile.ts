@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * // Creates a URL Access Profile object.
  * //
  * const example = new scm.UrlAccessProfile("example", {
- *     folder: "Shared",
+ *     folder: "Prisma Access",
  *     name: "example_url_access_profile",
  *     description: "Test URL Access Profile for create API",
  *     blocks: [

@@ -27,7 +27,7 @@ namespace Pulumi.Scm
         ///     //
         ///     // Data source to retrieve a list of URL Category objects.
         ///     //
-        ///     // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+        ///     // Example 1: Fetch a list of all URL Categories in the "All" folder.
         ///     var allShared = Scm.GetUrlCategoryList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -68,7 +68,7 @@ namespace Pulumi.Scm
         ///     //
         ///     // Data source to retrieve a list of URL Category objects.
         ///     //
-        ///     // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+        ///     // Example 1: Fetch a list of all URL Categories in the "All" folder.
         ///     var allShared = Scm.GetUrlCategoryList.Invoke(new()
         ///     {
         ///         Folder = "All",
@@ -109,7 +109,7 @@ namespace Pulumi.Scm
         ///     //
         ///     // Data source to retrieve a list of URL Category objects.
         ///     //
-        ///     // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+        ///     // Example 1: Fetch a list of all URL Categories in the "All" folder.
         ///     var allShared = Scm.GetUrlCategoryList.Invoke(new()
         ///     {
         ///         Folder = "All",

@@ -246,7 +246,7 @@ class ApplicationGroup(pulumi.CustomResource):
 
         # First, create some applications that will be used in the application group.
         scm_ag_app1 = scm.Application("scm_ag_app_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_ag_app_1",
             description="First test application",
             category="business-systems",
@@ -254,7 +254,7 @@ class ApplicationGroup(pulumi.CustomResource):
             technology="client-server",
             risk="3")
         scm_ag_app2 = scm.Application("scm_ag_app_2",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_ag_app_2",
             description="Second test application",
             category="business-systems",
@@ -263,7 +263,7 @@ class ApplicationGroup(pulumi.CustomResource):
             risk="4")
         # Create the application group that references the applications above.
         scm_app_group1 = scm.ApplicationGroup("scm_app_group_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_app_group_1",
             members=[
                 scm_ag_app1.name,
@@ -310,7 +310,7 @@ class ApplicationGroup(pulumi.CustomResource):
 
         # First, create some applications that will be used in the application group.
         scm_ag_app1 = scm.Application("scm_ag_app_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_ag_app_1",
             description="First test application",
             category="business-systems",
@@ -318,7 +318,7 @@ class ApplicationGroup(pulumi.CustomResource):
             technology="client-server",
             risk="3")
         scm_ag_app2 = scm.Application("scm_ag_app_2",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_ag_app_2",
             description="Second test application",
             category="business-systems",
@@ -327,7 +327,7 @@ class ApplicationGroup(pulumi.CustomResource):
             risk="4")
         # Create the application group that references the applications above.
         scm_app_group1 = scm.ApplicationGroup("scm_app_group_1",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_app_group_1",
             members=[
                 scm_ag_app1.name,

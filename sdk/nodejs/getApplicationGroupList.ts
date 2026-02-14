@@ -15,7 +15,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
+ * // 1. Use a single data block to fetch ALL application groups in the "All" folder.
  * const allShared = scm.getApplicationGroupList({
  *     folder: "All",
  * });
@@ -130,7 +130,7 @@ export interface GetApplicationGroupListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
+ * // 1. Use a single data block to fetch ALL application groups in the "All" folder.
  * const allShared = scm.getApplicationGroupList({
  *     folder: "All",
  * });

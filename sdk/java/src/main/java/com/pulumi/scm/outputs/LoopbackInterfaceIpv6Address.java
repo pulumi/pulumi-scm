@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoopbackInterfaceIpv6Address {
     /**
-     * @return Anycast
+     * @return Anycast for loopback interface
      * 
      */
     private @Nullable LoopbackInterfaceIpv6AddressAnycast anycast;
     /**
-     * @return Enable Address on Interface
+     * @return Enable Address on Interface for loopback interface
      * 
      */
     private @Nullable Boolean enableOnInterface;
     /**
-     * @return IPv6 Address
+     * @return IPv6 Address for loopback interface
      * 
      */
     private @Nullable String name;
     /**
-     * @return Use interface ID as host portion
+     * @return Use interface ID as host portion for loopback interface
      * 
      */
     private @Nullable LoopbackInterfaceIpv6AddressPrefix prefix;
 
     private LoopbackInterfaceIpv6Address() {}
     /**
-     * @return Anycast
+     * @return Anycast for loopback interface
      * 
      */
     public Optional<LoopbackInterfaceIpv6AddressAnycast> anycast() {
         return Optional.ofNullable(this.anycast);
     }
     /**
-     * @return Enable Address on Interface
+     * @return Enable Address on Interface for loopback interface
      * 
      */
     public Optional<Boolean> enableOnInterface() {
         return Optional.ofNullable(this.enableOnInterface);
     }
     /**
-     * @return IPv6 Address
+     * @return IPv6 Address for loopback interface
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return Use interface ID as host portion
+     * @return Use interface ID as host portion for loopback interface
      * 
      */
     public Optional<LoopbackInterfaceIpv6AddressPrefix> prefix() {

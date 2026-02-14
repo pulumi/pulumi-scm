@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class TunnelInterfaceIpv6
     {
         /// <summary>
-        /// IPv6 Address Parent
+        /// IPv6 Address Parent for tunnel interface
         /// </summary>
         public readonly ImmutableArray<Outputs.TunnelInterfaceIpv6Address> Addresses;
         /// <summary>
-        /// Enable IPv6
+        /// Enable IPv6 for tunnel interface
         /// </summary>
         public readonly bool? Enabled;
         /// <summary>
-        /// Interface ID
+        /// Interface ID for tunnel interface
         /// </summary>
         public readonly string? InterfaceId;
 

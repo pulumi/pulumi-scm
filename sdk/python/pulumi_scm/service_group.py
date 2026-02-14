@@ -279,7 +279,7 @@ class ServiceGroup(pulumi.CustomResource):
 
         # TCP Service with multiple destination ports custom timeout
         scm_service_tcp_ports = scm.Service("scm_service_tcp_ports",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_service_tcp_ports",
             description="Managed by Pulumi",
             protocol={
@@ -292,7 +292,7 @@ class ServiceGroup(pulumi.CustomResource):
             })
         # UDP Service with single destination port
         scm_service_udp_port = scm.Service("scm_service_udp_port",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_service_udp_port",
             description="Managed by Pulumi",
             protocol={
@@ -359,7 +359,7 @@ class ServiceGroup(pulumi.CustomResource):
 
         # TCP Service with multiple destination ports custom timeout
         scm_service_tcp_ports = scm.Service("scm_service_tcp_ports",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_service_tcp_ports",
             description="Managed by Pulumi",
             protocol={
@@ -372,7 +372,7 @@ class ServiceGroup(pulumi.CustomResource):
             })
         # UDP Service with single destination port
         scm_service_udp_port = scm.Service("scm_service_udp_port",
-            folder="Shared",
+            folder="Prisma Access",
             name="scm_service_udp_port",
             description="Managed by Pulumi",
             protocol={

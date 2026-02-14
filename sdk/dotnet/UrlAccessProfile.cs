@@ -27,7 +27,7 @@ namespace Pulumi.Scm
     ///     //
     ///     var example = new Scm.UrlAccessProfile("example", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "Prisma Access",
     ///         Name = "example_url_access_profile",
     ///         Description = "Test URL Access Profile for create API",
     ///         Blocks = new[]

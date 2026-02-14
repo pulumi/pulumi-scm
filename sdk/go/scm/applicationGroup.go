@@ -30,7 +30,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// First, create some applications that will be used in the application group.
 //			scmAgApp1, err := scm.NewApplication(ctx, "scm_ag_app_1", &scm.ApplicationArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_ag_app_1"),
 //				Description: pulumi.String("First test application"),
 //				Category:    pulumi.String("business-systems"),
@@ -42,7 +42,7 @@ import (
 //				return err
 //			}
 //			scmAgApp2, err := scm.NewApplication(ctx, "scm_ag_app_2", &scm.ApplicationArgs{
-//				Folder:      pulumi.String("Shared"),
+//				Folder:      pulumi.String("Prisma Access"),
 //				Name:        pulumi.String("scm_ag_app_2"),
 //				Description: pulumi.String("Second test application"),
 //				Category:    pulumi.String("business-systems"),
@@ -55,7 +55,7 @@ import (
 //			}
 //			// Create the application group that references the applications above.
 //			_, err = scm.NewApplicationGroup(ctx, "scm_app_group_1", &scm.ApplicationGroupArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("Prisma Access"),
 //				Name:   pulumi.String("scm_app_group_1"),
 //				Members: pulumi.StringArray{
 //					scmAgApp1.Name,
