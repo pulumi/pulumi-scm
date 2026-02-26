@@ -32,6 +32,7 @@ class WildfireAntiVirusProfileArgs:
                  threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]]] = None):
         """
         The set of arguments for constructing a WildfireAntiVirusProfile resource.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
@@ -193,6 +194,7 @@ class _WildfireAntiVirusProfileState:
                  threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]]] = None):
         """
         Input properties used for looking up and filtering WildfireAntiVirusProfile resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
@@ -377,11 +379,24 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -412,11 +427,24 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param WildfireAntiVirusProfileArgs args: The arguments to use to populate this resource's properties.

@@ -33,7 +33,14 @@ import * as utilities from "./utilities";
  *
  * The following command can be used to import a resource not managed by Terraform:
  *
+ * ```sh
+ * $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
+ * ```
  * or
+ *
+ * ```sh
+ * $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
+ * ```
  */
 export class BgpRouting extends pulumi.CustomResource {
     /**

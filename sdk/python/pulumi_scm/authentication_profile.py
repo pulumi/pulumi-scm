@@ -34,6 +34,7 @@ class AuthenticationProfileArgs:
                  username_modifier: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthenticationProfile resource.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The allow_list of the authentication profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
@@ -227,6 +228,7 @@ class _AuthenticationProfileState:
                  username_modifier: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthenticationProfile resources.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The allow_list of the authentication profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
@@ -486,11 +488,24 @@ class AuthenticationProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -566,11 +581,24 @@ class AuthenticationProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param AuthenticationProfileArgs args: The arguments to use to populate this resource's properties.

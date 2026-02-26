@@ -39,6 +39,7 @@ class HipObjectArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a HipObject resource.
+
         :param pulumi.Input['HipObjectAntiMalwareArgs'] anti_malware: Anti malware
         :param pulumi.Input['HipObjectCertificateArgs'] certificate: Certificate
         :param pulumi.Input['HipObjectCustomChecksArgs'] custom_checks: Custom checks
@@ -312,6 +313,7 @@ class _HipObjectState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering HipObject resources.
+
         :param pulumi.Input['HipObjectAntiMalwareArgs'] anti_malware: Anti malware
         :param pulumi.Input['HipObjectCertificateArgs'] certificate: Certificate
         :param pulumi.Input['HipObjectCustomChecksArgs'] custom_checks: Custom checks
@@ -765,11 +767,24 @@ class HipObject(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -964,11 +979,24 @@ class HipObject(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/hipObject:HipObject example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param HipObjectArgs args: The arguments to use to populate this resource's properties.

@@ -25,6 +25,7 @@ class InternalDnsServerArgs:
                  secondary: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a InternalDnsServer resource.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: The DNS domain name(s)
         :param pulumi.Input[_builtins.str] primary: The IP address of the primary DNS server
         :param pulumi.Input[_builtins.str] name: The name of the internet DNS server resource
@@ -96,6 +97,7 @@ class _InternalDnsServerState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering InternalDnsServer resources.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: The DNS domain name(s)
         :param pulumi.Input[_builtins.str] name: The name of the internet DNS server resource
         :param pulumi.Input[_builtins.str] primary: The IP address of the primary DNS server
@@ -192,11 +194,24 @@ class InternalDnsServer(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/internalDnsServer:InternalDnsServer example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/internalDnsServer:InternalDnsServer example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/internalDnsServer:InternalDnsServer example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -218,11 +233,24 @@ class InternalDnsServer(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/internalDnsServer:InternalDnsServer example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/internalDnsServer:InternalDnsServer example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/internalDnsServer:InternalDnsServer example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param InternalDnsServerArgs args: The arguments to use to populate this resource's properties.

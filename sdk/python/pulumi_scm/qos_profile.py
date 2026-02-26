@@ -29,6 +29,7 @@ class QosProfileArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a QosProfile resource.
+
         :param pulumi.Input['QosProfileAggregateBandwidthArgs'] aggregate_bandwidth: Aggregate bandwidth
         :param pulumi.Input['QosProfileClassBandwidthTypeArgs'] class_bandwidth_type: Class bandwidth type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -142,6 +143,7 @@ class _QosProfileState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering QosProfile resources.
+
         :param pulumi.Input['QosProfileAggregateBandwidthArgs'] aggregate_bandwidth: Aggregate bandwidth
         :param pulumi.Input['QosProfileClassBandwidthTypeArgs'] class_bandwidth_type: Class bandwidth type
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -378,11 +380,24 @@ class QosProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/qosProfile:QosProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/qosProfile:QosProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/qosProfile:QosProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -510,11 +525,24 @@ class QosProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/qosProfile:QosProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/qosProfile:QosProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/qosProfile:QosProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param QosProfileArgs args: The arguments to use to populate this resource's properties.

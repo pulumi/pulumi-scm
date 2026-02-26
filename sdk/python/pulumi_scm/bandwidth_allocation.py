@@ -27,6 +27,7 @@ class BandwidthAllocationArgs:
                  spn_name_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a BandwidthAllocation resource.
+
         :param pulumi.Input[_builtins.int] allocated_bandwidth: bandwidth to allocate in Mbps
         :param pulumi.Input[_builtins.str] name: name of the aggregated bandwidth region
         :param pulumi.Input['BandwidthAllocationQosArgs'] qos: Qos
@@ -99,6 +100,7 @@ class _BandwidthAllocationState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering BandwidthAllocation resources.
+
         :param pulumi.Input[_builtins.int] allocated_bandwidth: bandwidth to allocate in Mbps
         :param pulumi.Input[_builtins.str] name: name of the aggregated bandwidth region
         :param pulumi.Input['BandwidthAllocationQosArgs'] qos: Qos
@@ -226,6 +228,11 @@ class BandwidthAllocation(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
+        ```sh
+        $ pulumi import scm:index/bandwidthAllocation:BandwidthAllocation example <name_value_of_the_resource>
+        ```
+
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] allocated_bandwidth: bandwidth to allocate in Mbps
@@ -276,6 +283,11 @@ class BandwidthAllocation(pulumi.CustomResource):
         ## Import
 
         The following command can be used to import a resource not managed by Terraform:
+
+        ```sh
+        $ pulumi import scm:index/bandwidthAllocation:BandwidthAllocation example <name_value_of_the_resource>
+        ```
+
 
         :param str resource_name: The name of the resource.
         :param BandwidthAllocationArgs args: The arguments to use to populate this resource's properties.

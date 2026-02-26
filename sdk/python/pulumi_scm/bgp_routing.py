@@ -29,6 +29,7 @@ class BgpRoutingArgs:
                  withdraw_static_route: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a BgpRouting resource.
+
         :param pulumi.Input[_builtins.bool] accept_route_over_sc: Accept route over s c
         :param pulumi.Input[_builtins.bool] add_host_route_to_ike_peer: Add host route to ike peer
         :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing
@@ -134,6 +135,7 @@ class _BgpRoutingState:
                  withdraw_static_route: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering BgpRouting resources.
+
         :param pulumi.Input[_builtins.bool] accept_route_over_sc: Accept route over s c
         :param pulumi.Input[_builtins.bool] add_host_route_to_ike_peer: Add host route to ike peer
         :param pulumi.Input[_builtins.str] backbone_routing: Backbone routing
@@ -281,7 +283,15 @@ class BgpRouting(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
+        ```sh
+        $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
+        ```
         or
+
+        ```sh
+        $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
+        ```
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -324,7 +334,15 @@ class BgpRouting(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
+        ```sh
+        $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
+        ```
         or
+
+        ```sh
+        $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
+        ```
+
 
         :param str resource_name: The name of the resource.
         :param BgpRoutingArgs args: The arguments to use to populate this resource's properties.

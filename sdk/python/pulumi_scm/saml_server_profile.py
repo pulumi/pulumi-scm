@@ -34,6 +34,7 @@ class SamlServerProfileArgs:
                  want_auth_requests_signed: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a SamlServerProfile resource.
+
         :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
         :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
@@ -255,6 +256,7 @@ class _SamlServerProfileState:
                  want_auth_requests_signed: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering SamlServerProfile resources.
+
         :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
@@ -540,11 +542,24 @@ class SamlServerProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -616,11 +631,24 @@ class SamlServerProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/samlServerProfile:SamlServerProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param SamlServerProfileArgs args: The arguments to use to populate this resource's properties.

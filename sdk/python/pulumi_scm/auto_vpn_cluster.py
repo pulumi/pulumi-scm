@@ -30,6 +30,7 @@ class AutoVpnClusterArgs:
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AutoVpnCluster resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['AutoVpnClusterBranchArgs']]] branches: Branches
         :param pulumi.Input[_builtins.bool] enable_mesh_between_hubs: Enable mesh between hubs?
         :param pulumi.Input[_builtins.bool] enable_mesh_interconnect: Enable mesh interconnect?
@@ -151,6 +152,7 @@ class _AutoVpnClusterState:
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AutoVpnCluster resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['AutoVpnClusterBranchArgs']]] branches: Branches
         :param pulumi.Input[_builtins.bool] enable_mesh_between_hubs: Enable mesh between hubs?
         :param pulumi.Input[_builtins.bool] enable_mesh_interconnect: Enable mesh interconnect?
@@ -343,11 +345,24 @@ class AutoVpnCluster(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -420,11 +435,24 @@ class AutoVpnCluster(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param AutoVpnClusterArgs args: The arguments to use to populate this resource's properties.

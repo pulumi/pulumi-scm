@@ -27,6 +27,7 @@ class TagArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Tag resource.
+
         :param pulumi.Input[_builtins.str] color: The color of the tag
         :param pulumi.Input[_builtins.str] comments: The description of the tag
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -140,6 +141,7 @@ class _TagState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Tag resources.
+
         :param pulumi.Input[_builtins.str] color: The color of the tag
         :param pulumi.Input[_builtins.str] comments: The description of the tag
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -298,11 +300,24 @@ class Tag(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/tag:Tag example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/tag:Tag example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/tag:Tag example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -352,11 +367,24 @@ class Tag(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/tag:Tag example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/tag:Tag example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/tag:Tag example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param TagArgs args: The arguments to use to populate this resource's properties.

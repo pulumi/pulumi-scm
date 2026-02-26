@@ -36,6 +36,7 @@ class SiteArgs:
                  zip_code: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Site resource.
+
         :param pulumi.Input[_builtins.str] address_line1: The address in which the site exists
         :param pulumi.Input[_builtins.str] address_line2: The address in which the site exists (continued)
         :param pulumi.Input[_builtins.str] city: The city in which the site exists
@@ -254,6 +255,7 @@ class _SiteState:
                  zip_code: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Site resources.
+
         :param pulumi.Input[_builtins.str] address_line1: The address in which the site exists
         :param pulumi.Input[_builtins.str] address_line2: The address in which the site exists (continued)
         :param pulumi.Input[_builtins.str] city: The city in which the site exists
@@ -601,6 +603,11 @@ class Site(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
+        ```sh
+        $ pulumi import scm:index/site:Site example :::id
+        ```
+
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] address_line1: The address in which the site exists
@@ -721,6 +728,11 @@ class Site(pulumi.CustomResource):
         ## Import
 
         The following command can be used to import a resource not managed by Terraform:
+
+        ```sh
+        $ pulumi import scm:index/site:Site example :::id
+        ```
+
 
         :param str resource_name: The name of the resource.
         :param SiteArgs args: The arguments to use to populate this resource's properties.

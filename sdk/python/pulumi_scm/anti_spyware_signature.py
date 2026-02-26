@@ -37,6 +37,7 @@ class AntiSpywareSignatureArgs:
                  vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a AntiSpywareSignature resource.
+
         :param pulumi.Input[_builtins.str] threat_id: threat id range \\n\\n and \\n\\n
         :param pulumi.Input[_builtins.str] threatname: Threatname
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: Bugtraq
@@ -276,6 +277,7 @@ class _AntiSpywareSignatureState:
                  vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering AntiSpywareSignature resources.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: Bugtraq
         :param pulumi.Input[_builtins.str] comment: Comment
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: Cve
@@ -575,11 +577,24 @@ class AntiSpywareSignature(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -650,11 +665,24 @@ class AntiSpywareSignature(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/antiSpywareSignature:AntiSpywareSignature example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param AntiSpywareSignatureArgs args: The arguments to use to populate this resource's properties.

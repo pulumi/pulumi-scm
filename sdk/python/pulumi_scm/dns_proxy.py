@@ -35,6 +35,7 @@ class DnsProxyArgs:
                  udp_queries: Optional[pulumi.Input['DnsProxyUdpQueriesArgs']] = None):
         """
         The set of arguments for constructing a DnsProxy resource.
+
         :param pulumi.Input['DnsProxyDefaultArgs'] default: Default
         :param pulumi.Input['DnsProxyCacheArgs'] cache: Cache
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -243,6 +244,7 @@ class _DnsProxyState:
                  udp_queries: Optional[pulumi.Input['DnsProxyUdpQueriesArgs']] = None):
         """
         Input properties used for looking up and filtering DnsProxy resources.
+
         :param pulumi.Input['DnsProxyCacheArgs'] cache: Cache
         :param pulumi.Input['DnsProxyDefaultArgs'] default: Default
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -475,11 +477,24 @@ class DnsProxy(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/dnsProxy:DnsProxy example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/dnsProxy:DnsProxy example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/dnsProxy:DnsProxy example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -513,11 +528,24 @@ class DnsProxy(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/dnsProxy:DnsProxy example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/dnsProxy:DnsProxy example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/dnsProxy:DnsProxy example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param DnsProxyArgs args: The arguments to use to populate this resource's properties.

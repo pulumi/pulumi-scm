@@ -26,6 +26,7 @@ class AutoVpnSettingArgs:
                  enable_mesh_between_hubs: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a AutoVpnSetting resource.
+
         :param pulumi.Input['AutoVpnSettingAsRangeArgs'] as_range: As range
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vpn_address_pools: VPN address pool
         :param pulumi.Input[_builtins.bool] enable_mesh_between_hubs: Enable mesh connection between hubs?
@@ -81,6 +82,7 @@ class _AutoVpnSettingState:
                  vpn_address_pools: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering AutoVpnSetting resources.
+
         :param pulumi.Input['AutoVpnSettingAsRangeArgs'] as_range: As range
         :param pulumi.Input[_builtins.bool] enable_mesh_between_hubs: Enable mesh connection between hubs?
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
@@ -178,7 +180,15 @@ class AutoVpnSetting(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
+        ```sh
+        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
+        ```
         or
+
+        ```sh
+        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
+        ```
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -216,7 +226,15 @@ class AutoVpnSetting(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
+        ```sh
+        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
+        ```
         or
+
+        ```sh
+        $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
+        ```
+
 
         :param str resource_name: The name of the resource.
         :param AutoVpnSettingArgs args: The arguments to use to populate this resource's properties.

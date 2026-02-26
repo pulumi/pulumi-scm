@@ -23,6 +23,7 @@ class LabelArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Label resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the label
         :param pulumi.Input[_builtins.str] name: The name of the label
         """
@@ -64,6 +65,7 @@ class _LabelState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Label resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the label
         :param pulumi.Input[_builtins.str] name: The name of the label
         :param pulumi.Input[_builtins.str] tfid: The Terraform ID.
@@ -128,11 +130,24 @@ class Label(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/label:Label example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/label:Label example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/label:Label example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -152,11 +167,24 @@ class Label(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/label:Label example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/label:Label example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/label:Label example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param LabelArgs args: The arguments to use to populate this resource's properties.

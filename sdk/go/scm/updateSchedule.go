@@ -116,9 +116,21 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// or
+// ```sh
+// $ pulumi import scm:index/updateSchedule:UpdateSchedule example folder:::id
+// ```
 //
 // or
+//
+// ```sh
+// $ pulumi import scm:index/updateSchedule:UpdateSchedule example :snippet::id
+// ```
+//
+// or
+//
+// ```sh
+// $ pulumi import scm:index/updateSchedule:UpdateSchedule example ::device:id
+// ```
 //
 // **Note:** Please provide just one of folder, snippet, or device for the import command.
 type UpdateSchedule struct {

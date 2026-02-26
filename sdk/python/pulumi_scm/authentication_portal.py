@@ -31,6 +31,7 @@ class AuthenticationPortalArgs:
                  tls_service_profile: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthenticationPortal resource.
+
         :param pulumi.Input[_builtins.str] redirect_host: The authentication portal IP address or hostname
         :param pulumi.Input[_builtins.str] authentication_profile: The authentication profile
         :param pulumi.Input[_builtins.str] certificate_profile: The certificate profile
@@ -207,6 +208,7 @@ class _AuthenticationPortalState:
                  tls_service_profile: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthenticationPortal resources.
+
         :param pulumi.Input[_builtins.str] authentication_profile: The authentication profile
         :param pulumi.Input[_builtins.str] certificate_profile: The certificate profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -424,11 +426,24 @@ class AuthenticationPortal(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -477,11 +492,24 @@ class AuthenticationPortal(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param AuthenticationPortalArgs args: The arguments to use to populate this resource's properties.

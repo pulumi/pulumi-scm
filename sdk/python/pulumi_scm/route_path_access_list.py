@@ -29,6 +29,7 @@ class RoutePathAccessListArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a RoutePathAccessList resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['RoutePathAccessListAspathEntryArgs']]] aspath_entries: AS paths
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -142,6 +143,7 @@ class _RoutePathAccessListState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering RoutePathAccessList resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['RoutePathAccessListAspathEntryArgs']]] aspath_entries: AS paths
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -278,11 +280,24 @@ class RoutePathAccessList(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/routePathAccessList:RoutePathAccessList example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/routePathAccessList:RoutePathAccessList example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/routePathAccessList:RoutePathAccessList example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -310,11 +325,24 @@ class RoutePathAccessList(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/routePathAccessList:RoutePathAccessList example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/routePathAccessList:RoutePathAccessList example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/routePathAccessList:RoutePathAccessList example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param RoutePathAccessListArgs args: The arguments to use to populate this resource's properties.

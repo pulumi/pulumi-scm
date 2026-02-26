@@ -42,6 +42,7 @@ class UrlAccessProfileArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a UrlAccessProfile resource.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: Alert
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allows: Allow
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: Block
@@ -363,6 +364,7 @@ class _UrlAccessProfileState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering UrlAccessProfile resources.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: Alert
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allows: Allow
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: Block
@@ -730,11 +732,24 @@ class UrlAccessProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -798,11 +813,24 @@ class UrlAccessProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/urlAccessProfile:UrlAccessProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param UrlAccessProfileArgs args: The arguments to use to populate this resource's properties.
