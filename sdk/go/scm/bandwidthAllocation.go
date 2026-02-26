@@ -66,6 +66,10 @@ import (
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
+//
+// ```sh
+// $ pulumi import scm:index/bandwidthAllocation:BandwidthAllocation example <name_value_of_the_resource>
+// ```
 type BandwidthAllocation struct {
 	pulumi.CustomResourceState
 

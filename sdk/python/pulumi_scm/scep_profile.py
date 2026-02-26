@@ -39,6 +39,7 @@ class ScepProfileArgs:
                  use_for_key_encipherment: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ScepProfile resource.
+
         :param pulumi.Input['ScepProfileAlgorithmArgs'] algorithm: Algorithm
         :param pulumi.Input[_builtins.str] ca_identity_name: Certificate Authority Identity
         :param pulumi.Input[_builtins.str] digest: Digest for CSR
@@ -307,6 +308,7 @@ class _ScepProfileState:
                  use_for_key_encipherment: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ScepProfile resources.
+
         :param pulumi.Input['ScepProfileAlgorithmArgs'] algorithm: Algorithm
         :param pulumi.Input[_builtins.str] ca_identity_name: Certificate Authority Identity
         :param pulumi.Input['ScepProfileCertificateAttributesArgs'] certificate_attributes: Subject Alternative name type
@@ -716,11 +718,24 @@ class ScepProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/scepProfile:ScepProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/scepProfile:ScepProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/scepProfile:ScepProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -856,11 +871,24 @@ class ScepProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/scepProfile:ScepProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/scepProfile:ScepProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/scepProfile:ScepProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param ScepProfileArgs args: The arguments to use to populate this resource's properties.

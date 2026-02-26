@@ -37,6 +37,7 @@ class EthernetInterfaceArgs:
                  tap: Optional[pulumi.Input['EthernetInterfaceTapArgs']] = None):
         """
         The set of arguments for constructing a EthernetInterface resource.
+
         :param pulumi.Input[_builtins.str] aggregate_group: Aggregate group
         :param pulumi.Input[_builtins.str] comment: Interface description
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
@@ -295,6 +296,7 @@ class _EthernetInterfaceState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering EthernetInterface resources.
+
         :param pulumi.Input[_builtins.str] aggregate_group: Aggregate group
         :param pulumi.Input[_builtins.str] comment: Interface description
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
@@ -723,11 +725,24 @@ class EthernetInterface(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/ethernetInterface:EthernetInterface example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/ethernetInterface:EthernetInterface example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/ethernetInterface:EthernetInterface example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -904,11 +919,24 @@ class EthernetInterface(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/ethernetInterface:EthernetInterface example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/ethernetInterface:EthernetInterface example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/ethernetInterface:EthernetInterface example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param EthernetInterfaceArgs args: The arguments to use to populate this resource's properties.

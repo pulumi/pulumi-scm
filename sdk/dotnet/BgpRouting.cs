@@ -47,7 +47,14 @@ namespace Pulumi.Scm
     /// 
     /// The following command can be used to import a resource not managed by Terraform:
     /// 
+    /// ```sh
+    /// $ pulumi import scm:index/bgpRouting:BgpRouting example singleton
+    /// ```
     /// or
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/bgpRouting:BgpRouting example bgp_routing
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/bgpRouting:BgpRouting")]
     public partial class BgpRouting : global::Pulumi.CustomResource

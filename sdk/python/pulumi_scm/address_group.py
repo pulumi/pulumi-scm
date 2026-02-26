@@ -31,6 +31,7 @@ class AddressGroupArgs:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a AddressGroup resource.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['AddressGroupDynamicArgs'] dynamic: Dynamic
@@ -184,6 +185,7 @@ class _AddressGroupState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AddressGroup resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['AddressGroupDynamicArgs'] dynamic: Dynamic
@@ -408,11 +410,24 @@ class AddressGroup(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/addressGroup:AddressGroup example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/addressGroup:AddressGroup example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/addressGroup:AddressGroup example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -494,11 +509,24 @@ class AddressGroup(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/addressGroup:AddressGroup example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/addressGroup:AddressGroup example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/addressGroup:AddressGroup example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param AddressGroupArgs args: The arguments to use to populate this resource's properties.

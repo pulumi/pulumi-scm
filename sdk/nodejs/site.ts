@@ -111,6 +111,10 @@ import * as utilities from "./utilities";
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:
+ *
+ * ```sh
+ * $ pulumi import scm:index/site:Site example :::id
+ * ```
  */
 export class Site extends pulumi.CustomResource {
     /**

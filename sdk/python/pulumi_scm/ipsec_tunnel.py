@@ -33,6 +33,7 @@ class IpsecTunnelArgs:
                  tunnel_monitor: Optional[pulumi.Input['IpsecTunnelTunnelMonitorArgs']] = None):
         """
         The set of arguments for constructing a IpsecTunnel resource.
+
         :param pulumi.Input['IpsecTunnelAutoKeyArgs'] auto_key: Auto key
         :param pulumi.Input[_builtins.bool] anti_replay: Enable Anti-Replay check on this tunnel
         :param pulumi.Input[_builtins.bool] copy_tos: Copy IP TOS bits from inner packet to IPSec packet (not recommended)
@@ -209,6 +210,7 @@ class _IpsecTunnelState:
                  tunnel_monitor: Optional[pulumi.Input['IpsecTunnelTunnelMonitorArgs']] = None):
         """
         Input properties used for looking up and filtering IpsecTunnel resources.
+
         :param pulumi.Input[_builtins.bool] anti_replay: Enable Anti-Replay check on this tunnel
         :param pulumi.Input['IpsecTunnelAutoKeyArgs'] auto_key: Auto key
         :param pulumi.Input[_builtins.bool] copy_tos: Copy IP TOS bits from inner packet to IPSec packet (not recommended)
@@ -472,11 +474,24 @@ class IpsecTunnel(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -571,11 +586,24 @@ class IpsecTunnel(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/ipsecTunnel:IpsecTunnel example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param IpsecTunnelArgs args: The arguments to use to populate this resource's properties.

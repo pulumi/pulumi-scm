@@ -62,6 +62,7 @@ class SecurityRuleArgs:
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a SecurityRule resource.
+
         :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
         :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]] allow_url_categories: Allow url category
         :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]] allow_web_applications: Allow web application
@@ -695,6 +696,7 @@ class _SecurityRuleState:
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering SecurityRule resources.
+
         :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
         :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]] allow_url_categories: Allow url category
         :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]] allow_web_applications: Allow web application
@@ -1502,11 +1504,24 @@ class SecurityRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1714,11 +1729,24 @@ class SecurityRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param SecurityRuleArgs args: The arguments to use to populate this resource's properties.

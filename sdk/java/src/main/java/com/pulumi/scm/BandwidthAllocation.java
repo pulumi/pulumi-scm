@@ -78,6 +78,10 @@ import javax.annotation.Nullable;
  * 
  * The following command can be used to import a resource not managed by Terraform:
  * 
+ * ```sh
+ * $ pulumi import scm:index/bandwidthAllocation:BandwidthAllocation example &lt;name_value_of_the_resource&gt;
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/bandwidthAllocation:BandwidthAllocation")
 public class BandwidthAllocation extends com.pulumi.resources.CustomResource {

@@ -208,9 +208,21 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
-// or
+// ```sh
+// $ pulumi import scm:index/hipObject:HipObject example folder:::id
+// ```
 //
 // or
+//
+// ```sh
+// $ pulumi import scm:index/hipObject:HipObject example :snippet::id
+// ```
+//
+// or
+//
+// ```sh
+// $ pulumi import scm:index/hipObject:HipObject example ::device:id
+// ```
 //
 // **Note:** Please provide just one of folder, snippet, or device for the import command.
 type HipObject struct {

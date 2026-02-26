@@ -161,6 +161,10 @@ import (
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:
+//
+// ```sh
+// $ pulumi import scm:index/site:Site example :::id
+// ```
 type Site struct {
 	pulumi.CustomResourceState
 

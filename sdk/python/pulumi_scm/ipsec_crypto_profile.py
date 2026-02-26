@@ -32,6 +32,7 @@ class IpsecCryptoProfileArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a IpsecCryptoProfile resource.
+
         :param pulumi.Input['IpsecCryptoProfileLifetimeArgs'] lifetime: Ipsec crypto profile lifetime
         :param pulumi.Input['IpsecCryptoProfileAhArgs'] ah: Ah
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -200,6 +201,7 @@ class _IpsecCryptoProfileState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering IpsecCryptoProfile resources.
+
         :param pulumi.Input['IpsecCryptoProfileAhArgs'] ah: Ah
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
                
@@ -421,11 +423,24 @@ class IpsecCryptoProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -489,11 +504,24 @@ class IpsecCryptoProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/ipsecCryptoProfile:IpsecCryptoProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param IpsecCryptoProfileArgs args: The arguments to use to populate this resource's properties.

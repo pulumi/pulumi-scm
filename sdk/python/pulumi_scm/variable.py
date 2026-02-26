@@ -28,6 +28,7 @@ class VariableArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Variable resource.
+
         :param pulumi.Input[_builtins.str] type: The variable type
         :param pulumi.Input[_builtins.str] value: The value of the variable
         :param pulumi.Input[_builtins.str] description: The description of the variable
@@ -156,6 +157,7 @@ class _VariableState:
                  value: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Variable resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the variable
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
@@ -430,11 +432,24 @@ class Variable(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/variable:Variable example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/variable:Variable example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/variable:Variable example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -570,11 +585,24 @@ class Variable(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/variable:Variable example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/variable:Variable example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/variable:Variable example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param VariableArgs args: The arguments to use to populate this resource's properties.

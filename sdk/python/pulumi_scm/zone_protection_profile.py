@@ -60,6 +60,7 @@ class ZoneProtectionProfileArgs:
                  unknown_option_discard: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ZoneProtectionProfile resource.
+
         :param pulumi.Input[_builtins.str] asymmetric_path: Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
                * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
                * `drop` — Drop packets that contain an asymmetric path.
@@ -697,6 +698,7 @@ class _ZoneProtectionProfileState:
                  unknown_option_discard: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ZoneProtectionProfile resources.
+
         :param pulumi.Input[_builtins.str] asymmetric_path: Determine whether to drop or bypass packets that contain out-of-sync ACKs or out-of-window sequence numbers:
                * `global` — Use system-wide setting that is assigned through TCP Settings or the CLI.
                * `drop` — Drop packets that contain an asymmetric path.
@@ -1357,11 +1359,24 @@ class ZoneProtectionProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1434,11 +1449,24 @@ class ZoneProtectionProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/zoneProtectionProfile:ZoneProtectionProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param ZoneProtectionProfileArgs args: The arguments to use to populate this resource's properties.

@@ -42,6 +42,7 @@ class NatRuleArgs:
                  to_interface: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a NatRule resource.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
         :param pulumi.Input[_builtins.str] service: The service of the original packet
@@ -350,6 +351,7 @@ class _NatRuleState:
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering NatRule resources.
+
         :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
         :param pulumi.Input[_builtins.str] description: NAT rule description
         :param pulumi.Input['NatRuleDestinationTranslationArgs'] destination_translation: Destination translation
@@ -798,11 +800,24 @@ class NatRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -951,11 +966,24 @@ class NatRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/natRule:NatRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param NatRuleArgs args: The arguments to use to populate this resource's properties.

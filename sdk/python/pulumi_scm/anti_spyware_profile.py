@@ -34,6 +34,7 @@ class AntiSpywareProfileArgs:
                  threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]] = None):
         """
         The set of arguments for constructing a AntiSpywareProfile resource.
+
         :param pulumi.Input[_builtins.bool] cloud_inline_analysis: Cloud inline analysis
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -227,6 +228,7 @@ class _AntiSpywareProfileState:
                  threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionArgs']]]] = None):
         """
         Input properties used for looking up and filtering AntiSpywareProfile resources.
+
         :param pulumi.Input[_builtins.bool] cloud_inline_analysis: Cloud inline analysis
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -481,6 +483,7 @@ class AntiSpywareProfile(pulumi.CustomResource):
             }])
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] cloud_inline_analysis: Cloud inline analysis
@@ -549,6 +552,7 @@ class AntiSpywareProfile(pulumi.CustomResource):
                 "threat_name": "data-theft",
             }])
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AntiSpywareProfileArgs args: The arguments to use to populate this resource's properties.

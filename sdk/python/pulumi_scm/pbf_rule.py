@@ -38,6 +38,7 @@ class PbfRuleArgs:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a PbfRule resource.
+
         :param pulumi.Input['PbfRuleActionArgs'] action: Action
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: Applications
         :param pulumi.Input[_builtins.str] description: Description
@@ -295,6 +296,7 @@ class _PbfRuleState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering PbfRule resources.
+
         :param pulumi.Input['PbfRuleActionArgs'] action: Action
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: Applications
         :param pulumi.Input[_builtins.str] description: Description
@@ -660,11 +662,24 @@ class PbfRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/pbfRule:PbfRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/pbfRule:PbfRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/pbfRule:PbfRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -786,11 +801,24 @@ class PbfRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/pbfRule:PbfRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/pbfRule:PbfRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/pbfRule:PbfRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param PbfRuleArgs args: The arguments to use to populate this resource's properties.

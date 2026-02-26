@@ -41,6 +41,7 @@ class AppOverrideRuleArgs:
                  target_rule: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AppOverrideRule resource.
+
         :param pulumi.Input[_builtins.str] application: Application
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: From
@@ -371,6 +372,7 @@ class _AppOverrideRuleState:
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering AppOverrideRule resources.
+
         :param pulumi.Input[_builtins.str] application: Application
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination
@@ -814,11 +816,24 @@ class AppOverrideRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/appOverrideRule:AppOverrideRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/appOverrideRule:AppOverrideRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/appOverrideRule:AppOverrideRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -943,11 +958,24 @@ class AppOverrideRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/appOverrideRule:AppOverrideRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/appOverrideRule:AppOverrideRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/appOverrideRule:AppOverrideRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param AppOverrideRuleArgs args: The arguments to use to populate this resource's properties.

@@ -53,7 +53,14 @@ import (
 //
 // The following command can be used to import a resource not managed by Terraform:
 //
+// ```sh
+// $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example singleton
+// ```
 // or
+//
+// ```sh
+// $ pulumi import scm:index/autoVpnSetting:AutoVpnSetting example auto_vpn_setting
+// ```
 type AutoVpnSetting struct {
 	pulumi.CustomResourceState
 

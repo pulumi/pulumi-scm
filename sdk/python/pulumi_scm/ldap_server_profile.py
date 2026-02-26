@@ -37,6 +37,7 @@ class LdapServerProfileArgs:
                  verify_server_certificate: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a LdapServerProfile resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]] servers: The LDAP server configuration
         :param pulumi.Input[_builtins.str] base: The base DN
         :param pulumi.Input[_builtins.str] bind_dn: The bind DN
@@ -278,6 +279,7 @@ class _LdapServerProfileState:
                  verify_server_certificate: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering LdapServerProfile resources.
+
         :param pulumi.Input[_builtins.str] base: The base DN
         :param pulumi.Input[_builtins.str] bind_dn: The bind DN
         :param pulumi.Input[_builtins.str] bind_password: The bind password
@@ -557,11 +559,24 @@ class LdapServerProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -597,11 +612,24 @@ class LdapServerProfile(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/ldapServerProfile:LdapServerProfile example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param LdapServerProfileArgs args: The arguments to use to populate this resource's properties.

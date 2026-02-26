@@ -34,6 +34,7 @@ class ZoneArgs:
                  user_acl: Optional[pulumi.Input['ZoneUserAclArgs']] = None):
         """
         The set of arguments for constructing a Zone resource.
+
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['ZoneDeviceAclArgs'] device_acl: Device acl
         :param pulumi.Input[_builtins.str] dos_log_setting: Dos log setting
@@ -227,6 +228,7 @@ class _ZoneState:
                  user_acl: Optional[pulumi.Input['ZoneUserAclArgs']] = None):
         """
         Input properties used for looking up and filtering Zone resources.
+
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['ZoneDeviceAclArgs'] device_acl: Device acl
         :param pulumi.Input[_builtins.str] dos_log_setting: Dos log setting
@@ -509,11 +511,24 @@ class Zone(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/zone:Zone example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/zone:Zone example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/zone:Zone example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -612,11 +627,24 @@ class Zone(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/zone:Zone example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/zone:Zone example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/zone:Zone example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param ZoneArgs args: The arguments to use to populate this resource's properties.

@@ -44,6 +44,7 @@ class SdwanRuleArgs:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a SdwanRule resource.
+
         :param pulumi.Input['SdwanRuleActionArgs'] action: Action
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: List of applications
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
@@ -387,6 +388,7 @@ class _SdwanRuleState:
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering SdwanRule resources.
+
         :param pulumi.Input['SdwanRuleActionArgs'] action: Action
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: List of applications
         :param pulumi.Input[_builtins.str] description: Rule description
@@ -763,11 +765,24 @@ class SdwanRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/sdwanRule:SdwanRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/sdwanRule:SdwanRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/sdwanRule:SdwanRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -810,11 +825,24 @@ class SdwanRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/sdwanRule:SdwanRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/sdwanRule:SdwanRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/sdwanRule:SdwanRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param SdwanRuleArgs args: The arguments to use to populate this resource's properties.

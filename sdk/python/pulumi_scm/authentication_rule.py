@@ -48,6 +48,7 @@ class AuthenticationRuleArgs:
                  timeout: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a AuthenticationRule resource.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zones
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
@@ -492,6 +493,7 @@ class _AuthenticationRuleState:
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering AuthenticationRule resources.
+
         :param pulumi.Input[_builtins.str] authentication_enforcement: The authentication profile name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL categories
         :param pulumi.Input[_builtins.str] description: The description of the authentication rule
@@ -1057,11 +1059,24 @@ class AuthenticationRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/authenticationRule:AuthenticationRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/authenticationRule:AuthenticationRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/authenticationRule:AuthenticationRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1203,11 +1218,24 @@ class AuthenticationRule(pulumi.CustomResource):
 
         The following command can be used to import a resource not managed by Terraform:
 
-        or
+        ```sh
+        $ pulumi import scm:index/authenticationRule:AuthenticationRule example folder:::id
+        ```
 
         or
+
+        ```sh
+        $ pulumi import scm:index/authenticationRule:AuthenticationRule example :snippet::id
+        ```
+
+        or
+
+        ```sh
+        $ pulumi import scm:index/authenticationRule:AuthenticationRule example ::device:id
+        ```
 
         **Note:** Please provide just one of folder, snippet, or device for the import command.
+
 
         :param str resource_name: The name of the resource.
         :param AuthenticationRuleArgs args: The arguments to use to populate this resource's properties.
