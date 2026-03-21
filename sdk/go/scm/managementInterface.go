@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewManagementInterface(ctx, "mi_example", &scm.ManagementInterfaceArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				ManagementInterface: &scm.ManagementInterfaceManagementInterfaceArgs{
 //					SpeedDuplex: pulumi.String("auto-negotiate"),
 //					Mtu:         pulumi.Int(1500),
@@ -39,6 +39,40 @@ import (
 //							AcceptDhcpHostname: pulumi.Bool(false),
 //							AcceptDhcpDomain:   pulumi.Bool(false),
 //						},
+//					},
+//					Service: &scm.ManagementInterfaceManagementInterfaceServiceArgs{
+//						DisableHttp:                    pulumi.Bool(false),
+//						DisableHttps:                   pulumi.Bool(true),
+//						DisableTelnet:                  pulumi.Bool(false),
+//						DisableSsh:                     pulumi.Bool(true),
+//						DisableIcmp:                    pulumi.Bool(false),
+//						DisableSnmp:                    pulumi.Bool(false),
+//						DisableUseridService:           pulumi.Bool(false),
+//						DisableUseridSyslogListenerSsl: pulumi.Bool(false),
+//						DisableUseridSyslogListenerUdp: pulumi.Bool(false),
+//						DisableHttpOcsp:                pulumi.Bool(false),
+//					},
+//					PermittedIps: scm.ManagementInterfaceManagementInterfacePermittedIpArray{
+//						&scm.ManagementInterfaceManagementInterfacePermittedIpArgs{
+//							Name:        pulumi.String("10.10.10.10"),
+//							Description: pulumi.String("string"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewManagementInterface(ctx, "mi_static_example", &scm.ManagementInterfaceArgs{
+//				Folder: pulumi.String("Prisma Access"),
+//				ManagementInterface: &scm.ManagementInterfaceManagementInterfaceArgs{
+//					SpeedDuplex:    pulumi.String("auto-negotiate"),
+//					Mtu:            pulumi.Int(1500),
+//					IpAddress:      pulumi.String("10.10.10.10"),
+//					Netmask:        pulumi.String("255.255.255.0"),
+//					DefaultGateway: pulumi.String("192.168.252.1"),
+//					MgmtType: &scm.ManagementInterfaceManagementInterfaceMgmtTypeArgs{
+//						Static: &scm.ManagementInterfaceManagementInterfaceMgmtTypeStaticArgs{},
 //					},
 //					Service: &scm.ManagementInterfaceManagementInterfaceServiceArgs{
 //						DisableHttp:                    pulumi.Bool(false),

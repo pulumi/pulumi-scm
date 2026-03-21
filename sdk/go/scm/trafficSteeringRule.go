@@ -65,9 +65,6 @@ func NewTrafficSteeringRule(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
-	if args.Folder == nil {
-		return nil, errors.New("invalid value for required argument 'Folder'")
-	}
 	if args.Services == nil {
 		return nil, errors.New("invalid value for required argument 'Services'")
 	}
@@ -150,7 +147,7 @@ type trafficSteeringRuleArgs struct {
 	// Destination
 	Destinations []string `pulumi:"destinations"`
 	// The folder containing the traffic steering rule
-	Folder string `pulumi:"folder"`
+	Folder *string `pulumi:"folder"`
 	// Name
 	Name *string `pulumi:"name"`
 	// Service
@@ -170,7 +167,7 @@ type TrafficSteeringRuleArgs struct {
 	// Destination
 	Destinations pulumi.StringArrayInput
 	// The folder containing the traffic steering rule
-	Folder pulumi.StringInput
+	Folder pulumi.StringPtrInput
 	// Name
 	Name pulumi.StringPtrInput
 	// Service

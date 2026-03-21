@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Set Sessions with Config Rematch value set to True
 //			_, err := scm.NewSessionSetting(ctx, "session_example", &scm.SessionSettingArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				SessionSettings: &scm.SessionSettingSessionSettingsArgs{
 //					DhcpBcastSessionOn:            pulumi.Bool(false),
 //					Erspan:                        pulumi.Bool(false),

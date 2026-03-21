@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  *         // --- 1. TAG Resource ---
  *         var appOverridePositionTag = new Tag("appOverridePositionTag", TagArgs.builder()
  *             .name("app-override-position-tag_1")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .color("Orange")
  *             .build());
  * 
@@ -56,7 +56,7 @@ import javax.annotation.Nullable;
  *         var anchorAppOverride = new AppOverrideRule("anchorAppOverride", AppOverrideRuleArgs.builder()
  *             .name("anchor-app-override-rule")
  *             .description("Base rule for testing 'before' and 'after' positioning. Updating")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .position("pre")
  *             .application("ssl")
  *             .protocol("tcp")
@@ -72,7 +72,7 @@ import javax.annotation.Nullable;
  *         var ruleTopAppOverride = new AppOverrideRule("ruleTopAppOverride", AppOverrideRuleArgs.builder()
  *             .name("top-absolute-app-override")
  *             .description("Placed at the very TOP of the App Override rulebase.")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .position("pre")
  *             .relativePosition("bottom")
  *             .application("ssl")
@@ -87,7 +87,7 @@ import javax.annotation.Nullable;
  *         var ruleBottomAppOverride = new AppOverrideRule("ruleBottomAppOverride", AppOverrideRuleArgs.builder()
  *             .name("bottom-absolute-app-override")
  *             .description("Placed at the very BOTTOM of the App Override rulebase.")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .position("pre")
  *             .relativePosition("bottom")
  *             .application("ssl")
@@ -103,7 +103,7 @@ import javax.annotation.Nullable;
  *         var ruleBeforeAnchorOverride = new AppOverrideRule("ruleBeforeAnchorOverride", AppOverrideRuleArgs.builder()
  *             .name("before-anchor-app-override")
  *             .description("Positioned immediately BEFORE the anchor-app-override-rule.")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .position("pre")
  *             .relativePosition("before")
  *             .targetRule(anchorAppOverride.id())
@@ -119,7 +119,7 @@ import javax.annotation.Nullable;
  *         var ruleAfterAnchorOverride = new AppOverrideRule("ruleAfterAnchorOverride", AppOverrideRuleArgs.builder()
  *             .name("after-anchor-app-override")
  *             .description("Positioned immediately AFTER the anchor-app-override-rule.")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .position("pre")
  *             .relativePosition("before")
  *             .targetRule(anchorAppOverride.id())
@@ -167,14 +167,14 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="application", refs={String.class}, tree="[0]")
-    private Output<String> application;
+    private Output</* @Nullable */ String> application;
 
     /**
      * @return Application
      * 
      */
-    public Output<String> application() {
-        return this.application;
+    public Output<Optional<String>> application() {
+        return Codegen.optional(this.application);
     }
     /**
      * Description
@@ -325,14 +325,14 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="port", refs={String.class}, tree="[0]")
-    private Output<String> port;
+    private Output</* @Nullable */ String> port;
 
     /**
      * @return Port
      * 
      */
-    public Output<String> port() {
-        return this.port;
+    public Output<Optional<String>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * The position of a security rule
@@ -353,14 +353,14 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="protocol", refs={String.class}, tree="[0]")
-    private Output<String> protocol;
+    private Output</* @Nullable */ String> protocol;
 
     /**
      * @return Protocol
      * 
      */
-    public Output<String> protocol() {
-        return this.protocol;
+    public Output<Optional<String>> protocol() {
+        return Codegen.optional(this.protocol);
     }
     /**
      * Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
@@ -477,7 +477,7 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppOverrideRule(java.lang.String name, AppOverrideRuleArgs args) {
+    public AppOverrideRule(java.lang.String name, @Nullable AppOverrideRuleArgs args) {
         this(name, args, null);
     }
     /**
@@ -486,7 +486,7 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppOverrideRule(java.lang.String name, AppOverrideRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AppOverrideRule(java.lang.String name, @Nullable AppOverrideRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/appOverrideRule:AppOverrideRule", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -494,7 +494,7 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
         super("scm:index/appOverrideRule:AppOverrideRule", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static AppOverrideRuleArgs makeArgs(AppOverrideRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static AppOverrideRuleArgs makeArgs(@Nullable AppOverrideRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

@@ -282,7 +282,7 @@ class LogForwardingProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_log_forwarding_profile1 = scm.LogForwardingProfile("scm_log_forwarding_profile_1",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-log-fowarding-profile-1",
             match_lists=[{
                 "name": "profile_match",
@@ -290,7 +290,7 @@ class LogForwardingProfile(pulumi.CustomResource):
                 "filter": "(addr in 192.50.10.10) and (addr.dst notin 192.40.50.10)",
             }])
         scm_log_forwarding_profile2 = scm.LogForwardingProfile("scm_log_forwarding_profile_2",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-log-fowarding-profile-2",
             description="Log Forwarding w/ HTTP Server Profile and Syslog Server Profile",
             match_lists=[{
@@ -298,13 +298,10 @@ class LogForwardingProfile(pulumi.CustomResource):
                 "log_type": "traffic",
                 "filter": "(device_name eq test_device)",
                 "send_http": ["test_http"],
-                "send_syslog": [
-                    "syslog-server-prof-mixed",
-                    "syslog-server-prof-complete",
-                ],
+                "send_syslog": ["syslog-server-prof-complete"],
             }])
         scm_log_forwarding_profile3 = scm.LogForwardingProfile("scm_log_forwarding_profile_3",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-log-fowarding-profile-3",
             description="Log Forwarding w/ All Server Profiles",
             match_lists=[{
@@ -316,19 +313,12 @@ class LogForwardingProfile(pulumi.CustomResource):
                     "test_http",
                     "t10",
                 ],
-                "send_syslog": [
-                    "syslog-server-prof-base",
-                    "syslog-server-prof-mixed",
-                    "syslog-server-prof-complete",
-                ],
+                "send_syslog": ["syslog-server-prof-complete"],
                 "send_snmptrap": ["snmp_test"],
-                "send_email": [
-                    "email_test",
-                    "email_test_2",
-                ],
+                "send_email": ["email_test"],
             }])
         scm_log_forwarding_profile4 = scm.LogForwardingProfile("scm_log_forwarding_profile_4",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-log-fowarding-profile-4",
             description="Log Forwarding w/ Multiple Match Lists",
             match_lists=[
@@ -338,7 +328,7 @@ class LogForwardingProfile(pulumi.CustomResource):
                     "log_type": "url",
                     "filter": "(sdwan_cluster contains 123)",
                     "send_http": ["t10"],
-                    "send_syslog": ["syslog-server-prof-base"],
+                    "send_syslog": ["syslog-server-prof-complete"],
                     "send_snmptrap": ["snmp_test"],
                 },
                 {
@@ -348,13 +338,9 @@ class LogForwardingProfile(pulumi.CustomResource):
                     "send_http": [
                         "t5",
                         "t10",
-                        "t20",
                     ],
-                    "send_syslog": ["syslog-server-prof-mixed"],
-                    "send_email": [
-                        "email_test",
-                        "email_test_2",
-                    ],
+                    "send_syslog": ["syslog-server-prof-complete"],
+                    "send_email": ["email_test"],
                 },
                 {
                     "name": "profile_match_3",
@@ -364,15 +350,9 @@ class LogForwardingProfile(pulumi.CustomResource):
                     "send_http": [
                         "t5",
                         "t10",
-                        "t20",
-                        "t22",
-                        "t24",
                     ],
                     "send_syslog": ["syslog-server-prof-complete"],
-                    "send_email": [
-                        "email_test",
-                        "email_test_2",
-                    ],
+                    "send_email": ["email_test"],
                 },
             ])
         ```
@@ -429,7 +409,7 @@ class LogForwardingProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_log_forwarding_profile1 = scm.LogForwardingProfile("scm_log_forwarding_profile_1",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-log-fowarding-profile-1",
             match_lists=[{
                 "name": "profile_match",
@@ -437,7 +417,7 @@ class LogForwardingProfile(pulumi.CustomResource):
                 "filter": "(addr in 192.50.10.10) and (addr.dst notin 192.40.50.10)",
             }])
         scm_log_forwarding_profile2 = scm.LogForwardingProfile("scm_log_forwarding_profile_2",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-log-fowarding-profile-2",
             description="Log Forwarding w/ HTTP Server Profile and Syslog Server Profile",
             match_lists=[{
@@ -445,13 +425,10 @@ class LogForwardingProfile(pulumi.CustomResource):
                 "log_type": "traffic",
                 "filter": "(device_name eq test_device)",
                 "send_http": ["test_http"],
-                "send_syslog": [
-                    "syslog-server-prof-mixed",
-                    "syslog-server-prof-complete",
-                ],
+                "send_syslog": ["syslog-server-prof-complete"],
             }])
         scm_log_forwarding_profile3 = scm.LogForwardingProfile("scm_log_forwarding_profile_3",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-log-fowarding-profile-3",
             description="Log Forwarding w/ All Server Profiles",
             match_lists=[{
@@ -463,19 +440,12 @@ class LogForwardingProfile(pulumi.CustomResource):
                     "test_http",
                     "t10",
                 ],
-                "send_syslog": [
-                    "syslog-server-prof-base",
-                    "syslog-server-prof-mixed",
-                    "syslog-server-prof-complete",
-                ],
+                "send_syslog": ["syslog-server-prof-complete"],
                 "send_snmptrap": ["snmp_test"],
-                "send_email": [
-                    "email_test",
-                    "email_test_2",
-                ],
+                "send_email": ["email_test"],
             }])
         scm_log_forwarding_profile4 = scm.LogForwardingProfile("scm_log_forwarding_profile_4",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-log-fowarding-profile-4",
             description="Log Forwarding w/ Multiple Match Lists",
             match_lists=[
@@ -485,7 +455,7 @@ class LogForwardingProfile(pulumi.CustomResource):
                     "log_type": "url",
                     "filter": "(sdwan_cluster contains 123)",
                     "send_http": ["t10"],
-                    "send_syslog": ["syslog-server-prof-base"],
+                    "send_syslog": ["syslog-server-prof-complete"],
                     "send_snmptrap": ["snmp_test"],
                 },
                 {
@@ -495,13 +465,9 @@ class LogForwardingProfile(pulumi.CustomResource):
                     "send_http": [
                         "t5",
                         "t10",
-                        "t20",
                     ],
-                    "send_syslog": ["syslog-server-prof-mixed"],
-                    "send_email": [
-                        "email_test",
-                        "email_test_2",
-                    ],
+                    "send_syslog": ["syslog-server-prof-complete"],
+                    "send_email": ["email_test"],
                 },
                 {
                     "name": "profile_match_3",
@@ -511,15 +477,9 @@ class LogForwardingProfile(pulumi.CustomResource):
                     "send_http": [
                         "t5",
                         "t10",
-                        "t20",
-                        "t22",
-                        "t24",
                     ],
                     "send_syslog": ["syslog-server-prof-complete"],
-                    "send_email": [
-                        "email_test",
-                        "email_test_2",
-                    ],
+                    "send_email": ["email_test"],
                 },
             ])
         ```

@@ -153,6 +153,8 @@ func (o AddressGroupDynamicPtrOutput) Filter() pulumi.StringPtrOutput {
 type AggregateInterfaceLayer2 struct {
 	// Lacp
 	Lacp *AggregateInterfaceLayer2Lacp `pulumi:"lacp"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 	// VLAN tag
 	VlanTag *string `pulumi:"vlanTag"`
 }
@@ -171,6 +173,8 @@ type AggregateInterfaceLayer2Input interface {
 type AggregateInterfaceLayer2Args struct {
 	// Lacp
 	Lacp AggregateInterfaceLayer2LacpPtrInput `pulumi:"lacp"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput `pulumi:"netflowProfile"`
 	// VLAN tag
 	VlanTag pulumi.StringPtrInput `pulumi:"vlanTag"`
 }
@@ -257,6 +261,11 @@ func (o AggregateInterfaceLayer2Output) Lacp() AggregateInterfaceLayer2LacpPtrOu
 	return o.ApplyT(func(v AggregateInterfaceLayer2) *AggregateInterfaceLayer2Lacp { return v.Lacp }).(AggregateInterfaceLayer2LacpPtrOutput)
 }
 
+// Name of Netflow Profile to assign to Interface
+func (o AggregateInterfaceLayer2Output) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer2) *string { return v.NetflowProfile }).(pulumi.StringPtrOutput)
+}
+
 // VLAN tag
 func (o AggregateInterfaceLayer2Output) VlanTag() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v AggregateInterfaceLayer2) *string { return v.VlanTag }).(pulumi.StringPtrOutput)
@@ -294,6 +303,16 @@ func (o AggregateInterfaceLayer2PtrOutput) Lacp() AggregateInterfaceLayer2LacpPt
 		}
 		return v.Lacp
 	}).(AggregateInterfaceLayer2LacpPtrOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o AggregateInterfaceLayer2PtrOutput) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer2) *string {
+		if v == nil {
+			return nil
+		}
+		return v.NetflowProfile
+	}).(pulumi.StringPtrOutput)
 }
 
 // VLAN tag
@@ -555,6 +574,8 @@ type AggregateInterfaceLayer3 struct {
 	Lacp *AggregateInterfaceLayer3Lacp `pulumi:"lacp"`
 	// MTU
 	Mtu *int `pulumi:"mtu"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 }
 
 // AggregateInterfaceLayer3Input is an input type that accepts AggregateInterfaceLayer3Args and AggregateInterfaceLayer3Output values.
@@ -585,6 +606,8 @@ type AggregateInterfaceLayer3Args struct {
 	Lacp AggregateInterfaceLayer3LacpPtrInput `pulumi:"lacp"`
 	// MTU
 	Mtu pulumi.IntPtrInput `pulumi:"mtu"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput `pulumi:"netflowProfile"`
 }
 
 func (AggregateInterfaceLayer3Args) ElementType() reflect.Type {
@@ -701,6 +724,11 @@ func (o AggregateInterfaceLayer3Output) Mtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v AggregateInterfaceLayer3) *int { return v.Mtu }).(pulumi.IntPtrOutput)
 }
 
+// Name of Netflow Profile to assign to Interface
+func (o AggregateInterfaceLayer3Output) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3) *string { return v.NetflowProfile }).(pulumi.StringPtrOutput)
+}
+
 type AggregateInterfaceLayer3PtrOutput struct{ *pulumi.OutputState }
 
 func (AggregateInterfaceLayer3PtrOutput) ElementType() reflect.Type {
@@ -795,6 +823,16 @@ func (o AggregateInterfaceLayer3PtrOutput) Mtu() pulumi.IntPtrOutput {
 		}
 		return v.Mtu
 	}).(pulumi.IntPtrOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o AggregateInterfaceLayer3PtrOutput) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3) *string {
+		if v == nil {
+			return nil
+		}
+		return v.NetflowProfile
+	}).(pulumi.StringPtrOutput)
 }
 
 type AggregateInterfaceLayer3Arp struct {
@@ -39335,6 +39373,1099 @@ func (o ContentIdSettingContentIdApplicationPtrOutput) BypassExceedQueue() pulum
 	}).(pulumi.BoolPtrOutput)
 }
 
+type DataFilteringProfileRule struct {
+	// Alert threshold
+	AlertThreshold *int `pulumi:"alertThreshold"`
+	// Application
+	Applications []string `pulumi:"applications"`
+	// Block threshold
+	BlockThreshold *int `pulumi:"blockThreshold"`
+	// Data object
+	DataObject *string `pulumi:"dataObject"`
+	// Direction
+	Direction *string `pulumi:"direction"`
+	// File type
+	FileTypes []string `pulumi:"fileTypes"`
+	// Log severity
+	LogSeverity *string `pulumi:"logSeverity"`
+	// Name
+	Name *string `pulumi:"name"`
+}
+
+// DataFilteringProfileRuleInput is an input type that accepts DataFilteringProfileRuleArgs and DataFilteringProfileRuleOutput values.
+// You can construct a concrete instance of `DataFilteringProfileRuleInput` via:
+//
+//	DataFilteringProfileRuleArgs{...}
+type DataFilteringProfileRuleInput interface {
+	pulumi.Input
+
+	ToDataFilteringProfileRuleOutput() DataFilteringProfileRuleOutput
+	ToDataFilteringProfileRuleOutputWithContext(context.Context) DataFilteringProfileRuleOutput
+}
+
+type DataFilteringProfileRuleArgs struct {
+	// Alert threshold
+	AlertThreshold pulumi.IntPtrInput `pulumi:"alertThreshold"`
+	// Application
+	Applications pulumi.StringArrayInput `pulumi:"applications"`
+	// Block threshold
+	BlockThreshold pulumi.IntPtrInput `pulumi:"blockThreshold"`
+	// Data object
+	DataObject pulumi.StringPtrInput `pulumi:"dataObject"`
+	// Direction
+	Direction pulumi.StringPtrInput `pulumi:"direction"`
+	// File type
+	FileTypes pulumi.StringArrayInput `pulumi:"fileTypes"`
+	// Log severity
+	LogSeverity pulumi.StringPtrInput `pulumi:"logSeverity"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+}
+
+func (DataFilteringProfileRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataFilteringProfileRule)(nil)).Elem()
+}
+
+func (i DataFilteringProfileRuleArgs) ToDataFilteringProfileRuleOutput() DataFilteringProfileRuleOutput {
+	return i.ToDataFilteringProfileRuleOutputWithContext(context.Background())
+}
+
+func (i DataFilteringProfileRuleArgs) ToDataFilteringProfileRuleOutputWithContext(ctx context.Context) DataFilteringProfileRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataFilteringProfileRuleOutput)
+}
+
+// DataFilteringProfileRuleArrayInput is an input type that accepts DataFilteringProfileRuleArray and DataFilteringProfileRuleArrayOutput values.
+// You can construct a concrete instance of `DataFilteringProfileRuleArrayInput` via:
+//
+//	DataFilteringProfileRuleArray{ DataFilteringProfileRuleArgs{...} }
+type DataFilteringProfileRuleArrayInput interface {
+	pulumi.Input
+
+	ToDataFilteringProfileRuleArrayOutput() DataFilteringProfileRuleArrayOutput
+	ToDataFilteringProfileRuleArrayOutputWithContext(context.Context) DataFilteringProfileRuleArrayOutput
+}
+
+type DataFilteringProfileRuleArray []DataFilteringProfileRuleInput
+
+func (DataFilteringProfileRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]DataFilteringProfileRule)(nil)).Elem()
+}
+
+func (i DataFilteringProfileRuleArray) ToDataFilteringProfileRuleArrayOutput() DataFilteringProfileRuleArrayOutput {
+	return i.ToDataFilteringProfileRuleArrayOutputWithContext(context.Background())
+}
+
+func (i DataFilteringProfileRuleArray) ToDataFilteringProfileRuleArrayOutputWithContext(ctx context.Context) DataFilteringProfileRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataFilteringProfileRuleArrayOutput)
+}
+
+type DataFilteringProfileRuleOutput struct{ *pulumi.OutputState }
+
+func (DataFilteringProfileRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataFilteringProfileRule)(nil)).Elem()
+}
+
+func (o DataFilteringProfileRuleOutput) ToDataFilteringProfileRuleOutput() DataFilteringProfileRuleOutput {
+	return o
+}
+
+func (o DataFilteringProfileRuleOutput) ToDataFilteringProfileRuleOutputWithContext(ctx context.Context) DataFilteringProfileRuleOutput {
+	return o
+}
+
+// Alert threshold
+func (o DataFilteringProfileRuleOutput) AlertThreshold() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v DataFilteringProfileRule) *int { return v.AlertThreshold }).(pulumi.IntPtrOutput)
+}
+
+// Application
+func (o DataFilteringProfileRuleOutput) Applications() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v DataFilteringProfileRule) []string { return v.Applications }).(pulumi.StringArrayOutput)
+}
+
+// Block threshold
+func (o DataFilteringProfileRuleOutput) BlockThreshold() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v DataFilteringProfileRule) *int { return v.BlockThreshold }).(pulumi.IntPtrOutput)
+}
+
+// Data object
+func (o DataFilteringProfileRuleOutput) DataObject() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v DataFilteringProfileRule) *string { return v.DataObject }).(pulumi.StringPtrOutput)
+}
+
+// Direction
+func (o DataFilteringProfileRuleOutput) Direction() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v DataFilteringProfileRule) *string { return v.Direction }).(pulumi.StringPtrOutput)
+}
+
+// File type
+func (o DataFilteringProfileRuleOutput) FileTypes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v DataFilteringProfileRule) []string { return v.FileTypes }).(pulumi.StringArrayOutput)
+}
+
+// Log severity
+func (o DataFilteringProfileRuleOutput) LogSeverity() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v DataFilteringProfileRule) *string { return v.LogSeverity }).(pulumi.StringPtrOutput)
+}
+
+// Name
+func (o DataFilteringProfileRuleOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v DataFilteringProfileRule) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+type DataFilteringProfileRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (DataFilteringProfileRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]DataFilteringProfileRule)(nil)).Elem()
+}
+
+func (o DataFilteringProfileRuleArrayOutput) ToDataFilteringProfileRuleArrayOutput() DataFilteringProfileRuleArrayOutput {
+	return o
+}
+
+func (o DataFilteringProfileRuleArrayOutput) ToDataFilteringProfileRuleArrayOutputWithContext(ctx context.Context) DataFilteringProfileRuleArrayOutput {
+	return o
+}
+
+func (o DataFilteringProfileRuleArrayOutput) Index(i pulumi.IntInput) DataFilteringProfileRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) DataFilteringProfileRule {
+		return vs[0].([]DataFilteringProfileRule)[vs[1].(int)]
+	}).(DataFilteringProfileRuleOutput)
+}
+
+type DataObjectPatternType struct {
+	// File properties
+	FileProperties *DataObjectPatternTypeFileProperties `pulumi:"fileProperties"`
+	// Predefined
+	Predefined *DataObjectPatternTypePredefined `pulumi:"predefined"`
+	// Regex
+	Regex *DataObjectPatternTypeRegex `pulumi:"regex"`
+}
+
+// DataObjectPatternTypeInput is an input type that accepts DataObjectPatternTypeArgs and DataObjectPatternTypeOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypeInput` via:
+//
+//	DataObjectPatternTypeArgs{...}
+type DataObjectPatternTypeInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypeOutput() DataObjectPatternTypeOutput
+	ToDataObjectPatternTypeOutputWithContext(context.Context) DataObjectPatternTypeOutput
+}
+
+type DataObjectPatternTypeArgs struct {
+	// File properties
+	FileProperties DataObjectPatternTypeFilePropertiesPtrInput `pulumi:"fileProperties"`
+	// Predefined
+	Predefined DataObjectPatternTypePredefinedPtrInput `pulumi:"predefined"`
+	// Regex
+	Regex DataObjectPatternTypeRegexPtrInput `pulumi:"regex"`
+}
+
+func (DataObjectPatternTypeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternType)(nil)).Elem()
+}
+
+func (i DataObjectPatternTypeArgs) ToDataObjectPatternTypeOutput() DataObjectPatternTypeOutput {
+	return i.ToDataObjectPatternTypeOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypeArgs) ToDataObjectPatternTypeOutputWithContext(ctx context.Context) DataObjectPatternTypeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeOutput)
+}
+
+func (i DataObjectPatternTypeArgs) ToDataObjectPatternTypePtrOutput() DataObjectPatternTypePtrOutput {
+	return i.ToDataObjectPatternTypePtrOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypeArgs) ToDataObjectPatternTypePtrOutputWithContext(ctx context.Context) DataObjectPatternTypePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeOutput).ToDataObjectPatternTypePtrOutputWithContext(ctx)
+}
+
+// DataObjectPatternTypePtrInput is an input type that accepts DataObjectPatternTypeArgs, DataObjectPatternTypePtr and DataObjectPatternTypePtrOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypePtrInput` via:
+//
+//	        DataObjectPatternTypeArgs{...}
+//
+//	or:
+//
+//	        nil
+type DataObjectPatternTypePtrInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypePtrOutput() DataObjectPatternTypePtrOutput
+	ToDataObjectPatternTypePtrOutputWithContext(context.Context) DataObjectPatternTypePtrOutput
+}
+
+type dataObjectPatternTypePtrType DataObjectPatternTypeArgs
+
+func DataObjectPatternTypePtr(v *DataObjectPatternTypeArgs) DataObjectPatternTypePtrInput {
+	return (*dataObjectPatternTypePtrType)(v)
+}
+
+func (*dataObjectPatternTypePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**DataObjectPatternType)(nil)).Elem()
+}
+
+func (i *dataObjectPatternTypePtrType) ToDataObjectPatternTypePtrOutput() DataObjectPatternTypePtrOutput {
+	return i.ToDataObjectPatternTypePtrOutputWithContext(context.Background())
+}
+
+func (i *dataObjectPatternTypePtrType) ToDataObjectPatternTypePtrOutputWithContext(ctx context.Context) DataObjectPatternTypePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypePtrOutput)
+}
+
+type DataObjectPatternTypeOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternType)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypeOutput) ToDataObjectPatternTypeOutput() DataObjectPatternTypeOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeOutput) ToDataObjectPatternTypeOutputWithContext(ctx context.Context) DataObjectPatternTypeOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeOutput) ToDataObjectPatternTypePtrOutput() DataObjectPatternTypePtrOutput {
+	return o.ToDataObjectPatternTypePtrOutputWithContext(context.Background())
+}
+
+func (o DataObjectPatternTypeOutput) ToDataObjectPatternTypePtrOutputWithContext(ctx context.Context) DataObjectPatternTypePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v DataObjectPatternType) *DataObjectPatternType {
+		return &v
+	}).(DataObjectPatternTypePtrOutput)
+}
+
+// File properties
+func (o DataObjectPatternTypeOutput) FileProperties() DataObjectPatternTypeFilePropertiesPtrOutput {
+	return o.ApplyT(func(v DataObjectPatternType) *DataObjectPatternTypeFileProperties { return v.FileProperties }).(DataObjectPatternTypeFilePropertiesPtrOutput)
+}
+
+// Predefined
+func (o DataObjectPatternTypeOutput) Predefined() DataObjectPatternTypePredefinedPtrOutput {
+	return o.ApplyT(func(v DataObjectPatternType) *DataObjectPatternTypePredefined { return v.Predefined }).(DataObjectPatternTypePredefinedPtrOutput)
+}
+
+// Regex
+func (o DataObjectPatternTypeOutput) Regex() DataObjectPatternTypeRegexPtrOutput {
+	return o.ApplyT(func(v DataObjectPatternType) *DataObjectPatternTypeRegex { return v.Regex }).(DataObjectPatternTypeRegexPtrOutput)
+}
+
+type DataObjectPatternTypePtrOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**DataObjectPatternType)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypePtrOutput) ToDataObjectPatternTypePtrOutput() DataObjectPatternTypePtrOutput {
+	return o
+}
+
+func (o DataObjectPatternTypePtrOutput) ToDataObjectPatternTypePtrOutputWithContext(ctx context.Context) DataObjectPatternTypePtrOutput {
+	return o
+}
+
+func (o DataObjectPatternTypePtrOutput) Elem() DataObjectPatternTypeOutput {
+	return o.ApplyT(func(v *DataObjectPatternType) DataObjectPatternType {
+		if v != nil {
+			return *v
+		}
+		var ret DataObjectPatternType
+		return ret
+	}).(DataObjectPatternTypeOutput)
+}
+
+// File properties
+func (o DataObjectPatternTypePtrOutput) FileProperties() DataObjectPatternTypeFilePropertiesPtrOutput {
+	return o.ApplyT(func(v *DataObjectPatternType) *DataObjectPatternTypeFileProperties {
+		if v == nil {
+			return nil
+		}
+		return v.FileProperties
+	}).(DataObjectPatternTypeFilePropertiesPtrOutput)
+}
+
+// Predefined
+func (o DataObjectPatternTypePtrOutput) Predefined() DataObjectPatternTypePredefinedPtrOutput {
+	return o.ApplyT(func(v *DataObjectPatternType) *DataObjectPatternTypePredefined {
+		if v == nil {
+			return nil
+		}
+		return v.Predefined
+	}).(DataObjectPatternTypePredefinedPtrOutput)
+}
+
+// Regex
+func (o DataObjectPatternTypePtrOutput) Regex() DataObjectPatternTypeRegexPtrOutput {
+	return o.ApplyT(func(v *DataObjectPatternType) *DataObjectPatternTypeRegex {
+		if v == nil {
+			return nil
+		}
+		return v.Regex
+	}).(DataObjectPatternTypeRegexPtrOutput)
+}
+
+type DataObjectPatternTypeFileProperties struct {
+	// Pattern
+	Patterns []DataObjectPatternTypeFilePropertiesPattern `pulumi:"patterns"`
+}
+
+// DataObjectPatternTypeFilePropertiesInput is an input type that accepts DataObjectPatternTypeFilePropertiesArgs and DataObjectPatternTypeFilePropertiesOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypeFilePropertiesInput` via:
+//
+//	DataObjectPatternTypeFilePropertiesArgs{...}
+type DataObjectPatternTypeFilePropertiesInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypeFilePropertiesOutput() DataObjectPatternTypeFilePropertiesOutput
+	ToDataObjectPatternTypeFilePropertiesOutputWithContext(context.Context) DataObjectPatternTypeFilePropertiesOutput
+}
+
+type DataObjectPatternTypeFilePropertiesArgs struct {
+	// Pattern
+	Patterns DataObjectPatternTypeFilePropertiesPatternArrayInput `pulumi:"patterns"`
+}
+
+func (DataObjectPatternTypeFilePropertiesArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypeFileProperties)(nil)).Elem()
+}
+
+func (i DataObjectPatternTypeFilePropertiesArgs) ToDataObjectPatternTypeFilePropertiesOutput() DataObjectPatternTypeFilePropertiesOutput {
+	return i.ToDataObjectPatternTypeFilePropertiesOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypeFilePropertiesArgs) ToDataObjectPatternTypeFilePropertiesOutputWithContext(ctx context.Context) DataObjectPatternTypeFilePropertiesOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeFilePropertiesOutput)
+}
+
+func (i DataObjectPatternTypeFilePropertiesArgs) ToDataObjectPatternTypeFilePropertiesPtrOutput() DataObjectPatternTypeFilePropertiesPtrOutput {
+	return i.ToDataObjectPatternTypeFilePropertiesPtrOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypeFilePropertiesArgs) ToDataObjectPatternTypeFilePropertiesPtrOutputWithContext(ctx context.Context) DataObjectPatternTypeFilePropertiesPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeFilePropertiesOutput).ToDataObjectPatternTypeFilePropertiesPtrOutputWithContext(ctx)
+}
+
+// DataObjectPatternTypeFilePropertiesPtrInput is an input type that accepts DataObjectPatternTypeFilePropertiesArgs, DataObjectPatternTypeFilePropertiesPtr and DataObjectPatternTypeFilePropertiesPtrOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypeFilePropertiesPtrInput` via:
+//
+//	        DataObjectPatternTypeFilePropertiesArgs{...}
+//
+//	or:
+//
+//	        nil
+type DataObjectPatternTypeFilePropertiesPtrInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypeFilePropertiesPtrOutput() DataObjectPatternTypeFilePropertiesPtrOutput
+	ToDataObjectPatternTypeFilePropertiesPtrOutputWithContext(context.Context) DataObjectPatternTypeFilePropertiesPtrOutput
+}
+
+type dataObjectPatternTypeFilePropertiesPtrType DataObjectPatternTypeFilePropertiesArgs
+
+func DataObjectPatternTypeFilePropertiesPtr(v *DataObjectPatternTypeFilePropertiesArgs) DataObjectPatternTypeFilePropertiesPtrInput {
+	return (*dataObjectPatternTypeFilePropertiesPtrType)(v)
+}
+
+func (*dataObjectPatternTypeFilePropertiesPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**DataObjectPatternTypeFileProperties)(nil)).Elem()
+}
+
+func (i *dataObjectPatternTypeFilePropertiesPtrType) ToDataObjectPatternTypeFilePropertiesPtrOutput() DataObjectPatternTypeFilePropertiesPtrOutput {
+	return i.ToDataObjectPatternTypeFilePropertiesPtrOutputWithContext(context.Background())
+}
+
+func (i *dataObjectPatternTypeFilePropertiesPtrType) ToDataObjectPatternTypeFilePropertiesPtrOutputWithContext(ctx context.Context) DataObjectPatternTypeFilePropertiesPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeFilePropertiesPtrOutput)
+}
+
+type DataObjectPatternTypeFilePropertiesOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypeFilePropertiesOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypeFileProperties)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypeFilePropertiesOutput) ToDataObjectPatternTypeFilePropertiesOutput() DataObjectPatternTypeFilePropertiesOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeFilePropertiesOutput) ToDataObjectPatternTypeFilePropertiesOutputWithContext(ctx context.Context) DataObjectPatternTypeFilePropertiesOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeFilePropertiesOutput) ToDataObjectPatternTypeFilePropertiesPtrOutput() DataObjectPatternTypeFilePropertiesPtrOutput {
+	return o.ToDataObjectPatternTypeFilePropertiesPtrOutputWithContext(context.Background())
+}
+
+func (o DataObjectPatternTypeFilePropertiesOutput) ToDataObjectPatternTypeFilePropertiesPtrOutputWithContext(ctx context.Context) DataObjectPatternTypeFilePropertiesPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v DataObjectPatternTypeFileProperties) *DataObjectPatternTypeFileProperties {
+		return &v
+	}).(DataObjectPatternTypeFilePropertiesPtrOutput)
+}
+
+// Pattern
+func (o DataObjectPatternTypeFilePropertiesOutput) Patterns() DataObjectPatternTypeFilePropertiesPatternArrayOutput {
+	return o.ApplyT(func(v DataObjectPatternTypeFileProperties) []DataObjectPatternTypeFilePropertiesPattern {
+		return v.Patterns
+	}).(DataObjectPatternTypeFilePropertiesPatternArrayOutput)
+}
+
+type DataObjectPatternTypeFilePropertiesPtrOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypeFilePropertiesPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**DataObjectPatternTypeFileProperties)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypeFilePropertiesPtrOutput) ToDataObjectPatternTypeFilePropertiesPtrOutput() DataObjectPatternTypeFilePropertiesPtrOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeFilePropertiesPtrOutput) ToDataObjectPatternTypeFilePropertiesPtrOutputWithContext(ctx context.Context) DataObjectPatternTypeFilePropertiesPtrOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeFilePropertiesPtrOutput) Elem() DataObjectPatternTypeFilePropertiesOutput {
+	return o.ApplyT(func(v *DataObjectPatternTypeFileProperties) DataObjectPatternTypeFileProperties {
+		if v != nil {
+			return *v
+		}
+		var ret DataObjectPatternTypeFileProperties
+		return ret
+	}).(DataObjectPatternTypeFilePropertiesOutput)
+}
+
+// Pattern
+func (o DataObjectPatternTypeFilePropertiesPtrOutput) Patterns() DataObjectPatternTypeFilePropertiesPatternArrayOutput {
+	return o.ApplyT(func(v *DataObjectPatternTypeFileProperties) []DataObjectPatternTypeFilePropertiesPattern {
+		if v == nil {
+			return nil
+		}
+		return v.Patterns
+	}).(DataObjectPatternTypeFilePropertiesPatternArrayOutput)
+}
+
+type DataObjectPatternTypeFilePropertiesPattern struct {
+	// File property
+	FileProperty *string `pulumi:"fileProperty"`
+	// File type
+	FileType *string `pulumi:"fileType"`
+	// Name
+	Name *string `pulumi:"name"`
+	// Property value
+	PropertyValue *string `pulumi:"propertyValue"`
+}
+
+// DataObjectPatternTypeFilePropertiesPatternInput is an input type that accepts DataObjectPatternTypeFilePropertiesPatternArgs and DataObjectPatternTypeFilePropertiesPatternOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypeFilePropertiesPatternInput` via:
+//
+//	DataObjectPatternTypeFilePropertiesPatternArgs{...}
+type DataObjectPatternTypeFilePropertiesPatternInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypeFilePropertiesPatternOutput() DataObjectPatternTypeFilePropertiesPatternOutput
+	ToDataObjectPatternTypeFilePropertiesPatternOutputWithContext(context.Context) DataObjectPatternTypeFilePropertiesPatternOutput
+}
+
+type DataObjectPatternTypeFilePropertiesPatternArgs struct {
+	// File property
+	FileProperty pulumi.StringPtrInput `pulumi:"fileProperty"`
+	// File type
+	FileType pulumi.StringPtrInput `pulumi:"fileType"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// Property value
+	PropertyValue pulumi.StringPtrInput `pulumi:"propertyValue"`
+}
+
+func (DataObjectPatternTypeFilePropertiesPatternArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (i DataObjectPatternTypeFilePropertiesPatternArgs) ToDataObjectPatternTypeFilePropertiesPatternOutput() DataObjectPatternTypeFilePropertiesPatternOutput {
+	return i.ToDataObjectPatternTypeFilePropertiesPatternOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypeFilePropertiesPatternArgs) ToDataObjectPatternTypeFilePropertiesPatternOutputWithContext(ctx context.Context) DataObjectPatternTypeFilePropertiesPatternOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeFilePropertiesPatternOutput)
+}
+
+// DataObjectPatternTypeFilePropertiesPatternArrayInput is an input type that accepts DataObjectPatternTypeFilePropertiesPatternArray and DataObjectPatternTypeFilePropertiesPatternArrayOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypeFilePropertiesPatternArrayInput` via:
+//
+//	DataObjectPatternTypeFilePropertiesPatternArray{ DataObjectPatternTypeFilePropertiesPatternArgs{...} }
+type DataObjectPatternTypeFilePropertiesPatternArrayInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypeFilePropertiesPatternArrayOutput() DataObjectPatternTypeFilePropertiesPatternArrayOutput
+	ToDataObjectPatternTypeFilePropertiesPatternArrayOutputWithContext(context.Context) DataObjectPatternTypeFilePropertiesPatternArrayOutput
+}
+
+type DataObjectPatternTypeFilePropertiesPatternArray []DataObjectPatternTypeFilePropertiesPatternInput
+
+func (DataObjectPatternTypeFilePropertiesPatternArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]DataObjectPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (i DataObjectPatternTypeFilePropertiesPatternArray) ToDataObjectPatternTypeFilePropertiesPatternArrayOutput() DataObjectPatternTypeFilePropertiesPatternArrayOutput {
+	return i.ToDataObjectPatternTypeFilePropertiesPatternArrayOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypeFilePropertiesPatternArray) ToDataObjectPatternTypeFilePropertiesPatternArrayOutputWithContext(ctx context.Context) DataObjectPatternTypeFilePropertiesPatternArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeFilePropertiesPatternArrayOutput)
+}
+
+type DataObjectPatternTypeFilePropertiesPatternOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypeFilePropertiesPatternOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypeFilePropertiesPatternOutput) ToDataObjectPatternTypeFilePropertiesPatternOutput() DataObjectPatternTypeFilePropertiesPatternOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeFilePropertiesPatternOutput) ToDataObjectPatternTypeFilePropertiesPatternOutputWithContext(ctx context.Context) DataObjectPatternTypeFilePropertiesPatternOutput {
+	return o
+}
+
+// File property
+func (o DataObjectPatternTypeFilePropertiesPatternOutput) FileProperty() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v DataObjectPatternTypeFilePropertiesPattern) *string { return v.FileProperty }).(pulumi.StringPtrOutput)
+}
+
+// File type
+func (o DataObjectPatternTypeFilePropertiesPatternOutput) FileType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v DataObjectPatternTypeFilePropertiesPattern) *string { return v.FileType }).(pulumi.StringPtrOutput)
+}
+
+// Name
+func (o DataObjectPatternTypeFilePropertiesPatternOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v DataObjectPatternTypeFilePropertiesPattern) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+// Property value
+func (o DataObjectPatternTypeFilePropertiesPatternOutput) PropertyValue() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v DataObjectPatternTypeFilePropertiesPattern) *string { return v.PropertyValue }).(pulumi.StringPtrOutput)
+}
+
+type DataObjectPatternTypeFilePropertiesPatternArrayOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypeFilePropertiesPatternArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]DataObjectPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypeFilePropertiesPatternArrayOutput) ToDataObjectPatternTypeFilePropertiesPatternArrayOutput() DataObjectPatternTypeFilePropertiesPatternArrayOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeFilePropertiesPatternArrayOutput) ToDataObjectPatternTypeFilePropertiesPatternArrayOutputWithContext(ctx context.Context) DataObjectPatternTypeFilePropertiesPatternArrayOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeFilePropertiesPatternArrayOutput) Index(i pulumi.IntInput) DataObjectPatternTypeFilePropertiesPatternOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) DataObjectPatternTypeFilePropertiesPattern {
+		return vs[0].([]DataObjectPatternTypeFilePropertiesPattern)[vs[1].(int)]
+	}).(DataObjectPatternTypeFilePropertiesPatternOutput)
+}
+
+type DataObjectPatternTypePredefined struct {
+	// Pattern
+	Patterns []DataObjectPatternTypePredefinedPattern `pulumi:"patterns"`
+}
+
+// DataObjectPatternTypePredefinedInput is an input type that accepts DataObjectPatternTypePredefinedArgs and DataObjectPatternTypePredefinedOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypePredefinedInput` via:
+//
+//	DataObjectPatternTypePredefinedArgs{...}
+type DataObjectPatternTypePredefinedInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypePredefinedOutput() DataObjectPatternTypePredefinedOutput
+	ToDataObjectPatternTypePredefinedOutputWithContext(context.Context) DataObjectPatternTypePredefinedOutput
+}
+
+type DataObjectPatternTypePredefinedArgs struct {
+	// Pattern
+	Patterns DataObjectPatternTypePredefinedPatternArrayInput `pulumi:"patterns"`
+}
+
+func (DataObjectPatternTypePredefinedArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypePredefined)(nil)).Elem()
+}
+
+func (i DataObjectPatternTypePredefinedArgs) ToDataObjectPatternTypePredefinedOutput() DataObjectPatternTypePredefinedOutput {
+	return i.ToDataObjectPatternTypePredefinedOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypePredefinedArgs) ToDataObjectPatternTypePredefinedOutputWithContext(ctx context.Context) DataObjectPatternTypePredefinedOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypePredefinedOutput)
+}
+
+func (i DataObjectPatternTypePredefinedArgs) ToDataObjectPatternTypePredefinedPtrOutput() DataObjectPatternTypePredefinedPtrOutput {
+	return i.ToDataObjectPatternTypePredefinedPtrOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypePredefinedArgs) ToDataObjectPatternTypePredefinedPtrOutputWithContext(ctx context.Context) DataObjectPatternTypePredefinedPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypePredefinedOutput).ToDataObjectPatternTypePredefinedPtrOutputWithContext(ctx)
+}
+
+// DataObjectPatternTypePredefinedPtrInput is an input type that accepts DataObjectPatternTypePredefinedArgs, DataObjectPatternTypePredefinedPtr and DataObjectPatternTypePredefinedPtrOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypePredefinedPtrInput` via:
+//
+//	        DataObjectPatternTypePredefinedArgs{...}
+//
+//	or:
+//
+//	        nil
+type DataObjectPatternTypePredefinedPtrInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypePredefinedPtrOutput() DataObjectPatternTypePredefinedPtrOutput
+	ToDataObjectPatternTypePredefinedPtrOutputWithContext(context.Context) DataObjectPatternTypePredefinedPtrOutput
+}
+
+type dataObjectPatternTypePredefinedPtrType DataObjectPatternTypePredefinedArgs
+
+func DataObjectPatternTypePredefinedPtr(v *DataObjectPatternTypePredefinedArgs) DataObjectPatternTypePredefinedPtrInput {
+	return (*dataObjectPatternTypePredefinedPtrType)(v)
+}
+
+func (*dataObjectPatternTypePredefinedPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**DataObjectPatternTypePredefined)(nil)).Elem()
+}
+
+func (i *dataObjectPatternTypePredefinedPtrType) ToDataObjectPatternTypePredefinedPtrOutput() DataObjectPatternTypePredefinedPtrOutput {
+	return i.ToDataObjectPatternTypePredefinedPtrOutputWithContext(context.Background())
+}
+
+func (i *dataObjectPatternTypePredefinedPtrType) ToDataObjectPatternTypePredefinedPtrOutputWithContext(ctx context.Context) DataObjectPatternTypePredefinedPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypePredefinedPtrOutput)
+}
+
+type DataObjectPatternTypePredefinedOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypePredefinedOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypePredefined)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypePredefinedOutput) ToDataObjectPatternTypePredefinedOutput() DataObjectPatternTypePredefinedOutput {
+	return o
+}
+
+func (o DataObjectPatternTypePredefinedOutput) ToDataObjectPatternTypePredefinedOutputWithContext(ctx context.Context) DataObjectPatternTypePredefinedOutput {
+	return o
+}
+
+func (o DataObjectPatternTypePredefinedOutput) ToDataObjectPatternTypePredefinedPtrOutput() DataObjectPatternTypePredefinedPtrOutput {
+	return o.ToDataObjectPatternTypePredefinedPtrOutputWithContext(context.Background())
+}
+
+func (o DataObjectPatternTypePredefinedOutput) ToDataObjectPatternTypePredefinedPtrOutputWithContext(ctx context.Context) DataObjectPatternTypePredefinedPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v DataObjectPatternTypePredefined) *DataObjectPatternTypePredefined {
+		return &v
+	}).(DataObjectPatternTypePredefinedPtrOutput)
+}
+
+// Pattern
+func (o DataObjectPatternTypePredefinedOutput) Patterns() DataObjectPatternTypePredefinedPatternArrayOutput {
+	return o.ApplyT(func(v DataObjectPatternTypePredefined) []DataObjectPatternTypePredefinedPattern { return v.Patterns }).(DataObjectPatternTypePredefinedPatternArrayOutput)
+}
+
+type DataObjectPatternTypePredefinedPtrOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypePredefinedPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**DataObjectPatternTypePredefined)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypePredefinedPtrOutput) ToDataObjectPatternTypePredefinedPtrOutput() DataObjectPatternTypePredefinedPtrOutput {
+	return o
+}
+
+func (o DataObjectPatternTypePredefinedPtrOutput) ToDataObjectPatternTypePredefinedPtrOutputWithContext(ctx context.Context) DataObjectPatternTypePredefinedPtrOutput {
+	return o
+}
+
+func (o DataObjectPatternTypePredefinedPtrOutput) Elem() DataObjectPatternTypePredefinedOutput {
+	return o.ApplyT(func(v *DataObjectPatternTypePredefined) DataObjectPatternTypePredefined {
+		if v != nil {
+			return *v
+		}
+		var ret DataObjectPatternTypePredefined
+		return ret
+	}).(DataObjectPatternTypePredefinedOutput)
+}
+
+// Pattern
+func (o DataObjectPatternTypePredefinedPtrOutput) Patterns() DataObjectPatternTypePredefinedPatternArrayOutput {
+	return o.ApplyT(func(v *DataObjectPatternTypePredefined) []DataObjectPatternTypePredefinedPattern {
+		if v == nil {
+			return nil
+		}
+		return v.Patterns
+	}).(DataObjectPatternTypePredefinedPatternArrayOutput)
+}
+
+type DataObjectPatternTypePredefinedPattern struct {
+	// File type
+	FileTypes []string `pulumi:"fileTypes"`
+	// Name
+	Name *string `pulumi:"name"`
+}
+
+// DataObjectPatternTypePredefinedPatternInput is an input type that accepts DataObjectPatternTypePredefinedPatternArgs and DataObjectPatternTypePredefinedPatternOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypePredefinedPatternInput` via:
+//
+//	DataObjectPatternTypePredefinedPatternArgs{...}
+type DataObjectPatternTypePredefinedPatternInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypePredefinedPatternOutput() DataObjectPatternTypePredefinedPatternOutput
+	ToDataObjectPatternTypePredefinedPatternOutputWithContext(context.Context) DataObjectPatternTypePredefinedPatternOutput
+}
+
+type DataObjectPatternTypePredefinedPatternArgs struct {
+	// File type
+	FileTypes pulumi.StringArrayInput `pulumi:"fileTypes"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+}
+
+func (DataObjectPatternTypePredefinedPatternArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (i DataObjectPatternTypePredefinedPatternArgs) ToDataObjectPatternTypePredefinedPatternOutput() DataObjectPatternTypePredefinedPatternOutput {
+	return i.ToDataObjectPatternTypePredefinedPatternOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypePredefinedPatternArgs) ToDataObjectPatternTypePredefinedPatternOutputWithContext(ctx context.Context) DataObjectPatternTypePredefinedPatternOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypePredefinedPatternOutput)
+}
+
+// DataObjectPatternTypePredefinedPatternArrayInput is an input type that accepts DataObjectPatternTypePredefinedPatternArray and DataObjectPatternTypePredefinedPatternArrayOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypePredefinedPatternArrayInput` via:
+//
+//	DataObjectPatternTypePredefinedPatternArray{ DataObjectPatternTypePredefinedPatternArgs{...} }
+type DataObjectPatternTypePredefinedPatternArrayInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypePredefinedPatternArrayOutput() DataObjectPatternTypePredefinedPatternArrayOutput
+	ToDataObjectPatternTypePredefinedPatternArrayOutputWithContext(context.Context) DataObjectPatternTypePredefinedPatternArrayOutput
+}
+
+type DataObjectPatternTypePredefinedPatternArray []DataObjectPatternTypePredefinedPatternInput
+
+func (DataObjectPatternTypePredefinedPatternArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]DataObjectPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (i DataObjectPatternTypePredefinedPatternArray) ToDataObjectPatternTypePredefinedPatternArrayOutput() DataObjectPatternTypePredefinedPatternArrayOutput {
+	return i.ToDataObjectPatternTypePredefinedPatternArrayOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypePredefinedPatternArray) ToDataObjectPatternTypePredefinedPatternArrayOutputWithContext(ctx context.Context) DataObjectPatternTypePredefinedPatternArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypePredefinedPatternArrayOutput)
+}
+
+type DataObjectPatternTypePredefinedPatternOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypePredefinedPatternOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypePredefinedPatternOutput) ToDataObjectPatternTypePredefinedPatternOutput() DataObjectPatternTypePredefinedPatternOutput {
+	return o
+}
+
+func (o DataObjectPatternTypePredefinedPatternOutput) ToDataObjectPatternTypePredefinedPatternOutputWithContext(ctx context.Context) DataObjectPatternTypePredefinedPatternOutput {
+	return o
+}
+
+// File type
+func (o DataObjectPatternTypePredefinedPatternOutput) FileTypes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v DataObjectPatternTypePredefinedPattern) []string { return v.FileTypes }).(pulumi.StringArrayOutput)
+}
+
+// Name
+func (o DataObjectPatternTypePredefinedPatternOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v DataObjectPatternTypePredefinedPattern) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+type DataObjectPatternTypePredefinedPatternArrayOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypePredefinedPatternArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]DataObjectPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypePredefinedPatternArrayOutput) ToDataObjectPatternTypePredefinedPatternArrayOutput() DataObjectPatternTypePredefinedPatternArrayOutput {
+	return o
+}
+
+func (o DataObjectPatternTypePredefinedPatternArrayOutput) ToDataObjectPatternTypePredefinedPatternArrayOutputWithContext(ctx context.Context) DataObjectPatternTypePredefinedPatternArrayOutput {
+	return o
+}
+
+func (o DataObjectPatternTypePredefinedPatternArrayOutput) Index(i pulumi.IntInput) DataObjectPatternTypePredefinedPatternOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) DataObjectPatternTypePredefinedPattern {
+		return vs[0].([]DataObjectPatternTypePredefinedPattern)[vs[1].(int)]
+	}).(DataObjectPatternTypePredefinedPatternOutput)
+}
+
+type DataObjectPatternTypeRegex struct {
+	// Pattern
+	Patterns []DataObjectPatternTypeRegexPattern `pulumi:"patterns"`
+}
+
+// DataObjectPatternTypeRegexInput is an input type that accepts DataObjectPatternTypeRegexArgs and DataObjectPatternTypeRegexOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypeRegexInput` via:
+//
+//	DataObjectPatternTypeRegexArgs{...}
+type DataObjectPatternTypeRegexInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypeRegexOutput() DataObjectPatternTypeRegexOutput
+	ToDataObjectPatternTypeRegexOutputWithContext(context.Context) DataObjectPatternTypeRegexOutput
+}
+
+type DataObjectPatternTypeRegexArgs struct {
+	// Pattern
+	Patterns DataObjectPatternTypeRegexPatternArrayInput `pulumi:"patterns"`
+}
+
+func (DataObjectPatternTypeRegexArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypeRegex)(nil)).Elem()
+}
+
+func (i DataObjectPatternTypeRegexArgs) ToDataObjectPatternTypeRegexOutput() DataObjectPatternTypeRegexOutput {
+	return i.ToDataObjectPatternTypeRegexOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypeRegexArgs) ToDataObjectPatternTypeRegexOutputWithContext(ctx context.Context) DataObjectPatternTypeRegexOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeRegexOutput)
+}
+
+func (i DataObjectPatternTypeRegexArgs) ToDataObjectPatternTypeRegexPtrOutput() DataObjectPatternTypeRegexPtrOutput {
+	return i.ToDataObjectPatternTypeRegexPtrOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypeRegexArgs) ToDataObjectPatternTypeRegexPtrOutputWithContext(ctx context.Context) DataObjectPatternTypeRegexPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeRegexOutput).ToDataObjectPatternTypeRegexPtrOutputWithContext(ctx)
+}
+
+// DataObjectPatternTypeRegexPtrInput is an input type that accepts DataObjectPatternTypeRegexArgs, DataObjectPatternTypeRegexPtr and DataObjectPatternTypeRegexPtrOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypeRegexPtrInput` via:
+//
+//	        DataObjectPatternTypeRegexArgs{...}
+//
+//	or:
+//
+//	        nil
+type DataObjectPatternTypeRegexPtrInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypeRegexPtrOutput() DataObjectPatternTypeRegexPtrOutput
+	ToDataObjectPatternTypeRegexPtrOutputWithContext(context.Context) DataObjectPatternTypeRegexPtrOutput
+}
+
+type dataObjectPatternTypeRegexPtrType DataObjectPatternTypeRegexArgs
+
+func DataObjectPatternTypeRegexPtr(v *DataObjectPatternTypeRegexArgs) DataObjectPatternTypeRegexPtrInput {
+	return (*dataObjectPatternTypeRegexPtrType)(v)
+}
+
+func (*dataObjectPatternTypeRegexPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**DataObjectPatternTypeRegex)(nil)).Elem()
+}
+
+func (i *dataObjectPatternTypeRegexPtrType) ToDataObjectPatternTypeRegexPtrOutput() DataObjectPatternTypeRegexPtrOutput {
+	return i.ToDataObjectPatternTypeRegexPtrOutputWithContext(context.Background())
+}
+
+func (i *dataObjectPatternTypeRegexPtrType) ToDataObjectPatternTypeRegexPtrOutputWithContext(ctx context.Context) DataObjectPatternTypeRegexPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeRegexPtrOutput)
+}
+
+type DataObjectPatternTypeRegexOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypeRegexOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypeRegex)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypeRegexOutput) ToDataObjectPatternTypeRegexOutput() DataObjectPatternTypeRegexOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeRegexOutput) ToDataObjectPatternTypeRegexOutputWithContext(ctx context.Context) DataObjectPatternTypeRegexOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeRegexOutput) ToDataObjectPatternTypeRegexPtrOutput() DataObjectPatternTypeRegexPtrOutput {
+	return o.ToDataObjectPatternTypeRegexPtrOutputWithContext(context.Background())
+}
+
+func (o DataObjectPatternTypeRegexOutput) ToDataObjectPatternTypeRegexPtrOutputWithContext(ctx context.Context) DataObjectPatternTypeRegexPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v DataObjectPatternTypeRegex) *DataObjectPatternTypeRegex {
+		return &v
+	}).(DataObjectPatternTypeRegexPtrOutput)
+}
+
+// Pattern
+func (o DataObjectPatternTypeRegexOutput) Patterns() DataObjectPatternTypeRegexPatternArrayOutput {
+	return o.ApplyT(func(v DataObjectPatternTypeRegex) []DataObjectPatternTypeRegexPattern { return v.Patterns }).(DataObjectPatternTypeRegexPatternArrayOutput)
+}
+
+type DataObjectPatternTypeRegexPtrOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypeRegexPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**DataObjectPatternTypeRegex)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypeRegexPtrOutput) ToDataObjectPatternTypeRegexPtrOutput() DataObjectPatternTypeRegexPtrOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeRegexPtrOutput) ToDataObjectPatternTypeRegexPtrOutputWithContext(ctx context.Context) DataObjectPatternTypeRegexPtrOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeRegexPtrOutput) Elem() DataObjectPatternTypeRegexOutput {
+	return o.ApplyT(func(v *DataObjectPatternTypeRegex) DataObjectPatternTypeRegex {
+		if v != nil {
+			return *v
+		}
+		var ret DataObjectPatternTypeRegex
+		return ret
+	}).(DataObjectPatternTypeRegexOutput)
+}
+
+// Pattern
+func (o DataObjectPatternTypeRegexPtrOutput) Patterns() DataObjectPatternTypeRegexPatternArrayOutput {
+	return o.ApplyT(func(v *DataObjectPatternTypeRegex) []DataObjectPatternTypeRegexPattern {
+		if v == nil {
+			return nil
+		}
+		return v.Patterns
+	}).(DataObjectPatternTypeRegexPatternArrayOutput)
+}
+
+type DataObjectPatternTypeRegexPattern struct {
+	// File type
+	FileTypes []string `pulumi:"fileTypes"`
+	// Name
+	Name *string `pulumi:"name"`
+	// Regex
+	Regex *string `pulumi:"regex"`
+}
+
+// DataObjectPatternTypeRegexPatternInput is an input type that accepts DataObjectPatternTypeRegexPatternArgs and DataObjectPatternTypeRegexPatternOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypeRegexPatternInput` via:
+//
+//	DataObjectPatternTypeRegexPatternArgs{...}
+type DataObjectPatternTypeRegexPatternInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypeRegexPatternOutput() DataObjectPatternTypeRegexPatternOutput
+	ToDataObjectPatternTypeRegexPatternOutputWithContext(context.Context) DataObjectPatternTypeRegexPatternOutput
+}
+
+type DataObjectPatternTypeRegexPatternArgs struct {
+	// File type
+	FileTypes pulumi.StringArrayInput `pulumi:"fileTypes"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// Regex
+	Regex pulumi.StringPtrInput `pulumi:"regex"`
+}
+
+func (DataObjectPatternTypeRegexPatternArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (i DataObjectPatternTypeRegexPatternArgs) ToDataObjectPatternTypeRegexPatternOutput() DataObjectPatternTypeRegexPatternOutput {
+	return i.ToDataObjectPatternTypeRegexPatternOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypeRegexPatternArgs) ToDataObjectPatternTypeRegexPatternOutputWithContext(ctx context.Context) DataObjectPatternTypeRegexPatternOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeRegexPatternOutput)
+}
+
+// DataObjectPatternTypeRegexPatternArrayInput is an input type that accepts DataObjectPatternTypeRegexPatternArray and DataObjectPatternTypeRegexPatternArrayOutput values.
+// You can construct a concrete instance of `DataObjectPatternTypeRegexPatternArrayInput` via:
+//
+//	DataObjectPatternTypeRegexPatternArray{ DataObjectPatternTypeRegexPatternArgs{...} }
+type DataObjectPatternTypeRegexPatternArrayInput interface {
+	pulumi.Input
+
+	ToDataObjectPatternTypeRegexPatternArrayOutput() DataObjectPatternTypeRegexPatternArrayOutput
+	ToDataObjectPatternTypeRegexPatternArrayOutputWithContext(context.Context) DataObjectPatternTypeRegexPatternArrayOutput
+}
+
+type DataObjectPatternTypeRegexPatternArray []DataObjectPatternTypeRegexPatternInput
+
+func (DataObjectPatternTypeRegexPatternArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]DataObjectPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (i DataObjectPatternTypeRegexPatternArray) ToDataObjectPatternTypeRegexPatternArrayOutput() DataObjectPatternTypeRegexPatternArrayOutput {
+	return i.ToDataObjectPatternTypeRegexPatternArrayOutputWithContext(context.Background())
+}
+
+func (i DataObjectPatternTypeRegexPatternArray) ToDataObjectPatternTypeRegexPatternArrayOutputWithContext(ctx context.Context) DataObjectPatternTypeRegexPatternArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(DataObjectPatternTypeRegexPatternArrayOutput)
+}
+
+type DataObjectPatternTypeRegexPatternOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypeRegexPatternOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*DataObjectPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypeRegexPatternOutput) ToDataObjectPatternTypeRegexPatternOutput() DataObjectPatternTypeRegexPatternOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeRegexPatternOutput) ToDataObjectPatternTypeRegexPatternOutputWithContext(ctx context.Context) DataObjectPatternTypeRegexPatternOutput {
+	return o
+}
+
+// File type
+func (o DataObjectPatternTypeRegexPatternOutput) FileTypes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v DataObjectPatternTypeRegexPattern) []string { return v.FileTypes }).(pulumi.StringArrayOutput)
+}
+
+// Name
+func (o DataObjectPatternTypeRegexPatternOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v DataObjectPatternTypeRegexPattern) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+// Regex
+func (o DataObjectPatternTypeRegexPatternOutput) Regex() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v DataObjectPatternTypeRegexPattern) *string { return v.Regex }).(pulumi.StringPtrOutput)
+}
+
+type DataObjectPatternTypeRegexPatternArrayOutput struct{ *pulumi.OutputState }
+
+func (DataObjectPatternTypeRegexPatternArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]DataObjectPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (o DataObjectPatternTypeRegexPatternArrayOutput) ToDataObjectPatternTypeRegexPatternArrayOutput() DataObjectPatternTypeRegexPatternArrayOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeRegexPatternArrayOutput) ToDataObjectPatternTypeRegexPatternArrayOutputWithContext(ctx context.Context) DataObjectPatternTypeRegexPatternArrayOutput {
+	return o
+}
+
+func (o DataObjectPatternTypeRegexPatternArrayOutput) Index(i pulumi.IntInput) DataObjectPatternTypeRegexPatternOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) DataObjectPatternTypeRegexPattern {
+		return vs[0].([]DataObjectPatternTypeRegexPattern)[vs[1].(int)]
+	}).(DataObjectPatternTypeRegexPatternOutput)
+}
+
 type DecryptionProfileSslForwardProxy struct {
 	// Auto include altname
 	AutoIncludeAltname *bool `pulumi:"autoIncludeAltname"`
@@ -50320,6 +51451,8 @@ func (o DosProtectionRuleProtectionClassifiedClassificationCriteriaPtrOutput) Ad
 type EthernetInterfaceLayer2 struct {
 	// LLDP Settings
 	Lldp *EthernetInterfaceLayer2Lldp `pulumi:"lldp"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 	// Assign interface to VLAN tag
 	VlanTag *string `pulumi:"vlanTag"`
 }
@@ -50338,6 +51471,8 @@ type EthernetInterfaceLayer2Input interface {
 type EthernetInterfaceLayer2Args struct {
 	// LLDP Settings
 	Lldp EthernetInterfaceLayer2LldpPtrInput `pulumi:"lldp"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput `pulumi:"netflowProfile"`
 	// Assign interface to VLAN tag
 	VlanTag pulumi.StringPtrInput `pulumi:"vlanTag"`
 }
@@ -50424,6 +51559,11 @@ func (o EthernetInterfaceLayer2Output) Lldp() EthernetInterfaceLayer2LldpPtrOutp
 	return o.ApplyT(func(v EthernetInterfaceLayer2) *EthernetInterfaceLayer2Lldp { return v.Lldp }).(EthernetInterfaceLayer2LldpPtrOutput)
 }
 
+// Name of Netflow Profile to assign to Interface
+func (o EthernetInterfaceLayer2Output) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer2) *string { return v.NetflowProfile }).(pulumi.StringPtrOutput)
+}
+
 // Assign interface to VLAN tag
 func (o EthernetInterfaceLayer2Output) VlanTag() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer2) *string { return v.VlanTag }).(pulumi.StringPtrOutput)
@@ -50461,6 +51601,16 @@ func (o EthernetInterfaceLayer2PtrOutput) Lldp() EthernetInterfaceLayer2LldpPtrO
 		}
 		return v.Lldp
 	}).(EthernetInterfaceLayer2LldpPtrOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o EthernetInterfaceLayer2PtrOutput) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer2) *string {
+		if v == nil {
+			return nil
+		}
+		return v.NetflowProfile
+	}).(pulumi.StringPtrOutput)
 }
 
 // Assign interface to VLAN tag
@@ -50625,6 +51775,8 @@ type EthernetInterfaceLayer3 struct {
 	Ips []EthernetInterfaceLayer3Ip `pulumi:"ips"`
 	// MTU
 	Mtu *int `pulumi:"mtu"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 	// Pppoe
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
@@ -50657,6 +51809,8 @@ type EthernetInterfaceLayer3Args struct {
 	Ips EthernetInterfaceLayer3IpArrayInput `pulumi:"ips"`
 	// MTU
 	Mtu pulumi.IntPtrInput `pulumi:"mtu"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput `pulumi:"netflowProfile"`
 	// Pppoe
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
@@ -50772,6 +51926,11 @@ func (o EthernetInterfaceLayer3Output) Mtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer3) *int { return v.Mtu }).(pulumi.IntPtrOutput)
 }
 
+// Name of Netflow Profile to assign to Interface
+func (o EthernetInterfaceLayer3Output) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3) *string { return v.NetflowProfile }).(pulumi.StringPtrOutput)
+}
+
 // Pppoe
 //
 // > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
@@ -50863,6 +52022,16 @@ func (o EthernetInterfaceLayer3PtrOutput) Mtu() pulumi.IntPtrOutput {
 		}
 		return v.Mtu
 	}).(pulumi.IntPtrOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o EthernetInterfaceLayer3PtrOutput) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3) *string {
+		if v == nil {
+			return nil
+		}
+		return v.NetflowProfile
+	}).(pulumi.StringPtrOutput)
 }
 
 // Pppoe
@@ -52405,6 +53574,8 @@ func (o EthernetInterfacePoePtrOutput) PoeRsvdPwr() pulumi.IntPtrOutput {
 }
 
 type EthernetInterfaceTap struct {
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 }
 
 // EthernetInterfaceTapInput is an input type that accepts EthernetInterfaceTapArgs and EthernetInterfaceTapOutput values.
@@ -52419,6 +53590,8 @@ type EthernetInterfaceTapInput interface {
 }
 
 type EthernetInterfaceTapArgs struct {
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput `pulumi:"netflowProfile"`
 }
 
 func (EthernetInterfaceTapArgs) ElementType() reflect.Type {
@@ -52498,6 +53671,11 @@ func (o EthernetInterfaceTapOutput) ToEthernetInterfaceTapPtrOutputWithContext(c
 	}).(EthernetInterfaceTapPtrOutput)
 }
 
+// Name of Netflow Profile to assign to Interface
+func (o EthernetInterfaceTapOutput) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceTap) *string { return v.NetflowProfile }).(pulumi.StringPtrOutput)
+}
+
 type EthernetInterfaceTapPtrOutput struct{ *pulumi.OutputState }
 
 func (EthernetInterfaceTapPtrOutput) ElementType() reflect.Type {
@@ -52520,6 +53698,16 @@ func (o EthernetInterfaceTapPtrOutput) Elem() EthernetInterfaceTapOutput {
 		var ret EthernetInterfaceTap
 		return ret
 	}).(EthernetInterfaceTapOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o EthernetInterfaceTapPtrOutput) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceTap) *string {
+		if v == nil {
+			return nil
+		}
+		return v.NetflowProfile
+	}).(pulumi.StringPtrOutput)
 }
 
 type ExternalDynamicListType struct {
@@ -79158,1175 +80346,6 @@ func (o HttpServerProfileFormatSystemHeaderArrayOutput) Index(i pulumi.IntInput)
 	}).(HttpServerProfileFormatSystemHeaderOutput)
 }
 
-type HttpServerProfileFormatSystemParam struct {
-	// Parameter name
-	Name *string `pulumi:"name"`
-	// Parameter value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatSystemParamInput is an input type that accepts HttpServerProfileFormatSystemParamArgs and HttpServerProfileFormatSystemParamOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSystemParamInput` via:
-//
-//	HttpServerProfileFormatSystemParamArgs{...}
-type HttpServerProfileFormatSystemParamInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSystemParamOutput() HttpServerProfileFormatSystemParamOutput
-	ToHttpServerProfileFormatSystemParamOutputWithContext(context.Context) HttpServerProfileFormatSystemParamOutput
-}
-
-type HttpServerProfileFormatSystemParamArgs struct {
-	// Parameter name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Parameter value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatSystemParamArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSystemParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatSystemParamArgs) ToHttpServerProfileFormatSystemParamOutput() HttpServerProfileFormatSystemParamOutput {
-	return i.ToHttpServerProfileFormatSystemParamOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSystemParamArgs) ToHttpServerProfileFormatSystemParamOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemParamOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSystemParamOutput)
-}
-
-// HttpServerProfileFormatSystemParamArrayInput is an input type that accepts HttpServerProfileFormatSystemParamArray and HttpServerProfileFormatSystemParamArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSystemParamArrayInput` via:
-//
-//	HttpServerProfileFormatSystemParamArray{ HttpServerProfileFormatSystemParamArgs{...} }
-type HttpServerProfileFormatSystemParamArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSystemParamArrayOutput() HttpServerProfileFormatSystemParamArrayOutput
-	ToHttpServerProfileFormatSystemParamArrayOutputWithContext(context.Context) HttpServerProfileFormatSystemParamArrayOutput
-}
-
-type HttpServerProfileFormatSystemParamArray []HttpServerProfileFormatSystemParamInput
-
-func (HttpServerProfileFormatSystemParamArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatSystemParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatSystemParamArray) ToHttpServerProfileFormatSystemParamArrayOutput() HttpServerProfileFormatSystemParamArrayOutput {
-	return i.ToHttpServerProfileFormatSystemParamArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSystemParamArray) ToHttpServerProfileFormatSystemParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemParamArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSystemParamArrayOutput)
-}
-
-type HttpServerProfileFormatSystemParamOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSystemParamOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSystemParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSystemParamOutput) ToHttpServerProfileFormatSystemParamOutput() HttpServerProfileFormatSystemParamOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSystemParamOutput) ToHttpServerProfileFormatSystemParamOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemParamOutput {
-	return o
-}
-
-// Parameter name
-func (o HttpServerProfileFormatSystemParamOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSystemParam) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Parameter value
-func (o HttpServerProfileFormatSystemParamOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSystemParam) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatSystemParamArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSystemParamArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatSystemParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSystemParamArrayOutput) ToHttpServerProfileFormatSystemParamArrayOutput() HttpServerProfileFormatSystemParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSystemParamArrayOutput) ToHttpServerProfileFormatSystemParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSystemParamArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatSystemParamOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatSystemParam {
-		return vs[0].([]HttpServerProfileFormatSystemParam)[vs[1].(int)]
-	}).(HttpServerProfileFormatSystemParamOutput)
-}
-
-type HttpServerProfileFormatThreat struct {
-	// Headers
-	Headers []HttpServerProfileFormatThreatHeader `pulumi:"headers"`
-	// The name of the payload format
-	Name *string `pulumi:"name"`
-	// Params
-	Params []HttpServerProfileFormatThreatParam `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload *string `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat *string `pulumi:"urlFormat"`
-}
-
-// HttpServerProfileFormatThreatInput is an input type that accepts HttpServerProfileFormatThreatArgs and HttpServerProfileFormatThreatOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatThreatInput` via:
-//
-//	HttpServerProfileFormatThreatArgs{...}
-type HttpServerProfileFormatThreatInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatThreatOutput() HttpServerProfileFormatThreatOutput
-	ToHttpServerProfileFormatThreatOutputWithContext(context.Context) HttpServerProfileFormatThreatOutput
-}
-
-type HttpServerProfileFormatThreatArgs struct {
-	// Headers
-	Headers HttpServerProfileFormatThreatHeaderArrayInput `pulumi:"headers"`
-	// The name of the payload format
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Params
-	Params HttpServerProfileFormatThreatParamArrayInput `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload pulumi.StringPtrInput `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat pulumi.StringPtrInput `pulumi:"urlFormat"`
-}
-
-func (HttpServerProfileFormatThreatArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatThreat)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatThreatArgs) ToHttpServerProfileFormatThreatOutput() HttpServerProfileFormatThreatOutput {
-	return i.ToHttpServerProfileFormatThreatOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatThreatArgs) ToHttpServerProfileFormatThreatOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatThreatOutput)
-}
-
-func (i HttpServerProfileFormatThreatArgs) ToHttpServerProfileFormatThreatPtrOutput() HttpServerProfileFormatThreatPtrOutput {
-	return i.ToHttpServerProfileFormatThreatPtrOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatThreatArgs) ToHttpServerProfileFormatThreatPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatThreatOutput).ToHttpServerProfileFormatThreatPtrOutputWithContext(ctx)
-}
-
-// HttpServerProfileFormatThreatPtrInput is an input type that accepts HttpServerProfileFormatThreatArgs, HttpServerProfileFormatThreatPtr and HttpServerProfileFormatThreatPtrOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatThreatPtrInput` via:
-//
-//	        HttpServerProfileFormatThreatArgs{...}
-//
-//	or:
-//
-//	        nil
-type HttpServerProfileFormatThreatPtrInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatThreatPtrOutput() HttpServerProfileFormatThreatPtrOutput
-	ToHttpServerProfileFormatThreatPtrOutputWithContext(context.Context) HttpServerProfileFormatThreatPtrOutput
-}
-
-type httpServerProfileFormatThreatPtrType HttpServerProfileFormatThreatArgs
-
-func HttpServerProfileFormatThreatPtr(v *HttpServerProfileFormatThreatArgs) HttpServerProfileFormatThreatPtrInput {
-	return (*httpServerProfileFormatThreatPtrType)(v)
-}
-
-func (*httpServerProfileFormatThreatPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatThreat)(nil)).Elem()
-}
-
-func (i *httpServerProfileFormatThreatPtrType) ToHttpServerProfileFormatThreatPtrOutput() HttpServerProfileFormatThreatPtrOutput {
-	return i.ToHttpServerProfileFormatThreatPtrOutputWithContext(context.Background())
-}
-
-func (i *httpServerProfileFormatThreatPtrType) ToHttpServerProfileFormatThreatPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatThreatPtrOutput)
-}
-
-type HttpServerProfileFormatThreatOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatThreatOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatThreat)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatThreatOutput) ToHttpServerProfileFormatThreatOutput() HttpServerProfileFormatThreatOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatThreatOutput) ToHttpServerProfileFormatThreatOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatThreatOutput) ToHttpServerProfileFormatThreatPtrOutput() HttpServerProfileFormatThreatPtrOutput {
-	return o.ToHttpServerProfileFormatThreatPtrOutputWithContext(context.Background())
-}
-
-func (o HttpServerProfileFormatThreatOutput) ToHttpServerProfileFormatThreatPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v HttpServerProfileFormatThreat) *HttpServerProfileFormatThreat {
-		return &v
-	}).(HttpServerProfileFormatThreatPtrOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatThreatOutput) Headers() HttpServerProfileFormatThreatHeaderArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatThreat) []HttpServerProfileFormatThreatHeader { return v.Headers }).(HttpServerProfileFormatThreatHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatThreatOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatThreat) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatThreatOutput) Params() HttpServerProfileFormatThreatParamArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatThreat) []HttpServerProfileFormatThreatParam { return v.Params }).(HttpServerProfileFormatThreatParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatThreatOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatThreat) *string { return v.Payload }).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatThreatOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatThreat) *string { return v.UrlFormat }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatThreatPtrOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatThreatPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatThreat)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatThreatPtrOutput) ToHttpServerProfileFormatThreatPtrOutput() HttpServerProfileFormatThreatPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatThreatPtrOutput) ToHttpServerProfileFormatThreatPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatThreatPtrOutput) Elem() HttpServerProfileFormatThreatOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatThreat) HttpServerProfileFormatThreat {
-		if v != nil {
-			return *v
-		}
-		var ret HttpServerProfileFormatThreat
-		return ret
-	}).(HttpServerProfileFormatThreatOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatThreatPtrOutput) Headers() HttpServerProfileFormatThreatHeaderArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatThreat) []HttpServerProfileFormatThreatHeader {
-		if v == nil {
-			return nil
-		}
-		return v.Headers
-	}).(HttpServerProfileFormatThreatHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatThreatPtrOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatThreat) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Name
-	}).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatThreatPtrOutput) Params() HttpServerProfileFormatThreatParamArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatThreat) []HttpServerProfileFormatThreatParam {
-		if v == nil {
-			return nil
-		}
-		return v.Params
-	}).(HttpServerProfileFormatThreatParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatThreatPtrOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatThreat) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Payload
-	}).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatThreatPtrOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatThreat) *string {
-		if v == nil {
-			return nil
-		}
-		return v.UrlFormat
-	}).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatThreatHeader struct {
-	// Header name
-	Name *string `pulumi:"name"`
-	// Header value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatThreatHeaderInput is an input type that accepts HttpServerProfileFormatThreatHeaderArgs and HttpServerProfileFormatThreatHeaderOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatThreatHeaderInput` via:
-//
-//	HttpServerProfileFormatThreatHeaderArgs{...}
-type HttpServerProfileFormatThreatHeaderInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatThreatHeaderOutput() HttpServerProfileFormatThreatHeaderOutput
-	ToHttpServerProfileFormatThreatHeaderOutputWithContext(context.Context) HttpServerProfileFormatThreatHeaderOutput
-}
-
-type HttpServerProfileFormatThreatHeaderArgs struct {
-	// Header name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Header value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatThreatHeaderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatThreatHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatThreatHeaderArgs) ToHttpServerProfileFormatThreatHeaderOutput() HttpServerProfileFormatThreatHeaderOutput {
-	return i.ToHttpServerProfileFormatThreatHeaderOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatThreatHeaderArgs) ToHttpServerProfileFormatThreatHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatHeaderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatThreatHeaderOutput)
-}
-
-// HttpServerProfileFormatThreatHeaderArrayInput is an input type that accepts HttpServerProfileFormatThreatHeaderArray and HttpServerProfileFormatThreatHeaderArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatThreatHeaderArrayInput` via:
-//
-//	HttpServerProfileFormatThreatHeaderArray{ HttpServerProfileFormatThreatHeaderArgs{...} }
-type HttpServerProfileFormatThreatHeaderArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatThreatHeaderArrayOutput() HttpServerProfileFormatThreatHeaderArrayOutput
-	ToHttpServerProfileFormatThreatHeaderArrayOutputWithContext(context.Context) HttpServerProfileFormatThreatHeaderArrayOutput
-}
-
-type HttpServerProfileFormatThreatHeaderArray []HttpServerProfileFormatThreatHeaderInput
-
-func (HttpServerProfileFormatThreatHeaderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatThreatHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatThreatHeaderArray) ToHttpServerProfileFormatThreatHeaderArrayOutput() HttpServerProfileFormatThreatHeaderArrayOutput {
-	return i.ToHttpServerProfileFormatThreatHeaderArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatThreatHeaderArray) ToHttpServerProfileFormatThreatHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatHeaderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatThreatHeaderArrayOutput)
-}
-
-type HttpServerProfileFormatThreatHeaderOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatThreatHeaderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatThreatHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatThreatHeaderOutput) ToHttpServerProfileFormatThreatHeaderOutput() HttpServerProfileFormatThreatHeaderOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatThreatHeaderOutput) ToHttpServerProfileFormatThreatHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatHeaderOutput {
-	return o
-}
-
-// Header name
-func (o HttpServerProfileFormatThreatHeaderOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatThreatHeader) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Header value
-func (o HttpServerProfileFormatThreatHeaderOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatThreatHeader) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatThreatHeaderArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatThreatHeaderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatThreatHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatThreatHeaderArrayOutput) ToHttpServerProfileFormatThreatHeaderArrayOutput() HttpServerProfileFormatThreatHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatThreatHeaderArrayOutput) ToHttpServerProfileFormatThreatHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatThreatHeaderArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatThreatHeaderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatThreatHeader {
-		return vs[0].([]HttpServerProfileFormatThreatHeader)[vs[1].(int)]
-	}).(HttpServerProfileFormatThreatHeaderOutput)
-}
-
-type HttpServerProfileFormatThreatParam struct {
-	// Parameter name
-	Name *string `pulumi:"name"`
-	// Parameter value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatThreatParamInput is an input type that accepts HttpServerProfileFormatThreatParamArgs and HttpServerProfileFormatThreatParamOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatThreatParamInput` via:
-//
-//	HttpServerProfileFormatThreatParamArgs{...}
-type HttpServerProfileFormatThreatParamInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatThreatParamOutput() HttpServerProfileFormatThreatParamOutput
-	ToHttpServerProfileFormatThreatParamOutputWithContext(context.Context) HttpServerProfileFormatThreatParamOutput
-}
-
-type HttpServerProfileFormatThreatParamArgs struct {
-	// Parameter name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Parameter value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatThreatParamArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatThreatParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatThreatParamArgs) ToHttpServerProfileFormatThreatParamOutput() HttpServerProfileFormatThreatParamOutput {
-	return i.ToHttpServerProfileFormatThreatParamOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatThreatParamArgs) ToHttpServerProfileFormatThreatParamOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatParamOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatThreatParamOutput)
-}
-
-// HttpServerProfileFormatThreatParamArrayInput is an input type that accepts HttpServerProfileFormatThreatParamArray and HttpServerProfileFormatThreatParamArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatThreatParamArrayInput` via:
-//
-//	HttpServerProfileFormatThreatParamArray{ HttpServerProfileFormatThreatParamArgs{...} }
-type HttpServerProfileFormatThreatParamArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatThreatParamArrayOutput() HttpServerProfileFormatThreatParamArrayOutput
-	ToHttpServerProfileFormatThreatParamArrayOutputWithContext(context.Context) HttpServerProfileFormatThreatParamArrayOutput
-}
-
-type HttpServerProfileFormatThreatParamArray []HttpServerProfileFormatThreatParamInput
-
-func (HttpServerProfileFormatThreatParamArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatThreatParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatThreatParamArray) ToHttpServerProfileFormatThreatParamArrayOutput() HttpServerProfileFormatThreatParamArrayOutput {
-	return i.ToHttpServerProfileFormatThreatParamArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatThreatParamArray) ToHttpServerProfileFormatThreatParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatParamArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatThreatParamArrayOutput)
-}
-
-type HttpServerProfileFormatThreatParamOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatThreatParamOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatThreatParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatThreatParamOutput) ToHttpServerProfileFormatThreatParamOutput() HttpServerProfileFormatThreatParamOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatThreatParamOutput) ToHttpServerProfileFormatThreatParamOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatParamOutput {
-	return o
-}
-
-// Parameter name
-func (o HttpServerProfileFormatThreatParamOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatThreatParam) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Parameter value
-func (o HttpServerProfileFormatThreatParamOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatThreatParam) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatThreatParamArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatThreatParamArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatThreatParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatThreatParamArrayOutput) ToHttpServerProfileFormatThreatParamArrayOutput() HttpServerProfileFormatThreatParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatThreatParamArrayOutput) ToHttpServerProfileFormatThreatParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatThreatParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatThreatParamArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatThreatParamOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatThreatParam {
-		return vs[0].([]HttpServerProfileFormatThreatParam)[vs[1].(int)]
-	}).(HttpServerProfileFormatThreatParamOutput)
-}
-
-type HttpServerProfileFormatTraffic struct {
-	// Headers
-	Headers []HttpServerProfileFormatTrafficHeader `pulumi:"headers"`
-	// The name of the payload format
-	Name *string `pulumi:"name"`
-	// Params
-	Params []HttpServerProfileFormatTrafficParam `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload *string `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat *string `pulumi:"urlFormat"`
-}
-
-// HttpServerProfileFormatTrafficInput is an input type that accepts HttpServerProfileFormatTrafficArgs and HttpServerProfileFormatTrafficOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatTrafficInput` via:
-//
-//	HttpServerProfileFormatTrafficArgs{...}
-type HttpServerProfileFormatTrafficInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatTrafficOutput() HttpServerProfileFormatTrafficOutput
-	ToHttpServerProfileFormatTrafficOutputWithContext(context.Context) HttpServerProfileFormatTrafficOutput
-}
-
-type HttpServerProfileFormatTrafficArgs struct {
-	// Headers
-	Headers HttpServerProfileFormatTrafficHeaderArrayInput `pulumi:"headers"`
-	// The name of the payload format
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Params
-	Params HttpServerProfileFormatTrafficParamArrayInput `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload pulumi.StringPtrInput `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat pulumi.StringPtrInput `pulumi:"urlFormat"`
-}
-
-func (HttpServerProfileFormatTrafficArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatTraffic)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatTrafficArgs) ToHttpServerProfileFormatTrafficOutput() HttpServerProfileFormatTrafficOutput {
-	return i.ToHttpServerProfileFormatTrafficOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatTrafficArgs) ToHttpServerProfileFormatTrafficOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTrafficOutput)
-}
-
-func (i HttpServerProfileFormatTrafficArgs) ToHttpServerProfileFormatTrafficPtrOutput() HttpServerProfileFormatTrafficPtrOutput {
-	return i.ToHttpServerProfileFormatTrafficPtrOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatTrafficArgs) ToHttpServerProfileFormatTrafficPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTrafficOutput).ToHttpServerProfileFormatTrafficPtrOutputWithContext(ctx)
-}
-
-// HttpServerProfileFormatTrafficPtrInput is an input type that accepts HttpServerProfileFormatTrafficArgs, HttpServerProfileFormatTrafficPtr and HttpServerProfileFormatTrafficPtrOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatTrafficPtrInput` via:
-//
-//	        HttpServerProfileFormatTrafficArgs{...}
-//
-//	or:
-//
-//	        nil
-type HttpServerProfileFormatTrafficPtrInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatTrafficPtrOutput() HttpServerProfileFormatTrafficPtrOutput
-	ToHttpServerProfileFormatTrafficPtrOutputWithContext(context.Context) HttpServerProfileFormatTrafficPtrOutput
-}
-
-type httpServerProfileFormatTrafficPtrType HttpServerProfileFormatTrafficArgs
-
-func HttpServerProfileFormatTrafficPtr(v *HttpServerProfileFormatTrafficArgs) HttpServerProfileFormatTrafficPtrInput {
-	return (*httpServerProfileFormatTrafficPtrType)(v)
-}
-
-func (*httpServerProfileFormatTrafficPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatTraffic)(nil)).Elem()
-}
-
-func (i *httpServerProfileFormatTrafficPtrType) ToHttpServerProfileFormatTrafficPtrOutput() HttpServerProfileFormatTrafficPtrOutput {
-	return i.ToHttpServerProfileFormatTrafficPtrOutputWithContext(context.Background())
-}
-
-func (i *httpServerProfileFormatTrafficPtrType) ToHttpServerProfileFormatTrafficPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTrafficPtrOutput)
-}
-
-type HttpServerProfileFormatTrafficOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatTrafficOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatTraffic)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatTrafficOutput) ToHttpServerProfileFormatTrafficOutput() HttpServerProfileFormatTrafficOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTrafficOutput) ToHttpServerProfileFormatTrafficOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTrafficOutput) ToHttpServerProfileFormatTrafficPtrOutput() HttpServerProfileFormatTrafficPtrOutput {
-	return o.ToHttpServerProfileFormatTrafficPtrOutputWithContext(context.Background())
-}
-
-func (o HttpServerProfileFormatTrafficOutput) ToHttpServerProfileFormatTrafficPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v HttpServerProfileFormatTraffic) *HttpServerProfileFormatTraffic {
-		return &v
-	}).(HttpServerProfileFormatTrafficPtrOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatTrafficOutput) Headers() HttpServerProfileFormatTrafficHeaderArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTraffic) []HttpServerProfileFormatTrafficHeader { return v.Headers }).(HttpServerProfileFormatTrafficHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatTrafficOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTraffic) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatTrafficOutput) Params() HttpServerProfileFormatTrafficParamArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTraffic) []HttpServerProfileFormatTrafficParam { return v.Params }).(HttpServerProfileFormatTrafficParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatTrafficOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTraffic) *string { return v.Payload }).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatTrafficOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTraffic) *string { return v.UrlFormat }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatTrafficPtrOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatTrafficPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatTraffic)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatTrafficPtrOutput) ToHttpServerProfileFormatTrafficPtrOutput() HttpServerProfileFormatTrafficPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTrafficPtrOutput) ToHttpServerProfileFormatTrafficPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTrafficPtrOutput) Elem() HttpServerProfileFormatTrafficOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTraffic) HttpServerProfileFormatTraffic {
-		if v != nil {
-			return *v
-		}
-		var ret HttpServerProfileFormatTraffic
-		return ret
-	}).(HttpServerProfileFormatTrafficOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatTrafficPtrOutput) Headers() HttpServerProfileFormatTrafficHeaderArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTraffic) []HttpServerProfileFormatTrafficHeader {
-		if v == nil {
-			return nil
-		}
-		return v.Headers
-	}).(HttpServerProfileFormatTrafficHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatTrafficPtrOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTraffic) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Name
-	}).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatTrafficPtrOutput) Params() HttpServerProfileFormatTrafficParamArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTraffic) []HttpServerProfileFormatTrafficParam {
-		if v == nil {
-			return nil
-		}
-		return v.Params
-	}).(HttpServerProfileFormatTrafficParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatTrafficPtrOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTraffic) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Payload
-	}).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatTrafficPtrOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTraffic) *string {
-		if v == nil {
-			return nil
-		}
-		return v.UrlFormat
-	}).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatTrafficHeader struct {
-	// Header name
-	Name *string `pulumi:"name"`
-	// Header value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatTrafficHeaderInput is an input type that accepts HttpServerProfileFormatTrafficHeaderArgs and HttpServerProfileFormatTrafficHeaderOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatTrafficHeaderInput` via:
-//
-//	HttpServerProfileFormatTrafficHeaderArgs{...}
-type HttpServerProfileFormatTrafficHeaderInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatTrafficHeaderOutput() HttpServerProfileFormatTrafficHeaderOutput
-	ToHttpServerProfileFormatTrafficHeaderOutputWithContext(context.Context) HttpServerProfileFormatTrafficHeaderOutput
-}
-
-type HttpServerProfileFormatTrafficHeaderArgs struct {
-	// Header name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Header value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatTrafficHeaderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatTrafficHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatTrafficHeaderArgs) ToHttpServerProfileFormatTrafficHeaderOutput() HttpServerProfileFormatTrafficHeaderOutput {
-	return i.ToHttpServerProfileFormatTrafficHeaderOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatTrafficHeaderArgs) ToHttpServerProfileFormatTrafficHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficHeaderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTrafficHeaderOutput)
-}
-
-// HttpServerProfileFormatTrafficHeaderArrayInput is an input type that accepts HttpServerProfileFormatTrafficHeaderArray and HttpServerProfileFormatTrafficHeaderArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatTrafficHeaderArrayInput` via:
-//
-//	HttpServerProfileFormatTrafficHeaderArray{ HttpServerProfileFormatTrafficHeaderArgs{...} }
-type HttpServerProfileFormatTrafficHeaderArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatTrafficHeaderArrayOutput() HttpServerProfileFormatTrafficHeaderArrayOutput
-	ToHttpServerProfileFormatTrafficHeaderArrayOutputWithContext(context.Context) HttpServerProfileFormatTrafficHeaderArrayOutput
-}
-
-type HttpServerProfileFormatTrafficHeaderArray []HttpServerProfileFormatTrafficHeaderInput
-
-func (HttpServerProfileFormatTrafficHeaderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatTrafficHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatTrafficHeaderArray) ToHttpServerProfileFormatTrafficHeaderArrayOutput() HttpServerProfileFormatTrafficHeaderArrayOutput {
-	return i.ToHttpServerProfileFormatTrafficHeaderArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatTrafficHeaderArray) ToHttpServerProfileFormatTrafficHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficHeaderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTrafficHeaderArrayOutput)
-}
-
-type HttpServerProfileFormatTrafficHeaderOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatTrafficHeaderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatTrafficHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatTrafficHeaderOutput) ToHttpServerProfileFormatTrafficHeaderOutput() HttpServerProfileFormatTrafficHeaderOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTrafficHeaderOutput) ToHttpServerProfileFormatTrafficHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficHeaderOutput {
-	return o
-}
-
-// Header name
-func (o HttpServerProfileFormatTrafficHeaderOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTrafficHeader) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Header value
-func (o HttpServerProfileFormatTrafficHeaderOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTrafficHeader) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatTrafficHeaderArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatTrafficHeaderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatTrafficHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatTrafficHeaderArrayOutput) ToHttpServerProfileFormatTrafficHeaderArrayOutput() HttpServerProfileFormatTrafficHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTrafficHeaderArrayOutput) ToHttpServerProfileFormatTrafficHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTrafficHeaderArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatTrafficHeaderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatTrafficHeader {
-		return vs[0].([]HttpServerProfileFormatTrafficHeader)[vs[1].(int)]
-	}).(HttpServerProfileFormatTrafficHeaderOutput)
-}
-
-type HttpServerProfileFormatTrafficParam struct {
-	// Parameter name
-	Name *string `pulumi:"name"`
-	// Parameter value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatTrafficParamInput is an input type that accepts HttpServerProfileFormatTrafficParamArgs and HttpServerProfileFormatTrafficParamOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatTrafficParamInput` via:
-//
-//	HttpServerProfileFormatTrafficParamArgs{...}
-type HttpServerProfileFormatTrafficParamInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatTrafficParamOutput() HttpServerProfileFormatTrafficParamOutput
-	ToHttpServerProfileFormatTrafficParamOutputWithContext(context.Context) HttpServerProfileFormatTrafficParamOutput
-}
-
-type HttpServerProfileFormatTrafficParamArgs struct {
-	// Parameter name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Parameter value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatTrafficParamArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatTrafficParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatTrafficParamArgs) ToHttpServerProfileFormatTrafficParamOutput() HttpServerProfileFormatTrafficParamOutput {
-	return i.ToHttpServerProfileFormatTrafficParamOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatTrafficParamArgs) ToHttpServerProfileFormatTrafficParamOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficParamOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTrafficParamOutput)
-}
-
-// HttpServerProfileFormatTrafficParamArrayInput is an input type that accepts HttpServerProfileFormatTrafficParamArray and HttpServerProfileFormatTrafficParamArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatTrafficParamArrayInput` via:
-//
-//	HttpServerProfileFormatTrafficParamArray{ HttpServerProfileFormatTrafficParamArgs{...} }
-type HttpServerProfileFormatTrafficParamArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatTrafficParamArrayOutput() HttpServerProfileFormatTrafficParamArrayOutput
-	ToHttpServerProfileFormatTrafficParamArrayOutputWithContext(context.Context) HttpServerProfileFormatTrafficParamArrayOutput
-}
-
-type HttpServerProfileFormatTrafficParamArray []HttpServerProfileFormatTrafficParamInput
-
-func (HttpServerProfileFormatTrafficParamArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatTrafficParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatTrafficParamArray) ToHttpServerProfileFormatTrafficParamArrayOutput() HttpServerProfileFormatTrafficParamArrayOutput {
-	return i.ToHttpServerProfileFormatTrafficParamArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatTrafficParamArray) ToHttpServerProfileFormatTrafficParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficParamArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTrafficParamArrayOutput)
-}
-
-type HttpServerProfileFormatTrafficParamOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatTrafficParamOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatTrafficParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatTrafficParamOutput) ToHttpServerProfileFormatTrafficParamOutput() HttpServerProfileFormatTrafficParamOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTrafficParamOutput) ToHttpServerProfileFormatTrafficParamOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficParamOutput {
-	return o
-}
-
-// Parameter name
-func (o HttpServerProfileFormatTrafficParamOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTrafficParam) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Parameter value
-func (o HttpServerProfileFormatTrafficParamOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTrafficParam) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatTrafficParamArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatTrafficParamArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatTrafficParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatTrafficParamArrayOutput) ToHttpServerProfileFormatTrafficParamArrayOutput() HttpServerProfileFormatTrafficParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTrafficParamArrayOutput) ToHttpServerProfileFormatTrafficParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatTrafficParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTrafficParamArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatTrafficParamOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatTrafficParam {
-		return vs[0].([]HttpServerProfileFormatTrafficParam)[vs[1].(int)]
-	}).(HttpServerProfileFormatTrafficParamOutput)
-}
-
-type HttpServerProfileFormatTunnel struct {
-	// Headers
-	Headers []HttpServerProfileFormatTunnelHeader `pulumi:"headers"`
-	// The name of the payload format
-	Name *string `pulumi:"name"`
-	// Params
-	Params []HttpServerProfileFormatTunnelParam `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload *string `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat *string `pulumi:"urlFormat"`
-}
-
-// HttpServerProfileFormatTunnelInput is an input type that accepts HttpServerProfileFormatTunnelArgs and HttpServerProfileFormatTunnelOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatTunnelInput` via:
-//
-//	HttpServerProfileFormatTunnelArgs{...}
-type HttpServerProfileFormatTunnelInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatTunnelOutput() HttpServerProfileFormatTunnelOutput
-	ToHttpServerProfileFormatTunnelOutputWithContext(context.Context) HttpServerProfileFormatTunnelOutput
-}
-
-type HttpServerProfileFormatTunnelArgs struct {
-	// Headers
-	Headers HttpServerProfileFormatTunnelHeaderArrayInput `pulumi:"headers"`
-	// The name of the payload format
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Params
-	Params HttpServerProfileFormatTunnelParamArrayInput `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload pulumi.StringPtrInput `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat pulumi.StringPtrInput `pulumi:"urlFormat"`
-}
-
-func (HttpServerProfileFormatTunnelArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatTunnel)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatTunnelArgs) ToHttpServerProfileFormatTunnelOutput() HttpServerProfileFormatTunnelOutput {
-	return i.ToHttpServerProfileFormatTunnelOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatTunnelArgs) ToHttpServerProfileFormatTunnelOutputWithContext(ctx context.Context) HttpServerProfileFormatTunnelOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTunnelOutput)
-}
-
-func (i HttpServerProfileFormatTunnelArgs) ToHttpServerProfileFormatTunnelPtrOutput() HttpServerProfileFormatTunnelPtrOutput {
-	return i.ToHttpServerProfileFormatTunnelPtrOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatTunnelArgs) ToHttpServerProfileFormatTunnelPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatTunnelPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTunnelOutput).ToHttpServerProfileFormatTunnelPtrOutputWithContext(ctx)
-}
-
-// HttpServerProfileFormatTunnelPtrInput is an input type that accepts HttpServerProfileFormatTunnelArgs, HttpServerProfileFormatTunnelPtr and HttpServerProfileFormatTunnelPtrOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatTunnelPtrInput` via:
-//
-//	        HttpServerProfileFormatTunnelArgs{...}
-//
-//	or:
-//
-//	        nil
-type HttpServerProfileFormatTunnelPtrInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatTunnelPtrOutput() HttpServerProfileFormatTunnelPtrOutput
-	ToHttpServerProfileFormatTunnelPtrOutputWithContext(context.Context) HttpServerProfileFormatTunnelPtrOutput
-}
-
-type httpServerProfileFormatTunnelPtrType HttpServerProfileFormatTunnelArgs
-
-func HttpServerProfileFormatTunnelPtr(v *HttpServerProfileFormatTunnelArgs) HttpServerProfileFormatTunnelPtrInput {
-	return (*httpServerProfileFormatTunnelPtrType)(v)
-}
-
-func (*httpServerProfileFormatTunnelPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatTunnel)(nil)).Elem()
-}
-
-func (i *httpServerProfileFormatTunnelPtrType) ToHttpServerProfileFormatTunnelPtrOutput() HttpServerProfileFormatTunnelPtrOutput {
-	return i.ToHttpServerProfileFormatTunnelPtrOutputWithContext(context.Background())
-}
-
-func (i *httpServerProfileFormatTunnelPtrType) ToHttpServerProfileFormatTunnelPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatTunnelPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatTunnelPtrOutput)
-}
-
-type HttpServerProfileFormatTunnelOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatTunnelOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatTunnel)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatTunnelOutput) ToHttpServerProfileFormatTunnelOutput() HttpServerProfileFormatTunnelOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTunnelOutput) ToHttpServerProfileFormatTunnelOutputWithContext(ctx context.Context) HttpServerProfileFormatTunnelOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTunnelOutput) ToHttpServerProfileFormatTunnelPtrOutput() HttpServerProfileFormatTunnelPtrOutput {
-	return o.ToHttpServerProfileFormatTunnelPtrOutputWithContext(context.Background())
-}
-
-func (o HttpServerProfileFormatTunnelOutput) ToHttpServerProfileFormatTunnelPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatTunnelPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v HttpServerProfileFormatTunnel) *HttpServerProfileFormatTunnel {
-		return &v
-	}).(HttpServerProfileFormatTunnelPtrOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatTunnelOutput) Headers() HttpServerProfileFormatTunnelHeaderArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTunnel) []HttpServerProfileFormatTunnelHeader { return v.Headers }).(HttpServerProfileFormatTunnelHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatTunnelOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTunnel) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatTunnelOutput) Params() HttpServerProfileFormatTunnelParamArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTunnel) []HttpServerProfileFormatTunnelParam { return v.Params }).(HttpServerProfileFormatTunnelParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatTunnelOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTunnel) *string { return v.Payload }).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatTunnelOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatTunnel) *string { return v.UrlFormat }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatTunnelPtrOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatTunnelPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatTunnel)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatTunnelPtrOutput) ToHttpServerProfileFormatTunnelPtrOutput() HttpServerProfileFormatTunnelPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTunnelPtrOutput) ToHttpServerProfileFormatTunnelPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatTunnelPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatTunnelPtrOutput) Elem() HttpServerProfileFormatTunnelOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTunnel) HttpServerProfileFormatTunnel {
-		if v != nil {
-			return *v
-		}
-		var ret HttpServerProfileFormatTunnel
-		return ret
-	}).(HttpServerProfileFormatTunnelOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatTunnelPtrOutput) Headers() HttpServerProfileFormatTunnelHeaderArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTunnel) []HttpServerProfileFormatTunnelHeader {
-		if v == nil {
-			return nil
-		}
-		return v.Headers
-	}).(HttpServerProfileFormatTunnelHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatTunnelPtrOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTunnel) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Name
-	}).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatTunnelPtrOutput) Params() HttpServerProfileFormatTunnelParamArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTunnel) []HttpServerProfileFormatTunnelParam {
-		if v == nil {
-			return nil
-		}
-		return v.Params
-	}).(HttpServerProfileFormatTunnelParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatTunnelPtrOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTunnel) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Payload
-	}).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatTunnelPtrOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatTunnel) *string {
-		if v == nil {
-			return nil
-		}
-		return v.UrlFormat
-	}).(pulumi.StringPtrOutput)
-}
-
 func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*AddressGroupDynamicInput)(nil)).Elem(), AddressGroupDynamicArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AddressGroupDynamicPtrInput)(nil)).Elem(), AddressGroupDynamicArgs{})
@@ -80817,6 +80836,22 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*ContentIdSettingContentIdPtrInput)(nil)).Elem(), ContentIdSettingContentIdArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ContentIdSettingContentIdApplicationInput)(nil)).Elem(), ContentIdSettingContentIdApplicationArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ContentIdSettingContentIdApplicationPtrInput)(nil)).Elem(), ContentIdSettingContentIdApplicationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataFilteringProfileRuleInput)(nil)).Elem(), DataFilteringProfileRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataFilteringProfileRuleArrayInput)(nil)).Elem(), DataFilteringProfileRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypeInput)(nil)).Elem(), DataObjectPatternTypeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypePtrInput)(nil)).Elem(), DataObjectPatternTypeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypeFilePropertiesInput)(nil)).Elem(), DataObjectPatternTypeFilePropertiesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypeFilePropertiesPtrInput)(nil)).Elem(), DataObjectPatternTypeFilePropertiesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypeFilePropertiesPatternInput)(nil)).Elem(), DataObjectPatternTypeFilePropertiesPatternArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypeFilePropertiesPatternArrayInput)(nil)).Elem(), DataObjectPatternTypeFilePropertiesPatternArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypePredefinedInput)(nil)).Elem(), DataObjectPatternTypePredefinedArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypePredefinedPtrInput)(nil)).Elem(), DataObjectPatternTypePredefinedArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypePredefinedPatternInput)(nil)).Elem(), DataObjectPatternTypePredefinedPatternArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypePredefinedPatternArrayInput)(nil)).Elem(), DataObjectPatternTypePredefinedPatternArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypeRegexInput)(nil)).Elem(), DataObjectPatternTypeRegexArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypeRegexPtrInput)(nil)).Elem(), DataObjectPatternTypeRegexArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypeRegexPatternInput)(nil)).Elem(), DataObjectPatternTypeRegexPatternArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*DataObjectPatternTypeRegexPatternArrayInput)(nil)).Elem(), DataObjectPatternTypeRegexPatternArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*DecryptionProfileSslForwardProxyInput)(nil)).Elem(), DecryptionProfileSslForwardProxyArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*DecryptionProfileSslForwardProxyPtrInput)(nil)).Elem(), DecryptionProfileSslForwardProxyArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*DecryptionProfileSslInboundProxyInput)(nil)).Elem(), DecryptionProfileSslInboundProxyArgs{})
@@ -81311,22 +81346,6 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSystemPtrInput)(nil)).Elem(), HttpServerProfileFormatSystemArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSystemHeaderInput)(nil)).Elem(), HttpServerProfileFormatSystemHeaderArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSystemHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatSystemHeaderArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSystemParamInput)(nil)).Elem(), HttpServerProfileFormatSystemParamArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSystemParamArrayInput)(nil)).Elem(), HttpServerProfileFormatSystemParamArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatThreatInput)(nil)).Elem(), HttpServerProfileFormatThreatArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatThreatPtrInput)(nil)).Elem(), HttpServerProfileFormatThreatArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatThreatHeaderInput)(nil)).Elem(), HttpServerProfileFormatThreatHeaderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatThreatHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatThreatHeaderArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatThreatParamInput)(nil)).Elem(), HttpServerProfileFormatThreatParamArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatThreatParamArrayInput)(nil)).Elem(), HttpServerProfileFormatThreatParamArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTrafficInput)(nil)).Elem(), HttpServerProfileFormatTrafficArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTrafficPtrInput)(nil)).Elem(), HttpServerProfileFormatTrafficArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTrafficHeaderInput)(nil)).Elem(), HttpServerProfileFormatTrafficHeaderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTrafficHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatTrafficHeaderArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTrafficParamInput)(nil)).Elem(), HttpServerProfileFormatTrafficParamArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTrafficParamArrayInput)(nil)).Elem(), HttpServerProfileFormatTrafficParamArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTunnelInput)(nil)).Elem(), HttpServerProfileFormatTunnelArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatTunnelPtrInput)(nil)).Elem(), HttpServerProfileFormatTunnelArgs{})
 	pulumi.RegisterOutputType(AddressGroupDynamicOutput{})
 	pulumi.RegisterOutputType(AddressGroupDynamicPtrOutput{})
 	pulumi.RegisterOutputType(AggregateInterfaceLayer2Output{})
@@ -81816,6 +81835,22 @@ func init() {
 	pulumi.RegisterOutputType(ContentIdSettingContentIdPtrOutput{})
 	pulumi.RegisterOutputType(ContentIdSettingContentIdApplicationOutput{})
 	pulumi.RegisterOutputType(ContentIdSettingContentIdApplicationPtrOutput{})
+	pulumi.RegisterOutputType(DataFilteringProfileRuleOutput{})
+	pulumi.RegisterOutputType(DataFilteringProfileRuleArrayOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypeOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypePtrOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypeFilePropertiesOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypeFilePropertiesPtrOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypeFilePropertiesPatternOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypeFilePropertiesPatternArrayOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypePredefinedOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypePredefinedPtrOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypePredefinedPatternOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypePredefinedPatternArrayOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypeRegexOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypeRegexPtrOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypeRegexPatternOutput{})
+	pulumi.RegisterOutputType(DataObjectPatternTypeRegexPatternArrayOutput{})
 	pulumi.RegisterOutputType(DecryptionProfileSslForwardProxyOutput{})
 	pulumi.RegisterOutputType(DecryptionProfileSslForwardProxyPtrOutput{})
 	pulumi.RegisterOutputType(DecryptionProfileSslInboundProxyOutput{})
@@ -82310,20 +82345,4 @@ func init() {
 	pulumi.RegisterOutputType(HttpServerProfileFormatSystemPtrOutput{})
 	pulumi.RegisterOutputType(HttpServerProfileFormatSystemHeaderOutput{})
 	pulumi.RegisterOutputType(HttpServerProfileFormatSystemHeaderArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSystemParamOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSystemParamArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatThreatOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatThreatPtrOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatThreatHeaderOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatThreatHeaderArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatThreatParamOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatThreatParamArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatTrafficOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatTrafficPtrOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatTrafficHeaderOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatTrafficHeaderArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatTrafficParamOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatTrafficParamArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatTunnelOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatTunnelPtrOutput{})
 }

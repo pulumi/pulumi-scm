@@ -27,7 +27,7 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmParentInterface = new Scm.EthernetInterface("scm_parent_interface", new()
     ///     {
-    ///         Name = "$scm_parent_interface",
+    ///         Name = "$scm_tf_parent_interface",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
     ///         Layer3 = null,
@@ -38,11 +38,11 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmL3Subinterface = new Scm.Layer3Subinterface("scm_l3_subinterface", new()
     ///     {
-    ///         Name = "$scm_parent_interface.100",
+    ///         Name = "$scm_tf_parent_interface.100",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
     ///         Tag = 100,
-    ///         ParentInterface = "$scm_parent_interface",
+    ///         ParentInterface = "$scm_tf_parent_interface",
     ///         Ips = new[]
     ///         {
     ///             new Scm.Inputs.Layer3SubinterfaceIpArgs
@@ -60,9 +60,9 @@ namespace Pulumi.Scm
     /// 
     ///     var scmParentDhcpInterface = new Scm.EthernetInterface("scm_parent_dhcp_interface", new()
     ///     {
-    ///         Name = "$scm_parent_dhcp_interface",
+    ///         Name = "$scm_parent_tf_dhcp_interface",
     ///         Comment = "Managed by Pulumi",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Layer3 = null,
     ///     });
     /// 
@@ -71,11 +71,11 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmL3DhcpSubinterface = new Scm.Layer3Subinterface("scm_l3_dhcp_subinterface", new()
     ///     {
-    ///         Name = "$scm_parent_dhcp_interface.100",
+    ///         Name = "$scm_parent_tf_dhcp_interface.100",
     ///         Comment = "Managed by Pulumi",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Tag = 100,
-    ///         ParentInterface = "$scm_parent_dhcp_interface",
+    ///         ParentInterface = "$scm_parent_tf_dhcp_interface",
     ///         DhcpClient = new Scm.Inputs.Layer3SubinterfaceDhcpClientArgs
     ///         {
     ///             Enable = true,
@@ -188,6 +188,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
+
+        /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        [Output("netflowProfile")]
+        public Output<string?> NetflowProfile { get; private set; } = null!;
 
         /// <summary>
         /// Parent interface
@@ -340,6 +346,12 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        [Input("netflowProfile")]
+        public Input<string>? NetflowProfile { get; set; }
+
+        /// <summary>
         /// Parent interface
         /// </summary>
         [Input("parentInterface")]
@@ -444,6 +456,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        [Input("netflowProfile")]
+        public Input<string>? NetflowProfile { get; set; }
 
         /// <summary>
         /// Parent interface

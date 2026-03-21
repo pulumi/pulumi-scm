@@ -14,7 +14,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const scmSamlServerProfile1 = new scm.SamlServerProfile("scm_saml_server_profile_1", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm-saml-server-prof-1",
  *     certificate: "Global Authentication Cookie Cert",
  *     entityId: "123",
@@ -22,7 +22,7 @@ import * as utilities from "./utilities";
  *     ssoBindings: "post",
  * });
  * const scmSamlServerProfile2 = new scm.SamlServerProfile("scm_saml_server_profile_2", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm-saml-server-prof-2",
  *     certificate: "Global Authentication Cookie Cert",
  *     entityId: "test_id",
@@ -33,7 +33,7 @@ import * as utilities from "./utilities";
  *     validateIdpCertificate: true,
  * });
  * const scmSamlServerProfile3 = new scm.SamlServerProfile("scm_saml_server_profile_3", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm-saml-server-prof-3",
  *     certificate: "Global Authentication Cookie Cert",
  *     entityId: "test_123",

@@ -24,8 +24,8 @@ namespace Pulumi.Scm
     /// {
     ///     var exampleTag = new Scm.Tag("example_tag", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "example-tag",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "example-nat-rule",
     ///         Color = "Red",
     ///     });
     /// 
@@ -53,7 +53,7 @@ namespace Pulumi.Scm
     ///         Description = "Dynamic SNAT for internal traffic accessing the internet. Updating",
     ///         Disabled = false,
     ///         NatType = "ipv4",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Tags = new[]
     ///         {
     ///             exampleTag.Name,
@@ -101,7 +101,7 @@ namespace Pulumi.Scm
     ///         Description = "Dynamic SNAT for internal traffic accessing the internet. Updating",
     ///         Disabled = false,
     ///         NatType = "ipv4",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Tags = new[]
     ///         {
     ///             exampleTag.Name,
@@ -146,7 +146,7 @@ namespace Pulumi.Scm
     ///         Description = "Dynamic SNAT for internal traffic accessing the internet. Updating",
     ///         Disabled = false,
     ///         NatType = "ipv4",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Tags = new[]
     ///         {
     ///             exampleTag.Name,
@@ -186,7 +186,7 @@ namespace Pulumi.Scm
     ///         Description = "Dynamic SNAT for internal traffic accessing the internet. Updating",
     ///         Disabled = false,
     ///         NatType = "ipv4",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Tags = new[]
     ///         {
     ///             exampleTag.Name,

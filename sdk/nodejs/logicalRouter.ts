@@ -19,14 +19,14 @@ import * as utilities from "./utilities";
  * // Creates various resources used for subsequent examples
  * //
  * const scmNextHop = new scm.Variable("scm_next_hop", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "$scm_next_hop",
  *     description: "Managed by Pulumi",
  *     type: "ip-netmask",
  *     value: "198.18.1.1",
  * });
  * const scmNextHopFqdn = new scm.Variable("scm_next_hop_fqdn", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "$scm_next_hop_fqdn",
  *     description: "Managed by Pulumi",
  *     type: "fqdn",

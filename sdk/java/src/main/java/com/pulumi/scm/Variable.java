@@ -46,8 +46,8 @@ import javax.annotation.Nullable;
  *         // Creates a variable in as-number format
  *         //
  *         var scmVariableAsn = new Variable("scmVariableAsn", VariableArgs.builder()
- *             .folder("All")
- *             .name("$scm_variable_asn")
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_asn")
  *             .description("Managed by Pulumi")
  *             .type("as-number")
  *             .value("65535")
@@ -57,8 +57,8 @@ import javax.annotation.Nullable;
  *         // Creates a variable in count format
  *         //
  *         var scmVariableCount = new Variable("scmVariableCount", VariableArgs.builder()
- *             .folder("All")
- *             .name("$scm_variable_count")
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_count")
  *             .description("Managed by Pulumi")
  *             .type("count")
  *             .value("15")
@@ -68,8 +68,8 @@ import javax.annotation.Nullable;
  *         // Creates a variable in fqdn format
  *         //
  *         var scmVariableFqdn = new Variable("scmVariableFqdn", VariableArgs.builder()
- *             .folder("All")
- *             .name("$scm_variable_fqdn")
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_fqdn")
  *             .description("Managed by Pulumi")
  *             .type("fqdn")
  *             .value("scm.example.com")
@@ -79,8 +79,8 @@ import javax.annotation.Nullable;
  *         // Creates a variable in group-id format
  *         //
  *         var scmVariableGroupId = new Variable("scmVariableGroupId", VariableArgs.builder()
- *             .folder("All")
- *             .name("$scm_variable_group_id")
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_group_id")
  *             .description("Managed by Pulumi")
  *             .type("group-id")
  *             .value("10")
@@ -90,8 +90,8 @@ import javax.annotation.Nullable;
  *         // Creates a variable in ip-range format
  *         //
  *         var scmVariableIprange = new Variable("scmVariableIprange", VariableArgs.builder()
- *             .folder("All")
- *             .name("$scm_variable_iprange")
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_iprange")
  *             .description("Managed by Pulumi")
  *             .type("ip-range")
  *             .value("198.18.1.1-198.18.1.100")
@@ -101,8 +101,8 @@ import javax.annotation.Nullable;
  *         // Creates a variable in ip-netmask format
  *         //
  *         var scmVariableIpaddr = new Variable("scmVariableIpaddr", VariableArgs.builder()
- *             .folder("All")
- *             .name("$scm_variable_ipaddr")
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_ipaddr")
  *             .description("Managed by Pulumi")
  *             .type("ip-netmask")
  *             .value("198.18.2.0/24")
@@ -112,8 +112,8 @@ import javax.annotation.Nullable;
  *         // Creates a variable in ip-wildcard format
  *         //
  *         var scmVariableIpwildcard = new Variable("scmVariableIpwildcard", VariableArgs.builder()
- *             .folder("All")
- *             .name("$scm_variable_ipwildcard")
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_ipwildcard")
  *             .description("Managed by Pulumi")
  *             .type("ip-wildcard")
  *             .value("198.18.1.0/0.255.255.255")
@@ -123,8 +123,8 @@ import javax.annotation.Nullable;
  *         // Creates a variable in percent format
  *         //
  *         var scmVariablePercent = new Variable("scmVariablePercent", VariableArgs.builder()
- *             .folder("All")
- *             .name("$scm_variable_percent")
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_percent")
  *             .description("Managed by Pulumi")
  *             .type("percent")
  *             .value("10")
@@ -134,8 +134,8 @@ import javax.annotation.Nullable;
  *         // Creates a variable in router-id format
  *         //
  *         var scmVariableRouterId = new Variable("scmVariableRouterId", VariableArgs.builder()
- *             .folder("All")
- *             .name("$scm_variable_router_id")
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_router_id")
  *             .description("Managed by Pulumi")
  *             .type("router-id")
  *             .value("198.18.1.1")
@@ -145,8 +145,8 @@ import javax.annotation.Nullable;
  *         // Creates a variable in timer format
  *         //
  *         var scmVariableTimer = new Variable("scmVariableTimer", VariableArgs.builder()
- *             .folder("All")
- *             .name("$scm_variable_timer")
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_timer")
  *             .description("Managed by Pulumi")
  *             .type("timer")
  *             .value("1440")
@@ -156,8 +156,8 @@ import javax.annotation.Nullable;
  *         // Creates a variable in zone format
  *         //
  *         var scmVariableZone = new Variable("scmVariableZone", VariableArgs.builder()
- *             .folder("All")
- *             .name("$scm_variable_zone")
+ *             .folder("ngfw-shared")
+ *             .name("$tf_variable_zone")
  *             .description("Managed by Pulumi")
  *             .type("zone")
  *             .value("internet")

@@ -30,8 +30,8 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Creates a variable in as-number format
 //			_, err := scm.NewVariable(ctx, "scm_variable_asn", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("$scm_variable_asn"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_asn"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("as-number"),
 //				Value:       pulumi.String("65535"),
@@ -41,8 +41,8 @@ import (
 //			}
 //			// Creates a variable in count format
 //			_, err = scm.NewVariable(ctx, "scm_variable_count", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("$scm_variable_count"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_count"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("count"),
 //				Value:       pulumi.String("15"),
@@ -52,8 +52,8 @@ import (
 //			}
 //			// Creates a variable in fqdn format
 //			_, err = scm.NewVariable(ctx, "scm_variable_fqdn", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("$scm_variable_fqdn"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_fqdn"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("fqdn"),
 //				Value:       pulumi.String("scm.example.com"),
@@ -63,8 +63,8 @@ import (
 //			}
 //			// Creates a variable in group-id format
 //			_, err = scm.NewVariable(ctx, "scm_variable_group_id", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("$scm_variable_group_id"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_group_id"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("group-id"),
 //				Value:       pulumi.String("10"),
@@ -74,8 +74,8 @@ import (
 //			}
 //			// Creates a variable in ip-range format
 //			_, err = scm.NewVariable(ctx, "scm_variable_iprange", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("$scm_variable_iprange"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_iprange"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("ip-range"),
 //				Value:       pulumi.String("198.18.1.1-198.18.1.100"),
@@ -85,8 +85,8 @@ import (
 //			}
 //			// Creates a variable in ip-netmask format
 //			_, err = scm.NewVariable(ctx, "scm_variable_ipaddr", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("$scm_variable_ipaddr"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_ipaddr"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("ip-netmask"),
 //				Value:       pulumi.String("198.18.2.0/24"),
@@ -96,8 +96,8 @@ import (
 //			}
 //			// Creates a variable in ip-wildcard format
 //			_, err = scm.NewVariable(ctx, "scm_variable_ipwildcard", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("$scm_variable_ipwildcard"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_ipwildcard"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("ip-wildcard"),
 //				Value:       pulumi.String("198.18.1.0/0.255.255.255"),
@@ -107,8 +107,8 @@ import (
 //			}
 //			// Creates a variable in percent format
 //			_, err = scm.NewVariable(ctx, "scm_variable_percent", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("$scm_variable_percent"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_percent"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("percent"),
 //				Value:       pulumi.String("10"),
@@ -118,8 +118,8 @@ import (
 //			}
 //			// Creates a variable in router-id format
 //			_, err = scm.NewVariable(ctx, "scm_variable_router_id", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("$scm_variable_router_id"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_router_id"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("router-id"),
 //				Value:       pulumi.String("198.18.1.1"),
@@ -129,8 +129,8 @@ import (
 //			}
 //			// Creates a variable in timer format
 //			_, err = scm.NewVariable(ctx, "scm_variable_timer", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("$scm_variable_timer"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_timer"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("timer"),
 //				Value:       pulumi.String("1440"),
@@ -140,8 +140,8 @@ import (
 //			}
 //			// Creates a variable in zone format
 //			_, err = scm.NewVariable(ctx, "scm_variable_zone", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("$scm_variable_zone"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("$tf_variable_zone"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("zone"),
 //				Value:       pulumi.String("internet"),

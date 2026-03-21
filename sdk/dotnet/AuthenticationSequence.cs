@@ -22,10 +22,35 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
+    ///     var testUiExample = new Scm.AuthenticationProfile("test_ui_example", new()
+    ///     {
+    ///         Name = "Test_UI",
+    ///         Folder = "ngfw-shared",
+    ///         UserDomain = "default",
+    ///         UsernameModifier = "%USERINPUT%",
+    ///         AllowLists = new[]
+    ///         {
+    ///             "ngfw-shared",
+    ///         },
+    ///         Lockout = new Scm.Inputs.AuthenticationProfileLockoutArgs
+    ///         {
+    ///             FailedAttempts = 3,
+    ///             LockoutTime = 1,
+    ///         },
+    ///         Method = new Scm.Inputs.AuthenticationProfileMethodArgs
+    ///         {
+    ///             LocalDatabase = null,
+    ///         },
+    ///         SingleSignOn = new Scm.Inputs.AuthenticationProfileSingleSignOnArgs
+    ///         {
+    ///             Realm = "EXAMPLE.COM",
+    ///         },
+    ///     });
+    /// 
     ///     var testSequence = new Scm.AuthenticationSequence("test_sequence", new()
     ///     {
     ///         Name = "test_auth_sequence_1",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         AuthenticationProfiles = new[]
     ///         {
     ///             "test_auth_profile",
@@ -36,10 +61,10 @@ namespace Pulumi.Scm
     ///     var testSequence2 = new Scm.AuthenticationSequence("test_sequence_2", new()
     ///     {
     ///         Name = "test_auth_sequence_2",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         AuthenticationProfiles = new[]
     ///         {
-    ///             "Test_UI",
+    ///             testUiExample.Name,
     ///             "test_auth_profile",
     ///         },
     ///         UseDomainFindProfile = false,

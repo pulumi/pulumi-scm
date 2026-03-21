@@ -15,52 +15,52 @@ import * as utilities from "./utilities";
  *
  * // This file is embedded using go:embed
  * const scmAddrTag1 = new scm.Tag("scm_addr_tag_1", {
- *     folder: "All",
- *     name: "scm_addr_tag_1",
+ *     folder: "Prisma Access",
+ *     name: "tf_addr_tag_1",
  *     color: "Red",
  * });
  * const scmAddrTag2 = new scm.Tag("scm_addr_tag_2", {
- *     folder: "All",
- *     name: "scm_addr_tag_2",
+ *     folder: "Prisma Access",
+ *     name: "tf_addr_tag_2",
  *     color: "Blue",
  * });
  * const scmAddrTag3 = new scm.Tag("scm_addr_tag_3", {
- *     folder: "All",
- *     name: "scm_addr_tag_3",
+ *     folder: "Prisma Access",
+ *     name: "tf_addr_tag_3",
  *     color: "Orange",
  * });
  * // IP Netmask
  * const scmAddress1 = new scm.Address("scm_address_1", {
  *     folder: "Prisma Access",
- *     name: "scm_address_1",
+ *     name: "tf_address_1",
  *     description: "Made by Pulumi",
  *     ipNetmask: "10.2.3.4",
  * });
  * // IP Range
  * const scmAddress2 = new scm.Address("scm_address_2", {
  *     folder: "Prisma Access",
- *     name: "scm_address_2",
+ *     name: "tf_address_2",
  *     description: "Small IP range test",
  *     ipRange: "192.168.1.10-192.168.1.20",
  * });
  * // FQDN
  * const scmAddress3 = new scm.Address("scm_address_3", {
  *     folder: "Prisma Access",
- *     name: "scm_address_3",
+ *     name: "tf_address_3",
  *     description: "Simple FQDN test",
  *     fqdn: "example.com",
  * });
  * // Class C wildcard
  * const scmAddress4 = new scm.Address("scm_address_4", {
  *     folder: "Prisma Access",
- *     name: "scm_address_4",
+ *     name: "tf_address_4",
  *     description: "Class C wildcard test",
  *     ipWildcard: "192.168.1.0/0.0.0.255",
  * });
  * // Multiple tags
  * const scmAddress5 = new scm.Address("scm_address_5", {
  *     folder: "Prisma Access",
- *     name: "scm_address_5",
+ *     name: "tf_address_5",
  *     description: "Multiple tags test",
  *     ipNetmask: "10.10.10.2/32",
  *     tags: [

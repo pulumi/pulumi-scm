@@ -62,6 +62,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        public readonly string NetflowProfile;
+        /// <summary>
         /// Parent interface
         /// </summary>
         public readonly string ParentInterface;
@@ -102,6 +106,8 @@ namespace Pulumi.Scm.Outputs
 
             string name,
 
+            string netflowProfile,
+
             string parentInterface,
 
             string snippet,
@@ -121,6 +127,7 @@ namespace Pulumi.Scm.Outputs
             Ips = ips;
             Mtu = mtu;
             Name = name;
+            NetflowProfile = netflowProfile;
             ParentInterface = parentInterface;
             Snippet = snippet;
             Tag = tag;

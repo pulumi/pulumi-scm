@@ -14,7 +14,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const appAccessTag = new scm.Tag("app_access_tag", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "app-access-test_25",
  *     color: "Blue",
  * });
@@ -25,7 +25,7 @@ import * as utilities from "./utilities";
  *     name: "test_anchor_rule_251",
  *     description: "Base rule. Used to test 'before' and 'after' positioning",
  *     position: "pre",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     destinations: ["any"],
  *     froms: ["any"],
  *     tos: ["any"],
@@ -50,7 +50,7 @@ import * as utilities from "./utilities";
  * const ruleTopOfList = new scm.AuthenticationRule("rule_top_of_list", {
  *     name: "test_top_rule_25",
  *     description: "Placed at the very top of the 'pre' rulebase.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "top",
  *     destinations: ["any"],
@@ -63,7 +63,7 @@ import * as utilities from "./utilities";
  * const ruleBottomOfList = new scm.AuthenticationRule("rule_bottom_of_list", {
  *     name: "test_bottom_rule_25",
  *     description: "Placed at the very bottom of the 'pre' rulebase.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "bottom",
  *     destinations: ["any"],
@@ -79,7 +79,7 @@ import * as utilities from "./utilities";
  * const ruleBeforeAnchor = new scm.AuthenticationRule("rule_before_anchor", {
  *     name: "test_before_rule_25_updating",
  *     description: "Positioned immediately BEFORE the anchor_rule.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "before",
  *     targetRule: anchorRule.id,
@@ -93,7 +93,7 @@ import * as utilities from "./utilities";
  * const ruleAfterAnchor = new scm.AuthenticationRule("rule_after_anchor", {
  *     name: "test_after_rule_25",
  *     description: "Positioned immediately AFTER the anchor_rule.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "after",
  *     targetRule: anchorRule.id,

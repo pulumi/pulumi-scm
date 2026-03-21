@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var scmLogForwardingProfile1 = new LogForwardingProfile("scmLogForwardingProfile1", LogForwardingProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm-log-fowarding-profile-1")
  *             .matchLists(LogForwardingProfileMatchListArgs.builder()
  *                 .name("profile_match")
@@ -55,7 +55,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmLogForwardingProfile2 = new LogForwardingProfile("scmLogForwardingProfile2", LogForwardingProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm-log-fowarding-profile-2")
  *             .description("Log Forwarding w/ HTTP Server Profile and Syslog Server Profile")
  *             .matchLists(LogForwardingProfileMatchListArgs.builder()
@@ -63,14 +63,12 @@ import javax.annotation.Nullable;
  *                 .logType("traffic")
  *                 .filter("(device_name eq test_device)")
  *                 .sendHttp(List.of("test_http"))
- *                 .sendSyslog(List.of(                
- *                     "syslog-server-prof-mixed",
- *                     "syslog-server-prof-complete"))
+ *                 .sendSyslog(List.of("syslog-server-prof-complete"))
  *                 .build())
  *             .build());
  * 
  *         var scmLogForwardingProfile3 = new LogForwardingProfile("scmLogForwardingProfile3", LogForwardingProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm-log-fowarding-profile-3")
  *             .description("Log Forwarding w/ All Server Profiles")
  *             .matchLists(LogForwardingProfileMatchListArgs.builder()
@@ -81,19 +79,14 @@ import javax.annotation.Nullable;
  *                 .sendHttp(List.of(                
  *                     "test_http",
  *                     "t10"))
- *                 .sendSyslog(List.of(                
- *                     "syslog-server-prof-base",
- *                     "syslog-server-prof-mixed",
- *                     "syslog-server-prof-complete"))
+ *                 .sendSyslog(List.of("syslog-server-prof-complete"))
  *                 .sendSnmptrap(List.of("snmp_test"))
- *                 .sendEmail(List.of(                
- *                     "email_test",
- *                     "email_test_2"))
+ *                 .sendEmail(List.of("email_test"))
  *                 .build())
  *             .build());
  * 
  *         var scmLogForwardingProfile4 = new LogForwardingProfile("scmLogForwardingProfile4", LogForwardingProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm-log-fowarding-profile-4")
  *             .description("Log Forwarding w/ Multiple Match Lists")
  *             .matchLists(            
@@ -103,7 +96,7 @@ import javax.annotation.Nullable;
  *                     .logType("url")
  *                     .filter("(sdwan_cluster contains 123)")
  *                     .sendHttp(List.of("t10"))
- *                     .sendSyslog(List.of("syslog-server-prof-base"))
+ *                     .sendSyslog(List.of("syslog-server-prof-complete"))
  *                     .sendSnmptrap(List.of("snmp_test"))
  *                     .build(),
  *                 LogForwardingProfileMatchListArgs.builder()
@@ -112,12 +105,9 @@ import javax.annotation.Nullable;
  *                     .filter("(link_switch_2 neq lnk_2) or (pkts_received geq 100)")
  *                     .sendHttp(List.of(                    
  *                         "t5",
- *                         "t10",
- *                         "t20"))
- *                     .sendSyslog(List.of("syslog-server-prof-mixed"))
- *                     .sendEmail(List.of(                    
- *                         "email_test",
- *                         "email_test_2"))
+ *                         "t10"))
+ *                     .sendSyslog(List.of("syslog-server-prof-complete"))
+ *                     .sendEmail(List.of("email_test"))
  *                     .build(),
  *                 LogForwardingProfileMatchListArgs.builder()
  *                     .name("profile_match_3")
@@ -126,14 +116,9 @@ import javax.annotation.Nullable;
  *                     .filter("(imei contains test_server)")
  *                     .sendHttp(List.of(                    
  *                         "t5",
- *                         "t10",
- *                         "t20",
- *                         "t22",
- *                         "t24"))
+ *                         "t10"))
  *                     .sendSyslog(List.of("syslog-server-prof-complete"))
- *                     .sendEmail(List.of(                    
- *                         "email_test",
- *                         "email_test_2"))
+ *                     .sendEmail(List.of("email_test"))
  *                     .build())
  *             .build());
  * 

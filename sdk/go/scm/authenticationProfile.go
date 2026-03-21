@@ -27,13 +27,33 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewAuthenticationProfile(ctx, "global_radius_access", &scm.AuthenticationProfileArgs{
-//				Name:             pulumi.String("test_auth_profile_radius_1"),
-//				Folder:           pulumi.String("All"),
+//			chapRadiusProfile, err := scm.NewRadiusServerProfile(ctx, "chap_radius_profile", &scm.RadiusServerProfileArgs{
+//				Name:    pulumi.String("CHAP_only_rsp"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Retries: pulumi.Int(5),
+//				Timeout: pulumi.Int(60),
+//				Protocol: &scm.RadiusServerProfileProtocolArgs{
+//					Chap: &scm.RadiusServerProfileProtocolChapArgs{},
+//				},
+//				Servers: scm.RadiusServerProfileServerArray{
+//					&scm.RadiusServerProfileServerArgs{
+//						Name:      pulumi.String("Chap_Server_Primary"),
+//						IpAddress: pulumi.String("10.1.1.10"),
+//						Port:      pulumi.Int(1812),
+//						Secret:    pulumi.String("-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g=="),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewAuthenticationProfile(ctx, "global_radius_access", &scm.AuthenticationProfileArgs{
+//				Name:             pulumi.String("test_auth_profile_radius"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				UserDomain:       pulumi.String("default"),
 //				UsernameModifier: pulumi.String("%USERINPUT%"),
 //				AllowLists: pulumi.StringArray{
-//					pulumi.String("all"),
+//					pulumi.String("ngfw-shared"),
 //				},
 //				Lockout: &scm.AuthenticationProfileLockoutArgs{
 //					FailedAttempts: pulumi.Int(1),
@@ -42,7 +62,7 @@ import (
 //				Method: &scm.AuthenticationProfileMethodArgs{
 //					Radius: &scm.AuthenticationProfileMethodRadiusArgs{
 //						Checkgroup:    pulumi.Bool(true),
-//						ServerProfile: pulumi.String("CHAP_only_rsp_1"),
+//						ServerProfile: chapRadiusProfile.Name,
 //					},
 //				},
 //				SingleSignOn: &scm.AuthenticationProfileSingleSignOnArgs{
@@ -53,12 +73,12 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewAuthenticationProfile(ctx, "global_db_access", &scm.AuthenticationProfileArgs{
-//				Name:             pulumi.String("test_auth_profile_db_1"),
-//				Folder:           pulumi.String("All"),
+//				Name:             pulumi.String("test_auth_global_db"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				UserDomain:       pulumi.String("default"),
 //				UsernameModifier: pulumi.String("%USERINPUT%"),
 //				AllowLists: pulumi.StringArray{
-//					pulumi.String("all"),
+//					pulumi.String("ngfw-shared"),
 //				},
 //				Lockout: &scm.AuthenticationProfileLockoutArgs{
 //					FailedAttempts: pulumi.Int(3),

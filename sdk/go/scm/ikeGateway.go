@@ -31,7 +31,7 @@ import (
 //			// The scm_ike_crypto_profile resource is a prerequisite for the IKE gateway.
 //			scmIkeGwCryptoProfile1, err := scm.NewIkeCryptoProfile(ctx, "scm_ike_gw_crypto_profile_1", &scm.IkeCryptoProfileArgs{
 //				Folder: pulumi.String("Remote Networks"),
-//				Name:   pulumi.String("scm_ike_gw_crypto_profile_1"),
+//				Name:   pulumi.String("scm_ike_gw_crypto_profile_tf"),
 //				Hashes: pulumi.StringArray{
 //					pulumi.String("sha256"),
 //				},

@@ -15,10 +15,9 @@ import * as utilities from "./utilities";
  *
  * const exampleConfiguration = new scm.AuthenticationPortal("example_configuration", {
  *     redirectHost: "192.168.255.254",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     authenticationProfile: "test_auth_profile",
  *     certificateProfile: "EDL-Hosting-Service-Profile",
- *     tlsServiceProfile: "test_svc_profile",
  *     gpUdpPort: 12,
  *     idleTimer: 12,
  *     timer: 10,

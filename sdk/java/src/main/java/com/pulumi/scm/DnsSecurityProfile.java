@@ -45,12 +45,12 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var scmDnsSecurityProfileBase = new DnsSecurityProfile("scmDnsSecurityProfileBase", DnsSecurityProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("dns_base")
  *             .build());
  * 
  *         var scmDnsSecurityCategories = new DnsSecurityProfile("scmDnsSecurityCategories", DnsSecurityProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("test_dns_sec_categories")
  *             .description("dns security profile w/ dns security categories")
  *             .botnetDomains(DnsSecurityProfileBotnetDomainsArgs.builder()
@@ -86,7 +86,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmDnsLists = new DnsSecurityProfile("scmDnsLists", DnsSecurityProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("test_dns_lists")
  *             .description("dns security profile w/ dns lists")
  *             .botnetDomains(DnsSecurityProfileBotnetDomainsArgs.builder()
@@ -107,7 +107,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmDnsSinkhole = new DnsSecurityProfile("scmDnsSinkhole", DnsSecurityProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("test_dns_sinkhole")
  *             .description("dns security profile w/ sinkhole")
  *             .botnetDomains(DnsSecurityProfileBotnetDomainsArgs.builder()
@@ -119,7 +119,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmDnsWhitelist = new DnsSecurityProfile("scmDnsWhitelist", DnsSecurityProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("test_dns_whitelist")
  *             .description("dns security profile w/ whitelist")
  *             .botnetDomains(DnsSecurityProfileBotnetDomainsArgs.builder()
@@ -135,7 +135,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmDnsAll = new DnsSecurityProfile("scmDnsAll", DnsSecurityProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("test_dns_all_test")
  *             .description("dns security profile w/ all")
  *             .botnetDomains(DnsSecurityProfileBotnetDomainsArgs.builder()

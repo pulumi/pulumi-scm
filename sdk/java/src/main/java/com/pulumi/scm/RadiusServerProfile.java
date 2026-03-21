@@ -52,7 +52,7 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         var chapRadiusProfile = new RadiusServerProfile("chapRadiusProfile", RadiusServerProfileArgs.builder()
  *             .name("CHAP_only_rsp_1")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .retries(5)
  *             .timeout(60)
  *             .protocol(RadiusServerProfileProtocolArgs.builder()
@@ -69,7 +69,7 @@ import javax.annotation.Nullable;
  * 
  *         var papRadiusProfile = new RadiusServerProfile("papRadiusProfile", RadiusServerProfileArgs.builder()
  *             .name("pap_only_rsp_1")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .retries(5)
  *             .timeout(60)
  *             .protocol(RadiusServerProfileProtocolArgs.builder()

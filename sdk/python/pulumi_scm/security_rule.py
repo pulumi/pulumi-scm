@@ -1357,16 +1357,16 @@ class SecurityRule(pulumi.CustomResource):
 
         # First, create the tag objects that you will reference.
         outbound_tag = scm.Tag("outbound_tag",
-            folder="All",
+            folder="ngfw-shared",
             name="outbound143",
             color="Red")
         web_tag = scm.Tag("web_tag",
-            folder="All",
+            folder="ngfw-shared",
             name="web143",
             color="Blue")
         # --- Existing Rules (Backward Compatibility) ---
         standard_web_access = scm.SecurityRule("standard_web_access",
-            folder="All",
+            folder="ngfw-shared",
             name="Allow Standard Web Access143",
             description="Allow outbound web traffic to any destination...",
             position="pre",
@@ -1400,7 +1400,7 @@ class SecurityRule(pulumi.CustomResource):
                 web_tag.name,
             ])
         block_risky_saas = scm.SecurityRule("block_risky_saas",
-            folder="All",
+            folder="ngfw-shared",
             name="Block Risky SaaS Applications143",
             description="Prevent data exfiltration by blocking risky SaaS apps...",
             action="deny",
@@ -1427,7 +1427,7 @@ class SecurityRule(pulumi.CustomResource):
         # --- NEW Examples Demonstrating Rule Ordering ---
         # Example 1: Place a critical block rule at the absolute top
         critical_block_top = scm.SecurityRule("critical_block_top",
-            folder="All",
+            folder="ngfw-shared",
             name="CRITICAL Block Malicious IPs Top143",
             description="Always block known malicious IPs first.",
             relative_position="top",
@@ -1444,7 +1444,7 @@ class SecurityRule(pulumi.CustomResource):
             tags=[outbound_tag.name])
         # Example 2: Place a cleanup rule at the absolute bottom
         cleanup_deny_bottom = scm.SecurityRule("cleanup_deny_bottom",
-            folder="All",
+            folder="ngfw-shared",
             name="Cleanup Deny All Bottom143",
             description="Deny any traffic not explicitly allowed.",
             relative_position="bottom",
@@ -1461,7 +1461,7 @@ class SecurityRule(pulumi.CustomResource):
             tags=[outbound_tag.name])
         # Example 3: Place a rule *before* the standard web access rule
         allow_updates_before_web = scm.SecurityRule("allow_updates_before_web",
-            folder="All",
+            folder="ngfw-shared",
             name="Allow OS Updates Before Web143",
             description="Allow specific OS update traffic before general web access.",
             relative_position="before",
@@ -1482,7 +1482,7 @@ class SecurityRule(pulumi.CustomResource):
             tags=[outbound_tag.name])
         # Example 4: Place a rule *after* the standard web access rule
         allow_corp_apps_after_web = scm.SecurityRule("allow_corp_apps_after_web",
-            folder="All",
+            folder="ngfw-shared",
             name="Allow Corp Apps After Web143",
             description="Allow access to specific corporate apps after general web access.",
             relative_position="after",
@@ -1582,16 +1582,16 @@ class SecurityRule(pulumi.CustomResource):
 
         # First, create the tag objects that you will reference.
         outbound_tag = scm.Tag("outbound_tag",
-            folder="All",
+            folder="ngfw-shared",
             name="outbound143",
             color="Red")
         web_tag = scm.Tag("web_tag",
-            folder="All",
+            folder="ngfw-shared",
             name="web143",
             color="Blue")
         # --- Existing Rules (Backward Compatibility) ---
         standard_web_access = scm.SecurityRule("standard_web_access",
-            folder="All",
+            folder="ngfw-shared",
             name="Allow Standard Web Access143",
             description="Allow outbound web traffic to any destination...",
             position="pre",
@@ -1625,7 +1625,7 @@ class SecurityRule(pulumi.CustomResource):
                 web_tag.name,
             ])
         block_risky_saas = scm.SecurityRule("block_risky_saas",
-            folder="All",
+            folder="ngfw-shared",
             name="Block Risky SaaS Applications143",
             description="Prevent data exfiltration by blocking risky SaaS apps...",
             action="deny",
@@ -1652,7 +1652,7 @@ class SecurityRule(pulumi.CustomResource):
         # --- NEW Examples Demonstrating Rule Ordering ---
         # Example 1: Place a critical block rule at the absolute top
         critical_block_top = scm.SecurityRule("critical_block_top",
-            folder="All",
+            folder="ngfw-shared",
             name="CRITICAL Block Malicious IPs Top143",
             description="Always block known malicious IPs first.",
             relative_position="top",
@@ -1669,7 +1669,7 @@ class SecurityRule(pulumi.CustomResource):
             tags=[outbound_tag.name])
         # Example 2: Place a cleanup rule at the absolute bottom
         cleanup_deny_bottom = scm.SecurityRule("cleanup_deny_bottom",
-            folder="All",
+            folder="ngfw-shared",
             name="Cleanup Deny All Bottom143",
             description="Deny any traffic not explicitly allowed.",
             relative_position="bottom",
@@ -1686,7 +1686,7 @@ class SecurityRule(pulumi.CustomResource):
             tags=[outbound_tag.name])
         # Example 3: Place a rule *before* the standard web access rule
         allow_updates_before_web = scm.SecurityRule("allow_updates_before_web",
-            folder="All",
+            folder="ngfw-shared",
             name="Allow OS Updates Before Web143",
             description="Allow specific OS update traffic before general web access.",
             relative_position="before",
@@ -1707,7 +1707,7 @@ class SecurityRule(pulumi.CustomResource):
             tags=[outbound_tag.name])
         # Example 4: Place a rule *after* the standard web access rule
         allow_corp_apps_after_web = scm.SecurityRule("allow_corp_apps_after_web",
-            folder="All",
+            folder="ngfw-shared",
             name="Allow Corp Apps After Web143",
             description="Allow access to specific corporate apps after general web access.",
             relative_position="after",

@@ -12,6 +12,153 @@ namespace Pulumi.Scm
     /// <summary>
     /// LdapServerProfile resource
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // ldpap server profile w/ required fields
+    ///     var scmLdapServerProfileOne = new Scm.LdapServerProfile("scm_ldap_server_profile_one", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "simple-ldap-profile",
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.LdapServerProfileServerArgs
+    ///             {
+    ///                 Name = "primary-ldap",
+    ///                 Address = "$tst_68081_1",
+    ///                 Port = 389,
+    ///             },
+    ///             new Scm.Inputs.LdapServerProfileServerArgs
+    ///             {
+    ///                 Name = "secondary-ldap",
+    ///                 Address = "$tst_68081_2",
+    ///                 Port = 1,
+    ///             },
+    ///             new Scm.Inputs.LdapServerProfileServerArgs
+    ///             {
+    ///                 Name = "extra-ldap",
+    ///                 Address = "$test_ip",
+    ///                 Port = 65535,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     // ldpap server profile w/ some fields
+    ///     var scmLdapServerProfileTwo = new Scm.LdapServerProfile("scm_ldap_server_profile_two", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "intermediate-ldap-profile-one",
+    ///         LdapType = "active-directory",
+    ///         Base = "dc=example,dc=com",
+    ///         Ssl = true,
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.LdapServerProfileServerArgs
+    ///             {
+    ///                 Name = "extra-ldap",
+    ///                 Address = "$test_ip",
+    ///                 Port = 25,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmLdapServerProfileThree = new Scm.LdapServerProfile("scm_ldap_server_profile_three", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "intermediate-ldap-profile-two",
+    ///         LdapType = "sun",
+    ///         Base = "DC=internal,DC=company,DC=com",
+    ///         BindDn = "CN=LDAP Bind,OU=Service Accounts,DC=internal,DC=company,DC=com",
+    ///         BindPassword = "SecurePwd123!",
+    ///         Timelimit = 30,
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.LdapServerProfileServerArgs
+    ///             {
+    ///                 Name = "primary-ldap",
+    ///                 Address = "$tst_68081_1",
+    ///                 Port = 5000,
+    ///             },
+    ///             new Scm.Inputs.LdapServerProfileServerArgs
+    ///             {
+    ///                 Name = "secondary-ldap",
+    ///                 Address = "150.25.25.60",
+    ///                 Port = 25000,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     // ldpap server profile w/ all fields
+    ///     var scmLdapServerProfileFour = new Scm.LdapServerProfile("scm_ldap_server_profile_four", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "complex-ldap-profile-one",
+    ///         LdapType = "e-directory",
+    ///         Base = "ou=users,dc=corp,dc=local",
+    ///         BindDn = "cn=admin,dc=corp,dc=local",
+    ///         BindPassword = "MyPwd123!",
+    ///         BindTimelimit = "20",
+    ///         RetryInterval = 1000,
+    ///         Timelimit = 10,
+    ///         Ssl = true,
+    ///         VerifyServerCertificate = false,
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.LdapServerProfileServerArgs
+    ///             {
+    ///                 Name = "global-directory-main",
+    ///                 Address = "$scm_variable_ipaddr",
+    ///                 Port = 636,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmLdapServerProfileFive = new Scm.LdapServerProfile("scm_ldap_server_profile_five", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "complex-ldap-profile-two",
+    ///         LdapType = "other",
+    ///         Base = "OU=Employees,DC=global,DC=enterprise,DC=net",
+    ///         BindDn = "CN=SVC_LDAP_Search,OU=Service Accounts,DC=global,DC=enterprise,DC=net",
+    ///         BindPassword = "ExtremelyComplexP@ssw0rd!",
+    ///         BindTimelimit = "15",
+    ///         RetryInterval = 300,
+    ///         Timelimit = 30,
+    ///         Ssl = true,
+    ///         VerifyServerCertificate = true,
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.LdapServerProfileServerArgs
+    ///             {
+    ///                 Name = "dc-us-east",
+    ///                 Address = "$scm_variable_ipaddr",
+    ///                 Port = 720,
+    ///             },
+    ///             new Scm.Inputs.LdapServerProfileServerArgs
+    ///             {
+    ///                 Name = "dc-us-west",
+    ///                 Address = "192.10.10.10",
+    ///                 Port = 1400,
+    ///             },
+    ///             new Scm.Inputs.LdapServerProfileServerArgs
+    ///             {
+    ///                 Name = "dc-eu-central",
+    ///                 Address = "3.3.3.3",
+    ///                 Port = 20000,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The following command can be used to import a resource not managed by Terraform:

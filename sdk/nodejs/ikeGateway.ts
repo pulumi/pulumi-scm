@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * // The scm_ike_crypto_profile resource is a prerequisite for the IKE gateway.
  * const scmIkeGwCryptoProfile1 = new scm.IkeCryptoProfile("scm_ike_gw_crypto_profile_1", {
  *     folder: "Remote Networks",
- *     name: "scm_ike_gw_crypto_profile_1",
+ *     name: "scm_ike_gw_crypto_profile_tf",
  *     hashes: ["sha256"],
  *     dhGroups: ["group14"],
  *     encryptions: ["aes-256-cbc"],

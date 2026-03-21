@@ -217,7 +217,7 @@ class VpnSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         tcp_example = scm.VpnSetting("tcp_example",
-            folder="All",
+            folder="ngfw-shared",
             vpn={
                 "ikev2": {
                     "cookie_threshold": 500,
@@ -277,7 +277,7 @@ class VpnSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         tcp_example = scm.VpnSetting("tcp_example",
-            folder="All",
+            folder="ngfw-shared",
             vpn={
                 "ikev2": {
                     "cookie_threshold": 500,

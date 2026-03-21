@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewGeneralSetting(ctx, "gs_example", &scm.GeneralSettingArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				General: &scm.GeneralSettingGeneralArgs{
 //					Domain:         pulumi.String("foo.com"),
 //					LoginBanner:    pulumi.String("Test Banner"),

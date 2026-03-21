@@ -117,6 +117,21 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
     }
 
     /**
+     * Name of Netflow Profile to assign to Interface
+     * 
+     */
+    @Import(name="netflowProfile")
+    private @Nullable Output<String> netflowProfile;
+
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Optional<Output<String>> netflowProfile() {
+        return Optional.ofNullable(this.netflowProfile);
+    }
+
+    /**
      * Pppoe
      * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
@@ -144,6 +159,7 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
         this.interfaceManagementProfile = $.interfaceManagementProfile;
         this.ips = $.ips;
         this.mtu = $.mtu;
+        this.netflowProfile = $.netflowProfile;
         this.pppoe = $.pppoe;
     }
 
@@ -315,6 +331,27 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
          */
         public Builder mtu(Integer mtu) {
             return mtu(Output.of(mtu));
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(@Nullable Output<String> netflowProfile) {
+            $.netflowProfile = netflowProfile;
+            return this;
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(String netflowProfile) {
+            return netflowProfile(Output.of(netflowProfile));
         }
 
         /**

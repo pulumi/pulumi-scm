@@ -58,7 +58,7 @@ import javax.annotation.Nullable;
  *         // Creates a ethernet interface used as parent-interface for subsequent examples
  *         //
  *         var scmParentInterface = new EthernetInterface("scmParentInterface", EthernetInterfaceArgs.builder()
- *             .name("$scm_parent_interface")
+ *             .name("$scm_tf_parent_interface")
  *             .comment("Managed by Pulumi")
  *             .folder("ngfw-shared")
  *             .layer3(EthernetInterfaceLayer3Args.builder()
@@ -69,11 +69,11 @@ import javax.annotation.Nullable;
  *         // Creates a layer3 sub-interface with static ip address
  *         //
  *         var scmL3Subinterface = new Layer3Subinterface("scmL3Subinterface", Layer3SubinterfaceArgs.builder()
- *             .name("$scm_parent_interface.100")
+ *             .name("$scm_tf_parent_interface.100")
  *             .comment("Managed by Pulumi")
  *             .folder("ngfw-shared")
  *             .tag(100)
- *             .parentInterface("$scm_parent_interface")
+ *             .parentInterface("$scm_tf_parent_interface")
  *             .ips(Layer3SubinterfaceIpArgs.builder()
  *                 .name("198.18.1.1/32")
  *                 .build())
@@ -82,9 +82,9 @@ import javax.annotation.Nullable;
  *                 .build());
  * 
  *         var scmParentDhcpInterface = new EthernetInterface("scmParentDhcpInterface", EthernetInterfaceArgs.builder()
- *             .name("$scm_parent_dhcp_interface")
+ *             .name("$scm_parent_tf_dhcp_interface")
  *             .comment("Managed by Pulumi")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .layer3(EthernetInterfaceLayer3Args.builder()
  *                 .build())
  *             .build());
@@ -93,11 +93,11 @@ import javax.annotation.Nullable;
  *         // Creates a layer3 sub-interface with dhcp
  *         //
  *         var scmL3DhcpSubinterface = new Layer3Subinterface("scmL3DhcpSubinterface", Layer3SubinterfaceArgs.builder()
- *             .name("$scm_parent_dhcp_interface.100")
+ *             .name("$scm_parent_tf_dhcp_interface.100")
  *             .comment("Managed by Pulumi")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .tag(100)
- *             .parentInterface("$scm_parent_dhcp_interface")
+ *             .parentInterface("$scm_parent_tf_dhcp_interface")
  *             .dhcpClient(Layer3SubinterfaceDhcpClientArgs.builder()
  *                 .enable(true)
  *                 .createDefaultRoute(true)
@@ -292,6 +292,20 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
      */
     public Output<String> name() {
         return this.name;
+    }
+    /**
+     * Name of Netflow Profile to assign to Interface
+     * 
+     */
+    @Export(name="netflowProfile", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> netflowProfile;
+
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Output<Optional<String>> netflowProfile() {
+        return Codegen.optional(this.netflowProfile);
     }
     /**
      * Parent interface

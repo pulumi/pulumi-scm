@@ -40,6 +40,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int Mtu;
         /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        public readonly string NetflowProfile;
+        /// <summary>
         /// Pppoe
         /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient`, `Ip`, and `Pppoe`.
@@ -60,6 +64,8 @@ namespace Pulumi.Scm.Outputs
 
             int mtu,
 
+            string netflowProfile,
+
             Outputs.GetEthernetInterfaceListDataLayer3PppoeResult pppoe)
         {
             Arps = arps;
@@ -68,6 +74,7 @@ namespace Pulumi.Scm.Outputs
             InterfaceManagementProfile = interfaceManagementProfile;
             Ips = ips;
             Mtu = mtu;
+            NetflowProfile = netflowProfile;
             Pppoe = pppoe;
         }
     }

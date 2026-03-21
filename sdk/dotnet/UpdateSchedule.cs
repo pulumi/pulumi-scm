@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var usSettings = new Scm.UpdateSchedule("us_settings", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         UpdateScheduleDetails = new Scm.Inputs.UpdateScheduleUpdateScheduleArgs
     ///         {
     ///             Threats = new Scm.Inputs.UpdateScheduleUpdateScheduleThreatsArgs
@@ -64,55 +64,6 @@ namespace Pulumi.Scm
     ///                         At = 30,
     ///                         Action = "download-only",
     ///                         SyncToPeer = true,
-    ///                     },
-    ///                 },
-    ///             },
-    ///         },
-    ///     });
-    /// 
-    ///     // -- Example 2 : With Daily recurring updates for recurring and anti-virus
-    ///     var usSettingsDaily = new Scm.UpdateSchedule("us_settings_daily", new()
-    ///     {
-    ///         Folder = "All",
-    ///         UpdateScheduleDetails = new Scm.Inputs.UpdateScheduleUpdateScheduleArgs
-    ///         {
-    ///             Threats = new Scm.Inputs.UpdateScheduleUpdateScheduleThreatsArgs
-    ///             {
-    ///                 Recurring = new Scm.Inputs.UpdateScheduleUpdateScheduleThreatsRecurringArgs
-    ///                 {
-    ///                     Threshold = 300,
-    ///                     NewAppThreshold = 300,
-    ///                     SyncToPeer = false,
-    ///                     Daily = new Scm.Inputs.UpdateScheduleUpdateScheduleThreatsRecurringDailyArgs
-    ///                     {
-    ///                         At = "02:13",
-    ///                         Action = "download-only",
-    ///                         DisableNewContent = false,
-    ///                     },
-    ///                 },
-    ///             },
-    ///             AntiVirus = new Scm.Inputs.UpdateScheduleUpdateScheduleAntiVirusArgs
-    ///             {
-    ///                 Recurring = new Scm.Inputs.UpdateScheduleUpdateScheduleAntiVirusRecurringArgs
-    ///                 {
-    ///                     Threshold = 300,
-    ///                     SyncToPeer = true,
-    ///                     Daily = new Scm.Inputs.UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs
-    ///                     {
-    ///                         At = "02:13",
-    ///                         Action = "download-only",
-    ///                     },
-    ///                 },
-    ///             },
-    ///             Wildfire = new Scm.Inputs.UpdateScheduleUpdateScheduleWildfireArgs
-    ///             {
-    ///                 Recurring = new Scm.Inputs.UpdateScheduleUpdateScheduleWildfireRecurringArgs
-    ///                 {
-    ///                     Every30Mins = new Scm.Inputs.UpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsArgs
-    ///                     {
-    ///                         At = 20,
-    ///                         Action = "download-only",
-    ///                         SyncToPeer = false,
     ///                     },
     ///                 },
     ///             },

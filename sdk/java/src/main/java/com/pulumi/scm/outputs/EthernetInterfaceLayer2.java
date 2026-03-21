@@ -18,6 +18,11 @@ public final class EthernetInterfaceLayer2 {
      */
     private @Nullable EthernetInterfaceLayer2Lldp lldp;
     /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    private @Nullable String netflowProfile;
+    /**
      * @return Assign interface to VLAN tag
      * 
      */
@@ -30,6 +35,13 @@ public final class EthernetInterfaceLayer2 {
      */
     public Optional<EthernetInterfaceLayer2Lldp> lldp() {
         return Optional.ofNullable(this.lldp);
+    }
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Optional<String> netflowProfile() {
+        return Optional.ofNullable(this.netflowProfile);
     }
     /**
      * @return Assign interface to VLAN tag
@@ -49,11 +61,13 @@ public final class EthernetInterfaceLayer2 {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable EthernetInterfaceLayer2Lldp lldp;
+        private @Nullable String netflowProfile;
         private @Nullable String vlanTag;
         public Builder() {}
         public Builder(EthernetInterfaceLayer2 defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.lldp = defaults.lldp;
+    	      this.netflowProfile = defaults.netflowProfile;
     	      this.vlanTag = defaults.vlanTag;
         }
 
@@ -61,6 +75,12 @@ public final class EthernetInterfaceLayer2 {
         public Builder lldp(@Nullable EthernetInterfaceLayer2Lldp lldp) {
 
             this.lldp = lldp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder netflowProfile(@Nullable String netflowProfile) {
+
+            this.netflowProfile = netflowProfile;
             return this;
         }
         @CustomType.Setter
@@ -72,6 +92,7 @@ public final class EthernetInterfaceLayer2 {
         public EthernetInterfaceLayer2 build() {
             final var _resultValue = new EthernetInterfaceLayer2();
             _resultValue.lldp = lldp;
+            _resultValue.netflowProfile = netflowProfile;
             _resultValue.vlanTag = vlanTag;
             return _resultValue;
         }

@@ -43,7 +43,7 @@ namespace Pulumi.Scm
     ///                         Prefix = new Scm.Inputs.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs
     ///                         {
     ///                             GreaterThanOrEqual = 24,
-    ///                             Network = "198.18.1.0/24",
+    ///                             Network = "any",
     ///                         },
     ///                     },
     ///                 },

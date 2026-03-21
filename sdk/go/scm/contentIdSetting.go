@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewContentIdSetting(ctx, "cid_example", &scm.ContentIdSettingArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				ContentId: &scm.ContentIdSettingContentIdArgs{
 //					AllowForwardDecryptedContent: pulumi.Bool(true),
 //					ExtendedCaptureSegment:       pulumi.Int(6),

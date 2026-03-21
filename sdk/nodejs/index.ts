@@ -130,10 +130,25 @@ export type CertificateProfile = import("./certificateProfile").CertificateProfi
 export const CertificateProfile: typeof import("./certificateProfile").CertificateProfile = null as any;
 utilities.lazyLoad(exports, ["CertificateProfile"], () => require("./certificateProfile"));
 
+export { ConfigMatchListArgs, ConfigMatchListState } from "./configMatchList";
+export type ConfigMatchList = import("./configMatchList").ConfigMatchList;
+export const ConfigMatchList: typeof import("./configMatchList").ConfigMatchList = null as any;
+utilities.lazyLoad(exports, ["ConfigMatchList"], () => require("./configMatchList"));
+
 export { ContentIdSettingArgs, ContentIdSettingState } from "./contentIdSetting";
 export type ContentIdSetting = import("./contentIdSetting").ContentIdSetting;
 export const ContentIdSetting: typeof import("./contentIdSetting").ContentIdSetting = null as any;
 utilities.lazyLoad(exports, ["ContentIdSetting"], () => require("./contentIdSetting"));
+
+export { DataFilteringProfileArgs, DataFilteringProfileState } from "./dataFilteringProfile";
+export type DataFilteringProfile = import("./dataFilteringProfile").DataFilteringProfile;
+export const DataFilteringProfile: typeof import("./dataFilteringProfile").DataFilteringProfile = null as any;
+utilities.lazyLoad(exports, ["DataFilteringProfile"], () => require("./dataFilteringProfile"));
+
+export { DataObjectArgs, DataObjectState } from "./dataObject";
+export type DataObject = import("./dataObject").DataObject;
+export const DataObject: typeof import("./dataObject").DataObject = null as any;
+utilities.lazyLoad(exports, ["DataObject"], () => require("./dataObject"));
 
 export { DecryptionExclusionArgs, DecryptionExclusionState } from "./decryptionExclusion";
 export type DecryptionExclusion = import("./decryptionExclusion").DecryptionExclusion;
@@ -440,6 +455,16 @@ export const getCertificateProfileList: typeof import("./getCertificateProfileLi
 export const getCertificateProfileListOutput: typeof import("./getCertificateProfileList").getCertificateProfileListOutput = null as any;
 utilities.lazyLoad(exports, ["getCertificateProfileList","getCertificateProfileListOutput"], () => require("./getCertificateProfileList"));
 
+export { GetConfigMatchListArgs, GetConfigMatchListResult, GetConfigMatchListOutputArgs } from "./getConfigMatchList";
+export const getConfigMatchList: typeof import("./getConfigMatchList").getConfigMatchList = null as any;
+export const getConfigMatchListOutput: typeof import("./getConfigMatchList").getConfigMatchListOutput = null as any;
+utilities.lazyLoad(exports, ["getConfigMatchList","getConfigMatchListOutput"], () => require("./getConfigMatchList"));
+
+export { GetConfigMatchListListArgs, GetConfigMatchListListResult, GetConfigMatchListListOutputArgs } from "./getConfigMatchListList";
+export const getConfigMatchListList: typeof import("./getConfigMatchListList").getConfigMatchListList = null as any;
+export const getConfigMatchListListOutput: typeof import("./getConfigMatchListList").getConfigMatchListListOutput = null as any;
+utilities.lazyLoad(exports, ["getConfigMatchListList","getConfigMatchListListOutput"], () => require("./getConfigMatchListList"));
+
 export { GetContentIdSettingArgs, GetContentIdSettingResult, GetContentIdSettingOutputArgs } from "./getContentIdSetting";
 export const getContentIdSetting: typeof import("./getContentIdSetting").getContentIdSetting = null as any;
 export const getContentIdSettingOutput: typeof import("./getContentIdSetting").getContentIdSettingOutput = null as any;
@@ -449,6 +474,26 @@ export { GetContentIdSettingListArgs, GetContentIdSettingListResult, GetContentI
 export const getContentIdSettingList: typeof import("./getContentIdSettingList").getContentIdSettingList = null as any;
 export const getContentIdSettingListOutput: typeof import("./getContentIdSettingList").getContentIdSettingListOutput = null as any;
 utilities.lazyLoad(exports, ["getContentIdSettingList","getContentIdSettingListOutput"], () => require("./getContentIdSettingList"));
+
+export { GetDataFilteringProfileArgs, GetDataFilteringProfileResult, GetDataFilteringProfileOutputArgs } from "./getDataFilteringProfile";
+export const getDataFilteringProfile: typeof import("./getDataFilteringProfile").getDataFilteringProfile = null as any;
+export const getDataFilteringProfileOutput: typeof import("./getDataFilteringProfile").getDataFilteringProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getDataFilteringProfile","getDataFilteringProfileOutput"], () => require("./getDataFilteringProfile"));
+
+export { GetDataFilteringProfileListArgs, GetDataFilteringProfileListResult, GetDataFilteringProfileListOutputArgs } from "./getDataFilteringProfileList";
+export const getDataFilteringProfileList: typeof import("./getDataFilteringProfileList").getDataFilteringProfileList = null as any;
+export const getDataFilteringProfileListOutput: typeof import("./getDataFilteringProfileList").getDataFilteringProfileListOutput = null as any;
+utilities.lazyLoad(exports, ["getDataFilteringProfileList","getDataFilteringProfileListOutput"], () => require("./getDataFilteringProfileList"));
+
+export { GetDataObjectArgs, GetDataObjectResult, GetDataObjectOutputArgs } from "./getDataObject";
+export const getDataObject: typeof import("./getDataObject").getDataObject = null as any;
+export const getDataObjectOutput: typeof import("./getDataObject").getDataObjectOutput = null as any;
+utilities.lazyLoad(exports, ["getDataObject","getDataObjectOutput"], () => require("./getDataObject"));
+
+export { GetDataObjectListArgs, GetDataObjectListResult, GetDataObjectListOutputArgs } from "./getDataObjectList";
+export const getDataObjectList: typeof import("./getDataObjectList").getDataObjectList = null as any;
+export const getDataObjectListOutput: typeof import("./getDataObjectList").getDataObjectListOutput = null as any;
+utilities.lazyLoad(exports, ["getDataObjectList","getDataObjectListOutput"], () => require("./getDataObjectList"));
 
 export { GetDecryptionExclusionArgs, GetDecryptionExclusionResult, GetDecryptionExclusionOutputArgs } from "./getDecryptionExclusion";
 export const getDecryptionExclusion: typeof import("./getDecryptionExclusion").getDecryptionExclusion = null as any;
@@ -600,6 +645,16 @@ export const getGeneralSettingList: typeof import("./getGeneralSettingList").get
 export const getGeneralSettingListOutput: typeof import("./getGeneralSettingList").getGeneralSettingListOutput = null as any;
 utilities.lazyLoad(exports, ["getGeneralSettingList","getGeneralSettingListOutput"], () => require("./getGeneralSettingList"));
 
+export { GetGlobalprotectMatchListArgs, GetGlobalprotectMatchListResult, GetGlobalprotectMatchListOutputArgs } from "./getGlobalprotectMatchList";
+export const getGlobalprotectMatchList: typeof import("./getGlobalprotectMatchList").getGlobalprotectMatchList = null as any;
+export const getGlobalprotectMatchListOutput: typeof import("./getGlobalprotectMatchList").getGlobalprotectMatchListOutput = null as any;
+utilities.lazyLoad(exports, ["getGlobalprotectMatchList","getGlobalprotectMatchListOutput"], () => require("./getGlobalprotectMatchList"));
+
+export { GetGlobalprotectMatchListListArgs, GetGlobalprotectMatchListListResult, GetGlobalprotectMatchListListOutputArgs } from "./getGlobalprotectMatchListList";
+export const getGlobalprotectMatchListList: typeof import("./getGlobalprotectMatchListList").getGlobalprotectMatchListList = null as any;
+export const getGlobalprotectMatchListListOutput: typeof import("./getGlobalprotectMatchListList").getGlobalprotectMatchListListOutput = null as any;
+utilities.lazyLoad(exports, ["getGlobalprotectMatchListList","getGlobalprotectMatchListListOutput"], () => require("./getGlobalprotectMatchListList"));
+
 export { GetHipObjectArgs, GetHipObjectResult, GetHipObjectOutputArgs } from "./getHipObject";
 export const getHipObject: typeof import("./getHipObject").getHipObject = null as any;
 export const getHipObjectOutput: typeof import("./getHipObject").getHipObjectOutput = null as any;
@@ -619,6 +674,16 @@ export { GetHipProfileListArgs, GetHipProfileListResult, GetHipProfileListOutput
 export const getHipProfileList: typeof import("./getHipProfileList").getHipProfileList = null as any;
 export const getHipProfileListOutput: typeof import("./getHipProfileList").getHipProfileListOutput = null as any;
 utilities.lazyLoad(exports, ["getHipProfileList","getHipProfileListOutput"], () => require("./getHipProfileList"));
+
+export { GetHipmatchMatchListArgs, GetHipmatchMatchListResult, GetHipmatchMatchListOutputArgs } from "./getHipmatchMatchList";
+export const getHipmatchMatchList: typeof import("./getHipmatchMatchList").getHipmatchMatchList = null as any;
+export const getHipmatchMatchListOutput: typeof import("./getHipmatchMatchList").getHipmatchMatchListOutput = null as any;
+utilities.lazyLoad(exports, ["getHipmatchMatchList","getHipmatchMatchListOutput"], () => require("./getHipmatchMatchList"));
+
+export { GetHipmatchMatchListListArgs, GetHipmatchMatchListListResult, GetHipmatchMatchListListOutputArgs } from "./getHipmatchMatchListList";
+export const getHipmatchMatchListList: typeof import("./getHipmatchMatchListList").getHipmatchMatchListList = null as any;
+export const getHipmatchMatchListListOutput: typeof import("./getHipmatchMatchListList").getHipmatchMatchListListOutput = null as any;
+utilities.lazyLoad(exports, ["getHipmatchMatchListList","getHipmatchMatchListListOutput"], () => require("./getHipmatchMatchListList"));
 
 export { GetHttpHeaderProfileArgs, GetHttpHeaderProfileResult, GetHttpHeaderProfileOutputArgs } from "./getHttpHeaderProfile";
 export const getHttpHeaderProfile: typeof import("./getHttpHeaderProfile").getHttpHeaderProfile = null as any;
@@ -689,6 +754,16 @@ export { GetIpsecTunnelListArgs, GetIpsecTunnelListResult, GetIpsecTunnelListOut
 export const getIpsecTunnelList: typeof import("./getIpsecTunnelList").getIpsecTunnelList = null as any;
 export const getIpsecTunnelListOutput: typeof import("./getIpsecTunnelList").getIpsecTunnelListOutput = null as any;
 utilities.lazyLoad(exports, ["getIpsecTunnelList","getIpsecTunnelListOutput"], () => require("./getIpsecTunnelList"));
+
+export { GetIptagMatchListArgs, GetIptagMatchListResult, GetIptagMatchListOutputArgs } from "./getIptagMatchList";
+export const getIptagMatchList: typeof import("./getIptagMatchList").getIptagMatchList = null as any;
+export const getIptagMatchListOutput: typeof import("./getIptagMatchList").getIptagMatchListOutput = null as any;
+utilities.lazyLoad(exports, ["getIptagMatchList","getIptagMatchListOutput"], () => require("./getIptagMatchList"));
+
+export { GetIptagMatchListListArgs, GetIptagMatchListListResult, GetIptagMatchListListOutputArgs } from "./getIptagMatchListList";
+export const getIptagMatchListList: typeof import("./getIptagMatchListList").getIptagMatchListList = null as any;
+export const getIptagMatchListListOutput: typeof import("./getIptagMatchListList").getIptagMatchListListOutput = null as any;
+utilities.lazyLoad(exports, ["getIptagMatchListList","getIptagMatchListListOutput"], () => require("./getIptagMatchListList"));
 
 export { GetKerberosServerProfileArgs, GetKerberosServerProfileResult, GetKerberosServerProfileOutputArgs } from "./getKerberosServerProfile";
 export const getKerberosServerProfile: typeof import("./getKerberosServerProfile").getKerberosServerProfile = null as any;
@@ -1160,6 +1235,16 @@ export const getSyslogServerProfileList: typeof import("./getSyslogServerProfile
 export const getSyslogServerProfileListOutput: typeof import("./getSyslogServerProfileList").getSyslogServerProfileListOutput = null as any;
 utilities.lazyLoad(exports, ["getSyslogServerProfileList","getSyslogServerProfileListOutput"], () => require("./getSyslogServerProfileList"));
 
+export { GetSystemMatchListArgs, GetSystemMatchListResult, GetSystemMatchListOutputArgs } from "./getSystemMatchList";
+export const getSystemMatchList: typeof import("./getSystemMatchList").getSystemMatchList = null as any;
+export const getSystemMatchListOutput: typeof import("./getSystemMatchList").getSystemMatchListOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemMatchList","getSystemMatchListOutput"], () => require("./getSystemMatchList"));
+
+export { GetSystemMatchListListArgs, GetSystemMatchListListResult, GetSystemMatchListListOutputArgs } from "./getSystemMatchListList";
+export const getSystemMatchListList: typeof import("./getSystemMatchListList").getSystemMatchListList = null as any;
+export const getSystemMatchListListOutput: typeof import("./getSystemMatchListList").getSystemMatchListListOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemMatchListList","getSystemMatchListListOutput"], () => require("./getSystemMatchListList"));
+
 export { GetTacacsServerProfileArgs, GetTacacsServerProfileResult, GetTacacsServerProfileOutputArgs } from "./getTacacsServerProfile";
 export const getTacacsServerProfile: typeof import("./getTacacsServerProfile").getTacacsServerProfile = null as any;
 export const getTacacsServerProfileOutput: typeof import("./getTacacsServerProfile").getTacacsServerProfileOutput = null as any;
@@ -1250,6 +1335,16 @@ export const getUrlCategoryList: typeof import("./getUrlCategoryList").getUrlCat
 export const getUrlCategoryListOutput: typeof import("./getUrlCategoryList").getUrlCategoryListOutput = null as any;
 utilities.lazyLoad(exports, ["getUrlCategoryList","getUrlCategoryListOutput"], () => require("./getUrlCategoryList"));
 
+export { GetUseridMatchListArgs, GetUseridMatchListResult, GetUseridMatchListOutputArgs } from "./getUseridMatchList";
+export const getUseridMatchList: typeof import("./getUseridMatchList").getUseridMatchList = null as any;
+export const getUseridMatchListOutput: typeof import("./getUseridMatchList").getUseridMatchListOutput = null as any;
+utilities.lazyLoad(exports, ["getUseridMatchList","getUseridMatchListOutput"], () => require("./getUseridMatchList"));
+
+export { GetUseridMatchListListArgs, GetUseridMatchListListResult, GetUseridMatchListListOutputArgs } from "./getUseridMatchListList";
+export const getUseridMatchListList: typeof import("./getUseridMatchListList").getUseridMatchListList = null as any;
+export const getUseridMatchListListOutput: typeof import("./getUseridMatchListList").getUseridMatchListListOutput = null as any;
+utilities.lazyLoad(exports, ["getUseridMatchListList","getUseridMatchListListOutput"], () => require("./getUseridMatchListList"));
+
 export { GetVariableArgs, GetVariableResult, GetVariableOutputArgs } from "./getVariable";
 export const getVariable: typeof import("./getVariable").getVariable = null as any;
 export const getVariableOutput: typeof import("./getVariable").getVariableOutput = null as any;
@@ -1330,6 +1425,11 @@ export const getZoneProtectionProfileList: typeof import("./getZoneProtectionPro
 export const getZoneProtectionProfileListOutput: typeof import("./getZoneProtectionProfileList").getZoneProtectionProfileListOutput = null as any;
 utilities.lazyLoad(exports, ["getZoneProtectionProfileList","getZoneProtectionProfileListOutput"], () => require("./getZoneProtectionProfileList"));
 
+export { GlobalprotectMatchListArgs, GlobalprotectMatchListState } from "./globalprotectMatchList";
+export type GlobalprotectMatchList = import("./globalprotectMatchList").GlobalprotectMatchList;
+export const GlobalprotectMatchList: typeof import("./globalprotectMatchList").GlobalprotectMatchList = null as any;
+utilities.lazyLoad(exports, ["GlobalprotectMatchList"], () => require("./globalprotectMatchList"));
+
 export { HipObjectArgs, HipObjectState } from "./hipObject";
 export type HipObject = import("./hipObject").HipObject;
 export const HipObject: typeof import("./hipObject").HipObject = null as any;
@@ -1339,6 +1439,11 @@ export { HipProfileArgs, HipProfileState } from "./hipProfile";
 export type HipProfile = import("./hipProfile").HipProfile;
 export const HipProfile: typeof import("./hipProfile").HipProfile = null as any;
 utilities.lazyLoad(exports, ["HipProfile"], () => require("./hipProfile"));
+
+export { HipmatchMatchListArgs, HipmatchMatchListState } from "./hipmatchMatchList";
+export type HipmatchMatchList = import("./hipmatchMatchList").HipmatchMatchList;
+export const HipmatchMatchList: typeof import("./hipmatchMatchList").HipmatchMatchList = null as any;
+utilities.lazyLoad(exports, ["HipmatchMatchList"], () => require("./hipmatchMatchList"));
 
 export { HttpHeaderProfileArgs, HttpHeaderProfileState } from "./httpHeaderProfile";
 export type HttpHeaderProfile = import("./httpHeaderProfile").HttpHeaderProfile;
@@ -1379,6 +1484,11 @@ export { IpsecTunnelArgs, IpsecTunnelState } from "./ipsecTunnel";
 export type IpsecTunnel = import("./ipsecTunnel").IpsecTunnel;
 export const IpsecTunnel: typeof import("./ipsecTunnel").IpsecTunnel = null as any;
 utilities.lazyLoad(exports, ["IpsecTunnel"], () => require("./ipsecTunnel"));
+
+export { IptagMatchListArgs, IptagMatchListState } from "./iptagMatchList";
+export type IptagMatchList = import("./iptagMatchList").IptagMatchList;
+export const IptagMatchList: typeof import("./iptagMatchList").IptagMatchList = null as any;
+utilities.lazyLoad(exports, ["IptagMatchList"], () => require("./iptagMatchList"));
 
 export { KerberosServerProfileArgs, KerberosServerProfileState } from "./kerberosServerProfile";
 export type KerberosServerProfile = import("./kerberosServerProfile").KerberosServerProfile;
@@ -1623,6 +1733,11 @@ export type SyslogServerProfile = import("./syslogServerProfile").SyslogServerPr
 export const SyslogServerProfile: typeof import("./syslogServerProfile").SyslogServerProfile = null as any;
 utilities.lazyLoad(exports, ["SyslogServerProfile"], () => require("./syslogServerProfile"));
 
+export { SystemMatchListArgs, SystemMatchListState } from "./systemMatchList";
+export type SystemMatchList = import("./systemMatchList").SystemMatchList;
+export const SystemMatchList: typeof import("./systemMatchList").SystemMatchList = null as any;
+utilities.lazyLoad(exports, ["SystemMatchList"], () => require("./systemMatchList"));
+
 export { TacacsServerProfileArgs, TacacsServerProfileState } from "./tacacsServerProfile";
 export type TacacsServerProfile = import("./tacacsServerProfile").TacacsServerProfile;
 export const TacacsServerProfile: typeof import("./tacacsServerProfile").TacacsServerProfile = null as any;
@@ -1667,6 +1782,11 @@ export { UrlCategoryArgs, UrlCategoryState } from "./urlCategory";
 export type UrlCategory = import("./urlCategory").UrlCategory;
 export const UrlCategory: typeof import("./urlCategory").UrlCategory = null as any;
 utilities.lazyLoad(exports, ["UrlCategory"], () => require("./urlCategory"));
+
+export { UseridMatchListArgs, UseridMatchListState } from "./useridMatchList";
+export type UseridMatchList = import("./useridMatchList").UseridMatchList;
+export const UseridMatchList: typeof import("./useridMatchList").UseridMatchList = null as any;
+utilities.lazyLoad(exports, ["UseridMatchList"], () => require("./useridMatchList"));
 
 export { VariableArgs, VariableState } from "./variable";
 export type Variable = import("./variable").Variable;
@@ -1772,8 +1892,14 @@ const _module = {
                 return new BgpRouting(name, <any>undefined, { urn })
             case "scm:index/certificateProfile:CertificateProfile":
                 return new CertificateProfile(name, <any>undefined, { urn })
+            case "scm:index/configMatchList:ConfigMatchList":
+                return new ConfigMatchList(name, <any>undefined, { urn })
             case "scm:index/contentIdSetting:ContentIdSetting":
                 return new ContentIdSetting(name, <any>undefined, { urn })
+            case "scm:index/dataFilteringProfile:DataFilteringProfile":
+                return new DataFilteringProfile(name, <any>undefined, { urn })
+            case "scm:index/dataObject:DataObject":
+                return new DataObject(name, <any>undefined, { urn })
             case "scm:index/decryptionExclusion:DecryptionExclusion":
                 return new DecryptionExclusion(name, <any>undefined, { urn })
             case "scm:index/decryptionProfile:DecryptionProfile":
@@ -1804,10 +1930,14 @@ const _module = {
                 return new Folder(name, <any>undefined, { urn })
             case "scm:index/generalSetting:GeneralSetting":
                 return new GeneralSetting(name, <any>undefined, { urn })
+            case "scm:index/globalprotectMatchList:GlobalprotectMatchList":
+                return new GlobalprotectMatchList(name, <any>undefined, { urn })
             case "scm:index/hipObject:HipObject":
                 return new HipObject(name, <any>undefined, { urn })
             case "scm:index/hipProfile:HipProfile":
                 return new HipProfile(name, <any>undefined, { urn })
+            case "scm:index/hipmatchMatchList:HipmatchMatchList":
+                return new HipmatchMatchList(name, <any>undefined, { urn })
             case "scm:index/httpHeaderProfile:HttpHeaderProfile":
                 return new HttpHeaderProfile(name, <any>undefined, { urn })
             case "scm:index/httpServerProfile:HttpServerProfile":
@@ -1824,6 +1954,8 @@ const _module = {
                 return new IpsecCryptoProfile(name, <any>undefined, { urn })
             case "scm:index/ipsecTunnel:IpsecTunnel":
                 return new IpsecTunnel(name, <any>undefined, { urn })
+            case "scm:index/iptagMatchList:IptagMatchList":
+                return new IptagMatchList(name, <any>undefined, { urn })
             case "scm:index/kerberosServerProfile:KerberosServerProfile":
                 return new KerberosServerProfile(name, <any>undefined, { urn })
             case "scm:index/label:Label":
@@ -1920,6 +2052,8 @@ const _module = {
                 return new Snippet(name, <any>undefined, { urn })
             case "scm:index/syslogServerProfile:SyslogServerProfile":
                 return new SyslogServerProfile(name, <any>undefined, { urn })
+            case "scm:index/systemMatchList:SystemMatchList":
+                return new SystemMatchList(name, <any>undefined, { urn })
             case "scm:index/tacacsServerProfile:TacacsServerProfile":
                 return new TacacsServerProfile(name, <any>undefined, { urn })
             case "scm:index/tag:Tag":
@@ -1938,6 +2072,8 @@ const _module = {
                 return new UrlAccessProfile(name, <any>undefined, { urn })
             case "scm:index/urlCategory:UrlCategory":
                 return new UrlCategory(name, <any>undefined, { urn })
+            case "scm:index/useridMatchList:UseridMatchList":
+                return new UseridMatchList(name, <any>undefined, { urn })
             case "scm:index/variable:Variable":
                 return new Variable(name, <any>undefined, { urn })
             case "scm:index/vlanInterface:VlanInterface":
@@ -1984,7 +2120,10 @@ pulumi.runtime.registerResourceModule("scm", "index/bgpRouteMap", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpRouteMapRedistribution", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpRouting", _module)
 pulumi.runtime.registerResourceModule("scm", "index/certificateProfile", _module)
+pulumi.runtime.registerResourceModule("scm", "index/configMatchList", _module)
 pulumi.runtime.registerResourceModule("scm", "index/contentIdSetting", _module)
+pulumi.runtime.registerResourceModule("scm", "index/dataFilteringProfile", _module)
+pulumi.runtime.registerResourceModule("scm", "index/dataObject", _module)
 pulumi.runtime.registerResourceModule("scm", "index/decryptionExclusion", _module)
 pulumi.runtime.registerResourceModule("scm", "index/decryptionProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/decryptionRule", _module)
@@ -2000,8 +2139,10 @@ pulumi.runtime.registerResourceModule("scm", "index/externalDynamicList", _modul
 pulumi.runtime.registerResourceModule("scm", "index/fileBlockingProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/folder", _module)
 pulumi.runtime.registerResourceModule("scm", "index/generalSetting", _module)
+pulumi.runtime.registerResourceModule("scm", "index/globalprotectMatchList", _module)
 pulumi.runtime.registerResourceModule("scm", "index/hipObject", _module)
 pulumi.runtime.registerResourceModule("scm", "index/hipProfile", _module)
+pulumi.runtime.registerResourceModule("scm", "index/hipmatchMatchList", _module)
 pulumi.runtime.registerResourceModule("scm", "index/httpHeaderProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/httpServerProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/ikeCryptoProfile", _module)
@@ -2010,6 +2151,7 @@ pulumi.runtime.registerResourceModule("scm", "index/interfaceManagementProfile",
 pulumi.runtime.registerResourceModule("scm", "index/internalDnsServer", _module)
 pulumi.runtime.registerResourceModule("scm", "index/ipsecCryptoProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/ipsecTunnel", _module)
+pulumi.runtime.registerResourceModule("scm", "index/iptagMatchList", _module)
 pulumi.runtime.registerResourceModule("scm", "index/kerberosServerProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/label", _module)
 pulumi.runtime.registerResourceModule("scm", "index/layer2Subinterface", _module)
@@ -2058,6 +2200,7 @@ pulumi.runtime.registerResourceModule("scm", "index/sessionTimeout", _module)
 pulumi.runtime.registerResourceModule("scm", "index/site", _module)
 pulumi.runtime.registerResourceModule("scm", "index/snippet", _module)
 pulumi.runtime.registerResourceModule("scm", "index/syslogServerProfile", _module)
+pulumi.runtime.registerResourceModule("scm", "index/systemMatchList", _module)
 pulumi.runtime.registerResourceModule("scm", "index/tacacsServerProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/tag", _module)
 pulumi.runtime.registerResourceModule("scm", "index/tcpSetting", _module)
@@ -2067,6 +2210,7 @@ pulumi.runtime.registerResourceModule("scm", "index/tunnelInterface", _module)
 pulumi.runtime.registerResourceModule("scm", "index/updateSchedule", _module)
 pulumi.runtime.registerResourceModule("scm", "index/urlAccessProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/urlCategory", _module)
+pulumi.runtime.registerResourceModule("scm", "index/useridMatchList", _module)
 pulumi.runtime.registerResourceModule("scm", "index/variable", _module)
 pulumi.runtime.registerResourceModule("scm", "index/vlanInterface", _module)
 pulumi.runtime.registerResourceModule("scm", "index/vpnSetting", _module)

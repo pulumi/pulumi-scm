@@ -217,7 +217,7 @@ class SessionTimeout(pulumi.CustomResource):
         import pulumi_scm as scm
 
         st_example = scm.SessionTimeout("st_example",
-            folder="All",
+            folder="ngfw-shared",
             session_timeouts={
                 "timeout_default": 60,
                 "timeout_discard_default": 60,
@@ -286,7 +286,7 @@ class SessionTimeout(pulumi.CustomResource):
         import pulumi_scm as scm
 
         st_example = scm.SessionTimeout("st_example",
-            folder="All",
+            folder="ngfw-shared",
             session_timeouts={
                 "timeout_default": 60,
                 "timeout_discard_default": 60,

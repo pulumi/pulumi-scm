@@ -76,6 +76,7 @@ export interface GetLoopbackInterfaceResult {
     readonly ipv6: outputs.GetLoopbackInterfaceIpv6;
     readonly mtu: number;
     readonly name: string;
+    readonly netflowProfile: string;
     readonly snippet: string;
     readonly tfid: string;
 }

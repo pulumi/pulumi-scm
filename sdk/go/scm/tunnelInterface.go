@@ -138,6 +138,8 @@ type TunnelInterface struct {
 	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
 	// L3 sub-interface name for tunnel interface
 	Name pulumi.StringOutput `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrOutput `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -196,6 +198,8 @@ type tunnelInterfaceState struct {
 	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name for tunnel interface
 	Name *string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -225,6 +229,8 @@ type TunnelInterfaceState struct {
 	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name for tunnel interface
 	Name pulumi.StringPtrInput
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -258,6 +264,8 @@ type tunnelInterfaceArgs struct {
 	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name for tunnel interface
 	Name *string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -286,6 +294,8 @@ type TunnelInterfaceArgs struct {
 	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name for tunnel interface
 	Name pulumi.StringPtrInput
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -424,6 +434,11 @@ func (o TunnelInterfaceOutput) Mtu() pulumi.IntPtrOutput {
 // L3 sub-interface name for tunnel interface
 func (o TunnelInterfaceOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *TunnelInterface) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o TunnelInterfaceOutput) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TunnelInterface) pulumi.StringPtrOutput { return v.NetflowProfile }).(pulumi.StringPtrOutput)
 }
 
 // The snippet in which the resource is defined

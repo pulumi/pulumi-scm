@@ -84,6 +84,7 @@ type LookupVlanInterfaceResult struct {
 	Ips                        []GetVlanInterfaceIp `pulumi:"ips"`
 	Mtu                        int                  `pulumi:"mtu"`
 	Name                       string               `pulumi:"name"`
+	NetflowProfile             string               `pulumi:"netflowProfile"`
 	Snippet                    string               `pulumi:"snippet"`
 	Tfid                       string               `pulumi:"tfid"`
 	VlanTag                    string               `pulumi:"vlanTag"`
@@ -176,6 +177,10 @@ func (o LookupVlanInterfaceResultOutput) Mtu() pulumi.IntOutput {
 
 func (o LookupVlanInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVlanInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+func (o LookupVlanInterfaceResultOutput) NetflowProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupVlanInterfaceResult) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
 func (o LookupVlanInterfaceResultOutput) Snippet() pulumi.StringOutput {

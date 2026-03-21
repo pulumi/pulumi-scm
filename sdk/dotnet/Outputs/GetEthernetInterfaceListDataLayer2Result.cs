@@ -18,6 +18,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataLayer2LldpResult Lldp;
         /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        public readonly string NetflowProfile;
+        /// <summary>
         /// Assign interface to VLAN tag
         /// </summary>
         public readonly string VlanTag;
@@ -26,9 +30,12 @@ namespace Pulumi.Scm.Outputs
         private GetEthernetInterfaceListDataLayer2Result(
             Outputs.GetEthernetInterfaceListDataLayer2LldpResult lldp,
 
+            string netflowProfile,
+
             string vlanTag)
         {
             Lldp = lldp;
+            NetflowProfile = netflowProfile;
             VlanTag = vlanTag;
         }
     }

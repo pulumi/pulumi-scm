@@ -13,6 +13,2351 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetVulnerabilityProtectionProfileRule struct {
+	// vulnerability profiles threat exception default action
+	Action GetVulnerabilityProtectionProfileRuleAction `pulumi:"action"`
+	// Category
+	Category string `pulumi:"category"`
+	// Cve
+	Cves []string `pulumi:"cves"`
+	// Host
+	Host string `pulumi:"host"`
+	// Name
+	Name string `pulumi:"name"`
+	// Packet capture
+	PacketCapture string `pulumi:"packetCapture"`
+	// Severity
+	Severities []string `pulumi:"severities"`
+	// Threat name
+	ThreatName string `pulumi:"threatName"`
+	// Vendor id
+	VendorIds []string `pulumi:"vendorIds"`
+}
+
+// GetVulnerabilityProtectionProfileRuleInput is an input type that accepts GetVulnerabilityProtectionProfileRuleArgs and GetVulnerabilityProtectionProfileRuleOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileRuleInput` via:
+//
+//	GetVulnerabilityProtectionProfileRuleArgs{...}
+type GetVulnerabilityProtectionProfileRuleInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileRuleOutput() GetVulnerabilityProtectionProfileRuleOutput
+	ToGetVulnerabilityProtectionProfileRuleOutputWithContext(context.Context) GetVulnerabilityProtectionProfileRuleOutput
+}
+
+type GetVulnerabilityProtectionProfileRuleArgs struct {
+	// vulnerability profiles threat exception default action
+	Action GetVulnerabilityProtectionProfileRuleActionInput `pulumi:"action"`
+	// Category
+	Category pulumi.StringInput `pulumi:"category"`
+	// Cve
+	Cves pulumi.StringArrayInput `pulumi:"cves"`
+	// Host
+	Host pulumi.StringInput `pulumi:"host"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Packet capture
+	PacketCapture pulumi.StringInput `pulumi:"packetCapture"`
+	// Severity
+	Severities pulumi.StringArrayInput `pulumi:"severities"`
+	// Threat name
+	ThreatName pulumi.StringInput `pulumi:"threatName"`
+	// Vendor id
+	VendorIds pulumi.StringArrayInput `pulumi:"vendorIds"`
+}
+
+func (GetVulnerabilityProtectionProfileRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRule)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileRuleArgs) ToGetVulnerabilityProtectionProfileRuleOutput() GetVulnerabilityProtectionProfileRuleOutput {
+	return i.ToGetVulnerabilityProtectionProfileRuleOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileRuleArgs) ToGetVulnerabilityProtectionProfileRuleOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileRuleOutput)
+}
+
+// GetVulnerabilityProtectionProfileRuleArrayInput is an input type that accepts GetVulnerabilityProtectionProfileRuleArray and GetVulnerabilityProtectionProfileRuleArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileRuleArrayInput` via:
+//
+//	GetVulnerabilityProtectionProfileRuleArray{ GetVulnerabilityProtectionProfileRuleArgs{...} }
+type GetVulnerabilityProtectionProfileRuleArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileRuleArrayOutput() GetVulnerabilityProtectionProfileRuleArrayOutput
+	ToGetVulnerabilityProtectionProfileRuleArrayOutputWithContext(context.Context) GetVulnerabilityProtectionProfileRuleArrayOutput
+}
+
+type GetVulnerabilityProtectionProfileRuleArray []GetVulnerabilityProtectionProfileRuleInput
+
+func (GetVulnerabilityProtectionProfileRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionProfileRule)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileRuleArray) ToGetVulnerabilityProtectionProfileRuleArrayOutput() GetVulnerabilityProtectionProfileRuleArrayOutput {
+	return i.ToGetVulnerabilityProtectionProfileRuleArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileRuleArray) ToGetVulnerabilityProtectionProfileRuleArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileRuleArrayOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRule)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileRuleOutput) ToGetVulnerabilityProtectionProfileRuleOutput() GetVulnerabilityProtectionProfileRuleOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleOutput) ToGetVulnerabilityProtectionProfileRuleOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleOutput {
+	return o
+}
+
+// vulnerability profiles threat exception default action
+func (o GetVulnerabilityProtectionProfileRuleOutput) Action() GetVulnerabilityProtectionProfileRuleActionOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) GetVulnerabilityProtectionProfileRuleAction {
+		return v.Action
+	}).(GetVulnerabilityProtectionProfileRuleActionOutput)
+}
+
+// Category
+func (o GetVulnerabilityProtectionProfileRuleOutput) Category() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) string { return v.Category }).(pulumi.StringOutput)
+}
+
+// Cve
+func (o GetVulnerabilityProtectionProfileRuleOutput) Cves() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) []string { return v.Cves }).(pulumi.StringArrayOutput)
+}
+
+// Host
+func (o GetVulnerabilityProtectionProfileRuleOutput) Host() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) string { return v.Host }).(pulumi.StringOutput)
+}
+
+// Name
+func (o GetVulnerabilityProtectionProfileRuleOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Packet capture
+func (o GetVulnerabilityProtectionProfileRuleOutput) PacketCapture() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) string { return v.PacketCapture }).(pulumi.StringOutput)
+}
+
+// Severity
+func (o GetVulnerabilityProtectionProfileRuleOutput) Severities() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) []string { return v.Severities }).(pulumi.StringArrayOutput)
+}
+
+// Threat name
+func (o GetVulnerabilityProtectionProfileRuleOutput) ThreatName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) string { return v.ThreatName }).(pulumi.StringOutput)
+}
+
+// Vendor id
+func (o GetVulnerabilityProtectionProfileRuleOutput) VendorIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRule) []string { return v.VendorIds }).(pulumi.StringArrayOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionProfileRule)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileRuleArrayOutput) ToGetVulnerabilityProtectionProfileRuleArrayOutput() GetVulnerabilityProtectionProfileRuleArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleArrayOutput) ToGetVulnerabilityProtectionProfileRuleArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionProfileRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionProfileRule {
+		return vs[0].([]GetVulnerabilityProtectionProfileRule)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionProfileRuleOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleAction struct {
+	// Alert
+	Alert GetVulnerabilityProtectionProfileRuleActionAlert `pulumi:"alert"`
+	// Allow
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Allow GetVulnerabilityProtectionProfileRuleActionAllow `pulumi:"allow"`
+	// vulnerability protection block ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	BlockIp GetVulnerabilityProtectionProfileRuleActionBlockIp `pulumi:"blockIp"`
+	// Default
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Default GetVulnerabilityProtectionProfileRuleActionDefault `pulumi:"default"`
+	// Drop
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Drop GetVulnerabilityProtectionProfileRuleActionDrop `pulumi:"drop"`
+	// Reset both
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetBoth GetVulnerabilityProtectionProfileRuleActionResetBoth `pulumi:"resetBoth"`
+	// Reset client
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetClient GetVulnerabilityProtectionProfileRuleActionResetClient `pulumi:"resetClient"`
+	// Reset server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetServer GetVulnerabilityProtectionProfileRuleActionResetServer `pulumi:"resetServer"`
+}
+
+// GetVulnerabilityProtectionProfileRuleActionInput is an input type that accepts GetVulnerabilityProtectionProfileRuleActionArgs and GetVulnerabilityProtectionProfileRuleActionOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileRuleActionInput` via:
+//
+//	GetVulnerabilityProtectionProfileRuleActionArgs{...}
+type GetVulnerabilityProtectionProfileRuleActionInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileRuleActionOutput() GetVulnerabilityProtectionProfileRuleActionOutput
+	ToGetVulnerabilityProtectionProfileRuleActionOutputWithContext(context.Context) GetVulnerabilityProtectionProfileRuleActionOutput
+}
+
+type GetVulnerabilityProtectionProfileRuleActionArgs struct {
+	// Alert
+	Alert GetVulnerabilityProtectionProfileRuleActionAlertInput `pulumi:"alert"`
+	// Allow
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Allow GetVulnerabilityProtectionProfileRuleActionAllowInput `pulumi:"allow"`
+	// vulnerability protection block ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	BlockIp GetVulnerabilityProtectionProfileRuleActionBlockIpInput `pulumi:"blockIp"`
+	// Default
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Default GetVulnerabilityProtectionProfileRuleActionDefaultInput `pulumi:"default"`
+	// Drop
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Drop GetVulnerabilityProtectionProfileRuleActionDropInput `pulumi:"drop"`
+	// Reset both
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetBoth GetVulnerabilityProtectionProfileRuleActionResetBothInput `pulumi:"resetBoth"`
+	// Reset client
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetClient GetVulnerabilityProtectionProfileRuleActionResetClientInput `pulumi:"resetClient"`
+	// Reset server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetServer GetVulnerabilityProtectionProfileRuleActionResetServerInput `pulumi:"resetServer"`
+}
+
+func (GetVulnerabilityProtectionProfileRuleActionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleAction)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionArgs) ToGetVulnerabilityProtectionProfileRuleActionOutput() GetVulnerabilityProtectionProfileRuleActionOutput {
+	return i.ToGetVulnerabilityProtectionProfileRuleActionOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionArgs) ToGetVulnerabilityProtectionProfileRuleActionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileRuleActionOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleActionOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileRuleActionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleAction)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionOutput) ToGetVulnerabilityProtectionProfileRuleActionOutput() GetVulnerabilityProtectionProfileRuleActionOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionOutput) ToGetVulnerabilityProtectionProfileRuleActionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionOutput {
+	return o
+}
+
+// Alert
+func (o GetVulnerabilityProtectionProfileRuleActionOutput) Alert() GetVulnerabilityProtectionProfileRuleActionAlertOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionAlert {
+		return v.Alert
+	}).(GetVulnerabilityProtectionProfileRuleActionAlertOutput)
+}
+
+// Allow
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileRuleActionOutput) Allow() GetVulnerabilityProtectionProfileRuleActionAllowOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionAllow {
+		return v.Allow
+	}).(GetVulnerabilityProtectionProfileRuleActionAllowOutput)
+}
+
+// vulnerability protection block ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileRuleActionOutput) BlockIp() GetVulnerabilityProtectionProfileRuleActionBlockIpOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionBlockIp {
+		return v.BlockIp
+	}).(GetVulnerabilityProtectionProfileRuleActionBlockIpOutput)
+}
+
+// Default
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileRuleActionOutput) Default() GetVulnerabilityProtectionProfileRuleActionDefaultOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionDefault {
+		return v.Default
+	}).(GetVulnerabilityProtectionProfileRuleActionDefaultOutput)
+}
+
+// Drop
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileRuleActionOutput) Drop() GetVulnerabilityProtectionProfileRuleActionDropOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionDrop {
+		return v.Drop
+	}).(GetVulnerabilityProtectionProfileRuleActionDropOutput)
+}
+
+// Reset both
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileRuleActionOutput) ResetBoth() GetVulnerabilityProtectionProfileRuleActionResetBothOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionResetBoth {
+		return v.ResetBoth
+	}).(GetVulnerabilityProtectionProfileRuleActionResetBothOutput)
+}
+
+// Reset client
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileRuleActionOutput) ResetClient() GetVulnerabilityProtectionProfileRuleActionResetClientOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionResetClient {
+		return v.ResetClient
+	}).(GetVulnerabilityProtectionProfileRuleActionResetClientOutput)
+}
+
+// Reset server
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileRuleActionOutput) ResetServer() GetVulnerabilityProtectionProfileRuleActionResetServerOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleAction) GetVulnerabilityProtectionProfileRuleActionResetServer {
+		return v.ResetServer
+	}).(GetVulnerabilityProtectionProfileRuleActionResetServerOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleActionAlert struct {
+}
+
+// GetVulnerabilityProtectionProfileRuleActionAlertInput is an input type that accepts GetVulnerabilityProtectionProfileRuleActionAlertArgs and GetVulnerabilityProtectionProfileRuleActionAlertOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileRuleActionAlertInput` via:
+//
+//	GetVulnerabilityProtectionProfileRuleActionAlertArgs{...}
+type GetVulnerabilityProtectionProfileRuleActionAlertInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileRuleActionAlertOutput() GetVulnerabilityProtectionProfileRuleActionAlertOutput
+	ToGetVulnerabilityProtectionProfileRuleActionAlertOutputWithContext(context.Context) GetVulnerabilityProtectionProfileRuleActionAlertOutput
+}
+
+type GetVulnerabilityProtectionProfileRuleActionAlertArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileRuleActionAlertArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionAlert)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionAlertArgs) ToGetVulnerabilityProtectionProfileRuleActionAlertOutput() GetVulnerabilityProtectionProfileRuleActionAlertOutput {
+	return i.ToGetVulnerabilityProtectionProfileRuleActionAlertOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionAlertArgs) ToGetVulnerabilityProtectionProfileRuleActionAlertOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionAlertOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileRuleActionAlertOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleActionAlertOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileRuleActionAlertOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionAlert)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionAlertOutput) ToGetVulnerabilityProtectionProfileRuleActionAlertOutput() GetVulnerabilityProtectionProfileRuleActionAlertOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionAlertOutput) ToGetVulnerabilityProtectionProfileRuleActionAlertOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionAlertOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileRuleActionAllow struct {
+}
+
+// GetVulnerabilityProtectionProfileRuleActionAllowInput is an input type that accepts GetVulnerabilityProtectionProfileRuleActionAllowArgs and GetVulnerabilityProtectionProfileRuleActionAllowOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileRuleActionAllowInput` via:
+//
+//	GetVulnerabilityProtectionProfileRuleActionAllowArgs{...}
+type GetVulnerabilityProtectionProfileRuleActionAllowInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileRuleActionAllowOutput() GetVulnerabilityProtectionProfileRuleActionAllowOutput
+	ToGetVulnerabilityProtectionProfileRuleActionAllowOutputWithContext(context.Context) GetVulnerabilityProtectionProfileRuleActionAllowOutput
+}
+
+type GetVulnerabilityProtectionProfileRuleActionAllowArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileRuleActionAllowArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionAllow)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionAllowArgs) ToGetVulnerabilityProtectionProfileRuleActionAllowOutput() GetVulnerabilityProtectionProfileRuleActionAllowOutput {
+	return i.ToGetVulnerabilityProtectionProfileRuleActionAllowOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionAllowArgs) ToGetVulnerabilityProtectionProfileRuleActionAllowOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionAllowOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileRuleActionAllowOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleActionAllowOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileRuleActionAllowOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionAllow)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionAllowOutput) ToGetVulnerabilityProtectionProfileRuleActionAllowOutput() GetVulnerabilityProtectionProfileRuleActionAllowOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionAllowOutput) ToGetVulnerabilityProtectionProfileRuleActionAllowOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionAllowOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileRuleActionBlockIp struct {
+	// Duration
+	Duration int `pulumi:"duration"`
+	// Track by
+	TrackBy string `pulumi:"trackBy"`
+}
+
+// GetVulnerabilityProtectionProfileRuleActionBlockIpInput is an input type that accepts GetVulnerabilityProtectionProfileRuleActionBlockIpArgs and GetVulnerabilityProtectionProfileRuleActionBlockIpOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileRuleActionBlockIpInput` via:
+//
+//	GetVulnerabilityProtectionProfileRuleActionBlockIpArgs{...}
+type GetVulnerabilityProtectionProfileRuleActionBlockIpInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileRuleActionBlockIpOutput() GetVulnerabilityProtectionProfileRuleActionBlockIpOutput
+	ToGetVulnerabilityProtectionProfileRuleActionBlockIpOutputWithContext(context.Context) GetVulnerabilityProtectionProfileRuleActionBlockIpOutput
+}
+
+type GetVulnerabilityProtectionProfileRuleActionBlockIpArgs struct {
+	// Duration
+	Duration pulumi.IntInput `pulumi:"duration"`
+	// Track by
+	TrackBy pulumi.StringInput `pulumi:"trackBy"`
+}
+
+func (GetVulnerabilityProtectionProfileRuleActionBlockIpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionBlockIp)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionBlockIpArgs) ToGetVulnerabilityProtectionProfileRuleActionBlockIpOutput() GetVulnerabilityProtectionProfileRuleActionBlockIpOutput {
+	return i.ToGetVulnerabilityProtectionProfileRuleActionBlockIpOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionBlockIpArgs) ToGetVulnerabilityProtectionProfileRuleActionBlockIpOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionBlockIpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileRuleActionBlockIpOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleActionBlockIpOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileRuleActionBlockIpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionBlockIp)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionBlockIpOutput) ToGetVulnerabilityProtectionProfileRuleActionBlockIpOutput() GetVulnerabilityProtectionProfileRuleActionBlockIpOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionBlockIpOutput) ToGetVulnerabilityProtectionProfileRuleActionBlockIpOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionBlockIpOutput {
+	return o
+}
+
+// Duration
+func (o GetVulnerabilityProtectionProfileRuleActionBlockIpOutput) Duration() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
+}
+
+// Track by
+func (o GetVulnerabilityProtectionProfileRuleActionBlockIpOutput) TrackBy() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileRuleActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleActionDefault struct {
+}
+
+// GetVulnerabilityProtectionProfileRuleActionDefaultInput is an input type that accepts GetVulnerabilityProtectionProfileRuleActionDefaultArgs and GetVulnerabilityProtectionProfileRuleActionDefaultOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileRuleActionDefaultInput` via:
+//
+//	GetVulnerabilityProtectionProfileRuleActionDefaultArgs{...}
+type GetVulnerabilityProtectionProfileRuleActionDefaultInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileRuleActionDefaultOutput() GetVulnerabilityProtectionProfileRuleActionDefaultOutput
+	ToGetVulnerabilityProtectionProfileRuleActionDefaultOutputWithContext(context.Context) GetVulnerabilityProtectionProfileRuleActionDefaultOutput
+}
+
+type GetVulnerabilityProtectionProfileRuleActionDefaultArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileRuleActionDefaultArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionDefault)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionDefaultArgs) ToGetVulnerabilityProtectionProfileRuleActionDefaultOutput() GetVulnerabilityProtectionProfileRuleActionDefaultOutput {
+	return i.ToGetVulnerabilityProtectionProfileRuleActionDefaultOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionDefaultArgs) ToGetVulnerabilityProtectionProfileRuleActionDefaultOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionDefaultOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileRuleActionDefaultOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleActionDefaultOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileRuleActionDefaultOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionDefault)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionDefaultOutput) ToGetVulnerabilityProtectionProfileRuleActionDefaultOutput() GetVulnerabilityProtectionProfileRuleActionDefaultOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionDefaultOutput) ToGetVulnerabilityProtectionProfileRuleActionDefaultOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionDefaultOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileRuleActionDrop struct {
+}
+
+// GetVulnerabilityProtectionProfileRuleActionDropInput is an input type that accepts GetVulnerabilityProtectionProfileRuleActionDropArgs and GetVulnerabilityProtectionProfileRuleActionDropOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileRuleActionDropInput` via:
+//
+//	GetVulnerabilityProtectionProfileRuleActionDropArgs{...}
+type GetVulnerabilityProtectionProfileRuleActionDropInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileRuleActionDropOutput() GetVulnerabilityProtectionProfileRuleActionDropOutput
+	ToGetVulnerabilityProtectionProfileRuleActionDropOutputWithContext(context.Context) GetVulnerabilityProtectionProfileRuleActionDropOutput
+}
+
+type GetVulnerabilityProtectionProfileRuleActionDropArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileRuleActionDropArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionDrop)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionDropArgs) ToGetVulnerabilityProtectionProfileRuleActionDropOutput() GetVulnerabilityProtectionProfileRuleActionDropOutput {
+	return i.ToGetVulnerabilityProtectionProfileRuleActionDropOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionDropArgs) ToGetVulnerabilityProtectionProfileRuleActionDropOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionDropOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileRuleActionDropOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleActionDropOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileRuleActionDropOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionDrop)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionDropOutput) ToGetVulnerabilityProtectionProfileRuleActionDropOutput() GetVulnerabilityProtectionProfileRuleActionDropOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionDropOutput) ToGetVulnerabilityProtectionProfileRuleActionDropOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionDropOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileRuleActionResetBoth struct {
+}
+
+// GetVulnerabilityProtectionProfileRuleActionResetBothInput is an input type that accepts GetVulnerabilityProtectionProfileRuleActionResetBothArgs and GetVulnerabilityProtectionProfileRuleActionResetBothOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileRuleActionResetBothInput` via:
+//
+//	GetVulnerabilityProtectionProfileRuleActionResetBothArgs{...}
+type GetVulnerabilityProtectionProfileRuleActionResetBothInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileRuleActionResetBothOutput() GetVulnerabilityProtectionProfileRuleActionResetBothOutput
+	ToGetVulnerabilityProtectionProfileRuleActionResetBothOutputWithContext(context.Context) GetVulnerabilityProtectionProfileRuleActionResetBothOutput
+}
+
+type GetVulnerabilityProtectionProfileRuleActionResetBothArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileRuleActionResetBothArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionResetBoth)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionResetBothArgs) ToGetVulnerabilityProtectionProfileRuleActionResetBothOutput() GetVulnerabilityProtectionProfileRuleActionResetBothOutput {
+	return i.ToGetVulnerabilityProtectionProfileRuleActionResetBothOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionResetBothArgs) ToGetVulnerabilityProtectionProfileRuleActionResetBothOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionResetBothOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileRuleActionResetBothOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleActionResetBothOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileRuleActionResetBothOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionResetBoth)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionResetBothOutput) ToGetVulnerabilityProtectionProfileRuleActionResetBothOutput() GetVulnerabilityProtectionProfileRuleActionResetBothOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionResetBothOutput) ToGetVulnerabilityProtectionProfileRuleActionResetBothOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionResetBothOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileRuleActionResetClient struct {
+}
+
+// GetVulnerabilityProtectionProfileRuleActionResetClientInput is an input type that accepts GetVulnerabilityProtectionProfileRuleActionResetClientArgs and GetVulnerabilityProtectionProfileRuleActionResetClientOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileRuleActionResetClientInput` via:
+//
+//	GetVulnerabilityProtectionProfileRuleActionResetClientArgs{...}
+type GetVulnerabilityProtectionProfileRuleActionResetClientInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileRuleActionResetClientOutput() GetVulnerabilityProtectionProfileRuleActionResetClientOutput
+	ToGetVulnerabilityProtectionProfileRuleActionResetClientOutputWithContext(context.Context) GetVulnerabilityProtectionProfileRuleActionResetClientOutput
+}
+
+type GetVulnerabilityProtectionProfileRuleActionResetClientArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileRuleActionResetClientArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionResetClient)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionResetClientArgs) ToGetVulnerabilityProtectionProfileRuleActionResetClientOutput() GetVulnerabilityProtectionProfileRuleActionResetClientOutput {
+	return i.ToGetVulnerabilityProtectionProfileRuleActionResetClientOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionResetClientArgs) ToGetVulnerabilityProtectionProfileRuleActionResetClientOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionResetClientOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileRuleActionResetClientOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleActionResetClientOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileRuleActionResetClientOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionResetClient)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionResetClientOutput) ToGetVulnerabilityProtectionProfileRuleActionResetClientOutput() GetVulnerabilityProtectionProfileRuleActionResetClientOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionResetClientOutput) ToGetVulnerabilityProtectionProfileRuleActionResetClientOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionResetClientOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileRuleActionResetServer struct {
+}
+
+// GetVulnerabilityProtectionProfileRuleActionResetServerInput is an input type that accepts GetVulnerabilityProtectionProfileRuleActionResetServerArgs and GetVulnerabilityProtectionProfileRuleActionResetServerOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileRuleActionResetServerInput` via:
+//
+//	GetVulnerabilityProtectionProfileRuleActionResetServerArgs{...}
+type GetVulnerabilityProtectionProfileRuleActionResetServerInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileRuleActionResetServerOutput() GetVulnerabilityProtectionProfileRuleActionResetServerOutput
+	ToGetVulnerabilityProtectionProfileRuleActionResetServerOutputWithContext(context.Context) GetVulnerabilityProtectionProfileRuleActionResetServerOutput
+}
+
+type GetVulnerabilityProtectionProfileRuleActionResetServerArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileRuleActionResetServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionResetServer)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionResetServerArgs) ToGetVulnerabilityProtectionProfileRuleActionResetServerOutput() GetVulnerabilityProtectionProfileRuleActionResetServerOutput {
+	return i.ToGetVulnerabilityProtectionProfileRuleActionResetServerOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileRuleActionResetServerArgs) ToGetVulnerabilityProtectionProfileRuleActionResetServerOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionResetServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileRuleActionResetServerOutput)
+}
+
+type GetVulnerabilityProtectionProfileRuleActionResetServerOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileRuleActionResetServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionResetServer)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionResetServerOutput) ToGetVulnerabilityProtectionProfileRuleActionResetServerOutput() GetVulnerabilityProtectionProfileRuleActionResetServerOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileRuleActionResetServerOutput) ToGetVulnerabilityProtectionProfileRuleActionResetServerOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileRuleActionResetServerOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileThreatException struct {
+	// vulnerability threat exception default action
+	Action GetVulnerabilityProtectionProfileThreatExceptionAction `pulumi:"action"`
+	// Exempt ip
+	ExemptIps []GetVulnerabilityProtectionProfileThreatExceptionExemptIp `pulumi:"exemptIps"`
+	// Name
+	Name string `pulumi:"name"`
+	// Notes
+	Notes string `pulumi:"notes"`
+	// Packet capture
+	PacketCapture string `pulumi:"packetCapture"`
+	// vulnerability time attribute
+	TimeAttribute GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute `pulumi:"timeAttribute"`
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionArgs and GetVulnerabilityProtectionProfileThreatExceptionOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionOutput() GetVulnerabilityProtectionProfileThreatExceptionOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionArgs struct {
+	// vulnerability threat exception default action
+	Action GetVulnerabilityProtectionProfileThreatExceptionActionInput `pulumi:"action"`
+	// Exempt ip
+	ExemptIps GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayInput `pulumi:"exemptIps"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Notes
+	Notes pulumi.StringInput `pulumi:"notes"`
+	// Packet capture
+	PacketCapture pulumi.StringInput `pulumi:"packetCapture"`
+	// vulnerability time attribute
+	TimeAttribute GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeInput `pulumi:"timeAttribute"`
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatException)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionArgs) ToGetVulnerabilityProtectionProfileThreatExceptionOutput() GetVulnerabilityProtectionProfileThreatExceptionOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionArgs) ToGetVulnerabilityProtectionProfileThreatExceptionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionOutput)
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionArrayInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionArray and GetVulnerabilityProtectionProfileThreatExceptionArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionArrayInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionArray{ GetVulnerabilityProtectionProfileThreatExceptionArgs{...} }
+type GetVulnerabilityProtectionProfileThreatExceptionArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionArrayOutput() GetVulnerabilityProtectionProfileThreatExceptionArrayOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionArrayOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionArrayOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionArray []GetVulnerabilityProtectionProfileThreatExceptionInput
+
+func (GetVulnerabilityProtectionProfileThreatExceptionArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionProfileThreatException)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionArray) ToGetVulnerabilityProtectionProfileThreatExceptionArrayOutput() GetVulnerabilityProtectionProfileThreatExceptionArrayOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionArray) ToGetVulnerabilityProtectionProfileThreatExceptionArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionArrayOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatException)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionOutput) ToGetVulnerabilityProtectionProfileThreatExceptionOutput() GetVulnerabilityProtectionProfileThreatExceptionOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionOutput) ToGetVulnerabilityProtectionProfileThreatExceptionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionOutput {
+	return o
+}
+
+// vulnerability threat exception default action
+func (o GetVulnerabilityProtectionProfileThreatExceptionOutput) Action() GetVulnerabilityProtectionProfileThreatExceptionActionOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatException) GetVulnerabilityProtectionProfileThreatExceptionAction {
+		return v.Action
+	}).(GetVulnerabilityProtectionProfileThreatExceptionActionOutput)
+}
+
+// Exempt ip
+func (o GetVulnerabilityProtectionProfileThreatExceptionOutput) ExemptIps() GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatException) []GetVulnerabilityProtectionProfileThreatExceptionExemptIp {
+		return v.ExemptIps
+	}).(GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput)
+}
+
+// Name
+func (o GetVulnerabilityProtectionProfileThreatExceptionOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatException) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Notes
+func (o GetVulnerabilityProtectionProfileThreatExceptionOutput) Notes() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatException) string { return v.Notes }).(pulumi.StringOutput)
+}
+
+// Packet capture
+func (o GetVulnerabilityProtectionProfileThreatExceptionOutput) PacketCapture() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatException) string { return v.PacketCapture }).(pulumi.StringOutput)
+}
+
+// vulnerability time attribute
+func (o GetVulnerabilityProtectionProfileThreatExceptionOutput) TimeAttribute() GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatException) GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute {
+		return v.TimeAttribute
+	}).(GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionProfileThreatException)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionArrayOutput) ToGetVulnerabilityProtectionProfileThreatExceptionArrayOutput() GetVulnerabilityProtectionProfileThreatExceptionArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionArrayOutput) ToGetVulnerabilityProtectionProfileThreatExceptionArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionProfileThreatExceptionOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionProfileThreatException {
+		return vs[0].([]GetVulnerabilityProtectionProfileThreatException)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionProfileThreatExceptionOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionAction struct {
+	// Alert
+	Alert GetVulnerabilityProtectionProfileThreatExceptionActionAlert `pulumi:"alert"`
+	// Allow
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Allow GetVulnerabilityProtectionProfileThreatExceptionActionAllow `pulumi:"allow"`
+	// vulnerability protection threat exception block ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	BlockIp GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp `pulumi:"blockIp"`
+	// Default
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Default GetVulnerabilityProtectionProfileThreatExceptionActionDefault `pulumi:"default"`
+	// Drop
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Drop GetVulnerabilityProtectionProfileThreatExceptionActionDrop `pulumi:"drop"`
+	// Reset both
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetBoth GetVulnerabilityProtectionProfileThreatExceptionActionResetBoth `pulumi:"resetBoth"`
+	// Reset client
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetClient GetVulnerabilityProtectionProfileThreatExceptionActionResetClient `pulumi:"resetClient"`
+	// Reset server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetServer GetVulnerabilityProtectionProfileThreatExceptionActionResetServer `pulumi:"resetServer"`
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionActionInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionActionArgs and GetVulnerabilityProtectionProfileThreatExceptionActionOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionActionInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionActionArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionActionInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionOutput() GetVulnerabilityProtectionProfileThreatExceptionActionOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionArgs struct {
+	// Alert
+	Alert GetVulnerabilityProtectionProfileThreatExceptionActionAlertInput `pulumi:"alert"`
+	// Allow
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Allow GetVulnerabilityProtectionProfileThreatExceptionActionAllowInput `pulumi:"allow"`
+	// vulnerability protection threat exception block ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	BlockIp GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpInput `pulumi:"blockIp"`
+	// Default
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Default GetVulnerabilityProtectionProfileThreatExceptionActionDefaultInput `pulumi:"default"`
+	// Drop
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Drop GetVulnerabilityProtectionProfileThreatExceptionActionDropInput `pulumi:"drop"`
+	// Reset both
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetBoth GetVulnerabilityProtectionProfileThreatExceptionActionResetBothInput `pulumi:"resetBoth"`
+	// Reset client
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetClient GetVulnerabilityProtectionProfileThreatExceptionActionResetClientInput `pulumi:"resetClient"`
+	// Reset server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetServer GetVulnerabilityProtectionProfileThreatExceptionActionResetServerInput `pulumi:"resetServer"`
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionAction)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionOutput() GetVulnerabilityProtectionProfileThreatExceptionActionOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionActionOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionActionOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionAction)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionOutput() GetVulnerabilityProtectionProfileThreatExceptionActionOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionOutput {
+	return o
+}
+
+// Alert
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) Alert() GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionAlert {
+		return v.Alert
+	}).(GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput)
+}
+
+// Allow
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) Allow() GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionAllow {
+		return v.Allow
+	}).(GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput)
+}
+
+// vulnerability protection threat exception block ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) BlockIp() GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp {
+		return v.BlockIp
+	}).(GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput)
+}
+
+// Default
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) Default() GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionDefault {
+		return v.Default
+	}).(GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput)
+}
+
+// Drop
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) Drop() GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionDrop {
+		return v.Drop
+	}).(GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput)
+}
+
+// Reset both
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) ResetBoth() GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionResetBoth {
+		return v.ResetBoth
+	}).(GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput)
+}
+
+// Reset client
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) ResetClient() GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionResetClient {
+		return v.ResetClient
+	}).(GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput)
+}
+
+// Reset server
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionOutput) ResetServer() GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionAction) GetVulnerabilityProtectionProfileThreatExceptionActionResetServer {
+		return v.ResetServer
+	}).(GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionAlert struct {
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionActionAlertInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionActionAlertArgs and GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionActionAlertInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionActionAlertArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionActionAlertInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput() GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionAlertOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionAlertArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionAlertArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionAlert)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionAlertArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput() GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionActionAlertOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionAlertArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionAlertOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionAlert)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput() GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionAlertOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionAllow struct {
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionActionAllowInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionActionAllowArgs and GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionActionAllowInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionActionAllowArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionActionAllowInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput() GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionAllowOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionAllowArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionAllowArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionAllow)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionAllowArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput() GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionActionAllowOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionAllowArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionAllowOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionAllow)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput() GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionAllowOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp struct {
+	// Duration
+	Duration int `pulumi:"duration"`
+	// Track by
+	TrackBy string `pulumi:"trackBy"`
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs and GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput() GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs struct {
+	// Duration
+	Duration pulumi.IntInput `pulumi:"duration"`
+	// Track by
+	TrackBy pulumi.StringInput `pulumi:"trackBy"`
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput() GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput() GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput {
+	return o
+}
+
+// Duration
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) Duration() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
+}
+
+// Track by
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) TrackBy() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionDefault struct {
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionActionDefaultInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionActionDefaultArgs and GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionActionDefaultInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionActionDefaultArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionActionDefaultInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput() GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionDefaultArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionDefaultArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionDefault)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionDefaultArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput() GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionDefaultArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionDefault)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput() GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionDrop struct {
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionActionDropInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionActionDropArgs and GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionActionDropInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionActionDropArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionActionDropInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionDropOutput() GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionDropOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionDropArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionDropArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionDrop)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionDropArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionDropOutput() GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionActionDropOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionDropArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionDropOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionDrop)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionDropOutput() GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionDropOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetBoth struct {
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionActionResetBothInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionActionResetBothArgs and GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionActionResetBothInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionActionResetBothArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetBothInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput() GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetBothArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionResetBothArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionResetBoth)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionResetBothArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput() GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionResetBothArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionResetBoth)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput() GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetClient struct {
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionActionResetClientInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionActionResetClientArgs and GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionActionResetClientInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionActionResetClientArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetClientInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput() GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetClientArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionResetClientArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionResetClient)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionResetClientArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput() GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionResetClientArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionResetClient)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput() GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetServer struct {
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionActionResetServerInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionActionResetServerArgs and GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionActionResetServerInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionActionResetServerArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetServerInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput() GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetServerArgs struct {
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionResetServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionResetServer)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionResetServerArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput() GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionActionResetServerArgs) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionResetServer)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput() GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput) ToGetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionExemptIp struct {
+	// Name
+	Name string `pulumi:"name"`
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionExemptIpInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionExemptIpArgs and GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionExemptIpInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionExemptIpArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionExemptIpInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput() GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionExemptIpArgs struct {
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionExemptIpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionExemptIp)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionExemptIpArgs) ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput() GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionExemptIpArgs) ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput)
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionExemptIpArray and GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionExemptIpArray{ GetVulnerabilityProtectionProfileThreatExceptionExemptIpArgs{...} }
+type GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput() GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionExemptIpArray []GetVulnerabilityProtectionProfileThreatExceptionExemptIpInput
+
+func (GetVulnerabilityProtectionProfileThreatExceptionExemptIpArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionProfileThreatExceptionExemptIp)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionExemptIpArray) ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput() GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionExemptIpArray) ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionExemptIp)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput) ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput() GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput) ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput {
+	return o
+}
+
+// Name
+func (o GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionExemptIp) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionProfileThreatExceptionExemptIp)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput) ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput() GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput) ToGetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionProfileThreatExceptionExemptIp {
+		return vs[0].([]GetVulnerabilityProtectionProfileThreatExceptionExemptIp)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute struct {
+	// Interval
+	Interval int `pulumi:"interval"`
+	// Threshold
+	Threshold int `pulumi:"threshold"`
+	// Track by
+	TrackBy string `pulumi:"trackBy"`
+}
+
+// GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeInput is an input type that accepts GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs and GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeInput` via:
+//
+//	GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs{...}
+type GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput() GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput
+	ToGetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutputWithContext(context.Context) GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs struct {
+	// Interval
+	Interval pulumi.IntInput `pulumi:"interval"`
+	// Threshold
+	Threshold pulumi.IntInput `pulumi:"threshold"`
+	// Track by
+	TrackBy pulumi.StringInput `pulumi:"trackBy"`
+}
+
+func (GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs) ToGetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput() GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput {
+	return i.ToGetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs) ToGetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput)
+}
+
+type GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput) ToGetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput() GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput) ToGetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutputWithContext(ctx context.Context) GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput {
+	return o
+}
+
+// Interval
+func (o GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput) Interval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute) int { return v.Interval }).(pulumi.IntOutput)
+}
+
+// Threshold
+func (o GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput) Threshold() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute) int { return v.Threshold }).(pulumi.IntOutput)
+}
+
+// Track by
+func (o GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput) TrackBy() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionProfileThreatExceptionTimeAttribute) string { return v.TrackBy }).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionSignatureAffectedHost struct {
+	// Client
+	Client bool `pulumi:"client"`
+	// Server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
+	Server bool `pulumi:"server"`
+}
+
+// GetVulnerabilityProtectionSignatureAffectedHostInput is an input type that accepts GetVulnerabilityProtectionSignatureAffectedHostArgs and GetVulnerabilityProtectionSignatureAffectedHostOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureAffectedHostInput` via:
+//
+//	GetVulnerabilityProtectionSignatureAffectedHostArgs{...}
+type GetVulnerabilityProtectionSignatureAffectedHostInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureAffectedHostOutput() GetVulnerabilityProtectionSignatureAffectedHostOutput
+	ToGetVulnerabilityProtectionSignatureAffectedHostOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureAffectedHostOutput
+}
+
+type GetVulnerabilityProtectionSignatureAffectedHostArgs struct {
+	// Client
+	Client pulumi.BoolInput `pulumi:"client"`
+	// Server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
+	Server pulumi.BoolInput `pulumi:"server"`
+}
+
+func (GetVulnerabilityProtectionSignatureAffectedHostArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureAffectedHost)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureAffectedHostArgs) ToGetVulnerabilityProtectionSignatureAffectedHostOutput() GetVulnerabilityProtectionSignatureAffectedHostOutput {
+	return i.ToGetVulnerabilityProtectionSignatureAffectedHostOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureAffectedHostArgs) ToGetVulnerabilityProtectionSignatureAffectedHostOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureAffectedHostOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureAffectedHostOutput)
+}
+
+type GetVulnerabilityProtectionSignatureAffectedHostOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureAffectedHostOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureAffectedHost)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureAffectedHostOutput) ToGetVulnerabilityProtectionSignatureAffectedHostOutput() GetVulnerabilityProtectionSignatureAffectedHostOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureAffectedHostOutput) ToGetVulnerabilityProtectionSignatureAffectedHostOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureAffectedHostOutput {
+	return o
+}
+
+// Client
+func (o GetVulnerabilityProtectionSignatureAffectedHostOutput) Client() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureAffectedHost) bool { return v.Client }).(pulumi.BoolOutput)
+}
+
+// Server
+//
+// > ℹ️ **Note:** You must specify exactly one of `client` and `server`.
+func (o GetVulnerabilityProtectionSignatureAffectedHostOutput) Server() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureAffectedHost) bool { return v.Server }).(pulumi.BoolOutput)
+}
+
+type GetVulnerabilityProtectionSignatureDefaultAction struct {
+	// Alert
+	Alert GetVulnerabilityProtectionSignatureDefaultActionAlert `pulumi:"alert"`
+	// Allow
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Allow GetVulnerabilityProtectionSignatureDefaultActionAllow `pulumi:"allow"`
+	// vulnerability protection bugtraq block ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	BlockIp GetVulnerabilityProtectionSignatureDefaultActionBlockIp `pulumi:"blockIp"`
+	// Drop
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Drop GetVulnerabilityProtectionSignatureDefaultActionDrop `pulumi:"drop"`
+	// Reset both
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetBoth GetVulnerabilityProtectionSignatureDefaultActionResetBoth `pulumi:"resetBoth"`
+	// Reset client
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetClient GetVulnerabilityProtectionSignatureDefaultActionResetClient `pulumi:"resetClient"`
+	// Reset server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetServer GetVulnerabilityProtectionSignatureDefaultActionResetServer `pulumi:"resetServer"`
+}
+
+// GetVulnerabilityProtectionSignatureDefaultActionInput is an input type that accepts GetVulnerabilityProtectionSignatureDefaultActionArgs and GetVulnerabilityProtectionSignatureDefaultActionOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureDefaultActionInput` via:
+//
+//	GetVulnerabilityProtectionSignatureDefaultActionArgs{...}
+type GetVulnerabilityProtectionSignatureDefaultActionInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureDefaultActionOutput() GetVulnerabilityProtectionSignatureDefaultActionOutput
+	ToGetVulnerabilityProtectionSignatureDefaultActionOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureDefaultActionOutput
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionArgs struct {
+	// Alert
+	Alert GetVulnerabilityProtectionSignatureDefaultActionAlertInput `pulumi:"alert"`
+	// Allow
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Allow GetVulnerabilityProtectionSignatureDefaultActionAllowInput `pulumi:"allow"`
+	// vulnerability protection bugtraq block ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	BlockIp GetVulnerabilityProtectionSignatureDefaultActionBlockIpInput `pulumi:"blockIp"`
+	// Drop
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	Drop GetVulnerabilityProtectionSignatureDefaultActionDropInput `pulumi:"drop"`
+	// Reset both
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetBoth GetVulnerabilityProtectionSignatureDefaultActionResetBothInput `pulumi:"resetBoth"`
+	// Reset client
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetClient GetVulnerabilityProtectionSignatureDefaultActionResetClientInput `pulumi:"resetClient"`
+	// Reset server
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+	ResetServer GetVulnerabilityProtectionSignatureDefaultActionResetServerInput `pulumi:"resetServer"`
+}
+
+func (GetVulnerabilityProtectionSignatureDefaultActionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultAction)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionArgs) ToGetVulnerabilityProtectionSignatureDefaultActionOutput() GetVulnerabilityProtectionSignatureDefaultActionOutput {
+	return i.ToGetVulnerabilityProtectionSignatureDefaultActionOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionArgs) ToGetVulnerabilityProtectionSignatureDefaultActionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureDefaultActionOutput)
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureDefaultActionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultAction)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) ToGetVulnerabilityProtectionSignatureDefaultActionOutput() GetVulnerabilityProtectionSignatureDefaultActionOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) ToGetVulnerabilityProtectionSignatureDefaultActionOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionOutput {
+	return o
+}
+
+// Alert
+func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) Alert() GetVulnerabilityProtectionSignatureDefaultActionAlertOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionAlert {
+		return v.Alert
+	}).(GetVulnerabilityProtectionSignatureDefaultActionAlertOutput)
+}
+
+// Allow
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) Allow() GetVulnerabilityProtectionSignatureDefaultActionAllowOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionAllow {
+		return v.Allow
+	}).(GetVulnerabilityProtectionSignatureDefaultActionAllowOutput)
+}
+
+// vulnerability protection bugtraq block ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) BlockIp() GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionBlockIp {
+		return v.BlockIp
+	}).(GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput)
+}
+
+// Drop
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) Drop() GetVulnerabilityProtectionSignatureDefaultActionDropOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionDrop {
+		return v.Drop
+	}).(GetVulnerabilityProtectionSignatureDefaultActionDropOutput)
+}
+
+// Reset both
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) ResetBoth() GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionResetBoth {
+		return v.ResetBoth
+	}).(GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput)
+}
+
+// Reset client
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) ResetClient() GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionResetClient {
+		return v.ResetClient
+	}).(GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput)
+}
+
+// Reset server
+//
+// > ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+func (o GetVulnerabilityProtectionSignatureDefaultActionOutput) ResetServer() GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultAction) GetVulnerabilityProtectionSignatureDefaultActionResetServer {
+		return v.ResetServer
+	}).(GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput)
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionAlert struct {
+}
+
+// GetVulnerabilityProtectionSignatureDefaultActionAlertInput is an input type that accepts GetVulnerabilityProtectionSignatureDefaultActionAlertArgs and GetVulnerabilityProtectionSignatureDefaultActionAlertOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureDefaultActionAlertInput` via:
+//
+//	GetVulnerabilityProtectionSignatureDefaultActionAlertArgs{...}
+type GetVulnerabilityProtectionSignatureDefaultActionAlertInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureDefaultActionAlertOutput() GetVulnerabilityProtectionSignatureDefaultActionAlertOutput
+	ToGetVulnerabilityProtectionSignatureDefaultActionAlertOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureDefaultActionAlertOutput
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionAlertArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureDefaultActionAlertArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionAlert)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionAlertArgs) ToGetVulnerabilityProtectionSignatureDefaultActionAlertOutput() GetVulnerabilityProtectionSignatureDefaultActionAlertOutput {
+	return i.ToGetVulnerabilityProtectionSignatureDefaultActionAlertOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionAlertArgs) ToGetVulnerabilityProtectionSignatureDefaultActionAlertOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionAlertOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureDefaultActionAlertOutput)
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionAlertOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureDefaultActionAlertOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionAlert)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionAlertOutput) ToGetVulnerabilityProtectionSignatureDefaultActionAlertOutput() GetVulnerabilityProtectionSignatureDefaultActionAlertOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionAlertOutput) ToGetVulnerabilityProtectionSignatureDefaultActionAlertOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionAlertOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionAllow struct {
+}
+
+// GetVulnerabilityProtectionSignatureDefaultActionAllowInput is an input type that accepts GetVulnerabilityProtectionSignatureDefaultActionAllowArgs and GetVulnerabilityProtectionSignatureDefaultActionAllowOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureDefaultActionAllowInput` via:
+//
+//	GetVulnerabilityProtectionSignatureDefaultActionAllowArgs{...}
+type GetVulnerabilityProtectionSignatureDefaultActionAllowInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureDefaultActionAllowOutput() GetVulnerabilityProtectionSignatureDefaultActionAllowOutput
+	ToGetVulnerabilityProtectionSignatureDefaultActionAllowOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureDefaultActionAllowOutput
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionAllowArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureDefaultActionAllowArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionAllow)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionAllowArgs) ToGetVulnerabilityProtectionSignatureDefaultActionAllowOutput() GetVulnerabilityProtectionSignatureDefaultActionAllowOutput {
+	return i.ToGetVulnerabilityProtectionSignatureDefaultActionAllowOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionAllowArgs) ToGetVulnerabilityProtectionSignatureDefaultActionAllowOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionAllowOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureDefaultActionAllowOutput)
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionAllowOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureDefaultActionAllowOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionAllow)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionAllowOutput) ToGetVulnerabilityProtectionSignatureDefaultActionAllowOutput() GetVulnerabilityProtectionSignatureDefaultActionAllowOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionAllowOutput) ToGetVulnerabilityProtectionSignatureDefaultActionAllowOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionAllowOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionBlockIp struct {
+	// Duration
+	Duration int `pulumi:"duration"`
+	// Track by
+	TrackBy string `pulumi:"trackBy"`
+}
+
+// GetVulnerabilityProtectionSignatureDefaultActionBlockIpInput is an input type that accepts GetVulnerabilityProtectionSignatureDefaultActionBlockIpArgs and GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureDefaultActionBlockIpInput` via:
+//
+//	GetVulnerabilityProtectionSignatureDefaultActionBlockIpArgs{...}
+type GetVulnerabilityProtectionSignatureDefaultActionBlockIpInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput() GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput
+	ToGetVulnerabilityProtectionSignatureDefaultActionBlockIpOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionBlockIpArgs struct {
+	// Duration
+	Duration pulumi.IntInput `pulumi:"duration"`
+	// Track by
+	TrackBy pulumi.StringInput `pulumi:"trackBy"`
+}
+
+func (GetVulnerabilityProtectionSignatureDefaultActionBlockIpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionBlockIp)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionBlockIpArgs) ToGetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput() GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput {
+	return i.ToGetVulnerabilityProtectionSignatureDefaultActionBlockIpOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionBlockIpArgs) ToGetVulnerabilityProtectionSignatureDefaultActionBlockIpOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput)
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionBlockIp)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput) ToGetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput() GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput) ToGetVulnerabilityProtectionSignatureDefaultActionBlockIpOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput {
+	return o
+}
+
+// Duration
+func (o GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput) Duration() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultActionBlockIp) int { return v.Duration }).(pulumi.IntOutput)
+}
+
+// Track by
+func (o GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput) TrackBy() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureDefaultActionBlockIp) string { return v.TrackBy }).(pulumi.StringOutput)
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionDrop struct {
+}
+
+// GetVulnerabilityProtectionSignatureDefaultActionDropInput is an input type that accepts GetVulnerabilityProtectionSignatureDefaultActionDropArgs and GetVulnerabilityProtectionSignatureDefaultActionDropOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureDefaultActionDropInput` via:
+//
+//	GetVulnerabilityProtectionSignatureDefaultActionDropArgs{...}
+type GetVulnerabilityProtectionSignatureDefaultActionDropInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureDefaultActionDropOutput() GetVulnerabilityProtectionSignatureDefaultActionDropOutput
+	ToGetVulnerabilityProtectionSignatureDefaultActionDropOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureDefaultActionDropOutput
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionDropArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureDefaultActionDropArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionDrop)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionDropArgs) ToGetVulnerabilityProtectionSignatureDefaultActionDropOutput() GetVulnerabilityProtectionSignatureDefaultActionDropOutput {
+	return i.ToGetVulnerabilityProtectionSignatureDefaultActionDropOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionDropArgs) ToGetVulnerabilityProtectionSignatureDefaultActionDropOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionDropOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureDefaultActionDropOutput)
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionDropOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureDefaultActionDropOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionDrop)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionDropOutput) ToGetVulnerabilityProtectionSignatureDefaultActionDropOutput() GetVulnerabilityProtectionSignatureDefaultActionDropOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionDropOutput) ToGetVulnerabilityProtectionSignatureDefaultActionDropOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionDropOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionResetBoth struct {
+}
+
+// GetVulnerabilityProtectionSignatureDefaultActionResetBothInput is an input type that accepts GetVulnerabilityProtectionSignatureDefaultActionResetBothArgs and GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureDefaultActionResetBothInput` via:
+//
+//	GetVulnerabilityProtectionSignatureDefaultActionResetBothArgs{...}
+type GetVulnerabilityProtectionSignatureDefaultActionResetBothInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureDefaultActionResetBothOutput() GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput
+	ToGetVulnerabilityProtectionSignatureDefaultActionResetBothOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionResetBothArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureDefaultActionResetBothArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionResetBoth)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionResetBothArgs) ToGetVulnerabilityProtectionSignatureDefaultActionResetBothOutput() GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput {
+	return i.ToGetVulnerabilityProtectionSignatureDefaultActionResetBothOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionResetBothArgs) ToGetVulnerabilityProtectionSignatureDefaultActionResetBothOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput)
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionResetBoth)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput) ToGetVulnerabilityProtectionSignatureDefaultActionResetBothOutput() GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput) ToGetVulnerabilityProtectionSignatureDefaultActionResetBothOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionResetClient struct {
+}
+
+// GetVulnerabilityProtectionSignatureDefaultActionResetClientInput is an input type that accepts GetVulnerabilityProtectionSignatureDefaultActionResetClientArgs and GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureDefaultActionResetClientInput` via:
+//
+//	GetVulnerabilityProtectionSignatureDefaultActionResetClientArgs{...}
+type GetVulnerabilityProtectionSignatureDefaultActionResetClientInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureDefaultActionResetClientOutput() GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput
+	ToGetVulnerabilityProtectionSignatureDefaultActionResetClientOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionResetClientArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureDefaultActionResetClientArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionResetClient)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionResetClientArgs) ToGetVulnerabilityProtectionSignatureDefaultActionResetClientOutput() GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput {
+	return i.ToGetVulnerabilityProtectionSignatureDefaultActionResetClientOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionResetClientArgs) ToGetVulnerabilityProtectionSignatureDefaultActionResetClientOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput)
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionResetClient)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput) ToGetVulnerabilityProtectionSignatureDefaultActionResetClientOutput() GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput) ToGetVulnerabilityProtectionSignatureDefaultActionResetClientOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionResetServer struct {
+}
+
+// GetVulnerabilityProtectionSignatureDefaultActionResetServerInput is an input type that accepts GetVulnerabilityProtectionSignatureDefaultActionResetServerArgs and GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureDefaultActionResetServerInput` via:
+//
+//	GetVulnerabilityProtectionSignatureDefaultActionResetServerArgs{...}
+type GetVulnerabilityProtectionSignatureDefaultActionResetServerInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureDefaultActionResetServerOutput() GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput
+	ToGetVulnerabilityProtectionSignatureDefaultActionResetServerOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionResetServerArgs struct {
+}
+
+func (GetVulnerabilityProtectionSignatureDefaultActionResetServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionResetServer)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionResetServerArgs) ToGetVulnerabilityProtectionSignatureDefaultActionResetServerOutput() GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput {
+	return i.ToGetVulnerabilityProtectionSignatureDefaultActionResetServerOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureDefaultActionResetServerArgs) ToGetVulnerabilityProtectionSignatureDefaultActionResetServerOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput)
+}
+
+type GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionResetServer)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput) ToGetVulnerabilityProtectionSignatureDefaultActionResetServerOutput() GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput) ToGetVulnerabilityProtectionSignatureDefaultActionResetServerOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput {
+	return o
+}
+
+type GetVulnerabilityProtectionSignatureListData struct {
+	// Affected host
+	AffectedHost GetVulnerabilityProtectionSignatureListDataAffectedHost `pulumi:"affectedHost"`
+	// Bugtraq
+	Bugtraqs []string `pulumi:"bugtraqs"`
+	// Comment
+	Comment string `pulumi:"comment"`
+	// Cve
+	Cves []string `pulumi:"cves"`
+	// Default action
+	DefaultAction GetVulnerabilityProtectionSignatureListDataDefaultAction `pulumi:"defaultAction"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Direction
+	Direction string `pulumi:"direction"`
+	// The folder of the item. Default: Shared.
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
+	Id string `pulumi:"id"`
+	// Reference
+	References []string `pulumi:"references"`
+	// Severity
+	Severity string `pulumi:"severity"`
+	// vulnerability protection signature
+	Signature GetVulnerabilityProtectionSignatureListDataSignature `pulumi:"signature"`
+	// The snippet of the item.
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// threat id range <41000-45000> and <6800001-6900000>
+	ThreatId string `pulumi:"threatId"`
+	// Threatname
+	Threatname string `pulumi:"threatname"`
+	// Vendor
+	Vendors []string `pulumi:"vendors"`
+}
+
+// GetVulnerabilityProtectionSignatureListDataInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataArgs and GetVulnerabilityProtectionSignatureListDataOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataArgs{...}
+type GetVulnerabilityProtectionSignatureListDataInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataOutput() GetVulnerabilityProtectionSignatureListDataOutput
+	ToGetVulnerabilityProtectionSignatureListDataOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataArgs struct {
+	// Affected host
+	AffectedHost GetVulnerabilityProtectionSignatureListDataAffectedHostInput `pulumi:"affectedHost"`
+	// Bugtraq
+	Bugtraqs pulumi.StringArrayInput `pulumi:"bugtraqs"`
+	// Comment
+	Comment pulumi.StringInput `pulumi:"comment"`
+	// Cve
+	Cves pulumi.StringArrayInput `pulumi:"cves"`
+	// Default action
+	DefaultAction GetVulnerabilityProtectionSignatureListDataDefaultActionInput `pulumi:"defaultAction"`
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// Direction
+	Direction pulumi.StringInput `pulumi:"direction"`
+	// The folder of the item. Default: Shared.
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// UUID of the resource
+	Id pulumi.StringInput `pulumi:"id"`
+	// Reference
+	References pulumi.StringArrayInput `pulumi:"references"`
+	// Severity
+	Severity pulumi.StringInput `pulumi:"severity"`
+	// vulnerability protection signature
+	Signature GetVulnerabilityProtectionSignatureListDataSignatureInput `pulumi:"signature"`
+	// The snippet of the item.
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+	// threat id range <41000-45000> and <6800001-6900000>
+	ThreatId pulumi.StringInput `pulumi:"threatId"`
+	// Threatname
+	Threatname pulumi.StringInput `pulumi:"threatname"`
+	// Vendor
+	Vendors pulumi.StringArrayInput `pulumi:"vendors"`
+}
+
+func (GetVulnerabilityProtectionSignatureListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListData)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataArgs) ToGetVulnerabilityProtectionSignatureListDataOutput() GetVulnerabilityProtectionSignatureListDataOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataArgs) ToGetVulnerabilityProtectionSignatureListDataOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataOutput)
+}
+
+// GetVulnerabilityProtectionSignatureListDataArrayInput is an input type that accepts GetVulnerabilityProtectionSignatureListDataArray and GetVulnerabilityProtectionSignatureListDataArrayOutput values.
+// You can construct a concrete instance of `GetVulnerabilityProtectionSignatureListDataArrayInput` via:
+//
+//	GetVulnerabilityProtectionSignatureListDataArray{ GetVulnerabilityProtectionSignatureListDataArgs{...} }
+type GetVulnerabilityProtectionSignatureListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetVulnerabilityProtectionSignatureListDataArrayOutput() GetVulnerabilityProtectionSignatureListDataArrayOutput
+	ToGetVulnerabilityProtectionSignatureListDataArrayOutputWithContext(context.Context) GetVulnerabilityProtectionSignatureListDataArrayOutput
+}
+
+type GetVulnerabilityProtectionSignatureListDataArray []GetVulnerabilityProtectionSignatureListDataInput
+
+func (GetVulnerabilityProtectionSignatureListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListData)(nil)).Elem()
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataArray) ToGetVulnerabilityProtectionSignatureListDataArrayOutput() GetVulnerabilityProtectionSignatureListDataArrayOutput {
+	return i.ToGetVulnerabilityProtectionSignatureListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetVulnerabilityProtectionSignatureListDataArray) ToGetVulnerabilityProtectionSignatureListDataArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVulnerabilityProtectionSignatureListDataArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVulnerabilityProtectionSignatureListData)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataOutput) ToGetVulnerabilityProtectionSignatureListDataOutput() GetVulnerabilityProtectionSignatureListDataOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataOutput) ToGetVulnerabilityProtectionSignatureListDataOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataOutput {
+	return o
+}
+
+// Affected host
+func (o GetVulnerabilityProtectionSignatureListDataOutput) AffectedHost() GetVulnerabilityProtectionSignatureListDataAffectedHostOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) GetVulnerabilityProtectionSignatureListDataAffectedHost {
+		return v.AffectedHost
+	}).(GetVulnerabilityProtectionSignatureListDataAffectedHostOutput)
+}
+
+// Bugtraq
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Bugtraqs() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) []string { return v.Bugtraqs }).(pulumi.StringArrayOutput)
+}
+
+// Comment
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Comment() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Comment }).(pulumi.StringOutput)
+}
+
+// Cve
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Cves() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) []string { return v.Cves }).(pulumi.StringArrayOutput)
+}
+
+// Default action
+func (o GetVulnerabilityProtectionSignatureListDataOutput) DefaultAction() GetVulnerabilityProtectionSignatureListDataDefaultActionOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) GetVulnerabilityProtectionSignatureListDataDefaultAction {
+		return v.DefaultAction
+	}).(GetVulnerabilityProtectionSignatureListDataDefaultActionOutput)
+}
+
+// The device in which the resource is defined
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Direction
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Direction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Direction }).(pulumi.StringOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Reference
+func (o GetVulnerabilityProtectionSignatureListDataOutput) References() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) []string { return v.References }).(pulumi.StringArrayOutput)
+}
+
+// Severity
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Severity() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Severity }).(pulumi.StringOutput)
+}
+
+// vulnerability protection signature
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Signature() GetVulnerabilityProtectionSignatureListDataSignatureOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) GetVulnerabilityProtectionSignatureListDataSignature {
+		return v.Signature
+	}).(GetVulnerabilityProtectionSignatureListDataSignatureOutput)
+}
+
+// The snippet of the item.
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+// threat id range <41000-45000> and <6800001-6900000>
+func (o GetVulnerabilityProtectionSignatureListDataOutput) ThreatId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.ThreatId }).(pulumi.StringOutput)
+}
+
+// Threatname
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Threatname() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) string { return v.Threatname }).(pulumi.StringOutput)
+}
+
+// Vendor
+func (o GetVulnerabilityProtectionSignatureListDataOutput) Vendors() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetVulnerabilityProtectionSignatureListData) []string { return v.Vendors }).(pulumi.StringArrayOutput)
+}
+
+type GetVulnerabilityProtectionSignatureListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVulnerabilityProtectionSignatureListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVulnerabilityProtectionSignatureListData)(nil)).Elem()
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataArrayOutput) ToGetVulnerabilityProtectionSignatureListDataArrayOutput() GetVulnerabilityProtectionSignatureListDataArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataArrayOutput) ToGetVulnerabilityProtectionSignatureListDataArrayOutputWithContext(ctx context.Context) GetVulnerabilityProtectionSignatureListDataArrayOutput {
+	return o
+}
+
+func (o GetVulnerabilityProtectionSignatureListDataArrayOutput) Index(i pulumi.IntInput) GetVulnerabilityProtectionSignatureListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVulnerabilityProtectionSignatureListData {
+		return vs[0].([]GetVulnerabilityProtectionSignatureListData)[vs[1].(int)]
+	}).(GetVulnerabilityProtectionSignatureListDataOutput)
+}
+
 type GetVulnerabilityProtectionSignatureListDataAffectedHost struct {
 	// Client
 	Client bool `pulumi:"client"`
@@ -10421,6 +12766,42 @@ func (o GetZoneUserAclOutput) IncludeLists() pulumi.StringArrayOutput {
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleInput)(nil)).Elem(), GetVulnerabilityProtectionProfileRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleArrayInput)(nil)).Elem(), GetVulnerabilityProtectionProfileRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionInput)(nil)).Elem(), GetVulnerabilityProtectionProfileRuleActionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionAlertInput)(nil)).Elem(), GetVulnerabilityProtectionProfileRuleActionAlertArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionAllowInput)(nil)).Elem(), GetVulnerabilityProtectionProfileRuleActionAllowArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionBlockIpInput)(nil)).Elem(), GetVulnerabilityProtectionProfileRuleActionBlockIpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionDefaultInput)(nil)).Elem(), GetVulnerabilityProtectionProfileRuleActionDefaultArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionDropInput)(nil)).Elem(), GetVulnerabilityProtectionProfileRuleActionDropArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionResetBothInput)(nil)).Elem(), GetVulnerabilityProtectionProfileRuleActionResetBothArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionResetClientInput)(nil)).Elem(), GetVulnerabilityProtectionProfileRuleActionResetClientArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileRuleActionResetServerInput)(nil)).Elem(), GetVulnerabilityProtectionProfileRuleActionResetServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionArrayInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionActionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionAlertInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionActionAlertArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionAllowInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionActionAllowArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionDefaultInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionActionDefaultArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionDropInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionActionDropArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionResetBothInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionActionResetBothArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionResetClientInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionActionResetClientArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionActionResetServerInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionActionResetServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionExemptIpInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionExemptIpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionExemptIpArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeInput)(nil)).Elem(), GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureAffectedHostInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureAffectedHostArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureDefaultActionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionAlertInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureDefaultActionAlertArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionAllowInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureDefaultActionAllowArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionBlockIpInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureDefaultActionBlockIpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionDropInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureDefaultActionDropArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionResetBothInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureDefaultActionResetBothArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionResetClientInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureDefaultActionResetClientArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureDefaultActionResetServerInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureDefaultActionResetServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataArrayInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataAffectedHostInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataAffectedHostArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataDefaultActionArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVulnerabilityProtectionSignatureListDataDefaultActionAlertInput)(nil)).Elem(), GetVulnerabilityProtectionSignatureListDataDefaultActionAlertArgs{})
@@ -10572,6 +12953,42 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneProtectionProfileScanWhiteListInput)(nil)).Elem(), GetZoneProtectionProfileScanWhiteListArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneProtectionProfileScanWhiteListArrayInput)(nil)).Elem(), GetZoneProtectionProfileScanWhiteListArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneUserAclInput)(nil)).Elem(), GetZoneUserAclArgs{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileRuleOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileRuleArrayOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileRuleActionOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileRuleActionAlertOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileRuleActionAllowOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileRuleActionBlockIpOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileRuleActionDefaultOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileRuleActionDropOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileRuleActionResetBothOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileRuleActionResetClientOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileRuleActionResetServerOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionArrayOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionActionOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionActionAlertOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionActionAllowOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionActionDropOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionActionResetClientOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionActionResetServerOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionExemptIpOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionProfileThreatExceptionTimeAttributeOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureAffectedHostOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureDefaultActionOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureDefaultActionAlertOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureDefaultActionAllowOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureDefaultActionBlockIpOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureDefaultActionDropOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureDefaultActionResetBothOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureDefaultActionResetClientOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureDefaultActionResetServerOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataOutput{})
+	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataAffectedHostOutput{})
 	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataDefaultActionOutput{})
 	pulumi.RegisterOutputType(GetVulnerabilityProtectionSignatureListDataDefaultActionAlertOutput{})

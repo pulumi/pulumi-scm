@@ -29,7 +29,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewSyslogServerProfile(ctx, "scm_syslog_server_prof_1", &scm.SyslogServerProfileArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("syslog-server-prof-base"),
 //				Servers: scm.SyslogServerProfileServerArray{
 //					&scm.SyslogServerProfileServerArgs{
@@ -42,7 +42,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewSyslogServerProfile(ctx, "scm_syslog_server_prof_2", &scm.SyslogServerProfileArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("syslog-server-prof-mixed"),
 //				Servers: scm.SyslogServerProfileServerArray{
 //					&scm.SyslogServerProfileServerArgs{
@@ -64,8 +64,8 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewSyslogServerProfile(ctx, "scm_syslog_server_prof_3", &scm.SyslogServerProfileArgs{
-//				Folder: pulumi.String("All"),
-//				Name:   pulumi.String("syslog-server-prof-complete"),
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("syslog-server-tf-prof-complete"),
 //				Servers: scm.SyslogServerProfileServerArray{
 //					&scm.SyslogServerProfileServerArgs{
 //						Name:      pulumi.String("Server-A"),

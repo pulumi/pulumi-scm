@@ -206,6 +206,7 @@ namespace Pulumi.Scm
         public readonly ImmutableArray<Outputs.GetLayer3SubinterfaceIpResult> Ips;
         public readonly int Mtu;
         public readonly string Name;
+        public readonly string NetflowProfile;
         public readonly string ParentInterface;
         public readonly string Snippet;
         public readonly int Tag;
@@ -235,6 +236,8 @@ namespace Pulumi.Scm
 
             string name,
 
+            string netflowProfile,
+
             string parentInterface,
 
             string snippet,
@@ -254,6 +257,7 @@ namespace Pulumi.Scm
             Ips = ips;
             Mtu = mtu;
             Name = name;
+            NetflowProfile = netflowProfile;
             ParentInterface = parentInterface;
             Snippet = snippet;
             Tag = tag;

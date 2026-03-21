@@ -47,27 +47,27 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         // This file is embedded using go:embed
  *         var scmAddrTag1 = new Tag("scmAddrTag1", TagArgs.builder()
- *             .folder("All")
- *             .name("scm_addr_tag_1")
+ *             .folder("Prisma Access")
+ *             .name("tf_addr_tag_1")
  *             .color("Red")
  *             .build());
  * 
  *         var scmAddrTag2 = new Tag("scmAddrTag2", TagArgs.builder()
- *             .folder("All")
- *             .name("scm_addr_tag_2")
+ *             .folder("Prisma Access")
+ *             .name("tf_addr_tag_2")
  *             .color("Blue")
  *             .build());
  * 
  *         var scmAddrTag3 = new Tag("scmAddrTag3", TagArgs.builder()
- *             .folder("All")
- *             .name("scm_addr_tag_3")
+ *             .folder("Prisma Access")
+ *             .name("tf_addr_tag_3")
  *             .color("Orange")
  *             .build());
  * 
  *         // IP Netmask
  *         var scmAddress1 = new Address("scmAddress1", AddressArgs.builder()
  *             .folder("Prisma Access")
- *             .name("scm_address_1")
+ *             .name("tf_address_1")
  *             .description("Made by Pulumi")
  *             .ipNetmask("10.2.3.4")
  *             .build());
@@ -75,7 +75,7 @@ import javax.annotation.Nullable;
  *         // IP Range
  *         var scmAddress2 = new Address("scmAddress2", AddressArgs.builder()
  *             .folder("Prisma Access")
- *             .name("scm_address_2")
+ *             .name("tf_address_2")
  *             .description("Small IP range test")
  *             .ipRange("192.168.1.10-192.168.1.20")
  *             .build());
@@ -83,7 +83,7 @@ import javax.annotation.Nullable;
  *         // FQDN
  *         var scmAddress3 = new Address("scmAddress3", AddressArgs.builder()
  *             .folder("Prisma Access")
- *             .name("scm_address_3")
+ *             .name("tf_address_3")
  *             .description("Simple FQDN test")
  *             .fqdn("example.com")
  *             .build());
@@ -91,7 +91,7 @@ import javax.annotation.Nullable;
  *         // Class C wildcard
  *         var scmAddress4 = new Address("scmAddress4", AddressArgs.builder()
  *             .folder("Prisma Access")
- *             .name("scm_address_4")
+ *             .name("tf_address_4")
  *             .description("Class C wildcard test")
  *             .ipWildcard("192.168.1.0/0.0.0.255")
  *             .build());
@@ -99,7 +99,7 @@ import javax.annotation.Nullable;
  *         // Multiple tags
  *         var scmAddress5 = new Address("scmAddress5", AddressArgs.builder()
  *             .folder("Prisma Access")
- *             .name("scm_address_5")
+ *             .name("tf_address_5")
  *             .description("Multiple tags test")
  *             .ipNetmask("10.10.10.2/32")
  *             .tags(            

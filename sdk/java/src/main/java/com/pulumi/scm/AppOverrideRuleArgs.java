@@ -5,7 +5,6 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,15 +21,15 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
      * Application
      * 
      */
-    @Import(name="application", required=true)
-    private Output<String> application;
+    @Import(name="application")
+    private @Nullable Output<String> application;
 
     /**
      * @return Application
      * 
      */
-    public Output<String> application() {
-        return this.application;
+    public Optional<Output<String>> application() {
+        return Optional.ofNullable(this.application);
     }
 
     /**
@@ -52,15 +51,15 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
      * Destination
      * 
      */
-    @Import(name="destinations", required=true)
-    private Output<List<String>> destinations;
+    @Import(name="destinations")
+    private @Nullable Output<List<String>> destinations;
 
     /**
      * @return Destination
      * 
      */
-    public Output<List<String>> destinations() {
-        return this.destinations;
+    public Optional<Output<List<String>>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     /**
@@ -116,15 +115,15 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
      * From
      * 
      */
-    @Import(name="froms", required=true)
-    private Output<List<String>> froms;
+    @Import(name="froms")
+    private @Nullable Output<List<String>> froms;
 
     /**
      * @return From
      * 
      */
-    public Output<List<String>> froms() {
-        return this.froms;
+    public Optional<Output<List<String>>> froms() {
+        return Optional.ofNullable(this.froms);
     }
 
     /**
@@ -191,15 +190,15 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
      * Port
      * 
      */
-    @Import(name="port", required=true)
-    private Output<String> port;
+    @Import(name="port")
+    private @Nullable Output<String> port;
 
     /**
      * @return Port
      * 
      */
-    public Output<String> port() {
-        return this.port;
+    public Optional<Output<String>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -221,15 +220,15 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
      * Protocol
      * 
      */
-    @Import(name="protocol", required=true)
-    private Output<String> protocol;
+    @Import(name="protocol")
+    private @Nullable Output<String> protocol;
 
     /**
      * @return Protocol
      * 
      */
-    public Output<String> protocol() {
-        return this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -270,15 +269,15 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
      * Source
      * 
      */
-    @Import(name="sources", required=true)
-    private Output<List<String>> sources;
+    @Import(name="sources")
+    private @Nullable Output<List<String>> sources;
 
     /**
      * @return Source
      * 
      */
-    public Output<List<String>> sources() {
-        return this.sources;
+    public Optional<Output<List<String>>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
     /**
@@ -315,15 +314,15 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
      * To
      * 
      */
-    @Import(name="tos", required=true)
-    private Output<List<String>> tos;
+    @Import(name="tos")
+    private @Nullable Output<List<String>> tos;
 
     /**
      * @return To
      * 
      */
-    public Output<List<String>> tos() {
-        return this.tos;
+    public Optional<Output<List<String>>> tos() {
+        return Optional.ofNullable(this.tos);
     }
 
     private AppOverrideRuleArgs() {}
@@ -375,7 +374,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder application(Output<String> application) {
+        public Builder application(@Nullable Output<String> application) {
             $.application = application;
             return this;
         }
@@ -417,7 +416,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder destinations(Output<List<String>> destinations) {
+        public Builder destinations(@Nullable Output<List<String>> destinations) {
             $.destinations = destinations;
             return this;
         }
@@ -515,7 +514,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder froms(Output<List<String>> froms) {
+        public Builder froms(@Nullable Output<List<String>> froms) {
             $.froms = froms;
             return this;
         }
@@ -630,7 +629,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder port(Output<String> port) {
+        public Builder port(@Nullable Output<String> port) {
             $.port = port;
             return this;
         }
@@ -672,7 +671,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder protocol(Output<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
@@ -739,7 +738,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder sources(Output<List<String>> sources) {
+        public Builder sources(@Nullable Output<List<String>> sources) {
             $.sources = sources;
             return this;
         }
@@ -822,7 +821,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder tos(Output<List<String>> tos) {
+        public Builder tos(@Nullable Output<List<String>> tos) {
             $.tos = tos;
             return this;
         }
@@ -848,27 +847,6 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         public AppOverrideRuleArgs build() {
-            if ($.application == null) {
-                throw new MissingRequiredPropertyException("AppOverrideRuleArgs", "application");
-            }
-            if ($.destinations == null) {
-                throw new MissingRequiredPropertyException("AppOverrideRuleArgs", "destinations");
-            }
-            if ($.froms == null) {
-                throw new MissingRequiredPropertyException("AppOverrideRuleArgs", "froms");
-            }
-            if ($.port == null) {
-                throw new MissingRequiredPropertyException("AppOverrideRuleArgs", "port");
-            }
-            if ($.protocol == null) {
-                throw new MissingRequiredPropertyException("AppOverrideRuleArgs", "protocol");
-            }
-            if ($.sources == null) {
-                throw new MissingRequiredPropertyException("AppOverrideRuleArgs", "sources");
-            }
-            if ($.tos == null) {
-                throw new MissingRequiredPropertyException("AppOverrideRuleArgs", "tos");
-            }
             return $;
         }
     }

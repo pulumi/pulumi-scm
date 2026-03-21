@@ -16,8 +16,8 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const exampleTag = new scm.Tag("example_tag", {
- *     folder: "All",
- *     name: "example-tag",
+ *     folder: "ngfw-shared",
+ *     name: "example-nat-rule",
  *     color: "Red",
  * });
  * //Source Translation (SNAT) - Dynamic IP and Port
@@ -31,7 +31,7 @@ import * as utilities from "./utilities";
  *     description: "Dynamic SNAT for internal traffic accessing the internet. Updating",
  *     disabled: false,
  *     natType: "ipv4",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     tags: [exampleTag.name],
  *     sourceTranslation: {
  *         dynamicIpAndPort: {
@@ -58,7 +58,7 @@ import * as utilities from "./utilities";
  *     description: "Dynamic SNAT for internal traffic accessing the internet. Updating",
  *     disabled: false,
  *     natType: "ipv4",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     tags: [exampleTag.name],
  *     sourceTranslation: {
  *         staticIp: {
@@ -83,7 +83,7 @@ import * as utilities from "./utilities";
  *     description: "Dynamic SNAT for internal traffic accessing the internet. Updating",
  *     disabled: false,
  *     natType: "ipv4",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     tags: [exampleTag.name],
  *     sourceTranslation: {
  *         staticIp: {
@@ -104,7 +104,7 @@ import * as utilities from "./utilities";
  *     description: "Dynamic SNAT for internal traffic accessing the internet. Updating",
  *     disabled: false,
  *     natType: "ipv4",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     tags: [exampleTag.name],
  *     sourceTranslation: {
  *         dynamicIp: {

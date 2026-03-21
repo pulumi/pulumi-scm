@@ -29,7 +29,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewSamlServerProfile(ctx, "scm_saml_server_profile_1", &scm.SamlServerProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("scm-saml-server-prof-1"),
 //				Certificate: pulumi.String("Global Authentication Cookie Cert"),
 //				EntityId:    pulumi.String("123"),
@@ -40,7 +40,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewSamlServerProfile(ctx, "scm_saml_server_profile_2", &scm.SamlServerProfileArgs{
-//				Folder:                 pulumi.String("All"),
+//				Folder:                 pulumi.String("ngfw-shared"),
 //				Name:                   pulumi.String("scm-saml-server-prof-2"),
 //				Certificate:            pulumi.String("Global Authentication Cookie Cert"),
 //				EntityId:               pulumi.String("test_id"),
@@ -54,7 +54,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewSamlServerProfile(ctx, "scm_saml_server_profile_3", &scm.SamlServerProfileArgs{
-//				Folder:                 pulumi.String("All"),
+//				Folder:                 pulumi.String("ngfw-shared"),
 //				Name:                   pulumi.String("scm-saml-server-prof-3"),
 //				Certificate:            pulumi.String("Global Authentication Cookie Cert"),
 //				EntityId:               pulumi.String("test_123"),

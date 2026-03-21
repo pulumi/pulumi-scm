@@ -27,6 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates an empty bgp filtering profile
 //			_, err := scm.NewBgpFilteringProfile(ctx, "scm_bgp_filtering_profile", &scm.BgpFilteringProfileArgs{
 //				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("scm_bgp_filtering_profile"),
@@ -35,19 +36,115 @@ import (
 //			if err != nil {
 //				return err
 //			}
+//			// Creates various resources used for scm_bgp_filtering_profile_complex
+//			scmPlInbound, err := scm.NewRoutePrefixList(ctx, "scm_pl_inbound", &scm.RoutePrefixListArgs{
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("scm_pl_inbound"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type: &scm.RoutePrefixListTypeArgs{
+//					Ipv4: &scm.RoutePrefixListTypeIpv4Args{
+//						Ipv4Entries: scm.RoutePrefixListTypeIpv4Ipv4EntryArray{
+//							&scm.RoutePrefixListTypeIpv4Ipv4EntryArgs{
+//								Name:   pulumi.Int(10),
+//								Action: pulumi.String("permit"),
+//								Prefix: &scm.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs{
+//									GreaterThanOrEqual: 24,
+//									Network:            pulumi.String("any"),
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			scmRmInbound, err := scm.NewBgpRouteMap(ctx, "scm_rm_inbound", &scm.BgpRouteMapArgs{
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("scm_rm_inbound"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				RouteMaps: scm.BgpRouteMapRouteMapArray{
+//					&scm.BgpRouteMapRouteMapArgs{
+//						Name:        pulumi.Int(10),
+//						Description: pulumi.String("No Export"),
+//						Match: &scm.BgpRouteMapRouteMapMatchArgs{
+//							Ipv4: &scm.BgpRouteMapRouteMapMatchIpv4Args{
+//								Address: &scm.BgpRouteMapRouteMapMatchIpv4AddressArgs{
+//									PrefixList: pulumi.String("scm_pl_inbound"),
+//								},
+//							},
+//						},
+//						Set: &scm.BgpRouteMapRouteMapSetArgs{
+//							RegularCommunity: []string{
+//								"no-export",
+//							},
+//						},
+//					},
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmPlInbound,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			scmPlOutbound, err := scm.NewRoutePrefixList(ctx, "scm_pl_outbound", &scm.RoutePrefixListArgs{
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("scm_pl_outbound"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type: &scm.RoutePrefixListTypeArgs{
+//					Ipv4: &scm.RoutePrefixListTypeIpv4Args{
+//						Ipv4Entries: scm.RoutePrefixListTypeIpv4Ipv4EntryArray{
+//							&scm.RoutePrefixListTypeIpv4Ipv4EntryArgs{
+//								Name:   pulumi.Int(10),
+//								Action: pulumi.String("permit"),
+//								Prefix: &scm.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs{
+//									GreaterThanOrEqual: 24,
+//									Network:            pulumi.String("any"),
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			scmRmOutbound, err := scm.NewBgpRouteMap(ctx, "scm_rm_outbound", &scm.BgpRouteMapArgs{
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("scm_rm_outbound"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				RouteMaps: scm.BgpRouteMapRouteMapArray{
+//					&scm.BgpRouteMapRouteMapArgs{
+//						Name:        pulumi.Int(10),
+//						Description: pulumi.String("No Export"),
+//						Match: &scm.BgpRouteMapRouteMapMatchArgs{
+//							Ipv4: &scm.BgpRouteMapRouteMapMatchIpv4Args{
+//								Address: &scm.BgpRouteMapRouteMapMatchIpv4AddressArgs{
+//									PrefixList: pulumi.String("scm_pl_outbound"),
+//								},
+//							},
+//						},
+//						Set: &scm.BgpRouteMapRouteMapSetArgs{
+//							RegularCommunity: []string{
+//								"no-export",
+//							},
+//						},
+//					},
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmPlOutbound,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a complex filtering profile that utilises previously created FL, PL and RM
 //			_, err = scm.NewBgpFilteringProfile(ctx, "scm_bgp_filtering_profile_complex", &scm.BgpFilteringProfileArgs{
 //				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("scm_bgp_filtering_profile_complex"),
 //				Ipv4: &scm.BgpFilteringProfileIpv4Args{
 //					Unicast: &scm.BgpFilteringProfileIpv4UnicastArgs{
-//						FilterList: &scm.BgpFilteringProfileIpv4UnicastFilterListArgs{
-//							Inbound: pulumi.String("scm_filter_list"),
-//						},
 //						InboundNetworkFilters: &scm.BgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs{
 //							PrefixList: pulumi.String("scm_pl_inbound"),
-//						},
-//						OutboundNetworkFilters: &scm.BgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs{
-//							DistributeList: pulumi.String("scm_distribute_list"),
 //						},
 //						RouteMaps: &scm.BgpFilteringProfileIpv4UnicastRouteMapsArgs{
 //							Inbound:  pulumi.String("scm_rm_inbound"),
@@ -55,7 +152,11 @@ import (
 //						},
 //					},
 //				},
-//			})
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmPlInbound,
+//				scmRmInbound,
+//				scmRmOutbound,
+//			}))
 //			if err != nil {
 //				return err
 //			}

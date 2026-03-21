@@ -691,8 +691,8 @@ class NatRule(pulumi.CustomResource):
         import pulumi_scm as scm
 
         example_tag = scm.Tag("example_tag",
-            folder="All",
-            name="example-tag",
+            folder="ngfw-shared",
+            name="example-nat-rule",
             color="Red")
         #Source Translation (SNAT) - Dynamic IP and Port
         example_nat_rule = scm.NatRule("example_nat_rule",
@@ -705,7 +705,7 @@ class NatRule(pulumi.CustomResource):
             description="Dynamic SNAT for internal traffic accessing the internet. Updating",
             disabled=False,
             nat_type="ipv4",
-            folder="All",
+            folder="ngfw-shared",
             tags=[example_tag.name],
             source_translation={
                 "dynamic_ip_and_port": {
@@ -731,7 +731,7 @@ class NatRule(pulumi.CustomResource):
             description="Dynamic SNAT for internal traffic accessing the internet. Updating",
             disabled=False,
             nat_type="ipv4",
-            folder="All",
+            folder="ngfw-shared",
             tags=[example_tag.name],
             source_translation={
                 "static_ip": {
@@ -755,7 +755,7 @@ class NatRule(pulumi.CustomResource):
             description="Dynamic SNAT for internal traffic accessing the internet. Updating",
             disabled=False,
             nat_type="ipv4",
-            folder="All",
+            folder="ngfw-shared",
             tags=[example_tag.name],
             source_translation={
                 "static_ip": {
@@ -775,7 +775,7 @@ class NatRule(pulumi.CustomResource):
             description="Dynamic SNAT for internal traffic accessing the internet. Updating",
             disabled=False,
             nat_type="ipv4",
-            folder="All",
+            folder="ngfw-shared",
             tags=[example_tag.name],
             source_translation={
                 "dynamic_ip": {
@@ -857,8 +857,8 @@ class NatRule(pulumi.CustomResource):
         import pulumi_scm as scm
 
         example_tag = scm.Tag("example_tag",
-            folder="All",
-            name="example-tag",
+            folder="ngfw-shared",
+            name="example-nat-rule",
             color="Red")
         #Source Translation (SNAT) - Dynamic IP and Port
         example_nat_rule = scm.NatRule("example_nat_rule",
@@ -871,7 +871,7 @@ class NatRule(pulumi.CustomResource):
             description="Dynamic SNAT for internal traffic accessing the internet. Updating",
             disabled=False,
             nat_type="ipv4",
-            folder="All",
+            folder="ngfw-shared",
             tags=[example_tag.name],
             source_translation={
                 "dynamic_ip_and_port": {
@@ -897,7 +897,7 @@ class NatRule(pulumi.CustomResource):
             description="Dynamic SNAT for internal traffic accessing the internet. Updating",
             disabled=False,
             nat_type="ipv4",
-            folder="All",
+            folder="ngfw-shared",
             tags=[example_tag.name],
             source_translation={
                 "static_ip": {
@@ -921,7 +921,7 @@ class NatRule(pulumi.CustomResource):
             description="Dynamic SNAT for internal traffic accessing the internet. Updating",
             disabled=False,
             nat_type="ipv4",
-            folder="All",
+            folder="ngfw-shared",
             tags=[example_tag.name],
             source_translation={
                 "static_ip": {
@@ -941,7 +941,7 @@ class NatRule(pulumi.CustomResource):
             description="Dynamic SNAT for internal traffic accessing the internet. Updating",
             disabled=False,
             nat_type="ipv4",
-            folder="All",
+            folder="ngfw-shared",
             tags=[example_tag.name],
             source_translation={
                 "dynamic_ip": {

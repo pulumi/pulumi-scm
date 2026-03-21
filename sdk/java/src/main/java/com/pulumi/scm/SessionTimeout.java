@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var stExample = new SessionTimeout("stExample", SessionTimeoutArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .sessionTimeouts(SessionTimeoutSessionTimeoutsArgs.builder()
  *                 .timeoutDefault(60)
  *                 .timeoutDiscardDefault(60)

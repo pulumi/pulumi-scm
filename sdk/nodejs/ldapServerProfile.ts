@@ -9,6 +9,119 @@ import * as utilities from "./utilities";
 /**
  * LdapServerProfile resource
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // ldpap server profile w/ required fields
+ * const scmLdapServerProfileOne = new scm.LdapServerProfile("scm_ldap_server_profile_one", {
+ *     folder: "All",
+ *     name: "simple-ldap-profile",
+ *     servers: [
+ *         {
+ *             name: "primary-ldap",
+ *             address: "$tst_68081_1",
+ *             port: 389,
+ *         },
+ *         {
+ *             name: "secondary-ldap",
+ *             address: "$tst_68081_2",
+ *             port: 1,
+ *         },
+ *         {
+ *             name: "extra-ldap",
+ *             address: "$test_ip",
+ *             port: 65535,
+ *         },
+ *     ],
+ * });
+ * // ldpap server profile w/ some fields
+ * const scmLdapServerProfileTwo = new scm.LdapServerProfile("scm_ldap_server_profile_two", {
+ *     folder: "All",
+ *     name: "intermediate-ldap-profile-one",
+ *     ldapType: "active-directory",
+ *     base: "dc=example,dc=com",
+ *     ssl: true,
+ *     servers: [{
+ *         name: "extra-ldap",
+ *         address: "$test_ip",
+ *         port: 25,
+ *     }],
+ * });
+ * const scmLdapServerProfileThree = new scm.LdapServerProfile("scm_ldap_server_profile_three", {
+ *     folder: "All",
+ *     name: "intermediate-ldap-profile-two",
+ *     ldapType: "sun",
+ *     base: "DC=internal,DC=company,DC=com",
+ *     bindDn: "CN=LDAP Bind,OU=Service Accounts,DC=internal,DC=company,DC=com",
+ *     bindPassword: "SecurePwd123!",
+ *     timelimit: 30,
+ *     servers: [
+ *         {
+ *             name: "primary-ldap",
+ *             address: "$tst_68081_1",
+ *             port: 5000,
+ *         },
+ *         {
+ *             name: "secondary-ldap",
+ *             address: "150.25.25.60",
+ *             port: 25000,
+ *         },
+ *     ],
+ * });
+ * // ldpap server profile w/ all fields
+ * const scmLdapServerProfileFour = new scm.LdapServerProfile("scm_ldap_server_profile_four", {
+ *     folder: "All",
+ *     name: "complex-ldap-profile-one",
+ *     ldapType: "e-directory",
+ *     base: "ou=users,dc=corp,dc=local",
+ *     bindDn: "cn=admin,dc=corp,dc=local",
+ *     bindPassword: "MyPwd123!",
+ *     bindTimelimit: "20",
+ *     retryInterval: 1000,
+ *     timelimit: 10,
+ *     ssl: true,
+ *     verifyServerCertificate: false,
+ *     servers: [{
+ *         name: "global-directory-main",
+ *         address: "$scm_variable_ipaddr",
+ *         port: 636,
+ *     }],
+ * });
+ * const scmLdapServerProfileFive = new scm.LdapServerProfile("scm_ldap_server_profile_five", {
+ *     folder: "All",
+ *     name: "complex-ldap-profile-two",
+ *     ldapType: "other",
+ *     base: "OU=Employees,DC=global,DC=enterprise,DC=net",
+ *     bindDn: "CN=SVC_LDAP_Search,OU=Service Accounts,DC=global,DC=enterprise,DC=net",
+ *     bindPassword: "ExtremelyComplexP@ssw0rd!",
+ *     bindTimelimit: "15",
+ *     retryInterval: 300,
+ *     timelimit: 30,
+ *     ssl: true,
+ *     verifyServerCertificate: true,
+ *     servers: [
+ *         {
+ *             name: "dc-us-east",
+ *             address: "$scm_variable_ipaddr",
+ *             port: 720,
+ *         },
+ *         {
+ *             name: "dc-us-west",
+ *             address: "192.10.10.10",
+ *             port: 1400,
+ *         },
+ *         {
+ *             name: "dc-eu-central",
+ *             address: "3.3.3.3",
+ *             port: 20000,
+ *         },
+ *     ],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The following command can be used to import a resource not managed by Terraform:

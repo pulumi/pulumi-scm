@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *
  * const dcPostmanProfile = new scm.InterfaceManagementProfile("dc_postman_profile", {
  *     name: "test_inf_mgmt_profile_1_update",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     permittedIps: [
  *         {
  *             name: "10.0.0.0/24",

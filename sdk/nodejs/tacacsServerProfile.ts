@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  *     name: "ISE-TACACS11",
  *     protocol: "PAP",
  *     timeout: 3,
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     useSingleConnection: true,
  *     servers: [
  *         {

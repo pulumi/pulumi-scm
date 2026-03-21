@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Creates a ethernet interface used as parent-interface for subsequent examples
 //			scmParentInterface, err := scm.NewEthernetInterface(ctx, "scm_parent_interface", &scm.EthernetInterfaceArgs{
-//				Name:    pulumi.String("$scm_parent_interface"),
+//				Name:    pulumi.String("$scm_tf_parent_interface"),
 //				Comment: pulumi.String("Managed by Pulumi"),
 //				Folder:  pulumi.String("ngfw-shared"),
 //				Layer3:  &scm.EthernetInterfaceLayer3Args{},
@@ -39,11 +39,11 @@ import (
 //			}
 //			// Creates a layer3 sub-interface with static ip address
 //			_, err = scm.NewLayer3Subinterface(ctx, "scm_l3_subinterface", &scm.Layer3SubinterfaceArgs{
-//				Name:            pulumi.String("$scm_parent_interface.100"),
+//				Name:            pulumi.String("$scm_tf_parent_interface.100"),
 //				Comment:         pulumi.String("Managed by Pulumi"),
 //				Folder:          pulumi.String("ngfw-shared"),
 //				Tag:             pulumi.Int(100),
-//				ParentInterface: pulumi.String("$scm_parent_interface"),
+//				ParentInterface: pulumi.String("$scm_tf_parent_interface"),
 //				Ips: scm.Layer3SubinterfaceIpArray{
 //					&scm.Layer3SubinterfaceIpArgs{
 //						Name: pulumi.String("198.18.1.1/32"),
@@ -56,9 +56,9 @@ import (
 //				return err
 //			}
 //			scmParentDhcpInterface, err := scm.NewEthernetInterface(ctx, "scm_parent_dhcp_interface", &scm.EthernetInterfaceArgs{
-//				Name:    pulumi.String("$scm_parent_dhcp_interface"),
+//				Name:    pulumi.String("$scm_parent_tf_dhcp_interface"),
 //				Comment: pulumi.String("Managed by Pulumi"),
-//				Folder:  pulumi.String("All"),
+//				Folder:  pulumi.String("ngfw-shared"),
 //				Layer3:  &scm.EthernetInterfaceLayer3Args{},
 //			})
 //			if err != nil {
@@ -66,11 +66,11 @@ import (
 //			}
 //			// Creates a layer3 sub-interface with dhcp
 //			_, err = scm.NewLayer3Subinterface(ctx, "scm_l3_dhcp_subinterface", &scm.Layer3SubinterfaceArgs{
-//				Name:            pulumi.String("$scm_parent_dhcp_interface.100"),
+//				Name:            pulumi.String("$scm_parent_tf_dhcp_interface.100"),
 //				Comment:         pulumi.String("Managed by Pulumi"),
-//				Folder:          pulumi.String("All"),
+//				Folder:          pulumi.String("ngfw-shared"),
 //				Tag:             pulumi.Int(100),
-//				ParentInterface: pulumi.String("$scm_parent_dhcp_interface"),
+//				ParentInterface: pulumi.String("$scm_parent_tf_dhcp_interface"),
 //				DhcpClient: &scm.Layer3SubinterfaceDhcpClientArgs{
 //					Enable:             pulumi.Bool(true),
 //					CreateDefaultRoute: pulumi.Bool(true),
@@ -142,6 +142,8 @@ type Layer3Subinterface struct {
 	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name pulumi.StringOutput `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrOutput `pulumi:"netflowProfile"`
 	// Parent interface
 	ParentInterface pulumi.StringPtrOutput `pulumi:"parentInterface"`
 	// The snippet in which the resource is defined
@@ -210,6 +212,8 @@ type layer3SubinterfaceState struct {
 	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 	// Parent interface
 	ParentInterface *string `pulumi:"parentInterface"`
 	// The snippet in which the resource is defined
@@ -249,6 +253,8 @@ type Layer3SubinterfaceState struct {
 	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput
 	// Parent interface
 	ParentInterface pulumi.StringPtrInput
 	// The snippet in which the resource is defined
@@ -292,6 +298,8 @@ type layer3SubinterfaceArgs struct {
 	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 	// Parent interface
 	ParentInterface *string `pulumi:"parentInterface"`
 	// The snippet in which the resource is defined
@@ -330,6 +338,8 @@ type Layer3SubinterfaceArgs struct {
 	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput
 	// Parent interface
 	ParentInterface pulumi.StringPtrInput
 	// The snippet in which the resource is defined
@@ -481,6 +491,11 @@ func (o Layer3SubinterfaceOutput) Mtu() pulumi.IntPtrOutput {
 // L3 sub-interface name
 func (o Layer3SubinterfaceOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Layer3Subinterface) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o Layer3SubinterfaceOutput) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Layer3Subinterface) pulumi.StringPtrOutput { return v.NetflowProfile }).(pulumi.StringPtrOutput)
 }
 
 // Parent interface

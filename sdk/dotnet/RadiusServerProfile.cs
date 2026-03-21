@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     var chapRadiusProfile = new Scm.RadiusServerProfile("chap_radius_profile", new()
     ///     {
     ///         Name = "CHAP_only_rsp_1",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Retries = 5,
     ///         Timeout = 60,
     ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs
@@ -47,7 +47,7 @@ namespace Pulumi.Scm
     ///     var papRadiusProfile = new Scm.RadiusServerProfile("pap_radius_profile", new()
     ///     {
     ///         Name = "pap_only_rsp_1",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Retries = 5,
     ///         Timeout = 60,
     ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs

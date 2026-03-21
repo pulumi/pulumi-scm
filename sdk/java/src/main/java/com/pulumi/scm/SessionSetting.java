@@ -50,7 +50,7 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         // Set Sessions with Config Rematch value set to True
  *         var sessionExample = new SessionSetting("sessionExample", SessionSettingArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .sessionSettings(SessionSettingSessionSettingsArgs.builder()
  *                 .dhcpBcastSessionOn(false)
  *                 .erspan(false)

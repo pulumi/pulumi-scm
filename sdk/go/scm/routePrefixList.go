@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewRoutePrefixList(ctx, "scm_route_prefix_list", &scm.RoutePrefixListArgs{
 //				Folder:      pulumi.String("ngfw-shared"),
-//				Name:        pulumi.String("scm_bgp_prefix_list"),
+//				Name:        pulumi.String("scm_tf_bgp_prefix_list"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type: &scm.RoutePrefixListTypeArgs{
 //					Ipv4: &scm.RoutePrefixListTypeIpv4Args{
@@ -39,7 +39,7 @@ import (
 //								Action: pulumi.String("permit"),
 //								Prefix: &scm.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs{
 //									GreaterThanOrEqual: 24,
-//									Network:            pulumi.String("198.18.1.0/24"),
+//									Network:            pulumi.String("any"),
 //								},
 //							},
 //						},

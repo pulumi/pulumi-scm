@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Basic Anti-Spyware Profile
 //			_, err := scm.NewAntiSpywareProfile(ctx, "scm_anti_spyware_profile_1", &scm.AntiSpywareProfileArgs{
-//				Folder:              pulumi.String("All"),
+//				Folder:              pulumi.String("ngfw-shared"),
 //				Name:                pulumi.String("scm_anti_spyware_profile_1"),
 //				Description:         pulumi.String("Managed by Pulumi"),
 //				CloudInlineAnalysis: pulumi.Bool(true),
@@ -39,7 +39,7 @@ import (
 //			}
 //			// Required object that will be referenced in examples
 //			scmAddress1, err := scm.NewAddress(ctx, "scm_address_1", &scm.AddressArgs{
-//				Folder:      pulumi.String("Prisma Access"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("scm_address_1"),
 //				Description: pulumi.String("Made by Pulumi"),
 //				IpNetmask:   pulumi.String("10.2.3.4"),
@@ -49,7 +49,7 @@ import (
 //			}
 //			// Anti-Spyware Profile with exception EDL
 //			_, err = scm.NewAntiSpywareProfile(ctx, "scm_anti_spyware_profile_2", &scm.AntiSpywareProfileArgs{
-//				Folder:              pulumi.String("All"),
+//				Folder:              pulumi.String("ngfw-shared"),
 //				Name:                pulumi.String("scm_anti_spyware_profile_2"),
 //				Description:         pulumi.String("Managed by Pulumi"),
 //				CloudInlineAnalysis: pulumi.Bool(true),
@@ -64,7 +64,7 @@ import (
 //			}
 //			// Anti-Spyware Profile with rules
 //			_, err = scm.NewAntiSpywareProfile(ctx, "scm_anti_spyware_profile_3", &scm.AntiSpywareProfileArgs{
-//				Folder:              pulumi.String("All"),
+//				Folder:              pulumi.String("ngfw-shared"),
 //				Name:                pulumi.String("scm_anti_spyware_profile_3"),
 //				Description:         pulumi.String("Managed by Pulumi"),
 //				CloudInlineAnalysis: pulumi.Bool(true),

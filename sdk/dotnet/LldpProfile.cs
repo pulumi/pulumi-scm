@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var example = new Scm.LldpProfile("example", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Mode = "transmit-receive",
     ///         Name = "lldp-profile-tf-1",
     ///         OptionTlvs = new Scm.Inputs.LldpProfileOptionTlvsArgs

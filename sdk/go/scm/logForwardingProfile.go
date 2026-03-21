@@ -29,7 +29,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewLogForwardingProfile(ctx, "scm_log_forwarding_profile_1", &scm.LogForwardingProfileArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("scm-log-fowarding-profile-1"),
 //				MatchLists: scm.LogForwardingProfileMatchListArray{
 //					&scm.LogForwardingProfileMatchListArgs{
@@ -43,7 +43,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewLogForwardingProfile(ctx, "scm_log_forwarding_profile_2", &scm.LogForwardingProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("scm-log-fowarding-profile-2"),
 //				Description: pulumi.String("Log Forwarding w/ HTTP Server Profile and Syslog Server Profile"),
 //				MatchLists: scm.LogForwardingProfileMatchListArray{
@@ -55,7 +55,6 @@ import (
 //							"test_http",
 //						},
 //						SendSyslog: []string{
-//							"syslog-server-prof-mixed",
 //							"syslog-server-prof-complete",
 //						},
 //					},
@@ -65,7 +64,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewLogForwardingProfile(ctx, "scm_log_forwarding_profile_3", &scm.LogForwardingProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("scm-log-fowarding-profile-3"),
 //				Description: pulumi.String("Log Forwarding w/ All Server Profiles"),
 //				MatchLists: scm.LogForwardingProfileMatchListArray{
@@ -79,8 +78,6 @@ import (
 //							"t10",
 //						},
 //						SendSyslog: []string{
-//							"syslog-server-prof-base",
-//							"syslog-server-prof-mixed",
 //							"syslog-server-prof-complete",
 //						},
 //						SendSnmptrap: []string{
@@ -88,7 +85,6 @@ import (
 //						},
 //						SendEmail: []string{
 //							"email_test",
-//							"email_test_2",
 //						},
 //					},
 //				},
@@ -97,7 +93,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewLogForwardingProfile(ctx, "scm_log_forwarding_profile_4", &scm.LogForwardingProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("scm-log-fowarding-profile-4"),
 //				Description: pulumi.String("Log Forwarding w/ Multiple Match Lists"),
 //				MatchLists: scm.LogForwardingProfileMatchListArray{
@@ -110,7 +106,7 @@ import (
 //							"t10",
 //						},
 //						SendSyslog: []string{
-//							"syslog-server-prof-base",
+//							"syslog-server-prof-complete",
 //						},
 //						SendSnmptrap: []string{
 //							"snmp_test",
@@ -123,14 +119,12 @@ import (
 //						SendHttp: []string{
 //							"t5",
 //							"t10",
-//							"t20",
 //						},
 //						SendSyslog: []string{
-//							"syslog-server-prof-mixed",
+//							"syslog-server-prof-complete",
 //						},
 //						SendEmail: []string{
 //							"email_test",
-//							"email_test_2",
 //						},
 //					},
 //					&scm.LogForwardingProfileMatchListArgs{
@@ -141,16 +135,12 @@ import (
 //						SendHttp: []string{
 //							"t5",
 //							"t10",
-//							"t20",
-//							"t22",
-//							"t24",
 //						},
 //						SendSyslog: []string{
 //							"syslog-server-prof-complete",
 //						},
 //						SendEmail: []string{
 //							"email_test",
-//							"email_test_2",
 //						},
 //					},
 //				},

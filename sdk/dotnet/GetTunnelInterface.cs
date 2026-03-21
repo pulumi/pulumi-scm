@@ -199,6 +199,7 @@ namespace Pulumi.Scm
         public readonly Outputs.GetTunnelInterfaceIpv6Result Ipv6;
         public readonly int Mtu;
         public readonly string Name;
+        public readonly string NetflowProfile;
         public readonly string Snippet;
         public readonly string Tfid;
 
@@ -224,6 +225,8 @@ namespace Pulumi.Scm
 
             string name,
 
+            string netflowProfile,
+
             string snippet,
 
             string tfid)
@@ -238,6 +241,7 @@ namespace Pulumi.Scm
             Ipv6 = ipv6;
             Mtu = mtu;
             Name = name;
+            NetflowProfile = netflowProfile;
             Snippet = snippet;
             Tfid = tfid;
         }

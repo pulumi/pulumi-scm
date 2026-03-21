@@ -217,7 +217,7 @@ class MotdBannerSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         motd_example = scm.MotdBannerSetting("motd_example",
-            folder="All",
+            folder="ngfw-shared",
             motd_and_banner={
                 "motd_enable": True,
                 "message": "Test Message",
@@ -285,7 +285,7 @@ class MotdBannerSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         motd_example = scm.MotdBannerSetting("motd_example",
-            folder="All",
+            folder="ngfw-shared",
             motd_and_banner={
                 "motd_enable": True,
                 "message": "Test Message",

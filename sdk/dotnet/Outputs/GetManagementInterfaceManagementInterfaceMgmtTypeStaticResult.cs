@@ -13,30 +13,9 @@ namespace Pulumi.Scm.Outputs
     [OutputType]
     public sealed class GetManagementInterfaceManagementInterfaceMgmtTypeStaticResult
     {
-        /// <summary>
-        /// Default gateway
-        /// </summary>
-        public readonly string DefaultGateway;
-        /// <summary>
-        /// IP address
-        /// </summary>
-        public readonly string IpAddress;
-        /// <summary>
-        /// Netmask
-        /// </summary>
-        public readonly string Netmask;
-
         [OutputConstructor]
-        private GetManagementInterfaceManagementInterfaceMgmtTypeStaticResult(
-            string defaultGateway,
-
-            string ipAddress,
-
-            string netmask)
+        private GetManagementInterfaceManagementInterfaceMgmtTypeStaticResult()
         {
-            DefaultGateway = defaultGateway;
-            IpAddress = ipAddress;
-            Netmask = netmask;
         }
     }
 }

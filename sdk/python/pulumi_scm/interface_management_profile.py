@@ -581,7 +581,7 @@ class InterfaceManagementProfile(pulumi.CustomResource):
 
         dc_postman_profile = scm.InterfaceManagementProfile("dc_postman_profile",
             name="test_inf_mgmt_profile_1_update",
-            folder="All",
+            folder="ngfw-shared",
             permitted_ips=[
                 {
                     "name": "10.0.0.0/24",
@@ -664,7 +664,7 @@ class InterfaceManagementProfile(pulumi.CustomResource):
 
         dc_postman_profile = scm.InterfaceManagementProfile("dc_postman_profile",
             name="test_inf_mgmt_profile_1_update",
-            folder="All",
+            folder="ngfw-shared",
             permitted_ips=[
                 {
                     "name": "10.0.0.0/24",

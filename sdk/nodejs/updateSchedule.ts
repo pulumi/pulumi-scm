@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const usSettings = new scm.UpdateSchedule("us_settings", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     updateSchedule: {
  *         threats: {
  *             recurring: {
@@ -46,43 +46,6 @@ import * as utilities from "./utilities";
  *                     at: 30,
  *                     action: "download-only",
  *                     syncToPeer: true,
- *                 },
- *             },
- *         },
- *     },
- * });
- * // -- Example 2 : With Daily recurring updates for recurring and anti-virus
- * const usSettingsDaily = new scm.UpdateSchedule("us_settings_daily", {
- *     folder: "All",
- *     updateSchedule: {
- *         threats: {
- *             recurring: {
- *                 threshold: 300,
- *                 newAppThreshold: 300,
- *                 syncToPeer: false,
- *                 daily: {
- *                     at: "02:13",
- *                     action: "download-only",
- *                     disableNewContent: false,
- *                 },
- *             },
- *         },
- *         antiVirus: {
- *             recurring: {
- *                 threshold: 300,
- *                 syncToPeer: true,
- *                 daily: {
- *                     at: "02:13",
- *                     action: "download-only",
- *                 },
- *             },
- *         },
- *         wildfire: {
- *             recurring: {
- *                 every30Mins: {
- *                     at: 20,
- *                     action: "download-only",
- *                     syncToPeer: false,
  *                 },
  *             },
  *         },

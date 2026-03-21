@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var serviceSettings = new Scm.ServiceSetting("service_settings", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Services = new Scm.Inputs.ServiceSettingServicesArgs
     ///         {
     ///             DnsSetting = new Scm.Inputs.ServiceSettingServicesDnsSettingArgs

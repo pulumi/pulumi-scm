@@ -13,17 +13,34 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
+ * const testUiExample = new scm.AuthenticationProfile("test_ui_example", {
+ *     name: "Test_UI",
+ *     folder: "ngfw-shared",
+ *     userDomain: "default",
+ *     usernameModifier: "%USERINPUT%",
+ *     allowLists: ["ngfw-shared"],
+ *     lockout: {
+ *         failedAttempts: 3,
+ *         lockoutTime: 1,
+ *     },
+ *     method: {
+ *         localDatabase: {},
+ *     },
+ *     singleSignOn: {
+ *         realm: "EXAMPLE.COM",
+ *     },
+ * });
  * const testSequence = new scm.AuthenticationSequence("test_sequence", {
  *     name: "test_auth_sequence_1",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     authenticationProfiles: ["test_auth_profile"],
  *     useDomainFindProfile: false,
  * });
  * const testSequence2 = new scm.AuthenticationSequence("test_sequence_2", {
  *     name: "test_auth_sequence_2",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     authenticationProfiles: [
- *         "Test_UI",
+ *         testUiExample.name,
  *         "test_auth_profile",
  *     ],
  *     useDomainFindProfile: false,

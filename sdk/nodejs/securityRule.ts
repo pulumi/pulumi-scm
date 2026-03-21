@@ -17,18 +17,18 @@ import * as utilities from "./utilities";
  *
  * // First, create the tag objects that you will reference.
  * const outboundTag = new scm.Tag("outbound_tag", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "outbound143",
  *     color: "Red",
  * });
  * const webTag = new scm.Tag("web_tag", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "web143",
  *     color: "Blue",
  * });
  * // --- Existing Rules (Backward Compatibility) ---
  * const standardWebAccess = new scm.SecurityRule("standard_web_access", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "Allow Standard Web Access143",
  *     description: "Allow outbound web traffic to any destination...",
  *     position: "pre",
@@ -63,7 +63,7 @@ import * as utilities from "./utilities";
  *     ],
  * });
  * const blockRiskySaas = new scm.SecurityRule("block_risky_saas", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "Block Risky SaaS Applications143",
  *     description: "Prevent data exfiltration by blocking risky SaaS apps...",
  *     action: "deny",
@@ -91,7 +91,7 @@ import * as utilities from "./utilities";
  * // --- NEW Examples Demonstrating Rule Ordering ---
  * // Example 1: Place a critical block rule at the absolute top
  * const criticalBlockTop = new scm.SecurityRule("critical_block_top", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "CRITICAL Block Malicious IPs Top143",
  *     description: "Always block known malicious IPs first.",
  *     relativePosition: "top",
@@ -109,7 +109,7 @@ import * as utilities from "./utilities";
  * });
  * // Example 2: Place a cleanup rule at the absolute bottom
  * const cleanupDenyBottom = new scm.SecurityRule("cleanup_deny_bottom", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "Cleanup Deny All Bottom143",
  *     description: "Deny any traffic not explicitly allowed.",
  *     relativePosition: "bottom",
@@ -127,7 +127,7 @@ import * as utilities from "./utilities";
  * });
  * // Example 3: Place a rule *before* the standard web access rule
  * const allowUpdatesBeforeWeb = new scm.SecurityRule("allow_updates_before_web", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "Allow OS Updates Before Web143",
  *     description: "Allow specific OS update traffic before general web access.",
  *     relativePosition: "before",
@@ -149,7 +149,7 @@ import * as utilities from "./utilities";
  * });
  * // Example 4: Place a rule *after* the standard web access rule
  * const allowCorpAppsAfterWeb = new scm.SecurityRule("allow_corp_apps_after_web", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "Allow Corp Apps After Web143",
  *     description: "Allow access to specific corporate apps after general web access.",
  *     relativePosition: "after",

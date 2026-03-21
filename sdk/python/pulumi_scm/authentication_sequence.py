@@ -280,16 +280,32 @@ class AuthenticationSequence(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
+        test_ui_example = scm.AuthenticationProfile("test_ui_example",
+            name="Test_UI",
+            folder="ngfw-shared",
+            user_domain="default",
+            username_modifier="%USERINPUT%",
+            allow_lists=["ngfw-shared"],
+            lockout={
+                "failed_attempts": 3,
+                "lockout_time": 1,
+            },
+            method={
+                "local_database": {},
+            },
+            single_sign_on={
+                "realm": "EXAMPLE.COM",
+            })
         test_sequence = scm.AuthenticationSequence("test_sequence",
             name="test_auth_sequence_1",
-            folder="All",
+            folder="ngfw-shared",
             authentication_profiles=["test_auth_profile"],
             use_domain_find_profile=False)
         test_sequence2 = scm.AuthenticationSequence("test_sequence_2",
             name="test_auth_sequence_2",
-            folder="All",
+            folder="ngfw-shared",
             authentication_profiles=[
-                "Test_UI",
+                test_ui_example.name,
                 "test_auth_profile",
             ],
             use_domain_find_profile=False)
@@ -346,16 +362,32 @@ class AuthenticationSequence(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
+        test_ui_example = scm.AuthenticationProfile("test_ui_example",
+            name="Test_UI",
+            folder="ngfw-shared",
+            user_domain="default",
+            username_modifier="%USERINPUT%",
+            allow_lists=["ngfw-shared"],
+            lockout={
+                "failed_attempts": 3,
+                "lockout_time": 1,
+            },
+            method={
+                "local_database": {},
+            },
+            single_sign_on={
+                "realm": "EXAMPLE.COM",
+            })
         test_sequence = scm.AuthenticationSequence("test_sequence",
             name="test_auth_sequence_1",
-            folder="All",
+            folder="ngfw-shared",
             authentication_profiles=["test_auth_profile"],
             use_domain_find_profile=False)
         test_sequence2 = scm.AuthenticationSequence("test_sequence_2",
             name="test_auth_sequence_2",
-            folder="All",
+            folder="ngfw-shared",
             authentication_profiles=[
-                "Test_UI",
+                test_ui_example.name,
                 "test_auth_profile",
             ],
             use_domain_find_profile=False)

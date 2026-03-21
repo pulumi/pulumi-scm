@@ -30,10 +30,9 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewAuthenticationPortal(ctx, "example_configuration", &scm.AuthenticationPortalArgs{
 //				RedirectHost:          pulumi.String("192.168.255.254"),
-//				Folder:                pulumi.String("All"),
+//				Folder:                pulumi.String("ngfw-shared"),
 //				AuthenticationProfile: pulumi.String("test_auth_profile"),
 //				CertificateProfile:    pulumi.String("EDL-Hosting-Service-Profile"),
-//				TlsServiceProfile:     pulumi.String("test_svc_profile"),
 //				GpUdpPort:             pulumi.Int(12),
 //				IdleTimer:             pulumi.Int(12),
 //				Timer:                 pulumi.Int(10),

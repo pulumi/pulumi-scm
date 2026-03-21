@@ -30,11 +30,21 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.BgpFilteringProfile;
  * import com.pulumi.scm.BgpFilteringProfileArgs;
  * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4Args;
+ * import com.pulumi.scm.RoutePrefixList;
+ * import com.pulumi.scm.RoutePrefixListArgs;
+ * import com.pulumi.scm.inputs.RoutePrefixListTypeArgs;
+ * import com.pulumi.scm.inputs.RoutePrefixListTypeIpv4Args;
+ * import com.pulumi.scm.BgpRouteMap;
+ * import com.pulumi.scm.BgpRouteMapArgs;
+ * import com.pulumi.scm.inputs.BgpRouteMapRouteMapArgs;
+ * import com.pulumi.scm.inputs.BgpRouteMapRouteMapMatchArgs;
+ * import com.pulumi.scm.inputs.BgpRouteMapRouteMapMatchIpv4Args;
+ * import com.pulumi.scm.inputs.BgpRouteMapRouteMapMatchIpv4AddressArgs;
+ * import com.pulumi.scm.inputs.BgpRouteMapRouteMapSetArgs;
  * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastArgs;
- * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastFilterListArgs;
  * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs;
- * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs;
  * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastRouteMapsArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -48,6 +58,9 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates an empty bgp filtering profile
+ *         //
  *         var scmBgpFilteringProfile = new BgpFilteringProfile("scmBgpFilteringProfile", BgpFilteringProfileArgs.builder()
  *             .folder("ngfw-shared")
  *             .name("scm_bgp_filtering_profile")
@@ -55,19 +68,99 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .build());
  * 
+ *         //
+ *         // Creates various resources used for scm_bgp_filtering_profile_complex
+ *         //
+ *         var scmPlInbound = new RoutePrefixList("scmPlInbound", RoutePrefixListArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_pl_inbound")
+ *             .description("Managed by Pulumi")
+ *             .type(RoutePrefixListTypeArgs.builder()
+ *                 .ipv4(RoutePrefixListTypeIpv4Args.builder()
+ *                     .ipv4Entries(RoutePrefixListTypeIpv4Ipv4EntryArgs.builder()
+ *                         .name(10)
+ *                         .action("permit")
+ *                         .prefix(RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs.builder()
+ *                             .greaterThanOrEqual(24)
+ *                             .network("any")
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmRmInbound = new BgpRouteMap("scmRmInbound", BgpRouteMapArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_rm_inbound")
+ *             .description("Managed by Pulumi")
+ *             .routeMaps(BgpRouteMapRouteMapArgs.builder()
+ *                 .name(10)
+ *                 .description("No Export")
+ *                 .match(BgpRouteMapRouteMapMatchArgs.builder()
+ *                     .ipv4(BgpRouteMapRouteMapMatchIpv4Args.builder()
+ *                         .address(BgpRouteMapRouteMapMatchIpv4AddressArgs.builder()
+ *                             .prefixList("scm_pl_inbound")
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .set(BgpRouteMapRouteMapSetArgs.builder()
+ *                     .regularCommunity(List.of("no-export"))
+ *                     .build())
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmPlInbound)
+ *                 .build());
+ * 
+ *         var scmPlOutbound = new RoutePrefixList("scmPlOutbound", RoutePrefixListArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_pl_outbound")
+ *             .description("Managed by Pulumi")
+ *             .type(RoutePrefixListTypeArgs.builder()
+ *                 .ipv4(RoutePrefixListTypeIpv4Args.builder()
+ *                     .ipv4Entries(RoutePrefixListTypeIpv4Ipv4EntryArgs.builder()
+ *                         .name(10)
+ *                         .action("permit")
+ *                         .prefix(RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs.builder()
+ *                             .greaterThanOrEqual(24)
+ *                             .network("any")
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmRmOutbound = new BgpRouteMap("scmRmOutbound", BgpRouteMapArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_rm_outbound")
+ *             .description("Managed by Pulumi")
+ *             .routeMaps(BgpRouteMapRouteMapArgs.builder()
+ *                 .name(10)
+ *                 .description("No Export")
+ *                 .match(BgpRouteMapRouteMapMatchArgs.builder()
+ *                     .ipv4(BgpRouteMapRouteMapMatchIpv4Args.builder()
+ *                         .address(BgpRouteMapRouteMapMatchIpv4AddressArgs.builder()
+ *                             .prefixList("scm_pl_outbound")
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .set(BgpRouteMapRouteMapSetArgs.builder()
+ *                     .regularCommunity(List.of("no-export"))
+ *                     .build())
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmPlOutbound)
+ *                 .build());
+ * 
+ *         //
+ *         // Creates a complex filtering profile that utilises previously created FL, PL and RM
+ *         //
  *         var scmBgpFilteringProfileComplex = new BgpFilteringProfile("scmBgpFilteringProfileComplex", BgpFilteringProfileArgs.builder()
  *             .folder("ngfw-shared")
  *             .name("scm_bgp_filtering_profile_complex")
  *             .ipv4(BgpFilteringProfileIpv4Args.builder()
  *                 .unicast(BgpFilteringProfileIpv4UnicastArgs.builder()
- *                     .filterList(BgpFilteringProfileIpv4UnicastFilterListArgs.builder()
- *                         .inbound("scm_filter_list")
- *                         .build())
  *                     .inboundNetworkFilters(BgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs.builder()
  *                         .prefixList("scm_pl_inbound")
- *                         .build())
- *                     .outboundNetworkFilters(BgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs.builder()
- *                         .distributeList("scm_distribute_list")
  *                         .build())
  *                     .routeMaps(BgpFilteringProfileIpv4UnicastRouteMapsArgs.builder()
  *                         .inbound("scm_rm_inbound")
@@ -75,7 +168,12 @@ import javax.annotation.Nullable;
  *                         .build())
  *                     .build())
  *                 .build())
- *             .build());
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(                
+ *                     scmPlInbound,
+ *                     scmRmInbound,
+ *                     scmRmOutbound)
+ *                 .build());
  * 
  *     }
  * }

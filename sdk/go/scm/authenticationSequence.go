@@ -27,9 +27,31 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewAuthenticationSequence(ctx, "test_sequence", &scm.AuthenticationSequenceArgs{
+//			testUiExample, err := scm.NewAuthenticationProfile(ctx, "test_ui_example", &scm.AuthenticationProfileArgs{
+//				Name:             pulumi.String("Test_UI"),
+//				Folder:           pulumi.String("ngfw-shared"),
+//				UserDomain:       pulumi.String("default"),
+//				UsernameModifier: pulumi.String("%USERINPUT%"),
+//				AllowLists: pulumi.StringArray{
+//					pulumi.String("ngfw-shared"),
+//				},
+//				Lockout: &scm.AuthenticationProfileLockoutArgs{
+//					FailedAttempts: pulumi.Int(3),
+//					LockoutTime:    pulumi.Int(1),
+//				},
+//				Method: &scm.AuthenticationProfileMethodArgs{
+//					LocalDatabase: &scm.AuthenticationProfileMethodLocalDatabaseArgs{},
+//				},
+//				SingleSignOn: &scm.AuthenticationProfileSingleSignOnArgs{
+//					Realm: pulumi.String("EXAMPLE.COM"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewAuthenticationSequence(ctx, "test_sequence", &scm.AuthenticationSequenceArgs{
 //				Name:   pulumi.String("test_auth_sequence_1"),
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				AuthenticationProfiles: pulumi.StringArray{
 //					pulumi.String("test_auth_profile"),
 //				},
@@ -40,9 +62,9 @@ import (
 //			}
 //			_, err = scm.NewAuthenticationSequence(ctx, "test_sequence_2", &scm.AuthenticationSequenceArgs{
 //				Name:   pulumi.String("test_auth_sequence_2"),
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				AuthenticationProfiles: pulumi.StringArray{
-//					pulumi.String("Test_UI"),
+//					testUiExample.Name,
 //					pulumi.String("test_auth_profile"),
 //				},
 //				UseDomainFindProfile: pulumi.Bool(false),

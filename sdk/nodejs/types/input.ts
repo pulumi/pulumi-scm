@@ -18,6 +18,10 @@ export interface AggregateInterfaceLayer2 {
      */
     lacp?: pulumi.Input<inputs.AggregateInterfaceLayer2Lacp>;
     /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: pulumi.Input<string>;
+    /**
      * VLAN tag
      */
     vlanTag?: pulumi.Input<string>;
@@ -81,6 +85,10 @@ export interface AggregateInterfaceLayer3 {
      * MTU
      */
     mtu?: pulumi.Input<number>;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: pulumi.Input<string>;
 }
 
 export interface AggregateInterfaceLayer3Arp {
@@ -3378,6 +3386,122 @@ export interface ContentIdSettingContentIdApplication {
     bypassExceedQueue?: pulumi.Input<boolean>;
 }
 
+export interface DataFilteringProfileRule {
+    /**
+     * Alert threshold
+     */
+    alertThreshold?: pulumi.Input<number>;
+    /**
+     * Application
+     */
+    applications?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Block threshold
+     */
+    blockThreshold?: pulumi.Input<number>;
+    /**
+     * Data object
+     */
+    dataObject?: pulumi.Input<string>;
+    /**
+     * Direction
+     */
+    direction?: pulumi.Input<string>;
+    /**
+     * File type
+     */
+    fileTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Log severity
+     */
+    logSeverity?: pulumi.Input<string>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
+}
+
+export interface DataObjectPatternType {
+    /**
+     * File properties
+     */
+    fileProperties?: pulumi.Input<inputs.DataObjectPatternTypeFileProperties>;
+    /**
+     * Predefined
+     */
+    predefined?: pulumi.Input<inputs.DataObjectPatternTypePredefined>;
+    /**
+     * Regex
+     */
+    regex?: pulumi.Input<inputs.DataObjectPatternTypeRegex>;
+}
+
+export interface DataObjectPatternTypeFileProperties {
+    /**
+     * Pattern
+     */
+    patterns?: pulumi.Input<pulumi.Input<inputs.DataObjectPatternTypeFilePropertiesPattern>[]>;
+}
+
+export interface DataObjectPatternTypeFilePropertiesPattern {
+    /**
+     * File property
+     */
+    fileProperty?: pulumi.Input<string>;
+    /**
+     * File type
+     */
+    fileType?: pulumi.Input<string>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * Property value
+     */
+    propertyValue?: pulumi.Input<string>;
+}
+
+export interface DataObjectPatternTypePredefined {
+    /**
+     * Pattern
+     */
+    patterns?: pulumi.Input<pulumi.Input<inputs.DataObjectPatternTypePredefinedPattern>[]>;
+}
+
+export interface DataObjectPatternTypePredefinedPattern {
+    /**
+     * File type
+     */
+    fileTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
+}
+
+export interface DataObjectPatternTypeRegex {
+    /**
+     * Pattern
+     */
+    patterns?: pulumi.Input<pulumi.Input<inputs.DataObjectPatternTypeRegexPattern>[]>;
+}
+
+export interface DataObjectPatternTypeRegexPattern {
+    /**
+     * File type
+     */
+    fileTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * Regex
+     */
+    regex?: pulumi.Input<string>;
+}
+
 export interface DecryptionProfileSslForwardProxy {
     /**
      * Auto include altname
@@ -4308,6 +4432,10 @@ export interface EthernetInterfaceLayer2 {
      */
     lldp?: pulumi.Input<inputs.EthernetInterfaceLayer2Lldp>;
     /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: pulumi.Input<string>;
+    /**
      * Assign interface to VLAN tag
      */
     vlanTag?: pulumi.Input<string>;
@@ -4347,6 +4475,10 @@ export interface EthernetInterfaceLayer3 {
      * MTU
      */
     mtu?: pulumi.Input<number>;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: pulumi.Input<string>;
     /**
      * Pppoe
      *
@@ -4499,6 +4631,10 @@ export interface EthernetInterfacePoe {
 }
 
 export interface EthernetInterfaceTap {
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: pulumi.Input<string>;
 }
 
 export interface ExternalDynamicListType {
@@ -12835,6 +12971,14 @@ export interface LoopbackInterfaceIpv6AddressPrefix {
 
 export interface ManagementInterfaceManagementInterface {
     /**
+     * Default gateway
+     */
+    defaultGateway?: pulumi.Input<string>;
+    /**
+     * IP address
+     */
+    ipAddress?: pulumi.Input<string>;
+    /**
      * IP type
      */
     mgmtType?: pulumi.Input<inputs.ManagementInterfaceManagementInterfaceMgmtType>;
@@ -12842,6 +12986,10 @@ export interface ManagementInterfaceManagementInterface {
      * MTU
      */
     mtu?: pulumi.Input<number>;
+    /**
+     * Netmask
+     */
+    netmask?: pulumi.Input<string>;
     /**
      * Permitting IP addresses
      */
@@ -12889,18 +13037,6 @@ export interface ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient {
 }
 
 export interface ManagementInterfaceManagementInterfaceMgmtTypeStatic {
-    /**
-     * Default gateway
-     */
-    defaultGateway: pulumi.Input<string>;
-    /**
-     * IP address
-     */
-    ipAddress: pulumi.Input<string>;
-    /**
-     * Netmask
-     */
-    netmask: pulumi.Input<string>;
 }
 
 export interface ManagementInterfaceManagementInterfacePermittedIp {
@@ -13781,6 +13917,10 @@ export interface RemoteNetworkProtocolBgpPeer {
      * Remote peer IP address (secondary WAN)
      */
     peerIpAddress?: pulumi.Input<string>;
+    /**
+     * Same peer IP address as primary WAN
+     */
+    sameAsPrimary?: pulumi.Input<boolean>;
     /**
      * BGP peering secret (secondary WAN)
      */

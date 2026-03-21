@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var scmLogForwardingProfile1 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_1", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm-log-fowarding-profile-1",
     ///         MatchLists = new[]
     ///         {
@@ -39,7 +39,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmLogForwardingProfile2 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_2", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm-log-fowarding-profile-2",
     ///         Description = "Log Forwarding w/ HTTP Server Profile and Syslog Server Profile",
     ///         MatchLists = new[]
@@ -55,7 +55,6 @@ namespace Pulumi.Scm
     ///                 },
     ///                 SendSyslog = new[]
     ///                 {
-    ///                     "syslog-server-prof-mixed",
     ///                     "syslog-server-prof-complete",
     ///                 },
     ///             },
@@ -64,7 +63,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmLogForwardingProfile3 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_3", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm-log-fowarding-profile-3",
     ///         Description = "Log Forwarding w/ All Server Profiles",
     ///         MatchLists = new[]
@@ -82,8 +81,6 @@ namespace Pulumi.Scm
     ///                 },
     ///                 SendSyslog = new[]
     ///                 {
-    ///                     "syslog-server-prof-base",
-    ///                     "syslog-server-prof-mixed",
     ///                     "syslog-server-prof-complete",
     ///                 },
     ///                 SendSnmptrap = new[]
@@ -93,7 +90,6 @@ namespace Pulumi.Scm
     ///                 SendEmail = new[]
     ///                 {
     ///                     "email_test",
-    ///                     "email_test_2",
     ///                 },
     ///             },
     ///         },
@@ -101,7 +97,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmLogForwardingProfile4 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_4", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm-log-fowarding-profile-4",
     ///         Description = "Log Forwarding w/ Multiple Match Lists",
     ///         MatchLists = new[]
@@ -118,7 +114,7 @@ namespace Pulumi.Scm
     ///                 },
     ///                 SendSyslog = new[]
     ///                 {
-    ///                     "syslog-server-prof-base",
+    ///                     "syslog-server-prof-complete",
     ///                 },
     ///                 SendSnmptrap = new[]
     ///                 {
@@ -134,16 +130,14 @@ namespace Pulumi.Scm
     ///                 {
     ///                     "t5",
     ///                     "t10",
-    ///                     "t20",
     ///                 },
     ///                 SendSyslog = new[]
     ///                 {
-    ///                     "syslog-server-prof-mixed",
+    ///                     "syslog-server-prof-complete",
     ///                 },
     ///                 SendEmail = new[]
     ///                 {
     ///                     "email_test",
-    ///                     "email_test_2",
     ///                 },
     ///             },
     ///             new Scm.Inputs.LogForwardingProfileMatchListArgs
@@ -156,9 +150,6 @@ namespace Pulumi.Scm
     ///                 {
     ///                     "t5",
     ///                     "t10",
-    ///                     "t20",
-    ///                     "t22",
-    ///                     "t24",
     ///                 },
     ///                 SendSyslog = new[]
     ///                 {
@@ -167,7 +158,6 @@ namespace Pulumi.Scm
     ///                 SendEmail = new[]
     ///                 {
     ///                     "email_test",
-    ///                     "email_test_2",
     ///                 },
     ///             },
     ///         },

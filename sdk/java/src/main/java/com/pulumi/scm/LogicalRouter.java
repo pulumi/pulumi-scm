@@ -59,7 +59,7 @@ import javax.annotation.Nullable;
  *         // Creates various resources used for subsequent examples
  *         //
  *         var scmNextHop = new Variable("scmNextHop", VariableArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("$scm_next_hop")
  *             .description("Managed by Pulumi")
  *             .type("ip-netmask")
@@ -67,7 +67,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmNextHopFqdn = new Variable("scmNextHopFqdn", VariableArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("$scm_next_hop_fqdn")
  *             .description("Managed by Pulumi")
  *             .type("fqdn")

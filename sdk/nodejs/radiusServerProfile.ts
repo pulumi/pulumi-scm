@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *
  * const chapRadiusProfile = new scm.RadiusServerProfile("chap_radius_profile", {
  *     name: "CHAP_only_rsp_1",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     retries: 5,
  *     timeout: 60,
  *     protocol: {
@@ -32,7 +32,7 @@ import * as utilities from "./utilities";
  * });
  * const papRadiusProfile = new scm.RadiusServerProfile("pap_radius_profile", {
  *     name: "pap_only_rsp_1",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     retries: 5,
  *     timeout: 60,
  *     protocol: {

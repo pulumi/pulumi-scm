@@ -28,14 +28,14 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewDnsSecurityProfile(ctx, "scm_dns_security_profile_base", &scm.DnsSecurityProfileArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("dns_base"),
 //			})
 //			if err != nil {
 //				return err
 //			}
 //			_, err = scm.NewDnsSecurityProfile(ctx, "scm_dns_security_categories", &scm.DnsSecurityProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("test_dns_sec_categories"),
 //				Description: pulumi.String("dns security profile w/ dns security categories"),
 //				BotnetDomains: &scm.DnsSecurityProfileBotnetDomainsArgs{
@@ -74,7 +74,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewDnsSecurityProfile(ctx, "scm_dns_lists", &scm.DnsSecurityProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("test_dns_lists"),
 //				Description: pulumi.String("dns security profile w/ dns lists"),
 //				BotnetDomains: &scm.DnsSecurityProfileBotnetDomainsArgs{
@@ -100,7 +100,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewDnsSecurityProfile(ctx, "scm_dns_sinkhole", &scm.DnsSecurityProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("test_dns_sinkhole"),
 //				Description: pulumi.String("dns security profile w/ sinkhole"),
 //				BotnetDomains: &scm.DnsSecurityProfileBotnetDomainsArgs{
@@ -114,7 +114,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewDnsSecurityProfile(ctx, "scm_dns_whitelist", &scm.DnsSecurityProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("test_dns_whitelist"),
 //				Description: pulumi.String("dns security profile w/ whitelist"),
 //				BotnetDomains: &scm.DnsSecurityProfileBotnetDomainsArgs{
@@ -133,7 +133,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewDnsSecurityProfile(ctx, "scm_dns_all", &scm.DnsSecurityProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("test_dns_all_test"),
 //				Description: pulumi.String("dns security profile w/ all"),
 //				BotnetDomains: &scm.DnsSecurityProfileBotnetDomainsArgs{

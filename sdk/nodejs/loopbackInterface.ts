@@ -158,6 +158,10 @@ export class LoopbackInterface extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    declare public readonly netflowProfile: pulumi.Output<string | undefined>;
+    /**
      * The snippet in which the resource is defined
      *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -190,6 +194,7 @@ export class LoopbackInterface extends pulumi.CustomResource {
             resourceInputs["ipv6"] = state?.ipv6;
             resourceInputs["mtu"] = state?.mtu;
             resourceInputs["name"] = state?.name;
+            resourceInputs["netflowProfile"] = state?.netflowProfile;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["tfid"] = state?.tfid;
         } else {
@@ -203,6 +208,7 @@ export class LoopbackInterface extends pulumi.CustomResource {
             resourceInputs["ipv6"] = args?.ipv6;
             resourceInputs["mtu"] = args?.mtu;
             resourceInputs["name"] = args?.name;
+            resourceInputs["netflowProfile"] = args?.netflowProfile;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["tfid"] = undefined /*out*/;
         }
@@ -253,6 +259,10 @@ export interface LoopbackInterfaceState {
      * Loopback Interface name
      */
     name?: pulumi.Input<string>;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
      *
@@ -307,6 +317,10 @@ export interface LoopbackInterfaceArgs {
      * Loopback Interface name
      */
     name?: pulumi.Input<string>;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
      *

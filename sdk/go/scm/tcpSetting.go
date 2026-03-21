@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewTcpSetting(ctx, "tcp_example", &scm.TcpSettingArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Tcp: &scm.TcpSettingTcpArgs{
 //					BypassExceedOoQueue:  pulumi.Bool(false),
 //					AllowChallengeAck:    pulumi.Bool(true),

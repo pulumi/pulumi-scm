@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.ManagementInterfaceManagementInterfaceMgmtTypeArgs;
  * import com.pulumi.scm.inputs.ManagementInterfaceManagementInterfaceMgmtTypeDhcpClientArgs;
  * import com.pulumi.scm.inputs.ManagementInterfaceManagementInterfaceServiceArgs;
+ * import com.pulumi.scm.inputs.ManagementInterfaceManagementInterfaceMgmtTypeStaticArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -47,7 +48,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var miExample = new ManagementInterface("miExample", ManagementInterfaceArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .managementInterface(ManagementInterfaceManagementInterfaceArgs.builder()
  *                 .speedDuplex("auto-negotiate")
  *                 .mtu(1500)
@@ -57,6 +58,37 @@ import javax.annotation.Nullable;
  *                         .sendClientId(false)
  *                         .acceptDhcpHostname(false)
  *                         .acceptDhcpDomain(false)
+ *                         .build())
+ *                     .build())
+ *                 .service(ManagementInterfaceManagementInterfaceServiceArgs.builder()
+ *                     .disableHttp(false)
+ *                     .disableHttps(true)
+ *                     .disableTelnet(false)
+ *                     .disableSsh(true)
+ *                     .disableIcmp(false)
+ *                     .disableSnmp(false)
+ *                     .disableUseridService(false)
+ *                     .disableUseridSyslogListenerSsl(false)
+ *                     .disableUseridSyslogListenerUdp(false)
+ *                     .disableHttpOcsp(false)
+ *                     .build())
+ *                 .permittedIps(ManagementInterfaceManagementInterfacePermittedIpArgs.builder()
+ *                     .name("10.10.10.10")
+ *                     .description("string")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var miStaticExample = new ManagementInterface("miStaticExample", ManagementInterfaceArgs.builder()
+ *             .folder("Prisma Access")
+ *             .managementInterface(ManagementInterfaceManagementInterfaceArgs.builder()
+ *                 .speedDuplex("auto-negotiate")
+ *                 .mtu(1500)
+ *                 .ipAddress("10.10.10.10")
+ *                 .netmask("255.255.255.0")
+ *                 .defaultGateway("192.168.252.1")
+ *                 .mgmtType(ManagementInterfaceManagementInterfaceMgmtTypeArgs.builder()
+ *                     .static_(ManagementInterfaceManagementInterfaceMgmtTypeStaticArgs.builder()
  *                         .build())
  *                     .build())
  *                 .service(ManagementInterfaceManagementInterfaceServiceArgs.builder()

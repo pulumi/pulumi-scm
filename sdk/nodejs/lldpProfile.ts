@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const example = new scm.LldpProfile("example", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     mode: "transmit-receive",
  *     name: "lldp-profile-tf-1",
  *     optionTlvs: {

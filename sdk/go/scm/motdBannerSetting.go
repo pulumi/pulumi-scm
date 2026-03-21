@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewMotdBannerSetting(ctx, "motd_example", &scm.MotdBannerSettingArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				MotdAndBanner: &scm.MotdBannerSettingMotdAndBannerArgs{
 //					MotdEnable:              pulumi.Bool(true),
 //					Message:                 pulumi.String("Test Message"),

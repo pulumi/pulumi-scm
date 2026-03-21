@@ -30,7 +30,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Custom Application
 //			_, err := scm.NewApplication(ctx, "scm_media_app", &scm.ApplicationArgs{
-//				Folder:                pulumi.String("All"),
+//				Folder:                pulumi.String("ngfw-shared"),
 //				Name:                  pulumi.String("scm_media_app"),
 //				Description:           pulumi.String("Managed by Pulumi"),
 //				Category:              pulumi.String("media"),
@@ -48,7 +48,7 @@ import (
 //			}
 //			// Custom Application with tweaked timeouts and additional settings
 //			_, err = scm.NewApplication(ctx, "scm_risky_app", &scm.ApplicationArgs{
-//				Folder:                 pulumi.String("All"),
+//				Folder:                 pulumi.String("ngfw-shared"),
 //				Name:                   pulumi.String("scm_risky_app"),
 //				Description:            pulumi.String("Managed by Pulumi"),
 //				Category:               pulumi.String("media"),
@@ -74,8 +74,8 @@ import (
 //			}
 //			// Custom Application based on Custom Signature
 //			_, err = scm.NewApplication(ctx, "scm_custom_app", &scm.ApplicationArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("scm_custom_app"),
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("scm_custom_test_app"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Category:    pulumi.String("media"),
 //				Subcategory: pulumi.String("gaming"),

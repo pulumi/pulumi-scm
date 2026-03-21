@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * // This resource creates a domain-based External Dynamic List (EDL).
  * // The EDL will fetch a list of domains from the specified URL daily.
  * const scmEdl1 = new scm.ExternalDynamicList("scm_edl_1", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_edl_1",
  *     type: {
  *         domain: {
@@ -33,7 +33,7 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const scmEdl2 = new scm.ExternalDynamicList("scm_edl_2", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_edl_2",
  *     type: {
  *         ip: {
@@ -46,7 +46,7 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const scmEdl3 = new scm.ExternalDynamicList("scm_edl_3", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_edl_3",
  *     type: {
  *         url: {
@@ -62,7 +62,7 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const scmEdl4 = new scm.ExternalDynamicList("scm_edl_4", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_edl_4",
  *     type: {
  *         predefinedIp: {
@@ -72,7 +72,7 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const scmEdl5 = new scm.ExternalDynamicList("scm_edl_5", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_edl_5",
  *     type: {
  *         ip: {

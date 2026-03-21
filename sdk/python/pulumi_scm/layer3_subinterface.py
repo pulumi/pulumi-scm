@@ -31,6 +31,7 @@ class Layer3SubinterfaceArgs:
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tag: Optional[pulumi.Input[_builtins.int]] = None):
@@ -53,6 +54,7 @@ class Layer3SubinterfaceArgs:
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -79,6 +81,8 @@ class Layer3SubinterfaceArgs:
             pulumi.set(__self__, "mtu", mtu)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if netflow_profile is not None:
+            pulumi.set(__self__, "netflow_profile", netflow_profile)
         if parent_interface is not None:
             pulumi.set(__self__, "parent_interface", parent_interface)
         if snippet is not None:
@@ -213,6 +217,18 @@ class Layer3SubinterfaceArgs:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
+
+    @netflow_profile.setter
+    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netflow_profile", value)
+
+    @_builtins.property
     @pulumi.getter(name="parentInterface")
     def parent_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -264,6 +280,7 @@ class _Layer3SubinterfaceState:
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tag: Optional[pulumi.Input[_builtins.int]] = None,
@@ -287,6 +304,7 @@ class _Layer3SubinterfaceState:
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -314,6 +332,8 @@ class _Layer3SubinterfaceState:
             pulumi.set(__self__, "mtu", mtu)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if netflow_profile is not None:
+            pulumi.set(__self__, "netflow_profile", netflow_profile)
         if parent_interface is not None:
             pulumi.set(__self__, "parent_interface", parent_interface)
         if snippet is not None:
@@ -450,6 +470,18 @@ class _Layer3SubinterfaceState:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
+
+    @netflow_profile.setter
+    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netflow_profile", value)
+
+    @_builtins.property
     @pulumi.getter(name="parentInterface")
     def parent_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -516,6 +548,7 @@ class Layer3Subinterface(pulumi.CustomResource):
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tag: Optional[pulumi.Input[_builtins.int]] = None,
@@ -533,7 +566,7 @@ class Layer3Subinterface(pulumi.CustomResource):
         # Creates a ethernet interface used as parent-interface for subsequent examples
         #
         scm_parent_interface = scm.EthernetInterface("scm_parent_interface",
-            name="$scm_parent_interface",
+            name="$scm_tf_parent_interface",
             comment="Managed by Pulumi",
             folder="ngfw-shared",
             layer3={})
@@ -541,29 +574,29 @@ class Layer3Subinterface(pulumi.CustomResource):
         # Creates a layer3 sub-interface with static ip address
         #
         scm_l3_subinterface = scm.Layer3Subinterface("scm_l3_subinterface",
-            name="$scm_parent_interface.100",
+            name="$scm_tf_parent_interface.100",
             comment="Managed by Pulumi",
             folder="ngfw-shared",
             tag=100,
-            parent_interface="$scm_parent_interface",
+            parent_interface="$scm_tf_parent_interface",
             ips=[{
                 "name": "198.18.1.1/32",
             }],
             opts = pulumi.ResourceOptions(depends_on=[scm_parent_interface]))
         scm_parent_dhcp_interface = scm.EthernetInterface("scm_parent_dhcp_interface",
-            name="$scm_parent_dhcp_interface",
+            name="$scm_parent_tf_dhcp_interface",
             comment="Managed by Pulumi",
-            folder="All",
+            folder="ngfw-shared",
             layer3={})
         #
         # Creates a layer3 sub-interface with dhcp
         #
         scm_l3_dhcp_subinterface = scm.Layer3Subinterface("scm_l3_dhcp_subinterface",
-            name="$scm_parent_dhcp_interface.100",
+            name="$scm_parent_tf_dhcp_interface.100",
             comment="Managed by Pulumi",
-            folder="All",
+            folder="ngfw-shared",
             tag=100,
-            parent_interface="$scm_parent_dhcp_interface",
+            parent_interface="$scm_parent_tf_dhcp_interface",
             dhcp_client={
                 "enable": True,
                 "create_default_route": True,
@@ -617,6 +650,7 @@ class Layer3Subinterface(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -642,7 +676,7 @@ class Layer3Subinterface(pulumi.CustomResource):
         # Creates a ethernet interface used as parent-interface for subsequent examples
         #
         scm_parent_interface = scm.EthernetInterface("scm_parent_interface",
-            name="$scm_parent_interface",
+            name="$scm_tf_parent_interface",
             comment="Managed by Pulumi",
             folder="ngfw-shared",
             layer3={})
@@ -650,29 +684,29 @@ class Layer3Subinterface(pulumi.CustomResource):
         # Creates a layer3 sub-interface with static ip address
         #
         scm_l3_subinterface = scm.Layer3Subinterface("scm_l3_subinterface",
-            name="$scm_parent_interface.100",
+            name="$scm_tf_parent_interface.100",
             comment="Managed by Pulumi",
             folder="ngfw-shared",
             tag=100,
-            parent_interface="$scm_parent_interface",
+            parent_interface="$scm_tf_parent_interface",
             ips=[{
                 "name": "198.18.1.1/32",
             }],
             opts = pulumi.ResourceOptions(depends_on=[scm_parent_interface]))
         scm_parent_dhcp_interface = scm.EthernetInterface("scm_parent_dhcp_interface",
-            name="$scm_parent_dhcp_interface",
+            name="$scm_parent_tf_dhcp_interface",
             comment="Managed by Pulumi",
-            folder="All",
+            folder="ngfw-shared",
             layer3={})
         #
         # Creates a layer3 sub-interface with dhcp
         #
         scm_l3_dhcp_subinterface = scm.Layer3Subinterface("scm_l3_dhcp_subinterface",
-            name="$scm_parent_dhcp_interface.100",
+            name="$scm_parent_tf_dhcp_interface.100",
             comment="Managed by Pulumi",
-            folder="All",
+            folder="ngfw-shared",
             tag=100,
-            parent_interface="$scm_parent_dhcp_interface",
+            parent_interface="$scm_parent_tf_dhcp_interface",
             dhcp_client={
                 "enable": True,
                 "create_default_route": True,
@@ -733,6 +767,7 @@ class Layer3Subinterface(pulumi.CustomResource):
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tag: Optional[pulumi.Input[_builtins.int]] = None,
@@ -755,6 +790,7 @@ class Layer3Subinterface(pulumi.CustomResource):
             __props__.__dict__["ips"] = ips
             __props__.__dict__["mtu"] = mtu
             __props__.__dict__["name"] = name
+            __props__.__dict__["netflow_profile"] = netflow_profile
             __props__.__dict__["parent_interface"] = parent_interface
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["tag"] = tag
@@ -779,6 +815,7 @@ class Layer3Subinterface(pulumi.CustomResource):
             ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]]] = None,
             mtu: Optional[pulumi.Input[_builtins.int]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
+            netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
             parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             tag: Optional[pulumi.Input[_builtins.int]] = None,
@@ -806,6 +843,7 @@ class Layer3Subinterface(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
@@ -827,6 +865,7 @@ class Layer3Subinterface(pulumi.CustomResource):
         __props__.__dict__["ips"] = ips
         __props__.__dict__["mtu"] = mtu
         __props__.__dict__["name"] = name
+        __props__.__dict__["netflow_profile"] = netflow_profile
         __props__.__dict__["parent_interface"] = parent_interface
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["tag"] = tag
@@ -918,6 +957,14 @@ class Layer3Subinterface(pulumi.CustomResource):
         L3 sub-interface name
         """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
 
     @_builtins.property
     @pulumi.getter(name="parentInterface")

@@ -24,13 +24,13 @@ namespace Pulumi.Scm
     /// {
     ///     var globalRadiusAccess = new Scm.AuthenticationProfile("global_radius_access", new()
     ///     {
-    ///         Name = "test_auth_profile_radius_1",
+    ///         Name = "test_auth_profile_settings",
     ///         Folder = "Prisma Access",
     ///         UserDomain = "default",
     ///         UsernameModifier = "%USERINPUT%",
     ///         AllowLists = new[]
     ///         {
-    ///             "all",
+    ///             "ngfw-shared",
     ///         },
     ///         Lockout = new Scm.Inputs.AuthenticationProfileLockoutArgs
     ///         {
@@ -44,10 +44,6 @@ namespace Pulumi.Scm
     ///                 Checkgroup = true,
     ///                 ServerProfile = "CHAP_only_rsp_11",
     ///             },
-    ///         },
-    ///         SingleSignOn = new Scm.Inputs.AuthenticationProfileSingleSignOnArgs
-    ///         {
-    ///             Realm = "EXAMPLE.COM",
     ///         },
     ///     });
     /// 

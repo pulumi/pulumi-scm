@@ -316,7 +316,7 @@ class LldpProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         example = scm.LldpProfile("example",
-            folder="All",
+            folder="ngfw-shared",
             mode="transmit-receive",
             name="lldp-profile-tf-1",
             option_tlvs={
@@ -384,7 +384,7 @@ class LldpProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         example = scm.LldpProfile("example",
-            folder="All",
+            folder="ngfw-shared",
             mode="transmit-receive",
             name="lldp-profile-tf-1",
             option_tlvs={

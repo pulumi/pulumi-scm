@@ -286,13 +286,13 @@ class LogicalRouter(pulumi.CustomResource):
         # Creates various resources used for subsequent examples
         #
         scm_next_hop = scm.Variable("scm_next_hop",
-            folder="All",
+            folder="ngfw-shared",
             name="$scm_next_hop",
             description="Managed by Pulumi",
             type="ip-netmask",
             value="198.18.1.1")
         scm_next_hop_fqdn = scm.Variable("scm_next_hop_fqdn",
-            folder="All",
+            folder="ngfw-shared",
             name="$scm_next_hop_fqdn",
             description="Managed by Pulumi",
             type="fqdn",
@@ -472,13 +472,13 @@ class LogicalRouter(pulumi.CustomResource):
         # Creates various resources used for subsequent examples
         #
         scm_next_hop = scm.Variable("scm_next_hop",
-            folder="All",
+            folder="ngfw-shared",
             name="$scm_next_hop",
             description="Managed by Pulumi",
             type="ip-netmask",
             value="198.18.1.1")
         scm_next_hop_fqdn = scm.Variable("scm_next_hop_fqdn",
-            folder="All",
+            folder="ngfw-shared",
             name="$scm_next_hop_fqdn",
             description="Managed by Pulumi",
             type="fqdn",

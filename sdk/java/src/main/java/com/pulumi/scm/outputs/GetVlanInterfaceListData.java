@@ -81,6 +81,11 @@ public final class GetVlanInterfaceListData {
      */
     private String name;
     /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    private String netflowProfile;
+    /**
      * @return The snippet of the item.
      * 
      */
@@ -186,6 +191,13 @@ public final class GetVlanInterfaceListData {
         return this.name;
     }
     /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public String netflowProfile() {
+        return this.netflowProfile;
+    }
+    /**
      * @return The snippet of the item.
      * 
      */
@@ -228,6 +240,7 @@ public final class GetVlanInterfaceListData {
         private List<GetVlanInterfaceListDataIp> ips;
         private Integer mtu;
         private String name;
+        private String netflowProfile;
         private String snippet;
         private String tfid;
         private String vlanTag;
@@ -246,6 +259,7 @@ public final class GetVlanInterfaceListData {
     	      this.ips = defaults.ips;
     	      this.mtu = defaults.mtu;
     	      this.name = defaults.name;
+    	      this.netflowProfile = defaults.netflowProfile;
     	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.vlanTag = defaults.vlanTag;
@@ -354,6 +368,14 @@ public final class GetVlanInterfaceListData {
             return this;
         }
         @CustomType.Setter
+        public Builder netflowProfile(String netflowProfile) {
+            if (netflowProfile == null) {
+              throw new MissingRequiredPropertyException("GetVlanInterfaceListData", "netflowProfile");
+            }
+            this.netflowProfile = netflowProfile;
+            return this;
+        }
+        @CustomType.Setter
         public Builder snippet(String snippet) {
             if (snippet == null) {
               throw new MissingRequiredPropertyException("GetVlanInterfaceListData", "snippet");
@@ -391,6 +413,7 @@ public final class GetVlanInterfaceListData {
             _resultValue.ips = ips;
             _resultValue.mtu = mtu;
             _resultValue.name = name;
+            _resultValue.netflowProfile = netflowProfile;
             _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.vlanTag = vlanTag;

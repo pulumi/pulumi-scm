@@ -27,7 +27,7 @@ class GetLayer3SubinterfaceResult:
     """
     A collection of values returned by getLayer3Subinterface.
     """
-    def __init__(__self__, arps=None, comment=None, ddns_config=None, device=None, dhcp_client=None, folder=None, id=None, interface_management_profile=None, ips=None, mtu=None, name=None, parent_interface=None, snippet=None, tag=None, tfid=None):
+    def __init__(__self__, arps=None, comment=None, ddns_config=None, device=None, dhcp_client=None, folder=None, id=None, interface_management_profile=None, ips=None, mtu=None, name=None, netflow_profile=None, parent_interface=None, snippet=None, tag=None, tfid=None):
         if arps and not isinstance(arps, list):
             raise TypeError("Expected argument 'arps' to be a list")
         pulumi.set(__self__, "arps", arps)
@@ -61,6 +61,9 @@ class GetLayer3SubinterfaceResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if netflow_profile and not isinstance(netflow_profile, str):
+            raise TypeError("Expected argument 'netflow_profile' to be a str")
+        pulumi.set(__self__, "netflow_profile", netflow_profile)
         if parent_interface and not isinstance(parent_interface, str):
             raise TypeError("Expected argument 'parent_interface' to be a str")
         pulumi.set(__self__, "parent_interface", parent_interface)
@@ -136,6 +139,11 @@ class GetLayer3SubinterfaceResult:
         return pulumi.get(self, "name")
 
     @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> _builtins.str:
+        return pulumi.get(self, "netflow_profile")
+
+    @_builtins.property
     @pulumi.getter(name="parentInterface")
     def parent_interface(self) -> _builtins.str:
         return pulumi.get(self, "parent_interface")
@@ -173,6 +181,7 @@ class AwaitableGetLayer3SubinterfaceResult(GetLayer3SubinterfaceResult):
             ips=self.ips,
             mtu=self.mtu,
             name=self.name,
+            netflow_profile=self.netflow_profile,
             parent_interface=self.parent_interface,
             snippet=self.snippet,
             tag=self.tag,
@@ -232,6 +241,7 @@ def get_layer3_subinterface(device: Optional[_builtins.str] = None,
         ips=pulumi.get(__ret__, 'ips'),
         mtu=pulumi.get(__ret__, 'mtu'),
         name=pulumi.get(__ret__, 'name'),
+        netflow_profile=pulumi.get(__ret__, 'netflow_profile'),
         parent_interface=pulumi.get(__ret__, 'parent_interface'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tag=pulumi.get(__ret__, 'tag'),
@@ -288,6 +298,7 @@ def get_layer3_subinterface_output(device: Optional[pulumi.Input[Optional[_built
         ips=pulumi.get(__response__, 'ips'),
         mtu=pulumi.get(__response__, 'mtu'),
         name=pulumi.get(__response__, 'name'),
+        netflow_profile=pulumi.get(__response__, 'netflow_profile'),
         parent_interface=pulumi.get(__response__, 'parent_interface'),
         snippet=pulumi.get(__response__, 'snippet'),
         tag=pulumi.get(__response__, 'tag'),

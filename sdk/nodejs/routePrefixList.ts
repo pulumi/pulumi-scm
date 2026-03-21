@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *
  * const scmRoutePrefixList = new scm.RoutePrefixList("scm_route_prefix_list", {
  *     folder: "ngfw-shared",
- *     name: "scm_bgp_prefix_list",
+ *     name: "scm_tf_bgp_prefix_list",
  *     description: "Managed by Pulumi",
  *     type: {
  *         ipv4: {
@@ -26,7 +26,7 @@ import * as utilities from "./utilities";
  *                 action: "permit",
  *                 prefix: {
  *                     greaterThanOrEqual: 24,
- *                     network: "198.18.1.0/24",
+ *                     network: "any",
  *                 },
  *             }],
  *         },

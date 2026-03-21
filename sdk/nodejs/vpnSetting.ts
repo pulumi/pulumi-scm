@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const tcpExample = new scm.VpnSetting("tcp_example", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     vpn: {
  *         ikev2: {
  *             cookieThreshold: 500,

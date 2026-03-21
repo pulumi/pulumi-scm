@@ -60,7 +60,7 @@ import javax.annotation.Nullable;
  *         // This resource creates a domain-based External Dynamic List (EDL).
  *         // The EDL will fetch a list of domains from the specified URL daily.
  *         var scmEdl1 = new ExternalDynamicList("scmEdl1", ExternalDynamicListArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm_edl_1")
  *             .type(ExternalDynamicListTypeArgs.builder()
  *                 .domain(ExternalDynamicListTypeDomainArgs.builder()
@@ -76,7 +76,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmEdl2 = new ExternalDynamicList("scmEdl2", ExternalDynamicListArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm_edl_2")
  *             .type(ExternalDynamicListTypeArgs.builder()
  *                 .ip(ExternalDynamicListTypeIpArgs.builder()
@@ -91,7 +91,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmEdl3 = new ExternalDynamicList("scmEdl3", ExternalDynamicListArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm_edl_3")
  *             .type(ExternalDynamicListTypeArgs.builder()
  *                 .url(ExternalDynamicListTypeUrlArgs.builder()
@@ -108,7 +108,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmEdl4 = new ExternalDynamicList("scmEdl4", ExternalDynamicListArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm_edl_4")
  *             .type(ExternalDynamicListTypeArgs.builder()
  *                 .predefinedIp(ExternalDynamicListTypePredefinedIpArgs.builder()
@@ -119,7 +119,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmEdl5 = new ExternalDynamicList("scmEdl5", ExternalDynamicListArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm_edl_5")
  *             .type(ExternalDynamicListTypeArgs.builder()
  *                 .ip(ExternalDynamicListTypeIpArgs.builder()

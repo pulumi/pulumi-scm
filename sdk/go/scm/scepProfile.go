@@ -30,7 +30,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// scep profile w/ no challenge
 //			_, err := scm.NewScepProfile(ctx, "scm_scep_profile_1", &scm.ScepProfileArgs{
-//				Folder:         pulumi.String("All"),
+//				Folder:         pulumi.String("ngfw-shared"),
 //				Name:           pulumi.String("scep-prof-1"),
 //				ScepUrl:        pulumi.String("https://scep.example.com/"),
 //				CaIdentityName: pulumi.String("Default"),
@@ -50,7 +50,7 @@ import (
 //			}
 //			// scep profile w/ fixed challenge
 //			_, err = scm.NewScepProfile(ctx, "scm_scep_profile_2", &scm.ScepProfileArgs{
-//				Folder:         pulumi.String("All"),
+//				Folder:         pulumi.String("ngfw-shared"),
 //				Name:           pulumi.String("scep-prof-2"),
 //				ScepUrl:        pulumi.String("https://example.target.com/"),
 //				CaIdentityName: pulumi.String("user-scep"),
@@ -74,7 +74,7 @@ import (
 //			}
 //			// scep profile w/ dynamic challenge
 //			_, err = scm.NewScepProfile(ctx, "scm_scep_profile_3", &scm.ScepProfileArgs{
-//				Folder:                pulumi.String("All"),
+//				Folder:                pulumi.String("ngfw-shared"),
 //				Name:                  pulumi.String("scep-prof-3"),
 //				ScepUrl:               pulumi.String("https://example.gateway.com/"),
 //				CaIdentityName:        pulumi.String("vpn-gateway"),
@@ -104,7 +104,7 @@ import (
 //			}
 //			// scep profile w/ all fields
 //			_, err = scm.NewScepProfile(ctx, "scm_scep_profile_4", &scm.ScepProfileArgs{
-//				Folder:                pulumi.String("All"),
+//				Folder:                pulumi.String("ngfw-shared"),
 //				Name:                  pulumi.String("scep-prof-4"),
 //				ScepUrl:               pulumi.String("https://example.wifi.com/"),
 //				CaIdentityName:        pulumi.String("wifi"),

@@ -282,30 +282,108 @@ class BgpFilteringProfile(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
+        #
+        # Creates an empty bgp filtering profile
+        #
         scm_bgp_filtering_profile = scm.BgpFilteringProfile("scm_bgp_filtering_profile",
             folder="ngfw-shared",
             name="scm_bgp_filtering_profile",
             ipv4={})
+        #
+        # Creates various resources used for scm_bgp_filtering_profile_complex
+        #
+        scm_pl_inbound = scm.RoutePrefixList("scm_pl_inbound",
+            folder="ngfw-shared",
+            name="scm_pl_inbound",
+            description="Managed by Pulumi",
+            type={
+                "ipv4": {
+                    "ipv4_entries": [{
+                        "name": 10,
+                        "action": "permit",
+                        "prefix": {
+                            "greater_than_or_equal": 24,
+                            "network": "any",
+                        },
+                    }],
+                },
+            })
+        scm_rm_inbound = scm.BgpRouteMap("scm_rm_inbound",
+            folder="ngfw-shared",
+            name="scm_rm_inbound",
+            description="Managed by Pulumi",
+            route_maps=[{
+                "name": 10,
+                "description": "No Export",
+                "match": {
+                    "ipv4": {
+                        "address": {
+                            "prefix_list": "scm_pl_inbound",
+                        },
+                    },
+                },
+                "set": {
+                    "regular_community": ["no-export"],
+                },
+            }],
+            opts = pulumi.ResourceOptions(depends_on=[scm_pl_inbound]))
+        scm_pl_outbound = scm.RoutePrefixList("scm_pl_outbound",
+            folder="ngfw-shared",
+            name="scm_pl_outbound",
+            description="Managed by Pulumi",
+            type={
+                "ipv4": {
+                    "ipv4_entries": [{
+                        "name": 10,
+                        "action": "permit",
+                        "prefix": {
+                            "greater_than_or_equal": 24,
+                            "network": "any",
+                        },
+                    }],
+                },
+            })
+        scm_rm_outbound = scm.BgpRouteMap("scm_rm_outbound",
+            folder="ngfw-shared",
+            name="scm_rm_outbound",
+            description="Managed by Pulumi",
+            route_maps=[{
+                "name": 10,
+                "description": "No Export",
+                "match": {
+                    "ipv4": {
+                        "address": {
+                            "prefix_list": "scm_pl_outbound",
+                        },
+                    },
+                },
+                "set": {
+                    "regular_community": ["no-export"],
+                },
+            }],
+            opts = pulumi.ResourceOptions(depends_on=[scm_pl_outbound]))
+        #
+        # Creates a complex filtering profile that utilises previously created FL, PL and RM
+        #
         scm_bgp_filtering_profile_complex = scm.BgpFilteringProfile("scm_bgp_filtering_profile_complex",
             folder="ngfw-shared",
             name="scm_bgp_filtering_profile_complex",
             ipv4={
                 "unicast": {
-                    "filter_list": {
-                        "inbound": "scm_filter_list",
-                    },
                     "inbound_network_filters": {
                         "prefix_list": "scm_pl_inbound",
-                    },
-                    "outbound_network_filters": {
-                        "distribute_list": "scm_distribute_list",
                     },
                     "route_maps": {
                         "inbound": "scm_rm_inbound",
                         "outbound": "scm_rm_outbound",
                     },
                 },
-            })
+            },
+            opts = pulumi.ResourceOptions(depends_on=[
+                    scm_pl_inbound,
+                    scm_rm_inbound,
+                    scm_rm_outbound,
+                ]))
         ```
 
         ## Import
@@ -359,30 +437,108 @@ class BgpFilteringProfile(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
+        #
+        # Creates an empty bgp filtering profile
+        #
         scm_bgp_filtering_profile = scm.BgpFilteringProfile("scm_bgp_filtering_profile",
             folder="ngfw-shared",
             name="scm_bgp_filtering_profile",
             ipv4={})
+        #
+        # Creates various resources used for scm_bgp_filtering_profile_complex
+        #
+        scm_pl_inbound = scm.RoutePrefixList("scm_pl_inbound",
+            folder="ngfw-shared",
+            name="scm_pl_inbound",
+            description="Managed by Pulumi",
+            type={
+                "ipv4": {
+                    "ipv4_entries": [{
+                        "name": 10,
+                        "action": "permit",
+                        "prefix": {
+                            "greater_than_or_equal": 24,
+                            "network": "any",
+                        },
+                    }],
+                },
+            })
+        scm_rm_inbound = scm.BgpRouteMap("scm_rm_inbound",
+            folder="ngfw-shared",
+            name="scm_rm_inbound",
+            description="Managed by Pulumi",
+            route_maps=[{
+                "name": 10,
+                "description": "No Export",
+                "match": {
+                    "ipv4": {
+                        "address": {
+                            "prefix_list": "scm_pl_inbound",
+                        },
+                    },
+                },
+                "set": {
+                    "regular_community": ["no-export"],
+                },
+            }],
+            opts = pulumi.ResourceOptions(depends_on=[scm_pl_inbound]))
+        scm_pl_outbound = scm.RoutePrefixList("scm_pl_outbound",
+            folder="ngfw-shared",
+            name="scm_pl_outbound",
+            description="Managed by Pulumi",
+            type={
+                "ipv4": {
+                    "ipv4_entries": [{
+                        "name": 10,
+                        "action": "permit",
+                        "prefix": {
+                            "greater_than_or_equal": 24,
+                            "network": "any",
+                        },
+                    }],
+                },
+            })
+        scm_rm_outbound = scm.BgpRouteMap("scm_rm_outbound",
+            folder="ngfw-shared",
+            name="scm_rm_outbound",
+            description="Managed by Pulumi",
+            route_maps=[{
+                "name": 10,
+                "description": "No Export",
+                "match": {
+                    "ipv4": {
+                        "address": {
+                            "prefix_list": "scm_pl_outbound",
+                        },
+                    },
+                },
+                "set": {
+                    "regular_community": ["no-export"],
+                },
+            }],
+            opts = pulumi.ResourceOptions(depends_on=[scm_pl_outbound]))
+        #
+        # Creates a complex filtering profile that utilises previously created FL, PL and RM
+        #
         scm_bgp_filtering_profile_complex = scm.BgpFilteringProfile("scm_bgp_filtering_profile_complex",
             folder="ngfw-shared",
             name="scm_bgp_filtering_profile_complex",
             ipv4={
                 "unicast": {
-                    "filter_list": {
-                        "inbound": "scm_filter_list",
-                    },
                     "inbound_network_filters": {
                         "prefix_list": "scm_pl_inbound",
-                    },
-                    "outbound_network_filters": {
-                        "distribute_list": "scm_distribute_list",
                     },
                     "route_maps": {
                         "inbound": "scm_rm_inbound",
                         "outbound": "scm_rm_outbound",
                     },
                 },
-            })
+            },
+            opts = pulumi.ResourceOptions(depends_on=[
+                    scm_pl_inbound,
+                    scm_rm_inbound,
+                    scm_rm_outbound,
+                ]))
         ```
 
         ## Import

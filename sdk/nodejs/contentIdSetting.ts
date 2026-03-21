@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const cidExample = new scm.ContentIdSetting("cid_example", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     contentId: {
  *         allowForwardDecryptedContent: true,
  *         extendedCaptureSegment: 6,

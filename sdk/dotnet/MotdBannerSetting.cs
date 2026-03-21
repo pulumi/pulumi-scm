@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var motdExample = new Scm.MotdBannerSetting("motd_example", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         MotdAndBanner = new Scm.Inputs.MotdBannerSettingMotdAndBannerArgs
     ///         {
     ///             MotdEnable = true,

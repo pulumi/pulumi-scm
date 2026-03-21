@@ -26,7 +26,7 @@ namespace Pulumi.Scm
     ///     var scmIkeGwCryptoProfile1 = new Scm.IkeCryptoProfile("scm_ike_gw_crypto_profile_1", new()
     ///     {
     ///         Folder = "Remote Networks",
-    ///         Name = "scm_ike_gw_crypto_profile_1",
+    ///         Name = "scm_ike_gw_crypto_profile_tf",
     ///         Hashes = new[]
     ///         {
     ///             "sha256",

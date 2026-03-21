@@ -71,8 +71,14 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &BgpRouting{}
 	case "scm:index/certificateProfile:CertificateProfile":
 		r = &CertificateProfile{}
+	case "scm:index/configMatchList:ConfigMatchList":
+		r = &ConfigMatchList{}
 	case "scm:index/contentIdSetting:ContentIdSetting":
 		r = &ContentIdSetting{}
+	case "scm:index/dataFilteringProfile:DataFilteringProfile":
+		r = &DataFilteringProfile{}
+	case "scm:index/dataObject:DataObject":
+		r = &DataObject{}
 	case "scm:index/decryptionExclusion:DecryptionExclusion":
 		r = &DecryptionExclusion{}
 	case "scm:index/decryptionProfile:DecryptionProfile":
@@ -103,10 +109,14 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &Folder{}
 	case "scm:index/generalSetting:GeneralSetting":
 		r = &GeneralSetting{}
+	case "scm:index/globalprotectMatchList:GlobalprotectMatchList":
+		r = &GlobalprotectMatchList{}
 	case "scm:index/hipObject:HipObject":
 		r = &HipObject{}
 	case "scm:index/hipProfile:HipProfile":
 		r = &HipProfile{}
+	case "scm:index/hipmatchMatchList:HipmatchMatchList":
+		r = &HipmatchMatchList{}
 	case "scm:index/httpHeaderProfile:HttpHeaderProfile":
 		r = &HttpHeaderProfile{}
 	case "scm:index/httpServerProfile:HttpServerProfile":
@@ -123,6 +133,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &IpsecCryptoProfile{}
 	case "scm:index/ipsecTunnel:IpsecTunnel":
 		r = &IpsecTunnel{}
+	case "scm:index/iptagMatchList:IptagMatchList":
+		r = &IptagMatchList{}
 	case "scm:index/kerberosServerProfile:KerberosServerProfile":
 		r = &KerberosServerProfile{}
 	case "scm:index/label:Label":
@@ -219,6 +231,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &Snippet{}
 	case "scm:index/syslogServerProfile:SyslogServerProfile":
 		r = &SyslogServerProfile{}
+	case "scm:index/systemMatchList:SystemMatchList":
+		r = &SystemMatchList{}
 	case "scm:index/tacacsServerProfile:TacacsServerProfile":
 		r = &TacacsServerProfile{}
 	case "scm:index/tag:Tag":
@@ -237,6 +251,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &UrlAccessProfile{}
 	case "scm:index/urlCategory:UrlCategory":
 		r = &UrlCategory{}
+	case "scm:index/useridMatchList:UseridMatchList":
+		r = &UseridMatchList{}
 	case "scm:index/variable:Variable":
 		r = &Variable{}
 	case "scm:index/vlanInterface:VlanInterface":
@@ -411,7 +427,22 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/configMatchList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/contentIdSetting",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/dataFilteringProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/dataObject",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -491,12 +522,22 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/globalprotectMatchList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/hipObject",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/hipProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/hipmatchMatchList",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -537,6 +578,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/ipsecTunnel",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/iptagMatchList",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -781,6 +827,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/systemMatchList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/tacacsServerProfile",
 		&module{version},
 	)
@@ -822,6 +873,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/urlCategory",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/useridMatchList",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

@@ -331,8 +331,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in as-number format
         #
         scm_variable_asn = scm.Variable("scm_variable_asn",
-            folder="All",
-            name="$scm_variable_asn",
+            folder="ngfw-shared",
+            name="$tf_variable_asn",
             description="Managed by Pulumi",
             type="as-number",
             value="65535")
@@ -340,8 +340,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in count format
         #
         scm_variable_count = scm.Variable("scm_variable_count",
-            folder="All",
-            name="$scm_variable_count",
+            folder="ngfw-shared",
+            name="$tf_variable_count",
             description="Managed by Pulumi",
             type="count",
             value="15")
@@ -349,8 +349,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in fqdn format
         #
         scm_variable_fqdn = scm.Variable("scm_variable_fqdn",
-            folder="All",
-            name="$scm_variable_fqdn",
+            folder="ngfw-shared",
+            name="$tf_variable_fqdn",
             description="Managed by Pulumi",
             type="fqdn",
             value="scm.example.com")
@@ -358,8 +358,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in group-id format
         #
         scm_variable_group_id = scm.Variable("scm_variable_group_id",
-            folder="All",
-            name="$scm_variable_group_id",
+            folder="ngfw-shared",
+            name="$tf_variable_group_id",
             description="Managed by Pulumi",
             type="group-id",
             value="10")
@@ -367,8 +367,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in ip-range format
         #
         scm_variable_iprange = scm.Variable("scm_variable_iprange",
-            folder="All",
-            name="$scm_variable_iprange",
+            folder="ngfw-shared",
+            name="$tf_variable_iprange",
             description="Managed by Pulumi",
             type="ip-range",
             value="198.18.1.1-198.18.1.100")
@@ -376,8 +376,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in ip-netmask format
         #
         scm_variable_ipaddr = scm.Variable("scm_variable_ipaddr",
-            folder="All",
-            name="$scm_variable_ipaddr",
+            folder="ngfw-shared",
+            name="$tf_variable_ipaddr",
             description="Managed by Pulumi",
             type="ip-netmask",
             value="198.18.2.0/24")
@@ -385,8 +385,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in ip-wildcard format
         #
         scm_variable_ipwildcard = scm.Variable("scm_variable_ipwildcard",
-            folder="All",
-            name="$scm_variable_ipwildcard",
+            folder="ngfw-shared",
+            name="$tf_variable_ipwildcard",
             description="Managed by Pulumi",
             type="ip-wildcard",
             value="198.18.1.0/0.255.255.255")
@@ -394,8 +394,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in percent format
         #
         scm_variable_percent = scm.Variable("scm_variable_percent",
-            folder="All",
-            name="$scm_variable_percent",
+            folder="ngfw-shared",
+            name="$tf_variable_percent",
             description="Managed by Pulumi",
             type="percent",
             value="10")
@@ -403,8 +403,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in router-id format
         #
         scm_variable_router_id = scm.Variable("scm_variable_router_id",
-            folder="All",
-            name="$scm_variable_router_id",
+            folder="ngfw-shared",
+            name="$tf_variable_router_id",
             description="Managed by Pulumi",
             type="router-id",
             value="198.18.1.1")
@@ -412,8 +412,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in timer format
         #
         scm_variable_timer = scm.Variable("scm_variable_timer",
-            folder="All",
-            name="$scm_variable_timer",
+            folder="ngfw-shared",
+            name="$tf_variable_timer",
             description="Managed by Pulumi",
             type="timer",
             value="1440")
@@ -421,8 +421,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in zone format
         #
         scm_variable_zone = scm.Variable("scm_variable_zone",
-            folder="All",
-            name="$scm_variable_zone",
+            folder="ngfw-shared",
+            name="$tf_variable_zone",
             description="Managed by Pulumi",
             type="zone",
             value="internet")
@@ -484,8 +484,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in as-number format
         #
         scm_variable_asn = scm.Variable("scm_variable_asn",
-            folder="All",
-            name="$scm_variable_asn",
+            folder="ngfw-shared",
+            name="$tf_variable_asn",
             description="Managed by Pulumi",
             type="as-number",
             value="65535")
@@ -493,8 +493,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in count format
         #
         scm_variable_count = scm.Variable("scm_variable_count",
-            folder="All",
-            name="$scm_variable_count",
+            folder="ngfw-shared",
+            name="$tf_variable_count",
             description="Managed by Pulumi",
             type="count",
             value="15")
@@ -502,8 +502,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in fqdn format
         #
         scm_variable_fqdn = scm.Variable("scm_variable_fqdn",
-            folder="All",
-            name="$scm_variable_fqdn",
+            folder="ngfw-shared",
+            name="$tf_variable_fqdn",
             description="Managed by Pulumi",
             type="fqdn",
             value="scm.example.com")
@@ -511,8 +511,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in group-id format
         #
         scm_variable_group_id = scm.Variable("scm_variable_group_id",
-            folder="All",
-            name="$scm_variable_group_id",
+            folder="ngfw-shared",
+            name="$tf_variable_group_id",
             description="Managed by Pulumi",
             type="group-id",
             value="10")
@@ -520,8 +520,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in ip-range format
         #
         scm_variable_iprange = scm.Variable("scm_variable_iprange",
-            folder="All",
-            name="$scm_variable_iprange",
+            folder="ngfw-shared",
+            name="$tf_variable_iprange",
             description="Managed by Pulumi",
             type="ip-range",
             value="198.18.1.1-198.18.1.100")
@@ -529,8 +529,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in ip-netmask format
         #
         scm_variable_ipaddr = scm.Variable("scm_variable_ipaddr",
-            folder="All",
-            name="$scm_variable_ipaddr",
+            folder="ngfw-shared",
+            name="$tf_variable_ipaddr",
             description="Managed by Pulumi",
             type="ip-netmask",
             value="198.18.2.0/24")
@@ -538,8 +538,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in ip-wildcard format
         #
         scm_variable_ipwildcard = scm.Variable("scm_variable_ipwildcard",
-            folder="All",
-            name="$scm_variable_ipwildcard",
+            folder="ngfw-shared",
+            name="$tf_variable_ipwildcard",
             description="Managed by Pulumi",
             type="ip-wildcard",
             value="198.18.1.0/0.255.255.255")
@@ -547,8 +547,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in percent format
         #
         scm_variable_percent = scm.Variable("scm_variable_percent",
-            folder="All",
-            name="$scm_variable_percent",
+            folder="ngfw-shared",
+            name="$tf_variable_percent",
             description="Managed by Pulumi",
             type="percent",
             value="10")
@@ -556,8 +556,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in router-id format
         #
         scm_variable_router_id = scm.Variable("scm_variable_router_id",
-            folder="All",
-            name="$scm_variable_router_id",
+            folder="ngfw-shared",
+            name="$tf_variable_router_id",
             description="Managed by Pulumi",
             type="router-id",
             value="198.18.1.1")
@@ -565,8 +565,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in timer format
         #
         scm_variable_timer = scm.Variable("scm_variable_timer",
-            folder="All",
-            name="$scm_variable_timer",
+            folder="ngfw-shared",
+            name="$tf_variable_timer",
             description="Managed by Pulumi",
             type="timer",
             value="1440")
@@ -574,8 +574,8 @@ class Variable(pulumi.CustomResource):
         # Creates a variable in zone format
         #
         scm_variable_zone = scm.Variable("scm_variable_zone",
-            folder="All",
-            name="$scm_variable_zone",
+            folder="ngfw-shared",
+            name="$tf_variable_zone",
             description="Managed by Pulumi",
             type="zone",
             value="internet")

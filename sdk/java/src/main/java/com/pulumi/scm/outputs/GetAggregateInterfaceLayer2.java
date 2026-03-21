@@ -17,6 +17,11 @@ public final class GetAggregateInterfaceLayer2 {
      */
     private GetAggregateInterfaceLayer2Lacp lacp;
     /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    private String netflowProfile;
+    /**
      * @return VLAN tag
      * 
      */
@@ -29,6 +34,13 @@ public final class GetAggregateInterfaceLayer2 {
      */
     public GetAggregateInterfaceLayer2Lacp lacp() {
         return this.lacp;
+    }
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public String netflowProfile() {
+        return this.netflowProfile;
     }
     /**
      * @return VLAN tag
@@ -48,11 +60,13 @@ public final class GetAggregateInterfaceLayer2 {
     @CustomType.Builder
     public static final class Builder {
         private GetAggregateInterfaceLayer2Lacp lacp;
+        private String netflowProfile;
         private String vlanTag;
         public Builder() {}
         public Builder(GetAggregateInterfaceLayer2 defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.lacp = defaults.lacp;
+    	      this.netflowProfile = defaults.netflowProfile;
     	      this.vlanTag = defaults.vlanTag;
         }
 
@@ -62,6 +76,14 @@ public final class GetAggregateInterfaceLayer2 {
               throw new MissingRequiredPropertyException("GetAggregateInterfaceLayer2", "lacp");
             }
             this.lacp = lacp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder netflowProfile(String netflowProfile) {
+            if (netflowProfile == null) {
+              throw new MissingRequiredPropertyException("GetAggregateInterfaceLayer2", "netflowProfile");
+            }
+            this.netflowProfile = netflowProfile;
             return this;
         }
         @CustomType.Setter
@@ -75,6 +97,7 @@ public final class GetAggregateInterfaceLayer2 {
         public GetAggregateInterfaceLayer2 build() {
             final var _resultValue = new GetAggregateInterfaceLayer2();
             _resultValue.lacp = lacp;
+            _resultValue.netflowProfile = netflowProfile;
             _resultValue.vlanTag = vlanTag;
             return _resultValue;
         }

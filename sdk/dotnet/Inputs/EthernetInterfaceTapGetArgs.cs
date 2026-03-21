@@ -12,6 +12,12 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class EthernetInterfaceTapGetArgs : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        [Input("netflowProfile")]
+        public Input<string>? NetflowProfile { get; set; }
+
         public EthernetInterfaceTapGetArgs()
         {
         }

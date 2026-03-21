@@ -29,8 +29,8 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			exampleTag, err := scm.NewTag(ctx, "example_tag", &scm.TagArgs{
-//				Folder: pulumi.String("All"),
-//				Name:   pulumi.String("example-tag"),
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("example-nat-rule"),
 //				Color:  pulumi.String("Red"),
 //			})
 //			if err != nil {
@@ -55,7 +55,7 @@ import (
 //				Description: pulumi.String("Dynamic SNAT for internal traffic accessing the internet. Updating"),
 //				Disabled:    pulumi.Bool(false),
 //				NatType:     pulumi.String("ipv4"),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Tags: pulumi.StringArray{
 //					exampleTag.Name,
 //				},
@@ -95,7 +95,7 @@ import (
 //				Description: pulumi.String("Dynamic SNAT for internal traffic accessing the internet. Updating"),
 //				Disabled:    pulumi.Bool(false),
 //				NatType:     pulumi.String("ipv4"),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Tags: pulumi.StringArray{
 //					exampleTag.Name,
 //				},
@@ -133,7 +133,7 @@ import (
 //				Description: pulumi.String("Dynamic SNAT for internal traffic accessing the internet. Updating"),
 //				Disabled:    pulumi.Bool(false),
 //				NatType:     pulumi.String("ipv4"),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Tags: pulumi.StringArray{
 //					exampleTag.Name,
 //				},
@@ -167,7 +167,7 @@ import (
 //				Description: pulumi.String("Dynamic SNAT for internal traffic accessing the internet. Updating"),
 //				Disabled:    pulumi.Bool(false),
 //				NatType:     pulumi.String("ipv4"),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Tags: pulumi.StringArray{
 //					exampleTag.Name,
 //				},

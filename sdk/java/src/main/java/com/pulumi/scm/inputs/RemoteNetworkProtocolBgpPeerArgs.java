@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,6 +47,21 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
     }
 
     /**
+     * Same peer IP address as primary WAN
+     * 
+     */
+    @Import(name="sameAsPrimary")
+    private @Nullable Output<Boolean> sameAsPrimary;
+
+    /**
+     * @return Same peer IP address as primary WAN
+     * 
+     */
+    public Optional<Output<Boolean>> sameAsPrimary() {
+        return Optional.ofNullable(this.sameAsPrimary);
+    }
+
+    /**
      * BGP peering secret (secondary WAN)
      * 
      */
@@ -65,6 +81,7 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
     private RemoteNetworkProtocolBgpPeerArgs(RemoteNetworkProtocolBgpPeerArgs $) {
         this.localIpAddress = $.localIpAddress;
         this.peerIpAddress = $.peerIpAddress;
+        this.sameAsPrimary = $.sameAsPrimary;
         this.secret = $.secret;
     }
 
@@ -126,6 +143,27 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
          */
         public Builder peerIpAddress(String peerIpAddress) {
             return peerIpAddress(Output.of(peerIpAddress));
+        }
+
+        /**
+         * @param sameAsPrimary Same peer IP address as primary WAN
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sameAsPrimary(@Nullable Output<Boolean> sameAsPrimary) {
+            $.sameAsPrimary = sameAsPrimary;
+            return this;
+        }
+
+        /**
+         * @param sameAsPrimary Same peer IP address as primary WAN
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sameAsPrimary(Boolean sameAsPrimary) {
+            return sameAsPrimary(Output.of(sameAsPrimary));
         }
 
         /**

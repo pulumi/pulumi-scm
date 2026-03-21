@@ -24,13 +24,13 @@ namespace Pulumi.Scm
     /// {
     ///     var scmDnsSecurityProfileBase = new Scm.DnsSecurityProfile("scm_dns_security_profile_base", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "dns_base",
     ///     });
     /// 
     ///     var scmDnsSecurityCategories = new Scm.DnsSecurityProfile("scm_dns_security_categories", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "test_dns_sec_categories",
     ///         Description = "dns security profile w/ dns security categories",
     ///         BotnetDomains = new Scm.Inputs.DnsSecurityProfileBotnetDomainsArgs
@@ -75,7 +75,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmDnsLists = new Scm.DnsSecurityProfile("scm_dns_lists", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "test_dns_lists",
     ///         Description = "dns security profile w/ dns lists",
     ///         BotnetDomains = new Scm.Inputs.DnsSecurityProfileBotnetDomainsArgs
@@ -106,7 +106,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmDnsSinkhole = new Scm.DnsSecurityProfile("scm_dns_sinkhole", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "test_dns_sinkhole",
     ///         Description = "dns security profile w/ sinkhole",
     ///         BotnetDomains = new Scm.Inputs.DnsSecurityProfileBotnetDomainsArgs
@@ -121,7 +121,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmDnsWhitelist = new Scm.DnsSecurityProfile("scm_dns_whitelist", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "test_dns_whitelist",
     ///         Description = "dns security profile w/ whitelist",
     ///         BotnetDomains = new Scm.Inputs.DnsSecurityProfileBotnetDomainsArgs
@@ -143,7 +143,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmDnsAll = new Scm.DnsSecurityProfile("scm_dns_all", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "test_dns_all_test",
     ///         Description = "dns security profile w/ all",
     ///         BotnetDomains = new Scm.Inputs.DnsSecurityProfileBotnetDomainsArgs

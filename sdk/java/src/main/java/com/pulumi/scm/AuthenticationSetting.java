@@ -32,7 +32,6 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.AuthenticationProfileLockoutArgs;
  * import com.pulumi.scm.inputs.AuthenticationProfileMethodArgs;
  * import com.pulumi.scm.inputs.AuthenticationProfileMethodRadiusArgs;
- * import com.pulumi.scm.inputs.AuthenticationProfileSingleSignOnArgs;
  * import com.pulumi.scm.AuthenticationSetting;
  * import com.pulumi.scm.AuthenticationSettingArgs;
  * import com.pulumi.scm.inputs.AuthenticationSettingAuthenticationArgs;
@@ -50,11 +49,11 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var globalRadiusAccess = new AuthenticationProfile("globalRadiusAccess", AuthenticationProfileArgs.builder()
- *             .name("test_auth_profile_radius_1")
+ *             .name("test_auth_profile_settings")
  *             .folder("Prisma Access")
  *             .userDomain("default")
  *             .usernameModifier("%USERINPUT%")
- *             .allowLists("all")
+ *             .allowLists("ngfw-shared")
  *             .lockout(AuthenticationProfileLockoutArgs.builder()
  *                 .failedAttempts(1)
  *                 .lockoutTime(3)
@@ -64,9 +63,6 @@ import javax.annotation.Nullable;
  *                     .checkgroup(true)
  *                     .serverProfile("CHAP_only_rsp_11")
  *                     .build())
- *                 .build())
- *             .singleSignOn(AuthenticationProfileSingleSignOnArgs.builder()
- *                 .realm("EXAMPLE.COM")
  *                 .build())
  *             .build());
  * 

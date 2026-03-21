@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         var scmRoutePrefixList = new RoutePrefixList("scmRoutePrefixList", RoutePrefixListArgs.builder()
  *             .folder("ngfw-shared")
- *             .name("scm_bgp_prefix_list")
+ *             .name("scm_tf_bgp_prefix_list")
  *             .description("Managed by Pulumi")
  *             .type(RoutePrefixListTypeArgs.builder()
  *                 .ipv4(RoutePrefixListTypeIpv4Args.builder()
@@ -55,7 +55,7 @@ import javax.annotation.Nullable;
  *                         .action("permit")
  *                         .prefix(RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs.builder()
  *                             .greaterThanOrEqual(24)
- *                             .network("198.18.1.0/24")
+ *                             .network("any")
  *                             .build())
  *                         .build())
  *                     .build())

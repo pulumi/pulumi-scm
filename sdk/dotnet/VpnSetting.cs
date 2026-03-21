@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var tcpExample = new Scm.VpnSetting("tcp_example", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Vpn = new Scm.Inputs.VpnSettingVpnArgs
     ///         {
     ///             Ikev2 = new Scm.Inputs.VpnSettingVpnIkev2Args

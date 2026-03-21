@@ -79,6 +79,7 @@ export interface GetLayer3SubinterfaceResult {
     readonly ips: outputs.GetLayer3SubinterfaceIp[];
     readonly mtu: number;
     readonly name: string;
+    readonly netflowProfile: string;
     readonly parentInterface: string;
     readonly snippet: string;
     readonly tag: number;

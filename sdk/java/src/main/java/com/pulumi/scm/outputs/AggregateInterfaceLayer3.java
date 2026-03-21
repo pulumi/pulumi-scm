@@ -55,6 +55,11 @@ public final class AggregateInterfaceLayer3 {
      * 
      */
     private @Nullable Integer mtu;
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    private @Nullable String netflowProfile;
 
     private AggregateInterfaceLayer3() {}
     /**
@@ -108,6 +113,13 @@ public final class AggregateInterfaceLayer3 {
     public Optional<Integer> mtu() {
         return Optional.ofNullable(this.mtu);
     }
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Optional<String> netflowProfile() {
+        return Optional.ofNullable(this.netflowProfile);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -125,6 +137,7 @@ public final class AggregateInterfaceLayer3 {
         private @Nullable List<AggregateInterfaceLayer3Ip> ips;
         private @Nullable AggregateInterfaceLayer3Lacp lacp;
         private @Nullable Integer mtu;
+        private @Nullable String netflowProfile;
         public Builder() {}
         public Builder(AggregateInterfaceLayer3 defaults) {
     	      Objects.requireNonNull(defaults);
@@ -135,6 +148,7 @@ public final class AggregateInterfaceLayer3 {
     	      this.ips = defaults.ips;
     	      this.lacp = defaults.lacp;
     	      this.mtu = defaults.mtu;
+    	      this.netflowProfile = defaults.netflowProfile;
         }
 
         @CustomType.Setter
@@ -185,6 +199,12 @@ public final class AggregateInterfaceLayer3 {
             this.mtu = mtu;
             return this;
         }
+        @CustomType.Setter
+        public Builder netflowProfile(@Nullable String netflowProfile) {
+
+            this.netflowProfile = netflowProfile;
+            return this;
+        }
         public AggregateInterfaceLayer3 build() {
             final var _resultValue = new AggregateInterfaceLayer3();
             _resultValue.arps = arps;
@@ -194,6 +214,7 @@ public final class AggregateInterfaceLayer3 {
             _resultValue.ips = ips;
             _resultValue.lacp = lacp;
             _resultValue.mtu = mtu;
+            _resultValue.netflowProfile = netflowProfile;
             return _resultValue;
         }
     }

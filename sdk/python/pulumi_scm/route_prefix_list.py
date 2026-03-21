@@ -284,7 +284,7 @@ class RoutePrefixList(pulumi.CustomResource):
 
         scm_route_prefix_list = scm.RoutePrefixList("scm_route_prefix_list",
             folder="ngfw-shared",
-            name="scm_bgp_prefix_list",
+            name="scm_tf_bgp_prefix_list",
             description="Managed by Pulumi",
             type={
                 "ipv4": {
@@ -293,7 +293,7 @@ class RoutePrefixList(pulumi.CustomResource):
                         "action": "permit",
                         "prefix": {
                             "greater_than_or_equal": 24,
-                            "network": "198.18.1.0/24",
+                            "network": "any",
                         },
                     }],
                 },
@@ -353,7 +353,7 @@ class RoutePrefixList(pulumi.CustomResource):
 
         scm_route_prefix_list = scm.RoutePrefixList("scm_route_prefix_list",
             folder="ngfw-shared",
-            name="scm_bgp_prefix_list",
+            name="scm_tf_bgp_prefix_list",
             description="Managed by Pulumi",
             type={
                 "ipv4": {
@@ -362,7 +362,7 @@ class RoutePrefixList(pulumi.CustomResource):
                         "action": "permit",
                         "prefix": {
                             "greater_than_or_equal": 24,
-                            "network": "198.18.1.0/24",
+                            "network": "any",
                         },
                     }],
                 },

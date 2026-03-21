@@ -24,6 +24,12 @@ namespace Pulumi.Scm.Inputs
         [Input("peerIpAddress")]
         public Input<string>? PeerIpAddress { get; set; }
 
+        /// <summary>
+        /// Same peer IP address as primary WAN
+        /// </summary>
+        [Input("sameAsPrimary")]
+        public Input<bool>? SameAsPrimary { get; set; }
+
         [Input("secret")]
         private Input<string>? _secret;
 

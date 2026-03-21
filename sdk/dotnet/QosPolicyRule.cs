@@ -27,7 +27,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "anchor-qos-rule",
     ///         Description = "Base rule for testing 'before' and 'after' positioning.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
     ///         {
@@ -55,7 +55,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "top-absolute-qos-rule",
     ///         Description = "Placed at the very TOP of the QoS rulebase (Highest Priority).",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "top",
     ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
@@ -68,7 +68,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "bottom-absolute-qos-rule",
     ///         Description = "Placed at the very BOTTOM of the QoS rulebase (Lowest Priority)",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "bottom",
     ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
@@ -82,7 +82,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "before-anchor-qos-rule",
     ///         Description = "Positioned immediately BEFORE the anchor-qos-rule.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "before",
     ///         TargetRule = anchorQosRule.Id,
@@ -96,7 +96,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "after-anchor-qos-rule",
     ///         Description = "Positioned immediately AFTER the anchor-qos-rule.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "after",
     ///         TargetRule = anchorQosRule.Id,

@@ -16,11 +16,11 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const scmDnsSecurityProfileBase = new scm.DnsSecurityProfile("scm_dns_security_profile_base", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "dns_base",
  * });
  * const scmDnsSecurityCategories = new scm.DnsSecurityProfile("scm_dns_security_categories", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "test_dns_sec_categories",
  *     description: "dns security profile w/ dns security categories",
  *     botnetDomains: {
@@ -56,7 +56,7 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const scmDnsLists = new scm.DnsSecurityProfile("scm_dns_lists", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "test_dns_lists",
  *     description: "dns security profile w/ dns lists",
  *     botnetDomains: {
@@ -79,7 +79,7 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const scmDnsSinkhole = new scm.DnsSecurityProfile("scm_dns_sinkhole", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "test_dns_sinkhole",
  *     description: "dns security profile w/ sinkhole",
  *     botnetDomains: {
@@ -90,7 +90,7 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const scmDnsWhitelist = new scm.DnsSecurityProfile("scm_dns_whitelist", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "test_dns_whitelist",
  *     description: "dns security profile w/ whitelist",
  *     botnetDomains: {
@@ -106,7 +106,7 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const scmDnsAll = new scm.DnsSecurityProfile("scm_dns_all", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "test_dns_all_test",
  *     description: "dns security profile w/ all",
  *     botnetDomains: {

@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     // Custom Application
     ///     var scmMediaApp = new Scm.Application("scm_media_app", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm_media_app",
     ///         Description = "Managed by Pulumi",
     ///         Category = "media",
@@ -42,7 +42,7 @@ namespace Pulumi.Scm
     ///     // Custom Application with tweaked timeouts and additional settings
     ///     var scmRiskyApp = new Scm.Application("scm_risky_app", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm_risky_app",
     ///         Description = "Managed by Pulumi",
     ///         Category = "media",
@@ -67,8 +67,8 @@ namespace Pulumi.Scm
     ///     // Custom Application based on Custom Signature
     ///     var scmCustomApp = new Scm.Application("scm_custom_app", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "scm_custom_app",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_custom_test_app",
     ///         Description = "Managed by Pulumi",
     ///         Category = "media",
     ///         Subcategory = "gaming",

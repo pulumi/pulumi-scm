@@ -81,6 +81,7 @@ type LookupLoopbackInterfaceResult struct {
 	Ipv6                       GetLoopbackInterfaceIpv6 `pulumi:"ipv6"`
 	Mtu                        int                      `pulumi:"mtu"`
 	Name                       string                   `pulumi:"name"`
+	NetflowProfile             string                   `pulumi:"netflowProfile"`
 	Snippet                    string                   `pulumi:"snippet"`
 	Tfid                       string                   `pulumi:"tfid"`
 }
@@ -164,6 +165,10 @@ func (o LookupLoopbackInterfaceResultOutput) Mtu() pulumi.IntOutput {
 
 func (o LookupLoopbackInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+func (o LookupLoopbackInterfaceResultOutput) NetflowProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
 func (o LookupLoopbackInterfaceResultOutput) Snippet() pulumi.StringOutput {

@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const scmAntiSpywareSignature1 = new scm.AntiSpywareSignature("scm_anti_spyware_signature_1", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     threatId: "6900001",
  *     comment: "Managed by Pulumi",
  *     direction: "client2server",

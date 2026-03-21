@@ -16,14 +16,14 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const exampleTag = new scm.Tag("example_tag", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "pbf-rule-tag-test-1",
  *     color: "Red",
  * });
  * // --- PBF Rule Resource with discard action---
  * const examplePbfRule = new scm.PbfRule("example_pbf_rule", {
  *     name: "pbf-test-rule-discard",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     description: "PBF rule for forwarding specific traffic.",
  *     from: {
  *         zones: ["zone-untrust"],
@@ -45,7 +45,7 @@ import * as utilities from "./utilities";
  * // --- PBF Rule Resource with no-pbf action---
  * const exampleNoPbfRule = new scm.PbfRule("example_no_pbf_rule", {
  *     name: "pbf-test-rule-no-pbf",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     description: "PBF rule for forwarding specific traffic",
  *     from: {
  *         zones: ["zone-untrust"],
@@ -67,7 +67,7 @@ import * as utilities from "./utilities";
  * // --- PBF Rule Resource with forward action---
  * const exampleForwardPbfRule = new scm.PbfRule("example_forward_pbf_rule", {
  *     name: "pbf-test-rule-forward",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     description: "PBF rule for forwarding specific traffic",
  *     from: {
  *         zones: ["zone-untrust"],

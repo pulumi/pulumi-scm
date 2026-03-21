@@ -16,6 +16,16 @@ import java.util.Objects;
 @CustomType
 public final class GetManagementInterfaceManagementInterface {
     /**
+     * @return Default gateway
+     * 
+     */
+    private String defaultGateway;
+    /**
+     * @return IP address
+     * 
+     */
+    private String ipAddress;
+    /**
      * @return IP type
      * 
      */
@@ -25,6 +35,11 @@ public final class GetManagementInterfaceManagementInterface {
      * 
      */
     private Integer mtu;
+    /**
+     * @return Netmask
+     * 
+     */
+    private String netmask;
     /**
      * @return Permitting IP addresses
      * 
@@ -43,6 +58,20 @@ public final class GetManagementInterfaceManagementInterface {
 
     private GetManagementInterfaceManagementInterface() {}
     /**
+     * @return Default gateway
+     * 
+     */
+    public String defaultGateway() {
+        return this.defaultGateway;
+    }
+    /**
+     * @return IP address
+     * 
+     */
+    public String ipAddress() {
+        return this.ipAddress;
+    }
+    /**
      * @return IP type
      * 
      */
@@ -55,6 +84,13 @@ public final class GetManagementInterfaceManagementInterface {
      */
     public Integer mtu() {
         return this.mtu;
+    }
+    /**
+     * @return Netmask
+     * 
+     */
+    public String netmask() {
+        return this.netmask;
     }
     /**
      * @return Permitting IP addresses
@@ -87,21 +123,43 @@ public final class GetManagementInterfaceManagementInterface {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String defaultGateway;
+        private String ipAddress;
         private GetManagementInterfaceManagementInterfaceMgmtType mgmtType;
         private Integer mtu;
+        private String netmask;
         private List<GetManagementInterfaceManagementInterfacePermittedIp> permittedIps;
         private GetManagementInterfaceManagementInterfaceService service;
         private String speedDuplex;
         public Builder() {}
         public Builder(GetManagementInterfaceManagementInterface defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.defaultGateway = defaults.defaultGateway;
+    	      this.ipAddress = defaults.ipAddress;
     	      this.mgmtType = defaults.mgmtType;
     	      this.mtu = defaults.mtu;
+    	      this.netmask = defaults.netmask;
     	      this.permittedIps = defaults.permittedIps;
     	      this.service = defaults.service;
     	      this.speedDuplex = defaults.speedDuplex;
         }
 
+        @CustomType.Setter
+        public Builder defaultGateway(String defaultGateway) {
+            if (defaultGateway == null) {
+              throw new MissingRequiredPropertyException("GetManagementInterfaceManagementInterface", "defaultGateway");
+            }
+            this.defaultGateway = defaultGateway;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipAddress(String ipAddress) {
+            if (ipAddress == null) {
+              throw new MissingRequiredPropertyException("GetManagementInterfaceManagementInterface", "ipAddress");
+            }
+            this.ipAddress = ipAddress;
+            return this;
+        }
         @CustomType.Setter
         public Builder mgmtType(GetManagementInterfaceManagementInterfaceMgmtType mgmtType) {
             if (mgmtType == null) {
@@ -116,6 +174,14 @@ public final class GetManagementInterfaceManagementInterface {
               throw new MissingRequiredPropertyException("GetManagementInterfaceManagementInterface", "mtu");
             }
             this.mtu = mtu;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder netmask(String netmask) {
+            if (netmask == null) {
+              throw new MissingRequiredPropertyException("GetManagementInterfaceManagementInterface", "netmask");
+            }
+            this.netmask = netmask;
             return this;
         }
         @CustomType.Setter
@@ -147,8 +213,11 @@ public final class GetManagementInterfaceManagementInterface {
         }
         public GetManagementInterfaceManagementInterface build() {
             final var _resultValue = new GetManagementInterfaceManagementInterface();
+            _resultValue.defaultGateway = defaultGateway;
+            _resultValue.ipAddress = ipAddress;
             _resultValue.mgmtType = mgmtType;
             _resultValue.mtu = mtu;
+            _resultValue.netmask = netmask;
             _resultValue.permittedIps = permittedIps;
             _resultValue.service = service;
             _resultValue.speedDuplex = speedDuplex;

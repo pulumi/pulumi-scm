@@ -296,7 +296,7 @@ class BgpRouteMap(pulumi.CustomResource):
                         "action": "permit",
                         "prefix": {
                             "greater_than_or_equal": 24,
-                            "network": "198.18.1.0/24",
+                            "network": "any",
                         },
                     }],
                 },
@@ -391,7 +391,7 @@ class BgpRouteMap(pulumi.CustomResource):
                         "action": "permit",
                         "prefix": {
                             "greater_than_or_equal": 24,
-                            "network": "198.18.1.0/24",
+                            "network": "any",
                         },
                     }],
                 },

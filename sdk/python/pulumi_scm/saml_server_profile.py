@@ -508,14 +508,14 @@ class SamlServerProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_saml_server_profile1 = scm.SamlServerProfile("scm_saml_server_profile_1",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-saml-server-prof-1",
             certificate="Global Authentication Cookie Cert",
             entity_id="123",
             sso_url="http://example.com",
             sso_bindings="post")
         scm_saml_server_profile2 = scm.SamlServerProfile("scm_saml_server_profile_2",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-saml-server-prof-2",
             certificate="Global Authentication Cookie Cert",
             entity_id="test_id",
@@ -525,7 +525,7 @@ class SamlServerProfile(pulumi.CustomResource):
             sso_url="http://target.com",
             validate_idp_certificate=True)
         scm_saml_server_profile3 = scm.SamlServerProfile("scm_saml_server_profile_3",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-saml-server-prof-3",
             certificate="Global Authentication Cookie Cert",
             entity_id="test_123",
@@ -597,14 +597,14 @@ class SamlServerProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_saml_server_profile1 = scm.SamlServerProfile("scm_saml_server_profile_1",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-saml-server-prof-1",
             certificate="Global Authentication Cookie Cert",
             entity_id="123",
             sso_url="http://example.com",
             sso_bindings="post")
         scm_saml_server_profile2 = scm.SamlServerProfile("scm_saml_server_profile_2",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-saml-server-prof-2",
             certificate="Global Authentication Cookie Cert",
             entity_id="test_id",
@@ -614,7 +614,7 @@ class SamlServerProfile(pulumi.CustomResource):
             sso_url="http://target.com",
             validate_idp_certificate=True)
         scm_saml_server_profile3 = scm.SamlServerProfile("scm_saml_server_profile_3",
-            folder="All",
+            folder="ngfw-shared",
             name="scm-saml-server-prof-3",
             certificate="Global Authentication Cookie Cert",
             entity_id="test_123",

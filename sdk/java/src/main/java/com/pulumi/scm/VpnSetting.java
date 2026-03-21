@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var tcpExample = new VpnSetting("tcpExample", VpnSettingArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .vpn(VpnSettingVpnArgs.builder()
  *                 .ikev2(VpnSettingVpnIkev2Args.builder()
  *                     .cookieThreshold(500)

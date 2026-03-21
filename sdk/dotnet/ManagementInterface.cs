@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var miExample = new Scm.ManagementInterface("mi_example", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         ManagementInterfaceDetails = new Scm.Inputs.ManagementInterfaceManagementInterfaceArgs
     ///         {
     ///             SpeedDuplex = "auto-negotiate",
@@ -38,6 +38,44 @@ namespace Pulumi.Scm
     ///                     AcceptDhcpHostname = false,
     ///                     AcceptDhcpDomain = false,
     ///                 },
+    ///             },
+    ///             Service = new Scm.Inputs.ManagementInterfaceManagementInterfaceServiceArgs
+    ///             {
+    ///                 DisableHttp = false,
+    ///                 DisableHttps = true,
+    ///                 DisableTelnet = false,
+    ///                 DisableSsh = true,
+    ///                 DisableIcmp = false,
+    ///                 DisableSnmp = false,
+    ///                 DisableUseridService = false,
+    ///                 DisableUseridSyslogListenerSsl = false,
+    ///                 DisableUseridSyslogListenerUdp = false,
+    ///                 DisableHttpOcsp = false,
+    ///             },
+    ///             PermittedIps = new[]
+    ///             {
+    ///                 new Scm.Inputs.ManagementInterfaceManagementInterfacePermittedIpArgs
+    ///                 {
+    ///                     Name = "10.10.10.10",
+    ///                     Description = "string",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var miStaticExample = new Scm.ManagementInterface("mi_static_example", new()
+    ///     {
+    ///         Folder = "Prisma Access",
+    ///         ManagementInterfaceDetails = new Scm.Inputs.ManagementInterfaceManagementInterfaceArgs
+    ///         {
+    ///             SpeedDuplex = "auto-negotiate",
+    ///             Mtu = 1500,
+    ///             IpAddress = "10.10.10.10",
+    ///             Netmask = "255.255.255.0",
+    ///             DefaultGateway = "192.168.252.1",
+    ///             MgmtType = new Scm.Inputs.ManagementInterfaceManagementInterfaceMgmtTypeArgs
+    ///             {
+    ///                 Static = null,
     ///             },
     ///             Service = new Scm.Inputs.ManagementInterfaceManagementInterfaceServiceArgs
     ///             {

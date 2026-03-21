@@ -29,7 +29,7 @@ namespace Pulumi.Scm
     ///     // Note: The resource name is plural: "scm_ike_crypto_profile"
     ///     var example = new Scm.IkeCryptoProfile("example", new()
     ///     {
-    ///         Name = "example-ike-crypto",
+    ///         Name = "example-sc-ike-crypto",
     ///         Folder = folderScope,
     ///         Hashes = new[]
     ///         {
@@ -49,7 +49,7 @@ namespace Pulumi.Scm
     ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
     ///     var exampleIpsecCryptoProfile = new Scm.IpsecCryptoProfile("example", new()
     ///     {
-    ///         Name = "panw-IPSec-Crypto",
+    ///         Name = "panw-sc-Crypto",
     ///         Folder = folderScope,
     ///         Esp = new Scm.Inputs.IpsecCryptoProfileEspArgs
     ///         {
@@ -73,7 +73,7 @@ namespace Pulumi.Scm
     ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
     ///     var exampleIkeGateway = new Scm.IkeGateway("example", new()
     ///     {
-    ///         Name = "example-gateway",
+    ///         Name = "example-sc-gateway",
     ///         Folder = folderScope,
     ///         PeerAddress = new Scm.Inputs.IkeGatewayPeerAddressArgs
     ///         {
@@ -99,7 +99,7 @@ namespace Pulumi.Scm
     ///     // Note: Nested 'auto_key' block uses an equals sign (=).
     ///     var exampleIpsecTunnel = new Scm.IpsecTunnel("example", new()
     ///     {
-    ///         Name = "example-tunnel",
+    ///         Name = "example-sc-tunnel",
     ///         Folder = folderScope,
     ///         TunnelInterface = "tunnel",
     ///         AntiReplay = true,

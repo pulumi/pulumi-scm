@@ -21,27 +21,26 @@ __all__ = ['TrafficSteeringRuleArgs', 'TrafficSteeringRule']
 @pulumi.input_type
 class TrafficSteeringRuleArgs:
     def __init__(__self__, *,
-                 folder: pulumi.Input[_builtins.str],
                  services: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  sources: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  action: Optional[pulumi.Input['TrafficSteeringRuleActionArgs']] = None,
                  categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a TrafficSteeringRule resource.
 
-        :param pulumi.Input[_builtins.str] folder: The folder containing the traffic steering rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: Service
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source
         :param pulumi.Input['TrafficSteeringRuleActionArgs'] action: Action
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination
+        :param pulumi.Input[_builtins.str] folder: The folder containing the traffic steering rule
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: Source user
         """
-        pulumi.set(__self__, "folder", folder)
         pulumi.set(__self__, "services", services)
         pulumi.set(__self__, "sources", sources)
         if action is not None:
@@ -50,22 +49,12 @@ class TrafficSteeringRuleArgs:
             pulumi.set(__self__, "categories", categories)
         if destinations is not None:
             pulumi.set(__self__, "destinations", destinations)
+        if folder is not None:
+            pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if source_users is not None:
             pulumi.set(__self__, "source_users", source_users)
-
-    @_builtins.property
-    @pulumi.getter
-    def folder(self) -> pulumi.Input[_builtins.str]:
-        """
-        The folder containing the traffic steering rule
-        """
-        return pulumi.get(self, "folder")
-
-    @folder.setter
-    def folder(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
@@ -126,6 +115,18 @@ class TrafficSteeringRuleArgs:
     @destinations.setter
     def destinations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "destinations", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The folder containing the traffic steering rule
+        """
+        return pulumi.get(self, "folder")
+
+    @folder.setter
+    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "folder", value)
 
     @_builtins.property
     @pulumi.getter
@@ -424,8 +425,6 @@ class TrafficSteeringRule(pulumi.CustomResource):
             __props__.__dict__["action"] = action
             __props__.__dict__["categories"] = categories
             __props__.__dict__["destinations"] = destinations
-            if folder is None and not opts.urn:
-                raise TypeError("Missing required property 'folder'")
             __props__.__dict__["folder"] = folder
             __props__.__dict__["name"] = name
             if services is None and not opts.urn:

@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     // Basic Anti-Spyware Profile
     ///     var scmAntiSpywareProfile1 = new Scm.AntiSpywareProfile("scm_anti_spyware_profile_1", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm_anti_spyware_profile_1",
     ///         Description = "Managed by Pulumi",
     ///         CloudInlineAnalysis = true,
@@ -34,7 +34,7 @@ namespace Pulumi.Scm
     ///     // Required object that will be referenced in examples
     ///     var scmAddress1 = new Scm.Address("scm_address_1", new()
     ///     {
-    ///         Folder = "Prisma Access",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm_address_1",
     ///         Description = "Made by Pulumi",
     ///         IpNetmask = "10.2.3.4",
@@ -43,7 +43,7 @@ namespace Pulumi.Scm
     ///     // Anti-Spyware Profile with exception EDL
     ///     var scmAntiSpywareProfile2 = new Scm.AntiSpywareProfile("scm_anti_spyware_profile_2", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm_anti_spyware_profile_2",
     ///         Description = "Managed by Pulumi",
     ///         CloudInlineAnalysis = true,
@@ -62,7 +62,7 @@ namespace Pulumi.Scm
     ///     // Anti-Spyware Profile with rules
     ///     var scmAntiSpywareProfile3 = new Scm.AntiSpywareProfile("scm_anti_spyware_profile_3", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm_anti_spyware_profile_3",
     ///         Description = "Managed by Pulumi",
     ///         CloudInlineAnalysis = true,

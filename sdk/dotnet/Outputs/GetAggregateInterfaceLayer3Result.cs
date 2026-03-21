@@ -43,6 +43,10 @@ namespace Pulumi.Scm.Outputs
         /// MTU
         /// </summary>
         public readonly int Mtu;
+        /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        public readonly string NetflowProfile;
 
         [OutputConstructor]
         private GetAggregateInterfaceLayer3Result(
@@ -58,7 +62,9 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetAggregateInterfaceLayer3LacpResult lacp,
 
-            int mtu)
+            int mtu,
+
+            string netflowProfile)
         {
             Arps = arps;
             DdnsConfig = ddnsConfig;
@@ -67,6 +73,7 @@ namespace Pulumi.Scm.Outputs
             Ips = ips;
             Lacp = lacp;
             Mtu = mtu;
+            NetflowProfile = netflowProfile;
         }
     }
 }

@@ -56,7 +56,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var exampleTag = new Tag("exampleTag", TagArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("pbf-rule-tag-test-1")
  *             .color("Red")
  *             .build());
@@ -64,7 +64,7 @@ import javax.annotation.Nullable;
  *         // --- PBF Rule Resource with discard action---
  *         var examplePbfRule = new PbfRule("examplePbfRule", PbfRuleArgs.builder()
  *             .name("pbf-test-rule-discard")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .description("PBF rule for forwarding specific traffic.")
  *             .from(PbfRuleFromArgs.builder()
  *                 .zones("zone-untrust")
@@ -88,7 +88,7 @@ import javax.annotation.Nullable;
  *         // --- PBF Rule Resource with no-pbf action---
  *         var exampleNoPbfRule = new PbfRule("exampleNoPbfRule", PbfRuleArgs.builder()
  *             .name("pbf-test-rule-no-pbf")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .description("PBF rule for forwarding specific traffic")
  *             .from(PbfRuleFromArgs.builder()
  *                 .zones("zone-untrust")
@@ -112,7 +112,7 @@ import javax.annotation.Nullable;
  *         // --- PBF Rule Resource with forward action---
  *         var exampleForwardPbfRule = new PbfRule("exampleForwardPbfRule", PbfRuleArgs.builder()
  *             .name("pbf-test-rule-forward")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .description("PBF rule for forwarding specific traffic")
  *             .from(PbfRuleFromArgs.builder()
  *                 .zones("zone-untrust")

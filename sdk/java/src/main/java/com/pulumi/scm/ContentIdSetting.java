@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var cidExample = new ContentIdSetting("cidExample", ContentIdSettingArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .contentId(ContentIdSettingContentIdArgs.builder()
  *                 .allowForwardDecryptedContent(true)
  *                 .extendedCaptureSegment(6)

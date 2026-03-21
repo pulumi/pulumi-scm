@@ -170,8 +170,8 @@ namespace Pulumi.Scm
         /// <summary>
         /// The folder containing the traffic steering rule
         /// </summary>
-        [Input("folder", required: true)]
-        public Input<string> Folder { get; set; } = null!;
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
 
         /// <summary>
         /// Name

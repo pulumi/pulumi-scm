@@ -447,12 +447,26 @@ class AuthenticationProfile(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
+        chap_radius_profile = scm.RadiusServerProfile("chap_radius_profile",
+            name="CHAP_only_rsp",
+            folder="ngfw-shared",
+            retries=5,
+            timeout=60,
+            protocol={
+                "chap": {},
+            },
+            servers=[{
+                "name": "Chap_Server_Primary",
+                "ip_address": "10.1.1.10",
+                "port": 1812,
+                "secret": "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+            }])
         global_radius_access = scm.AuthenticationProfile("global_radius_access",
-            name="test_auth_profile_radius_1",
-            folder="All",
+            name="test_auth_profile_radius",
+            folder="ngfw-shared",
             user_domain="default",
             username_modifier="%USERINPUT%",
-            allow_lists=["all"],
+            allow_lists=["ngfw-shared"],
             lockout={
                 "failed_attempts": 1,
                 "lockout_time": 3,
@@ -460,18 +474,18 @@ class AuthenticationProfile(pulumi.CustomResource):
             method={
                 "radius": {
                     "checkgroup": True,
-                    "server_profile": "CHAP_only_rsp_1",
+                    "server_profile": chap_radius_profile.name,
                 },
             },
             single_sign_on={
                 "realm": "EXAMPLE.COM",
             })
         global_db_access = scm.AuthenticationProfile("global_db_access",
-            name="test_auth_profile_db_1",
-            folder="All",
+            name="test_auth_global_db",
+            folder="ngfw-shared",
             user_domain="default",
             username_modifier="%USERINPUT%",
-            allow_lists=["all"],
+            allow_lists=["ngfw-shared"],
             lockout={
                 "failed_attempts": 3,
                 "lockout_time": 1,
@@ -540,12 +554,26 @@ class AuthenticationProfile(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
+        chap_radius_profile = scm.RadiusServerProfile("chap_radius_profile",
+            name="CHAP_only_rsp",
+            folder="ngfw-shared",
+            retries=5,
+            timeout=60,
+            protocol={
+                "chap": {},
+            },
+            servers=[{
+                "name": "Chap_Server_Primary",
+                "ip_address": "10.1.1.10",
+                "port": 1812,
+                "secret": "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+            }])
         global_radius_access = scm.AuthenticationProfile("global_radius_access",
-            name="test_auth_profile_radius_1",
-            folder="All",
+            name="test_auth_profile_radius",
+            folder="ngfw-shared",
             user_domain="default",
             username_modifier="%USERINPUT%",
-            allow_lists=["all"],
+            allow_lists=["ngfw-shared"],
             lockout={
                 "failed_attempts": 1,
                 "lockout_time": 3,
@@ -553,18 +581,18 @@ class AuthenticationProfile(pulumi.CustomResource):
             method={
                 "radius": {
                     "checkgroup": True,
-                    "server_profile": "CHAP_only_rsp_1",
+                    "server_profile": chap_radius_profile.name,
                 },
             },
             single_sign_on={
                 "realm": "EXAMPLE.COM",
             })
         global_db_access = scm.AuthenticationProfile("global_db_access",
-            name="test_auth_profile_db_1",
-            folder="All",
+            name="test_auth_global_db",
+            folder="ngfw-shared",
             user_domain="default",
             username_modifier="%USERINPUT%",
-            allow_lists=["all"],
+            allow_lists=["ngfw-shared"],
             lockout={
                 "failed_attempts": 3,
                 "lockout_time": 1,

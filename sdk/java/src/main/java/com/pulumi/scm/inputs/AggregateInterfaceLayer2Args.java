@@ -32,6 +32,21 @@ public final class AggregateInterfaceLayer2Args extends com.pulumi.resources.Res
     }
 
     /**
+     * Name of Netflow Profile to assign to Interface
+     * 
+     */
+    @Import(name="netflowProfile")
+    private @Nullable Output<String> netflowProfile;
+
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Optional<Output<String>> netflowProfile() {
+        return Optional.ofNullable(this.netflowProfile);
+    }
+
+    /**
      * VLAN tag
      * 
      */
@@ -50,6 +65,7 @@ public final class AggregateInterfaceLayer2Args extends com.pulumi.resources.Res
 
     private AggregateInterfaceLayer2Args(AggregateInterfaceLayer2Args $) {
         this.lacp = $.lacp;
+        this.netflowProfile = $.netflowProfile;
         this.vlanTag = $.vlanTag;
     }
 
@@ -90,6 +106,27 @@ public final class AggregateInterfaceLayer2Args extends com.pulumi.resources.Res
          */
         public Builder lacp(AggregateInterfaceLayer2LacpArgs lacp) {
             return lacp(Output.of(lacp));
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(@Nullable Output<String> netflowProfile) {
+            $.netflowProfile = netflowProfile;
+            return this;
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(String netflowProfile) {
+            return netflowProfile(Output.of(netflowProfile));
         }
 
         /**

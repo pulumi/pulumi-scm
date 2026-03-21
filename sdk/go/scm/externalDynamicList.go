@@ -30,7 +30,7 @@ import (
 //			// This resource creates a domain-based External Dynamic List (EDL).
 //			// The EDL will fetch a list of domains from the specified URL daily.
 //			_, err := scm.NewExternalDynamicList(ctx, "scm_edl_1", &scm.ExternalDynamicListArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("scm_edl_1"),
 //				Type: &scm.ExternalDynamicListTypeArgs{
 //					Domain: &scm.ExternalDynamicListTypeDomainArgs{
@@ -48,7 +48,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewExternalDynamicList(ctx, "scm_edl_2", &scm.ExternalDynamicListArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("scm_edl_2"),
 //				Type: &scm.ExternalDynamicListTypeArgs{
 //					Ip: &scm.ExternalDynamicListTypeIpArgs{
@@ -64,7 +64,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewExternalDynamicList(ctx, "scm_edl_3", &scm.ExternalDynamicListArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("scm_edl_3"),
 //				Type: &scm.ExternalDynamicListTypeArgs{
 //					Url: &scm.ExternalDynamicListTypeUrlArgs{
@@ -83,7 +83,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewExternalDynamicList(ctx, "scm_edl_4", &scm.ExternalDynamicListArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("scm_edl_4"),
 //				Type: &scm.ExternalDynamicListTypeArgs{
 //					PredefinedIp: &scm.ExternalDynamicListTypePredefinedIpArgs{
@@ -96,7 +96,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewExternalDynamicList(ctx, "scm_edl_5", &scm.ExternalDynamicListArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("scm_edl_5"),
 //				Type: &scm.ExternalDynamicListTypeArgs{
 //					Ip: &scm.ExternalDynamicListTypeIpArgs{

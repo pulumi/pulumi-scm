@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var tlsServiceProf1Upper = new TlsServiceProfile("tlsServiceProf1Upper", TlsServiceProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("TLS_Service_Profile_1")
  *             .certificate("Authentication Cookie CA")
  *             .protocolSettings(TlsServiceProfileProtocolSettingsArgs.builder()
@@ -53,7 +53,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var tlsServiceProf2Upper = new TlsServiceProfile("tlsServiceProf2Upper", TlsServiceProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("TLS_Service_Profile_2")
  *             .certificate("Forward-Trust-CA")
  *             .protocolSettings(TlsServiceProfileProtocolSettingsArgs.builder()
@@ -65,7 +65,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var tlsServiceProf3Upper = new TlsServiceProfile("tlsServiceProf3Upper", TlsServiceProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("TLS_Service_Profile_3")
  *             .certificate("Root CA")
  *             .protocolSettings(TlsServiceProfileProtocolSettingsArgs.builder()

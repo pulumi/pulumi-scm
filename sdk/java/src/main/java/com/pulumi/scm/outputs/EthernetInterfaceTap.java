@@ -4,11 +4,27 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class EthernetInterfaceTap {
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    private @Nullable String netflowProfile;
+
     private EthernetInterfaceTap() {}
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Optional<String> netflowProfile() {
+        return Optional.ofNullable(this.netflowProfile);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -19,13 +35,22 @@ public final class EthernetInterfaceTap {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable String netflowProfile;
         public Builder() {}
         public Builder(EthernetInterfaceTap defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.netflowProfile = defaults.netflowProfile;
         }
 
+        @CustomType.Setter
+        public Builder netflowProfile(@Nullable String netflowProfile) {
+
+            this.netflowProfile = netflowProfile;
+            return this;
+        }
         public EthernetInterfaceTap build() {
             final var _resultValue = new EthernetInterfaceTap();
+            _resultValue.netflowProfile = netflowProfile;
             return _resultValue;
         }
     }

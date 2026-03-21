@@ -51,6 +51,11 @@ public final class EthernetInterfaceLayer3 {
      */
     private @Nullable Integer mtu;
     /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    private @Nullable String netflowProfile;
+    /**
      * @return Pppoe
      * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
@@ -104,6 +109,13 @@ public final class EthernetInterfaceLayer3 {
         return Optional.ofNullable(this.mtu);
     }
     /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Optional<String> netflowProfile() {
+        return Optional.ofNullable(this.netflowProfile);
+    }
+    /**
      * @return Pppoe
      * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
@@ -128,6 +140,7 @@ public final class EthernetInterfaceLayer3 {
         private @Nullable String interfaceManagementProfile;
         private @Nullable List<EthernetInterfaceLayer3Ip> ips;
         private @Nullable Integer mtu;
+        private @Nullable String netflowProfile;
         private @Nullable EthernetInterfaceLayer3Pppoe pppoe;
         public Builder() {}
         public Builder(EthernetInterfaceLayer3 defaults) {
@@ -138,6 +151,7 @@ public final class EthernetInterfaceLayer3 {
     	      this.interfaceManagementProfile = defaults.interfaceManagementProfile;
     	      this.ips = defaults.ips;
     	      this.mtu = defaults.mtu;
+    	      this.netflowProfile = defaults.netflowProfile;
     	      this.pppoe = defaults.pppoe;
         }
 
@@ -184,6 +198,12 @@ public final class EthernetInterfaceLayer3 {
             return this;
         }
         @CustomType.Setter
+        public Builder netflowProfile(@Nullable String netflowProfile) {
+
+            this.netflowProfile = netflowProfile;
+            return this;
+        }
+        @CustomType.Setter
         public Builder pppoe(@Nullable EthernetInterfaceLayer3Pppoe pppoe) {
 
             this.pppoe = pppoe;
@@ -197,6 +217,7 @@ public final class EthernetInterfaceLayer3 {
             _resultValue.interfaceManagementProfile = interfaceManagementProfile;
             _resultValue.ips = ips;
             _resultValue.mtu = mtu;
+            _resultValue.netflowProfile = netflowProfile;
             _resultValue.pppoe = pppoe;
             return _resultValue;
         }

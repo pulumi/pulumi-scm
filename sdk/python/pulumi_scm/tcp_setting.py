@@ -217,7 +217,7 @@ class TcpSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         tcp_example = scm.TcpSetting("tcp_example",
-            folder="All",
+            folder="ngfw-shared",
             tcp={
                 "bypass_exceed_oo_queue": False,
                 "allow_challenge_ack": True,
@@ -281,7 +281,7 @@ class TcpSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         tcp_example = scm.TcpSetting("tcp_example",
-            folder="All",
+            folder="ngfw-shared",
             tcp={
                 "bypass_exceed_oo_queue": False,
                 "allow_challenge_ack": True,

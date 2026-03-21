@@ -545,7 +545,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_anti_spyware_signature1 = scm.AntiSpywareSignature("scm_anti_spyware_signature_1",
-            folder="All",
+            folder="ngfw-shared",
             threat_id="6900001",
             comment="Managed by Pulumi",
             direction="client2server",
@@ -633,7 +633,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_anti_spyware_signature1 = scm.AntiSpywareSignature("scm_anti_spyware_signature_1",
-            folder="All",
+            folder="ngfw-shared",
             threat_id="6900001",
             comment="Managed by Pulumi",
             direction="client2server",

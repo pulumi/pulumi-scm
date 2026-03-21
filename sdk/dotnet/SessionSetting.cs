@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     // Set Sessions with Config Rematch value set to True
     ///     var sessionExample = new Scm.SessionSetting("session_example", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         SessionSettings = new Scm.Inputs.SessionSettingSessionSettingsArgs
     ///         {
     ///             DhcpBcastSessionOn = false,

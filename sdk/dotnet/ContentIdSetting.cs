@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var cidExample = new Scm.ContentIdSetting("cid_example", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         ContentId = new Scm.Inputs.ContentIdSettingContentIdArgs
     ///         {
     ///             AllowForwardDecryptedContent = true,

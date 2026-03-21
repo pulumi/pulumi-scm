@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var scmSamlServerProfile1 = new SamlServerProfile("scmSamlServerProfile1", SamlServerProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm-saml-server-prof-1")
  *             .certificate("Global Authentication Cookie Cert")
  *             .entityId("123")
@@ -53,7 +53,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmSamlServerProfile2 = new SamlServerProfile("scmSamlServerProfile2", SamlServerProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm-saml-server-prof-2")
  *             .certificate("Global Authentication Cookie Cert")
  *             .entityId("test_id")
@@ -65,7 +65,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmSamlServerProfile3 = new SamlServerProfile("scmSamlServerProfile3", SamlServerProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm-saml-server-prof-3")
  *             .certificate("Global Authentication Cookie Cert")
  *             .entityId("test_123")

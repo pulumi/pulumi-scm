@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const scmSyslogServerProf1 = new scm.SyslogServerProfile("scm_syslog_server_prof_1", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "syslog-server-prof-base",
  *     servers: [{
  *         name: "Server-Primary",
@@ -24,7 +24,7 @@ import * as utilities from "./utilities";
  *     }],
  * });
  * const scmSyslogServerProf2 = new scm.SyslogServerProfile("scm_syslog_server_prof_2", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "syslog-server-prof-mixed",
  *     servers: [{
  *         name: "Server-Mixed",
@@ -41,8 +41,8 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const scmSyslogServerProf3 = new scm.SyslogServerProfile("scm_syslog_server_prof_3", {
- *     folder: "All",
- *     name: "syslog-server-prof-complete",
+ *     folder: "ngfw-shared",
+ *     name: "syslog-server-tf-prof-complete",
  *     servers: [
  *         {
  *             name: "Server-A",

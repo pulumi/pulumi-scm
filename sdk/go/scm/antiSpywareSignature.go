@@ -29,7 +29,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewAntiSpywareSignature(ctx, "scm_anti_spyware_signature_1", &scm.AntiSpywareSignatureArgs{
-//				Folder:     pulumi.String("All"),
+//				Folder:     pulumi.String("ngfw-shared"),
 //				ThreatId:   pulumi.String("6900001"),
 //				Comment:    pulumi.String("Managed by Pulumi"),
 //				Direction:  pulumi.String("client2server"),

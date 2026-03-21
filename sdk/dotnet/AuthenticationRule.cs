@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var appAccessTag = new Scm.Tag("app_access_tag", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "app-access-test_25",
     ///         Color = "Blue",
     ///     });
@@ -37,7 +37,7 @@ namespace Pulumi.Scm
     ///         Name = "test_anchor_rule_251",
     ///         Description = "Base rule. Used to test 'before' and 'after' positioning",
     ///         Position = "pre",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Destinations = new[]
     ///         {
     ///             "any",
@@ -89,7 +89,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "test_top_rule_25",
     ///         Description = "Placed at the very top of the 'pre' rulebase.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "top",
     ///         Destinations = new[]
@@ -122,7 +122,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "test_bottom_rule_25",
     ///         Description = "Placed at the very bottom of the 'pre' rulebase.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "bottom",
     ///         Destinations = new[]
@@ -158,7 +158,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "test_before_rule_25_updating",
     ///         Description = "Positioned immediately BEFORE the anchor_rule.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "before",
     ///         TargetRule = anchorRule.Id,
@@ -192,7 +192,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "test_after_rule_25",
     ///         Description = "Positioned immediately AFTER the anchor_rule.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "after",
     ///         TargetRule = anchorRule.Id,

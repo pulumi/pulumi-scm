@@ -55,7 +55,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var serviceSettings = new ServiceSetting("serviceSettings", ServiceSettingArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .services(ServiceSettingServicesArgs.builder()
  *                 .dnsSetting(ServiceSettingServicesDnsSettingArgs.builder()
  *                     .servers(ServiceSettingServicesDnsSettingServersArgs.builder()

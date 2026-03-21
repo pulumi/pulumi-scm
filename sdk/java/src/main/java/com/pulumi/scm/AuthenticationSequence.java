@@ -28,6 +28,12 @@ import javax.annotation.Nullable;
  * import com.pulumi.Context;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
+ * import com.pulumi.scm.AuthenticationProfile;
+ * import com.pulumi.scm.AuthenticationProfileArgs;
+ * import com.pulumi.scm.inputs.AuthenticationProfileLockoutArgs;
+ * import com.pulumi.scm.inputs.AuthenticationProfileMethodArgs;
+ * import com.pulumi.scm.inputs.AuthenticationProfileMethodLocalDatabaseArgs;
+ * import com.pulumi.scm.inputs.AuthenticationProfileSingleSignOnArgs;
  * import com.pulumi.scm.AuthenticationSequence;
  * import com.pulumi.scm.AuthenticationSequenceArgs;
  * import java.util.List;
@@ -43,18 +49,37 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
+ *         var testUiExample = new AuthenticationProfile("testUiExample", AuthenticationProfileArgs.builder()
+ *             .name("Test_UI")
+ *             .folder("ngfw-shared")
+ *             .userDomain("default")
+ *             .usernameModifier("%USERINPUT%")
+ *             .allowLists("ngfw-shared")
+ *             .lockout(AuthenticationProfileLockoutArgs.builder()
+ *                 .failedAttempts(3)
+ *                 .lockoutTime(1)
+ *                 .build())
+ *             .method(AuthenticationProfileMethodArgs.builder()
+ *                 .localDatabase(AuthenticationProfileMethodLocalDatabaseArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .singleSignOn(AuthenticationProfileSingleSignOnArgs.builder()
+ *                 .realm("EXAMPLE.COM")
+ *                 .build())
+ *             .build());
+ * 
  *         var testSequence = new AuthenticationSequence("testSequence", AuthenticationSequenceArgs.builder()
  *             .name("test_auth_sequence_1")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .authenticationProfiles("test_auth_profile")
  *             .useDomainFindProfile(false)
  *             .build());
  * 
  *         var testSequence2 = new AuthenticationSequence("testSequence2", AuthenticationSequenceArgs.builder()
  *             .name("test_auth_sequence_2")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .authenticationProfiles(            
- *                 "Test_UI",
+ *                 testUiExample.name(),
  *                 "test_auth_profile")
  *             .useDomainFindProfile(false)
  *             .build());

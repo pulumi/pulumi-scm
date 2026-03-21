@@ -35,6 +35,7 @@ public final class GetLayer3SubinterfaceResult {
     private List<GetLayer3SubinterfaceIp> ips;
     private Integer mtu;
     private String name;
+    private String netflowProfile;
     private String parentInterface;
     private String snippet;
     private Integer tag;
@@ -82,6 +83,9 @@ public final class GetLayer3SubinterfaceResult {
     public String name() {
         return this.name;
     }
+    public String netflowProfile() {
+        return this.netflowProfile;
+    }
     public String parentInterface() {
         return this.parentInterface;
     }
@@ -115,6 +119,7 @@ public final class GetLayer3SubinterfaceResult {
         private List<GetLayer3SubinterfaceIp> ips;
         private Integer mtu;
         private String name;
+        private String netflowProfile;
         private String parentInterface;
         private String snippet;
         private Integer tag;
@@ -133,6 +138,7 @@ public final class GetLayer3SubinterfaceResult {
     	      this.ips = defaults.ips;
     	      this.mtu = defaults.mtu;
     	      this.name = defaults.name;
+    	      this.netflowProfile = defaults.netflowProfile;
     	      this.parentInterface = defaults.parentInterface;
     	      this.snippet = defaults.snippet;
     	      this.tag = defaults.tag;
@@ -234,6 +240,14 @@ public final class GetLayer3SubinterfaceResult {
             return this;
         }
         @CustomType.Setter
+        public Builder netflowProfile(String netflowProfile) {
+            if (netflowProfile == null) {
+              throw new MissingRequiredPropertyException("GetLayer3SubinterfaceResult", "netflowProfile");
+            }
+            this.netflowProfile = netflowProfile;
+            return this;
+        }
+        @CustomType.Setter
         public Builder parentInterface(String parentInterface) {
             if (parentInterface == null) {
               throw new MissingRequiredPropertyException("GetLayer3SubinterfaceResult", "parentInterface");
@@ -278,6 +292,7 @@ public final class GetLayer3SubinterfaceResult {
             _resultValue.ips = ips;
             _resultValue.mtu = mtu;
             _resultValue.name = name;
+            _resultValue.netflowProfile = netflowProfile;
             _resultValue.parentInterface = parentInterface;
             _resultValue.snippet = snippet;
             _resultValue.tag = tag;

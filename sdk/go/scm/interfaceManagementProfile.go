@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewInterfaceManagementProfile(ctx, "dc_postman_profile", &scm.InterfaceManagementProfileArgs{
 //				Name:   pulumi.String("test_inf_mgmt_profile_1_update"),
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				PermittedIps: scm.InterfaceManagementProfilePermittedIpArray{
 //					&scm.InterfaceManagementProfilePermittedIpArgs{
 //						Name: pulumi.String("10.0.0.0/24"),

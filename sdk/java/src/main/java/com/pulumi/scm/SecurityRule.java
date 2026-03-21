@@ -55,20 +55,20 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         // First, create the tag objects that you will reference.
  *         var outboundTag = new Tag("outboundTag", TagArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("outbound143")
  *             .color("Red")
  *             .build());
  * 
  *         var webTag = new Tag("webTag", TagArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("web143")
  *             .color("Blue")
  *             .build());
  * 
  *         // --- Existing Rules (Backward Compatibility) ---
  *         var standardWebAccess = new SecurityRule("standardWebAccess", SecurityRuleArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("Allow Standard Web Access143")
  *             .description("Allow outbound web traffic to any destination...")
  *             .position("pre")
@@ -100,7 +100,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var blockRiskySaas = new SecurityRule("blockRiskySaas", SecurityRuleArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("Block Risky SaaS Applications143")
  *             .description("Prevent data exfiltration by blocking risky SaaS apps...")
  *             .action("deny")
@@ -128,7 +128,7 @@ import javax.annotation.Nullable;
  *         // --- NEW Examples Demonstrating Rule Ordering ---
  *         // Example 1: Place a critical block rule at the absolute top
  *         var criticalBlockTop = new SecurityRule("criticalBlockTop", SecurityRuleArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("CRITICAL Block Malicious IPs Top143")
  *             .description("Always block known malicious IPs first.")
  *             .relativePosition("top")
@@ -147,7 +147,7 @@ import javax.annotation.Nullable;
  * 
  *         // Example 2: Place a cleanup rule at the absolute bottom
  *         var cleanupDenyBottom = new SecurityRule("cleanupDenyBottom", SecurityRuleArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("Cleanup Deny All Bottom143")
  *             .description("Deny any traffic not explicitly allowed.")
  *             .relativePosition("bottom")
@@ -166,7 +166,7 @@ import javax.annotation.Nullable;
  * 
  *         // Example 3: Place a rule *before* the standard web access rule
  *         var allowUpdatesBeforeWeb = new SecurityRule("allowUpdatesBeforeWeb", SecurityRuleArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("Allow OS Updates Before Web143")
  *             .description("Allow specific OS update traffic before general web access.")
  *             .relativePosition("before")
@@ -188,7 +188,7 @@ import javax.annotation.Nullable;
  * 
  *         // Example 4: Place a rule *after* the standard web access rule
  *         var allowCorpAppsAfterWeb = new SecurityRule("allowCorpAppsAfterWeb", SecurityRuleArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("Allow Corp Apps After Web143")
  *             .description("Allow access to specific corporate apps after general web access.")
  *             .relativePosition("after")

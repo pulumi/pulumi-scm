@@ -29,24 +29,24 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// This file is embedded using go:embed
 //			scmAddrTag1, err := scm.NewTag(ctx, "scm_addr_tag_1", &scm.TagArgs{
-//				Folder: pulumi.String("All"),
-//				Name:   pulumi.String("scm_addr_tag_1"),
+//				Folder: pulumi.String("Prisma Access"),
+//				Name:   pulumi.String("tf_addr_tag_1"),
 //				Color:  pulumi.String("Red"),
 //			})
 //			if err != nil {
 //				return err
 //			}
 //			scmAddrTag2, err := scm.NewTag(ctx, "scm_addr_tag_2", &scm.TagArgs{
-//				Folder: pulumi.String("All"),
-//				Name:   pulumi.String("scm_addr_tag_2"),
+//				Folder: pulumi.String("Prisma Access"),
+//				Name:   pulumi.String("tf_addr_tag_2"),
 //				Color:  pulumi.String("Blue"),
 //			})
 //			if err != nil {
 //				return err
 //			}
 //			scmAddrTag3, err := scm.NewTag(ctx, "scm_addr_tag_3", &scm.TagArgs{
-//				Folder: pulumi.String("All"),
-//				Name:   pulumi.String("scm_addr_tag_3"),
+//				Folder: pulumi.String("Prisma Access"),
+//				Name:   pulumi.String("tf_addr_tag_3"),
 //				Color:  pulumi.String("Orange"),
 //			})
 //			if err != nil {
@@ -55,7 +55,7 @@ import (
 //			// IP Netmask
 //			_, err = scm.NewAddress(ctx, "scm_address_1", &scm.AddressArgs{
 //				Folder:      pulumi.String("Prisma Access"),
-//				Name:        pulumi.String("scm_address_1"),
+//				Name:        pulumi.String("tf_address_1"),
 //				Description: pulumi.String("Made by Pulumi"),
 //				IpNetmask:   pulumi.String("10.2.3.4"),
 //			})
@@ -65,7 +65,7 @@ import (
 //			// IP Range
 //			_, err = scm.NewAddress(ctx, "scm_address_2", &scm.AddressArgs{
 //				Folder:      pulumi.String("Prisma Access"),
-//				Name:        pulumi.String("scm_address_2"),
+//				Name:        pulumi.String("tf_address_2"),
 //				Description: pulumi.String("Small IP range test"),
 //				IpRange:     pulumi.String("192.168.1.10-192.168.1.20"),
 //			})
@@ -75,7 +75,7 @@ import (
 //			// FQDN
 //			_, err = scm.NewAddress(ctx, "scm_address_3", &scm.AddressArgs{
 //				Folder:      pulumi.String("Prisma Access"),
-//				Name:        pulumi.String("scm_address_3"),
+//				Name:        pulumi.String("tf_address_3"),
 //				Description: pulumi.String("Simple FQDN test"),
 //				Fqdn:        pulumi.String("example.com"),
 //			})
@@ -85,7 +85,7 @@ import (
 //			// Class C wildcard
 //			_, err = scm.NewAddress(ctx, "scm_address_4", &scm.AddressArgs{
 //				Folder:      pulumi.String("Prisma Access"),
-//				Name:        pulumi.String("scm_address_4"),
+//				Name:        pulumi.String("tf_address_4"),
 //				Description: pulumi.String("Class C wildcard test"),
 //				IpWildcard:  pulumi.String("192.168.1.0/0.0.0.255"),
 //			})
@@ -95,7 +95,7 @@ import (
 //			// Multiple tags
 //			_, err = scm.NewAddress(ctx, "scm_address_5", &scm.AddressArgs{
 //				Folder:      pulumi.String("Prisma Access"),
-//				Name:        pulumi.String("scm_address_5"),
+//				Name:        pulumi.String("tf_address_5"),
 //				Description: pulumi.String("Multiple tags test"),
 //				IpNetmask:   pulumi.String("10.10.10.2/32"),
 //				Tags: pulumi.StringArray{

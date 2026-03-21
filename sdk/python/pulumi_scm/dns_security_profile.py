@@ -283,10 +283,10 @@ class DnsSecurityProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_dns_security_profile_base = scm.DnsSecurityProfile("scm_dns_security_profile_base",
-            folder="All",
+            folder="ngfw-shared",
             name="dns_base")
         scm_dns_security_categories = scm.DnsSecurityProfile("scm_dns_security_categories",
-            folder="All",
+            folder="ngfw-shared",
             name="test_dns_sec_categories",
             description="dns security profile w/ dns security categories",
             botnet_domains={
@@ -321,7 +321,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
                 ],
             })
         scm_dns_lists = scm.DnsSecurityProfile("scm_dns_lists",
-            folder="All",
+            folder="ngfw-shared",
             name="test_dns_lists",
             description="dns security profile w/ dns lists",
             botnet_domains={
@@ -343,7 +343,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
                 ],
             })
         scm_dns_sinkhole = scm.DnsSecurityProfile("scm_dns_sinkhole",
-            folder="All",
+            folder="ngfw-shared",
             name="test_dns_sinkhole",
             description="dns security profile w/ sinkhole",
             botnet_domains={
@@ -353,7 +353,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
                 },
             })
         scm_dns_whitelist = scm.DnsSecurityProfile("scm_dns_whitelist",
-            folder="All",
+            folder="ngfw-shared",
             name="test_dns_whitelist",
             description="dns security profile w/ whitelist",
             botnet_domains={
@@ -368,7 +368,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
                 ],
             })
         scm_dns_all = scm.DnsSecurityProfile("scm_dns_all",
-            folder="All",
+            folder="ngfw-shared",
             name="test_dns_all_test",
             description="dns security profile w/ all",
             botnet_domains={
@@ -448,10 +448,10 @@ class DnsSecurityProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_dns_security_profile_base = scm.DnsSecurityProfile("scm_dns_security_profile_base",
-            folder="All",
+            folder="ngfw-shared",
             name="dns_base")
         scm_dns_security_categories = scm.DnsSecurityProfile("scm_dns_security_categories",
-            folder="All",
+            folder="ngfw-shared",
             name="test_dns_sec_categories",
             description="dns security profile w/ dns security categories",
             botnet_domains={
@@ -486,7 +486,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
                 ],
             })
         scm_dns_lists = scm.DnsSecurityProfile("scm_dns_lists",
-            folder="All",
+            folder="ngfw-shared",
             name="test_dns_lists",
             description="dns security profile w/ dns lists",
             botnet_domains={
@@ -508,7 +508,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
                 ],
             })
         scm_dns_sinkhole = scm.DnsSecurityProfile("scm_dns_sinkhole",
-            folder="All",
+            folder="ngfw-shared",
             name="test_dns_sinkhole",
             description="dns security profile w/ sinkhole",
             botnet_domains={
@@ -518,7 +518,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
                 },
             })
         scm_dns_whitelist = scm.DnsSecurityProfile("scm_dns_whitelist",
-            folder="All",
+            folder="ngfw-shared",
             name="test_dns_whitelist",
             description="dns security profile w/ whitelist",
             botnet_domains={
@@ -533,7 +533,7 @@ class DnsSecurityProfile(pulumi.CustomResource):
                 ],
             })
         scm_dns_all = scm.DnsSecurityProfile("scm_dns_all",
-            folder="All",
+            folder="ngfw-shared",
             name="test_dns_all_test",
             description="dns security profile w/ all",
             botnet_domains={

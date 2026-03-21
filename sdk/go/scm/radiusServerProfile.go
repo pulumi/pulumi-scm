@@ -30,7 +30,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewRadiusServerProfile(ctx, "chap_radius_profile", &scm.RadiusServerProfileArgs{
 //				Name:    pulumi.String("CHAP_only_rsp_1"),
-//				Folder:  pulumi.String("All"),
+//				Folder:  pulumi.String("ngfw-shared"),
 //				Retries: pulumi.Int(5),
 //				Timeout: pulumi.Int(60),
 //				Protocol: &scm.RadiusServerProfileProtocolArgs{
@@ -50,7 +50,7 @@ import (
 //			}
 //			_, err = scm.NewRadiusServerProfile(ctx, "pap_radius_profile", &scm.RadiusServerProfileArgs{
 //				Name:    pulumi.String("pap_only_rsp_1"),
-//				Folder:  pulumi.String("All"),
+//				Folder:  pulumi.String("ngfw-shared"),
 //				Retries: pulumi.Int(5),
 //				Timeout: pulumi.Int(60),
 //				Protocol: &scm.RadiusServerProfileProtocolArgs{

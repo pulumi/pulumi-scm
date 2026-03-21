@@ -17,21 +17,21 @@ import * as utilities from "./utilities";
  *
  * // Basic Anti-Spyware Profile
  * const scmAntiSpywareProfile1 = new scm.AntiSpywareProfile("scm_anti_spyware_profile_1", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_anti_spyware_profile_1",
  *     description: "Managed by Pulumi",
  *     cloudInlineAnalysis: true,
  * });
  * // Required object that will be referenced in examples
  * const scmAddress1 = new scm.Address("scm_address_1", {
- *     folder: "Prisma Access",
+ *     folder: "ngfw-shared",
  *     name: "scm_address_1",
  *     description: "Made by Pulumi",
  *     ipNetmask: "10.2.3.4",
  * });
  * // Anti-Spyware Profile with exception EDL
  * const scmAntiSpywareProfile2 = new scm.AntiSpywareProfile("scm_anti_spyware_profile_2", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_anti_spyware_profile_2",
  *     description: "Managed by Pulumi",
  *     cloudInlineAnalysis: true,
@@ -41,7 +41,7 @@ import * as utilities from "./utilities";
  * });
  * // Anti-Spyware Profile with rules
  * const scmAntiSpywareProfile3 = new scm.AntiSpywareProfile("scm_anti_spyware_profile_3", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_anti_spyware_profile_3",
  *     description: "Managed by Pulumi",
  *     cloudInlineAnalysis: true,

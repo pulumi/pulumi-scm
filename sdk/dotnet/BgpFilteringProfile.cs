@@ -22,6 +22,9 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
+    ///     //
+    ///     // Creates an empty bgp filtering profile
+    ///     //
     ///     var scmBgpFilteringProfile = new Scm.BgpFilteringProfile("scm_bgp_filtering_profile", new()
     ///     {
     ///         Folder = "ngfw-shared",
@@ -29,6 +32,140 @@ namespace Pulumi.Scm
     ///         Ipv4 = null,
     ///     });
     /// 
+    ///     //
+    ///     // Creates various resources used for scm_bgp_filtering_profile_complex
+    ///     //
+    ///     var scmPlInbound = new Scm.RoutePrefixList("scm_pl_inbound", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_pl_inbound",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = new Scm.Inputs.RoutePrefixListTypeArgs
+    ///         {
+    ///             Ipv4 = new Scm.Inputs.RoutePrefixListTypeIpv4Args
+    ///             {
+    ///                 Ipv4Entries = new[]
+    ///                 {
+    ///                     new Scm.Inputs.RoutePrefixListTypeIpv4Ipv4EntryArgs
+    ///                     {
+    ///                         Name = 10,
+    ///                         Action = "permit",
+    ///                         Prefix = new Scm.Inputs.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs
+    ///                         {
+    ///                             GreaterThanOrEqual = 24,
+    ///                             Network = "any",
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmRmInbound = new Scm.BgpRouteMap("scm_rm_inbound", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_rm_inbound",
+    ///         Description = "Managed by Pulumi",
+    ///         RouteMaps = new[]
+    ///         {
+    ///             new Scm.Inputs.BgpRouteMapRouteMapArgs
+    ///             {
+    ///                 Name = 10,
+    ///                 Description = "No Export",
+    ///                 Match = new Scm.Inputs.BgpRouteMapRouteMapMatchArgs
+    ///                 {
+    ///                     Ipv4 = new Scm.Inputs.BgpRouteMapRouteMapMatchIpv4Args
+    ///                     {
+    ///                         Address = new Scm.Inputs.BgpRouteMapRouteMapMatchIpv4AddressArgs
+    ///                         {
+    ///                             PrefixList = "scm_pl_inbound",
+    ///                         },
+    ///                     },
+    ///                 },
+    ///                 Set = new Scm.Inputs.BgpRouteMapRouteMapSetArgs
+    ///                 {
+    ///                     RegularCommunity = new[]
+    ///                     {
+    ///                         "no-export",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmPlInbound,
+    ///         },
+    ///     });
+    /// 
+    ///     var scmPlOutbound = new Scm.RoutePrefixList("scm_pl_outbound", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_pl_outbound",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = new Scm.Inputs.RoutePrefixListTypeArgs
+    ///         {
+    ///             Ipv4 = new Scm.Inputs.RoutePrefixListTypeIpv4Args
+    ///             {
+    ///                 Ipv4Entries = new[]
+    ///                 {
+    ///                     new Scm.Inputs.RoutePrefixListTypeIpv4Ipv4EntryArgs
+    ///                     {
+    ///                         Name = 10,
+    ///                         Action = "permit",
+    ///                         Prefix = new Scm.Inputs.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs
+    ///                         {
+    ///                             GreaterThanOrEqual = 24,
+    ///                             Network = "any",
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmRmOutbound = new Scm.BgpRouteMap("scm_rm_outbound", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_rm_outbound",
+    ///         Description = "Managed by Pulumi",
+    ///         RouteMaps = new[]
+    ///         {
+    ///             new Scm.Inputs.BgpRouteMapRouteMapArgs
+    ///             {
+    ///                 Name = 10,
+    ///                 Description = "No Export",
+    ///                 Match = new Scm.Inputs.BgpRouteMapRouteMapMatchArgs
+    ///                 {
+    ///                     Ipv4 = new Scm.Inputs.BgpRouteMapRouteMapMatchIpv4Args
+    ///                     {
+    ///                         Address = new Scm.Inputs.BgpRouteMapRouteMapMatchIpv4AddressArgs
+    ///                         {
+    ///                             PrefixList = "scm_pl_outbound",
+    ///                         },
+    ///                     },
+    ///                 },
+    ///                 Set = new Scm.Inputs.BgpRouteMapRouteMapSetArgs
+    ///                 {
+    ///                     RegularCommunity = new[]
+    ///                     {
+    ///                         "no-export",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmPlOutbound,
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a complex filtering profile that utilises previously created FL, PL and RM
+    ///     //
     ///     var scmBgpFilteringProfileComplex = new Scm.BgpFilteringProfile("scm_bgp_filtering_profile_complex", new()
     ///     {
     ///         Folder = "ngfw-shared",
@@ -37,17 +174,9 @@ namespace Pulumi.Scm
     ///         {
     ///             Unicast = new Scm.Inputs.BgpFilteringProfileIpv4UnicastArgs
     ///             {
-    ///                 FilterList = new Scm.Inputs.BgpFilteringProfileIpv4UnicastFilterListArgs
-    ///                 {
-    ///                     Inbound = "scm_filter_list",
-    ///                 },
     ///                 InboundNetworkFilters = new Scm.Inputs.BgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs
     ///                 {
     ///                     PrefixList = "scm_pl_inbound",
-    ///                 },
-    ///                 OutboundNetworkFilters = new Scm.Inputs.BgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs
-    ///                 {
-    ///                     DistributeList = "scm_distribute_list",
     ///                 },
     ///                 RouteMaps = new Scm.Inputs.BgpFilteringProfileIpv4UnicastRouteMapsArgs
     ///                 {
@@ -55,6 +184,14 @@ namespace Pulumi.Scm
     ///                     Outbound = "scm_rm_outbound",
     ///                 },
     ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmPlInbound,
+    ///             scmRmInbound,
+    ///             scmRmOutbound,
     ///         },
     ///     });
     /// 

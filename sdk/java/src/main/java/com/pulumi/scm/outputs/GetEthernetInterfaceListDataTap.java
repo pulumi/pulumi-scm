@@ -4,11 +4,26 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetEthernetInterfaceListDataTap {
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    private String netflowProfile;
+
     private GetEthernetInterfaceListDataTap() {}
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public String netflowProfile() {
+        return this.netflowProfile;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -19,13 +34,24 @@ public final class GetEthernetInterfaceListDataTap {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String netflowProfile;
         public Builder() {}
         public Builder(GetEthernetInterfaceListDataTap defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.netflowProfile = defaults.netflowProfile;
         }
 
+        @CustomType.Setter
+        public Builder netflowProfile(String netflowProfile) {
+            if (netflowProfile == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceListDataTap", "netflowProfile");
+            }
+            this.netflowProfile = netflowProfile;
+            return this;
+        }
         public GetEthernetInterfaceListDataTap build() {
             final var _resultValue = new GetEthernetInterfaceListDataTap();
+            _resultValue.netflowProfile = netflowProfile;
             return _resultValue;
         }
     }

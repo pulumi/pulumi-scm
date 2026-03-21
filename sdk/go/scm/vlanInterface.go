@@ -100,6 +100,8 @@ type VlanInterface struct {
 	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name pulumi.StringOutput `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrOutput `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -168,6 +170,8 @@ type vlanInterfaceState struct {
 	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -207,6 +211,8 @@ type VlanInterfaceState struct {
 	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -250,6 +256,8 @@ type vlanInterfaceArgs struct {
 	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -288,6 +296,8 @@ type VlanInterfaceArgs struct {
 	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -442,6 +452,11 @@ func (o VlanInterfaceOutput) Mtu() pulumi.IntPtrOutput {
 // L3 sub-interface name
 func (o VlanInterfaceOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *VlanInterface) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o VlanInterfaceOutput) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *VlanInterface) pulumi.StringPtrOutput { return v.NetflowProfile }).(pulumi.StringPtrOutput)
 }
 
 // The snippet in which the resource is defined

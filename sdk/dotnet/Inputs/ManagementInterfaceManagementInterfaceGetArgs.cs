@@ -13,6 +13,18 @@ namespace Pulumi.Scm.Inputs
     public sealed class ManagementInterfaceManagementInterfaceGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Default gateway
+        /// </summary>
+        [Input("defaultGateway")]
+        public Input<string>? DefaultGateway { get; set; }
+
+        /// <summary>
+        /// IP address
+        /// </summary>
+        [Input("ipAddress")]
+        public Input<string>? IpAddress { get; set; }
+
+        /// <summary>
         /// IP type
         /// </summary>
         [Input("mgmtType")]
@@ -23,6 +35,12 @@ namespace Pulumi.Scm.Inputs
         /// </summary>
         [Input("mtu")]
         public Input<int>? Mtu { get; set; }
+
+        /// <summary>
+        /// Netmask
+        /// </summary>
+        [Input("netmask")]
+        public Input<string>? Netmask { get; set; }
 
         [Input("permittedIps")]
         private InputList<Inputs.ManagementInterfaceManagementInterfacePermittedIpGetArgs>? _permittedIps;

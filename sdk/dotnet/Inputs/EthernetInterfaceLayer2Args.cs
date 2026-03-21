@@ -19,6 +19,12 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.EthernetInterfaceLayer2LldpArgs>? Lldp { get; set; }
 
         /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        [Input("netflowProfile")]
+        public Input<string>? NetflowProfile { get; set; }
+
+        /// <summary>
         /// Assign interface to VLAN tag
         /// </summary>
         [Input("vlanTag")]
