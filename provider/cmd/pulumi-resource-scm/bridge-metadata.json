@@ -571,9 +571,91 @@
                     }
                 }
             },
+            "scm_config_match_list": {
+                "current": "scm:index/configMatchList:ConfigMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "scm_content_id_setting": {
                 "current": "scm:index/contentIdSetting:ContentIdSetting",
                 "majorVersion": 1
+            },
+            "scm_data_filtering_profile": {
+                "current": "scm:index/dataFilteringProfile:DataFilteringProfile",
+                "majorVersion": 1,
+                "fields": {
+                    "rules": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "application": {
+                                    "maxItemsOne": false
+                                },
+                                "file_type": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_data_object": {
+                "current": "scm:index/dataObject:DataObject",
+                "majorVersion": 1,
+                "fields": {
+                    "pattern_type": {
+                        "fields": {
+                            "file_properties": {
+                                "fields": {
+                                    "pattern": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            },
+                            "predefined": {
+                                "fields": {
+                                    "pattern": {
+                                        "maxItemsOne": false,
+                                        "elem": {
+                                            "fields": {
+                                                "file_type": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "regex": {
+                                "fields": {
+                                    "pattern": {
+                                        "maxItemsOne": false,
+                                        "elem": {
+                                            "fields": {
+                                                "file_type": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             },
             "scm_decryption_exclusion": {
                 "current": "scm:index/decryptionExclusion:DecryptionExclusion",
@@ -879,6 +961,24 @@
                 "current": "scm:index/generalSetting:GeneralSetting",
                 "majorVersion": 1
             },
+            "scm_globalprotect_match_list": {
+                "current": "scm:index/globalprotectMatchList:GlobalprotectMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "scm_hip_object": {
                 "current": "scm:index/hipObject:HipObject",
                 "majorVersion": 1,
@@ -1058,6 +1158,24 @@
             "scm_hip_profile": {
                 "current": "scm:index/hipProfile:HipProfile",
                 "majorVersion": 1
+            },
+            "scm_hipmatch_match_list": {
+                "current": "scm:index/hipmatchMatchList:HipmatchMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
             },
             "scm_http_header_profile": {
                 "current": "scm:index/httpHeaderProfile:HttpHeaderProfile",
@@ -1344,6 +1462,24 @@
                                 "maxItemsOne": false
                             }
                         }
+                    }
+                }
+            },
+            "scm_iptag_match_list": {
+                "current": "scm:index/iptagMatchList:IptagMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
+                        "maxItemsOne": false
                     }
                 }
             },
@@ -2705,6 +2841,24 @@
                     }
                 }
             },
+            "scm_system_match_list": {
+                "current": "scm:index/systemMatchList:SystemMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "scm_tacacs_server_profile": {
                 "current": "scm:index/tacacsServerProfile:TacacsServerProfile",
                 "majorVersion": 1,
@@ -2812,6 +2966,24 @@
                 "majorVersion": 1,
                 "fields": {
                     "list": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_userid_match_list": {
+                "current": "scm:index/useridMatchList:UseridMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
                         "maxItemsOne": false
                     }
                 }
@@ -4313,6 +4485,49 @@
                     }
                 }
             },
+            "scm_config_match_list": {
+                "current": "scm:index/getConfigMatchList:getConfigMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_config_match_list_list": {
+                "current": "scm:index/getConfigMatchListList:getConfigMatchListList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "send_email": {
+                                    "maxItemsOne": false
+                                },
+                                "send_http": {
+                                    "maxItemsOne": false
+                                },
+                                "send_snmptrap": {
+                                    "maxItemsOne": false
+                                },
+                                "send_syslog": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "scm_content_id_setting": {
                 "current": "scm:index/getContentIdSetting:getContentIdSetting",
                 "majorVersion": 1
@@ -4323,6 +4538,148 @@
                 "fields": {
                     "data": {
                         "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_data_filtering_profile": {
+                "current": "scm:index/getDataFilteringProfile:getDataFilteringProfile",
+                "majorVersion": 1,
+                "fields": {
+                    "rules": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "application": {
+                                    "maxItemsOne": false
+                                },
+                                "file_type": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_data_filtering_profile_list": {
+                "current": "scm:index/getDataFilteringProfileList:getDataFilteringProfileList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "rules": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "application": {
+                                                "maxItemsOne": false
+                                            },
+                                            "file_type": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_data_object": {
+                "current": "scm:index/getDataObject:getDataObject",
+                "majorVersion": 1,
+                "fields": {
+                    "pattern_type": {
+                        "fields": {
+                            "file_properties": {
+                                "fields": {
+                                    "pattern": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            },
+                            "predefined": {
+                                "fields": {
+                                    "pattern": {
+                                        "maxItemsOne": false,
+                                        "elem": {
+                                            "fields": {
+                                                "file_type": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "regex": {
+                                "fields": {
+                                    "pattern": {
+                                        "maxItemsOne": false,
+                                        "elem": {
+                                            "fields": {
+                                                "file_type": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_data_object_list": {
+                "current": "scm:index/getDataObjectList:getDataObjectList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "pattern_type": {
+                                    "fields": {
+                                        "file_properties": {
+                                            "fields": {
+                                                "pattern": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        },
+                                        "predefined": {
+                                            "fields": {
+                                                "pattern": {
+                                                    "maxItemsOne": false,
+                                                    "elem": {
+                                                        "fields": {
+                                                            "file_type": {
+                                                                "maxItemsOne": false
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "regex": {
+                                            "fields": {
+                                                "pattern": {
+                                                    "maxItemsOne": false,
+                                                    "elem": {
+                                                        "fields": {
+                                                            "file_type": {
+                                                                "maxItemsOne": false
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -5029,6 +5386,49 @@
                     }
                 }
             },
+            "scm_globalprotect_match_list": {
+                "current": "scm:index/getGlobalprotectMatchList:getGlobalprotectMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_globalprotect_match_list_list": {
+                "current": "scm:index/getGlobalprotectMatchListList:getGlobalprotectMatchListList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "send_email": {
+                                    "maxItemsOne": false
+                                },
+                                "send_http": {
+                                    "maxItemsOne": false
+                                },
+                                "send_snmptrap": {
+                                    "maxItemsOne": false
+                                },
+                                "send_syslog": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "scm_hip_object": {
                 "current": "scm:index/getHipObject:getHipObject",
                 "majorVersion": 1,
@@ -5398,6 +5798,49 @@
                 "fields": {
                     "data": {
                         "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_hipmatch_match_list": {
+                "current": "scm:index/getHipmatchMatchList:getHipmatchMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_hipmatch_match_list_list": {
+                "current": "scm:index/getHipmatchMatchListList:getHipmatchMatchListList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "send_email": {
+                                    "maxItemsOne": false
+                                },
+                                "send_http": {
+                                    "maxItemsOne": false
+                                },
+                                "send_snmptrap": {
+                                    "maxItemsOne": false
+                                },
+                                "send_syslog": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -6000,6 +6443,49 @@
                                             "maxItemsOne": false
                                         }
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_iptag_match_list": {
+                "current": "scm:index/getIptagMatchList:getIptagMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_iptag_match_list_list": {
+                "current": "scm:index/getIptagMatchListList:getIptagMatchListList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "send_email": {
+                                    "maxItemsOne": false
+                                },
+                                "send_http": {
+                                    "maxItemsOne": false
+                                },
+                                "send_snmptrap": {
+                                    "maxItemsOne": false
+                                },
+                                "send_syslog": {
+                                    "maxItemsOne": false
                                 }
                             }
                         }
@@ -9019,6 +9505,49 @@
                     }
                 }
             },
+            "scm_system_match_list": {
+                "current": "scm:index/getSystemMatchList:getSystemMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_system_match_list_list": {
+                "current": "scm:index/getSystemMatchListList:getSystemMatchListList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "send_email": {
+                                    "maxItemsOne": false
+                                },
+                                "send_http": {
+                                    "maxItemsOne": false
+                                },
+                                "send_snmptrap": {
+                                    "maxItemsOne": false
+                                },
+                                "send_syslog": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "scm_tacacs_server_profile": {
                 "current": "scm:index/getTacacsServerProfile:getTacacsServerProfile",
                 "majorVersion": 1,
@@ -9289,6 +9818,49 @@
                         "elem": {
                             "fields": {
                                 "list": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_userid_match_list": {
+                "current": "scm:index/getUseridMatchList:getUseridMatchList",
+                "majorVersion": 1,
+                "fields": {
+                    "send_email": {
+                        "maxItemsOne": false
+                    },
+                    "send_http": {
+                        "maxItemsOne": false
+                    },
+                    "send_snmptrap": {
+                        "maxItemsOne": false
+                    },
+                    "send_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_userid_match_list_list": {
+                "current": "scm:index/getUseridMatchListList:getUseridMatchListList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "send_email": {
+                                    "maxItemsOne": false
+                                },
+                                "send_http": {
+                                    "maxItemsOne": false
+                                },
+                                "send_snmptrap": {
+                                    "maxItemsOne": false
+                                },
+                                "send_syslog": {
                                     "maxItemsOne": false
                                 }
                             }
