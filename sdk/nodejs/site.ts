@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * //# 1. Define the IKE Crypto Profile (IKE Phase 1)
  * // Note: The resource name is plural: "scm_ike_crypto_profile"
  * const example = new scm.IkeCryptoProfile("example", {
- *     name: "example-ike-crypto-14",
+ *     name: "example-ike-crypto-site",
  *     folder: "Remote Networks",
  *     hashes: ["sha256"],
  *     dhGroups: ["group14"],
@@ -27,7 +27,7 @@ import * as utilities from "./utilities";
  * //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
  * // Note: The resource name is plural and nested blocks now use an equals sign (=).
  * const exampleIpsecCryptoProfile = new scm.IpsecCryptoProfile("example", {
- *     name: "PaloAlto-Networks-IPSec-14",
+ *     name: "panw-IPSec-site",
  *     folder: "Remote Networks",
  *     esp: {
  *         encryptions: ["aes-256-gcm"],
@@ -41,7 +41,7 @@ import * as utilities from "./utilities";
  * //# 3. Define the IKE Gateway
  * // Note: The resource name is plural and nested blocks now use an equals sign (=).
  * const exampleIkeGateway = new scm.IkeGateway("example", {
- *     name: "example-gateway-14",
+ *     name: "example-gateway-site",
  *     folder: "Remote Networks",
  *     peerAddress: {
  *         ip: "1.1.1.1",
@@ -60,7 +60,7 @@ import * as utilities from "./utilities";
  * //# 4. Define the IPsec Tunnel
  * // Note: Nested 'auto_key' block uses an equals sign (=).
  * const exampleIpsecTunnel = new scm.IpsecTunnel("example", {
- *     name: "example-tunnel-14",
+ *     name: "example-tunnel-site",
  *     folder: "Remote Networks",
  *     tunnelInterface: "tunnel",
  *     antiReplay: true,
@@ -78,7 +78,7 @@ import * as utilities from "./utilities";
  * // 1. Define the Remote Network first
  * const branchOffice = new scm.RemoteNetwork("branch_office", {
  *     folder: "Remote Networks",
- *     name: "example-rn-14",
+ *     name: "example-rn-site",
  *     region: "us-west-1",
  *     licenseType: "FWAAS-AGGREGATE",
  *     ipsecTunnel: exampleIpsecTunnel.name,
@@ -87,7 +87,7 @@ import * as utilities from "./utilities";
  * });
  * // 2. Define the Site
  * const exampleSite = new scm.Site("example", {
- *     name: "example-site-14",
+ *     name: "example-site-site",
  *     type: "third-party-branch",
  *     licenseType: "FWAAS-SITE-25Mbps",
  *     city: "San Jose",

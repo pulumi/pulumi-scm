@@ -183,6 +183,12 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        [Output("netflowProfile")]
+        public Output<string?> NetflowProfile { get; private set; } = null!;
+
+        /// <summary>
         /// The snippet in which the resource is defined
         /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
@@ -305,6 +311,12 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        [Input("netflowProfile")]
+        public Input<string>? NetflowProfile { get; set; }
+
+        /// <summary>
         /// The snippet in which the resource is defined
         /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
@@ -381,6 +393,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        [Input("netflowProfile")]
+        public Input<string>? NetflowProfile { get; set; }
 
         /// <summary>
         /// The snippet in which the resource is defined

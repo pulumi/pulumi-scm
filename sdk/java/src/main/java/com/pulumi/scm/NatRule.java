@@ -56,8 +56,8 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var exampleTag = new Tag("exampleTag", TagArgs.builder()
- *             .folder("All")
- *             .name("example-tag")
+ *             .folder("ngfw-shared")
+ *             .name("example-nat-rule")
  *             .color("Red")
  *             .build());
  * 
@@ -72,7 +72,7 @@ import javax.annotation.Nullable;
  *             .description("Dynamic SNAT for internal traffic accessing the internet. Updating")
  *             .disabled(false)
  *             .natType("ipv4")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .tags(exampleTag.name())
  *             .sourceTranslation(NatRuleSourceTranslationArgs.builder()
  *                 .dynamicIpAndPort(NatRuleSourceTranslationDynamicIpAndPortArgs.builder()
@@ -99,7 +99,7 @@ import javax.annotation.Nullable;
  *             .description("Dynamic SNAT for internal traffic accessing the internet. Updating")
  *             .disabled(false)
  *             .natType("ipv4")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .tags(exampleTag.name())
  *             .sourceTranslation(NatRuleSourceTranslationArgs.builder()
  *                 .staticIp(NatRuleSourceTranslationStaticIpArgs.builder()
@@ -125,7 +125,7 @@ import javax.annotation.Nullable;
  *             .description("Dynamic SNAT for internal traffic accessing the internet. Updating")
  *             .disabled(false)
  *             .natType("ipv4")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .tags(exampleTag.name())
  *             .sourceTranslation(NatRuleSourceTranslationArgs.builder()
  *                 .staticIp(NatRuleSourceTranslationStaticIpArgs.builder()
@@ -147,7 +147,7 @@ import javax.annotation.Nullable;
  *             .description("Dynamic SNAT for internal traffic accessing the internet. Updating")
  *             .disabled(false)
  *             .natType("ipv4")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .tags(exampleTag.name())
  *             .sourceTranslation(NatRuleSourceTranslationArgs.builder()
  *                 .dynamicIp(NatRuleSourceTranslationDynamicIpArgs.builder()

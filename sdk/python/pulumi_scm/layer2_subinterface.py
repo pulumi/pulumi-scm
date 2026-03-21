@@ -316,7 +316,7 @@ class Layer2Subinterface(pulumi.CustomResource):
         # Creates a ethernet interface used as parent-interface for subsequent examples
         #
         scm_parent_interface = scm.EthernetInterface("scm_parent_interface",
-            name="$scm_parent_interface",
+            name="$scm_tf_parent_interface",
             comment="Managed by Pulumi",
             folder="ngfw-shared",
             layer2={})
@@ -324,11 +324,11 @@ class Layer2Subinterface(pulumi.CustomResource):
         # Creates a layer2 sub-interface with vlan tag 100
         #
         scm_layer2_subinterface = scm.Layer2Subinterface("scm_layer2_subinterface",
-            name="$scm_parent_interface.100",
+            name="$scm_tf_parent_interface.100",
             comment="Managed by Pulumi",
             folder="ngfw-shared",
             vlan_tag="100",
-            parent_interface="$scm_parent_interface",
+            parent_interface="$scm_tf_parent_interface",
             opts = pulumi.ResourceOptions(depends_on=[scm_parent_interface]))
         ```
 
@@ -388,7 +388,7 @@ class Layer2Subinterface(pulumi.CustomResource):
         # Creates a ethernet interface used as parent-interface for subsequent examples
         #
         scm_parent_interface = scm.EthernetInterface("scm_parent_interface",
-            name="$scm_parent_interface",
+            name="$scm_tf_parent_interface",
             comment="Managed by Pulumi",
             folder="ngfw-shared",
             layer2={})
@@ -396,11 +396,11 @@ class Layer2Subinterface(pulumi.CustomResource):
         # Creates a layer2 sub-interface with vlan tag 100
         #
         scm_layer2_subinterface = scm.Layer2Subinterface("scm_layer2_subinterface",
-            name="$scm_parent_interface.100",
+            name="$scm_tf_parent_interface.100",
             comment="Managed by Pulumi",
             folder="ngfw-shared",
             vlan_tag="100",
-            parent_interface="$scm_parent_interface",
+            parent_interface="$scm_tf_parent_interface",
             opts = pulumi.ResourceOptions(depends_on=[scm_parent_interface]))
         ```
 

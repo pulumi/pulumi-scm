@@ -44,10 +44,9 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         var exampleConfiguration = new AuthenticationPortal("exampleConfiguration", AuthenticationPortalArgs.builder()
  *             .redirectHost("192.168.255.254")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .authenticationProfile("test_auth_profile")
  *             .certificateProfile("EDL-Hosting-Service-Profile")
- *             .tlsServiceProfile("test_svc_profile")
  *             .gpUdpPort(12)
  *             .idleTimer(12)
  *             .timer(10)

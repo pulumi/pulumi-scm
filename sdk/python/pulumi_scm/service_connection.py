@@ -535,7 +535,7 @@ class ServiceConnection(pulumi.CustomResource):
         ## 1. Define the IKE Crypto Profile (IKE Phase 1)
         # Note: The resource name is plural: "scm_ike_crypto_profile"
         example = scm.IkeCryptoProfile("example",
-            name="example-ike-crypto",
+            name="example-sc-ike-crypto",
             folder=folder_scope,
             hashes=["sha256"],
             dh_groups=["group14"],
@@ -543,7 +543,7 @@ class ServiceConnection(pulumi.CustomResource):
         ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
         # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
-            name="panw-IPSec-Crypto",
+            name="panw-sc-Crypto",
             folder=folder_scope,
             esp={
                 "encryptions": ["aes-256-gcm"],
@@ -556,7 +556,7 @@ class ServiceConnection(pulumi.CustomResource):
         ## 3. Define the IKE Gateway
         # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ike_gateway = scm.IkeGateway("example",
-            name="example-gateway",
+            name="example-sc-gateway",
             folder=folder_scope,
             peer_address={
                 "ip": "1.1.1.1",
@@ -574,7 +574,7 @@ class ServiceConnection(pulumi.CustomResource):
         ## 4. Define the IPsec Tunnel
         # Note: Nested 'auto_key' block uses an equals sign (=).
         example_ipsec_tunnel = scm.IpsecTunnel("example",
-            name="example-tunnel",
+            name="example-sc-tunnel",
             folder=folder_scope,
             tunnel_interface="tunnel",
             anti_replay=True,
@@ -660,7 +660,7 @@ class ServiceConnection(pulumi.CustomResource):
         ## 1. Define the IKE Crypto Profile (IKE Phase 1)
         # Note: The resource name is plural: "scm_ike_crypto_profile"
         example = scm.IkeCryptoProfile("example",
-            name="example-ike-crypto",
+            name="example-sc-ike-crypto",
             folder=folder_scope,
             hashes=["sha256"],
             dh_groups=["group14"],
@@ -668,7 +668,7 @@ class ServiceConnection(pulumi.CustomResource):
         ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
         # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
-            name="panw-IPSec-Crypto",
+            name="panw-sc-Crypto",
             folder=folder_scope,
             esp={
                 "encryptions": ["aes-256-gcm"],
@@ -681,7 +681,7 @@ class ServiceConnection(pulumi.CustomResource):
         ## 3. Define the IKE Gateway
         # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ike_gateway = scm.IkeGateway("example",
-            name="example-gateway",
+            name="example-sc-gateway",
             folder=folder_scope,
             peer_address={
                 "ip": "1.1.1.1",
@@ -699,7 +699,7 @@ class ServiceConnection(pulumi.CustomResource):
         ## 4. Define the IPsec Tunnel
         # Note: Nested 'auto_key' block uses an equals sign (=).
         example_ipsec_tunnel = scm.IpsecTunnel("example",
-            name="example-tunnel",
+            name="example-sc-tunnel",
             folder=folder_scope,
             tunnel_interface="tunnel",
             anti_replay=True,

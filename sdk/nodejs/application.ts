@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *
  * // Custom Application
  * const scmMediaApp = new scm.Application("scm_media_app", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_media_app",
  *     description: "Managed by Pulumi",
  *     category: "media",
@@ -32,7 +32,7 @@ import * as utilities from "./utilities";
  * });
  * // Custom Application with tweaked timeouts and additional settings
  * const scmRiskyApp = new scm.Application("scm_risky_app", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_risky_app",
  *     description: "Managed by Pulumi",
  *     category: "media",
@@ -55,8 +55,8 @@ import * as utilities from "./utilities";
  * });
  * // Custom Application based on Custom Signature
  * const scmCustomApp = new scm.Application("scm_custom_app", {
- *     folder: "All",
- *     name: "scm_custom_app",
+ *     folder: "ngfw-shared",
+ *     name: "scm_custom_test_app",
  *     description: "Managed by Pulumi",
  *     category: "media",
  *     subcategory: "gaming",

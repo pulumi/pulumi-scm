@@ -14,6 +14,14 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetManagementInterfaceManagementInterfaceResult
     {
         /// <summary>
+        /// Default gateway
+        /// </summary>
+        public readonly string DefaultGateway;
+        /// <summary>
+        /// IP address
+        /// </summary>
+        public readonly string IpAddress;
+        /// <summary>
         /// IP type
         /// </summary>
         public readonly Outputs.GetManagementInterfaceManagementInterfaceMgmtTypeResult MgmtType;
@@ -21,6 +29,10 @@ namespace Pulumi.Scm.Outputs
         /// MTU
         /// </summary>
         public readonly int Mtu;
+        /// <summary>
+        /// Netmask
+        /// </summary>
+        public readonly string Netmask;
         /// <summary>
         /// Permitting IP addresses
         /// </summary>
@@ -36,9 +48,15 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private GetManagementInterfaceManagementInterfaceResult(
+            string defaultGateway,
+
+            string ipAddress,
+
             Outputs.GetManagementInterfaceManagementInterfaceMgmtTypeResult mgmtType,
 
             int mtu,
+
+            string netmask,
 
             ImmutableArray<Outputs.GetManagementInterfaceManagementInterfacePermittedIpResult> permittedIps,
 
@@ -46,8 +64,11 @@ namespace Pulumi.Scm.Outputs
 
             string speedDuplex)
         {
+            DefaultGateway = defaultGateway;
+            IpAddress = ipAddress;
             MgmtType = mgmtType;
             Mtu = mtu;
+            Netmask = netmask;
             PermittedIps = permittedIps;
             Service = service;
             SpeedDuplex = speedDuplex;

@@ -76,6 +76,11 @@ public final class GetLayer3SubinterfaceListData {
      */
     private String name;
     /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    private String netflowProfile;
+    /**
      * @return Parent interface
      * 
      */
@@ -179,6 +184,13 @@ public final class GetLayer3SubinterfaceListData {
         return this.name;
     }
     /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public String netflowProfile() {
+        return this.netflowProfile;
+    }
+    /**
      * @return Parent interface
      * 
      */
@@ -227,6 +239,7 @@ public final class GetLayer3SubinterfaceListData {
         private List<GetLayer3SubinterfaceListDataIp> ips;
         private Integer mtu;
         private String name;
+        private String netflowProfile;
         private String parentInterface;
         private String snippet;
         private Integer tag;
@@ -245,6 +258,7 @@ public final class GetLayer3SubinterfaceListData {
     	      this.ips = defaults.ips;
     	      this.mtu = defaults.mtu;
     	      this.name = defaults.name;
+    	      this.netflowProfile = defaults.netflowProfile;
     	      this.parentInterface = defaults.parentInterface;
     	      this.snippet = defaults.snippet;
     	      this.tag = defaults.tag;
@@ -346,6 +360,14 @@ public final class GetLayer3SubinterfaceListData {
             return this;
         }
         @CustomType.Setter
+        public Builder netflowProfile(String netflowProfile) {
+            if (netflowProfile == null) {
+              throw new MissingRequiredPropertyException("GetLayer3SubinterfaceListData", "netflowProfile");
+            }
+            this.netflowProfile = netflowProfile;
+            return this;
+        }
+        @CustomType.Setter
         public Builder parentInterface(String parentInterface) {
             if (parentInterface == null) {
               throw new MissingRequiredPropertyException("GetLayer3SubinterfaceListData", "parentInterface");
@@ -390,6 +412,7 @@ public final class GetLayer3SubinterfaceListData {
             _resultValue.ips = ips;
             _resultValue.mtu = mtu;
             _resultValue.name = name;
+            _resultValue.netflowProfile = netflowProfile;
             _resultValue.parentInterface = parentInterface;
             _resultValue.snippet = snippet;
             _resultValue.tag = tag;

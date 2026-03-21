@@ -120,9 +120,6 @@ export class TrafficSteeringRule extends pulumi.CustomResource {
             resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as TrafficSteeringRuleArgs | undefined;
-            if (args?.folder === undefined && !opts.urn) {
-                throw new Error("Missing required property 'folder'");
-            }
             if (args?.services === undefined && !opts.urn) {
                 throw new Error("Missing required property 'services'");
             }
@@ -205,7 +202,7 @@ export interface TrafficSteeringRuleArgs {
     /**
      * The folder containing the traffic steering rule
      */
-    folder: pulumi.Input<string>;
+    folder?: pulumi.Input<string>;
     /**
      * Name
      */

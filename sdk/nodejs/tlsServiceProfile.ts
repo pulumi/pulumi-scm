@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const tlsServiceProf1Upper = new scm.TlsServiceProfile("tls_service_prof_1_upper", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "TLS_Service_Profile_1",
  *     certificate: "Authentication Cookie CA",
  *     protocolSettings: {
@@ -24,7 +24,7 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const tlsServiceProf2Upper = new scm.TlsServiceProfile("tls_service_prof_2_upper", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "TLS_Service_Profile_2",
  *     certificate: "Forward-Trust-CA",
  *     protocolSettings: {
@@ -35,7 +35,7 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const tlsServiceProf3Upper = new scm.TlsServiceProfile("tls_service_prof_3_upper", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "TLS_Service_Profile_3",
  *     certificate: "Root CA",
  *     protocolSettings: {

@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  * // Creates a ethernet interface used as parent-interface for subsequent examples
  * //
  * const scmParentInterface = new scm.EthernetInterface("scm_parent_interface", {
- *     name: "$scm_parent_interface",
+ *     name: "$scm_tf_parent_interface",
  *     comment: "Managed by Pulumi",
  *     folder: "ngfw-shared",
  *     layer2: {},
@@ -26,11 +26,11 @@ import * as utilities from "./utilities";
  * // Creates a layer2 sub-interface with vlan tag 100
  * //
  * const scmLayer2Subinterface = new scm.Layer2Subinterface("scm_layer2_subinterface", {
- *     name: "$scm_parent_interface.100",
+ *     name: "$scm_tf_parent_interface.100",
  *     comment: "Managed by Pulumi",
  *     folder: "ngfw-shared",
  *     vlanTag: "100",
- *     parentInterface: "$scm_parent_interface",
+ *     parentInterface: "$scm_tf_parent_interface",
  * }, {
  *     dependsOn: [scmParentInterface],
  * });

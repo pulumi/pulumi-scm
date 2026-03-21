@@ -17,6 +17,16 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagementInterfaceManagementInterface {
     /**
+     * @return Default gateway
+     * 
+     */
+    private @Nullable String defaultGateway;
+    /**
+     * @return IP address
+     * 
+     */
+    private @Nullable String ipAddress;
+    /**
      * @return IP type
      * 
      */
@@ -26,6 +36,11 @@ public final class ManagementInterfaceManagementInterface {
      * 
      */
     private @Nullable Integer mtu;
+    /**
+     * @return Netmask
+     * 
+     */
+    private @Nullable String netmask;
     /**
      * @return Permitting IP addresses
      * 
@@ -44,6 +59,20 @@ public final class ManagementInterfaceManagementInterface {
 
     private ManagementInterfaceManagementInterface() {}
     /**
+     * @return Default gateway
+     * 
+     */
+    public Optional<String> defaultGateway() {
+        return Optional.ofNullable(this.defaultGateway);
+    }
+    /**
+     * @return IP address
+     * 
+     */
+    public Optional<String> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
+    }
+    /**
      * @return IP type
      * 
      */
@@ -56,6 +85,13 @@ public final class ManagementInterfaceManagementInterface {
      */
     public Optional<Integer> mtu() {
         return Optional.ofNullable(this.mtu);
+    }
+    /**
+     * @return Netmask
+     * 
+     */
+    public Optional<String> netmask() {
+        return Optional.ofNullable(this.netmask);
     }
     /**
      * @return Permitting IP addresses
@@ -88,21 +124,39 @@ public final class ManagementInterfaceManagementInterface {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable String defaultGateway;
+        private @Nullable String ipAddress;
         private @Nullable ManagementInterfaceManagementInterfaceMgmtType mgmtType;
         private @Nullable Integer mtu;
+        private @Nullable String netmask;
         private @Nullable List<ManagementInterfaceManagementInterfacePermittedIp> permittedIps;
         private @Nullable ManagementInterfaceManagementInterfaceService service;
         private @Nullable String speedDuplex;
         public Builder() {}
         public Builder(ManagementInterfaceManagementInterface defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.defaultGateway = defaults.defaultGateway;
+    	      this.ipAddress = defaults.ipAddress;
     	      this.mgmtType = defaults.mgmtType;
     	      this.mtu = defaults.mtu;
+    	      this.netmask = defaults.netmask;
     	      this.permittedIps = defaults.permittedIps;
     	      this.service = defaults.service;
     	      this.speedDuplex = defaults.speedDuplex;
         }
 
+        @CustomType.Setter
+        public Builder defaultGateway(@Nullable String defaultGateway) {
+
+            this.defaultGateway = defaultGateway;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipAddress(@Nullable String ipAddress) {
+
+            this.ipAddress = ipAddress;
+            return this;
+        }
         @CustomType.Setter
         public Builder mgmtType(@Nullable ManagementInterfaceManagementInterfaceMgmtType mgmtType) {
 
@@ -113,6 +167,12 @@ public final class ManagementInterfaceManagementInterface {
         public Builder mtu(@Nullable Integer mtu) {
 
             this.mtu = mtu;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder netmask(@Nullable String netmask) {
+
+            this.netmask = netmask;
             return this;
         }
         @CustomType.Setter
@@ -138,8 +198,11 @@ public final class ManagementInterfaceManagementInterface {
         }
         public ManagementInterfaceManagementInterface build() {
             final var _resultValue = new ManagementInterfaceManagementInterface();
+            _resultValue.defaultGateway = defaultGateway;
+            _resultValue.ipAddress = ipAddress;
             _resultValue.mgmtType = mgmtType;
             _resultValue.mtu = mtu;
+            _resultValue.netmask = netmask;
             _resultValue.permittedIps = permittedIps;
             _resultValue.service = service;
             _resultValue.speedDuplex = speedDuplex;

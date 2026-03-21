@@ -26,7 +26,7 @@ namespace Pulumi.Scm
     ///     var appOverridePositionTag = new Scm.Tag("app_override_position_tag", new()
     ///     {
     ///         Name = "app-override-position-tag_1",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Color = "Orange",
     ///     });
     /// 
@@ -35,7 +35,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "anchor-app-override-rule",
     ///         Description = "Base rule for testing 'before' and 'after' positioning. Updating",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         Application = "ssl",
     ///         Protocol = "tcp",
@@ -67,7 +67,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "top-absolute-app-override",
     ///         Description = "Placed at the very TOP of the App Override rulebase.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "bottom",
     ///         Application = "ssl",
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "bottom-absolute-app-override",
     ///         Description = "Placed at the very BOTTOM of the App Override rulebase.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "bottom",
     ///         Application = "ssl",
@@ -124,7 +124,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "before-anchor-app-override",
     ///         Description = "Positioned immediately BEFORE the anchor-app-override-rule.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "before",
     ///         TargetRule = anchorAppOverride.Id,
@@ -153,7 +153,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "after-anchor-app-override",
     ///         Description = "Positioned immediately AFTER the anchor-app-override-rule.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         RelativePosition = "before",
     ///         TargetRule = anchorAppOverride.Id,
@@ -210,7 +210,7 @@ namespace Pulumi.Scm
         /// Application
         /// </summary>
         [Output("application")]
-        public Output<string> Application { get; private set; } = null!;
+        public Output<string?> Application { get; private set; } = null!;
 
         /// <summary>
         /// Description
@@ -278,7 +278,7 @@ namespace Pulumi.Scm
         /// Port
         /// </summary>
         [Output("port")]
-        public Output<string> Port { get; private set; } = null!;
+        public Output<string?> Port { get; private set; } = null!;
 
         /// <summary>
         /// The position of a security rule
@@ -290,7 +290,7 @@ namespace Pulumi.Scm
         /// Protocol
         /// </summary>
         [Output("protocol")]
-        public Output<string> Protocol { get; private set; } = null!;
+        public Output<string?> Protocol { get; private set; } = null!;
 
         /// <summary>
         /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
@@ -344,7 +344,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public AppOverrideRule(string name, AppOverrideRuleArgs args, CustomResourceOptions? options = null)
+        public AppOverrideRule(string name, AppOverrideRuleArgs? args = null, CustomResourceOptions? options = null)
             : base("scm:index/appOverrideRule:AppOverrideRule", name, args ?? new AppOverrideRuleArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -385,8 +385,8 @@ namespace Pulumi.Scm
         /// <summary>
         /// Application
         /// </summary>
-        [Input("application", required: true)]
-        public Input<string> Application { get; set; } = null!;
+        [Input("application")]
+        public Input<string>? Application { get; set; }
 
         /// <summary>
         /// Description
@@ -394,7 +394,7 @@ namespace Pulumi.Scm
         [Input("description")]
         public Input<string>? Description { get; set; }
 
-        [Input("destinations", required: true)]
+        [Input("destinations")]
         private InputList<string>? _destinations;
 
         /// <summary>
@@ -426,7 +426,7 @@ namespace Pulumi.Scm
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
-        [Input("froms", required: true)]
+        [Input("froms")]
         private InputList<string>? _froms;
 
         /// <summary>
@@ -465,8 +465,8 @@ namespace Pulumi.Scm
         /// <summary>
         /// Port
         /// </summary>
-        [Input("port", required: true)]
-        public Input<string> Port { get; set; } = null!;
+        [Input("port")]
+        public Input<string>? Port { get; set; }
 
         /// <summary>
         /// The position of a security rule
@@ -477,8 +477,8 @@ namespace Pulumi.Scm
         /// <summary>
         /// Protocol
         /// </summary>
-        [Input("protocol", required: true)]
-        public Input<string> Protocol { get; set; } = null!;
+        [Input("protocol")]
+        public Input<string>? Protocol { get; set; }
 
         /// <summary>
         /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
@@ -494,7 +494,7 @@ namespace Pulumi.Scm
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
-        [Input("sources", required: true)]
+        [Input("sources")]
         private InputList<string>? _sources;
 
         /// <summary>
@@ -524,7 +524,7 @@ namespace Pulumi.Scm
         [Input("targetRule")]
         public Input<string>? TargetRule { get; set; }
 
-        [Input("tos", required: true)]
+        [Input("tos")]
         private InputList<string>? _tos;
 
         /// <summary>

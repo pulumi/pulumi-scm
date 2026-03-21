@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var tcpExample = new TcpSetting("tcpExample", TcpSettingArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .tcp(TcpSettingTcpArgs.builder()
  *                 .bypassExceedOoQueue(false)
  *                 .allowChallengeAck(true)

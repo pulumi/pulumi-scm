@@ -131,6 +131,21 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
         return Optional.ofNullable(this.mtu);
     }
 
+    /**
+     * Name of Netflow Profile to assign to Interface
+     * 
+     */
+    @Import(name="netflowProfile")
+    private @Nullable Output<String> netflowProfile;
+
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Optional<Output<String>> netflowProfile() {
+        return Optional.ofNullable(this.netflowProfile);
+    }
+
     private AggregateInterfaceLayer3Args() {}
 
     private AggregateInterfaceLayer3Args(AggregateInterfaceLayer3Args $) {
@@ -141,6 +156,7 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
         this.ips = $.ips;
         this.lacp = $.lacp;
         this.mtu = $.mtu;
+        this.netflowProfile = $.netflowProfile;
     }
 
     public static Builder builder() {
@@ -332,6 +348,27 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
          */
         public Builder mtu(Integer mtu) {
             return mtu(Output.of(mtu));
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(@Nullable Output<String> netflowProfile) {
+            $.netflowProfile = netflowProfile;
+            return this;
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(String netflowProfile) {
+            return netflowProfile(Output.of(netflowProfile));
         }
 
         public AggregateInterfaceLayer3Args build() {

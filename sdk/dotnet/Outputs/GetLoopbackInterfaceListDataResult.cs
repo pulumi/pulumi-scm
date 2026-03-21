@@ -54,6 +54,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        public readonly string NetflowProfile;
+        /// <summary>
         /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
@@ -84,6 +88,8 @@ namespace Pulumi.Scm.Outputs
 
             string name,
 
+            string netflowProfile,
+
             string snippet,
 
             string tfid)
@@ -98,6 +104,7 @@ namespace Pulumi.Scm.Outputs
             Ipv6 = ipv6;
             Mtu = mtu;
             Name = name;
+            NetflowProfile = netflowProfile;
             Snippet = snippet;
             Tfid = tfid;
         }

@@ -29,7 +29,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewKerberosServerProfile(ctx, "scm_kerberos_server_profile_1", &scm.KerberosServerProfileArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("kerberos-server-prof-1"),
 //				Servers: scm.KerberosServerProfileServerArray{
 //					&scm.KerberosServerProfileServerArgs{
@@ -42,7 +42,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewKerberosServerProfile(ctx, "scm_kerberos_server_profile_2", &scm.KerberosServerProfileArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("kerberos-server-prof-2"),
 //				Servers: scm.KerberosServerProfileServerArray{
 //					&scm.KerberosServerProfileServerArgs{
@@ -56,7 +56,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewKerberosServerProfile(ctx, "scm_kerberos_server_profile_3", &scm.KerberosServerProfileArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("kerberos-server-prof-3"),
 //				Servers: scm.KerberosServerProfileServerArray{
 //					&scm.KerberosServerProfileServerArgs{

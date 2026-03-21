@@ -25,10 +25,9 @@ namespace Pulumi.Scm
     ///     var exampleConfiguration = new Scm.AuthenticationPortal("example_configuration", new()
     ///     {
     ///         RedirectHost = "192.168.255.254",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         AuthenticationProfile = "test_auth_profile",
     ///         CertificateProfile = "EDL-Hosting-Service-Profile",
-    ///         TlsServiceProfile = "test_svc_profile",
     ///         GpUdpPort = 12,
     ///         IdleTimer = 12,
     ///         Timer = 10,

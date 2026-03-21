@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * // Creates a ethernet interface used as parent-interface for subsequent examples
  * //
  * const scmParentInterface = new scm.EthernetInterface("scm_parent_interface", {
- *     name: "$scm_parent_interface",
+ *     name: "$scm_tf_parent_interface",
  *     comment: "Managed by Pulumi",
  *     folder: "ngfw-shared",
  *     layer3: {},
@@ -28,11 +28,11 @@ import * as utilities from "./utilities";
  * // Creates a layer3 sub-interface with static ip address
  * //
  * const scmL3Subinterface = new scm.Layer3Subinterface("scm_l3_subinterface", {
- *     name: "$scm_parent_interface.100",
+ *     name: "$scm_tf_parent_interface.100",
  *     comment: "Managed by Pulumi",
  *     folder: "ngfw-shared",
  *     tag: 100,
- *     parentInterface: "$scm_parent_interface",
+ *     parentInterface: "$scm_tf_parent_interface",
  *     ips: [{
  *         name: "198.18.1.1/32",
  *     }],
@@ -40,20 +40,20 @@ import * as utilities from "./utilities";
  *     dependsOn: [scmParentInterface],
  * });
  * const scmParentDhcpInterface = new scm.EthernetInterface("scm_parent_dhcp_interface", {
- *     name: "$scm_parent_dhcp_interface",
+ *     name: "$scm_parent_tf_dhcp_interface",
  *     comment: "Managed by Pulumi",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     layer3: {},
  * });
  * //
  * // Creates a layer3 sub-interface with dhcp
  * //
  * const scmL3DhcpSubinterface = new scm.Layer3Subinterface("scm_l3_dhcp_subinterface", {
- *     name: "$scm_parent_dhcp_interface.100",
+ *     name: "$scm_parent_tf_dhcp_interface.100",
  *     comment: "Managed by Pulumi",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     tag: 100,
- *     parentInterface: "$scm_parent_dhcp_interface",
+ *     parentInterface: "$scm_parent_tf_dhcp_interface",
  *     dhcpClient: {
  *         enable: true,
  *         createDefaultRoute: true,
@@ -165,6 +165,10 @@ export class Layer3Subinterface extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    declare public readonly netflowProfile: pulumi.Output<string | undefined>;
+    /**
      * Parent interface
      */
     declare public readonly parentInterface: pulumi.Output<string | undefined>;
@@ -206,6 +210,7 @@ export class Layer3Subinterface extends pulumi.CustomResource {
             resourceInputs["ips"] = state?.ips;
             resourceInputs["mtu"] = state?.mtu;
             resourceInputs["name"] = state?.name;
+            resourceInputs["netflowProfile"] = state?.netflowProfile;
             resourceInputs["parentInterface"] = state?.parentInterface;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["tag"] = state?.tag;
@@ -222,6 +227,7 @@ export class Layer3Subinterface extends pulumi.CustomResource {
             resourceInputs["ips"] = args?.ips;
             resourceInputs["mtu"] = args?.mtu;
             resourceInputs["name"] = args?.name;
+            resourceInputs["netflowProfile"] = args?.netflowProfile;
             resourceInputs["parentInterface"] = args?.parentInterface;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["tag"] = args?.tag;
@@ -282,6 +288,10 @@ export interface Layer3SubinterfaceState {
      * L3 sub-interface name
      */
     name?: pulumi.Input<string>;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: pulumi.Input<string>;
     /**
      * Parent interface
      */
@@ -352,6 +362,10 @@ export interface Layer3SubinterfaceArgs {
      * L3 sub-interface name
      */
     name?: pulumi.Input<string>;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: pulumi.Input<string>;
     /**
      * Parent interface
      */

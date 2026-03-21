@@ -98,10 +98,22 @@ import com.pulumi.scm.inputs.GetCertificateProfileArgs;
 import com.pulumi.scm.inputs.GetCertificateProfileListArgs;
 import com.pulumi.scm.inputs.GetCertificateProfileListPlainArgs;
 import com.pulumi.scm.inputs.GetCertificateProfilePlainArgs;
+import com.pulumi.scm.inputs.GetConfigMatchListArgs;
+import com.pulumi.scm.inputs.GetConfigMatchListListArgs;
+import com.pulumi.scm.inputs.GetConfigMatchListListPlainArgs;
+import com.pulumi.scm.inputs.GetConfigMatchListPlainArgs;
 import com.pulumi.scm.inputs.GetContentIdSettingArgs;
 import com.pulumi.scm.inputs.GetContentIdSettingListArgs;
 import com.pulumi.scm.inputs.GetContentIdSettingListPlainArgs;
 import com.pulumi.scm.inputs.GetContentIdSettingPlainArgs;
+import com.pulumi.scm.inputs.GetDataFilteringProfileArgs;
+import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
+import com.pulumi.scm.inputs.GetDataFilteringProfileListPlainArgs;
+import com.pulumi.scm.inputs.GetDataFilteringProfilePlainArgs;
+import com.pulumi.scm.inputs.GetDataObjectArgs;
+import com.pulumi.scm.inputs.GetDataObjectListArgs;
+import com.pulumi.scm.inputs.GetDataObjectListPlainArgs;
+import com.pulumi.scm.inputs.GetDataObjectPlainArgs;
 import com.pulumi.scm.inputs.GetDecryptionExclusionArgs;
 import com.pulumi.scm.inputs.GetDecryptionExclusionListArgs;
 import com.pulumi.scm.inputs.GetDecryptionExclusionListPlainArgs;
@@ -162,6 +174,10 @@ import com.pulumi.scm.inputs.GetGeneralSettingArgs;
 import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
 import com.pulumi.scm.inputs.GetGeneralSettingListPlainArgs;
 import com.pulumi.scm.inputs.GetGeneralSettingPlainArgs;
+import com.pulumi.scm.inputs.GetGlobalprotectMatchListArgs;
+import com.pulumi.scm.inputs.GetGlobalprotectMatchListListArgs;
+import com.pulumi.scm.inputs.GetGlobalprotectMatchListListPlainArgs;
+import com.pulumi.scm.inputs.GetGlobalprotectMatchListPlainArgs;
 import com.pulumi.scm.inputs.GetHipObjectArgs;
 import com.pulumi.scm.inputs.GetHipObjectListArgs;
 import com.pulumi.scm.inputs.GetHipObjectListPlainArgs;
@@ -170,6 +186,10 @@ import com.pulumi.scm.inputs.GetHipProfileArgs;
 import com.pulumi.scm.inputs.GetHipProfileListArgs;
 import com.pulumi.scm.inputs.GetHipProfileListPlainArgs;
 import com.pulumi.scm.inputs.GetHipProfilePlainArgs;
+import com.pulumi.scm.inputs.GetHipmatchMatchListArgs;
+import com.pulumi.scm.inputs.GetHipmatchMatchListListArgs;
+import com.pulumi.scm.inputs.GetHipmatchMatchListListPlainArgs;
+import com.pulumi.scm.inputs.GetHipmatchMatchListPlainArgs;
 import com.pulumi.scm.inputs.GetHttpHeaderProfileArgs;
 import com.pulumi.scm.inputs.GetHttpHeaderProfileListArgs;
 import com.pulumi.scm.inputs.GetHttpHeaderProfileListPlainArgs;
@@ -198,6 +218,10 @@ import com.pulumi.scm.inputs.GetIpsecTunnelArgs;
 import com.pulumi.scm.inputs.GetIpsecTunnelListArgs;
 import com.pulumi.scm.inputs.GetIpsecTunnelListPlainArgs;
 import com.pulumi.scm.inputs.GetIpsecTunnelPlainArgs;
+import com.pulumi.scm.inputs.GetIptagMatchListArgs;
+import com.pulumi.scm.inputs.GetIptagMatchListListArgs;
+import com.pulumi.scm.inputs.GetIptagMatchListListPlainArgs;
+import com.pulumi.scm.inputs.GetIptagMatchListPlainArgs;
 import com.pulumi.scm.inputs.GetKerberosServerProfileArgs;
 import com.pulumi.scm.inputs.GetKerberosServerProfileListArgs;
 import com.pulumi.scm.inputs.GetKerberosServerProfileListPlainArgs;
@@ -386,6 +410,10 @@ import com.pulumi.scm.inputs.GetSyslogServerProfileArgs;
 import com.pulumi.scm.inputs.GetSyslogServerProfileListArgs;
 import com.pulumi.scm.inputs.GetSyslogServerProfileListPlainArgs;
 import com.pulumi.scm.inputs.GetSyslogServerProfilePlainArgs;
+import com.pulumi.scm.inputs.GetSystemMatchListArgs;
+import com.pulumi.scm.inputs.GetSystemMatchListListArgs;
+import com.pulumi.scm.inputs.GetSystemMatchListListPlainArgs;
+import com.pulumi.scm.inputs.GetSystemMatchListPlainArgs;
 import com.pulumi.scm.inputs.GetTacacsServerProfileArgs;
 import com.pulumi.scm.inputs.GetTacacsServerProfileListArgs;
 import com.pulumi.scm.inputs.GetTacacsServerProfileListPlainArgs;
@@ -422,6 +450,10 @@ import com.pulumi.scm.inputs.GetUrlCategoryArgs;
 import com.pulumi.scm.inputs.GetUrlCategoryListArgs;
 import com.pulumi.scm.inputs.GetUrlCategoryListPlainArgs;
 import com.pulumi.scm.inputs.GetUrlCategoryPlainArgs;
+import com.pulumi.scm.inputs.GetUseridMatchListArgs;
+import com.pulumi.scm.inputs.GetUseridMatchListListArgs;
+import com.pulumi.scm.inputs.GetUseridMatchListListPlainArgs;
+import com.pulumi.scm.inputs.GetUseridMatchListPlainArgs;
 import com.pulumi.scm.inputs.GetVariableArgs;
 import com.pulumi.scm.inputs.GetVariableListArgs;
 import com.pulumi.scm.inputs.GetVariableListPlainArgs;
@@ -500,8 +532,14 @@ import com.pulumi.scm.outputs.GetBgpRouteMapResult;
 import com.pulumi.scm.outputs.GetBgpRoutingResult;
 import com.pulumi.scm.outputs.GetCertificateProfileListResult;
 import com.pulumi.scm.outputs.GetCertificateProfileResult;
+import com.pulumi.scm.outputs.GetConfigMatchListListResult;
+import com.pulumi.scm.outputs.GetConfigMatchListResult;
 import com.pulumi.scm.outputs.GetContentIdSettingListResult;
 import com.pulumi.scm.outputs.GetContentIdSettingResult;
+import com.pulumi.scm.outputs.GetDataFilteringProfileListResult;
+import com.pulumi.scm.outputs.GetDataFilteringProfileResult;
+import com.pulumi.scm.outputs.GetDataObjectListResult;
+import com.pulumi.scm.outputs.GetDataObjectResult;
 import com.pulumi.scm.outputs.GetDecryptionExclusionListResult;
 import com.pulumi.scm.outputs.GetDecryptionExclusionResult;
 import com.pulumi.scm.outputs.GetDecryptionProfileListResult;
@@ -532,10 +570,14 @@ import com.pulumi.scm.outputs.GetFolderListResult;
 import com.pulumi.scm.outputs.GetFolderResult;
 import com.pulumi.scm.outputs.GetGeneralSettingListResult;
 import com.pulumi.scm.outputs.GetGeneralSettingResult;
+import com.pulumi.scm.outputs.GetGlobalprotectMatchListListResult;
+import com.pulumi.scm.outputs.GetGlobalprotectMatchListResult;
 import com.pulumi.scm.outputs.GetHipObjectListResult;
 import com.pulumi.scm.outputs.GetHipObjectResult;
 import com.pulumi.scm.outputs.GetHipProfileListResult;
 import com.pulumi.scm.outputs.GetHipProfileResult;
+import com.pulumi.scm.outputs.GetHipmatchMatchListListResult;
+import com.pulumi.scm.outputs.GetHipmatchMatchListResult;
 import com.pulumi.scm.outputs.GetHttpHeaderProfileListResult;
 import com.pulumi.scm.outputs.GetHttpHeaderProfileResult;
 import com.pulumi.scm.outputs.GetHttpServerProfileListResult;
@@ -550,6 +592,8 @@ import com.pulumi.scm.outputs.GetIpsecCryptoProfileListResult;
 import com.pulumi.scm.outputs.GetIpsecCryptoProfileResult;
 import com.pulumi.scm.outputs.GetIpsecTunnelListResult;
 import com.pulumi.scm.outputs.GetIpsecTunnelResult;
+import com.pulumi.scm.outputs.GetIptagMatchListListResult;
+import com.pulumi.scm.outputs.GetIptagMatchListResult;
 import com.pulumi.scm.outputs.GetKerberosServerProfileListResult;
 import com.pulumi.scm.outputs.GetKerberosServerProfileResult;
 import com.pulumi.scm.outputs.GetLabelListResult;
@@ -644,6 +688,8 @@ import com.pulumi.scm.outputs.GetSnippetListResult;
 import com.pulumi.scm.outputs.GetSnippetResult;
 import com.pulumi.scm.outputs.GetSyslogServerProfileListResult;
 import com.pulumi.scm.outputs.GetSyslogServerProfileResult;
+import com.pulumi.scm.outputs.GetSystemMatchListListResult;
+import com.pulumi.scm.outputs.GetSystemMatchListResult;
 import com.pulumi.scm.outputs.GetTacacsServerProfileListResult;
 import com.pulumi.scm.outputs.GetTacacsServerProfileResult;
 import com.pulumi.scm.outputs.GetTagListResult;
@@ -662,6 +708,8 @@ import com.pulumi.scm.outputs.GetUrlAccessProfileListResult;
 import com.pulumi.scm.outputs.GetUrlAccessProfileResult;
 import com.pulumi.scm.outputs.GetUrlCategoryListResult;
 import com.pulumi.scm.outputs.GetUrlCategoryResult;
+import com.pulumi.scm.outputs.GetUseridMatchListListResult;
+import com.pulumi.scm.outputs.GetUseridMatchListResult;
 import com.pulumi.scm.outputs.GetVariableListResult;
 import com.pulumi.scm.outputs.GetVariableResult;
 import com.pulumi.scm.outputs.GetVlanInterfaceListResult;
@@ -9812,6 +9860,279 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getCertificateProfileList:getCertificateProfileList", TypeShape.of(GetCertificateProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * ConfigMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetConfigMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the config match list by its ID.
+     *         final var configMatchListDs = ScmFunctions.getConfigMatchList(GetConfigMatchListArgs.builder()
+     *             .id("e8592b6e-b135-4792-b722-fc583a8f7b8e")
+     *             .build());
+     * 
+     *         ctx.export("configMatchListDataSourceResults", configMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetConfigMatchListResult> getConfigMatchList(GetConfigMatchListArgs args) {
+        return getConfigMatchList(args, InvokeOptions.Empty);
+    }
+    /**
+     * ConfigMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetConfigMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the config match list by its ID.
+     *         final var configMatchListDs = ScmFunctions.getConfigMatchList(GetConfigMatchListArgs.builder()
+     *             .id("e8592b6e-b135-4792-b722-fc583a8f7b8e")
+     *             .build());
+     * 
+     *         ctx.export("configMatchListDataSourceResults", configMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetConfigMatchListResult> getConfigMatchListPlain(GetConfigMatchListPlainArgs args) {
+        return getConfigMatchListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ConfigMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetConfigMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the config match list by its ID.
+     *         final var configMatchListDs = ScmFunctions.getConfigMatchList(GetConfigMatchListArgs.builder()
+     *             .id("e8592b6e-b135-4792-b722-fc583a8f7b8e")
+     *             .build());
+     * 
+     *         ctx.export("configMatchListDataSourceResults", configMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetConfigMatchListResult> getConfigMatchList(GetConfigMatchListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getConfigMatchList:getConfigMatchList", TypeShape.of(GetConfigMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ConfigMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetConfigMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the config match list by its ID.
+     *         final var configMatchListDs = ScmFunctions.getConfigMatchList(GetConfigMatchListArgs.builder()
+     *             .id("e8592b6e-b135-4792-b722-fc583a8f7b8e")
+     *             .build());
+     * 
+     *         ctx.export("configMatchListDataSourceResults", configMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetConfigMatchListResult> getConfigMatchList(GetConfigMatchListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getConfigMatchList:getConfigMatchList", TypeShape.of(GetConfigMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ConfigMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetConfigMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the config match list by its ID.
+     *         final var configMatchListDs = ScmFunctions.getConfigMatchList(GetConfigMatchListArgs.builder()
+     *             .id("e8592b6e-b135-4792-b722-fc583a8f7b8e")
+     *             .build());
+     * 
+     *         ctx.export("configMatchListDataSourceResults", configMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetConfigMatchListResult> getConfigMatchListPlain(GetConfigMatchListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getConfigMatchList:getConfigMatchList", TypeShape.of(GetConfigMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetConfigMatchListListResult> getConfigMatchListList() {
+        return getConfigMatchListList(GetConfigMatchListListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetConfigMatchListListResult> getConfigMatchListListPlain() {
+        return getConfigMatchListListPlain(GetConfigMatchListListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetConfigMatchListListResult> getConfigMatchListList(GetConfigMatchListListArgs args) {
+        return getConfigMatchListList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetConfigMatchListListResult> getConfigMatchListListPlain(GetConfigMatchListListPlainArgs args) {
+        return getConfigMatchListListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetConfigMatchListListResult> getConfigMatchListList(GetConfigMatchListListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getConfigMatchListList:getConfigMatchListList", TypeShape.of(GetConfigMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetConfigMatchListListResult> getConfigMatchListList(GetConfigMatchListListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getConfigMatchListList:getConfigMatchListList", TypeShape.of(GetConfigMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetConfigMatchListListResult> getConfigMatchListListPlain(GetConfigMatchListListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getConfigMatchListList:getConfigMatchListList", TypeShape.of(GetConfigMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * ContentIdSetting data source
      * 
      * ## Example Usage
@@ -10323,6 +10644,1056 @@ public final class ScmFunctions {
      */
     public static CompletableFuture<GetContentIdSettingListResult> getContentIdSettingListPlain(GetContentIdSettingListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getContentIdSettingList:getContentIdSettingList", TypeShape.of(GetContentIdSettingListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * DataFilteringProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Replace the ID with the UUID of the SCM Data filtering profile you want to find.
+     *         final var scmDataFilteringProfileGet = ScmFunctions.getDataFilteringProfile(GetDataFilteringProfileArgs.builder()
+     *             .id("d50c57e4-3a3e-419e-bd41-33fdd1c56a32")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileDetails", scmDataFilteringProfileGet.rules());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataFilteringProfileResult> getDataFilteringProfile(GetDataFilteringProfileArgs args) {
+        return getDataFilteringProfile(args, InvokeOptions.Empty);
+    }
+    /**
+     * DataFilteringProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Replace the ID with the UUID of the SCM Data filtering profile you want to find.
+     *         final var scmDataFilteringProfileGet = ScmFunctions.getDataFilteringProfile(GetDataFilteringProfileArgs.builder()
+     *             .id("d50c57e4-3a3e-419e-bd41-33fdd1c56a32")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileDetails", scmDataFilteringProfileGet.rules());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDataFilteringProfileResult> getDataFilteringProfilePlain(GetDataFilteringProfilePlainArgs args) {
+        return getDataFilteringProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * DataFilteringProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Replace the ID with the UUID of the SCM Data filtering profile you want to find.
+     *         final var scmDataFilteringProfileGet = ScmFunctions.getDataFilteringProfile(GetDataFilteringProfileArgs.builder()
+     *             .id("d50c57e4-3a3e-419e-bd41-33fdd1c56a32")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileDetails", scmDataFilteringProfileGet.rules());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataFilteringProfileResult> getDataFilteringProfile(GetDataFilteringProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDataFilteringProfile:getDataFilteringProfile", TypeShape.of(GetDataFilteringProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * DataFilteringProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Replace the ID with the UUID of the SCM Data filtering profile you want to find.
+     *         final var scmDataFilteringProfileGet = ScmFunctions.getDataFilteringProfile(GetDataFilteringProfileArgs.builder()
+     *             .id("d50c57e4-3a3e-419e-bd41-33fdd1c56a32")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileDetails", scmDataFilteringProfileGet.rules());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataFilteringProfileResult> getDataFilteringProfile(GetDataFilteringProfileArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDataFilteringProfile:getDataFilteringProfile", TypeShape.of(GetDataFilteringProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * DataFilteringProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Replace the ID with the UUID of the SCM Data filtering profile you want to find.
+     *         final var scmDataFilteringProfileGet = ScmFunctions.getDataFilteringProfile(GetDataFilteringProfileArgs.builder()
+     *             .id("d50c57e4-3a3e-419e-bd41-33fdd1c56a32")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileDetails", scmDataFilteringProfileGet.rules());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDataFilteringProfileResult> getDataFilteringProfilePlain(GetDataFilteringProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getDataFilteringProfile:getDataFilteringProfile", TypeShape.of(GetDataFilteringProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data Filtering Porofiles.
+     *         //
+     *         // Fetch a list of all SCM Data Filtering Porofiles in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataFilteringProfileList(GetDataFilteringProfileListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataFilteringProfileListResult> getDataFilteringProfileList() {
+        return getDataFilteringProfileList(GetDataFilteringProfileListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data Filtering Porofiles.
+     *         //
+     *         // Fetch a list of all SCM Data Filtering Porofiles in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataFilteringProfileList(GetDataFilteringProfileListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDataFilteringProfileListResult> getDataFilteringProfileListPlain() {
+        return getDataFilteringProfileListPlain(GetDataFilteringProfileListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data Filtering Porofiles.
+     *         //
+     *         // Fetch a list of all SCM Data Filtering Porofiles in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataFilteringProfileList(GetDataFilteringProfileListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataFilteringProfileListResult> getDataFilteringProfileList(GetDataFilteringProfileListArgs args) {
+        return getDataFilteringProfileList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data Filtering Porofiles.
+     *         //
+     *         // Fetch a list of all SCM Data Filtering Porofiles in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataFilteringProfileList(GetDataFilteringProfileListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDataFilteringProfileListResult> getDataFilteringProfileListPlain(GetDataFilteringProfileListPlainArgs args) {
+        return getDataFilteringProfileListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data Filtering Porofiles.
+     *         //
+     *         // Fetch a list of all SCM Data Filtering Porofiles in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataFilteringProfileList(GetDataFilteringProfileListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataFilteringProfileListResult> getDataFilteringProfileList(GetDataFilteringProfileListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDataFilteringProfileList:getDataFilteringProfileList", TypeShape.of(GetDataFilteringProfileListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data Filtering Porofiles.
+     *         //
+     *         // Fetch a list of all SCM Data Filtering Porofiles in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataFilteringProfileList(GetDataFilteringProfileListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataFilteringProfileListResult> getDataFilteringProfileList(GetDataFilteringProfileListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDataFilteringProfileList:getDataFilteringProfileList", TypeShape.of(GetDataFilteringProfileListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataFilteringProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data Filtering Porofiles.
+     *         //
+     *         // Fetch a list of all SCM Data Filtering Porofiles in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataFilteringProfileList(GetDataFilteringProfileListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataFilteringProfileListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDataFilteringProfileListResult> getDataFilteringProfileListPlain(GetDataFilteringProfileListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getDataFilteringProfileList:getDataFilteringProfileList", TypeShape.of(GetDataFilteringProfileListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * DataObject data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Replace the ID with the UUID of the SCM Data Object you want to find.
+     *         final var scmDataObjectGet = ScmFunctions.getDataObject(GetDataObjectArgs.builder()
+     *             .id("b1398675-254e-4eff-8050-007ef2f9c0a1")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectDetails", scmDataObjectGet.patternType());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataObjectResult> getDataObject(GetDataObjectArgs args) {
+        return getDataObject(args, InvokeOptions.Empty);
+    }
+    /**
+     * DataObject data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Replace the ID with the UUID of the SCM Data Object you want to find.
+     *         final var scmDataObjectGet = ScmFunctions.getDataObject(GetDataObjectArgs.builder()
+     *             .id("b1398675-254e-4eff-8050-007ef2f9c0a1")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectDetails", scmDataObjectGet.patternType());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDataObjectResult> getDataObjectPlain(GetDataObjectPlainArgs args) {
+        return getDataObjectPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * DataObject data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Replace the ID with the UUID of the SCM Data Object you want to find.
+     *         final var scmDataObjectGet = ScmFunctions.getDataObject(GetDataObjectArgs.builder()
+     *             .id("b1398675-254e-4eff-8050-007ef2f9c0a1")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectDetails", scmDataObjectGet.patternType());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataObjectResult> getDataObject(GetDataObjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDataObject:getDataObject", TypeShape.of(GetDataObjectResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * DataObject data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Replace the ID with the UUID of the SCM Data Object you want to find.
+     *         final var scmDataObjectGet = ScmFunctions.getDataObject(GetDataObjectArgs.builder()
+     *             .id("b1398675-254e-4eff-8050-007ef2f9c0a1")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectDetails", scmDataObjectGet.patternType());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataObjectResult> getDataObject(GetDataObjectArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDataObject:getDataObject", TypeShape.of(GetDataObjectResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * DataObject data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Replace the ID with the UUID of the SCM Data Object you want to find.
+     *         final var scmDataObjectGet = ScmFunctions.getDataObject(GetDataObjectArgs.builder()
+     *             .id("b1398675-254e-4eff-8050-007ef2f9c0a1")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectDetails", scmDataObjectGet.patternType());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDataObjectResult> getDataObjectPlain(GetDataObjectPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getDataObject:getDataObject", TypeShape.of(GetDataObjectResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data objects.
+     *         //
+     *         // Fetch a list of all SCM Data Objects in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataObjectList(GetDataObjectListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataObjectListResult> getDataObjectList() {
+        return getDataObjectList(GetDataObjectListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data objects.
+     *         //
+     *         // Fetch a list of all SCM Data Objects in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataObjectList(GetDataObjectListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDataObjectListResult> getDataObjectListPlain() {
+        return getDataObjectListPlain(GetDataObjectListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data objects.
+     *         //
+     *         // Fetch a list of all SCM Data Objects in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataObjectList(GetDataObjectListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataObjectListResult> getDataObjectList(GetDataObjectListArgs args) {
+        return getDataObjectList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data objects.
+     *         //
+     *         // Fetch a list of all SCM Data Objects in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataObjectList(GetDataObjectListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDataObjectListResult> getDataObjectListPlain(GetDataObjectListPlainArgs args) {
+        return getDataObjectListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data objects.
+     *         //
+     *         // Fetch a list of all SCM Data Objects in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataObjectList(GetDataObjectListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataObjectListResult> getDataObjectList(GetDataObjectListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDataObjectList:getDataObjectList", TypeShape.of(GetDataObjectListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data objects.
+     *         //
+     *         // Fetch a list of all SCM Data Objects in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataObjectList(GetDataObjectListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDataObjectListResult> getDataObjectList(GetDataObjectListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDataObjectList:getDataObjectList", TypeShape.of(GetDataObjectListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDataObjectListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Data objects.
+     *         //
+     *         // Fetch a list of all SCM Data Objects in the "ngfw-shared" folder.
+     *         final var allNgfwShared = ScmFunctions.getDataObjectList(GetDataObjectListArgs.builder()
+     *             .folder("ngfw-shared")
+     *             .build());
+     * 
+     *         ctx.export("scmDataObjectListNgfwShared", allNgfwShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDataObjectListResult> getDataObjectListPlain(GetDataObjectListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getDataObjectList:getDataObjectList", TypeShape.of(GetDataObjectListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * DecryptionExclusion data source
@@ -15850,6 +17221,279 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getGeneralSettingList:getGeneralSettingList", TypeShape.of(GetGeneralSettingListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * GlobalprotectMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGlobalprotectMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the globalprotect match list by its ID.
+     *         final var globalprotectMatchListDs = ScmFunctions.getGlobalprotectMatchList(GetGlobalprotectMatchListArgs.builder()
+     *             .id("89c5fc2d-dba8-4560-b853-4eb1ecd36025")
+     *             .build());
+     * 
+     *         ctx.export("globalprotectMatchListDataSourceResults", globalprotectMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetGlobalprotectMatchListResult> getGlobalprotectMatchList(GetGlobalprotectMatchListArgs args) {
+        return getGlobalprotectMatchList(args, InvokeOptions.Empty);
+    }
+    /**
+     * GlobalprotectMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGlobalprotectMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the globalprotect match list by its ID.
+     *         final var globalprotectMatchListDs = ScmFunctions.getGlobalprotectMatchList(GetGlobalprotectMatchListArgs.builder()
+     *             .id("89c5fc2d-dba8-4560-b853-4eb1ecd36025")
+     *             .build());
+     * 
+     *         ctx.export("globalprotectMatchListDataSourceResults", globalprotectMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetGlobalprotectMatchListResult> getGlobalprotectMatchListPlain(GetGlobalprotectMatchListPlainArgs args) {
+        return getGlobalprotectMatchListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * GlobalprotectMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGlobalprotectMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the globalprotect match list by its ID.
+     *         final var globalprotectMatchListDs = ScmFunctions.getGlobalprotectMatchList(GetGlobalprotectMatchListArgs.builder()
+     *             .id("89c5fc2d-dba8-4560-b853-4eb1ecd36025")
+     *             .build());
+     * 
+     *         ctx.export("globalprotectMatchListDataSourceResults", globalprotectMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetGlobalprotectMatchListResult> getGlobalprotectMatchList(GetGlobalprotectMatchListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getGlobalprotectMatchList:getGlobalprotectMatchList", TypeShape.of(GetGlobalprotectMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * GlobalprotectMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGlobalprotectMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the globalprotect match list by its ID.
+     *         final var globalprotectMatchListDs = ScmFunctions.getGlobalprotectMatchList(GetGlobalprotectMatchListArgs.builder()
+     *             .id("89c5fc2d-dba8-4560-b853-4eb1ecd36025")
+     *             .build());
+     * 
+     *         ctx.export("globalprotectMatchListDataSourceResults", globalprotectMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetGlobalprotectMatchListResult> getGlobalprotectMatchList(GetGlobalprotectMatchListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getGlobalprotectMatchList:getGlobalprotectMatchList", TypeShape.of(GetGlobalprotectMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * GlobalprotectMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetGlobalprotectMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the globalprotect match list by its ID.
+     *         final var globalprotectMatchListDs = ScmFunctions.getGlobalprotectMatchList(GetGlobalprotectMatchListArgs.builder()
+     *             .id("89c5fc2d-dba8-4560-b853-4eb1ecd36025")
+     *             .build());
+     * 
+     *         ctx.export("globalprotectMatchListDataSourceResults", globalprotectMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetGlobalprotectMatchListResult> getGlobalprotectMatchListPlain(GetGlobalprotectMatchListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getGlobalprotectMatchList:getGlobalprotectMatchList", TypeShape.of(GetGlobalprotectMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetGlobalprotectMatchListListResult> getGlobalprotectMatchListList() {
+        return getGlobalprotectMatchListList(GetGlobalprotectMatchListListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetGlobalprotectMatchListListResult> getGlobalprotectMatchListListPlain() {
+        return getGlobalprotectMatchListListPlain(GetGlobalprotectMatchListListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetGlobalprotectMatchListListResult> getGlobalprotectMatchListList(GetGlobalprotectMatchListListArgs args) {
+        return getGlobalprotectMatchListList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetGlobalprotectMatchListListResult> getGlobalprotectMatchListListPlain(GetGlobalprotectMatchListListPlainArgs args) {
+        return getGlobalprotectMatchListListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetGlobalprotectMatchListListResult> getGlobalprotectMatchListList(GetGlobalprotectMatchListListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getGlobalprotectMatchListList:getGlobalprotectMatchListList", TypeShape.of(GetGlobalprotectMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetGlobalprotectMatchListListResult> getGlobalprotectMatchListList(GetGlobalprotectMatchListListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getGlobalprotectMatchListList:getGlobalprotectMatchListList", TypeShape.of(GetGlobalprotectMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetGlobalprotectMatchListListResult> getGlobalprotectMatchListListPlain(GetGlobalprotectMatchListListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getGlobalprotectMatchListList:getGlobalprotectMatchListList", TypeShape.of(GetGlobalprotectMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * HipObject data source
      * 
      * ## Example Usage
@@ -16968,6 +18612,279 @@ public final class ScmFunctions {
      */
     public static CompletableFuture<GetHipProfileListResult> getHipProfileListPlain(GetHipProfileListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getHipProfileList:getHipProfileList", TypeShape.of(GetHipProfileListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * HipmatchMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHipmatchMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the hipmatch match list by its ID.
+     *         final var hipmatchMatchListDs = ScmFunctions.getHipmatchMatchList(GetHipmatchMatchListArgs.builder()
+     *             .id("ee509dcd-207e-43ca-bd35-d2f459aa7fb0")
+     *             .build());
+     * 
+     *         ctx.export("hipmatchMatchListDataSourceResults", hipmatchMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetHipmatchMatchListResult> getHipmatchMatchList(GetHipmatchMatchListArgs args) {
+        return getHipmatchMatchList(args, InvokeOptions.Empty);
+    }
+    /**
+     * HipmatchMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHipmatchMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the hipmatch match list by its ID.
+     *         final var hipmatchMatchListDs = ScmFunctions.getHipmatchMatchList(GetHipmatchMatchListArgs.builder()
+     *             .id("ee509dcd-207e-43ca-bd35-d2f459aa7fb0")
+     *             .build());
+     * 
+     *         ctx.export("hipmatchMatchListDataSourceResults", hipmatchMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetHipmatchMatchListResult> getHipmatchMatchListPlain(GetHipmatchMatchListPlainArgs args) {
+        return getHipmatchMatchListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * HipmatchMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHipmatchMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the hipmatch match list by its ID.
+     *         final var hipmatchMatchListDs = ScmFunctions.getHipmatchMatchList(GetHipmatchMatchListArgs.builder()
+     *             .id("ee509dcd-207e-43ca-bd35-d2f459aa7fb0")
+     *             .build());
+     * 
+     *         ctx.export("hipmatchMatchListDataSourceResults", hipmatchMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetHipmatchMatchListResult> getHipmatchMatchList(GetHipmatchMatchListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getHipmatchMatchList:getHipmatchMatchList", TypeShape.of(GetHipmatchMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * HipmatchMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHipmatchMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the hipmatch match list by its ID.
+     *         final var hipmatchMatchListDs = ScmFunctions.getHipmatchMatchList(GetHipmatchMatchListArgs.builder()
+     *             .id("ee509dcd-207e-43ca-bd35-d2f459aa7fb0")
+     *             .build());
+     * 
+     *         ctx.export("hipmatchMatchListDataSourceResults", hipmatchMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetHipmatchMatchListResult> getHipmatchMatchList(GetHipmatchMatchListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getHipmatchMatchList:getHipmatchMatchList", TypeShape.of(GetHipmatchMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * HipmatchMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetHipmatchMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the hipmatch match list by its ID.
+     *         final var hipmatchMatchListDs = ScmFunctions.getHipmatchMatchList(GetHipmatchMatchListArgs.builder()
+     *             .id("ee509dcd-207e-43ca-bd35-d2f459aa7fb0")
+     *             .build());
+     * 
+     *         ctx.export("hipmatchMatchListDataSourceResults", hipmatchMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetHipmatchMatchListResult> getHipmatchMatchListPlain(GetHipmatchMatchListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getHipmatchMatchList:getHipmatchMatchList", TypeShape.of(GetHipmatchMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetHipmatchMatchListListResult> getHipmatchMatchListList() {
+        return getHipmatchMatchListList(GetHipmatchMatchListListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetHipmatchMatchListListResult> getHipmatchMatchListListPlain() {
+        return getHipmatchMatchListListPlain(GetHipmatchMatchListListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetHipmatchMatchListListResult> getHipmatchMatchListList(GetHipmatchMatchListListArgs args) {
+        return getHipmatchMatchListList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetHipmatchMatchListListResult> getHipmatchMatchListListPlain(GetHipmatchMatchListListPlainArgs args) {
+        return getHipmatchMatchListListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetHipmatchMatchListListResult> getHipmatchMatchListList(GetHipmatchMatchListListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getHipmatchMatchListList:getHipmatchMatchListList", TypeShape.of(GetHipmatchMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetHipmatchMatchListListResult> getHipmatchMatchListList(GetHipmatchMatchListListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getHipmatchMatchListList:getHipmatchMatchListList", TypeShape.of(GetHipmatchMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetHipmatchMatchListListResult> getHipmatchMatchListListPlain(GetHipmatchMatchListListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getHipmatchMatchListList:getHipmatchMatchListList", TypeShape.of(GetHipmatchMatchListListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * HttpHeaderProfile data source
@@ -20237,6 +22154,279 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getIpsecTunnelList:getIpsecTunnelList", TypeShape.of(GetIpsecTunnelListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * IptagMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetIptagMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the iptag match list by its ID.
+     *         final var iptagMatchListDs = ScmFunctions.getIptagMatchList(GetIptagMatchListArgs.builder()
+     *             .id("108dfdb1-0723-497d-9352-50642b231b4e")
+     *             .build());
+     * 
+     *         ctx.export("iptagMatchListDataSourceResults", iptagMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetIptagMatchListResult> getIptagMatchList(GetIptagMatchListArgs args) {
+        return getIptagMatchList(args, InvokeOptions.Empty);
+    }
+    /**
+     * IptagMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetIptagMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the iptag match list by its ID.
+     *         final var iptagMatchListDs = ScmFunctions.getIptagMatchList(GetIptagMatchListArgs.builder()
+     *             .id("108dfdb1-0723-497d-9352-50642b231b4e")
+     *             .build());
+     * 
+     *         ctx.export("iptagMatchListDataSourceResults", iptagMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetIptagMatchListResult> getIptagMatchListPlain(GetIptagMatchListPlainArgs args) {
+        return getIptagMatchListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * IptagMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetIptagMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the iptag match list by its ID.
+     *         final var iptagMatchListDs = ScmFunctions.getIptagMatchList(GetIptagMatchListArgs.builder()
+     *             .id("108dfdb1-0723-497d-9352-50642b231b4e")
+     *             .build());
+     * 
+     *         ctx.export("iptagMatchListDataSourceResults", iptagMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetIptagMatchListResult> getIptagMatchList(GetIptagMatchListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getIptagMatchList:getIptagMatchList", TypeShape.of(GetIptagMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * IptagMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetIptagMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the iptag match list by its ID.
+     *         final var iptagMatchListDs = ScmFunctions.getIptagMatchList(GetIptagMatchListArgs.builder()
+     *             .id("108dfdb1-0723-497d-9352-50642b231b4e")
+     *             .build());
+     * 
+     *         ctx.export("iptagMatchListDataSourceResults", iptagMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetIptagMatchListResult> getIptagMatchList(GetIptagMatchListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getIptagMatchList:getIptagMatchList", TypeShape.of(GetIptagMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * IptagMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetIptagMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the iptag match list by its ID.
+     *         final var iptagMatchListDs = ScmFunctions.getIptagMatchList(GetIptagMatchListArgs.builder()
+     *             .id("108dfdb1-0723-497d-9352-50642b231b4e")
+     *             .build());
+     * 
+     *         ctx.export("iptagMatchListDataSourceResults", iptagMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetIptagMatchListResult> getIptagMatchListPlain(GetIptagMatchListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getIptagMatchList:getIptagMatchList", TypeShape.of(GetIptagMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetIptagMatchListListResult> getIptagMatchListList() {
+        return getIptagMatchListList(GetIptagMatchListListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetIptagMatchListListResult> getIptagMatchListListPlain() {
+        return getIptagMatchListListPlain(GetIptagMatchListListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetIptagMatchListListResult> getIptagMatchListList(GetIptagMatchListListArgs args) {
+        return getIptagMatchListList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetIptagMatchListListResult> getIptagMatchListListPlain(GetIptagMatchListListPlainArgs args) {
+        return getIptagMatchListListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetIptagMatchListListResult> getIptagMatchListList(GetIptagMatchListListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getIptagMatchListList:getIptagMatchListList", TypeShape.of(GetIptagMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetIptagMatchListListResult> getIptagMatchListList(GetIptagMatchListListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getIptagMatchListList:getIptagMatchListList", TypeShape.of(GetIptagMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetIptagMatchListListResult> getIptagMatchListListPlain(GetIptagMatchListListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getIptagMatchListList:getIptagMatchListList", TypeShape.of(GetIptagMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * KerberosServerProfile data source
      * 
      * ## Example Usage
@@ -21504,12 +23694,96 @@ public final class ScmFunctions {
     /**
      * LdapServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLdapServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the LDAP Server Profile you want to find.
+     *         final var ldapServerProf = ScmFunctions.getLdapServerProfile(GetLdapServerProfileArgs.builder()
+     *             .id("a5006a3e-52b3-435e-9e3b-39b50dc72401")
+     *             .build());
+     * 
+     *         ctx.export("scmLdapServerProfileDetails", Map.ofEntries(
+     *             Map.entry("id", ldapServerProf.id()),
+     *             Map.entry("folder", ldapServerProf.folder()),
+     *             Map.entry("name", ldapServerProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLdapServerProfileResult> getLdapServerProfile(GetLdapServerProfileArgs args) {
         return getLdapServerProfile(args, InvokeOptions.Empty);
     }
     /**
      * LdapServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLdapServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the LDAP Server Profile you want to find.
+     *         final var ldapServerProf = ScmFunctions.getLdapServerProfile(GetLdapServerProfileArgs.builder()
+     *             .id("a5006a3e-52b3-435e-9e3b-39b50dc72401")
+     *             .build());
+     * 
+     *         ctx.export("scmLdapServerProfileDetails", Map.ofEntries(
+     *             Map.entry("id", ldapServerProf.id()),
+     *             Map.entry("folder", ldapServerProf.folder()),
+     *             Map.entry("name", ldapServerProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetLdapServerProfileResult> getLdapServerProfilePlain(GetLdapServerProfilePlainArgs args) {
@@ -21518,12 +23792,96 @@ public final class ScmFunctions {
     /**
      * LdapServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLdapServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the LDAP Server Profile you want to find.
+     *         final var ldapServerProf = ScmFunctions.getLdapServerProfile(GetLdapServerProfileArgs.builder()
+     *             .id("a5006a3e-52b3-435e-9e3b-39b50dc72401")
+     *             .build());
+     * 
+     *         ctx.export("scmLdapServerProfileDetails", Map.ofEntries(
+     *             Map.entry("id", ldapServerProf.id()),
+     *             Map.entry("folder", ldapServerProf.folder()),
+     *             Map.entry("name", ldapServerProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLdapServerProfileResult> getLdapServerProfile(GetLdapServerProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLdapServerProfile:getLdapServerProfile", TypeShape.of(GetLdapServerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * LdapServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLdapServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the LDAP Server Profile you want to find.
+     *         final var ldapServerProf = ScmFunctions.getLdapServerProfile(GetLdapServerProfileArgs.builder()
+     *             .id("a5006a3e-52b3-435e-9e3b-39b50dc72401")
+     *             .build());
+     * 
+     *         ctx.export("scmLdapServerProfileDetails", Map.ofEntries(
+     *             Map.entry("id", ldapServerProf.id()),
+     *             Map.entry("folder", ldapServerProf.folder()),
+     *             Map.entry("name", ldapServerProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLdapServerProfileResult> getLdapServerProfile(GetLdapServerProfileArgs args, InvokeOutputOptions options) {
@@ -21532,12 +23890,56 @@ public final class ScmFunctions {
     /**
      * LdapServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLdapServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the LDAP Server Profile you want to find.
+     *         final var ldapServerProf = ScmFunctions.getLdapServerProfile(GetLdapServerProfileArgs.builder()
+     *             .id("a5006a3e-52b3-435e-9e3b-39b50dc72401")
+     *             .build());
+     * 
+     *         ctx.export("scmLdapServerProfileDetails", Map.ofEntries(
+     *             Map.entry("id", ldapServerProf.id()),
+     *             Map.entry("folder", ldapServerProf.folder()),
+     *             Map.entry("name", ldapServerProf.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetLdapServerProfileResult> getLdapServerProfilePlain(GetLdapServerProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getLdapServerProfile:getLdapServerProfile", TypeShape.of(GetLdapServerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLdapServerProfileListResult> getLdapServerProfileList() {
@@ -21546,12 +23948,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetLdapServerProfileListResult> getLdapServerProfileListPlain() {
         return getLdapServerProfileListPlain(GetLdapServerProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLdapServerProfileListResult> getLdapServerProfileList(GetLdapServerProfileListArgs args) {
@@ -21560,12 +23966,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetLdapServerProfileListResult> getLdapServerProfileListPlain(GetLdapServerProfileListPlainArgs args) {
         return getLdapServerProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLdapServerProfileListResult> getLdapServerProfileList(GetLdapServerProfileListArgs args, InvokeOptions options) {
@@ -21574,12 +23984,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetLdapServerProfileListResult> getLdapServerProfileList(GetLdapServerProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLdapServerProfileList:getLdapServerProfileList", TypeShape.of(GetLdapServerProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetLdapServerProfileListResult> getLdapServerProfileListPlain(GetLdapServerProfileListPlainArgs args, InvokeOptions options) {
@@ -34663,6 +37077,279 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getSyslogServerProfileList:getSyslogServerProfileList", TypeShape.of(GetSyslogServerProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * SystemMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSystemMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the system match list by its ID.
+     *         final var systemMatchListDs = ScmFunctions.getSystemMatchList(GetSystemMatchListArgs.builder()
+     *             .id("dc61ea2f-e7aa-4e86-a742-aa8b2aaf4bf2")
+     *             .build());
+     * 
+     *         ctx.export("systemMatchListDataSourceResults", systemMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSystemMatchListResult> getSystemMatchList(GetSystemMatchListArgs args) {
+        return getSystemMatchList(args, InvokeOptions.Empty);
+    }
+    /**
+     * SystemMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSystemMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the system match list by its ID.
+     *         final var systemMatchListDs = ScmFunctions.getSystemMatchList(GetSystemMatchListArgs.builder()
+     *             .id("dc61ea2f-e7aa-4e86-a742-aa8b2aaf4bf2")
+     *             .build());
+     * 
+     *         ctx.export("systemMatchListDataSourceResults", systemMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSystemMatchListResult> getSystemMatchListPlain(GetSystemMatchListPlainArgs args) {
+        return getSystemMatchListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * SystemMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSystemMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the system match list by its ID.
+     *         final var systemMatchListDs = ScmFunctions.getSystemMatchList(GetSystemMatchListArgs.builder()
+     *             .id("dc61ea2f-e7aa-4e86-a742-aa8b2aaf4bf2")
+     *             .build());
+     * 
+     *         ctx.export("systemMatchListDataSourceResults", systemMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSystemMatchListResult> getSystemMatchList(GetSystemMatchListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSystemMatchList:getSystemMatchList", TypeShape.of(GetSystemMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * SystemMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSystemMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the system match list by its ID.
+     *         final var systemMatchListDs = ScmFunctions.getSystemMatchList(GetSystemMatchListArgs.builder()
+     *             .id("dc61ea2f-e7aa-4e86-a742-aa8b2aaf4bf2")
+     *             .build());
+     * 
+     *         ctx.export("systemMatchListDataSourceResults", systemMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSystemMatchListResult> getSystemMatchList(GetSystemMatchListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSystemMatchList:getSystemMatchList", TypeShape.of(GetSystemMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * SystemMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSystemMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the system match list by its ID.
+     *         final var systemMatchListDs = ScmFunctions.getSystemMatchList(GetSystemMatchListArgs.builder()
+     *             .id("dc61ea2f-e7aa-4e86-a742-aa8b2aaf4bf2")
+     *             .build());
+     * 
+     *         ctx.export("systemMatchListDataSourceResults", systemMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSystemMatchListResult> getSystemMatchListPlain(GetSystemMatchListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getSystemMatchList:getSystemMatchList", TypeShape.of(GetSystemMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSystemMatchListListResult> getSystemMatchListList() {
+        return getSystemMatchListList(GetSystemMatchListListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSystemMatchListListResult> getSystemMatchListListPlain() {
+        return getSystemMatchListListPlain(GetSystemMatchListListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSystemMatchListListResult> getSystemMatchListList(GetSystemMatchListListArgs args) {
+        return getSystemMatchListList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSystemMatchListListResult> getSystemMatchListListPlain(GetSystemMatchListListPlainArgs args) {
+        return getSystemMatchListListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSystemMatchListListResult> getSystemMatchListList(GetSystemMatchListListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSystemMatchListList:getSystemMatchListList", TypeShape.of(GetSystemMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSystemMatchListListResult> getSystemMatchListList(GetSystemMatchListListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getSystemMatchListList:getSystemMatchListList", TypeShape.of(GetSystemMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSystemMatchListListResult> getSystemMatchListListPlain(GetSystemMatchListListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getSystemMatchListList:getSystemMatchListList", TypeShape.of(GetSystemMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * TacacsServerProfile data source
      * 
      * ## Example Usage
@@ -38614,6 +41301,279 @@ public final class ScmFunctions {
      */
     public static CompletableFuture<GetUrlCategoryListResult> getUrlCategoryListPlain(GetUrlCategoryListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getUrlCategoryList:getUrlCategoryList", TypeShape.of(GetUrlCategoryListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * UseridMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUseridMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the userid match list by its ID.
+     *         final var useridMatchListDs = ScmFunctions.getUseridMatchList(GetUseridMatchListArgs.builder()
+     *             .id("dcf09e7b-3e46-45d8-953d-30d47a49137f")
+     *             .build());
+     * 
+     *         ctx.export("useridMatchListDataSourceResults", useridMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetUseridMatchListResult> getUseridMatchList(GetUseridMatchListArgs args) {
+        return getUseridMatchList(args, InvokeOptions.Empty);
+    }
+    /**
+     * UseridMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUseridMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the userid match list by its ID.
+     *         final var useridMatchListDs = ScmFunctions.getUseridMatchList(GetUseridMatchListArgs.builder()
+     *             .id("dcf09e7b-3e46-45d8-953d-30d47a49137f")
+     *             .build());
+     * 
+     *         ctx.export("useridMatchListDataSourceResults", useridMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetUseridMatchListResult> getUseridMatchListPlain(GetUseridMatchListPlainArgs args) {
+        return getUseridMatchListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * UseridMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUseridMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the userid match list by its ID.
+     *         final var useridMatchListDs = ScmFunctions.getUseridMatchList(GetUseridMatchListArgs.builder()
+     *             .id("dcf09e7b-3e46-45d8-953d-30d47a49137f")
+     *             .build());
+     * 
+     *         ctx.export("useridMatchListDataSourceResults", useridMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetUseridMatchListResult> getUseridMatchList(GetUseridMatchListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getUseridMatchList:getUseridMatchList", TypeShape.of(GetUseridMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * UseridMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUseridMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the userid match list by its ID.
+     *         final var useridMatchListDs = ScmFunctions.getUseridMatchList(GetUseridMatchListArgs.builder()
+     *             .id("dcf09e7b-3e46-45d8-953d-30d47a49137f")
+     *             .build());
+     * 
+     *         ctx.export("useridMatchListDataSourceResults", useridMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetUseridMatchListResult> getUseridMatchList(GetUseridMatchListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getUseridMatchList:getUseridMatchList", TypeShape.of(GetUseridMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * UseridMatchList data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetUseridMatchListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the userid match list by its ID.
+     *         final var useridMatchListDs = ScmFunctions.getUseridMatchList(GetUseridMatchListArgs.builder()
+     *             .id("dcf09e7b-3e46-45d8-953d-30d47a49137f")
+     *             .build());
+     * 
+     *         ctx.export("useridMatchListDataSourceResults", useridMatchListDs);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetUseridMatchListResult> getUseridMatchListPlain(GetUseridMatchListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getUseridMatchList:getUseridMatchList", TypeShape.of(GetUseridMatchListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetUseridMatchListListResult> getUseridMatchListList() {
+        return getUseridMatchListList(GetUseridMatchListListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetUseridMatchListListResult> getUseridMatchListListPlain() {
+        return getUseridMatchListListPlain(GetUseridMatchListListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetUseridMatchListListResult> getUseridMatchListList(GetUseridMatchListListArgs args) {
+        return getUseridMatchListList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetUseridMatchListListResult> getUseridMatchListListPlain(GetUseridMatchListListPlainArgs args) {
+        return getUseridMatchListListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetUseridMatchListListResult> getUseridMatchListList(GetUseridMatchListListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getUseridMatchListList:getUseridMatchListList", TypeShape.of(GetUseridMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetUseridMatchListListResult> getUseridMatchListList(GetUseridMatchListListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getUseridMatchListList:getUseridMatchListList", TypeShape.of(GetUseridMatchListListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetUseridMatchListListResult> getUseridMatchListListPlain(GetUseridMatchListListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getUseridMatchListList:getUseridMatchListList", TypeShape.of(GetUseridMatchListListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Variable data source

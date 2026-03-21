@@ -27,7 +27,7 @@ namespace Pulumi.Scm
     ///         Name = "ISE-TACACS11",
     ///         Protocol = "PAP",
     ///         Timeout = 3,
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         UseSingleConnection = true,
     ///         Servers = new[]
     ///         {

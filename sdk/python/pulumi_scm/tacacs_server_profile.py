@@ -366,7 +366,7 @@ class TacacsServerProfile(pulumi.CustomResource):
             name="ISE-TACACS11",
             protocol="PAP",
             timeout=3,
-            folder="All",
+            folder="ngfw-shared",
             use_single_connection=True,
             servers=[
                 {
@@ -447,7 +447,7 @@ class TacacsServerProfile(pulumi.CustomResource):
             name="ISE-TACACS11",
             protocol="PAP",
             timeout=3,
-            folder="All",
+            folder="ngfw-shared",
             use_single_connection=True,
             servers=[
                 {

@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var exampleTag = new Scm.Tag("example_tag", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "pbf-rule-tag-test-1",
     ///         Color = "Red",
     ///     });
@@ -33,7 +33,7 @@ namespace Pulumi.Scm
     ///     var examplePbfRule = new Scm.PbfRule("example_pbf_rule", new()
     ///     {
     ///         Name = "pbf-test-rule-discard",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Description = "PBF rule for forwarding specific traffic.",
     ///         From = new Scm.Inputs.PbfRuleFromArgs
     ///         {
@@ -81,7 +81,7 @@ namespace Pulumi.Scm
     ///     var exampleNoPbfRule = new Scm.PbfRule("example_no_pbf_rule", new()
     ///     {
     ///         Name = "pbf-test-rule-no-pbf",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Description = "PBF rule for forwarding specific traffic",
     ///         From = new Scm.Inputs.PbfRuleFromArgs
     ///         {
@@ -129,7 +129,7 @@ namespace Pulumi.Scm
     ///     var exampleForwardPbfRule = new Scm.PbfRule("example_forward_pbf_rule", new()
     ///     {
     ///         Name = "pbf-test-rule-forward",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Description = "PBF rule for forwarding specific traffic",
     ///         From = new Scm.Inputs.PbfRuleFromArgs
     ///         {

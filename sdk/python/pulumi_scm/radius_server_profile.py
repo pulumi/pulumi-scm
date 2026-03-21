@@ -364,7 +364,7 @@ class RadiusServerProfile(pulumi.CustomResource):
 
         chap_radius_profile = scm.RadiusServerProfile("chap_radius_profile",
             name="CHAP_only_rsp_1",
-            folder="All",
+            folder="ngfw-shared",
             retries=5,
             timeout=60,
             protocol={
@@ -378,7 +378,7 @@ class RadiusServerProfile(pulumi.CustomResource):
             }])
         pap_radius_profile = scm.RadiusServerProfile("pap_radius_profile",
             name="pap_only_rsp_1",
-            folder="All",
+            folder="ngfw-shared",
             retries=5,
             timeout=60,
             protocol={
@@ -447,7 +447,7 @@ class RadiusServerProfile(pulumi.CustomResource):
 
         chap_radius_profile = scm.RadiusServerProfile("chap_radius_profile",
             name="CHAP_only_rsp_1",
-            folder="All",
+            folder="ngfw-shared",
             retries=5,
             timeout=60,
             protocol={
@@ -461,7 +461,7 @@ class RadiusServerProfile(pulumi.CustomResource):
             }])
         pap_radius_profile = scm.RadiusServerProfile("pap_radius_profile",
             name="pap_only_rsp_1",
-            folder="All",
+            folder="ngfw-shared",
             retries=5,
             timeout=60,
             protocol={

@@ -31,6 +31,11 @@ import javax.annotation.Nullable;
  * import com.pulumi.Context;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
+ * import com.pulumi.scm.RadiusServerProfile;
+ * import com.pulumi.scm.RadiusServerProfileArgs;
+ * import com.pulumi.scm.inputs.RadiusServerProfileProtocolArgs;
+ * import com.pulumi.scm.inputs.RadiusServerProfileProtocolChapArgs;
+ * import com.pulumi.scm.inputs.RadiusServerProfileServerArgs;
  * import com.pulumi.scm.AuthenticationProfile;
  * import com.pulumi.scm.AuthenticationProfileArgs;
  * import com.pulumi.scm.inputs.AuthenticationProfileLockoutArgs;
@@ -51,12 +56,29 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
+ *         var chapRadiusProfile = new RadiusServerProfile("chapRadiusProfile", RadiusServerProfileArgs.builder()
+ *             .name("CHAP_only_rsp")
+ *             .folder("ngfw-shared")
+ *             .retries(5)
+ *             .timeout(60)
+ *             .protocol(RadiusServerProfileProtocolArgs.builder()
+ *                 .chap(RadiusServerProfileProtocolChapArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .servers(RadiusServerProfileServerArgs.builder()
+ *                 .name("Chap_Server_Primary")
+ *                 .ipAddress("10.1.1.10")
+ *                 .port(1812)
+ *                 .secret("-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==")
+ *                 .build())
+ *             .build());
+ * 
  *         var globalRadiusAccess = new AuthenticationProfile("globalRadiusAccess", AuthenticationProfileArgs.builder()
- *             .name("test_auth_profile_radius_1")
- *             .folder("All")
+ *             .name("test_auth_profile_radius")
+ *             .folder("ngfw-shared")
  *             .userDomain("default")
  *             .usernameModifier("%USERINPUT%")
- *             .allowLists("all")
+ *             .allowLists("ngfw-shared")
  *             .lockout(AuthenticationProfileLockoutArgs.builder()
  *                 .failedAttempts(1)
  *                 .lockoutTime(3)
@@ -64,7 +86,7 @@ import javax.annotation.Nullable;
  *             .method(AuthenticationProfileMethodArgs.builder()
  *                 .radius(AuthenticationProfileMethodRadiusArgs.builder()
  *                     .checkgroup(true)
- *                     .serverProfile("CHAP_only_rsp_1")
+ *                     .serverProfile(chapRadiusProfile.name())
  *                     .build())
  *                 .build())
  *             .singleSignOn(AuthenticationProfileSingleSignOnArgs.builder()
@@ -73,11 +95,11 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var globalDbAccess = new AuthenticationProfile("globalDbAccess", AuthenticationProfileArgs.builder()
- *             .name("test_auth_profile_db_1")
- *             .folder("All")
+ *             .name("test_auth_global_db")
+ *             .folder("ngfw-shared")
  *             .userDomain("default")
  *             .usernameModifier("%USERINPUT%")
- *             .allowLists("all")
+ *             .allowLists("ngfw-shared")
  *             .lockout(AuthenticationProfileLockoutArgs.builder()
  *                 .failedAttempts(3)
  *                 .lockoutTime(1)

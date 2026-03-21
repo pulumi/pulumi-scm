@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Creates various resources used for subsequent examples
 //			scmNextHop, err := scm.NewVariable(ctx, "scm_next_hop", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("$scm_next_hop"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("ip-netmask"),
@@ -39,7 +39,7 @@ import (
 //				return err
 //			}
 //			scmNextHopFqdn, err := scm.NewVariable(ctx, "scm_next_hop_fqdn", &scm.VariableArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("$scm_next_hop_fqdn"),
 //				Description: pulumi.String("Managed by Pulumi"),
 //				Type:        pulumi.String("fqdn"),

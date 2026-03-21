@@ -30,7 +30,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Creates a ethernet interface used as parent-interface for subsequent examples
 //			scmParentInterface, err := scm.NewEthernetInterface(ctx, "scm_parent_interface", &scm.EthernetInterfaceArgs{
-//				Name:    pulumi.String("$scm_parent_interface"),
+//				Name:    pulumi.String("$scm_tf_parent_interface"),
 //				Comment: pulumi.String("Managed by Pulumi"),
 //				Folder:  pulumi.String("ngfw-shared"),
 //				Layer2:  &scm.EthernetInterfaceLayer2Args{},
@@ -40,11 +40,11 @@ import (
 //			}
 //			// Creates a layer2 sub-interface with vlan tag 100
 //			_, err = scm.NewLayer2Subinterface(ctx, "scm_layer2_subinterface", &scm.Layer2SubinterfaceArgs{
-//				Name:            pulumi.String("$scm_parent_interface.100"),
+//				Name:            pulumi.String("$scm_tf_parent_interface.100"),
 //				Comment:         pulumi.String("Managed by Pulumi"),
 //				Folder:          pulumi.String("ngfw-shared"),
 //				VlanTag:         pulumi.String("100"),
-//				ParentInterface: pulumi.String("$scm_parent_interface"),
+//				ParentInterface: pulumi.String("$scm_tf_parent_interface"),
 //			}, pulumi.DependsOn([]pulumi.Resource{
 //				scmParentInterface,
 //			}))

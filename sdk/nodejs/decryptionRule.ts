@@ -18,14 +18,14 @@ import * as utilities from "./utilities";
  * // --- 1. TAG Resource ---
  * const decryptionPositionTag = new scm.Tag("decryption_position_tag", {
  *     name: "decryption-position-tag",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     color: "Purple",
  * });
  * // --- 2. ANCHOR DECRYPTION RULE (Used for relative positioning) ---
  * const anchorDecryptionRule = new scm.DecryptionRule("anchor_decryption_rule", {
  *     name: "anchor-decryption-rule",
  *     description: "Base rule for testing 'before' and 'after' positioning.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     action: "decrypt",
  *     froms: ["trust"],
@@ -50,7 +50,7 @@ import * as utilities from "./utilities";
  * const ruleTopDecryptionRule = new scm.DecryptionRule("rule_top_decryption_rule", {
  *     name: "top-absolute-decryption-rule",
  *     description: "Placed at the very TOP of the Decryption rulebase.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     action: "no-decrypt",
  *     relativePosition: "top",
@@ -68,7 +68,7 @@ import * as utilities from "./utilities";
  * const ruleBottomDecryptionRule = new scm.DecryptionRule("rule_bottom_decryption_rule", {
  *     name: "bottom-absolute-decryption-rule",
  *     description: "Placed at the very BOTTOM of the Decryption rulebase.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     action: "decrypt",
  *     relativePosition: "bottom",
@@ -87,7 +87,7 @@ import * as utilities from "./utilities";
  * const ruleBeforeAnchorDecryption = new scm.DecryptionRule("rule_before_anchor_decryption", {
  *     name: "before-anchor-decryption-rule",
  *     description: "Positioned immediately BEFORE the anchor-decryption-rule. Updating",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     action: "decrypt",
  *     relativePosition: "before",
@@ -106,7 +106,7 @@ import * as utilities from "./utilities";
  * const ruleAfterAnchorDecryption = new scm.DecryptionRule("rule_after_anchor_decryption", {
  *     name: "after-anchor-decryption-rule_123",
  *     description: "Positioned immediately AFTER the anchor-decryption-rule.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     action: "decrypt",
  *     relativePosition: "after",
@@ -125,7 +125,7 @@ import * as utilities from "./utilities";
  * const decryptionRuleSslInboundInspection = new scm.DecryptionRule("decryption_rule_ssl_inbound_inspection", {
  *     name: "ssl_inbound_inspection_rule",
  *     description: "Decryption Rule with SSL Inbound Set",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     action: "decrypt",
  *     froms: ["trust"],

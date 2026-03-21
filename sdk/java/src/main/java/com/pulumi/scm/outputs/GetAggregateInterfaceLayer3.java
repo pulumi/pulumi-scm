@@ -54,6 +54,11 @@ public final class GetAggregateInterfaceLayer3 {
      * 
      */
     private Integer mtu;
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    private String netflowProfile;
 
     private GetAggregateInterfaceLayer3() {}
     /**
@@ -107,6 +112,13 @@ public final class GetAggregateInterfaceLayer3 {
     public Integer mtu() {
         return this.mtu;
     }
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public String netflowProfile() {
+        return this.netflowProfile;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -124,6 +136,7 @@ public final class GetAggregateInterfaceLayer3 {
         private List<GetAggregateInterfaceLayer3Ip> ips;
         private GetAggregateInterfaceLayer3Lacp lacp;
         private Integer mtu;
+        private String netflowProfile;
         public Builder() {}
         public Builder(GetAggregateInterfaceLayer3 defaults) {
     	      Objects.requireNonNull(defaults);
@@ -134,6 +147,7 @@ public final class GetAggregateInterfaceLayer3 {
     	      this.ips = defaults.ips;
     	      this.lacp = defaults.lacp;
     	      this.mtu = defaults.mtu;
+    	      this.netflowProfile = defaults.netflowProfile;
         }
 
         @CustomType.Setter
@@ -198,6 +212,14 @@ public final class GetAggregateInterfaceLayer3 {
             this.mtu = mtu;
             return this;
         }
+        @CustomType.Setter
+        public Builder netflowProfile(String netflowProfile) {
+            if (netflowProfile == null) {
+              throw new MissingRequiredPropertyException("GetAggregateInterfaceLayer3", "netflowProfile");
+            }
+            this.netflowProfile = netflowProfile;
+            return this;
+        }
         public GetAggregateInterfaceLayer3 build() {
             final var _resultValue = new GetAggregateInterfaceLayer3();
             _resultValue.arps = arps;
@@ -207,6 +229,7 @@ public final class GetAggregateInterfaceLayer3 {
             _resultValue.ips = ips;
             _resultValue.lacp = lacp;
             _resultValue.mtu = mtu;
+            _resultValue.netflowProfile = netflowProfile;
             return _resultValue;
         }
     }

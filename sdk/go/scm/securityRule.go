@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// First, create the tag objects that you will reference.
 //			outboundTag, err := scm.NewTag(ctx, "outbound_tag", &scm.TagArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("outbound143"),
 //				Color:  pulumi.String("Red"),
 //			})
@@ -37,7 +37,7 @@ import (
 //				return err
 //			}
 //			webTag, err := scm.NewTag(ctx, "web_tag", &scm.TagArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("web143"),
 //				Color:  pulumi.String("Blue"),
 //			})
@@ -46,7 +46,7 @@ import (
 //			}
 //			// --- Existing Rules (Backward Compatibility) ---
 //			standardWebAccess, err := scm.NewSecurityRule(ctx, "standard_web_access", &scm.SecurityRuleArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("Allow Standard Web Access143"),
 //				Description: pulumi.String("Allow outbound web traffic to any destination..."),
 //				Position:    pulumi.String("pre"),
@@ -98,7 +98,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewSecurityRule(ctx, "block_risky_saas", &scm.SecurityRuleArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("Block Risky SaaS Applications143"),
 //				Description: pulumi.String("Prevent data exfiltration by blocking risky SaaS apps..."),
 //				Action:      pulumi.String("deny"),
@@ -140,7 +140,7 @@ import (
 //			}
 //			// Example 1: Place a critical block rule at the absolute top
 //			_, err = scm.NewSecurityRule(ctx, "critical_block_top", &scm.SecurityRuleArgs{
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Name:             pulumi.String("CRITICAL Block Malicious IPs Top143"),
 //				Description:      pulumi.String("Always block known malicious IPs first."),
 //				RelativePosition: pulumi.String("top"),
@@ -179,7 +179,7 @@ import (
 //			}
 //			// Example 2: Place a cleanup rule at the absolute bottom
 //			_, err = scm.NewSecurityRule(ctx, "cleanup_deny_bottom", &scm.SecurityRuleArgs{
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Name:             pulumi.String("Cleanup Deny All Bottom143"),
 //				Description:      pulumi.String("Deny any traffic not explicitly allowed."),
 //				RelativePosition: pulumi.String("bottom"),
@@ -218,7 +218,7 @@ import (
 //			}
 //			// Example 3: Place a rule *before* the standard web access rule
 //			_, err = scm.NewSecurityRule(ctx, "allow_updates_before_web", &scm.SecurityRuleArgs{
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Name:             pulumi.String("Allow OS Updates Before Web143"),
 //				Description:      pulumi.String("Allow specific OS update traffic before general web access."),
 //				RelativePosition: pulumi.String("before"),
@@ -259,7 +259,7 @@ import (
 //			}
 //			// Example 4: Place a rule *after* the standard web access rule
 //			_, err = scm.NewSecurityRule(ctx, "allow_corp_apps_after_web", &scm.SecurityRuleArgs{
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Name:             pulumi.String("Allow Corp Apps After Web143"),
 //				Description:      pulumi.String("Allow access to specific corporate apps after general web access."),
 //				RelativePosition: pulumi.String("after"),

@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var scmSyslogServerProf1 = new SyslogServerProfile("scmSyslogServerProf1", SyslogServerProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("syslog-server-prof-base")
  *             .servers(SyslogServerProfileServerArgs.builder()
  *                 .name("Server-Primary")
@@ -57,7 +57,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmSyslogServerProf2 = new SyslogServerProfile("scmSyslogServerProf2", SyslogServerProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("syslog-server-prof-mixed")
  *             .servers(SyslogServerProfileServerArgs.builder()
  *                 .name("Server-Mixed")
@@ -75,8 +75,8 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmSyslogServerProf3 = new SyslogServerProfile("scmSyslogServerProf3", SyslogServerProfileArgs.builder()
- *             .folder("All")
- *             .name("syslog-server-prof-complete")
+ *             .folder("ngfw-shared")
+ *             .name("syslog-server-tf-prof-complete")
  *             .servers(            
  *                 SyslogServerProfileServerArgs.builder()
  *                     .name("Server-A")

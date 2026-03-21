@@ -218,16 +218,18 @@ class ServiceConnectionGroup(pulumi.CustomResource):
         folder_scope = config.get("folderScope")
         if folder_scope is None:
             folder_scope = "Service Connections"
-        ## 1. IKE Crypto Profile (IKE Phase 1)
+        ## 1. Define the IKE Crypto Profile (IKE Phase 1)
+        # Note: The resource name is plural: "scm_ike_crypto_profile"
         example = scm.IkeCryptoProfile("example",
-            name="example-ike-crypto_sc_grp",
+            name="example-sc-ike-crypto",
             folder=folder_scope,
             hashes=["sha256"],
             dh_groups=["group14"],
             encryptions=["aes-256-cbc"])
-        ## 2. IPsec Crypto Profile (IKE Phase 2)
+        ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
-            name="panw-IPSec-Crypto_sc_grp",
+            name="panw-sc-Crypto",
             folder=folder_scope,
             esp={
                 "encryptions": ["aes-256-gcm"],
@@ -237,9 +239,10 @@ class ServiceConnectionGroup(pulumi.CustomResource):
             lifetime={
                 "hours": 8,
             })
-        ## 3. IKE Gateway
+        ## 3. Define the IKE Gateway
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ike_gateway = scm.IkeGateway("example",
-            name="example-gateway_sc_grp",
+            name="example-sc-gateway",
             folder=folder_scope,
             peer_address={
                 "ip": "1.1.1.1",
@@ -254,9 +257,10 @@ class ServiceConnectionGroup(pulumi.CustomResource):
                     "ike_crypto_profile": example.name,
                 },
             })
-        ## 4. IPsec Tunnel
+        ## 4. Define the IPsec Tunnel
+        # Note: Nested 'auto_key' block uses an equals sign (=).
         example_ipsec_tunnel = scm.IpsecTunnel("example",
-            name="example-tunnel_sc_grp",
+            name="example-sc-tunnel",
             folder=folder_scope,
             tunnel_interface="tunnel",
             anti_replay=True,
@@ -281,7 +285,7 @@ class ServiceConnectionGroup(pulumi.CustomResource):
             source_nat=False)
         ## 5. Service Connection (The target for the group)
         site_a_vpn_sc2 = scm.ServiceConnection("site_a_vpn_sc_2",
-            name="creating_a_service_connection_sc_grp_2",
+            name="creating_a_svc_connection_sc_grp_2",
             region="us-west-1a",
             ipsec_tunnel=example_ipsec_tunnel.name,
             subnets=[
@@ -294,7 +298,7 @@ class ServiceConnectionGroup(pulumi.CustomResource):
         # ------------------------------------------------------------------
         ## 6. Service Connection Group (Groups the Service Connection created above)
         example_group = scm.ServiceConnectionGroup("example_group",
-            name="service-connection-group-app_sc_grp",
+            name="svc-connection-group-app_sc_grp",
             targets=[
                 site_a_vpn_sc.name,
                 site_a_vpn_sc2.name,
@@ -353,16 +357,18 @@ class ServiceConnectionGroup(pulumi.CustomResource):
         folder_scope = config.get("folderScope")
         if folder_scope is None:
             folder_scope = "Service Connections"
-        ## 1. IKE Crypto Profile (IKE Phase 1)
+        ## 1. Define the IKE Crypto Profile (IKE Phase 1)
+        # Note: The resource name is plural: "scm_ike_crypto_profile"
         example = scm.IkeCryptoProfile("example",
-            name="example-ike-crypto_sc_grp",
+            name="example-sc-ike-crypto",
             folder=folder_scope,
             hashes=["sha256"],
             dh_groups=["group14"],
             encryptions=["aes-256-cbc"])
-        ## 2. IPsec Crypto Profile (IKE Phase 2)
+        ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
-            name="panw-IPSec-Crypto_sc_grp",
+            name="panw-sc-Crypto",
             folder=folder_scope,
             esp={
                 "encryptions": ["aes-256-gcm"],
@@ -372,9 +378,10 @@ class ServiceConnectionGroup(pulumi.CustomResource):
             lifetime={
                 "hours": 8,
             })
-        ## 3. IKE Gateway
+        ## 3. Define the IKE Gateway
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ike_gateway = scm.IkeGateway("example",
-            name="example-gateway_sc_grp",
+            name="example-sc-gateway",
             folder=folder_scope,
             peer_address={
                 "ip": "1.1.1.1",
@@ -389,9 +396,10 @@ class ServiceConnectionGroup(pulumi.CustomResource):
                     "ike_crypto_profile": example.name,
                 },
             })
-        ## 4. IPsec Tunnel
+        ## 4. Define the IPsec Tunnel
+        # Note: Nested 'auto_key' block uses an equals sign (=).
         example_ipsec_tunnel = scm.IpsecTunnel("example",
-            name="example-tunnel_sc_grp",
+            name="example-sc-tunnel",
             folder=folder_scope,
             tunnel_interface="tunnel",
             anti_replay=True,
@@ -416,7 +424,7 @@ class ServiceConnectionGroup(pulumi.CustomResource):
             source_nat=False)
         ## 5. Service Connection (The target for the group)
         site_a_vpn_sc2 = scm.ServiceConnection("site_a_vpn_sc_2",
-            name="creating_a_service_connection_sc_grp_2",
+            name="creating_a_svc_connection_sc_grp_2",
             region="us-west-1a",
             ipsec_tunnel=example_ipsec_tunnel.name,
             subnets=[
@@ -429,7 +437,7 @@ class ServiceConnectionGroup(pulumi.CustomResource):
         # ------------------------------------------------------------------
         ## 6. Service Connection Group (Groups the Service Connection created above)
         example_group = scm.ServiceConnectionGroup("example_group",
-            name="service-connection-group-app_sc_grp",
+            name="svc-connection-group-app_sc_grp",
             targets=[
                 site_a_vpn_sc.name,
                 site_a_vpn_sc2.name,

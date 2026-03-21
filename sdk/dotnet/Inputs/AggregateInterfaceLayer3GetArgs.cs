@@ -68,6 +68,12 @@ namespace Pulumi.Scm.Inputs
         [Input("mtu")]
         public Input<int>? Mtu { get; set; }
 
+        /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        [Input("netflowProfile")]
+        public Input<string>? NetflowProfile { get; set; }
+
         public AggregateInterfaceLayer3GetArgs()
         {
         }

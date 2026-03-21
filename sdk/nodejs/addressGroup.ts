@@ -41,13 +41,13 @@ import * as utilities from "./utilities";
  * });
  * // Create tags to be used for dynamic address group
  * const scmAddressgroupTag1 = new scm.Tag("scm_addressgroup_tag_1", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_addressgroup_tag_1",
  *     comments: "Managed by Pulumi",
  *     color: "Orange",
  * });
  * const scmAddressgroupTag2 = new scm.Tag("scm_addressgroup_tag_2", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm_addressgroup_tag_2",
  *     comments: "Managed by Pulumi",
  *     color: "Blue",

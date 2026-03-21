@@ -18,6 +18,10 @@ export interface AggregateInterfaceLayer2 {
      */
     lacp?: outputs.AggregateInterfaceLayer2Lacp;
     /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: string;
+    /**
      * VLAN tag
      */
     vlanTag?: string;
@@ -81,6 +85,10 @@ export interface AggregateInterfaceLayer3 {
      * MTU
      */
     mtu: number;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: string;
 }
 
 export interface AggregateInterfaceLayer3Arp {
@@ -3378,6 +3386,122 @@ export interface ContentIdSettingContentIdApplication {
     bypassExceedQueue: boolean;
 }
 
+export interface DataFilteringProfileRule {
+    /**
+     * Alert threshold
+     */
+    alertThreshold?: number;
+    /**
+     * Application
+     */
+    applications?: string[];
+    /**
+     * Block threshold
+     */
+    blockThreshold?: number;
+    /**
+     * Data object
+     */
+    dataObject?: string;
+    /**
+     * Direction
+     */
+    direction?: string;
+    /**
+     * File type
+     */
+    fileTypes?: string[];
+    /**
+     * Log severity
+     */
+    logSeverity?: string;
+    /**
+     * Name
+     */
+    name?: string;
+}
+
+export interface DataObjectPatternType {
+    /**
+     * File properties
+     */
+    fileProperties?: outputs.DataObjectPatternTypeFileProperties;
+    /**
+     * Predefined
+     */
+    predefined?: outputs.DataObjectPatternTypePredefined;
+    /**
+     * Regex
+     */
+    regex?: outputs.DataObjectPatternTypeRegex;
+}
+
+export interface DataObjectPatternTypeFileProperties {
+    /**
+     * Pattern
+     */
+    patterns?: outputs.DataObjectPatternTypeFilePropertiesPattern[];
+}
+
+export interface DataObjectPatternTypeFilePropertiesPattern {
+    /**
+     * File property
+     */
+    fileProperty?: string;
+    /**
+     * File type
+     */
+    fileType?: string;
+    /**
+     * Name
+     */
+    name?: string;
+    /**
+     * Property value
+     */
+    propertyValue?: string;
+}
+
+export interface DataObjectPatternTypePredefined {
+    /**
+     * Pattern
+     */
+    patterns?: outputs.DataObjectPatternTypePredefinedPattern[];
+}
+
+export interface DataObjectPatternTypePredefinedPattern {
+    /**
+     * File type
+     */
+    fileTypes?: string[];
+    /**
+     * Name
+     */
+    name?: string;
+}
+
+export interface DataObjectPatternTypeRegex {
+    /**
+     * Pattern
+     */
+    patterns?: outputs.DataObjectPatternTypeRegexPattern[];
+}
+
+export interface DataObjectPatternTypeRegexPattern {
+    /**
+     * File type
+     */
+    fileTypes?: string[];
+    /**
+     * Name
+     */
+    name?: string;
+    /**
+     * Regex
+     */
+    regex?: string;
+}
+
 export interface DecryptionProfileSslForwardProxy {
     /**
      * Auto include altname
@@ -4308,6 +4432,10 @@ export interface EthernetInterfaceLayer2 {
      */
     lldp?: outputs.EthernetInterfaceLayer2Lldp;
     /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: string;
+    /**
      * Assign interface to VLAN tag
      */
     vlanTag?: string;
@@ -4347,6 +4475,10 @@ export interface EthernetInterfaceLayer3 {
      * MTU
      */
     mtu: number;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: string;
     /**
      * Pppoe
      *
@@ -4499,6 +4631,10 @@ export interface EthernetInterfacePoe {
 }
 
 export interface EthernetInterfaceTap {
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile?: string;
 }
 
 export interface ExternalDynamicListType {
@@ -5323,6 +5459,10 @@ export interface GetAggregateInterfaceLayer2 {
      */
     lacp: outputs.GetAggregateInterfaceLayer2Lacp;
     /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
+    /**
      * VLAN tag
      */
     vlanTag: string;
@@ -5386,6 +5526,10 @@ export interface GetAggregateInterfaceLayer3 {
      * MTU
      */
     mtu: number;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
 }
 
 export interface GetAggregateInterfaceLayer3Arp {
@@ -5547,6 +5691,10 @@ export interface GetAggregateInterfaceListDataLayer2 {
      */
     lacp: outputs.GetAggregateInterfaceListDataLayer2Lacp;
     /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
+    /**
      * VLAN tag
      */
     vlanTag: string;
@@ -5610,6 +5758,10 @@ export interface GetAggregateInterfaceListDataLayer3 {
      * MTU
      */
     mtu: number;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
 }
 
 export interface GetAggregateInterfaceListDataLayer3Arp {
@@ -13049,6 +13201,61 @@ export interface GetCertificateProfileUsernameField {
     subjectAlt: string;
 }
 
+export interface GetConfigMatchListListData {
+    /**
+     * Description of the config match list entry
+     */
+    description: string;
+    /**
+     * The device in which the resource is defined
+     */
+    device: string;
+    /**
+     * Filter of the config match list entry
+     */
+    filter: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    folder: string;
+    /**
+     * UUID of the resource
+     */
+    id: string;
+    /**
+     * The name of the item.
+     */
+    name: string;
+    /**
+     * Send Email List of the config match list entry
+     */
+    sendEmails: string[];
+    /**
+     * Send HTTP List of the config match list entry
+     */
+    sendHttps: string[];
+    /**
+     * Send SNMP Trap List of the config match list entry
+     */
+    sendSnmptraps: string[];
+    /**
+     * Send Sys Log List of the config match list entry
+     */
+    sendSyslogs: string[];
+    /**
+     * Send Panorama Flag of the config match list entry
+     */
+    sendToPanorama: boolean;
+    /**
+     * The snippet of the item.
+     */
+    snippet: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+}
+
 export interface GetContentIdSettingContentId {
     /**
      * Allow forward decrypted content
@@ -13158,6 +13365,320 @@ export interface GetContentIdSettingListDataContentIdApplication {
      * Bypass exceed queue
      */
     bypassExceedQueue: boolean;
+}
+
+export interface GetDataFilteringProfileListData {
+    /**
+     * Data capture
+     */
+    dataCapture: boolean;
+    /**
+     * The description of the data filtering profile
+     */
+    description: string;
+    /**
+     * The device in which the resource is defined
+     */
+    device: string;
+    /**
+     * Disable override
+     */
+    disableOverride: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    folder: string;
+    /**
+     * The UUID of the data filtering profile
+     */
+    id: string;
+    /**
+     * The name of the item.
+     */
+    name: string;
+    /**
+     * Rules
+     */
+    rules: outputs.GetDataFilteringProfileListDataRule[];
+    /**
+     * The snippet of the item.
+     */
+    snippet: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+}
+
+export interface GetDataFilteringProfileListDataRule {
+    /**
+     * Alert threshold
+     */
+    alertThreshold: number;
+    /**
+     * Application
+     */
+    applications: string[];
+    /**
+     * Block threshold
+     */
+    blockThreshold: number;
+    /**
+     * Data object
+     */
+    dataObject: string;
+    /**
+     * Direction
+     */
+    direction: string;
+    /**
+     * File type
+     */
+    fileTypes: string[];
+    /**
+     * Log severity
+     */
+    logSeverity: string;
+    /**
+     * Name
+     */
+    name: string;
+}
+
+export interface GetDataFilteringProfileRule {
+    /**
+     * Alert threshold
+     */
+    alertThreshold: number;
+    /**
+     * Application
+     */
+    applications: string[];
+    /**
+     * Block threshold
+     */
+    blockThreshold: number;
+    /**
+     * Data object
+     */
+    dataObject: string;
+    /**
+     * Direction
+     */
+    direction: string;
+    /**
+     * File type
+     */
+    fileTypes: string[];
+    /**
+     * Log severity
+     */
+    logSeverity: string;
+    /**
+     * Name
+     */
+    name: string;
+}
+
+export interface GetDataObjectListData {
+    /**
+     * The description of the data object
+     */
+    description: string;
+    /**
+     * The device in which the resource is defined
+     */
+    device: string;
+    /**
+     * Disable override
+     */
+    disableOverride: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    folder: string;
+    /**
+     * The UUID of the data object
+     */
+    id: string;
+    /**
+     * The name of the item.
+     */
+    name: string;
+    /**
+     * Pattern type
+     */
+    patternType: outputs.GetDataObjectListDataPatternType;
+    /**
+     * The snippet of the item.
+     */
+    snippet: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+}
+
+export interface GetDataObjectListDataPatternType {
+    /**
+     * File properties
+     */
+    fileProperties: outputs.GetDataObjectListDataPatternTypeFileProperties;
+    /**
+     * Predefined
+     */
+    predefined: outputs.GetDataObjectListDataPatternTypePredefined;
+    /**
+     * Regex
+     */
+    regex: outputs.GetDataObjectListDataPatternTypeRegex;
+}
+
+export interface GetDataObjectListDataPatternTypeFileProperties {
+    /**
+     * Pattern
+     */
+    patterns: outputs.GetDataObjectListDataPatternTypeFilePropertiesPattern[];
+}
+
+export interface GetDataObjectListDataPatternTypeFilePropertiesPattern {
+    /**
+     * File property
+     */
+    fileProperty: string;
+    /**
+     * File type
+     */
+    fileType: string;
+    /**
+     * Name
+     */
+    name: string;
+    /**
+     * Property value
+     */
+    propertyValue: string;
+}
+
+export interface GetDataObjectListDataPatternTypePredefined {
+    /**
+     * Pattern
+     */
+    patterns: outputs.GetDataObjectListDataPatternTypePredefinedPattern[];
+}
+
+export interface GetDataObjectListDataPatternTypePredefinedPattern {
+    /**
+     * File type
+     */
+    fileTypes: string[];
+    /**
+     * Name
+     */
+    name: string;
+}
+
+export interface GetDataObjectListDataPatternTypeRegex {
+    /**
+     * Pattern
+     */
+    patterns: outputs.GetDataObjectListDataPatternTypeRegexPattern[];
+}
+
+export interface GetDataObjectListDataPatternTypeRegexPattern {
+    /**
+     * File type
+     */
+    fileTypes: string[];
+    /**
+     * Name
+     */
+    name: string;
+    /**
+     * Regex
+     */
+    regex: string;
+}
+
+export interface GetDataObjectPatternType {
+    /**
+     * File properties
+     */
+    fileProperties: outputs.GetDataObjectPatternTypeFileProperties;
+    /**
+     * Predefined
+     */
+    predefined: outputs.GetDataObjectPatternTypePredefined;
+    /**
+     * Regex
+     */
+    regex: outputs.GetDataObjectPatternTypeRegex;
+}
+
+export interface GetDataObjectPatternTypeFileProperties {
+    /**
+     * Pattern
+     */
+    patterns: outputs.GetDataObjectPatternTypeFilePropertiesPattern[];
+}
+
+export interface GetDataObjectPatternTypeFilePropertiesPattern {
+    /**
+     * File property
+     */
+    fileProperty: string;
+    /**
+     * File type
+     */
+    fileType: string;
+    /**
+     * Name
+     */
+    name: string;
+    /**
+     * Property value
+     */
+    propertyValue: string;
+}
+
+export interface GetDataObjectPatternTypePredefined {
+    /**
+     * Pattern
+     */
+    patterns: outputs.GetDataObjectPatternTypePredefinedPattern[];
+}
+
+export interface GetDataObjectPatternTypePredefinedPattern {
+    /**
+     * File type
+     */
+    fileTypes: string[];
+    /**
+     * Name
+     */
+    name: string;
+}
+
+export interface GetDataObjectPatternTypeRegex {
+    /**
+     * Pattern
+     */
+    patterns: outputs.GetDataObjectPatternTypeRegexPattern[];
+}
+
+export interface GetDataObjectPatternTypeRegexPattern {
+    /**
+     * File type
+     */
+    fileTypes: string[];
+    /**
+     * Name
+     */
+    name: string;
+    /**
+     * Regex
+     */
+    regex: string;
 }
 
 export interface GetDecryptionExclusionListData {
@@ -15532,6 +16053,10 @@ export interface GetEthernetInterfaceLayer2 {
      */
     lldp: outputs.GetEthernetInterfaceLayer2Lldp;
     /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
+    /**
      * Assign interface to VLAN tag
      */
     vlanTag: string;
@@ -15571,6 +16096,10 @@ export interface GetEthernetInterfaceLayer3 {
      * MTU
      */
     mtu: number;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
     /**
      * Pppoe
      *
@@ -15796,6 +16325,10 @@ export interface GetEthernetInterfaceListDataLayer2 {
      */
     lldp: outputs.GetEthernetInterfaceListDataLayer2Lldp;
     /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
+    /**
      * Assign interface to VLAN tag
      */
     vlanTag: string;
@@ -15835,6 +16368,10 @@ export interface GetEthernetInterfaceListDataLayer3 {
      * MTU
      */
     mtu: number;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
     /**
      * Pppoe
      *
@@ -15987,6 +16524,10 @@ export interface GetEthernetInterfaceListDataPoe {
 }
 
 export interface GetEthernetInterfaceListDataTap {
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
 }
 
 export interface GetEthernetInterfacePoe {
@@ -16001,6 +16542,10 @@ export interface GetEthernetInterfacePoe {
 }
 
 export interface GetEthernetInterfaceTap {
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
 }
 
 export interface GetExternalDynamicListListData {
@@ -17521,6 +18066,65 @@ export interface GetGeneralSettingListDataGeneralSettingManagement {
      * Certificate expiration check
      */
     enableCertificateExpirationCheck: boolean;
+}
+
+export interface GetGlobalprotectMatchListListData {
+    /**
+     * Description of the globalprotect match list entry
+     */
+    description: string;
+    /**
+     * The device in which the resource is defined
+     */
+    device: string;
+    /**
+     * Filter of the globalprotect match list entry
+     */
+    filter: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    folder: string;
+    /**
+     * UUID of the resource
+     */
+    id: string;
+    /**
+     * The name of the item.
+     */
+    name: string;
+    /**
+     * Quarantine Flag of the globalprotect match list entry
+     */
+    quarantine: boolean;
+    /**
+     * Send Email List of the globalprotect match list entry
+     */
+    sendEmails: string[];
+    /**
+     * Send HTTP List of the globalprotect match list entry
+     */
+    sendHttps: string[];
+    /**
+     * Send SNMP Trap List of the globalprotect match list entry
+     */
+    sendSnmptraps: string[];
+    /**
+     * Send Sys log List of the globalprotect match list entry
+     */
+    sendSyslogs: string[];
+    /**
+     * Send to Panorama Flag of the globalprotect match list entry
+     */
+    sendToPanorama: boolean;
+    /**
+     * The snippet of the item.
+     */
+    snippet: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
 }
 
 export interface GetHipObjectAntiMalware {
@@ -19887,6 +20491,65 @@ export interface GetHipProfileListData {
      * The name of the item.
      */
     name: string;
+    /**
+     * The snippet of the item.
+     */
+    snippet: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+}
+
+export interface GetHipmatchMatchListListData {
+    /**
+     * Description of the hipmatch match list entry
+     */
+    description: string;
+    /**
+     * The device in which the resource is defined
+     */
+    device: string;
+    /**
+     * Filter of the hipmatch match list entry
+     */
+    filter: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    folder: string;
+    /**
+     * UUID of the resource
+     */
+    id: string;
+    /**
+     * The name of the item.
+     */
+    name: string;
+    /**
+     * Quarantine Flag of the hipmatch match list entry
+     */
+    quarantine: boolean;
+    /**
+     * Send Email List of the hipmatch match list entry
+     */
+    sendEmails: string[];
+    /**
+     * Send HTTP List of the hipmatch match list entry
+     */
+    sendHttps: string[];
+    /**
+     * Send SNMP Trap List of the hipmatch match list entry
+     */
+    sendSnmptraps: string[];
+    /**
+     * Send Sys Log List of the hipmatch match list entry
+     */
+    sendSyslogs: string[];
+    /**
+     * Send to Panorama Flag of the hipmatch match list entry
+     */
+    sendToPanorama: boolean;
     /**
      * The snippet of the item.
      */
@@ -22966,6 +23629,65 @@ export interface GetIpsecTunnelTunnelMonitor {
     proxyId: string;
 }
 
+export interface GetIptagMatchListListData {
+    /**
+     * Description of the iptag match list entry
+     */
+    description: string;
+    /**
+     * The device in which the resource is defined
+     */
+    device: string;
+    /**
+     * Filter of the iptag match list entry
+     */
+    filter: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    folder: string;
+    /**
+     * UUID of the resource
+     */
+    id: string;
+    /**
+     * The name of the item.
+     */
+    name: string;
+    /**
+     * Quarantine Flag of the iptag match list entry
+     */
+    quarantine: boolean;
+    /**
+     * Send Email List of the iptag match list entry
+     */
+    sendEmails: string[];
+    /**
+     * Send HTTP List of the iptag match list entry
+     */
+    sendHttps: string[];
+    /**
+     * Send SNMP Trap List of the iptag match list entry
+     */
+    sendSnmptraps: string[];
+    /**
+     * Send Sys Log List of the iptag match list entry
+     */
+    sendSyslogs: string[];
+    /**
+     * Send to Panorama Flag of the iptag match list entry
+     */
+    sendToPanorama: boolean;
+    /**
+     * The snippet of the item.
+     */
+    snippet: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+}
+
 export interface GetKerberosServerProfileListData {
     /**
      * The device in which the resource is defined
@@ -23213,6 +23935,10 @@ export interface GetLayer3SubinterfaceListData {
      * The name of the item.
      */
     name: string;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
     /**
      * Parent interface
      */
@@ -33694,6 +34420,10 @@ export interface GetLoopbackInterfaceListData {
      */
     name: string;
     /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
+    /**
      * The snippet of the item.
      */
     snippet: string;
@@ -33779,6 +34509,14 @@ export interface GetManagementInterfaceListData {
 
 export interface GetManagementInterfaceListDataManagementInterface {
     /**
+     * Default gateway
+     */
+    defaultGateway: string;
+    /**
+     * IP address
+     */
+    ipAddress: string;
+    /**
      * IP type
      */
     mgmtType: outputs.GetManagementInterfaceListDataManagementInterfaceMgmtType;
@@ -33786,6 +34524,10 @@ export interface GetManagementInterfaceListDataManagementInterface {
      * MTU
      */
     mtu: number;
+    /**
+     * Netmask
+     */
+    netmask: string;
     /**
      * Permitting IP addresses
      */
@@ -33833,18 +34575,6 @@ export interface GetManagementInterfaceListDataManagementInterfaceMgmtTypeDhcpCl
 }
 
 export interface GetManagementInterfaceListDataManagementInterfaceMgmtTypeStatic {
-    /**
-     * Default gateway
-     */
-    defaultGateway: string;
-    /**
-     * IP address
-     */
-    ipAddress: string;
-    /**
-     * Netmask
-     */
-    netmask: string;
 }
 
 export interface GetManagementInterfaceListDataManagementInterfacePermittedIp {
@@ -33903,6 +34633,14 @@ export interface GetManagementInterfaceListDataManagementInterfaceService {
 
 export interface GetManagementInterfaceManagementInterface {
     /**
+     * Default gateway
+     */
+    defaultGateway: string;
+    /**
+     * IP address
+     */
+    ipAddress: string;
+    /**
      * IP type
      */
     mgmtType: outputs.GetManagementInterfaceManagementInterfaceMgmtType;
@@ -33910,6 +34648,10 @@ export interface GetManagementInterfaceManagementInterface {
      * MTU
      */
     mtu: number;
+    /**
+     * Netmask
+     */
+    netmask: string;
     /**
      * Permitting IP addresses
      */
@@ -33957,18 +34699,6 @@ export interface GetManagementInterfaceManagementInterfaceMgmtTypeDhcpClient {
 }
 
 export interface GetManagementInterfaceManagementInterfaceMgmtTypeStatic {
-    /**
-     * Default gateway
-     */
-    defaultGateway: string;
-    /**
-     * IP address
-     */
-    ipAddress: string;
-    /**
-     * Netmask
-     */
-    netmask: string;
 }
 
 export interface GetManagementInterfaceManagementInterfacePermittedIp {
@@ -35887,6 +36617,10 @@ export interface GetRemoteNetworkListDataProtocolBgpPeer {
      */
     peerIpAddress: string;
     /**
+     * Same peer IP address as primary WAN
+     */
+    sameAsPrimary: boolean;
+    /**
      * BGP peering secret (secondary WAN)
      */
     secret: string;
@@ -35951,6 +36685,10 @@ export interface GetRemoteNetworkProtocolBgpPeer {
      * Remote peer IP address (secondary WAN)
      */
     peerIpAddress: string;
+    /**
+     * Same peer IP address as primary WAN
+     */
+    sameAsPrimary: boolean;
     /**
      * BGP peering secret (secondary WAN)
      */
@@ -40109,6 +40847,61 @@ export interface GetSyslogServerProfileServer {
     transport: string;
 }
 
+export interface GetSystemMatchListListData {
+    /**
+     * Description of the system match list entry
+     */
+    description: string;
+    /**
+     * The device in which the resource is defined
+     */
+    device: string;
+    /**
+     * Filter of the system match list entry
+     */
+    filter: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    folder: string;
+    /**
+     * UUID of the resource
+     */
+    id: string;
+    /**
+     * The name of the item.
+     */
+    name: string;
+    /**
+     * Send Email List of the system match list entry
+     */
+    sendEmails: string[];
+    /**
+     * Send HTTP List of the system match list entry
+     */
+    sendHttps: string[];
+    /**
+     * Send SNMP Trap List of the system match list entry
+     */
+    sendSnmptraps: string[];
+    /**
+     * Send Sys Log List of the system match list entry
+     */
+    sendSyslogs: string[];
+    /**
+     * Send to Panorama Flag of the system match list entry
+     */
+    sendToPanorama: boolean;
+    /**
+     * The snippet of the item.
+     */
+    snippet: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+}
+
 export interface GetTacacsServerProfileListData {
     /**
      * The device in which the resource is defined
@@ -40658,6 +41451,10 @@ export interface GetTunnelInterfaceListData {
      * The name of the item.
      */
     name: string;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
     /**
      * The snippet of the item.
      */
@@ -41614,6 +42411,65 @@ export interface GetUrlCategoryListData {
     type: string;
 }
 
+export interface GetUseridMatchListListData {
+    /**
+     * Description of the userid match list entry
+     */
+    description: string;
+    /**
+     * The device in which the resource is defined
+     */
+    device: string;
+    /**
+     * Filter of the userid match list entry
+     */
+    filter: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    folder: string;
+    /**
+     * UUID of the resource
+     */
+    id: string;
+    /**
+     * The name of the item.
+     */
+    name: string;
+    /**
+     * Quarantine Flag of the userid match list entry
+     */
+    quarantine: boolean;
+    /**
+     * Send Email List of the userid match list entry
+     */
+    sendEmails: string[];
+    /**
+     * Send HTTP List of the userid match list entry
+     */
+    sendHttps: string[];
+    /**
+     * Send SNMP Trap List of the userid match list entry
+     */
+    sendSnmptraps: string[];
+    /**
+     * Send Sys Log List of the userid match list entry
+     */
+    sendSyslogs: string[];
+    /**
+     * Send to Panorama Flag of the userid match list entry
+     */
+    sendToPanorama: boolean;
+    /**
+     * The snippet of the item.
+     */
+    snippet: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+}
+
 export interface GetVariableListData {
     /**
      * The description of the variable
@@ -41793,6 +42649,10 @@ export interface GetVlanInterfaceListData {
      * The name of the item.
      */
     name: string;
+    /**
+     * Name of Netflow Profile to assign to Interface
+     */
+    netflowProfile: string;
     /**
      * The snippet of the item.
      */
@@ -52232,6 +53092,14 @@ export interface LoopbackInterfaceIpv6AddressPrefix {
 
 export interface ManagementInterfaceManagementInterface {
     /**
+     * Default gateway
+     */
+    defaultGateway?: string;
+    /**
+     * IP address
+     */
+    ipAddress?: string;
+    /**
      * IP type
      */
     mgmtType?: outputs.ManagementInterfaceManagementInterfaceMgmtType;
@@ -52239,6 +53107,10 @@ export interface ManagementInterfaceManagementInterface {
      * MTU
      */
     mtu: number;
+    /**
+     * Netmask
+     */
+    netmask?: string;
     /**
      * Permitting IP addresses
      */
@@ -52286,18 +53158,6 @@ export interface ManagementInterfaceManagementInterfaceMgmtTypeDhcpClient {
 }
 
 export interface ManagementInterfaceManagementInterfaceMgmtTypeStatic {
-    /**
-     * Default gateway
-     */
-    defaultGateway: string;
-    /**
-     * IP address
-     */
-    ipAddress: string;
-    /**
-     * Netmask
-     */
-    netmask: string;
 }
 
 export interface ManagementInterfaceManagementInterfacePermittedIp {
@@ -53178,6 +54038,10 @@ export interface RemoteNetworkProtocolBgpPeer {
      * Remote peer IP address (secondary WAN)
      */
     peerIpAddress?: string;
+    /**
+     * Same peer IP address as primary WAN
+     */
+    sameAsPrimary?: boolean;
     /**
      * BGP peering secret (secondary WAN)
      */

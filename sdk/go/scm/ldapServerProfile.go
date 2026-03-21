@@ -14,6 +14,150 @@ import (
 
 // LdapServerProfile resource
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// ldpap server profile w/ required fields
+//			_, err := scm.NewLdapServerProfile(ctx, "scm_ldap_server_profile_one", &scm.LdapServerProfileArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("simple-ldap-profile"),
+//				Servers: scm.LdapServerProfileServerArray{
+//					&scm.LdapServerProfileServerArgs{
+//						Name:    pulumi.String("primary-ldap"),
+//						Address: pulumi.String("$tst_68081_1"),
+//						Port:    pulumi.Int(389),
+//					},
+//					&scm.LdapServerProfileServerArgs{
+//						Name:    pulumi.String("secondary-ldap"),
+//						Address: pulumi.String("$tst_68081_2"),
+//						Port:    pulumi.Int(1),
+//					},
+//					&scm.LdapServerProfileServerArgs{
+//						Name:    pulumi.String("extra-ldap"),
+//						Address: pulumi.String("$test_ip"),
+//						Port:    pulumi.Int(65535),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// ldpap server profile w/ some fields
+//			_, err = scm.NewLdapServerProfile(ctx, "scm_ldap_server_profile_two", &scm.LdapServerProfileArgs{
+//				Folder:   pulumi.String("All"),
+//				Name:     pulumi.String("intermediate-ldap-profile-one"),
+//				LdapType: pulumi.String("active-directory"),
+//				Base:     pulumi.String("dc=example,dc=com"),
+//				Ssl:      pulumi.Bool(true),
+//				Servers: scm.LdapServerProfileServerArray{
+//					&scm.LdapServerProfileServerArgs{
+//						Name:    pulumi.String("extra-ldap"),
+//						Address: pulumi.String("$test_ip"),
+//						Port:    pulumi.Int(25),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewLdapServerProfile(ctx, "scm_ldap_server_profile_three", &scm.LdapServerProfileArgs{
+//				Folder:       pulumi.String("All"),
+//				Name:         pulumi.String("intermediate-ldap-profile-two"),
+//				LdapType:     pulumi.String("sun"),
+//				Base:         pulumi.String("DC=internal,DC=company,DC=com"),
+//				BindDn:       pulumi.String("CN=LDAP Bind,OU=Service Accounts,DC=internal,DC=company,DC=com"),
+//				BindPassword: pulumi.String("SecurePwd123!"),
+//				Timelimit:    pulumi.Int(30),
+//				Servers: scm.LdapServerProfileServerArray{
+//					&scm.LdapServerProfileServerArgs{
+//						Name:    pulumi.String("primary-ldap"),
+//						Address: pulumi.String("$tst_68081_1"),
+//						Port:    pulumi.Int(5000),
+//					},
+//					&scm.LdapServerProfileServerArgs{
+//						Name:    pulumi.String("secondary-ldap"),
+//						Address: pulumi.String("150.25.25.60"),
+//						Port:    pulumi.Int(25000),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// ldpap server profile w/ all fields
+//			_, err = scm.NewLdapServerProfile(ctx, "scm_ldap_server_profile_four", &scm.LdapServerProfileArgs{
+//				Folder:                  pulumi.String("All"),
+//				Name:                    pulumi.String("complex-ldap-profile-one"),
+//				LdapType:                pulumi.String("e-directory"),
+//				Base:                    pulumi.String("ou=users,dc=corp,dc=local"),
+//				BindDn:                  pulumi.String("cn=admin,dc=corp,dc=local"),
+//				BindPassword:            pulumi.String("MyPwd123!"),
+//				BindTimelimit:           pulumi.String("20"),
+//				RetryInterval:           pulumi.Int(1000),
+//				Timelimit:               pulumi.Int(10),
+//				Ssl:                     pulumi.Bool(true),
+//				VerifyServerCertificate: pulumi.Bool(false),
+//				Servers: scm.LdapServerProfileServerArray{
+//					&scm.LdapServerProfileServerArgs{
+//						Name:    pulumi.String("global-directory-main"),
+//						Address: pulumi.String("$scm_variable_ipaddr"),
+//						Port:    pulumi.Int(636),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewLdapServerProfile(ctx, "scm_ldap_server_profile_five", &scm.LdapServerProfileArgs{
+//				Folder:                  pulumi.String("All"),
+//				Name:                    pulumi.String("complex-ldap-profile-two"),
+//				LdapType:                pulumi.String("other"),
+//				Base:                    pulumi.String("OU=Employees,DC=global,DC=enterprise,DC=net"),
+//				BindDn:                  pulumi.String("CN=SVC_LDAP_Search,OU=Service Accounts,DC=global,DC=enterprise,DC=net"),
+//				BindPassword:            pulumi.String("ExtremelyComplexP@ssw0rd!"),
+//				BindTimelimit:           pulumi.String("15"),
+//				RetryInterval:           pulumi.Int(300),
+//				Timelimit:               pulumi.Int(30),
+//				Ssl:                     pulumi.Bool(true),
+//				VerifyServerCertificate: pulumi.Bool(true),
+//				Servers: scm.LdapServerProfileServerArray{
+//					&scm.LdapServerProfileServerArgs{
+//						Name:    pulumi.String("dc-us-east"),
+//						Address: pulumi.String("$scm_variable_ipaddr"),
+//						Port:    pulumi.Int(720),
+//					},
+//					&scm.LdapServerProfileServerArgs{
+//						Name:    pulumi.String("dc-us-west"),
+//						Address: pulumi.String("192.10.10.10"),
+//						Port:    pulumi.Int(1400),
+//					},
+//					&scm.LdapServerProfileServerArgs{
+//						Name:    pulumi.String("dc-eu-central"),
+//						Address: pulumi.String("3.3.3.3"),
+//						Port:    pulumi.Int(20000),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The following command can be used to import a resource not managed by Terraform:

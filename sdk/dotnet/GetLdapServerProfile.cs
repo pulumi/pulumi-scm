@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// LdapServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the LDAP Server Profile you want to find.
+        ///     var ldapServerProf = Scm.GetLdapServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "a5006a3e-52b3-435e-9e3b-39b50dc72401",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLdapServerProfileDetails"] = 
+        ///         {
+        ///             { "id", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Id) },
+        ///             { "folder", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Folder) },
+        ///             { "name", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLdapServerProfileResult> InvokeAsync(GetLdapServerProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLdapServerProfileResult>("scm:index/getLdapServerProfile:getLdapServerProfile", args ?? new GetLdapServerProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// LdapServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the LDAP Server Profile you want to find.
+        ///     var ldapServerProf = Scm.GetLdapServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "a5006a3e-52b3-435e-9e3b-39b50dc72401",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLdapServerProfileDetails"] = 
+        ///         {
+        ///             { "id", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Id) },
+        ///             { "folder", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Folder) },
+        ///             { "name", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLdapServerProfileResult> Invoke(GetLdapServerProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLdapServerProfileResult>("scm:index/getLdapServerProfile:getLdapServerProfile", args ?? new GetLdapServerProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// LdapServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the LDAP Server Profile you want to find.
+        ///     var ldapServerProf = Scm.GetLdapServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "a5006a3e-52b3-435e-9e3b-39b50dc72401",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLdapServerProfileDetails"] = 
+        ///         {
+        ///             { "id", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Id) },
+        ///             { "folder", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Folder) },
+        ///             { "name", ldapServerProf.Apply(getLdapServerProfileResult =&gt; getLdapServerProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLdapServerProfileResult> Invoke(GetLdapServerProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLdapServerProfileResult>("scm:index/getLdapServerProfile:getLdapServerProfile", args ?? new GetLdapServerProfileInvokeArgs(), options.WithDefaults());

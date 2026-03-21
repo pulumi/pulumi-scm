@@ -84,6 +84,7 @@ type LookupLayer3SubinterfaceResult struct {
 	Ips                        []GetLayer3SubinterfaceIp `pulumi:"ips"`
 	Mtu                        int                       `pulumi:"mtu"`
 	Name                       string                    `pulumi:"name"`
+	NetflowProfile             string                    `pulumi:"netflowProfile"`
 	ParentInterface            string                    `pulumi:"parentInterface"`
 	Snippet                    string                    `pulumi:"snippet"`
 	Tag                        int                       `pulumi:"tag"`
@@ -173,6 +174,10 @@ func (o LookupLayer3SubinterfaceResultOutput) Mtu() pulumi.IntOutput {
 
 func (o LookupLayer3SubinterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+func (o LookupLayer3SubinterfaceResultOutput) NetflowProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
 func (o LookupLayer3SubinterfaceResultOutput) ParentInterface() pulumi.StringOutput {

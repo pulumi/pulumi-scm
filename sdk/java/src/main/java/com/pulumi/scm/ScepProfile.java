@@ -54,7 +54,7 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) }{{@code
  *         // scep profile w/ no challenge
  *         var scmScepProfile1 = new ScepProfile("scmScepProfile1", ScepProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scep-prof-1")
  *             .scepUrl("https://scep.example.com/")
  *             .caIdentityName("Default")
@@ -72,7 +72,7 @@ import javax.annotation.Nullable;
  * 
  *         // scep profile w/ fixed challenge
  *         var scmScepProfile2 = new ScepProfile("scmScepProfile2", ScepProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scep-prof-2")
  *             .scepUrl("https://example.target.com/")
  *             .caIdentityName("user-scep")
@@ -94,7 +94,7 @@ import javax.annotation.Nullable;
  * 
  *         // scep profile w/ dynamic challenge
  *         var scmScepProfile3 = new ScepProfile("scmScepProfile3", ScepProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scep-prof-3")
  *             .scepUrl("https://example.gateway.com/")
  *             .caIdentityName("vpn-gateway")
@@ -122,7 +122,7 @@ import javax.annotation.Nullable;
  * 
  *         // scep profile w/ all fields
  *         var scmScepProfile4 = new ScepProfile("scmScepProfile4", ScepProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scep-prof-4")
  *             .scepUrl("https://example.wifi.com/")
  *             .caIdentityName("wifi")

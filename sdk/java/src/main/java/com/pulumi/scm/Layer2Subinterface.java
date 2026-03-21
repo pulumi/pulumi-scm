@@ -49,7 +49,7 @@ import javax.annotation.Nullable;
  *         // Creates a ethernet interface used as parent-interface for subsequent examples
  *         //
  *         var scmParentInterface = new EthernetInterface("scmParentInterface", EthernetInterfaceArgs.builder()
- *             .name("$scm_parent_interface")
+ *             .name("$scm_tf_parent_interface")
  *             .comment("Managed by Pulumi")
  *             .folder("ngfw-shared")
  *             .layer2(EthernetInterfaceLayer2Args.builder()
@@ -60,11 +60,11 @@ import javax.annotation.Nullable;
  *         // Creates a layer2 sub-interface with vlan tag 100
  *         //
  *         var scmLayer2Subinterface = new Layer2Subinterface("scmLayer2Subinterface", Layer2SubinterfaceArgs.builder()
- *             .name("$scm_parent_interface.100")
+ *             .name("$scm_tf_parent_interface.100")
  *             .comment("Managed by Pulumi")
  *             .folder("ngfw-shared")
  *             .vlanTag("100")
- *             .parentInterface("$scm_parent_interface")
+ *             .parentInterface("$scm_tf_parent_interface")
  *             .build(), CustomResourceOptions.builder()
  *                 .dependsOn(scmParentInterface)
  *                 .build());

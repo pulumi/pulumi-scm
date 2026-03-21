@@ -63,6 +63,12 @@ namespace Pulumi.Scm.Inputs
         public Input<int>? Mtu { get; set; }
 
         /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        [Input("netflowProfile")]
+        public Input<string>? NetflowProfile { get; set; }
+
+        /// <summary>
         /// Pppoe
         /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient`, `Ip`, and `Pppoe`.

@@ -26,7 +26,7 @@ namespace Pulumi.Scm
     ///     // Note: The resource name is plural: "scm_ike_crypto_profile"
     ///     var example = new Scm.IkeCryptoProfile("example", new()
     ///     {
-    ///         Name = "example-ike-crypto-14",
+    ///         Name = "example-ike-crypto-site",
     ///         Folder = "Remote Networks",
     ///         Hashes = new[]
     ///         {
@@ -46,7 +46,7 @@ namespace Pulumi.Scm
     ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
     ///     var exampleIpsecCryptoProfile = new Scm.IpsecCryptoProfile("example", new()
     ///     {
-    ///         Name = "PaloAlto-Networks-IPSec-14",
+    ///         Name = "panw-IPSec-site",
     ///         Folder = "Remote Networks",
     ///         Esp = new Scm.Inputs.IpsecCryptoProfileEspArgs
     ///         {
@@ -70,7 +70,7 @@ namespace Pulumi.Scm
     ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
     ///     var exampleIkeGateway = new Scm.IkeGateway("example", new()
     ///     {
-    ///         Name = "example-gateway-14",
+    ///         Name = "example-gateway-site",
     ///         Folder = "Remote Networks",
     ///         PeerAddress = new Scm.Inputs.IkeGatewayPeerAddressArgs
     ///         {
@@ -96,7 +96,7 @@ namespace Pulumi.Scm
     ///     // Note: Nested 'auto_key' block uses an equals sign (=).
     ///     var exampleIpsecTunnel = new Scm.IpsecTunnel("example", new()
     ///     {
-    ///         Name = "example-tunnel-14",
+    ///         Name = "example-tunnel-site",
     ///         Folder = "Remote Networks",
     ///         TunnelInterface = "tunnel",
     ///         AntiReplay = true,
@@ -125,7 +125,7 @@ namespace Pulumi.Scm
     ///     var branchOffice = new Scm.RemoteNetwork("branch_office", new()
     ///     {
     ///         Folder = "Remote Networks",
-    ///         Name = "example-rn-14",
+    ///         Name = "example-rn-site",
     ///         Region = "us-west-1",
     ///         LicenseType = "FWAAS-AGGREGATE",
     ///         IpsecTunnel = exampleIpsecTunnel.Name,
@@ -139,7 +139,7 @@ namespace Pulumi.Scm
     ///     // 2. Define the Site
     ///     var exampleSite = new Scm.Site("example", new()
     ///     {
-    ///         Name = "example-site-14",
+    ///         Name = "example-site-site",
     ///         Type = "third-party-branch",
     ///         LicenseType = "FWAAS-SITE-25Mbps",
     ///         City = "San Jose",

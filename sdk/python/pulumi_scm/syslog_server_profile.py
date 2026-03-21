@@ -282,14 +282,14 @@ class SyslogServerProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_syslog_server_prof1 = scm.SyslogServerProfile("scm_syslog_server_prof_1",
-            folder="All",
+            folder="ngfw-shared",
             name="syslog-server-prof-base",
             servers=[{
                 "name": "Server-Primary",
                 "server": "192.168.1.10",
             }])
         scm_syslog_server_prof2 = scm.SyslogServerProfile("scm_syslog_server_prof_2",
-            folder="All",
+            folder="ngfw-shared",
             name="syslog-server-prof-mixed",
             servers=[{
                 "name": "Server-Mixed",
@@ -305,8 +305,8 @@ class SyslogServerProfile(pulumi.CustomResource):
                 "globalprotect": "$cloud",
             })
         scm_syslog_server_prof3 = scm.SyslogServerProfile("scm_syslog_server_prof_3",
-            folder="All",
-            name="syslog-server-prof-complete",
+            folder="ngfw-shared",
+            name="syslog-server-tf-prof-complete",
             servers=[
                 {
                     "name": "Server-A",
@@ -410,14 +410,14 @@ class SyslogServerProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_syslog_server_prof1 = scm.SyslogServerProfile("scm_syslog_server_prof_1",
-            folder="All",
+            folder="ngfw-shared",
             name="syslog-server-prof-base",
             servers=[{
                 "name": "Server-Primary",
                 "server": "192.168.1.10",
             }])
         scm_syslog_server_prof2 = scm.SyslogServerProfile("scm_syslog_server_prof_2",
-            folder="All",
+            folder="ngfw-shared",
             name="syslog-server-prof-mixed",
             servers=[{
                 "name": "Server-Mixed",
@@ -433,8 +433,8 @@ class SyslogServerProfile(pulumi.CustomResource):
                 "globalprotect": "$cloud",
             })
         scm_syslog_server_prof3 = scm.SyslogServerProfile("scm_syslog_server_prof_3",
-            folder="All",
-            name="syslog-server-prof-complete",
+            folder="ngfw-shared",
+            name="syslog-server-tf-prof-complete",
             servers=[
                 {
                     "name": "Server-A",

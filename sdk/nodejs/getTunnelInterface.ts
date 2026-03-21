@@ -76,6 +76,7 @@ export interface GetTunnelInterfaceResult {
     readonly ipv6: outputs.GetTunnelInterfaceIpv6;
     readonly mtu: number;
     readonly name: string;
+    readonly netflowProfile: string;
     readonly snippet: string;
     readonly tfid: string;
 }

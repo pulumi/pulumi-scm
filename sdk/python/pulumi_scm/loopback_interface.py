@@ -30,6 +30,7 @@ class LoopbackInterfaceArgs:
                  ipv6: Optional[pulumi.Input['LoopbackInterfaceIpv6Args']] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a LoopbackInterface resource.
@@ -45,6 +46,7 @@ class LoopbackInterfaceArgs:
         :param pulumi.Input['LoopbackInterfaceIpv6Args'] ipv6: Loopback IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU for loopback interface
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -67,6 +69,8 @@ class LoopbackInterfaceArgs:
             pulumi.set(__self__, "mtu", mtu)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if netflow_profile is not None:
+            pulumi.set(__self__, "netflow_profile", netflow_profile)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
 
@@ -181,6 +185,18 @@ class LoopbackInterfaceArgs:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
+
+    @netflow_profile.setter
+    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netflow_profile", value)
+
+    @_builtins.property
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -207,6 +223,7 @@ class _LoopbackInterfaceState:
                  ipv6: Optional[pulumi.Input['LoopbackInterfaceIpv6Args']] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
@@ -223,6 +240,7 @@ class _LoopbackInterfaceState:
         :param pulumi.Input['LoopbackInterfaceIpv6Args'] ipv6: Loopback IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU for loopback interface
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -246,6 +264,8 @@ class _LoopbackInterfaceState:
             pulumi.set(__self__, "mtu", mtu)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if netflow_profile is not None:
+            pulumi.set(__self__, "netflow_profile", netflow_profile)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if tfid is not None:
@@ -362,6 +382,18 @@ class _LoopbackInterfaceState:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
+
+    @netflow_profile.setter
+    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netflow_profile", value)
+
+    @_builtins.property
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -403,6 +435,7 @@ class LoopbackInterface(pulumi.CustomResource):
                  ipv6: Optional[pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
@@ -499,6 +532,7 @@ class LoopbackInterface(pulumi.CustomResource):
         :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']] ipv6: Loopback IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU for loopback interface
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -614,6 +648,7 @@ class LoopbackInterface(pulumi.CustomResource):
                  ipv6: Optional[pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -633,6 +668,7 @@ class LoopbackInterface(pulumi.CustomResource):
             __props__.__dict__["ipv6"] = ipv6
             __props__.__dict__["mtu"] = mtu
             __props__.__dict__["name"] = name
+            __props__.__dict__["netflow_profile"] = netflow_profile
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["tfid"] = None
         super(LoopbackInterface, __self__).__init__(
@@ -654,6 +690,7 @@ class LoopbackInterface(pulumi.CustomResource):
             ipv6: Optional[pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']]] = None,
             mtu: Optional[pulumi.Input[_builtins.int]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
+            netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'LoopbackInterface':
         """
@@ -674,6 +711,7 @@ class LoopbackInterface(pulumi.CustomResource):
         :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']] ipv6: Loopback IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU for loopback interface
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -692,6 +730,7 @@ class LoopbackInterface(pulumi.CustomResource):
         __props__.__dict__["ipv6"] = ipv6
         __props__.__dict__["mtu"] = mtu
         __props__.__dict__["name"] = name
+        __props__.__dict__["netflow_profile"] = netflow_profile
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["tfid"] = tfid
         return LoopbackInterface(resource_name, opts=opts, __props__=__props__)
@@ -769,6 +808,14 @@ class LoopbackInterface(pulumi.CustomResource):
         Loopback Interface name
         """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
 
     @_builtins.property
     @pulumi.getter

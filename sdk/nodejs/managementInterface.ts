@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const miExample = new scm.ManagementInterface("mi_example", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     managementInterface: {
  *         speedDuplex: "auto-negotiate",
  *         mtu: 1500,
@@ -27,6 +27,35 @@ import * as utilities from "./utilities";
  *                 acceptDhcpHostname: false,
  *                 acceptDhcpDomain: false,
  *             },
+ *         },
+ *         service: {
+ *             disableHttp: false,
+ *             disableHttps: true,
+ *             disableTelnet: false,
+ *             disableSsh: true,
+ *             disableIcmp: false,
+ *             disableSnmp: false,
+ *             disableUseridService: false,
+ *             disableUseridSyslogListenerSsl: false,
+ *             disableUseridSyslogListenerUdp: false,
+ *             disableHttpOcsp: false,
+ *         },
+ *         permittedIps: [{
+ *             name: "10.10.10.10",
+ *             description: "string",
+ *         }],
+ *     },
+ * });
+ * const miStaticExample = new scm.ManagementInterface("mi_static_example", {
+ *     folder: "Prisma Access",
+ *     managementInterface: {
+ *         speedDuplex: "auto-negotiate",
+ *         mtu: 1500,
+ *         ipAddress: "10.10.10.10",
+ *         netmask: "255.255.255.0",
+ *         defaultGateway: "192.168.252.1",
+ *         mgmtType: {
+ *             static: {},
  *         },
  *         service: {
  *             disableHttp: false,

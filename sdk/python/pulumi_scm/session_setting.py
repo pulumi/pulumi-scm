@@ -218,7 +218,7 @@ class SessionSetting(pulumi.CustomResource):
 
         # Set Sessions with Config Rematch value set to True
         session_example = scm.SessionSetting("session_example",
-            folder="All",
+            folder="ngfw-shared",
             session_settings={
                 "dhcp_bcast_session_on": False,
                 "erspan": False,
@@ -312,7 +312,7 @@ class SessionSetting(pulumi.CustomResource):
 
         # Set Sessions with Config Rematch value set to True
         session_example = scm.SessionSetting("session_example",
-            folder="All",
+            folder="ngfw-shared",
             session_settings={
                 "dhcp_bcast_session_on": False,
                 "erspan": False,

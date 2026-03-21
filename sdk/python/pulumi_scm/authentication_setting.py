@@ -217,11 +217,11 @@ class AuthenticationSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         global_radius_access = scm.AuthenticationProfile("global_radius_access",
-            name="test_auth_profile_radius_1",
+            name="test_auth_profile_settings",
             folder="Prisma Access",
             user_domain="default",
             username_modifier="%USERINPUT%",
-            allow_lists=["all"],
+            allow_lists=["ngfw-shared"],
             lockout={
                 "failed_attempts": 1,
                 "lockout_time": 3,
@@ -231,9 +231,6 @@ class AuthenticationSetting(pulumi.CustomResource):
                     "checkgroup": True,
                     "server_profile": "CHAP_only_rsp_11",
                 },
-            },
-            single_sign_on={
-                "realm": "EXAMPLE.COM",
             })
         auth_settings = scm.AuthenticationSetting("auth_settings",
             folder="Prisma Access",
@@ -293,11 +290,11 @@ class AuthenticationSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         global_radius_access = scm.AuthenticationProfile("global_radius_access",
-            name="test_auth_profile_radius_1",
+            name="test_auth_profile_settings",
             folder="Prisma Access",
             user_domain="default",
             username_modifier="%USERINPUT%",
-            allow_lists=["all"],
+            allow_lists=["ngfw-shared"],
             lockout={
                 "failed_attempts": 1,
                 "lockout_time": 3,
@@ -307,9 +304,6 @@ class AuthenticationSetting(pulumi.CustomResource):
                     "checkgroup": True,
                     "server_profile": "CHAP_only_rsp_11",
                 },
-            },
-            single_sign_on={
-                "realm": "EXAMPLE.COM",
             })
         auth_settings = scm.AuthenticationSetting("auth_settings",
             folder="Prisma Access",

@@ -29,7 +29,7 @@ import * as utilities from "./utilities";
  *                 action: "permit",
  *                 prefix: {
  *                     greaterThanOrEqual: 24,
- *                     network: "198.18.1.0/24",
+ *                     network: "any",
  *                 },
  *             }],
  *         },

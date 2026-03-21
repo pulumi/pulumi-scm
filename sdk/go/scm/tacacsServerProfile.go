@@ -32,7 +32,7 @@ import (
 //				Name:                pulumi.String("ISE-TACACS11"),
 //				Protocol:            pulumi.String("PAP"),
 //				Timeout:             pulumi.Int(3),
-//				Folder:              pulumi.String("All"),
+//				Folder:              pulumi.String("ngfw-shared"),
 //				UseSingleConnection: pulumi.Bool(true),
 //				Servers: scm.TacacsServerProfileServerArray{
 //					&scm.TacacsServerProfileServerArgs{

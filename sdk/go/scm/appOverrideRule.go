@@ -7,7 +7,6 @@ import (
 	"context"
 	"reflect"
 
-	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -31,7 +30,7 @@ import (
 //			// --- 1. TAG Resource ---
 //			appOverridePositionTag, err := scm.NewTag(ctx, "app_override_position_tag", &scm.TagArgs{
 //				Name:   pulumi.String("app-override-position-tag_1"),
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Color:  pulumi.String("Orange"),
 //			})
 //			if err != nil {
@@ -41,7 +40,7 @@ import (
 //			anchorAppOverride, err := scm.NewAppOverrideRule(ctx, "anchor_app_override", &scm.AppOverrideRuleArgs{
 //				Name:        pulumi.String("anchor-app-override-rule"),
 //				Description: pulumi.String("Base rule for testing 'before' and 'after' positioning. Updating"),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Position:    pulumi.String("pre"),
 //				Application: pulumi.String("ssl"),
 //				Protocol:    pulumi.String("tcp"),
@@ -69,7 +68,7 @@ import (
 //			_, err = scm.NewAppOverrideRule(ctx, "rule_top_app_override", &scm.AppOverrideRuleArgs{
 //				Name:             pulumi.String("top-absolute-app-override"),
 //				Description:      pulumi.String("Placed at the very TOP of the App Override rulebase."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("bottom"),
 //				Application:      pulumi.String("ssl"),
@@ -94,7 +93,7 @@ import (
 //			_, err = scm.NewAppOverrideRule(ctx, "rule_bottom_app_override", &scm.AppOverrideRuleArgs{
 //				Name:             pulumi.String("bottom-absolute-app-override"),
 //				Description:      pulumi.String("Placed at the very BOTTOM of the App Override rulebase."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("bottom"),
 //				Application:      pulumi.String("ssl"),
@@ -120,7 +119,7 @@ import (
 //			_, err = scm.NewAppOverrideRule(ctx, "rule_before_anchor_override", &scm.AppOverrideRuleArgs{
 //				Name:             pulumi.String("before-anchor-app-override"),
 //				Description:      pulumi.String("Positioned immediately BEFORE the anchor-app-override-rule."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("before"),
 //				TargetRule:       anchorAppOverride.ID(),
@@ -146,7 +145,7 @@ import (
 //			_, err = scm.NewAppOverrideRule(ctx, "rule_after_anchor_override", &scm.AppOverrideRuleArgs{
 //				Name:             pulumi.String("after-anchor-app-override"),
 //				Description:      pulumi.String("Positioned immediately AFTER the anchor-app-override-rule."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("before"),
 //				TargetRule:       anchorAppOverride.ID(),
@@ -200,7 +199,7 @@ type AppOverrideRule struct {
 	pulumi.CustomResourceState
 
 	// Application
-	Application pulumi.StringOutput `pulumi:"application"`
+	Application pulumi.StringPtrOutput `pulumi:"application"`
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Destination
@@ -224,11 +223,11 @@ type AppOverrideRule struct {
 	// Negate source
 	NegateSource pulumi.BoolOutput `pulumi:"negateSource"`
 	// Port
-	Port pulumi.StringOutput `pulumi:"port"`
+	Port pulumi.StringPtrOutput `pulumi:"port"`
 	// The position of a security rule
 	Position pulumi.StringOutput `pulumi:"position"`
 	// Protocol
-	Protocol pulumi.StringOutput `pulumi:"protocol"`
+	Protocol pulumi.StringPtrOutput `pulumi:"protocol"`
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition pulumi.StringPtrOutput `pulumi:"relativePosition"`
 	// The snippet in which the resource is defined
@@ -251,30 +250,9 @@ type AppOverrideRule struct {
 func NewAppOverrideRule(ctx *pulumi.Context,
 	name string, args *AppOverrideRuleArgs, opts ...pulumi.ResourceOption) (*AppOverrideRule, error) {
 	if args == nil {
-		return nil, errors.New("missing one or more required arguments")
+		args = &AppOverrideRuleArgs{}
 	}
 
-	if args.Application == nil {
-		return nil, errors.New("invalid value for required argument 'Application'")
-	}
-	if args.Destinations == nil {
-		return nil, errors.New("invalid value for required argument 'Destinations'")
-	}
-	if args.Froms == nil {
-		return nil, errors.New("invalid value for required argument 'Froms'")
-	}
-	if args.Port == nil {
-		return nil, errors.New("invalid value for required argument 'Port'")
-	}
-	if args.Protocol == nil {
-		return nil, errors.New("invalid value for required argument 'Protocol'")
-	}
-	if args.Sources == nil {
-		return nil, errors.New("invalid value for required argument 'Sources'")
-	}
-	if args.Tos == nil {
-		return nil, errors.New("invalid value for required argument 'Tos'")
-	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource AppOverrideRule
 	err := ctx.RegisterResource("scm:index/appOverrideRule:AppOverrideRule", name, args, &resource, opts...)
@@ -401,7 +379,7 @@ func (AppOverrideRuleState) ElementType() reflect.Type {
 
 type appOverrideRuleArgs struct {
 	// Application
-	Application string `pulumi:"application"`
+	Application *string `pulumi:"application"`
 	// Description
 	Description *string `pulumi:"description"`
 	// Destination
@@ -425,11 +403,11 @@ type appOverrideRuleArgs struct {
 	// Negate source
 	NegateSource *bool `pulumi:"negateSource"`
 	// Port
-	Port string `pulumi:"port"`
+	Port *string `pulumi:"port"`
 	// The position of a security rule
 	Position *string `pulumi:"position"`
 	// Protocol
-	Protocol string `pulumi:"protocol"`
+	Protocol *string `pulumi:"protocol"`
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition *string `pulumi:"relativePosition"`
 	// The snippet in which the resource is defined
@@ -449,7 +427,7 @@ type appOverrideRuleArgs struct {
 // The set of arguments for constructing a AppOverrideRule resource.
 type AppOverrideRuleArgs struct {
 	// Application
-	Application pulumi.StringInput
+	Application pulumi.StringPtrInput
 	// Description
 	Description pulumi.StringPtrInput
 	// Destination
@@ -473,11 +451,11 @@ type AppOverrideRuleArgs struct {
 	// Negate source
 	NegateSource pulumi.BoolPtrInput
 	// Port
-	Port pulumi.StringInput
+	Port pulumi.StringPtrInput
 	// The position of a security rule
 	Position pulumi.StringPtrInput
 	// Protocol
-	Protocol pulumi.StringInput
+	Protocol pulumi.StringPtrInput
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition pulumi.StringPtrInput
 	// The snippet in which the resource is defined
@@ -582,8 +560,8 @@ func (o AppOverrideRuleOutput) ToAppOverrideRuleOutputWithContext(ctx context.Co
 }
 
 // Application
-func (o AppOverrideRuleOutput) Application() pulumi.StringOutput {
-	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Application }).(pulumi.StringOutput)
+func (o AppOverrideRuleOutput) Application() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.Application }).(pulumi.StringPtrOutput)
 }
 
 // Description
@@ -639,8 +617,8 @@ func (o AppOverrideRuleOutput) NegateSource() pulumi.BoolOutput {
 }
 
 // Port
-func (o AppOverrideRuleOutput) Port() pulumi.StringOutput {
-	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Port }).(pulumi.StringOutput)
+func (o AppOverrideRuleOutput) Port() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.Port }).(pulumi.StringPtrOutput)
 }
 
 // The position of a security rule
@@ -649,8 +627,8 @@ func (o AppOverrideRuleOutput) Position() pulumi.StringOutput {
 }
 
 // Protocol
-func (o AppOverrideRuleOutput) Protocol() pulumi.StringOutput {
-	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Protocol }).(pulumi.StringOutput)
+func (o AppOverrideRuleOutput) Protocol() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.Protocol }).(pulumi.StringPtrOutput)
 }
 
 // Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.

@@ -27,7 +27,7 @@ class GetVlanInterfaceResult:
     """
     A collection of values returned by getVlanInterface.
     """
-    def __init__(__self__, arps=None, comment=None, ddns_config=None, default_value=None, device=None, dhcp_client=None, folder=None, id=None, interface_management_profile=None, ips=None, mtu=None, name=None, snippet=None, tfid=None, vlan_tag=None):
+    def __init__(__self__, arps=None, comment=None, ddns_config=None, default_value=None, device=None, dhcp_client=None, folder=None, id=None, interface_management_profile=None, ips=None, mtu=None, name=None, netflow_profile=None, snippet=None, tfid=None, vlan_tag=None):
         if arps and not isinstance(arps, list):
             raise TypeError("Expected argument 'arps' to be a list")
         pulumi.set(__self__, "arps", arps)
@@ -64,6 +64,9 @@ class GetVlanInterfaceResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if netflow_profile and not isinstance(netflow_profile, str):
+            raise TypeError("Expected argument 'netflow_profile' to be a str")
+        pulumi.set(__self__, "netflow_profile", netflow_profile)
         if snippet and not isinstance(snippet, str):
             raise TypeError("Expected argument 'snippet' to be a str")
         pulumi.set(__self__, "snippet", snippet)
@@ -141,6 +144,11 @@ class GetVlanInterfaceResult:
         return pulumi.get(self, "name")
 
     @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> _builtins.str:
+        return pulumi.get(self, "netflow_profile")
+
+    @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
         return pulumi.get(self, "snippet")
@@ -174,6 +182,7 @@ class AwaitableGetVlanInterfaceResult(GetVlanInterfaceResult):
             ips=self.ips,
             mtu=self.mtu,
             name=self.name,
+            netflow_profile=self.netflow_profile,
             snippet=self.snippet,
             tfid=self.tfid,
             vlan_tag=self.vlan_tag)
@@ -232,6 +241,7 @@ def get_vlan_interface(device: Optional[_builtins.str] = None,
         ips=pulumi.get(__ret__, 'ips'),
         mtu=pulumi.get(__ret__, 'mtu'),
         name=pulumi.get(__ret__, 'name'),
+        netflow_profile=pulumi.get(__ret__, 'netflow_profile'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         vlan_tag=pulumi.get(__ret__, 'vlan_tag'))
@@ -287,6 +297,7 @@ def get_vlan_interface_output(device: Optional[pulumi.Input[Optional[_builtins.s
         ips=pulumi.get(__response__, 'ips'),
         mtu=pulumi.get(__response__, 'mtu'),
         name=pulumi.get(__response__, 'name'),
+        netflow_profile=pulumi.get(__response__, 'netflow_profile'),
         snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         vlan_tag=pulumi.get(__response__, 'vlan_tag')))

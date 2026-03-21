@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var scmSamlServerProfile1 = new Scm.SamlServerProfile("scm_saml_server_profile_1", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm-saml-server-prof-1",
     ///         Certificate = "Global Authentication Cookie Cert",
     ///         EntityId = "123",
@@ -34,7 +34,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmSamlServerProfile2 = new Scm.SamlServerProfile("scm_saml_server_profile_2", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm-saml-server-prof-2",
     ///         Certificate = "Global Authentication Cookie Cert",
     ///         EntityId = "test_id",
@@ -47,7 +47,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmSamlServerProfile3 = new Scm.SamlServerProfile("scm_saml_server_profile_3", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm-saml-server-prof-3",
     ///         Certificate = "Global Authentication Cookie Cert",
     ///         EntityId = "test_123",

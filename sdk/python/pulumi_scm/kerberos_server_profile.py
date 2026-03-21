@@ -249,14 +249,14 @@ class KerberosServerProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_kerberos_server_profile1 = scm.KerberosServerProfile("scm_kerberos_server_profile_1",
-            folder="All",
+            folder="ngfw-shared",
             name="kerberos-server-prof-1",
             servers=[{
                 "name": "server_a",
                 "host": "$test_ip",
             }])
         scm_kerberos_server_profile2 = scm.KerberosServerProfile("scm_kerberos_server_profile_2",
-            folder="All",
+            folder="ngfw-shared",
             name="kerberos-server-prof-2",
             servers=[{
                 "name": "server_a",
@@ -264,7 +264,7 @@ class KerberosServerProfile(pulumi.CustomResource):
                 "port": 120,
             }])
         scm_kerberos_server_profile3 = scm.KerberosServerProfile("scm_kerberos_server_profile_3",
-            folder="All",
+            folder="ngfw-shared",
             name="kerberos-server-prof-3",
             servers=[
                 {
@@ -336,14 +336,14 @@ class KerberosServerProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_kerberos_server_profile1 = scm.KerberosServerProfile("scm_kerberos_server_profile_1",
-            folder="All",
+            folder="ngfw-shared",
             name="kerberos-server-prof-1",
             servers=[{
                 "name": "server_a",
                 "host": "$test_ip",
             }])
         scm_kerberos_server_profile2 = scm.KerberosServerProfile("scm_kerberos_server_profile_2",
-            folder="All",
+            folder="ngfw-shared",
             name="kerberos-server-prof-2",
             servers=[{
                 "name": "server_a",
@@ -351,7 +351,7 @@ class KerberosServerProfile(pulumi.CustomResource):
                 "port": 120,
             }])
         scm_kerberos_server_profile3 = scm.KerberosServerProfile("scm_kerberos_server_profile_3",
-            folder="All",
+            folder="ngfw-shared",
             name="kerberos-server-prof-3",
             servers=[
                 {

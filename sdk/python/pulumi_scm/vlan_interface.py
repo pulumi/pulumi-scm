@@ -32,6 +32,7 @@ class VlanInterfaceArgs:
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input['VlanInterfaceIpArgs']]]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  vlan_tag: Optional[pulumi.Input[_builtins.str]] = None):
         """
@@ -54,6 +55,7 @@ class VlanInterfaceArgs:
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -81,6 +83,8 @@ class VlanInterfaceArgs:
             pulumi.set(__self__, "mtu", mtu)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if netflow_profile is not None:
+            pulumi.set(__self__, "netflow_profile", netflow_profile)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if vlan_tag is not None:
@@ -225,6 +229,18 @@ class VlanInterfaceArgs:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
+
+    @netflow_profile.setter
+    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netflow_profile", value)
+
+    @_builtins.property
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -265,6 +281,7 @@ class _VlanInterfaceState:
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input['VlanInterfaceIpArgs']]]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None,
                  vlan_tag: Optional[pulumi.Input[_builtins.str]] = None):
@@ -288,6 +305,7 @@ class _VlanInterfaceState:
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -316,6 +334,8 @@ class _VlanInterfaceState:
             pulumi.set(__self__, "mtu", mtu)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if netflow_profile is not None:
+            pulumi.set(__self__, "netflow_profile", netflow_profile)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if tfid is not None:
@@ -462,6 +482,18 @@ class _VlanInterfaceState:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
+
+    @netflow_profile.setter
+    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netflow_profile", value)
+
+    @_builtins.property
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -517,6 +549,7 @@ class VlanInterface(pulumi.CustomResource):
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict']]]]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  vlan_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -584,6 +617,7 @@ class VlanInterface(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -666,6 +700,7 @@ class VlanInterface(pulumi.CustomResource):
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict']]]]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  vlan_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -688,6 +723,7 @@ class VlanInterface(pulumi.CustomResource):
             __props__.__dict__["ips"] = ips
             __props__.__dict__["mtu"] = mtu
             __props__.__dict__["name"] = name
+            __props__.__dict__["netflow_profile"] = netflow_profile
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["vlan_tag"] = vlan_tag
             __props__.__dict__["tfid"] = None
@@ -712,6 +748,7 @@ class VlanInterface(pulumi.CustomResource):
             ips: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VlanInterfaceIpArgs', 'VlanInterfaceIpArgsDict']]]]] = None,
             mtu: Optional[pulumi.Input[_builtins.int]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
+            netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None,
             vlan_tag: Optional[pulumi.Input[_builtins.str]] = None) -> 'VlanInterface':
@@ -739,6 +776,7 @@ class VlanInterface(pulumi.CustomResource):
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
                
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -760,6 +798,7 @@ class VlanInterface(pulumi.CustomResource):
         __props__.__dict__["ips"] = ips
         __props__.__dict__["mtu"] = mtu
         __props__.__dict__["name"] = name
+        __props__.__dict__["netflow_profile"] = netflow_profile
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["tfid"] = tfid
         __props__.__dict__["vlan_tag"] = vlan_tag
@@ -858,6 +897,14 @@ class VlanInterface(pulumi.CustomResource):
         L3 sub-interface name
         """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
 
     @_builtins.property
     @pulumi.getter

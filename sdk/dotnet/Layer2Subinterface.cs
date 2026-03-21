@@ -27,7 +27,7 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmParentInterface = new Scm.EthernetInterface("scm_parent_interface", new()
     ///     {
-    ///         Name = "$scm_parent_interface",
+    ///         Name = "$scm_tf_parent_interface",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
     ///         Layer2 = null,
@@ -38,11 +38,11 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmLayer2Subinterface = new Scm.Layer2Subinterface("scm_layer2_subinterface", new()
     ///     {
-    ///         Name = "$scm_parent_interface.100",
+    ///         Name = "$scm_tf_parent_interface.100",
     ///         Comment = "Managed by Pulumi",
     ///         Folder = "ngfw-shared",
     ///         VlanTag = "100",
-    ///         ParentInterface = "$scm_parent_interface",
+    ///         ParentInterface = "$scm_tf_parent_interface",
     ///     }, new CustomResourceOptions
     ///     {
     ///         DependsOn =

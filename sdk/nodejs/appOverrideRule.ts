@@ -16,14 +16,14 @@ import * as utilities from "./utilities";
  * // --- 1. TAG Resource ---
  * const appOverridePositionTag = new scm.Tag("app_override_position_tag", {
  *     name: "app-override-position-tag_1",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     color: "Orange",
  * });
  * // --- 2. ANCHOR RULE (Used for relative positioning by other rules) ---
  * const anchorAppOverride = new scm.AppOverrideRule("anchor_app_override", {
  *     name: "anchor-app-override-rule",
  *     description: "Base rule for testing 'before' and 'after' positioning. Updating",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     application: "ssl",
  *     protocol: "tcp",
@@ -38,7 +38,7 @@ import * as utilities from "./utilities";
  * const ruleTopAppOverride = new scm.AppOverrideRule("rule_top_app_override", {
  *     name: "top-absolute-app-override",
  *     description: "Placed at the very TOP of the App Override rulebase.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "bottom",
  *     application: "ssl",
@@ -52,7 +52,7 @@ import * as utilities from "./utilities";
  * const ruleBottomAppOverride = new scm.AppOverrideRule("rule_bottom_app_override", {
  *     name: "bottom-absolute-app-override",
  *     description: "Placed at the very BOTTOM of the App Override rulebase.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "bottom",
  *     application: "ssl",
@@ -67,7 +67,7 @@ import * as utilities from "./utilities";
  * const ruleBeforeAnchorOverride = new scm.AppOverrideRule("rule_before_anchor_override", {
  *     name: "before-anchor-app-override",
  *     description: "Positioned immediately BEFORE the anchor-app-override-rule.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "before",
  *     targetRule: anchorAppOverride.id,
@@ -82,7 +82,7 @@ import * as utilities from "./utilities";
  * const ruleAfterAnchorOverride = new scm.AppOverrideRule("rule_after_anchor_override", {
  *     name: "after-anchor-app-override",
  *     description: "Positioned immediately AFTER the anchor-app-override-rule.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "before",
  *     targetRule: anchorAppOverride.id,
@@ -149,7 +149,7 @@ export class AppOverrideRule extends pulumi.CustomResource {
     /**
      * Application
      */
-    declare public readonly application: pulumi.Output<string>;
+    declare public readonly application: pulumi.Output<string | undefined>;
     /**
      * Description
      */
@@ -195,7 +195,7 @@ export class AppOverrideRule extends pulumi.CustomResource {
     /**
      * Port
      */
-    declare public readonly port: pulumi.Output<string>;
+    declare public readonly port: pulumi.Output<string | undefined>;
     /**
      * The position of a security rule
      */
@@ -203,7 +203,7 @@ export class AppOverrideRule extends pulumi.CustomResource {
     /**
      * Protocol
      */
-    declare public readonly protocol: pulumi.Output<string>;
+    declare public readonly protocol: pulumi.Output<string | undefined>;
     /**
      * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
      */
@@ -242,7 +242,7 @@ export class AppOverrideRule extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args: AppOverrideRuleArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args?: AppOverrideRuleArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: AppOverrideRuleArgs | AppOverrideRuleState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -271,27 +271,6 @@ export class AppOverrideRule extends pulumi.CustomResource {
             resourceInputs["tos"] = state?.tos;
         } else {
             const args = argsOrState as AppOverrideRuleArgs | undefined;
-            if (args?.application === undefined && !opts.urn) {
-                throw new Error("Missing required property 'application'");
-            }
-            if (args?.destinations === undefined && !opts.urn) {
-                throw new Error("Missing required property 'destinations'");
-            }
-            if (args?.froms === undefined && !opts.urn) {
-                throw new Error("Missing required property 'froms'");
-            }
-            if (args?.port === undefined && !opts.urn) {
-                throw new Error("Missing required property 'port'");
-            }
-            if (args?.protocol === undefined && !opts.urn) {
-                throw new Error("Missing required property 'protocol'");
-            }
-            if (args?.sources === undefined && !opts.urn) {
-                throw new Error("Missing required property 'sources'");
-            }
-            if (args?.tos === undefined && !opts.urn) {
-                throw new Error("Missing required property 'tos'");
-            }
             resourceInputs["application"] = args?.application;
             resourceInputs["description"] = args?.description;
             resourceInputs["destinations"] = args?.destinations;
@@ -420,7 +399,7 @@ export interface AppOverrideRuleArgs {
     /**
      * Application
      */
-    application: pulumi.Input<string>;
+    application?: pulumi.Input<string>;
     /**
      * Description
      */
@@ -428,7 +407,7 @@ export interface AppOverrideRuleArgs {
     /**
      * Destination
      */
-    destinations: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The device in which the resource is defined
      */
@@ -446,7 +425,7 @@ export interface AppOverrideRuleArgs {
     /**
      * From
      */
-    froms: pulumi.Input<pulumi.Input<string>[]>;
+    froms?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Group tag
      */
@@ -466,7 +445,7 @@ export interface AppOverrideRuleArgs {
     /**
      * Port
      */
-    port: pulumi.Input<string>;
+    port?: pulumi.Input<string>;
     /**
      * The position of a security rule
      */
@@ -474,7 +453,7 @@ export interface AppOverrideRuleArgs {
     /**
      * Protocol
      */
-    protocol: pulumi.Input<string>;
+    protocol?: pulumi.Input<string>;
     /**
      * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
      */
@@ -488,7 +467,7 @@ export interface AppOverrideRuleArgs {
     /**
      * Source
      */
-    sources: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Tag
      */
@@ -500,5 +479,5 @@ export interface AppOverrideRuleArgs {
     /**
      * To
      */
-    tos: pulumi.Input<pulumi.Input<string>[]>;
+    tos?: pulumi.Input<pulumi.Input<string>[]>;
 }

@@ -50,7 +50,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var scmAntiSpywareSignature1 = new AntiSpywareSignature("scmAntiSpywareSignature1", AntiSpywareSignatureArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .threatId("6900001")
  *             .comment("Managed by Pulumi")
  *             .direction("client2server")

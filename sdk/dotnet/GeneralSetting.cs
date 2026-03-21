@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var gsExample = new Scm.GeneralSetting("gs_example", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         General = new Scm.Inputs.GeneralSettingGeneralArgs
     ///         {
     ///             Domain = "foo.com",

@@ -65,6 +65,11 @@ public final class GetLoopbackInterfaceListData {
      */
     private String name;
     /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    private String netflowProfile;
+    /**
      * @return The snippet of the item.
      * 
      */
@@ -147,6 +152,13 @@ public final class GetLoopbackInterfaceListData {
         return this.name;
     }
     /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public String netflowProfile() {
+        return this.netflowProfile;
+    }
+    /**
      * @return The snippet of the item.
      * 
      */
@@ -180,6 +192,7 @@ public final class GetLoopbackInterfaceListData {
         private GetLoopbackInterfaceListDataIpv6 ipv6;
         private Integer mtu;
         private String name;
+        private String netflowProfile;
         private String snippet;
         private String tfid;
         public Builder() {}
@@ -195,6 +208,7 @@ public final class GetLoopbackInterfaceListData {
     	      this.ipv6 = defaults.ipv6;
     	      this.mtu = defaults.mtu;
     	      this.name = defaults.name;
+    	      this.netflowProfile = defaults.netflowProfile;
     	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
         }
@@ -283,6 +297,14 @@ public final class GetLoopbackInterfaceListData {
             return this;
         }
         @CustomType.Setter
+        public Builder netflowProfile(String netflowProfile) {
+            if (netflowProfile == null) {
+              throw new MissingRequiredPropertyException("GetLoopbackInterfaceListData", "netflowProfile");
+            }
+            this.netflowProfile = netflowProfile;
+            return this;
+        }
+        @CustomType.Setter
         public Builder snippet(String snippet) {
             if (snippet == null) {
               throw new MissingRequiredPropertyException("GetLoopbackInterfaceListData", "snippet");
@@ -310,6 +332,7 @@ public final class GetLoopbackInterfaceListData {
             _resultValue.ipv6 = ipv6;
             _resultValue.mtu = mtu;
             _resultValue.name = name;
+            _resultValue.netflowProfile = netflowProfile;
             _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             return _resultValue;

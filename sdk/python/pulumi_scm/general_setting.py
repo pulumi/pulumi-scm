@@ -217,7 +217,7 @@ class GeneralSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         gs_example = scm.GeneralSetting("gs_example",
-            folder="All",
+            folder="ngfw-shared",
             general={
                 "domain": "foo.com",
                 "login_banner": "Test Banner",
@@ -290,7 +290,7 @@ class GeneralSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         gs_example = scm.GeneralSetting("gs_example",
-            folder="All",
+            folder="ngfw-shared",
             general={
                 "domain": "foo.com",
                 "login_banner": "Test Banner",

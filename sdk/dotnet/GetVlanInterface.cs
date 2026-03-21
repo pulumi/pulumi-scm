@@ -204,6 +204,7 @@ namespace Pulumi.Scm
         public readonly ImmutableArray<Outputs.GetVlanInterfaceIpResult> Ips;
         public readonly int Mtu;
         public readonly string Name;
+        public readonly string NetflowProfile;
         public readonly string Snippet;
         public readonly string Tfid;
         public readonly string VlanTag;
@@ -234,6 +235,8 @@ namespace Pulumi.Scm
 
             string name,
 
+            string netflowProfile,
+
             string snippet,
 
             string tfid,
@@ -252,6 +255,7 @@ namespace Pulumi.Scm
             Ips = ips;
             Mtu = mtu;
             Name = name;
+            NetflowProfile = netflowProfile;
             Snippet = snippet;
             Tfid = tfid;
             VlanTag = vlanTag;

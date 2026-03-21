@@ -22,6 +22,143 @@ import javax.annotation.Nullable;
 /**
  * LdapServerProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.LdapServerProfile;
+ * import com.pulumi.scm.LdapServerProfileArgs;
+ * import com.pulumi.scm.inputs.LdapServerProfileServerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
+ *         Pulumi.run(App::stack);
+ *     }}{@code
+ * 
+ *     public static void stack(Context ctx) }{{@code
+ *         // ldpap server profile w/ required fields
+ *         var scmLdapServerProfileOne = new LdapServerProfile("scmLdapServerProfileOne", LdapServerProfileArgs.builder()
+ *             .folder("All")
+ *             .name("simple-ldap-profile")
+ *             .servers(            
+ *                 LdapServerProfileServerArgs.builder()
+ *                     .name("primary-ldap")
+ *                     .address("$tst_68081_1")
+ *                     .port(389)
+ *                     .build(),
+ *                 LdapServerProfileServerArgs.builder()
+ *                     .name("secondary-ldap")
+ *                     .address("$tst_68081_2")
+ *                     .port(1)
+ *                     .build(),
+ *                 LdapServerProfileServerArgs.builder()
+ *                     .name("extra-ldap")
+ *                     .address("$test_ip")
+ *                     .port(65535)
+ *                     .build())
+ *             .build());
+ * 
+ *         // ldpap server profile w/ some fields
+ *         var scmLdapServerProfileTwo = new LdapServerProfile("scmLdapServerProfileTwo", LdapServerProfileArgs.builder()
+ *             .folder("All")
+ *             .name("intermediate-ldap-profile-one")
+ *             .ldapType("active-directory")
+ *             .base("dc=example,dc=com")
+ *             .ssl(true)
+ *             .servers(LdapServerProfileServerArgs.builder()
+ *                 .name("extra-ldap")
+ *                 .address("$test_ip")
+ *                 .port(25)
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmLdapServerProfileThree = new LdapServerProfile("scmLdapServerProfileThree", LdapServerProfileArgs.builder()
+ *             .folder("All")
+ *             .name("intermediate-ldap-profile-two")
+ *             .ldapType("sun")
+ *             .base("DC=internal,DC=company,DC=com")
+ *             .bindDn("CN=LDAP Bind,OU=Service Accounts,DC=internal,DC=company,DC=com")
+ *             .bindPassword("SecurePwd123!")
+ *             .timelimit(30)
+ *             .servers(            
+ *                 LdapServerProfileServerArgs.builder()
+ *                     .name("primary-ldap")
+ *                     .address("$tst_68081_1")
+ *                     .port(5000)
+ *                     .build(),
+ *                 LdapServerProfileServerArgs.builder()
+ *                     .name("secondary-ldap")
+ *                     .address("150.25.25.60")
+ *                     .port(25000)
+ *                     .build())
+ *             .build());
+ * 
+ *         // ldpap server profile w/ all fields
+ *         var scmLdapServerProfileFour = new LdapServerProfile("scmLdapServerProfileFour", LdapServerProfileArgs.builder()
+ *             .folder("All")
+ *             .name("complex-ldap-profile-one")
+ *             .ldapType("e-directory")
+ *             .base("ou=users,dc=corp,dc=local")
+ *             .bindDn("cn=admin,dc=corp,dc=local")
+ *             .bindPassword("MyPwd123!")
+ *             .bindTimelimit("20")
+ *             .retryInterval(1000)
+ *             .timelimit(10)
+ *             .ssl(true)
+ *             .verifyServerCertificate(false)
+ *             .servers(LdapServerProfileServerArgs.builder()
+ *                 .name("global-directory-main")
+ *                 .address("$scm_variable_ipaddr")
+ *                 .port(636)
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmLdapServerProfileFive = new LdapServerProfile("scmLdapServerProfileFive", LdapServerProfileArgs.builder()
+ *             .folder("All")
+ *             .name("complex-ldap-profile-two")
+ *             .ldapType("other")
+ *             .base("OU=Employees,DC=global,DC=enterprise,DC=net")
+ *             .bindDn("CN=SVC_LDAP_Search,OU=Service Accounts,DC=global,DC=enterprise,DC=net")
+ *             .bindPassword("ExtremelyComplexP}{@literal @}{@code ssw0rd!")
+ *             .bindTimelimit("15")
+ *             .retryInterval(300)
+ *             .timelimit(30)
+ *             .ssl(true)
+ *             .verifyServerCertificate(true)
+ *             .servers(            
+ *                 LdapServerProfileServerArgs.builder()
+ *                     .name("dc-us-east")
+ *                     .address("$scm_variable_ipaddr")
+ *                     .port(720)
+ *                     .build(),
+ *                 LdapServerProfileServerArgs.builder()
+ *                     .name("dc-us-west")
+ *                     .address("192.10.10.10")
+ *                     .port(1400)
+ *                     .build(),
+ *                 LdapServerProfileServerArgs.builder()
+ *                     .name("dc-eu-central")
+ *                     .address("3.3.3.3")
+ *                     .port(20000)
+ *                     .build())
+ *             .build());
+ * 
+ *     }}{@code
+ * }}{@code
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The following command can be used to import a resource not managed by Terraform:

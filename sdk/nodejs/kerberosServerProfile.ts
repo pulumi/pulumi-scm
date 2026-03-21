@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const scmKerberosServerProfile1 = new scm.KerberosServerProfile("scm_kerberos_server_profile_1", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "kerberos-server-prof-1",
  *     servers: [{
  *         name: "server_a",
@@ -24,7 +24,7 @@ import * as utilities from "./utilities";
  *     }],
  * });
  * const scmKerberosServerProfile2 = new scm.KerberosServerProfile("scm_kerberos_server_profile_2", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "kerberos-server-prof-2",
  *     servers: [{
  *         name: "server_a",
@@ -33,7 +33,7 @@ import * as utilities from "./utilities";
  *     }],
  * });
  * const scmKerberosServerProfile3 = new scm.KerberosServerProfile("scm_kerberos_server_profile_3", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "kerberos-server-prof-3",
  *     servers: [
  *         {

@@ -26,7 +26,7 @@ namespace Pulumi.Scm
     ///     var decryptionPositionTag = new Scm.Tag("decryption_position_tag", new()
     ///     {
     ///         Name = "decryption-position-tag",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Color = "Purple",
     ///     });
     /// 
@@ -35,7 +35,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "anchor-decryption-rule",
     ///         Description = "Base rule for testing 'before' and 'after' positioning.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         Action = "decrypt",
     ///         Froms = new[]
@@ -90,7 +90,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "top-absolute-decryption-rule",
     ///         Description = "Placed at the very TOP of the Decryption rulebase.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         Action = "no-decrypt",
     ///         RelativePosition = "top",
@@ -132,7 +132,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "bottom-absolute-decryption-rule",
     ///         Description = "Placed at the very BOTTOM of the Decryption rulebase.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         Action = "decrypt",
     ///         RelativePosition = "bottom",
@@ -175,7 +175,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "before-anchor-decryption-rule",
     ///         Description = "Positioned immediately BEFORE the anchor-decryption-rule. Updating",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         Action = "decrypt",
     ///         RelativePosition = "before",
@@ -218,7 +218,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "after-anchor-decryption-rule_123",
     ///         Description = "Positioned immediately AFTER the anchor-decryption-rule.",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         Action = "decrypt",
     ///         RelativePosition = "after",
@@ -261,7 +261,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Name = "ssl_inbound_inspection_rule",
     ///         Description = "Decryption Rule with SSL Inbound Set",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Position = "pre",
     ///         Action = "decrypt",
     ///         Froms = new[]

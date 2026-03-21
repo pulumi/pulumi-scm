@@ -29,7 +29,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			appAccessTag, err := scm.NewTag(ctx, "app_access_tag", &scm.TagArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("app-access-test_25"),
 //				Color:  pulumi.String("Blue"),
 //			})
@@ -43,7 +43,7 @@ import (
 //				Name:        pulumi.String("test_anchor_rule_251"),
 //				Description: pulumi.String("Base rule. Used to test 'before' and 'after' positioning"),
 //				Position:    pulumi.String("pre"),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Destinations: pulumi.StringArray{
 //					pulumi.String("any"),
 //				},
@@ -87,7 +87,7 @@ import (
 //			_, err = scm.NewAuthenticationRule(ctx, "rule_top_of_list", &scm.AuthenticationRuleArgs{
 //				Name:             pulumi.String("test_top_rule_25"),
 //				Description:      pulumi.String("Placed at the very top of the 'pre' rulebase."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("top"),
 //				Destinations: pulumi.StringArray{
@@ -115,7 +115,7 @@ import (
 //			_, err = scm.NewAuthenticationRule(ctx, "rule_bottom_of_list", &scm.AuthenticationRuleArgs{
 //				Name:             pulumi.String("test_bottom_rule_25"),
 //				Description:      pulumi.String("Placed at the very bottom of the 'pre' rulebase."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("bottom"),
 //				Destinations: pulumi.StringArray{
@@ -146,7 +146,7 @@ import (
 //			_, err = scm.NewAuthenticationRule(ctx, "rule_before_anchor", &scm.AuthenticationRuleArgs{
 //				Name:             pulumi.String("test_before_rule_25_updating"),
 //				Description:      pulumi.String("Positioned immediately BEFORE the anchor_rule."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("before"),
 //				TargetRule:       anchorRule.ID(),
@@ -175,7 +175,7 @@ import (
 //			_, err = scm.NewAuthenticationRule(ctx, "rule_after_anchor", &scm.AuthenticationRuleArgs{
 //				Name:             pulumi.String("test_after_rule_25"),
 //				Description:      pulumi.String("Positioned immediately AFTER the anchor_rule."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("after"),
 //				TargetRule:       anchorRule.ID(),

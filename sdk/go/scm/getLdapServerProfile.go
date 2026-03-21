@@ -12,6 +12,40 @@ import (
 )
 
 // LdapServerProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+//			//
+//			// Replace the ID with the UUID of the LDAP Server Profile you want to find.
+//			ldapServerProf, err := scm.LookupLdapServerProfile(ctx, &scm.LookupLdapServerProfileArgs{
+//				Id: "a5006a3e-52b3-435e-9e3b-39b50dc72401",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmLdapServerProfileDetails", pulumi.StringMap{
+//				"id":     ldapServerProf.Id,
+//				"folder": ldapServerProf.Folder,
+//				"name":   ldapServerProf.Name,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupLdapServerProfile(ctx *pulumi.Context, args *LookupLdapServerProfileArgs, opts ...pulumi.InvokeOption) (*LookupLdapServerProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupLdapServerProfileResult

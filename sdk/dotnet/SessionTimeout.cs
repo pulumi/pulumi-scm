@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var stExample = new Scm.SessionTimeout("st_example", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         SessionTimeouts = new Scm.Inputs.SessionTimeoutSessionTimeoutsArgs
     ///         {
     ///             TimeoutDefault = 60,

@@ -12,24 +12,6 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class ManagementInterfaceManagementInterfaceMgmtTypeStaticArgs : global::Pulumi.ResourceArgs
     {
-        /// <summary>
-        /// Default gateway
-        /// </summary>
-        [Input("defaultGateway", required: true)]
-        public Input<string> DefaultGateway { get; set; } = null!;
-
-        /// <summary>
-        /// IP address
-        /// </summary>
-        [Input("ipAddress", required: true)]
-        public Input<string> IpAddress { get; set; } = null!;
-
-        /// <summary>
-        /// Netmask
-        /// </summary>
-        [Input("netmask", required: true)]
-        public Input<string> Netmask { get; set; } = null!;
-
         public ManagementInterfaceManagementInterfaceMgmtTypeStaticArgs()
         {
         }

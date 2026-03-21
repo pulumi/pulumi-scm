@@ -32,7 +32,7 @@ import (
 //			anchorQosRule, err := scm.NewQosPolicyRule(ctx, "anchor_qos_rule", &scm.QosPolicyRuleArgs{
 //				Name:        pulumi.String("anchor-qos-rule"),
 //				Description: pulumi.String("Base rule for testing 'before' and 'after' positioning."),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Position:    pulumi.String("pre"),
 //				Action: &scm.QosPolicyRuleActionArgs{
 //					Class: pulumi.String("2"),
@@ -56,7 +56,7 @@ import (
 //			_, err = scm.NewQosPolicyRule(ctx, "rule_top_qos_rule", &scm.QosPolicyRuleArgs{
 //				Name:             pulumi.String("top-absolute-qos-rule"),
 //				Description:      pulumi.String("Placed at the very TOP of the QoS rulebase (Highest Priority)."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("top"),
 //				Action: &scm.QosPolicyRuleActionArgs{
@@ -69,7 +69,7 @@ import (
 //			_, err = scm.NewQosPolicyRule(ctx, "rule_bottom_qos_rule", &scm.QosPolicyRuleArgs{
 //				Name:             pulumi.String("bottom-absolute-qos-rule"),
 //				Description:      pulumi.String("Placed at the very BOTTOM of the QoS rulebase (Lowest Priority)"),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("bottom"),
 //				Action: &scm.QosPolicyRuleActionArgs{
@@ -83,7 +83,7 @@ import (
 //			_, err = scm.NewQosPolicyRule(ctx, "rule_before_anchor_qos", &scm.QosPolicyRuleArgs{
 //				Name:             pulumi.String("before-anchor-qos-rule"),
 //				Description:      pulumi.String("Positioned immediately BEFORE the anchor-qos-rule."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("before"),
 //				TargetRule:       anchorQosRule.ID(),
@@ -97,7 +97,7 @@ import (
 //			_, err = scm.NewQosPolicyRule(ctx, "rule_after_anchor_qos", &scm.QosPolicyRuleArgs{
 //				Name:             pulumi.String("after-anchor-qos-rule"),
 //				Description:      pulumi.String("Positioned immediately AFTER the anchor-qos-rule."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				RelativePosition: pulumi.String("after"),
 //				TargetRule:       anchorQosRule.ID(),

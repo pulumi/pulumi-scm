@@ -8,6 +8,27 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM LDAP Server Profile objects.
+ * //
+ * // Fetch a list of all SCM LDAP Server Profiles in the "All" folder.
+ * const allShared = scm.getLdapServerProfileList({
+ *     folder: "All",
+ * });
+ * export const scmLdapServerProfileListAllSharedFiltered = allShared.then(allShared => .map(profile => ({
+ *     id: profile.id,
+ *     name: profile.name,
+ *     folder: profile.folder,
+ *     server: profile.server,
+ * })));
+ * ```
  */
 export function getLdapServerProfileList(args?: GetLdapServerProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetLdapServerProfileListResult> {
     args = args || {};
@@ -99,6 +120,27 @@ export interface GetLdapServerProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM LDAP Server Profile objects.
+ * //
+ * // Fetch a list of all SCM LDAP Server Profiles in the "All" folder.
+ * const allShared = scm.getLdapServerProfileList({
+ *     folder: "All",
+ * });
+ * export const scmLdapServerProfileListAllSharedFiltered = allShared.then(allShared => .map(profile => ({
+ *     id: profile.id,
+ *     name: profile.name,
+ *     folder: profile.folder,
+ *     server: profile.server,
+ * })));
+ * ```
  */
 export function getLdapServerProfileListOutput(args?: GetLdapServerProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLdapServerProfileListResult> {
     args = args || {};

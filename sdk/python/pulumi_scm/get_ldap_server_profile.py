@@ -206,6 +206,24 @@ def get_ldap_server_profile(device: Optional[_builtins.str] = None,
     """
     LdapServerProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the LDAP Server Profile you want to find.
+    ldap_server_prof = scm.get_ldap_server_profile(id="a5006a3e-52b3-435e-9e3b-39b50dc72401")
+    pulumi.export("scmLdapServerProfileDetails", {
+        "id": ldap_server_prof.id,
+        "folder": ldap_server_prof.folder,
+        "name": ldap_server_prof.name,
+    })
+    ```
+
 
     :param _builtins.str device: The device in which the resource is defined
     :param _builtins.str id: The UUID of the LDAP server profile
@@ -245,6 +263,24 @@ def get_ldap_server_profile_output(device: Optional[pulumi.Input[Optional[_built
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLdapServerProfileResult]:
     """
     LdapServerProfile data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the LDAP Server Profile you want to find.
+    ldap_server_prof = scm.get_ldap_server_profile(id="a5006a3e-52b3-435e-9e3b-39b50dc72401")
+    pulumi.export("scmLdapServerProfileDetails", {
+        "id": ldap_server_prof.id,
+        "folder": ldap_server_prof.folder,
+        "name": ldap_server_prof.name,
+    })
+    ```
 
 
     :param _builtins.str device: The device in which the resource is defined

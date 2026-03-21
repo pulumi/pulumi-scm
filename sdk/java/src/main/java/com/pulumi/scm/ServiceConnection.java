@@ -69,7 +69,7 @@ import javax.annotation.Nullable;
  *         //# 1. Define the IKE Crypto Profile (IKE Phase 1)
  *         // Note: The resource name is plural: "scm_ike_crypto_profile"
  *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
- *             .name("example-ike-crypto")
+ *             .name("example-sc-ike-crypto")
  *             .folder(folderScope)
  *             .hashes("sha256")
  *             .dhGroups("group14")
@@ -79,7 +79,7 @@ import javax.annotation.Nullable;
  *         //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
  *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
  *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
- *             .name("panw-IPSec-Crypto")
+ *             .name("panw-sc-Crypto")
  *             .folder(folderScope)
  *             .esp(IpsecCryptoProfileEspArgs.builder()
  *                 .encryptions("aes-256-gcm")
@@ -94,7 +94,7 @@ import javax.annotation.Nullable;
  *         //# 3. Define the IKE Gateway
  *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
  *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
- *             .name("example-gateway")
+ *             .name("example-sc-gateway")
  *             .folder(folderScope)
  *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
  *                 .ip("1.1.1.1")
@@ -114,7 +114,7 @@ import javax.annotation.Nullable;
  *         //# 4. Define the IPsec Tunnel
  *         // Note: Nested 'auto_key' block uses an equals sign (=).
  *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
- *             .name("example-tunnel")
+ *             .name("example-sc-tunnel")
  *             .folder(folderScope)
  *             .tunnelInterface("tunnel")
  *             .antiReplay(true)

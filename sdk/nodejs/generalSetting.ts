@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const gsExample = new scm.GeneralSetting("gs_example", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     general: {
  *         domain: "foo.com",
  *         loginBanner: "Test Banner",

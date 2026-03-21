@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewLldpProfile(ctx, "example", &scm.LldpProfileArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Mode:   pulumi.String("transmit-receive"),
 //				Name:   pulumi.String("lldp-profile-tf-1"),
 //				OptionTlvs: &scm.LldpProfileOptionTlvsArgs{

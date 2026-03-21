@@ -314,15 +314,15 @@ class DynamicUserGroup(pulumi.CustomResource):
 
         # First, create the tags that will be used in the dynamic user group's filter.
         scm_dug_tag1 = scm.Tag("scm_dug_tag_1",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_dug_tag_1",
             color="Red")
         scm_dug_tag2 = scm.Tag("scm_dug_tag_2",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_dug_tag_2",
             color="Blue")
         scm_dug_tag3 = scm.Tag("scm_dug_tag_3",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_dug_tag_3",
             color="Green")
         # Create the dynamic user group that references the tags above.
@@ -398,15 +398,15 @@ class DynamicUserGroup(pulumi.CustomResource):
 
         # First, create the tags that will be used in the dynamic user group's filter.
         scm_dug_tag1 = scm.Tag("scm_dug_tag_1",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_dug_tag_1",
             color="Red")
         scm_dug_tag2 = scm.Tag("scm_dug_tag_2",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_dug_tag_2",
             color="Blue")
         scm_dug_tag3 = scm.Tag("scm_dug_tag_3",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_dug_tag_3",
             color="Green")
         # Create the dynamic user group that references the tags above.

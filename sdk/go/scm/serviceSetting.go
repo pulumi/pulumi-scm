@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewServiceSetting(ctx, "service_settings", &scm.ServiceSettingArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Services: &scm.ServiceSettingServicesArgs{
 //					DnsSetting: &scm.ServiceSettingServicesDnsSettingArgs{
 //						Servers: &scm.ServiceSettingServicesDnsSettingServersArgs{

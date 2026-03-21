@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,6 +22,11 @@ public final class RemoteNetworkProtocolBgpPeer {
      * 
      */
     private @Nullable String peerIpAddress;
+    /**
+     * @return Same peer IP address as primary WAN
+     * 
+     */
+    private @Nullable Boolean sameAsPrimary;
     /**
      * @return BGP peering secret (secondary WAN)
      * 
@@ -43,6 +49,13 @@ public final class RemoteNetworkProtocolBgpPeer {
         return Optional.ofNullable(this.peerIpAddress);
     }
     /**
+     * @return Same peer IP address as primary WAN
+     * 
+     */
+    public Optional<Boolean> sameAsPrimary() {
+        return Optional.ofNullable(this.sameAsPrimary);
+    }
+    /**
      * @return BGP peering secret (secondary WAN)
      * 
      */
@@ -61,12 +74,14 @@ public final class RemoteNetworkProtocolBgpPeer {
     public static final class Builder {
         private @Nullable String localIpAddress;
         private @Nullable String peerIpAddress;
+        private @Nullable Boolean sameAsPrimary;
         private @Nullable String secret;
         public Builder() {}
         public Builder(RemoteNetworkProtocolBgpPeer defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.localIpAddress = defaults.localIpAddress;
     	      this.peerIpAddress = defaults.peerIpAddress;
+    	      this.sameAsPrimary = defaults.sameAsPrimary;
     	      this.secret = defaults.secret;
         }
 
@@ -83,6 +98,12 @@ public final class RemoteNetworkProtocolBgpPeer {
             return this;
         }
         @CustomType.Setter
+        public Builder sameAsPrimary(@Nullable Boolean sameAsPrimary) {
+
+            this.sameAsPrimary = sameAsPrimary;
+            return this;
+        }
+        @CustomType.Setter
         public Builder secret(@Nullable String secret) {
 
             this.secret = secret;
@@ -92,6 +113,7 @@ public final class RemoteNetworkProtocolBgpPeer {
             final var _resultValue = new RemoteNetworkProtocolBgpPeer();
             _resultValue.localIpAddress = localIpAddress;
             _resultValue.peerIpAddress = peerIpAddress;
+            _resultValue.sameAsPrimary = sameAsPrimary;
             _resultValue.secret = secret;
             return _resultValue;
         }

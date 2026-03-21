@@ -79,6 +79,7 @@ export interface GetVlanInterfaceResult {
     readonly ips: outputs.GetVlanInterfaceIp[];
     readonly mtu: number;
     readonly name: string;
+    readonly netflowProfile: string;
     readonly snippet: string;
     readonly tfid: string;
     readonly vlanTag: string;

@@ -168,6 +168,25 @@ def get_ldap_server_profile_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM LDAP Server Profile objects.
+    #
+    # Fetch a list of all SCM LDAP Server Profiles in the "All" folder.
+    all_shared = scm.get_ldap_server_profile_list(folder="All")
+    pulumi.export("scmLdapServerProfileListAllSharedFiltered", [{
+        "id": profile.id,
+        "name": profile.name,
+        "folder": profile.folder,
+        "server": profile.server,
+    } for profile in all_shared.datas])
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -206,6 +225,25 @@ def get_ldap_server_profile_list_output(device: Optional[pulumi.Input[Optional[_
                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLdapServerProfileListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM LDAP Server Profile objects.
+    #
+    # Fetch a list of all SCM LDAP Server Profiles in the "All" folder.
+    all_shared = scm.get_ldap_server_profile_list(folder="All")
+    pulumi.export("scmLdapServerProfileListAllSharedFiltered", [{
+        "id": profile.id,
+        "name": profile.name,
+        "folder": profile.folder,
+        "server": profile.server,
+    } for profile in all_shared.datas])
+    ```
 
 
     :param _builtins.str device: The device of the item.

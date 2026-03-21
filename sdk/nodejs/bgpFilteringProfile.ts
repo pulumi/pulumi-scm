@@ -15,24 +15,103 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
+ * //
+ * // Creates an empty bgp filtering profile
+ * //
  * const scmBgpFilteringProfile = new scm.BgpFilteringProfile("scm_bgp_filtering_profile", {
  *     folder: "ngfw-shared",
  *     name: "scm_bgp_filtering_profile",
  *     ipv4: {},
  * });
+ * //
+ * // Creates various resources used for scm_bgp_filtering_profile_complex
+ * //
+ * const scmPlInbound = new scm.RoutePrefixList("scm_pl_inbound", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_pl_inbound",
+ *     description: "Managed by Pulumi",
+ *     type: {
+ *         ipv4: {
+ *             ipv4Entries: [{
+ *                 name: 10,
+ *                 action: "permit",
+ *                 prefix: {
+ *                     greaterThanOrEqual: 24,
+ *                     network: "any",
+ *                 },
+ *             }],
+ *         },
+ *     },
+ * });
+ * const scmRmInbound = new scm.BgpRouteMap("scm_rm_inbound", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_rm_inbound",
+ *     description: "Managed by Pulumi",
+ *     routeMaps: [{
+ *         name: 10,
+ *         description: "No Export",
+ *         match: {
+ *             ipv4: {
+ *                 address: {
+ *                     prefixList: "scm_pl_inbound",
+ *                 },
+ *             },
+ *         },
+ *         set: {
+ *             regularCommunity: ["no-export"],
+ *         },
+ *     }],
+ * }, {
+ *     dependsOn: [scmPlInbound],
+ * });
+ * const scmPlOutbound = new scm.RoutePrefixList("scm_pl_outbound", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_pl_outbound",
+ *     description: "Managed by Pulumi",
+ *     type: {
+ *         ipv4: {
+ *             ipv4Entries: [{
+ *                 name: 10,
+ *                 action: "permit",
+ *                 prefix: {
+ *                     greaterThanOrEqual: 24,
+ *                     network: "any",
+ *                 },
+ *             }],
+ *         },
+ *     },
+ * });
+ * const scmRmOutbound = new scm.BgpRouteMap("scm_rm_outbound", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_rm_outbound",
+ *     description: "Managed by Pulumi",
+ *     routeMaps: [{
+ *         name: 10,
+ *         description: "No Export",
+ *         match: {
+ *             ipv4: {
+ *                 address: {
+ *                     prefixList: "scm_pl_outbound",
+ *                 },
+ *             },
+ *         },
+ *         set: {
+ *             regularCommunity: ["no-export"],
+ *         },
+ *     }],
+ * }, {
+ *     dependsOn: [scmPlOutbound],
+ * });
+ * //
+ * // Creates a complex filtering profile that utilises previously created FL, PL and RM
+ * //
  * const scmBgpFilteringProfileComplex = new scm.BgpFilteringProfile("scm_bgp_filtering_profile_complex", {
  *     folder: "ngfw-shared",
  *     name: "scm_bgp_filtering_profile_complex",
  *     ipv4: {
  *         unicast: {
- *             filterList: {
- *                 inbound: "scm_filter_list",
- *             },
  *             inboundNetworkFilters: {
  *                 prefixList: "scm_pl_inbound",
- *             },
- *             outboundNetworkFilters: {
- *                 distributeList: "scm_distribute_list",
  *             },
  *             routeMaps: {
  *                 inbound: "scm_rm_inbound",
@@ -40,6 +119,12 @@ import * as utilities from "./utilities";
  *             },
  *         },
  *     },
+ * }, {
+ *     dependsOn: [
+ *         scmPlInbound,
+ *         scmRmInbound,
+ *         scmRmOutbound,
+ *     ],
  * });
  * ```
  *

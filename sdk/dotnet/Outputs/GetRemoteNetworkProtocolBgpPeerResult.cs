@@ -22,6 +22,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string PeerIpAddress;
         /// <summary>
+        /// Same peer IP address as primary WAN
+        /// </summary>
+        public readonly bool SameAsPrimary;
+        /// <summary>
         /// BGP peering secret (secondary WAN)
         /// </summary>
         public readonly string Secret;
@@ -32,10 +36,13 @@ namespace Pulumi.Scm.Outputs
 
             string peerIpAddress,
 
+            bool sameAsPrimary,
+
             string secret)
         {
             LocalIpAddress = localIpAddress;
             PeerIpAddress = peerIpAddress;
+            SameAsPrimary = sameAsPrimary;
             Secret = secret;
         }
     }

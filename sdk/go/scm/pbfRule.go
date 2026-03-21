@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			exampleTag, err := scm.NewTag(ctx, "example_tag", &scm.TagArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("pbf-rule-tag-test-1"),
 //				Color:  pulumi.String("Red"),
 //			})
@@ -38,7 +38,7 @@ import (
 //			// --- PBF Rule Resource with discard action---
 //			_, err = scm.NewPbfRule(ctx, "example_pbf_rule", &scm.PbfRuleArgs{
 //				Name:        pulumi.String("pbf-test-rule-discard"),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Description: pulumi.String("PBF rule for forwarding specific traffic."),
 //				From: &scm.PbfRuleFromArgs{
 //					Zones: pulumi.StringArray{
@@ -77,7 +77,7 @@ import (
 //			// --- PBF Rule Resource with no-pbf action---
 //			_, err = scm.NewPbfRule(ctx, "example_no_pbf_rule", &scm.PbfRuleArgs{
 //				Name:        pulumi.String("pbf-test-rule-no-pbf"),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Description: pulumi.String("PBF rule for forwarding specific traffic"),
 //				From: &scm.PbfRuleFromArgs{
 //					Zones: pulumi.StringArray{
@@ -116,7 +116,7 @@ import (
 //			// --- PBF Rule Resource with forward action---
 //			_, err = scm.NewPbfRule(ctx, "example_forward_pbf_rule", &scm.PbfRuleArgs{
 //				Name:        pulumi.String("pbf-test-rule-forward"),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Description: pulumi.String("PBF rule for forwarding specific traffic"),
 //				From: &scm.PbfRuleFromArgs{
 //					Zones: pulumi.StringArray{

@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetLdapServerProfileList(ctx *pulumi.Context, args *GetLdapServerProfileListArgs, opts ...pulumi.InvokeOption) (*GetLdapServerProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetLdapServerProfileListResult

@@ -27,7 +27,7 @@ class GetTunnelInterfaceResult:
     """
     A collection of values returned by getTunnelInterface.
     """
-    def __init__(__self__, comment=None, default_value=None, device=None, folder=None, id=None, interface_management_profile=None, ips=None, ipv6=None, mtu=None, name=None, snippet=None, tfid=None):
+    def __init__(__self__, comment=None, default_value=None, device=None, folder=None, id=None, interface_management_profile=None, ips=None, ipv6=None, mtu=None, name=None, netflow_profile=None, snippet=None, tfid=None):
         if comment and not isinstance(comment, str):
             raise TypeError("Expected argument 'comment' to be a str")
         pulumi.set(__self__, "comment", comment)
@@ -58,6 +58,9 @@ class GetTunnelInterfaceResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if netflow_profile and not isinstance(netflow_profile, str):
+            raise TypeError("Expected argument 'netflow_profile' to be a str")
+        pulumi.set(__self__, "netflow_profile", netflow_profile)
         if snippet and not isinstance(snippet, str):
             raise TypeError("Expected argument 'snippet' to be a str")
         pulumi.set(__self__, "snippet", snippet)
@@ -122,6 +125,11 @@ class GetTunnelInterfaceResult:
         return pulumi.get(self, "name")
 
     @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> _builtins.str:
+        return pulumi.get(self, "netflow_profile")
+
+    @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
         return pulumi.get(self, "snippet")
@@ -148,6 +156,7 @@ class AwaitableGetTunnelInterfaceResult(GetTunnelInterfaceResult):
             ipv6=self.ipv6,
             mtu=self.mtu,
             name=self.name,
+            netflow_profile=self.netflow_profile,
             snippet=self.snippet,
             tfid=self.tfid)
 
@@ -202,6 +211,7 @@ def get_tunnel_interface(device: Optional[_builtins.str] = None,
         ipv6=pulumi.get(__ret__, 'ipv6'),
         mtu=pulumi.get(__ret__, 'mtu'),
         name=pulumi.get(__ret__, 'name'),
+        netflow_profile=pulumi.get(__ret__, 'netflow_profile'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_tunnel_interface_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
@@ -253,5 +263,6 @@ def get_tunnel_interface_output(device: Optional[pulumi.Input[Optional[_builtins
         ipv6=pulumi.get(__response__, 'ipv6'),
         mtu=pulumi.get(__response__, 'mtu'),
         name=pulumi.get(__response__, 'name'),
+        netflow_profile=pulumi.get(__response__, 'netflow_profile'),
         snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid')))

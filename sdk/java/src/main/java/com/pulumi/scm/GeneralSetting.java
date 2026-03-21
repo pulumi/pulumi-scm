@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var gsExample = new GeneralSetting("gsExample", GeneralSettingArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .general(GeneralSettingGeneralArgs.builder()
  *                 .domain("foo.com")
  *                 .loginBanner("Test Banner")

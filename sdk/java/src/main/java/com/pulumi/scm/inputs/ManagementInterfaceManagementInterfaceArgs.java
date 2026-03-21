@@ -21,6 +21,36 @@ public final class ManagementInterfaceManagementInterfaceArgs extends com.pulumi
     public static final ManagementInterfaceManagementInterfaceArgs Empty = new ManagementInterfaceManagementInterfaceArgs();
 
     /**
+     * Default gateway
+     * 
+     */
+    @Import(name="defaultGateway")
+    private @Nullable Output<String> defaultGateway;
+
+    /**
+     * @return Default gateway
+     * 
+     */
+    public Optional<Output<String>> defaultGateway() {
+        return Optional.ofNullable(this.defaultGateway);
+    }
+
+    /**
+     * IP address
+     * 
+     */
+    @Import(name="ipAddress")
+    private @Nullable Output<String> ipAddress;
+
+    /**
+     * @return IP address
+     * 
+     */
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
+    }
+
+    /**
      * IP type
      * 
      */
@@ -48,6 +78,21 @@ public final class ManagementInterfaceManagementInterfaceArgs extends com.pulumi
      */
     public Optional<Output<Integer>> mtu() {
         return Optional.ofNullable(this.mtu);
+    }
+
+    /**
+     * Netmask
+     * 
+     */
+    @Import(name="netmask")
+    private @Nullable Output<String> netmask;
+
+    /**
+     * @return Netmask
+     * 
+     */
+    public Optional<Output<String>> netmask() {
+        return Optional.ofNullable(this.netmask);
     }
 
     /**
@@ -98,8 +143,11 @@ public final class ManagementInterfaceManagementInterfaceArgs extends com.pulumi
     private ManagementInterfaceManagementInterfaceArgs() {}
 
     private ManagementInterfaceManagementInterfaceArgs(ManagementInterfaceManagementInterfaceArgs $) {
+        this.defaultGateway = $.defaultGateway;
+        this.ipAddress = $.ipAddress;
         this.mgmtType = $.mgmtType;
         this.mtu = $.mtu;
+        this.netmask = $.netmask;
         this.permittedIps = $.permittedIps;
         this.service = $.service;
         this.speedDuplex = $.speedDuplex;
@@ -121,6 +169,48 @@ public final class ManagementInterfaceManagementInterfaceArgs extends com.pulumi
 
         public Builder(ManagementInterfaceManagementInterfaceArgs defaults) {
             $ = new ManagementInterfaceManagementInterfaceArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param defaultGateway Default gateway
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultGateway(@Nullable Output<String> defaultGateway) {
+            $.defaultGateway = defaultGateway;
+            return this;
+        }
+
+        /**
+         * @param defaultGateway Default gateway
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultGateway(String defaultGateway) {
+            return defaultGateway(Output.of(defaultGateway));
+        }
+
+        /**
+         * @param ipAddress IP address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
+            $.ipAddress = ipAddress;
+            return this;
+        }
+
+        /**
+         * @param ipAddress IP address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
 
         /**
@@ -163,6 +253,27 @@ public final class ManagementInterfaceManagementInterfaceArgs extends com.pulumi
          */
         public Builder mtu(Integer mtu) {
             return mtu(Output.of(mtu));
+        }
+
+        /**
+         * @param netmask Netmask
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netmask(@Nullable Output<String> netmask) {
+            $.netmask = netmask;
+            return this;
+        }
+
+        /**
+         * @param netmask Netmask
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netmask(String netmask) {
+            return netmask(Output.of(netmask));
         }
 
         /**

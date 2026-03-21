@@ -16,17 +16,19 @@ import * as utilities from "./utilities";
  * const config = new pulumi.Config();
  * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
  * const folderScope = config.get("folderScope") || "Service Connections";
- * //# 1. IKE Crypto Profile (IKE Phase 1)
+ * //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+ * // Note: The resource name is plural: "scm_ike_crypto_profile"
  * const example = new scm.IkeCryptoProfile("example", {
- *     name: "example-ike-crypto_sc_grp",
+ *     name: "example-sc-ike-crypto",
  *     folder: folderScope,
  *     hashes: ["sha256"],
  *     dhGroups: ["group14"],
  *     encryptions: ["aes-256-cbc"],
  * });
- * //# 2. IPsec Crypto Profile (IKE Phase 2)
+ * //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+ * // Note: The resource name is plural and nested blocks now use an equals sign (=).
  * const exampleIpsecCryptoProfile = new scm.IpsecCryptoProfile("example", {
- *     name: "panw-IPSec-Crypto_sc_grp",
+ *     name: "panw-sc-Crypto",
  *     folder: folderScope,
  *     esp: {
  *         encryptions: ["aes-256-gcm"],
@@ -37,9 +39,10 @@ import * as utilities from "./utilities";
  *         hours: 8,
  *     },
  * });
- * //# 3. IKE Gateway
+ * //# 3. Define the IKE Gateway
+ * // Note: The resource name is plural and nested blocks now use an equals sign (=).
  * const exampleIkeGateway = new scm.IkeGateway("example", {
- *     name: "example-gateway_sc_grp",
+ *     name: "example-sc-gateway",
  *     folder: folderScope,
  *     peerAddress: {
  *         ip: "1.1.1.1",
@@ -55,9 +58,10 @@ import * as utilities from "./utilities";
  *         },
  *     },
  * });
- * //# 4. IPsec Tunnel
+ * //# 4. Define the IPsec Tunnel
+ * // Note: Nested 'auto_key' block uses an equals sign (=).
  * const exampleIpsecTunnel = new scm.IpsecTunnel("example", {
- *     name: "example-tunnel_sc_grp",
+ *     name: "example-sc-tunnel",
  *     folder: folderScope,
  *     tunnelInterface: "tunnel",
  *     antiReplay: true,
@@ -85,7 +89,7 @@ import * as utilities from "./utilities";
  * });
  * //# 5. Service Connection (The target for the group)
  * const siteAVpnSc2 = new scm.ServiceConnection("site_a_vpn_sc_2", {
- *     name: "creating_a_service_connection_sc_grp_2",
+ *     name: "creating_a_svc_connection_sc_grp_2",
  *     region: "us-west-1a",
  *     ipsecTunnel: exampleIpsecTunnel.name,
  *     subnets: [
@@ -99,7 +103,7 @@ import * as utilities from "./utilities";
  * // ------------------------------------------------------------------
  * //# 6. Service Connection Group (Groups the Service Connection created above)
  * const exampleGroup = new scm.ServiceConnectionGroup("example_group", {
- *     name: "service-connection-group-app_sc_grp",
+ *     name: "svc-connection-group-app_sc_grp",
  *     targets: [
  *         siteAVpnSc.name,
  *         siteAVpnSc2.name,

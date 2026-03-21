@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const tcpExample = new scm.TcpSetting("tcp_example", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     tcp: {
  *         bypassExceedOoQueue: false,
  *         allowChallengeAck: true,

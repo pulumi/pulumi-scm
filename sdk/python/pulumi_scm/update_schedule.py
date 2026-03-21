@@ -217,7 +217,7 @@ class UpdateSchedule(pulumi.CustomResource):
         import pulumi_scm as scm
 
         us_settings = scm.UpdateSchedule("us_settings",
-            folder="All",
+            folder="ngfw-shared",
             update_schedule={
                 "threats": {
                     "recurring": {
@@ -247,42 +247,6 @@ class UpdateSchedule(pulumi.CustomResource):
                             "at": 30,
                             "action": "download-only",
                             "sync_to_peer": True,
-                        },
-                    },
-                },
-            })
-        # -- Example 2 : With Daily recurring updates for recurring and anti-virus
-        us_settings_daily = scm.UpdateSchedule("us_settings_daily",
-            folder="All",
-            update_schedule={
-                "threats": {
-                    "recurring": {
-                        "threshold": 300,
-                        "new_app_threshold": 300,
-                        "sync_to_peer": False,
-                        "daily": {
-                            "at": "02:13",
-                            "action": "download-only",
-                            "disable_new_content": False,
-                        },
-                    },
-                },
-                "anti_virus": {
-                    "recurring": {
-                        "threshold": 300,
-                        "sync_to_peer": True,
-                        "daily": {
-                            "at": "02:13",
-                            "action": "download-only",
-                        },
-                    },
-                },
-                "wildfire": {
-                    "recurring": {
-                        "every30_mins": {
-                            "at": 20,
-                            "action": "download-only",
-                            "sync_to_peer": False,
                         },
                     },
                 },
@@ -339,7 +303,7 @@ class UpdateSchedule(pulumi.CustomResource):
         import pulumi_scm as scm
 
         us_settings = scm.UpdateSchedule("us_settings",
-            folder="All",
+            folder="ngfw-shared",
             update_schedule={
                 "threats": {
                     "recurring": {
@@ -369,42 +333,6 @@ class UpdateSchedule(pulumi.CustomResource):
                             "at": 30,
                             "action": "download-only",
                             "sync_to_peer": True,
-                        },
-                    },
-                },
-            })
-        # -- Example 2 : With Daily recurring updates for recurring and anti-virus
-        us_settings_daily = scm.UpdateSchedule("us_settings_daily",
-            folder="All",
-            update_schedule={
-                "threats": {
-                    "recurring": {
-                        "threshold": 300,
-                        "new_app_threshold": 300,
-                        "sync_to_peer": False,
-                        "daily": {
-                            "at": "02:13",
-                            "action": "download-only",
-                            "disable_new_content": False,
-                        },
-                    },
-                },
-                "anti_virus": {
-                    "recurring": {
-                        "threshold": 300,
-                        "sync_to_peer": True,
-                        "daily": {
-                            "at": "02:13",
-                            "action": "download-only",
-                        },
-                    },
-                },
-                "wildfire": {
-                    "recurring": {
-                        "every30_mins": {
-                            "at": 20,
-                            "action": "download-only",
-                            "sync_to_peer": False,
                         },
                     },
                 },

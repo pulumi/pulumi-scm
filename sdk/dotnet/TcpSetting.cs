@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var tcpExample = new Scm.TcpSetting("tcp_example", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Tcp = new Scm.Inputs.TcpSettingTcpArgs
     ///         {
     ///             BypassExceedOoQueue = false,

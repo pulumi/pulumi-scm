@@ -45,12 +45,12 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var scmHttpHeaderProfile1 = new HttpHeaderProfile("scmHttpHeaderProfile1", HttpHeaderProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("base_http_header_profile_1")
  *             .build());
  * 
  *         var scmHttpHeaderProfile2 = new HttpHeaderProfile("scmHttpHeaderProfile2", HttpHeaderProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("simple_http_header_profile_2")
  *             .httpHeaderInsertions(HttpHeaderProfileHttpHeaderInsertionArgs.builder()
  *                 .name("header_one")
@@ -67,7 +67,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmHttpHeaderProfile3 = new HttpHeaderProfile("scmHttpHeaderProfile3", HttpHeaderProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("complete_http_header_profile_3")
  *             .httpHeaderInsertions(            
  *                 HttpHeaderProfileHttpHeaderInsertionArgs.builder()

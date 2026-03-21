@@ -68,7 +68,7 @@ import javax.annotation.Nullable;
  *         //# 1. Define the IKE Crypto Profile (IKE Phase 1)
  *         // Note: The resource name is plural: "scm_ike_crypto_profile"
  *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
- *             .name("example-ike-crypto-14")
+ *             .name("example-ike-crypto-site")
  *             .folder("Remote Networks")
  *             .hashes("sha256")
  *             .dhGroups("group14")
@@ -78,7 +78,7 @@ import javax.annotation.Nullable;
  *         //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
  *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
  *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
- *             .name("PaloAlto-Networks-IPSec-14")
+ *             .name("panw-IPSec-site")
  *             .folder("Remote Networks")
  *             .esp(IpsecCryptoProfileEspArgs.builder()
  *                 .encryptions("aes-256-gcm")
@@ -93,7 +93,7 @@ import javax.annotation.Nullable;
  *         //# 3. Define the IKE Gateway
  *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
  *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
- *             .name("example-gateway-14")
+ *             .name("example-gateway-site")
  *             .folder("Remote Networks")
  *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
  *                 .ip("1.1.1.1")
@@ -113,7 +113,7 @@ import javax.annotation.Nullable;
  *         //# 4. Define the IPsec Tunnel
  *         // Note: Nested 'auto_key' block uses an equals sign (=).
  *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
- *             .name("example-tunnel-14")
+ *             .name("example-tunnel-site")
  *             .folder("Remote Networks")
  *             .tunnelInterface("tunnel")
  *             .antiReplay(true)
@@ -132,7 +132,7 @@ import javax.annotation.Nullable;
  *         // 1. Define the Remote Network first
  *         var branchOffice = new RemoteNetwork("branchOffice", RemoteNetworkArgs.builder()
  *             .folder("Remote Networks")
- *             .name("example-rn-14")
+ *             .name("example-rn-site")
  *             .region("us-west-1")
  *             .licenseType("FWAAS-AGGREGATE")
  *             .ipsecTunnel(exampleIpsecTunnel.name())
@@ -142,7 +142,7 @@ import javax.annotation.Nullable;
  * 
  *         // 2. Define the Site
  *         var exampleSite = new Site("exampleSite", SiteArgs.builder()
- *             .name("example-site-14")
+ *             .name("example-site-site")
  *             .type("third-party-branch")
  *             .licenseType("FWAAS-SITE-25Mbps")
  *             .city("San Jose")

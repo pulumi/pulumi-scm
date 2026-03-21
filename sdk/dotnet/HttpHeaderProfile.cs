@@ -24,13 +24,13 @@ namespace Pulumi.Scm
     /// {
     ///     var scmHttpHeaderProfile1 = new Scm.HttpHeaderProfile("scm_http_header_profile_1", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "base_http_header_profile_1",
     ///     });
     /// 
     ///     var scmHttpHeaderProfile2 = new Scm.HttpHeaderProfile("scm_http_header_profile_2", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "simple_http_header_profile_2",
     ///         HttpHeaderInsertions = new[]
     ///         {
@@ -63,7 +63,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmHttpHeaderProfile3 = new Scm.HttpHeaderProfile("scm_http_header_profile_3", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "complete_http_header_profile_3",
     ///         HttpHeaderInsertions = new[]
     ///         {

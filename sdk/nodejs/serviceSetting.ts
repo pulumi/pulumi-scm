@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const serviceSettings = new scm.ServiceSetting("service_settings", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     services: {
  *         dnsSetting: {
  *             servers: {

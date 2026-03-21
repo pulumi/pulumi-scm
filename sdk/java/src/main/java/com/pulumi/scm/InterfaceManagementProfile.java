@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         var dcPostmanProfile = new InterfaceManagementProfile("dcPostmanProfile", InterfaceManagementProfileArgs.builder()
  *             .name("test_inf_mgmt_profile_1_update")
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .permittedIps(            
  *                 InterfaceManagementProfilePermittedIpArgs.builder()
  *                     .name("10.0.0.0/24")

@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewSessionTimeout(ctx, "st_example", &scm.SessionTimeoutArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				SessionTimeouts: &scm.SessionTimeoutSessionTimeoutsArgs{
 //					TimeoutDefault:          pulumi.Int(60),
 //					TimeoutDiscardDefault:   pulumi.Int(60),

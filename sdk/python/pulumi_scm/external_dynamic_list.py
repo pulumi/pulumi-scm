@@ -268,7 +268,7 @@ class ExternalDynamicList(pulumi.CustomResource):
         # This resource creates a domain-based External Dynamic List (EDL).
         # The EDL will fetch a list of domains from the specified URL daily.
         scm_edl1 = scm.ExternalDynamicList("scm_edl_1",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_edl_1",
             type={
                 "domain": {
@@ -282,7 +282,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                 },
             })
         scm_edl2 = scm.ExternalDynamicList("scm_edl_2",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_edl_2",
             type={
                 "ip": {
@@ -294,7 +294,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                 },
             })
         scm_edl3 = scm.ExternalDynamicList("scm_edl_3",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_edl_3",
             type={
                 "url": {
@@ -309,7 +309,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                 },
             })
         scm_edl4 = scm.ExternalDynamicList("scm_edl_4",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_edl_4",
             type={
                 "predefined_ip": {
@@ -318,7 +318,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                 },
             })
         scm_edl5 = scm.ExternalDynamicList("scm_edl_5",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_edl_5",
             type={
                 "ip": {
@@ -389,7 +389,7 @@ class ExternalDynamicList(pulumi.CustomResource):
         # This resource creates a domain-based External Dynamic List (EDL).
         # The EDL will fetch a list of domains from the specified URL daily.
         scm_edl1 = scm.ExternalDynamicList("scm_edl_1",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_edl_1",
             type={
                 "domain": {
@@ -403,7 +403,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                 },
             })
         scm_edl2 = scm.ExternalDynamicList("scm_edl_2",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_edl_2",
             type={
                 "ip": {
@@ -415,7 +415,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                 },
             })
         scm_edl3 = scm.ExternalDynamicList("scm_edl_3",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_edl_3",
             type={
                 "url": {
@@ -430,7 +430,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                 },
             })
         scm_edl4 = scm.ExternalDynamicList("scm_edl_4",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_edl_4",
             type={
                 "predefined_ip": {
@@ -439,7 +439,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                 },
             })
         scm_edl5 = scm.ExternalDynamicList("scm_edl_5",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_edl_5",
             type={
                 "ip": {

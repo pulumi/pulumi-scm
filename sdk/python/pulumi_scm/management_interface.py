@@ -217,7 +217,7 @@ class ManagementInterface(pulumi.CustomResource):
         import pulumi_scm as scm
 
         mi_example = scm.ManagementInterface("mi_example",
-            folder="All",
+            folder="ngfw-shared",
             management_interface={
                 "speed_duplex": "auto-negotiate",
                 "mtu": 1500,
@@ -228,6 +228,34 @@ class ManagementInterface(pulumi.CustomResource):
                         "accept_dhcp_hostname": False,
                         "accept_dhcp_domain": False,
                     },
+                },
+                "service": {
+                    "disable_http": False,
+                    "disable_https": True,
+                    "disable_telnet": False,
+                    "disable_ssh": True,
+                    "disable_icmp": False,
+                    "disable_snmp": False,
+                    "disable_userid_service": False,
+                    "disable_userid_syslog_listener_ssl": False,
+                    "disable_userid_syslog_listener_udp": False,
+                    "disable_http_ocsp": False,
+                },
+                "permitted_ips": [{
+                    "name": "10.10.10.10",
+                    "description": "string",
+                }],
+            })
+        mi_static_example = scm.ManagementInterface("mi_static_example",
+            folder="Prisma Access",
+            management_interface={
+                "speed_duplex": "auto-negotiate",
+                "mtu": 1500,
+                "ip_address": "10.10.10.10",
+                "netmask": "255.255.255.0",
+                "default_gateway": "192.168.252.1",
+                "mgmt_type": {
+                    "static": {},
                 },
                 "service": {
                     "disable_http": False,
@@ -298,7 +326,7 @@ class ManagementInterface(pulumi.CustomResource):
         import pulumi_scm as scm
 
         mi_example = scm.ManagementInterface("mi_example",
-            folder="All",
+            folder="ngfw-shared",
             management_interface={
                 "speed_duplex": "auto-negotiate",
                 "mtu": 1500,
@@ -309,6 +337,34 @@ class ManagementInterface(pulumi.CustomResource):
                         "accept_dhcp_hostname": False,
                         "accept_dhcp_domain": False,
                     },
+                },
+                "service": {
+                    "disable_http": False,
+                    "disable_https": True,
+                    "disable_telnet": False,
+                    "disable_ssh": True,
+                    "disable_icmp": False,
+                    "disable_snmp": False,
+                    "disable_userid_service": False,
+                    "disable_userid_syslog_listener_ssl": False,
+                    "disable_userid_syslog_listener_udp": False,
+                    "disable_http_ocsp": False,
+                },
+                "permitted_ips": [{
+                    "name": "10.10.10.10",
+                    "description": "string",
+                }],
+            })
+        mi_static_example = scm.ManagementInterface("mi_static_example",
+            folder="Prisma Access",
+            management_interface={
+                "speed_duplex": "auto-negotiate",
+                "mtu": 1500,
+                "ip_address": "10.10.10.10",
+                "netmask": "255.255.255.0",
+                "default_gateway": "192.168.252.1",
+                "mgmt_type": {
+                    "static": {},
                 },
                 "service": {
                     "disable_http": False,

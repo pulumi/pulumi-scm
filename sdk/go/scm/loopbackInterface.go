@@ -139,6 +139,8 @@ type LoopbackInterface struct {
 	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
 	// Loopback Interface name
 	Name pulumi.StringOutput `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrOutput `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -197,6 +199,8 @@ type loopbackInterfaceState struct {
 	Mtu *int `pulumi:"mtu"`
 	// Loopback Interface name
 	Name *string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -226,6 +230,8 @@ type LoopbackInterfaceState struct {
 	Mtu pulumi.IntPtrInput
 	// Loopback Interface name
 	Name pulumi.StringPtrInput
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -259,6 +265,8 @@ type loopbackInterfaceArgs struct {
 	Mtu *int `pulumi:"mtu"`
 	// Loopback Interface name
 	Name *string `pulumi:"name"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile *string `pulumi:"netflowProfile"`
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -287,6 +295,8 @@ type LoopbackInterfaceArgs struct {
 	Mtu pulumi.IntPtrInput
 	// Loopback Interface name
 	Name pulumi.StringPtrInput
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -425,6 +435,11 @@ func (o LoopbackInterfaceOutput) Mtu() pulumi.IntPtrOutput {
 // Loopback Interface name
 func (o LoopbackInterfaceOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o LoopbackInterfaceOutput) NetflowProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *LoopbackInterface) pulumi.StringPtrOutput { return v.NetflowProfile }).(pulumi.StringPtrOutput)
 }
 
 // The snippet in which the resource is defined

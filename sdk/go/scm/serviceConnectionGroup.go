@@ -35,9 +35,10 @@ import (
 //			if param := cfg.Get("folderScope"); param != "" {
 //				folderScope = param
 //			}
-//			// # 1. IKE Crypto Profile (IKE Phase 1)
+//			// # 1. Define the IKE Crypto Profile (IKE Phase 1)
+//			// Note: The resource name is plural: "scm_ike_crypto_profile"
 //			example, err := scm.NewIkeCryptoProfile(ctx, "example", &scm.IkeCryptoProfileArgs{
-//				Name:   pulumi.String("example-ike-crypto_sc_grp"),
+//				Name:   pulumi.String("example-sc-ike-crypto"),
 //				Folder: pulumi.String(folderScope),
 //				Hashes: pulumi.StringArray{
 //					pulumi.String("sha256"),
@@ -52,9 +53,10 @@ import (
 //			if err != nil {
 //				return err
 //			}
-//			// # 2. IPsec Crypto Profile (IKE Phase 2)
+//			// # 2. Define the IPsec Crypto Profile (IKE Phase 2)
+//			// Note: The resource name is plural and nested blocks now use an equals sign (=).
 //			exampleIpsecCryptoProfile, err := scm.NewIpsecCryptoProfile(ctx, "example", &scm.IpsecCryptoProfileArgs{
-//				Name:   pulumi.String("panw-IPSec-Crypto_sc_grp"),
+//				Name:   pulumi.String("panw-sc-Crypto"),
 //				Folder: pulumi.String(folderScope),
 //				Esp: &scm.IpsecCryptoProfileEspArgs{
 //					Encryptions: pulumi.StringArray{
@@ -72,9 +74,10 @@ import (
 //			if err != nil {
 //				return err
 //			}
-//			// # 3. IKE Gateway
+//			// # 3. Define the IKE Gateway
+//			// Note: The resource name is plural and nested blocks now use an equals sign (=).
 //			exampleIkeGateway, err := scm.NewIkeGateway(ctx, "example", &scm.IkeGatewayArgs{
-//				Name:   pulumi.String("example-gateway_sc_grp"),
+//				Name:   pulumi.String("example-sc-gateway"),
 //				Folder: pulumi.String(folderScope),
 //				PeerAddress: &scm.IkeGatewayPeerAddressArgs{
 //					Ip: pulumi.String("1.1.1.1"),
@@ -93,9 +96,10 @@ import (
 //			if err != nil {
 //				return err
 //			}
-//			// # 4. IPsec Tunnel
+//			// # 4. Define the IPsec Tunnel
+//			// Note: Nested 'auto_key' block uses an equals sign (=).
 //			exampleIpsecTunnel, err := scm.NewIpsecTunnel(ctx, "example", &scm.IpsecTunnelArgs{
-//				Name:                   pulumi.String("example-tunnel_sc_grp"),
+//				Name:                   pulumi.String("example-sc-tunnel"),
 //				Folder:                 pulumi.String(folderScope),
 //				TunnelInterface:        pulumi.String("tunnel"),
 //				AntiReplay:             pulumi.Bool(true),
@@ -131,7 +135,7 @@ import (
 //			}
 //			// # 5. Service Connection (The target for the group)
 //			siteAVpnSc2, err := scm.NewServiceConnection(ctx, "site_a_vpn_sc_2", &scm.ServiceConnectionArgs{
-//				Name:        pulumi.String("creating_a_service_connection_sc_grp_2"),
+//				Name:        pulumi.String("creating_a_svc_connection_sc_grp_2"),
 //				Region:      pulumi.String("us-west-1a"),
 //				IpsecTunnel: exampleIpsecTunnel.Name,
 //				Subnets: pulumi.StringArray{
@@ -145,7 +149,7 @@ import (
 //			}
 //			// # 6. Service Connection Group (Groups the Service Connection created above)
 //			_, err = scm.NewServiceConnectionGroup(ctx, "example_group", &scm.ServiceConnectionGroupArgs{
-//				Name: pulumi.String("service-connection-group-app_sc_grp"),
+//				Name: pulumi.String("svc-connection-group-app_sc_grp"),
 //				Targets: pulumi.StringArray{
 //					siteAVpnSc.Name,
 //					siteAVpnSc2.Name,

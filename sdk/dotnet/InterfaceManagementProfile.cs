@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     var dcPostmanProfile = new Scm.InterfaceManagementProfile("dc_postman_profile", new()
     ///     {
     ///         Name = "test_inf_mgmt_profile_1_update",
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         PermittedIps = new[]
     ///         {
     ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs

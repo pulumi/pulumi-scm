@@ -266,6 +266,20 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
+     * Name of Netflow Profile to assign to Interface
+     * 
+     */
+    @Export(name="netflowProfile", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> netflowProfile;
+
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Output<Optional<String>> netflowProfile() {
+        return Codegen.optional(this.netflowProfile);
+    }
+    /**
      * The snippet in which the resource is defined
      * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.

@@ -52,7 +52,7 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         // Basic Anti-Spyware Profile
  *         var scmAntiSpywareProfile1 = new AntiSpywareProfile("scmAntiSpywareProfile1", AntiSpywareProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm_anti_spyware_profile_1")
  *             .description("Managed by Pulumi")
  *             .cloudInlineAnalysis(true)
@@ -60,7 +60,7 @@ import javax.annotation.Nullable;
  * 
  *         // Required object that will be referenced in examples
  *         var scmAddress1 = new Address("scmAddress1", AddressArgs.builder()
- *             .folder("Prisma Access")
+ *             .folder("ngfw-shared")
  *             .name("scm_address_1")
  *             .description("Made by Pulumi")
  *             .ipNetmask("10.2.3.4")
@@ -68,7 +68,7 @@ import javax.annotation.Nullable;
  * 
  *         // Anti-Spyware Profile with exception EDL
  *         var scmAntiSpywareProfile2 = new AntiSpywareProfile("scmAntiSpywareProfile2", AntiSpywareProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm_anti_spyware_profile_2")
  *             .description("Managed by Pulumi")
  *             .cloudInlineAnalysis(true)
@@ -79,7 +79,7 @@ import javax.annotation.Nullable;
  * 
  *         // Anti-Spyware Profile with rules
  *         var scmAntiSpywareProfile3 = new AntiSpywareProfile("scmAntiSpywareProfile3", AntiSpywareProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm_anti_spyware_profile_3")
  *             .description("Managed by Pulumi")
  *             .cloudInlineAnalysis(true)

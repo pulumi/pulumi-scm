@@ -39,9 +39,6 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.UpdateScheduleUpdateScheduleWildfireArgs;
  * import com.pulumi.scm.inputs.UpdateScheduleUpdateScheduleWildfireRecurringArgs;
  * import com.pulumi.scm.inputs.UpdateScheduleUpdateScheduleWildfireRecurringEveryHourArgs;
- * import com.pulumi.scm.inputs.UpdateScheduleUpdateScheduleThreatsRecurringDailyArgs;
- * import com.pulumi.scm.inputs.UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs;
- * import com.pulumi.scm.inputs.UpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -56,7 +53,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var usSettings = new UpdateSchedule("usSettings", UpdateScheduleArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .updateSchedule(UpdateScheduleUpdateScheduleArgs.builder()
  *                 .threats(UpdateScheduleUpdateScheduleThreatsArgs.builder()
  *                     .recurring(UpdateScheduleUpdateScheduleThreatsRecurringArgs.builder()
@@ -86,44 +83,6 @@ import javax.annotation.Nullable;
  *                             .at(30)
  *                             .action("download-only")
  *                             .syncToPeer(true)
- *                             .build())
- *                         .build())
- *                     .build())
- *                 .build())
- *             .build());
- * 
- *         // -- Example 2 : With Daily recurring updates for recurring and anti-virus
- *         var usSettingsDaily = new UpdateSchedule("usSettingsDaily", UpdateScheduleArgs.builder()
- *             .folder("All")
- *             .updateSchedule(UpdateScheduleUpdateScheduleArgs.builder()
- *                 .threats(UpdateScheduleUpdateScheduleThreatsArgs.builder()
- *                     .recurring(UpdateScheduleUpdateScheduleThreatsRecurringArgs.builder()
- *                         .threshold(300)
- *                         .newAppThreshold(300)
- *                         .syncToPeer(false)
- *                         .daily(UpdateScheduleUpdateScheduleThreatsRecurringDailyArgs.builder()
- *                             .at("02:13")
- *                             .action("download-only")
- *                             .disableNewContent(false)
- *                             .build())
- *                         .build())
- *                     .build())
- *                 .antiVirus(UpdateScheduleUpdateScheduleAntiVirusArgs.builder()
- *                     .recurring(UpdateScheduleUpdateScheduleAntiVirusRecurringArgs.builder()
- *                         .threshold(300)
- *                         .syncToPeer(true)
- *                         .daily(UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs.builder()
- *                             .at("02:13")
- *                             .action("download-only")
- *                             .build())
- *                         .build())
- *                     .build())
- *                 .wildfire(UpdateScheduleUpdateScheduleWildfireArgs.builder()
- *                     .recurring(UpdateScheduleUpdateScheduleWildfireRecurringArgs.builder()
- *                         .every30Mins(UpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsArgs.builder()
- *                             .at(20)
- *                             .action("download-only")
- *                             .syncToPeer(false)
  *                             .build())
  *                         .build())
  *                     .build())

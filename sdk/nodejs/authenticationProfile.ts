@@ -15,12 +15,27 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
+ * const chapRadiusProfile = new scm.RadiusServerProfile("chap_radius_profile", {
+ *     name: "CHAP_only_rsp",
+ *     folder: "ngfw-shared",
+ *     retries: 5,
+ *     timeout: 60,
+ *     protocol: {
+ *         chap: {},
+ *     },
+ *     servers: [{
+ *         name: "Chap_Server_Primary",
+ *         ipAddress: "10.1.1.10",
+ *         port: 1812,
+ *         secret: "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+ *     }],
+ * });
  * const globalRadiusAccess = new scm.AuthenticationProfile("global_radius_access", {
- *     name: "test_auth_profile_radius_1",
- *     folder: "All",
+ *     name: "test_auth_profile_radius",
+ *     folder: "ngfw-shared",
  *     userDomain: "default",
  *     usernameModifier: "%USERINPUT%",
- *     allowLists: ["all"],
+ *     allowLists: ["ngfw-shared"],
  *     lockout: {
  *         failedAttempts: 1,
  *         lockoutTime: 3,
@@ -28,7 +43,7 @@ import * as utilities from "./utilities";
  *     method: {
  *         radius: {
  *             checkgroup: true,
- *             serverProfile: "CHAP_only_rsp_1",
+ *             serverProfile: chapRadiusProfile.name,
  *         },
  *     },
  *     singleSignOn: {
@@ -36,11 +51,11 @@ import * as utilities from "./utilities";
  *     },
  * });
  * const globalDbAccess = new scm.AuthenticationProfile("global_db_access", {
- *     name: "test_auth_profile_db_1",
- *     folder: "All",
+ *     name: "test_auth_global_db",
+ *     folder: "ngfw-shared",
  *     userDomain: "default",
  *     usernameModifier: "%USERINPUT%",
- *     allowLists: ["all"],
+ *     allowLists: ["ngfw-shared"],
  *     lockout: {
  *         failedAttempts: 3,
  *         lockoutTime: 1,

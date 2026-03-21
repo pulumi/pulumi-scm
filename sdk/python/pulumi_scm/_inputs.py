@@ -505,6 +505,22 @@ __all__ = [
     'ContentIdSettingContentIdArgsDict',
     'ContentIdSettingContentIdApplicationArgs',
     'ContentIdSettingContentIdApplicationArgsDict',
+    'DataFilteringProfileRuleArgs',
+    'DataFilteringProfileRuleArgsDict',
+    'DataObjectPatternTypeArgs',
+    'DataObjectPatternTypeArgsDict',
+    'DataObjectPatternTypeFilePropertiesArgs',
+    'DataObjectPatternTypeFilePropertiesArgsDict',
+    'DataObjectPatternTypeFilePropertiesPatternArgs',
+    'DataObjectPatternTypeFilePropertiesPatternArgsDict',
+    'DataObjectPatternTypePredefinedArgs',
+    'DataObjectPatternTypePredefinedArgsDict',
+    'DataObjectPatternTypePredefinedPatternArgs',
+    'DataObjectPatternTypePredefinedPatternArgsDict',
+    'DataObjectPatternTypeRegexArgs',
+    'DataObjectPatternTypeRegexArgsDict',
+    'DataObjectPatternTypeRegexPatternArgs',
+    'DataObjectPatternTypeRegexPatternArgsDict',
     'DecryptionProfileSslForwardProxyArgs',
     'DecryptionProfileSslForwardProxyArgsDict',
     'DecryptionProfileSslInboundProxyArgs',
@@ -2396,6 +2412,10 @@ class AggregateInterfaceLayer2ArgsDict(TypedDict):
     """
     Lacp
     """
+    netflow_profile: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of Netflow Profile to assign to Interface
+    """
     vlan_tag: NotRequired[pulumi.Input[_builtins.str]]
     """
     VLAN tag
@@ -2405,13 +2425,17 @@ class AggregateInterfaceLayer2ArgsDict(TypedDict):
 class AggregateInterfaceLayer2Args:
     def __init__(__self__, *,
                  lacp: Optional[pulumi.Input['AggregateInterfaceLayer2LacpArgs']] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  vlan_tag: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input['AggregateInterfaceLayer2LacpArgs'] lacp: Lacp
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] vlan_tag: VLAN tag
         """
         if lacp is not None:
             pulumi.set(__self__, "lacp", lacp)
+        if netflow_profile is not None:
+            pulumi.set(__self__, "netflow_profile", netflow_profile)
         if vlan_tag is not None:
             pulumi.set(__self__, "vlan_tag", vlan_tag)
 
@@ -2426,6 +2450,18 @@ class AggregateInterfaceLayer2Args:
     @lacp.setter
     def lacp(self, value: Optional[pulumi.Input['AggregateInterfaceLayer2LacpArgs']]):
         pulumi.set(self, "lacp", value)
+
+    @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
+
+    @netflow_profile.setter
+    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netflow_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanTag")
@@ -2600,6 +2636,10 @@ class AggregateInterfaceLayer3ArgsDict(TypedDict):
     """
     MTU
     """
+    netflow_profile: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of Netflow Profile to assign to Interface
+    """
 
 @pulumi.input_type
 class AggregateInterfaceLayer3Args:
@@ -2610,7 +2650,8 @@ class AggregateInterfaceLayer3Args:
                  interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3IpArgs']]]] = None,
                  lacp: Optional[pulumi.Input['AggregateInterfaceLayer3LacpArgs']] = None,
-                 mtu: Optional[pulumi.Input[_builtins.int]] = None):
+                 mtu: Optional[pulumi.Input[_builtins.int]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3ArpArgs']]] arps: Aggregate Ethernet ARP configuration
         :param pulumi.Input['AggregateInterfaceLayer3DdnsConfigArgs'] ddns_config: Dynamic DNS configuration specific to the Aggregate Interface.
@@ -2621,6 +2662,7 @@ class AggregateInterfaceLayer3Args:
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input['AggregateInterfaceLayer3LacpArgs'] lacp: Lacp
         :param pulumi.Input[_builtins.int] mtu: MTU
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         """
         if arps is not None:
             pulumi.set(__self__, "arps", arps)
@@ -2636,6 +2678,8 @@ class AggregateInterfaceLayer3Args:
             pulumi.set(__self__, "lacp", lacp)
         if mtu is not None:
             pulumi.set(__self__, "mtu", mtu)
+        if netflow_profile is not None:
+            pulumi.set(__self__, "netflow_profile", netflow_profile)
 
     @_builtins.property
     @pulumi.getter
@@ -2722,6 +2766,18 @@ class AggregateInterfaceLayer3Args:
     @mtu.setter
     def mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "mtu", value)
+
+    @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
+
+    @netflow_profile.setter
+    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netflow_profile", value)
 
 
 class AggregateInterfaceLayer3ArpArgsDict(TypedDict):
@@ -17501,6 +17557,538 @@ class ContentIdSettingContentIdApplicationArgs:
         pulumi.set(self, "bypass_exceed_queue", value)
 
 
+class DataFilteringProfileRuleArgsDict(TypedDict):
+    alert_threshold: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alert threshold
+    """
+    applications: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Application
+    """
+    block_threshold: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Block threshold
+    """
+    data_object: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Data object
+    """
+    direction: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Direction
+    """
+    file_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    File type
+    """
+    log_severity: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Log severity
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name
+    """
+
+@pulumi.input_type
+class DataFilteringProfileRuleArgs:
+    def __init__(__self__, *,
+                 alert_threshold: Optional[pulumi.Input[_builtins.int]] = None,
+                 applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_threshold: Optional[pulumi.Input[_builtins.int]] = None,
+                 data_object: Optional[pulumi.Input[_builtins.str]] = None,
+                 direction: Optional[pulumi.Input[_builtins.str]] = None,
+                 file_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 log_severity: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.int] alert_threshold: Alert threshold
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: Application
+        :param pulumi.Input[_builtins.int] block_threshold: Block threshold
+        :param pulumi.Input[_builtins.str] data_object: Data object
+        :param pulumi.Input[_builtins.str] direction: Direction
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_types: File type
+        :param pulumi.Input[_builtins.str] log_severity: Log severity
+        :param pulumi.Input[_builtins.str] name: Name
+        """
+        if alert_threshold is not None:
+            pulumi.set(__self__, "alert_threshold", alert_threshold)
+        if applications is not None:
+            pulumi.set(__self__, "applications", applications)
+        if block_threshold is not None:
+            pulumi.set(__self__, "block_threshold", block_threshold)
+        if data_object is not None:
+            pulumi.set(__self__, "data_object", data_object)
+        if direction is not None:
+            pulumi.set(__self__, "direction", direction)
+        if file_types is not None:
+            pulumi.set(__self__, "file_types", file_types)
+        if log_severity is not None:
+            pulumi.set(__self__, "log_severity", log_severity)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+
+    @_builtins.property
+    @pulumi.getter(name="alertThreshold")
+    def alert_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Alert threshold
+        """
+        return pulumi.get(self, "alert_threshold")
+
+    @alert_threshold.setter
+    def alert_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "alert_threshold", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def applications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Application
+        """
+        return pulumi.get(self, "applications")
+
+    @applications.setter
+    def applications(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "applications", value)
+
+    @_builtins.property
+    @pulumi.getter(name="blockThreshold")
+    def block_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Block threshold
+        """
+        return pulumi.get(self, "block_threshold")
+
+    @block_threshold.setter
+    def block_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "block_threshold", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dataObject")
+    def data_object(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Data object
+        """
+        return pulumi.get(self, "data_object")
+
+    @data_object.setter
+    def data_object(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "data_object", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def direction(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Direction
+        """
+        return pulumi.get(self, "direction")
+
+    @direction.setter
+    def direction(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "direction", value)
+
+    @_builtins.property
+    @pulumi.getter(name="fileTypes")
+    def file_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        File type
+        """
+        return pulumi.get(self, "file_types")
+
+    @file_types.setter
+    def file_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "file_types", value)
+
+    @_builtins.property
+    @pulumi.getter(name="logSeverity")
+    def log_severity(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Log severity
+        """
+        return pulumi.get(self, "log_severity")
+
+    @log_severity.setter
+    def log_severity(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "log_severity", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+
+class DataObjectPatternTypeArgsDict(TypedDict):
+    file_properties: NotRequired[pulumi.Input['DataObjectPatternTypeFilePropertiesArgsDict']]
+    """
+    File properties
+    """
+    predefined: NotRequired[pulumi.Input['DataObjectPatternTypePredefinedArgsDict']]
+    """
+    Predefined
+    """
+    regex: NotRequired[pulumi.Input['DataObjectPatternTypeRegexArgsDict']]
+    """
+    Regex
+    """
+
+@pulumi.input_type
+class DataObjectPatternTypeArgs:
+    def __init__(__self__, *,
+                 file_properties: Optional[pulumi.Input['DataObjectPatternTypeFilePropertiesArgs']] = None,
+                 predefined: Optional[pulumi.Input['DataObjectPatternTypePredefinedArgs']] = None,
+                 regex: Optional[pulumi.Input['DataObjectPatternTypeRegexArgs']] = None):
+        """
+        :param pulumi.Input['DataObjectPatternTypeFilePropertiesArgs'] file_properties: File properties
+        :param pulumi.Input['DataObjectPatternTypePredefinedArgs'] predefined: Predefined
+        :param pulumi.Input['DataObjectPatternTypeRegexArgs'] regex: Regex
+        """
+        if file_properties is not None:
+            pulumi.set(__self__, "file_properties", file_properties)
+        if predefined is not None:
+            pulumi.set(__self__, "predefined", predefined)
+        if regex is not None:
+            pulumi.set(__self__, "regex", regex)
+
+    @_builtins.property
+    @pulumi.getter(name="fileProperties")
+    def file_properties(self) -> Optional[pulumi.Input['DataObjectPatternTypeFilePropertiesArgs']]:
+        """
+        File properties
+        """
+        return pulumi.get(self, "file_properties")
+
+    @file_properties.setter
+    def file_properties(self, value: Optional[pulumi.Input['DataObjectPatternTypeFilePropertiesArgs']]):
+        pulumi.set(self, "file_properties", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def predefined(self) -> Optional[pulumi.Input['DataObjectPatternTypePredefinedArgs']]:
+        """
+        Predefined
+        """
+        return pulumi.get(self, "predefined")
+
+    @predefined.setter
+    def predefined(self, value: Optional[pulumi.Input['DataObjectPatternTypePredefinedArgs']]):
+        pulumi.set(self, "predefined", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def regex(self) -> Optional[pulumi.Input['DataObjectPatternTypeRegexArgs']]:
+        """
+        Regex
+        """
+        return pulumi.get(self, "regex")
+
+    @regex.setter
+    def regex(self, value: Optional[pulumi.Input['DataObjectPatternTypeRegexArgs']]):
+        pulumi.set(self, "regex", value)
+
+
+class DataObjectPatternTypeFilePropertiesArgsDict(TypedDict):
+    patterns: NotRequired[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypeFilePropertiesPatternArgsDict']]]]
+    """
+    Pattern
+    """
+
+@pulumi.input_type
+class DataObjectPatternTypeFilePropertiesArgs:
+    def __init__(__self__, *,
+                 patterns: Optional[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypeFilePropertiesPatternArgs']]]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypeFilePropertiesPatternArgs']]] patterns: Pattern
+        """
+        if patterns is not None:
+            pulumi.set(__self__, "patterns", patterns)
+
+    @_builtins.property
+    @pulumi.getter
+    def patterns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypeFilePropertiesPatternArgs']]]]:
+        """
+        Pattern
+        """
+        return pulumi.get(self, "patterns")
+
+    @patterns.setter
+    def patterns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypeFilePropertiesPatternArgs']]]]):
+        pulumi.set(self, "patterns", value)
+
+
+class DataObjectPatternTypeFilePropertiesPatternArgsDict(TypedDict):
+    file_property: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    File property
+    """
+    file_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    File type
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name
+    """
+    property_value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Property value
+    """
+
+@pulumi.input_type
+class DataObjectPatternTypeFilePropertiesPatternArgs:
+    def __init__(__self__, *,
+                 file_property: Optional[pulumi.Input[_builtins.str]] = None,
+                 file_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 property_value: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] file_property: File property
+        :param pulumi.Input[_builtins.str] file_type: File type
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] property_value: Property value
+        """
+        if file_property is not None:
+            pulumi.set(__self__, "file_property", file_property)
+        if file_type is not None:
+            pulumi.set(__self__, "file_type", file_type)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if property_value is not None:
+            pulumi.set(__self__, "property_value", property_value)
+
+    @_builtins.property
+    @pulumi.getter(name="fileProperty")
+    def file_property(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        File property
+        """
+        return pulumi.get(self, "file_property")
+
+    @file_property.setter
+    def file_property(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "file_property", value)
+
+    @_builtins.property
+    @pulumi.getter(name="fileType")
+    def file_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        File type
+        """
+        return pulumi.get(self, "file_type")
+
+    @file_type.setter
+    def file_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "file_type", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="propertyValue")
+    def property_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Property value
+        """
+        return pulumi.get(self, "property_value")
+
+    @property_value.setter
+    def property_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "property_value", value)
+
+
+class DataObjectPatternTypePredefinedArgsDict(TypedDict):
+    patterns: NotRequired[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypePredefinedPatternArgsDict']]]]
+    """
+    Pattern
+    """
+
+@pulumi.input_type
+class DataObjectPatternTypePredefinedArgs:
+    def __init__(__self__, *,
+                 patterns: Optional[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypePredefinedPatternArgs']]]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypePredefinedPatternArgs']]] patterns: Pattern
+        """
+        if patterns is not None:
+            pulumi.set(__self__, "patterns", patterns)
+
+    @_builtins.property
+    @pulumi.getter
+    def patterns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypePredefinedPatternArgs']]]]:
+        """
+        Pattern
+        """
+        return pulumi.get(self, "patterns")
+
+    @patterns.setter
+    def patterns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypePredefinedPatternArgs']]]]):
+        pulumi.set(self, "patterns", value)
+
+
+class DataObjectPatternTypePredefinedPatternArgsDict(TypedDict):
+    file_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    File type
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name
+    """
+
+@pulumi.input_type
+class DataObjectPatternTypePredefinedPatternArgs:
+    def __init__(__self__, *,
+                 file_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_types: File type
+        :param pulumi.Input[_builtins.str] name: Name
+        """
+        if file_types is not None:
+            pulumi.set(__self__, "file_types", file_types)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+
+    @_builtins.property
+    @pulumi.getter(name="fileTypes")
+    def file_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        File type
+        """
+        return pulumi.get(self, "file_types")
+
+    @file_types.setter
+    def file_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "file_types", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+
+class DataObjectPatternTypeRegexArgsDict(TypedDict):
+    patterns: NotRequired[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypeRegexPatternArgsDict']]]]
+    """
+    Pattern
+    """
+
+@pulumi.input_type
+class DataObjectPatternTypeRegexArgs:
+    def __init__(__self__, *,
+                 patterns: Optional[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypeRegexPatternArgs']]]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypeRegexPatternArgs']]] patterns: Pattern
+        """
+        if patterns is not None:
+            pulumi.set(__self__, "patterns", patterns)
+
+    @_builtins.property
+    @pulumi.getter
+    def patterns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypeRegexPatternArgs']]]]:
+        """
+        Pattern
+        """
+        return pulumi.get(self, "patterns")
+
+    @patterns.setter
+    def patterns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['DataObjectPatternTypeRegexPatternArgs']]]]):
+        pulumi.set(self, "patterns", value)
+
+
+class DataObjectPatternTypeRegexPatternArgsDict(TypedDict):
+    file_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    File type
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name
+    """
+    regex: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Regex
+    """
+
+@pulumi.input_type
+class DataObjectPatternTypeRegexPatternArgs:
+    def __init__(__self__, *,
+                 file_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 regex: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_types: File type
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] regex: Regex
+        """
+        if file_types is not None:
+            pulumi.set(__self__, "file_types", file_types)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if regex is not None:
+            pulumi.set(__self__, "regex", regex)
+
+    @_builtins.property
+    @pulumi.getter(name="fileTypes")
+    def file_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        File type
+        """
+        return pulumi.get(self, "file_types")
+
+    @file_types.setter
+    def file_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "file_types", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def regex(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Regex
+        """
+        return pulumi.get(self, "regex")
+
+    @regex.setter
+    def regex(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "regex", value)
+
+
 class DecryptionProfileSslForwardProxyArgsDict(TypedDict):
     auto_include_altname: NotRequired[pulumi.Input[_builtins.bool]]
     """
@@ -21668,6 +22256,10 @@ class EthernetInterfaceLayer2ArgsDict(TypedDict):
     """
     LLDP Settings
     """
+    netflow_profile: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of Netflow Profile to assign to Interface
+    """
     vlan_tag: NotRequired[pulumi.Input[_builtins.str]]
     """
     Assign interface to VLAN tag
@@ -21677,13 +22269,17 @@ class EthernetInterfaceLayer2ArgsDict(TypedDict):
 class EthernetInterfaceLayer2Args:
     def __init__(__self__, *,
                  lldp: Optional[pulumi.Input['EthernetInterfaceLayer2LldpArgs']] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  vlan_tag: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input['EthernetInterfaceLayer2LldpArgs'] lldp: LLDP Settings
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input[_builtins.str] vlan_tag: Assign interface to VLAN tag
         """
         if lldp is not None:
             pulumi.set(__self__, "lldp", lldp)
+        if netflow_profile is not None:
+            pulumi.set(__self__, "netflow_profile", netflow_profile)
         if vlan_tag is not None:
             pulumi.set(__self__, "vlan_tag", vlan_tag)
 
@@ -21698,6 +22294,18 @@ class EthernetInterfaceLayer2Args:
     @lldp.setter
     def lldp(self, value: Optional[pulumi.Input['EthernetInterfaceLayer2LldpArgs']]):
         pulumi.set(self, "lldp", value)
+
+    @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
+
+    @netflow_profile.setter
+    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netflow_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanTag")
@@ -21767,6 +22375,10 @@ class EthernetInterfaceLayer3ArgsDict(TypedDict):
     """
     MTU
     """
+    netflow_profile: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of Netflow Profile to assign to Interface
+    """
     pppoe: NotRequired[pulumi.Input['EthernetInterfaceLayer3PppoeArgsDict']]
     """
     Pppoe
@@ -21783,6 +22395,7 @@ class EthernetInterfaceLayer3Args:
                  interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  ips: Optional[pulumi.Input[Sequence[pulumi.Input['EthernetInterfaceLayer3IpArgs']]]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  pppoe: Optional[pulumi.Input['EthernetInterfaceLayer3PppoeArgs']] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['EthernetInterfaceLayer3ArpArgs']]] arps: Ethernet Interfaces ARP configuration
@@ -21793,6 +22406,7 @@ class EthernetInterfaceLayer3Args:
                
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client`, `ip`, and `pppoe`.
         :param pulumi.Input[_builtins.int] mtu: MTU
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
         :param pulumi.Input['EthernetInterfaceLayer3PppoeArgs'] pppoe: Pppoe
                
                > ℹ️ **Note:** You must specify exactly one of `dhcp_client`, `ip`, and `pppoe`.
@@ -21809,6 +22423,8 @@ class EthernetInterfaceLayer3Args:
             pulumi.set(__self__, "ips", ips)
         if mtu is not None:
             pulumi.set(__self__, "mtu", mtu)
+        if netflow_profile is not None:
+            pulumi.set(__self__, "netflow_profile", netflow_profile)
         if pppoe is not None:
             pulumi.set(__self__, "pppoe", pppoe)
 
@@ -21885,6 +22501,18 @@ class EthernetInterfaceLayer3Args:
     @mtu.setter
     def mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "mtu", value)
+
+    @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
+
+    @netflow_profile.setter
+    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netflow_profile", value)
 
     @_builtins.property
     @pulumi.getter
@@ -22554,12 +23182,32 @@ class EthernetInterfacePoeArgs:
 
 
 class EthernetInterfaceTapArgsDict(TypedDict):
-    pass
+    netflow_profile: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of Netflow Profile to assign to Interface
+    """
 
 @pulumi.input_type
 class EthernetInterfaceTapArgs:
-    def __init__(__self__):
-        pass
+    def __init__(__self__, *,
+                 netflow_profile: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] netflow_profile: Name of Netflow Profile to assign to Interface
+        """
+        if netflow_profile is not None:
+            pulumi.set(__self__, "netflow_profile", netflow_profile)
+
+    @_builtins.property
+    @pulumi.getter(name="netflowProfile")
+    def netflow_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Name of Netflow Profile to assign to Interface
+        """
+        return pulumi.get(self, "netflow_profile")
+
+    @netflow_profile.setter
+    def netflow_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netflow_profile", value)
 
 
 class ExternalDynamicListTypeArgsDict(TypedDict):
@@ -60052,6 +60700,14 @@ class LoopbackInterfaceIpv6AddressPrefixArgs:
 
 
 class ManagementInterfaceManagementInterfaceArgsDict(TypedDict):
+    default_gateway: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Default gateway
+    """
+    ip_address: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IP address
+    """
     mgmt_type: NotRequired[pulumi.Input['ManagementInterfaceManagementInterfaceMgmtTypeArgsDict']]
     """
     IP type
@@ -60059,6 +60715,10 @@ class ManagementInterfaceManagementInterfaceArgsDict(TypedDict):
     mtu: NotRequired[pulumi.Input[_builtins.int]]
     """
     MTU
+    """
+    netmask: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Netmask
     """
     permitted_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input['ManagementInterfaceManagementInterfacePermittedIpArgsDict']]]]
     """
@@ -60076,28 +60736,64 @@ class ManagementInterfaceManagementInterfaceArgsDict(TypedDict):
 @pulumi.input_type
 class ManagementInterfaceManagementInterfaceArgs:
     def __init__(__self__, *,
+                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
+                 ip_address: Optional[pulumi.Input[_builtins.str]] = None,
                  mgmt_type: Optional[pulumi.Input['ManagementInterfaceManagementInterfaceMgmtTypeArgs']] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
+                 netmask: Optional[pulumi.Input[_builtins.str]] = None,
                  permitted_ips: Optional[pulumi.Input[Sequence[pulumi.Input['ManagementInterfaceManagementInterfacePermittedIpArgs']]]] = None,
                  service: Optional[pulumi.Input['ManagementInterfaceManagementInterfaceServiceArgs']] = None,
                  speed_duplex: Optional[pulumi.Input[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.str] default_gateway: Default gateway
+        :param pulumi.Input[_builtins.str] ip_address: IP address
         :param pulumi.Input['ManagementInterfaceManagementInterfaceMgmtTypeArgs'] mgmt_type: IP type
         :param pulumi.Input[_builtins.int] mtu: MTU
+        :param pulumi.Input[_builtins.str] netmask: Netmask
         :param pulumi.Input[Sequence[pulumi.Input['ManagementInterfaceManagementInterfacePermittedIpArgs']]] permitted_ips: Permitting IP addresses
         :param pulumi.Input['ManagementInterfaceManagementInterfaceServiceArgs'] service: Network services
         :param pulumi.Input[_builtins.str] speed_duplex: Speed and duplex
         """
+        if default_gateway is not None:
+            pulumi.set(__self__, "default_gateway", default_gateway)
+        if ip_address is not None:
+            pulumi.set(__self__, "ip_address", ip_address)
         if mgmt_type is not None:
             pulumi.set(__self__, "mgmt_type", mgmt_type)
         if mtu is not None:
             pulumi.set(__self__, "mtu", mtu)
+        if netmask is not None:
+            pulumi.set(__self__, "netmask", netmask)
         if permitted_ips is not None:
             pulumi.set(__self__, "permitted_ips", permitted_ips)
         if service is not None:
             pulumi.set(__self__, "service", service)
         if speed_duplex is not None:
             pulumi.set(__self__, "speed_duplex", speed_duplex)
+
+    @_builtins.property
+    @pulumi.getter(name="defaultGateway")
+    def default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Default gateway
+        """
+        return pulumi.get(self, "default_gateway")
+
+    @default_gateway.setter
+    def default_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "default_gateway", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipAddress")
+    def ip_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        IP address
+        """
+        return pulumi.get(self, "ip_address")
+
+    @ip_address.setter
+    def ip_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ip_address", value)
 
     @_builtins.property
     @pulumi.getter(name="mgmtType")
@@ -60122,6 +60818,18 @@ class ManagementInterfaceManagementInterfaceArgs:
     @mtu.setter
     def mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "mtu", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def netmask(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Netmask
+        """
+        return pulumi.get(self, "netmask")
+
+    @netmask.setter
+    def netmask(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "netmask", value)
 
     @_builtins.property
     @pulumi.getter(name="permittedIps")
@@ -60305,69 +61013,12 @@ class ManagementInterfaceManagementInterfaceMgmtTypeDhcpClientArgs:
 
 
 class ManagementInterfaceManagementInterfaceMgmtTypeStaticArgsDict(TypedDict):
-    default_gateway: pulumi.Input[_builtins.str]
-    """
-    Default gateway
-    """
-    ip_address: pulumi.Input[_builtins.str]
-    """
-    IP address
-    """
-    netmask: pulumi.Input[_builtins.str]
-    """
-    Netmask
-    """
+    pass
 
 @pulumi.input_type
 class ManagementInterfaceManagementInterfaceMgmtTypeStaticArgs:
-    def __init__(__self__, *,
-                 default_gateway: pulumi.Input[_builtins.str],
-                 ip_address: pulumi.Input[_builtins.str],
-                 netmask: pulumi.Input[_builtins.str]):
-        """
-        :param pulumi.Input[_builtins.str] default_gateway: Default gateway
-        :param pulumi.Input[_builtins.str] ip_address: IP address
-        :param pulumi.Input[_builtins.str] netmask: Netmask
-        """
-        pulumi.set(__self__, "default_gateway", default_gateway)
-        pulumi.set(__self__, "ip_address", ip_address)
-        pulumi.set(__self__, "netmask", netmask)
-
-    @_builtins.property
-    @pulumi.getter(name="defaultGateway")
-    def default_gateway(self) -> pulumi.Input[_builtins.str]:
-        """
-        Default gateway
-        """
-        return pulumi.get(self, "default_gateway")
-
-    @default_gateway.setter
-    def default_gateway(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "default_gateway", value)
-
-    @_builtins.property
-    @pulumi.getter(name="ipAddress")
-    def ip_address(self) -> pulumi.Input[_builtins.str]:
-        """
-        IP address
-        """
-        return pulumi.get(self, "ip_address")
-
-    @ip_address.setter
-    def ip_address(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "ip_address", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def netmask(self) -> pulumi.Input[_builtins.str]:
-        """
-        Netmask
-        """
-        return pulumi.get(self, "netmask")
-
-    @netmask.setter
-    def netmask(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "netmask", value)
+    def __init__(__self__):
+        pass
 
 
 class ManagementInterfaceManagementInterfacePermittedIpArgsDict(TypedDict):
@@ -64302,6 +64953,10 @@ class RemoteNetworkProtocolBgpPeerArgsDict(TypedDict):
     """
     Remote peer IP address (secondary WAN)
     """
+    same_as_primary: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Same peer IP address as primary WAN
+    """
     secret: NotRequired[pulumi.Input[_builtins.str]]
     """
     BGP peering secret (secondary WAN)
@@ -64312,16 +64967,20 @@ class RemoteNetworkProtocolBgpPeerArgs:
     def __init__(__self__, *,
                  local_ip_address: Optional[pulumi.Input[_builtins.str]] = None,
                  peer_ip_address: Optional[pulumi.Input[_builtins.str]] = None,
+                 same_as_primary: Optional[pulumi.Input[_builtins.bool]] = None,
                  secret: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] local_ip_address: Local peer IP address (secondary WAN)
         :param pulumi.Input[_builtins.str] peer_ip_address: Remote peer IP address (secondary WAN)
+        :param pulumi.Input[_builtins.bool] same_as_primary: Same peer IP address as primary WAN
         :param pulumi.Input[_builtins.str] secret: BGP peering secret (secondary WAN)
         """
         if local_ip_address is not None:
             pulumi.set(__self__, "local_ip_address", local_ip_address)
         if peer_ip_address is not None:
             pulumi.set(__self__, "peer_ip_address", peer_ip_address)
+        if same_as_primary is not None:
+            pulumi.set(__self__, "same_as_primary", same_as_primary)
         if secret is not None:
             pulumi.set(__self__, "secret", secret)
 
@@ -64348,6 +65007,18 @@ class RemoteNetworkProtocolBgpPeerArgs:
     @peer_ip_address.setter
     def peer_ip_address(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "peer_ip_address", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sameAsPrimary")
+    def same_as_primary(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Same peer IP address as primary WAN
+        """
+        return pulumi.get(self, "same_as_primary")
+
+    @same_as_primary.setter
+    def same_as_primary(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "same_as_primary", value)
 
     @_builtins.property
     @pulumi.getter

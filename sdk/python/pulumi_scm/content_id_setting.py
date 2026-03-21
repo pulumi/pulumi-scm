@@ -217,7 +217,7 @@ class ContentIdSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         cid_example = scm.ContentIdSetting("cid_example",
-            folder="All",
+            folder="ngfw-shared",
             content_id={
                 "allow_forward_decrypted_content": True,
                 "extended_capture_segment": 6,
@@ -282,7 +282,7 @@ class ContentIdSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         cid_example = scm.ContentIdSetting("cid_example",
-            folder="All",
+            folder="ngfw-shared",
             content_id={
                 "allow_forward_decrypted_content": True,
                 "extended_capture_segment": 6,

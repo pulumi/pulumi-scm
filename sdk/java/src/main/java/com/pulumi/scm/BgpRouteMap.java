@@ -67,7 +67,7 @@ import javax.annotation.Nullable;
  *                         .action("permit")
  *                         .prefix(RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs.builder()
  *                             .greaterThanOrEqual(24)
- *                             .network("198.18.1.0/24")
+ *                             .network("any")
  *                             .build())
  *                         .build())
  *                     .build())

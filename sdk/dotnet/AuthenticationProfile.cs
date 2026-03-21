@@ -22,15 +22,37 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
+    ///     var chapRadiusProfile = new Scm.RadiusServerProfile("chap_radius_profile", new()
+    ///     {
+    ///         Name = "CHAP_only_rsp",
+    ///         Folder = "ngfw-shared",
+    ///         Retries = 5,
+    ///         Timeout = 60,
+    ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs
+    ///         {
+    ///             Chap = null,
+    ///         },
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.RadiusServerProfileServerArgs
+    ///             {
+    ///                 Name = "Chap_Server_Primary",
+    ///                 IpAddress = "10.1.1.10",
+    ///                 Port = 1812,
+    ///                 Secret = "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+    ///             },
+    ///         },
+    ///     });
+    /// 
     ///     var globalRadiusAccess = new Scm.AuthenticationProfile("global_radius_access", new()
     ///     {
-    ///         Name = "test_auth_profile_radius_1",
-    ///         Folder = "All",
+    ///         Name = "test_auth_profile_radius",
+    ///         Folder = "ngfw-shared",
     ///         UserDomain = "default",
     ///         UsernameModifier = "%USERINPUT%",
     ///         AllowLists = new[]
     ///         {
-    ///             "all",
+    ///             "ngfw-shared",
     ///         },
     ///         Lockout = new Scm.Inputs.AuthenticationProfileLockoutArgs
     ///         {
@@ -42,7 +64,7 @@ namespace Pulumi.Scm
     ///             Radius = new Scm.Inputs.AuthenticationProfileMethodRadiusArgs
     ///             {
     ///                 Checkgroup = true,
-    ///                 ServerProfile = "CHAP_only_rsp_1",
+    ///                 ServerProfile = chapRadiusProfile.Name,
     ///             },
     ///         },
     ///         SingleSignOn = new Scm.Inputs.AuthenticationProfileSingleSignOnArgs
@@ -53,13 +75,13 @@ namespace Pulumi.Scm
     /// 
     ///     var globalDbAccess = new Scm.AuthenticationProfile("global_db_access", new()
     ///     {
-    ///         Name = "test_auth_profile_db_1",
-    ///         Folder = "All",
+    ///         Name = "test_auth_global_db",
+    ///         Folder = "ngfw-shared",
     ///         UserDomain = "default",
     ///         UsernameModifier = "%USERINPUT%",
     ///         AllowLists = new[]
     ///         {
-    ///             "all",
+    ///             "ngfw-shared",
     ///         },
     ///         Lockout = new Scm.Inputs.AuthenticationProfileLockoutArgs
     ///         {

@@ -233,7 +233,7 @@ class ServiceSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         service_settings = scm.ServiceSetting("service_settings",
-            folder="All",
+            folder="ngfw-shared",
             services={
                 "dns_setting": {
                     "servers": {
@@ -318,7 +318,7 @@ class ServiceSetting(pulumi.CustomResource):
         import pulumi_scm as scm
 
         service_settings = scm.ServiceSetting("service_settings",
-            folder="All",
+            folder="ngfw-shared",
             services={
                 "dns_setting": {
                     "servers": {

@@ -16,11 +16,11 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const globalRadiusAccess = new scm.AuthenticationProfile("global_radius_access", {
- *     name: "test_auth_profile_radius_1",
+ *     name: "test_auth_profile_settings",
  *     folder: "Prisma Access",
  *     userDomain: "default",
  *     usernameModifier: "%USERINPUT%",
- *     allowLists: ["all"],
+ *     allowLists: ["ngfw-shared"],
  *     lockout: {
  *         failedAttempts: 1,
  *         lockoutTime: 3,
@@ -30,9 +30,6 @@ import * as utilities from "./utilities";
  *             checkgroup: true,
  *             serverProfile: "CHAP_only_rsp_11",
  *         },
- *     },
- *     singleSignOn: {
- *         realm: "EXAMPLE.COM",
  *     },
  * });
  * const authSettings = new scm.AuthenticationSetting("auth_settings", {

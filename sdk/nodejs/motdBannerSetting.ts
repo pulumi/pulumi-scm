@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const motdExample = new scm.MotdBannerSetting("motd_example", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     motdAndBanner: {
  *         motdEnable: true,
  *         message: "Test Message",

@@ -26,7 +26,7 @@ namespace Pulumi.Scm
     ///     // The EDL will fetch a list of domains from the specified URL daily.
     ///     var scmEdl1 = new Scm.ExternalDynamicList("scm_edl_1", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm_edl_1",
     ///         Type = new Scm.Inputs.ExternalDynamicListTypeArgs
     ///         {
@@ -47,7 +47,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmEdl2 = new Scm.ExternalDynamicList("scm_edl_2", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm_edl_2",
     ///         Type = new Scm.Inputs.ExternalDynamicListTypeArgs
     ///         {
@@ -65,7 +65,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmEdl3 = new Scm.ExternalDynamicList("scm_edl_3", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm_edl_3",
     ///         Type = new Scm.Inputs.ExternalDynamicListTypeArgs
     ///         {
@@ -87,7 +87,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmEdl4 = new Scm.ExternalDynamicList("scm_edl_4", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm_edl_4",
     ///         Type = new Scm.Inputs.ExternalDynamicListTypeArgs
     ///         {
@@ -101,7 +101,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmEdl5 = new Scm.ExternalDynamicList("scm_edl_5", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "scm_edl_5",
     ///         Type = new Scm.Inputs.ExternalDynamicListTypeArgs
     ///         {

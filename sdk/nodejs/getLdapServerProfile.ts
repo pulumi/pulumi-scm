@@ -8,6 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * LdapServerProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the LDAP Server Profile you want to find.
+ * const ldapServerProf = scm.getLdapServerProfile({
+ *     id: "a5006a3e-52b3-435e-9e3b-39b50dc72401",
+ * });
+ * export const scmLdapServerProfileDetails = {
+ *     id: ldapServerProf.then(ldapServerProf => ldapServerProf.id),
+ *     folder: ldapServerProf.then(ldapServerProf => ldapServerProf.folder),
+ *     name: ldapServerProf.then(ldapServerProf => ldapServerProf.name),
+ * };
+ * ```
  */
 export function getLdapServerProfile(args: GetLdapServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetLdapServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -67,6 +87,26 @@ export interface GetLdapServerProfileResult {
 }
 /**
  * LdapServerProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM LDAP Server Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the LDAP Server Profile you want to find.
+ * const ldapServerProf = scm.getLdapServerProfile({
+ *     id: "a5006a3e-52b3-435e-9e3b-39b50dc72401",
+ * });
+ * export const scmLdapServerProfileDetails = {
+ *     id: ldapServerProf.then(ldapServerProf => ldapServerProf.id),
+ *     folder: ldapServerProf.then(ldapServerProf => ldapServerProf.folder),
+ *     name: ldapServerProf.then(ldapServerProf => ldapServerProf.name),
+ * };
+ * ```
  */
 export function getLdapServerProfileOutput(args: GetLdapServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLdapServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var example = new LldpProfile("example", LldpProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .mode("transmit-receive")
  *             .name("lldp-profile-tf-1")
  *             .optionTlvs(LldpProfileOptionTlvsArgs.builder()

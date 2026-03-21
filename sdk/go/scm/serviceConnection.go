@@ -38,7 +38,7 @@ import (
 //			// # 1. Define the IKE Crypto Profile (IKE Phase 1)
 //			// Note: The resource name is plural: "scm_ike_crypto_profile"
 //			example, err := scm.NewIkeCryptoProfile(ctx, "example", &scm.IkeCryptoProfileArgs{
-//				Name:   pulumi.String("example-ike-crypto"),
+//				Name:   pulumi.String("example-sc-ike-crypto"),
 //				Folder: pulumi.String(folderScope),
 //				Hashes: pulumi.StringArray{
 //					pulumi.String("sha256"),
@@ -56,7 +56,7 @@ import (
 //			// # 2. Define the IPsec Crypto Profile (IKE Phase 2)
 //			// Note: The resource name is plural and nested blocks now use an equals sign (=).
 //			exampleIpsecCryptoProfile, err := scm.NewIpsecCryptoProfile(ctx, "example", &scm.IpsecCryptoProfileArgs{
-//				Name:   pulumi.String("panw-IPSec-Crypto"),
+//				Name:   pulumi.String("panw-sc-Crypto"),
 //				Folder: pulumi.String(folderScope),
 //				Esp: &scm.IpsecCryptoProfileEspArgs{
 //					Encryptions: pulumi.StringArray{
@@ -77,7 +77,7 @@ import (
 //			// # 3. Define the IKE Gateway
 //			// Note: The resource name is plural and nested blocks now use an equals sign (=).
 //			exampleIkeGateway, err := scm.NewIkeGateway(ctx, "example", &scm.IkeGatewayArgs{
-//				Name:   pulumi.String("example-gateway"),
+//				Name:   pulumi.String("example-sc-gateway"),
 //				Folder: pulumi.String(folderScope),
 //				PeerAddress: &scm.IkeGatewayPeerAddressArgs{
 //					Ip: pulumi.String("1.1.1.1"),
@@ -99,7 +99,7 @@ import (
 //			// # 4. Define the IPsec Tunnel
 //			// Note: Nested 'auto_key' block uses an equals sign (=).
 //			exampleIpsecTunnel, err := scm.NewIpsecTunnel(ctx, "example", &scm.IpsecTunnelArgs{
-//				Name:                   pulumi.String("example-tunnel"),
+//				Name:                   pulumi.String("example-sc-tunnel"),
 //				Folder:                 pulumi.String(folderScope),
 //				TunnelInterface:        pulumi.String("tunnel"),
 //				AntiReplay:             pulumi.Bool(true),

@@ -580,13 +580,13 @@ class PbfRule(pulumi.CustomResource):
         import pulumi_scm as scm
 
         example_tag = scm.Tag("example_tag",
-            folder="All",
+            folder="ngfw-shared",
             name="pbf-rule-tag-test-1",
             color="Red")
         # --- PBF Rule Resource with discard action---
         example_pbf_rule = scm.PbfRule("example_pbf_rule",
             name="pbf-test-rule-discard",
-            folder="All",
+            folder="ngfw-shared",
             description="PBF rule for forwarding specific traffic.",
             from_={
                 "zones": ["zone-untrust"],
@@ -607,7 +607,7 @@ class PbfRule(pulumi.CustomResource):
         # --- PBF Rule Resource with no-pbf action---
         example_no_pbf_rule = scm.PbfRule("example_no_pbf_rule",
             name="pbf-test-rule-no-pbf",
-            folder="All",
+            folder="ngfw-shared",
             description="PBF rule for forwarding specific traffic",
             from_={
                 "zones": ["zone-untrust"],
@@ -628,7 +628,7 @@ class PbfRule(pulumi.CustomResource):
         # --- PBF Rule Resource with forward action---
         example_forward_pbf_rule = scm.PbfRule("example_forward_pbf_rule",
             name="pbf-test-rule-forward",
-            folder="All",
+            folder="ngfw-shared",
             description="PBF rule for forwarding specific traffic",
             from_={
                 "zones": ["zone-untrust"],
@@ -719,13 +719,13 @@ class PbfRule(pulumi.CustomResource):
         import pulumi_scm as scm
 
         example_tag = scm.Tag("example_tag",
-            folder="All",
+            folder="ngfw-shared",
             name="pbf-rule-tag-test-1",
             color="Red")
         # --- PBF Rule Resource with discard action---
         example_pbf_rule = scm.PbfRule("example_pbf_rule",
             name="pbf-test-rule-discard",
-            folder="All",
+            folder="ngfw-shared",
             description="PBF rule for forwarding specific traffic.",
             from_={
                 "zones": ["zone-untrust"],
@@ -746,7 +746,7 @@ class PbfRule(pulumi.CustomResource):
         # --- PBF Rule Resource with no-pbf action---
         example_no_pbf_rule = scm.PbfRule("example_no_pbf_rule",
             name="pbf-test-rule-no-pbf",
-            folder="All",
+            folder="ngfw-shared",
             description="PBF rule for forwarding specific traffic",
             from_={
                 "zones": ["zone-untrust"],
@@ -767,7 +767,7 @@ class PbfRule(pulumi.CustomResource):
         # --- PBF Rule Resource with forward action---
         example_forward_pbf_rule = scm.PbfRule("example_forward_pbf_rule",
             name="pbf-test-rule-forward",
-            folder="All",
+            folder="ngfw-shared",
             description="PBF rule for forwarding specific traffic",
             from_={
                 "zones": ["zone-untrust"],

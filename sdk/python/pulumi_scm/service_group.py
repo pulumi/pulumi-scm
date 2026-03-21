@@ -304,7 +304,7 @@ class ServiceGroup(pulumi.CustomResource):
             })
         # Service Group containing multiple services
         scm_servicegroup = scm.ServiceGroup("scm_servicegroup",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_servicegroup",
             members=[
                 scm_service_tcp_ports.name,
@@ -312,7 +312,7 @@ class ServiceGroup(pulumi.CustomResource):
             ])
         # Service Group containing multiple services and another servicegroup
         scm_servicegroup_nested = scm.ServiceGroup("scm_servicegroup_nested",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_servicegroup_nested",
             members=[
                 scm_service_tcp_ports.name,
@@ -397,7 +397,7 @@ class ServiceGroup(pulumi.CustomResource):
             })
         # Service Group containing multiple services
         scm_servicegroup = scm.ServiceGroup("scm_servicegroup",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_servicegroup",
             members=[
                 scm_service_tcp_ports.name,
@@ -405,7 +405,7 @@ class ServiceGroup(pulumi.CustomResource):
             ])
         # Service Group containing multiple services and another servicegroup
         scm_servicegroup_nested = scm.ServiceGroup("scm_servicegroup_nested",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_servicegroup_nested",
             members=[
                 scm_service_tcp_ports.name,

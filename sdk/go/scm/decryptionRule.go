@@ -31,7 +31,7 @@ import (
 //			// --- 1. TAG Resource ---
 //			decryptionPositionTag, err := scm.NewTag(ctx, "decryption_position_tag", &scm.TagArgs{
 //				Name:   pulumi.String("decryption-position-tag"),
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Color:  pulumi.String("Purple"),
 //			})
 //			if err != nil {
@@ -41,7 +41,7 @@ import (
 //			anchorDecryptionRule, err := scm.NewDecryptionRule(ctx, "anchor_decryption_rule", &scm.DecryptionRuleArgs{
 //				Name:        pulumi.String("anchor-decryption-rule"),
 //				Description: pulumi.String("Base rule for testing 'before' and 'after' positioning."),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Position:    pulumi.String("pre"),
 //				Action:      pulumi.String("decrypt"),
 //				Froms: pulumi.StringArray{
@@ -87,7 +87,7 @@ import (
 //			_, err = scm.NewDecryptionRule(ctx, "rule_top_decryption_rule", &scm.DecryptionRuleArgs{
 //				Name:             pulumi.String("top-absolute-decryption-rule"),
 //				Description:      pulumi.String("Placed at the very TOP of the Decryption rulebase."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				Action:           pulumi.String("no-decrypt"),
 //				RelativePosition: pulumi.String("top"),
@@ -122,7 +122,7 @@ import (
 //			_, err = scm.NewDecryptionRule(ctx, "rule_bottom_decryption_rule", &scm.DecryptionRuleArgs{
 //				Name:             pulumi.String("bottom-absolute-decryption-rule"),
 //				Description:      pulumi.String("Placed at the very BOTTOM of the Decryption rulebase."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				Action:           pulumi.String("decrypt"),
 //				RelativePosition: pulumi.String("bottom"),
@@ -158,7 +158,7 @@ import (
 //			_, err = scm.NewDecryptionRule(ctx, "rule_before_anchor_decryption", &scm.DecryptionRuleArgs{
 //				Name:             pulumi.String("before-anchor-decryption-rule"),
 //				Description:      pulumi.String("Positioned immediately BEFORE the anchor-decryption-rule. Updating"),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				Action:           pulumi.String("decrypt"),
 //				RelativePosition: pulumi.String("before"),
@@ -194,7 +194,7 @@ import (
 //			_, err = scm.NewDecryptionRule(ctx, "rule_after_anchor_decryption", &scm.DecryptionRuleArgs{
 //				Name:             pulumi.String("after-anchor-decryption-rule_123"),
 //				Description:      pulumi.String("Positioned immediately AFTER the anchor-decryption-rule."),
-//				Folder:           pulumi.String("All"),
+//				Folder:           pulumi.String("ngfw-shared"),
 //				Position:         pulumi.String("pre"),
 //				Action:           pulumi.String("decrypt"),
 //				RelativePosition: pulumi.String("after"),
@@ -230,7 +230,7 @@ import (
 //			_, err = scm.NewDecryptionRule(ctx, "decryption_rule_ssl_inbound_inspection", &scm.DecryptionRuleArgs{
 //				Name:        pulumi.String("ssl_inbound_inspection_rule"),
 //				Description: pulumi.String("Decryption Rule with SSL Inbound Set"),
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Position:    pulumi.String("pre"),
 //				Action:      pulumi.String("decrypt"),
 //				Froms: pulumi.StringArray{

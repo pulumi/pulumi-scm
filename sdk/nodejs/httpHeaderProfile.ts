@@ -16,11 +16,11 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const scmHttpHeaderProfile1 = new scm.HttpHeaderProfile("scm_http_header_profile_1", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "base_http_header_profile_1",
  * });
  * const scmHttpHeaderProfile2 = new scm.HttpHeaderProfile("scm_http_header_profile_2", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "simple_http_header_profile_2",
  *     httpHeaderInsertions: [{
  *         name: "header_one",
@@ -36,7 +36,7 @@ import * as utilities from "./utilities";
  *     }],
  * });
  * const scmHttpHeaderProfile3 = new scm.HttpHeaderProfile("scm_http_header_profile_3", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "complete_http_header_profile_3",
  *     httpHeaderInsertions: [
  *         {

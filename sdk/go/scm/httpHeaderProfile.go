@@ -28,14 +28,14 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewHttpHeaderProfile(ctx, "scm_http_header_profile_1", &scm.HttpHeaderProfileArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("base_http_header_profile_1"),
 //			})
 //			if err != nil {
 //				return err
 //			}
 //			_, err = scm.NewHttpHeaderProfile(ctx, "scm_http_header_profile_2", &scm.HttpHeaderProfileArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("simple_http_header_profile_2"),
 //				HttpHeaderInsertions: scm.HttpHeaderProfileHttpHeaderInsertionArray{
 //					&scm.HttpHeaderProfileHttpHeaderInsertionArgs{
@@ -62,7 +62,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewHttpHeaderProfile(ctx, "scm_http_header_profile_3", &scm.HttpHeaderProfileArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Name:   pulumi.String("complete_http_header_profile_3"),
 //				HttpHeaderInsertions: scm.HttpHeaderProfileHttpHeaderInsertionArray{
 //					&scm.HttpHeaderProfileHttpHeaderInsertionArgs{

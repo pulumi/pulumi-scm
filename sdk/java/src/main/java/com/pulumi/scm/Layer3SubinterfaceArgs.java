@@ -184,6 +184,21 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
+     * Name of Netflow Profile to assign to Interface
+     * 
+     */
+    @Import(name="netflowProfile")
+    private @Nullable Output<String> netflowProfile;
+
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Optional<Output<String>> netflowProfile() {
+        return Optional.ofNullable(this.netflowProfile);
+    }
+
+    /**
      * Parent interface
      * 
      */
@@ -245,6 +260,7 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
         this.ips = $.ips;
         this.mtu = $.mtu;
         this.name = $.name;
+        this.netflowProfile = $.netflowProfile;
         this.parentInterface = $.parentInterface;
         this.snippet = $.snippet;
         this.tag = $.tag;
@@ -510,6 +526,27 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(@Nullable Output<String> netflowProfile) {
+            $.netflowProfile = netflowProfile;
+            return this;
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(String netflowProfile) {
+            return netflowProfile(Output.of(netflowProfile));
         }
 
         /**

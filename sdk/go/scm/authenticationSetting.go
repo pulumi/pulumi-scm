@@ -28,12 +28,12 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			globalRadiusAccess, err := scm.NewAuthenticationProfile(ctx, "global_radius_access", &scm.AuthenticationProfileArgs{
-//				Name:             pulumi.String("test_auth_profile_radius_1"),
+//				Name:             pulumi.String("test_auth_profile_settings"),
 //				Folder:           pulumi.String("Prisma Access"),
 //				UserDomain:       pulumi.String("default"),
 //				UsernameModifier: pulumi.String("%USERINPUT%"),
 //				AllowLists: pulumi.StringArray{
-//					pulumi.String("all"),
+//					pulumi.String("ngfw-shared"),
 //				},
 //				Lockout: &scm.AuthenticationProfileLockoutArgs{
 //					FailedAttempts: pulumi.Int(1),
@@ -44,9 +44,6 @@ import (
 //						Checkgroup:    pulumi.Bool(true),
 //						ServerProfile: pulumi.String("CHAP_only_rsp_11"),
 //					},
-//				},
-//				SingleSignOn: &scm.AuthenticationProfileSingleSignOnArgs{
-//					Realm: pulumi.String("EXAMPLE.COM"),
 //				},
 //			})
 //			if err != nil {

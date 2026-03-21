@@ -413,10 +413,9 @@ class AuthenticationPortal(pulumi.CustomResource):
 
         example_configuration = scm.AuthenticationPortal("example_configuration",
             redirect_host="192.168.255.254",
-            folder="All",
+            folder="ngfw-shared",
             authentication_profile="test_auth_profile",
             certificate_profile="EDL-Hosting-Service-Profile",
-            tls_service_profile="test_svc_profile",
             gp_udp_port=12,
             idle_timer=12,
             timer=10)
@@ -479,10 +478,9 @@ class AuthenticationPortal(pulumi.CustomResource):
 
         example_configuration = scm.AuthenticationPortal("example_configuration",
             redirect_host="192.168.255.254",
-            folder="All",
+            folder="ngfw-shared",
             authentication_profile="test_auth_profile",
             certificate_profile="EDL-Hosting-Service-Profile",
-            tls_service_profile="test_svc_profile",
             gp_udp_port=12,
             idle_timer=12,
             timer=10)

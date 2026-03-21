@@ -463,7 +463,7 @@ class IkeGateway(pulumi.CustomResource):
         # The scm_ike_crypto_profile resource is a prerequisite for the IKE gateway.
         scm_ike_gw_crypto_profile1 = scm.IkeCryptoProfile("scm_ike_gw_crypto_profile_1",
             folder="Remote Networks",
-            name="scm_ike_gw_crypto_profile_1",
+            name="scm_ike_gw_crypto_profile_tf",
             hashes=["sha256"],
             dh_groups=["group14"],
             encryptions=["aes-256-cbc"])
@@ -562,7 +562,7 @@ class IkeGateway(pulumi.CustomResource):
         # The scm_ike_crypto_profile resource is a prerequisite for the IKE gateway.
         scm_ike_gw_crypto_profile1 = scm.IkeCryptoProfile("scm_ike_gw_crypto_profile_1",
             folder="Remote Networks",
-            name="scm_ike_gw_crypto_profile_1",
+            name="scm_ike_gw_crypto_profile_tf",
             hashes=["sha256"],
             dh_groups=["group14"],
             encryptions=["aes-256-cbc"])

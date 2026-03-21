@@ -21,7 +21,7 @@ import * as utilities from "./utilities";
  * //# 1. Define the IKE Crypto Profile (IKE Phase 1)
  * // Note: The resource name is plural: "scm_ike_crypto_profile"
  * const example = new scm.IkeCryptoProfile("example", {
- *     name: "example-ike-crypto",
+ *     name: "example-sc-ike-crypto",
  *     folder: folderScope,
  *     hashes: ["sha256"],
  *     dhGroups: ["group14"],
@@ -30,7 +30,7 @@ import * as utilities from "./utilities";
  * //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
  * // Note: The resource name is plural and nested blocks now use an equals sign (=).
  * const exampleIpsecCryptoProfile = new scm.IpsecCryptoProfile("example", {
- *     name: "panw-IPSec-Crypto",
+ *     name: "panw-sc-Crypto",
  *     folder: folderScope,
  *     esp: {
  *         encryptions: ["aes-256-gcm"],
@@ -44,7 +44,7 @@ import * as utilities from "./utilities";
  * //# 3. Define the IKE Gateway
  * // Note: The resource name is plural and nested blocks now use an equals sign (=).
  * const exampleIkeGateway = new scm.IkeGateway("example", {
- *     name: "example-gateway",
+ *     name: "example-sc-gateway",
  *     folder: folderScope,
  *     peerAddress: {
  *         ip: "1.1.1.1",
@@ -63,7 +63,7 @@ import * as utilities from "./utilities";
  * //# 4. Define the IPsec Tunnel
  * // Note: Nested 'auto_key' block uses an equals sign (=).
  * const exampleIpsecTunnel = new scm.IpsecTunnel("example", {
- *     name: "example-tunnel",
+ *     name: "example-sc-tunnel",
  *     folder: folderScope,
  *     tunnelInterface: "tunnel",
  *     antiReplay: true,

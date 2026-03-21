@@ -64,18 +64,20 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         final var config = ctx.config();
  *         final var folderScope = config.get("folderScope").orElse("Service Connections");
- *         //# 1. IKE Crypto Profile (IKE Phase 1)
+ *         //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+ *         // Note: The resource name is plural: "scm_ike_crypto_profile"
  *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
- *             .name("example-ike-crypto_sc_grp")
+ *             .name("example-sc-ike-crypto")
  *             .folder(folderScope)
  *             .hashes("sha256")
  *             .dhGroups("group14")
  *             .encryptions("aes-256-cbc")
  *             .build());
  * 
- *         //# 2. IPsec Crypto Profile (IKE Phase 2)
+ *         //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+ *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
  *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
- *             .name("panw-IPSec-Crypto_sc_grp")
+ *             .name("panw-sc-Crypto")
  *             .folder(folderScope)
  *             .esp(IpsecCryptoProfileEspArgs.builder()
  *                 .encryptions("aes-256-gcm")
@@ -87,9 +89,10 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .build());
  * 
- *         //# 3. IKE Gateway
+ *         //# 3. Define the IKE Gateway
+ *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
  *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
- *             .name("example-gateway_sc_grp")
+ *             .name("example-sc-gateway")
  *             .folder(folderScope)
  *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
  *                 .ip("1.1.1.1")
@@ -106,9 +109,10 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .build());
  * 
- *         //# 4. IPsec Tunnel
+ *         //# 4. Define the IPsec Tunnel
+ *         // Note: Nested 'auto_key' block uses an equals sign (=).
  *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
- *             .name("example-tunnel_sc_grp")
+ *             .name("example-sc-tunnel")
  *             .folder(folderScope)
  *             .tunnelInterface("tunnel")
  *             .antiReplay(true)
@@ -137,7 +141,7 @@ import javax.annotation.Nullable;
  * 
  *         //# 5. Service Connection (The target for the group)
  *         var siteAVpnSc2 = new ServiceConnection("siteAVpnSc2", ServiceConnectionArgs.builder()
- *             .name("creating_a_service_connection_sc_grp_2")
+ *             .name("creating_a_svc_connection_sc_grp_2")
  *             .region("us-west-1a")
  *             .ipsecTunnel(exampleIpsecTunnel.name())
  *             .subnets(            
@@ -151,7 +155,7 @@ import javax.annotation.Nullable;
  *         // ------------------------------------------------------------------
  *         //# 6. Service Connection Group (Groups the Service Connection created above)
  *         var exampleGroup = new ServiceConnectionGroup("exampleGroup", ServiceConnectionGroupArgs.builder()
- *             .name("service-connection-group-app_sc_grp")
+ *             .name("svc-connection-group-app_sc_grp")
  *             .targets(            
  *                 siteAVpnSc.name(),
  *                 siteAVpnSc2.name())

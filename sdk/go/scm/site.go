@@ -30,7 +30,7 @@ import (
 //			// # 1. Define the IKE Crypto Profile (IKE Phase 1)
 //			// Note: The resource name is plural: "scm_ike_crypto_profile"
 //			example, err := scm.NewIkeCryptoProfile(ctx, "example", &scm.IkeCryptoProfileArgs{
-//				Name:   pulumi.String("example-ike-crypto-14"),
+//				Name:   pulumi.String("example-ike-crypto-site"),
 //				Folder: pulumi.String("Remote Networks"),
 //				Hashes: pulumi.StringArray{
 //					pulumi.String("sha256"),
@@ -48,7 +48,7 @@ import (
 //			// # 2. Define the IPsec Crypto Profile (IKE Phase 2)
 //			// Note: The resource name is plural and nested blocks now use an equals sign (=).
 //			exampleIpsecCryptoProfile, err := scm.NewIpsecCryptoProfile(ctx, "example", &scm.IpsecCryptoProfileArgs{
-//				Name:   pulumi.String("PaloAlto-Networks-IPSec-14"),
+//				Name:   pulumi.String("panw-IPSec-site"),
 //				Folder: pulumi.String("Remote Networks"),
 //				Esp: &scm.IpsecCryptoProfileEspArgs{
 //					Encryptions: pulumi.StringArray{
@@ -69,7 +69,7 @@ import (
 //			// # 3. Define the IKE Gateway
 //			// Note: The resource name is plural and nested blocks now use an equals sign (=).
 //			exampleIkeGateway, err := scm.NewIkeGateway(ctx, "example", &scm.IkeGatewayArgs{
-//				Name:   pulumi.String("example-gateway-14"),
+//				Name:   pulumi.String("example-gateway-site"),
 //				Folder: pulumi.String("Remote Networks"),
 //				PeerAddress: &scm.IkeGatewayPeerAddressArgs{
 //					Ip: pulumi.String("1.1.1.1"),
@@ -91,7 +91,7 @@ import (
 //			// # 4. Define the IPsec Tunnel
 //			// Note: Nested 'auto_key' block uses an equals sign (=).
 //			exampleIpsecTunnel, err := scm.NewIpsecTunnel(ctx, "example", &scm.IpsecTunnelArgs{
-//				Name:                   pulumi.String("example-tunnel-14"),
+//				Name:                   pulumi.String("example-tunnel-site"),
 //				Folder:                 pulumi.String("Remote Networks"),
 //				TunnelInterface:        pulumi.String("tunnel"),
 //				AntiReplay:             pulumi.Bool(true),
@@ -114,7 +114,7 @@ import (
 //			// 1. Define the Remote Network first
 //			branchOffice, err := scm.NewRemoteNetwork(ctx, "branch_office", &scm.RemoteNetworkArgs{
 //				Folder:      pulumi.String("Remote Networks"),
-//				Name:        pulumi.String("example-rn-14"),
+//				Name:        pulumi.String("example-rn-site"),
 //				Region:      pulumi.String("us-west-1"),
 //				LicenseType: pulumi.String("FWAAS-AGGREGATE"),
 //				IpsecTunnel: exampleIpsecTunnel.Name,
@@ -128,7 +128,7 @@ import (
 //			}
 //			// 2. Define the Site
 //			_, err = scm.NewSite(ctx, "example", &scm.SiteArgs{
-//				Name:        pulumi.String("example-site-14"),
+//				Name:        pulumi.String("example-site-site"),
 //				Type:        pulumi.String("third-party-branch"),
 //				LicenseType: pulumi.String("FWAAS-SITE-25Mbps"),
 //				City:        pulumi.String("San Jose"),

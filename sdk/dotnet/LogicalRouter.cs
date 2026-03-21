@@ -27,7 +27,7 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmNextHop = new Scm.Variable("scm_next_hop", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "$scm_next_hop",
     ///         Description = "Managed by Pulumi",
     ///         Type = "ip-netmask",
@@ -36,7 +36,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmNextHopFqdn = new Scm.Variable("scm_next_hop_fqdn", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         Name = "$scm_next_hop_fqdn",
     ///         Description = "Managed by Pulumi",
     ///         Type = "fqdn",

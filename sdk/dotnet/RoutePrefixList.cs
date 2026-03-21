@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     var scmRoutePrefixList = new Scm.RoutePrefixList("scm_route_prefix_list", new()
     ///     {
     ///         Folder = "ngfw-shared",
-    ///         Name = "scm_bgp_prefix_list",
+    ///         Name = "scm_tf_bgp_prefix_list",
     ///         Description = "Managed by Pulumi",
     ///         Type = new Scm.Inputs.RoutePrefixListTypeArgs
     ///         {
@@ -40,7 +40,7 @@ namespace Pulumi.Scm
     ///                         Prefix = new Scm.Inputs.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs
     ///                         {
     ///                             GreaterThanOrEqual = 24,
-    ///                             Network = "198.18.1.0/24",
+    ///                             Network = "any",
     ///                         },
     ///                     },
     ///                 },

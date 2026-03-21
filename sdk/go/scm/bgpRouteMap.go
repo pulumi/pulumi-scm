@@ -40,7 +40,7 @@ import (
 //								Action: pulumi.String("permit"),
 //								Prefix: &scm.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs{
 //									GreaterThanOrEqual: 24,
-//									Network:            pulumi.String("198.18.1.0/24"),
+//									Network:            pulumi.String("any"),
 //								},
 //							},
 //						},

@@ -49,7 +49,7 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         // Custom Application
  *         var scmMediaApp = new Application("scmMediaApp", ApplicationArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm_media_app")
  *             .description("Managed by Pulumi")
  *             .category("media")
@@ -65,7 +65,7 @@ import javax.annotation.Nullable;
  * 
  *         // Custom Application with tweaked timeouts and additional settings
  *         var scmRiskyApp = new Application("scmRiskyApp", ApplicationArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("scm_risky_app")
  *             .description("Managed by Pulumi")
  *             .category("media")
@@ -89,8 +89,8 @@ import javax.annotation.Nullable;
  * 
  *         // Custom Application based on Custom Signature
  *         var scmCustomApp = new Application("scmCustomApp", ApplicationArgs.builder()
- *             .folder("All")
- *             .name("scm_custom_app")
+ *             .folder("ngfw-shared")
+ *             .name("scm_custom_test_app")
  *             .description("Managed by Pulumi")
  *             .category("media")
  *             .subcategory("gaming")

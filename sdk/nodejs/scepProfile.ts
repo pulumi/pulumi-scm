@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *
  * // scep profile w/ no challenge
  * const scmScepProfile1 = new scm.ScepProfile("scm_scep_profile_1", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scep-prof-1",
  *     scepUrl: "https://scep.example.com/",
  *     caIdentityName: "Default",
@@ -34,7 +34,7 @@ import * as utilities from "./utilities";
  * });
  * // scep profile w/ fixed challenge
  * const scmScepProfile2 = new scm.ScepProfile("scm_scep_profile_2", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scep-prof-2",
  *     scepUrl: "https://example.target.com/",
  *     caIdentityName: "user-scep",
@@ -55,7 +55,7 @@ import * as utilities from "./utilities";
  * });
  * // scep profile w/ dynamic challenge
  * const scmScepProfile3 = new scm.ScepProfile("scm_scep_profile_3", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scep-prof-3",
  *     scepUrl: "https://example.gateway.com/",
  *     caIdentityName: "vpn-gateway",
@@ -82,7 +82,7 @@ import * as utilities from "./utilities";
  * });
  * // scep profile w/ all fields
  * const scmScepProfile4 = new scm.ScepProfile("scm_scep_profile_4", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scep-prof-4",
  *     scepUrl: "https://example.wifi.com/",
  *     caIdentityName: "wifi",

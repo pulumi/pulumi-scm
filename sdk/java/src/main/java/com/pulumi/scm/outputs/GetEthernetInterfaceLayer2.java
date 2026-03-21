@@ -17,6 +17,11 @@ public final class GetEthernetInterfaceLayer2 {
      */
     private GetEthernetInterfaceLayer2Lldp lldp;
     /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    private String netflowProfile;
+    /**
      * @return Assign interface to VLAN tag
      * 
      */
@@ -29,6 +34,13 @@ public final class GetEthernetInterfaceLayer2 {
      */
     public GetEthernetInterfaceLayer2Lldp lldp() {
         return this.lldp;
+    }
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public String netflowProfile() {
+        return this.netflowProfile;
     }
     /**
      * @return Assign interface to VLAN tag
@@ -48,11 +60,13 @@ public final class GetEthernetInterfaceLayer2 {
     @CustomType.Builder
     public static final class Builder {
         private GetEthernetInterfaceLayer2Lldp lldp;
+        private String netflowProfile;
         private String vlanTag;
         public Builder() {}
         public Builder(GetEthernetInterfaceLayer2 defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.lldp = defaults.lldp;
+    	      this.netflowProfile = defaults.netflowProfile;
     	      this.vlanTag = defaults.vlanTag;
         }
 
@@ -62,6 +76,14 @@ public final class GetEthernetInterfaceLayer2 {
               throw new MissingRequiredPropertyException("GetEthernetInterfaceLayer2", "lldp");
             }
             this.lldp = lldp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder netflowProfile(String netflowProfile) {
+            if (netflowProfile == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceLayer2", "netflowProfile");
+            }
+            this.netflowProfile = netflowProfile;
             return this;
         }
         @CustomType.Setter
@@ -75,6 +97,7 @@ public final class GetEthernetInterfaceLayer2 {
         public GetEthernetInterfaceLayer2 build() {
             final var _resultValue = new GetEthernetInterfaceLayer2();
             _resultValue.lldp = lldp;
+            _resultValue.netflowProfile = netflowProfile;
             _resultValue.vlanTag = vlanTag;
             return _resultValue;
         }

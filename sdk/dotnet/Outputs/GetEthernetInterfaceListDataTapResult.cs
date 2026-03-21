@@ -13,9 +13,15 @@ namespace Pulumi.Scm.Outputs
     [OutputType]
     public sealed class GetEthernetInterfaceListDataTapResult
     {
+        /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        public readonly string NetflowProfile;
+
         [OutputConstructor]
-        private GetEthernetInterfaceListDataTapResult()
+        private GetEthernetInterfaceListDataTapResult(string netflowProfile)
         {
+            NetflowProfile = netflowProfile;
         }
     }
 }

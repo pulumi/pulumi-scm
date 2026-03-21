@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const stExample = new scm.SessionTimeout("st_example", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     sessionTimeouts: {
  *         timeoutDefault: 60,
  *         timeoutDiscardDefault: 60,

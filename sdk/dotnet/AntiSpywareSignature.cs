@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     var scmAntiSpywareSignature1 = new Scm.AntiSpywareSignature("scm_anti_spyware_signature_1", new()
     ///     {
-    ///         Folder = "All",
+    ///         Folder = "ngfw-shared",
     ///         ThreatId = "6900001",
     ///         Comment = "Managed by Pulumi",
     ///         Direction = "client2server",

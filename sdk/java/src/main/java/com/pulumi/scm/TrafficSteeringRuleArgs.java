@@ -67,15 +67,15 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
      * The folder containing the traffic steering rule
      * 
      */
-    @Import(name="folder", required=true)
-    private Output<String> folder;
+    @Import(name="folder")
+    private @Nullable Output<String> folder;
 
     /**
      * @return The folder containing the traffic steering rule
      * 
      */
-    public Output<String> folder() {
-        return this.folder;
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -258,7 +258,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder folder(Output<String> folder) {
+        public Builder folder(@Nullable Output<String> folder) {
             $.folder = folder;
             return this;
         }
@@ -388,9 +388,6 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         public TrafficSteeringRuleArgs build() {
-            if ($.folder == null) {
-                throw new MissingRequiredPropertyException("TrafficSteeringRuleArgs", "folder");
-            }
             if ($.services == null) {
                 throw new MissingRequiredPropertyException("TrafficSteeringRuleArgs", "services");
             }

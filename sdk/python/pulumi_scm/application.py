@@ -1107,7 +1107,7 @@ class Application(pulumi.CustomResource):
 
         # Custom Application
         scm_media_app = scm.Application("scm_media_app",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_media_app",
             description="Managed by Pulumi",
             category="media",
@@ -1121,7 +1121,7 @@ class Application(pulumi.CustomResource):
             prone_to_misuse=True)
         # Custom Application with tweaked timeouts and additional settings
         scm_risky_app = scm.Application("scm_risky_app",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_risky_app",
             description="Managed by Pulumi",
             category="media",
@@ -1143,8 +1143,8 @@ class Application(pulumi.CustomResource):
             parent_app="bittorrent")
         # Custom Application based on Custom Signature
         scm_custom_app = scm.Application("scm_custom_app",
-            folder="All",
-            name="scm_custom_app",
+            folder="ngfw-shared",
+            name="scm_custom_test_app",
             description="Managed by Pulumi",
             category="media",
             subcategory="gaming",
@@ -1245,7 +1245,7 @@ class Application(pulumi.CustomResource):
 
         # Custom Application
         scm_media_app = scm.Application("scm_media_app",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_media_app",
             description="Managed by Pulumi",
             category="media",
@@ -1259,7 +1259,7 @@ class Application(pulumi.CustomResource):
             prone_to_misuse=True)
         # Custom Application with tweaked timeouts and additional settings
         scm_risky_app = scm.Application("scm_risky_app",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_risky_app",
             description="Managed by Pulumi",
             category="media",
@@ -1281,8 +1281,8 @@ class Application(pulumi.CustomResource):
             parent_app="bittorrent")
         # Custom Application based on Custom Signature
         scm_custom_app = scm.Application("scm_custom_app",
-            folder="All",
-            name="scm_custom_app",
+            folder="ngfw-shared",
+            name="scm_custom_test_app",
             description="Managed by Pulumi",
             category="media",
             subcategory="gaming",

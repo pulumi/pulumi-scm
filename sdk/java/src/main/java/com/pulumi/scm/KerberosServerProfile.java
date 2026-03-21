@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var scmKerberosServerProfile1 = new KerberosServerProfile("scmKerberosServerProfile1", KerberosServerProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("kerberos-server-prof-1")
  *             .servers(KerberosServerProfileServerArgs.builder()
  *                 .name("server_a")
@@ -54,7 +54,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmKerberosServerProfile2 = new KerberosServerProfile("scmKerberosServerProfile2", KerberosServerProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("kerberos-server-prof-2")
  *             .servers(KerberosServerProfileServerArgs.builder()
  *                 .name("server_a")
@@ -64,7 +64,7 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         var scmKerberosServerProfile3 = new KerberosServerProfile("scmKerberosServerProfile3", KerberosServerProfileArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .name("kerberos-server-prof-3")
  *             .servers(            
  *                 KerberosServerProfileServerArgs.builder()

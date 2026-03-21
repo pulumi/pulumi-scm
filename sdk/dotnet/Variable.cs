@@ -27,8 +27,8 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmVariableAsn = new Scm.Variable("scm_variable_asn", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "$scm_variable_asn",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_asn",
     ///         Description = "Managed by Pulumi",
     ///         Type = "as-number",
     ///         Value = "65535",
@@ -39,8 +39,8 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmVariableCount = new Scm.Variable("scm_variable_count", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "$scm_variable_count",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_count",
     ///         Description = "Managed by Pulumi",
     ///         Type = "count",
     ///         Value = "15",
@@ -51,8 +51,8 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmVariableFqdn = new Scm.Variable("scm_variable_fqdn", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "$scm_variable_fqdn",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_fqdn",
     ///         Description = "Managed by Pulumi",
     ///         Type = "fqdn",
     ///         Value = "scm.example.com",
@@ -63,8 +63,8 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmVariableGroupId = new Scm.Variable("scm_variable_group_id", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "$scm_variable_group_id",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_group_id",
     ///         Description = "Managed by Pulumi",
     ///         Type = "group-id",
     ///         Value = "10",
@@ -75,8 +75,8 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmVariableIprange = new Scm.Variable("scm_variable_iprange", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "$scm_variable_iprange",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_iprange",
     ///         Description = "Managed by Pulumi",
     ///         Type = "ip-range",
     ///         Value = "198.18.1.1-198.18.1.100",
@@ -87,8 +87,8 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmVariableIpaddr = new Scm.Variable("scm_variable_ipaddr", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "$scm_variable_ipaddr",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_ipaddr",
     ///         Description = "Managed by Pulumi",
     ///         Type = "ip-netmask",
     ///         Value = "198.18.2.0/24",
@@ -99,8 +99,8 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmVariableIpwildcard = new Scm.Variable("scm_variable_ipwildcard", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "$scm_variable_ipwildcard",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_ipwildcard",
     ///         Description = "Managed by Pulumi",
     ///         Type = "ip-wildcard",
     ///         Value = "198.18.1.0/0.255.255.255",
@@ -111,8 +111,8 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmVariablePercent = new Scm.Variable("scm_variable_percent", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "$scm_variable_percent",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_percent",
     ///         Description = "Managed by Pulumi",
     ///         Type = "percent",
     ///         Value = "10",
@@ -123,8 +123,8 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmVariableRouterId = new Scm.Variable("scm_variable_router_id", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "$scm_variable_router_id",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_router_id",
     ///         Description = "Managed by Pulumi",
     ///         Type = "router-id",
     ///         Value = "198.18.1.1",
@@ -135,8 +135,8 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmVariableTimer = new Scm.Variable("scm_variable_timer", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "$scm_variable_timer",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_timer",
     ///         Description = "Managed by Pulumi",
     ///         Type = "timer",
     ///         Value = "1440",
@@ -147,8 +147,8 @@ namespace Pulumi.Scm
     ///     //
     ///     var scmVariableZone = new Scm.Variable("scm_variable_zone", new()
     ///     {
-    ///         Folder = "All",
-    ///         Name = "$scm_variable_zone",
+    ///         Folder = "ngfw-shared",
+    ///         Name = "$tf_variable_zone",
     ///         Description = "Managed by Pulumi",
     ///         Type = "zone",
     ///         Value = "internet",

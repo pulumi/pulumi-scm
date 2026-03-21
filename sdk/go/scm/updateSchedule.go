@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewUpdateSchedule(ctx, "us_settings", &scm.UpdateScheduleArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				UpdateSchedule: &scm.UpdateScheduleUpdateScheduleArgs{
 //					Threats: &scm.UpdateScheduleUpdateScheduleThreatsArgs{
 //						Recurring: &scm.UpdateScheduleUpdateScheduleThreatsRecurringArgs{
@@ -58,46 +58,6 @@ import (
 //								At:         pulumi.Int(30),
 //								Action:     pulumi.String("download-only"),
 //								SyncToPeer: pulumi.Bool(true),
-//							},
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			// -- Example 2 : With Daily recurring updates for recurring and anti-virus
-//			_, err = scm.NewUpdateSchedule(ctx, "us_settings_daily", &scm.UpdateScheduleArgs{
-//				Folder: pulumi.String("All"),
-//				UpdateSchedule: &scm.UpdateScheduleUpdateScheduleArgs{
-//					Threats: &scm.UpdateScheduleUpdateScheduleThreatsArgs{
-//						Recurring: &scm.UpdateScheduleUpdateScheduleThreatsRecurringArgs{
-//							Threshold:       pulumi.Int(300),
-//							NewAppThreshold: pulumi.Int(300),
-//							SyncToPeer:      pulumi.Bool(false),
-//							Daily: &scm.UpdateScheduleUpdateScheduleThreatsRecurringDailyArgs{
-//								At:                pulumi.String("02:13"),
-//								Action:            pulumi.String("download-only"),
-//								DisableNewContent: pulumi.Bool(false),
-//							},
-//						},
-//					},
-//					AntiVirus: &scm.UpdateScheduleUpdateScheduleAntiVirusArgs{
-//						Recurring: &scm.UpdateScheduleUpdateScheduleAntiVirusRecurringArgs{
-//							Threshold:  pulumi.Int(300),
-//							SyncToPeer: pulumi.Bool(true),
-//							Daily: &scm.UpdateScheduleUpdateScheduleAntiVirusRecurringDailyArgs{
-//								At:     pulumi.String("02:13"),
-//								Action: pulumi.String("download-only"),
-//							},
-//						},
-//					},
-//					Wildfire: &scm.UpdateScheduleUpdateScheduleWildfireArgs{
-//						Recurring: &scm.UpdateScheduleUpdateScheduleWildfireRecurringArgs{
-//							Every30Mins: &scm.UpdateScheduleUpdateScheduleWildfireRecurringEvery30MinsArgs{
-//								At:         pulumi.Int(20),
-//								Action:     pulumi.String("download-only"),
-//								SyncToPeer: pulumi.Bool(false),
 //							},
 //						},
 //					},

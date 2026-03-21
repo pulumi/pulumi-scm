@@ -283,15 +283,15 @@ class Tag(pulumi.CustomResource):
         # This file is embedded using go:embed
         # Tags for organizing and categorizing resources
         scm_tag1 = scm.Tag("scm_tag_1",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_tag_1",
             color="Red")
         scm_tag2 = scm.Tag("scm_tag_2",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_tag_2",
             color="Blue")
         scm_tag3 = scm.Tag("scm_tag_3",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_tag_3",
             color="Orange")
         ```
@@ -350,15 +350,15 @@ class Tag(pulumi.CustomResource):
         # This file is embedded using go:embed
         # Tags for organizing and categorizing resources
         scm_tag1 = scm.Tag("scm_tag_1",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_tag_1",
             color="Red")
         scm_tag2 = scm.Tag("scm_tag_2",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_tag_2",
             color="Blue")
         scm_tag3 = scm.Tag("scm_tag_3",
-            folder="All",
+            folder="ngfw-shared",
             name="scm_tag_3",
             color="Orange")
         ```

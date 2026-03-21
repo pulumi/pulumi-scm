@@ -29,7 +29,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewTlsServiceProfile(ctx, "tls_service_prof_1_upper", &scm.TlsServiceProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("TLS_Service_Profile_1"),
 //				Certificate: pulumi.String("Authentication Cookie CA"),
 //				ProtocolSettings: &scm.TlsServiceProfileProtocolSettingsArgs{
@@ -40,7 +40,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewTlsServiceProfile(ctx, "tls_service_prof_2_upper", &scm.TlsServiceProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("TLS_Service_Profile_2"),
 //				Certificate: pulumi.String("Forward-Trust-CA"),
 //				ProtocolSettings: &scm.TlsServiceProfileProtocolSettingsArgs{
@@ -54,7 +54,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewTlsServiceProfile(ctx, "tls_service_prof_3_upper", &scm.TlsServiceProfileArgs{
-//				Folder:      pulumi.String("All"),
+//				Folder:      pulumi.String("ngfw-shared"),
 //				Name:        pulumi.String("TLS_Service_Profile_3"),
 //				Certificate: pulumi.String("Root CA"),
 //				ProtocolSettings: &scm.TlsServiceProfileProtocolSettingsArgs{

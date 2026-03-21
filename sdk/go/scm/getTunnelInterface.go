@@ -81,6 +81,7 @@ type LookupTunnelInterfaceResult struct {
 	Ipv6                       GetTunnelInterfaceIpv6 `pulumi:"ipv6"`
 	Mtu                        int                    `pulumi:"mtu"`
 	Name                       string                 `pulumi:"name"`
+	NetflowProfile             string                 `pulumi:"netflowProfile"`
 	Snippet                    string                 `pulumi:"snippet"`
 	Tfid                       string                 `pulumi:"tfid"`
 }
@@ -164,6 +165,10 @@ func (o LookupTunnelInterfaceResultOutput) Mtu() pulumi.IntOutput {
 
 func (o LookupTunnelInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+func (o LookupTunnelInterfaceResultOutput) NetflowProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
 func (o LookupTunnelInterfaceResultOutput) Snippet() pulumi.StringOutput {

@@ -3,15 +3,44 @@
 
 package com.pulumi.scm.inputs;
 
-
+import com.pulumi.core.Output;
+import com.pulumi.core.annotations.Import;
+import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class EthernetInterfaceTapArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final EthernetInterfaceTapArgs Empty = new EthernetInterfaceTapArgs();
 
+    /**
+     * Name of Netflow Profile to assign to Interface
+     * 
+     */
+    @Import(name="netflowProfile")
+    private @Nullable Output<String> netflowProfile;
+
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Optional<Output<String>> netflowProfile() {
+        return Optional.ofNullable(this.netflowProfile);
+    }
+
+    private EthernetInterfaceTapArgs() {}
+
+    private EthernetInterfaceTapArgs(EthernetInterfaceTapArgs $) {
+        this.netflowProfile = $.netflowProfile;
+    }
+
     public static Builder builder() {
         return new Builder();
+    }
+    public static Builder builder(EthernetInterfaceTapArgs defaults) {
+        return new Builder(defaults);
     }
 
     public static final class Builder {
@@ -20,6 +49,32 @@ public final class EthernetInterfaceTapArgs extends com.pulumi.resources.Resourc
         public Builder() {
             $ = new EthernetInterfaceTapArgs();
         }
+
+        public Builder(EthernetInterfaceTapArgs defaults) {
+            $ = new EthernetInterfaceTapArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(@Nullable Output<String> netflowProfile) {
+            $.netflowProfile = netflowProfile;
+            return this;
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(String netflowProfile) {
+            return netflowProfile(Output.of(netflowProfile));
+        }
+
         public EthernetInterfaceTapArgs build() {
             return $;
         }

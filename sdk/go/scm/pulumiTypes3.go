@@ -13,6 +13,597 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExist struct {
+	// Advertise map
+	AdvertiseMap string `pulumi:"advertiseMap"`
+	// Exist map
+	ExistMap string `pulumi:"existMap"`
+}
+
+// GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistInput is an input type that accepts GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistArgs and GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistInput` via:
+//
+//	GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistArgs{...}
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput
+	ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutputWithContext(context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput
+}
+
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistArgs struct {
+	// Advertise map
+	AdvertiseMap pulumi.StringInput `pulumi:"advertiseMap"`
+	// Exist map
+	ExistMap pulumi.StringInput `pulumi:"existMap"`
+}
+
+func (GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExist)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistArgs) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput {
+	return i.ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistArgs) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExist)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput {
+	return o
+}
+
+// Advertise map
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput) AdvertiseMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExist) string { return v.AdvertiseMap }).(pulumi.StringOutput)
+}
+
+// Exist map
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput) ExistMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExist) string { return v.ExistMap }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExist struct {
+	// Advertise map
+	AdvertiseMap string `pulumi:"advertiseMap"`
+	// Non exist map
+	NonExistMap string `pulumi:"nonExistMap"`
+}
+
+// GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistInput is an input type that accepts GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistArgs and GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistInput` via:
+//
+//	GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistArgs{...}
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput
+	ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutputWithContext(context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput
+}
+
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistArgs struct {
+	// Advertise map
+	AdvertiseMap pulumi.StringInput `pulumi:"advertiseMap"`
+	// Non exist map
+	NonExistMap pulumi.StringInput `pulumi:"nonExistMap"`
+}
+
+func (GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExist)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistArgs) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput {
+	return i.ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistArgs) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExist)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput {
+	return o
+}
+
+// Advertise map
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput) AdvertiseMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExist) string {
+		return v.AdvertiseMap
+	}).(pulumi.StringOutput)
+}
+
+// Non exist map
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput) NonExistMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExist) string { return v.NonExistMap }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastFilterList struct {
+	// Inbound
+	Inbound string `pulumi:"inbound"`
+	// Outbound
+	Outbound string `pulumi:"outbound"`
+}
+
+// GetBgpFilteringProfileIpv4UnicastFilterListInput is an input type that accepts GetBgpFilteringProfileIpv4UnicastFilterListArgs and GetBgpFilteringProfileIpv4UnicastFilterListOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4UnicastFilterListInput` via:
+//
+//	GetBgpFilteringProfileIpv4UnicastFilterListArgs{...}
+type GetBgpFilteringProfileIpv4UnicastFilterListInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4UnicastFilterListOutput() GetBgpFilteringProfileIpv4UnicastFilterListOutput
+	ToGetBgpFilteringProfileIpv4UnicastFilterListOutputWithContext(context.Context) GetBgpFilteringProfileIpv4UnicastFilterListOutput
+}
+
+type GetBgpFilteringProfileIpv4UnicastFilterListArgs struct {
+	// Inbound
+	Inbound pulumi.StringInput `pulumi:"inbound"`
+	// Outbound
+	Outbound pulumi.StringInput `pulumi:"outbound"`
+}
+
+func (GetBgpFilteringProfileIpv4UnicastFilterListArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastFilterList)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastFilterListArgs) ToGetBgpFilteringProfileIpv4UnicastFilterListOutput() GetBgpFilteringProfileIpv4UnicastFilterListOutput {
+	return i.ToGetBgpFilteringProfileIpv4UnicastFilterListOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastFilterListArgs) ToGetBgpFilteringProfileIpv4UnicastFilterListOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastFilterListOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4UnicastFilterListOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastFilterListOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4UnicastFilterListOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastFilterList)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastFilterListOutput) ToGetBgpFilteringProfileIpv4UnicastFilterListOutput() GetBgpFilteringProfileIpv4UnicastFilterListOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastFilterListOutput) ToGetBgpFilteringProfileIpv4UnicastFilterListOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastFilterListOutput {
+	return o
+}
+
+// Inbound
+func (o GetBgpFilteringProfileIpv4UnicastFilterListOutput) Inbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastFilterList) string { return v.Inbound }).(pulumi.StringOutput)
+}
+
+// Outbound
+func (o GetBgpFilteringProfileIpv4UnicastFilterListOutput) Outbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastFilterList) string { return v.Outbound }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastInboundNetworkFilters struct {
+	// Distribute list
+	DistributeList string `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList string `pulumi:"prefixList"`
+}
+
+// GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersInput is an input type that accepts GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs and GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersInput` via:
+//
+//	GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs{...}
+type GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput
+	ToGetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutputWithContext(context.Context) GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput
+}
+
+type GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs struct {
+	// Distribute list
+	DistributeList pulumi.StringInput `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList pulumi.StringInput `pulumi:"prefixList"`
+}
+
+func (GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastInboundNetworkFilters)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput {
+	return i.ToGetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastInboundNetworkFilters)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput {
+	return o
+}
+
+// Distribute list
+func (o GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput) DistributeList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastInboundNetworkFilters) string { return v.DistributeList }).(pulumi.StringOutput)
+}
+
+// Prefix list
+func (o GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput) PrefixList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastInboundNetworkFilters) string { return v.PrefixList }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastOutboundNetworkFilters struct {
+	// Distribute list
+	DistributeList string `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList string `pulumi:"prefixList"`
+}
+
+// GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersInput is an input type that accepts GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs and GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersInput` via:
+//
+//	GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs{...}
+type GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput
+	ToGetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutputWithContext(context.Context) GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput
+}
+
+type GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs struct {
+	// Distribute list
+	DistributeList pulumi.StringInput `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList pulumi.StringInput `pulumi:"prefixList"`
+}
+
+func (GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastOutboundNetworkFilters)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput {
+	return i.ToGetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastOutboundNetworkFilters)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput {
+	return o
+}
+
+// Distribute list
+func (o GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput) DistributeList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastOutboundNetworkFilters) string { return v.DistributeList }).(pulumi.StringOutput)
+}
+
+// Prefix list
+func (o GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput) PrefixList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastOutboundNetworkFilters) string { return v.PrefixList }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastRouteMaps struct {
+	// Inbound
+	Inbound string `pulumi:"inbound"`
+	// Outbound
+	Outbound string `pulumi:"outbound"`
+}
+
+// GetBgpFilteringProfileIpv4UnicastRouteMapsInput is an input type that accepts GetBgpFilteringProfileIpv4UnicastRouteMapsArgs and GetBgpFilteringProfileIpv4UnicastRouteMapsOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4UnicastRouteMapsInput` via:
+//
+//	GetBgpFilteringProfileIpv4UnicastRouteMapsArgs{...}
+type GetBgpFilteringProfileIpv4UnicastRouteMapsInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4UnicastRouteMapsOutput() GetBgpFilteringProfileIpv4UnicastRouteMapsOutput
+	ToGetBgpFilteringProfileIpv4UnicastRouteMapsOutputWithContext(context.Context) GetBgpFilteringProfileIpv4UnicastRouteMapsOutput
+}
+
+type GetBgpFilteringProfileIpv4UnicastRouteMapsArgs struct {
+	// Inbound
+	Inbound pulumi.StringInput `pulumi:"inbound"`
+	// Outbound
+	Outbound pulumi.StringInput `pulumi:"outbound"`
+}
+
+func (GetBgpFilteringProfileIpv4UnicastRouteMapsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastRouteMaps)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastRouteMapsArgs) ToGetBgpFilteringProfileIpv4UnicastRouteMapsOutput() GetBgpFilteringProfileIpv4UnicastRouteMapsOutput {
+	return i.ToGetBgpFilteringProfileIpv4UnicastRouteMapsOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastRouteMapsArgs) ToGetBgpFilteringProfileIpv4UnicastRouteMapsOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastRouteMapsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4UnicastRouteMapsOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastRouteMapsOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4UnicastRouteMapsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastRouteMaps)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastRouteMapsOutput) ToGetBgpFilteringProfileIpv4UnicastRouteMapsOutput() GetBgpFilteringProfileIpv4UnicastRouteMapsOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastRouteMapsOutput) ToGetBgpFilteringProfileIpv4UnicastRouteMapsOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastRouteMapsOutput {
+	return o
+}
+
+// Inbound
+func (o GetBgpFilteringProfileIpv4UnicastRouteMapsOutput) Inbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastRouteMaps) string { return v.Inbound }).(pulumi.StringOutput)
+}
+
+// Outbound
+func (o GetBgpFilteringProfileIpv4UnicastRouteMapsOutput) Outbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastRouteMaps) string { return v.Outbound }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileListData struct {
+	// Description
+	Description string `pulumi:"description"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder of the item. Default: Shared.
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
+	Id string `pulumi:"id"`
+	// Ipv4
+	Ipv4 GetBgpFilteringProfileListDataIpv4 `pulumi:"ipv4"`
+	// The name of the item.
+	Name string `pulumi:"name"`
+	// The snippet of the item.
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetBgpFilteringProfileListDataInput is an input type that accepts GetBgpFilteringProfileListDataArgs and GetBgpFilteringProfileListDataOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileListDataInput` via:
+//
+//	GetBgpFilteringProfileListDataArgs{...}
+type GetBgpFilteringProfileListDataInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileListDataOutput() GetBgpFilteringProfileListDataOutput
+	ToGetBgpFilteringProfileListDataOutputWithContext(context.Context) GetBgpFilteringProfileListDataOutput
+}
+
+type GetBgpFilteringProfileListDataArgs struct {
+	// Description
+	Description pulumi.StringInput `pulumi:"description"`
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// The folder of the item. Default: Shared.
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// UUID of the resource
+	Id pulumi.StringInput `pulumi:"id"`
+	// Ipv4
+	Ipv4 GetBgpFilteringProfileListDataIpv4Input `pulumi:"ipv4"`
+	// The name of the item.
+	Name pulumi.StringInput `pulumi:"name"`
+	// The snippet of the item.
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetBgpFilteringProfileListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListData)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileListDataArgs) ToGetBgpFilteringProfileListDataOutput() GetBgpFilteringProfileListDataOutput {
+	return i.ToGetBgpFilteringProfileListDataOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileListDataArgs) ToGetBgpFilteringProfileListDataOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileListDataOutput)
+}
+
+// GetBgpFilteringProfileListDataArrayInput is an input type that accepts GetBgpFilteringProfileListDataArray and GetBgpFilteringProfileListDataArrayOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileListDataArrayInput` via:
+//
+//	GetBgpFilteringProfileListDataArray{ GetBgpFilteringProfileListDataArgs{...} }
+type GetBgpFilteringProfileListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileListDataArrayOutput() GetBgpFilteringProfileListDataArrayOutput
+	ToGetBgpFilteringProfileListDataArrayOutputWithContext(context.Context) GetBgpFilteringProfileListDataArrayOutput
+}
+
+type GetBgpFilteringProfileListDataArray []GetBgpFilteringProfileListDataInput
+
+func (GetBgpFilteringProfileListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetBgpFilteringProfileListData)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileListDataArray) ToGetBgpFilteringProfileListDataArrayOutput() GetBgpFilteringProfileListDataArrayOutput {
+	return i.ToGetBgpFilteringProfileListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileListDataArray) ToGetBgpFilteringProfileListDataArrayOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileListDataArrayOutput)
+}
+
+type GetBgpFilteringProfileListDataOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListData)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileListDataOutput) ToGetBgpFilteringProfileListDataOutput() GetBgpFilteringProfileListDataOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataOutput) ToGetBgpFilteringProfileListDataOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataOutput {
+	return o
+}
+
+// Description
+func (o GetBgpFilteringProfileListDataOutput) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListData) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// The device in which the resource is defined
+func (o GetBgpFilteringProfileListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetBgpFilteringProfileListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
+func (o GetBgpFilteringProfileListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Ipv4
+func (o GetBgpFilteringProfileListDataOutput) Ipv4() GetBgpFilteringProfileListDataIpv4Output {
+	return o.ApplyT(func(v GetBgpFilteringProfileListData) GetBgpFilteringProfileListDataIpv4 { return v.Ipv4 }).(GetBgpFilteringProfileListDataIpv4Output)
+}
+
+// The name of the item.
+func (o GetBgpFilteringProfileListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The snippet of the item.
+func (o GetBgpFilteringProfileListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetBgpFilteringProfileListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetBgpFilteringProfileListData)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileListDataArrayOutput) ToGetBgpFilteringProfileListDataArrayOutput() GetBgpFilteringProfileListDataArrayOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataArrayOutput) ToGetBgpFilteringProfileListDataArrayOutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataArrayOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataArrayOutput) Index(i pulumi.IntInput) GetBgpFilteringProfileListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetBgpFilteringProfileListData {
+		return vs[0].([]GetBgpFilteringProfileListData)[vs[1].(int)]
+	}).(GetBgpFilteringProfileListDataOutput)
+}
+
+type GetBgpFilteringProfileListDataIpv4 struct {
+	// Multicast
+	Multicast GetBgpFilteringProfileListDataIpv4Multicast `pulumi:"multicast"`
+	// Unicast
+	Unicast GetBgpFilteringProfileListDataIpv4Unicast `pulumi:"unicast"`
+}
+
+// GetBgpFilteringProfileListDataIpv4Input is an input type that accepts GetBgpFilteringProfileListDataIpv4Args and GetBgpFilteringProfileListDataIpv4Output values.
+// You can construct a concrete instance of `GetBgpFilteringProfileListDataIpv4Input` via:
+//
+//	GetBgpFilteringProfileListDataIpv4Args{...}
+type GetBgpFilteringProfileListDataIpv4Input interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileListDataIpv4Output() GetBgpFilteringProfileListDataIpv4Output
+	ToGetBgpFilteringProfileListDataIpv4OutputWithContext(context.Context) GetBgpFilteringProfileListDataIpv4Output
+}
+
+type GetBgpFilteringProfileListDataIpv4Args struct {
+	// Multicast
+	Multicast GetBgpFilteringProfileListDataIpv4MulticastInput `pulumi:"multicast"`
+	// Unicast
+	Unicast GetBgpFilteringProfileListDataIpv4UnicastInput `pulumi:"unicast"`
+}
+
+func (GetBgpFilteringProfileListDataIpv4Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileListDataIpv4Args) ToGetBgpFilteringProfileListDataIpv4Output() GetBgpFilteringProfileListDataIpv4Output {
+	return i.ToGetBgpFilteringProfileListDataIpv4OutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileListDataIpv4Args) ToGetBgpFilteringProfileListDataIpv4OutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4Output {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileListDataIpv4Output)
+}
+
+type GetBgpFilteringProfileListDataIpv4Output struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileListDataIpv4Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileListDataIpv4Output) ToGetBgpFilteringProfileListDataIpv4Output() GetBgpFilteringProfileListDataIpv4Output {
+	return o
+}
+
+func (o GetBgpFilteringProfileListDataIpv4Output) ToGetBgpFilteringProfileListDataIpv4OutputWithContext(ctx context.Context) GetBgpFilteringProfileListDataIpv4Output {
+	return o
+}
+
+// Multicast
+func (o GetBgpFilteringProfileListDataIpv4Output) Multicast() GetBgpFilteringProfileListDataIpv4MulticastOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4) GetBgpFilteringProfileListDataIpv4Multicast {
+		return v.Multicast
+	}).(GetBgpFilteringProfileListDataIpv4MulticastOutput)
+}
+
+// Unicast
+func (o GetBgpFilteringProfileListDataIpv4Output) Unicast() GetBgpFilteringProfileListDataIpv4UnicastOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileListDataIpv4) GetBgpFilteringProfileListDataIpv4Unicast { return v.Unicast }).(GetBgpFilteringProfileListDataIpv4UnicastOutput)
+}
+
 type GetBgpFilteringProfileListDataIpv4Multicast struct {
 	// Conditional advertisement
 	ConditionalAdvertisement GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisement `pulumi:"conditionalAdvertisement"`
@@ -14352,6 +14943,211 @@ func (o GetCertificateProfileUsernameFieldOutput) SubjectAlt() pulumi.StringOutp
 	return o.ApplyT(func(v GetCertificateProfileUsernameField) string { return v.SubjectAlt }).(pulumi.StringOutput)
 }
 
+type GetConfigMatchListListData struct {
+	// Description of the config match list entry
+	Description string `pulumi:"description"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Filter of the config match list entry
+	Filter string `pulumi:"filter"`
+	// The folder of the item. Default: Shared.
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
+	Id string `pulumi:"id"`
+	// The name of the item.
+	Name string `pulumi:"name"`
+	// Send Email List of the config match list entry
+	SendEmails []string `pulumi:"sendEmails"`
+	// Send HTTP List of the config match list entry
+	SendHttps []string `pulumi:"sendHttps"`
+	// Send SNMP Trap List of the config match list entry
+	SendSnmptraps []string `pulumi:"sendSnmptraps"`
+	// Send Sys Log List of the config match list entry
+	SendSyslogs []string `pulumi:"sendSyslogs"`
+	// Send Panorama Flag of the config match list entry
+	SendToPanorama bool `pulumi:"sendToPanorama"`
+	// The snippet of the item.
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetConfigMatchListListDataInput is an input type that accepts GetConfigMatchListListDataArgs and GetConfigMatchListListDataOutput values.
+// You can construct a concrete instance of `GetConfigMatchListListDataInput` via:
+//
+//	GetConfigMatchListListDataArgs{...}
+type GetConfigMatchListListDataInput interface {
+	pulumi.Input
+
+	ToGetConfigMatchListListDataOutput() GetConfigMatchListListDataOutput
+	ToGetConfigMatchListListDataOutputWithContext(context.Context) GetConfigMatchListListDataOutput
+}
+
+type GetConfigMatchListListDataArgs struct {
+	// Description of the config match list entry
+	Description pulumi.StringInput `pulumi:"description"`
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// Filter of the config match list entry
+	Filter pulumi.StringInput `pulumi:"filter"`
+	// The folder of the item. Default: Shared.
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// UUID of the resource
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the item.
+	Name pulumi.StringInput `pulumi:"name"`
+	// Send Email List of the config match list entry
+	SendEmails pulumi.StringArrayInput `pulumi:"sendEmails"`
+	// Send HTTP List of the config match list entry
+	SendHttps pulumi.StringArrayInput `pulumi:"sendHttps"`
+	// Send SNMP Trap List of the config match list entry
+	SendSnmptraps pulumi.StringArrayInput `pulumi:"sendSnmptraps"`
+	// Send Sys Log List of the config match list entry
+	SendSyslogs pulumi.StringArrayInput `pulumi:"sendSyslogs"`
+	// Send Panorama Flag of the config match list entry
+	SendToPanorama pulumi.BoolInput `pulumi:"sendToPanorama"`
+	// The snippet of the item.
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetConfigMatchListListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetConfigMatchListListData)(nil)).Elem()
+}
+
+func (i GetConfigMatchListListDataArgs) ToGetConfigMatchListListDataOutput() GetConfigMatchListListDataOutput {
+	return i.ToGetConfigMatchListListDataOutputWithContext(context.Background())
+}
+
+func (i GetConfigMatchListListDataArgs) ToGetConfigMatchListListDataOutputWithContext(ctx context.Context) GetConfigMatchListListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetConfigMatchListListDataOutput)
+}
+
+// GetConfigMatchListListDataArrayInput is an input type that accepts GetConfigMatchListListDataArray and GetConfigMatchListListDataArrayOutput values.
+// You can construct a concrete instance of `GetConfigMatchListListDataArrayInput` via:
+//
+//	GetConfigMatchListListDataArray{ GetConfigMatchListListDataArgs{...} }
+type GetConfigMatchListListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetConfigMatchListListDataArrayOutput() GetConfigMatchListListDataArrayOutput
+	ToGetConfigMatchListListDataArrayOutputWithContext(context.Context) GetConfigMatchListListDataArrayOutput
+}
+
+type GetConfigMatchListListDataArray []GetConfigMatchListListDataInput
+
+func (GetConfigMatchListListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetConfigMatchListListData)(nil)).Elem()
+}
+
+func (i GetConfigMatchListListDataArray) ToGetConfigMatchListListDataArrayOutput() GetConfigMatchListListDataArrayOutput {
+	return i.ToGetConfigMatchListListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetConfigMatchListListDataArray) ToGetConfigMatchListListDataArrayOutputWithContext(ctx context.Context) GetConfigMatchListListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetConfigMatchListListDataArrayOutput)
+}
+
+type GetConfigMatchListListDataOutput struct{ *pulumi.OutputState }
+
+func (GetConfigMatchListListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetConfigMatchListListData)(nil)).Elem()
+}
+
+func (o GetConfigMatchListListDataOutput) ToGetConfigMatchListListDataOutput() GetConfigMatchListListDataOutput {
+	return o
+}
+
+func (o GetConfigMatchListListDataOutput) ToGetConfigMatchListListDataOutputWithContext(ctx context.Context) GetConfigMatchListListDataOutput {
+	return o
+}
+
+// Description of the config match list entry
+func (o GetConfigMatchListListDataOutput) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// The device in which the resource is defined
+func (o GetConfigMatchListListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Filter of the config match list entry
+func (o GetConfigMatchListListDataOutput) Filter() pulumi.StringOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) string { return v.Filter }).(pulumi.StringOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetConfigMatchListListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
+func (o GetConfigMatchListListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The name of the item.
+func (o GetConfigMatchListListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Send Email List of the config match list entry
+func (o GetConfigMatchListListDataOutput) SendEmails() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) []string { return v.SendEmails }).(pulumi.StringArrayOutput)
+}
+
+// Send HTTP List of the config match list entry
+func (o GetConfigMatchListListDataOutput) SendHttps() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) []string { return v.SendHttps }).(pulumi.StringArrayOutput)
+}
+
+// Send SNMP Trap List of the config match list entry
+func (o GetConfigMatchListListDataOutput) SendSnmptraps() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) []string { return v.SendSnmptraps }).(pulumi.StringArrayOutput)
+}
+
+// Send Sys Log List of the config match list entry
+func (o GetConfigMatchListListDataOutput) SendSyslogs() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) []string { return v.SendSyslogs }).(pulumi.StringArrayOutput)
+}
+
+// Send Panorama Flag of the config match list entry
+func (o GetConfigMatchListListDataOutput) SendToPanorama() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) bool { return v.SendToPanorama }).(pulumi.BoolOutput)
+}
+
+// The snippet of the item.
+func (o GetConfigMatchListListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetConfigMatchListListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetConfigMatchListListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetConfigMatchListListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetConfigMatchListListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetConfigMatchListListData)(nil)).Elem()
+}
+
+func (o GetConfigMatchListListDataArrayOutput) ToGetConfigMatchListListDataArrayOutput() GetConfigMatchListListDataArrayOutput {
+	return o
+}
+
+func (o GetConfigMatchListListDataArrayOutput) ToGetConfigMatchListListDataArrayOutputWithContext(ctx context.Context) GetConfigMatchListListDataArrayOutput {
+	return o
+}
+
+func (o GetConfigMatchListListDataArrayOutput) Index(i pulumi.IntInput) GetConfigMatchListListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetConfigMatchListListData {
+		return vs[0].([]GetConfigMatchListListData)[vs[1].(int)]
+	}).(GetConfigMatchListListDataOutput)
+}
+
 type GetContentIdSettingContentId struct {
 	// Allow forward decrypted content
 	AllowForwardDecryptedContent bool `pulumi:"allowForwardDecryptedContent"`
@@ -14828,6 +15624,1829 @@ func (o GetContentIdSettingListDataContentIdApplicationOutput) ToGetContentIdSet
 // Bypass exceed queue
 func (o GetContentIdSettingListDataContentIdApplicationOutput) BypassExceedQueue() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetContentIdSettingListDataContentIdApplication) bool { return v.BypassExceedQueue }).(pulumi.BoolOutput)
+}
+
+type GetDataFilteringProfileListData struct {
+	// Data capture
+	DataCapture bool `pulumi:"dataCapture"`
+	// The description of the data filtering profile
+	Description string `pulumi:"description"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Disable override
+	DisableOverride string `pulumi:"disableOverride"`
+	// The folder of the item. Default: Shared.
+	Folder string `pulumi:"folder"`
+	// The UUID of the data filtering profile
+	Id string `pulumi:"id"`
+	// The name of the item.
+	Name string `pulumi:"name"`
+	// Rules
+	Rules []GetDataFilteringProfileListDataRule `pulumi:"rules"`
+	// The snippet of the item.
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetDataFilteringProfileListDataInput is an input type that accepts GetDataFilteringProfileListDataArgs and GetDataFilteringProfileListDataOutput values.
+// You can construct a concrete instance of `GetDataFilteringProfileListDataInput` via:
+//
+//	GetDataFilteringProfileListDataArgs{...}
+type GetDataFilteringProfileListDataInput interface {
+	pulumi.Input
+
+	ToGetDataFilteringProfileListDataOutput() GetDataFilteringProfileListDataOutput
+	ToGetDataFilteringProfileListDataOutputWithContext(context.Context) GetDataFilteringProfileListDataOutput
+}
+
+type GetDataFilteringProfileListDataArgs struct {
+	// Data capture
+	DataCapture pulumi.BoolInput `pulumi:"dataCapture"`
+	// The description of the data filtering profile
+	Description pulumi.StringInput `pulumi:"description"`
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// Disable override
+	DisableOverride pulumi.StringInput `pulumi:"disableOverride"`
+	// The folder of the item. Default: Shared.
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// The UUID of the data filtering profile
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the item.
+	Name pulumi.StringInput `pulumi:"name"`
+	// Rules
+	Rules GetDataFilteringProfileListDataRuleArrayInput `pulumi:"rules"`
+	// The snippet of the item.
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetDataFilteringProfileListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataFilteringProfileListData)(nil)).Elem()
+}
+
+func (i GetDataFilteringProfileListDataArgs) ToGetDataFilteringProfileListDataOutput() GetDataFilteringProfileListDataOutput {
+	return i.ToGetDataFilteringProfileListDataOutputWithContext(context.Background())
+}
+
+func (i GetDataFilteringProfileListDataArgs) ToGetDataFilteringProfileListDataOutputWithContext(ctx context.Context) GetDataFilteringProfileListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataFilteringProfileListDataOutput)
+}
+
+// GetDataFilteringProfileListDataArrayInput is an input type that accepts GetDataFilteringProfileListDataArray and GetDataFilteringProfileListDataArrayOutput values.
+// You can construct a concrete instance of `GetDataFilteringProfileListDataArrayInput` via:
+//
+//	GetDataFilteringProfileListDataArray{ GetDataFilteringProfileListDataArgs{...} }
+type GetDataFilteringProfileListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetDataFilteringProfileListDataArrayOutput() GetDataFilteringProfileListDataArrayOutput
+	ToGetDataFilteringProfileListDataArrayOutputWithContext(context.Context) GetDataFilteringProfileListDataArrayOutput
+}
+
+type GetDataFilteringProfileListDataArray []GetDataFilteringProfileListDataInput
+
+func (GetDataFilteringProfileListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataFilteringProfileListData)(nil)).Elem()
+}
+
+func (i GetDataFilteringProfileListDataArray) ToGetDataFilteringProfileListDataArrayOutput() GetDataFilteringProfileListDataArrayOutput {
+	return i.ToGetDataFilteringProfileListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetDataFilteringProfileListDataArray) ToGetDataFilteringProfileListDataArrayOutputWithContext(ctx context.Context) GetDataFilteringProfileListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataFilteringProfileListDataArrayOutput)
+}
+
+type GetDataFilteringProfileListDataOutput struct{ *pulumi.OutputState }
+
+func (GetDataFilteringProfileListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataFilteringProfileListData)(nil)).Elem()
+}
+
+func (o GetDataFilteringProfileListDataOutput) ToGetDataFilteringProfileListDataOutput() GetDataFilteringProfileListDataOutput {
+	return o
+}
+
+func (o GetDataFilteringProfileListDataOutput) ToGetDataFilteringProfileListDataOutputWithContext(ctx context.Context) GetDataFilteringProfileListDataOutput {
+	return o
+}
+
+// Data capture
+func (o GetDataFilteringProfileListDataOutput) DataCapture() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListData) bool { return v.DataCapture }).(pulumi.BoolOutput)
+}
+
+// The description of the data filtering profile
+func (o GetDataFilteringProfileListDataOutput) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListData) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// The device in which the resource is defined
+func (o GetDataFilteringProfileListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Disable override
+func (o GetDataFilteringProfileListDataOutput) DisableOverride() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListData) string { return v.DisableOverride }).(pulumi.StringOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetDataFilteringProfileListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the data filtering profile
+func (o GetDataFilteringProfileListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The name of the item.
+func (o GetDataFilteringProfileListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Rules
+func (o GetDataFilteringProfileListDataOutput) Rules() GetDataFilteringProfileListDataRuleArrayOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListData) []GetDataFilteringProfileListDataRule { return v.Rules }).(GetDataFilteringProfileListDataRuleArrayOutput)
+}
+
+// The snippet of the item.
+func (o GetDataFilteringProfileListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetDataFilteringProfileListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetDataFilteringProfileListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDataFilteringProfileListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataFilteringProfileListData)(nil)).Elem()
+}
+
+func (o GetDataFilteringProfileListDataArrayOutput) ToGetDataFilteringProfileListDataArrayOutput() GetDataFilteringProfileListDataArrayOutput {
+	return o
+}
+
+func (o GetDataFilteringProfileListDataArrayOutput) ToGetDataFilteringProfileListDataArrayOutputWithContext(ctx context.Context) GetDataFilteringProfileListDataArrayOutput {
+	return o
+}
+
+func (o GetDataFilteringProfileListDataArrayOutput) Index(i pulumi.IntInput) GetDataFilteringProfileListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDataFilteringProfileListData {
+		return vs[0].([]GetDataFilteringProfileListData)[vs[1].(int)]
+	}).(GetDataFilteringProfileListDataOutput)
+}
+
+type GetDataFilteringProfileListDataRule struct {
+	// Alert threshold
+	AlertThreshold int `pulumi:"alertThreshold"`
+	// Application
+	Applications []string `pulumi:"applications"`
+	// Block threshold
+	BlockThreshold int `pulumi:"blockThreshold"`
+	// Data object
+	DataObject string `pulumi:"dataObject"`
+	// Direction
+	Direction string `pulumi:"direction"`
+	// File type
+	FileTypes []string `pulumi:"fileTypes"`
+	// Log severity
+	LogSeverity string `pulumi:"logSeverity"`
+	// Name
+	Name string `pulumi:"name"`
+}
+
+// GetDataFilteringProfileListDataRuleInput is an input type that accepts GetDataFilteringProfileListDataRuleArgs and GetDataFilteringProfileListDataRuleOutput values.
+// You can construct a concrete instance of `GetDataFilteringProfileListDataRuleInput` via:
+//
+//	GetDataFilteringProfileListDataRuleArgs{...}
+type GetDataFilteringProfileListDataRuleInput interface {
+	pulumi.Input
+
+	ToGetDataFilteringProfileListDataRuleOutput() GetDataFilteringProfileListDataRuleOutput
+	ToGetDataFilteringProfileListDataRuleOutputWithContext(context.Context) GetDataFilteringProfileListDataRuleOutput
+}
+
+type GetDataFilteringProfileListDataRuleArgs struct {
+	// Alert threshold
+	AlertThreshold pulumi.IntInput `pulumi:"alertThreshold"`
+	// Application
+	Applications pulumi.StringArrayInput `pulumi:"applications"`
+	// Block threshold
+	BlockThreshold pulumi.IntInput `pulumi:"blockThreshold"`
+	// Data object
+	DataObject pulumi.StringInput `pulumi:"dataObject"`
+	// Direction
+	Direction pulumi.StringInput `pulumi:"direction"`
+	// File type
+	FileTypes pulumi.StringArrayInput `pulumi:"fileTypes"`
+	// Log severity
+	LogSeverity pulumi.StringInput `pulumi:"logSeverity"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (GetDataFilteringProfileListDataRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataFilteringProfileListDataRule)(nil)).Elem()
+}
+
+func (i GetDataFilteringProfileListDataRuleArgs) ToGetDataFilteringProfileListDataRuleOutput() GetDataFilteringProfileListDataRuleOutput {
+	return i.ToGetDataFilteringProfileListDataRuleOutputWithContext(context.Background())
+}
+
+func (i GetDataFilteringProfileListDataRuleArgs) ToGetDataFilteringProfileListDataRuleOutputWithContext(ctx context.Context) GetDataFilteringProfileListDataRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataFilteringProfileListDataRuleOutput)
+}
+
+// GetDataFilteringProfileListDataRuleArrayInput is an input type that accepts GetDataFilteringProfileListDataRuleArray and GetDataFilteringProfileListDataRuleArrayOutput values.
+// You can construct a concrete instance of `GetDataFilteringProfileListDataRuleArrayInput` via:
+//
+//	GetDataFilteringProfileListDataRuleArray{ GetDataFilteringProfileListDataRuleArgs{...} }
+type GetDataFilteringProfileListDataRuleArrayInput interface {
+	pulumi.Input
+
+	ToGetDataFilteringProfileListDataRuleArrayOutput() GetDataFilteringProfileListDataRuleArrayOutput
+	ToGetDataFilteringProfileListDataRuleArrayOutputWithContext(context.Context) GetDataFilteringProfileListDataRuleArrayOutput
+}
+
+type GetDataFilteringProfileListDataRuleArray []GetDataFilteringProfileListDataRuleInput
+
+func (GetDataFilteringProfileListDataRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataFilteringProfileListDataRule)(nil)).Elem()
+}
+
+func (i GetDataFilteringProfileListDataRuleArray) ToGetDataFilteringProfileListDataRuleArrayOutput() GetDataFilteringProfileListDataRuleArrayOutput {
+	return i.ToGetDataFilteringProfileListDataRuleArrayOutputWithContext(context.Background())
+}
+
+func (i GetDataFilteringProfileListDataRuleArray) ToGetDataFilteringProfileListDataRuleArrayOutputWithContext(ctx context.Context) GetDataFilteringProfileListDataRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataFilteringProfileListDataRuleArrayOutput)
+}
+
+type GetDataFilteringProfileListDataRuleOutput struct{ *pulumi.OutputState }
+
+func (GetDataFilteringProfileListDataRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataFilteringProfileListDataRule)(nil)).Elem()
+}
+
+func (o GetDataFilteringProfileListDataRuleOutput) ToGetDataFilteringProfileListDataRuleOutput() GetDataFilteringProfileListDataRuleOutput {
+	return o
+}
+
+func (o GetDataFilteringProfileListDataRuleOutput) ToGetDataFilteringProfileListDataRuleOutputWithContext(ctx context.Context) GetDataFilteringProfileListDataRuleOutput {
+	return o
+}
+
+// Alert threshold
+func (o GetDataFilteringProfileListDataRuleOutput) AlertThreshold() pulumi.IntOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListDataRule) int { return v.AlertThreshold }).(pulumi.IntOutput)
+}
+
+// Application
+func (o GetDataFilteringProfileListDataRuleOutput) Applications() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListDataRule) []string { return v.Applications }).(pulumi.StringArrayOutput)
+}
+
+// Block threshold
+func (o GetDataFilteringProfileListDataRuleOutput) BlockThreshold() pulumi.IntOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListDataRule) int { return v.BlockThreshold }).(pulumi.IntOutput)
+}
+
+// Data object
+func (o GetDataFilteringProfileListDataRuleOutput) DataObject() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListDataRule) string { return v.DataObject }).(pulumi.StringOutput)
+}
+
+// Direction
+func (o GetDataFilteringProfileListDataRuleOutput) Direction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListDataRule) string { return v.Direction }).(pulumi.StringOutput)
+}
+
+// File type
+func (o GetDataFilteringProfileListDataRuleOutput) FileTypes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListDataRule) []string { return v.FileTypes }).(pulumi.StringArrayOutput)
+}
+
+// Log severity
+func (o GetDataFilteringProfileListDataRuleOutput) LogSeverity() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListDataRule) string { return v.LogSeverity }).(pulumi.StringOutput)
+}
+
+// Name
+func (o GetDataFilteringProfileListDataRuleOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileListDataRule) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type GetDataFilteringProfileListDataRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDataFilteringProfileListDataRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataFilteringProfileListDataRule)(nil)).Elem()
+}
+
+func (o GetDataFilteringProfileListDataRuleArrayOutput) ToGetDataFilteringProfileListDataRuleArrayOutput() GetDataFilteringProfileListDataRuleArrayOutput {
+	return o
+}
+
+func (o GetDataFilteringProfileListDataRuleArrayOutput) ToGetDataFilteringProfileListDataRuleArrayOutputWithContext(ctx context.Context) GetDataFilteringProfileListDataRuleArrayOutput {
+	return o
+}
+
+func (o GetDataFilteringProfileListDataRuleArrayOutput) Index(i pulumi.IntInput) GetDataFilteringProfileListDataRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDataFilteringProfileListDataRule {
+		return vs[0].([]GetDataFilteringProfileListDataRule)[vs[1].(int)]
+	}).(GetDataFilteringProfileListDataRuleOutput)
+}
+
+type GetDataFilteringProfileRule struct {
+	// Alert threshold
+	AlertThreshold int `pulumi:"alertThreshold"`
+	// Application
+	Applications []string `pulumi:"applications"`
+	// Block threshold
+	BlockThreshold int `pulumi:"blockThreshold"`
+	// Data object
+	DataObject string `pulumi:"dataObject"`
+	// Direction
+	Direction string `pulumi:"direction"`
+	// File type
+	FileTypes []string `pulumi:"fileTypes"`
+	// Log severity
+	LogSeverity string `pulumi:"logSeverity"`
+	// Name
+	Name string `pulumi:"name"`
+}
+
+// GetDataFilteringProfileRuleInput is an input type that accepts GetDataFilteringProfileRuleArgs and GetDataFilteringProfileRuleOutput values.
+// You can construct a concrete instance of `GetDataFilteringProfileRuleInput` via:
+//
+//	GetDataFilteringProfileRuleArgs{...}
+type GetDataFilteringProfileRuleInput interface {
+	pulumi.Input
+
+	ToGetDataFilteringProfileRuleOutput() GetDataFilteringProfileRuleOutput
+	ToGetDataFilteringProfileRuleOutputWithContext(context.Context) GetDataFilteringProfileRuleOutput
+}
+
+type GetDataFilteringProfileRuleArgs struct {
+	// Alert threshold
+	AlertThreshold pulumi.IntInput `pulumi:"alertThreshold"`
+	// Application
+	Applications pulumi.StringArrayInput `pulumi:"applications"`
+	// Block threshold
+	BlockThreshold pulumi.IntInput `pulumi:"blockThreshold"`
+	// Data object
+	DataObject pulumi.StringInput `pulumi:"dataObject"`
+	// Direction
+	Direction pulumi.StringInput `pulumi:"direction"`
+	// File type
+	FileTypes pulumi.StringArrayInput `pulumi:"fileTypes"`
+	// Log severity
+	LogSeverity pulumi.StringInput `pulumi:"logSeverity"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (GetDataFilteringProfileRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataFilteringProfileRule)(nil)).Elem()
+}
+
+func (i GetDataFilteringProfileRuleArgs) ToGetDataFilteringProfileRuleOutput() GetDataFilteringProfileRuleOutput {
+	return i.ToGetDataFilteringProfileRuleOutputWithContext(context.Background())
+}
+
+func (i GetDataFilteringProfileRuleArgs) ToGetDataFilteringProfileRuleOutputWithContext(ctx context.Context) GetDataFilteringProfileRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataFilteringProfileRuleOutput)
+}
+
+// GetDataFilteringProfileRuleArrayInput is an input type that accepts GetDataFilteringProfileRuleArray and GetDataFilteringProfileRuleArrayOutput values.
+// You can construct a concrete instance of `GetDataFilteringProfileRuleArrayInput` via:
+//
+//	GetDataFilteringProfileRuleArray{ GetDataFilteringProfileRuleArgs{...} }
+type GetDataFilteringProfileRuleArrayInput interface {
+	pulumi.Input
+
+	ToGetDataFilteringProfileRuleArrayOutput() GetDataFilteringProfileRuleArrayOutput
+	ToGetDataFilteringProfileRuleArrayOutputWithContext(context.Context) GetDataFilteringProfileRuleArrayOutput
+}
+
+type GetDataFilteringProfileRuleArray []GetDataFilteringProfileRuleInput
+
+func (GetDataFilteringProfileRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataFilteringProfileRule)(nil)).Elem()
+}
+
+func (i GetDataFilteringProfileRuleArray) ToGetDataFilteringProfileRuleArrayOutput() GetDataFilteringProfileRuleArrayOutput {
+	return i.ToGetDataFilteringProfileRuleArrayOutputWithContext(context.Background())
+}
+
+func (i GetDataFilteringProfileRuleArray) ToGetDataFilteringProfileRuleArrayOutputWithContext(ctx context.Context) GetDataFilteringProfileRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataFilteringProfileRuleArrayOutput)
+}
+
+type GetDataFilteringProfileRuleOutput struct{ *pulumi.OutputState }
+
+func (GetDataFilteringProfileRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataFilteringProfileRule)(nil)).Elem()
+}
+
+func (o GetDataFilteringProfileRuleOutput) ToGetDataFilteringProfileRuleOutput() GetDataFilteringProfileRuleOutput {
+	return o
+}
+
+func (o GetDataFilteringProfileRuleOutput) ToGetDataFilteringProfileRuleOutputWithContext(ctx context.Context) GetDataFilteringProfileRuleOutput {
+	return o
+}
+
+// Alert threshold
+func (o GetDataFilteringProfileRuleOutput) AlertThreshold() pulumi.IntOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileRule) int { return v.AlertThreshold }).(pulumi.IntOutput)
+}
+
+// Application
+func (o GetDataFilteringProfileRuleOutput) Applications() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileRule) []string { return v.Applications }).(pulumi.StringArrayOutput)
+}
+
+// Block threshold
+func (o GetDataFilteringProfileRuleOutput) BlockThreshold() pulumi.IntOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileRule) int { return v.BlockThreshold }).(pulumi.IntOutput)
+}
+
+// Data object
+func (o GetDataFilteringProfileRuleOutput) DataObject() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileRule) string { return v.DataObject }).(pulumi.StringOutput)
+}
+
+// Direction
+func (o GetDataFilteringProfileRuleOutput) Direction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileRule) string { return v.Direction }).(pulumi.StringOutput)
+}
+
+// File type
+func (o GetDataFilteringProfileRuleOutput) FileTypes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileRule) []string { return v.FileTypes }).(pulumi.StringArrayOutput)
+}
+
+// Log severity
+func (o GetDataFilteringProfileRuleOutput) LogSeverity() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileRule) string { return v.LogSeverity }).(pulumi.StringOutput)
+}
+
+// Name
+func (o GetDataFilteringProfileRuleOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataFilteringProfileRule) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type GetDataFilteringProfileRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDataFilteringProfileRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataFilteringProfileRule)(nil)).Elem()
+}
+
+func (o GetDataFilteringProfileRuleArrayOutput) ToGetDataFilteringProfileRuleArrayOutput() GetDataFilteringProfileRuleArrayOutput {
+	return o
+}
+
+func (o GetDataFilteringProfileRuleArrayOutput) ToGetDataFilteringProfileRuleArrayOutputWithContext(ctx context.Context) GetDataFilteringProfileRuleArrayOutput {
+	return o
+}
+
+func (o GetDataFilteringProfileRuleArrayOutput) Index(i pulumi.IntInput) GetDataFilteringProfileRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDataFilteringProfileRule {
+		return vs[0].([]GetDataFilteringProfileRule)[vs[1].(int)]
+	}).(GetDataFilteringProfileRuleOutput)
+}
+
+type GetDataObjectListData struct {
+	// The description of the data object
+	Description string `pulumi:"description"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Disable override
+	DisableOverride string `pulumi:"disableOverride"`
+	// The folder of the item. Default: Shared.
+	Folder string `pulumi:"folder"`
+	// The UUID of the data object
+	Id string `pulumi:"id"`
+	// The name of the item.
+	Name string `pulumi:"name"`
+	// Pattern type
+	PatternType GetDataObjectListDataPatternType `pulumi:"patternType"`
+	// The snippet of the item.
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetDataObjectListDataInput is an input type that accepts GetDataObjectListDataArgs and GetDataObjectListDataOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataInput` via:
+//
+//	GetDataObjectListDataArgs{...}
+type GetDataObjectListDataInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataOutput() GetDataObjectListDataOutput
+	ToGetDataObjectListDataOutputWithContext(context.Context) GetDataObjectListDataOutput
+}
+
+type GetDataObjectListDataArgs struct {
+	// The description of the data object
+	Description pulumi.StringInput `pulumi:"description"`
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// Disable override
+	DisableOverride pulumi.StringInput `pulumi:"disableOverride"`
+	// The folder of the item. Default: Shared.
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// The UUID of the data object
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the item.
+	Name pulumi.StringInput `pulumi:"name"`
+	// Pattern type
+	PatternType GetDataObjectListDataPatternTypeInput `pulumi:"patternType"`
+	// The snippet of the item.
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetDataObjectListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListData)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataArgs) ToGetDataObjectListDataOutput() GetDataObjectListDataOutput {
+	return i.ToGetDataObjectListDataOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataArgs) ToGetDataObjectListDataOutputWithContext(ctx context.Context) GetDataObjectListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataOutput)
+}
+
+// GetDataObjectListDataArrayInput is an input type that accepts GetDataObjectListDataArray and GetDataObjectListDataArrayOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataArrayInput` via:
+//
+//	GetDataObjectListDataArray{ GetDataObjectListDataArgs{...} }
+type GetDataObjectListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataArrayOutput() GetDataObjectListDataArrayOutput
+	ToGetDataObjectListDataArrayOutputWithContext(context.Context) GetDataObjectListDataArrayOutput
+}
+
+type GetDataObjectListDataArray []GetDataObjectListDataInput
+
+func (GetDataObjectListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectListData)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataArray) ToGetDataObjectListDataArrayOutput() GetDataObjectListDataArrayOutput {
+	return i.ToGetDataObjectListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataArray) ToGetDataObjectListDataArrayOutputWithContext(ctx context.Context) GetDataObjectListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataArrayOutput)
+}
+
+type GetDataObjectListDataOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListData)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataOutput) ToGetDataObjectListDataOutput() GetDataObjectListDataOutput {
+	return o
+}
+
+func (o GetDataObjectListDataOutput) ToGetDataObjectListDataOutputWithContext(ctx context.Context) GetDataObjectListDataOutput {
+	return o
+}
+
+// The description of the data object
+func (o GetDataObjectListDataOutput) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListData) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// The device in which the resource is defined
+func (o GetDataObjectListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Disable override
+func (o GetDataObjectListDataOutput) DisableOverride() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListData) string { return v.DisableOverride }).(pulumi.StringOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetDataObjectListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the data object
+func (o GetDataObjectListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The name of the item.
+func (o GetDataObjectListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Pattern type
+func (o GetDataObjectListDataOutput) PatternType() GetDataObjectListDataPatternTypeOutput {
+	return o.ApplyT(func(v GetDataObjectListData) GetDataObjectListDataPatternType { return v.PatternType }).(GetDataObjectListDataPatternTypeOutput)
+}
+
+// The snippet of the item.
+func (o GetDataObjectListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetDataObjectListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetDataObjectListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectListData)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataArrayOutput) ToGetDataObjectListDataArrayOutput() GetDataObjectListDataArrayOutput {
+	return o
+}
+
+func (o GetDataObjectListDataArrayOutput) ToGetDataObjectListDataArrayOutputWithContext(ctx context.Context) GetDataObjectListDataArrayOutput {
+	return o
+}
+
+func (o GetDataObjectListDataArrayOutput) Index(i pulumi.IntInput) GetDataObjectListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDataObjectListData {
+		return vs[0].([]GetDataObjectListData)[vs[1].(int)]
+	}).(GetDataObjectListDataOutput)
+}
+
+type GetDataObjectListDataPatternType struct {
+	// File properties
+	FileProperties GetDataObjectListDataPatternTypeFileProperties `pulumi:"fileProperties"`
+	// Predefined
+	Predefined GetDataObjectListDataPatternTypePredefined `pulumi:"predefined"`
+	// Regex
+	Regex GetDataObjectListDataPatternTypeRegex `pulumi:"regex"`
+}
+
+// GetDataObjectListDataPatternTypeInput is an input type that accepts GetDataObjectListDataPatternTypeArgs and GetDataObjectListDataPatternTypeOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataPatternTypeInput` via:
+//
+//	GetDataObjectListDataPatternTypeArgs{...}
+type GetDataObjectListDataPatternTypeInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataPatternTypeOutput() GetDataObjectListDataPatternTypeOutput
+	ToGetDataObjectListDataPatternTypeOutputWithContext(context.Context) GetDataObjectListDataPatternTypeOutput
+}
+
+type GetDataObjectListDataPatternTypeArgs struct {
+	// File properties
+	FileProperties GetDataObjectListDataPatternTypeFilePropertiesInput `pulumi:"fileProperties"`
+	// Predefined
+	Predefined GetDataObjectListDataPatternTypePredefinedInput `pulumi:"predefined"`
+	// Regex
+	Regex GetDataObjectListDataPatternTypeRegexInput `pulumi:"regex"`
+}
+
+func (GetDataObjectListDataPatternTypeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternType)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataPatternTypeArgs) ToGetDataObjectListDataPatternTypeOutput() GetDataObjectListDataPatternTypeOutput {
+	return i.ToGetDataObjectListDataPatternTypeOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataPatternTypeArgs) ToGetDataObjectListDataPatternTypeOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataPatternTypeOutput)
+}
+
+type GetDataObjectListDataPatternTypeOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataPatternTypeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternType)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataPatternTypeOutput) ToGetDataObjectListDataPatternTypeOutput() GetDataObjectListDataPatternTypeOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypeOutput) ToGetDataObjectListDataPatternTypeOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeOutput {
+	return o
+}
+
+// File properties
+func (o GetDataObjectListDataPatternTypeOutput) FileProperties() GetDataObjectListDataPatternTypeFilePropertiesOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternType) GetDataObjectListDataPatternTypeFileProperties {
+		return v.FileProperties
+	}).(GetDataObjectListDataPatternTypeFilePropertiesOutput)
+}
+
+// Predefined
+func (o GetDataObjectListDataPatternTypeOutput) Predefined() GetDataObjectListDataPatternTypePredefinedOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternType) GetDataObjectListDataPatternTypePredefined {
+		return v.Predefined
+	}).(GetDataObjectListDataPatternTypePredefinedOutput)
+}
+
+// Regex
+func (o GetDataObjectListDataPatternTypeOutput) Regex() GetDataObjectListDataPatternTypeRegexOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternType) GetDataObjectListDataPatternTypeRegex { return v.Regex }).(GetDataObjectListDataPatternTypeRegexOutput)
+}
+
+type GetDataObjectListDataPatternTypeFileProperties struct {
+	// Pattern
+	Patterns []GetDataObjectListDataPatternTypeFilePropertiesPattern `pulumi:"patterns"`
+}
+
+// GetDataObjectListDataPatternTypeFilePropertiesInput is an input type that accepts GetDataObjectListDataPatternTypeFilePropertiesArgs and GetDataObjectListDataPatternTypeFilePropertiesOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataPatternTypeFilePropertiesInput` via:
+//
+//	GetDataObjectListDataPatternTypeFilePropertiesArgs{...}
+type GetDataObjectListDataPatternTypeFilePropertiesInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataPatternTypeFilePropertiesOutput() GetDataObjectListDataPatternTypeFilePropertiesOutput
+	ToGetDataObjectListDataPatternTypeFilePropertiesOutputWithContext(context.Context) GetDataObjectListDataPatternTypeFilePropertiesOutput
+}
+
+type GetDataObjectListDataPatternTypeFilePropertiesArgs struct {
+	// Pattern
+	Patterns GetDataObjectListDataPatternTypeFilePropertiesPatternArrayInput `pulumi:"patterns"`
+}
+
+func (GetDataObjectListDataPatternTypeFilePropertiesArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypeFileProperties)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataPatternTypeFilePropertiesArgs) ToGetDataObjectListDataPatternTypeFilePropertiesOutput() GetDataObjectListDataPatternTypeFilePropertiesOutput {
+	return i.ToGetDataObjectListDataPatternTypeFilePropertiesOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataPatternTypeFilePropertiesArgs) ToGetDataObjectListDataPatternTypeFilePropertiesOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeFilePropertiesOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataPatternTypeFilePropertiesOutput)
+}
+
+type GetDataObjectListDataPatternTypeFilePropertiesOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataPatternTypeFilePropertiesOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypeFileProperties)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataPatternTypeFilePropertiesOutput) ToGetDataObjectListDataPatternTypeFilePropertiesOutput() GetDataObjectListDataPatternTypeFilePropertiesOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypeFilePropertiesOutput) ToGetDataObjectListDataPatternTypeFilePropertiesOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeFilePropertiesOutput {
+	return o
+}
+
+// Pattern
+func (o GetDataObjectListDataPatternTypeFilePropertiesOutput) Patterns() GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypeFileProperties) []GetDataObjectListDataPatternTypeFilePropertiesPattern {
+		return v.Patterns
+	}).(GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput)
+}
+
+type GetDataObjectListDataPatternTypeFilePropertiesPattern struct {
+	// File property
+	FileProperty string `pulumi:"fileProperty"`
+	// File type
+	FileType string `pulumi:"fileType"`
+	// Name
+	Name string `pulumi:"name"`
+	// Property value
+	PropertyValue string `pulumi:"propertyValue"`
+}
+
+// GetDataObjectListDataPatternTypeFilePropertiesPatternInput is an input type that accepts GetDataObjectListDataPatternTypeFilePropertiesPatternArgs and GetDataObjectListDataPatternTypeFilePropertiesPatternOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataPatternTypeFilePropertiesPatternInput` via:
+//
+//	GetDataObjectListDataPatternTypeFilePropertiesPatternArgs{...}
+type GetDataObjectListDataPatternTypeFilePropertiesPatternInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataPatternTypeFilePropertiesPatternOutput() GetDataObjectListDataPatternTypeFilePropertiesPatternOutput
+	ToGetDataObjectListDataPatternTypeFilePropertiesPatternOutputWithContext(context.Context) GetDataObjectListDataPatternTypeFilePropertiesPatternOutput
+}
+
+type GetDataObjectListDataPatternTypeFilePropertiesPatternArgs struct {
+	// File property
+	FileProperty pulumi.StringInput `pulumi:"fileProperty"`
+	// File type
+	FileType pulumi.StringInput `pulumi:"fileType"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Property value
+	PropertyValue pulumi.StringInput `pulumi:"propertyValue"`
+}
+
+func (GetDataObjectListDataPatternTypeFilePropertiesPatternArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataPatternTypeFilePropertiesPatternArgs) ToGetDataObjectListDataPatternTypeFilePropertiesPatternOutput() GetDataObjectListDataPatternTypeFilePropertiesPatternOutput {
+	return i.ToGetDataObjectListDataPatternTypeFilePropertiesPatternOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataPatternTypeFilePropertiesPatternArgs) ToGetDataObjectListDataPatternTypeFilePropertiesPatternOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeFilePropertiesPatternOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataPatternTypeFilePropertiesPatternOutput)
+}
+
+// GetDataObjectListDataPatternTypeFilePropertiesPatternArrayInput is an input type that accepts GetDataObjectListDataPatternTypeFilePropertiesPatternArray and GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataPatternTypeFilePropertiesPatternArrayInput` via:
+//
+//	GetDataObjectListDataPatternTypeFilePropertiesPatternArray{ GetDataObjectListDataPatternTypeFilePropertiesPatternArgs{...} }
+type GetDataObjectListDataPatternTypeFilePropertiesPatternArrayInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput() GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput
+	ToGetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutputWithContext(context.Context) GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput
+}
+
+type GetDataObjectListDataPatternTypeFilePropertiesPatternArray []GetDataObjectListDataPatternTypeFilePropertiesPatternInput
+
+func (GetDataObjectListDataPatternTypeFilePropertiesPatternArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectListDataPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataPatternTypeFilePropertiesPatternArray) ToGetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput() GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput {
+	return i.ToGetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataPatternTypeFilePropertiesPatternArray) ToGetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput)
+}
+
+type GetDataObjectListDataPatternTypeFilePropertiesPatternOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataPatternTypeFilePropertiesPatternOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataPatternTypeFilePropertiesPatternOutput) ToGetDataObjectListDataPatternTypeFilePropertiesPatternOutput() GetDataObjectListDataPatternTypeFilePropertiesPatternOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypeFilePropertiesPatternOutput) ToGetDataObjectListDataPatternTypeFilePropertiesPatternOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeFilePropertiesPatternOutput {
+	return o
+}
+
+// File property
+func (o GetDataObjectListDataPatternTypeFilePropertiesPatternOutput) FileProperty() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypeFilePropertiesPattern) string { return v.FileProperty }).(pulumi.StringOutput)
+}
+
+// File type
+func (o GetDataObjectListDataPatternTypeFilePropertiesPatternOutput) FileType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypeFilePropertiesPattern) string { return v.FileType }).(pulumi.StringOutput)
+}
+
+// Name
+func (o GetDataObjectListDataPatternTypeFilePropertiesPatternOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypeFilePropertiesPattern) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Property value
+func (o GetDataObjectListDataPatternTypeFilePropertiesPatternOutput) PropertyValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypeFilePropertiesPattern) string { return v.PropertyValue }).(pulumi.StringOutput)
+}
+
+type GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectListDataPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput) ToGetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput() GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput) ToGetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput) Index(i pulumi.IntInput) GetDataObjectListDataPatternTypeFilePropertiesPatternOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDataObjectListDataPatternTypeFilePropertiesPattern {
+		return vs[0].([]GetDataObjectListDataPatternTypeFilePropertiesPattern)[vs[1].(int)]
+	}).(GetDataObjectListDataPatternTypeFilePropertiesPatternOutput)
+}
+
+type GetDataObjectListDataPatternTypePredefined struct {
+	// Pattern
+	Patterns []GetDataObjectListDataPatternTypePredefinedPattern `pulumi:"patterns"`
+}
+
+// GetDataObjectListDataPatternTypePredefinedInput is an input type that accepts GetDataObjectListDataPatternTypePredefinedArgs and GetDataObjectListDataPatternTypePredefinedOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataPatternTypePredefinedInput` via:
+//
+//	GetDataObjectListDataPatternTypePredefinedArgs{...}
+type GetDataObjectListDataPatternTypePredefinedInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataPatternTypePredefinedOutput() GetDataObjectListDataPatternTypePredefinedOutput
+	ToGetDataObjectListDataPatternTypePredefinedOutputWithContext(context.Context) GetDataObjectListDataPatternTypePredefinedOutput
+}
+
+type GetDataObjectListDataPatternTypePredefinedArgs struct {
+	// Pattern
+	Patterns GetDataObjectListDataPatternTypePredefinedPatternArrayInput `pulumi:"patterns"`
+}
+
+func (GetDataObjectListDataPatternTypePredefinedArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypePredefined)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataPatternTypePredefinedArgs) ToGetDataObjectListDataPatternTypePredefinedOutput() GetDataObjectListDataPatternTypePredefinedOutput {
+	return i.ToGetDataObjectListDataPatternTypePredefinedOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataPatternTypePredefinedArgs) ToGetDataObjectListDataPatternTypePredefinedOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypePredefinedOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataPatternTypePredefinedOutput)
+}
+
+type GetDataObjectListDataPatternTypePredefinedOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataPatternTypePredefinedOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypePredefined)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataPatternTypePredefinedOutput) ToGetDataObjectListDataPatternTypePredefinedOutput() GetDataObjectListDataPatternTypePredefinedOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypePredefinedOutput) ToGetDataObjectListDataPatternTypePredefinedOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypePredefinedOutput {
+	return o
+}
+
+// Pattern
+func (o GetDataObjectListDataPatternTypePredefinedOutput) Patterns() GetDataObjectListDataPatternTypePredefinedPatternArrayOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypePredefined) []GetDataObjectListDataPatternTypePredefinedPattern {
+		return v.Patterns
+	}).(GetDataObjectListDataPatternTypePredefinedPatternArrayOutput)
+}
+
+type GetDataObjectListDataPatternTypePredefinedPattern struct {
+	// File type
+	FileTypes []string `pulumi:"fileTypes"`
+	// Name
+	Name string `pulumi:"name"`
+}
+
+// GetDataObjectListDataPatternTypePredefinedPatternInput is an input type that accepts GetDataObjectListDataPatternTypePredefinedPatternArgs and GetDataObjectListDataPatternTypePredefinedPatternOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataPatternTypePredefinedPatternInput` via:
+//
+//	GetDataObjectListDataPatternTypePredefinedPatternArgs{...}
+type GetDataObjectListDataPatternTypePredefinedPatternInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataPatternTypePredefinedPatternOutput() GetDataObjectListDataPatternTypePredefinedPatternOutput
+	ToGetDataObjectListDataPatternTypePredefinedPatternOutputWithContext(context.Context) GetDataObjectListDataPatternTypePredefinedPatternOutput
+}
+
+type GetDataObjectListDataPatternTypePredefinedPatternArgs struct {
+	// File type
+	FileTypes pulumi.StringArrayInput `pulumi:"fileTypes"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (GetDataObjectListDataPatternTypePredefinedPatternArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataPatternTypePredefinedPatternArgs) ToGetDataObjectListDataPatternTypePredefinedPatternOutput() GetDataObjectListDataPatternTypePredefinedPatternOutput {
+	return i.ToGetDataObjectListDataPatternTypePredefinedPatternOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataPatternTypePredefinedPatternArgs) ToGetDataObjectListDataPatternTypePredefinedPatternOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypePredefinedPatternOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataPatternTypePredefinedPatternOutput)
+}
+
+// GetDataObjectListDataPatternTypePredefinedPatternArrayInput is an input type that accepts GetDataObjectListDataPatternTypePredefinedPatternArray and GetDataObjectListDataPatternTypePredefinedPatternArrayOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataPatternTypePredefinedPatternArrayInput` via:
+//
+//	GetDataObjectListDataPatternTypePredefinedPatternArray{ GetDataObjectListDataPatternTypePredefinedPatternArgs{...} }
+type GetDataObjectListDataPatternTypePredefinedPatternArrayInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataPatternTypePredefinedPatternArrayOutput() GetDataObjectListDataPatternTypePredefinedPatternArrayOutput
+	ToGetDataObjectListDataPatternTypePredefinedPatternArrayOutputWithContext(context.Context) GetDataObjectListDataPatternTypePredefinedPatternArrayOutput
+}
+
+type GetDataObjectListDataPatternTypePredefinedPatternArray []GetDataObjectListDataPatternTypePredefinedPatternInput
+
+func (GetDataObjectListDataPatternTypePredefinedPatternArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectListDataPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataPatternTypePredefinedPatternArray) ToGetDataObjectListDataPatternTypePredefinedPatternArrayOutput() GetDataObjectListDataPatternTypePredefinedPatternArrayOutput {
+	return i.ToGetDataObjectListDataPatternTypePredefinedPatternArrayOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataPatternTypePredefinedPatternArray) ToGetDataObjectListDataPatternTypePredefinedPatternArrayOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypePredefinedPatternArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataPatternTypePredefinedPatternArrayOutput)
+}
+
+type GetDataObjectListDataPatternTypePredefinedPatternOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataPatternTypePredefinedPatternOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataPatternTypePredefinedPatternOutput) ToGetDataObjectListDataPatternTypePredefinedPatternOutput() GetDataObjectListDataPatternTypePredefinedPatternOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypePredefinedPatternOutput) ToGetDataObjectListDataPatternTypePredefinedPatternOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypePredefinedPatternOutput {
+	return o
+}
+
+// File type
+func (o GetDataObjectListDataPatternTypePredefinedPatternOutput) FileTypes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypePredefinedPattern) []string { return v.FileTypes }).(pulumi.StringArrayOutput)
+}
+
+// Name
+func (o GetDataObjectListDataPatternTypePredefinedPatternOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypePredefinedPattern) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type GetDataObjectListDataPatternTypePredefinedPatternArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataPatternTypePredefinedPatternArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectListDataPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataPatternTypePredefinedPatternArrayOutput) ToGetDataObjectListDataPatternTypePredefinedPatternArrayOutput() GetDataObjectListDataPatternTypePredefinedPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypePredefinedPatternArrayOutput) ToGetDataObjectListDataPatternTypePredefinedPatternArrayOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypePredefinedPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypePredefinedPatternArrayOutput) Index(i pulumi.IntInput) GetDataObjectListDataPatternTypePredefinedPatternOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDataObjectListDataPatternTypePredefinedPattern {
+		return vs[0].([]GetDataObjectListDataPatternTypePredefinedPattern)[vs[1].(int)]
+	}).(GetDataObjectListDataPatternTypePredefinedPatternOutput)
+}
+
+type GetDataObjectListDataPatternTypeRegex struct {
+	// Pattern
+	Patterns []GetDataObjectListDataPatternTypeRegexPattern `pulumi:"patterns"`
+}
+
+// GetDataObjectListDataPatternTypeRegexInput is an input type that accepts GetDataObjectListDataPatternTypeRegexArgs and GetDataObjectListDataPatternTypeRegexOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataPatternTypeRegexInput` via:
+//
+//	GetDataObjectListDataPatternTypeRegexArgs{...}
+type GetDataObjectListDataPatternTypeRegexInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataPatternTypeRegexOutput() GetDataObjectListDataPatternTypeRegexOutput
+	ToGetDataObjectListDataPatternTypeRegexOutputWithContext(context.Context) GetDataObjectListDataPatternTypeRegexOutput
+}
+
+type GetDataObjectListDataPatternTypeRegexArgs struct {
+	// Pattern
+	Patterns GetDataObjectListDataPatternTypeRegexPatternArrayInput `pulumi:"patterns"`
+}
+
+func (GetDataObjectListDataPatternTypeRegexArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypeRegex)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataPatternTypeRegexArgs) ToGetDataObjectListDataPatternTypeRegexOutput() GetDataObjectListDataPatternTypeRegexOutput {
+	return i.ToGetDataObjectListDataPatternTypeRegexOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataPatternTypeRegexArgs) ToGetDataObjectListDataPatternTypeRegexOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeRegexOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataPatternTypeRegexOutput)
+}
+
+type GetDataObjectListDataPatternTypeRegexOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataPatternTypeRegexOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypeRegex)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataPatternTypeRegexOutput) ToGetDataObjectListDataPatternTypeRegexOutput() GetDataObjectListDataPatternTypeRegexOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypeRegexOutput) ToGetDataObjectListDataPatternTypeRegexOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeRegexOutput {
+	return o
+}
+
+// Pattern
+func (o GetDataObjectListDataPatternTypeRegexOutput) Patterns() GetDataObjectListDataPatternTypeRegexPatternArrayOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypeRegex) []GetDataObjectListDataPatternTypeRegexPattern {
+		return v.Patterns
+	}).(GetDataObjectListDataPatternTypeRegexPatternArrayOutput)
+}
+
+type GetDataObjectListDataPatternTypeRegexPattern struct {
+	// File type
+	FileTypes []string `pulumi:"fileTypes"`
+	// Name
+	Name string `pulumi:"name"`
+	// Regex
+	Regex string `pulumi:"regex"`
+}
+
+// GetDataObjectListDataPatternTypeRegexPatternInput is an input type that accepts GetDataObjectListDataPatternTypeRegexPatternArgs and GetDataObjectListDataPatternTypeRegexPatternOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataPatternTypeRegexPatternInput` via:
+//
+//	GetDataObjectListDataPatternTypeRegexPatternArgs{...}
+type GetDataObjectListDataPatternTypeRegexPatternInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataPatternTypeRegexPatternOutput() GetDataObjectListDataPatternTypeRegexPatternOutput
+	ToGetDataObjectListDataPatternTypeRegexPatternOutputWithContext(context.Context) GetDataObjectListDataPatternTypeRegexPatternOutput
+}
+
+type GetDataObjectListDataPatternTypeRegexPatternArgs struct {
+	// File type
+	FileTypes pulumi.StringArrayInput `pulumi:"fileTypes"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Regex
+	Regex pulumi.StringInput `pulumi:"regex"`
+}
+
+func (GetDataObjectListDataPatternTypeRegexPatternArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataPatternTypeRegexPatternArgs) ToGetDataObjectListDataPatternTypeRegexPatternOutput() GetDataObjectListDataPatternTypeRegexPatternOutput {
+	return i.ToGetDataObjectListDataPatternTypeRegexPatternOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataPatternTypeRegexPatternArgs) ToGetDataObjectListDataPatternTypeRegexPatternOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeRegexPatternOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataPatternTypeRegexPatternOutput)
+}
+
+// GetDataObjectListDataPatternTypeRegexPatternArrayInput is an input type that accepts GetDataObjectListDataPatternTypeRegexPatternArray and GetDataObjectListDataPatternTypeRegexPatternArrayOutput values.
+// You can construct a concrete instance of `GetDataObjectListDataPatternTypeRegexPatternArrayInput` via:
+//
+//	GetDataObjectListDataPatternTypeRegexPatternArray{ GetDataObjectListDataPatternTypeRegexPatternArgs{...} }
+type GetDataObjectListDataPatternTypeRegexPatternArrayInput interface {
+	pulumi.Input
+
+	ToGetDataObjectListDataPatternTypeRegexPatternArrayOutput() GetDataObjectListDataPatternTypeRegexPatternArrayOutput
+	ToGetDataObjectListDataPatternTypeRegexPatternArrayOutputWithContext(context.Context) GetDataObjectListDataPatternTypeRegexPatternArrayOutput
+}
+
+type GetDataObjectListDataPatternTypeRegexPatternArray []GetDataObjectListDataPatternTypeRegexPatternInput
+
+func (GetDataObjectListDataPatternTypeRegexPatternArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectListDataPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectListDataPatternTypeRegexPatternArray) ToGetDataObjectListDataPatternTypeRegexPatternArrayOutput() GetDataObjectListDataPatternTypeRegexPatternArrayOutput {
+	return i.ToGetDataObjectListDataPatternTypeRegexPatternArrayOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectListDataPatternTypeRegexPatternArray) ToGetDataObjectListDataPatternTypeRegexPatternArrayOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeRegexPatternArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectListDataPatternTypeRegexPatternArrayOutput)
+}
+
+type GetDataObjectListDataPatternTypeRegexPatternOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataPatternTypeRegexPatternOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectListDataPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataPatternTypeRegexPatternOutput) ToGetDataObjectListDataPatternTypeRegexPatternOutput() GetDataObjectListDataPatternTypeRegexPatternOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypeRegexPatternOutput) ToGetDataObjectListDataPatternTypeRegexPatternOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeRegexPatternOutput {
+	return o
+}
+
+// File type
+func (o GetDataObjectListDataPatternTypeRegexPatternOutput) FileTypes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypeRegexPattern) []string { return v.FileTypes }).(pulumi.StringArrayOutput)
+}
+
+// Name
+func (o GetDataObjectListDataPatternTypeRegexPatternOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypeRegexPattern) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Regex
+func (o GetDataObjectListDataPatternTypeRegexPatternOutput) Regex() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectListDataPatternTypeRegexPattern) string { return v.Regex }).(pulumi.StringOutput)
+}
+
+type GetDataObjectListDataPatternTypeRegexPatternArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectListDataPatternTypeRegexPatternArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectListDataPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectListDataPatternTypeRegexPatternArrayOutput) ToGetDataObjectListDataPatternTypeRegexPatternArrayOutput() GetDataObjectListDataPatternTypeRegexPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypeRegexPatternArrayOutput) ToGetDataObjectListDataPatternTypeRegexPatternArrayOutputWithContext(ctx context.Context) GetDataObjectListDataPatternTypeRegexPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectListDataPatternTypeRegexPatternArrayOutput) Index(i pulumi.IntInput) GetDataObjectListDataPatternTypeRegexPatternOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDataObjectListDataPatternTypeRegexPattern {
+		return vs[0].([]GetDataObjectListDataPatternTypeRegexPattern)[vs[1].(int)]
+	}).(GetDataObjectListDataPatternTypeRegexPatternOutput)
+}
+
+type GetDataObjectPatternType struct {
+	// File properties
+	FileProperties GetDataObjectPatternTypeFileProperties `pulumi:"fileProperties"`
+	// Predefined
+	Predefined GetDataObjectPatternTypePredefined `pulumi:"predefined"`
+	// Regex
+	Regex GetDataObjectPatternTypeRegex `pulumi:"regex"`
+}
+
+// GetDataObjectPatternTypeInput is an input type that accepts GetDataObjectPatternTypeArgs and GetDataObjectPatternTypeOutput values.
+// You can construct a concrete instance of `GetDataObjectPatternTypeInput` via:
+//
+//	GetDataObjectPatternTypeArgs{...}
+type GetDataObjectPatternTypeInput interface {
+	pulumi.Input
+
+	ToGetDataObjectPatternTypeOutput() GetDataObjectPatternTypeOutput
+	ToGetDataObjectPatternTypeOutputWithContext(context.Context) GetDataObjectPatternTypeOutput
+}
+
+type GetDataObjectPatternTypeArgs struct {
+	// File properties
+	FileProperties GetDataObjectPatternTypeFilePropertiesInput `pulumi:"fileProperties"`
+	// Predefined
+	Predefined GetDataObjectPatternTypePredefinedInput `pulumi:"predefined"`
+	// Regex
+	Regex GetDataObjectPatternTypeRegexInput `pulumi:"regex"`
+}
+
+func (GetDataObjectPatternTypeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternType)(nil)).Elem()
+}
+
+func (i GetDataObjectPatternTypeArgs) ToGetDataObjectPatternTypeOutput() GetDataObjectPatternTypeOutput {
+	return i.ToGetDataObjectPatternTypeOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectPatternTypeArgs) ToGetDataObjectPatternTypeOutputWithContext(ctx context.Context) GetDataObjectPatternTypeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectPatternTypeOutput)
+}
+
+type GetDataObjectPatternTypeOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectPatternTypeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternType)(nil)).Elem()
+}
+
+func (o GetDataObjectPatternTypeOutput) ToGetDataObjectPatternTypeOutput() GetDataObjectPatternTypeOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypeOutput) ToGetDataObjectPatternTypeOutputWithContext(ctx context.Context) GetDataObjectPatternTypeOutput {
+	return o
+}
+
+// File properties
+func (o GetDataObjectPatternTypeOutput) FileProperties() GetDataObjectPatternTypeFilePropertiesOutput {
+	return o.ApplyT(func(v GetDataObjectPatternType) GetDataObjectPatternTypeFileProperties { return v.FileProperties }).(GetDataObjectPatternTypeFilePropertiesOutput)
+}
+
+// Predefined
+func (o GetDataObjectPatternTypeOutput) Predefined() GetDataObjectPatternTypePredefinedOutput {
+	return o.ApplyT(func(v GetDataObjectPatternType) GetDataObjectPatternTypePredefined { return v.Predefined }).(GetDataObjectPatternTypePredefinedOutput)
+}
+
+// Regex
+func (o GetDataObjectPatternTypeOutput) Regex() GetDataObjectPatternTypeRegexOutput {
+	return o.ApplyT(func(v GetDataObjectPatternType) GetDataObjectPatternTypeRegex { return v.Regex }).(GetDataObjectPatternTypeRegexOutput)
+}
+
+type GetDataObjectPatternTypeFileProperties struct {
+	// Pattern
+	Patterns []GetDataObjectPatternTypeFilePropertiesPattern `pulumi:"patterns"`
+}
+
+// GetDataObjectPatternTypeFilePropertiesInput is an input type that accepts GetDataObjectPatternTypeFilePropertiesArgs and GetDataObjectPatternTypeFilePropertiesOutput values.
+// You can construct a concrete instance of `GetDataObjectPatternTypeFilePropertiesInput` via:
+//
+//	GetDataObjectPatternTypeFilePropertiesArgs{...}
+type GetDataObjectPatternTypeFilePropertiesInput interface {
+	pulumi.Input
+
+	ToGetDataObjectPatternTypeFilePropertiesOutput() GetDataObjectPatternTypeFilePropertiesOutput
+	ToGetDataObjectPatternTypeFilePropertiesOutputWithContext(context.Context) GetDataObjectPatternTypeFilePropertiesOutput
+}
+
+type GetDataObjectPatternTypeFilePropertiesArgs struct {
+	// Pattern
+	Patterns GetDataObjectPatternTypeFilePropertiesPatternArrayInput `pulumi:"patterns"`
+}
+
+func (GetDataObjectPatternTypeFilePropertiesArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypeFileProperties)(nil)).Elem()
+}
+
+func (i GetDataObjectPatternTypeFilePropertiesArgs) ToGetDataObjectPatternTypeFilePropertiesOutput() GetDataObjectPatternTypeFilePropertiesOutput {
+	return i.ToGetDataObjectPatternTypeFilePropertiesOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectPatternTypeFilePropertiesArgs) ToGetDataObjectPatternTypeFilePropertiesOutputWithContext(ctx context.Context) GetDataObjectPatternTypeFilePropertiesOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectPatternTypeFilePropertiesOutput)
+}
+
+type GetDataObjectPatternTypeFilePropertiesOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectPatternTypeFilePropertiesOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypeFileProperties)(nil)).Elem()
+}
+
+func (o GetDataObjectPatternTypeFilePropertiesOutput) ToGetDataObjectPatternTypeFilePropertiesOutput() GetDataObjectPatternTypeFilePropertiesOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypeFilePropertiesOutput) ToGetDataObjectPatternTypeFilePropertiesOutputWithContext(ctx context.Context) GetDataObjectPatternTypeFilePropertiesOutput {
+	return o
+}
+
+// Pattern
+func (o GetDataObjectPatternTypeFilePropertiesOutput) Patterns() GetDataObjectPatternTypeFilePropertiesPatternArrayOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypeFileProperties) []GetDataObjectPatternTypeFilePropertiesPattern {
+		return v.Patterns
+	}).(GetDataObjectPatternTypeFilePropertiesPatternArrayOutput)
+}
+
+type GetDataObjectPatternTypeFilePropertiesPattern struct {
+	// File property
+	FileProperty string `pulumi:"fileProperty"`
+	// File type
+	FileType string `pulumi:"fileType"`
+	// Name
+	Name string `pulumi:"name"`
+	// Property value
+	PropertyValue string `pulumi:"propertyValue"`
+}
+
+// GetDataObjectPatternTypeFilePropertiesPatternInput is an input type that accepts GetDataObjectPatternTypeFilePropertiesPatternArgs and GetDataObjectPatternTypeFilePropertiesPatternOutput values.
+// You can construct a concrete instance of `GetDataObjectPatternTypeFilePropertiesPatternInput` via:
+//
+//	GetDataObjectPatternTypeFilePropertiesPatternArgs{...}
+type GetDataObjectPatternTypeFilePropertiesPatternInput interface {
+	pulumi.Input
+
+	ToGetDataObjectPatternTypeFilePropertiesPatternOutput() GetDataObjectPatternTypeFilePropertiesPatternOutput
+	ToGetDataObjectPatternTypeFilePropertiesPatternOutputWithContext(context.Context) GetDataObjectPatternTypeFilePropertiesPatternOutput
+}
+
+type GetDataObjectPatternTypeFilePropertiesPatternArgs struct {
+	// File property
+	FileProperty pulumi.StringInput `pulumi:"fileProperty"`
+	// File type
+	FileType pulumi.StringInput `pulumi:"fileType"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Property value
+	PropertyValue pulumi.StringInput `pulumi:"propertyValue"`
+}
+
+func (GetDataObjectPatternTypeFilePropertiesPatternArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectPatternTypeFilePropertiesPatternArgs) ToGetDataObjectPatternTypeFilePropertiesPatternOutput() GetDataObjectPatternTypeFilePropertiesPatternOutput {
+	return i.ToGetDataObjectPatternTypeFilePropertiesPatternOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectPatternTypeFilePropertiesPatternArgs) ToGetDataObjectPatternTypeFilePropertiesPatternOutputWithContext(ctx context.Context) GetDataObjectPatternTypeFilePropertiesPatternOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectPatternTypeFilePropertiesPatternOutput)
+}
+
+// GetDataObjectPatternTypeFilePropertiesPatternArrayInput is an input type that accepts GetDataObjectPatternTypeFilePropertiesPatternArray and GetDataObjectPatternTypeFilePropertiesPatternArrayOutput values.
+// You can construct a concrete instance of `GetDataObjectPatternTypeFilePropertiesPatternArrayInput` via:
+//
+//	GetDataObjectPatternTypeFilePropertiesPatternArray{ GetDataObjectPatternTypeFilePropertiesPatternArgs{...} }
+type GetDataObjectPatternTypeFilePropertiesPatternArrayInput interface {
+	pulumi.Input
+
+	ToGetDataObjectPatternTypeFilePropertiesPatternArrayOutput() GetDataObjectPatternTypeFilePropertiesPatternArrayOutput
+	ToGetDataObjectPatternTypeFilePropertiesPatternArrayOutputWithContext(context.Context) GetDataObjectPatternTypeFilePropertiesPatternArrayOutput
+}
+
+type GetDataObjectPatternTypeFilePropertiesPatternArray []GetDataObjectPatternTypeFilePropertiesPatternInput
+
+func (GetDataObjectPatternTypeFilePropertiesPatternArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectPatternTypeFilePropertiesPatternArray) ToGetDataObjectPatternTypeFilePropertiesPatternArrayOutput() GetDataObjectPatternTypeFilePropertiesPatternArrayOutput {
+	return i.ToGetDataObjectPatternTypeFilePropertiesPatternArrayOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectPatternTypeFilePropertiesPatternArray) ToGetDataObjectPatternTypeFilePropertiesPatternArrayOutputWithContext(ctx context.Context) GetDataObjectPatternTypeFilePropertiesPatternArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectPatternTypeFilePropertiesPatternArrayOutput)
+}
+
+type GetDataObjectPatternTypeFilePropertiesPatternOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectPatternTypeFilePropertiesPatternOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectPatternTypeFilePropertiesPatternOutput) ToGetDataObjectPatternTypeFilePropertiesPatternOutput() GetDataObjectPatternTypeFilePropertiesPatternOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypeFilePropertiesPatternOutput) ToGetDataObjectPatternTypeFilePropertiesPatternOutputWithContext(ctx context.Context) GetDataObjectPatternTypeFilePropertiesPatternOutput {
+	return o
+}
+
+// File property
+func (o GetDataObjectPatternTypeFilePropertiesPatternOutput) FileProperty() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypeFilePropertiesPattern) string { return v.FileProperty }).(pulumi.StringOutput)
+}
+
+// File type
+func (o GetDataObjectPatternTypeFilePropertiesPatternOutput) FileType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypeFilePropertiesPattern) string { return v.FileType }).(pulumi.StringOutput)
+}
+
+// Name
+func (o GetDataObjectPatternTypeFilePropertiesPatternOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypeFilePropertiesPattern) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Property value
+func (o GetDataObjectPatternTypeFilePropertiesPatternOutput) PropertyValue() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypeFilePropertiesPattern) string { return v.PropertyValue }).(pulumi.StringOutput)
+}
+
+type GetDataObjectPatternTypeFilePropertiesPatternArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectPatternTypeFilePropertiesPatternArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectPatternTypeFilePropertiesPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectPatternTypeFilePropertiesPatternArrayOutput) ToGetDataObjectPatternTypeFilePropertiesPatternArrayOutput() GetDataObjectPatternTypeFilePropertiesPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypeFilePropertiesPatternArrayOutput) ToGetDataObjectPatternTypeFilePropertiesPatternArrayOutputWithContext(ctx context.Context) GetDataObjectPatternTypeFilePropertiesPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypeFilePropertiesPatternArrayOutput) Index(i pulumi.IntInput) GetDataObjectPatternTypeFilePropertiesPatternOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDataObjectPatternTypeFilePropertiesPattern {
+		return vs[0].([]GetDataObjectPatternTypeFilePropertiesPattern)[vs[1].(int)]
+	}).(GetDataObjectPatternTypeFilePropertiesPatternOutput)
+}
+
+type GetDataObjectPatternTypePredefined struct {
+	// Pattern
+	Patterns []GetDataObjectPatternTypePredefinedPattern `pulumi:"patterns"`
+}
+
+// GetDataObjectPatternTypePredefinedInput is an input type that accepts GetDataObjectPatternTypePredefinedArgs and GetDataObjectPatternTypePredefinedOutput values.
+// You can construct a concrete instance of `GetDataObjectPatternTypePredefinedInput` via:
+//
+//	GetDataObjectPatternTypePredefinedArgs{...}
+type GetDataObjectPatternTypePredefinedInput interface {
+	pulumi.Input
+
+	ToGetDataObjectPatternTypePredefinedOutput() GetDataObjectPatternTypePredefinedOutput
+	ToGetDataObjectPatternTypePredefinedOutputWithContext(context.Context) GetDataObjectPatternTypePredefinedOutput
+}
+
+type GetDataObjectPatternTypePredefinedArgs struct {
+	// Pattern
+	Patterns GetDataObjectPatternTypePredefinedPatternArrayInput `pulumi:"patterns"`
+}
+
+func (GetDataObjectPatternTypePredefinedArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypePredefined)(nil)).Elem()
+}
+
+func (i GetDataObjectPatternTypePredefinedArgs) ToGetDataObjectPatternTypePredefinedOutput() GetDataObjectPatternTypePredefinedOutput {
+	return i.ToGetDataObjectPatternTypePredefinedOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectPatternTypePredefinedArgs) ToGetDataObjectPatternTypePredefinedOutputWithContext(ctx context.Context) GetDataObjectPatternTypePredefinedOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectPatternTypePredefinedOutput)
+}
+
+type GetDataObjectPatternTypePredefinedOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectPatternTypePredefinedOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypePredefined)(nil)).Elem()
+}
+
+func (o GetDataObjectPatternTypePredefinedOutput) ToGetDataObjectPatternTypePredefinedOutput() GetDataObjectPatternTypePredefinedOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypePredefinedOutput) ToGetDataObjectPatternTypePredefinedOutputWithContext(ctx context.Context) GetDataObjectPatternTypePredefinedOutput {
+	return o
+}
+
+// Pattern
+func (o GetDataObjectPatternTypePredefinedOutput) Patterns() GetDataObjectPatternTypePredefinedPatternArrayOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypePredefined) []GetDataObjectPatternTypePredefinedPattern {
+		return v.Patterns
+	}).(GetDataObjectPatternTypePredefinedPatternArrayOutput)
+}
+
+type GetDataObjectPatternTypePredefinedPattern struct {
+	// File type
+	FileTypes []string `pulumi:"fileTypes"`
+	// Name
+	Name string `pulumi:"name"`
+}
+
+// GetDataObjectPatternTypePredefinedPatternInput is an input type that accepts GetDataObjectPatternTypePredefinedPatternArgs and GetDataObjectPatternTypePredefinedPatternOutput values.
+// You can construct a concrete instance of `GetDataObjectPatternTypePredefinedPatternInput` via:
+//
+//	GetDataObjectPatternTypePredefinedPatternArgs{...}
+type GetDataObjectPatternTypePredefinedPatternInput interface {
+	pulumi.Input
+
+	ToGetDataObjectPatternTypePredefinedPatternOutput() GetDataObjectPatternTypePredefinedPatternOutput
+	ToGetDataObjectPatternTypePredefinedPatternOutputWithContext(context.Context) GetDataObjectPatternTypePredefinedPatternOutput
+}
+
+type GetDataObjectPatternTypePredefinedPatternArgs struct {
+	// File type
+	FileTypes pulumi.StringArrayInput `pulumi:"fileTypes"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (GetDataObjectPatternTypePredefinedPatternArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectPatternTypePredefinedPatternArgs) ToGetDataObjectPatternTypePredefinedPatternOutput() GetDataObjectPatternTypePredefinedPatternOutput {
+	return i.ToGetDataObjectPatternTypePredefinedPatternOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectPatternTypePredefinedPatternArgs) ToGetDataObjectPatternTypePredefinedPatternOutputWithContext(ctx context.Context) GetDataObjectPatternTypePredefinedPatternOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectPatternTypePredefinedPatternOutput)
+}
+
+// GetDataObjectPatternTypePredefinedPatternArrayInput is an input type that accepts GetDataObjectPatternTypePredefinedPatternArray and GetDataObjectPatternTypePredefinedPatternArrayOutput values.
+// You can construct a concrete instance of `GetDataObjectPatternTypePredefinedPatternArrayInput` via:
+//
+//	GetDataObjectPatternTypePredefinedPatternArray{ GetDataObjectPatternTypePredefinedPatternArgs{...} }
+type GetDataObjectPatternTypePredefinedPatternArrayInput interface {
+	pulumi.Input
+
+	ToGetDataObjectPatternTypePredefinedPatternArrayOutput() GetDataObjectPatternTypePredefinedPatternArrayOutput
+	ToGetDataObjectPatternTypePredefinedPatternArrayOutputWithContext(context.Context) GetDataObjectPatternTypePredefinedPatternArrayOutput
+}
+
+type GetDataObjectPatternTypePredefinedPatternArray []GetDataObjectPatternTypePredefinedPatternInput
+
+func (GetDataObjectPatternTypePredefinedPatternArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectPatternTypePredefinedPatternArray) ToGetDataObjectPatternTypePredefinedPatternArrayOutput() GetDataObjectPatternTypePredefinedPatternArrayOutput {
+	return i.ToGetDataObjectPatternTypePredefinedPatternArrayOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectPatternTypePredefinedPatternArray) ToGetDataObjectPatternTypePredefinedPatternArrayOutputWithContext(ctx context.Context) GetDataObjectPatternTypePredefinedPatternArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectPatternTypePredefinedPatternArrayOutput)
+}
+
+type GetDataObjectPatternTypePredefinedPatternOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectPatternTypePredefinedPatternOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectPatternTypePredefinedPatternOutput) ToGetDataObjectPatternTypePredefinedPatternOutput() GetDataObjectPatternTypePredefinedPatternOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypePredefinedPatternOutput) ToGetDataObjectPatternTypePredefinedPatternOutputWithContext(ctx context.Context) GetDataObjectPatternTypePredefinedPatternOutput {
+	return o
+}
+
+// File type
+func (o GetDataObjectPatternTypePredefinedPatternOutput) FileTypes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypePredefinedPattern) []string { return v.FileTypes }).(pulumi.StringArrayOutput)
+}
+
+// Name
+func (o GetDataObjectPatternTypePredefinedPatternOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypePredefinedPattern) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type GetDataObjectPatternTypePredefinedPatternArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectPatternTypePredefinedPatternArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectPatternTypePredefinedPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectPatternTypePredefinedPatternArrayOutput) ToGetDataObjectPatternTypePredefinedPatternArrayOutput() GetDataObjectPatternTypePredefinedPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypePredefinedPatternArrayOutput) ToGetDataObjectPatternTypePredefinedPatternArrayOutputWithContext(ctx context.Context) GetDataObjectPatternTypePredefinedPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypePredefinedPatternArrayOutput) Index(i pulumi.IntInput) GetDataObjectPatternTypePredefinedPatternOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDataObjectPatternTypePredefinedPattern {
+		return vs[0].([]GetDataObjectPatternTypePredefinedPattern)[vs[1].(int)]
+	}).(GetDataObjectPatternTypePredefinedPatternOutput)
+}
+
+type GetDataObjectPatternTypeRegex struct {
+	// Pattern
+	Patterns []GetDataObjectPatternTypeRegexPattern `pulumi:"patterns"`
+}
+
+// GetDataObjectPatternTypeRegexInput is an input type that accepts GetDataObjectPatternTypeRegexArgs and GetDataObjectPatternTypeRegexOutput values.
+// You can construct a concrete instance of `GetDataObjectPatternTypeRegexInput` via:
+//
+//	GetDataObjectPatternTypeRegexArgs{...}
+type GetDataObjectPatternTypeRegexInput interface {
+	pulumi.Input
+
+	ToGetDataObjectPatternTypeRegexOutput() GetDataObjectPatternTypeRegexOutput
+	ToGetDataObjectPatternTypeRegexOutputWithContext(context.Context) GetDataObjectPatternTypeRegexOutput
+}
+
+type GetDataObjectPatternTypeRegexArgs struct {
+	// Pattern
+	Patterns GetDataObjectPatternTypeRegexPatternArrayInput `pulumi:"patterns"`
+}
+
+func (GetDataObjectPatternTypeRegexArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypeRegex)(nil)).Elem()
+}
+
+func (i GetDataObjectPatternTypeRegexArgs) ToGetDataObjectPatternTypeRegexOutput() GetDataObjectPatternTypeRegexOutput {
+	return i.ToGetDataObjectPatternTypeRegexOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectPatternTypeRegexArgs) ToGetDataObjectPatternTypeRegexOutputWithContext(ctx context.Context) GetDataObjectPatternTypeRegexOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectPatternTypeRegexOutput)
+}
+
+type GetDataObjectPatternTypeRegexOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectPatternTypeRegexOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypeRegex)(nil)).Elem()
+}
+
+func (o GetDataObjectPatternTypeRegexOutput) ToGetDataObjectPatternTypeRegexOutput() GetDataObjectPatternTypeRegexOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypeRegexOutput) ToGetDataObjectPatternTypeRegexOutputWithContext(ctx context.Context) GetDataObjectPatternTypeRegexOutput {
+	return o
+}
+
+// Pattern
+func (o GetDataObjectPatternTypeRegexOutput) Patterns() GetDataObjectPatternTypeRegexPatternArrayOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypeRegex) []GetDataObjectPatternTypeRegexPattern { return v.Patterns }).(GetDataObjectPatternTypeRegexPatternArrayOutput)
+}
+
+type GetDataObjectPatternTypeRegexPattern struct {
+	// File type
+	FileTypes []string `pulumi:"fileTypes"`
+	// Name
+	Name string `pulumi:"name"`
+	// Regex
+	Regex string `pulumi:"regex"`
+}
+
+// GetDataObjectPatternTypeRegexPatternInput is an input type that accepts GetDataObjectPatternTypeRegexPatternArgs and GetDataObjectPatternTypeRegexPatternOutput values.
+// You can construct a concrete instance of `GetDataObjectPatternTypeRegexPatternInput` via:
+//
+//	GetDataObjectPatternTypeRegexPatternArgs{...}
+type GetDataObjectPatternTypeRegexPatternInput interface {
+	pulumi.Input
+
+	ToGetDataObjectPatternTypeRegexPatternOutput() GetDataObjectPatternTypeRegexPatternOutput
+	ToGetDataObjectPatternTypeRegexPatternOutputWithContext(context.Context) GetDataObjectPatternTypeRegexPatternOutput
+}
+
+type GetDataObjectPatternTypeRegexPatternArgs struct {
+	// File type
+	FileTypes pulumi.StringArrayInput `pulumi:"fileTypes"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Regex
+	Regex pulumi.StringInput `pulumi:"regex"`
+}
+
+func (GetDataObjectPatternTypeRegexPatternArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectPatternTypeRegexPatternArgs) ToGetDataObjectPatternTypeRegexPatternOutput() GetDataObjectPatternTypeRegexPatternOutput {
+	return i.ToGetDataObjectPatternTypeRegexPatternOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectPatternTypeRegexPatternArgs) ToGetDataObjectPatternTypeRegexPatternOutputWithContext(ctx context.Context) GetDataObjectPatternTypeRegexPatternOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectPatternTypeRegexPatternOutput)
+}
+
+// GetDataObjectPatternTypeRegexPatternArrayInput is an input type that accepts GetDataObjectPatternTypeRegexPatternArray and GetDataObjectPatternTypeRegexPatternArrayOutput values.
+// You can construct a concrete instance of `GetDataObjectPatternTypeRegexPatternArrayInput` via:
+//
+//	GetDataObjectPatternTypeRegexPatternArray{ GetDataObjectPatternTypeRegexPatternArgs{...} }
+type GetDataObjectPatternTypeRegexPatternArrayInput interface {
+	pulumi.Input
+
+	ToGetDataObjectPatternTypeRegexPatternArrayOutput() GetDataObjectPatternTypeRegexPatternArrayOutput
+	ToGetDataObjectPatternTypeRegexPatternArrayOutputWithContext(context.Context) GetDataObjectPatternTypeRegexPatternArrayOutput
+}
+
+type GetDataObjectPatternTypeRegexPatternArray []GetDataObjectPatternTypeRegexPatternInput
+
+func (GetDataObjectPatternTypeRegexPatternArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (i GetDataObjectPatternTypeRegexPatternArray) ToGetDataObjectPatternTypeRegexPatternArrayOutput() GetDataObjectPatternTypeRegexPatternArrayOutput {
+	return i.ToGetDataObjectPatternTypeRegexPatternArrayOutputWithContext(context.Background())
+}
+
+func (i GetDataObjectPatternTypeRegexPatternArray) ToGetDataObjectPatternTypeRegexPatternArrayOutputWithContext(ctx context.Context) GetDataObjectPatternTypeRegexPatternArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDataObjectPatternTypeRegexPatternArrayOutput)
+}
+
+type GetDataObjectPatternTypeRegexPatternOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectPatternTypeRegexPatternOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDataObjectPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectPatternTypeRegexPatternOutput) ToGetDataObjectPatternTypeRegexPatternOutput() GetDataObjectPatternTypeRegexPatternOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypeRegexPatternOutput) ToGetDataObjectPatternTypeRegexPatternOutputWithContext(ctx context.Context) GetDataObjectPatternTypeRegexPatternOutput {
+	return o
+}
+
+// File type
+func (o GetDataObjectPatternTypeRegexPatternOutput) FileTypes() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypeRegexPattern) []string { return v.FileTypes }).(pulumi.StringArrayOutput)
+}
+
+// Name
+func (o GetDataObjectPatternTypeRegexPatternOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypeRegexPattern) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Regex
+func (o GetDataObjectPatternTypeRegexPatternOutput) Regex() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDataObjectPatternTypeRegexPattern) string { return v.Regex }).(pulumi.StringOutput)
+}
+
+type GetDataObjectPatternTypeRegexPatternArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDataObjectPatternTypeRegexPatternArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDataObjectPatternTypeRegexPattern)(nil)).Elem()
+}
+
+func (o GetDataObjectPatternTypeRegexPatternArrayOutput) ToGetDataObjectPatternTypeRegexPatternArrayOutput() GetDataObjectPatternTypeRegexPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypeRegexPatternArrayOutput) ToGetDataObjectPatternTypeRegexPatternArrayOutputWithContext(ctx context.Context) GetDataObjectPatternTypeRegexPatternArrayOutput {
+	return o
+}
+
+func (o GetDataObjectPatternTypeRegexPatternArrayOutput) Index(i pulumi.IntInput) GetDataObjectPatternTypeRegexPatternOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDataObjectPatternTypeRegexPattern {
+		return vs[0].([]GetDataObjectPatternTypeRegexPattern)[vs[1].(int)]
+	}).(GetDataObjectPatternTypeRegexPatternOutput)
 }
 
 type GetDecryptionExclusionListData struct {
@@ -26664,6 +29283,8 @@ func (o GetDynamicUserGroupListDataArrayOutput) Index(i pulumi.IntInput) GetDyna
 type GetEthernetInterfaceLayer2 struct {
 	// LLDP Settings
 	Lldp GetEthernetInterfaceLayer2Lldp `pulumi:"lldp"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile string `pulumi:"netflowProfile"`
 	// Assign interface to VLAN tag
 	VlanTag string `pulumi:"vlanTag"`
 }
@@ -26682,6 +29303,8 @@ type GetEthernetInterfaceLayer2Input interface {
 type GetEthernetInterfaceLayer2Args struct {
 	// LLDP Settings
 	Lldp GetEthernetInterfaceLayer2LldpInput `pulumi:"lldp"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringInput `pulumi:"netflowProfile"`
 	// Assign interface to VLAN tag
 	VlanTag pulumi.StringInput `pulumi:"vlanTag"`
 }
@@ -26715,6 +29338,11 @@ func (o GetEthernetInterfaceLayer2Output) ToGetEthernetInterfaceLayer2OutputWith
 // LLDP Settings
 func (o GetEthernetInterfaceLayer2Output) Lldp() GetEthernetInterfaceLayer2LldpOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceLayer2) GetEthernetInterfaceLayer2Lldp { return v.Lldp }).(GetEthernetInterfaceLayer2LldpOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o GetEthernetInterfaceLayer2Output) NetflowProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEthernetInterfaceLayer2) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
 // Assign interface to VLAN tag
@@ -26789,6 +29417,8 @@ type GetEthernetInterfaceLayer3 struct {
 	Ips []GetEthernetInterfaceLayer3Ip `pulumi:"ips"`
 	// MTU
 	Mtu int `pulumi:"mtu"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile string `pulumi:"netflowProfile"`
 	// Pppoe
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
@@ -26821,6 +29451,8 @@ type GetEthernetInterfaceLayer3Args struct {
 	Ips GetEthernetInterfaceLayer3IpArrayInput `pulumi:"ips"`
 	// MTU
 	Mtu pulumi.IntInput `pulumi:"mtu"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringInput `pulumi:"netflowProfile"`
 	// Pppoe
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
@@ -26883,6 +29515,11 @@ func (o GetEthernetInterfaceLayer3Output) Ips() GetEthernetInterfaceLayer3IpArra
 // MTU
 func (o GetEthernetInterfaceLayer3Output) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceLayer3) int { return v.Mtu }).(pulumi.IntOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o GetEthernetInterfaceLayer3Output) NetflowProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEthernetInterfaceLayer3) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
 // Pppoe
@@ -27841,6 +30478,8 @@ func (o GetEthernetInterfaceListDataArrayOutput) Index(i pulumi.IntInput) GetEth
 type GetEthernetInterfaceListDataLayer2 struct {
 	// LLDP Settings
 	Lldp GetEthernetInterfaceListDataLayer2Lldp `pulumi:"lldp"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile string `pulumi:"netflowProfile"`
 	// Assign interface to VLAN tag
 	VlanTag string `pulumi:"vlanTag"`
 }
@@ -27859,6 +30498,8 @@ type GetEthernetInterfaceListDataLayer2Input interface {
 type GetEthernetInterfaceListDataLayer2Args struct {
 	// LLDP Settings
 	Lldp GetEthernetInterfaceListDataLayer2LldpInput `pulumi:"lldp"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringInput `pulumi:"netflowProfile"`
 	// Assign interface to VLAN tag
 	VlanTag pulumi.StringInput `pulumi:"vlanTag"`
 }
@@ -27892,6 +30533,11 @@ func (o GetEthernetInterfaceListDataLayer2Output) ToGetEthernetInterfaceListData
 // LLDP Settings
 func (o GetEthernetInterfaceListDataLayer2Output) Lldp() GetEthernetInterfaceListDataLayer2LldpOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListDataLayer2) GetEthernetInterfaceListDataLayer2Lldp { return v.Lldp }).(GetEthernetInterfaceListDataLayer2LldpOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o GetEthernetInterfaceListDataLayer2Output) NetflowProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEthernetInterfaceListDataLayer2) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
 // Assign interface to VLAN tag
@@ -27966,6 +30612,8 @@ type GetEthernetInterfaceListDataLayer3 struct {
 	Ips []GetEthernetInterfaceListDataLayer3Ip `pulumi:"ips"`
 	// MTU
 	Mtu int `pulumi:"mtu"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile string `pulumi:"netflowProfile"`
 	// Pppoe
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
@@ -27998,6 +30646,8 @@ type GetEthernetInterfaceListDataLayer3Args struct {
 	Ips GetEthernetInterfaceListDataLayer3IpArrayInput `pulumi:"ips"`
 	// MTU
 	Mtu pulumi.IntInput `pulumi:"mtu"`
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringInput `pulumi:"netflowProfile"`
 	// Pppoe
 	//
 	// > ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
@@ -28064,6 +30714,11 @@ func (o GetEthernetInterfaceListDataLayer3Output) Ips() GetEthernetInterfaceList
 // MTU
 func (o GetEthernetInterfaceListDataLayer3Output) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v GetEthernetInterfaceListDataLayer3) int { return v.Mtu }).(pulumi.IntOutput)
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o GetEthernetInterfaceListDataLayer3Output) NetflowProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEthernetInterfaceListDataLayer3) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
 // Pppoe
@@ -28818,6 +31473,8 @@ func (o GetEthernetInterfaceListDataPoeOutput) PoeRsvdPwr() pulumi.IntOutput {
 }
 
 type GetEthernetInterfaceListDataTap struct {
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile string `pulumi:"netflowProfile"`
 }
 
 // GetEthernetInterfaceListDataTapInput is an input type that accepts GetEthernetInterfaceListDataTapArgs and GetEthernetInterfaceListDataTapOutput values.
@@ -28832,6 +31489,8 @@ type GetEthernetInterfaceListDataTapInput interface {
 }
 
 type GetEthernetInterfaceListDataTapArgs struct {
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringInput `pulumi:"netflowProfile"`
 }
 
 func (GetEthernetInterfaceListDataTapArgs) ElementType() reflect.Type {
@@ -28858,6 +31517,11 @@ func (o GetEthernetInterfaceListDataTapOutput) ToGetEthernetInterfaceListDataTap
 
 func (o GetEthernetInterfaceListDataTapOutput) ToGetEthernetInterfaceListDataTapOutputWithContext(ctx context.Context) GetEthernetInterfaceListDataTapOutput {
 	return o
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o GetEthernetInterfaceListDataTapOutput) NetflowProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEthernetInterfaceListDataTap) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
 type GetEthernetInterfacePoe struct {
@@ -28922,6 +31586,8 @@ func (o GetEthernetInterfacePoeOutput) PoeRsvdPwr() pulumi.IntOutput {
 }
 
 type GetEthernetInterfaceTap struct {
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile string `pulumi:"netflowProfile"`
 }
 
 // GetEthernetInterfaceTapInput is an input type that accepts GetEthernetInterfaceTapArgs and GetEthernetInterfaceTapOutput values.
@@ -28936,6 +31602,8 @@ type GetEthernetInterfaceTapInput interface {
 }
 
 type GetEthernetInterfaceTapArgs struct {
+	// Name of Netflow Profile to assign to Interface
+	NetflowProfile pulumi.StringInput `pulumi:"netflowProfile"`
 }
 
 func (GetEthernetInterfaceTapArgs) ElementType() reflect.Type {
@@ -28962,6 +31630,11 @@ func (o GetEthernetInterfaceTapOutput) ToGetEthernetInterfaceTapOutput() GetEthe
 
 func (o GetEthernetInterfaceTapOutput) ToGetEthernetInterfaceTapOutputWithContext(ctx context.Context) GetEthernetInterfaceTapOutput {
 	return o
+}
+
+// Name of Netflow Profile to assign to Interface
+func (o GetEthernetInterfaceTapOutput) NetflowProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v GetEthernetInterfaceTap) string { return v.NetflowProfile }).(pulumi.StringOutput)
 }
 
 type GetExternalDynamicListListData struct {
@@ -36483,6 +39156,220 @@ func (o GetGeneralSettingListDataGeneralSettingManagementOutput) EnableCertifica
 	}).(pulumi.BoolOutput)
 }
 
+type GetGlobalprotectMatchListListData struct {
+	// Description of the globalprotect match list entry
+	Description string `pulumi:"description"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Filter of the globalprotect match list entry
+	Filter string `pulumi:"filter"`
+	// The folder of the item. Default: Shared.
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
+	Id string `pulumi:"id"`
+	// The name of the item.
+	Name string `pulumi:"name"`
+	// Quarantine Flag of the globalprotect match list entry
+	Quarantine bool `pulumi:"quarantine"`
+	// Send Email List of the globalprotect match list entry
+	SendEmails []string `pulumi:"sendEmails"`
+	// Send HTTP List of the globalprotect match list entry
+	SendHttps []string `pulumi:"sendHttps"`
+	// Send SNMP Trap List of the globalprotect match list entry
+	SendSnmptraps []string `pulumi:"sendSnmptraps"`
+	// Send Sys log List of the globalprotect match list entry
+	SendSyslogs []string `pulumi:"sendSyslogs"`
+	// Send to Panorama Flag of the globalprotect match list entry
+	SendToPanorama bool `pulumi:"sendToPanorama"`
+	// The snippet of the item.
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetGlobalprotectMatchListListDataInput is an input type that accepts GetGlobalprotectMatchListListDataArgs and GetGlobalprotectMatchListListDataOutput values.
+// You can construct a concrete instance of `GetGlobalprotectMatchListListDataInput` via:
+//
+//	GetGlobalprotectMatchListListDataArgs{...}
+type GetGlobalprotectMatchListListDataInput interface {
+	pulumi.Input
+
+	ToGetGlobalprotectMatchListListDataOutput() GetGlobalprotectMatchListListDataOutput
+	ToGetGlobalprotectMatchListListDataOutputWithContext(context.Context) GetGlobalprotectMatchListListDataOutput
+}
+
+type GetGlobalprotectMatchListListDataArgs struct {
+	// Description of the globalprotect match list entry
+	Description pulumi.StringInput `pulumi:"description"`
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// Filter of the globalprotect match list entry
+	Filter pulumi.StringInput `pulumi:"filter"`
+	// The folder of the item. Default: Shared.
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// UUID of the resource
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the item.
+	Name pulumi.StringInput `pulumi:"name"`
+	// Quarantine Flag of the globalprotect match list entry
+	Quarantine pulumi.BoolInput `pulumi:"quarantine"`
+	// Send Email List of the globalprotect match list entry
+	SendEmails pulumi.StringArrayInput `pulumi:"sendEmails"`
+	// Send HTTP List of the globalprotect match list entry
+	SendHttps pulumi.StringArrayInput `pulumi:"sendHttps"`
+	// Send SNMP Trap List of the globalprotect match list entry
+	SendSnmptraps pulumi.StringArrayInput `pulumi:"sendSnmptraps"`
+	// Send Sys log List of the globalprotect match list entry
+	SendSyslogs pulumi.StringArrayInput `pulumi:"sendSyslogs"`
+	// Send to Panorama Flag of the globalprotect match list entry
+	SendToPanorama pulumi.BoolInput `pulumi:"sendToPanorama"`
+	// The snippet of the item.
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetGlobalprotectMatchListListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetGlobalprotectMatchListListData)(nil)).Elem()
+}
+
+func (i GetGlobalprotectMatchListListDataArgs) ToGetGlobalprotectMatchListListDataOutput() GetGlobalprotectMatchListListDataOutput {
+	return i.ToGetGlobalprotectMatchListListDataOutputWithContext(context.Background())
+}
+
+func (i GetGlobalprotectMatchListListDataArgs) ToGetGlobalprotectMatchListListDataOutputWithContext(ctx context.Context) GetGlobalprotectMatchListListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetGlobalprotectMatchListListDataOutput)
+}
+
+// GetGlobalprotectMatchListListDataArrayInput is an input type that accepts GetGlobalprotectMatchListListDataArray and GetGlobalprotectMatchListListDataArrayOutput values.
+// You can construct a concrete instance of `GetGlobalprotectMatchListListDataArrayInput` via:
+//
+//	GetGlobalprotectMatchListListDataArray{ GetGlobalprotectMatchListListDataArgs{...} }
+type GetGlobalprotectMatchListListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetGlobalprotectMatchListListDataArrayOutput() GetGlobalprotectMatchListListDataArrayOutput
+	ToGetGlobalprotectMatchListListDataArrayOutputWithContext(context.Context) GetGlobalprotectMatchListListDataArrayOutput
+}
+
+type GetGlobalprotectMatchListListDataArray []GetGlobalprotectMatchListListDataInput
+
+func (GetGlobalprotectMatchListListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetGlobalprotectMatchListListData)(nil)).Elem()
+}
+
+func (i GetGlobalprotectMatchListListDataArray) ToGetGlobalprotectMatchListListDataArrayOutput() GetGlobalprotectMatchListListDataArrayOutput {
+	return i.ToGetGlobalprotectMatchListListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetGlobalprotectMatchListListDataArray) ToGetGlobalprotectMatchListListDataArrayOutputWithContext(ctx context.Context) GetGlobalprotectMatchListListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetGlobalprotectMatchListListDataArrayOutput)
+}
+
+type GetGlobalprotectMatchListListDataOutput struct{ *pulumi.OutputState }
+
+func (GetGlobalprotectMatchListListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetGlobalprotectMatchListListData)(nil)).Elem()
+}
+
+func (o GetGlobalprotectMatchListListDataOutput) ToGetGlobalprotectMatchListListDataOutput() GetGlobalprotectMatchListListDataOutput {
+	return o
+}
+
+func (o GetGlobalprotectMatchListListDataOutput) ToGetGlobalprotectMatchListListDataOutputWithContext(ctx context.Context) GetGlobalprotectMatchListListDataOutput {
+	return o
+}
+
+// Description of the globalprotect match list entry
+func (o GetGlobalprotectMatchListListDataOutput) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// The device in which the resource is defined
+func (o GetGlobalprotectMatchListListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Filter of the globalprotect match list entry
+func (o GetGlobalprotectMatchListListDataOutput) Filter() pulumi.StringOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Filter }).(pulumi.StringOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetGlobalprotectMatchListListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
+func (o GetGlobalprotectMatchListListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The name of the item.
+func (o GetGlobalprotectMatchListListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Quarantine Flag of the globalprotect match list entry
+func (o GetGlobalprotectMatchListListDataOutput) Quarantine() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) bool { return v.Quarantine }).(pulumi.BoolOutput)
+}
+
+// Send Email List of the globalprotect match list entry
+func (o GetGlobalprotectMatchListListDataOutput) SendEmails() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) []string { return v.SendEmails }).(pulumi.StringArrayOutput)
+}
+
+// Send HTTP List of the globalprotect match list entry
+func (o GetGlobalprotectMatchListListDataOutput) SendHttps() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) []string { return v.SendHttps }).(pulumi.StringArrayOutput)
+}
+
+// Send SNMP Trap List of the globalprotect match list entry
+func (o GetGlobalprotectMatchListListDataOutput) SendSnmptraps() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) []string { return v.SendSnmptraps }).(pulumi.StringArrayOutput)
+}
+
+// Send Sys log List of the globalprotect match list entry
+func (o GetGlobalprotectMatchListListDataOutput) SendSyslogs() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) []string { return v.SendSyslogs }).(pulumi.StringArrayOutput)
+}
+
+// Send to Panorama Flag of the globalprotect match list entry
+func (o GetGlobalprotectMatchListListDataOutput) SendToPanorama() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) bool { return v.SendToPanorama }).(pulumi.BoolOutput)
+}
+
+// The snippet of the item.
+func (o GetGlobalprotectMatchListListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetGlobalprotectMatchListListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetGlobalprotectMatchListListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetGlobalprotectMatchListListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetGlobalprotectMatchListListData)(nil)).Elem()
+}
+
+func (o GetGlobalprotectMatchListListDataArrayOutput) ToGetGlobalprotectMatchListListDataArrayOutput() GetGlobalprotectMatchListListDataArrayOutput {
+	return o
+}
+
+func (o GetGlobalprotectMatchListListDataArrayOutput) ToGetGlobalprotectMatchListListDataArrayOutputWithContext(ctx context.Context) GetGlobalprotectMatchListListDataArrayOutput {
+	return o
+}
+
+func (o GetGlobalprotectMatchListListDataArrayOutput) Index(i pulumi.IntInput) GetGlobalprotectMatchListListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetGlobalprotectMatchListListData {
+		return vs[0].([]GetGlobalprotectMatchListListData)[vs[1].(int)]
+	}).(GetGlobalprotectMatchListListDataOutput)
+}
+
 type GetHipObjectAntiMalware struct {
 	// Criteria
 	Criteria GetHipObjectAntiMalwareCriteria `pulumi:"criteria"`
@@ -37776,2374 +40663,16 @@ func (o GetHipObjectCustomChecksOutput) Criteria() GetHipObjectCustomChecksCrite
 	return o.ApplyT(func(v GetHipObjectCustomChecks) GetHipObjectCustomChecksCriteria { return v.Criteria }).(GetHipObjectCustomChecksCriteriaOutput)
 }
 
-type GetHipObjectCustomChecksCriteria struct {
-	// Plist
-	Plists []GetHipObjectCustomChecksCriteriaPlist `pulumi:"plists"`
-	// Process list
-	ProcessLists []GetHipObjectCustomChecksCriteriaProcessList `pulumi:"processLists"`
-	// Registry key
-	RegistryKeys []GetHipObjectCustomChecksCriteriaRegistryKey `pulumi:"registryKeys"`
-}
-
-// GetHipObjectCustomChecksCriteriaInput is an input type that accepts GetHipObjectCustomChecksCriteriaArgs and GetHipObjectCustomChecksCriteriaOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksCriteriaInput` via:
-//
-//	GetHipObjectCustomChecksCriteriaArgs{...}
-type GetHipObjectCustomChecksCriteriaInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksCriteriaOutput() GetHipObjectCustomChecksCriteriaOutput
-	ToGetHipObjectCustomChecksCriteriaOutputWithContext(context.Context) GetHipObjectCustomChecksCriteriaOutput
-}
-
-type GetHipObjectCustomChecksCriteriaArgs struct {
-	// Plist
-	Plists GetHipObjectCustomChecksCriteriaPlistArrayInput `pulumi:"plists"`
-	// Process list
-	ProcessLists GetHipObjectCustomChecksCriteriaProcessListArrayInput `pulumi:"processLists"`
-	// Registry key
-	RegistryKeys GetHipObjectCustomChecksCriteriaRegistryKeyArrayInput `pulumi:"registryKeys"`
-}
-
-func (GetHipObjectCustomChecksCriteriaArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteria)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksCriteriaArgs) ToGetHipObjectCustomChecksCriteriaOutput() GetHipObjectCustomChecksCriteriaOutput {
-	return i.ToGetHipObjectCustomChecksCriteriaOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksCriteriaArgs) ToGetHipObjectCustomChecksCriteriaOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksCriteriaOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksCriteriaOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteria)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksCriteriaOutput) ToGetHipObjectCustomChecksCriteriaOutput() GetHipObjectCustomChecksCriteriaOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaOutput) ToGetHipObjectCustomChecksCriteriaOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaOutput {
-	return o
-}
-
-// Plist
-func (o GetHipObjectCustomChecksCriteriaOutput) Plists() GetHipObjectCustomChecksCriteriaPlistArrayOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteria) []GetHipObjectCustomChecksCriteriaPlist { return v.Plists }).(GetHipObjectCustomChecksCriteriaPlistArrayOutput)
-}
-
-// Process list
-func (o GetHipObjectCustomChecksCriteriaOutput) ProcessLists() GetHipObjectCustomChecksCriteriaProcessListArrayOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteria) []GetHipObjectCustomChecksCriteriaProcessList {
-		return v.ProcessLists
-	}).(GetHipObjectCustomChecksCriteriaProcessListArrayOutput)
-}
-
-// Registry key
-func (o GetHipObjectCustomChecksCriteriaOutput) RegistryKeys() GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteria) []GetHipObjectCustomChecksCriteriaRegistryKey {
-		return v.RegistryKeys
-	}).(GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaPlist struct {
-	// Key
-	Keys []GetHipObjectCustomChecksCriteriaPlistKey `pulumi:"keys"`
-	// Preference list
-	Name string `pulumi:"name"`
-	// Plist does not exist
-	Negate bool `pulumi:"negate"`
-}
-
-// GetHipObjectCustomChecksCriteriaPlistInput is an input type that accepts GetHipObjectCustomChecksCriteriaPlistArgs and GetHipObjectCustomChecksCriteriaPlistOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksCriteriaPlistInput` via:
-//
-//	GetHipObjectCustomChecksCriteriaPlistArgs{...}
-type GetHipObjectCustomChecksCriteriaPlistInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksCriteriaPlistOutput() GetHipObjectCustomChecksCriteriaPlistOutput
-	ToGetHipObjectCustomChecksCriteriaPlistOutputWithContext(context.Context) GetHipObjectCustomChecksCriteriaPlistOutput
-}
-
-type GetHipObjectCustomChecksCriteriaPlistArgs struct {
-	// Key
-	Keys GetHipObjectCustomChecksCriteriaPlistKeyArrayInput `pulumi:"keys"`
-	// Preference list
-	Name pulumi.StringInput `pulumi:"name"`
-	// Plist does not exist
-	Negate pulumi.BoolInput `pulumi:"negate"`
-}
-
-func (GetHipObjectCustomChecksCriteriaPlistArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteriaPlist)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksCriteriaPlistArgs) ToGetHipObjectCustomChecksCriteriaPlistOutput() GetHipObjectCustomChecksCriteriaPlistOutput {
-	return i.ToGetHipObjectCustomChecksCriteriaPlistOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksCriteriaPlistArgs) ToGetHipObjectCustomChecksCriteriaPlistOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaPlistOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksCriteriaPlistOutput)
-}
-
-// GetHipObjectCustomChecksCriteriaPlistArrayInput is an input type that accepts GetHipObjectCustomChecksCriteriaPlistArray and GetHipObjectCustomChecksCriteriaPlistArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksCriteriaPlistArrayInput` via:
-//
-//	GetHipObjectCustomChecksCriteriaPlistArray{ GetHipObjectCustomChecksCriteriaPlistArgs{...} }
-type GetHipObjectCustomChecksCriteriaPlistArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksCriteriaPlistArrayOutput() GetHipObjectCustomChecksCriteriaPlistArrayOutput
-	ToGetHipObjectCustomChecksCriteriaPlistArrayOutputWithContext(context.Context) GetHipObjectCustomChecksCriteriaPlistArrayOutput
-}
-
-type GetHipObjectCustomChecksCriteriaPlistArray []GetHipObjectCustomChecksCriteriaPlistInput
-
-func (GetHipObjectCustomChecksCriteriaPlistArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCustomChecksCriteriaPlist)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksCriteriaPlistArray) ToGetHipObjectCustomChecksCriteriaPlistArrayOutput() GetHipObjectCustomChecksCriteriaPlistArrayOutput {
-	return i.ToGetHipObjectCustomChecksCriteriaPlistArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksCriteriaPlistArray) ToGetHipObjectCustomChecksCriteriaPlistArrayOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaPlistArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksCriteriaPlistArrayOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaPlistOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksCriteriaPlistOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteriaPlist)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksCriteriaPlistOutput) ToGetHipObjectCustomChecksCriteriaPlistOutput() GetHipObjectCustomChecksCriteriaPlistOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaPlistOutput) ToGetHipObjectCustomChecksCriteriaPlistOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaPlistOutput {
-	return o
-}
-
-// Key
-func (o GetHipObjectCustomChecksCriteriaPlistOutput) Keys() GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaPlist) []GetHipObjectCustomChecksCriteriaPlistKey {
-		return v.Keys
-	}).(GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput)
-}
-
-// Preference list
-func (o GetHipObjectCustomChecksCriteriaPlistOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaPlist) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Plist does not exist
-func (o GetHipObjectCustomChecksCriteriaPlistOutput) Negate() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaPlist) bool { return v.Negate }).(pulumi.BoolOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaPlistArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksCriteriaPlistArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCustomChecksCriteriaPlist)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksCriteriaPlistArrayOutput) ToGetHipObjectCustomChecksCriteriaPlistArrayOutput() GetHipObjectCustomChecksCriteriaPlistArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaPlistArrayOutput) ToGetHipObjectCustomChecksCriteriaPlistArrayOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaPlistArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaPlistArrayOutput) Index(i pulumi.IntInput) GetHipObjectCustomChecksCriteriaPlistOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectCustomChecksCriteriaPlist {
-		return vs[0].([]GetHipObjectCustomChecksCriteriaPlist)[vs[1].(int)]
-	}).(GetHipObjectCustomChecksCriteriaPlistOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaPlistKey struct {
-	// Key name
-	Name string `pulumi:"name"`
-	// Value does not exist or match specified value data
-	Negate bool `pulumi:"negate"`
-	// Key value
-	Value string `pulumi:"value"`
-}
-
-// GetHipObjectCustomChecksCriteriaPlistKeyInput is an input type that accepts GetHipObjectCustomChecksCriteriaPlistKeyArgs and GetHipObjectCustomChecksCriteriaPlistKeyOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksCriteriaPlistKeyInput` via:
-//
-//	GetHipObjectCustomChecksCriteriaPlistKeyArgs{...}
-type GetHipObjectCustomChecksCriteriaPlistKeyInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksCriteriaPlistKeyOutput() GetHipObjectCustomChecksCriteriaPlistKeyOutput
-	ToGetHipObjectCustomChecksCriteriaPlistKeyOutputWithContext(context.Context) GetHipObjectCustomChecksCriteriaPlistKeyOutput
-}
-
-type GetHipObjectCustomChecksCriteriaPlistKeyArgs struct {
-	// Key name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Value does not exist or match specified value data
-	Negate pulumi.BoolInput `pulumi:"negate"`
-	// Key value
-	Value pulumi.StringInput `pulumi:"value"`
-}
-
-func (GetHipObjectCustomChecksCriteriaPlistKeyArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteriaPlistKey)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksCriteriaPlistKeyArgs) ToGetHipObjectCustomChecksCriteriaPlistKeyOutput() GetHipObjectCustomChecksCriteriaPlistKeyOutput {
-	return i.ToGetHipObjectCustomChecksCriteriaPlistKeyOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksCriteriaPlistKeyArgs) ToGetHipObjectCustomChecksCriteriaPlistKeyOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaPlistKeyOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksCriteriaPlistKeyOutput)
-}
-
-// GetHipObjectCustomChecksCriteriaPlistKeyArrayInput is an input type that accepts GetHipObjectCustomChecksCriteriaPlistKeyArray and GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksCriteriaPlistKeyArrayInput` via:
-//
-//	GetHipObjectCustomChecksCriteriaPlistKeyArray{ GetHipObjectCustomChecksCriteriaPlistKeyArgs{...} }
-type GetHipObjectCustomChecksCriteriaPlistKeyArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksCriteriaPlistKeyArrayOutput() GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput
-	ToGetHipObjectCustomChecksCriteriaPlistKeyArrayOutputWithContext(context.Context) GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput
-}
-
-type GetHipObjectCustomChecksCriteriaPlistKeyArray []GetHipObjectCustomChecksCriteriaPlistKeyInput
-
-func (GetHipObjectCustomChecksCriteriaPlistKeyArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCustomChecksCriteriaPlistKey)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksCriteriaPlistKeyArray) ToGetHipObjectCustomChecksCriteriaPlistKeyArrayOutput() GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput {
-	return i.ToGetHipObjectCustomChecksCriteriaPlistKeyArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksCriteriaPlistKeyArray) ToGetHipObjectCustomChecksCriteriaPlistKeyArrayOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaPlistKeyOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksCriteriaPlistKeyOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteriaPlistKey)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksCriteriaPlistKeyOutput) ToGetHipObjectCustomChecksCriteriaPlistKeyOutput() GetHipObjectCustomChecksCriteriaPlistKeyOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaPlistKeyOutput) ToGetHipObjectCustomChecksCriteriaPlistKeyOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaPlistKeyOutput {
-	return o
-}
-
-// Key name
-func (o GetHipObjectCustomChecksCriteriaPlistKeyOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaPlistKey) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Value does not exist or match specified value data
-func (o GetHipObjectCustomChecksCriteriaPlistKeyOutput) Negate() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaPlistKey) bool { return v.Negate }).(pulumi.BoolOutput)
-}
-
-// Key value
-func (o GetHipObjectCustomChecksCriteriaPlistKeyOutput) Value() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaPlistKey) string { return v.Value }).(pulumi.StringOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCustomChecksCriteriaPlistKey)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput) ToGetHipObjectCustomChecksCriteriaPlistKeyArrayOutput() GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput) ToGetHipObjectCustomChecksCriteriaPlistKeyArrayOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput) Index(i pulumi.IntInput) GetHipObjectCustomChecksCriteriaPlistKeyOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectCustomChecksCriteriaPlistKey {
-		return vs[0].([]GetHipObjectCustomChecksCriteriaPlistKey)[vs[1].(int)]
-	}).(GetHipObjectCustomChecksCriteriaPlistKeyOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaProcessList struct {
-	// Process Name
-	Name string `pulumi:"name"`
-	// Running
-	Running bool `pulumi:"running"`
-}
-
-// GetHipObjectCustomChecksCriteriaProcessListInput is an input type that accepts GetHipObjectCustomChecksCriteriaProcessListArgs and GetHipObjectCustomChecksCriteriaProcessListOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksCriteriaProcessListInput` via:
-//
-//	GetHipObjectCustomChecksCriteriaProcessListArgs{...}
-type GetHipObjectCustomChecksCriteriaProcessListInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksCriteriaProcessListOutput() GetHipObjectCustomChecksCriteriaProcessListOutput
-	ToGetHipObjectCustomChecksCriteriaProcessListOutputWithContext(context.Context) GetHipObjectCustomChecksCriteriaProcessListOutput
-}
-
-type GetHipObjectCustomChecksCriteriaProcessListArgs struct {
-	// Process Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Running
-	Running pulumi.BoolInput `pulumi:"running"`
-}
-
-func (GetHipObjectCustomChecksCriteriaProcessListArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteriaProcessList)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksCriteriaProcessListArgs) ToGetHipObjectCustomChecksCriteriaProcessListOutput() GetHipObjectCustomChecksCriteriaProcessListOutput {
-	return i.ToGetHipObjectCustomChecksCriteriaProcessListOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksCriteriaProcessListArgs) ToGetHipObjectCustomChecksCriteriaProcessListOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaProcessListOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksCriteriaProcessListOutput)
-}
-
-// GetHipObjectCustomChecksCriteriaProcessListArrayInput is an input type that accepts GetHipObjectCustomChecksCriteriaProcessListArray and GetHipObjectCustomChecksCriteriaProcessListArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksCriteriaProcessListArrayInput` via:
-//
-//	GetHipObjectCustomChecksCriteriaProcessListArray{ GetHipObjectCustomChecksCriteriaProcessListArgs{...} }
-type GetHipObjectCustomChecksCriteriaProcessListArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksCriteriaProcessListArrayOutput() GetHipObjectCustomChecksCriteriaProcessListArrayOutput
-	ToGetHipObjectCustomChecksCriteriaProcessListArrayOutputWithContext(context.Context) GetHipObjectCustomChecksCriteriaProcessListArrayOutput
-}
-
-type GetHipObjectCustomChecksCriteriaProcessListArray []GetHipObjectCustomChecksCriteriaProcessListInput
-
-func (GetHipObjectCustomChecksCriteriaProcessListArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCustomChecksCriteriaProcessList)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksCriteriaProcessListArray) ToGetHipObjectCustomChecksCriteriaProcessListArrayOutput() GetHipObjectCustomChecksCriteriaProcessListArrayOutput {
-	return i.ToGetHipObjectCustomChecksCriteriaProcessListArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksCriteriaProcessListArray) ToGetHipObjectCustomChecksCriteriaProcessListArrayOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaProcessListArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksCriteriaProcessListArrayOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaProcessListOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksCriteriaProcessListOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteriaProcessList)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksCriteriaProcessListOutput) ToGetHipObjectCustomChecksCriteriaProcessListOutput() GetHipObjectCustomChecksCriteriaProcessListOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaProcessListOutput) ToGetHipObjectCustomChecksCriteriaProcessListOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaProcessListOutput {
-	return o
-}
-
-// Process Name
-func (o GetHipObjectCustomChecksCriteriaProcessListOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaProcessList) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Running
-func (o GetHipObjectCustomChecksCriteriaProcessListOutput) Running() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaProcessList) bool { return v.Running }).(pulumi.BoolOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaProcessListArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksCriteriaProcessListArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCustomChecksCriteriaProcessList)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksCriteriaProcessListArrayOutput) ToGetHipObjectCustomChecksCriteriaProcessListArrayOutput() GetHipObjectCustomChecksCriteriaProcessListArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaProcessListArrayOutput) ToGetHipObjectCustomChecksCriteriaProcessListArrayOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaProcessListArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaProcessListArrayOutput) Index(i pulumi.IntInput) GetHipObjectCustomChecksCriteriaProcessListOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectCustomChecksCriteriaProcessList {
-		return vs[0].([]GetHipObjectCustomChecksCriteriaProcessList)[vs[1].(int)]
-	}).(GetHipObjectCustomChecksCriteriaProcessListOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaRegistryKey struct {
-	// Registry key default value data
-	DefaultValueData string `pulumi:"defaultValueData"`
-	// Registry key
-	Name string `pulumi:"name"`
-	// Key does not exist or match specified value data
-	Negate bool `pulumi:"negate"`
-	// Registry value
-	RegistryValues []GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue `pulumi:"registryValues"`
-}
-
-// GetHipObjectCustomChecksCriteriaRegistryKeyInput is an input type that accepts GetHipObjectCustomChecksCriteriaRegistryKeyArgs and GetHipObjectCustomChecksCriteriaRegistryKeyOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksCriteriaRegistryKeyInput` via:
-//
-//	GetHipObjectCustomChecksCriteriaRegistryKeyArgs{...}
-type GetHipObjectCustomChecksCriteriaRegistryKeyInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksCriteriaRegistryKeyOutput() GetHipObjectCustomChecksCriteriaRegistryKeyOutput
-	ToGetHipObjectCustomChecksCriteriaRegistryKeyOutputWithContext(context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyOutput
-}
-
-type GetHipObjectCustomChecksCriteriaRegistryKeyArgs struct {
-	// Registry key default value data
-	DefaultValueData pulumi.StringInput `pulumi:"defaultValueData"`
-	// Registry key
-	Name pulumi.StringInput `pulumi:"name"`
-	// Key does not exist or match specified value data
-	Negate pulumi.BoolInput `pulumi:"negate"`
-	// Registry value
-	RegistryValues GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayInput `pulumi:"registryValues"`
-}
-
-func (GetHipObjectCustomChecksCriteriaRegistryKeyArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteriaRegistryKey)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksCriteriaRegistryKeyArgs) ToGetHipObjectCustomChecksCriteriaRegistryKeyOutput() GetHipObjectCustomChecksCriteriaRegistryKeyOutput {
-	return i.ToGetHipObjectCustomChecksCriteriaRegistryKeyOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksCriteriaRegistryKeyArgs) ToGetHipObjectCustomChecksCriteriaRegistryKeyOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksCriteriaRegistryKeyOutput)
-}
-
-// GetHipObjectCustomChecksCriteriaRegistryKeyArrayInput is an input type that accepts GetHipObjectCustomChecksCriteriaRegistryKeyArray and GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksCriteriaRegistryKeyArrayInput` via:
-//
-//	GetHipObjectCustomChecksCriteriaRegistryKeyArray{ GetHipObjectCustomChecksCriteriaRegistryKeyArgs{...} }
-type GetHipObjectCustomChecksCriteriaRegistryKeyArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput() GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput
-	ToGetHipObjectCustomChecksCriteriaRegistryKeyArrayOutputWithContext(context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput
-}
-
-type GetHipObjectCustomChecksCriteriaRegistryKeyArray []GetHipObjectCustomChecksCriteriaRegistryKeyInput
-
-func (GetHipObjectCustomChecksCriteriaRegistryKeyArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCustomChecksCriteriaRegistryKey)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksCriteriaRegistryKeyArray) ToGetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput() GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput {
-	return i.ToGetHipObjectCustomChecksCriteriaRegistryKeyArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksCriteriaRegistryKeyArray) ToGetHipObjectCustomChecksCriteriaRegistryKeyArrayOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaRegistryKeyOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksCriteriaRegistryKeyOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteriaRegistryKey)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyOutput) ToGetHipObjectCustomChecksCriteriaRegistryKeyOutput() GetHipObjectCustomChecksCriteriaRegistryKeyOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyOutput) ToGetHipObjectCustomChecksCriteriaRegistryKeyOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyOutput {
-	return o
-}
-
-// Registry key default value data
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyOutput) DefaultValueData() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaRegistryKey) string { return v.DefaultValueData }).(pulumi.StringOutput)
-}
-
-// Registry key
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaRegistryKey) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Key does not exist or match specified value data
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyOutput) Negate() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaRegistryKey) bool { return v.Negate }).(pulumi.BoolOutput)
-}
-
-// Registry value
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyOutput) RegistryValues() GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaRegistryKey) []GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue {
-		return v.RegistryValues
-	}).(GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCustomChecksCriteriaRegistryKey)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput) ToGetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput() GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput) ToGetHipObjectCustomChecksCriteriaRegistryKeyArrayOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput) Index(i pulumi.IntInput) GetHipObjectCustomChecksCriteriaRegistryKeyOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectCustomChecksCriteriaRegistryKey {
-		return vs[0].([]GetHipObjectCustomChecksCriteriaRegistryKey)[vs[1].(int)]
-	}).(GetHipObjectCustomChecksCriteriaRegistryKeyOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue struct {
-	// Registry value name
-	Name string `pulumi:"name"`
-	// Value does not exist or match specified value data
-	Negate bool `pulumi:"negate"`
-	// Registry value data
-	ValueData string `pulumi:"valueData"`
-}
-
-// GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueInput is an input type that accepts GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs and GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueInput` via:
-//
-//	GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs{...}
-type GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput() GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput
-	ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutputWithContext(context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput
-}
-
-type GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs struct {
-	// Registry value name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Value does not exist or match specified value data
-	Negate pulumi.BoolInput `pulumi:"negate"`
-	// Registry value data
-	ValueData pulumi.StringInput `pulumi:"valueData"`
-}
-
-func (GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs) ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput() GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput {
-	return i.ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs) ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput)
-}
-
-// GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayInput is an input type that accepts GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArray and GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayInput` via:
-//
-//	GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArray{ GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs{...} }
-type GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput() GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput
-	ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutputWithContext(context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput
-}
-
-type GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArray []GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueInput
-
-func (GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArray) ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput() GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput {
-	return i.ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArray) ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput) ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput() GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput) ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput {
-	return o
-}
-
-// Registry value name
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Value does not exist or match specified value data
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput) Negate() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue) bool { return v.Negate }).(pulumi.BoolOutput)
-}
-
-// Registry value data
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput) ValueData() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue) string { return v.ValueData }).(pulumi.StringOutput)
-}
-
-type GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput) ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput() GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput) ToGetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutputWithContext(ctx context.Context) GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput) Index(i pulumi.IntInput) GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue {
-		return vs[0].([]GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue)[vs[1].(int)]
-	}).(GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput)
-}
-
-type GetHipObjectDataLossPrevention struct {
-	// Criteria
-	Criteria GetHipObjectDataLossPreventionCriteria `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor bool `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors []GetHipObjectDataLossPreventionVendor `pulumi:"vendors"`
-}
-
-// GetHipObjectDataLossPreventionInput is an input type that accepts GetHipObjectDataLossPreventionArgs and GetHipObjectDataLossPreventionOutput values.
-// You can construct a concrete instance of `GetHipObjectDataLossPreventionInput` via:
-//
-//	GetHipObjectDataLossPreventionArgs{...}
-type GetHipObjectDataLossPreventionInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDataLossPreventionOutput() GetHipObjectDataLossPreventionOutput
-	ToGetHipObjectDataLossPreventionOutputWithContext(context.Context) GetHipObjectDataLossPreventionOutput
-}
-
-type GetHipObjectDataLossPreventionArgs struct {
-	// Criteria
-	Criteria GetHipObjectDataLossPreventionCriteriaInput `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor pulumi.BoolInput `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors GetHipObjectDataLossPreventionVendorArrayInput `pulumi:"vendors"`
-}
-
-func (GetHipObjectDataLossPreventionArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDataLossPrevention)(nil)).Elem()
-}
-
-func (i GetHipObjectDataLossPreventionArgs) ToGetHipObjectDataLossPreventionOutput() GetHipObjectDataLossPreventionOutput {
-	return i.ToGetHipObjectDataLossPreventionOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDataLossPreventionArgs) ToGetHipObjectDataLossPreventionOutputWithContext(ctx context.Context) GetHipObjectDataLossPreventionOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDataLossPreventionOutput)
-}
-
-type GetHipObjectDataLossPreventionOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDataLossPreventionOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDataLossPrevention)(nil)).Elem()
-}
-
-func (o GetHipObjectDataLossPreventionOutput) ToGetHipObjectDataLossPreventionOutput() GetHipObjectDataLossPreventionOutput {
-	return o
-}
-
-func (o GetHipObjectDataLossPreventionOutput) ToGetHipObjectDataLossPreventionOutputWithContext(ctx context.Context) GetHipObjectDataLossPreventionOutput {
-	return o
-}
-
-// Criteria
-func (o GetHipObjectDataLossPreventionOutput) Criteria() GetHipObjectDataLossPreventionCriteriaOutput {
-	return o.ApplyT(func(v GetHipObjectDataLossPrevention) GetHipObjectDataLossPreventionCriteria { return v.Criteria }).(GetHipObjectDataLossPreventionCriteriaOutput)
-}
-
-// Exclude vendor
-func (o GetHipObjectDataLossPreventionOutput) ExcludeVendor() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectDataLossPrevention) bool { return v.ExcludeVendor }).(pulumi.BoolOutput)
-}
-
-// Vendor name
-func (o GetHipObjectDataLossPreventionOutput) Vendors() GetHipObjectDataLossPreventionVendorArrayOutput {
-	return o.ApplyT(func(v GetHipObjectDataLossPrevention) []GetHipObjectDataLossPreventionVendor { return v.Vendors }).(GetHipObjectDataLossPreventionVendorArrayOutput)
-}
-
-type GetHipObjectDataLossPreventionCriteria struct {
-	// is enabled
-	IsEnabled string `pulumi:"isEnabled"`
-	// Is Installed
-	IsInstalled bool `pulumi:"isInstalled"`
-}
-
-// GetHipObjectDataLossPreventionCriteriaInput is an input type that accepts GetHipObjectDataLossPreventionCriteriaArgs and GetHipObjectDataLossPreventionCriteriaOutput values.
-// You can construct a concrete instance of `GetHipObjectDataLossPreventionCriteriaInput` via:
-//
-//	GetHipObjectDataLossPreventionCriteriaArgs{...}
-type GetHipObjectDataLossPreventionCriteriaInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDataLossPreventionCriteriaOutput() GetHipObjectDataLossPreventionCriteriaOutput
-	ToGetHipObjectDataLossPreventionCriteriaOutputWithContext(context.Context) GetHipObjectDataLossPreventionCriteriaOutput
-}
-
-type GetHipObjectDataLossPreventionCriteriaArgs struct {
-	// is enabled
-	IsEnabled pulumi.StringInput `pulumi:"isEnabled"`
-	// Is Installed
-	IsInstalled pulumi.BoolInput `pulumi:"isInstalled"`
-}
-
-func (GetHipObjectDataLossPreventionCriteriaArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDataLossPreventionCriteria)(nil)).Elem()
-}
-
-func (i GetHipObjectDataLossPreventionCriteriaArgs) ToGetHipObjectDataLossPreventionCriteriaOutput() GetHipObjectDataLossPreventionCriteriaOutput {
-	return i.ToGetHipObjectDataLossPreventionCriteriaOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDataLossPreventionCriteriaArgs) ToGetHipObjectDataLossPreventionCriteriaOutputWithContext(ctx context.Context) GetHipObjectDataLossPreventionCriteriaOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDataLossPreventionCriteriaOutput)
-}
-
-type GetHipObjectDataLossPreventionCriteriaOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDataLossPreventionCriteriaOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDataLossPreventionCriteria)(nil)).Elem()
-}
-
-func (o GetHipObjectDataLossPreventionCriteriaOutput) ToGetHipObjectDataLossPreventionCriteriaOutput() GetHipObjectDataLossPreventionCriteriaOutput {
-	return o
-}
-
-func (o GetHipObjectDataLossPreventionCriteriaOutput) ToGetHipObjectDataLossPreventionCriteriaOutputWithContext(ctx context.Context) GetHipObjectDataLossPreventionCriteriaOutput {
-	return o
-}
-
-// is enabled
-func (o GetHipObjectDataLossPreventionCriteriaOutput) IsEnabled() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectDataLossPreventionCriteria) string { return v.IsEnabled }).(pulumi.StringOutput)
-}
-
-// Is Installed
-func (o GetHipObjectDataLossPreventionCriteriaOutput) IsInstalled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectDataLossPreventionCriteria) bool { return v.IsInstalled }).(pulumi.BoolOutput)
-}
-
-type GetHipObjectDataLossPreventionVendor struct {
-	// Name
-	Name string `pulumi:"name"`
-	// Product name
-	Products []string `pulumi:"products"`
-}
-
-// GetHipObjectDataLossPreventionVendorInput is an input type that accepts GetHipObjectDataLossPreventionVendorArgs and GetHipObjectDataLossPreventionVendorOutput values.
-// You can construct a concrete instance of `GetHipObjectDataLossPreventionVendorInput` via:
-//
-//	GetHipObjectDataLossPreventionVendorArgs{...}
-type GetHipObjectDataLossPreventionVendorInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDataLossPreventionVendorOutput() GetHipObjectDataLossPreventionVendorOutput
-	ToGetHipObjectDataLossPreventionVendorOutputWithContext(context.Context) GetHipObjectDataLossPreventionVendorOutput
-}
-
-type GetHipObjectDataLossPreventionVendorArgs struct {
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Product name
-	Products pulumi.StringArrayInput `pulumi:"products"`
-}
-
-func (GetHipObjectDataLossPreventionVendorArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDataLossPreventionVendor)(nil)).Elem()
-}
-
-func (i GetHipObjectDataLossPreventionVendorArgs) ToGetHipObjectDataLossPreventionVendorOutput() GetHipObjectDataLossPreventionVendorOutput {
-	return i.ToGetHipObjectDataLossPreventionVendorOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDataLossPreventionVendorArgs) ToGetHipObjectDataLossPreventionVendorOutputWithContext(ctx context.Context) GetHipObjectDataLossPreventionVendorOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDataLossPreventionVendorOutput)
-}
-
-// GetHipObjectDataLossPreventionVendorArrayInput is an input type that accepts GetHipObjectDataLossPreventionVendorArray and GetHipObjectDataLossPreventionVendorArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectDataLossPreventionVendorArrayInput` via:
-//
-//	GetHipObjectDataLossPreventionVendorArray{ GetHipObjectDataLossPreventionVendorArgs{...} }
-type GetHipObjectDataLossPreventionVendorArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDataLossPreventionVendorArrayOutput() GetHipObjectDataLossPreventionVendorArrayOutput
-	ToGetHipObjectDataLossPreventionVendorArrayOutputWithContext(context.Context) GetHipObjectDataLossPreventionVendorArrayOutput
-}
-
-type GetHipObjectDataLossPreventionVendorArray []GetHipObjectDataLossPreventionVendorInput
-
-func (GetHipObjectDataLossPreventionVendorArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectDataLossPreventionVendor)(nil)).Elem()
-}
-
-func (i GetHipObjectDataLossPreventionVendorArray) ToGetHipObjectDataLossPreventionVendorArrayOutput() GetHipObjectDataLossPreventionVendorArrayOutput {
-	return i.ToGetHipObjectDataLossPreventionVendorArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDataLossPreventionVendorArray) ToGetHipObjectDataLossPreventionVendorArrayOutputWithContext(ctx context.Context) GetHipObjectDataLossPreventionVendorArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDataLossPreventionVendorArrayOutput)
-}
-
-type GetHipObjectDataLossPreventionVendorOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDataLossPreventionVendorOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDataLossPreventionVendor)(nil)).Elem()
-}
-
-func (o GetHipObjectDataLossPreventionVendorOutput) ToGetHipObjectDataLossPreventionVendorOutput() GetHipObjectDataLossPreventionVendorOutput {
-	return o
-}
-
-func (o GetHipObjectDataLossPreventionVendorOutput) ToGetHipObjectDataLossPreventionVendorOutputWithContext(ctx context.Context) GetHipObjectDataLossPreventionVendorOutput {
-	return o
-}
-
-// Name
-func (o GetHipObjectDataLossPreventionVendorOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectDataLossPreventionVendor) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Product name
-func (o GetHipObjectDataLossPreventionVendorOutput) Products() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetHipObjectDataLossPreventionVendor) []string { return v.Products }).(pulumi.StringArrayOutput)
-}
-
-type GetHipObjectDataLossPreventionVendorArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDataLossPreventionVendorArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectDataLossPreventionVendor)(nil)).Elem()
-}
-
-func (o GetHipObjectDataLossPreventionVendorArrayOutput) ToGetHipObjectDataLossPreventionVendorArrayOutput() GetHipObjectDataLossPreventionVendorArrayOutput {
-	return o
-}
-
-func (o GetHipObjectDataLossPreventionVendorArrayOutput) ToGetHipObjectDataLossPreventionVendorArrayOutputWithContext(ctx context.Context) GetHipObjectDataLossPreventionVendorArrayOutput {
-	return o
-}
-
-func (o GetHipObjectDataLossPreventionVendorArrayOutput) Index(i pulumi.IntInput) GetHipObjectDataLossPreventionVendorOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectDataLossPreventionVendor {
-		return vs[0].([]GetHipObjectDataLossPreventionVendor)[vs[1].(int)]
-	}).(GetHipObjectDataLossPreventionVendorOutput)
-}
-
-type GetHipObjectDiskBackup struct {
-	// Criteria
-	Criteria GetHipObjectDiskBackupCriteria `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor bool `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors []GetHipObjectDiskBackupVendor `pulumi:"vendors"`
-}
-
-// GetHipObjectDiskBackupInput is an input type that accepts GetHipObjectDiskBackupArgs and GetHipObjectDiskBackupOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskBackupInput` via:
-//
-//	GetHipObjectDiskBackupArgs{...}
-type GetHipObjectDiskBackupInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskBackupOutput() GetHipObjectDiskBackupOutput
-	ToGetHipObjectDiskBackupOutputWithContext(context.Context) GetHipObjectDiskBackupOutput
-}
-
-type GetHipObjectDiskBackupArgs struct {
-	// Criteria
-	Criteria GetHipObjectDiskBackupCriteriaInput `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor pulumi.BoolInput `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors GetHipObjectDiskBackupVendorArrayInput `pulumi:"vendors"`
-}
-
-func (GetHipObjectDiskBackupArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackup)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskBackupArgs) ToGetHipObjectDiskBackupOutput() GetHipObjectDiskBackupOutput {
-	return i.ToGetHipObjectDiskBackupOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskBackupArgs) ToGetHipObjectDiskBackupOutputWithContext(ctx context.Context) GetHipObjectDiskBackupOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskBackupOutput)
-}
-
-type GetHipObjectDiskBackupOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskBackupOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackup)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskBackupOutput) ToGetHipObjectDiskBackupOutput() GetHipObjectDiskBackupOutput {
-	return o
-}
-
-func (o GetHipObjectDiskBackupOutput) ToGetHipObjectDiskBackupOutputWithContext(ctx context.Context) GetHipObjectDiskBackupOutput {
-	return o
-}
-
-// Criteria
-func (o GetHipObjectDiskBackupOutput) Criteria() GetHipObjectDiskBackupCriteriaOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackup) GetHipObjectDiskBackupCriteria { return v.Criteria }).(GetHipObjectDiskBackupCriteriaOutput)
-}
-
-// Exclude vendor
-func (o GetHipObjectDiskBackupOutput) ExcludeVendor() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackup) bool { return v.ExcludeVendor }).(pulumi.BoolOutput)
-}
-
-// Vendor name
-func (o GetHipObjectDiskBackupOutput) Vendors() GetHipObjectDiskBackupVendorArrayOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackup) []GetHipObjectDiskBackupVendor { return v.Vendors }).(GetHipObjectDiskBackupVendorArrayOutput)
-}
-
-type GetHipObjectDiskBackupCriteria struct {
-	// Is Installed
-	IsInstalled bool `pulumi:"isInstalled"`
-	// Last backup time
-	LastBackupTime GetHipObjectDiskBackupCriteriaLastBackupTime `pulumi:"lastBackupTime"`
-}
-
-// GetHipObjectDiskBackupCriteriaInput is an input type that accepts GetHipObjectDiskBackupCriteriaArgs and GetHipObjectDiskBackupCriteriaOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskBackupCriteriaInput` via:
-//
-//	GetHipObjectDiskBackupCriteriaArgs{...}
-type GetHipObjectDiskBackupCriteriaInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskBackupCriteriaOutput() GetHipObjectDiskBackupCriteriaOutput
-	ToGetHipObjectDiskBackupCriteriaOutputWithContext(context.Context) GetHipObjectDiskBackupCriteriaOutput
-}
-
-type GetHipObjectDiskBackupCriteriaArgs struct {
-	// Is Installed
-	IsInstalled pulumi.BoolInput `pulumi:"isInstalled"`
-	// Last backup time
-	LastBackupTime GetHipObjectDiskBackupCriteriaLastBackupTimeInput `pulumi:"lastBackupTime"`
-}
-
-func (GetHipObjectDiskBackupCriteriaArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupCriteria)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskBackupCriteriaArgs) ToGetHipObjectDiskBackupCriteriaOutput() GetHipObjectDiskBackupCriteriaOutput {
-	return i.ToGetHipObjectDiskBackupCriteriaOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskBackupCriteriaArgs) ToGetHipObjectDiskBackupCriteriaOutputWithContext(ctx context.Context) GetHipObjectDiskBackupCriteriaOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskBackupCriteriaOutput)
-}
-
-type GetHipObjectDiskBackupCriteriaOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskBackupCriteriaOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupCriteria)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskBackupCriteriaOutput) ToGetHipObjectDiskBackupCriteriaOutput() GetHipObjectDiskBackupCriteriaOutput {
-	return o
-}
-
-func (o GetHipObjectDiskBackupCriteriaOutput) ToGetHipObjectDiskBackupCriteriaOutputWithContext(ctx context.Context) GetHipObjectDiskBackupCriteriaOutput {
-	return o
-}
-
-// Is Installed
-func (o GetHipObjectDiskBackupCriteriaOutput) IsInstalled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackupCriteria) bool { return v.IsInstalled }).(pulumi.BoolOutput)
-}
-
-// Last backup time
-func (o GetHipObjectDiskBackupCriteriaOutput) LastBackupTime() GetHipObjectDiskBackupCriteriaLastBackupTimeOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackupCriteria) GetHipObjectDiskBackupCriteriaLastBackupTime {
-		return v.LastBackupTime
-	}).(GetHipObjectDiskBackupCriteriaLastBackupTimeOutput)
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTime struct {
-	// Not available
-	NotAvailable GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable `pulumi:"notAvailable"`
-	// Not within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	NotWithin GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin `pulumi:"notWithin"`
-	// Within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	Within GetHipObjectDiskBackupCriteriaLastBackupTimeWithin `pulumi:"within"`
-}
-
-// GetHipObjectDiskBackupCriteriaLastBackupTimeInput is an input type that accepts GetHipObjectDiskBackupCriteriaLastBackupTimeArgs and GetHipObjectDiskBackupCriteriaLastBackupTimeOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskBackupCriteriaLastBackupTimeInput` via:
-//
-//	GetHipObjectDiskBackupCriteriaLastBackupTimeArgs{...}
-type GetHipObjectDiskBackupCriteriaLastBackupTimeInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskBackupCriteriaLastBackupTimeOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeOutput
-	ToGetHipObjectDiskBackupCriteriaLastBackupTimeOutputWithContext(context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeOutput
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTimeArgs struct {
-	// Not available
-	NotAvailable GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableInput `pulumi:"notAvailable"`
-	// Not within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	NotWithin GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinInput `pulumi:"notWithin"`
-	// Within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	Within GetHipObjectDiskBackupCriteriaLastBackupTimeWithinInput `pulumi:"within"`
-}
-
-func (GetHipObjectDiskBackupCriteriaLastBackupTimeArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTime)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskBackupCriteriaLastBackupTimeArgs) ToGetHipObjectDiskBackupCriteriaLastBackupTimeOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeOutput {
-	return i.ToGetHipObjectDiskBackupCriteriaLastBackupTimeOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskBackupCriteriaLastBackupTimeArgs) ToGetHipObjectDiskBackupCriteriaLastBackupTimeOutputWithContext(ctx context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskBackupCriteriaLastBackupTimeOutput)
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTimeOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTime)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) ToGetHipObjectDiskBackupCriteriaLastBackupTimeOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeOutput {
-	return o
-}
-
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) ToGetHipObjectDiskBackupCriteriaLastBackupTimeOutputWithContext(ctx context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeOutput {
-	return o
-}
-
-// Not available
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) NotAvailable() GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTime) GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable {
-		return v.NotAvailable
-	}).(GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput)
-}
-
-// Not within
-//
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) NotWithin() GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTime) GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin {
-		return v.NotWithin
-	}).(GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput)
-}
-
-// Within
-//
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeOutput) Within() GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTime) GetHipObjectDiskBackupCriteriaLastBackupTimeWithin {
-		return v.Within
-	}).(GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput)
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable struct {
-}
-
-// GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableInput is an input type that accepts GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs and GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableInput` via:
-//
-//	GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs{...}
-type GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput
-	ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutputWithContext(context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs struct {
-}
-
-func (GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs) ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput {
-	return i.ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs) ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutputWithContext(ctx context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput)
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput) ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput {
-	return o
-}
-
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput) ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutputWithContext(ctx context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput {
-	return o
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin struct {
-	// specify time in days
-	Days int `pulumi:"days"`
-	// specify time in hours
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-	Hours int `pulumi:"hours"`
-}
-
-// GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinInput is an input type that accepts GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs and GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinInput` via:
-//
-//	GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs{...}
-type GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput
-	ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutputWithContext(context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs struct {
-	// specify time in days
-	Days pulumi.IntInput `pulumi:"days"`
-	// specify time in hours
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-	Hours pulumi.IntInput `pulumi:"hours"`
-}
-
-func (GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs) ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput {
-	return i.ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs) ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutputWithContext(ctx context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput)
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput {
-	return o
-}
-
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) ToGetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutputWithContext(ctx context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput {
-	return o
-}
-
-// specify time in days
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) Days() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin) int { return v.Days }).(pulumi.IntOutput)
-}
-
-// specify time in hours
-//
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput) Hours() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin) int { return v.Hours }).(pulumi.IntOutput)
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTimeWithin struct {
-	// specify time in days
-	Days int `pulumi:"days"`
-	// specify time in hours
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-	Hours int `pulumi:"hours"`
-}
-
-// GetHipObjectDiskBackupCriteriaLastBackupTimeWithinInput is an input type that accepts GetHipObjectDiskBackupCriteriaLastBackupTimeWithinArgs and GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskBackupCriteriaLastBackupTimeWithinInput` via:
-//
-//	GetHipObjectDiskBackupCriteriaLastBackupTimeWithinArgs{...}
-type GetHipObjectDiskBackupCriteriaLastBackupTimeWithinInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput
-	ToGetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutputWithContext(context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTimeWithinArgs struct {
-	// specify time in days
-	Days pulumi.IntInput `pulumi:"days"`
-	// specify time in hours
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-	Hours pulumi.IntInput `pulumi:"hours"`
-}
-
-func (GetHipObjectDiskBackupCriteriaLastBackupTimeWithinArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTimeWithin)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskBackupCriteriaLastBackupTimeWithinArgs) ToGetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput {
-	return i.ToGetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskBackupCriteriaLastBackupTimeWithinArgs) ToGetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutputWithContext(ctx context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput)
-}
-
-type GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTimeWithin)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput) ToGetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput() GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput {
-	return o
-}
-
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput) ToGetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutputWithContext(ctx context.Context) GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput {
-	return o
-}
-
-// specify time in days
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput) Days() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTimeWithin) int { return v.Days }).(pulumi.IntOutput)
-}
-
-// specify time in hours
-//
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-func (o GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput) Hours() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackupCriteriaLastBackupTimeWithin) int { return v.Hours }).(pulumi.IntOutput)
-}
-
-type GetHipObjectDiskBackupVendor struct {
-	// Name
-	Name string `pulumi:"name"`
-	// Product
-	Products []string `pulumi:"products"`
-}
-
-// GetHipObjectDiskBackupVendorInput is an input type that accepts GetHipObjectDiskBackupVendorArgs and GetHipObjectDiskBackupVendorOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskBackupVendorInput` via:
-//
-//	GetHipObjectDiskBackupVendorArgs{...}
-type GetHipObjectDiskBackupVendorInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskBackupVendorOutput() GetHipObjectDiskBackupVendorOutput
-	ToGetHipObjectDiskBackupVendorOutputWithContext(context.Context) GetHipObjectDiskBackupVendorOutput
-}
-
-type GetHipObjectDiskBackupVendorArgs struct {
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Product
-	Products pulumi.StringArrayInput `pulumi:"products"`
-}
-
-func (GetHipObjectDiskBackupVendorArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupVendor)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskBackupVendorArgs) ToGetHipObjectDiskBackupVendorOutput() GetHipObjectDiskBackupVendorOutput {
-	return i.ToGetHipObjectDiskBackupVendorOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskBackupVendorArgs) ToGetHipObjectDiskBackupVendorOutputWithContext(ctx context.Context) GetHipObjectDiskBackupVendorOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskBackupVendorOutput)
-}
-
-// GetHipObjectDiskBackupVendorArrayInput is an input type that accepts GetHipObjectDiskBackupVendorArray and GetHipObjectDiskBackupVendorArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskBackupVendorArrayInput` via:
-//
-//	GetHipObjectDiskBackupVendorArray{ GetHipObjectDiskBackupVendorArgs{...} }
-type GetHipObjectDiskBackupVendorArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskBackupVendorArrayOutput() GetHipObjectDiskBackupVendorArrayOutput
-	ToGetHipObjectDiskBackupVendorArrayOutputWithContext(context.Context) GetHipObjectDiskBackupVendorArrayOutput
-}
-
-type GetHipObjectDiskBackupVendorArray []GetHipObjectDiskBackupVendorInput
-
-func (GetHipObjectDiskBackupVendorArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectDiskBackupVendor)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskBackupVendorArray) ToGetHipObjectDiskBackupVendorArrayOutput() GetHipObjectDiskBackupVendorArrayOutput {
-	return i.ToGetHipObjectDiskBackupVendorArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskBackupVendorArray) ToGetHipObjectDiskBackupVendorArrayOutputWithContext(ctx context.Context) GetHipObjectDiskBackupVendorArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskBackupVendorArrayOutput)
-}
-
-type GetHipObjectDiskBackupVendorOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskBackupVendorOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskBackupVendor)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskBackupVendorOutput) ToGetHipObjectDiskBackupVendorOutput() GetHipObjectDiskBackupVendorOutput {
-	return o
-}
-
-func (o GetHipObjectDiskBackupVendorOutput) ToGetHipObjectDiskBackupVendorOutputWithContext(ctx context.Context) GetHipObjectDiskBackupVendorOutput {
-	return o
-}
-
-// Name
-func (o GetHipObjectDiskBackupVendorOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackupVendor) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Product
-func (o GetHipObjectDiskBackupVendorOutput) Products() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetHipObjectDiskBackupVendor) []string { return v.Products }).(pulumi.StringArrayOutput)
-}
-
-type GetHipObjectDiskBackupVendorArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskBackupVendorArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectDiskBackupVendor)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskBackupVendorArrayOutput) ToGetHipObjectDiskBackupVendorArrayOutput() GetHipObjectDiskBackupVendorArrayOutput {
-	return o
-}
-
-func (o GetHipObjectDiskBackupVendorArrayOutput) ToGetHipObjectDiskBackupVendorArrayOutputWithContext(ctx context.Context) GetHipObjectDiskBackupVendorArrayOutput {
-	return o
-}
-
-func (o GetHipObjectDiskBackupVendorArrayOutput) Index(i pulumi.IntInput) GetHipObjectDiskBackupVendorOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectDiskBackupVendor {
-		return vs[0].([]GetHipObjectDiskBackupVendor)[vs[1].(int)]
-	}).(GetHipObjectDiskBackupVendorOutput)
-}
-
-type GetHipObjectDiskEncryption struct {
-	// Encryption locations
-	Criteria GetHipObjectDiskEncryptionCriteria `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor bool `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors []GetHipObjectDiskEncryptionVendor `pulumi:"vendors"`
-}
-
-// GetHipObjectDiskEncryptionInput is an input type that accepts GetHipObjectDiskEncryptionArgs and GetHipObjectDiskEncryptionOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskEncryptionInput` via:
-//
-//	GetHipObjectDiskEncryptionArgs{...}
-type GetHipObjectDiskEncryptionInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskEncryptionOutput() GetHipObjectDiskEncryptionOutput
-	ToGetHipObjectDiskEncryptionOutputWithContext(context.Context) GetHipObjectDiskEncryptionOutput
-}
-
-type GetHipObjectDiskEncryptionArgs struct {
-	// Encryption locations
-	Criteria GetHipObjectDiskEncryptionCriteriaInput `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor pulumi.BoolInput `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors GetHipObjectDiskEncryptionVendorArrayInput `pulumi:"vendors"`
-}
-
-func (GetHipObjectDiskEncryptionArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskEncryption)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskEncryptionArgs) ToGetHipObjectDiskEncryptionOutput() GetHipObjectDiskEncryptionOutput {
-	return i.ToGetHipObjectDiskEncryptionOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskEncryptionArgs) ToGetHipObjectDiskEncryptionOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskEncryptionOutput)
-}
-
-type GetHipObjectDiskEncryptionOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskEncryptionOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskEncryption)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskEncryptionOutput) ToGetHipObjectDiskEncryptionOutput() GetHipObjectDiskEncryptionOutput {
-	return o
-}
-
-func (o GetHipObjectDiskEncryptionOutput) ToGetHipObjectDiskEncryptionOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionOutput {
-	return o
-}
-
-// Encryption locations
-func (o GetHipObjectDiskEncryptionOutput) Criteria() GetHipObjectDiskEncryptionCriteriaOutput {
-	return o.ApplyT(func(v GetHipObjectDiskEncryption) GetHipObjectDiskEncryptionCriteria { return v.Criteria }).(GetHipObjectDiskEncryptionCriteriaOutput)
-}
-
-// Exclude vendor
-func (o GetHipObjectDiskEncryptionOutput) ExcludeVendor() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectDiskEncryption) bool { return v.ExcludeVendor }).(pulumi.BoolOutput)
-}
-
-// Vendor name
-func (o GetHipObjectDiskEncryptionOutput) Vendors() GetHipObjectDiskEncryptionVendorArrayOutput {
-	return o.ApplyT(func(v GetHipObjectDiskEncryption) []GetHipObjectDiskEncryptionVendor { return v.Vendors }).(GetHipObjectDiskEncryptionVendorArrayOutput)
-}
-
-type GetHipObjectDiskEncryptionCriteria struct {
-	// Encrypted locations
-	EncryptedLocations []GetHipObjectDiskEncryptionCriteriaEncryptedLocation `pulumi:"encryptedLocations"`
-	// Is Installed
-	IsInstalled bool `pulumi:"isInstalled"`
-}
-
-// GetHipObjectDiskEncryptionCriteriaInput is an input type that accepts GetHipObjectDiskEncryptionCriteriaArgs and GetHipObjectDiskEncryptionCriteriaOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskEncryptionCriteriaInput` via:
-//
-//	GetHipObjectDiskEncryptionCriteriaArgs{...}
-type GetHipObjectDiskEncryptionCriteriaInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskEncryptionCriteriaOutput() GetHipObjectDiskEncryptionCriteriaOutput
-	ToGetHipObjectDiskEncryptionCriteriaOutputWithContext(context.Context) GetHipObjectDiskEncryptionCriteriaOutput
-}
-
-type GetHipObjectDiskEncryptionCriteriaArgs struct {
-	// Encrypted locations
-	EncryptedLocations GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayInput `pulumi:"encryptedLocations"`
-	// Is Installed
-	IsInstalled pulumi.BoolInput `pulumi:"isInstalled"`
-}
-
-func (GetHipObjectDiskEncryptionCriteriaArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskEncryptionCriteria)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskEncryptionCriteriaArgs) ToGetHipObjectDiskEncryptionCriteriaOutput() GetHipObjectDiskEncryptionCriteriaOutput {
-	return i.ToGetHipObjectDiskEncryptionCriteriaOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskEncryptionCriteriaArgs) ToGetHipObjectDiskEncryptionCriteriaOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionCriteriaOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskEncryptionCriteriaOutput)
-}
-
-type GetHipObjectDiskEncryptionCriteriaOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskEncryptionCriteriaOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskEncryptionCriteria)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskEncryptionCriteriaOutput) ToGetHipObjectDiskEncryptionCriteriaOutput() GetHipObjectDiskEncryptionCriteriaOutput {
-	return o
-}
-
-func (o GetHipObjectDiskEncryptionCriteriaOutput) ToGetHipObjectDiskEncryptionCriteriaOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionCriteriaOutput {
-	return o
-}
-
-// Encrypted locations
-func (o GetHipObjectDiskEncryptionCriteriaOutput) EncryptedLocations() GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput {
-	return o.ApplyT(func(v GetHipObjectDiskEncryptionCriteria) []GetHipObjectDiskEncryptionCriteriaEncryptedLocation {
-		return v.EncryptedLocations
-	}).(GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput)
-}
-
-// Is Installed
-func (o GetHipObjectDiskEncryptionCriteriaOutput) IsInstalled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectDiskEncryptionCriteria) bool { return v.IsInstalled }).(pulumi.BoolOutput)
-}
-
-type GetHipObjectDiskEncryptionCriteriaEncryptedLocation struct {
-	// Encryption state
-	EncryptionState GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState `pulumi:"encryptionState"`
-	// Encryption location
-	Name string `pulumi:"name"`
-}
-
-// GetHipObjectDiskEncryptionCriteriaEncryptedLocationInput is an input type that accepts GetHipObjectDiskEncryptionCriteriaEncryptedLocationArgs and GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskEncryptionCriteriaEncryptedLocationInput` via:
-//
-//	GetHipObjectDiskEncryptionCriteriaEncryptedLocationArgs{...}
-type GetHipObjectDiskEncryptionCriteriaEncryptedLocationInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput() GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput
-	ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationOutputWithContext(context.Context) GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput
-}
-
-type GetHipObjectDiskEncryptionCriteriaEncryptedLocationArgs struct {
-	// Encryption state
-	EncryptionState GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateInput `pulumi:"encryptionState"`
-	// Encryption location
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetHipObjectDiskEncryptionCriteriaEncryptedLocationArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskEncryptionCriteriaEncryptedLocation)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskEncryptionCriteriaEncryptedLocationArgs) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput() GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput {
-	return i.ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskEncryptionCriteriaEncryptedLocationArgs) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput)
-}
-
-// GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayInput is an input type that accepts GetHipObjectDiskEncryptionCriteriaEncryptedLocationArray and GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayInput` via:
-//
-//	GetHipObjectDiskEncryptionCriteriaEncryptedLocationArray{ GetHipObjectDiskEncryptionCriteriaEncryptedLocationArgs{...} }
-type GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput() GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput
-	ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutputWithContext(context.Context) GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput
-}
-
-type GetHipObjectDiskEncryptionCriteriaEncryptedLocationArray []GetHipObjectDiskEncryptionCriteriaEncryptedLocationInput
-
-func (GetHipObjectDiskEncryptionCriteriaEncryptedLocationArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectDiskEncryptionCriteriaEncryptedLocation)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskEncryptionCriteriaEncryptedLocationArray) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput() GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput {
-	return i.ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskEncryptionCriteriaEncryptedLocationArray) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput)
-}
-
-type GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskEncryptionCriteriaEncryptedLocation)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput() GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput {
-	return o
-}
-
-func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput {
-	return o
-}
-
-// Encryption state
-func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput) EncryptionState() GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput {
-	return o.ApplyT(func(v GetHipObjectDiskEncryptionCriteriaEncryptedLocation) GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState {
-		return v.EncryptionState
-	}).(GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput)
-}
-
-// Encryption location
-func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectDiskEncryptionCriteriaEncryptedLocation) string { return v.Name }).(pulumi.StringOutput)
-}
-
-type GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectDiskEncryptionCriteriaEncryptedLocation)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput() GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput {
-	return o
-}
-
-func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput {
-	return o
-}
-
-func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput) Index(i pulumi.IntInput) GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectDiskEncryptionCriteriaEncryptedLocation {
-		return vs[0].([]GetHipObjectDiskEncryptionCriteriaEncryptedLocation)[vs[1].(int)]
-	}).(GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput)
-}
-
-type GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState struct {
-	// Is
-	Is string `pulumi:"is"`
-	// Is not
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
-	IsNot string `pulumi:"isNot"`
-}
-
-// GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateInput is an input type that accepts GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs and GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateInput` via:
-//
-//	GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs{...}
-type GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput() GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput
-	ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutputWithContext(context.Context) GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput
-}
-
-type GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs struct {
-	// Is
-	Is pulumi.StringInput `pulumi:"is"`
-	// Is not
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
-	IsNot pulumi.StringInput `pulumi:"isNot"`
-}
-
-func (GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput() GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput {
-	return i.ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput)
-}
-
-type GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput() GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput {
-	return o
-}
-
-func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) ToGetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput {
-	return o
-}
-
-// Is
-func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) Is() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState) string { return v.Is }).(pulumi.StringOutput)
-}
-
-// Is not
-//
-// > ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
-func (o GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput) IsNot() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState) string { return v.IsNot }).(pulumi.StringOutput)
-}
-
-type GetHipObjectDiskEncryptionVendor struct {
-	// Name
-	Name string `pulumi:"name"`
-	// Product
-	Products []string `pulumi:"products"`
-}
-
-// GetHipObjectDiskEncryptionVendorInput is an input type that accepts GetHipObjectDiskEncryptionVendorArgs and GetHipObjectDiskEncryptionVendorOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskEncryptionVendorInput` via:
-//
-//	GetHipObjectDiskEncryptionVendorArgs{...}
-type GetHipObjectDiskEncryptionVendorInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskEncryptionVendorOutput() GetHipObjectDiskEncryptionVendorOutput
-	ToGetHipObjectDiskEncryptionVendorOutputWithContext(context.Context) GetHipObjectDiskEncryptionVendorOutput
-}
-
-type GetHipObjectDiskEncryptionVendorArgs struct {
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Product
-	Products pulumi.StringArrayInput `pulumi:"products"`
-}
-
-func (GetHipObjectDiskEncryptionVendorArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskEncryptionVendor)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskEncryptionVendorArgs) ToGetHipObjectDiskEncryptionVendorOutput() GetHipObjectDiskEncryptionVendorOutput {
-	return i.ToGetHipObjectDiskEncryptionVendorOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskEncryptionVendorArgs) ToGetHipObjectDiskEncryptionVendorOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionVendorOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskEncryptionVendorOutput)
-}
-
-// GetHipObjectDiskEncryptionVendorArrayInput is an input type that accepts GetHipObjectDiskEncryptionVendorArray and GetHipObjectDiskEncryptionVendorArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectDiskEncryptionVendorArrayInput` via:
-//
-//	GetHipObjectDiskEncryptionVendorArray{ GetHipObjectDiskEncryptionVendorArgs{...} }
-type GetHipObjectDiskEncryptionVendorArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectDiskEncryptionVendorArrayOutput() GetHipObjectDiskEncryptionVendorArrayOutput
-	ToGetHipObjectDiskEncryptionVendorArrayOutputWithContext(context.Context) GetHipObjectDiskEncryptionVendorArrayOutput
-}
-
-type GetHipObjectDiskEncryptionVendorArray []GetHipObjectDiskEncryptionVendorInput
-
-func (GetHipObjectDiskEncryptionVendorArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectDiskEncryptionVendor)(nil)).Elem()
-}
-
-func (i GetHipObjectDiskEncryptionVendorArray) ToGetHipObjectDiskEncryptionVendorArrayOutput() GetHipObjectDiskEncryptionVendorArrayOutput {
-	return i.ToGetHipObjectDiskEncryptionVendorArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectDiskEncryptionVendorArray) ToGetHipObjectDiskEncryptionVendorArrayOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionVendorArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectDiskEncryptionVendorArrayOutput)
-}
-
-type GetHipObjectDiskEncryptionVendorOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskEncryptionVendorOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectDiskEncryptionVendor)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskEncryptionVendorOutput) ToGetHipObjectDiskEncryptionVendorOutput() GetHipObjectDiskEncryptionVendorOutput {
-	return o
-}
-
-func (o GetHipObjectDiskEncryptionVendorOutput) ToGetHipObjectDiskEncryptionVendorOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionVendorOutput {
-	return o
-}
-
-// Name
-func (o GetHipObjectDiskEncryptionVendorOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectDiskEncryptionVendor) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Product
-func (o GetHipObjectDiskEncryptionVendorOutput) Products() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetHipObjectDiskEncryptionVendor) []string { return v.Products }).(pulumi.StringArrayOutput)
-}
-
-type GetHipObjectDiskEncryptionVendorArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectDiskEncryptionVendorArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectDiskEncryptionVendor)(nil)).Elem()
-}
-
-func (o GetHipObjectDiskEncryptionVendorArrayOutput) ToGetHipObjectDiskEncryptionVendorArrayOutput() GetHipObjectDiskEncryptionVendorArrayOutput {
-	return o
-}
-
-func (o GetHipObjectDiskEncryptionVendorArrayOutput) ToGetHipObjectDiskEncryptionVendorArrayOutputWithContext(ctx context.Context) GetHipObjectDiskEncryptionVendorArrayOutput {
-	return o
-}
-
-func (o GetHipObjectDiskEncryptionVendorArrayOutput) Index(i pulumi.IntInput) GetHipObjectDiskEncryptionVendorOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectDiskEncryptionVendor {
-		return vs[0].([]GetHipObjectDiskEncryptionVendor)[vs[1].(int)]
-	}).(GetHipObjectDiskEncryptionVendorOutput)
-}
-
-type GetHipObjectFirewall struct {
-	// Criteria
-	Criteria GetHipObjectFirewallCriteria `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor bool `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors []GetHipObjectFirewallVendor `pulumi:"vendors"`
-}
-
-// GetHipObjectFirewallInput is an input type that accepts GetHipObjectFirewallArgs and GetHipObjectFirewallOutput values.
-// You can construct a concrete instance of `GetHipObjectFirewallInput` via:
-//
-//	GetHipObjectFirewallArgs{...}
-type GetHipObjectFirewallInput interface {
-	pulumi.Input
-
-	ToGetHipObjectFirewallOutput() GetHipObjectFirewallOutput
-	ToGetHipObjectFirewallOutputWithContext(context.Context) GetHipObjectFirewallOutput
-}
-
-type GetHipObjectFirewallArgs struct {
-	// Criteria
-	Criteria GetHipObjectFirewallCriteriaInput `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor pulumi.BoolInput `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors GetHipObjectFirewallVendorArrayInput `pulumi:"vendors"`
-}
-
-func (GetHipObjectFirewallArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectFirewall)(nil)).Elem()
-}
-
-func (i GetHipObjectFirewallArgs) ToGetHipObjectFirewallOutput() GetHipObjectFirewallOutput {
-	return i.ToGetHipObjectFirewallOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectFirewallArgs) ToGetHipObjectFirewallOutputWithContext(ctx context.Context) GetHipObjectFirewallOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectFirewallOutput)
-}
-
-type GetHipObjectFirewallOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectFirewallOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectFirewall)(nil)).Elem()
-}
-
-func (o GetHipObjectFirewallOutput) ToGetHipObjectFirewallOutput() GetHipObjectFirewallOutput {
-	return o
-}
-
-func (o GetHipObjectFirewallOutput) ToGetHipObjectFirewallOutputWithContext(ctx context.Context) GetHipObjectFirewallOutput {
-	return o
-}
-
-// Criteria
-func (o GetHipObjectFirewallOutput) Criteria() GetHipObjectFirewallCriteriaOutput {
-	return o.ApplyT(func(v GetHipObjectFirewall) GetHipObjectFirewallCriteria { return v.Criteria }).(GetHipObjectFirewallCriteriaOutput)
-}
-
-// Exclude vendor
-func (o GetHipObjectFirewallOutput) ExcludeVendor() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectFirewall) bool { return v.ExcludeVendor }).(pulumi.BoolOutput)
-}
-
-// Vendor name
-func (o GetHipObjectFirewallOutput) Vendors() GetHipObjectFirewallVendorArrayOutput {
-	return o.ApplyT(func(v GetHipObjectFirewall) []GetHipObjectFirewallVendor { return v.Vendors }).(GetHipObjectFirewallVendorArrayOutput)
-}
-
-type GetHipObjectFirewallCriteria struct {
-	// is enabled
-	IsEnabled string `pulumi:"isEnabled"`
-	// Is Installed
-	IsInstalled bool `pulumi:"isInstalled"`
-}
-
-// GetHipObjectFirewallCriteriaInput is an input type that accepts GetHipObjectFirewallCriteriaArgs and GetHipObjectFirewallCriteriaOutput values.
-// You can construct a concrete instance of `GetHipObjectFirewallCriteriaInput` via:
-//
-//	GetHipObjectFirewallCriteriaArgs{...}
-type GetHipObjectFirewallCriteriaInput interface {
-	pulumi.Input
-
-	ToGetHipObjectFirewallCriteriaOutput() GetHipObjectFirewallCriteriaOutput
-	ToGetHipObjectFirewallCriteriaOutputWithContext(context.Context) GetHipObjectFirewallCriteriaOutput
-}
-
-type GetHipObjectFirewallCriteriaArgs struct {
-	// is enabled
-	IsEnabled pulumi.StringInput `pulumi:"isEnabled"`
-	// Is Installed
-	IsInstalled pulumi.BoolInput `pulumi:"isInstalled"`
-}
-
-func (GetHipObjectFirewallCriteriaArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectFirewallCriteria)(nil)).Elem()
-}
-
-func (i GetHipObjectFirewallCriteriaArgs) ToGetHipObjectFirewallCriteriaOutput() GetHipObjectFirewallCriteriaOutput {
-	return i.ToGetHipObjectFirewallCriteriaOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectFirewallCriteriaArgs) ToGetHipObjectFirewallCriteriaOutputWithContext(ctx context.Context) GetHipObjectFirewallCriteriaOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectFirewallCriteriaOutput)
-}
-
-type GetHipObjectFirewallCriteriaOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectFirewallCriteriaOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectFirewallCriteria)(nil)).Elem()
-}
-
-func (o GetHipObjectFirewallCriteriaOutput) ToGetHipObjectFirewallCriteriaOutput() GetHipObjectFirewallCriteriaOutput {
-	return o
-}
-
-func (o GetHipObjectFirewallCriteriaOutput) ToGetHipObjectFirewallCriteriaOutputWithContext(ctx context.Context) GetHipObjectFirewallCriteriaOutput {
-	return o
-}
-
-// is enabled
-func (o GetHipObjectFirewallCriteriaOutput) IsEnabled() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectFirewallCriteria) string { return v.IsEnabled }).(pulumi.StringOutput)
-}
-
-// Is Installed
-func (o GetHipObjectFirewallCriteriaOutput) IsInstalled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectFirewallCriteria) bool { return v.IsInstalled }).(pulumi.BoolOutput)
-}
-
-type GetHipObjectFirewallVendor struct {
-	// Name
-	Name string `pulumi:"name"`
-	// Product
-	Products []string `pulumi:"products"`
-}
-
-// GetHipObjectFirewallVendorInput is an input type that accepts GetHipObjectFirewallVendorArgs and GetHipObjectFirewallVendorOutput values.
-// You can construct a concrete instance of `GetHipObjectFirewallVendorInput` via:
-//
-//	GetHipObjectFirewallVendorArgs{...}
-type GetHipObjectFirewallVendorInput interface {
-	pulumi.Input
-
-	ToGetHipObjectFirewallVendorOutput() GetHipObjectFirewallVendorOutput
-	ToGetHipObjectFirewallVendorOutputWithContext(context.Context) GetHipObjectFirewallVendorOutput
-}
-
-type GetHipObjectFirewallVendorArgs struct {
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Product
-	Products pulumi.StringArrayInput `pulumi:"products"`
-}
-
-func (GetHipObjectFirewallVendorArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectFirewallVendor)(nil)).Elem()
-}
-
-func (i GetHipObjectFirewallVendorArgs) ToGetHipObjectFirewallVendorOutput() GetHipObjectFirewallVendorOutput {
-	return i.ToGetHipObjectFirewallVendorOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectFirewallVendorArgs) ToGetHipObjectFirewallVendorOutputWithContext(ctx context.Context) GetHipObjectFirewallVendorOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectFirewallVendorOutput)
-}
-
-// GetHipObjectFirewallVendorArrayInput is an input type that accepts GetHipObjectFirewallVendorArray and GetHipObjectFirewallVendorArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectFirewallVendorArrayInput` via:
-//
-//	GetHipObjectFirewallVendorArray{ GetHipObjectFirewallVendorArgs{...} }
-type GetHipObjectFirewallVendorArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectFirewallVendorArrayOutput() GetHipObjectFirewallVendorArrayOutput
-	ToGetHipObjectFirewallVendorArrayOutputWithContext(context.Context) GetHipObjectFirewallVendorArrayOutput
-}
-
-type GetHipObjectFirewallVendorArray []GetHipObjectFirewallVendorInput
-
-func (GetHipObjectFirewallVendorArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectFirewallVendor)(nil)).Elem()
-}
-
-func (i GetHipObjectFirewallVendorArray) ToGetHipObjectFirewallVendorArrayOutput() GetHipObjectFirewallVendorArrayOutput {
-	return i.ToGetHipObjectFirewallVendorArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectFirewallVendorArray) ToGetHipObjectFirewallVendorArrayOutputWithContext(ctx context.Context) GetHipObjectFirewallVendorArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectFirewallVendorArrayOutput)
-}
-
-type GetHipObjectFirewallVendorOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectFirewallVendorOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectFirewallVendor)(nil)).Elem()
-}
-
-func (o GetHipObjectFirewallVendorOutput) ToGetHipObjectFirewallVendorOutput() GetHipObjectFirewallVendorOutput {
-	return o
-}
-
-func (o GetHipObjectFirewallVendorOutput) ToGetHipObjectFirewallVendorOutputWithContext(ctx context.Context) GetHipObjectFirewallVendorOutput {
-	return o
-}
-
-// Name
-func (o GetHipObjectFirewallVendorOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectFirewallVendor) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Product
-func (o GetHipObjectFirewallVendorOutput) Products() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetHipObjectFirewallVendor) []string { return v.Products }).(pulumi.StringArrayOutput)
-}
-
-type GetHipObjectFirewallVendorArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectFirewallVendorArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectFirewallVendor)(nil)).Elem()
-}
-
-func (o GetHipObjectFirewallVendorArrayOutput) ToGetHipObjectFirewallVendorArrayOutput() GetHipObjectFirewallVendorArrayOutput {
-	return o
-}
-
-func (o GetHipObjectFirewallVendorArrayOutput) ToGetHipObjectFirewallVendorArrayOutputWithContext(ctx context.Context) GetHipObjectFirewallVendorArrayOutput {
-	return o
-}
-
-func (o GetHipObjectFirewallVendorArrayOutput) Index(i pulumi.IntInput) GetHipObjectFirewallVendorOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectFirewallVendor {
-		return vs[0].([]GetHipObjectFirewallVendor)[vs[1].(int)]
-	}).(GetHipObjectFirewallVendorOutput)
-}
-
-type GetHipObjectHostInfo struct {
-	// Criteria
-	Criteria GetHipObjectHostInfoCriteria `pulumi:"criteria"`
-}
-
-// GetHipObjectHostInfoInput is an input type that accepts GetHipObjectHostInfoArgs and GetHipObjectHostInfoOutput values.
-// You can construct a concrete instance of `GetHipObjectHostInfoInput` via:
-//
-//	GetHipObjectHostInfoArgs{...}
-type GetHipObjectHostInfoInput interface {
-	pulumi.Input
-
-	ToGetHipObjectHostInfoOutput() GetHipObjectHostInfoOutput
-	ToGetHipObjectHostInfoOutputWithContext(context.Context) GetHipObjectHostInfoOutput
-}
-
-type GetHipObjectHostInfoArgs struct {
-	// Criteria
-	Criteria GetHipObjectHostInfoCriteriaInput `pulumi:"criteria"`
-}
-
-func (GetHipObjectHostInfoArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfo)(nil)).Elem()
-}
-
-func (i GetHipObjectHostInfoArgs) ToGetHipObjectHostInfoOutput() GetHipObjectHostInfoOutput {
-	return i.ToGetHipObjectHostInfoOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectHostInfoArgs) ToGetHipObjectHostInfoOutputWithContext(ctx context.Context) GetHipObjectHostInfoOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoOutput)
-}
-
-type GetHipObjectHostInfoOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectHostInfoOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfo)(nil)).Elem()
-}
-
-func (o GetHipObjectHostInfoOutput) ToGetHipObjectHostInfoOutput() GetHipObjectHostInfoOutput {
-	return o
-}
-
-func (o GetHipObjectHostInfoOutput) ToGetHipObjectHostInfoOutputWithContext(ctx context.Context) GetHipObjectHostInfoOutput {
-	return o
-}
-
-// Criteria
-func (o GetHipObjectHostInfoOutput) Criteria() GetHipObjectHostInfoCriteriaOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfo) GetHipObjectHostInfoCriteria { return v.Criteria }).(GetHipObjectHostInfoCriteriaOutput)
-}
-
-type GetHipObjectHostInfoCriteria struct {
-	// Client version
-	ClientVersion GetHipObjectHostInfoCriteriaClientVersion `pulumi:"clientVersion"`
-	// Domain
-	Domain GetHipObjectHostInfoCriteriaDomain `pulumi:"domain"`
-	// Host id
-	HostId GetHipObjectHostInfoCriteriaHostId `pulumi:"hostId"`
-	// Host name
-	HostName GetHipObjectHostInfoCriteriaHostName `pulumi:"hostName"`
-	// If device is managed
-	Managed bool `pulumi:"managed"`
-	// Os
-	Os GetHipObjectHostInfoCriteriaOs `pulumi:"os"`
-	// Serial number
-	SerialNumber GetHipObjectHostInfoCriteriaSerialNumber `pulumi:"serialNumber"`
-}
-
-// GetHipObjectHostInfoCriteriaInput is an input type that accepts GetHipObjectHostInfoCriteriaArgs and GetHipObjectHostInfoCriteriaOutput values.
-// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaInput` via:
-//
-//	GetHipObjectHostInfoCriteriaArgs{...}
-type GetHipObjectHostInfoCriteriaInput interface {
-	pulumi.Input
-
-	ToGetHipObjectHostInfoCriteriaOutput() GetHipObjectHostInfoCriteriaOutput
-	ToGetHipObjectHostInfoCriteriaOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaOutput
-}
-
-type GetHipObjectHostInfoCriteriaArgs struct {
-	// Client version
-	ClientVersion GetHipObjectHostInfoCriteriaClientVersionInput `pulumi:"clientVersion"`
-	// Domain
-	Domain GetHipObjectHostInfoCriteriaDomainInput `pulumi:"domain"`
-	// Host id
-	HostId GetHipObjectHostInfoCriteriaHostIdInput `pulumi:"hostId"`
-	// Host name
-	HostName GetHipObjectHostInfoCriteriaHostNameInput `pulumi:"hostName"`
-	// If device is managed
-	Managed pulumi.BoolInput `pulumi:"managed"`
-	// Os
-	Os GetHipObjectHostInfoCriteriaOsInput `pulumi:"os"`
-	// Serial number
-	SerialNumber GetHipObjectHostInfoCriteriaSerialNumberInput `pulumi:"serialNumber"`
-}
-
-func (GetHipObjectHostInfoCriteriaArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteria)(nil)).Elem()
-}
-
-func (i GetHipObjectHostInfoCriteriaArgs) ToGetHipObjectHostInfoCriteriaOutput() GetHipObjectHostInfoCriteriaOutput {
-	return i.ToGetHipObjectHostInfoCriteriaOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectHostInfoCriteriaArgs) ToGetHipObjectHostInfoCriteriaOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaOutput)
-}
-
-type GetHipObjectHostInfoCriteriaOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectHostInfoCriteriaOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteria)(nil)).Elem()
-}
-
-func (o GetHipObjectHostInfoCriteriaOutput) ToGetHipObjectHostInfoCriteriaOutput() GetHipObjectHostInfoCriteriaOutput {
-	return o
-}
-
-func (o GetHipObjectHostInfoCriteriaOutput) ToGetHipObjectHostInfoCriteriaOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaOutput {
-	return o
-}
-
-// Client version
-func (o GetHipObjectHostInfoCriteriaOutput) ClientVersion() GetHipObjectHostInfoCriteriaClientVersionOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteria) GetHipObjectHostInfoCriteriaClientVersion { return v.ClientVersion }).(GetHipObjectHostInfoCriteriaClientVersionOutput)
-}
-
-// Domain
-func (o GetHipObjectHostInfoCriteriaOutput) Domain() GetHipObjectHostInfoCriteriaDomainOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteria) GetHipObjectHostInfoCriteriaDomain { return v.Domain }).(GetHipObjectHostInfoCriteriaDomainOutput)
-}
-
-// Host id
-func (o GetHipObjectHostInfoCriteriaOutput) HostId() GetHipObjectHostInfoCriteriaHostIdOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteria) GetHipObjectHostInfoCriteriaHostId { return v.HostId }).(GetHipObjectHostInfoCriteriaHostIdOutput)
-}
-
-// Host name
-func (o GetHipObjectHostInfoCriteriaOutput) HostName() GetHipObjectHostInfoCriteriaHostNameOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteria) GetHipObjectHostInfoCriteriaHostName { return v.HostName }).(GetHipObjectHostInfoCriteriaHostNameOutput)
-}
-
-// If device is managed
-func (o GetHipObjectHostInfoCriteriaOutput) Managed() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteria) bool { return v.Managed }).(pulumi.BoolOutput)
-}
-
-// Os
-func (o GetHipObjectHostInfoCriteriaOutput) Os() GetHipObjectHostInfoCriteriaOsOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteria) GetHipObjectHostInfoCriteriaOs { return v.Os }).(GetHipObjectHostInfoCriteriaOsOutput)
-}
-
-// Serial number
-func (o GetHipObjectHostInfoCriteriaOutput) SerialNumber() GetHipObjectHostInfoCriteriaSerialNumberOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteria) GetHipObjectHostInfoCriteriaSerialNumber { return v.SerialNumber }).(GetHipObjectHostInfoCriteriaSerialNumberOutput)
-}
-
-type GetHipObjectHostInfoCriteriaClientVersion struct {
-	// Contains
-	Contains string `pulumi:"contains"`
-	// Is
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Is string `pulumi:"is"`
-	// Is not
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	IsNot string `pulumi:"isNot"`
-}
-
-// GetHipObjectHostInfoCriteriaClientVersionInput is an input type that accepts GetHipObjectHostInfoCriteriaClientVersionArgs and GetHipObjectHostInfoCriteriaClientVersionOutput values.
-// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaClientVersionInput` via:
-//
-//	GetHipObjectHostInfoCriteriaClientVersionArgs{...}
-type GetHipObjectHostInfoCriteriaClientVersionInput interface {
-	pulumi.Input
-
-	ToGetHipObjectHostInfoCriteriaClientVersionOutput() GetHipObjectHostInfoCriteriaClientVersionOutput
-	ToGetHipObjectHostInfoCriteriaClientVersionOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaClientVersionOutput
-}
-
-type GetHipObjectHostInfoCriteriaClientVersionArgs struct {
-	// Contains
-	Contains pulumi.StringInput `pulumi:"contains"`
-	// Is
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Is pulumi.StringInput `pulumi:"is"`
-	// Is not
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	IsNot pulumi.StringInput `pulumi:"isNot"`
-}
-
-func (GetHipObjectHostInfoCriteriaClientVersionArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaClientVersion)(nil)).Elem()
-}
-
-func (i GetHipObjectHostInfoCriteriaClientVersionArgs) ToGetHipObjectHostInfoCriteriaClientVersionOutput() GetHipObjectHostInfoCriteriaClientVersionOutput {
-	return i.ToGetHipObjectHostInfoCriteriaClientVersionOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectHostInfoCriteriaClientVersionArgs) ToGetHipObjectHostInfoCriteriaClientVersionOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaClientVersionOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaClientVersionOutput)
-}
-
-type GetHipObjectHostInfoCriteriaClientVersionOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectHostInfoCriteriaClientVersionOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaClientVersion)(nil)).Elem()
-}
-
-func (o GetHipObjectHostInfoCriteriaClientVersionOutput) ToGetHipObjectHostInfoCriteriaClientVersionOutput() GetHipObjectHostInfoCriteriaClientVersionOutput {
-	return o
-}
-
-func (o GetHipObjectHostInfoCriteriaClientVersionOutput) ToGetHipObjectHostInfoCriteriaClientVersionOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaClientVersionOutput {
-	return o
-}
-
-// Contains
-func (o GetHipObjectHostInfoCriteriaClientVersionOutput) Contains() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaClientVersion) string { return v.Contains }).(pulumi.StringOutput)
-}
-
-// Is
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaClientVersionOutput) Is() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaClientVersion) string { return v.Is }).(pulumi.StringOutput)
-}
-
-// Is not
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaClientVersionOutput) IsNot() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaClientVersion) string { return v.IsNot }).(pulumi.StringOutput)
-}
-
-type GetHipObjectHostInfoCriteriaDomain struct {
-	// Contains
-	Contains string `pulumi:"contains"`
-	// Is
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Is string `pulumi:"is"`
-	// Is not
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	IsNot string `pulumi:"isNot"`
-}
-
-// GetHipObjectHostInfoCriteriaDomainInput is an input type that accepts GetHipObjectHostInfoCriteriaDomainArgs and GetHipObjectHostInfoCriteriaDomainOutput values.
-// You can construct a concrete instance of `GetHipObjectHostInfoCriteriaDomainInput` via:
-//
-//	GetHipObjectHostInfoCriteriaDomainArgs{...}
-type GetHipObjectHostInfoCriteriaDomainInput interface {
-	pulumi.Input
-
-	ToGetHipObjectHostInfoCriteriaDomainOutput() GetHipObjectHostInfoCriteriaDomainOutput
-	ToGetHipObjectHostInfoCriteriaDomainOutputWithContext(context.Context) GetHipObjectHostInfoCriteriaDomainOutput
-}
-
-type GetHipObjectHostInfoCriteriaDomainArgs struct {
-	// Contains
-	Contains pulumi.StringInput `pulumi:"contains"`
-	// Is
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	Is pulumi.StringInput `pulumi:"is"`
-	// Is not
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-	IsNot pulumi.StringInput `pulumi:"isNot"`
-}
-
-func (GetHipObjectHostInfoCriteriaDomainArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaDomain)(nil)).Elem()
-}
-
-func (i GetHipObjectHostInfoCriteriaDomainArgs) ToGetHipObjectHostInfoCriteriaDomainOutput() GetHipObjectHostInfoCriteriaDomainOutput {
-	return i.ToGetHipObjectHostInfoCriteriaDomainOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectHostInfoCriteriaDomainArgs) ToGetHipObjectHostInfoCriteriaDomainOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaDomainOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectHostInfoCriteriaDomainOutput)
-}
-
-type GetHipObjectHostInfoCriteriaDomainOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectHostInfoCriteriaDomainOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectHostInfoCriteriaDomain)(nil)).Elem()
-}
-
-func (o GetHipObjectHostInfoCriteriaDomainOutput) ToGetHipObjectHostInfoCriteriaDomainOutput() GetHipObjectHostInfoCriteriaDomainOutput {
-	return o
-}
-
-func (o GetHipObjectHostInfoCriteriaDomainOutput) ToGetHipObjectHostInfoCriteriaDomainOutputWithContext(ctx context.Context) GetHipObjectHostInfoCriteriaDomainOutput {
-	return o
-}
-
-// Contains
-func (o GetHipObjectHostInfoCriteriaDomainOutput) Contains() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaDomain) string { return v.Contains }).(pulumi.StringOutput)
-}
-
-// Is
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaDomainOutput) Is() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaDomain) string { return v.Is }).(pulumi.StringOutput)
-}
-
-// Is not
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
-func (o GetHipObjectHostInfoCriteriaDomainOutput) IsNot() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectHostInfoCriteriaDomain) string { return v.IsNot }).(pulumi.StringOutput)
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastFilterListInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastFilterListArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastRouteMapsInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastRouteMapsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataInput)(nil)).Elem(), GetBgpFilteringProfileListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataArrayInput)(nil)).Elem(), GetBgpFilteringProfileListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4Input)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4Args{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4MulticastArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistInput)(nil)).Elem(), GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistArgs{})
@@ -40343,12 +40872,42 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetCertificateProfileListDataCaCertificateArrayInput)(nil)).Elem(), GetCertificateProfileListDataCaCertificateArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetCertificateProfileListDataUsernameFieldInput)(nil)).Elem(), GetCertificateProfileListDataUsernameFieldArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetCertificateProfileUsernameFieldInput)(nil)).Elem(), GetCertificateProfileUsernameFieldArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetConfigMatchListListDataInput)(nil)).Elem(), GetConfigMatchListListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetConfigMatchListListDataArrayInput)(nil)).Elem(), GetConfigMatchListListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetContentIdSettingContentIdInput)(nil)).Elem(), GetContentIdSettingContentIdArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetContentIdSettingContentIdApplicationInput)(nil)).Elem(), GetContentIdSettingContentIdApplicationArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetContentIdSettingListDataInput)(nil)).Elem(), GetContentIdSettingListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetContentIdSettingListDataArrayInput)(nil)).Elem(), GetContentIdSettingListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetContentIdSettingListDataContentIdInput)(nil)).Elem(), GetContentIdSettingListDataContentIdArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetContentIdSettingListDataContentIdApplicationInput)(nil)).Elem(), GetContentIdSettingListDataContentIdApplicationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataFilteringProfileListDataInput)(nil)).Elem(), GetDataFilteringProfileListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataFilteringProfileListDataArrayInput)(nil)).Elem(), GetDataFilteringProfileListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataFilteringProfileListDataRuleInput)(nil)).Elem(), GetDataFilteringProfileListDataRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataFilteringProfileListDataRuleArrayInput)(nil)).Elem(), GetDataFilteringProfileListDataRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataFilteringProfileRuleInput)(nil)).Elem(), GetDataFilteringProfileRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataFilteringProfileRuleArrayInput)(nil)).Elem(), GetDataFilteringProfileRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataInput)(nil)).Elem(), GetDataObjectListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataArrayInput)(nil)).Elem(), GetDataObjectListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataPatternTypeInput)(nil)).Elem(), GetDataObjectListDataPatternTypeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataPatternTypeFilePropertiesInput)(nil)).Elem(), GetDataObjectListDataPatternTypeFilePropertiesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataPatternTypeFilePropertiesPatternInput)(nil)).Elem(), GetDataObjectListDataPatternTypeFilePropertiesPatternArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataPatternTypeFilePropertiesPatternArrayInput)(nil)).Elem(), GetDataObjectListDataPatternTypeFilePropertiesPatternArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataPatternTypePredefinedInput)(nil)).Elem(), GetDataObjectListDataPatternTypePredefinedArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataPatternTypePredefinedPatternInput)(nil)).Elem(), GetDataObjectListDataPatternTypePredefinedPatternArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataPatternTypePredefinedPatternArrayInput)(nil)).Elem(), GetDataObjectListDataPatternTypePredefinedPatternArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataPatternTypeRegexInput)(nil)).Elem(), GetDataObjectListDataPatternTypeRegexArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataPatternTypeRegexPatternInput)(nil)).Elem(), GetDataObjectListDataPatternTypeRegexPatternArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectListDataPatternTypeRegexPatternArrayInput)(nil)).Elem(), GetDataObjectListDataPatternTypeRegexPatternArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectPatternTypeInput)(nil)).Elem(), GetDataObjectPatternTypeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectPatternTypeFilePropertiesInput)(nil)).Elem(), GetDataObjectPatternTypeFilePropertiesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectPatternTypeFilePropertiesPatternInput)(nil)).Elem(), GetDataObjectPatternTypeFilePropertiesPatternArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectPatternTypeFilePropertiesPatternArrayInput)(nil)).Elem(), GetDataObjectPatternTypeFilePropertiesPatternArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectPatternTypePredefinedInput)(nil)).Elem(), GetDataObjectPatternTypePredefinedArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectPatternTypePredefinedPatternInput)(nil)).Elem(), GetDataObjectPatternTypePredefinedPatternArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectPatternTypePredefinedPatternArrayInput)(nil)).Elem(), GetDataObjectPatternTypePredefinedPatternArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectPatternTypeRegexInput)(nil)).Elem(), GetDataObjectPatternTypeRegexArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectPatternTypeRegexPatternInput)(nil)).Elem(), GetDataObjectPatternTypeRegexPatternArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDataObjectPatternTypeRegexPatternArrayInput)(nil)).Elem(), GetDataObjectPatternTypeRegexPatternArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionExclusionListDataInput)(nil)).Elem(), GetDecryptionExclusionListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionExclusionListDataArrayInput)(nil)).Elem(), GetDecryptionExclusionListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionProfileListDataInput)(nil)).Elem(), GetDecryptionProfileListDataArgs{})
@@ -40657,6 +41216,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingListDataGeneralGeoLocationInput)(nil)).Elem(), GetGeneralSettingListDataGeneralGeoLocationArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingListDataGeneralSettingInput)(nil)).Elem(), GetGeneralSettingListDataGeneralSettingArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingListDataGeneralSettingManagementInput)(nil)).Elem(), GetGeneralSettingListDataGeneralSettingManagementArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetGlobalprotectMatchListListDataInput)(nil)).Elem(), GetGlobalprotectMatchListListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetGlobalprotectMatchListListDataArrayInput)(nil)).Elem(), GetGlobalprotectMatchListListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareInput)(nil)).Elem(), GetHipObjectAntiMalwareArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaLastScanTimeArgs{})
@@ -40676,44 +41237,15 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCertificateCriteriaCertificateAttributeInput)(nil)).Elem(), GetHipObjectCertificateCriteriaCertificateAttributeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCertificateCriteriaCertificateAttributeArrayInput)(nil)).Elem(), GetHipObjectCertificateCriteriaCertificateAttributeArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksInput)(nil)).Elem(), GetHipObjectCustomChecksArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksCriteriaInput)(nil)).Elem(), GetHipObjectCustomChecksCriteriaArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksCriteriaPlistInput)(nil)).Elem(), GetHipObjectCustomChecksCriteriaPlistArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksCriteriaPlistArrayInput)(nil)).Elem(), GetHipObjectCustomChecksCriteriaPlistArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksCriteriaPlistKeyInput)(nil)).Elem(), GetHipObjectCustomChecksCriteriaPlistKeyArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksCriteriaPlistKeyArrayInput)(nil)).Elem(), GetHipObjectCustomChecksCriteriaPlistKeyArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksCriteriaProcessListInput)(nil)).Elem(), GetHipObjectCustomChecksCriteriaProcessListArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksCriteriaProcessListArrayInput)(nil)).Elem(), GetHipObjectCustomChecksCriteriaProcessListArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksCriteriaRegistryKeyInput)(nil)).Elem(), GetHipObjectCustomChecksCriteriaRegistryKeyArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksCriteriaRegistryKeyArrayInput)(nil)).Elem(), GetHipObjectCustomChecksCriteriaRegistryKeyArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueInput)(nil)).Elem(), GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayInput)(nil)).Elem(), GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDataLossPreventionInput)(nil)).Elem(), GetHipObjectDataLossPreventionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDataLossPreventionCriteriaInput)(nil)).Elem(), GetHipObjectDataLossPreventionCriteriaArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDataLossPreventionVendorInput)(nil)).Elem(), GetHipObjectDataLossPreventionVendorArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDataLossPreventionVendorArrayInput)(nil)).Elem(), GetHipObjectDataLossPreventionVendorArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskBackupInput)(nil)).Elem(), GetHipObjectDiskBackupArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskBackupCriteriaInput)(nil)).Elem(), GetHipObjectDiskBackupCriteriaArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTimeInput)(nil)).Elem(), GetHipObjectDiskBackupCriteriaLastBackupTimeArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableInput)(nil)).Elem(), GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinInput)(nil)).Elem(), GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskBackupCriteriaLastBackupTimeWithinInput)(nil)).Elem(), GetHipObjectDiskBackupCriteriaLastBackupTimeWithinArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskBackupVendorInput)(nil)).Elem(), GetHipObjectDiskBackupVendorArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskBackupVendorArrayInput)(nil)).Elem(), GetHipObjectDiskBackupVendorArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskEncryptionInput)(nil)).Elem(), GetHipObjectDiskEncryptionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskEncryptionCriteriaInput)(nil)).Elem(), GetHipObjectDiskEncryptionCriteriaArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskEncryptionCriteriaEncryptedLocationInput)(nil)).Elem(), GetHipObjectDiskEncryptionCriteriaEncryptedLocationArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayInput)(nil)).Elem(), GetHipObjectDiskEncryptionCriteriaEncryptedLocationArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateInput)(nil)).Elem(), GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskEncryptionVendorInput)(nil)).Elem(), GetHipObjectDiskEncryptionVendorArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectDiskEncryptionVendorArrayInput)(nil)).Elem(), GetHipObjectDiskEncryptionVendorArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectFirewallInput)(nil)).Elem(), GetHipObjectFirewallArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectFirewallCriteriaInput)(nil)).Elem(), GetHipObjectFirewallCriteriaArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectFirewallVendorInput)(nil)).Elem(), GetHipObjectFirewallVendorArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectFirewallVendorArrayInput)(nil)).Elem(), GetHipObjectFirewallVendorArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoInput)(nil)).Elem(), GetHipObjectHostInfoArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaClientVersionInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaClientVersionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectHostInfoCriteriaDomainInput)(nil)).Elem(), GetHipObjectHostInfoCriteriaDomainArgs{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastFilterListOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastRouteMapsOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4Output{})
 	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4MulticastOutput{})
 	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementOutput{})
 	pulumi.RegisterOutputType(GetBgpFilteringProfileListDataIpv4MulticastConditionalAdvertisementExistOutput{})
@@ -40913,12 +41445,42 @@ func init() {
 	pulumi.RegisterOutputType(GetCertificateProfileListDataCaCertificateArrayOutput{})
 	pulumi.RegisterOutputType(GetCertificateProfileListDataUsernameFieldOutput{})
 	pulumi.RegisterOutputType(GetCertificateProfileUsernameFieldOutput{})
+	pulumi.RegisterOutputType(GetConfigMatchListListDataOutput{})
+	pulumi.RegisterOutputType(GetConfigMatchListListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetContentIdSettingContentIdOutput{})
 	pulumi.RegisterOutputType(GetContentIdSettingContentIdApplicationOutput{})
 	pulumi.RegisterOutputType(GetContentIdSettingListDataOutput{})
 	pulumi.RegisterOutputType(GetContentIdSettingListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetContentIdSettingListDataContentIdOutput{})
 	pulumi.RegisterOutputType(GetContentIdSettingListDataContentIdApplicationOutput{})
+	pulumi.RegisterOutputType(GetDataFilteringProfileListDataOutput{})
+	pulumi.RegisterOutputType(GetDataFilteringProfileListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetDataFilteringProfileListDataRuleOutput{})
+	pulumi.RegisterOutputType(GetDataFilteringProfileListDataRuleArrayOutput{})
+	pulumi.RegisterOutputType(GetDataFilteringProfileRuleOutput{})
+	pulumi.RegisterOutputType(GetDataFilteringProfileRuleArrayOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataPatternTypeOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataPatternTypeFilePropertiesOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataPatternTypeFilePropertiesPatternOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataPatternTypeFilePropertiesPatternArrayOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataPatternTypePredefinedOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataPatternTypePredefinedPatternOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataPatternTypePredefinedPatternArrayOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataPatternTypeRegexOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataPatternTypeRegexPatternOutput{})
+	pulumi.RegisterOutputType(GetDataObjectListDataPatternTypeRegexPatternArrayOutput{})
+	pulumi.RegisterOutputType(GetDataObjectPatternTypeOutput{})
+	pulumi.RegisterOutputType(GetDataObjectPatternTypeFilePropertiesOutput{})
+	pulumi.RegisterOutputType(GetDataObjectPatternTypeFilePropertiesPatternOutput{})
+	pulumi.RegisterOutputType(GetDataObjectPatternTypeFilePropertiesPatternArrayOutput{})
+	pulumi.RegisterOutputType(GetDataObjectPatternTypePredefinedOutput{})
+	pulumi.RegisterOutputType(GetDataObjectPatternTypePredefinedPatternOutput{})
+	pulumi.RegisterOutputType(GetDataObjectPatternTypePredefinedPatternArrayOutput{})
+	pulumi.RegisterOutputType(GetDataObjectPatternTypeRegexOutput{})
+	pulumi.RegisterOutputType(GetDataObjectPatternTypeRegexPatternOutput{})
+	pulumi.RegisterOutputType(GetDataObjectPatternTypeRegexPatternArrayOutput{})
 	pulumi.RegisterOutputType(GetDecryptionExclusionListDataOutput{})
 	pulumi.RegisterOutputType(GetDecryptionExclusionListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetDecryptionProfileListDataOutput{})
@@ -41227,6 +41789,8 @@ func init() {
 	pulumi.RegisterOutputType(GetGeneralSettingListDataGeneralGeoLocationOutput{})
 	pulumi.RegisterOutputType(GetGeneralSettingListDataGeneralSettingOutput{})
 	pulumi.RegisterOutputType(GetGeneralSettingListDataGeneralSettingManagementOutput{})
+	pulumi.RegisterOutputType(GetGlobalprotectMatchListListDataOutput{})
+	pulumi.RegisterOutputType(GetGlobalprotectMatchListListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetHipObjectAntiMalwareOutput{})
 	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaOutput{})
 	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaLastScanTimeOutput{})
@@ -41246,42 +41810,4 @@ func init() {
 	pulumi.RegisterOutputType(GetHipObjectCertificateCriteriaCertificateAttributeOutput{})
 	pulumi.RegisterOutputType(GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput{})
 	pulumi.RegisterOutputType(GetHipObjectCustomChecksOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksCriteriaOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksCriteriaPlistOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksCriteriaPlistArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksCriteriaPlistKeyOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksCriteriaPlistKeyArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksCriteriaProcessListOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksCriteriaProcessListArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksCriteriaRegistryKeyOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksCriteriaRegistryKeyArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDataLossPreventionOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDataLossPreventionCriteriaOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDataLossPreventionVendorOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDataLossPreventionVendorArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskBackupOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskBackupCriteriaOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskBackupCriteriaLastBackupTimeOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskBackupCriteriaLastBackupTimeWithinOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskBackupVendorOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskBackupVendorArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskEncryptionOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskEncryptionCriteriaOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskEncryptionCriteriaEncryptedLocationOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskEncryptionCriteriaEncryptedLocationArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskEncryptionVendorOutput{})
-	pulumi.RegisterOutputType(GetHipObjectDiskEncryptionVendorArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectFirewallOutput{})
-	pulumi.RegisterOutputType(GetHipObjectFirewallCriteriaOutput{})
-	pulumi.RegisterOutputType(GetHipObjectFirewallVendorOutput{})
-	pulumi.RegisterOutputType(GetHipObjectFirewallVendorArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectHostInfoOutput{})
-	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaOutput{})
-	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaClientVersionOutput{})
-	pulumi.RegisterOutputType(GetHipObjectHostInfoCriteriaDomainOutput{})
 }

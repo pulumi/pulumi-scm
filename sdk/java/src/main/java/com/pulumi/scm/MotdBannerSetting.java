@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var motdExample = new MotdBannerSetting("motdExample", MotdBannerSettingArgs.builder()
- *             .folder("All")
+ *             .folder("ngfw-shared")
  *             .motdAndBanner(MotdBannerSettingMotdAndBannerArgs.builder()
  *                 .motdEnable(true)
  *                 .message("Test Message")

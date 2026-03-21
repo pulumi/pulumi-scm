@@ -13,18 +13,123 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM LDAP Server Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM LDAP Server Profiles in the "All" folder.
+        ///     var allShared = Scm.GetLdapServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLdapServerProfileListAllSharedFiltered"] = .Select(profile =&gt; 
+        ///         {
+        ///             return 
+        ///             {
+        ///                 { "id", profile.Id },
+        ///                 { "name", profile.Name },
+        ///                 { "folder", profile.Folder },
+        ///                 { "server", profile.Server },
+        ///             };
+        ///         }).ToList(),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLdapServerProfileListResult> InvokeAsync(GetLdapServerProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLdapServerProfileListResult>("scm:index/getLdapServerProfileList:getLdapServerProfileList", args ?? new GetLdapServerProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM LDAP Server Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM LDAP Server Profiles in the "All" folder.
+        ///     var allShared = Scm.GetLdapServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLdapServerProfileListAllSharedFiltered"] = .Select(profile =&gt; 
+        ///         {
+        ///             return 
+        ///             {
+        ///                 { "id", profile.Id },
+        ///                 { "name", profile.Name },
+        ///                 { "folder", profile.Folder },
+        ///                 { "server", profile.Server },
+        ///             };
+        ///         }).ToList(),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLdapServerProfileListResult> Invoke(GetLdapServerProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLdapServerProfileListResult>("scm:index/getLdapServerProfileList:getLdapServerProfileList", args ?? new GetLdapServerProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM LDAP Server Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM LDAP Server Profiles in the "All" folder.
+        ///     var allShared = Scm.GetLdapServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLdapServerProfileListAllSharedFiltered"] = .Select(profile =&gt; 
+        ///         {
+        ///             return 
+        ///             {
+        ///                 { "id", profile.Id },
+        ///                 { "name", profile.Name },
+        ///                 { "folder", profile.Folder },
+        ///                 { "server", profile.Server },
+        ///             };
+        ///         }).ToList(),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLdapServerProfileListResult> Invoke(GetLdapServerProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLdapServerProfileListResult>("scm:index/getLdapServerProfileList:getLdapServerProfileList", args ?? new GetLdapServerProfileListInvokeArgs(), options.WithDefaults());

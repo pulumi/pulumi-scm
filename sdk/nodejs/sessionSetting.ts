@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *
  * // Set Sessions with Config Rematch value set to True
  * const sessionExample = new scm.SessionSetting("session_example", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     sessionSettings: {
  *         dhcpBcastSessionOn: false,
  *         erspan: false,

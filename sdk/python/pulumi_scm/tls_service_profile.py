@@ -281,14 +281,14 @@ class TlsServiceProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         tls_service_prof1_upper = scm.TlsServiceProfile("tls_service_prof_1_upper",
-            folder="All",
+            folder="ngfw-shared",
             name="TLS_Service_Profile_1",
             certificate="Authentication Cookie CA",
             protocol_settings={
                 "keyxchg_algo_rsa": True,
             })
         tls_service_prof2_upper = scm.TlsServiceProfile("tls_service_prof_2_upper",
-            folder="All",
+            folder="ngfw-shared",
             name="TLS_Service_Profile_2",
             certificate="Forward-Trust-CA",
             protocol_settings={
@@ -298,7 +298,7 @@ class TlsServiceProfile(pulumi.CustomResource):
                 "enc_algo_aes256_cbc": True,
             })
         tls_service_prof3_upper = scm.TlsServiceProfile("tls_service_prof_3_upper",
-            folder="All",
+            folder="ngfw-shared",
             name="TLS_Service_Profile_3",
             certificate="Root CA",
             protocol_settings={
@@ -369,14 +369,14 @@ class TlsServiceProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         tls_service_prof1_upper = scm.TlsServiceProfile("tls_service_prof_1_upper",
-            folder="All",
+            folder="ngfw-shared",
             name="TLS_Service_Profile_1",
             certificate="Authentication Cookie CA",
             protocol_settings={
                 "keyxchg_algo_rsa": True,
             })
         tls_service_prof2_upper = scm.TlsServiceProfile("tls_service_prof_2_upper",
-            folder="All",
+            folder="ngfw-shared",
             name="TLS_Service_Profile_2",
             certificate="Forward-Trust-CA",
             protocol_settings={
@@ -386,7 +386,7 @@ class TlsServiceProfile(pulumi.CustomResource):
                 "enc_algo_aes256_cbc": True,
             })
         tls_service_prof3_upper = scm.TlsServiceProfile("tls_service_prof_3_upper",
-            folder="All",
+            folder="ngfw-shared",
             name="TLS_Service_Profile_3",
             certificate="Root CA",
             protocol_settings={

@@ -31,7 +31,10 @@ from .bgp_route_map import *
 from .bgp_route_map_redistribution import *
 from .bgp_routing import *
 from .certificate_profile import *
+from .config_match_list import *
 from .content_id_setting import *
+from .data_filtering_profile import *
+from .data_object import *
 from .decryption_exclusion import *
 from .decryption_profile import *
 from .decryption_rule import *
@@ -93,8 +96,14 @@ from .get_bgp_route_map_redistribution_list import *
 from .get_bgp_routing import *
 from .get_certificate_profile import *
 from .get_certificate_profile_list import *
+from .get_config_match_list import *
+from .get_config_match_list_list import *
 from .get_content_id_setting import *
 from .get_content_id_setting_list import *
+from .get_data_filtering_profile import *
+from .get_data_filtering_profile_list import *
+from .get_data_object import *
+from .get_data_object_list import *
 from .get_decryption_exclusion import *
 from .get_decryption_exclusion_list import *
 from .get_decryption_profile import *
@@ -125,10 +134,14 @@ from .get_folder import *
 from .get_folder_list import *
 from .get_general_setting import *
 from .get_general_setting_list import *
+from .get_globalprotect_match_list import *
+from .get_globalprotect_match_list_list import *
 from .get_hip_object import *
 from .get_hip_object_list import *
 from .get_hip_profile import *
 from .get_hip_profile_list import *
+from .get_hipmatch_match_list import *
+from .get_hipmatch_match_list_list import *
 from .get_http_header_profile import *
 from .get_http_header_profile_list import *
 from .get_http_server_profile import *
@@ -143,6 +156,8 @@ from .get_ipsec_crypto_profile import *
 from .get_ipsec_crypto_profile_list import *
 from .get_ipsec_tunnel import *
 from .get_ipsec_tunnel_list import *
+from .get_iptag_match_list import *
+from .get_iptag_match_list_list import *
 from .get_kerberos_server_profile import *
 from .get_kerberos_server_profile_list import *
 from .get_label import *
@@ -237,6 +252,8 @@ from .get_snippet import *
 from .get_snippet_list import *
 from .get_syslog_server_profile import *
 from .get_syslog_server_profile_list import *
+from .get_system_match_list import *
+from .get_system_match_list_list import *
 from .get_tacacs_server_profile import *
 from .get_tacacs_server_profile_list import *
 from .get_tag import *
@@ -255,6 +272,8 @@ from .get_url_access_profile import *
 from .get_url_access_profile_list import *
 from .get_url_category import *
 from .get_url_category_list import *
+from .get_userid_match_list import *
+from .get_userid_match_list_list import *
 from .get_variable import *
 from .get_variable_list import *
 from .get_vlan_interface import *
@@ -271,8 +290,10 @@ from .get_zone import *
 from .get_zone_list import *
 from .get_zone_protection_profile import *
 from .get_zone_protection_profile_list import *
+from .globalprotect_match_list import *
 from .hip_object import *
 from .hip_profile import *
+from .hipmatch_match_list import *
 from .http_header_profile import *
 from .http_server_profile import *
 from .ike_crypto_profile import *
@@ -281,6 +302,7 @@ from .interface_management_profile import *
 from .internal_dns_server import *
 from .ipsec_crypto_profile import *
 from .ipsec_tunnel import *
+from .iptag_match_list import *
 from .kerberos_server_profile import *
 from .label import *
 from .layer2_subinterface import *
@@ -330,6 +352,7 @@ from .session_timeout import *
 from .site import *
 from .snippet import *
 from .syslog_server_profile import *
+from .system_match_list import *
 from .tacacs_server_profile import *
 from .tag import *
 from .tcp_setting import *
@@ -339,6 +362,7 @@ from .tunnel_interface import *
 from .update_schedule import *
 from .url_access_profile import *
 from .url_category import *
+from .userid_match_list import *
 from .variable import *
 from .vlan_interface import *
 from .vpn_setting import *
@@ -562,10 +586,34 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/configMatchList",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/configMatchList:ConfigMatchList": "ConfigMatchList"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/contentIdSetting",
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/contentIdSetting:ContentIdSetting": "ContentIdSetting"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/dataFilteringProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/dataFilteringProfile:DataFilteringProfile": "DataFilteringProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/dataObject",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/dataObject:DataObject": "DataObject"
   }
  },
  {
@@ -690,6 +738,14 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/globalprotectMatchList",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/globalprotectMatchList:GlobalprotectMatchList": "GlobalprotectMatchList"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/hipObject",
   "fqn": "pulumi_scm",
   "classes": {
@@ -702,6 +758,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/hipProfile:HipProfile": "HipProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/hipmatchMatchList",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/hipmatchMatchList:HipmatchMatchList": "HipmatchMatchList"
   }
  },
  {
@@ -766,6 +830,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/ipsecTunnel:IpsecTunnel": "IpsecTunnel"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/iptagMatchList",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/iptagMatchList:IptagMatchList": "IptagMatchList"
   }
  },
  {
@@ -1154,6 +1226,14 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/systemMatchList",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/systemMatchList:SystemMatchList": "SystemMatchList"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/tacacsServerProfile",
   "fqn": "pulumi_scm",
   "classes": {
@@ -1222,6 +1302,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/urlCategory:UrlCategory": "UrlCategory"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/useridMatchList",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/useridMatchList:UseridMatchList": "UseridMatchList"
   }
  },
  {

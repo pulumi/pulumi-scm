@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as scm from "@pulumi/scm";
  *
  * const scmLogForwardingProfile1 = new scm.LogForwardingProfile("scm_log_forwarding_profile_1", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm-log-fowarding-profile-1",
  *     matchLists: [{
  *         name: "profile_match",
@@ -25,7 +25,7 @@ import * as utilities from "./utilities";
  *     }],
  * });
  * const scmLogForwardingProfile2 = new scm.LogForwardingProfile("scm_log_forwarding_profile_2", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm-log-fowarding-profile-2",
  *     description: "Log Forwarding w/ HTTP Server Profile and Syslog Server Profile",
  *     matchLists: [{
@@ -33,14 +33,11 @@ import * as utilities from "./utilities";
  *         logType: "traffic",
  *         filter: "(device_name eq test_device)",
  *         sendHttp: ["test_http"],
- *         sendSyslog: [
- *             "syslog-server-prof-mixed",
- *             "syslog-server-prof-complete",
- *         ],
+ *         sendSyslog: ["syslog-server-prof-complete"],
  *     }],
  * });
  * const scmLogForwardingProfile3 = new scm.LogForwardingProfile("scm_log_forwarding_profile_3", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm-log-fowarding-profile-3",
  *     description: "Log Forwarding w/ All Server Profiles",
  *     matchLists: [{
@@ -52,20 +49,13 @@ import * as utilities from "./utilities";
  *             "test_http",
  *             "t10",
  *         ],
- *         sendSyslog: [
- *             "syslog-server-prof-base",
- *             "syslog-server-prof-mixed",
- *             "syslog-server-prof-complete",
- *         ],
+ *         sendSyslog: ["syslog-server-prof-complete"],
  *         sendSnmptrap: ["snmp_test"],
- *         sendEmail: [
- *             "email_test",
- *             "email_test_2",
- *         ],
+ *         sendEmail: ["email_test"],
  *     }],
  * });
  * const scmLogForwardingProfile4 = new scm.LogForwardingProfile("scm_log_forwarding_profile_4", {
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     name: "scm-log-fowarding-profile-4",
  *     description: "Log Forwarding w/ Multiple Match Lists",
  *     matchLists: [
@@ -75,7 +65,7 @@ import * as utilities from "./utilities";
  *             logType: "url",
  *             filter: "(sdwan_cluster contains 123)",
  *             sendHttp: ["t10"],
- *             sendSyslog: ["syslog-server-prof-base"],
+ *             sendSyslog: ["syslog-server-prof-complete"],
  *             sendSnmptrap: ["snmp_test"],
  *         },
  *         {
@@ -85,13 +75,9 @@ import * as utilities from "./utilities";
  *             sendHttp: [
  *                 "t5",
  *                 "t10",
- *                 "t20",
  *             ],
- *             sendSyslog: ["syslog-server-prof-mixed"],
- *             sendEmail: [
- *                 "email_test",
- *                 "email_test_2",
- *             ],
+ *             sendSyslog: ["syslog-server-prof-complete"],
+ *             sendEmail: ["email_test"],
  *         },
  *         {
  *             name: "profile_match_3",
@@ -101,15 +87,9 @@ import * as utilities from "./utilities";
  *             sendHttp: [
  *                 "t5",
  *                 "t10",
- *                 "t20",
- *                 "t22",
- *                 "t24",
  *             ],
  *             sendSyslog: ["syslog-server-prof-complete"],
- *             sendEmail: [
- *                 "email_test",
- *                 "email_test_2",
- *             ],
+ *             sendEmail: ["email_test"],
  *         },
  *     ],
  * });

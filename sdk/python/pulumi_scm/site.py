@@ -516,7 +516,7 @@ class Site(pulumi.CustomResource):
         ## 1. Define the IKE Crypto Profile (IKE Phase 1)
         # Note: The resource name is plural: "scm_ike_crypto_profile"
         example = scm.IkeCryptoProfile("example",
-            name="example-ike-crypto-14",
+            name="example-ike-crypto-site",
             folder="Remote Networks",
             hashes=["sha256"],
             dh_groups=["group14"],
@@ -524,7 +524,7 @@ class Site(pulumi.CustomResource):
         ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
         # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
-            name="PaloAlto-Networks-IPSec-14",
+            name="panw-IPSec-site",
             folder="Remote Networks",
             esp={
                 "encryptions": ["aes-256-gcm"],
@@ -537,7 +537,7 @@ class Site(pulumi.CustomResource):
         ## 3. Define the IKE Gateway
         # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ike_gateway = scm.IkeGateway("example",
-            name="example-gateway-14",
+            name="example-gateway-site",
             folder="Remote Networks",
             peer_address={
                 "ip": "1.1.1.1",
@@ -555,7 +555,7 @@ class Site(pulumi.CustomResource):
         ## 4. Define the IPsec Tunnel
         # Note: Nested 'auto_key' block uses an equals sign (=).
         example_ipsec_tunnel = scm.IpsecTunnel("example",
-            name="example-tunnel-14",
+            name="example-tunnel-site",
             folder="Remote Networks",
             tunnel_interface="tunnel",
             anti_replay=True,
@@ -571,7 +571,7 @@ class Site(pulumi.CustomResource):
         # 1. Define the Remote Network first
         branch_office = scm.RemoteNetwork("branch_office",
             folder="Remote Networks",
-            name="example-rn-14",
+            name="example-rn-site",
             region="us-west-1",
             license_type="FWAAS-AGGREGATE",
             ipsec_tunnel=example_ipsec_tunnel.name,
@@ -579,7 +579,7 @@ class Site(pulumi.CustomResource):
             subnets=["192.168.10.0/24"])
         # 2. Define the Site
         example_site = scm.Site("example",
-            name="example-site-14",
+            name="example-site-site",
             type="third-party-branch",
             license_type="FWAAS-SITE-25Mbps",
             city="San Jose",
@@ -642,7 +642,7 @@ class Site(pulumi.CustomResource):
         ## 1. Define the IKE Crypto Profile (IKE Phase 1)
         # Note: The resource name is plural: "scm_ike_crypto_profile"
         example = scm.IkeCryptoProfile("example",
-            name="example-ike-crypto-14",
+            name="example-ike-crypto-site",
             folder="Remote Networks",
             hashes=["sha256"],
             dh_groups=["group14"],
@@ -650,7 +650,7 @@ class Site(pulumi.CustomResource):
         ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
         # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
-            name="PaloAlto-Networks-IPSec-14",
+            name="panw-IPSec-site",
             folder="Remote Networks",
             esp={
                 "encryptions": ["aes-256-gcm"],
@@ -663,7 +663,7 @@ class Site(pulumi.CustomResource):
         ## 3. Define the IKE Gateway
         # Note: The resource name is plural and nested blocks now use an equals sign (=).
         example_ike_gateway = scm.IkeGateway("example",
-            name="example-gateway-14",
+            name="example-gateway-site",
             folder="Remote Networks",
             peer_address={
                 "ip": "1.1.1.1",
@@ -681,7 +681,7 @@ class Site(pulumi.CustomResource):
         ## 4. Define the IPsec Tunnel
         # Note: Nested 'auto_key' block uses an equals sign (=).
         example_ipsec_tunnel = scm.IpsecTunnel("example",
-            name="example-tunnel-14",
+            name="example-tunnel-site",
             folder="Remote Networks",
             tunnel_interface="tunnel",
             anti_replay=True,
@@ -697,7 +697,7 @@ class Site(pulumi.CustomResource):
         # 1. Define the Remote Network first
         branch_office = scm.RemoteNetwork("branch_office",
             folder="Remote Networks",
-            name="example-rn-14",
+            name="example-rn-site",
             region="us-west-1",
             license_type="FWAAS-AGGREGATE",
             ipsec_tunnel=example_ipsec_tunnel.name,
@@ -705,7 +705,7 @@ class Site(pulumi.CustomResource):
             subnets=["192.168.10.0/24"])
         # 2. Define the Site
         example_site = scm.Site("example",
-            name="example-site-14",
+            name="example-site-site",
             type="third-party-branch",
             license_type="FWAAS-SITE-25Mbps",
             city="San Jose",

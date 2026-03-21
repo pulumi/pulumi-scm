@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * const anchorQosRule = new scm.QosPolicyRule("anchor_qos_rule", {
  *     name: "anchor-qos-rule",
  *     description: "Base rule for testing 'before' and 'after' positioning.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     action: {
  *         "class": "2",
@@ -38,7 +38,7 @@ import * as utilities from "./utilities";
  * const ruleTopQosRule = new scm.QosPolicyRule("rule_top_qos_rule", {
  *     name: "top-absolute-qos-rule",
  *     description: "Placed at the very TOP of the QoS rulebase (Highest Priority).",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "top",
  *     action: {
@@ -48,7 +48,7 @@ import * as utilities from "./utilities";
  * const ruleBottomQosRule = new scm.QosPolicyRule("rule_bottom_qos_rule", {
  *     name: "bottom-absolute-qos-rule",
  *     description: "Placed at the very BOTTOM of the QoS rulebase (Lowest Priority)",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "bottom",
  *     action: {
@@ -59,7 +59,7 @@ import * as utilities from "./utilities";
  * const ruleBeforeAnchorQos = new scm.QosPolicyRule("rule_before_anchor_qos", {
  *     name: "before-anchor-qos-rule",
  *     description: "Positioned immediately BEFORE the anchor-qos-rule.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "before",
  *     targetRule: anchorQosRule.id,
@@ -70,7 +70,7 @@ import * as utilities from "./utilities";
  * const ruleAfterAnchorQos = new scm.QosPolicyRule("rule_after_anchor_qos", {
  *     name: "after-anchor-qos-rule",
  *     description: "Positioned immediately AFTER the anchor-qos-rule.",
- *     folder: "All",
+ *     folder: "ngfw-shared",
  *     position: "pre",
  *     relativePosition: "after",
  *     targetRule: anchorQosRule.id,

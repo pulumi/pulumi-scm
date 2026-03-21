@@ -18,6 +18,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.EthernetInterfaceLayer2Lldp? Lldp;
         /// <summary>
+        /// Name of Netflow Profile to assign to Interface
+        /// </summary>
+        public readonly string? NetflowProfile;
+        /// <summary>
         /// Assign interface to VLAN tag
         /// </summary>
         public readonly string? VlanTag;
@@ -26,9 +30,12 @@ namespace Pulumi.Scm.Outputs
         private EthernetInterfaceLayer2(
             Outputs.EthernetInterfaceLayer2Lldp? lldp,
 
+            string? netflowProfile,
+
             string? vlanTag)
         {
             Lldp = lldp;
+            NetflowProfile = netflowProfile;
             VlanTag = vlanTag;
         }
     }

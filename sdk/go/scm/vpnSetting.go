@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := scm.NewVpnSetting(ctx, "tcp_example", &scm.VpnSettingArgs{
-//				Folder: pulumi.String("All"),
+//				Folder: pulumi.String("ngfw-shared"),
 //				Vpn: &scm.VpnSettingVpnArgs{
 //					Ikev2: &scm.VpnSettingVpnIkev2Args{
 //						CookieThreshold:      pulumi.Int(500),

@@ -283,10 +283,10 @@ class HttpHeaderProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_http_header_profile1 = scm.HttpHeaderProfile("scm_http_header_profile_1",
-            folder="All",
+            folder="ngfw-shared",
             name="base_http_header_profile_1")
         scm_http_header_profile2 = scm.HttpHeaderProfile("scm_http_header_profile_2",
-            folder="All",
+            folder="ngfw-shared",
             name="simple_http_header_profile_2",
             http_header_insertions=[{
                 "name": "header_one",
@@ -301,7 +301,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
                 }],
             }])
         scm_http_header_profile3 = scm.HttpHeaderProfile("scm_http_header_profile_3",
-            folder="All",
+            folder="ngfw-shared",
             name="complete_http_header_profile_3",
             http_header_insertions=[
                 {
@@ -447,10 +447,10 @@ class HttpHeaderProfile(pulumi.CustomResource):
         import pulumi_scm as scm
 
         scm_http_header_profile1 = scm.HttpHeaderProfile("scm_http_header_profile_1",
-            folder="All",
+            folder="ngfw-shared",
             name="base_http_header_profile_1")
         scm_http_header_profile2 = scm.HttpHeaderProfile("scm_http_header_profile_2",
-            folder="All",
+            folder="ngfw-shared",
             name="simple_http_header_profile_2",
             http_header_insertions=[{
                 "name": "header_one",
@@ -465,7 +465,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
                 }],
             }])
         scm_http_header_profile3 = scm.HttpHeaderProfile("scm_http_header_profile_3",
-            folder="All",
+            folder="ngfw-shared",
             name="complete_http_header_profile_3",
             http_header_insertions=[
                 {

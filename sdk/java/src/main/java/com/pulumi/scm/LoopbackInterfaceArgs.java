@@ -159,6 +159,21 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
+     * Name of Netflow Profile to assign to Interface
+     * 
+     */
+    @Import(name="netflowProfile")
+    private @Nullable Output<String> netflowProfile;
+
+    /**
+     * @return Name of Netflow Profile to assign to Interface
+     * 
+     */
+    public Optional<Output<String>> netflowProfile() {
+        return Optional.ofNullable(this.netflowProfile);
+    }
+
+    /**
      * The snippet in which the resource is defined
      * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
@@ -189,6 +204,7 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
         this.ipv6 = $.ipv6;
         this.mtu = $.mtu;
         this.name = $.name;
+        this.netflowProfile = $.netflowProfile;
         this.snippet = $.snippet;
     }
 
@@ -411,6 +427,27 @@ public final class LoopbackInterfaceArgs extends com.pulumi.resources.ResourceAr
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(@Nullable Output<String> netflowProfile) {
+            $.netflowProfile = netflowProfile;
+            return this;
+        }
+
+        /**
+         * @param netflowProfile Name of Netflow Profile to assign to Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder netflowProfile(String netflowProfile) {
+            return netflowProfile(Output.of(netflowProfile));
         }
 
         /**
