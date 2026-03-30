@@ -37,7 +37,7 @@ import (
 //			ctx.Export("scmAntiSpywareSignatureOutput", pulumi.Map{
 //				"threadId":  scmAntiSpywareSignatureDs.Id,
 //				"folder":    scmAntiSpywareSignatureDs.Folder,
-//				"name":      scmAntiSpywareSignatureDs.Name,
+//				"name":      pulumi.Any(scmAntiSpywareSignatureDs.Name),
 //				"comment":   scmAntiSpywareSignatureDs.Comment,
 //				"severity":  scmAntiSpywareSignatureDs.Severity,
 //				"signature": scmAntiSpywareSignatureDs.Signature,
