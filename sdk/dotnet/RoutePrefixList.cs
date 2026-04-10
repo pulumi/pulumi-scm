@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmRoutePrefixList = new Scm.RoutePrefixList("scm_route_prefix_list", new()
+    ///     var scmRoutePrefixList = new Scm.Index.RoutePrefixList("scm_route_prefix_list", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_tf_bgp_prefix_list",

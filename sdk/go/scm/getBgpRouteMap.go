@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up bgp route map by its ID.
-//			scmBgpRouteMapDs, err := scm.LookupBgpRouteMap(ctx, &scm.LookupBgpRouteMapArgs{
+//			scmBgpRouteMapDs, err := scm.GetBgpRouteMap(ctx, &scm.LookupBgpRouteMapArgs{
 //				Id: "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
 //			}, nil)
 //			if err != nil {

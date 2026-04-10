@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			autoVpnSetting, err := scm.LookupAutoVpnSetting(ctx, map[string]interface{}{}, nil)
+//			autoVpnSetting, err := scm.GetAutoVpnSetting(ctx, map[string]interface{}{}, nil)
 //			if err != nil {
 //				return err
 //			}

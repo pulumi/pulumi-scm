@@ -27,7 +27,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of IKE Gateways.
         ///     // You can filter the list by folder, snippet, or device.
         ///     // This example retrieves all gateways in the "All" folder.
-        ///     var exampleListIkeGatewayDs = Scm.GetIkeGatewayList.Invoke(new()
+        ///     var exampleListIkeGatewayDs = Scm.Index.GetIkeGatewayList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///     });
@@ -59,7 +59,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of IKE Gateways.
         ///     // You can filter the list by folder, snippet, or device.
         ///     // This example retrieves all gateways in the "All" folder.
-        ///     var exampleListIkeGatewayDs = Scm.GetIkeGatewayList.Invoke(new()
+        ///     var exampleListIkeGatewayDs = Scm.Index.GetIkeGatewayList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///     });
@@ -91,7 +91,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of IKE Gateways.
         ///     // You can filter the list by folder, snippet, or device.
         ///     // This example retrieves all gateways in the "All" folder.
-        ///     var exampleListIkeGatewayDs = Scm.GetIkeGatewayList.Invoke(new()
+        ///     var exampleListIkeGatewayDs = Scm.Index.GetIkeGatewayList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///     });

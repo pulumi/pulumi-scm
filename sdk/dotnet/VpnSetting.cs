@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var tcpExample = new Scm.VpnSetting("tcp_example", new()
+    ///     var tcpExample = new Scm.Index.VpnSetting("tcp_example", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Vpn = new Scm.Inputs.VpnSettingVpnArgs

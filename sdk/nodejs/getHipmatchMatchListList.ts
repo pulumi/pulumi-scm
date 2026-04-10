@@ -22,7 +22,7 @@ import * as utilities from "./utilities";
  * export const hipmatchMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getHipmatchMatchListList(args?: GetHipmatchMatchListListArgs, opts?: pulumi.InvokeOptions): Promise<GetHipmatchMatchListListResult> {
@@ -129,7 +129,7 @@ export interface GetHipmatchMatchListListResult {
  * export const hipmatchMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getHipmatchMatchListListOutput(args?: GetHipmatchMatchListListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHipmatchMatchListListResult> {

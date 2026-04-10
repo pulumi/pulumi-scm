@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to retrieve a single IKE Gateway by its ID.
 //			// Replace the placeholder ID with the actual UUID of the gateway you want to fetch.
-//			exampleSingularIkeGatewayDs, err := scm.LookupIkeGateway(ctx, &scm.LookupIkeGatewayArgs{
+//			exampleSingularIkeGatewayDs, err := scm.GetIkeGateway(ctx, &scm.LookupIkeGatewayArgs{
 //				Id: "1ba42513-2985-4783-8bdf-c83cf20d6dd1",
 //			}, nil)
 //			if err != nil {

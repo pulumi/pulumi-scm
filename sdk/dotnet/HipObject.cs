@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     // This resource creates a comprehensive HIP Object with many criteria enabled.
     ///     // This showcases the use of nested objects and lists of objects that the
     ///     // corrected provider schema now supports.
-    ///     var scmHipObject1 = new Scm.HipObject("scm_hip_object_1", new()
+    ///     var scmHipObject1 = new Scm.Index.HipObject("scm_hip_object_1", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_hip_object_1",

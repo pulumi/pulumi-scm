@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a vlan interface used as parent-interface for subsequent examples
     ///     //
-    ///     var scmVlanInterfaceIpv4 = new Scm.VlanInterface("scm_vlan_interface_ipv4", new()
+    ///     var scmVlanInterfaceIpv4 = new Scm.Index.VlanInterface("scm_vlan_interface_ipv4", new()
     ///     {
     ///         Name = "$scm_vlan_interface_ipv4",
     ///         Comment = "Managed by Pulumi",

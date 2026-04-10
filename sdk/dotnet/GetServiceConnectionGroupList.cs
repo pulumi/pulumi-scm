@@ -30,7 +30,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source List: SCM Service Connection Group (List Lookup)
         ///     // ------------------------------------------------------------------
-        ///     var allGroupsInFolder = Scm.GetServiceConnectionGroupList.Invoke(new()
+        ///     var allGroupsInFolder = Scm.Index.GetServiceConnectionGroupList.Invoke(new()
         ///     {
         ///         Folder = folderScope,
         ///         Limit = 50,
@@ -69,7 +69,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source List: SCM Service Connection Group (List Lookup)
         ///     // ------------------------------------------------------------------
-        ///     var allGroupsInFolder = Scm.GetServiceConnectionGroupList.Invoke(new()
+        ///     var allGroupsInFolder = Scm.Index.GetServiceConnectionGroupList.Invoke(new()
         ///     {
         ///         Folder = folderScope,
         ///         Limit = 50,
@@ -108,7 +108,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source List: SCM Service Connection Group (List Lookup)
         ///     // ------------------------------------------------------------------
-        ///     var allGroupsInFolder = Scm.GetServiceConnectionGroupList.Invoke(new()
+        ///     var allGroupsInFolder = Scm.Index.GetServiceConnectionGroupList.Invoke(new()
         ///     {
         ///         Folder = folderScope,
         ///         Limit = 50,

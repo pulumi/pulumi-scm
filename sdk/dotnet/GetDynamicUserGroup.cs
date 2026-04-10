@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the dynamic user group by its ID.
-        ///     var scmDynamicUserGroupDs = Scm.GetDynamicUserGroup.Invoke(new()
+        ///     var scmDynamicUserGroupDs = Scm.Index.GetDynamicUserGroup.Invoke(new()
         ///     {
         ///         Id = "c8ac5c18-023b-4be5-bc39-65e585cff9c7",
         ///     });
@@ -62,7 +62,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the dynamic user group by its ID.
-        ///     var scmDynamicUserGroupDs = Scm.GetDynamicUserGroup.Invoke(new()
+        ///     var scmDynamicUserGroupDs = Scm.Index.GetDynamicUserGroup.Invoke(new()
         ///     {
         ///         Id = "c8ac5c18-023b-4be5-bc39-65e585cff9c7",
         ///     });
@@ -99,7 +99,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the dynamic user group by its ID.
-        ///     var scmDynamicUserGroupDs = Scm.GetDynamicUserGroup.Invoke(new()
+        ///     var scmDynamicUserGroupDs = Scm.Index.GetDynamicUserGroup.Invoke(new()
         ///     {
         ///         Id = "c8ac5c18-023b-4be5-bc39-65e585cff9c7",
         ///     });

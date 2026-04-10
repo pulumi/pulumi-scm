@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var dhcpServerExample = new Scm.DhcpInterface("dhcp_server_example", new()
+    ///     var dhcpServerExample = new Scm.Index.DhcpInterface("dhcp_server_example", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$test-interface-must-exist",

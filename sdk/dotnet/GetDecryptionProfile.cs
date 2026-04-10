@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM Decryption Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
-        ///     var scmDpProfile = Scm.GetDecryptionProfile.Invoke(new()
+        ///     var scmDpProfile = Scm.Index.GetDecryptionProfile.Invoke(new()
         ///     {
         ///         Id = "c7629092-d286-400b-ba3f-1d57b8065645",
         ///     });
@@ -65,7 +65,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM Decryption Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
-        ///     var scmDpProfile = Scm.GetDecryptionProfile.Invoke(new()
+        ///     var scmDpProfile = Scm.Index.GetDecryptionProfile.Invoke(new()
         ///     {
         ///         Id = "c7629092-d286-400b-ba3f-1d57b8065645",
         ///     });
@@ -102,7 +102,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM Decryption Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
-        ///     var scmDpProfile = Scm.GetDecryptionProfile.Invoke(new()
+        ///     var scmDpProfile = Scm.Index.GetDecryptionProfile.Invoke(new()
         ///     {
         ///         Id = "c7629092-d286-400b-ba3f-1d57b8065645",
         ///     });

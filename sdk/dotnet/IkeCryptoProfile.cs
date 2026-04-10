@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // The resource block defines a new IKE Crypto Profile.
-    ///     var scmIkeCryptoProfile2 = new Scm.IkeCryptoProfile("scm_ike_crypto_profile_2", new()
+    ///     var scmIkeCryptoProfile2 = new Scm.Index.IkeCryptoProfile("scm_ike_crypto_profile_2", new()
     ///     {
     ///         Name = "scm_ike_crypto_profile_2",
     ///         Folder = "Prisma Access",

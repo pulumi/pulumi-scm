@@ -21,13 +21,13 @@ import * as utilities from "./utilities";
  * const allShared = scm.getAddressList({
  *     folder: "All",
  * });
- * export const addressDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * export const addressDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr }), {}));
  * const paginatedAddressesExample = scm.getAddressList({
  *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
- * export const paginatedAddresses = paginatedAddressesExample.then(paginatedAddressesExample => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * export const paginatedAddresses = paginatedAddressesExample.then(paginatedAddressesExample => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr }), {}));
  * export const paginationAddressesDetails = {
  *     totalObjectsInFolder: paginatedAddressesExample.then(paginatedAddressesExample => paginatedAddressesExample.total),
  *     limitUsed: paginatedAddressesExample.then(paginatedAddressesExample => paginatedAddressesExample.limit),
@@ -137,13 +137,13 @@ export interface GetAddressListResult {
  * const allShared = scm.getAddressList({
  *     folder: "All",
  * });
- * export const addressDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * export const addressDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr }), {}));
  * const paginatedAddressesExample = scm.getAddressList({
  *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
- * export const paginatedAddresses = paginatedAddressesExample.then(paginatedAddressesExample => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * export const paginatedAddresses = paginatedAddressesExample.then(paginatedAddressesExample => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr }), {}));
  * export const paginationAddressesDetails = {
  *     totalObjectsInFolder: paginatedAddressesExample.then(paginatedAddressesExample => paginatedAddressesExample.total),
  *     limitUsed: paginatedAddressesExample.then(paginatedAddressesExample => paginatedAddressesExample.limit),

@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the "scm_snippet" tag by its id
-//			scmSnippetOutputsDs, err := scm.LookupSnippet(ctx, &scm.LookupSnippetArgs{
+//			scmSnippetOutputsDs, err := scm.GetSnippet(ctx, &scm.LookupSnippetArgs{
 //				Id: "b4811c43-e5f9-4b28-8316-7f18f97ba244",
 //			}, nil)
 //			if err != nil {

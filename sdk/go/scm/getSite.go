@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			singleSiteById, err := scm.LookupSite(ctx, &scm.LookupSiteArgs{
+//			singleSiteById, err := scm.GetSite(ctx, &scm.LookupSiteArgs{
 //				Id: "d037fe30-68ae-47ee-9a74-71bc63ac2c10",
 //			}, nil)
 //			if err != nil {

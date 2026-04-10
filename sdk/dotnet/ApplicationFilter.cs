@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmApplicationFilter1 = new Scm.ApplicationFilter("scm_application_filter_1", new()
+    ///     var scmApplicationFilter1 = new Scm.Index.ApplicationFilter("scm_application_filter_1", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_application_filter_1",

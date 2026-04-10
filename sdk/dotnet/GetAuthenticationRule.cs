@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var ruleData = Scm.GetAuthenticationRule.Invoke(new()
+        ///     var ruleData = Scm.Index.GetAuthenticationRule.Invoke(new()
         ///     {
         ///         Id = "1f1e08af-fe7b-4c36-882a-411101ad36d7",
         ///     });
@@ -53,7 +53,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var ruleData = Scm.GetAuthenticationRule.Invoke(new()
+        ///     var ruleData = Scm.Index.GetAuthenticationRule.Invoke(new()
         ///     {
         ///         Id = "1f1e08af-fe7b-4c36-882a-411101ad36d7",
         ///     });
@@ -82,7 +82,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var ruleData = Scm.GetAuthenticationRule.Invoke(new()
+        ///     var ruleData = Scm.Index.GetAuthenticationRule.Invoke(new()
         ///     {
         ///         Id = "1f1e08af-fe7b-4c36-882a-411101ad36d7",
         ///     });

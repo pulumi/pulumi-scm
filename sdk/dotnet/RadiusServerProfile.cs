@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var chapRadiusProfile = new Scm.RadiusServerProfile("chap_radius_profile", new()
+    ///     var chapRadiusProfile = new Scm.Index.RadiusServerProfile("chap_radius_profile", new()
     ///     {
     ///         Name = "CHAP_only_rsp_1",
     ///         Folder = "ngfw-shared",
@@ -44,7 +44,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var papRadiusProfile = new Scm.RadiusServerProfile("pap_radius_profile", new()
+    ///     var papRadiusProfile = new Scm.Index.RadiusServerProfile("pap_radius_profile", new()
     ///     {
     ///         Name = "pap_only_rsp_1",
     ///         Folder = "ngfw-shared",

@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var globalprotectMatchList = new Scm.GlobalprotectMatchList("globalprotect_match_list", new()
+    ///     var globalprotectMatchList = new Scm.Index.GlobalprotectMatchList("globalprotect_match_list", new()
     ///     {
     ///         Name = "test-globalprotect-list",
     ///         Description = "GlobalProtect match list for monitoring VPN connection events and remote access activities",

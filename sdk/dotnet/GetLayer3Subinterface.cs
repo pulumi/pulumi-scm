@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up layer3 sub-interface by its ID.
-        ///     var scmL3SubinterfaceDs = Scm.GetLayer3Subinterface.Invoke(new()
+        ///     var scmL3SubinterfaceDs = Scm.Index.GetLayer3Subinterface.Invoke(new()
         ///     {
         ///         Id = "88f730d1-6577-492b-88a6-73d4a513dc76",
         ///     });
@@ -63,7 +63,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up layer3 sub-interface by its ID.
-        ///     var scmL3SubinterfaceDs = Scm.GetLayer3Subinterface.Invoke(new()
+        ///     var scmL3SubinterfaceDs = Scm.Index.GetLayer3Subinterface.Invoke(new()
         ///     {
         ///         Id = "88f730d1-6577-492b-88a6-73d4a513dc76",
         ///     });
@@ -101,7 +101,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up layer3 sub-interface by its ID.
-        ///     var scmL3SubinterfaceDs = Scm.GetLayer3Subinterface.Invoke(new()
+        ///     var scmL3SubinterfaceDs = Scm.Index.GetLayer3Subinterface.Invoke(new()
         ///     {
         ///         Id = "88f730d1-6577-492b-88a6-73d4a513dc76",
         ///     });

@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the "scm_snippet" tag by its id
-        ///     var scmSnippetOutputsDs = Scm.GetSnippet.Invoke(new()
+        ///     var scmSnippetOutputsDs = Scm.Index.GetSnippet.Invoke(new()
         ///     {
         ///         Id = "b4811c43-e5f9-4b28-8316-7f18f97ba244",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the "scm_snippet" tag by its id
-        ///     var scmSnippetOutputsDs = Scm.GetSnippet.Invoke(new()
+        ///     var scmSnippetOutputsDs = Scm.Index.GetSnippet.Invoke(new()
         ///     {
         ///         Id = "b4811c43-e5f9-4b28-8316-7f18f97ba244",
         ///     });
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the "scm_snippet" tag by its id
-        ///     var scmSnippetOutputsDs = Scm.GetSnippet.Invoke(new()
+        ///     var scmSnippetOutputsDs = Scm.Index.GetSnippet.Invoke(new()
         ///     {
         ///         Id = "b4811c43-e5f9-4b28-8316-7f18f97ba244",
         ///     });

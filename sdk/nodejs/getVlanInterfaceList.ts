@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * const allVlanInterfaces = scm.getVlanInterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmVlanInterfaceList = allVlanInterfaces.then(allVlanInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmVlanInterfaceList = allVlanInterfaces.then(allVlanInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getVlanInterfaceList(args?: GetVlanInterfaceListArgs, opts?: pulumi.InvokeOptions): Promise<GetVlanInterfaceListResult> {
@@ -123,7 +123,7 @@ export interface GetVlanInterfaceListResult {
  * const allVlanInterfaces = scm.getVlanInterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmVlanInterfaceList = allVlanInterfaces.then(allVlanInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmVlanInterfaceList = allVlanInterfaces.then(allVlanInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getVlanInterfaceListOutput(args?: GetVlanInterfaceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVlanInterfaceListResult> {

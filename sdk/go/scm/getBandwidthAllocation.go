@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up an existing Bandwidth Allocation by name
-//			example, err := scm.LookupBandwidthAllocation(ctx, &scm.LookupBandwidthAllocationArgs{
+//			example, err := scm.GetBandwidthAllocation(ctx, &scm.LookupBandwidthAllocationArgs{
 //				Name: pulumi.StringRef("taiwan"),
 //			}, nil)
 //			if err != nil {

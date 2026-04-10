@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up a folder by id
-//			scmFolderDs, err := scm.LookupFolder(ctx, &scm.LookupFolderArgs{
+//			scmFolderDs, err := scm.GetFolder(ctx, &scm.LookupFolderArgs{
 //				Id: "0f11d0d9-df7c-45da-a60c-4d80f8422544",
 //			}, nil)
 //			if err != nil {

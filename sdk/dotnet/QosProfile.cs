@@ -22,13 +22,13 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmQosProfile1 = new Scm.QosProfile("scm_qos_profile_1", new()
+    ///     var scmQosProfile1 = new Scm.Index.QosProfile("scm_qos_profile_1", new()
     ///     {
     ///         Folder = "Remote Networks",
     ///         Name = "scm-qos-profile-base",
     ///     });
     /// 
-    ///     var scmQosProfile2 = new Scm.QosProfile("scm_qos_profile_2", new()
+    ///     var scmQosProfile2 = new Scm.Index.QosProfile("scm_qos_profile_2", new()
     ///     {
     ///         Folder = "Remote Networks",
     ///         Name = "scm-qos-profile-2",
@@ -39,7 +39,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmQosProfile3 = new Scm.QosProfile("scm_qos_profile_3", new()
+    ///     var scmQosProfile3 = new Scm.Index.QosProfile("scm_qos_profile_3", new()
     ///     {
     ///         Folder = "Service Connections",
     ///         Name = "scm-qos-profile-3",
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmQosProfile4 = new Scm.QosProfile("scm_qos_profile_4", new()
+    ///     var scmQosProfile4 = new Scm.Index.QosProfile("scm_qos_profile_4", new()
     ///     {
     ///         Folder = "Service Connections",
     ///         Name = "scm-qos-profile-4",

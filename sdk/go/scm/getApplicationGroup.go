@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the application group by its ID from the terraform.tfstate file.
-//			scmApplicationGroupDs, err := scm.LookupApplicationGroup(ctx, &scm.LookupApplicationGroupArgs{
+//			scmApplicationGroupDs, err := scm.GetApplicationGroup(ctx, &scm.LookupApplicationGroupArgs{
 //				Id: "91616221-ddeb-4b49-866d-48d64dedc056",
 //			}, nil)
 //			if err != nil {

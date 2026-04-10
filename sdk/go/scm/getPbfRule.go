@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Define the data source (the item to be retrieved via API GET)
-//			pbfExternalWebTestGet, err := scm.LookupPbfRule(ctx, &scm.LookupPbfRuleArgs{
+//			pbfExternalWebTestGet, err := scm.GetPbfRule(ctx, &scm.LookupPbfRuleArgs{
 //				Id: "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
 //			}, nil)
 //			if err != nil {

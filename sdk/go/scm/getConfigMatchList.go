@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the config match list by its ID.
-//			configMatchListDs, err := scm.LookupConfigMatchList(ctx, &scm.LookupConfigMatchListArgs{
+//			configMatchListDs, err := scm.GetConfigMatchList(ctx, &scm.LookupConfigMatchListArgs{
 //				Id: "e8592b6e-b135-4792-b722-fc583a8f7b8e",
 //			}, nil)
 //			if err != nil {

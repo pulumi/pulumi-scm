@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * const allBgpRouteMaps = scm.getBgpRouteMapList({
  *     folder: "ngfw-shared",
  * });
- * export const scmBgpRouteMapList = allBgpRouteMaps.then(allBgpRouteMaps => .reduce((__obj, routeMap) => ({ ...__obj, [routeMap.id]: routeMap })));
+ * export const scmBgpRouteMapList = allBgpRouteMaps.then(allBgpRouteMaps => .reduce((__obj, routeMap) => ({ ...__obj, [routeMap.id]: routeMap }), {}));
  * ```
  */
 export function getBgpRouteMapList(args?: GetBgpRouteMapListArgs, opts?: pulumi.InvokeOptions): Promise<GetBgpRouteMapListResult> {
@@ -123,7 +123,7 @@ export interface GetBgpRouteMapListResult {
  * const allBgpRouteMaps = scm.getBgpRouteMapList({
  *     folder: "ngfw-shared",
  * });
- * export const scmBgpRouteMapList = allBgpRouteMaps.then(allBgpRouteMaps => .reduce((__obj, routeMap) => ({ ...__obj, [routeMap.id]: routeMap })));
+ * export const scmBgpRouteMapList = allBgpRouteMaps.then(allBgpRouteMaps => .reduce((__obj, routeMap) => ({ ...__obj, [routeMap.id]: routeMap }), {}));
  * ```
  */
 export function getBgpRouteMapListOutput(args?: GetBgpRouteMapListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBgpRouteMapListResult> {

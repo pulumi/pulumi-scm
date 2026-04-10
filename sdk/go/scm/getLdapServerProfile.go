@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single SCM LDAP Server Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the LDAP Server Profile you want to find.
-//			ldapServerProf, err := scm.LookupLdapServerProfile(ctx, &scm.LookupLdapServerProfileArgs{
+//			ldapServerProf, err := scm.GetLdapServerProfile(ctx, &scm.LookupLdapServerProfileArgs{
 //				Id: "a5006a3e-52b3-435e-9e3b-39b50dc72401",
 //			}, nil)
 //			if err != nil {

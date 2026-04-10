@@ -25,13 +25,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // 1. Use a single data block to fetch ALL application groups in the "All" folder.
-        ///     var allShared = Scm.GetApplicationGroupList.Invoke(new()
+        ///     var allShared = Scm.Index.GetApplicationGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get a subset of application groups.
-        ///     var paginatedExample = Scm.GetApplicationGroupList.Invoke(new()
+        ///     var paginatedExample = Scm.Index.GetApplicationGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // 1. Use a single data block to fetch ALL application groups in the "All" folder.
-        ///     var allShared = Scm.GetApplicationGroupList.Invoke(new()
+        ///     var allShared = Scm.Index.GetApplicationGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get a subset of application groups.
-        ///     var paginatedExample = Scm.GetApplicationGroupList.Invoke(new()
+        ///     var paginatedExample = Scm.Index.GetApplicationGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -111,13 +111,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // 1. Use a single data block to fetch ALL application groups in the "All" folder.
-        ///     var allShared = Scm.GetApplicationGroupList.Invoke(new()
+        ///     var allShared = Scm.Index.GetApplicationGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get a subset of application groups.
-        ///     var paginatedExample = Scm.GetApplicationGroupList.Invoke(new()
+        ///     var paginatedExample = Scm.Index.GetApplicationGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,

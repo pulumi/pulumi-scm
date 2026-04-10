@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up BGP Redistribution Profile by its ID.
-        ///     var scmBgpRedistributionProfileDs = Scm.GetBgpRedistributionProfile.Invoke(new()
+        ///     var scmBgpRedistributionProfileDs = Scm.Index.GetBgpRedistributionProfile.Invoke(new()
         ///     {
         ///         Id = "491918e9-0205-4a08-955a-7e59a38d5dc4",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up BGP Redistribution Profile by its ID.
-        ///     var scmBgpRedistributionProfileDs = Scm.GetBgpRedistributionProfile.Invoke(new()
+        ///     var scmBgpRedistributionProfileDs = Scm.Index.GetBgpRedistributionProfile.Invoke(new()
         ///     {
         ///         Id = "491918e9-0205-4a08-955a-7e59a38d5dc4",
         ///     });
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up BGP Redistribution Profile by its ID.
-        ///     var scmBgpRedistributionProfileDs = Scm.GetBgpRedistributionProfile.Invoke(new()
+        ///     var scmBgpRedistributionProfileDs = Scm.Index.GetBgpRedistributionProfile.Invoke(new()
         ///     {
         ///         Id = "491918e9-0205-4a08-955a-7e59a38d5dc4",
         ///     });

@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single SCM File Blocking Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the SCM File Blocking Profile you want to find.
-//			scmFileBlockingProf, err := scm.LookupFileBlockingProfile(ctx, &scm.LookupFileBlockingProfileArgs{
+//			scmFileBlockingProf, err := scm.GetFileBlockingProfile(ctx, &scm.LookupFileBlockingProfileArgs{
 //				Id: "f32697f8-a98b-4097-b249-22c89f7d8f7f",
 //			}, nil)
 //			if err != nil {

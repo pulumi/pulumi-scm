@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			singleRuleById, err := scm.LookupAppOverrideRule(ctx, &scm.LookupAppOverrideRuleArgs{
+//			singleRuleById, err := scm.GetAppOverrideRule(ctx, &scm.LookupAppOverrideRuleArgs{
 //				Id: "8c285335-3c95-47c9-9bbd-829105b4a15c",
 //			}, nil)
 //			if err != nil {

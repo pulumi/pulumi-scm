@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
-        ///     var scmLogForwardingProf = Scm.GetLogForwardingProfile.Invoke(new()
+        ///     var scmLogForwardingProf = Scm.Index.GetLogForwardingProfile.Invoke(new()
         ///     {
         ///         Id = "712dc61d-94ed-45e4-82b7-b2d86669a2bf",
         ///     });
@@ -66,7 +66,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
-        ///     var scmLogForwardingProf = Scm.GetLogForwardingProfile.Invoke(new()
+        ///     var scmLogForwardingProf = Scm.Index.GetLogForwardingProfile.Invoke(new()
         ///     {
         ///         Id = "712dc61d-94ed-45e4-82b7-b2d86669a2bf",
         ///     });
@@ -104,7 +104,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
-        ///     var scmLogForwardingProf = Scm.GetLogForwardingProfile.Invoke(new()
+        ///     var scmLogForwardingProf = Scm.Index.GetLogForwardingProfile.Invoke(new()
         ///     {
         ///         Id = "712dc61d-94ed-45e4-82b7-b2d86669a2bf",
         ///     });

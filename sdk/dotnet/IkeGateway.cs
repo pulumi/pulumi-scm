@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // The scm_ike_crypto_profile resource is a prerequisite for the IKE gateway.
-    ///     var scmIkeGwCryptoProfile1 = new Scm.IkeCryptoProfile("scm_ike_gw_crypto_profile_1", new()
+    ///     var scmIkeGwCryptoProfile1 = new Scm.Index.IkeCryptoProfile("scm_ike_gw_crypto_profile_1", new()
     ///     {
     ///         Folder = "Remote Networks",
     ///         Name = "scm_ike_gw_crypto_profile_tf",
@@ -42,7 +42,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // This is the main scm_ike_gateway resource.
-    ///     var scmIkeGateway1 = new Scm.IkeGateway("scm_ike_gateway_1", new()
+    ///     var scmIkeGateway1 = new Scm.Index.IkeGateway("scm_ike_gateway_1", new()
     ///     {
     ///         Folder = "Remote Networks",
     ///         Name = "scm_ike_gateway_1",

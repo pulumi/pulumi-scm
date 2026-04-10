@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single SCM HTTP Header Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the SCM HTTP Header Profile you want to find.
-//			scmHttpHeaderProf, err := scm.LookupHttpHeaderProfile(ctx, &scm.LookupHttpHeaderProfileArgs{
+//			scmHttpHeaderProf, err := scm.GetHttpHeaderProfile(ctx, &scm.LookupHttpHeaderProfileArgs{
 //				Id: "2733cba4-c79d-4c98-8e07-4d3cbdd0ba11",
 //			}, nil)
 //			if err != nil {

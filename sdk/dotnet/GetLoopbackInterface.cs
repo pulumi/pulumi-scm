@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up loopback interface by its ID.
-        ///     var scmLoopbackIntfDs = Scm.GetLoopbackInterface.Invoke(new()
+        ///     var scmLoopbackIntfDs = Scm.Index.GetLoopbackInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f1",
         ///     });
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up loopback interface by its ID.
-        ///     var scmLoopbackIntfDs = Scm.GetLoopbackInterface.Invoke(new()
+        ///     var scmLoopbackIntfDs = Scm.Index.GetLoopbackInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f1",
         ///     });
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up loopback interface by its ID.
-        ///     var scmLoopbackIntfDs = Scm.GetLoopbackInterface.Invoke(new()
+        ///     var scmLoopbackIntfDs = Scm.Index.GetLoopbackInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f1",
         ///     });

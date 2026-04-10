@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var pagedRulesList = Scm.GetSecurityRuleList.Invoke(new()
+        ///     var pagedRulesList = Scm.Index.GetSecurityRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Position = "pre",
@@ -57,7 +57,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var pagedRulesList = Scm.GetSecurityRuleList.Invoke(new()
+        ///     var pagedRulesList = Scm.Index.GetSecurityRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Position = "pre",
@@ -90,7 +90,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var pagedRulesList = Scm.GetSecurityRuleList.Invoke(new()
+        ///     var pagedRulesList = Scm.Index.GetSecurityRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Position = "pre",

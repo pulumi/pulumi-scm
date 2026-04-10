@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var iptagMatchList = new Scm.IptagMatchList("iptag_match_list", new()
+    ///     var iptagMatchList = new Scm.Index.IptagMatchList("iptag_match_list", new()
     ///     {
     ///         Name = "test-iptag-list",
     ///         Description = "IP tag match list for tracking dynamic IP address tagging events and policy enforcement",

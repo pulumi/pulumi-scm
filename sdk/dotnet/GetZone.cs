@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up zone by its ID.
-        ///     var scmZoneDs = Scm.GetZone.Invoke(new()
+        ///     var scmZoneDs = Scm.Index.GetZone.Invoke(new()
         ///     {
         ///         Id = "50f1f0f3-a420-4989-9770-c927f1467a9a",
         ///     });
@@ -64,7 +64,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up zone by its ID.
-        ///     var scmZoneDs = Scm.GetZone.Invoke(new()
+        ///     var scmZoneDs = Scm.Index.GetZone.Invoke(new()
         ///     {
         ///         Id = "50f1f0f3-a420-4989-9770-c927f1467a9a",
         ///     });
@@ -103,7 +103,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up zone by its ID.
-        ///     var scmZoneDs = Scm.GetZone.Invoke(new()
+        ///     var scmZoneDs = Scm.Index.GetZone.Invoke(new()
         ///     {
         ///         Id = "50f1f0f3-a420-4989-9770-c927f1467a9a",
         ///     });

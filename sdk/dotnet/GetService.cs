@@ -25,13 +25,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to look up a single service by its ID.
-        ///     var scmServiceTcpDs = Scm.GetService.Invoke(new()
+        ///     var scmServiceTcpDs = Scm.Index.GetService.Invoke(new()
         ///     {
         ///         Id = "ff135641-6735-4d7d-85c6-3401bba9dee8",
         ///     });
         /// 
         ///     // Data source to look up a single service by its ID.
-        ///     var scmServiceUdpDs = Scm.GetService.Invoke(new()
+        ///     var scmServiceUdpDs = Scm.Index.GetService.Invoke(new()
         ///     {
         ///         Id = "e087b703-aede-437e-853e-b11576f6dcbe",
         ///     });
@@ -61,13 +61,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to look up a single service by its ID.
-        ///     var scmServiceTcpDs = Scm.GetService.Invoke(new()
+        ///     var scmServiceTcpDs = Scm.Index.GetService.Invoke(new()
         ///     {
         ///         Id = "ff135641-6735-4d7d-85c6-3401bba9dee8",
         ///     });
         /// 
         ///     // Data source to look up a single service by its ID.
-        ///     var scmServiceUdpDs = Scm.GetService.Invoke(new()
+        ///     var scmServiceUdpDs = Scm.Index.GetService.Invoke(new()
         ///     {
         ///         Id = "e087b703-aede-437e-853e-b11576f6dcbe",
         ///     });
@@ -97,13 +97,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to look up a single service by its ID.
-        ///     var scmServiceTcpDs = Scm.GetService.Invoke(new()
+        ///     var scmServiceTcpDs = Scm.Index.GetService.Invoke(new()
         ///     {
         ///         Id = "ff135641-6735-4d7d-85c6-3401bba9dee8",
         ///     });
         /// 
         ///     // Data source to look up a single service by its ID.
-        ///     var scmServiceUdpDs = Scm.GetService.Invoke(new()
+        ///     var scmServiceUdpDs = Scm.Index.GetService.Invoke(new()
         ///     {
         ///         Id = "e087b703-aede-437e-853e-b11576f6dcbe",
         ///     });

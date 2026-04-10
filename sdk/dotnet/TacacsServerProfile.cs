@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var iseTacacsExample = new Scm.TacacsServerProfile("ise_tacacs_example", new()
+    ///     var iseTacacsExample = new Scm.Index.TacacsServerProfile("ise_tacacs_example", new()
     ///     {
     ///         Name = "ISE-TACACS11",
     ///         Protocol = "PAP",

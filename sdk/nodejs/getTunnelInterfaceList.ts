@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * const allTunnelInterfaces = scm.getTunnelInterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmTunnelInterfaceList = allTunnelInterfaces.then(allTunnelInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmTunnelInterfaceList = allTunnelInterfaces.then(allTunnelInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getTunnelInterfaceList(args?: GetTunnelInterfaceListArgs, opts?: pulumi.InvokeOptions): Promise<GetTunnelInterfaceListResult> {
@@ -123,7 +123,7 @@ export interface GetTunnelInterfaceListResult {
  * const allTunnelInterfaces = scm.getTunnelInterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmTunnelInterfaceList = allTunnelInterfaces.then(allTunnelInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmTunnelInterfaceList = allTunnelInterfaces.then(allTunnelInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getTunnelInterfaceListOutput(args?: GetTunnelInterfaceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTunnelInterfaceListResult> {

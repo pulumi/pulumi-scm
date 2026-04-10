@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of looking up an individual IPsec Crypto Profile by its ID.
-        ///     var scmIkeCryptoProfileDs = Scm.GetIkeCryptoProfile.Invoke(new()
+        ///     var scmIkeCryptoProfileDs = Scm.Index.GetIkeCryptoProfile.Invoke(new()
         ///     {
         ///         Id = "f3a1251a-bb9e-437d-8048-f5d54617d0be",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of looking up an individual IPsec Crypto Profile by its ID.
-        ///     var scmIkeCryptoProfileDs = Scm.GetIkeCryptoProfile.Invoke(new()
+        ///     var scmIkeCryptoProfileDs = Scm.Index.GetIkeCryptoProfile.Invoke(new()
         ///     {
         ///         Id = "f3a1251a-bb9e-437d-8048-f5d54617d0be",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of looking up an individual IPsec Crypto Profile by its ID.
-        ///     var scmIkeCryptoProfileDs = Scm.GetIkeCryptoProfile.Invoke(new()
+        ///     var scmIkeCryptoProfileDs = Scm.Index.GetIkeCryptoProfile.Invoke(new()
         ///     {
         ///         Id = "f3a1251a-bb9e-437d-8048-f5d54617d0be",
         ///     });

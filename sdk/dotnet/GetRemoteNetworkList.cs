@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of remote_network objects.
         ///     //
         ///     // Look up a list of Remote Networks, filtering by folder.
-        ///     var example = Scm.GetRemoteNetworkList.Invoke(new()
+        ///     var example = Scm.Index.GetRemoteNetworkList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///     });
@@ -63,7 +63,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of remote_network objects.
         ///     //
         ///     // Look up a list of Remote Networks, filtering by folder.
-        ///     var example = Scm.GetRemoteNetworkList.Invoke(new()
+        ///     var example = Scm.Index.GetRemoteNetworkList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///     });
@@ -98,7 +98,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of remote_network objects.
         ///     //
         ///     // Look up a list of Remote Networks, filtering by folder.
-        ///     var example = Scm.GetRemoteNetworkList.Invoke(new()
+        ///     var example = Scm.Index.GetRemoteNetworkList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///     });

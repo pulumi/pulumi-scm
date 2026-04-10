@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of listing all IPsec Tunnels within a specific folder.
-        ///     var allInFolder = Scm.GetIpsecTunnelList.Invoke(new()
+        ///     var allInFolder = Scm.Index.GetIpsecTunnelList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///         Limit = 100,
@@ -55,7 +55,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of listing all IPsec Tunnels within a specific folder.
-        ///     var allInFolder = Scm.GetIpsecTunnelList.Invoke(new()
+        ///     var allInFolder = Scm.Index.GetIpsecTunnelList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///         Limit = 100,
@@ -85,7 +85,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of listing all IPsec Tunnels within a specific folder.
-        ///     var allInFolder = Scm.GetIpsecTunnelList.Invoke(new()
+        ///     var allInFolder = Scm.Index.GetIpsecTunnelList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///         Limit = 100,

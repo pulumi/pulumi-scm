@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * const allZones = scm.getZoneList({
  *     folder: "ngfw-shared",
  * });
- * export const scmZoneList = allZones.then(allZones => .reduce((__obj, zone) => ({ ...__obj, [zone.name]: zone })));
+ * export const scmZoneList = allZones.then(allZones => .reduce((__obj, zone) => ({ ...__obj, [zone.name]: zone }), {}));
  * ```
  */
 export function getZoneList(args?: GetZoneListArgs, opts?: pulumi.InvokeOptions): Promise<GetZoneListResult> {
@@ -123,7 +123,7 @@ export interface GetZoneListResult {
  * const allZones = scm.getZoneList({
  *     folder: "ngfw-shared",
  * });
- * export const scmZoneList = allZones.then(allZones => .reduce((__obj, zone) => ({ ...__obj, [zone.name]: zone })));
+ * export const scmZoneList = allZones.then(allZones => .reduce((__obj, zone) => ({ ...__obj, [zone.name]: zone }), {}));
  * ```
  */
 export function getZoneListOutput(args?: GetZoneListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetZoneListResult> {

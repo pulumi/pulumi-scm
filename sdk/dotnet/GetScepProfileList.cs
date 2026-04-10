@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM SCEP Profile objects.
         ///     //
         ///     // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
-        ///     var allShared = Scm.GetScepProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetScepProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM SCEP Profile objects.
         ///     //
         ///     // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
-        ///     var allShared = Scm.GetScepProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetScepProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM SCEP Profile objects.
         ///     //
         ///     // Example: Fetch a list of all SCM SCEP Profile in the "All" folder.
-        ///     var allShared = Scm.GetScepProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetScepProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });

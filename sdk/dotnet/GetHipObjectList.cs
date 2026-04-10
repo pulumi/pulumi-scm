@@ -25,13 +25,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all HIP Object objects in the Shared folder.
-        ///     var allShared = Scm.GetHipObjectList.Invoke(new()
+        ///     var allShared = Scm.Index.GetHipObjectList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 10 HIP objects.
-        ///     var paginated = Scm.GetHipObjectList.Invoke(new()
+        ///     var paginated = Scm.Index.GetHipObjectList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,
@@ -63,13 +63,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all HIP Object objects in the Shared folder.
-        ///     var allShared = Scm.GetHipObjectList.Invoke(new()
+        ///     var allShared = Scm.Index.GetHipObjectList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 10 HIP objects.
-        ///     var paginated = Scm.GetHipObjectList.Invoke(new()
+        ///     var paginated = Scm.Index.GetHipObjectList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,
@@ -101,13 +101,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all HIP Object objects in the Shared folder.
-        ///     var allShared = Scm.GetHipObjectList.Invoke(new()
+        ///     var allShared = Scm.Index.GetHipObjectList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 10 HIP objects.
-        ///     var paginated = Scm.GetHipObjectList.Invoke(new()
+        ///     var paginated = Scm.Index.GetHipObjectList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,

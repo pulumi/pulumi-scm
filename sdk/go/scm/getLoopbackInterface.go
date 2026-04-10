@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up loopback interface by its ID.
-//			scmLoopbackIntfDs, err := scm.LookupLoopbackInterface(ctx, &scm.LookupLoopbackInterfaceArgs{
+//			scmLoopbackIntfDs, err := scm.GetLoopbackInterface(ctx, &scm.LookupLoopbackInterfaceArgs{
 //				Id: "ddad1e64-0b64-41a4-b361-c6199769a8f1",
 //			}, nil)
 //			if err != nil {

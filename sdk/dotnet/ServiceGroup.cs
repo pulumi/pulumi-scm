@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // TCP Service with multiple destination ports custom timeout
-    ///     var scmServiceTcpPorts = new Scm.Service("scm_service_tcp_ports", new()
+    ///     var scmServiceTcpPorts = new Scm.Index.Service("scm_service_tcp_ports", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_service_tcp_ports",
@@ -42,7 +42,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // UDP Service with single destination port
-    ///     var scmServiceUdpPort = new Scm.Service("scm_service_udp_port", new()
+    ///     var scmServiceUdpPort = new Scm.Index.Service("scm_service_udp_port", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_service_udp_port",
@@ -57,7 +57,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Service Group containing multiple services
-    ///     var scmServicegroup = new Scm.ServiceGroup("scm_servicegroup", new()
+    ///     var scmServicegroup = new Scm.Index.ServiceGroup("scm_servicegroup", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_servicegroup",
@@ -69,7 +69,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Service Group containing multiple services and another servicegroup
-    ///     var scmServicegroupNested = new Scm.ServiceGroup("scm_servicegroup_nested", new()
+    ///     var scmServicegroupNested = new Scm.Index.ServiceGroup("scm_servicegroup_nested", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_servicegroup_nested",

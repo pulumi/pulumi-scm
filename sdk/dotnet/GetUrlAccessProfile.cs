@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single URL Access Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the URL Access Profile you want to find.
-        ///     var example = Scm.GetUrlAccessProfile.Invoke(new()
+        ///     var example = Scm.Index.GetUrlAccessProfile.Invoke(new()
         ///     {
         ///         Id = "e97c7e7e-9906-42d6-90a8-606ed5527125",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single URL Access Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the URL Access Profile you want to find.
-        ///     var example = Scm.GetUrlAccessProfile.Invoke(new()
+        ///     var example = Scm.Index.GetUrlAccessProfile.Invoke(new()
         ///     {
         ///         Id = "e97c7e7e-9906-42d6-90a8-606ed5527125",
         ///     });
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single URL Access Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the URL Access Profile you want to find.
-        ///     var example = Scm.GetUrlAccessProfile.Invoke(new()
+        ///     var example = Scm.Index.GetUrlAccessProfile.Invoke(new()
         ///     {
         ///         Id = "e97c7e7e-9906-42d6-90a8-606ed5527125",
         ///     });

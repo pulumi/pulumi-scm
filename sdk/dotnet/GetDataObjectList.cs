@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Data objects.
         ///     //
         ///     // Fetch a list of all SCM Data Objects in the "ngfw-shared" folder.
-        ///     var allNgfwShared = Scm.GetDataObjectList.Invoke(new()
+        ///     var allNgfwShared = Scm.Index.GetDataObjectList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Data objects.
         ///     //
         ///     // Fetch a list of all SCM Data Objects in the "ngfw-shared" folder.
-        ///     var allNgfwShared = Scm.GetDataObjectList.Invoke(new()
+        ///     var allNgfwShared = Scm.Index.GetDataObjectList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Data objects.
         ///     //
         ///     // Fetch a list of all SCM Data Objects in the "ngfw-shared" folder.
-        ///     var allNgfwShared = Scm.GetDataObjectList.Invoke(new()
+        ///     var allNgfwShared = Scm.Index.GetDataObjectList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });

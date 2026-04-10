@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Replace the ID with the UUID of the SCM Data filtering profile you want to find.
-//			scmDataFilteringProfileGet, err := scm.LookupDataFilteringProfile(ctx, &scm.LookupDataFilteringProfileArgs{
+//			scmDataFilteringProfileGet, err := scm.GetDataFilteringProfile(ctx, &scm.LookupDataFilteringProfileArgs{
 //				Id: "d50c57e4-3a3e-419e-bd41-33fdd1c56a32",
 //			}, nil)
 //			if err != nil {

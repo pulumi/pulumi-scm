@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // scep profile w/ no challenge
-    ///     var scmScepProfile1 = new Scm.ScepProfile("scm_scep_profile_1", new()
+    ///     var scmScepProfile1 = new Scm.Index.ScepProfile("scm_scep_profile_1", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scep-prof-1",
@@ -45,7 +45,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // scep profile w/ fixed challenge
-    ///     var scmScepProfile2 = new Scm.ScepProfile("scm_scep_profile_2", new()
+    ///     var scmScepProfile2 = new Scm.Index.ScepProfile("scm_scep_profile_2", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scep-prof-2",
@@ -72,7 +72,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // scep profile w/ dynamic challenge
-    ///     var scmScepProfile3 = new Scm.ScepProfile("scm_scep_profile_3", new()
+    ///     var scmScepProfile3 = new Scm.Index.ScepProfile("scm_scep_profile_3", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scep-prof-3",
@@ -106,7 +106,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // scep profile w/ all fields
-    ///     var scmScepProfile4 = new Scm.ScepProfile("scm_scep_profile_4", new()
+    ///     var scmScepProfile4 = new Scm.Index.ScepProfile("scm_scep_profile_4", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scep-prof-4",

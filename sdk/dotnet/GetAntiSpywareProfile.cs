@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up anti-spyware-profile by ID
-        ///     var scmAntiSpywareProfileDs = Scm.GetAntiSpywareProfile.Invoke(new()
+        ///     var scmAntiSpywareProfileDs = Scm.Index.GetAntiSpywareProfile.Invoke(new()
         ///     {
         ///         Id = "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
         ///     });
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up anti-spyware-profile by ID
-        ///     var scmAntiSpywareProfileDs = Scm.GetAntiSpywareProfile.Invoke(new()
+        ///     var scmAntiSpywareProfileDs = Scm.Index.GetAntiSpywareProfile.Invoke(new()
         ///     {
         ///         Id = "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
         ///     });
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up anti-spyware-profile by ID
-        ///     var scmAntiSpywareProfileDs = Scm.GetAntiSpywareProfile.Invoke(new()
+        ///     var scmAntiSpywareProfileDs = Scm.Index.GetAntiSpywareProfile.Invoke(new()
         ///     {
         ///         Id = "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
         ///     });

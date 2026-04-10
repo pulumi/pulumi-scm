@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Scm.LldpProfile("example", new()
+    ///     var example = new Scm.Index.LldpProfile("example", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Mode = "transmit-receive",

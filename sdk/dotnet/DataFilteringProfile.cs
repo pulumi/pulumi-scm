@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmDataFilteringProfileExample = new Scm.DataObject("scm_data_filtering_profile_example", new()
+    ///     var scmDataFilteringProfileExample = new Scm.Index.DataObject("scm_data_filtering_profile_example", new()
     ///     {
     ///         Name = "tf-data-object-df",
     ///         Folder = "ngfw-shared",
@@ -45,7 +45,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmDataFilteringProfileExampleDataFilteringProfile = new Scm.DataFilteringProfile("scm_data_filtering_profile_example", new()
+    ///     var scmDataFilteringProfileExampleDataFilteringProfile = new Scm.Index.DataFilteringProfile("scm_data_filtering_profile_example", new()
     ///     {
     ///         Name = "tf-data-filtering",
     ///         DataCapture = false,

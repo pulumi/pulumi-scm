@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Example of looking up an individual IPsec Tunnel by its ID.
-//			scmIpsecTunnelDs, err := scm.LookupIpsecTunnel(ctx, &scm.LookupIpsecTunnelArgs{
+//			scmIpsecTunnelDs, err := scm.GetIpsecTunnel(ctx, &scm.LookupIpsecTunnelArgs{
 //				Id: "7c237a82-8c11-4f09-bdbf-599e159019ce",
 //			}, nil)
 //			if err != nil {

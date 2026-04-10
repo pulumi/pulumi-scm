@@ -26,7 +26,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Fetch a list of all service group objects.
         ///     // This data source will call the "List" API endpoint.
-        ///     var allServiceGroups = Scm.GetServiceGroupList.Invoke(new()
+        ///     var allServiceGroups = Scm.Index.GetServiceGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Fetch a list of all service group objects.
         ///     // This data source will call the "List" API endpoint.
-        ///     var allServiceGroups = Scm.GetServiceGroupList.Invoke(new()
+        ///     var allServiceGroups = Scm.Index.GetServiceGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -86,7 +86,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Fetch a list of all service group objects.
         ///     // This data source will call the "List" API endpoint.
-        ///     var allServiceGroups = Scm.GetServiceGroupList.Invoke(new()
+        ///     var allServiceGroups = Scm.Index.GetServiceGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });

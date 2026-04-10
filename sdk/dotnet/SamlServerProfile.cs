@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmSamlServerProfile1 = new Scm.SamlServerProfile("scm_saml_server_profile_1", new()
+    ///     var scmSamlServerProfile1 = new Scm.Index.SamlServerProfile("scm_saml_server_profile_1", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm-saml-server-prof-1",
@@ -32,7 +32,7 @@ namespace Pulumi.Scm
     ///         SsoBindings = "post",
     ///     });
     /// 
-    ///     var scmSamlServerProfile2 = new Scm.SamlServerProfile("scm_saml_server_profile_2", new()
+    ///     var scmSamlServerProfile2 = new Scm.Index.SamlServerProfile("scm_saml_server_profile_2", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm-saml-server-prof-2",
@@ -45,7 +45,7 @@ namespace Pulumi.Scm
     ///         ValidateIdpCertificate = true,
     ///     });
     /// 
-    ///     var scmSamlServerProfile3 = new Scm.SamlServerProfile("scm_saml_server_profile_3", new()
+    ///     var scmSamlServerProfile3 = new Scm.Index.SamlServerProfile("scm_saml_server_profile_3", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm-saml-server-prof-3",

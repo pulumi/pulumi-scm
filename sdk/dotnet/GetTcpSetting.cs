@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var settingsData = Scm.GetTcpSetting.Invoke(new()
+        ///     var settingsData = Scm.Index.GetTcpSetting.Invoke(new()
         ///     {
         ///         Id = "e7e9b9e1-e8db-4eed-b355-099a36a380c9",
         ///     });
@@ -52,7 +52,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var settingsData = Scm.GetTcpSetting.Invoke(new()
+        ///     var settingsData = Scm.Index.GetTcpSetting.Invoke(new()
         ///     {
         ///         Id = "e7e9b9e1-e8db-4eed-b355-099a36a380c9",
         ///     });
@@ -80,7 +80,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var settingsData = Scm.GetTcpSetting.Invoke(new()
+        ///     var settingsData = Scm.Index.GetTcpSetting.Invoke(new()
         ///     {
         ///         Id = "e7e9b9e1-e8db-4eed-b355-099a36a380c9",
         ///     });

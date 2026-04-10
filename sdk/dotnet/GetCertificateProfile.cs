@@ -26,7 +26,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Look up a single certificate profile object by its ID.
         ///     // The ID used here is from the API response log you provided.
-        ///     var scmCertificateProfileDs = Scm.GetCertificateProfile.Invoke(new()
+        ///     var scmCertificateProfileDs = Scm.Index.GetCertificateProfile.Invoke(new()
         ///     {
         ///         Id = "8e64859b-eba9-4e25-9005-754c90c2b02d",
         ///     });
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Look up a single certificate profile object by its ID.
         ///     // The ID used here is from the API response log you provided.
-        ///     var scmCertificateProfileDs = Scm.GetCertificateProfile.Invoke(new()
+        ///     var scmCertificateProfileDs = Scm.Index.GetCertificateProfile.Invoke(new()
         ///     {
         ///         Id = "8e64859b-eba9-4e25-9005-754c90c2b02d",
         ///     });
@@ -86,7 +86,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Look up a single certificate profile object by its ID.
         ///     // The ID used here is from the API response log you provided.
-        ///     var scmCertificateProfileDs = Scm.GetCertificateProfile.Invoke(new()
+        ///     var scmCertificateProfileDs = Scm.Index.GetCertificateProfile.Invoke(new()
         ///     {
         ///         Id = "8e64859b-eba9-4e25-9005-754c90c2b02d",
         ///     });

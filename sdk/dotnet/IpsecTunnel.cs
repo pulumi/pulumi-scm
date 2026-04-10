@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     //# 1. Define the IKE Crypto Profile (IKE Phase 1)
     ///     // Note: The resource name is plural: "scm_ike_crypto_profile"
-    ///     var example = new Scm.IkeCryptoProfile("example", new()
+    ///     var example = new Scm.Index.IkeCryptoProfile("example", new()
     ///     {
     ///         Name = "tunnel-ike-crypto",
     ///         Folder = "Remote Networks",
@@ -44,7 +44,7 @@ namespace Pulumi.Scm
     /// 
     ///     //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
     ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
-    ///     var exampleIpsecCryptoProfile = new Scm.IpsecCryptoProfile("example", new()
+    ///     var exampleIpsecCryptoProfile = new Scm.Index.IpsecCryptoProfile("example", new()
     ///     {
     ///         Name = "example-tunnel-crypto",
     ///         Folder = "Remote Networks",
@@ -68,7 +68,7 @@ namespace Pulumi.Scm
     /// 
     ///     //# 3. Define the IKE Gateway
     ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
-    ///     var exampleIkeGateway = new Scm.IkeGateway("example", new()
+    ///     var exampleIkeGateway = new Scm.Index.IkeGateway("example", new()
     ///     {
     ///         Name = "example-tunnel-gateway",
     ///         Folder = "Remote Networks",
@@ -94,7 +94,7 @@ namespace Pulumi.Scm
     /// 
     ///     //# 4. Define the IPsec Tunnel
     ///     // Note: Nested 'auto_key' block uses an equals sign (=).
-    ///     var exampleIpsecTunnel = new Scm.IpsecTunnel("example", new()
+    ///     var exampleIpsecTunnel = new Scm.Index.IpsecTunnel("example", new()
     ///     {
     ///         Name = "example-tf-tunnel",
     ///         Folder = "Remote Networks",

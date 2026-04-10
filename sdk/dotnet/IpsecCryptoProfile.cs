@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // The resource block defines a new IPsec Crypto Profile.
-    ///     var scmIpsecCryptoProfile2 = new Scm.IpsecCryptoProfile("scm_ipsec_crypto_profile_2", new()
+    ///     var scmIpsecCryptoProfile2 = new Scm.Index.IpsecCryptoProfile("scm_ipsec_crypto_profile_2", new()
     ///     {
     ///         Name = "scm_ipsec_crypto_profile_2",
     ///         Folder = "Prisma Access",

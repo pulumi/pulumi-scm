@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var dcPostmanProfile = new Scm.InterfaceManagementProfile("dc_postman_profile", new()
+    ///     var dcPostmanProfile = new Scm.Index.InterfaceManagementProfile("dc_postman_profile", new()
     ///     {
     ///         Name = "test_inf_mgmt_profile_1_update",
     ///         Folder = "ngfw-shared",

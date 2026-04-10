@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var scmApplicationFilterDs = Scm.GetApplicationFilter.Invoke(new()
+        ///     var scmApplicationFilterDs = Scm.Index.GetApplicationFilter.Invoke(new()
         ///     {
         ///         Id = "52ee6475-a99c-42d7-be0a-e251c05e805b",
         ///     });
@@ -52,7 +52,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var scmApplicationFilterDs = Scm.GetApplicationFilter.Invoke(new()
+        ///     var scmApplicationFilterDs = Scm.Index.GetApplicationFilter.Invoke(new()
         ///     {
         ///         Id = "52ee6475-a99c-42d7-be0a-e251c05e805b",
         ///     });
@@ -80,7 +80,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var scmApplicationFilterDs = Scm.GetApplicationFilter.Invoke(new()
+        ///     var scmApplicationFilterDs = Scm.Index.GetApplicationFilter.Invoke(new()
         ///     {
         ///         Id = "52ee6475-a99c-42d7-be0a-e251c05e805b",
         ///     });

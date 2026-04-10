@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var appAccessTag = new Scm.Tag("app_access_tag", new()
+    ///     var appAccessTag = new Scm.Index.Tag("app_access_tag", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "app-access-test_25",
@@ -32,7 +32,7 @@ namespace Pulumi.Scm
     ///     // -----------------------------------------------------------------------------
     ///     // 2. ANCHOR RULE (Used for relative positioning by other rules)
     ///     // -----------------------------------------------------------------------------
-    ///     var anchorRule = new Scm.AuthenticationRule("anchor_rule", new()
+    ///     var anchorRule = new Scm.Index.AuthenticationRule("anchor_rule", new()
     ///     {
     ///         Name = "test_anchor_rule_251",
     ///         Description = "Base rule. Used to test 'before' and 'after' positioning",
@@ -85,7 +85,7 @@ namespace Pulumi.Scm
     ///     // # -----------------------------------------------------------------------------
     ///     // # 3. ABSOLUTE POSITIONING Examples ("top" and "bottom")
     ///     // # -----------------------------------------------------------------------------
-    ///     var ruleTopOfList = new Scm.AuthenticationRule("rule_top_of_list", new()
+    ///     var ruleTopOfList = new Scm.Index.AuthenticationRule("rule_top_of_list", new()
     ///     {
     ///         Name = "test_top_rule_25",
     ///         Description = "Placed at the very top of the 'pre' rulebase.",
@@ -118,7 +118,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var ruleBottomOfList = new Scm.AuthenticationRule("rule_bottom_of_list", new()
+    ///     var ruleBottomOfList = new Scm.Index.AuthenticationRule("rule_bottom_of_list", new()
     ///     {
     ///         Name = "test_bottom_rule_25",
     ///         Description = "Placed at the very bottom of the 'pre' rulebase.",
@@ -154,7 +154,7 @@ namespace Pulumi.Scm
     ///     // -----------------------------------------------------------------------------
     ///     // 4. RELATIVE POSITIONING Examples ("before" and "after")
     ///     // -----------------------------------------------------------------------------
-    ///     var ruleBeforeAnchor = new Scm.AuthenticationRule("rule_before_anchor", new()
+    ///     var ruleBeforeAnchor = new Scm.Index.AuthenticationRule("rule_before_anchor", new()
     ///     {
     ///         Name = "test_before_rule_25_updating",
     ///         Description = "Positioned immediately BEFORE the anchor_rule.",
@@ -188,7 +188,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var ruleAfterAnchor = new Scm.AuthenticationRule("rule_after_anchor", new()
+    ///     var ruleAfterAnchor = new Scm.Index.AuthenticationRule("rule_after_anchor", new()
     ///     {
     ///         Name = "test_after_rule_25",
     ///         Description = "Positioned immediately AFTER the anchor_rule.",

@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * const allAggregateInterfaces = scm.getAggregateInterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmAggregateInterfaceList = allAggregateInterfaces.then(allAggregateInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmAggregateInterfaceList = allAggregateInterfaces.then(allAggregateInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getAggregateInterfaceList(args?: GetAggregateInterfaceListArgs, opts?: pulumi.InvokeOptions): Promise<GetAggregateInterfaceListResult> {
@@ -123,7 +123,7 @@ export interface GetAggregateInterfaceListResult {
  * const allAggregateInterfaces = scm.getAggregateInterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmAggregateInterfaceList = allAggregateInterfaces.then(allAggregateInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmAggregateInterfaceList = allAggregateInterfaces.then(allAggregateInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getAggregateInterfaceListOutput(args?: GetAggregateInterfaceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAggregateInterfaceListResult> {

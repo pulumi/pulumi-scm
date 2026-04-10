@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the userid match list by its ID.
-//			useridMatchListDs, err := scm.LookupUseridMatchList(ctx, &scm.LookupUseridMatchListArgs{
+//			useridMatchListDs, err := scm.GetUseridMatchList(ctx, &scm.LookupUseridMatchListArgs{
 //				Id: "dcf09e7b-3e46-45d8-953d-30d47a49137f",
 //			}, nil)
 //			if err != nil {

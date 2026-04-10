@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// We use the ID from the resource created above.
-//			singleInfById, err := scm.LookupDhcpInterface(ctx, &scm.LookupDhcpInterfaceArgs{
+//			singleInfById, err := scm.GetDhcpInterface(ctx, &scm.LookupDhcpInterfaceArgs{
 //				Id: "b3544acb-fc55-4c6f-921d-4128b5a1d135",
 //			}, nil)
 //			if err != nil {

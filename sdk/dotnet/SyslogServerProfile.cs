@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmSyslogServerProf1 = new Scm.SyslogServerProfile("scm_syslog_server_prof_1", new()
+    ///     var scmSyslogServerProf1 = new Scm.Index.SyslogServerProfile("scm_syslog_server_prof_1", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "syslog-server-prof-base",
@@ -36,7 +36,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmSyslogServerProf2 = new Scm.SyslogServerProfile("scm_syslog_server_prof_2", new()
+    ///     var scmSyslogServerProf2 = new Scm.Index.SyslogServerProfile("scm_syslog_server_prof_2", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "syslog-server-prof-mixed",
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmSyslogServerProf3 = new Scm.SyslogServerProfile("scm_syslog_server_prof_3", new()
+    ///     var scmSyslogServerProf3 = new Scm.Index.SyslogServerProfile("scm_syslog_server_prof_3", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "syslog-server-tf-prof-complete",

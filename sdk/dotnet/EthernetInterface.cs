@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates various resources used for subsequent examples
     ///     //
-    ///     var scmAeIntf = new Scm.AggregateInterface("scm_ae_intf", new()
+    ///     var scmAeIntf = new Scm.Index.AggregateInterface("scm_ae_intf", new()
     ///     {
     ///         Name = "$scm_ae_intf",
     ///         Comment = "Managed by Pulumi",
@@ -36,7 +36,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer 2 ethernet interface without vlan configuration
     ///     //
-    ///     var scmL2Intf = new Scm.EthernetInterface("scm_l2_intf", new()
+    ///     var scmL2Intf = new Scm.Index.EthernetInterface("scm_l2_intf", new()
     ///     {
     ///         Name = "$scm_l2_intf",
     ///         Comment = "Managed by Pulumi",
@@ -50,7 +50,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a tap ethernet interface without vlan configuration
     ///     //
-    ///     var scmTapIntf = new Scm.EthernetInterface("scm_tap_intf", new()
+    ///     var scmTapIntf = new Scm.Index.EthernetInterface("scm_tap_intf", new()
     ///     {
     ///         Name = "$scm_tap_intf",
     ///         Comment = "Managed by Pulumi",
@@ -64,7 +64,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer3 ethernet interface without ip configuration
     ///     //
-    ///     var scmL3Intf = new Scm.EthernetInterface("scm_l3_intf", new()
+    ///     var scmL3Intf = new Scm.Index.EthernetInterface("scm_l3_intf", new()
     ///     {
     ///         Name = "$scm_l3_intf",
     ///         Comment = "Managed by Pulumi",
@@ -78,7 +78,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer3 ethernet interface with static ip address
     ///     //
-    ///     var scmL3IntfStatic = new Scm.EthernetInterface("scm_l3_intf_static", new()
+    ///     var scmL3IntfStatic = new Scm.Index.EthernetInterface("scm_l3_intf_static", new()
     ///     {
     ///         Name = "$scm_l3_intf_static",
     ///         Comment = "Managed by Pulumi",
@@ -98,7 +98,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer3 ethernet interface with dhcp-assigned ip address
     ///     //
-    ///     var scmL3IntfDhcp = new Scm.EthernetInterface("scm_l3_intf_dhcp", new()
+    ///     var scmL3IntfDhcp = new Scm.Index.EthernetInterface("scm_l3_intf_dhcp", new()
     ///     {
     ///         Name = "$scm_l3_intf_dhcp",
     ///         Comment = "Managed by Pulumi",
@@ -117,7 +117,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer3 ethernet interface with pppoe
     ///     //
-    ///     var scmL3IntfPppoe = new Scm.EthernetInterface("scm_l3_intf_pppoe", new()
+    ///     var scmL3IntfPppoe = new Scm.Index.EthernetInterface("scm_l3_intf_pppoe", new()
     ///     {
     ///         Name = "$scm_l3_intf_pppoe",
     ///         Comment = "Managed by Pulumi",
@@ -139,7 +139,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer3 ethernet interface with multiple static ip addresses
     ///     //
-    ///     var scmL3IntfComplex = new Scm.EthernetInterface("scm_l3_intf_complex", new()
+    ///     var scmL3IntfComplex = new Scm.Index.EthernetInterface("scm_l3_intf_complex", new()
     ///     {
     ///         Name = "$scm_l3_intf_complex",
     ///         Comment = "Managed by Pulumi",
@@ -164,7 +164,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates an ethernet interface assigned to an AggregateEthernet Interface
     ///     //
-    ///     var scmAeMember1 = new Scm.EthernetInterface("scm_ae_member_1", new()
+    ///     var scmAeMember1 = new Scm.Index.EthernetInterface("scm_ae_member_1", new()
     ///     {
     ///         Name = "$scm_ae_member_1",
     ///         Comment = "Managed by Pulumi",
@@ -184,7 +184,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates an ethernet interface assigned to an AggregateEthernet Interface
     ///     //
-    ///     var scmAeMember2 = new Scm.EthernetInterface("scm_ae_member_2", new()
+    ///     var scmAeMember2 = new Scm.Index.EthernetInterface("scm_ae_member_2", new()
     ///     {
     ///         Name = "$scm_ae_member_2",
     ///         Comment = "Managed by Pulumi",

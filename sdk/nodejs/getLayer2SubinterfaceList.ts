@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * const allLayer2Subinterfaces = scm.getLayer2SubinterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmLayer2SubinterfaceList = allLayer2Subinterfaces.then(allLayer2Subinterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmLayer2SubinterfaceList = allLayer2Subinterfaces.then(allLayer2Subinterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getLayer2SubinterfaceList(args?: GetLayer2SubinterfaceListArgs, opts?: pulumi.InvokeOptions): Promise<GetLayer2SubinterfaceListResult> {
@@ -123,7 +123,7 @@ export interface GetLayer2SubinterfaceListResult {
  * const allLayer2Subinterfaces = scm.getLayer2SubinterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmLayer2SubinterfaceList = allLayer2Subinterfaces.then(allLayer2Subinterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmLayer2SubinterfaceList = allLayer2Subinterfaces.then(allLayer2Subinterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getLayer2SubinterfaceListOutput(args?: GetLayer2SubinterfaceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLayer2SubinterfaceListResult> {

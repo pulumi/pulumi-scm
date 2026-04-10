@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of looking up an individual IPsec Tunnel by its ID.
-        ///     var scmIpsecTunnelDs = Scm.GetIpsecTunnel.Invoke(new()
+        ///     var scmIpsecTunnelDs = Scm.Index.GetIpsecTunnel.Invoke(new()
         ///     {
         ///         Id = "7c237a82-8c11-4f09-bdbf-599e159019ce",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of looking up an individual IPsec Tunnel by its ID.
-        ///     var scmIpsecTunnelDs = Scm.GetIpsecTunnel.Invoke(new()
+        ///     var scmIpsecTunnelDs = Scm.Index.GetIpsecTunnel.Invoke(new()
         ///     {
         ///         Id = "7c237a82-8c11-4f09-bdbf-599e159019ce",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of looking up an individual IPsec Tunnel by its ID.
-        ///     var scmIpsecTunnelDs = Scm.GetIpsecTunnel.Invoke(new()
+        ///     var scmIpsecTunnelDs = Scm.Index.GetIpsecTunnel.Invoke(new()
         ///     {
         ///         Id = "7c237a82-8c11-4f09-bdbf-599e159019ce",
         ///     });

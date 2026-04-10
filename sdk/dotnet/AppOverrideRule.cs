@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // --- 1. TAG Resource ---
-    ///     var appOverridePositionTag = new Scm.Tag("app_override_position_tag", new()
+    ///     var appOverridePositionTag = new Scm.Index.Tag("app_override_position_tag", new()
     ///     {
     ///         Name = "app-override-position-tag_1",
     ///         Folder = "ngfw-shared",
@@ -31,7 +31,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // --- 2. ANCHOR RULE (Used for relative positioning by other rules) ---
-    ///     var anchorAppOverride = new Scm.AppOverrideRule("anchor_app_override", new()
+    ///     var anchorAppOverride = new Scm.Index.AppOverrideRule("anchor_app_override", new()
     ///     {
     ///         Name = "anchor-app-override-rule",
     ///         Description = "Base rule for testing 'before' and 'after' positioning. Updating",
@@ -63,7 +63,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
-    ///     var ruleTopAppOverride = new Scm.AppOverrideRule("rule_top_app_override", new()
+    ///     var ruleTopAppOverride = new Scm.Index.AppOverrideRule("rule_top_app_override", new()
     ///     {
     ///         Name = "top-absolute-app-override",
     ///         Description = "Placed at the very TOP of the App Override rulebase.",
@@ -91,7 +91,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var ruleBottomAppOverride = new Scm.AppOverrideRule("rule_bottom_app_override", new()
+    ///     var ruleBottomAppOverride = new Scm.Index.AppOverrideRule("rule_bottom_app_override", new()
     ///     {
     ///         Name = "bottom-absolute-app-override",
     ///         Description = "Placed at the very BOTTOM of the App Override rulebase.",
@@ -120,7 +120,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     //--- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
-    ///     var ruleBeforeAnchorOverride = new Scm.AppOverrideRule("rule_before_anchor_override", new()
+    ///     var ruleBeforeAnchorOverride = new Scm.Index.AppOverrideRule("rule_before_anchor_override", new()
     ///     {
     ///         Name = "before-anchor-app-override",
     ///         Description = "Positioned immediately BEFORE the anchor-app-override-rule.",
@@ -149,7 +149,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var ruleAfterAnchorOverride = new Scm.AppOverrideRule("rule_after_anchor_override", new()
+    ///     var ruleAfterAnchorOverride = new Scm.Index.AppOverrideRule("rule_after_anchor_override", new()
     ///     {
     ///         Name = "after-anchor-app-override",
     ///         Description = "Positioned immediately AFTER the anchor-app-override-rule.",

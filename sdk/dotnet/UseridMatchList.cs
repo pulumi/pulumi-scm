@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var useridMatchList = new Scm.UseridMatchList("userid_match_list", new()
+    ///     var useridMatchList = new Scm.Index.UseridMatchList("userid_match_list", new()
     ///     {
     ///         Name = "test-userid-match-list",
     ///         Description = "User ID match list for monitoring and forwarding user authentication events to external systems",

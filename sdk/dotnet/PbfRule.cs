@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var exampleTag = new Scm.Tag("example_tag", new()
+    ///     var exampleTag = new Scm.Index.Tag("example_tag", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "pbf-rule-tag-test-1",
@@ -30,7 +30,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // --- PBF Rule Resource with discard action---
-    ///     var examplePbfRule = new Scm.PbfRule("example_pbf_rule", new()
+    ///     var examplePbfRule = new Scm.Index.PbfRule("example_pbf_rule", new()
     ///     {
     ///         Name = "pbf-test-rule-discard",
     ///         Folder = "ngfw-shared",
@@ -78,7 +78,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // --- PBF Rule Resource with no-pbf action---
-    ///     var exampleNoPbfRule = new Scm.PbfRule("example_no_pbf_rule", new()
+    ///     var exampleNoPbfRule = new Scm.Index.PbfRule("example_no_pbf_rule", new()
     ///     {
     ///         Name = "pbf-test-rule-no-pbf",
     ///         Folder = "ngfw-shared",
@@ -126,7 +126,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // --- PBF Rule Resource with forward action---
-    ///     var exampleForwardPbfRule = new Scm.PbfRule("example_forward_pbf_rule", new()
+    ///     var exampleForwardPbfRule = new Scm.Index.PbfRule("example_forward_pbf_rule", new()
     ///     {
     ///         Name = "pbf-test-rule-forward",
     ///         Folder = "ngfw-shared",

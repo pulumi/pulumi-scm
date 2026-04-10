@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			singleProfileById, err := scm.LookupRadiusServerProfile(ctx, &scm.LookupRadiusServerProfileArgs{
+//			singleProfileById, err := scm.GetRadiusServerProfile(ctx, &scm.LookupRadiusServerProfileArgs{
 //				Id: "50e5f694-19a2-467b-90a8-9db168600327",
 //			}, nil)
 //			if err != nil {

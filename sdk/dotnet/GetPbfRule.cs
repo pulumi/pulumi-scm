@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define the data source (the item to be retrieved via API GET)
-        ///     var pbfExternalWebTestGet = Scm.GetPbfRule.Invoke(new()
+        ///     var pbfExternalWebTestGet = Scm.Index.GetPbfRule.Invoke(new()
         ///     {
         ///         Id = "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
         ///     });
@@ -59,7 +59,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define the data source (the item to be retrieved via API GET)
-        ///     var pbfExternalWebTestGet = Scm.GetPbfRule.Invoke(new()
+        ///     var pbfExternalWebTestGet = Scm.Index.GetPbfRule.Invoke(new()
         ///     {
         ///         Id = "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
         ///     });
@@ -93,7 +93,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define the data source (the item to be retrieved via API GET)
-        ///     var pbfExternalWebTestGet = Scm.GetPbfRule.Invoke(new()
+        ///     var pbfExternalWebTestGet = Scm.Index.GetPbfRule.Invoke(new()
         ///     {
         ///         Id = "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
         ///     });

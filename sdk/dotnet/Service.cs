@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // TCP Service with multiple destination ports custom timeout
-    ///     var scmServiceTcpPorts = new Scm.Service("scm_service_tcp_ports", new()
+    ///     var scmServiceTcpPorts = new Scm.Index.Service("scm_service_tcp_ports", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_service_tcp_ports",
@@ -42,7 +42,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // TCP Service with source port, destination port and custom timeout values
-    ///     var scmServiceTcpPortSrcDst = new Scm.Service("scm_service_tcp_port_src_dst", new()
+    ///     var scmServiceTcpPortSrcDst = new Scm.Index.Service("scm_service_tcp_port_src_dst", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_service_tcp_port_src_dst",
@@ -64,7 +64,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // UDP Service with single destination port
-    ///     var scmServiceUdpPort = new Scm.Service("scm_service_udp_port", new()
+    ///     var scmServiceUdpPort = new Scm.Index.Service("scm_service_udp_port", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_service_udp_port",

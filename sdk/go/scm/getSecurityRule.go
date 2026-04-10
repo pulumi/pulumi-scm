@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// 1. Fetch by ID (Best for direct lookup)
-//			standardWebAccessById, err := scm.LookupSecurityRule(ctx, &scm.LookupSecurityRuleArgs{
+//			standardWebAccessById, err := scm.GetSecurityRule(ctx, &scm.LookupSecurityRuleArgs{
 //				Id: "2a550f26-3e98-47d0-984f-b51e4ff367de",
 //			}, nil)
 //			if err != nil {

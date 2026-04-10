@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmKerberosServerProfile1 = new Scm.KerberosServerProfile("scm_kerberos_server_profile_1", new()
+    ///     var scmKerberosServerProfile1 = new Scm.Index.KerberosServerProfile("scm_kerberos_server_profile_1", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "kerberos-server-prof-1",
@@ -36,7 +36,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmKerberosServerProfile2 = new Scm.KerberosServerProfile("scm_kerberos_server_profile_2", new()
+    ///     var scmKerberosServerProfile2 = new Scm.Index.KerberosServerProfile("scm_kerberos_server_profile_2", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "kerberos-server-prof-2",
@@ -51,7 +51,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmKerberosServerProfile3 = new Scm.KerberosServerProfile("scm_kerberos_server_profile_3", new()
+    ///     var scmKerberosServerProfile3 = new Scm.Index.KerberosServerProfile("scm_kerberos_server_profile_3", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "kerberos-server-prof-3",

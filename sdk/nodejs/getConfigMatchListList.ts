@@ -22,7 +22,7 @@ import * as utilities from "./utilities";
  * export const configMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getConfigMatchListList(args?: GetConfigMatchListListArgs, opts?: pulumi.InvokeOptions): Promise<GetConfigMatchListListResult> {
@@ -129,7 +129,7 @@ export interface GetConfigMatchListListResult {
  * export const configMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getConfigMatchListListOutput(args?: GetConfigMatchListListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetConfigMatchListListResult> {

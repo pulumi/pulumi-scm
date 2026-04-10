@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to look up a single service by its ID.
-//			scmServiceTcpDs, err := scm.LookupService(ctx, &scm.LookupServiceArgs{
+//			scmServiceTcpDs, err := scm.GetService(ctx, &scm.LookupServiceArgs{
 //				Id: "ff135641-6735-4d7d-85c6-3401bba9dee8",
 //			}, nil)
 //			if err != nil {
@@ -36,7 +36,7 @@ import (
 //			}
 //			ctx.Export("serviceDetailsTcp", scmServiceTcpDs)
 //			// Data source to look up a single service by its ID.
-//			scmServiceUdpDs, err := scm.LookupService(ctx, &scm.LookupServiceArgs{
+//			scmServiceUdpDs, err := scm.GetService(ctx, &scm.LookupServiceArgs{
 //				Id: "e087b703-aede-437e-853e-b11576f6dcbe",
 //			}, nil)
 //			if err != nil {

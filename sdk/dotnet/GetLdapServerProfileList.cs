@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM LDAP Server Profile objects.
         ///     //
         ///     // Fetch a list of all SCM LDAP Server Profiles in the "All" folder.
-        ///     var allShared = Scm.GetLdapServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetLdapServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -69,7 +69,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM LDAP Server Profile objects.
         ///     //
         ///     // Fetch a list of all SCM LDAP Server Profiles in the "All" folder.
-        ///     var allShared = Scm.GetLdapServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetLdapServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -110,7 +110,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM LDAP Server Profile objects.
         ///     //
         ///     // Fetch a list of all SCM LDAP Server Profiles in the "All" folder.
-        ///     var allShared = Scm.GetLdapServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetLdapServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });

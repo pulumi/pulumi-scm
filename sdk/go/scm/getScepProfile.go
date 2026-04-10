@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single SCM SCEP Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the SCM SCEP Profile you want to find.
-//			scmScepProf, err := scm.LookupScepProfile(ctx, &scm.LookupScepProfileArgs{
+//			scmScepProf, err := scm.GetScepProfile(ctx, &scm.LookupScepProfileArgs{
 //				Id: "06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1",
 //			}, nil)
 //			if err != nil {

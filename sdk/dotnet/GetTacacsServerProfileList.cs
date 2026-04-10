@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the multi-tag address object by its ID.
-        ///     var scmTacacsServerProfiles = Scm.GetTacacsServerProfileList.Invoke(new()
+        ///     var scmTacacsServerProfiles = Scm.Index.GetTacacsServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -58,7 +58,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the multi-tag address object by its ID.
-        ///     var scmTacacsServerProfiles = Scm.GetTacacsServerProfileList.Invoke(new()
+        ///     var scmTacacsServerProfiles = Scm.Index.GetTacacsServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -91,7 +91,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the multi-tag address object by its ID.
-        ///     var scmTacacsServerProfiles = Scm.GetTacacsServerProfileList.Invoke(new()
+        ///     var scmTacacsServerProfiles = Scm.Index.GetTacacsServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });

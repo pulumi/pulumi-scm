@@ -28,35 +28,35 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the IP Netmask address object by its ID.
-//			scmAddress1Ds, err := scm.LookupAddress(ctx, &scm.LookupAddressArgs{
+//			scmAddress1Ds, err := scm.GetAddress(ctx, &scm.LookupAddressArgs{
 //				Id: "f23e1c22-de94-44cd-b67f-36f2516618a7",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
 //			// Look up the IP Range address object by its ID.
-//			scmAddress2Ds, err := scm.LookupAddress(ctx, &scm.LookupAddressArgs{
+//			scmAddress2Ds, err := scm.GetAddress(ctx, &scm.LookupAddressArgs{
 //				Id: "662ef9a5-80d4-40d8-b51a-ec11915895d8",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
 //			// Look up the FQDN address object by its ID.
-//			scmAddress3Ds, err := scm.LookupAddress(ctx, &scm.LookupAddressArgs{
+//			scmAddress3Ds, err := scm.GetAddress(ctx, &scm.LookupAddressArgs{
 //				Id: "1b996b9d-d350-4565-8ace-b319e6ae5a34",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
 //			// Look up the class_c_wildcard address object by its ID.
-//			scmAddress4Ds, err := scm.LookupAddress(ctx, &scm.LookupAddressArgs{
+//			scmAddress4Ds, err := scm.GetAddress(ctx, &scm.LookupAddressArgs{
 //				Id: "933a1646-21fa-4edc-a0ca-868ead783ac0",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
 //			// Look up the multi-tag address object by its ID.
-//			scmAddress5Ds, err := scm.LookupAddress(ctx, &scm.LookupAddressArgs{
+//			scmAddress5Ds, err := scm.GetAddress(ctx, &scm.LookupAddressArgs{
 //				Id: "f10df339-61aa-42a0-aab8-85424bfb2a8f",
 //			}, nil)
 //			if err != nil {

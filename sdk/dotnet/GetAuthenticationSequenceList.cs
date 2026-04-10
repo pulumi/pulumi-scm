@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSequences = Scm.GetAuthenticationSequenceList.Invoke(new()
+        ///     var allSequences = Scm.Index.GetAuthenticationSequenceList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///         Folder = "All",
@@ -57,7 +57,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSequences = Scm.GetAuthenticationSequenceList.Invoke(new()
+        ///     var allSequences = Scm.Index.GetAuthenticationSequenceList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///         Folder = "All",
@@ -90,7 +90,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSequences = Scm.GetAuthenticationSequenceList.Invoke(new()
+        ///     var allSequences = Scm.Index.GetAuthenticationSequenceList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///         Folder = "All",

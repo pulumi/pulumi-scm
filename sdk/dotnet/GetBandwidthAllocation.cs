@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up an existing Bandwidth Allocation by name
-        ///     var example = Scm.GetBandwidthAllocation.Invoke(new()
+        ///     var example = Scm.Index.GetBandwidthAllocation.Invoke(new()
         ///     {
         ///         Name = "taiwan",
         ///     });
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up an existing Bandwidth Allocation by name
-        ///     var example = Scm.GetBandwidthAllocation.Invoke(new()
+        ///     var example = Scm.Index.GetBandwidthAllocation.Invoke(new()
         ///     {
         ///         Name = "taiwan",
         ///     });
@@ -87,7 +87,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up an existing Bandwidth Allocation by name
-        ///     var example = Scm.GetBandwidthAllocation.Invoke(new()
+        ///     var example = Scm.Index.GetBandwidthAllocation.Invoke(new()
         ///     {
         ///         Name = "taiwan",
         ///     });

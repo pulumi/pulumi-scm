@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var settingsData = Scm.GetVpnSetting.Invoke(new()
+        ///     var settingsData = Scm.Index.GetVpnSetting.Invoke(new()
         ///     {
         ///         Id = "7e4287ab-dfec-48bc-866d-8fb2ae3e1c5f",
         ///     });
@@ -52,7 +52,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var settingsData = Scm.GetVpnSetting.Invoke(new()
+        ///     var settingsData = Scm.Index.GetVpnSetting.Invoke(new()
         ///     {
         ///         Id = "7e4287ab-dfec-48bc-866d-8fb2ae3e1c5f",
         ///     });
@@ -80,7 +80,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var settingsData = Scm.GetVpnSetting.Invoke(new()
+        ///     var settingsData = Scm.Index.GetVpnSetting.Invoke(new()
         ///     {
         ///         Id = "7e4287ab-dfec-48bc-866d-8fb2ae3e1c5f",
         ///     });

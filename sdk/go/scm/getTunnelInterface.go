@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up tunnel interface by its ID.
-//			scmTunnelIntfDs, err := scm.LookupTunnelInterface(ctx, &scm.LookupTunnelInterfaceArgs{
+//			scmTunnelIntfDs, err := scm.GetTunnelInterface(ctx, &scm.LookupTunnelInterfaceArgs{
 //				Id: "ddad1e64-0b64-41a4-b361-c6191169a8f1",
 //			}, nil)
 //			if err != nil {

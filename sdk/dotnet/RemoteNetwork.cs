@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     // --- DEPENDENCY 1: IKE Crypto Profile ---
     ///     // This profile defines the encryption and authentication algorithms for the IKE Gateway.
     ///     // The values are taken from the 'createTestIKECryptoProfile' helper function.
-    ///     var example = new Scm.IkeCryptoProfile("example", new()
+    ///     var example = new Scm.Index.IkeCryptoProfile("example", new()
     ///     {
     ///         Name = "example-ike-crypto-11",
     ///         Folder = "Remote Networks",
@@ -46,7 +46,7 @@ namespace Pulumi.Scm
     ///     // --- DEPENDENCY 2: IKE Gateway ---
     ///     // This defines the VPN peer. It depends on the IKE Crypto Profile created above.
     ///     // The values are taken from the 'createTestIKEGateway' helper function.
-    ///     var exampleIkeGateway = new Scm.IkeGateway("example", new()
+    ///     var exampleIkeGateway = new Scm.Index.IkeGateway("example", new()
     ///     {
     ///         Name = "example-ike-gateway-11",
     ///         Folder = "Remote Networks",
@@ -79,7 +79,7 @@ namespace Pulumi.Scm
     ///     // --- DEPENDENCY 3: IPsec Tunnel ---
     ///     // This defines the tunnel interface itself and uses the IKE Gateway.
     ///     // The values are taken from the 'createTestIPsecTunnel' helper function.
-    ///     var exampleIpsecTunnel = new Scm.IpsecTunnel("example", new()
+    ///     var exampleIpsecTunnel = new Scm.Index.IpsecTunnel("example", new()
     ///     {
     ///         Name = "example-ipsec-tunnel-11",
     ///         Folder = "Remote Networks",
@@ -108,7 +108,7 @@ namespace Pulumi.Scm
     ///     // --- MAIN RESOURCE: Remote Network ---
     ///     // This is the final resource, which uses the IPsec Tunnel created above.
     ///     // The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
-    ///     var exampleRemoteNetwork = new Scm.RemoteNetwork("example", new()
+    ///     var exampleRemoteNetwork = new Scm.Index.RemoteNetwork("example", new()
     ///     {
     ///         Name = "example-remote-network-11",
     ///         Folder = "Remote Networks",

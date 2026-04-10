@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up ethernet interface by its ID.
-//			scmL3IntfStaticDs, err := scm.LookupEthernetInterface(ctx, &scm.LookupEthernetInterfaceArgs{
+//			scmL3IntfStaticDs, err := scm.GetEthernetInterface(ctx, &scm.LookupEthernetInterfaceArgs{
 //				Id: "ddad1e64-0b64-41a4-b361-c6199769a8f2",
 //			}, nil)
 //			if err != nil {

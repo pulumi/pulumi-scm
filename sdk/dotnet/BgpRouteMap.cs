@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates various resources used for subsequent examples
     ///     //
-    ///     var scmRoutePrefixList = new Scm.RoutePrefixList("scm_route_prefix_list", new()
+    ///     var scmRoutePrefixList = new Scm.Index.RoutePrefixList("scm_route_prefix_list", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_bgp_prefix_list",
@@ -55,7 +55,7 @@ namespace Pulumi.Scm
     ///     // Creates a bgp route map that sets no-export community for traffic matching prefix-list
     ///     // Requires: scm_bgp_prefix_list
     ///     //
-    ///     var scmBgpRouteMap = new Scm.BgpRouteMap("scm_bgp_route_map", new()
+    ///     var scmBgpRouteMap = new Scm.Index.BgpRouteMap("scm_bgp_route_map", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_bgp_route_map",

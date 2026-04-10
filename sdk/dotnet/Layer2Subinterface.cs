@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a ethernet interface used as parent-interface for subsequent examples
     ///     //
-    ///     var scmParentInterface = new Scm.EthernetInterface("scm_parent_interface", new()
+    ///     var scmParentInterface = new Scm.Index.EthernetInterface("scm_parent_interface", new()
     ///     {
     ///         Name = "$scm_tf_parent_interface",
     ///         Comment = "Managed by Pulumi",
@@ -36,7 +36,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer2 sub-interface with vlan tag 100
     ///     //
-    ///     var scmLayer2Subinterface = new Scm.Layer2Subinterface("scm_layer2_subinterface", new()
+    ///     var scmLayer2Subinterface = new Scm.Index.Layer2Subinterface("scm_layer2_subinterface", new()
     ///     {
     ///         Name = "$scm_tf_parent_interface.100",
     ///         Comment = "Managed by Pulumi",

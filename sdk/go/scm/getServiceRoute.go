@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			settingsData, err := scm.LookupServiceRoute(ctx, &scm.LookupServiceRouteArgs{
+//			settingsData, err := scm.GetServiceRoute(ctx, &scm.LookupServiceRouteArgs{
 //				Id: "a232c048-98d6-4507-a299-bb10f66fca01",
 //			}, nil)
 //			if err != nil {

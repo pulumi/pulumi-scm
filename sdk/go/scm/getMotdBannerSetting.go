@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			settingsData, err := scm.LookupMotdBannerSetting(ctx, &scm.LookupMotdBannerSettingArgs{
+//			settingsData, err := scm.GetMotdBannerSetting(ctx, &scm.LookupMotdBannerSettingArgs{
 //				Id: "bc31452f-7f57-4c29-9dab-e1cb461799eb",
 //			}, nil)
 //			if err != nil {

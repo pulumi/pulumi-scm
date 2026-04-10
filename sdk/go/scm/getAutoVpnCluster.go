@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the application group by its ID from the terraform.tfstate file.
-//			scmAutoVpnClusterDs, err := scm.LookupAutoVpnCluster(ctx, &scm.LookupAutoVpnClusterArgs{
+//			scmAutoVpnClusterDs, err := scm.GetAutoVpnCluster(ctx, &scm.LookupAutoVpnClusterArgs{
 //				Id: "e3c732fb-85c7-4116-b5ed-ba3977209b29",
 //			}, nil)
 //			if err != nil {

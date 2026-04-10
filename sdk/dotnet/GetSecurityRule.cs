@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // 1. Fetch by ID (Best for direct lookup)
-        ///     var standardWebAccessById = Scm.GetSecurityRule.Invoke(new()
+        ///     var standardWebAccessById = Scm.Index.GetSecurityRule.Invoke(new()
         ///     {
         ///         Id = "2a550f26-3e98-47d0-984f-b51e4ff367de",
         ///     });
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // 1. Fetch by ID (Best for direct lookup)
-        ///     var standardWebAccessById = Scm.GetSecurityRule.Invoke(new()
+        ///     var standardWebAccessById = Scm.Index.GetSecurityRule.Invoke(new()
         ///     {
         ///         Id = "2a550f26-3e98-47d0-984f-b51e4ff367de",
         ///     });
@@ -87,7 +87,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // 1. Fetch by ID (Best for direct lookup)
-        ///     var standardWebAccessById = Scm.GetSecurityRule.Invoke(new()
+        ///     var standardWebAccessById = Scm.Index.GetSecurityRule.Invoke(new()
         ///     {
         ///         Id = "2a550f26-3e98-47d0-984f-b51e4ff367de",
         ///     });

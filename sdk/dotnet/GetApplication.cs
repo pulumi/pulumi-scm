@@ -26,7 +26,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Look up a single application object by its ID.
         ///     // The ID used here is from the API response log you provided.
-        ///     var scmApplicationDs = Scm.GetApplication.Invoke(new()
+        ///     var scmApplicationDs = Scm.Index.GetApplication.Invoke(new()
         ///     {
         ///         Id = "bb16f631-4839-475e-8628-70585319ca75",
         ///     });
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Look up a single application object by its ID.
         ///     // The ID used here is from the API response log you provided.
-        ///     var scmApplicationDs = Scm.GetApplication.Invoke(new()
+        ///     var scmApplicationDs = Scm.Index.GetApplication.Invoke(new()
         ///     {
         ///         Id = "bb16f631-4839-475e-8628-70585319ca75",
         ///     });
@@ -86,7 +86,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Look up a single application object by its ID.
         ///     // The ID used here is from the API response log you provided.
-        ///     var scmApplicationDs = Scm.GetApplication.Invoke(new()
+        ///     var scmApplicationDs = Scm.Index.GetApplication.Invoke(new()
         ///     {
         ///         Id = "bb16f631-4839-475e-8628-70585319ca75",
         ///     });

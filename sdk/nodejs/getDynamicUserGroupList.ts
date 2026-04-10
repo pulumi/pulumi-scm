@@ -19,14 +19,14 @@ import * as utilities from "./utilities";
  * const allSharedDugs = scm.getDynamicUserGroupList({
  *     folder: "All",
  * });
- * export const dugResultsFromList = allSharedDugs.then(allSharedDugs => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
+ * export const dugResultsFromList = allSharedDugs.then(allSharedDugs => .reduce((__obj, group) => ({ ...__obj, [group.id]: group }), {}));
  * // This data source block shows an example of pagination.
  * const paginatedDugsExample = scm.getDynamicUserGroupList({
  *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
- * export const paginatedDugs = paginatedDugsExample.then(paginatedDugsExample => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
+ * export const paginatedDugs = paginatedDugsExample.then(paginatedDugsExample => .reduce((__obj, group) => ({ ...__obj, [group.id]: group }), {}));
  * export const paginationDugsDetails = {
  *     totalObjectsInFolder: paginatedDugsExample.then(paginatedDugsExample => paginatedDugsExample.total),
  *     limitUsed: paginatedDugsExample.then(paginatedDugsExample => paginatedDugsExample.limit),
@@ -134,14 +134,14 @@ export interface GetDynamicUserGroupListResult {
  * const allSharedDugs = scm.getDynamicUserGroupList({
  *     folder: "All",
  * });
- * export const dugResultsFromList = allSharedDugs.then(allSharedDugs => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
+ * export const dugResultsFromList = allSharedDugs.then(allSharedDugs => .reduce((__obj, group) => ({ ...__obj, [group.id]: group }), {}));
  * // This data source block shows an example of pagination.
  * const paginatedDugsExample = scm.getDynamicUserGroupList({
  *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
- * export const paginatedDugs = paginatedDugsExample.then(paginatedDugsExample => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
+ * export const paginatedDugs = paginatedDugsExample.then(paginatedDugsExample => .reduce((__obj, group) => ({ ...__obj, [group.id]: group }), {}));
  * export const paginationDugsDetails = {
  *     totalObjectsInFolder: paginatedDugsExample.then(paginatedDugsExample => paginatedDugsExample.total),
  *     limitUsed: paginatedDugsExample.then(paginatedDugsExample => paginatedDugsExample.limit),

@@ -30,7 +30,7 @@ import (
 //			// ------------------------------------------------------
 //			// Data Soruce
 //			// ------------------------------------------------------
-//			createdConnLookup, err := scm.LookupServiceConnection(ctx, &scm.LookupServiceConnectionArgs{
+//			createdConnLookup, err := scm.GetServiceConnection(ctx, &scm.LookupServiceConnectionArgs{
 //				Id: "3d07bda7-2cfa-4fdc-b504-cd82847b2ec3",
 //			}, nil)
 //			if err != nil {

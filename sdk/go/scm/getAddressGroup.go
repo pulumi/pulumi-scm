@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the address group by its ID.
-//			scmAddressGroupDs, err := scm.LookupAddressGroup(ctx, &scm.LookupAddressGroupArgs{
+//			scmAddressGroupDs, err := scm.GetAddressGroup(ctx, &scm.LookupAddressGroupArgs{
 //				Id: "99802bce-76c6-42c9-801e-e2e4529bb335",
 //			}, nil)
 //			if err != nil {

@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the "$example" variable by its name.
-        ///     var scmVariableDs = Scm.GetVariable.Invoke(new()
+        ///     var scmVariableDs = Scm.Index.GetVariable.Invoke(new()
         ///     {
         ///         Id = "66cbe56c-0300-4905-8455-d384978a0081",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the "$example" variable by its name.
-        ///     var scmVariableDs = Scm.GetVariable.Invoke(new()
+        ///     var scmVariableDs = Scm.Index.GetVariable.Invoke(new()
         ///     {
         ///         Id = "66cbe56c-0300-4905-8455-d384978a0081",
         ///     });
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the "$example" variable by its name.
-        ///     var scmVariableDs = Scm.GetVariable.Invoke(new()
+        ///     var scmVariableDs = Scm.Index.GetVariable.Invoke(new()
         ///     {
         ///         Id = "66cbe56c-0300-4905-8455-d384978a0081",
         ///     });

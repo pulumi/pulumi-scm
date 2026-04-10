@@ -22,13 +22,13 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmDecryptionProfileBase = new Scm.DecryptionProfile("scm_decryption_profile_base", new()
+    ///     var scmDecryptionProfileBase = new Scm.Index.DecryptionProfile("scm_decryption_profile_base", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "dp_base",
     ///     });
     /// 
-    ///     var scmDecryptionProfileForwardProxy = new Scm.DecryptionProfile("scm_decryption_profile_forward_proxy", new()
+    ///     var scmDecryptionProfileForwardProxy = new Scm.Index.DecryptionProfile("scm_decryption_profile_forward_proxy", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "dp_forward_proxy",
@@ -48,7 +48,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmDecryptionProfileInboundProxy = new Scm.DecryptionProfile("scm_decryption_profile_inbound_proxy", new()
+    ///     var scmDecryptionProfileInboundProxy = new Scm.Index.DecryptionProfile("scm_decryption_profile_inbound_proxy", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "dp_inbound_proxy",
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmDecryptionProfileNoProxy = new Scm.DecryptionProfile("scm_decryption_profile_no_proxy", new()
+    ///     var scmDecryptionProfileNoProxy = new Scm.Index.DecryptionProfile("scm_decryption_profile_no_proxy", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "dp_no_proxy",
@@ -72,7 +72,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmDecryptionProfileProtocolSettings = new Scm.DecryptionProfile("scm_decryption_profile_protocol_settings", new()
+    ///     var scmDecryptionProfileProtocolSettings = new Scm.Index.DecryptionProfile("scm_decryption_profile_protocol_settings", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "dp_protocol_settings",
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var mixedDecryptionProfile = new Scm.DecryptionProfile("mixed_decryption_profile", new()
+    ///     var mixedDecryptionProfile = new Scm.Index.DecryptionProfile("mixed_decryption_profile", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "mixed_dp",
@@ -131,7 +131,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var fullMixedDecryptionProfile = new Scm.DecryptionProfile("full_mixed_decryption_profile", new()
+    ///     var fullMixedDecryptionProfile = new Scm.Index.DecryptionProfile("full_mixed_decryption_profile", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "full_mixed_dp",

@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of listing all IPsec Crypto Profiles within a specific folder.
-        ///     var scmIpsecCryptoProfileListDs = Scm.GetIpsecCryptoProfileList.Invoke(new()
+        ///     var scmIpsecCryptoProfileListDs = Scm.Index.GetIpsecCryptoProfileList.Invoke(new()
         ///     {
         ///         Folder = "Prisma Access",
         ///         Limit = 100,
@@ -55,7 +55,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of listing all IPsec Crypto Profiles within a specific folder.
-        ///     var scmIpsecCryptoProfileListDs = Scm.GetIpsecCryptoProfileList.Invoke(new()
+        ///     var scmIpsecCryptoProfileListDs = Scm.Index.GetIpsecCryptoProfileList.Invoke(new()
         ///     {
         ///         Folder = "Prisma Access",
         ///         Limit = 100,
@@ -85,7 +85,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Example of listing all IPsec Crypto Profiles within a specific folder.
-        ///     var scmIpsecCryptoProfileListDs = Scm.GetIpsecCryptoProfileList.Invoke(new()
+        ///     var scmIpsecCryptoProfileListDs = Scm.Index.GetIpsecCryptoProfileList.Invoke(new()
         ///     {
         ///         Folder = "Prisma Access",
         ///         Limit = 100,

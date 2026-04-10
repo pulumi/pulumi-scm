@@ -19,14 +19,14 @@ import * as utilities from "./utilities";
  * const allShared = scm.getApplicationGroupList({
  *     folder: "All",
  * });
- * export const applicationGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
+ * export const applicationGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, group) => ({ ...__obj, [group.id]: group }), {}));
  * // Example of using pagination to get a subset of application groups.
  * const paginatedExample = scm.getApplicationGroupList({
  *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
- * export const paginatedApplicationGroups = paginatedExample.then(paginatedExample => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
+ * export const paginatedApplicationGroups = paginatedExample.then(paginatedExample => .reduce((__obj, group) => ({ ...__obj, [group.id]: group }), {}));
  * export const paginationApplicationGroupsDetails = {
  *     totalObjectsInFolder: paginatedExample.then(paginatedExample => paginatedExample.total),
  *     limitUsed: paginatedExample.then(paginatedExample => paginatedExample.limit),
@@ -134,14 +134,14 @@ export interface GetApplicationGroupListResult {
  * const allShared = scm.getApplicationGroupList({
  *     folder: "All",
  * });
- * export const applicationGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
+ * export const applicationGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, group) => ({ ...__obj, [group.id]: group }), {}));
  * // Example of using pagination to get a subset of application groups.
  * const paginatedExample = scm.getApplicationGroupList({
  *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
- * export const paginatedApplicationGroups = paginatedExample.then(paginatedExample => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
+ * export const paginatedApplicationGroups = paginatedExample.then(paginatedExample => .reduce((__obj, group) => ({ ...__obj, [group.id]: group }), {}));
  * export const paginationApplicationGroupsDetails = {
  *     totalObjectsInFolder: paginatedExample.then(paginatedExample => paginatedExample.total),
  *     limitUsed: paginatedExample.then(paginatedExample => paginatedExample.limit),

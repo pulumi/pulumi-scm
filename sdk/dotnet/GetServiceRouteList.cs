@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSettings = Scm.GetServiceRouteList.Invoke(new()
+        ///     var allSettings = Scm.Index.GetServiceRouteList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSettings = Scm.GetServiceRouteList.Invoke(new()
+        ///     var allSettings = Scm.Index.GetServiceRouteList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -88,7 +88,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSettings = Scm.GetServiceRouteList.Invoke(new()
+        ///     var allSettings = Scm.Index.GetServiceRouteList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });

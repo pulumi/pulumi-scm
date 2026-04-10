@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up vlan interface by its ID.
-//			scmVlanInterfaceDs, err := scm.LookupVlanInterface(ctx, &scm.LookupVlanInterfaceArgs{
+//			scmVlanInterfaceDs, err := scm.GetVlanInterface(ctx, &scm.LookupVlanInterfaceArgs{
 //				Id: "3f9382a3-5c93-46d9-ae06-a632c2d9ce0c",
 //			}, nil)
 //			if err != nil {

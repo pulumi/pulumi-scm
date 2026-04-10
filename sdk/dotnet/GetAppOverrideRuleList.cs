@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allPreRules = Scm.GetAppOverrideRuleList.Invoke(new()
+        ///     var allPreRules = Scm.Index.GetAppOverrideRuleList.Invoke(new()
         ///     {
         ///         Offset = 10,
         ///         Position = "pre",
@@ -58,7 +58,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allPreRules = Scm.GetAppOverrideRuleList.Invoke(new()
+        ///     var allPreRules = Scm.Index.GetAppOverrideRuleList.Invoke(new()
         ///     {
         ///         Offset = 10,
         ///         Position = "pre",
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allPreRules = Scm.GetAppOverrideRuleList.Invoke(new()
+        ///     var allPreRules = Scm.Index.GetAppOverrideRuleList.Invoke(new()
         ///     {
         ///         Offset = 10,
         ///         Position = "pre",

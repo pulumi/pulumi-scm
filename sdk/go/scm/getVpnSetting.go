@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			settingsData, err := scm.LookupVpnSetting(ctx, &scm.LookupVpnSettingArgs{
+//			settingsData, err := scm.GetVpnSetting(ctx, &scm.LookupVpnSettingArgs{
 //				Id: "7e4287ab-dfec-48bc-866d-8fb2ae3e1c5f",
 //			}, nil)
 //			if err != nil {

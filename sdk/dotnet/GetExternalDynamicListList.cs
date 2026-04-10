@@ -25,13 +25,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to fetch all external dynamic lists in the "All" folder.
-        ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     var allSharedEdls = Scm.Index.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 EDLs.
-        ///     var paginatedEdls = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     var paginatedEdls = Scm.Index.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to fetch all external dynamic lists in the "All" folder.
-        ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     var allSharedEdls = Scm.Index.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 EDLs.
-        ///     var paginatedEdls = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     var paginatedEdls = Scm.Index.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -111,13 +111,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to fetch all external dynamic lists in the "All" folder.
-        ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     var allSharedEdls = Scm.Index.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 EDLs.
-        ///     var paginatedEdls = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     var paginatedEdls = Scm.Index.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,

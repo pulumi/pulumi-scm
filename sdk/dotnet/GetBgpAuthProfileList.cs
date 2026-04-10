@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all bgp auth profiles
-        ///     var allBgpAuthProfiles = Scm.GetBgpAuthProfileList.Invoke(new()
+        ///     var allBgpAuthProfiles = Scm.Index.GetBgpAuthProfileList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all bgp auth profiles
-        ///     var allBgpAuthProfiles = Scm.GetBgpAuthProfileList.Invoke(new()
+        ///     var allBgpAuthProfiles = Scm.Index.GetBgpAuthProfileList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all bgp auth profiles
-        ///     var allBgpAuthProfiles = Scm.GetBgpAuthProfileList.Invoke(new()
+        ///     var allBgpAuthProfiles = Scm.Index.GetBgpAuthProfileList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });

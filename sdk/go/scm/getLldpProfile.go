@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			profileData, err := scm.LookupLldpProfile(ctx, &scm.LookupLldpProfileArgs{
+//			profileData, err := scm.GetLldpProfile(ctx, &scm.LookupLldpProfileArgs{
 //				Id: "e46f6246-fd4a-4211-a18f-948b09f474bd",
 //			}, nil)
 //			if err != nil {

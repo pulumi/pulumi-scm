@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the "production" tag by its name.
-        ///     var scmTagDs = Scm.GetTag.Invoke(new()
+        ///     var scmTagDs = Scm.Index.GetTag.Invoke(new()
         ///     {
         ///         Id = "66cbe56c-0300-4905-8455-d384978a0082",
         ///     });
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the "production" tag by its name.
-        ///     var scmTagDs = Scm.GetTag.Invoke(new()
+        ///     var scmTagDs = Scm.Index.GetTag.Invoke(new()
         ///     {
         ///         Id = "66cbe56c-0300-4905-8455-d384978a0082",
         ///     });
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the "production" tag by its name.
-        ///     var scmTagDs = Scm.GetTag.Invoke(new()
+        ///     var scmTagDs = Scm.Index.GetTag.Invoke(new()
         ///     {
         ///         Id = "66cbe56c-0300-4905-8455-d384978a0082",
         ///     });

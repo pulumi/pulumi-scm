@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up BGP Redistribution Profile by its ID.
-//			scmBgpRedistributionProfileDs, err := scm.LookupBgpRedistributionProfile(ctx, &scm.LookupBgpRedistributionProfileArgs{
+//			scmBgpRedistributionProfileDs, err := scm.GetBgpRedistributionProfile(ctx, &scm.LookupBgpRedistributionProfileArgs{
 //				Id: "491918e9-0205-4a08-955a-7e59a38d5dc4",
 //			}, nil)
 //			if err != nil {

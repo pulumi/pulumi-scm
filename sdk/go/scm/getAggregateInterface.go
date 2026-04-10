@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up aggregate interface by its ID.
-//			scmAggregateInterfaceDs, err := scm.LookupAggregateInterface(ctx, &scm.LookupAggregateInterfaceArgs{
+//			scmAggregateInterfaceDs, err := scm.GetAggregateInterface(ctx, &scm.LookupAggregateInterfaceArgs{
 //				Id: "ddad1e64-0b64-41a4-b361-c6199761a8f1",
 //			}, nil)
 //			if err != nil {

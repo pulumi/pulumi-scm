@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up layer3 sub-interface by its ID.
-//			scmL3SubinterfaceDs, err := scm.LookupLayer3Subinterface(ctx, &scm.LookupLayer3SubinterfaceArgs{
+//			scmL3SubinterfaceDs, err := scm.GetLayer3Subinterface(ctx, &scm.LookupLayer3SubinterfaceArgs{
 //				Id: "88f730d1-6577-492b-88a6-73d4a513dc76",
 //			}, nil)
 //			if err != nil {

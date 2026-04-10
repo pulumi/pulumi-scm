@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up BGP Auth Profile by its ID.
-        ///     var scmBgpAuthProfileDs = Scm.GetBgpAuthProfile.Invoke(new()
+        ///     var scmBgpAuthProfileDs = Scm.Index.GetBgpAuthProfile.Invoke(new()
         ///     {
         ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up BGP Auth Profile by its ID.
-        ///     var scmBgpAuthProfileDs = Scm.GetBgpAuthProfile.Invoke(new()
+        ///     var scmBgpAuthProfileDs = Scm.Index.GetBgpAuthProfile.Invoke(new()
         ///     {
         ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
         ///     });
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up BGP Auth Profile by its ID.
-        ///     var scmBgpAuthProfileDs = Scm.GetBgpAuthProfile.Invoke(new()
+        ///     var scmBgpAuthProfileDs = Scm.Index.GetBgpAuthProfile.Invoke(new()
         ///     {
         ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
         ///     });

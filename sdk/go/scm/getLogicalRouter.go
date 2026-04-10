@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the logical router by its ID.
-//			scmLogicalRouterDs, err := scm.LookupLogicalRouter(ctx, &scm.LookupLogicalRouterArgs{
+//			scmLogicalRouterDs, err := scm.GetLogicalRouter(ctx, &scm.LookupLogicalRouterArgs{
 //				Id: "b7c6f00b-b20e-4073-af1c-1f42863a5983",
 //			}, nil)
 //			if err != nil {

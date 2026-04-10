@@ -22,7 +22,7 @@ import * as utilities from "./utilities";
  * export const globalprotectMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getGlobalprotectMatchListList(args?: GetGlobalprotectMatchListListArgs, opts?: pulumi.InvokeOptions): Promise<GetGlobalprotectMatchListListResult> {
@@ -129,7 +129,7 @@ export interface GetGlobalprotectMatchListListResult {
  * export const globalprotectMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getGlobalprotectMatchListListOutput(args?: GetGlobalprotectMatchListListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetGlobalprotectMatchListListResult> {

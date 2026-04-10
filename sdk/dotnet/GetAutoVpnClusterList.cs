@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all clusters from the "All" folder.
-        ///     var allClusters = Scm.GetAutoVpnClusterList.Invoke(new()
+        ///     var allClusters = Scm.Index.GetAutoVpnClusterList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,
@@ -55,7 +55,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all clusters from the "All" folder.
-        ///     var allClusters = Scm.GetAutoVpnClusterList.Invoke(new()
+        ///     var allClusters = Scm.Index.GetAutoVpnClusterList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,
@@ -85,7 +85,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all clusters from the "All" folder.
-        ///     var allClusters = Scm.GetAutoVpnClusterList.Invoke(new()
+        ///     var allClusters = Scm.Index.GetAutoVpnClusterList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,

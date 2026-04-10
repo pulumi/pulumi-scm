@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a ethernet interface used as parent-interface for subsequent examples
     ///     //
-    ///     var scmParentInterface = new Scm.EthernetInterface("scm_parent_interface", new()
+    ///     var scmParentInterface = new Scm.Index.EthernetInterface("scm_parent_interface", new()
     ///     {
     ///         Name = "$scm_tf_parent_interface",
     ///         Comment = "Managed by Pulumi",
@@ -36,7 +36,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer3 sub-interface with static ip address
     ///     //
-    ///     var scmL3Subinterface = new Scm.Layer3Subinterface("scm_l3_subinterface", new()
+    ///     var scmL3Subinterface = new Scm.Index.Layer3Subinterface("scm_l3_subinterface", new()
     ///     {
     ///         Name = "$scm_tf_parent_interface.100",
     ///         Comment = "Managed by Pulumi",
@@ -58,7 +58,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmParentDhcpInterface = new Scm.EthernetInterface("scm_parent_dhcp_interface", new()
+    ///     var scmParentDhcpInterface = new Scm.Index.EthernetInterface("scm_parent_dhcp_interface", new()
     ///     {
     ///         Name = "$scm_parent_tf_dhcp_interface",
     ///         Comment = "Managed by Pulumi",
@@ -69,7 +69,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer3 sub-interface with dhcp
     ///     //
-    ///     var scmL3DhcpSubinterface = new Scm.Layer3Subinterface("scm_l3_dhcp_subinterface", new()
+    ///     var scmL3DhcpSubinterface = new Scm.Index.Layer3Subinterface("scm_l3_dhcp_subinterface", new()
     ///     {
     ///         Name = "$scm_parent_tf_dhcp_interface.100",
     ///         Comment = "Managed by Pulumi",

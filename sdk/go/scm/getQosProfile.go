@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single SCM QoS Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the QoS Profile you want to find.
-//			scmQosProf, err := scm.LookupQosProfile(ctx, &scm.LookupQosProfileArgs{
+//			scmQosProf, err := scm.GetQosProfile(ctx, &scm.LookupQosProfileArgs{
 //				Id: "cffecf78-b3b1-4b01-ad31-c69bf839850b",
 //			}, nil)
 //			if err != nil {

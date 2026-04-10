@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates an empty layer3 zone
     ///     //
-    ///     var scmLayer3Zone = new Scm.Zone("scm_layer3_zone", new()
+    ///     var scmLayer3Zone = new Scm.Index.Zone("scm_layer3_zone", new()
     ///     {
     ///         Name = "scm_layer3_zone",
     ///         Folder = "ngfw-shared",
@@ -38,7 +38,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates an empty layer2 zone
     ///     //
-    ///     var scmLayer2Zone = new Scm.Zone("scm_layer2_zone", new()
+    ///     var scmLayer2Zone = new Scm.Index.Zone("scm_layer2_zone", new()
     ///     {
     ///         Name = "scm_layer2_zone",
     ///         Folder = "ngfw-shared",
@@ -51,7 +51,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates an empty tap zone
     ///     //
-    ///     var scmTapZone = new Scm.Zone("scm_tap_zone", new()
+    ///     var scmTapZone = new Scm.Index.Zone("scm_tap_zone", new()
     ///     {
     ///         Name = "scm_tap_zone",
     ///         Folder = "ngfw-shared",
@@ -64,7 +64,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates an empty vwire zone
     ///     //
-    ///     var scmVwireZone = new Scm.Zone("scm_vwire_zone", new()
+    ///     var scmVwireZone = new Scm.Index.Zone("scm_vwire_zone", new()
     ///     {
     ///         Name = "scm_vwire_zone",
     ///         Folder = "ngfw-shared",
@@ -78,7 +78,7 @@ namespace Pulumi.Scm
     ///     // Creates a layer3 zone
     ///     // Requires Interface $scm_l3_interface to exist
     ///     //
-    ///     var scmLayer3ZoneComplex = new Scm.Zone("scm_layer3_zone_complex", new()
+    ///     var scmLayer3ZoneComplex = new Scm.Index.Zone("scm_layer3_zone_complex", new()
     ///     {
     ///         Name = "scm_layer3_zone_complex",
     ///         Folder = "ngfw-shared",

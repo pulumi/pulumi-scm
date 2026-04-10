@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up aggregate interface by its ID.
-        ///     var scmAggregateInterfaceDs = Scm.GetAggregateInterface.Invoke(new()
+        ///     var scmAggregateInterfaceDs = Scm.Index.GetAggregateInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6199761a8f1",
         ///     });
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up aggregate interface by its ID.
-        ///     var scmAggregateInterfaceDs = Scm.GetAggregateInterface.Invoke(new()
+        ///     var scmAggregateInterfaceDs = Scm.Index.GetAggregateInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6199761a8f1",
         ///     });
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up aggregate interface by its ID.
-        ///     var scmAggregateInterfaceDs = Scm.GetAggregateInterface.Invoke(new()
+        ///     var scmAggregateInterfaceDs = Scm.Index.GetAggregateInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6199761a8f1",
         ///     });

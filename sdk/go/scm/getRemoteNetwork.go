@@ -31,7 +31,7 @@ import (
 //			//
 //			// Look up a single Remote Network by its ID.
 //			// Replace the ID with the UUID of the remote network you want to find.
-//			example, err := scm.LookupRemoteNetwork(ctx, &scm.LookupRemoteNetworkArgs{
+//			example, err := scm.GetRemoteNetwork(ctx, &scm.LookupRemoteNetworkArgs{
 //				Id: "7fc59ec2-46b3-4a0e-9c86-9b7416426a70",
 //			}, nil)
 //			if err != nil {

@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all anti-spyware profiles
-        ///     var allAntiSpywareSignatures = Scm.GetAntiSpywareSignatureList.Invoke(new()
+        ///     var allAntiSpywareSignatures = Scm.Index.GetAntiSpywareSignatureList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all anti-spyware profiles
-        ///     var allAntiSpywareSignatures = Scm.GetAntiSpywareSignatureList.Invoke(new()
+        ///     var allAntiSpywareSignatures = Scm.Index.GetAntiSpywareSignatureList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all anti-spyware profiles
-        ///     var allAntiSpywareSignatures = Scm.GetAntiSpywareSignatureList.Invoke(new()
+        ///     var allAntiSpywareSignatures = Scm.Index.GetAntiSpywareSignatureList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
