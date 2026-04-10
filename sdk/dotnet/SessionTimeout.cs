@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var stExample = new Scm.SessionTimeout("st_example", new()
+    ///     var stExample = new Scm.Index.SessionTimeout("st_example", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         SessionTimeouts = new Scm.Inputs.SessionTimeoutSessionTimeoutsArgs

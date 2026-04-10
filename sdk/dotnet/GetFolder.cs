@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a folder by id
-        ///     var scmFolderDs = Scm.GetFolder.Invoke(new()
+        ///     var scmFolderDs = Scm.Index.GetFolder.Invoke(new()
         ///     {
         ///         Id = "0f11d0d9-df7c-45da-a60c-4d80f8422544",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a folder by id
-        ///     var scmFolderDs = Scm.GetFolder.Invoke(new()
+        ///     var scmFolderDs = Scm.Index.GetFolder.Invoke(new()
         ///     {
         ///         Id = "0f11d0d9-df7c-45da-a60c-4d80f8422544",
         ///     });
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a folder by id
-        ///     var scmFolderDs = Scm.GetFolder.Invoke(new()
+        ///     var scmFolderDs = Scm.Index.GetFolder.Invoke(new()
         ///     {
         ///         Id = "0f11d0d9-df7c-45da-a60c-4d80f8422544",
         ///     });

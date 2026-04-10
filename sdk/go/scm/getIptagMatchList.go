@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the iptag match list by its ID.
-//			iptagMatchListDs, err := scm.LookupIptagMatchList(ctx, &scm.LookupIptagMatchListArgs{
+//			iptagMatchListDs, err := scm.GetIptagMatchList(ctx, &scm.LookupIptagMatchListArgs{
 //				Id: "108dfdb1-0723-497d-9352-50642b231b4e",
 //			}, nil)
 //			if err != nil {

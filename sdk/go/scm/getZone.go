@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up zone by its ID.
-//			scmZoneDs, err := scm.LookupZone(ctx, &scm.LookupZoneArgs{
+//			scmZoneDs, err := scm.GetZone(ctx, &scm.LookupZoneArgs{
 //				Id: "50f1f0f3-a420-4989-9770-c927f1467a9a",
 //			}, nil)
 //			if err != nil {

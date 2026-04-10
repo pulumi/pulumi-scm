@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var systemMatchList = new Scm.SystemMatchList("system_match_list", new()
+    ///     var systemMatchList = new Scm.Index.SystemMatchList("system_match_list", new()
     ///     {
     ///         Name = "test-system-list",
     ///         Description = "System match list for capturing system-level events and forwarding to monitoring platform",

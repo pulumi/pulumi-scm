@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var exampleTag = new Scm.Tag("example_tag", new()
+    ///     var exampleTag = new Scm.Index.Tag("example_tag", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "example-nat-rule",
@@ -30,7 +30,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     //Source Translation (SNAT) - Dynamic IP and Port
-    ///     var exampleNatRule = new Scm.NatRule("example_nat_rule", new()
+    ///     var exampleNatRule = new Scm.Index.NatRule("example_nat_rule", new()
     ///     {
     ///         Name = "snat-to-internet-1",
     ///         Froms = new[]
@@ -78,7 +78,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     //Source Translation (SNAT) - Static IP - Bidirectional - no
-    ///     var exampleNatStaticRule = new Scm.NatRule("example_nat_static_rule", new()
+    ///     var exampleNatStaticRule = new Scm.Index.NatRule("example_nat_static_rule", new()
     ///     {
     ///         Name = "snat-to-bid-1",
     ///         Froms = new[]
@@ -123,7 +123,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     //Source Translation (SNAT) - Static IP - Bidirectional - yes
-    ///     var exampleNatStaticRule2 = new Scm.NatRule("example_nat_static_rule_2", new()
+    ///     var exampleNatStaticRule2 = new Scm.Index.NatRule("example_nat_static_rule_2", new()
     ///     {
     ///         Name = "snat-to-bid-yes-1",
     ///         Froms = new[]
@@ -163,7 +163,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     //Source Translation (SNAT) - Dynamic IP 
-    ///     var exampleNatDynamicRule = new Scm.NatRule("example_nat_dynamic_rule", new()
+    ///     var exampleNatDynamicRule = new Scm.Index.NatRule("example_nat_dynamic_rule", new()
     ///     {
     ///         Name = "snat-to-dyanamic-1",
     ///         Froms = new[]

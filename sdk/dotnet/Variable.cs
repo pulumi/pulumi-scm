@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a variable in as-number format
     ///     //
-    ///     var scmVariableAsn = new Scm.Variable("scm_variable_asn", new()
+    ///     var scmVariableAsn = new Scm.Index.Variable("scm_variable_asn", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$tf_variable_asn",
@@ -37,7 +37,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a variable in count format
     ///     //
-    ///     var scmVariableCount = new Scm.Variable("scm_variable_count", new()
+    ///     var scmVariableCount = new Scm.Index.Variable("scm_variable_count", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$tf_variable_count",
@@ -49,7 +49,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a variable in fqdn format
     ///     //
-    ///     var scmVariableFqdn = new Scm.Variable("scm_variable_fqdn", new()
+    ///     var scmVariableFqdn = new Scm.Index.Variable("scm_variable_fqdn", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$tf_variable_fqdn",
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a variable in group-id format
     ///     //
-    ///     var scmVariableGroupId = new Scm.Variable("scm_variable_group_id", new()
+    ///     var scmVariableGroupId = new Scm.Index.Variable("scm_variable_group_id", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$tf_variable_group_id",
@@ -73,7 +73,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a variable in ip-range format
     ///     //
-    ///     var scmVariableIprange = new Scm.Variable("scm_variable_iprange", new()
+    ///     var scmVariableIprange = new Scm.Index.Variable("scm_variable_iprange", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$tf_variable_iprange",
@@ -85,7 +85,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a variable in ip-netmask format
     ///     //
-    ///     var scmVariableIpaddr = new Scm.Variable("scm_variable_ipaddr", new()
+    ///     var scmVariableIpaddr = new Scm.Index.Variable("scm_variable_ipaddr", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$tf_variable_ipaddr",
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a variable in ip-wildcard format
     ///     //
-    ///     var scmVariableIpwildcard = new Scm.Variable("scm_variable_ipwildcard", new()
+    ///     var scmVariableIpwildcard = new Scm.Index.Variable("scm_variable_ipwildcard", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$tf_variable_ipwildcard",
@@ -109,7 +109,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a variable in percent format
     ///     //
-    ///     var scmVariablePercent = new Scm.Variable("scm_variable_percent", new()
+    ///     var scmVariablePercent = new Scm.Index.Variable("scm_variable_percent", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$tf_variable_percent",
@@ -121,7 +121,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a variable in router-id format
     ///     //
-    ///     var scmVariableRouterId = new Scm.Variable("scm_variable_router_id", new()
+    ///     var scmVariableRouterId = new Scm.Index.Variable("scm_variable_router_id", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$tf_variable_router_id",
@@ -133,7 +133,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a variable in timer format
     ///     //
-    ///     var scmVariableTimer = new Scm.Variable("scm_variable_timer", new()
+    ///     var scmVariableTimer = new Scm.Index.Variable("scm_variable_timer", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$tf_variable_timer",
@@ -145,7 +145,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a variable in zone format
     ///     //
-    ///     var scmVariableZone = new Scm.Variable("scm_variable_zone", new()
+    ///     var scmVariableZone = new Scm.Index.Variable("scm_variable_zone", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$tf_variable_zone",

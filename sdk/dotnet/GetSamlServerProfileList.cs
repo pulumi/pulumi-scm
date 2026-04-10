@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM SAML Server Profile objects.
         ///     //
         ///     // Fetch a list of all SCM SAML Server Profile in the "All" folder.
-        ///     var allShared = Scm.GetSamlServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetSamlServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM SAML Server Profile objects.
         ///     //
         ///     // Fetch a list of all SCM SAML Server Profile in the "All" folder.
-        ///     var allShared = Scm.GetSamlServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetSamlServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM SAML Server Profile objects.
         ///     //
         ///     // Fetch a list of all SCM SAML Server Profile in the "All" folder.
-        ///     var allShared = Scm.GetSamlServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetSamlServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });

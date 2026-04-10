@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer 2 aggregate interface without vlan configuration
     ///     //
-    ///     var scmAggregateIntfL2 = new Scm.AggregateInterface("scm_aggregate_intf_l2", new()
+    ///     var scmAggregateIntfL2 = new Scm.Index.AggregateInterface("scm_aggregate_intf_l2", new()
     ///     {
     ///         Name = "$scm_aggregate_intf_l2",
     ///         Comment = "Managed by Pulumi",
@@ -36,7 +36,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer 2 aggregate interface with vlan and lacp configuration
     ///     //
-    ///     var scmAggregateIntfL2Lacp = new Scm.AggregateInterface("scm_aggregate_intf_l2_lacp", new()
+    ///     var scmAggregateIntfL2Lacp = new Scm.Index.AggregateInterface("scm_aggregate_intf_l2_lacp", new()
     ///     {
     ///         Name = "$scm_aggregate_intf_l2_lacp",
     ///         Comment = "Managed by Pulumi",
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer3 aggregate interface without ip configuration
     ///     //
-    ///     var scmAggregateIntfL3 = new Scm.AggregateInterface("scm_aggregate_intf_l3", new()
+    ///     var scmAggregateIntfL3 = new Scm.Index.AggregateInterface("scm_aggregate_intf_l3", new()
     ///     {
     ///         Name = "$scm_aggregate_intf_l3",
     ///         Comment = "Managed by Pulumi",
@@ -72,7 +72,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer3 aggregate interface with static ip address and lacp
     ///     //
-    ///     var scmAggregateIntfL3Static = new Scm.AggregateInterface("scm_aggregate_intf_l3_static", new()
+    ///     var scmAggregateIntfL3Static = new Scm.Index.AggregateInterface("scm_aggregate_intf_l3_static", new()
     ///     {
     ///         Name = "$scm_aggregate_intf_l3_static",
     ///         Comment = "Managed by Pulumi",
@@ -99,7 +99,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer3 aggregate interface with dhcp-assigned ip address
     ///     //
-    ///     var scmAggregateIntfL3Dhcp = new Scm.AggregateInterface("scm_aggregate_intf_l3_dhcp", new()
+    ///     var scmAggregateIntfL3Dhcp = new Scm.Index.AggregateInterface("scm_aggregate_intf_l3_dhcp", new()
     ///     {
     ///         Name = "$scm_aggregate_intf_l3_dhcp",
     ///         Comment = "Managed by Pulumi",
@@ -118,7 +118,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a layer3 aggregate interface with multiple static ip addresses
     ///     //
-    ///     var scmAggregateIntfL3Complex = new Scm.AggregateInterface("scm_aggregate_intf_l3_complex", new()
+    ///     var scmAggregateIntfL3Complex = new Scm.Index.AggregateInterface("scm_aggregate_intf_l3_complex", new()
     ///     {
     ///         Name = "$scm_aggregate_intf_l3_complex",
     ///         Comment = "Managed by Pulumi",

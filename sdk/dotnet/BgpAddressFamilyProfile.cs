@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmBgpAddressFamilyProfile = new Scm.BgpAddressFamilyProfile("scm_bgp_address_family_profile", new()
+    ///     var scmBgpAddressFamilyProfile = new Scm.Index.BgpAddressFamilyProfile("scm_bgp_address_family_profile", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_bgp_address_family_profile",

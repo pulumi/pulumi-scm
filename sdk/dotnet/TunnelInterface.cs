@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a tunnel interface with static ipv4 address
     ///     //
-    ///     var scmTunnelIntf = new Scm.TunnelInterface("scm_tunnel_intf", new()
+    ///     var scmTunnelIntf = new Scm.Index.TunnelInterface("scm_tunnel_intf", new()
     ///     {
     ///         Name = "$scm_tunnel_intf",
     ///         Comment = "Managed by Pulumi",
@@ -42,7 +42,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a tunnel interface with static ipv4 address, with default value tunnel.123
     ///     //
-    ///     var scmTunnelIntf2 = new Scm.TunnelInterface("scm_tunnel_intf_2", new()
+    ///     var scmTunnelIntf2 = new Scm.Index.TunnelInterface("scm_tunnel_intf_2", new()
     ///     {
     ///         Name = "$scm_tunnel_intf_2",
     ///         Comment = "Managed by Pulumi",
@@ -59,7 +59,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates an ip subnet variable used in the subsequent example
     ///     //
-    ///     var scmIpv6Prefix = new Scm.Variable("scm_ipv6_prefix", new()
+    ///     var scmIpv6Prefix = new Scm.Index.Variable("scm_ipv6_prefix", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$scm_ipv6_prefix",
@@ -71,7 +71,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a tunnel interface with ipv6 address, with default value tunnel.321
     ///     //
-    ///     var scmTunnelIntf3 = new Scm.TunnelInterface("scm_tunnel_intf_3", new()
+    ///     var scmTunnelIntf3 = new Scm.Index.TunnelInterface("scm_tunnel_intf_3", new()
     ///     {
     ///         Name = "$scm_tunnel_intf_3",
     ///         Comment = "Managed by Pulumi",

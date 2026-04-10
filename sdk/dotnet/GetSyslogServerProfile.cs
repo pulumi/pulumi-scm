@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
-        ///     var scmSyslogServerProf = Scm.GetSyslogServerProfile.Invoke(new()
+        ///     var scmSyslogServerProf = Scm.Index.GetSyslogServerProfile.Invoke(new()
         ///     {
         ///         Id = "69f7ee97-7c0a-416d-a28d-d45929851f6e",
         ///     });
@@ -65,7 +65,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
-        ///     var scmSyslogServerProf = Scm.GetSyslogServerProfile.Invoke(new()
+        ///     var scmSyslogServerProf = Scm.Index.GetSyslogServerProfile.Invoke(new()
         ///     {
         ///         Id = "69f7ee97-7c0a-416d-a28d-d45929851f6e",
         ///     });
@@ -102,7 +102,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
-        ///     var scmSyslogServerProf = Scm.GetSyslogServerProfile.Invoke(new()
+        ///     var scmSyslogServerProf = Scm.Index.GetSyslogServerProfile.Invoke(new()
         ///     {
         ///         Id = "69f7ee97-7c0a-416d-a28d-d45929851f6e",
         ///     });

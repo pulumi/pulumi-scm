@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single URL Access Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the URL Access Profile you want to find.
-//			example, err := scm.LookupUrlAccessProfile(ctx, &scm.LookupUrlAccessProfileArgs{
+//			example, err := scm.GetUrlAccessProfile(ctx, &scm.LookupUrlAccessProfileArgs{
 //				Id: "e97c7e7e-9906-42d6-90a8-606ed5527125",
 //			}, nil)
 //			if err != nil {

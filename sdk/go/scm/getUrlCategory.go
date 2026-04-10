@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single URL Category object by its ID.
 //			//
 //			// Replace the ID with the UUID of the URL Category you want to find.
-//			example, err := scm.LookupUrlCategory(ctx, &scm.LookupUrlCategoryArgs{
+//			example, err := scm.GetUrlCategory(ctx, &scm.LookupUrlCategoryArgs{
 //				Id: "5ae04e1a-bc7b-4ea3-99bb-86de23886b45",
 //			}, nil)
 //			if err != nil {

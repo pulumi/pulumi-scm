@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			singleRuleById, err := scm.LookupQosPolicyRule(ctx, &scm.LookupQosPolicyRuleArgs{
+//			singleRuleById, err := scm.GetQosPolicyRule(ctx, &scm.LookupQosPolicyRuleArgs{
 //				Id: "fbc3fdb2-8513-4949-be8a-f1be03b492da",
 //			}, nil)
 //			if err != nil {

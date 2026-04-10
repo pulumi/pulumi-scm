@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM DNS Security Profile objects.
         ///     //
         ///     // Fetch a list of all SCM DNS Security Profile in the "All" folder.
-        ///     var allShared = Scm.GetDnsSecurityProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetDnsSecurityProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM DNS Security Profile objects.
         ///     //
         ///     // Fetch a list of all SCM DNS Security Profile in the "All" folder.
-        ///     var allShared = Scm.GetDnsSecurityProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetDnsSecurityProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM DNS Security Profile objects.
         ///     //
         ///     // Fetch a list of all SCM DNS Security Profile in the "All" folder.
-        ///     var allShared = Scm.GetDnsSecurityProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetDnsSecurityProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });

@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // Custom Application
-    ///     var scmMediaApp = new Scm.Application("scm_media_app", new()
+    ///     var scmMediaApp = new Scm.Index.Application("scm_media_app", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_media_app",
@@ -40,7 +40,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Custom Application with tweaked timeouts and additional settings
-    ///     var scmRiskyApp = new Scm.Application("scm_risky_app", new()
+    ///     var scmRiskyApp = new Scm.Index.Application("scm_risky_app", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_risky_app",
@@ -65,7 +65,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Custom Application based on Custom Signature
-    ///     var scmCustomApp = new Scm.Application("scm_custom_app", new()
+    ///     var scmCustomApp = new Scm.Index.Application("scm_custom_app", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_custom_test_app",

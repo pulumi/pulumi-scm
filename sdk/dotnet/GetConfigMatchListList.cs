@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // List all config match lists in the ngfw-shared folder
-        ///     var example = Scm.GetConfigMatchListList.Invoke(new()
+        ///     var example = Scm.Index.GetConfigMatchListList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -64,7 +64,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // List all config match lists in the ngfw-shared folder
-        ///     var example = Scm.GetConfigMatchListList.Invoke(new()
+        ///     var example = Scm.Index.GetConfigMatchListList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -103,7 +103,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // List all config match lists in the ngfw-shared folder
-        ///     var example = Scm.GetConfigMatchListList.Invoke(new()
+        ///     var example = Scm.Index.GetConfigMatchListList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });

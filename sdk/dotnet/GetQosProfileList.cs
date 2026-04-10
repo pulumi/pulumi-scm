@@ -29,7 +29,7 @@ namespace Pulumi.Scm
         ///     //
         ///     // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
         ///     // Folder must be one of [Remote Networks, Service Connections]"
-        ///     var allShared = Scm.GetQosProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetQosProfileList.Invoke(new()
         ///     {
         ///         Folder = "Service Connections",
         ///     });
@@ -62,7 +62,7 @@ namespace Pulumi.Scm
         ///     //
         ///     // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
         ///     // Folder must be one of [Remote Networks, Service Connections]"
-        ///     var allShared = Scm.GetQosProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetQosProfileList.Invoke(new()
         ///     {
         ///         Folder = "Service Connections",
         ///     });
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
         ///     //
         ///     // Example 1: Fetch a list of all SCM QoS Profile in the "Service Connections" folder.
         ///     // Folder must be one of [Remote Networks, Service Connections]"
-        ///     var allShared = Scm.GetQosProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetQosProfileList.Invoke(new()
         ///     {
         ///         Folder = "Service Connections",
         ///     });

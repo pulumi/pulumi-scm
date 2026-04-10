@@ -22,7 +22,7 @@ import * as utilities from "./utilities";
  * export const iptagMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getIptagMatchListList(args?: GetIptagMatchListListArgs, opts?: pulumi.InvokeOptions): Promise<GetIptagMatchListListResult> {
@@ -129,7 +129,7 @@ export interface GetIptagMatchListListResult {
  * export const iptagMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getIptagMatchListListOutput(args?: GetIptagMatchListListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIptagMatchListListResult> {

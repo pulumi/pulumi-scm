@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the globalprotect match list by its ID.
-//			globalprotectMatchListDs, err := scm.LookupGlobalprotectMatchList(ctx, &scm.LookupGlobalprotectMatchListArgs{
+//			globalprotectMatchListDs, err := scm.GetGlobalprotectMatchList(ctx, &scm.LookupGlobalprotectMatchListArgs{
 //				Id: "89c5fc2d-dba8-4560-b853-4eb1ecd36025",
 //			}, nil)
 //			if err != nil {

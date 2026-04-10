@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single SCM Syslog Server Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
-//			scmSyslogServerProf, err := scm.LookupSyslogServerProfile(ctx, &scm.LookupSyslogServerProfileArgs{
+//			scmSyslogServerProf, err := scm.GetSyslogServerProfile(ctx, &scm.LookupSyslogServerProfileArgs{
 //				Id: "69f7ee97-7c0a-416d-a28d-d45929851f6e",
 //			}, nil)
 //			if err != nil {

@@ -27,7 +27,7 @@ namespace Pulumi.Scm
     ///     var folderScope = config.Get("folderScope") ?? "Service Connections";
     ///     //# 1. Define the IKE Crypto Profile (IKE Phase 1)
     ///     // Note: The resource name is plural: "scm_ike_crypto_profile"
-    ///     var example = new Scm.IkeCryptoProfile("example", new()
+    ///     var example = new Scm.Index.IkeCryptoProfile("example", new()
     ///     {
     ///         Name = "example-sc-ike-crypto",
     ///         Folder = folderScope,
@@ -47,7 +47,7 @@ namespace Pulumi.Scm
     /// 
     ///     //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
     ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
-    ///     var exampleIpsecCryptoProfile = new Scm.IpsecCryptoProfile("example", new()
+    ///     var exampleIpsecCryptoProfile = new Scm.Index.IpsecCryptoProfile("example", new()
     ///     {
     ///         Name = "panw-sc-Crypto",
     ///         Folder = folderScope,
@@ -71,7 +71,7 @@ namespace Pulumi.Scm
     /// 
     ///     //# 3. Define the IKE Gateway
     ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
-    ///     var exampleIkeGateway = new Scm.IkeGateway("example", new()
+    ///     var exampleIkeGateway = new Scm.Index.IkeGateway("example", new()
     ///     {
     ///         Name = "example-sc-gateway",
     ///         Folder = folderScope,
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
     /// 
     ///     //# 4. Define the IPsec Tunnel
     ///     // Note: Nested 'auto_key' block uses an equals sign (=).
-    ///     var exampleIpsecTunnel = new Scm.IpsecTunnel("example", new()
+    ///     var exampleIpsecTunnel = new Scm.Index.IpsecTunnel("example", new()
     ///     {
     ///         Name = "example-sc-tunnel",
     ///         Folder = folderScope,
@@ -125,7 +125,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     //# 5. Service Connection (The target for the group)
-    ///     var siteAVpnSc = new Scm.ServiceConnection("site_a_vpn_sc", new()
+    ///     var siteAVpnSc = new Scm.Index.ServiceConnection("site_a_vpn_sc", new()
     ///     {
     ///         Name = "creating_a_service_connection_sc_grp",
     ///         Region = "us-west-1a",
@@ -139,7 +139,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     //# 5. Service Connection (The target for the group)
-    ///     var siteAVpnSc2 = new Scm.ServiceConnection("site_a_vpn_sc_2", new()
+    ///     var siteAVpnSc2 = new Scm.Index.ServiceConnection("site_a_vpn_sc_2", new()
     ///     {
     ///         Name = "creating_a_svc_connection_sc_grp_2",
     ///         Region = "us-west-1a",
@@ -156,7 +156,7 @@ namespace Pulumi.Scm
     ///     // II. SERVICE CONNECTION GROUP RESOURCE
     ///     // ------------------------------------------------------------------
     ///     //# 6. Service Connection Group (Groups the Service Connection created above)
-    ///     var exampleGroup = new Scm.ServiceConnectionGroup("example_group", new()
+    ///     var exampleGroup = new Scm.Index.ServiceConnectionGroup("example_group", new()
     ///     {
     ///         Name = "svc-connection-group-app_sc_grp",
     ///         Targets = new[]

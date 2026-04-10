@@ -23,14 +23,14 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // First, create the tag objects that you will reference.
-    ///     var outboundTag = new Scm.Tag("outbound_tag", new()
+    ///     var outboundTag = new Scm.Index.Tag("outbound_tag", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "outbound143",
     ///         Color = "Red",
     ///     });
     /// 
-    ///     var webTag = new Scm.Tag("web_tag", new()
+    ///     var webTag = new Scm.Index.Tag("web_tag", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "web143",
@@ -38,7 +38,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // --- Existing Rules (Backward Compatibility) ---
-    ///     var standardWebAccess = new Scm.SecurityRule("standard_web_access", new()
+    ///     var standardWebAccess = new Scm.Index.SecurityRule("standard_web_access", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "Allow Standard Web Access143",
@@ -100,7 +100,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var blockRiskySaas = new Scm.SecurityRule("block_risky_saas", new()
+    ///     var blockRiskySaas = new Scm.Index.SecurityRule("block_risky_saas", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "Block Risky SaaS Applications143",
@@ -151,7 +151,7 @@ namespace Pulumi.Scm
     /// 
     ///     // --- NEW Examples Demonstrating Rule Ordering ---
     ///     // Example 1: Place a critical block rule at the absolute top
-    ///     var criticalBlockTop = new Scm.SecurityRule("critical_block_top", new()
+    ///     var criticalBlockTop = new Scm.Index.SecurityRule("critical_block_top", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "CRITICAL Block Malicious IPs Top143",
@@ -198,7 +198,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Example 2: Place a cleanup rule at the absolute bottom
-    ///     var cleanupDenyBottom = new Scm.SecurityRule("cleanup_deny_bottom", new()
+    ///     var cleanupDenyBottom = new Scm.Index.SecurityRule("cleanup_deny_bottom", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "Cleanup Deny All Bottom143",
@@ -245,7 +245,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Example 3: Place a rule *before* the standard web access rule
-    ///     var allowUpdatesBeforeWeb = new Scm.SecurityRule("allow_updates_before_web", new()
+    ///     var allowUpdatesBeforeWeb = new Scm.Index.SecurityRule("allow_updates_before_web", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "Allow OS Updates Before Web143",
@@ -294,7 +294,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Example 4: Place a rule *after* the standard web access rule
-    ///     var allowCorpAppsAfterWeb = new Scm.SecurityRule("allow_corp_apps_after_web", new()
+    ///     var allowCorpAppsAfterWeb = new Scm.Index.SecurityRule("allow_corp_apps_after_web", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "Allow Corp Apps After Web143",

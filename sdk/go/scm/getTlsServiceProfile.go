@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single SCM TLS Service Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
-//			scmTlsServiceProf, err := scm.LookupTlsServiceProfile(ctx, &scm.LookupTlsServiceProfileArgs{
+//			scmTlsServiceProf, err := scm.GetTlsServiceProfile(ctx, &scm.LookupTlsServiceProfileArgs{
 //				Id: "b4d70015-5b0e-4491-a2a9-4305b01397d5",
 //			}, nil)
 //			if err != nil {

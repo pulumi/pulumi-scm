@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Data Filtering Porofiles.
         ///     //
         ///     // Fetch a list of all SCM Data Filtering Porofiles in the "ngfw-shared" folder.
-        ///     var allNgfwShared = Scm.GetDataFilteringProfileList.Invoke(new()
+        ///     var allNgfwShared = Scm.Index.GetDataFilteringProfileList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Data Filtering Porofiles.
         ///     //
         ///     // Fetch a list of all SCM Data Filtering Porofiles in the "ngfw-shared" folder.
-        ///     var allNgfwShared = Scm.GetDataFilteringProfileList.Invoke(new()
+        ///     var allNgfwShared = Scm.Index.GetDataFilteringProfileList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Data Filtering Porofiles.
         ///     //
         ///     // Fetch a list of all SCM Data Filtering Porofiles in the "ngfw-shared" folder.
-        ///     var allNgfwShared = Scm.GetDataFilteringProfileList.Invoke(new()
+        ///     var allNgfwShared = Scm.Index.GetDataFilteringProfileList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });

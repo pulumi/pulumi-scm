@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Kerberos Server Profile objects.
         ///     //
         ///     // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
-        ///     var allShared = Scm.GetKerberosServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetKerberosServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Kerberos Server Profile objects.
         ///     //
         ///     // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
-        ///     var allShared = Scm.GetKerberosServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetKerberosServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Kerberos Server Profile objects.
         ///     //
         ///     // Example 1: Fetch a list of all SCM Kerberos Server Profile in the "All" folder.
-        ///     var allShared = Scm.GetKerberosServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetKerberosServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });

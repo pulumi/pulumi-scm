@@ -42,7 +42,7 @@ namespace Pulumi.Scm
     ///     //  }
     ///     //}
     ///     // When creating, we never specify an spn_name_list. That is purely during update
-    ///     var example = new Scm.BandwidthAllocation("example", new()
+    ///     var example = new Scm.Index.BandwidthAllocation("example", new()
     ///     {
     ///         Name = "taiwan",
     ///         AllocatedBandwidth = 50,

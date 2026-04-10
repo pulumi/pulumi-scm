@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmAntiSpywareSignature1 = new Scm.AntiSpywareSignature("scm_anti_spyware_signature_1", new()
+    ///     var scmAntiSpywareSignature1 = new Scm.Index.AntiSpywareSignature("scm_anti_spyware_signature_1", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         ThreatId = "6900001",

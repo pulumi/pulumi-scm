@@ -27,7 +27,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source: SCM Service Connection Group (Single Lookup)
         ///     // ------------------------------------------------------------------
-        ///     var groupLookup = Scm.GetServiceConnectionGroup.Invoke(new()
+        ///     var groupLookup = Scm.Index.GetServiceConnectionGroup.Invoke(new()
         ///     {
         ///         Id = "1480fd9d-dae7-4bf3-94f6-4945e89b59b6",
         ///     });
@@ -58,7 +58,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source: SCM Service Connection Group (Single Lookup)
         ///     // ------------------------------------------------------------------
-        ///     var groupLookup = Scm.GetServiceConnectionGroup.Invoke(new()
+        ///     var groupLookup = Scm.Index.GetServiceConnectionGroup.Invoke(new()
         ///     {
         ///         Id = "1480fd9d-dae7-4bf3-94f6-4945e89b59b6",
         ///     });
@@ -89,7 +89,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source: SCM Service Connection Group (Single Lookup)
         ///     // ------------------------------------------------------------------
-        ///     var groupLookup = Scm.GetServiceConnectionGroup.Invoke(new()
+        ///     var groupLookup = Scm.Index.GetServiceConnectionGroup.Invoke(new()
         ///     {
         ///         Id = "1480fd9d-dae7-4bf3-94f6-4945e89b59b6",
         ///     });

@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSettings = Scm.GetContentIdSettingList.Invoke(new()
+        ///     var allSettings = Scm.Index.GetContentIdSettingList.Invoke(new()
         ///     {
         ///         Folder = "Prisma Access",
         ///     });
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSettings = Scm.GetContentIdSettingList.Invoke(new()
+        ///     var allSettings = Scm.Index.GetContentIdSettingList.Invoke(new()
         ///     {
         ///         Folder = "Prisma Access",
         ///     });
@@ -88,7 +88,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSettings = Scm.GetContentIdSettingList.Invoke(new()
+        ///     var allSettings = Scm.Index.GetContentIdSettingList.Invoke(new()
         ///     {
         ///         Folder = "Prisma Access",
         ///     });

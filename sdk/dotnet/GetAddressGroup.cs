@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the address group by its ID.
-        ///     var scmAddressGroupDs = Scm.GetAddressGroup.Invoke(new()
+        ///     var scmAddressGroupDs = Scm.Index.GetAddressGroup.Invoke(new()
         ///     {
         ///         Id = "99802bce-76c6-42c9-801e-e2e4529bb335",
         ///     });
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the address group by its ID.
-        ///     var scmAddressGroupDs = Scm.GetAddressGroup.Invoke(new()
+        ///     var scmAddressGroupDs = Scm.Index.GetAddressGroup.Invoke(new()
         ///     {
         ///         Id = "99802bce-76c6-42c9-801e-e2e4529bb335",
         ///     });
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the address group by its ID.
-        ///     var scmAddressGroupDs = Scm.GetAddressGroup.Invoke(new()
+        ///     var scmAddressGroupDs = Scm.Index.GetAddressGroup.Invoke(new()
         ///     {
         ///         Id = "99802bce-76c6-42c9-801e-e2e4529bb335",
         ///     });

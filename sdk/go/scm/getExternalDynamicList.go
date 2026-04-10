@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to look up a single external dynamic list by its ID.
-//			scmExternalDynamicListDs, err := scm.LookupExternalDynamicList(ctx, &scm.LookupExternalDynamicListArgs{
+//			scmExternalDynamicListDs, err := scm.GetExternalDynamicList(ctx, &scm.LookupExternalDynamicListArgs{
 //				Id: "ce39b7b5-f5bc-4276-9fe5-be56613e37ad",
 //			}, nil)
 //			if err != nil {

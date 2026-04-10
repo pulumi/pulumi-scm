@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up bgp route map by its ID.
-        ///     var scmBgpRouteMapDs = Scm.GetBgpRouteMap.Invoke(new()
+        ///     var scmBgpRouteMapDs = Scm.Index.GetBgpRouteMap.Invoke(new()
         ///     {
         ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up bgp route map by its ID.
-        ///     var scmBgpRouteMapDs = Scm.GetBgpRouteMap.Invoke(new()
+        ///     var scmBgpRouteMapDs = Scm.Index.GetBgpRouteMap.Invoke(new()
         ///     {
         ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
         ///     });
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up bgp route map by its ID.
-        ///     var scmBgpRouteMapDs = Scm.GetBgpRouteMap.Invoke(new()
+        ///     var scmBgpRouteMapDs = Scm.Index.GetBgpRouteMap.Invoke(new()
         ///     {
         ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
         ///     });

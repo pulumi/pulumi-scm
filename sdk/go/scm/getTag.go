@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the "production" tag by its name.
-//			scmTagDs, err := scm.LookupTag(ctx, &scm.LookupTagArgs{
+//			scmTagDs, err := scm.GetTag(ctx, &scm.LookupTagArgs{
 //				Id: "66cbe56c-0300-4905-8455-d384978a0082",
 //			}, nil)
 //			if err != nil {

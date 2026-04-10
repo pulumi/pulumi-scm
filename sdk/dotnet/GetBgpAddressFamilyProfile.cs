@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up bgp address family profile by its ID.
-        ///     var scmBgpAddressFamilyProfileDs = Scm.GetBgpAddressFamilyProfile.Invoke(new()
+        ///     var scmBgpAddressFamilyProfileDs = Scm.Index.GetBgpAddressFamilyProfile.Invoke(new()
         ///     {
         ///         Id = "83ccef34-c29a-4e88-a99b-d0355440174e",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up bgp address family profile by its ID.
-        ///     var scmBgpAddressFamilyProfileDs = Scm.GetBgpAddressFamilyProfile.Invoke(new()
+        ///     var scmBgpAddressFamilyProfileDs = Scm.Index.GetBgpAddressFamilyProfile.Invoke(new()
         ///     {
         ///         Id = "83ccef34-c29a-4e88-a99b-d0355440174e",
         ///     });
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up bgp address family profile by its ID.
-        ///     var scmBgpAddressFamilyProfileDs = Scm.GetBgpAddressFamilyProfile.Invoke(new()
+        ///     var scmBgpAddressFamilyProfileDs = Scm.Index.GetBgpAddressFamilyProfile.Invoke(new()
         ///     {
         ///         Id = "83ccef34-c29a-4e88-a99b-d0355440174e",
         ///     });

@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up bgp address family profile by its ID.
-//			scmBgpAddressFamilyProfileDs, err := scm.LookupBgpAddressFamilyProfile(ctx, &scm.LookupBgpAddressFamilyProfileArgs{
+//			scmBgpAddressFamilyProfileDs, err := scm.GetBgpAddressFamilyProfile(ctx, &scm.LookupBgpAddressFamilyProfileArgs{
 //				Id: "83ccef34-c29a-4e88-a99b-d0355440174e",
 //			}, nil)
 //			if err != nil {

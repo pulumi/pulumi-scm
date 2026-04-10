@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single SCM Kerberos Server Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the SCM Kerberos Server Profile you want to find.
-//			scmKerberosProf, err := scm.LookupKerberosServerProfile(ctx, &scm.LookupKerberosServerProfileArgs{
+//			scmKerberosProf, err := scm.GetKerberosServerProfile(ctx, &scm.LookupKerberosServerProfileArgs{
 //				Id: "6bd818f8-9679-4031-86df-17b8b40842a0",
 //			}, nil)
 //			if err != nil {

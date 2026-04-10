@@ -21,13 +21,13 @@ import * as utilities from "./utilities";
  * const allShared = scm.getAddressGroupList({
  *     folder: "All",
  * });
- * export const addressGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * export const addressGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr }), {}));
  * const paginatedAddressGroupsExample = scm.getAddressGroupList({
  *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
- * export const paginatedAddressGroups = paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * export const paginatedAddressGroups = paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr }), {}));
  * export const paginationAddressGroupsDetails = {
  *     totalObjectsInFolder: paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => paginatedAddressGroupsExample.total),
  *     limitUsed: paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => paginatedAddressGroupsExample.limit),
@@ -137,13 +137,13 @@ export interface GetAddressGroupListResult {
  * const allShared = scm.getAddressGroupList({
  *     folder: "All",
  * });
- * export const addressGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * export const addressGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr }), {}));
  * const paginatedAddressGroupsExample = scm.getAddressGroupList({
  *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
- * export const paginatedAddressGroups = paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * export const paginatedAddressGroups = paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr }), {}));
  * export const paginationAddressGroupsDetails = {
  *     totalObjectsInFolder: paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => paginatedAddressGroupsExample.total),
  *     limitUsed: paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => paginatedAddressGroupsExample.limit),

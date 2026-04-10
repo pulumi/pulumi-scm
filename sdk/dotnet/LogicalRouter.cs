@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates various resources used for subsequent examples
     ///     //
-    ///     var scmNextHop = new Scm.Variable("scm_next_hop", new()
+    ///     var scmNextHop = new Scm.Index.Variable("scm_next_hop", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$scm_next_hop",
@@ -34,7 +34,7 @@ namespace Pulumi.Scm
     ///         Value = "198.18.1.1",
     ///     });
     /// 
-    ///     var scmNextHopFqdn = new Scm.Variable("scm_next_hop_fqdn", new()
+    ///     var scmNextHopFqdn = new Scm.Index.Variable("scm_next_hop_fqdn", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$scm_next_hop_fqdn",
@@ -43,7 +43,7 @@ namespace Pulumi.Scm
     ///         Value = "nexthop.example.com",
     ///     });
     /// 
-    ///     var scmEthernetInterface = new Scm.EthernetInterface("scm_ethernet_interface", new()
+    ///     var scmEthernetInterface = new Scm.Index.EthernetInterface("scm_ethernet_interface", new()
     ///     {
     ///         Name = "$scm_ethernet_interface",
     ///         Comment = "Managed by Pulumi",
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmBgpInterface = new Scm.EthernetInterface("scm_bgp_interface", new()
+    ///     var scmBgpInterface = new Scm.Index.EthernetInterface("scm_bgp_interface", new()
     ///     {
     ///         Name = "$scm_bgp_interface",
     ///         Comment = "Managed by Pulumi",
@@ -77,7 +77,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var bgpAuthProfile = new Scm.BgpAuthProfile("bgp_auth_profile", new()
+    ///     var bgpAuthProfile = new Scm.Index.BgpAuthProfile("bgp_auth_profile", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "bgp_auth_profile",
@@ -87,7 +87,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a logical router with static routes
     ///     //
-    ///     var scmLogicalRouter = new Scm.LogicalRouter("scm_logical_router", new()
+    ///     var scmLogicalRouter = new Scm.Index.LogicalRouter("scm_logical_router", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_logical_router",
@@ -161,7 +161,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a logical router with bgp configuration
     ///     //
-    ///     var scmBgpRouter = new Scm.LogicalRouter("scm_bgp_router", new()
+    ///     var scmBgpRouter = new Scm.Index.LogicalRouter("scm_bgp_router", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_bgp_router",

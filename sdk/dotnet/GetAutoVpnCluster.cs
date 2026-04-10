@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the application group by its ID from the terraform.tfstate file.
-        ///     var scmAutoVpnClusterDs = Scm.GetAutoVpnCluster.Invoke(new()
+        ///     var scmAutoVpnClusterDs = Scm.Index.GetAutoVpnCluster.Invoke(new()
         ///     {
         ///         Id = "e3c732fb-85c7-4116-b5ed-ba3977209b29",
         ///     });
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the application group by its ID from the terraform.tfstate file.
-        ///     var scmAutoVpnClusterDs = Scm.GetAutoVpnCluster.Invoke(new()
+        ///     var scmAutoVpnClusterDs = Scm.Index.GetAutoVpnCluster.Invoke(new()
         ///     {
         ///         Id = "e3c732fb-85c7-4116-b5ed-ba3977209b29",
         ///     });
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the application group by its ID from the terraform.tfstate file.
-        ///     var scmAutoVpnClusterDs = Scm.GetAutoVpnCluster.Invoke(new()
+        ///     var scmAutoVpnClusterDs = Scm.Index.GetAutoVpnCluster.Invoke(new()
         ///     {
         ///         Id = "e3c732fb-85c7-4116-b5ed-ba3977209b29",
         ///     });

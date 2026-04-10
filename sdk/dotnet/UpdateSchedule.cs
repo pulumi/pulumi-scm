@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var usSettings = new Scm.UpdateSchedule("us_settings", new()
+    ///     var usSettings = new Scm.Index.UpdateSchedule("us_settings", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         UpdateScheduleDetails = new Scm.Inputs.UpdateScheduleUpdateScheduleArgs

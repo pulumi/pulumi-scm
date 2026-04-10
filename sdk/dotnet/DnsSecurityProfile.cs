@@ -22,13 +22,13 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmDnsSecurityProfileBase = new Scm.DnsSecurityProfile("scm_dns_security_profile_base", new()
+    ///     var scmDnsSecurityProfileBase = new Scm.Index.DnsSecurityProfile("scm_dns_security_profile_base", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "dns_base",
     ///     });
     /// 
-    ///     var scmDnsSecurityCategories = new Scm.DnsSecurityProfile("scm_dns_security_categories", new()
+    ///     var scmDnsSecurityCategories = new Scm.Index.DnsSecurityProfile("scm_dns_security_categories", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "test_dns_sec_categories",
@@ -73,7 +73,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmDnsLists = new Scm.DnsSecurityProfile("scm_dns_lists", new()
+    ///     var scmDnsLists = new Scm.Index.DnsSecurityProfile("scm_dns_lists", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "test_dns_lists",
@@ -104,7 +104,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmDnsSinkhole = new Scm.DnsSecurityProfile("scm_dns_sinkhole", new()
+    ///     var scmDnsSinkhole = new Scm.Index.DnsSecurityProfile("scm_dns_sinkhole", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "test_dns_sinkhole",
@@ -119,7 +119,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmDnsWhitelist = new Scm.DnsSecurityProfile("scm_dns_whitelist", new()
+    ///     var scmDnsWhitelist = new Scm.Index.DnsSecurityProfile("scm_dns_whitelist", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "test_dns_whitelist",
@@ -141,7 +141,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmDnsAll = new Scm.DnsSecurityProfile("scm_dns_all", new()
+    ///     var scmDnsAll = new Scm.Index.DnsSecurityProfile("scm_dns_all", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "test_dns_all_test",

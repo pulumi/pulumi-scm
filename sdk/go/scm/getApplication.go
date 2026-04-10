@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up a single application object by its ID.
 //			// The ID used here is from the API response log you provided.
-//			scmApplicationDs, err := scm.LookupApplication(ctx, &scm.LookupApplicationArgs{
+//			scmApplicationDs, err := scm.GetApplication(ctx, &scm.LookupApplicationArgs{
 //				Id: "bb16f631-4839-475e-8628-70585319ca75",
 //			}, nil)
 //			if err != nil {

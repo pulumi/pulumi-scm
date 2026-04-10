@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var srEthernetInterface1 = new Scm.EthernetInterface("sr_ethernet_interface_1", new()
+    ///     var srEthernetInterface1 = new Scm.Index.EthernetInterface("sr_ethernet_interface_1", new()
     ///     {
     ///         Name = "$layer3_sr_1",
     ///         Comment = "Managed by Pulumi",
@@ -42,7 +42,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var srEthernetInterface2 = new Scm.EthernetInterface("sr_ethernet_interface_2", new()
+    ///     var srEthernetInterface2 = new Scm.Index.EthernetInterface("sr_ethernet_interface_2", new()
     ///     {
     ///         Name = "$layer3_sr_2",
     ///         Comment = "Managed by Pulumi",
@@ -62,7 +62,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var srSettings = new Scm.ServiceRoute("sr_settings", new()
+    ///     var srSettings = new Scm.Index.ServiceRoute("sr_settings", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Route = new Scm.Inputs.ServiceRouteRouteArgs

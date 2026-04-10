@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Example of looking up an individual IPsec Crypto Profile by its ID.
-//			scmIpsecCryptoProfileDs, err := scm.LookupIpsecCryptoProfile(ctx, &scm.LookupIpsecCryptoProfileArgs{
+//			scmIpsecCryptoProfileDs, err := scm.GetIpsecCryptoProfile(ctx, &scm.LookupIpsecCryptoProfileArgs{
 //				Id: "b89e8fe1-9e92-46fa-8a67-de84313128c9",
 //			}, nil)
 //			if err != nil {

@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a folder under the "All Firewalls" aka "ngfw-shared" folder
     ///     //
-    ///     var scmFolderExample = new Scm.Folder("scm_folder_example", new()
+    ///     var scmFolderExample = new Scm.Index.Folder("scm_folder_example", new()
     ///     {
     ///         Name = "scm_folder_example",
     ///         Parent = "ngfw-shared",
@@ -35,7 +35,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a folder under the "scm_folder_example" folder created beforehand
     ///     //
-    ///     var scmNestedFolderExample = new Scm.Folder("scm_nested_folder_example", new()
+    ///     var scmNestedFolderExample = new Scm.Index.Folder("scm_nested_folder_example", new()
     ///     {
     ///         Name = "scm_nested_folder_example",
     ///         Parent = "scm_folder_example",
@@ -51,7 +51,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a snippet that will be associated to a folder
     ///     //
-    ///     var scmSnippetExample = new Scm.Snippet("scm_snippet_example", new()
+    ///     var scmSnippetExample = new Scm.Index.Snippet("scm_snippet_example", new()
     ///     {
     ///         Name = "scm_snippet_example",
     ///         Description = "Managed by Pulumi",
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a folder with an attached snippet
     ///     //
-    ///     var scmFolderWithSnippets = new Scm.Folder("scm_folder_with_snippets", new()
+    ///     var scmFolderWithSnippets = new Scm.Index.Folder("scm_folder_with_snippets", new()
     ///     {
     ///         Name = "scm_folder_with_snippets",
     ///         Parent = "ngfw-shared",
@@ -74,7 +74,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a label that will be associated to a folder
     ///     //
-    ///     var scmLabelExample = new Scm.Label("scm_label_example", new()
+    ///     var scmLabelExample = new Scm.Index.Label("scm_label_example", new()
     ///     {
     ///         Name = "scm_label_example",
     ///         Description = "Managed by Pulumi",
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a folder with an attached label
     ///     //
-    ///     var scmFolderWithLabel = new Scm.Folder("scm_folder_with_label", new()
+    ///     var scmFolderWithLabel = new Scm.Index.Folder("scm_folder_with_label", new()
     ///     {
     ///         Name = "scm_folder_with_label",
     ///         Parent = "ngfw-shared",

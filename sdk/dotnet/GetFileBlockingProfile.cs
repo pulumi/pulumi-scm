@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM File Blocking Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM File Blocking Profile you want to find.
-        ///     var scmFileBlockingProf = Scm.GetFileBlockingProfile.Invoke(new()
+        ///     var scmFileBlockingProf = Scm.Index.GetFileBlockingProfile.Invoke(new()
         ///     {
         ///         Id = "f32697f8-a98b-4097-b249-22c89f7d8f7f",
         ///     });
@@ -65,7 +65,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM File Blocking Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM File Blocking Profile you want to find.
-        ///     var scmFileBlockingProf = Scm.GetFileBlockingProfile.Invoke(new()
+        ///     var scmFileBlockingProf = Scm.Index.GetFileBlockingProfile.Invoke(new()
         ///     {
         ///         Id = "f32697f8-a98b-4097-b249-22c89f7d8f7f",
         ///     });
@@ -102,7 +102,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM File Blocking Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM File Blocking Profile you want to find.
-        ///     var scmFileBlockingProf = Scm.GetFileBlockingProfile.Invoke(new()
+        ///     var scmFileBlockingProf = Scm.Index.GetFileBlockingProfile.Invoke(new()
         ///     {
         ///         Id = "f32697f8-a98b-4097-b249-22c89f7d8f7f",
         ///     });

@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the dynamic user group by its ID.
-//			scmDynamicUserGroupDs, err := scm.LookupDynamicUserGroup(ctx, &scm.LookupDynamicUserGroupArgs{
+//			scmDynamicUserGroupDs, err := scm.GetDynamicUserGroup(ctx, &scm.LookupDynamicUserGroupArgs{
 //				Id: "c8ac5c18-023b-4be5-bc39-65e585cff9c7",
 //			}, nil)
 //			if err != nil {

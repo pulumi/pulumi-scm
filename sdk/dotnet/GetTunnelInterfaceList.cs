@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all tunnel interfaces
-        ///     var allTunnelInterfaces = Scm.GetTunnelInterfaceList.Invoke(new()
+        ///     var allTunnelInterfaces = Scm.Index.GetTunnelInterfaceList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all tunnel interfaces
-        ///     var allTunnelInterfaces = Scm.GetTunnelInterfaceList.Invoke(new()
+        ///     var allTunnelInterfaces = Scm.Index.GetTunnelInterfaceList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all tunnel interfaces
-        ///     var allTunnelInterfaces = Scm.GetTunnelInterfaceList.Invoke(new()
+        ///     var allTunnelInterfaces = Scm.Index.GetTunnelInterfaceList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });

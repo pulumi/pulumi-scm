@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			settingsData, err := scm.LookupGeneralSetting(ctx, &scm.LookupGeneralSettingArgs{
+//			settingsData, err := scm.GetGeneralSetting(ctx, &scm.LookupGeneralSettingArgs{
 //				Id: "f7e61db6-b03a-493b-a70d-da39ed2e21b0",
 //			}, nil)
 //			if err != nil {

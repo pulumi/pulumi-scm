@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * const allEthernetInterfaces = scm.getEthernetInterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmEthernetInterfaceList = allEthernetInterfaces.then(allEthernetInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmEthernetInterfaceList = allEthernetInterfaces.then(allEthernetInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getEthernetInterfaceList(args?: GetEthernetInterfaceListArgs, opts?: pulumi.InvokeOptions): Promise<GetEthernetInterfaceListResult> {
@@ -123,7 +123,7 @@ export interface GetEthernetInterfaceListResult {
  * const allEthernetInterfaces = scm.getEthernetInterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmEthernetInterfaceList = allEthernetInterfaces.then(allEthernetInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmEthernetInterfaceList = allEthernetInterfaces.then(allEthernetInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getEthernetInterfaceListOutput(args?: GetEthernetInterfaceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetEthernetInterfaceListResult> {

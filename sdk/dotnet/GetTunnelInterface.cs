@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up tunnel interface by its ID.
-        ///     var scmTunnelIntfDs = Scm.GetTunnelInterface.Invoke(new()
+        ///     var scmTunnelIntfDs = Scm.Index.GetTunnelInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6191169a8f1",
         ///     });
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up tunnel interface by its ID.
-        ///     var scmTunnelIntfDs = Scm.GetTunnelInterface.Invoke(new()
+        ///     var scmTunnelIntfDs = Scm.Index.GetTunnelInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6191169a8f1",
         ///     });
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up tunnel interface by its ID.
-        ///     var scmTunnelIntfDs = Scm.GetTunnelInterface.Invoke(new()
+        ///     var scmTunnelIntfDs = Scm.Index.GetTunnelInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6191169a8f1",
         ///     });

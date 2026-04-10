@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define a data source for listing pbf rules
-        ///     var pagedPbfRulesList = Scm.GetPbfRuleList.Invoke(new()
+        ///     var pagedPbfRulesList = Scm.Index.GetPbfRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,
@@ -59,7 +59,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define a data source for listing pbf rules
-        ///     var pagedPbfRulesList = Scm.GetPbfRuleList.Invoke(new()
+        ///     var pagedPbfRulesList = Scm.Index.GetPbfRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,
@@ -93,7 +93,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define a data source for listing pbf rules
-        ///     var pagedPbfRulesList = Scm.GetPbfRuleList.Invoke(new()
+        ///     var pagedPbfRulesList = Scm.Index.GetPbfRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,

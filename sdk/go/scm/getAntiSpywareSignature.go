@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up anti-spyware-profile by ID
-//			scmAntiSpywareSignatureDs, err := scm.LookupAntiSpywareSignature(ctx, &scm.LookupAntiSpywareSignatureArgs{
+//			scmAntiSpywareSignatureDs, err := scm.GetAntiSpywareSignature(ctx, &scm.LookupAntiSpywareSignatureArgs{
 //				Id: "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
 //			}, nil)
 //			if err != nil {

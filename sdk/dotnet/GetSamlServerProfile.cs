@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM SAML Server Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
-        ///     var scmSamlServerProf = Scm.GetSamlServerProfile.Invoke(new()
+        ///     var scmSamlServerProf = Scm.Index.GetSamlServerProfile.Invoke(new()
         ///     {
         ///         Id = "a17abcfc-d37d-4b8a-bb09-102ffdc3abef",
         ///     });
@@ -66,7 +66,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM SAML Server Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
-        ///     var scmSamlServerProf = Scm.GetSamlServerProfile.Invoke(new()
+        ///     var scmSamlServerProf = Scm.Index.GetSamlServerProfile.Invoke(new()
         ///     {
         ///         Id = "a17abcfc-d37d-4b8a-bb09-102ffdc3abef",
         ///     });
@@ -104,7 +104,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM SAML Server Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
-        ///     var scmSamlServerProf = Scm.GetSamlServerProfile.Invoke(new()
+        ///     var scmSamlServerProf = Scm.Index.GetSamlServerProfile.Invoke(new()
         ///     {
         ///         Id = "a17abcfc-d37d-4b8a-bb09-102ffdc3abef",
         ///     });

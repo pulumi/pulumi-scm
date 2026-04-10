@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Replace the ID with the UUID of the SCM Data Object you want to find.
-        ///     var scmDataObjectGet = Scm.GetDataObject.Invoke(new()
+        ///     var scmDataObjectGet = Scm.Index.GetDataObject.Invoke(new()
         ///     {
         ///         Id = "b1398675-254e-4eff-8050-007ef2f9c0a1",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Replace the ID with the UUID of the SCM Data Object you want to find.
-        ///     var scmDataObjectGet = Scm.GetDataObject.Invoke(new()
+        ///     var scmDataObjectGet = Scm.Index.GetDataObject.Invoke(new()
         ///     {
         ///         Id = "b1398675-254e-4eff-8050-007ef2f9c0a1",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Replace the ID with the UUID of the SCM Data Object you want to find.
-        ///     var scmDataObjectGet = Scm.GetDataObject.Invoke(new()
+        ///     var scmDataObjectGet = Scm.Index.GetDataObject.Invoke(new()
         ///     {
         ///         Id = "b1398675-254e-4eff-8050-007ef2f9c0a1",
         ///     });

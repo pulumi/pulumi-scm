@@ -24,21 +24,21 @@ namespace Pulumi.Scm
     /// {
     ///     // This file is embedded using go:embed
     ///     // Tags for organizing and categorizing resources
-    ///     var scmTag1 = new Scm.Tag("scm_tag_1", new()
+    ///     var scmTag1 = new Scm.Index.Tag("scm_tag_1", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_tag_1",
     ///         Color = "Red",
     ///     });
     /// 
-    ///     var scmTag2 = new Scm.Tag("scm_tag_2", new()
+    ///     var scmTag2 = new Scm.Index.Tag("scm_tag_2", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_tag_2",
     ///         Color = "Blue",
     ///     });
     /// 
-    ///     var scmTag3 = new Scm.Tag("scm_tag_3", new()
+    ///     var scmTag3 = new Scm.Index.Tag("scm_tag_3", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_tag_3",

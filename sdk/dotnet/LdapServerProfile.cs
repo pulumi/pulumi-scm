@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // ldpap server profile w/ required fields
-    ///     var scmLdapServerProfileOne = new Scm.LdapServerProfile("scm_ldap_server_profile_one", new()
+    ///     var scmLdapServerProfileOne = new Scm.Index.LdapServerProfile("scm_ldap_server_profile_one", new()
     ///     {
     ///         Folder = "All",
     ///         Name = "simple-ldap-profile",
@@ -51,7 +51,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // ldpap server profile w/ some fields
-    ///     var scmLdapServerProfileTwo = new Scm.LdapServerProfile("scm_ldap_server_profile_two", new()
+    ///     var scmLdapServerProfileTwo = new Scm.Index.LdapServerProfile("scm_ldap_server_profile_two", new()
     ///     {
     ///         Folder = "All",
     ///         Name = "intermediate-ldap-profile-one",
@@ -69,7 +69,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmLdapServerProfileThree = new Scm.LdapServerProfile("scm_ldap_server_profile_three", new()
+    ///     var scmLdapServerProfileThree = new Scm.Index.LdapServerProfile("scm_ldap_server_profile_three", new()
     ///     {
     ///         Folder = "All",
     ///         Name = "intermediate-ldap-profile-two",
@@ -96,7 +96,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // ldpap server profile w/ all fields
-    ///     var scmLdapServerProfileFour = new Scm.LdapServerProfile("scm_ldap_server_profile_four", new()
+    ///     var scmLdapServerProfileFour = new Scm.Index.LdapServerProfile("scm_ldap_server_profile_four", new()
     ///     {
     ///         Folder = "All",
     ///         Name = "complex-ldap-profile-one",
@@ -120,7 +120,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmLdapServerProfileFive = new Scm.LdapServerProfile("scm_ldap_server_profile_five", new()
+    ///     var scmLdapServerProfileFive = new Scm.Index.LdapServerProfile("scm_ldap_server_profile_five", new()
     ///     {
     ///         Folder = "All",
     ///         Name = "complex-ldap-profile-two",

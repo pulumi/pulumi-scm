@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the globalprotect match list by its ID.
-        ///     var globalprotectMatchListDs = Scm.GetGlobalprotectMatchList.Invoke(new()
+        ///     var globalprotectMatchListDs = Scm.Index.GetGlobalprotectMatchList.Invoke(new()
         ///     {
         ///         Id = "89c5fc2d-dba8-4560-b853-4eb1ecd36025",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the globalprotect match list by its ID.
-        ///     var globalprotectMatchListDs = Scm.GetGlobalprotectMatchList.Invoke(new()
+        ///     var globalprotectMatchListDs = Scm.Index.GetGlobalprotectMatchList.Invoke(new()
         ///     {
         ///         Id = "89c5fc2d-dba8-4560-b853-4eb1ecd36025",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the globalprotect match list by its ID.
-        ///     var globalprotectMatchListDs = Scm.GetGlobalprotectMatchList.Invoke(new()
+        ///     var globalprotectMatchListDs = Scm.Index.GetGlobalprotectMatchList.Invoke(new()
         ///     {
         ///         Id = "89c5fc2d-dba8-4560-b853-4eb1ecd36025",
         ///     });

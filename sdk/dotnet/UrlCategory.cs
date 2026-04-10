@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a custom URL Category object.
     ///     //
-    ///     var example = new Scm.UrlCategory("example", new()
+    ///     var example = new Scm.Index.UrlCategory("example", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "example_url_category",

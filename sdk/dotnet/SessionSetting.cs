@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // Set Sessions with Config Rematch value set to True
-    ///     var sessionExample = new Scm.SessionSetting("session_example", new()
+    ///     var sessionExample = new Scm.Index.SessionSetting("session_example", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         SessionSettings = new Scm.Inputs.SessionSettingSessionSettingsArgs

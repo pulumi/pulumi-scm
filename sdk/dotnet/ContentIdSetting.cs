@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var cidExample = new Scm.ContentIdSetting("cid_example", new()
+    ///     var cidExample = new Scm.Index.ContentIdSetting("cid_example", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         ContentId = new Scm.Inputs.ContentIdSettingContentIdArgs

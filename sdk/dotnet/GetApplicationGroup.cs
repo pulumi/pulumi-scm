@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the application group by its ID from the terraform.tfstate file.
-        ///     var scmApplicationGroupDs = Scm.GetApplicationGroup.Invoke(new()
+        ///     var scmApplicationGroupDs = Scm.Index.GetApplicationGroup.Invoke(new()
         ///     {
         ///         Id = "91616221-ddeb-4b49-866d-48d64dedc056",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the application group by its ID from the terraform.tfstate file.
-        ///     var scmApplicationGroupDs = Scm.GetApplicationGroup.Invoke(new()
+        ///     var scmApplicationGroupDs = Scm.Index.GetApplicationGroup.Invoke(new()
         ///     {
         ///         Id = "91616221-ddeb-4b49-866d-48d64dedc056",
         ///     });
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the application group by its ID from the terraform.tfstate file.
-        ///     var scmApplicationGroupDs = Scm.GetApplicationGroup.Invoke(new()
+        ///     var scmApplicationGroupDs = Scm.Index.GetApplicationGroup.Invoke(new()
         ///     {
         ///         Id = "91616221-ddeb-4b49-866d-48d64dedc056",
         ///     });

@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			allRouting, err := scm.LookupBgpRouting(ctx, map[string]interface{}{}, nil)
+//			allRouting, err := scm.GetBgpRouting(ctx, map[string]interface{}{}, nil)
 //			if err != nil {
 //				return err
 //			}

@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Scm.AutoVpnSetting("example", new()
+    ///     var example = new Scm.Index.AutoVpnSetting("example", new()
     ///     {
     ///         EnableMeshBetweenHubs = true,
     ///         VpnAddressPools = new[]

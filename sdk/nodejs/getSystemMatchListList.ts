@@ -22,7 +22,7 @@ import * as utilities from "./utilities";
  * export const systemMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getSystemMatchListList(args?: GetSystemMatchListListArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemMatchListListResult> {
@@ -129,7 +129,7 @@ export interface GetSystemMatchListListResult {
  * export const systemMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getSystemMatchListListOutput(args?: GetSystemMatchListListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemMatchListListResult> {

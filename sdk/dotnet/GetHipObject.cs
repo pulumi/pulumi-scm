@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a single HIP Profile by its ID.
-        ///     var scmHipObjectDs = Scm.GetHipObject.Invoke(new()
+        ///     var scmHipObjectDs = Scm.Index.GetHipObject.Invoke(new()
         ///     {
         ///         Id = "aba16b3c-8d43-4bac-aa76-572f1d36dbc5",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a single HIP Profile by its ID.
-        ///     var scmHipObjectDs = Scm.GetHipObject.Invoke(new()
+        ///     var scmHipObjectDs = Scm.Index.GetHipObject.Invoke(new()
         ///     {
         ///         Id = "aba16b3c-8d43-4bac-aa76-572f1d36dbc5",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a single HIP Profile by its ID.
-        ///     var scmHipObjectDs = Scm.GetHipObject.Invoke(new()
+        ///     var scmHipObjectDs = Scm.Index.GetHipObject.Invoke(new()
         ///     {
         ///         Id = "aba16b3c-8d43-4bac-aa76-572f1d36dbc5",
         ///     });

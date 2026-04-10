@@ -20,7 +20,7 @@ import * as utilities from "./utilities";
  *     folder: "ngfw-shared",
  *     limit: 100,
  * });
- * export const scmLogicalRouterList = allLogicalRouters.then(allLogicalRouters => .reduce((__obj, router) => ({ ...__obj, [router.name]: router })));
+ * export const scmLogicalRouterList = allLogicalRouters.then(allLogicalRouters => .reduce((__obj, router) => ({ ...__obj, [router.name]: router }), {}));
  * ```
  */
 export function getLogicalRouterList(args?: GetLogicalRouterListArgs, opts?: pulumi.InvokeOptions): Promise<GetLogicalRouterListResult> {
@@ -134,7 +134,7 @@ export interface GetLogicalRouterListResult {
  *     folder: "ngfw-shared",
  *     limit: 100,
  * });
- * export const scmLogicalRouterList = allLogicalRouters.then(allLogicalRouters => .reduce((__obj, router) => ({ ...__obj, [router.name]: router })));
+ * export const scmLogicalRouterList = allLogicalRouters.then(allLogicalRouters => .reduce((__obj, router) => ({ ...__obj, [router.name]: router }), {}));
  * ```
  */
 export function getLogicalRouterListOutput(args?: GetLogicalRouterListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLogicalRouterListResult> {

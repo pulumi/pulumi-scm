@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Replace the ID with the UUID of the SCM Data Object you want to find.
-//			scmDataObjectGet, err := scm.LookupDataObject(ctx, &scm.LookupDataObjectArgs{
+//			scmDataObjectGet, err := scm.GetDataObject(ctx, &scm.LookupDataObjectArgs{
 //				Id: "b1398675-254e-4eff-8050-007ef2f9c0a1",
 //			}, nil)
 //			if err != nil {

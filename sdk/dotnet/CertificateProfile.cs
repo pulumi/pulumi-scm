@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmCp1 = new Scm.CertificateProfile("scm_cp_1", new()
+    ///     var scmCp1 = new Scm.Index.CertificateProfile("scm_cp_1", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_cp_1",

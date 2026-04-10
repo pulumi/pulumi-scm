@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the system match list by its ID.
-        ///     var systemMatchListDs = Scm.GetSystemMatchList.Invoke(new()
+        ///     var systemMatchListDs = Scm.Index.GetSystemMatchList.Invoke(new()
         ///     {
         ///         Id = "dc61ea2f-e7aa-4e86-a742-aa8b2aaf4bf2",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the system match list by its ID.
-        ///     var systemMatchListDs = Scm.GetSystemMatchList.Invoke(new()
+        ///     var systemMatchListDs = Scm.Index.GetSystemMatchList.Invoke(new()
         ///     {
         ///         Id = "dc61ea2f-e7aa-4e86-a742-aa8b2aaf4bf2",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the system match list by its ID.
-        ///     var systemMatchListDs = Scm.GetSystemMatchList.Invoke(new()
+        ///     var systemMatchListDs = Scm.Index.GetSystemMatchList.Invoke(new()
         ///     {
         ///         Id = "dc61ea2f-e7aa-4e86-a742-aa8b2aaf4bf2",
         ///     });

@@ -26,7 +26,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Look up a single service group object by its ID.
         ///     // The ID used here is from the terraform.tfstate file.
-        ///     var scmServiceGroupDs = Scm.GetServiceGroup.Invoke(new()
+        ///     var scmServiceGroupDs = Scm.Index.GetServiceGroup.Invoke(new()
         ///     {
         ///         Id = "dc430d61-52ca-44bc-a797-e65123a94134",
         ///     });
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Look up a single service group object by its ID.
         ///     // The ID used here is from the terraform.tfstate file.
-        ///     var scmServiceGroupDs = Scm.GetServiceGroup.Invoke(new()
+        ///     var scmServiceGroupDs = Scm.Index.GetServiceGroup.Invoke(new()
         ///     {
         ///         Id = "dc430d61-52ca-44bc-a797-e65123a94134",
         ///     });
@@ -86,7 +86,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Look up a single service group object by its ID.
         ///     // The ID used here is from the terraform.tfstate file.
-        ///     var scmServiceGroupDs = Scm.GetServiceGroup.Invoke(new()
+        ///     var scmServiceGroupDs = Scm.Index.GetServiceGroup.Invoke(new()
         ///     {
         ///         Id = "dc430d61-52ca-44bc-a797-e65123a94134",
         ///     });

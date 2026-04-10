@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
         ///     // This data source retrieves multiple Interface Management Profiles from SCM.
         ///     // -----------------------------------------------------------------------------
-        ///     var allMgmtProfiles = Scm.GetInterfaceManagementProfileList.Invoke(new()
+        ///     var allMgmtProfiles = Scm.Index.GetInterfaceManagementProfileList.Invoke(new()
         ///     {
         ///         Limit = 50,
         ///         Folder = "All",
@@ -66,7 +66,7 @@ namespace Pulumi.Scm
         ///     // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
         ///     // This data source retrieves multiple Interface Management Profiles from SCM.
         ///     // -----------------------------------------------------------------------------
-        ///     var allMgmtProfiles = Scm.GetInterfaceManagementProfileList.Invoke(new()
+        ///     var allMgmtProfiles = Scm.Index.GetInterfaceManagementProfileList.Invoke(new()
         ///     {
         ///         Limit = 50,
         ///         Folder = "All",
@@ -104,7 +104,7 @@ namespace Pulumi.Scm
         ///     // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
         ///     // This data source retrieves multiple Interface Management Profiles from SCM.
         ///     // -----------------------------------------------------------------------------
-        ///     var allMgmtProfiles = Scm.GetInterfaceManagementProfileList.Invoke(new()
+        ///     var allMgmtProfiles = Scm.Index.GetInterfaceManagementProfileList.Invoke(new()
         ///     {
         ///         Limit = 50,
         ///         Folder = "All",

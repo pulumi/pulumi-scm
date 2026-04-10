@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // This resource creates a new HIP Profile.
-    ///     var scmHipProfile1 = new Scm.HipProfile("scm_hip_profile_1", new()
+    ///     var scmHipProfile1 = new Scm.Index.HipProfile("scm_hip_profile_1", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_hip_profile_1",

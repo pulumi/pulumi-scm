@@ -28,13 +28,13 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of all variables in a folder.
         ///     //
         ///     // Example 1: Fetch a list of all variables in the "Global" aka "All" folder.
-        ///     var allGlobal = Scm.GetVariableList.Invoke(new()
+        ///     var allGlobal = Scm.Index.GetVariableList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example 2: Use pagination to get the first variables by name.
-        ///     var paginated = Scm.GetVariableList.Invoke(new()
+        ///     var paginated = Scm.Index.GetVariableList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -69,13 +69,13 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of all variables in a folder.
         ///     //
         ///     // Example 1: Fetch a list of all variables in the "Global" aka "All" folder.
-        ///     var allGlobal = Scm.GetVariableList.Invoke(new()
+        ///     var allGlobal = Scm.Index.GetVariableList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example 2: Use pagination to get the first variables by name.
-        ///     var paginated = Scm.GetVariableList.Invoke(new()
+        ///     var paginated = Scm.Index.GetVariableList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -110,13 +110,13 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of all variables in a folder.
         ///     //
         ///     // Example 1: Fetch a list of all variables in the "Global" aka "All" folder.
-        ///     var allGlobal = Scm.GetVariableList.Invoke(new()
+        ///     var allGlobal = Scm.Index.GetVariableList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example 2: Use pagination to get the first variables by name.
-        ///     var paginated = Scm.GetVariableList.Invoke(new()
+        ///     var paginated = Scm.Index.GetVariableList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,

@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var exampleConfiguration = new Scm.AuthenticationPortal("example_configuration", new()
+    ///     var exampleConfiguration = new Scm.Index.AuthenticationPortal("example_configuration", new()
     ///     {
     ///         RedirectHost = "192.168.255.254",
     ///         Folder = "ngfw-shared",

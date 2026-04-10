@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var motdExample = new Scm.MotdBannerSetting("motd_example", new()
+    ///     var motdExample = new Scm.Index.MotdBannerSetting("motd_example", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         MotdAndBanner = new Scm.Inputs.MotdBannerSettingMotdAndBannerArgs

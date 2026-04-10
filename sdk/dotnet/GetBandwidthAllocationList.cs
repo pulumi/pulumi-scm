@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetBandwidthAllocationList.Invoke(new()
+        ///     var example = Scm.Index.GetBandwidthAllocationList.Invoke(new()
         ///     {
         ///         Name = "taiwan",
         ///         Limit = 50,
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetBandwidthAllocationList.Invoke(new()
+        ///     var example = Scm.Index.GetBandwidthAllocationList.Invoke(new()
         ///     {
         ///         Name = "taiwan",
         ///         Limit = 50,
@@ -84,7 +84,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetBandwidthAllocationList.Invoke(new()
+        ///     var example = Scm.Index.GetBandwidthAllocationList.Invoke(new()
         ///     {
         ///         Name = "taiwan",
         ///         Limit = 50,

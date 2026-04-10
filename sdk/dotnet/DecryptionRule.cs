@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // --- 1. TAG Resource ---
-    ///     var decryptionPositionTag = new Scm.Tag("decryption_position_tag", new()
+    ///     var decryptionPositionTag = new Scm.Index.Tag("decryption_position_tag", new()
     ///     {
     ///         Name = "decryption-position-tag",
     ///         Folder = "ngfw-shared",
@@ -31,7 +31,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // --- 2. ANCHOR DECRYPTION RULE (Used for relative positioning) ---
-    ///     var anchorDecryptionRule = new Scm.DecryptionRule("anchor_decryption_rule", new()
+    ///     var anchorDecryptionRule = new Scm.Index.DecryptionRule("anchor_decryption_rule", new()
     ///     {
     ///         Name = "anchor-decryption-rule",
     ///         Description = "Base rule for testing 'before' and 'after' positioning.",
@@ -86,7 +86,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
-    ///     var ruleTopDecryptionRule = new Scm.DecryptionRule("rule_top_decryption_rule", new()
+    ///     var ruleTopDecryptionRule = new Scm.Index.DecryptionRule("rule_top_decryption_rule", new()
     ///     {
     ///         Name = "top-absolute-decryption-rule",
     ///         Description = "Placed at the very TOP of the Decryption rulebase.",
@@ -128,7 +128,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var ruleBottomDecryptionRule = new Scm.DecryptionRule("rule_bottom_decryption_rule", new()
+    ///     var ruleBottomDecryptionRule = new Scm.Index.DecryptionRule("rule_bottom_decryption_rule", new()
     ///     {
     ///         Name = "bottom-absolute-decryption-rule",
     ///         Description = "Placed at the very BOTTOM of the Decryption rulebase.",
@@ -171,7 +171,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
-    ///     var ruleBeforeAnchorDecryption = new Scm.DecryptionRule("rule_before_anchor_decryption", new()
+    ///     var ruleBeforeAnchorDecryption = new Scm.Index.DecryptionRule("rule_before_anchor_decryption", new()
     ///     {
     ///         Name = "before-anchor-decryption-rule",
     ///         Description = "Positioned immediately BEFORE the anchor-decryption-rule. Updating",
@@ -214,7 +214,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var ruleAfterAnchorDecryption = new Scm.DecryptionRule("rule_after_anchor_decryption", new()
+    ///     var ruleAfterAnchorDecryption = new Scm.Index.DecryptionRule("rule_after_anchor_decryption", new()
     ///     {
     ///         Name = "after-anchor-decryption-rule_123",
     ///         Description = "Positioned immediately AFTER the anchor-decryption-rule.",
@@ -257,7 +257,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var decryptionRuleSslInboundInspection = new Scm.DecryptionRule("decryption_rule_ssl_inbound_inspection", new()
+    ///     var decryptionRuleSslInboundInspection = new Scm.Index.DecryptionRule("decryption_rule_ssl_inbound_inspection", new()
     ///     {
     ///         Name = "ssl_inbound_inspection_rule",
     ///         Description = "Decryption Rule with SSL Inbound Set",

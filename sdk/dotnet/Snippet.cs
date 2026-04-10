@@ -22,13 +22,13 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmLabel1 = new Scm.Label("scm_label_1", new()
+    ///     var scmLabel1 = new Scm.Index.Label("scm_label_1", new()
     ///     {
     ///         Name = "scm_label",
     ///     });
     /// 
     ///     //snippet with label
-    ///     var scmSnippet1 = new Scm.Snippet("scm_snippet_1", new()
+    ///     var scmSnippet1 = new Scm.Index.Snippet("scm_snippet_1", new()
     ///     {
     ///         Name = "scm_snippet",
     ///         Description = "Adding a Description from Terraform",
@@ -38,13 +38,13 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmSnippet2 = new Scm.Snippet("scm_snippet_2", new()
+    ///     var scmSnippet2 = new Scm.Index.Snippet("scm_snippet_2", new()
     ///     {
     ///         Name = "scm_snippet_2",
     ///         Description = "Adding a Description from Terraform",
     ///     });
     /// 
-    ///     var scmSnippet3 = new Scm.Snippet("scm_snippet_3", new()
+    ///     var scmSnippet3 = new Scm.Index.Snippet("scm_snippet_3", new()
     ///     {
     ///         Name = "scm_snippet_3",
     ///         Description = "Adding a Description from Terraform",

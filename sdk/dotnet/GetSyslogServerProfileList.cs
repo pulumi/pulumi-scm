@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Syslog Server Profile objects.
         ///     //
         ///     // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
-        ///     var allShared = Scm.GetSyslogServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetSyslogServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Syslog Server Profile objects.
         ///     //
         ///     // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
-        ///     var allShared = Scm.GetSyslogServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetSyslogServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM Syslog Server Profile objects.
         ///     //
         ///     // Example 1: Fetch a list of all SCM Syslog Server Profile in the "All" folder.
-        ///     var allShared = Scm.GetSyslogServerProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetSyslogServerProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });

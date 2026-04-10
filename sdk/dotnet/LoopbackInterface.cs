@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a loopback interface with static ipv4 address
     ///     //
-    ///     var scmLoopbackIntf = new Scm.LoopbackInterface("scm_loopback_intf", new()
+    ///     var scmLoopbackIntf = new Scm.Index.LoopbackInterface("scm_loopback_intf", new()
     ///     {
     ///         Name = "$scm_loopback_intf",
     ///         Comment = "Managed by Pulumi",
@@ -42,7 +42,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a loopback interface with static ipv4 address, with default value loopback.123
     ///     //
-    ///     var scmLoopbackIntf2 = new Scm.LoopbackInterface("scm_loopback_intf_2", new()
+    ///     var scmLoopbackIntf2 = new Scm.Index.LoopbackInterface("scm_loopback_intf_2", new()
     ///     {
     ///         Name = "$scm_loopback_intf_2",
     ///         Comment = "Managed by Pulumi",
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates an ip subnet variable used in the subsequent example
     ///     //
-    ///     var scmIpv6Prefix = new Scm.Variable("scm_ipv6_prefix", new()
+    ///     var scmIpv6Prefix = new Scm.Index.Variable("scm_ipv6_prefix", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "$scm_ipv6_prefix",
@@ -72,7 +72,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a loopback interface with ipv6 address, with default value loopback.321
     ///     //
-    ///     var scmLoopbackIntf3 = new Scm.LoopbackInterface("scm_loopback_intf_3", new()
+    ///     var scmLoopbackIntf3 = new Scm.Index.LoopbackInterface("scm_loopback_intf_3", new()
     ///     {
     ///         Name = "$scm_loopback_intf3",
     ///         Comment = "Managed by Pulumi",

@@ -22,7 +22,7 @@ import * as utilities from "./utilities";
  * export const useridMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getUseridMatchListList(args?: GetUseridMatchListListArgs, opts?: pulumi.InvokeOptions): Promise<GetUseridMatchListListResult> {
@@ -129,7 +129,7 @@ export interface GetUseridMatchListListResult {
  * export const useridMatchListListResults = example.then(example => .reduce((__obj, item) => ({ ...__obj, [item.id]: {
  *     name: item.name,
  *     folder: item.folder,
- * } })));
+ * } }), {}));
  * ```
  */
 export function getUseridMatchListListOutput(args?: GetUseridMatchListListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUseridMatchListListResult> {

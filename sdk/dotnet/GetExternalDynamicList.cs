@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to look up a single external dynamic list by its ID.
-        ///     var scmExternalDynamicListDs = Scm.GetExternalDynamicList.Invoke(new()
+        ///     var scmExternalDynamicListDs = Scm.Index.GetExternalDynamicList.Invoke(new()
         ///     {
         ///         Id = "ce39b7b5-f5bc-4276-9fe5-be56613e37ad",
         ///     });
@@ -62,7 +62,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to look up a single external dynamic list by its ID.
-        ///     var scmExternalDynamicListDs = Scm.GetExternalDynamicList.Invoke(new()
+        ///     var scmExternalDynamicListDs = Scm.Index.GetExternalDynamicList.Invoke(new()
         ///     {
         ///         Id = "ce39b7b5-f5bc-4276-9fe5-be56613e37ad",
         ///     });
@@ -99,7 +99,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to look up a single external dynamic list by its ID.
-        ///     var scmExternalDynamicListDs = Scm.GetExternalDynamicList.Invoke(new()
+        ///     var scmExternalDynamicListDs = Scm.Index.GetExternalDynamicList.Invoke(new()
         ///     {
         ///         Id = "ce39b7b5-f5bc-4276-9fe5-be56613e37ad",
         ///     });

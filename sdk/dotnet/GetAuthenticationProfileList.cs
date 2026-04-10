@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allProfiles = Scm.GetAuthenticationProfileList.Invoke(new()
+        ///     var allProfiles = Scm.Index.GetAuthenticationProfileList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///         Folder = "All",
@@ -57,7 +57,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allProfiles = Scm.GetAuthenticationProfileList.Invoke(new()
+        ///     var allProfiles = Scm.Index.GetAuthenticationProfileList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///         Folder = "All",
@@ -90,7 +90,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allProfiles = Scm.GetAuthenticationProfileList.Invoke(new()
+        ///     var allProfiles = Scm.Index.GetAuthenticationProfileList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///         Folder = "All",

@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the hipmatch match list by its ID.
-//			hipmatchMatchListDs, err := scm.LookupHipmatchMatchList(ctx, &scm.LookupHipmatchMatchListArgs{
+//			hipmatchMatchListDs, err := scm.GetHipmatchMatchList(ctx, &scm.LookupHipmatchMatchListArgs{
 //				Id: "ee509dcd-207e-43ca-bd35-d2f459aa7fb0",
 //			}, nil)
 //			if err != nil {

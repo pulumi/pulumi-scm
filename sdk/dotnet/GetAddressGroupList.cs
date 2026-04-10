@@ -27,12 +27,12 @@ namespace Pulumi.Scm
         ///     // This data source will call the "ListAddresses" API endpoint
         ///     // and return all filters in the "All" folder.
         ///     // 1. Use a single data block to fetch ALL addresses in the "All" folder.
-        ///     var allShared = Scm.GetAddressGroupList.Invoke(new()
+        ///     var allShared = Scm.Index.GetAddressGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
-        ///     var paginatedAddressGroupsExample = Scm.GetAddressGroupList.Invoke(new()
+        ///     var paginatedAddressGroupsExample = Scm.Index.GetAddressGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -71,12 +71,12 @@ namespace Pulumi.Scm
         ///     // This data source will call the "ListAddresses" API endpoint
         ///     // and return all filters in the "All" folder.
         ///     // 1. Use a single data block to fetch ALL addresses in the "All" folder.
-        ///     var allShared = Scm.GetAddressGroupList.Invoke(new()
+        ///     var allShared = Scm.Index.GetAddressGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
-        ///     var paginatedAddressGroupsExample = Scm.GetAddressGroupList.Invoke(new()
+        ///     var paginatedAddressGroupsExample = Scm.Index.GetAddressGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -115,12 +115,12 @@ namespace Pulumi.Scm
         ///     // This data source will call the "ListAddresses" API endpoint
         ///     // and return all filters in the "All" folder.
         ///     // 1. Use a single data block to fetch ALL addresses in the "All" folder.
-        ///     var allShared = Scm.GetAddressGroupList.Invoke(new()
+        ///     var allShared = Scm.Index.GetAddressGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
-        ///     var paginatedAddressGroupsExample = Scm.GetAddressGroupList.Invoke(new()
+        ///     var paginatedAddressGroupsExample = Scm.Index.GetAddressGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,

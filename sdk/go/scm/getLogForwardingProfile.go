@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single SCM Log Forwarding Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the SCM Log Forwarding Profile you want to find.
-//			scmLogForwardingProf, err := scm.LookupLogForwardingProfile(ctx, &scm.LookupLogForwardingProfileArgs{
+//			scmLogForwardingProf, err := scm.GetLogForwardingProfile(ctx, &scm.LookupLogForwardingProfileArgs{
 //				Id: "712dc61d-94ed-45e4-82b7-b2d86669a2bf",
 //			}, nil)
 //			if err != nil {

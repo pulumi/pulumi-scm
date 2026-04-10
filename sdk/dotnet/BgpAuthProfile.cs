@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmBgpAuthProfile = new Scm.BgpAuthProfile("scm_bgp_auth_profile", new()
+    ///     var scmBgpAuthProfile = new Scm.Index.BgpAuthProfile("scm_bgp_auth_profile", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_bgp_auth_profile",

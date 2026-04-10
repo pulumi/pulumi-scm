@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var globalRadiusAccess = new Scm.AuthenticationProfile("global_radius_access", new()
+    ///     var globalRadiusAccess = new Scm.Index.AuthenticationProfile("global_radius_access", new()
     ///     {
     ///         Name = "test_auth_profile_settings",
     ///         Folder = "Prisma Access",
@@ -47,7 +47,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var authSettings = new Scm.AuthenticationSetting("auth_settings", new()
+    ///     var authSettings = new Scm.Index.AuthenticationSetting("auth_settings", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Authentication = new Scm.Inputs.AuthenticationSettingAuthenticationArgs

@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var hipmatchMatchList = new Scm.HipmatchMatchList("hipmatch_match_list", new()
+    ///     var hipmatchMatchList = new Scm.Index.HipmatchMatchList("hipmatch_match_list", new()
     ///     {
     ///         Name = "test-hipmatch-list",
     ///         Description = "HIP match list for monitoring host information profile events and endpoint compliance status",

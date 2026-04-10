@@ -23,21 +23,21 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // This file is embedded using go:embed
-    ///     var scmAddrTag1 = new Scm.Tag("scm_addr_tag_1", new()
+    ///     var scmAddrTag1 = new Scm.Index.Tag("scm_addr_tag_1", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "tf_addr_tag_1",
     ///         Color = "Red",
     ///     });
     /// 
-    ///     var scmAddrTag2 = new Scm.Tag("scm_addr_tag_2", new()
+    ///     var scmAddrTag2 = new Scm.Index.Tag("scm_addr_tag_2", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "tf_addr_tag_2",
     ///         Color = "Blue",
     ///     });
     /// 
-    ///     var scmAddrTag3 = new Scm.Tag("scm_addr_tag_3", new()
+    ///     var scmAddrTag3 = new Scm.Index.Tag("scm_addr_tag_3", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "tf_addr_tag_3",
@@ -45,7 +45,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // IP Netmask
-    ///     var scmAddress1 = new Scm.Address("scm_address_1", new()
+    ///     var scmAddress1 = new Scm.Index.Address("scm_address_1", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "tf_address_1",
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // IP Range
-    ///     var scmAddress2 = new Scm.Address("scm_address_2", new()
+    ///     var scmAddress2 = new Scm.Index.Address("scm_address_2", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "tf_address_2",
@@ -63,7 +63,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // FQDN
-    ///     var scmAddress3 = new Scm.Address("scm_address_3", new()
+    ///     var scmAddress3 = new Scm.Index.Address("scm_address_3", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "tf_address_3",
@@ -72,7 +72,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Class C wildcard
-    ///     var scmAddress4 = new Scm.Address("scm_address_4", new()
+    ///     var scmAddress4 = new Scm.Index.Address("scm_address_4", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "tf_address_4",
@@ -81,7 +81,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Multiple tags
-    ///     var scmAddress5 = new Scm.Address("scm_address_5", new()
+    ///     var scmAddress5 = new Scm.Index.Address("scm_address_5", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "tf_address_5",

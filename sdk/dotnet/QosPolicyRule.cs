@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // --- 2. ANCHOR QOS POLICY RULE (Used for relative positioning) ---
-    ///     var anchorQosRule = new Scm.QosPolicyRule("anchor_qos_rule", new()
+    ///     var anchorQosRule = new Scm.Index.QosPolicyRule("anchor_qos_rule", new()
     ///     {
     ///         Name = "anchor-qos-rule",
     ///         Description = "Base rule for testing 'before' and 'after' positioning.",
@@ -51,7 +51,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
-    ///     var ruleTopQosRule = new Scm.QosPolicyRule("rule_top_qos_rule", new()
+    ///     var ruleTopQosRule = new Scm.Index.QosPolicyRule("rule_top_qos_rule", new()
     ///     {
     ///         Name = "top-absolute-qos-rule",
     ///         Description = "Placed at the very TOP of the QoS rulebase (Highest Priority).",
@@ -64,7 +64,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var ruleBottomQosRule = new Scm.QosPolicyRule("rule_bottom_qos_rule", new()
+    ///     var ruleBottomQosRule = new Scm.Index.QosPolicyRule("rule_bottom_qos_rule", new()
     ///     {
     ///         Name = "bottom-absolute-qos-rule",
     ///         Description = "Placed at the very BOTTOM of the QoS rulebase (Lowest Priority)",
@@ -78,7 +78,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
-    ///     var ruleBeforeAnchorQos = new Scm.QosPolicyRule("rule_before_anchor_qos", new()
+    ///     var ruleBeforeAnchorQos = new Scm.Index.QosPolicyRule("rule_before_anchor_qos", new()
     ///     {
     ///         Name = "before-anchor-qos-rule",
     ///         Description = "Positioned immediately BEFORE the anchor-qos-rule.",
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var ruleAfterAnchorQos = new Scm.QosPolicyRule("rule_after_anchor_qos", new()
+    ///     var ruleAfterAnchorQos = new Scm.Index.QosPolicyRule("rule_after_anchor_qos", new()
     ///     {
     ///         Name = "after-anchor-qos-rule",
     ///         Description = "Positioned immediately AFTER the anchor-qos-rule.",

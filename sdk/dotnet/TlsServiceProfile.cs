@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var tlsServiceProf1Upper = new Scm.TlsServiceProfile("tls_service_prof_1_upper", new()
+    ///     var tlsServiceProf1Upper = new Scm.Index.TlsServiceProfile("tls_service_prof_1_upper", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "TLS_Service_Profile_1",
@@ -33,7 +33,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var tlsServiceProf2Upper = new Scm.TlsServiceProfile("tls_service_prof_2_upper", new()
+    ///     var tlsServiceProf2Upper = new Scm.Index.TlsServiceProfile("tls_service_prof_2_upper", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "TLS_Service_Profile_2",
@@ -47,7 +47,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var tlsServiceProf3Upper = new Scm.TlsServiceProfile("tls_service_prof_3_upper", new()
+    ///     var tlsServiceProf3Upper = new Scm.Index.TlsServiceProfile("tls_service_prof_3_upper", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "TLS_Service_Profile_3",

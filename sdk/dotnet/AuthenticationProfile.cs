@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var chapRadiusProfile = new Scm.RadiusServerProfile("chap_radius_profile", new()
+    ///     var chapRadiusProfile = new Scm.Index.RadiusServerProfile("chap_radius_profile", new()
     ///     {
     ///         Name = "CHAP_only_rsp",
     ///         Folder = "ngfw-shared",
@@ -44,7 +44,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var globalRadiusAccess = new Scm.AuthenticationProfile("global_radius_access", new()
+    ///     var globalRadiusAccess = new Scm.Index.AuthenticationProfile("global_radius_access", new()
     ///     {
     ///         Name = "test_auth_profile_radius",
     ///         Folder = "ngfw-shared",
@@ -73,7 +73,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var globalDbAccess = new Scm.AuthenticationProfile("global_db_access", new()
+    ///     var globalDbAccess = new Scm.Index.AuthenticationProfile("global_db_access", new()
     ///     {
     ///         Name = "test_auth_global_db",
     ///         Folder = "ngfw-shared",

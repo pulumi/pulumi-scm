@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // We use the ID from the resource created above.
-        ///     var singleRuleById = Scm.GetDecryptionRule.Invoke(new()
+        ///     var singleRuleById = Scm.Index.GetDecryptionRule.Invoke(new()
         ///     {
         ///         Id = "b3544acb-fc55-4c6f-921d-4128b5a1d135",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // We use the ID from the resource created above.
-        ///     var singleRuleById = Scm.GetDecryptionRule.Invoke(new()
+        ///     var singleRuleById = Scm.Index.GetDecryptionRule.Invoke(new()
         ///     {
         ///         Id = "b3544acb-fc55-4c6f-921d-4128b5a1d135",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // We use the ID from the resource created above.
-        ///     var singleRuleById = Scm.GetDecryptionRule.Invoke(new()
+        ///     var singleRuleById = Scm.Index.GetDecryptionRule.Invoke(new()
         ///     {
         ///         Id = "b3544acb-fc55-4c6f-921d-4128b5a1d135",
         ///     });

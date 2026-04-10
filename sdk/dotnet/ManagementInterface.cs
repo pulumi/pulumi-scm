@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var miExample = new Scm.ManagementInterface("mi_example", new()
+    ///     var miExample = new Scm.Index.ManagementInterface("mi_example", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         ManagementInterfaceDetails = new Scm.Inputs.ManagementInterfaceManagementInterfaceArgs
@@ -63,7 +63,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var miStaticExample = new Scm.ManagementInterface("mi_static_example", new()
+    ///     var miStaticExample = new Scm.Index.ManagementInterface("mi_static_example", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         ManagementInterfaceDetails = new Scm.Inputs.ManagementInterfaceManagementInterfaceArgs

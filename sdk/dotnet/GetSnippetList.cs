@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSnippets = Scm.GetSnippetList.Invoke(new()
+        ///     var allSnippets = Scm.Index.GetSnippetList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///     });
@@ -52,7 +52,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSnippets = Scm.GetSnippetList.Invoke(new()
+        ///     var allSnippets = Scm.Index.GetSnippetList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///     });
@@ -80,7 +80,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSnippets = Scm.GetSnippetList.Invoke(new()
+        ///     var allSnippets = Scm.Index.GetSnippetList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///     });

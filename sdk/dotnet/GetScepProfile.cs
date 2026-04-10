@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM SCEP Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
-        ///     var scmScepProf = Scm.GetScepProfile.Invoke(new()
+        ///     var scmScepProf = Scm.Index.GetScepProfile.Invoke(new()
         ///     {
         ///         Id = "06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1",
         ///     });
@@ -65,7 +65,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM SCEP Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
-        ///     var scmScepProf = Scm.GetScepProfile.Invoke(new()
+        ///     var scmScepProf = Scm.Index.GetScepProfile.Invoke(new()
         ///     {
         ///         Id = "06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1",
         ///     });
@@ -102,7 +102,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM SCEP Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM SCEP Profile you want to find.
-        ///     var scmScepProf = Scm.GetScepProfile.Invoke(new()
+        ///     var scmScepProf = Scm.Index.GetScepProfile.Invoke(new()
         ///     {
         ///         Id = "06c1d4ea-e2b1-44c9-bf5a-3f66c7d180a1",
         ///     });

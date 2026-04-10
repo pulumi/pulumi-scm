@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up a single certificate profile object by its ID.
 //			// The ID used here is from the API response log you provided.
-//			scmCertificateProfileDs, err := scm.LookupCertificateProfile(ctx, &scm.LookupCertificateProfileArgs{
+//			scmCertificateProfileDs, err := scm.GetCertificateProfile(ctx, &scm.LookupCertificateProfileArgs{
 //				Id: "8e64859b-eba9-4e25-9005-754c90c2b02d",
 //			}, nil)
 //			if err != nil {

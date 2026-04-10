@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM TLS Service Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
-        ///     var scmTlsServiceProf = Scm.GetTlsServiceProfile.Invoke(new()
+        ///     var scmTlsServiceProf = Scm.Index.GetTlsServiceProfile.Invoke(new()
         ///     {
         ///         Id = "b4d70015-5b0e-4491-a2a9-4305b01397d5",
         ///     });
@@ -65,7 +65,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM TLS Service Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
-        ///     var scmTlsServiceProf = Scm.GetTlsServiceProfile.Invoke(new()
+        ///     var scmTlsServiceProf = Scm.Index.GetTlsServiceProfile.Invoke(new()
         ///     {
         ///         Id = "b4d70015-5b0e-4491-a2a9-4305b01397d5",
         ///     });
@@ -102,7 +102,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM TLS Service Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM TLS Service Profile you want to find.
-        ///     var scmTlsServiceProf = Scm.GetTlsServiceProfile.Invoke(new()
+        ///     var scmTlsServiceProf = Scm.Index.GetTlsServiceProfile.Invoke(new()
         ///     {
         ///         Id = "b4d70015-5b0e-4491-a2a9-4305b01397d5",
         ///     });

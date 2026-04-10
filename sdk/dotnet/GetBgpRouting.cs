@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allRouting = Scm.GetBgpRouting.Invoke();
+        ///     var allRouting = Scm.Index.GetBgpRouting.Invoke();
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
@@ -49,7 +49,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allRouting = Scm.GetBgpRouting.Invoke();
+        ///     var allRouting = Scm.Index.GetBgpRouting.Invoke();
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {
@@ -74,7 +74,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allRouting = Scm.GetBgpRouting.Invoke();
+        ///     var allRouting = Scm.Index.GetBgpRouting.Invoke();
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
         ///     {

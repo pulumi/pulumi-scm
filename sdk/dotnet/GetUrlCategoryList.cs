@@ -28,13 +28,13 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of URL Category objects.
         ///     //
         ///     // Example 1: Fetch a list of all URL Categories in the "All" folder.
-        ///     var allShared = Scm.GetUrlCategoryList.Invoke(new()
+        ///     var allShared = Scm.Index.GetUrlCategoryList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example 2: Use pagination to get the first 5 URL Categories by name.
-        ///     var paginated = Scm.GetUrlCategoryList.Invoke(new()
+        ///     var paginated = Scm.Index.GetUrlCategoryList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -69,13 +69,13 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of URL Category objects.
         ///     //
         ///     // Example 1: Fetch a list of all URL Categories in the "All" folder.
-        ///     var allShared = Scm.GetUrlCategoryList.Invoke(new()
+        ///     var allShared = Scm.Index.GetUrlCategoryList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example 2: Use pagination to get the first 5 URL Categories by name.
-        ///     var paginated = Scm.GetUrlCategoryList.Invoke(new()
+        ///     var paginated = Scm.Index.GetUrlCategoryList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -110,13 +110,13 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of URL Category objects.
         ///     //
         ///     // Example 1: Fetch a list of all URL Categories in the "All" folder.
-        ///     var allShared = Scm.GetUrlCategoryList.Invoke(new()
+        ///     var allShared = Scm.Index.GetUrlCategoryList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example 2: Use pagination to get the first 5 URL Categories by name.
-        ///     var paginated = Scm.GetUrlCategoryList.Invoke(new()
+        ///     var paginated = Scm.Index.GetUrlCategoryList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,

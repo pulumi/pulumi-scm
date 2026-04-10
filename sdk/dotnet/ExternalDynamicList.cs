@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     // This resource creates a domain-based External Dynamic List (EDL).
     ///     // The EDL will fetch a list of domains from the specified URL daily.
-    ///     var scmEdl1 = new Scm.ExternalDynamicList("scm_edl_1", new()
+    ///     var scmEdl1 = new Scm.Index.ExternalDynamicList("scm_edl_1", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_edl_1",
@@ -45,7 +45,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmEdl2 = new Scm.ExternalDynamicList("scm_edl_2", new()
+    ///     var scmEdl2 = new Scm.Index.ExternalDynamicList("scm_edl_2", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_edl_2",
@@ -63,7 +63,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmEdl3 = new Scm.ExternalDynamicList("scm_edl_3", new()
+    ///     var scmEdl3 = new Scm.Index.ExternalDynamicList("scm_edl_3", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_edl_3",
@@ -85,7 +85,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmEdl4 = new Scm.ExternalDynamicList("scm_edl_4", new()
+    ///     var scmEdl4 = new Scm.Index.ExternalDynamicList("scm_edl_4", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_edl_4",
@@ -99,7 +99,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmEdl5 = new Scm.ExternalDynamicList("scm_edl_5", new()
+    ///     var scmEdl5 = new Scm.Index.ExternalDynamicList("scm_edl_5", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_edl_5",

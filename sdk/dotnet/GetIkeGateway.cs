@@ -26,7 +26,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Data source to retrieve a single IKE Gateway by its ID.
         ///     // Replace the placeholder ID with the actual UUID of the gateway you want to fetch.
-        ///     var exampleSingularIkeGatewayDs = Scm.GetIkeGateway.Invoke(new()
+        ///     var exampleSingularIkeGatewayDs = Scm.Index.GetIkeGateway.Invoke(new()
         ///     {
         ///         Id = "1ba42513-2985-4783-8bdf-c83cf20d6dd1",
         ///     });
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Data source to retrieve a single IKE Gateway by its ID.
         ///     // Replace the placeholder ID with the actual UUID of the gateway you want to fetch.
-        ///     var exampleSingularIkeGatewayDs = Scm.GetIkeGateway.Invoke(new()
+        ///     var exampleSingularIkeGatewayDs = Scm.Index.GetIkeGateway.Invoke(new()
         ///     {
         ///         Id = "1ba42513-2985-4783-8bdf-c83cf20d6dd1",
         ///     });
@@ -86,7 +86,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Data source to retrieve a single IKE Gateway by its ID.
         ///     // Replace the placeholder ID with the actual UUID of the gateway you want to fetch.
-        ///     var exampleSingularIkeGatewayDs = Scm.GetIkeGateway.Invoke(new()
+        ///     var exampleSingularIkeGatewayDs = Scm.Index.GetIkeGateway.Invoke(new()
         ///     {
         ///         Id = "1ba42513-2985-4783-8bdf-c83cf20d6dd1",
         ///     });

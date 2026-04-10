@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allPreRules = Scm.GetAuthenticationRuleList.Invoke(new()
+        ///     var allPreRules = Scm.Index.GetAuthenticationRuleList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///         Offset = 15,
@@ -59,7 +59,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allPreRules = Scm.GetAuthenticationRuleList.Invoke(new()
+        ///     var allPreRules = Scm.Index.GetAuthenticationRuleList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///         Offset = 15,
@@ -94,7 +94,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allPreRules = Scm.GetAuthenticationRuleList.Invoke(new()
+        ///     var allPreRules = Scm.Index.GetAuthenticationRuleList.Invoke(new()
         ///     {
         ///         Limit = 10,
         ///         Offset = 15,

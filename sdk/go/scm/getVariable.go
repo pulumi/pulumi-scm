@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the "$example" variable by its name.
-//			scmVariableDs, err := scm.LookupVariable(ctx, &scm.LookupVariableArgs{
+//			scmVariableDs, err := scm.GetVariable(ctx, &scm.LookupVariableArgs{
 //				Id: "66cbe56c-0300-4905-8455-d384978a0081",
 //			}, nil)
 //			if err != nil {

@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var configMatchList = new Scm.ConfigMatchList("config_match_list", new()
+    ///     var configMatchList = new Scm.Index.ConfigMatchList("config_match_list", new()
     ///     {
     ///         Name = "test-config-list",
     ///         Description = "Config match list for tracking configuration changes and audit log forwarding",

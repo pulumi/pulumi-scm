@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// {
     ///     // This file is embedded using go:embed
     ///     // First, create some addresses that will be used in the address group
-    ///     var scmAddressAg1 = new Scm.Address("scm_address_ag_1", new()
+    ///     var scmAddressAg1 = new Scm.Index.Address("scm_address_ag_1", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_address_ag_1",
@@ -32,7 +32,7 @@ namespace Pulumi.Scm
     ///         IpNetmask = "192.168.1.1/32",
     ///     });
     /// 
-    ///     var scmAddressAg2 = new Scm.Address("scm_address_ag_2", new()
+    ///     var scmAddressAg2 = new Scm.Index.Address("scm_address_ag_2", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_address_ag_2",
@@ -41,7 +41,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Create the address group that references the addresses above
-    ///     var scmAddressGroup1 = new Scm.AddressGroup("scm_address_group_1", new()
+    ///     var scmAddressGroup1 = new Scm.Index.AddressGroup("scm_address_group_1", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_address_group_1",
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Create tags to be used for dynamic address group
-    ///     var scmAddressgroupTag1 = new Scm.Tag("scm_addressgroup_tag_1", new()
+    ///     var scmAddressgroupTag1 = new Scm.Index.Tag("scm_addressgroup_tag_1", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_addressgroup_tag_1",
@@ -62,7 +62,7 @@ namespace Pulumi.Scm
     ///         Color = "Orange",
     ///     });
     /// 
-    ///     var scmAddressgroupTag2 = new Scm.Tag("scm_addressgroup_tag_2", new()
+    ///     var scmAddressgroupTag2 = new Scm.Index.Tag("scm_addressgroup_tag_2", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_addressgroup_tag_2",
@@ -71,7 +71,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Create a dynamic addressgroup that matches both tags
-    ///     var scmAddressgroupDynamic = new Scm.AddressGroup("scm_addressgroup_dynamic", new()
+    ///     var scmAddressgroupDynamic = new Scm.Index.AddressGroup("scm_addressgroup_dynamic", new()
     ///     {
     ///         Folder = "Prisma Access",
     ///         Name = "scm_addressgroup_dynamic",

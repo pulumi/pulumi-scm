@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSettings = Scm.GetServiceSettingList.Invoke(new()
+        ///     var allSettings = Scm.Index.GetServiceSettingList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSettings = Scm.GetServiceSettingList.Invoke(new()
+        ///     var allSettings = Scm.Index.GetServiceSettingList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -88,7 +88,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSettings = Scm.GetServiceSettingList.Invoke(new()
+        ///     var allSettings = Scm.Index.GetServiceSettingList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });

@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM TLS Service Profile objects.
         ///     //
         ///     // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
-        ///     var allShared = Scm.GetTlsServiceProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetTlsServiceProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM TLS Service Profile objects.
         ///     //
         ///     // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
-        ///     var allShared = Scm.GetTlsServiceProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetTlsServiceProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a list of SCM TLS Service Profile objects.
         ///     //
         ///     // Example 1: Fetch a list of all SCM TLS Service Profile in the "All" folder.
-        ///     var allShared = Scm.GetTlsServiceProfileList.Invoke(new()
+        ///     var allShared = Scm.Index.GetTlsServiceProfileList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });

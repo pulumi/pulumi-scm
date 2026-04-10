@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Auto VPN Cluster Configuration
     ///     //
-    ///     var testCluster = new Scm.AutoVpnCluster("test_cluster", new()
+    ///     var testCluster = new Scm.Index.AutoVpnCluster("test_cluster", new()
     ///     {
     ///         Name = "test-will-be-deleted",
     ///         Type = "hub-spoke",

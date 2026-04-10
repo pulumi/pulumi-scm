@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * const allLoopbackInterfaces = scm.getLoopbackInterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmLoopbackInterfaceList = allLoopbackInterfaces.then(allLoopbackInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmLoopbackInterfaceList = allLoopbackInterfaces.then(allLoopbackInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getLoopbackInterfaceList(args?: GetLoopbackInterfaceListArgs, opts?: pulumi.InvokeOptions): Promise<GetLoopbackInterfaceListResult> {
@@ -123,7 +123,7 @@ export interface GetLoopbackInterfaceListResult {
  * const allLoopbackInterfaces = scm.getLoopbackInterfaceList({
  *     folder: "ngfw-shared",
  * });
- * export const scmLoopbackInterfaceList = allLoopbackInterfaces.then(allLoopbackInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * export const scmLoopbackInterfaceList = allLoopbackInterfaces.then(allLoopbackInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface }), {}));
  * ```
  */
 export function getLoopbackInterfaceListOutput(args?: GetLoopbackInterfaceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLoopbackInterfaceListResult> {

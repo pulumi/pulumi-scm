@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Replace the ID with the UUID of the SCM Data filtering profile you want to find.
-        ///     var scmDataFilteringProfileGet = Scm.GetDataFilteringProfile.Invoke(new()
+        ///     var scmDataFilteringProfileGet = Scm.Index.GetDataFilteringProfile.Invoke(new()
         ///     {
         ///         Id = "d50c57e4-3a3e-419e-bd41-33fdd1c56a32",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Replace the ID with the UUID of the SCM Data filtering profile you want to find.
-        ///     var scmDataFilteringProfileGet = Scm.GetDataFilteringProfile.Invoke(new()
+        ///     var scmDataFilteringProfileGet = Scm.Index.GetDataFilteringProfile.Invoke(new()
         ///     {
         ///         Id = "d50c57e4-3a3e-419e-bd41-33fdd1c56a32",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Replace the ID with the UUID of the SCM Data filtering profile you want to find.
-        ///     var scmDataFilteringProfileGet = Scm.GetDataFilteringProfile.Invoke(new()
+        ///     var scmDataFilteringProfileGet = Scm.Index.GetDataFilteringProfile.Invoke(new()
         ///     {
         ///         Id = "d50c57e4-3a3e-419e-bd41-33fdd1c56a32",
         ///     });

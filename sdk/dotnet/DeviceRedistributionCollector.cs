@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var layer3Setting = new Scm.EthernetInterface("layer3_setting", new()
+    ///     var layer3Setting = new Scm.Index.EthernetInterface("layer3_setting", new()
     ///     {
     ///         Name = "$layer3_setting",
     ///         Comment = "Managed by Pulumi",
@@ -42,7 +42,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var drcSettings = new Scm.DeviceRedistributionCollector("drc_settings", new()
+    ///     var drcSettings = new Scm.Index.DeviceRedistributionCollector("drc_settings", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         RedistributionCollector = new Scm.Inputs.DeviceRedistributionCollectorRedistributionCollectorArgs

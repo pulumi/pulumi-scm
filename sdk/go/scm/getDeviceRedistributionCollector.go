@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			settingsData, err := scm.LookupDeviceRedistributionCollector(ctx, &scm.LookupDeviceRedistributionCollectorArgs{
+//			settingsData, err := scm.GetDeviceRedistributionCollector(ctx, &scm.LookupDeviceRedistributionCollectorArgs{
 //				Id: "8c1f7d95-83bd-4ae6-877c-89e1a212ef14",
 //			}, nil)
 //			if err != nil {

@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmLogForwardingProfile1 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_1", new()
+    ///     var scmLogForwardingProfile1 = new Scm.Index.LogForwardingProfile("scm_log_forwarding_profile_1", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm-log-fowarding-profile-1",
@@ -37,7 +37,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmLogForwardingProfile2 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_2", new()
+    ///     var scmLogForwardingProfile2 = new Scm.Index.LogForwardingProfile("scm_log_forwarding_profile_2", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm-log-fowarding-profile-2",
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmLogForwardingProfile3 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_3", new()
+    ///     var scmLogForwardingProfile3 = new Scm.Index.LogForwardingProfile("scm_log_forwarding_profile_3", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm-log-fowarding-profile-3",
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmLogForwardingProfile4 = new Scm.LogForwardingProfile("scm_log_forwarding_profile_4", new()
+    ///     var scmLogForwardingProfile4 = new Scm.Index.LogForwardingProfile("scm_log_forwarding_profile_4", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm-log-fowarding-profile-4",

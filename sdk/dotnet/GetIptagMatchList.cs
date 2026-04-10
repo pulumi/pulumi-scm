@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the iptag match list by its ID.
-        ///     var iptagMatchListDs = Scm.GetIptagMatchList.Invoke(new()
+        ///     var iptagMatchListDs = Scm.Index.GetIptagMatchList.Invoke(new()
         ///     {
         ///         Id = "108dfdb1-0723-497d-9352-50642b231b4e",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the iptag match list by its ID.
-        ///     var iptagMatchListDs = Scm.GetIptagMatchList.Invoke(new()
+        ///     var iptagMatchListDs = Scm.Index.GetIptagMatchList.Invoke(new()
         ///     {
         ///         Id = "108dfdb1-0723-497d-9352-50642b231b4e",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the iptag match list by its ID.
-        ///     var iptagMatchListDs = Scm.GetIptagMatchList.Invoke(new()
+        ///     var iptagMatchListDs = Scm.Index.GetIptagMatchList.Invoke(new()
         ///     {
         ///         Id = "108dfdb1-0723-497d-9352-50642b231b4e",
         ///     });

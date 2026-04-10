@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single SCM SAML Server Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the SCM SAML Server Profile you want to find.
-//			scmSamlServerProf, err := scm.LookupSamlServerProfile(ctx, &scm.LookupSamlServerProfileArgs{
+//			scmSamlServerProf, err := scm.GetSamlServerProfile(ctx, &scm.LookupSamlServerProfileArgs{
 //				Id: "a17abcfc-d37d-4b8a-bb09-102ffdc3abef",
 //			}, nil)
 //			if err != nil {

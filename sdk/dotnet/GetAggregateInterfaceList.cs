@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all aggregate interfaces
-        ///     var allAggregateInterfaces = Scm.GetAggregateInterfaceList.Invoke(new()
+        ///     var allAggregateInterfaces = Scm.Index.GetAggregateInterfaceList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all aggregate interfaces
-        ///     var allAggregateInterfaces = Scm.GetAggregateInterfaceList.Invoke(new()
+        ///     var allAggregateInterfaces = Scm.Index.GetAggregateInterfaceList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all aggregate interfaces
-        ///     var allAggregateInterfaces = Scm.GetAggregateInterfaceList.Invoke(new()
+        ///     var allAggregateInterfaces = Scm.Index.GetAggregateInterfaceList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });

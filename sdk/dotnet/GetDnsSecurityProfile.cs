@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM DNS Security Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM DNS Profile you want to find.
-        ///     var scmDnsProfile = Scm.GetDnsSecurityProfile.Invoke(new()
+        ///     var scmDnsProfile = Scm.Index.GetDnsSecurityProfile.Invoke(new()
         ///     {
         ///         Id = "18607c90-22fa-4627-8741-f0584d1fa7d6",
         ///     });
@@ -65,7 +65,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM DNS Security Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM DNS Profile you want to find.
-        ///     var scmDnsProfile = Scm.GetDnsSecurityProfile.Invoke(new()
+        ///     var scmDnsProfile = Scm.Index.GetDnsSecurityProfile.Invoke(new()
         ///     {
         ///         Id = "18607c90-22fa-4627-8741-f0584d1fa7d6",
         ///     });
@@ -102,7 +102,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single SCM DNS Security Profile object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the SCM DNS Profile you want to find.
-        ///     var scmDnsProfile = Scm.GetDnsSecurityProfile.Invoke(new()
+        ///     var scmDnsProfile = Scm.Index.GetDnsSecurityProfile.Invoke(new()
         ///     {
         ///         Id = "18607c90-22fa-4627-8741-f0584d1fa7d6",
         ///     });

@@ -25,13 +25,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "All" folder. [cite: 2]
-        ///     var allSharedDugs = Scm.GetDynamicUserGroupList.Invoke(new()
+        ///     var allSharedDugs = Scm.Index.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // This data source block shows an example of pagination.
-        ///     var paginatedDugsExample = Scm.GetDynamicUserGroupList.Invoke(new()
+        ///     var paginatedDugsExample = Scm.Index.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -68,13 +68,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "All" folder. [cite: 2]
-        ///     var allSharedDugs = Scm.GetDynamicUserGroupList.Invoke(new()
+        ///     var allSharedDugs = Scm.Index.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // This data source block shows an example of pagination.
-        ///     var paginatedDugsExample = Scm.GetDynamicUserGroupList.Invoke(new()
+        ///     var paginatedDugsExample = Scm.Index.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -111,13 +111,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "All" folder. [cite: 2]
-        ///     var allSharedDugs = Scm.GetDynamicUserGroupList.Invoke(new()
+        ///     var allSharedDugs = Scm.Index.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // This data source block shows an example of pagination.
-        ///     var paginatedDugsExample = Scm.GetDynamicUserGroupList.Invoke(new()
+        ///     var paginatedDugsExample = Scm.Index.GetDynamicUserGroupList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,

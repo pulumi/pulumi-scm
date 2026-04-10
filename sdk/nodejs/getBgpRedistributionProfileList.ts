@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * const allBgpRedistributionProfiles = scm.getBgpRedistributionProfileList({
  *     folder: "ngfw-shared",
  * });
- * export const scmBgpRedistributionProfileList = allBgpRedistributionProfiles.then(allBgpRedistributionProfiles => .reduce((__obj, profile) => ({ ...__obj, [profile.id]: profile })));
+ * export const scmBgpRedistributionProfileList = allBgpRedistributionProfiles.then(allBgpRedistributionProfiles => .reduce((__obj, profile) => ({ ...__obj, [profile.id]: profile }), {}));
  * ```
  */
 export function getBgpRedistributionProfileList(args?: GetBgpRedistributionProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetBgpRedistributionProfileListResult> {
@@ -123,7 +123,7 @@ export interface GetBgpRedistributionProfileListResult {
  * const allBgpRedistributionProfiles = scm.getBgpRedistributionProfileList({
  *     folder: "ngfw-shared",
  * });
- * export const scmBgpRedistributionProfileList = allBgpRedistributionProfiles.then(allBgpRedistributionProfiles => .reduce((__obj, profile) => ({ ...__obj, [profile.id]: profile })));
+ * export const scmBgpRedistributionProfileList = allBgpRedistributionProfiles.then(allBgpRedistributionProfiles => .reduce((__obj, profile) => ({ ...__obj, [profile.id]: profile }), {}));
  * ```
  */
 export function getBgpRedistributionProfileListOutput(args?: GetBgpRedistributionProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBgpRedistributionProfileListResult> {

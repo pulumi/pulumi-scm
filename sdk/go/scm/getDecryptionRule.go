@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// We use the ID from the resource created above.
-//			singleRuleById, err := scm.LookupDecryptionRule(ctx, &scm.LookupDecryptionRuleArgs{
+//			singleRuleById, err := scm.GetDecryptionRule(ctx, &scm.LookupDecryptionRuleArgs{
 //				Id: "b3544acb-fc55-4c6f-921d-4128b5a1d135",
 //			}, nil)
 //			if err != nil {

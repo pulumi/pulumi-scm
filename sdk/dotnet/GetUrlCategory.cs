@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single URL Category object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the URL Category you want to find.
-        ///     var example = Scm.GetUrlCategory.Invoke(new()
+        ///     var example = Scm.Index.GetUrlCategory.Invoke(new()
         ///     {
         ///         Id = "5ae04e1a-bc7b-4ea3-99bb-86de23886b45",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single URL Category object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the URL Category you want to find.
-        ///     var example = Scm.GetUrlCategory.Invoke(new()
+        ///     var example = Scm.Index.GetUrlCategory.Invoke(new()
         ///     {
         ///         Id = "5ae04e1a-bc7b-4ea3-99bb-86de23886b45",
         ///     });
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         ///     // Data source to retrieve a single URL Category object by its ID.
         ///     //
         ///     // Replace the ID with the UUID of the URL Category you want to find.
-        ///     var example = Scm.GetUrlCategory.Invoke(new()
+        ///     var example = Scm.Index.GetUrlCategory.Invoke(new()
         ///     {
         ///         Id = "5ae04e1a-bc7b-4ea3-99bb-86de23886b45",
         ///     });

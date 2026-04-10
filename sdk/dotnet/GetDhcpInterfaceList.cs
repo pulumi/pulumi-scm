@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var pagedInterfaceList = Scm.GetDhcpInterfaceList.Invoke(new()
+        ///     var pagedInterfaceList = Scm.Index.GetDhcpInterfaceList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,
@@ -57,7 +57,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var pagedInterfaceList = Scm.GetDhcpInterfaceList.Invoke(new()
+        ///     var pagedInterfaceList = Scm.Index.GetDhcpInterfaceList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,
@@ -90,7 +90,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var pagedInterfaceList = Scm.GetDhcpInterfaceList.Invoke(new()
+        ///     var pagedInterfaceList = Scm.Index.GetDhcpInterfaceList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,

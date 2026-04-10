@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define a data source for listing NAT rules
-        ///     var pagedNatRulesList = Scm.GetNatRuleList.Invoke(new()
+        ///     var pagedNatRulesList = Scm.Index.GetNatRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define a data source for listing NAT rules
-        ///     var pagedNatRulesList = Scm.GetNatRuleList.Invoke(new()
+        ///     var pagedNatRulesList = Scm.Index.GetNatRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define a data source for listing NAT rules
-        ///     var pagedNatRulesList = Scm.GetNatRuleList.Invoke(new()
+        ///     var pagedNatRulesList = Scm.Index.GetNatRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 10,

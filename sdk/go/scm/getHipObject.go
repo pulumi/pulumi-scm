@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up a single HIP Profile by its ID.
-//			scmHipObjectDs, err := scm.LookupHipObject(ctx, &scm.LookupHipObjectArgs{
+//			scmHipObjectDs, err := scm.GetHipObject(ctx, &scm.LookupHipObjectArgs{
 //				Id: "aba16b3c-8d43-4bac-aa76-572f1d36dbc5",
 //			}, nil)
 //			if err != nil {

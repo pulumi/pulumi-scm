@@ -22,13 +22,13 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var scmFileBlockingBase = new Scm.FileBlockingProfile("scm_file_blocking_base", new()
+    ///     var scmFileBlockingBase = new Scm.Index.FileBlockingProfile("scm_file_blocking_base", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "base_file_blocking",
     ///     });
     /// 
-    ///     var scmFileBlockingProfile = new Scm.FileBlockingProfile("scm_file_blocking_profile", new()
+    ///     var scmFileBlockingProfile = new Scm.Index.FileBlockingProfile("scm_file_blocking_profile", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "file_blocking_profile_complete",

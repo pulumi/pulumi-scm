@@ -25,7 +25,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates an empty bgp filtering profile
     ///     //
-    ///     var scmBgpFilteringProfile = new Scm.BgpFilteringProfile("scm_bgp_filtering_profile", new()
+    ///     var scmBgpFilteringProfile = new Scm.Index.BgpFilteringProfile("scm_bgp_filtering_profile", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_bgp_filtering_profile",
@@ -35,7 +35,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates various resources used for scm_bgp_filtering_profile_complex
     ///     //
-    ///     var scmPlInbound = new Scm.RoutePrefixList("scm_pl_inbound", new()
+    ///     var scmPlInbound = new Scm.Index.RoutePrefixList("scm_pl_inbound", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_pl_inbound",
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmRmInbound = new Scm.BgpRouteMap("scm_rm_inbound", new()
+    ///     var scmRmInbound = new Scm.Index.BgpRouteMap("scm_rm_inbound", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_rm_inbound",
@@ -99,7 +99,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmPlOutbound = new Scm.RoutePrefixList("scm_pl_outbound", new()
+    ///     var scmPlOutbound = new Scm.Index.RoutePrefixList("scm_pl_outbound", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_pl_outbound",
@@ -125,7 +125,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var scmRmOutbound = new Scm.BgpRouteMap("scm_rm_outbound", new()
+    ///     var scmRmOutbound = new Scm.Index.BgpRouteMap("scm_rm_outbound", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_rm_outbound",
@@ -166,7 +166,7 @@ namespace Pulumi.Scm
     ///     //
     ///     // Creates a complex filtering profile that utilises previously created FL, PL and RM
     ///     //
-    ///     var scmBgpFilteringProfileComplex = new Scm.BgpFilteringProfile("scm_bgp_filtering_profile_complex", new()
+    ///     var scmBgpFilteringProfileComplex = new Scm.Index.BgpFilteringProfile("scm_bgp_filtering_profile_complex", new()
     ///     {
     ///         Folder = "ngfw-shared",
     ///         Name = "scm_bgp_filtering_profile_complex",

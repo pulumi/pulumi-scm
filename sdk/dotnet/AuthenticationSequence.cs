@@ -22,7 +22,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var testUiExample = new Scm.AuthenticationProfile("test_ui_example", new()
+    ///     var testUiExample = new Scm.Index.AuthenticationProfile("test_ui_example", new()
     ///     {
     ///         Name = "Test_UI",
     ///         Folder = "ngfw-shared",
@@ -47,7 +47,7 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
-    ///     var testSequence = new Scm.AuthenticationSequence("test_sequence", new()
+    ///     var testSequence = new Scm.Index.AuthenticationSequence("test_sequence", new()
     ///     {
     ///         Name = "test_auth_sequence_1",
     ///         Folder = "ngfw-shared",
@@ -58,7 +58,7 @@ namespace Pulumi.Scm
     ///         UseDomainFindProfile = false,
     ///     });
     /// 
-    ///     var testSequence2 = new Scm.AuthenticationSequence("test_sequence_2", new()
+    ///     var testSequence2 = new Scm.Index.AuthenticationSequence("test_sequence_2", new()
     ///     {
     ///         Name = "test_auth_sequence_2",
     ///         Folder = "ngfw-shared",

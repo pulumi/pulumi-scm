@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up ethernet interface by its ID.
-        ///     var scmL3IntfStaticDs = Scm.GetEthernetInterface.Invoke(new()
+        ///     var scmL3IntfStaticDs = Scm.Index.GetEthernetInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f2",
         ///     });
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up ethernet interface by its ID.
-        ///     var scmL3IntfStaticDs = Scm.GetEthernetInterface.Invoke(new()
+        ///     var scmL3IntfStaticDs = Scm.Index.GetEthernetInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f2",
         ///     });
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up ethernet interface by its ID.
-        ///     var scmL3IntfStaticDs = Scm.GetEthernetInterface.Invoke(new()
+        ///     var scmL3IntfStaticDs = Scm.Index.GetEthernetInterface.Invoke(new()
         ///     {
         ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f2",
         ///     });

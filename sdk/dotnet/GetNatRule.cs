@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define the data source (the item to be retrieved via API GET)
-        ///     var dnatExternalWebTestGet = Scm.GetNatRule.Invoke(new()
+        ///     var dnatExternalWebTestGet = Scm.Index.GetNatRule.Invoke(new()
         ///     {
         ///         Id = "574717ac-8a63-4b6f-bf77-f05a66ba6322",
         ///     });
@@ -60,7 +60,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define the data source (the item to be retrieved via API GET)
-        ///     var dnatExternalWebTestGet = Scm.GetNatRule.Invoke(new()
+        ///     var dnatExternalWebTestGet = Scm.Index.GetNatRule.Invoke(new()
         ///     {
         ///         Id = "574717ac-8a63-4b6f-bf77-f05a66ba6322",
         ///     });
@@ -95,7 +95,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Define the data source (the item to be retrieved via API GET)
-        ///     var dnatExternalWebTestGet = Scm.GetNatRule.Invoke(new()
+        ///     var dnatExternalWebTestGet = Scm.Index.GetNatRule.Invoke(new()
         ///     {
         ///         Id = "574717ac-8a63-4b6f-bf77-f05a66ba6322",
         ///     });

@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all logical routers
-        ///     var allLogicalRouters = Scm.GetLogicalRouterList.Invoke(new()
+        ///     var allLogicalRouters = Scm.Index.GetLogicalRouterList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///         Limit = 100,
@@ -55,7 +55,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all logical routers
-        ///     var allLogicalRouters = Scm.GetLogicalRouterList.Invoke(new()
+        ///     var allLogicalRouters = Scm.Index.GetLogicalRouterList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///         Limit = 100,
@@ -85,7 +85,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all logical routers
-        ///     var allLogicalRouters = Scm.GetLogicalRouterList.Invoke(new()
+        ///     var allLogicalRouters = Scm.Index.GetLogicalRouterList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///         Limit = 100,

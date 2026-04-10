@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up BGP Auth Profile by its ID.
-//			scmBgpAuthProfileDs, err := scm.LookupBgpAuthProfile(ctx, &scm.LookupBgpAuthProfileArgs{
+//			scmBgpAuthProfileDs, err := scm.GetBgpAuthProfile(ctx, &scm.LookupBgpAuthProfileArgs{
 //				Id: "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
 //			}, nil)
 //			if err != nil {

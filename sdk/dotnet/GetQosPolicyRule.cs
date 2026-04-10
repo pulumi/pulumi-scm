@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var singleRuleById = Scm.GetQosPolicyRule.Invoke(new()
+        ///     var singleRuleById = Scm.Index.GetQosPolicyRule.Invoke(new()
         ///     {
         ///         Id = "fbc3fdb2-8513-4949-be8a-f1be03b492da",
         ///     });
@@ -52,7 +52,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var singleRuleById = Scm.GetQosPolicyRule.Invoke(new()
+        ///     var singleRuleById = Scm.Index.GetQosPolicyRule.Invoke(new()
         ///     {
         ///         Id = "fbc3fdb2-8513-4949-be8a-f1be03b492da",
         ///     });
@@ -80,7 +80,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var singleRuleById = Scm.GetQosPolicyRule.Invoke(new()
+        ///     var singleRuleById = Scm.Index.GetQosPolicyRule.Invoke(new()
         ///     {
         ///         Id = "fbc3fdb2-8513-4949-be8a-f1be03b492da",
         ///     });

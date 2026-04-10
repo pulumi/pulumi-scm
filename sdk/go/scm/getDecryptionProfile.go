@@ -30,7 +30,7 @@ import (
 //			// Data source to retrieve a single SCM Decryption Profile object by its ID.
 //			//
 //			// Replace the ID with the UUID of the SCM Decryption Profile you want to find.
-//			scmDpProfile, err := scm.LookupDecryptionProfile(ctx, &scm.LookupDecryptionProfileArgs{
+//			scmDpProfile, err := scm.GetDecryptionProfile(ctx, &scm.LookupDecryptionProfileArgs{
 //				Id: "c7629092-d286-400b-ba3f-1d57b8065645",
 //			}, nil)
 //			if err != nil {

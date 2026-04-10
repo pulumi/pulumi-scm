@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the logical router by its ID.
-        ///     var scmLogicalRouterDs = Scm.GetLogicalRouter.Invoke(new()
+        ///     var scmLogicalRouterDs = Scm.Index.GetLogicalRouter.Invoke(new()
         ///     {
         ///         Id = "b7c6f00b-b20e-4073-af1c-1f42863a5983",
         ///     });
@@ -61,7 +61,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the logical router by its ID.
-        ///     var scmLogicalRouterDs = Scm.GetLogicalRouter.Invoke(new()
+        ///     var scmLogicalRouterDs = Scm.Index.GetLogicalRouter.Invoke(new()
         ///     {
         ///         Id = "b7c6f00b-b20e-4073-af1c-1f42863a5983",
         ///     });
@@ -97,7 +97,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the logical router by its ID.
-        ///     var scmLogicalRouterDs = Scm.GetLogicalRouter.Invoke(new()
+        ///     var scmLogicalRouterDs = Scm.Index.GetLogicalRouter.Invoke(new()
         ///     {
         ///         Id = "b7c6f00b-b20e-4073-af1c-1f42863a5983",
         ///     });

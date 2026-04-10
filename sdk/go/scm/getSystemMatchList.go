@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the system match list by its ID.
-//			systemMatchListDs, err := scm.LookupSystemMatchList(ctx, &scm.LookupSystemMatchListArgs{
+//			systemMatchListDs, err := scm.GetSystemMatchList(ctx, &scm.LookupSystemMatchListArgs{
 //				Id: "dc61ea2f-e7aa-4e86-a742-aa8b2aaf4bf2",
 //			}, nil)
 //			if err != nil {

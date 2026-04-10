@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var pagedRulesList = Scm.GetQosPolicyRuleList.Invoke(new()
+        ///     var pagedRulesList = Scm.Index.GetQosPolicyRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Offset = 10,
@@ -58,7 +58,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var pagedRulesList = Scm.GetQosPolicyRuleList.Invoke(new()
+        ///     var pagedRulesList = Scm.Index.GetQosPolicyRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Offset = 10,
@@ -92,7 +92,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var pagedRulesList = Scm.GetQosPolicyRuleList.Invoke(new()
+        ///     var pagedRulesList = Scm.Index.GetQosPolicyRuleList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Offset = 10,

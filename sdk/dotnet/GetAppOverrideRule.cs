@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var singleRuleById = Scm.GetAppOverrideRule.Invoke(new()
+        ///     var singleRuleById = Scm.Index.GetAppOverrideRule.Invoke(new()
         ///     {
         ///         Id = "8c285335-3c95-47c9-9bbd-829105b4a15c",
         ///     });
@@ -52,7 +52,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var singleRuleById = Scm.GetAppOverrideRule.Invoke(new()
+        ///     var singleRuleById = Scm.Index.GetAppOverrideRule.Invoke(new()
         ///     {
         ///         Id = "8c285335-3c95-47c9-9bbd-829105b4a15c",
         ///     });
@@ -80,7 +80,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var singleRuleById = Scm.GetAppOverrideRule.Invoke(new()
+        ///     var singleRuleById = Scm.Index.GetAppOverrideRule.Invoke(new()
         ///     {
         ///         Id = "8c285335-3c95-47c9-9bbd-829105b4a15c",
         ///     });

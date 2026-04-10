@@ -24,7 +24,7 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Scm.BgpRouting("example", new()
+    ///     var example = new Scm.Index.BgpRouting("example", new()
     ///     {
     ///         BackboneRouting = "no-asymmetric-routing",
     ///         AcceptRouteOverSc = true,

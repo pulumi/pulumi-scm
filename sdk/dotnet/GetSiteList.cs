@@ -24,7 +24,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSites = Scm.GetSiteList.Invoke(new()
+        ///     var allSites = Scm.Index.GetSiteList.Invoke(new()
         ///     {
         ///         Limit = 50,
         ///         Folder = "Remote Networks",
@@ -57,7 +57,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSites = Scm.GetSiteList.Invoke(new()
+        ///     var allSites = Scm.Index.GetSiteList.Invoke(new()
         ///     {
         ///         Limit = 50,
         ///         Folder = "Remote Networks",
@@ -90,7 +90,7 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var allSites = Scm.GetSiteList.Invoke(new()
+        ///     var allSites = Scm.Index.GetSiteList.Invoke(new()
         ///     {
         ///         Limit = 50,
         ///         Folder = "Remote Networks",

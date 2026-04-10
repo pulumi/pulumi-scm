@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up vlan interface by its ID.
-        ///     var scmVlanInterfaceDs = Scm.GetVlanInterface.Invoke(new()
+        ///     var scmVlanInterfaceDs = Scm.Index.GetVlanInterface.Invoke(new()
         ///     {
         ///         Id = "3f9382a3-5c93-46d9-ae06-a632c2d9ce0c",
         ///     });
@@ -62,7 +62,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up vlan interface by its ID.
-        ///     var scmVlanInterfaceDs = Scm.GetVlanInterface.Invoke(new()
+        ///     var scmVlanInterfaceDs = Scm.Index.GetVlanInterface.Invoke(new()
         ///     {
         ///         Id = "3f9382a3-5c93-46d9-ae06-a632c2d9ce0c",
         ///     });
@@ -99,7 +99,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up vlan interface by its ID.
-        ///     var scmVlanInterfaceDs = Scm.GetVlanInterface.Invoke(new()
+        ///     var scmVlanInterfaceDs = Scm.Index.GetVlanInterface.Invoke(new()
         ///     {
         ///         Id = "3f9382a3-5c93-46d9-ae06-a632c2d9ce0c",
         ///     });

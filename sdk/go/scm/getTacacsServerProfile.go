@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Look up the multi-tag address object by its ID.
-//			scmTacacsServerProfile5Ds, err := scm.LookupTacacsServerProfile(ctx, &scm.LookupTacacsServerProfileArgs{
+//			scmTacacsServerProfile5Ds, err := scm.GetTacacsServerProfile(ctx, &scm.LookupTacacsServerProfileArgs{
 //				Id: "1967a784-402b-4c20-aa48-aab64d73cc06",
 //			}, nil)
 //			if err != nil {

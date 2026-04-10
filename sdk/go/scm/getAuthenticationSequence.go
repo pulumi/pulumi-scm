@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			sequenceData, err := scm.LookupAuthenticationSequence(ctx, &scm.LookupAuthenticationSequenceArgs{
+//			sequenceData, err := scm.GetAuthenticationSequence(ctx, &scm.LookupAuthenticationSequenceArgs{
 //				Id: "1ee14ac7-760c-401f-8dbc-c887db16106a",
 //			}, nil)
 //			if err != nil {

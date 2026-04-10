@@ -26,7 +26,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Fetch a list of all application objects.
         ///     // This data source will call the "List" API endpoint.
-        ///     var allApps = Scm.GetApplicationList.Invoke(new()
+        ///     var allApps = Scm.Index.GetApplicationList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Fetch a list of all application objects.
         ///     // This data source will call the "List" API endpoint.
-        ///     var allApps = Scm.GetApplicationList.Invoke(new()
+        ///     var allApps = Scm.Index.GetApplicationList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
@@ -86,7 +86,7 @@ namespace Pulumi.Scm
         /// {
         ///     // Fetch a list of all application objects.
         ///     // This data source will call the "List" API endpoint.
-        ///     var allApps = Scm.GetApplicationList.Invoke(new()
+        ///     var allApps = Scm.Index.GetApplicationList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });

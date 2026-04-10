@@ -25,13 +25,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to fetch all services in the "All" folder.
-        ///     var allSharedServices = Scm.GetServiceList.Invoke(new()
+        ///     var allSharedServices = Scm.Index.GetServiceList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 services.
-        ///     var paginatedServices = Scm.GetServiceList.Invoke(new()
+        ///     var paginatedServices = Scm.Index.GetServiceList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -69,13 +69,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to fetch all services in the "All" folder.
-        ///     var allSharedServices = Scm.GetServiceList.Invoke(new()
+        ///     var allSharedServices = Scm.Index.GetServiceList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 services.
-        ///     var paginatedServices = Scm.GetServiceList.Invoke(new()
+        ///     var paginatedServices = Scm.Index.GetServiceList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,
@@ -113,13 +113,13 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Data source to fetch all services in the "All" folder.
-        ///     var allSharedServices = Scm.GetServiceList.Invoke(new()
+        ///     var allSharedServices = Scm.Index.GetServiceList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 services.
-        ///     var paginatedServices = Scm.GetServiceList.Invoke(new()
+        ///     var paginatedServices = Scm.Index.GetServiceList.Invoke(new()
         ///     {
         ///         Folder = "All",
         ///         Limit = 5,

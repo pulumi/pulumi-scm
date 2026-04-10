@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all layer2 sub-interfaces
-        ///     var allLayer2Subinterfaces = Scm.GetLayer2SubinterfaceList.Invoke(new()
+        ///     var allLayer2Subinterfaces = Scm.Index.GetLayer2SubinterfaceList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all layer2 sub-interfaces
-        ///     var allLayer2Subinterfaces = Scm.GetLayer2SubinterfaceList.Invoke(new()
+        ///     var allLayer2Subinterfaces = Scm.Index.GetLayer2SubinterfaceList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Fetch a list of all layer2 sub-interfaces
-        ///     var allLayer2Subinterfaces = Scm.GetLayer2SubinterfaceList.Invoke(new()
+        ///     var allLayer2Subinterfaces = Scm.Index.GetLayer2SubinterfaceList.Invoke(new()
         ///     {
         ///         Folder = "ngfw-shared",
         ///     });
