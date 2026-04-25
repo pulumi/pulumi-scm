@@ -771,6 +771,48 @@ __all__ = [
     'ExternalDynamicListTypeUrlRecurringWeeklyArgsDict',
     'FileBlockingProfileRuleArgs',
     'FileBlockingProfileRuleArgsDict',
+    'ForwardingProfileDestinationFqdnArgs',
+    'ForwardingProfileDestinationFqdnArgsDict',
+    'ForwardingProfileDestinationIpAddressArgs',
+    'ForwardingProfileDestinationIpAddressArgsDict',
+    'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs',
+    'ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict',
+    'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs',
+    'ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict',
+    'ForwardingProfileRegionalAndCustomProxyProxy1Args',
+    'ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict',
+    'ForwardingProfileRegionalAndCustomProxyProxy2Args',
+    'ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict',
+    'ForwardingProfileTypeArgs',
+    'ForwardingProfileTypeArgsDict',
+    'ForwardingProfileTypeGlobalProtectProxyArgs',
+    'ForwardingProfileTypeGlobalProtectProxyArgsDict',
+    'ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs',
+    'ForwardingProfileTypeGlobalProtectProxyBlockRuleArgsDict',
+    'ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs',
+    'ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgsDict',
+    'ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs',
+    'ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgsDict',
+    'ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs',
+    'ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgsDict',
+    'ForwardingProfileTypePacFileArgs',
+    'ForwardingProfileTypePacFileArgsDict',
+    'ForwardingProfileTypePacFileBlockRuleArgs',
+    'ForwardingProfileTypePacFileBlockRuleArgsDict',
+    'ForwardingProfileTypePacFileBlockRuleAllowTcpArgs',
+    'ForwardingProfileTypePacFileBlockRuleAllowTcpArgsDict',
+    'ForwardingProfileTypePacFileBlockRuleAllowUdpArgs',
+    'ForwardingProfileTypePacFileBlockRuleAllowUdpArgsDict',
+    'ForwardingProfileTypePacFileForwardingRuleArgs',
+    'ForwardingProfileTypePacFileForwardingRuleArgsDict',
+    'ForwardingProfileTypeZtnaAgentArgs',
+    'ForwardingProfileTypeZtnaAgentArgsDict',
+    'ForwardingProfileTypeZtnaAgentBlockRuleArgs',
+    'ForwardingProfileTypeZtnaAgentBlockRuleArgsDict',
+    'ForwardingProfileTypeZtnaAgentForwardingRuleArgs',
+    'ForwardingProfileTypeZtnaAgentForwardingRuleArgsDict',
+    'ForwardingProfileUserLocationInternalHostDetectionArgs',
+    'ForwardingProfileUserLocationInternalHostDetectionArgsDict',
     'GeneralSettingGeneralArgs',
     'GeneralSettingGeneralArgsDict',
     'GeneralSettingGeneralGeoLocationArgs',
@@ -25888,6 +25930,1598 @@ class FileBlockingProfileRuleArgs:
     @name.setter
     def name(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "name", value)
+
+
+class ForwardingProfileDestinationFqdnArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Port number for fqdn based destination
+    """
+
+@pulumi.input_type
+class ForwardingProfileDestinationFqdnArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str],
+                 port: Optional[pulumi.Input[_builtins.int]] = None):
+        """
+        :param pulumi.Input[_builtins.str] name: alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
+        :param pulumi.Input[_builtins.int] port: Port number for fqdn based destination
+        """
+        pulumi.set(__self__, "name", name)
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Port number for fqdn based destination
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "port", value)
+
+
+class ForwardingProfileDestinationIpAddressArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    IP address with wildcards and CIDR notation support
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Port number for IP address based destination
+    """
+
+@pulumi.input_type
+class ForwardingProfileDestinationIpAddressArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str],
+                 port: Optional[pulumi.Input[_builtins.int]] = None):
+        """
+        :param pulumi.Input[_builtins.str] name: IP address with wildcards and CIDR notation support
+        :param pulumi.Input[_builtins.int] port: Port number for IP address based destination
+        """
+        pulumi.set(__self__, "name", name)
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        IP address with wildcards and CIDR notation support
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Port number for IP address based destination
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "port", value)
+
+
+class ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whether this connectivity method is enabled for use in the proxy configuration
+    """
+
+@pulumi.input_type
+class ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str],
+                 enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+        """
+        :param pulumi.Input[_builtins.str] name: Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+        :param pulumi.Input[_builtins.bool] enabled: Indicates whether this connectivity method is enabled for use in the proxy configuration
+        """
+        pulumi.set(__self__, "name", name)
+        if enabled is not None:
+            pulumi.set(__self__, "enabled", enabled)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Indicates whether this connectivity method is enabled for use in the proxy configuration
+        """
+        return pulumi.get(self, "enabled")
+
+    @enabled.setter
+    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enabled", value)
+
+
+class ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    One of the region from 'americas', 'europe', 'apac'
+    """
+    locations: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Add list of locations separated by space, in that region
+    """
+
+@pulumi.input_type
+class ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str],
+                 locations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[_builtins.str] name: One of the region from 'americas', 'europe', 'apac'
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] locations: Add list of locations separated by space, in that region
+        """
+        pulumi.set(__self__, "name", name)
+        if locations is not None:
+            pulumi.set(__self__, "locations", locations)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        One of the region from 'americas', 'europe', 'apac'
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def locations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Add list of locations separated by space, in that region
+        """
+        return pulumi.get(self, "locations")
+
+    @locations.setter
+    def locations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "locations", value)
+
+
+class ForwardingProfileRegionalAndCustomProxyProxy1ArgsDict(TypedDict):
+    fqdn: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    fqdn of the primary proxy server (supports wildcards and alphanumeric characters with dots, hyphens, and underscores)
+    """
+    location: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Geographic or network location identifier for the primary proxy server
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    port number for primary proxy
+    """
+
+@pulumi.input_type
+class ForwardingProfileRegionalAndCustomProxyProxy1Args:
+    def __init__(__self__, *,
+                 fqdn: Optional[pulumi.Input[_builtins.str]] = None,
+                 location: Optional[pulumi.Input[_builtins.str]] = None,
+                 port: Optional[pulumi.Input[_builtins.int]] = None):
+        """
+        :param pulumi.Input[_builtins.str] fqdn: fqdn of the primary proxy server (supports wildcards and alphanumeric characters with dots, hyphens, and underscores)
+        :param pulumi.Input[_builtins.str] location: Geographic or network location identifier for the primary proxy server
+        :param pulumi.Input[_builtins.int] port: port number for primary proxy
+        """
+        if fqdn is not None:
+            pulumi.set(__self__, "fqdn", fqdn)
+        if location is not None:
+            pulumi.set(__self__, "location", location)
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @_builtins.property
+    @pulumi.getter
+    def fqdn(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        fqdn of the primary proxy server (supports wildcards and alphanumeric characters with dots, hyphens, and underscores)
+        """
+        return pulumi.get(self, "fqdn")
+
+    @fqdn.setter
+    def fqdn(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "fqdn", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def location(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Geographic or network location identifier for the primary proxy server
+        """
+        return pulumi.get(self, "location")
+
+    @location.setter
+    def location(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "location", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        port number for primary proxy
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "port", value)
+
+
+class ForwardingProfileRegionalAndCustomProxyProxy2ArgsDict(TypedDict):
+    fqdn: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Fqdn of the secondary (backup) proxy server used for failover scenarios
+    """
+    location: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Geographic or network location identifier for the secondary proxy server
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    port number for secondary proxy
+    """
+
+@pulumi.input_type
+class ForwardingProfileRegionalAndCustomProxyProxy2Args:
+    def __init__(__self__, *,
+                 fqdn: Optional[pulumi.Input[_builtins.str]] = None,
+                 location: Optional[pulumi.Input[_builtins.str]] = None,
+                 port: Optional[pulumi.Input[_builtins.int]] = None):
+        """
+        :param pulumi.Input[_builtins.str] fqdn: Fqdn of the secondary (backup) proxy server used for failover scenarios
+        :param pulumi.Input[_builtins.str] location: Geographic or network location identifier for the secondary proxy server
+        :param pulumi.Input[_builtins.int] port: port number for secondary proxy
+        """
+        if fqdn is not None:
+            pulumi.set(__self__, "fqdn", fqdn)
+        if location is not None:
+            pulumi.set(__self__, "location", location)
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @_builtins.property
+    @pulumi.getter
+    def fqdn(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Fqdn of the secondary (backup) proxy server used for failover scenarios
+        """
+        return pulumi.get(self, "fqdn")
+
+    @fqdn.setter
+    def fqdn(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "fqdn", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def location(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Geographic or network location identifier for the secondary proxy server
+        """
+        return pulumi.get(self, "location")
+
+    @location.setter
+    def location(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "location", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        port number for secondary proxy
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "port", value)
+
+
+class ForwardingProfileTypeArgsDict(TypedDict):
+    global_protect_proxy: NotRequired[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyArgsDict']]
+    """
+    Global Protect proxy-based forwarding configuration
+    """
+    pac_file: NotRequired[pulumi.Input['ForwardingProfileTypePacFileArgsDict']]
+    """
+    PAC file based forwarding configuration
+
+    > ℹ️ **Note:** You must specify exactly one of `global_protect_proxy`, `pac_file`, and `ztna_agent`.
+    """
+    ztna_agent: NotRequired[pulumi.Input['ForwardingProfileTypeZtnaAgentArgsDict']]
+    """
+    ZTNA agent-based forwarding configuration
+
+    > ℹ️ **Note:** You must specify exactly one of `global_protect_proxy`, `pac_file`, and `ztna_agent`.
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypeArgs:
+    def __init__(__self__, *,
+                 global_protect_proxy: Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyArgs']] = None,
+                 pac_file: Optional[pulumi.Input['ForwardingProfileTypePacFileArgs']] = None,
+                 ztna_agent: Optional[pulumi.Input['ForwardingProfileTypeZtnaAgentArgs']] = None):
+        """
+        :param pulumi.Input['ForwardingProfileTypeGlobalProtectProxyArgs'] global_protect_proxy: Global Protect proxy-based forwarding configuration
+        :param pulumi.Input['ForwardingProfileTypePacFileArgs'] pac_file: PAC file based forwarding configuration
+               
+               > ℹ️ **Note:** You must specify exactly one of `global_protect_proxy`, `pac_file`, and `ztna_agent`.
+        :param pulumi.Input['ForwardingProfileTypeZtnaAgentArgs'] ztna_agent: ZTNA agent-based forwarding configuration
+               
+               > ℹ️ **Note:** You must specify exactly one of `global_protect_proxy`, `pac_file`, and `ztna_agent`.
+        """
+        if global_protect_proxy is not None:
+            pulumi.set(__self__, "global_protect_proxy", global_protect_proxy)
+        if pac_file is not None:
+            pulumi.set(__self__, "pac_file", pac_file)
+        if ztna_agent is not None:
+            pulumi.set(__self__, "ztna_agent", ztna_agent)
+
+    @_builtins.property
+    @pulumi.getter(name="globalProtectProxy")
+    def global_protect_proxy(self) -> Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyArgs']]:
+        """
+        Global Protect proxy-based forwarding configuration
+        """
+        return pulumi.get(self, "global_protect_proxy")
+
+    @global_protect_proxy.setter
+    def global_protect_proxy(self, value: Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyArgs']]):
+        pulumi.set(self, "global_protect_proxy", value)
+
+    @_builtins.property
+    @pulumi.getter(name="pacFile")
+    def pac_file(self) -> Optional[pulumi.Input['ForwardingProfileTypePacFileArgs']]:
+        """
+        PAC file based forwarding configuration
+
+        > ℹ️ **Note:** You must specify exactly one of `global_protect_proxy`, `pac_file`, and `ztna_agent`.
+        """
+        return pulumi.get(self, "pac_file")
+
+    @pac_file.setter
+    def pac_file(self, value: Optional[pulumi.Input['ForwardingProfileTypePacFileArgs']]):
+        pulumi.set(self, "pac_file", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ztnaAgent")
+    def ztna_agent(self) -> Optional[pulumi.Input['ForwardingProfileTypeZtnaAgentArgs']]:
+        """
+        ZTNA agent-based forwarding configuration
+
+        > ℹ️ **Note:** You must specify exactly one of `global_protect_proxy`, `pac_file`, and `ztna_agent`.
+        """
+        return pulumi.get(self, "ztna_agent")
+
+    @ztna_agent.setter
+    def ztna_agent(self, value: Optional[pulumi.Input['ForwardingProfileTypeZtnaAgentArgs']]):
+        pulumi.set(self, "ztna_agent", value)
+
+
+class ForwardingProfileTypeGlobalProtectProxyArgsDict(TypedDict):
+    block_rule: NotRequired[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleArgsDict']]
+    """
+    Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+    """
+    forwarding_rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgsDict']]]]
+    """
+    List of GlobalProtect proxy-based forwarding rules
+    """
+    pac_upload: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    User uploaded PAC file for Global Protect proxy-based forwarding configuration
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypeGlobalProtectProxyArgs:
+    def __init__(__self__, *,
+                 block_rule: Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs']] = None,
+                 forwarding_rules: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs']]]] = None,
+                 pac_upload: Optional[pulumi.Input[_builtins.bool]] = None):
+        """
+        :param pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs'] block_rule: Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+        :param pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs']]] forwarding_rules: List of GlobalProtect proxy-based forwarding rules
+        :param pulumi.Input[_builtins.bool] pac_upload: User uploaded PAC file for Global Protect proxy-based forwarding configuration
+        """
+        if block_rule is not None:
+            pulumi.set(__self__, "block_rule", block_rule)
+        if forwarding_rules is not None:
+            pulumi.set(__self__, "forwarding_rules", forwarding_rules)
+        if pac_upload is not None:
+            pulumi.set(__self__, "pac_upload", pac_upload)
+
+    @_builtins.property
+    @pulumi.getter(name="blockRule")
+    def block_rule(self) -> Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs']]:
+        """
+        Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+        """
+        return pulumi.get(self, "block_rule")
+
+    @block_rule.setter
+    def block_rule(self, value: Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs']]):
+        pulumi.set(self, "block_rule", value)
+
+    @_builtins.property
+    @pulumi.getter(name="forwardingRules")
+    def forwarding_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs']]]]:
+        """
+        List of GlobalProtect proxy-based forwarding rules
+        """
+        return pulumi.get(self, "forwarding_rules")
+
+    @forwarding_rules.setter
+    def forwarding_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs']]]]):
+        pulumi.set(self, "forwarding_rules", value)
+
+    @_builtins.property
+    @pulumi.getter(name="pacUpload")
+    def pac_upload(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        User uploaded PAC file for Global Protect proxy-based forwarding configuration
+        """
+        return pulumi.get(self, "pac_upload")
+
+    @pac_upload.setter
+    def pac_upload(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "pac_upload", value)
+
+
+class ForwardingProfileTypeGlobalProtectProxyBlockRuleArgsDict(TypedDict):
+    allow_tcp: NotRequired[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgsDict']]
+    """
+    TCP traffic allowlist configuration
+    """
+    allow_udp: NotRequired[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgsDict']]
+    """
+    UDP traffic allowlist configuration with location and destination support
+    """
+    enable: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable block rule
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs:
+    def __init__(__self__, *,
+                 allow_tcp: Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs']] = None,
+                 allow_udp: Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs']] = None,
+                 enable: Optional[pulumi.Input[_builtins.bool]] = None):
+        """
+        :param pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs'] allow_tcp: TCP traffic allowlist configuration
+        :param pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs'] allow_udp: UDP traffic allowlist configuration with location and destination support
+        :param pulumi.Input[_builtins.bool] enable: Enable block rule
+        """
+        if allow_tcp is not None:
+            pulumi.set(__self__, "allow_tcp", allow_tcp)
+        if allow_udp is not None:
+            pulumi.set(__self__, "allow_udp", allow_udp)
+        if enable is not None:
+            pulumi.set(__self__, "enable", enable)
+
+    @_builtins.property
+    @pulumi.getter(name="allowTcp")
+    def allow_tcp(self) -> Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs']]:
+        """
+        TCP traffic allowlist configuration
+        """
+        return pulumi.get(self, "allow_tcp")
+
+    @allow_tcp.setter
+    def allow_tcp(self, value: Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs']]):
+        pulumi.set(self, "allow_tcp", value)
+
+    @_builtins.property
+    @pulumi.getter(name="allowUdp")
+    def allow_udp(self) -> Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs']]:
+        """
+        UDP traffic allowlist configuration with location and destination support
+        """
+        return pulumi.get(self, "allow_udp")
+
+    @allow_udp.setter
+    def allow_udp(self, value: Optional[pulumi.Input['ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs']]):
+        pulumi.set(self, "allow_udp", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable block rule
+        """
+        return pulumi.get(self, "enable")
+
+    @enable.setter
+    def enable(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enable", value)
+
+
+class ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgsDict(TypedDict):
+    enable_locations: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable locations for allow-tcp
+    """
+    locations: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of user locations allowed for TCP traffic
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs:
+    def __init__(__self__, *,
+                 enable_locations: Optional[pulumi.Input[_builtins.bool]] = None,
+                 locations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[_builtins.bool] enable_locations: Enable locations for allow-tcp
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] locations: List of user locations allowed for TCP traffic
+        """
+        if enable_locations is not None:
+            pulumi.set(__self__, "enable_locations", enable_locations)
+        if locations is not None:
+            pulumi.set(__self__, "locations", locations)
+
+    @_builtins.property
+    @pulumi.getter(name="enableLocations")
+    def enable_locations(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable locations for allow-tcp
+        """
+        return pulumi.get(self, "enable_locations")
+
+    @enable_locations.setter
+    def enable_locations(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enable_locations", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def locations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        List of user locations allowed for TCP traffic
+        """
+        return pulumi.get(self, "locations")
+
+    @locations.setter
+    def locations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "locations", value)
+
+
+class ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgsDict(TypedDict):
+    destinations: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination addresses or networks allowed for UDP traffic
+    """
+    enable_destinations: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable destinations for allow-udp
+    """
+    enable_locations: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable locations for allow-udp
+    """
+    locations: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of user locations allowed for UDP traffic
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs:
+    def __init__(__self__, *,
+                 destinations: Optional[pulumi.Input[_builtins.str]] = None,
+                 enable_destinations: Optional[pulumi.Input[_builtins.bool]] = None,
+                 enable_locations: Optional[pulumi.Input[_builtins.bool]] = None,
+                 locations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[_builtins.str] destinations: Destination addresses or networks allowed for UDP traffic
+        :param pulumi.Input[_builtins.bool] enable_destinations: Enable destinations for allow-udp
+        :param pulumi.Input[_builtins.bool] enable_locations: Enable locations for allow-udp
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] locations: List of user locations allowed for UDP traffic
+        """
+        if destinations is not None:
+            pulumi.set(__self__, "destinations", destinations)
+        if enable_destinations is not None:
+            pulumi.set(__self__, "enable_destinations", enable_destinations)
+        if enable_locations is not None:
+            pulumi.set(__self__, "enable_locations", enable_locations)
+        if locations is not None:
+            pulumi.set(__self__, "locations", locations)
+
+    @_builtins.property
+    @pulumi.getter
+    def destinations(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Destination addresses or networks allowed for UDP traffic
+        """
+        return pulumi.get(self, "destinations")
+
+    @destinations.setter
+    def destinations(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destinations", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableDestinations")
+    def enable_destinations(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable destinations for allow-udp
+        """
+        return pulumi.get(self, "enable_destinations")
+
+    @enable_destinations.setter
+    def enable_destinations(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enable_destinations", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableLocations")
+    def enable_locations(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable locations for allow-udp
+        """
+        return pulumi.get(self, "enable_locations")
+
+    @enable_locations.setter
+    def enable_locations(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enable_locations", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def locations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        List of user locations allowed for UDP traffic
+        """
+        return pulumi.get(self, "locations")
+
+    @locations.setter
+    def locations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "locations", value)
+
+
+class ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+    """
+    connectivity: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Connectivity method for this forwarding rule (e.g. direct)
+    """
+    destinations: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination scope this forwarding rule applies to
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable a basic forwarding rule
+    """
+    user_locations: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    User location scope this rule applies to
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str],
+                 connectivity: Optional[pulumi.Input[_builtins.str]] = None,
+                 destinations: Optional[pulumi.Input[_builtins.str]] = None,
+                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 user_locations: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] name: Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+        :param pulumi.Input[_builtins.str] connectivity: Connectivity method for this forwarding rule (e.g. direct)
+        :param pulumi.Input[_builtins.str] destinations: Destination scope this forwarding rule applies to
+        :param pulumi.Input[_builtins.bool] enabled: Enable a basic forwarding rule
+        :param pulumi.Input[_builtins.str] user_locations: User location scope this rule applies to
+        """
+        pulumi.set(__self__, "name", name)
+        if connectivity is not None:
+            pulumi.set(__self__, "connectivity", connectivity)
+        if destinations is not None:
+            pulumi.set(__self__, "destinations", destinations)
+        if enabled is not None:
+            pulumi.set(__self__, "enabled", enabled)
+        if user_locations is not None:
+            pulumi.set(__self__, "user_locations", user_locations)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def connectivity(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Connectivity method for this forwarding rule (e.g. direct)
+        """
+        return pulumi.get(self, "connectivity")
+
+    @connectivity.setter
+    def connectivity(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "connectivity", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def destinations(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Destination scope this forwarding rule applies to
+        """
+        return pulumi.get(self, "destinations")
+
+    @destinations.setter
+    def destinations(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destinations", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable a basic forwarding rule
+        """
+        return pulumi.get(self, "enabled")
+
+    @enabled.setter
+    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enabled", value)
+
+    @_builtins.property
+    @pulumi.getter(name="userLocations")
+    def user_locations(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        User location scope this rule applies to
+        """
+        return pulumi.get(self, "user_locations")
+
+    @user_locations.setter
+    def user_locations(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "user_locations", value)
+
+
+class ForwardingProfileTypePacFileArgsDict(TypedDict):
+    block_rule: NotRequired[pulumi.Input['ForwardingProfileTypePacFileBlockRuleArgsDict']]
+    """
+    Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+    """
+    forwarding_rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypePacFileForwardingRuleArgsDict']]]]
+    """
+    List of PAC file-based forwarding rules
+    """
+    pac_upload: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    User upload PAC file for PAC file based forwarding configuration
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypePacFileArgs:
+    def __init__(__self__, *,
+                 block_rule: Optional[pulumi.Input['ForwardingProfileTypePacFileBlockRuleArgs']] = None,
+                 forwarding_rules: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypePacFileForwardingRuleArgs']]]] = None,
+                 pac_upload: Optional[pulumi.Input[_builtins.bool]] = None):
+        """
+        :param pulumi.Input['ForwardingProfileTypePacFileBlockRuleArgs'] block_rule: Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+        :param pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypePacFileForwardingRuleArgs']]] forwarding_rules: List of PAC file-based forwarding rules
+        :param pulumi.Input[_builtins.bool] pac_upload: User upload PAC file for PAC file based forwarding configuration
+        """
+        if block_rule is not None:
+            pulumi.set(__self__, "block_rule", block_rule)
+        if forwarding_rules is not None:
+            pulumi.set(__self__, "forwarding_rules", forwarding_rules)
+        if pac_upload is not None:
+            pulumi.set(__self__, "pac_upload", pac_upload)
+
+    @_builtins.property
+    @pulumi.getter(name="blockRule")
+    def block_rule(self) -> Optional[pulumi.Input['ForwardingProfileTypePacFileBlockRuleArgs']]:
+        """
+        Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+        """
+        return pulumi.get(self, "block_rule")
+
+    @block_rule.setter
+    def block_rule(self, value: Optional[pulumi.Input['ForwardingProfileTypePacFileBlockRuleArgs']]):
+        pulumi.set(self, "block_rule", value)
+
+    @_builtins.property
+    @pulumi.getter(name="forwardingRules")
+    def forwarding_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypePacFileForwardingRuleArgs']]]]:
+        """
+        List of PAC file-based forwarding rules
+        """
+        return pulumi.get(self, "forwarding_rules")
+
+    @forwarding_rules.setter
+    def forwarding_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypePacFileForwardingRuleArgs']]]]):
+        pulumi.set(self, "forwarding_rules", value)
+
+    @_builtins.property
+    @pulumi.getter(name="pacUpload")
+    def pac_upload(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        User upload PAC file for PAC file based forwarding configuration
+        """
+        return pulumi.get(self, "pac_upload")
+
+    @pac_upload.setter
+    def pac_upload(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "pac_upload", value)
+
+
+class ForwardingProfileTypePacFileBlockRuleArgsDict(TypedDict):
+    allow_tcp: NotRequired[pulumi.Input['ForwardingProfileTypePacFileBlockRuleAllowTcpArgsDict']]
+    """
+    TCP traffic allowlist configuration
+    """
+    allow_udp: NotRequired[pulumi.Input['ForwardingProfileTypePacFileBlockRuleAllowUdpArgsDict']]
+    """
+    UDP traffic allowlist configuration with location and destination support
+    """
+    enable: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable block rule
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypePacFileBlockRuleArgs:
+    def __init__(__self__, *,
+                 allow_tcp: Optional[pulumi.Input['ForwardingProfileTypePacFileBlockRuleAllowTcpArgs']] = None,
+                 allow_udp: Optional[pulumi.Input['ForwardingProfileTypePacFileBlockRuleAllowUdpArgs']] = None,
+                 enable: Optional[pulumi.Input[_builtins.bool]] = None):
+        """
+        :param pulumi.Input['ForwardingProfileTypePacFileBlockRuleAllowTcpArgs'] allow_tcp: TCP traffic allowlist configuration
+        :param pulumi.Input['ForwardingProfileTypePacFileBlockRuleAllowUdpArgs'] allow_udp: UDP traffic allowlist configuration with location and destination support
+        :param pulumi.Input[_builtins.bool] enable: Enable block rule
+        """
+        if allow_tcp is not None:
+            pulumi.set(__self__, "allow_tcp", allow_tcp)
+        if allow_udp is not None:
+            pulumi.set(__self__, "allow_udp", allow_udp)
+        if enable is not None:
+            pulumi.set(__self__, "enable", enable)
+
+    @_builtins.property
+    @pulumi.getter(name="allowTcp")
+    def allow_tcp(self) -> Optional[pulumi.Input['ForwardingProfileTypePacFileBlockRuleAllowTcpArgs']]:
+        """
+        TCP traffic allowlist configuration
+        """
+        return pulumi.get(self, "allow_tcp")
+
+    @allow_tcp.setter
+    def allow_tcp(self, value: Optional[pulumi.Input['ForwardingProfileTypePacFileBlockRuleAllowTcpArgs']]):
+        pulumi.set(self, "allow_tcp", value)
+
+    @_builtins.property
+    @pulumi.getter(name="allowUdp")
+    def allow_udp(self) -> Optional[pulumi.Input['ForwardingProfileTypePacFileBlockRuleAllowUdpArgs']]:
+        """
+        UDP traffic allowlist configuration with location and destination support
+        """
+        return pulumi.get(self, "allow_udp")
+
+    @allow_udp.setter
+    def allow_udp(self, value: Optional[pulumi.Input['ForwardingProfileTypePacFileBlockRuleAllowUdpArgs']]):
+        pulumi.set(self, "allow_udp", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable block rule
+        """
+        return pulumi.get(self, "enable")
+
+    @enable.setter
+    def enable(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enable", value)
+
+
+class ForwardingProfileTypePacFileBlockRuleAllowTcpArgsDict(TypedDict):
+    enable_locations: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable locations for allow-tcp
+    """
+    locations: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of user locations allowed for TCP traffic
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypePacFileBlockRuleAllowTcpArgs:
+    def __init__(__self__, *,
+                 enable_locations: Optional[pulumi.Input[_builtins.bool]] = None,
+                 locations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[_builtins.bool] enable_locations: Enable locations for allow-tcp
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] locations: List of user locations allowed for TCP traffic
+        """
+        if enable_locations is not None:
+            pulumi.set(__self__, "enable_locations", enable_locations)
+        if locations is not None:
+            pulumi.set(__self__, "locations", locations)
+
+    @_builtins.property
+    @pulumi.getter(name="enableLocations")
+    def enable_locations(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable locations for allow-tcp
+        """
+        return pulumi.get(self, "enable_locations")
+
+    @enable_locations.setter
+    def enable_locations(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enable_locations", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def locations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        List of user locations allowed for TCP traffic
+        """
+        return pulumi.get(self, "locations")
+
+    @locations.setter
+    def locations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "locations", value)
+
+
+class ForwardingProfileTypePacFileBlockRuleAllowUdpArgsDict(TypedDict):
+    destinations: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination addresses or networks allowed for UDP traffic
+    """
+    enable_destinations: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable destinations for allow-udp
+    """
+    enable_locations: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable locations for allow-udp
+    """
+    locations: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of user locations allowed for UDP traffic
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypePacFileBlockRuleAllowUdpArgs:
+    def __init__(__self__, *,
+                 destinations: Optional[pulumi.Input[_builtins.str]] = None,
+                 enable_destinations: Optional[pulumi.Input[_builtins.bool]] = None,
+                 enable_locations: Optional[pulumi.Input[_builtins.bool]] = None,
+                 locations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[_builtins.str] destinations: Destination addresses or networks allowed for UDP traffic
+        :param pulumi.Input[_builtins.bool] enable_destinations: Enable destinations for allow-udp
+        :param pulumi.Input[_builtins.bool] enable_locations: Enable locations for allow-udp
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] locations: List of user locations allowed for UDP traffic
+        """
+        if destinations is not None:
+            pulumi.set(__self__, "destinations", destinations)
+        if enable_destinations is not None:
+            pulumi.set(__self__, "enable_destinations", enable_destinations)
+        if enable_locations is not None:
+            pulumi.set(__self__, "enable_locations", enable_locations)
+        if locations is not None:
+            pulumi.set(__self__, "locations", locations)
+
+    @_builtins.property
+    @pulumi.getter
+    def destinations(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Destination addresses or networks allowed for UDP traffic
+        """
+        return pulumi.get(self, "destinations")
+
+    @destinations.setter
+    def destinations(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destinations", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableDestinations")
+    def enable_destinations(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable destinations for allow-udp
+        """
+        return pulumi.get(self, "enable_destinations")
+
+    @enable_destinations.setter
+    def enable_destinations(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enable_destinations", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableLocations")
+    def enable_locations(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable locations for allow-udp
+        """
+        return pulumi.get(self, "enable_locations")
+
+    @enable_locations.setter
+    def enable_locations(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enable_locations", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def locations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        List of user locations allowed for UDP traffic
+        """
+        return pulumi.get(self, "locations")
+
+    @locations.setter
+    def locations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "locations", value)
+
+
+class ForwardingProfileTypePacFileForwardingRuleArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+    """
+    connectivity: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Connectivity method for this forwarding rule (e.g. direct)
+    """
+    destinations: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination scope this forwarding rule applies to
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable a basic forwarding rule
+    """
+    user_locations: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    User location scope this rule applies to
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypePacFileForwardingRuleArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str],
+                 connectivity: Optional[pulumi.Input[_builtins.str]] = None,
+                 destinations: Optional[pulumi.Input[_builtins.str]] = None,
+                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 user_locations: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] name: Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+        :param pulumi.Input[_builtins.str] connectivity: Connectivity method for this forwarding rule (e.g. direct)
+        :param pulumi.Input[_builtins.str] destinations: Destination scope this forwarding rule applies to
+        :param pulumi.Input[_builtins.bool] enabled: Enable a basic forwarding rule
+        :param pulumi.Input[_builtins.str] user_locations: User location scope this rule applies to
+        """
+        pulumi.set(__self__, "name", name)
+        if connectivity is not None:
+            pulumi.set(__self__, "connectivity", connectivity)
+        if destinations is not None:
+            pulumi.set(__self__, "destinations", destinations)
+        if enabled is not None:
+            pulumi.set(__self__, "enabled", enabled)
+        if user_locations is not None:
+            pulumi.set(__self__, "user_locations", user_locations)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def connectivity(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Connectivity method for this forwarding rule (e.g. direct)
+        """
+        return pulumi.get(self, "connectivity")
+
+    @connectivity.setter
+    def connectivity(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "connectivity", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def destinations(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Destination scope this forwarding rule applies to
+        """
+        return pulumi.get(self, "destinations")
+
+    @destinations.setter
+    def destinations(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destinations", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable a basic forwarding rule
+        """
+        return pulumi.get(self, "enabled")
+
+    @enabled.setter
+    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enabled", value)
+
+    @_builtins.property
+    @pulumi.getter(name="userLocations")
+    def user_locations(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        User location scope this rule applies to
+        """
+        return pulumi.get(self, "user_locations")
+
+    @user_locations.setter
+    def user_locations(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "user_locations", value)
+
+
+class ForwardingProfileTypeZtnaAgentArgsDict(TypedDict):
+    block_rule: NotRequired[pulumi.Input['ForwardingProfileTypeZtnaAgentBlockRuleArgsDict']]
+    """
+    ZTNA block rule configuration
+    """
+    forwarding_rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypeZtnaAgentForwardingRuleArgsDict']]]]
+    """
+    List of ZTNA agent-based forwarding rules
+    """
+    pac_upload: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    User uploaded PAC file for a ZTNA agent-based forwarding configuration
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypeZtnaAgentArgs:
+    def __init__(__self__, *,
+                 block_rule: Optional[pulumi.Input['ForwardingProfileTypeZtnaAgentBlockRuleArgs']] = None,
+                 forwarding_rules: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypeZtnaAgentForwardingRuleArgs']]]] = None,
+                 pac_upload: Optional[pulumi.Input[_builtins.bool]] = None):
+        """
+        :param pulumi.Input['ForwardingProfileTypeZtnaAgentBlockRuleArgs'] block_rule: ZTNA block rule configuration
+        :param pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypeZtnaAgentForwardingRuleArgs']]] forwarding_rules: List of ZTNA agent-based forwarding rules
+        :param pulumi.Input[_builtins.bool] pac_upload: User uploaded PAC file for a ZTNA agent-based forwarding configuration
+        """
+        if block_rule is not None:
+            pulumi.set(__self__, "block_rule", block_rule)
+        if forwarding_rules is not None:
+            pulumi.set(__self__, "forwarding_rules", forwarding_rules)
+        if pac_upload is not None:
+            pulumi.set(__self__, "pac_upload", pac_upload)
+
+    @_builtins.property
+    @pulumi.getter(name="blockRule")
+    def block_rule(self) -> Optional[pulumi.Input['ForwardingProfileTypeZtnaAgentBlockRuleArgs']]:
+        """
+        ZTNA block rule configuration
+        """
+        return pulumi.get(self, "block_rule")
+
+    @block_rule.setter
+    def block_rule(self, value: Optional[pulumi.Input['ForwardingProfileTypeZtnaAgentBlockRuleArgs']]):
+        pulumi.set(self, "block_rule", value)
+
+    @_builtins.property
+    @pulumi.getter(name="forwardingRules")
+    def forwarding_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypeZtnaAgentForwardingRuleArgs']]]]:
+        """
+        List of ZTNA agent-based forwarding rules
+        """
+        return pulumi.get(self, "forwarding_rules")
+
+    @forwarding_rules.setter
+    def forwarding_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ForwardingProfileTypeZtnaAgentForwardingRuleArgs']]]]):
+        pulumi.set(self, "forwarding_rules", value)
+
+    @_builtins.property
+    @pulumi.getter(name="pacUpload")
+    def pac_upload(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        User uploaded PAC file for a ZTNA agent-based forwarding configuration
+        """
+        return pulumi.get(self, "pac_upload")
+
+    @pac_upload.setter
+    def pac_upload(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "pac_upload", value)
+
+
+class ForwardingProfileTypeZtnaAgentBlockRuleArgsDict(TypedDict):
+    allow_icmp_for_troubleshooting: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Allow ICMP for troubleshooting
+    """
+    block_all_other_unmatched_outbound_connections: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Block all other unmatched outbound connections
+    """
+    block_inbound_access_when_connected_to_tunnel: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Block inbound access when connected to tunnel
+    """
+    block_non_tcp_non_udp_traffic_when_connected_to_tunnel: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Block Non-TCP Non UDP based traffic when connected to tunnel
+    """
+    block_outbound_lan_access_when_connected_to_tunnel: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Block outbound LAN access when connected to tunnel
+    """
+    enforcer_fqdn_dns_resolution_via_dns_servers: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enforce FQDN DNS resolution via tunnel DNS servers
+    """
+    resolve_all_fqdns_using_dns_servers_assigned_by_the_tunnel: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Resolve All FQDNs using DNS servers assigned by the tunnel (Windows Only)
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypeZtnaAgentBlockRuleArgs:
+    def __init__(__self__, *,
+                 allow_icmp_for_troubleshooting: Optional[pulumi.Input[_builtins.bool]] = None,
+                 block_all_other_unmatched_outbound_connections: Optional[pulumi.Input[_builtins.bool]] = None,
+                 block_inbound_access_when_connected_to_tunnel: Optional[pulumi.Input[_builtins.bool]] = None,
+                 block_non_tcp_non_udp_traffic_when_connected_to_tunnel: Optional[pulumi.Input[_builtins.bool]] = None,
+                 block_outbound_lan_access_when_connected_to_tunnel: Optional[pulumi.Input[_builtins.bool]] = None,
+                 enforcer_fqdn_dns_resolution_via_dns_servers: Optional[pulumi.Input[_builtins.bool]] = None,
+                 resolve_all_fqdns_using_dns_servers_assigned_by_the_tunnel: Optional[pulumi.Input[_builtins.bool]] = None):
+        """
+        :param pulumi.Input[_builtins.bool] allow_icmp_for_troubleshooting: Allow ICMP for troubleshooting
+        :param pulumi.Input[_builtins.bool] block_all_other_unmatched_outbound_connections: Block all other unmatched outbound connections
+        :param pulumi.Input[_builtins.bool] block_inbound_access_when_connected_to_tunnel: Block inbound access when connected to tunnel
+        :param pulumi.Input[_builtins.bool] block_non_tcp_non_udp_traffic_when_connected_to_tunnel: Block Non-TCP Non UDP based traffic when connected to tunnel
+        :param pulumi.Input[_builtins.bool] block_outbound_lan_access_when_connected_to_tunnel: Block outbound LAN access when connected to tunnel
+        :param pulumi.Input[_builtins.bool] enforcer_fqdn_dns_resolution_via_dns_servers: Enforce FQDN DNS resolution via tunnel DNS servers
+        :param pulumi.Input[_builtins.bool] resolve_all_fqdns_using_dns_servers_assigned_by_the_tunnel: Resolve All FQDNs using DNS servers assigned by the tunnel (Windows Only)
+        """
+        if allow_icmp_for_troubleshooting is not None:
+            pulumi.set(__self__, "allow_icmp_for_troubleshooting", allow_icmp_for_troubleshooting)
+        if block_all_other_unmatched_outbound_connections is not None:
+            pulumi.set(__self__, "block_all_other_unmatched_outbound_connections", block_all_other_unmatched_outbound_connections)
+        if block_inbound_access_when_connected_to_tunnel is not None:
+            pulumi.set(__self__, "block_inbound_access_when_connected_to_tunnel", block_inbound_access_when_connected_to_tunnel)
+        if block_non_tcp_non_udp_traffic_when_connected_to_tunnel is not None:
+            pulumi.set(__self__, "block_non_tcp_non_udp_traffic_when_connected_to_tunnel", block_non_tcp_non_udp_traffic_when_connected_to_tunnel)
+        if block_outbound_lan_access_when_connected_to_tunnel is not None:
+            pulumi.set(__self__, "block_outbound_lan_access_when_connected_to_tunnel", block_outbound_lan_access_when_connected_to_tunnel)
+        if enforcer_fqdn_dns_resolution_via_dns_servers is not None:
+            pulumi.set(__self__, "enforcer_fqdn_dns_resolution_via_dns_servers", enforcer_fqdn_dns_resolution_via_dns_servers)
+        if resolve_all_fqdns_using_dns_servers_assigned_by_the_tunnel is not None:
+            pulumi.set(__self__, "resolve_all_fqdns_using_dns_servers_assigned_by_the_tunnel", resolve_all_fqdns_using_dns_servers_assigned_by_the_tunnel)
+
+    @_builtins.property
+    @pulumi.getter(name="allowIcmpForTroubleshooting")
+    def allow_icmp_for_troubleshooting(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Allow ICMP for troubleshooting
+        """
+        return pulumi.get(self, "allow_icmp_for_troubleshooting")
+
+    @allow_icmp_for_troubleshooting.setter
+    def allow_icmp_for_troubleshooting(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "allow_icmp_for_troubleshooting", value)
+
+    @_builtins.property
+    @pulumi.getter(name="blockAllOtherUnmatchedOutboundConnections")
+    def block_all_other_unmatched_outbound_connections(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Block all other unmatched outbound connections
+        """
+        return pulumi.get(self, "block_all_other_unmatched_outbound_connections")
+
+    @block_all_other_unmatched_outbound_connections.setter
+    def block_all_other_unmatched_outbound_connections(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "block_all_other_unmatched_outbound_connections", value)
+
+    @_builtins.property
+    @pulumi.getter(name="blockInboundAccessWhenConnectedToTunnel")
+    def block_inbound_access_when_connected_to_tunnel(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Block inbound access when connected to tunnel
+        """
+        return pulumi.get(self, "block_inbound_access_when_connected_to_tunnel")
+
+    @block_inbound_access_when_connected_to_tunnel.setter
+    def block_inbound_access_when_connected_to_tunnel(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "block_inbound_access_when_connected_to_tunnel", value)
+
+    @_builtins.property
+    @pulumi.getter(name="blockNonTcpNonUdpTrafficWhenConnectedToTunnel")
+    def block_non_tcp_non_udp_traffic_when_connected_to_tunnel(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Block Non-TCP Non UDP based traffic when connected to tunnel
+        """
+        return pulumi.get(self, "block_non_tcp_non_udp_traffic_when_connected_to_tunnel")
+
+    @block_non_tcp_non_udp_traffic_when_connected_to_tunnel.setter
+    def block_non_tcp_non_udp_traffic_when_connected_to_tunnel(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "block_non_tcp_non_udp_traffic_when_connected_to_tunnel", value)
+
+    @_builtins.property
+    @pulumi.getter(name="blockOutboundLanAccessWhenConnectedToTunnel")
+    def block_outbound_lan_access_when_connected_to_tunnel(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Block outbound LAN access when connected to tunnel
+        """
+        return pulumi.get(self, "block_outbound_lan_access_when_connected_to_tunnel")
+
+    @block_outbound_lan_access_when_connected_to_tunnel.setter
+    def block_outbound_lan_access_when_connected_to_tunnel(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "block_outbound_lan_access_when_connected_to_tunnel", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enforcerFqdnDnsResolutionViaDnsServers")
+    def enforcer_fqdn_dns_resolution_via_dns_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enforce FQDN DNS resolution via tunnel DNS servers
+        """
+        return pulumi.get(self, "enforcer_fqdn_dns_resolution_via_dns_servers")
+
+    @enforcer_fqdn_dns_resolution_via_dns_servers.setter
+    def enforcer_fqdn_dns_resolution_via_dns_servers(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enforcer_fqdn_dns_resolution_via_dns_servers", value)
+
+    @_builtins.property
+    @pulumi.getter(name="resolveAllFqdnsUsingDnsServersAssignedByTheTunnel")
+    def resolve_all_fqdns_using_dns_servers_assigned_by_the_tunnel(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Resolve All FQDNs using DNS servers assigned by the tunnel (Windows Only)
+        """
+        return pulumi.get(self, "resolve_all_fqdns_using_dns_servers_assigned_by_the_tunnel")
+
+    @resolve_all_fqdns_using_dns_servers_assigned_by_the_tunnel.setter
+    def resolve_all_fqdns_using_dns_servers_assigned_by_the_tunnel(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "resolve_all_fqdns_using_dns_servers_assigned_by_the_tunnel", value)
+
+
+class ForwardingProfileTypeZtnaAgentForwardingRuleArgsDict(TypedDict):
+    name: pulumi.Input[_builtins.str]
+    """
+    Forwarding rule ZTNA name as an alphanumeric string [ 0-9a-zA-Z._ -]
+    """
+    connectivity: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Connectivity method for this ZTNA forwarding rule (e.g. direct)
+    """
+    destinations: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination scope this ZTNA forwarding rule applies to
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable a forwarding rule ztna
+    """
+    source_applications: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Source applications this ZTNA rule applies to
+    """
+    traffic_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Type of traffic this ZTNA rule applies to (dns, network, or both)
+    """
+    user_locations: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    User location scope this ZTNA rule applies to
+    """
+
+@pulumi.input_type
+class ForwardingProfileTypeZtnaAgentForwardingRuleArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str],
+                 connectivity: Optional[pulumi.Input[_builtins.str]] = None,
+                 destinations: Optional[pulumi.Input[_builtins.str]] = None,
+                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 source_applications: Optional[pulumi.Input[_builtins.str]] = None,
+                 traffic_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 user_locations: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] name: Forwarding rule ZTNA name as an alphanumeric string [ 0-9a-zA-Z._ -]
+        :param pulumi.Input[_builtins.str] connectivity: Connectivity method for this ZTNA forwarding rule (e.g. direct)
+        :param pulumi.Input[_builtins.str] destinations: Destination scope this ZTNA forwarding rule applies to
+        :param pulumi.Input[_builtins.bool] enabled: Enable a forwarding rule ztna
+        :param pulumi.Input[_builtins.str] source_applications: Source applications this ZTNA rule applies to
+        :param pulumi.Input[_builtins.str] traffic_type: Type of traffic this ZTNA rule applies to (dns, network, or both)
+        :param pulumi.Input[_builtins.str] user_locations: User location scope this ZTNA rule applies to
+        """
+        pulumi.set(__self__, "name", name)
+        if connectivity is not None:
+            pulumi.set(__self__, "connectivity", connectivity)
+        if destinations is not None:
+            pulumi.set(__self__, "destinations", destinations)
+        if enabled is not None:
+            pulumi.set(__self__, "enabled", enabled)
+        if source_applications is not None:
+            pulumi.set(__self__, "source_applications", source_applications)
+        if traffic_type is not None:
+            pulumi.set(__self__, "traffic_type", traffic_type)
+        if user_locations is not None:
+            pulumi.set(__self__, "user_locations", user_locations)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        Forwarding rule ZTNA name as an alphanumeric string [ 0-9a-zA-Z._ -]
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def connectivity(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Connectivity method for this ZTNA forwarding rule (e.g. direct)
+        """
+        return pulumi.get(self, "connectivity")
+
+    @connectivity.setter
+    def connectivity(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "connectivity", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def destinations(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Destination scope this ZTNA forwarding rule applies to
+        """
+        return pulumi.get(self, "destinations")
+
+    @destinations.setter
+    def destinations(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destinations", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable a forwarding rule ztna
+        """
+        return pulumi.get(self, "enabled")
+
+    @enabled.setter
+    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enabled", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceApplications")
+    def source_applications(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Source applications this ZTNA rule applies to
+        """
+        return pulumi.get(self, "source_applications")
+
+    @source_applications.setter
+    def source_applications(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "source_applications", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trafficType")
+    def traffic_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Type of traffic this ZTNA rule applies to (dns, network, or both)
+        """
+        return pulumi.get(self, "traffic_type")
+
+    @traffic_type.setter
+    def traffic_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "traffic_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="userLocations")
+    def user_locations(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        User location scope this ZTNA rule applies to
+        """
+        return pulumi.get(self, "user_locations")
+
+    @user_locations.setter
+    def user_locations(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "user_locations", value)
+
+
+class ForwardingProfileUserLocationInternalHostDetectionArgsDict(TypedDict):
+    fqdn: pulumi.Input[_builtins.str]
+    """
+    user location fqdn
+    """
+    ip_address: pulumi.Input[_builtins.str]
+    """
+    user location ip address
+    """
+
+@pulumi.input_type
+class ForwardingProfileUserLocationInternalHostDetectionArgs:
+    def __init__(__self__, *,
+                 fqdn: pulumi.Input[_builtins.str],
+                 ip_address: pulumi.Input[_builtins.str]):
+        """
+        :param pulumi.Input[_builtins.str] fqdn: user location fqdn
+        :param pulumi.Input[_builtins.str] ip_address: user location ip address
+        """
+        pulumi.set(__self__, "fqdn", fqdn)
+        pulumi.set(__self__, "ip_address", ip_address)
+
+    @_builtins.property
+    @pulumi.getter
+    def fqdn(self) -> pulumi.Input[_builtins.str]:
+        """
+        user location fqdn
+        """
+        return pulumi.get(self, "fqdn")
+
+    @fqdn.setter
+    def fqdn(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "fqdn", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipAddress")
+    def ip_address(self) -> pulumi.Input[_builtins.str]:
+        """
+        user location ip address
+        """
+        return pulumi.get(self, "ip_address")
+
+    @ip_address.setter
+    def ip_address(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ip_address", value)
 
 
 class GeneralSettingGeneralArgsDict(TypedDict):
@@ -61503,7 +63137,7 @@ class MfaServerMfaVendorTypeOktaAdaptiveV1ArgsDict(TypedDict):
     """
     Okta organization
     """
-    okta_timeout: pulumi.Input[_builtins.int]
+    okta_timeout: pulumi.Input[_builtins.str]
     """
     Okta timeout (seconds)
     """
@@ -61518,13 +63152,13 @@ class MfaServerMfaVendorTypeOktaAdaptiveV1Args:
                  okta_api_host: pulumi.Input[_builtins.str],
                  okta_baseuri: pulumi.Input[_builtins.str],
                  okta_org: pulumi.Input[_builtins.str],
-                 okta_timeout: pulumi.Input[_builtins.int],
+                 okta_timeout: pulumi.Input[_builtins.str],
                  okta_token: pulumi.Input[_builtins.str]):
         """
         :param pulumi.Input[_builtins.str] okta_api_host: Okta API hostname
         :param pulumi.Input[_builtins.str] okta_baseuri: Okta baseuri
         :param pulumi.Input[_builtins.str] okta_org: Okta organization
-        :param pulumi.Input[_builtins.int] okta_timeout: Okta timeout (seconds)
+        :param pulumi.Input[_builtins.str] okta_timeout: Okta timeout (seconds)
         :param pulumi.Input[_builtins.str] okta_token: Okta API token
         """
         pulumi.set(__self__, "okta_api_host", okta_api_host)
@@ -61571,14 +63205,14 @@ class MfaServerMfaVendorTypeOktaAdaptiveV1Args:
 
     @_builtins.property
     @pulumi.getter(name="oktaTimeout")
-    def okta_timeout(self) -> pulumi.Input[_builtins.int]:
+    def okta_timeout(self) -> pulumi.Input[_builtins.str]:
         """
         Okta timeout (seconds)
         """
         return pulumi.get(self, "okta_timeout")
 
     @okta_timeout.setter
-    def okta_timeout(self, value: pulumi.Input[_builtins.int]):
+    def okta_timeout(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "okta_timeout", value)
 
     @_builtins.property
@@ -67524,6 +69158,10 @@ class SecurityRuleAllowUrlCategoryFileControlArgs:
 
 
 class SecurityRuleAllowWebApplicationArgsDict(TypedDict):
+    app_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    App id
+    """
     application_functions: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
     """
     Application function
@@ -67564,6 +69202,7 @@ class SecurityRuleAllowWebApplicationArgsDict(TypedDict):
 @pulumi.input_type
 class SecurityRuleAllowWebApplicationArgs:
     def __init__(__self__, *,
+                 app_id: Optional[pulumi.Input[_builtins.str]] = None,
                  application_functions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  dlp: Optional[pulumi.Input[_builtins.str]] = None,
                  file_control: Optional[pulumi.Input['SecurityRuleAllowWebApplicationFileControlArgs']] = None,
@@ -67574,6 +69213,7 @@ class SecurityRuleAllowWebApplicationArgs:
                  tenant_control: Optional[pulumi.Input['SecurityRuleAllowWebApplicationTenantControlArgs']] = None,
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.str] app_id: App id
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] application_functions: Application function
         :param pulumi.Input[_builtins.str] dlp: Dlp
         :param pulumi.Input['SecurityRuleAllowWebApplicationFileControlArgs'] file_control: File control
@@ -67584,6 +69224,8 @@ class SecurityRuleAllowWebApplicationArgs:
         :param pulumi.Input['SecurityRuleAllowWebApplicationTenantControlArgs'] tenant_control: Tenant control
         :param pulumi.Input[_builtins.str] type: Type
         """
+        if app_id is not None:
+            pulumi.set(__self__, "app_id", app_id)
         if application_functions is not None:
             pulumi.set(__self__, "application_functions", application_functions)
         if dlp is not None:
@@ -67602,6 +69244,18 @@ class SecurityRuleAllowWebApplicationArgs:
             pulumi.set(__self__, "tenant_control", tenant_control)
         if type is not None:
             pulumi.set(__self__, "type", type)
+
+    @_builtins.property
+    @pulumi.getter(name="appId")
+    def app_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        App id
+        """
+        return pulumi.get(self, "app_id")
+
+    @app_id.setter
+    def app_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "app_id", value)
 
     @_builtins.property
     @pulumi.getter(name="applicationFunctions")
@@ -68219,6 +69873,10 @@ class ServiceConnectionBgpPeerArgsDict(TypedDict):
     """
     Peer ipv6 address
     """
+    same_as_primary: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Same peer IP address for SC
+    """
     secret: NotRequired[pulumi.Input[_builtins.str]]
     """
     Secret
@@ -68231,12 +69889,14 @@ class ServiceConnectionBgpPeerArgs:
                  local_ipv6_address: Optional[pulumi.Input[_builtins.str]] = None,
                  peer_ip_address: Optional[pulumi.Input[_builtins.str]] = None,
                  peer_ipv6_address: Optional[pulumi.Input[_builtins.str]] = None,
+                 same_as_primary: Optional[pulumi.Input[_builtins.bool]] = None,
                  secret: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] local_ip_address: Local ip address
         :param pulumi.Input[_builtins.str] local_ipv6_address: Local ipv6 address
         :param pulumi.Input[_builtins.str] peer_ip_address: Peer ip address
         :param pulumi.Input[_builtins.str] peer_ipv6_address: Peer ipv6 address
+        :param pulumi.Input[_builtins.bool] same_as_primary: Same peer IP address for SC
         :param pulumi.Input[_builtins.str] secret: Secret
         """
         if local_ip_address is not None:
@@ -68247,6 +69907,8 @@ class ServiceConnectionBgpPeerArgs:
             pulumi.set(__self__, "peer_ip_address", peer_ip_address)
         if peer_ipv6_address is not None:
             pulumi.set(__self__, "peer_ipv6_address", peer_ipv6_address)
+        if same_as_primary is not None:
+            pulumi.set(__self__, "same_as_primary", same_as_primary)
         if secret is not None:
             pulumi.set(__self__, "secret", secret)
 
@@ -68297,6 +69959,18 @@ class ServiceConnectionBgpPeerArgs:
     @peer_ipv6_address.setter
     def peer_ipv6_address(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "peer_ipv6_address", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sameAsPrimary")
+    def same_as_primary(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Same peer IP address for SC
+        """
+        return pulumi.get(self, "same_as_primary")
+
+    @same_as_primary.setter
+    def same_as_primary(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "same_as_primary", value)
 
     @_builtins.property
     @pulumi.getter

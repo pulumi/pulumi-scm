@@ -5257,6 +5257,353 @@ export interface FileBlockingProfileRule {
     name: pulumi.Input<string>;
 }
 
+export interface ForwardingProfileDestinationFqdn {
+    /**
+     * alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
+     */
+    name: pulumi.Input<string>;
+    /**
+     * Port number for fqdn based destination
+     */
+    port?: pulumi.Input<number>;
+}
+
+export interface ForwardingProfileDestinationIpAddress {
+    /**
+     * IP address with wildcards and CIDR notation support
+     */
+    name: pulumi.Input<string>;
+    /**
+     * Port number for IP address based destination
+     */
+    port?: pulumi.Input<number>;
+}
+
+export interface ForwardingProfileRegionalAndCustomProxyConnectivityPreference {
+    /**
+     * Indicates whether this connectivity method is enabled for use in the proxy configuration
+     */
+    enabled?: pulumi.Input<boolean>;
+    /**
+     * Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+     */
+    name: pulumi.Input<string>;
+}
+
+export interface ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation {
+    /**
+     * Add list of locations separated by space, in that region
+     */
+    locations?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * One of the region from 'americas', 'europe', 'apac'
+     */
+    name: pulumi.Input<string>;
+}
+
+export interface ForwardingProfileRegionalAndCustomProxyProxy1 {
+    /**
+     * fqdn of the primary proxy server (supports wildcards and alphanumeric characters with dots, hyphens, and underscores)
+     */
+    fqdn?: pulumi.Input<string>;
+    /**
+     * Geographic or network location identifier for the primary proxy server
+     */
+    location?: pulumi.Input<string>;
+    /**
+     * port number for primary proxy
+     */
+    port?: pulumi.Input<number>;
+}
+
+export interface ForwardingProfileRegionalAndCustomProxyProxy2 {
+    /**
+     * Fqdn of the secondary (backup) proxy server used for failover scenarios
+     */
+    fqdn?: pulumi.Input<string>;
+    /**
+     * Geographic or network location identifier for the secondary proxy server
+     */
+    location?: pulumi.Input<string>;
+    /**
+     * port number for secondary proxy
+     */
+    port?: pulumi.Input<number>;
+}
+
+export interface ForwardingProfileType {
+    /**
+     * Global Protect proxy-based forwarding configuration
+     */
+    globalProtectProxy?: pulumi.Input<inputs.ForwardingProfileTypeGlobalProtectProxy>;
+    /**
+     * PAC file based forwarding configuration
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+     */
+    pacFile?: pulumi.Input<inputs.ForwardingProfileTypePacFile>;
+    /**
+     * ZTNA agent-based forwarding configuration
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+     */
+    ztnaAgent?: pulumi.Input<inputs.ForwardingProfileTypeZtnaAgent>;
+}
+
+export interface ForwardingProfileTypeGlobalProtectProxy {
+    /**
+     * Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+     */
+    blockRule?: pulumi.Input<inputs.ForwardingProfileTypeGlobalProtectProxyBlockRule>;
+    /**
+     * List of GlobalProtect proxy-based forwarding rules
+     */
+    forwardingRules?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileTypeGlobalProtectProxyForwardingRule>[]>;
+    /**
+     * User uploaded PAC file for Global Protect proxy-based forwarding configuration
+     */
+    pacUpload?: pulumi.Input<boolean>;
+}
+
+export interface ForwardingProfileTypeGlobalProtectProxyBlockRule {
+    /**
+     * TCP traffic allowlist configuration
+     */
+    allowTcp?: pulumi.Input<inputs.ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp>;
+    /**
+     * UDP traffic allowlist configuration with location and destination support
+     */
+    allowUdp?: pulumi.Input<inputs.ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp>;
+    /**
+     * Enable block rule
+     */
+    enable?: pulumi.Input<boolean>;
+}
+
+export interface ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp {
+    /**
+     * Enable locations for allow-tcp
+     */
+    enableLocations?: pulumi.Input<boolean>;
+    /**
+     * List of user locations allowed for TCP traffic
+     */
+    locations?: pulumi.Input<pulumi.Input<string>[]>;
+}
+
+export interface ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp {
+    /**
+     * Destination addresses or networks allowed for UDP traffic
+     */
+    destinations?: pulumi.Input<string>;
+    /**
+     * Enable destinations for allow-udp
+     */
+    enableDestinations?: pulumi.Input<boolean>;
+    /**
+     * Enable locations for allow-udp
+     */
+    enableLocations?: pulumi.Input<boolean>;
+    /**
+     * List of user locations allowed for UDP traffic
+     */
+    locations?: pulumi.Input<pulumi.Input<string>[]>;
+}
+
+export interface ForwardingProfileTypeGlobalProtectProxyForwardingRule {
+    /**
+     * Connectivity method for this forwarding rule (e.g. direct)
+     */
+    connectivity?: pulumi.Input<string>;
+    /**
+     * Destination scope this forwarding rule applies to
+     */
+    destinations?: pulumi.Input<string>;
+    /**
+     * Enable a basic forwarding rule
+     */
+    enabled?: pulumi.Input<boolean>;
+    /**
+     * Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: pulumi.Input<string>;
+    /**
+     * User location scope this rule applies to
+     */
+    userLocations?: pulumi.Input<string>;
+}
+
+export interface ForwardingProfileTypePacFile {
+    /**
+     * Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+     */
+    blockRule?: pulumi.Input<inputs.ForwardingProfileTypePacFileBlockRule>;
+    /**
+     * List of PAC file-based forwarding rules
+     */
+    forwardingRules?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileTypePacFileForwardingRule>[]>;
+    /**
+     * User upload PAC file for PAC file based forwarding configuration
+     */
+    pacUpload?: pulumi.Input<boolean>;
+}
+
+export interface ForwardingProfileTypePacFileBlockRule {
+    /**
+     * TCP traffic allowlist configuration
+     */
+    allowTcp?: pulumi.Input<inputs.ForwardingProfileTypePacFileBlockRuleAllowTcp>;
+    /**
+     * UDP traffic allowlist configuration with location and destination support
+     */
+    allowUdp?: pulumi.Input<inputs.ForwardingProfileTypePacFileBlockRuleAllowUdp>;
+    /**
+     * Enable block rule
+     */
+    enable?: pulumi.Input<boolean>;
+}
+
+export interface ForwardingProfileTypePacFileBlockRuleAllowTcp {
+    /**
+     * Enable locations for allow-tcp
+     */
+    enableLocations?: pulumi.Input<boolean>;
+    /**
+     * List of user locations allowed for TCP traffic
+     */
+    locations?: pulumi.Input<pulumi.Input<string>[]>;
+}
+
+export interface ForwardingProfileTypePacFileBlockRuleAllowUdp {
+    /**
+     * Destination addresses or networks allowed for UDP traffic
+     */
+    destinations?: pulumi.Input<string>;
+    /**
+     * Enable destinations for allow-udp
+     */
+    enableDestinations?: pulumi.Input<boolean>;
+    /**
+     * Enable locations for allow-udp
+     */
+    enableLocations?: pulumi.Input<boolean>;
+    /**
+     * List of user locations allowed for UDP traffic
+     */
+    locations?: pulumi.Input<pulumi.Input<string>[]>;
+}
+
+export interface ForwardingProfileTypePacFileForwardingRule {
+    /**
+     * Connectivity method for this forwarding rule (e.g. direct)
+     */
+    connectivity?: pulumi.Input<string>;
+    /**
+     * Destination scope this forwarding rule applies to
+     */
+    destinations?: pulumi.Input<string>;
+    /**
+     * Enable a basic forwarding rule
+     */
+    enabled?: pulumi.Input<boolean>;
+    /**
+     * Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: pulumi.Input<string>;
+    /**
+     * User location scope this rule applies to
+     */
+    userLocations?: pulumi.Input<string>;
+}
+
+export interface ForwardingProfileTypeZtnaAgent {
+    /**
+     * ZTNA block rule configuration
+     */
+    blockRule?: pulumi.Input<inputs.ForwardingProfileTypeZtnaAgentBlockRule>;
+    /**
+     * List of ZTNA agent-based forwarding rules
+     */
+    forwardingRules?: pulumi.Input<pulumi.Input<inputs.ForwardingProfileTypeZtnaAgentForwardingRule>[]>;
+    /**
+     * User uploaded PAC file for a ZTNA agent-based forwarding configuration
+     */
+    pacUpload?: pulumi.Input<boolean>;
+}
+
+export interface ForwardingProfileTypeZtnaAgentBlockRule {
+    /**
+     * Allow ICMP for troubleshooting
+     */
+    allowIcmpForTroubleshooting?: pulumi.Input<boolean>;
+    /**
+     * Block all other unmatched outbound connections
+     */
+    blockAllOtherUnmatchedOutboundConnections?: pulumi.Input<boolean>;
+    /**
+     * Block inbound access when connected to tunnel
+     */
+    blockInboundAccessWhenConnectedToTunnel?: pulumi.Input<boolean>;
+    /**
+     * Block Non-TCP Non UDP based traffic when connected to tunnel
+     */
+    blockNonTcpNonUdpTrafficWhenConnectedToTunnel?: pulumi.Input<boolean>;
+    /**
+     * Block outbound LAN access when connected to tunnel
+     */
+    blockOutboundLanAccessWhenConnectedToTunnel?: pulumi.Input<boolean>;
+    /**
+     * Enforce FQDN DNS resolution via tunnel DNS servers
+     */
+    enforcerFqdnDnsResolutionViaDnsServers?: pulumi.Input<boolean>;
+    /**
+     * Resolve All FQDNs using DNS servers assigned by the tunnel (Windows Only)
+     */
+    resolveAllFqdnsUsingDnsServersAssignedByTheTunnel?: pulumi.Input<boolean>;
+}
+
+export interface ForwardingProfileTypeZtnaAgentForwardingRule {
+    /**
+     * Connectivity method for this ZTNA forwarding rule (e.g. direct)
+     */
+    connectivity?: pulumi.Input<string>;
+    /**
+     * Destination scope this ZTNA forwarding rule applies to
+     */
+    destinations?: pulumi.Input<string>;
+    /**
+     * Enable a forwarding rule ztna
+     */
+    enabled?: pulumi.Input<boolean>;
+    /**
+     * Forwarding rule ZTNA name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: pulumi.Input<string>;
+    /**
+     * Source applications this ZTNA rule applies to
+     */
+    sourceApplications?: pulumi.Input<string>;
+    /**
+     * Type of traffic this ZTNA rule applies to (dns, network, or both)
+     */
+    trafficType?: pulumi.Input<string>;
+    /**
+     * User location scope this ZTNA rule applies to
+     */
+    userLocations?: pulumi.Input<string>;
+}
+
+export interface ForwardingProfileUserLocationInternalHostDetection {
+    /**
+     * user location fqdn
+     */
+    fqdn: pulumi.Input<string>;
+    /**
+     * user location ip address
+     */
+    ipAddress: pulumi.Input<string>;
+}
+
 export interface GeneralSettingGeneral {
     /**
      * Force admins to acknowledge login banner
@@ -13157,7 +13504,7 @@ export interface MfaServerMfaVendorTypeOktaAdaptiveV1 {
     /**
      * Okta timeout (seconds)
      */
-    oktaTimeout: pulumi.Input<number>;
+    oktaTimeout: pulumi.Input<string>;
     /**
      * Okta API token
      */
@@ -14497,6 +14844,10 @@ export interface SecurityRuleAllowUrlCategoryFileControl {
 
 export interface SecurityRuleAllowWebApplication {
     /**
+     * App id
+     */
+    appId?: pulumi.Input<string>;
+    /**
      * Application function
      */
     applicationFunctions?: pulumi.Input<pulumi.Input<string>[]>;
@@ -14661,6 +15012,10 @@ export interface ServiceConnectionBgpPeer {
      * Peer ipv6 address
      */
     peerIpv6Address?: pulumi.Input<string>;
+    /**
+     * Same peer IP address for SC
+     */
+    sameAsPrimary?: pulumi.Input<boolean>;
     /**
      * Secret
      */

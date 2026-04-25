@@ -1498,6 +1498,32 @@ class SecurityRule(pulumi.CustomResource):
             services=["service-https"],
             log_end=True,
             tags=[web_tag.name])
+        # Internet Rule with Web Application
+        internet_rule_example = scm.SecurityRule("internet_rule_example",
+            folder="ngfw-shared",
+            name="internet-rule-postman",
+            policy_type="Internet",
+            allow_web_applications=[
+                {
+                    "name": "web_appln",
+                    "type": "application",
+                    "application_function": ["any"],
+                    "app_id": "4sync",
+                },
+                {
+                    "name": "web_appln_2",
+                    "type": "application",
+                    "application_function": ["any"],
+                    "app_id": "4sync",
+                },
+            ],
+            sources=["any"],
+            destinations=["any"],
+            action="allow",
+            source_users=[
+                "casidp\\\\test_1",
+                "CN=ng1,DC=casidp,DC=onmicrosoft,DC=com",
+            ])
         ```
 
         ## Import
@@ -1723,6 +1749,32 @@ class SecurityRule(pulumi.CustomResource):
             services=["service-https"],
             log_end=True,
             tags=[web_tag.name])
+        # Internet Rule with Web Application
+        internet_rule_example = scm.SecurityRule("internet_rule_example",
+            folder="ngfw-shared",
+            name="internet-rule-postman",
+            policy_type="Internet",
+            allow_web_applications=[
+                {
+                    "name": "web_appln",
+                    "type": "application",
+                    "application_function": ["any"],
+                    "app_id": "4sync",
+                },
+                {
+                    "name": "web_appln_2",
+                    "type": "application",
+                    "application_function": ["any"],
+                    "app_id": "4sync",
+                },
+            ],
+            sources=["any"],
+            destinations=["any"],
+            action="allow",
+            source_users=[
+                "casidp\\\\test_1",
+                "CN=ng1,DC=casidp,DC=onmicrosoft,DC=com",
+            ])
         ```
 
         ## Import

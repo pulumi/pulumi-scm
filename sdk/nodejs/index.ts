@@ -220,6 +220,31 @@ export type Folder = import("./folder").Folder;
 export const Folder: typeof import("./folder").Folder = null as any;
 utilities.lazyLoad(exports, ["Folder"], () => require("./folder"));
 
+export { ForwardingProfileArgs, ForwardingProfileState } from "./forwardingProfile";
+export type ForwardingProfile = import("./forwardingProfile").ForwardingProfile;
+export const ForwardingProfile: typeof import("./forwardingProfile").ForwardingProfile = null as any;
+utilities.lazyLoad(exports, ["ForwardingProfile"], () => require("./forwardingProfile"));
+
+export { ForwardingProfileDestinationArgs, ForwardingProfileDestinationState } from "./forwardingProfileDestination";
+export type ForwardingProfileDestination = import("./forwardingProfileDestination").ForwardingProfileDestination;
+export const ForwardingProfileDestination: typeof import("./forwardingProfileDestination").ForwardingProfileDestination = null as any;
+utilities.lazyLoad(exports, ["ForwardingProfileDestination"], () => require("./forwardingProfileDestination"));
+
+export { ForwardingProfileRegionalAndCustomProxyArgs, ForwardingProfileRegionalAndCustomProxyState } from "./forwardingProfileRegionalAndCustomProxy";
+export type ForwardingProfileRegionalAndCustomProxy = import("./forwardingProfileRegionalAndCustomProxy").ForwardingProfileRegionalAndCustomProxy;
+export const ForwardingProfileRegionalAndCustomProxy: typeof import("./forwardingProfileRegionalAndCustomProxy").ForwardingProfileRegionalAndCustomProxy = null as any;
+utilities.lazyLoad(exports, ["ForwardingProfileRegionalAndCustomProxy"], () => require("./forwardingProfileRegionalAndCustomProxy"));
+
+export { ForwardingProfileSourceApplicationArgs, ForwardingProfileSourceApplicationState } from "./forwardingProfileSourceApplication";
+export type ForwardingProfileSourceApplication = import("./forwardingProfileSourceApplication").ForwardingProfileSourceApplication;
+export const ForwardingProfileSourceApplication: typeof import("./forwardingProfileSourceApplication").ForwardingProfileSourceApplication = null as any;
+utilities.lazyLoad(exports, ["ForwardingProfileSourceApplication"], () => require("./forwardingProfileSourceApplication"));
+
+export { ForwardingProfileUserLocationArgs, ForwardingProfileUserLocationState } from "./forwardingProfileUserLocation";
+export type ForwardingProfileUserLocation = import("./forwardingProfileUserLocation").ForwardingProfileUserLocation;
+export const ForwardingProfileUserLocation: typeof import("./forwardingProfileUserLocation").ForwardingProfileUserLocation = null as any;
+utilities.lazyLoad(exports, ["ForwardingProfileUserLocation"], () => require("./forwardingProfileUserLocation"));
+
 export { GeneralSettingArgs, GeneralSettingState } from "./generalSetting";
 export type GeneralSetting = import("./generalSetting").GeneralSetting;
 export const GeneralSetting: typeof import("./generalSetting").GeneralSetting = null as any;
@@ -525,6 +550,16 @@ export const getDecryptionRuleList: typeof import("./getDecryptionRuleList").get
 export const getDecryptionRuleListOutput: typeof import("./getDecryptionRuleList").getDecryptionRuleListOutput = null as any;
 utilities.lazyLoad(exports, ["getDecryptionRuleList","getDecryptionRuleListOutput"], () => require("./getDecryptionRuleList"));
 
+export { GetDeviceArgs, GetDeviceResult, GetDeviceOutputArgs } from "./getDevice";
+export const getDevice: typeof import("./getDevice").getDevice = null as any;
+export const getDeviceOutput: typeof import("./getDevice").getDeviceOutput = null as any;
+utilities.lazyLoad(exports, ["getDevice","getDeviceOutput"], () => require("./getDevice"));
+
+export { GetDeviceListArgs, GetDeviceListResult, GetDeviceListOutputArgs } from "./getDeviceList";
+export const getDeviceList: typeof import("./getDeviceList").getDeviceList = null as any;
+export const getDeviceListOutput: typeof import("./getDeviceList").getDeviceListOutput = null as any;
+utilities.lazyLoad(exports, ["getDeviceList","getDeviceListOutput"], () => require("./getDeviceList"));
+
 export { GetDeviceRedistributionCollectorArgs, GetDeviceRedistributionCollectorResult, GetDeviceRedistributionCollectorOutputArgs } from "./getDeviceRedistributionCollector";
 export const getDeviceRedistributionCollector: typeof import("./getDeviceRedistributionCollector").getDeviceRedistributionCollector = null as any;
 export const getDeviceRedistributionCollectorOutput: typeof import("./getDeviceRedistributionCollector").getDeviceRedistributionCollectorOutput = null as any;
@@ -634,6 +669,56 @@ export { GetFolderListArgs, GetFolderListResult, GetFolderListOutputArgs } from 
 export const getFolderList: typeof import("./getFolderList").getFolderList = null as any;
 export const getFolderListOutput: typeof import("./getFolderList").getFolderListOutput = null as any;
 utilities.lazyLoad(exports, ["getFolderList","getFolderListOutput"], () => require("./getFolderList"));
+
+export { GetForwardingProfileArgs, GetForwardingProfileResult, GetForwardingProfileOutputArgs } from "./getForwardingProfile";
+export const getForwardingProfile: typeof import("./getForwardingProfile").getForwardingProfile = null as any;
+export const getForwardingProfileOutput: typeof import("./getForwardingProfile").getForwardingProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getForwardingProfile","getForwardingProfileOutput"], () => require("./getForwardingProfile"));
+
+export { GetForwardingProfileDestinationArgs, GetForwardingProfileDestinationResult, GetForwardingProfileDestinationOutputArgs } from "./getForwardingProfileDestination";
+export const getForwardingProfileDestination: typeof import("./getForwardingProfileDestination").getForwardingProfileDestination = null as any;
+export const getForwardingProfileDestinationOutput: typeof import("./getForwardingProfileDestination").getForwardingProfileDestinationOutput = null as any;
+utilities.lazyLoad(exports, ["getForwardingProfileDestination","getForwardingProfileDestinationOutput"], () => require("./getForwardingProfileDestination"));
+
+export { GetForwardingProfileDestinationListArgs, GetForwardingProfileDestinationListResult, GetForwardingProfileDestinationListOutputArgs } from "./getForwardingProfileDestinationList";
+export const getForwardingProfileDestinationList: typeof import("./getForwardingProfileDestinationList").getForwardingProfileDestinationList = null as any;
+export const getForwardingProfileDestinationListOutput: typeof import("./getForwardingProfileDestinationList").getForwardingProfileDestinationListOutput = null as any;
+utilities.lazyLoad(exports, ["getForwardingProfileDestinationList","getForwardingProfileDestinationListOutput"], () => require("./getForwardingProfileDestinationList"));
+
+export { GetForwardingProfileListArgs, GetForwardingProfileListResult, GetForwardingProfileListOutputArgs } from "./getForwardingProfileList";
+export const getForwardingProfileList: typeof import("./getForwardingProfileList").getForwardingProfileList = null as any;
+export const getForwardingProfileListOutput: typeof import("./getForwardingProfileList").getForwardingProfileListOutput = null as any;
+utilities.lazyLoad(exports, ["getForwardingProfileList","getForwardingProfileListOutput"], () => require("./getForwardingProfileList"));
+
+export { GetForwardingProfileRegionalAndCustomProxyArgs, GetForwardingProfileRegionalAndCustomProxyResult, GetForwardingProfileRegionalAndCustomProxyOutputArgs } from "./getForwardingProfileRegionalAndCustomProxy";
+export const getForwardingProfileRegionalAndCustomProxy: typeof import("./getForwardingProfileRegionalAndCustomProxy").getForwardingProfileRegionalAndCustomProxy = null as any;
+export const getForwardingProfileRegionalAndCustomProxyOutput: typeof import("./getForwardingProfileRegionalAndCustomProxy").getForwardingProfileRegionalAndCustomProxyOutput = null as any;
+utilities.lazyLoad(exports, ["getForwardingProfileRegionalAndCustomProxy","getForwardingProfileRegionalAndCustomProxyOutput"], () => require("./getForwardingProfileRegionalAndCustomProxy"));
+
+export { GetForwardingProfileRegionalAndCustomProxyListArgs, GetForwardingProfileRegionalAndCustomProxyListResult, GetForwardingProfileRegionalAndCustomProxyListOutputArgs } from "./getForwardingProfileRegionalAndCustomProxyList";
+export const getForwardingProfileRegionalAndCustomProxyList: typeof import("./getForwardingProfileRegionalAndCustomProxyList").getForwardingProfileRegionalAndCustomProxyList = null as any;
+export const getForwardingProfileRegionalAndCustomProxyListOutput: typeof import("./getForwardingProfileRegionalAndCustomProxyList").getForwardingProfileRegionalAndCustomProxyListOutput = null as any;
+utilities.lazyLoad(exports, ["getForwardingProfileRegionalAndCustomProxyList","getForwardingProfileRegionalAndCustomProxyListOutput"], () => require("./getForwardingProfileRegionalAndCustomProxyList"));
+
+export { GetForwardingProfileSourceApplicationArgs, GetForwardingProfileSourceApplicationResult, GetForwardingProfileSourceApplicationOutputArgs } from "./getForwardingProfileSourceApplication";
+export const getForwardingProfileSourceApplication: typeof import("./getForwardingProfileSourceApplication").getForwardingProfileSourceApplication = null as any;
+export const getForwardingProfileSourceApplicationOutput: typeof import("./getForwardingProfileSourceApplication").getForwardingProfileSourceApplicationOutput = null as any;
+utilities.lazyLoad(exports, ["getForwardingProfileSourceApplication","getForwardingProfileSourceApplicationOutput"], () => require("./getForwardingProfileSourceApplication"));
+
+export { GetForwardingProfileSourceApplicationListArgs, GetForwardingProfileSourceApplicationListResult, GetForwardingProfileSourceApplicationListOutputArgs } from "./getForwardingProfileSourceApplicationList";
+export const getForwardingProfileSourceApplicationList: typeof import("./getForwardingProfileSourceApplicationList").getForwardingProfileSourceApplicationList = null as any;
+export const getForwardingProfileSourceApplicationListOutput: typeof import("./getForwardingProfileSourceApplicationList").getForwardingProfileSourceApplicationListOutput = null as any;
+utilities.lazyLoad(exports, ["getForwardingProfileSourceApplicationList","getForwardingProfileSourceApplicationListOutput"], () => require("./getForwardingProfileSourceApplicationList"));
+
+export { GetForwardingProfileUserLocationArgs, GetForwardingProfileUserLocationResult, GetForwardingProfileUserLocationOutputArgs } from "./getForwardingProfileUserLocation";
+export const getForwardingProfileUserLocation: typeof import("./getForwardingProfileUserLocation").getForwardingProfileUserLocation = null as any;
+export const getForwardingProfileUserLocationOutput: typeof import("./getForwardingProfileUserLocation").getForwardingProfileUserLocationOutput = null as any;
+utilities.lazyLoad(exports, ["getForwardingProfileUserLocation","getForwardingProfileUserLocationOutput"], () => require("./getForwardingProfileUserLocation"));
+
+export { GetForwardingProfileUserLocationListArgs, GetForwardingProfileUserLocationListResult, GetForwardingProfileUserLocationListOutputArgs } from "./getForwardingProfileUserLocationList";
+export const getForwardingProfileUserLocationList: typeof import("./getForwardingProfileUserLocationList").getForwardingProfileUserLocationList = null as any;
+export const getForwardingProfileUserLocationListOutput: typeof import("./getForwardingProfileUserLocationList").getForwardingProfileUserLocationListOutput = null as any;
+utilities.lazyLoad(exports, ["getForwardingProfileUserLocationList","getForwardingProfileUserLocationListOutput"], () => require("./getForwardingProfileUserLocationList"));
 
 export { GetGeneralSettingArgs, GetGeneralSettingResult, GetGeneralSettingOutputArgs } from "./getGeneralSetting";
 export const getGeneralSetting: typeof import("./getGeneralSetting").getGeneralSetting = null as any;
@@ -1928,6 +2013,16 @@ const _module = {
                 return new FileBlockingProfile(name, <any>undefined, { urn })
             case "scm:index/folder:Folder":
                 return new Folder(name, <any>undefined, { urn })
+            case "scm:index/forwardingProfile:ForwardingProfile":
+                return new ForwardingProfile(name, <any>undefined, { urn })
+            case "scm:index/forwardingProfileDestination:ForwardingProfileDestination":
+                return new ForwardingProfileDestination(name, <any>undefined, { urn })
+            case "scm:index/forwardingProfileRegionalAndCustomProxy:ForwardingProfileRegionalAndCustomProxy":
+                return new ForwardingProfileRegionalAndCustomProxy(name, <any>undefined, { urn })
+            case "scm:index/forwardingProfileSourceApplication:ForwardingProfileSourceApplication":
+                return new ForwardingProfileSourceApplication(name, <any>undefined, { urn })
+            case "scm:index/forwardingProfileUserLocation:ForwardingProfileUserLocation":
+                return new ForwardingProfileUserLocation(name, <any>undefined, { urn })
             case "scm:index/generalSetting:GeneralSetting":
                 return new GeneralSetting(name, <any>undefined, { urn })
             case "scm:index/globalprotectMatchList:GlobalprotectMatchList":
@@ -2138,6 +2233,11 @@ pulumi.runtime.registerResourceModule("scm", "index/ethernetInterface", _module)
 pulumi.runtime.registerResourceModule("scm", "index/externalDynamicList", _module)
 pulumi.runtime.registerResourceModule("scm", "index/fileBlockingProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/folder", _module)
+pulumi.runtime.registerResourceModule("scm", "index/forwardingProfile", _module)
+pulumi.runtime.registerResourceModule("scm", "index/forwardingProfileDestination", _module)
+pulumi.runtime.registerResourceModule("scm", "index/forwardingProfileRegionalAndCustomProxy", _module)
+pulumi.runtime.registerResourceModule("scm", "index/forwardingProfileSourceApplication", _module)
+pulumi.runtime.registerResourceModule("scm", "index/forwardingProfileUserLocation", _module)
 pulumi.runtime.registerResourceModule("scm", "index/generalSetting", _module)
 pulumi.runtime.registerResourceModule("scm", "index/globalprotectMatchList", _module)
 pulumi.runtime.registerResourceModule("scm", "index/hipObject", _module)

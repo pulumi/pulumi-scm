@@ -189,6 +189,10 @@ export class ServiceConnection extends pulumi.CustomResource {
      */
     declare public readonly region: pulumi.Output<string>;
     /**
+     * Region tag
+     */
+    declare public readonly regionTag: pulumi.Output<string>;
+    /**
      * Secondary ipsec tunnel
      */
     declare public readonly secondaryIpsecTunnel: pulumi.Output<string | undefined>;
@@ -230,6 +234,7 @@ export class ServiceConnection extends pulumi.CustomResource {
             resourceInputs["protocol"] = state?.protocol;
             resourceInputs["qos"] = state?.qos;
             resourceInputs["region"] = state?.region;
+            resourceInputs["regionTag"] = state?.regionTag;
             resourceInputs["secondaryIpsecTunnel"] = state?.secondaryIpsecTunnel;
             resourceInputs["sourceNat"] = state?.sourceNat;
             resourceInputs["subnets"] = state?.subnets;
@@ -252,6 +257,7 @@ export class ServiceConnection extends pulumi.CustomResource {
             resourceInputs["protocol"] = args?.protocol;
             resourceInputs["qos"] = args?.qos;
             resourceInputs["region"] = args?.region;
+            resourceInputs["regionTag"] = args?.regionTag;
             resourceInputs["secondaryIpsecTunnel"] = args?.secondaryIpsecTunnel;
             resourceInputs["sourceNat"] = args?.sourceNat;
             resourceInputs["subnets"] = args?.subnets;
@@ -319,6 +325,10 @@ export interface ServiceConnectionState {
      */
     region?: pulumi.Input<string>;
     /**
+     * Region tag
+     */
+    regionTag?: pulumi.Input<string>;
+    /**
      * Secondary ipsec tunnel
      */
     secondaryIpsecTunnel?: pulumi.Input<string>;
@@ -380,6 +390,10 @@ export interface ServiceConnectionArgs {
      * Region
      */
     region: pulumi.Input<string>;
+    /**
+     * Region tag
+     */
+    regionTag?: pulumi.Input<string>;
     /**
      * Secondary ipsec tunnel
      */

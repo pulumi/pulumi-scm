@@ -238,6 +238,12 @@ namespace Pulumi.Scm
         public Output<string> Region { get; private set; } = null!;
 
         /// <summary>
+        /// Region tag
+        /// </summary>
+        [Output("regionTag")]
+        public Output<string> RegionTag { get; private set; } = null!;
+
+        /// <summary>
         /// Secondary ipsec tunnel
         /// </summary>
         [Output("secondaryIpsecTunnel")]
@@ -372,6 +378,12 @@ namespace Pulumi.Scm
         public Input<string> Region { get; set; } = null!;
 
         /// <summary>
+        /// Region tag
+        /// </summary>
+        [Input("regionTag")]
+        public Input<string>? RegionTag { get; set; }
+
+        /// <summary>
         /// Secondary ipsec tunnel
         /// </summary>
         [Input("secondaryIpsecTunnel")]
@@ -484,6 +496,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("region")]
         public Input<string>? Region { get; set; }
+
+        /// <summary>
+        /// Region tag
+        /// </summary>
+        [Input("regionTag")]
+        public Input<string>? RegionTag { get; set; }
 
         /// <summary>
         /// Secondary ipsec tunnel

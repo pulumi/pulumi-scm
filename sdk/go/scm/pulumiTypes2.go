@@ -13,6 +13,3226 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type SdwanErrorCorrectionProfileModePacketDuplication struct {
+	// Recovery duration pd
+	RecoveryDurationPd int `pulumi:"recoveryDurationPd"`
+}
+
+// SdwanErrorCorrectionProfileModePacketDuplicationInput is an input type that accepts SdwanErrorCorrectionProfileModePacketDuplicationArgs and SdwanErrorCorrectionProfileModePacketDuplicationOutput values.
+// You can construct a concrete instance of `SdwanErrorCorrectionProfileModePacketDuplicationInput` via:
+//
+//	SdwanErrorCorrectionProfileModePacketDuplicationArgs{...}
+type SdwanErrorCorrectionProfileModePacketDuplicationInput interface {
+	pulumi.Input
+
+	ToSdwanErrorCorrectionProfileModePacketDuplicationOutput() SdwanErrorCorrectionProfileModePacketDuplicationOutput
+	ToSdwanErrorCorrectionProfileModePacketDuplicationOutputWithContext(context.Context) SdwanErrorCorrectionProfileModePacketDuplicationOutput
+}
+
+type SdwanErrorCorrectionProfileModePacketDuplicationArgs struct {
+	// Recovery duration pd
+	RecoveryDurationPd pulumi.IntInput `pulumi:"recoveryDurationPd"`
+}
+
+func (SdwanErrorCorrectionProfileModePacketDuplicationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanErrorCorrectionProfileModePacketDuplication)(nil)).Elem()
+}
+
+func (i SdwanErrorCorrectionProfileModePacketDuplicationArgs) ToSdwanErrorCorrectionProfileModePacketDuplicationOutput() SdwanErrorCorrectionProfileModePacketDuplicationOutput {
+	return i.ToSdwanErrorCorrectionProfileModePacketDuplicationOutputWithContext(context.Background())
+}
+
+func (i SdwanErrorCorrectionProfileModePacketDuplicationArgs) ToSdwanErrorCorrectionProfileModePacketDuplicationOutputWithContext(ctx context.Context) SdwanErrorCorrectionProfileModePacketDuplicationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanErrorCorrectionProfileModePacketDuplicationOutput)
+}
+
+func (i SdwanErrorCorrectionProfileModePacketDuplicationArgs) ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutput() SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput {
+	return i.ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutputWithContext(context.Background())
+}
+
+func (i SdwanErrorCorrectionProfileModePacketDuplicationArgs) ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutputWithContext(ctx context.Context) SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanErrorCorrectionProfileModePacketDuplicationOutput).ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutputWithContext(ctx)
+}
+
+// SdwanErrorCorrectionProfileModePacketDuplicationPtrInput is an input type that accepts SdwanErrorCorrectionProfileModePacketDuplicationArgs, SdwanErrorCorrectionProfileModePacketDuplicationPtr and SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput values.
+// You can construct a concrete instance of `SdwanErrorCorrectionProfileModePacketDuplicationPtrInput` via:
+//
+//	        SdwanErrorCorrectionProfileModePacketDuplicationArgs{...}
+//
+//	or:
+//
+//	        nil
+type SdwanErrorCorrectionProfileModePacketDuplicationPtrInput interface {
+	pulumi.Input
+
+	ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutput() SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput
+	ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutputWithContext(context.Context) SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput
+}
+
+type sdwanErrorCorrectionProfileModePacketDuplicationPtrType SdwanErrorCorrectionProfileModePacketDuplicationArgs
+
+func SdwanErrorCorrectionProfileModePacketDuplicationPtr(v *SdwanErrorCorrectionProfileModePacketDuplicationArgs) SdwanErrorCorrectionProfileModePacketDuplicationPtrInput {
+	return (*sdwanErrorCorrectionProfileModePacketDuplicationPtrType)(v)
+}
+
+func (*sdwanErrorCorrectionProfileModePacketDuplicationPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanErrorCorrectionProfileModePacketDuplication)(nil)).Elem()
+}
+
+func (i *sdwanErrorCorrectionProfileModePacketDuplicationPtrType) ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutput() SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput {
+	return i.ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutputWithContext(context.Background())
+}
+
+func (i *sdwanErrorCorrectionProfileModePacketDuplicationPtrType) ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutputWithContext(ctx context.Context) SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput)
+}
+
+type SdwanErrorCorrectionProfileModePacketDuplicationOutput struct{ *pulumi.OutputState }
+
+func (SdwanErrorCorrectionProfileModePacketDuplicationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanErrorCorrectionProfileModePacketDuplication)(nil)).Elem()
+}
+
+func (o SdwanErrorCorrectionProfileModePacketDuplicationOutput) ToSdwanErrorCorrectionProfileModePacketDuplicationOutput() SdwanErrorCorrectionProfileModePacketDuplicationOutput {
+	return o
+}
+
+func (o SdwanErrorCorrectionProfileModePacketDuplicationOutput) ToSdwanErrorCorrectionProfileModePacketDuplicationOutputWithContext(ctx context.Context) SdwanErrorCorrectionProfileModePacketDuplicationOutput {
+	return o
+}
+
+func (o SdwanErrorCorrectionProfileModePacketDuplicationOutput) ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutput() SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput {
+	return o.ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutputWithContext(context.Background())
+}
+
+func (o SdwanErrorCorrectionProfileModePacketDuplicationOutput) ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutputWithContext(ctx context.Context) SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SdwanErrorCorrectionProfileModePacketDuplication) *SdwanErrorCorrectionProfileModePacketDuplication {
+		return &v
+	}).(SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput)
+}
+
+// Recovery duration pd
+func (o SdwanErrorCorrectionProfileModePacketDuplicationOutput) RecoveryDurationPd() pulumi.IntOutput {
+	return o.ApplyT(func(v SdwanErrorCorrectionProfileModePacketDuplication) int { return v.RecoveryDurationPd }).(pulumi.IntOutput)
+}
+
+type SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput struct{ *pulumi.OutputState }
+
+func (SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanErrorCorrectionProfileModePacketDuplication)(nil)).Elem()
+}
+
+func (o SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput) ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutput() SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput {
+	return o
+}
+
+func (o SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput) ToSdwanErrorCorrectionProfileModePacketDuplicationPtrOutputWithContext(ctx context.Context) SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput {
+	return o
+}
+
+func (o SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput) Elem() SdwanErrorCorrectionProfileModePacketDuplicationOutput {
+	return o.ApplyT(func(v *SdwanErrorCorrectionProfileModePacketDuplication) SdwanErrorCorrectionProfileModePacketDuplication {
+		if v != nil {
+			return *v
+		}
+		var ret SdwanErrorCorrectionProfileModePacketDuplication
+		return ret
+	}).(SdwanErrorCorrectionProfileModePacketDuplicationOutput)
+}
+
+// Recovery duration pd
+func (o SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput) RecoveryDurationPd() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *SdwanErrorCorrectionProfileModePacketDuplication) *int {
+		if v == nil {
+			return nil
+		}
+		return &v.RecoveryDurationPd
+	}).(pulumi.IntPtrOutput)
+}
+
+type SdwanPathQualityProfileMetric struct {
+	// Jitter
+	Jitter SdwanPathQualityProfileMetricJitter `pulumi:"jitter"`
+	// Latency
+	Latency SdwanPathQualityProfileMetricLatency `pulumi:"latency"`
+	// Pkt loss
+	PktLoss *SdwanPathQualityProfileMetricPktLoss `pulumi:"pktLoss"`
+}
+
+// SdwanPathQualityProfileMetricInput is an input type that accepts SdwanPathQualityProfileMetricArgs and SdwanPathQualityProfileMetricOutput values.
+// You can construct a concrete instance of `SdwanPathQualityProfileMetricInput` via:
+//
+//	SdwanPathQualityProfileMetricArgs{...}
+type SdwanPathQualityProfileMetricInput interface {
+	pulumi.Input
+
+	ToSdwanPathQualityProfileMetricOutput() SdwanPathQualityProfileMetricOutput
+	ToSdwanPathQualityProfileMetricOutputWithContext(context.Context) SdwanPathQualityProfileMetricOutput
+}
+
+type SdwanPathQualityProfileMetricArgs struct {
+	// Jitter
+	Jitter SdwanPathQualityProfileMetricJitterInput `pulumi:"jitter"`
+	// Latency
+	Latency SdwanPathQualityProfileMetricLatencyInput `pulumi:"latency"`
+	// Pkt loss
+	PktLoss SdwanPathQualityProfileMetricPktLossPtrInput `pulumi:"pktLoss"`
+}
+
+func (SdwanPathQualityProfileMetricArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanPathQualityProfileMetric)(nil)).Elem()
+}
+
+func (i SdwanPathQualityProfileMetricArgs) ToSdwanPathQualityProfileMetricOutput() SdwanPathQualityProfileMetricOutput {
+	return i.ToSdwanPathQualityProfileMetricOutputWithContext(context.Background())
+}
+
+func (i SdwanPathQualityProfileMetricArgs) ToSdwanPathQualityProfileMetricOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricOutput)
+}
+
+func (i SdwanPathQualityProfileMetricArgs) ToSdwanPathQualityProfileMetricPtrOutput() SdwanPathQualityProfileMetricPtrOutput {
+	return i.ToSdwanPathQualityProfileMetricPtrOutputWithContext(context.Background())
+}
+
+func (i SdwanPathQualityProfileMetricArgs) ToSdwanPathQualityProfileMetricPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricOutput).ToSdwanPathQualityProfileMetricPtrOutputWithContext(ctx)
+}
+
+// SdwanPathQualityProfileMetricPtrInput is an input type that accepts SdwanPathQualityProfileMetricArgs, SdwanPathQualityProfileMetricPtr and SdwanPathQualityProfileMetricPtrOutput values.
+// You can construct a concrete instance of `SdwanPathQualityProfileMetricPtrInput` via:
+//
+//	        SdwanPathQualityProfileMetricArgs{...}
+//
+//	or:
+//
+//	        nil
+type SdwanPathQualityProfileMetricPtrInput interface {
+	pulumi.Input
+
+	ToSdwanPathQualityProfileMetricPtrOutput() SdwanPathQualityProfileMetricPtrOutput
+	ToSdwanPathQualityProfileMetricPtrOutputWithContext(context.Context) SdwanPathQualityProfileMetricPtrOutput
+}
+
+type sdwanPathQualityProfileMetricPtrType SdwanPathQualityProfileMetricArgs
+
+func SdwanPathQualityProfileMetricPtr(v *SdwanPathQualityProfileMetricArgs) SdwanPathQualityProfileMetricPtrInput {
+	return (*sdwanPathQualityProfileMetricPtrType)(v)
+}
+
+func (*sdwanPathQualityProfileMetricPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanPathQualityProfileMetric)(nil)).Elem()
+}
+
+func (i *sdwanPathQualityProfileMetricPtrType) ToSdwanPathQualityProfileMetricPtrOutput() SdwanPathQualityProfileMetricPtrOutput {
+	return i.ToSdwanPathQualityProfileMetricPtrOutputWithContext(context.Background())
+}
+
+func (i *sdwanPathQualityProfileMetricPtrType) ToSdwanPathQualityProfileMetricPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricPtrOutput)
+}
+
+type SdwanPathQualityProfileMetricOutput struct{ *pulumi.OutputState }
+
+func (SdwanPathQualityProfileMetricOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanPathQualityProfileMetric)(nil)).Elem()
+}
+
+func (o SdwanPathQualityProfileMetricOutput) ToSdwanPathQualityProfileMetricOutput() SdwanPathQualityProfileMetricOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricOutput) ToSdwanPathQualityProfileMetricOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricOutput) ToSdwanPathQualityProfileMetricPtrOutput() SdwanPathQualityProfileMetricPtrOutput {
+	return o.ToSdwanPathQualityProfileMetricPtrOutputWithContext(context.Background())
+}
+
+func (o SdwanPathQualityProfileMetricOutput) ToSdwanPathQualityProfileMetricPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SdwanPathQualityProfileMetric) *SdwanPathQualityProfileMetric {
+		return &v
+	}).(SdwanPathQualityProfileMetricPtrOutput)
+}
+
+// Jitter
+func (o SdwanPathQualityProfileMetricOutput) Jitter() SdwanPathQualityProfileMetricJitterOutput {
+	return o.ApplyT(func(v SdwanPathQualityProfileMetric) SdwanPathQualityProfileMetricJitter { return v.Jitter }).(SdwanPathQualityProfileMetricJitterOutput)
+}
+
+// Latency
+func (o SdwanPathQualityProfileMetricOutput) Latency() SdwanPathQualityProfileMetricLatencyOutput {
+	return o.ApplyT(func(v SdwanPathQualityProfileMetric) SdwanPathQualityProfileMetricLatency { return v.Latency }).(SdwanPathQualityProfileMetricLatencyOutput)
+}
+
+// Pkt loss
+func (o SdwanPathQualityProfileMetricOutput) PktLoss() SdwanPathQualityProfileMetricPktLossPtrOutput {
+	return o.ApplyT(func(v SdwanPathQualityProfileMetric) *SdwanPathQualityProfileMetricPktLoss { return v.PktLoss }).(SdwanPathQualityProfileMetricPktLossPtrOutput)
+}
+
+type SdwanPathQualityProfileMetricPtrOutput struct{ *pulumi.OutputState }
+
+func (SdwanPathQualityProfileMetricPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanPathQualityProfileMetric)(nil)).Elem()
+}
+
+func (o SdwanPathQualityProfileMetricPtrOutput) ToSdwanPathQualityProfileMetricPtrOutput() SdwanPathQualityProfileMetricPtrOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricPtrOutput) ToSdwanPathQualityProfileMetricPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricPtrOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricPtrOutput) Elem() SdwanPathQualityProfileMetricOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetric) SdwanPathQualityProfileMetric {
+		if v != nil {
+			return *v
+		}
+		var ret SdwanPathQualityProfileMetric
+		return ret
+	}).(SdwanPathQualityProfileMetricOutput)
+}
+
+// Jitter
+func (o SdwanPathQualityProfileMetricPtrOutput) Jitter() SdwanPathQualityProfileMetricJitterPtrOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetric) *SdwanPathQualityProfileMetricJitter {
+		if v == nil {
+			return nil
+		}
+		return &v.Jitter
+	}).(SdwanPathQualityProfileMetricJitterPtrOutput)
+}
+
+// Latency
+func (o SdwanPathQualityProfileMetricPtrOutput) Latency() SdwanPathQualityProfileMetricLatencyPtrOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetric) *SdwanPathQualityProfileMetricLatency {
+		if v == nil {
+			return nil
+		}
+		return &v.Latency
+	}).(SdwanPathQualityProfileMetricLatencyPtrOutput)
+}
+
+// Pkt loss
+func (o SdwanPathQualityProfileMetricPtrOutput) PktLoss() SdwanPathQualityProfileMetricPktLossPtrOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetric) *SdwanPathQualityProfileMetricPktLoss {
+		if v == nil {
+			return nil
+		}
+		return v.PktLoss
+	}).(SdwanPathQualityProfileMetricPktLossPtrOutput)
+}
+
+type SdwanPathQualityProfileMetricJitter struct {
+	// Jitter sensitivity
+	Sensitivity string `pulumi:"sensitivity"`
+	// Jitter threshold (ms)
+	Threshold int `pulumi:"threshold"`
+}
+
+// SdwanPathQualityProfileMetricJitterInput is an input type that accepts SdwanPathQualityProfileMetricJitterArgs and SdwanPathQualityProfileMetricJitterOutput values.
+// You can construct a concrete instance of `SdwanPathQualityProfileMetricJitterInput` via:
+//
+//	SdwanPathQualityProfileMetricJitterArgs{...}
+type SdwanPathQualityProfileMetricJitterInput interface {
+	pulumi.Input
+
+	ToSdwanPathQualityProfileMetricJitterOutput() SdwanPathQualityProfileMetricJitterOutput
+	ToSdwanPathQualityProfileMetricJitterOutputWithContext(context.Context) SdwanPathQualityProfileMetricJitterOutput
+}
+
+type SdwanPathQualityProfileMetricJitterArgs struct {
+	// Jitter sensitivity
+	Sensitivity pulumi.StringInput `pulumi:"sensitivity"`
+	// Jitter threshold (ms)
+	Threshold pulumi.IntInput `pulumi:"threshold"`
+}
+
+func (SdwanPathQualityProfileMetricJitterArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanPathQualityProfileMetricJitter)(nil)).Elem()
+}
+
+func (i SdwanPathQualityProfileMetricJitterArgs) ToSdwanPathQualityProfileMetricJitterOutput() SdwanPathQualityProfileMetricJitterOutput {
+	return i.ToSdwanPathQualityProfileMetricJitterOutputWithContext(context.Background())
+}
+
+func (i SdwanPathQualityProfileMetricJitterArgs) ToSdwanPathQualityProfileMetricJitterOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricJitterOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricJitterOutput)
+}
+
+func (i SdwanPathQualityProfileMetricJitterArgs) ToSdwanPathQualityProfileMetricJitterPtrOutput() SdwanPathQualityProfileMetricJitterPtrOutput {
+	return i.ToSdwanPathQualityProfileMetricJitterPtrOutputWithContext(context.Background())
+}
+
+func (i SdwanPathQualityProfileMetricJitterArgs) ToSdwanPathQualityProfileMetricJitterPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricJitterPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricJitterOutput).ToSdwanPathQualityProfileMetricJitterPtrOutputWithContext(ctx)
+}
+
+// SdwanPathQualityProfileMetricJitterPtrInput is an input type that accepts SdwanPathQualityProfileMetricJitterArgs, SdwanPathQualityProfileMetricJitterPtr and SdwanPathQualityProfileMetricJitterPtrOutput values.
+// You can construct a concrete instance of `SdwanPathQualityProfileMetricJitterPtrInput` via:
+//
+//	        SdwanPathQualityProfileMetricJitterArgs{...}
+//
+//	or:
+//
+//	        nil
+type SdwanPathQualityProfileMetricJitterPtrInput interface {
+	pulumi.Input
+
+	ToSdwanPathQualityProfileMetricJitterPtrOutput() SdwanPathQualityProfileMetricJitterPtrOutput
+	ToSdwanPathQualityProfileMetricJitterPtrOutputWithContext(context.Context) SdwanPathQualityProfileMetricJitterPtrOutput
+}
+
+type sdwanPathQualityProfileMetricJitterPtrType SdwanPathQualityProfileMetricJitterArgs
+
+func SdwanPathQualityProfileMetricJitterPtr(v *SdwanPathQualityProfileMetricJitterArgs) SdwanPathQualityProfileMetricJitterPtrInput {
+	return (*sdwanPathQualityProfileMetricJitterPtrType)(v)
+}
+
+func (*sdwanPathQualityProfileMetricJitterPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanPathQualityProfileMetricJitter)(nil)).Elem()
+}
+
+func (i *sdwanPathQualityProfileMetricJitterPtrType) ToSdwanPathQualityProfileMetricJitterPtrOutput() SdwanPathQualityProfileMetricJitterPtrOutput {
+	return i.ToSdwanPathQualityProfileMetricJitterPtrOutputWithContext(context.Background())
+}
+
+func (i *sdwanPathQualityProfileMetricJitterPtrType) ToSdwanPathQualityProfileMetricJitterPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricJitterPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricJitterPtrOutput)
+}
+
+type SdwanPathQualityProfileMetricJitterOutput struct{ *pulumi.OutputState }
+
+func (SdwanPathQualityProfileMetricJitterOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanPathQualityProfileMetricJitter)(nil)).Elem()
+}
+
+func (o SdwanPathQualityProfileMetricJitterOutput) ToSdwanPathQualityProfileMetricJitterOutput() SdwanPathQualityProfileMetricJitterOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricJitterOutput) ToSdwanPathQualityProfileMetricJitterOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricJitterOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricJitterOutput) ToSdwanPathQualityProfileMetricJitterPtrOutput() SdwanPathQualityProfileMetricJitterPtrOutput {
+	return o.ToSdwanPathQualityProfileMetricJitterPtrOutputWithContext(context.Background())
+}
+
+func (o SdwanPathQualityProfileMetricJitterOutput) ToSdwanPathQualityProfileMetricJitterPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricJitterPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SdwanPathQualityProfileMetricJitter) *SdwanPathQualityProfileMetricJitter {
+		return &v
+	}).(SdwanPathQualityProfileMetricJitterPtrOutput)
+}
+
+// Jitter sensitivity
+func (o SdwanPathQualityProfileMetricJitterOutput) Sensitivity() pulumi.StringOutput {
+	return o.ApplyT(func(v SdwanPathQualityProfileMetricJitter) string { return v.Sensitivity }).(pulumi.StringOutput)
+}
+
+// Jitter threshold (ms)
+func (o SdwanPathQualityProfileMetricJitterOutput) Threshold() pulumi.IntOutput {
+	return o.ApplyT(func(v SdwanPathQualityProfileMetricJitter) int { return v.Threshold }).(pulumi.IntOutput)
+}
+
+type SdwanPathQualityProfileMetricJitterPtrOutput struct{ *pulumi.OutputState }
+
+func (SdwanPathQualityProfileMetricJitterPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanPathQualityProfileMetricJitter)(nil)).Elem()
+}
+
+func (o SdwanPathQualityProfileMetricJitterPtrOutput) ToSdwanPathQualityProfileMetricJitterPtrOutput() SdwanPathQualityProfileMetricJitterPtrOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricJitterPtrOutput) ToSdwanPathQualityProfileMetricJitterPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricJitterPtrOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricJitterPtrOutput) Elem() SdwanPathQualityProfileMetricJitterOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetricJitter) SdwanPathQualityProfileMetricJitter {
+		if v != nil {
+			return *v
+		}
+		var ret SdwanPathQualityProfileMetricJitter
+		return ret
+	}).(SdwanPathQualityProfileMetricJitterOutput)
+}
+
+// Jitter sensitivity
+func (o SdwanPathQualityProfileMetricJitterPtrOutput) Sensitivity() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetricJitter) *string {
+		if v == nil {
+			return nil
+		}
+		return &v.Sensitivity
+	}).(pulumi.StringPtrOutput)
+}
+
+// Jitter threshold (ms)
+func (o SdwanPathQualityProfileMetricJitterPtrOutput) Threshold() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetricJitter) *int {
+		if v == nil {
+			return nil
+		}
+		return &v.Threshold
+	}).(pulumi.IntPtrOutput)
+}
+
+type SdwanPathQualityProfileMetricLatency struct {
+	// Latency sensitivity
+	Sensitivity string `pulumi:"sensitivity"`
+	// Latency threshold (ms)
+	Threshold int `pulumi:"threshold"`
+}
+
+// SdwanPathQualityProfileMetricLatencyInput is an input type that accepts SdwanPathQualityProfileMetricLatencyArgs and SdwanPathQualityProfileMetricLatencyOutput values.
+// You can construct a concrete instance of `SdwanPathQualityProfileMetricLatencyInput` via:
+//
+//	SdwanPathQualityProfileMetricLatencyArgs{...}
+type SdwanPathQualityProfileMetricLatencyInput interface {
+	pulumi.Input
+
+	ToSdwanPathQualityProfileMetricLatencyOutput() SdwanPathQualityProfileMetricLatencyOutput
+	ToSdwanPathQualityProfileMetricLatencyOutputWithContext(context.Context) SdwanPathQualityProfileMetricLatencyOutput
+}
+
+type SdwanPathQualityProfileMetricLatencyArgs struct {
+	// Latency sensitivity
+	Sensitivity pulumi.StringInput `pulumi:"sensitivity"`
+	// Latency threshold (ms)
+	Threshold pulumi.IntInput `pulumi:"threshold"`
+}
+
+func (SdwanPathQualityProfileMetricLatencyArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanPathQualityProfileMetricLatency)(nil)).Elem()
+}
+
+func (i SdwanPathQualityProfileMetricLatencyArgs) ToSdwanPathQualityProfileMetricLatencyOutput() SdwanPathQualityProfileMetricLatencyOutput {
+	return i.ToSdwanPathQualityProfileMetricLatencyOutputWithContext(context.Background())
+}
+
+func (i SdwanPathQualityProfileMetricLatencyArgs) ToSdwanPathQualityProfileMetricLatencyOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricLatencyOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricLatencyOutput)
+}
+
+func (i SdwanPathQualityProfileMetricLatencyArgs) ToSdwanPathQualityProfileMetricLatencyPtrOutput() SdwanPathQualityProfileMetricLatencyPtrOutput {
+	return i.ToSdwanPathQualityProfileMetricLatencyPtrOutputWithContext(context.Background())
+}
+
+func (i SdwanPathQualityProfileMetricLatencyArgs) ToSdwanPathQualityProfileMetricLatencyPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricLatencyPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricLatencyOutput).ToSdwanPathQualityProfileMetricLatencyPtrOutputWithContext(ctx)
+}
+
+// SdwanPathQualityProfileMetricLatencyPtrInput is an input type that accepts SdwanPathQualityProfileMetricLatencyArgs, SdwanPathQualityProfileMetricLatencyPtr and SdwanPathQualityProfileMetricLatencyPtrOutput values.
+// You can construct a concrete instance of `SdwanPathQualityProfileMetricLatencyPtrInput` via:
+//
+//	        SdwanPathQualityProfileMetricLatencyArgs{...}
+//
+//	or:
+//
+//	        nil
+type SdwanPathQualityProfileMetricLatencyPtrInput interface {
+	pulumi.Input
+
+	ToSdwanPathQualityProfileMetricLatencyPtrOutput() SdwanPathQualityProfileMetricLatencyPtrOutput
+	ToSdwanPathQualityProfileMetricLatencyPtrOutputWithContext(context.Context) SdwanPathQualityProfileMetricLatencyPtrOutput
+}
+
+type sdwanPathQualityProfileMetricLatencyPtrType SdwanPathQualityProfileMetricLatencyArgs
+
+func SdwanPathQualityProfileMetricLatencyPtr(v *SdwanPathQualityProfileMetricLatencyArgs) SdwanPathQualityProfileMetricLatencyPtrInput {
+	return (*sdwanPathQualityProfileMetricLatencyPtrType)(v)
+}
+
+func (*sdwanPathQualityProfileMetricLatencyPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanPathQualityProfileMetricLatency)(nil)).Elem()
+}
+
+func (i *sdwanPathQualityProfileMetricLatencyPtrType) ToSdwanPathQualityProfileMetricLatencyPtrOutput() SdwanPathQualityProfileMetricLatencyPtrOutput {
+	return i.ToSdwanPathQualityProfileMetricLatencyPtrOutputWithContext(context.Background())
+}
+
+func (i *sdwanPathQualityProfileMetricLatencyPtrType) ToSdwanPathQualityProfileMetricLatencyPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricLatencyPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricLatencyPtrOutput)
+}
+
+type SdwanPathQualityProfileMetricLatencyOutput struct{ *pulumi.OutputState }
+
+func (SdwanPathQualityProfileMetricLatencyOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanPathQualityProfileMetricLatency)(nil)).Elem()
+}
+
+func (o SdwanPathQualityProfileMetricLatencyOutput) ToSdwanPathQualityProfileMetricLatencyOutput() SdwanPathQualityProfileMetricLatencyOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricLatencyOutput) ToSdwanPathQualityProfileMetricLatencyOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricLatencyOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricLatencyOutput) ToSdwanPathQualityProfileMetricLatencyPtrOutput() SdwanPathQualityProfileMetricLatencyPtrOutput {
+	return o.ToSdwanPathQualityProfileMetricLatencyPtrOutputWithContext(context.Background())
+}
+
+func (o SdwanPathQualityProfileMetricLatencyOutput) ToSdwanPathQualityProfileMetricLatencyPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricLatencyPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SdwanPathQualityProfileMetricLatency) *SdwanPathQualityProfileMetricLatency {
+		return &v
+	}).(SdwanPathQualityProfileMetricLatencyPtrOutput)
+}
+
+// Latency sensitivity
+func (o SdwanPathQualityProfileMetricLatencyOutput) Sensitivity() pulumi.StringOutput {
+	return o.ApplyT(func(v SdwanPathQualityProfileMetricLatency) string { return v.Sensitivity }).(pulumi.StringOutput)
+}
+
+// Latency threshold (ms)
+func (o SdwanPathQualityProfileMetricLatencyOutput) Threshold() pulumi.IntOutput {
+	return o.ApplyT(func(v SdwanPathQualityProfileMetricLatency) int { return v.Threshold }).(pulumi.IntOutput)
+}
+
+type SdwanPathQualityProfileMetricLatencyPtrOutput struct{ *pulumi.OutputState }
+
+func (SdwanPathQualityProfileMetricLatencyPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanPathQualityProfileMetricLatency)(nil)).Elem()
+}
+
+func (o SdwanPathQualityProfileMetricLatencyPtrOutput) ToSdwanPathQualityProfileMetricLatencyPtrOutput() SdwanPathQualityProfileMetricLatencyPtrOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricLatencyPtrOutput) ToSdwanPathQualityProfileMetricLatencyPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricLatencyPtrOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricLatencyPtrOutput) Elem() SdwanPathQualityProfileMetricLatencyOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetricLatency) SdwanPathQualityProfileMetricLatency {
+		if v != nil {
+			return *v
+		}
+		var ret SdwanPathQualityProfileMetricLatency
+		return ret
+	}).(SdwanPathQualityProfileMetricLatencyOutput)
+}
+
+// Latency sensitivity
+func (o SdwanPathQualityProfileMetricLatencyPtrOutput) Sensitivity() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetricLatency) *string {
+		if v == nil {
+			return nil
+		}
+		return &v.Sensitivity
+	}).(pulumi.StringPtrOutput)
+}
+
+// Latency threshold (ms)
+func (o SdwanPathQualityProfileMetricLatencyPtrOutput) Threshold() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetricLatency) *int {
+		if v == nil {
+			return nil
+		}
+		return &v.Threshold
+	}).(pulumi.IntPtrOutput)
+}
+
+type SdwanPathQualityProfileMetricPktLoss struct {
+	// Packet loss sensitivity
+	Sensitivity string `pulumi:"sensitivity"`
+	// Packet loss threshold (percentage)
+	Threshold int `pulumi:"threshold"`
+}
+
+// SdwanPathQualityProfileMetricPktLossInput is an input type that accepts SdwanPathQualityProfileMetricPktLossArgs and SdwanPathQualityProfileMetricPktLossOutput values.
+// You can construct a concrete instance of `SdwanPathQualityProfileMetricPktLossInput` via:
+//
+//	SdwanPathQualityProfileMetricPktLossArgs{...}
+type SdwanPathQualityProfileMetricPktLossInput interface {
+	pulumi.Input
+
+	ToSdwanPathQualityProfileMetricPktLossOutput() SdwanPathQualityProfileMetricPktLossOutput
+	ToSdwanPathQualityProfileMetricPktLossOutputWithContext(context.Context) SdwanPathQualityProfileMetricPktLossOutput
+}
+
+type SdwanPathQualityProfileMetricPktLossArgs struct {
+	// Packet loss sensitivity
+	Sensitivity pulumi.StringInput `pulumi:"sensitivity"`
+	// Packet loss threshold (percentage)
+	Threshold pulumi.IntInput `pulumi:"threshold"`
+}
+
+func (SdwanPathQualityProfileMetricPktLossArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanPathQualityProfileMetricPktLoss)(nil)).Elem()
+}
+
+func (i SdwanPathQualityProfileMetricPktLossArgs) ToSdwanPathQualityProfileMetricPktLossOutput() SdwanPathQualityProfileMetricPktLossOutput {
+	return i.ToSdwanPathQualityProfileMetricPktLossOutputWithContext(context.Background())
+}
+
+func (i SdwanPathQualityProfileMetricPktLossArgs) ToSdwanPathQualityProfileMetricPktLossOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricPktLossOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricPktLossOutput)
+}
+
+func (i SdwanPathQualityProfileMetricPktLossArgs) ToSdwanPathQualityProfileMetricPktLossPtrOutput() SdwanPathQualityProfileMetricPktLossPtrOutput {
+	return i.ToSdwanPathQualityProfileMetricPktLossPtrOutputWithContext(context.Background())
+}
+
+func (i SdwanPathQualityProfileMetricPktLossArgs) ToSdwanPathQualityProfileMetricPktLossPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricPktLossPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricPktLossOutput).ToSdwanPathQualityProfileMetricPktLossPtrOutputWithContext(ctx)
+}
+
+// SdwanPathQualityProfileMetricPktLossPtrInput is an input type that accepts SdwanPathQualityProfileMetricPktLossArgs, SdwanPathQualityProfileMetricPktLossPtr and SdwanPathQualityProfileMetricPktLossPtrOutput values.
+// You can construct a concrete instance of `SdwanPathQualityProfileMetricPktLossPtrInput` via:
+//
+//	        SdwanPathQualityProfileMetricPktLossArgs{...}
+//
+//	or:
+//
+//	        nil
+type SdwanPathQualityProfileMetricPktLossPtrInput interface {
+	pulumi.Input
+
+	ToSdwanPathQualityProfileMetricPktLossPtrOutput() SdwanPathQualityProfileMetricPktLossPtrOutput
+	ToSdwanPathQualityProfileMetricPktLossPtrOutputWithContext(context.Context) SdwanPathQualityProfileMetricPktLossPtrOutput
+}
+
+type sdwanPathQualityProfileMetricPktLossPtrType SdwanPathQualityProfileMetricPktLossArgs
+
+func SdwanPathQualityProfileMetricPktLossPtr(v *SdwanPathQualityProfileMetricPktLossArgs) SdwanPathQualityProfileMetricPktLossPtrInput {
+	return (*sdwanPathQualityProfileMetricPktLossPtrType)(v)
+}
+
+func (*sdwanPathQualityProfileMetricPktLossPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanPathQualityProfileMetricPktLoss)(nil)).Elem()
+}
+
+func (i *sdwanPathQualityProfileMetricPktLossPtrType) ToSdwanPathQualityProfileMetricPktLossPtrOutput() SdwanPathQualityProfileMetricPktLossPtrOutput {
+	return i.ToSdwanPathQualityProfileMetricPktLossPtrOutputWithContext(context.Background())
+}
+
+func (i *sdwanPathQualityProfileMetricPktLossPtrType) ToSdwanPathQualityProfileMetricPktLossPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricPktLossPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanPathQualityProfileMetricPktLossPtrOutput)
+}
+
+type SdwanPathQualityProfileMetricPktLossOutput struct{ *pulumi.OutputState }
+
+func (SdwanPathQualityProfileMetricPktLossOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanPathQualityProfileMetricPktLoss)(nil)).Elem()
+}
+
+func (o SdwanPathQualityProfileMetricPktLossOutput) ToSdwanPathQualityProfileMetricPktLossOutput() SdwanPathQualityProfileMetricPktLossOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricPktLossOutput) ToSdwanPathQualityProfileMetricPktLossOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricPktLossOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricPktLossOutput) ToSdwanPathQualityProfileMetricPktLossPtrOutput() SdwanPathQualityProfileMetricPktLossPtrOutput {
+	return o.ToSdwanPathQualityProfileMetricPktLossPtrOutputWithContext(context.Background())
+}
+
+func (o SdwanPathQualityProfileMetricPktLossOutput) ToSdwanPathQualityProfileMetricPktLossPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricPktLossPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SdwanPathQualityProfileMetricPktLoss) *SdwanPathQualityProfileMetricPktLoss {
+		return &v
+	}).(SdwanPathQualityProfileMetricPktLossPtrOutput)
+}
+
+// Packet loss sensitivity
+func (o SdwanPathQualityProfileMetricPktLossOutput) Sensitivity() pulumi.StringOutput {
+	return o.ApplyT(func(v SdwanPathQualityProfileMetricPktLoss) string { return v.Sensitivity }).(pulumi.StringOutput)
+}
+
+// Packet loss threshold (percentage)
+func (o SdwanPathQualityProfileMetricPktLossOutput) Threshold() pulumi.IntOutput {
+	return o.ApplyT(func(v SdwanPathQualityProfileMetricPktLoss) int { return v.Threshold }).(pulumi.IntOutput)
+}
+
+type SdwanPathQualityProfileMetricPktLossPtrOutput struct{ *pulumi.OutputState }
+
+func (SdwanPathQualityProfileMetricPktLossPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanPathQualityProfileMetricPktLoss)(nil)).Elem()
+}
+
+func (o SdwanPathQualityProfileMetricPktLossPtrOutput) ToSdwanPathQualityProfileMetricPktLossPtrOutput() SdwanPathQualityProfileMetricPktLossPtrOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricPktLossPtrOutput) ToSdwanPathQualityProfileMetricPktLossPtrOutputWithContext(ctx context.Context) SdwanPathQualityProfileMetricPktLossPtrOutput {
+	return o
+}
+
+func (o SdwanPathQualityProfileMetricPktLossPtrOutput) Elem() SdwanPathQualityProfileMetricPktLossOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetricPktLoss) SdwanPathQualityProfileMetricPktLoss {
+		if v != nil {
+			return *v
+		}
+		var ret SdwanPathQualityProfileMetricPktLoss
+		return ret
+	}).(SdwanPathQualityProfileMetricPktLossOutput)
+}
+
+// Packet loss sensitivity
+func (o SdwanPathQualityProfileMetricPktLossPtrOutput) Sensitivity() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetricPktLoss) *string {
+		if v == nil {
+			return nil
+		}
+		return &v.Sensitivity
+	}).(pulumi.StringPtrOutput)
+}
+
+// Packet loss threshold (percentage)
+func (o SdwanPathQualityProfileMetricPktLossPtrOutput) Threshold() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *SdwanPathQualityProfileMetricPktLoss) *int {
+		if v == nil {
+			return nil
+		}
+		return &v.Threshold
+	}).(pulumi.IntPtrOutput)
+}
+
+type SdwanRuleAction struct {
+	// Traffic dstribution profile
+	TrafficDistributionProfile string `pulumi:"trafficDistributionProfile"`
+}
+
+// SdwanRuleActionInput is an input type that accepts SdwanRuleActionArgs and SdwanRuleActionOutput values.
+// You can construct a concrete instance of `SdwanRuleActionInput` via:
+//
+//	SdwanRuleActionArgs{...}
+type SdwanRuleActionInput interface {
+	pulumi.Input
+
+	ToSdwanRuleActionOutput() SdwanRuleActionOutput
+	ToSdwanRuleActionOutputWithContext(context.Context) SdwanRuleActionOutput
+}
+
+type SdwanRuleActionArgs struct {
+	// Traffic dstribution profile
+	TrafficDistributionProfile pulumi.StringInput `pulumi:"trafficDistributionProfile"`
+}
+
+func (SdwanRuleActionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanRuleAction)(nil)).Elem()
+}
+
+func (i SdwanRuleActionArgs) ToSdwanRuleActionOutput() SdwanRuleActionOutput {
+	return i.ToSdwanRuleActionOutputWithContext(context.Background())
+}
+
+func (i SdwanRuleActionArgs) ToSdwanRuleActionOutputWithContext(ctx context.Context) SdwanRuleActionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanRuleActionOutput)
+}
+
+func (i SdwanRuleActionArgs) ToSdwanRuleActionPtrOutput() SdwanRuleActionPtrOutput {
+	return i.ToSdwanRuleActionPtrOutputWithContext(context.Background())
+}
+
+func (i SdwanRuleActionArgs) ToSdwanRuleActionPtrOutputWithContext(ctx context.Context) SdwanRuleActionPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanRuleActionOutput).ToSdwanRuleActionPtrOutputWithContext(ctx)
+}
+
+// SdwanRuleActionPtrInput is an input type that accepts SdwanRuleActionArgs, SdwanRuleActionPtr and SdwanRuleActionPtrOutput values.
+// You can construct a concrete instance of `SdwanRuleActionPtrInput` via:
+//
+//	        SdwanRuleActionArgs{...}
+//
+//	or:
+//
+//	        nil
+type SdwanRuleActionPtrInput interface {
+	pulumi.Input
+
+	ToSdwanRuleActionPtrOutput() SdwanRuleActionPtrOutput
+	ToSdwanRuleActionPtrOutputWithContext(context.Context) SdwanRuleActionPtrOutput
+}
+
+type sdwanRuleActionPtrType SdwanRuleActionArgs
+
+func SdwanRuleActionPtr(v *SdwanRuleActionArgs) SdwanRuleActionPtrInput {
+	return (*sdwanRuleActionPtrType)(v)
+}
+
+func (*sdwanRuleActionPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanRuleAction)(nil)).Elem()
+}
+
+func (i *sdwanRuleActionPtrType) ToSdwanRuleActionPtrOutput() SdwanRuleActionPtrOutput {
+	return i.ToSdwanRuleActionPtrOutputWithContext(context.Background())
+}
+
+func (i *sdwanRuleActionPtrType) ToSdwanRuleActionPtrOutputWithContext(ctx context.Context) SdwanRuleActionPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanRuleActionPtrOutput)
+}
+
+type SdwanRuleActionOutput struct{ *pulumi.OutputState }
+
+func (SdwanRuleActionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanRuleAction)(nil)).Elem()
+}
+
+func (o SdwanRuleActionOutput) ToSdwanRuleActionOutput() SdwanRuleActionOutput {
+	return o
+}
+
+func (o SdwanRuleActionOutput) ToSdwanRuleActionOutputWithContext(ctx context.Context) SdwanRuleActionOutput {
+	return o
+}
+
+func (o SdwanRuleActionOutput) ToSdwanRuleActionPtrOutput() SdwanRuleActionPtrOutput {
+	return o.ToSdwanRuleActionPtrOutputWithContext(context.Background())
+}
+
+func (o SdwanRuleActionOutput) ToSdwanRuleActionPtrOutputWithContext(ctx context.Context) SdwanRuleActionPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SdwanRuleAction) *SdwanRuleAction {
+		return &v
+	}).(SdwanRuleActionPtrOutput)
+}
+
+// Traffic dstribution profile
+func (o SdwanRuleActionOutput) TrafficDistributionProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v SdwanRuleAction) string { return v.TrafficDistributionProfile }).(pulumi.StringOutput)
+}
+
+type SdwanRuleActionPtrOutput struct{ *pulumi.OutputState }
+
+func (SdwanRuleActionPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanRuleAction)(nil)).Elem()
+}
+
+func (o SdwanRuleActionPtrOutput) ToSdwanRuleActionPtrOutput() SdwanRuleActionPtrOutput {
+	return o
+}
+
+func (o SdwanRuleActionPtrOutput) ToSdwanRuleActionPtrOutputWithContext(ctx context.Context) SdwanRuleActionPtrOutput {
+	return o
+}
+
+func (o SdwanRuleActionPtrOutput) Elem() SdwanRuleActionOutput {
+	return o.ApplyT(func(v *SdwanRuleAction) SdwanRuleAction {
+		if v != nil {
+			return *v
+		}
+		var ret SdwanRuleAction
+		return ret
+	}).(SdwanRuleActionOutput)
+}
+
+// Traffic dstribution profile
+func (o SdwanRuleActionPtrOutput) TrafficDistributionProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SdwanRuleAction) *string {
+		if v == nil {
+			return nil
+		}
+		return &v.TrafficDistributionProfile
+	}).(pulumi.StringPtrOutput)
+}
+
+type SdwanSaasQualityProfileMonitorMode struct {
+	// Adaptive
+	Adaptive *SdwanSaasQualityProfileMonitorModeAdaptive `pulumi:"adaptive"`
+	// Http https
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
+	HttpHttps *SdwanSaasQualityProfileMonitorModeHttpHttps `pulumi:"httpHttps"`
+	// Static ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
+	StaticIp *SdwanSaasQualityProfileMonitorModeStaticIp `pulumi:"staticIp"`
+}
+
+// SdwanSaasQualityProfileMonitorModeInput is an input type that accepts SdwanSaasQualityProfileMonitorModeArgs and SdwanSaasQualityProfileMonitorModeOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModeInput` via:
+//
+//	SdwanSaasQualityProfileMonitorModeArgs{...}
+type SdwanSaasQualityProfileMonitorModeInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModeOutput() SdwanSaasQualityProfileMonitorModeOutput
+	ToSdwanSaasQualityProfileMonitorModeOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModeOutput
+}
+
+type SdwanSaasQualityProfileMonitorModeArgs struct {
+	// Adaptive
+	Adaptive SdwanSaasQualityProfileMonitorModeAdaptivePtrInput `pulumi:"adaptive"`
+	// Http https
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
+	HttpHttps SdwanSaasQualityProfileMonitorModeHttpHttpsPtrInput `pulumi:"httpHttps"`
+	// Static ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
+	StaticIp SdwanSaasQualityProfileMonitorModeStaticIpPtrInput `pulumi:"staticIp"`
+}
+
+func (SdwanSaasQualityProfileMonitorModeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorMode)(nil)).Elem()
+}
+
+func (i SdwanSaasQualityProfileMonitorModeArgs) ToSdwanSaasQualityProfileMonitorModeOutput() SdwanSaasQualityProfileMonitorModeOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeArgs) ToSdwanSaasQualityProfileMonitorModeOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeOutput)
+}
+
+func (i SdwanSaasQualityProfileMonitorModeArgs) ToSdwanSaasQualityProfileMonitorModePtrOutput() SdwanSaasQualityProfileMonitorModePtrOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModePtrOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeArgs) ToSdwanSaasQualityProfileMonitorModePtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeOutput).ToSdwanSaasQualityProfileMonitorModePtrOutputWithContext(ctx)
+}
+
+// SdwanSaasQualityProfileMonitorModePtrInput is an input type that accepts SdwanSaasQualityProfileMonitorModeArgs, SdwanSaasQualityProfileMonitorModePtr and SdwanSaasQualityProfileMonitorModePtrOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModePtrInput` via:
+//
+//	        SdwanSaasQualityProfileMonitorModeArgs{...}
+//
+//	or:
+//
+//	        nil
+type SdwanSaasQualityProfileMonitorModePtrInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModePtrOutput() SdwanSaasQualityProfileMonitorModePtrOutput
+	ToSdwanSaasQualityProfileMonitorModePtrOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModePtrOutput
+}
+
+type sdwanSaasQualityProfileMonitorModePtrType SdwanSaasQualityProfileMonitorModeArgs
+
+func SdwanSaasQualityProfileMonitorModePtr(v *SdwanSaasQualityProfileMonitorModeArgs) SdwanSaasQualityProfileMonitorModePtrInput {
+	return (*sdwanSaasQualityProfileMonitorModePtrType)(v)
+}
+
+func (*sdwanSaasQualityProfileMonitorModePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanSaasQualityProfileMonitorMode)(nil)).Elem()
+}
+
+func (i *sdwanSaasQualityProfileMonitorModePtrType) ToSdwanSaasQualityProfileMonitorModePtrOutput() SdwanSaasQualityProfileMonitorModePtrOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModePtrOutputWithContext(context.Background())
+}
+
+func (i *sdwanSaasQualityProfileMonitorModePtrType) ToSdwanSaasQualityProfileMonitorModePtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModePtrOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorMode)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModeOutput) ToSdwanSaasQualityProfileMonitorModeOutput() SdwanSaasQualityProfileMonitorModeOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeOutput) ToSdwanSaasQualityProfileMonitorModeOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeOutput) ToSdwanSaasQualityProfileMonitorModePtrOutput() SdwanSaasQualityProfileMonitorModePtrOutput {
+	return o.ToSdwanSaasQualityProfileMonitorModePtrOutputWithContext(context.Background())
+}
+
+func (o SdwanSaasQualityProfileMonitorModeOutput) ToSdwanSaasQualityProfileMonitorModePtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SdwanSaasQualityProfileMonitorMode) *SdwanSaasQualityProfileMonitorMode {
+		return &v
+	}).(SdwanSaasQualityProfileMonitorModePtrOutput)
+}
+
+// Adaptive
+func (o SdwanSaasQualityProfileMonitorModeOutput) Adaptive() SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput {
+	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorMode) *SdwanSaasQualityProfileMonitorModeAdaptive {
+		return v.Adaptive
+	}).(SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput)
+}
+
+// Http https
+//
+// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
+func (o SdwanSaasQualityProfileMonitorModeOutput) HttpHttps() SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
+	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorMode) *SdwanSaasQualityProfileMonitorModeHttpHttps {
+		return v.HttpHttps
+	}).(SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput)
+}
+
+// Static ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
+func (o SdwanSaasQualityProfileMonitorModeOutput) StaticIp() SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
+	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorMode) *SdwanSaasQualityProfileMonitorModeStaticIp {
+		return v.StaticIp
+	}).(SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModePtrOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanSaasQualityProfileMonitorMode)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModePtrOutput) ToSdwanSaasQualityProfileMonitorModePtrOutput() SdwanSaasQualityProfileMonitorModePtrOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModePtrOutput) ToSdwanSaasQualityProfileMonitorModePtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModePtrOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModePtrOutput) Elem() SdwanSaasQualityProfileMonitorModeOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorMode) SdwanSaasQualityProfileMonitorMode {
+		if v != nil {
+			return *v
+		}
+		var ret SdwanSaasQualityProfileMonitorMode
+		return ret
+	}).(SdwanSaasQualityProfileMonitorModeOutput)
+}
+
+// Adaptive
+func (o SdwanSaasQualityProfileMonitorModePtrOutput) Adaptive() SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorMode) *SdwanSaasQualityProfileMonitorModeAdaptive {
+		if v == nil {
+			return nil
+		}
+		return v.Adaptive
+	}).(SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput)
+}
+
+// Http https
+//
+// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
+func (o SdwanSaasQualityProfileMonitorModePtrOutput) HttpHttps() SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorMode) *SdwanSaasQualityProfileMonitorModeHttpHttps {
+		if v == nil {
+			return nil
+		}
+		return v.HttpHttps
+	}).(SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput)
+}
+
+// Static ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
+func (o SdwanSaasQualityProfileMonitorModePtrOutput) StaticIp() SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorMode) *SdwanSaasQualityProfileMonitorModeStaticIp {
+		if v == nil {
+			return nil
+		}
+		return v.StaticIp
+	}).(SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeAdaptive struct {
+}
+
+// SdwanSaasQualityProfileMonitorModeAdaptiveInput is an input type that accepts SdwanSaasQualityProfileMonitorModeAdaptiveArgs and SdwanSaasQualityProfileMonitorModeAdaptiveOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModeAdaptiveInput` via:
+//
+//	SdwanSaasQualityProfileMonitorModeAdaptiveArgs{...}
+type SdwanSaasQualityProfileMonitorModeAdaptiveInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModeAdaptiveOutput() SdwanSaasQualityProfileMonitorModeAdaptiveOutput
+	ToSdwanSaasQualityProfileMonitorModeAdaptiveOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModeAdaptiveOutput
+}
+
+type SdwanSaasQualityProfileMonitorModeAdaptiveArgs struct {
+}
+
+func (SdwanSaasQualityProfileMonitorModeAdaptiveArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeAdaptive)(nil)).Elem()
+}
+
+func (i SdwanSaasQualityProfileMonitorModeAdaptiveArgs) ToSdwanSaasQualityProfileMonitorModeAdaptiveOutput() SdwanSaasQualityProfileMonitorModeAdaptiveOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeAdaptiveOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeAdaptiveArgs) ToSdwanSaasQualityProfileMonitorModeAdaptiveOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeAdaptiveOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeAdaptiveOutput)
+}
+
+func (i SdwanSaasQualityProfileMonitorModeAdaptiveArgs) ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutput() SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeAdaptiveArgs) ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeAdaptiveOutput).ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutputWithContext(ctx)
+}
+
+// SdwanSaasQualityProfileMonitorModeAdaptivePtrInput is an input type that accepts SdwanSaasQualityProfileMonitorModeAdaptiveArgs, SdwanSaasQualityProfileMonitorModeAdaptivePtr and SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModeAdaptivePtrInput` via:
+//
+//	        SdwanSaasQualityProfileMonitorModeAdaptiveArgs{...}
+//
+//	or:
+//
+//	        nil
+type SdwanSaasQualityProfileMonitorModeAdaptivePtrInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutput() SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput
+	ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput
+}
+
+type sdwanSaasQualityProfileMonitorModeAdaptivePtrType SdwanSaasQualityProfileMonitorModeAdaptiveArgs
+
+func SdwanSaasQualityProfileMonitorModeAdaptivePtr(v *SdwanSaasQualityProfileMonitorModeAdaptiveArgs) SdwanSaasQualityProfileMonitorModeAdaptivePtrInput {
+	return (*sdwanSaasQualityProfileMonitorModeAdaptivePtrType)(v)
+}
+
+func (*sdwanSaasQualityProfileMonitorModeAdaptivePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanSaasQualityProfileMonitorModeAdaptive)(nil)).Elem()
+}
+
+func (i *sdwanSaasQualityProfileMonitorModeAdaptivePtrType) ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutput() SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutputWithContext(context.Background())
+}
+
+func (i *sdwanSaasQualityProfileMonitorModeAdaptivePtrType) ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeAdaptiveOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModeAdaptiveOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeAdaptive)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModeAdaptiveOutput) ToSdwanSaasQualityProfileMonitorModeAdaptiveOutput() SdwanSaasQualityProfileMonitorModeAdaptiveOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeAdaptiveOutput) ToSdwanSaasQualityProfileMonitorModeAdaptiveOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeAdaptiveOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeAdaptiveOutput) ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutput() SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput {
+	return o.ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutputWithContext(context.Background())
+}
+
+func (o SdwanSaasQualityProfileMonitorModeAdaptiveOutput) ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SdwanSaasQualityProfileMonitorModeAdaptive) *SdwanSaasQualityProfileMonitorModeAdaptive {
+		return &v
+	}).(SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanSaasQualityProfileMonitorModeAdaptive)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput) ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutput() SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput) ToSdwanSaasQualityProfileMonitorModeAdaptivePtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput) Elem() SdwanSaasQualityProfileMonitorModeAdaptiveOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorModeAdaptive) SdwanSaasQualityProfileMonitorModeAdaptive {
+		if v != nil {
+			return *v
+		}
+		var ret SdwanSaasQualityProfileMonitorModeAdaptive
+		return ret
+	}).(SdwanSaasQualityProfileMonitorModeAdaptiveOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeHttpHttps struct {
+	// Monitored URL
+	MonitoredUrl string `pulumi:"monitoredUrl"`
+	// Probe interval (seconds)
+	ProbeInterval int `pulumi:"probeInterval"`
+}
+
+// SdwanSaasQualityProfileMonitorModeHttpHttpsInput is an input type that accepts SdwanSaasQualityProfileMonitorModeHttpHttpsArgs and SdwanSaasQualityProfileMonitorModeHttpHttpsOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModeHttpHttpsInput` via:
+//
+//	SdwanSaasQualityProfileMonitorModeHttpHttpsArgs{...}
+type SdwanSaasQualityProfileMonitorModeHttpHttpsInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModeHttpHttpsOutput() SdwanSaasQualityProfileMonitorModeHttpHttpsOutput
+	ToSdwanSaasQualityProfileMonitorModeHttpHttpsOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModeHttpHttpsOutput
+}
+
+type SdwanSaasQualityProfileMonitorModeHttpHttpsArgs struct {
+	// Monitored URL
+	MonitoredUrl pulumi.StringInput `pulumi:"monitoredUrl"`
+	// Probe interval (seconds)
+	ProbeInterval pulumi.IntInput `pulumi:"probeInterval"`
+}
+
+func (SdwanSaasQualityProfileMonitorModeHttpHttpsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeHttpHttps)(nil)).Elem()
+}
+
+func (i SdwanSaasQualityProfileMonitorModeHttpHttpsArgs) ToSdwanSaasQualityProfileMonitorModeHttpHttpsOutput() SdwanSaasQualityProfileMonitorModeHttpHttpsOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeHttpHttpsOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeHttpHttpsArgs) ToSdwanSaasQualityProfileMonitorModeHttpHttpsOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeHttpHttpsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeHttpHttpsOutput)
+}
+
+func (i SdwanSaasQualityProfileMonitorModeHttpHttpsArgs) ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput() SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeHttpHttpsArgs) ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeHttpHttpsOutput).ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutputWithContext(ctx)
+}
+
+// SdwanSaasQualityProfileMonitorModeHttpHttpsPtrInput is an input type that accepts SdwanSaasQualityProfileMonitorModeHttpHttpsArgs, SdwanSaasQualityProfileMonitorModeHttpHttpsPtr and SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModeHttpHttpsPtrInput` via:
+//
+//	        SdwanSaasQualityProfileMonitorModeHttpHttpsArgs{...}
+//
+//	or:
+//
+//	        nil
+type SdwanSaasQualityProfileMonitorModeHttpHttpsPtrInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput() SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput
+	ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput
+}
+
+type sdwanSaasQualityProfileMonitorModeHttpHttpsPtrType SdwanSaasQualityProfileMonitorModeHttpHttpsArgs
+
+func SdwanSaasQualityProfileMonitorModeHttpHttpsPtr(v *SdwanSaasQualityProfileMonitorModeHttpHttpsArgs) SdwanSaasQualityProfileMonitorModeHttpHttpsPtrInput {
+	return (*sdwanSaasQualityProfileMonitorModeHttpHttpsPtrType)(v)
+}
+
+func (*sdwanSaasQualityProfileMonitorModeHttpHttpsPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanSaasQualityProfileMonitorModeHttpHttps)(nil)).Elem()
+}
+
+func (i *sdwanSaasQualityProfileMonitorModeHttpHttpsPtrType) ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput() SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutputWithContext(context.Background())
+}
+
+func (i *sdwanSaasQualityProfileMonitorModeHttpHttpsPtrType) ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeHttpHttpsOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModeHttpHttpsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeHttpHttps)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModeHttpHttpsOutput) ToSdwanSaasQualityProfileMonitorModeHttpHttpsOutput() SdwanSaasQualityProfileMonitorModeHttpHttpsOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeHttpHttpsOutput) ToSdwanSaasQualityProfileMonitorModeHttpHttpsOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeHttpHttpsOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeHttpHttpsOutput) ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput() SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
+	return o.ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutputWithContext(context.Background())
+}
+
+func (o SdwanSaasQualityProfileMonitorModeHttpHttpsOutput) ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SdwanSaasQualityProfileMonitorModeHttpHttps) *SdwanSaasQualityProfileMonitorModeHttpHttps {
+		return &v
+	}).(SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput)
+}
+
+// Monitored URL
+func (o SdwanSaasQualityProfileMonitorModeHttpHttpsOutput) MonitoredUrl() pulumi.StringOutput {
+	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorModeHttpHttps) string { return v.MonitoredUrl }).(pulumi.StringOutput)
+}
+
+// Probe interval (seconds)
+func (o SdwanSaasQualityProfileMonitorModeHttpHttpsOutput) ProbeInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorModeHttpHttps) int { return v.ProbeInterval }).(pulumi.IntOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanSaasQualityProfileMonitorModeHttpHttps)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput) ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput() SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput) ToSdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput) Elem() SdwanSaasQualityProfileMonitorModeHttpHttpsOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorModeHttpHttps) SdwanSaasQualityProfileMonitorModeHttpHttps {
+		if v != nil {
+			return *v
+		}
+		var ret SdwanSaasQualityProfileMonitorModeHttpHttps
+		return ret
+	}).(SdwanSaasQualityProfileMonitorModeHttpHttpsOutput)
+}
+
+// Monitored URL
+func (o SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput) MonitoredUrl() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorModeHttpHttps) *string {
+		if v == nil {
+			return nil
+		}
+		return &v.MonitoredUrl
+	}).(pulumi.StringPtrOutput)
+}
+
+// Probe interval (seconds)
+func (o SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput) ProbeInterval() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorModeHttpHttps) *int {
+		if v == nil {
+			return nil
+		}
+		return &v.ProbeInterval
+	}).(pulumi.IntPtrOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIp struct {
+	// Fqdn
+	Fqdn *SdwanSaasQualityProfileMonitorModeStaticIpFqdn `pulumi:"fqdn"`
+	// List of IP addresses
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
+	IpAddresses []SdwanSaasQualityProfileMonitorModeStaticIpIpAddress `pulumi:"ipAddresses"`
+}
+
+// SdwanSaasQualityProfileMonitorModeStaticIpInput is an input type that accepts SdwanSaasQualityProfileMonitorModeStaticIpArgs and SdwanSaasQualityProfileMonitorModeStaticIpOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModeStaticIpInput` via:
+//
+//	SdwanSaasQualityProfileMonitorModeStaticIpArgs{...}
+type SdwanSaasQualityProfileMonitorModeStaticIpInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModeStaticIpOutput() SdwanSaasQualityProfileMonitorModeStaticIpOutput
+	ToSdwanSaasQualityProfileMonitorModeStaticIpOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModeStaticIpOutput
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpArgs struct {
+	// Fqdn
+	Fqdn SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrInput `pulumi:"fqdn"`
+	// List of IP addresses
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
+	IpAddresses SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayInput `pulumi:"ipAddresses"`
+}
+
+func (SdwanSaasQualityProfileMonitorModeStaticIpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIp)(nil)).Elem()
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpArgs) ToSdwanSaasQualityProfileMonitorModeStaticIpOutput() SdwanSaasQualityProfileMonitorModeStaticIpOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeStaticIpOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpArgs) ToSdwanSaasQualityProfileMonitorModeStaticIpOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeStaticIpOutput)
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpArgs) ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutput() SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpArgs) ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeStaticIpOutput).ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutputWithContext(ctx)
+}
+
+// SdwanSaasQualityProfileMonitorModeStaticIpPtrInput is an input type that accepts SdwanSaasQualityProfileMonitorModeStaticIpArgs, SdwanSaasQualityProfileMonitorModeStaticIpPtr and SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModeStaticIpPtrInput` via:
+//
+//	        SdwanSaasQualityProfileMonitorModeStaticIpArgs{...}
+//
+//	or:
+//
+//	        nil
+type SdwanSaasQualityProfileMonitorModeStaticIpPtrInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutput() SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput
+	ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput
+}
+
+type sdwanSaasQualityProfileMonitorModeStaticIpPtrType SdwanSaasQualityProfileMonitorModeStaticIpArgs
+
+func SdwanSaasQualityProfileMonitorModeStaticIpPtr(v *SdwanSaasQualityProfileMonitorModeStaticIpArgs) SdwanSaasQualityProfileMonitorModeStaticIpPtrInput {
+	return (*sdwanSaasQualityProfileMonitorModeStaticIpPtrType)(v)
+}
+
+func (*sdwanSaasQualityProfileMonitorModeStaticIpPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanSaasQualityProfileMonitorModeStaticIp)(nil)).Elem()
+}
+
+func (i *sdwanSaasQualityProfileMonitorModeStaticIpPtrType) ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutput() SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutputWithContext(context.Background())
+}
+
+func (i *sdwanSaasQualityProfileMonitorModeStaticIpPtrType) ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModeStaticIpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIp)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpOutput() SdwanSaasQualityProfileMonitorModeStaticIpOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutput() SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
+	return o.ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutputWithContext(context.Background())
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SdwanSaasQualityProfileMonitorModeStaticIp) *SdwanSaasQualityProfileMonitorModeStaticIp {
+		return &v
+	}).(SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput)
+}
+
+// Fqdn
+func (o SdwanSaasQualityProfileMonitorModeStaticIpOutput) Fqdn() SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput {
+	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorModeStaticIp) *SdwanSaasQualityProfileMonitorModeStaticIpFqdn {
+		return v.Fqdn
+	}).(SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput)
+}
+
+// List of IP addresses
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
+func (o SdwanSaasQualityProfileMonitorModeStaticIpOutput) IpAddresses() SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput {
+	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorModeStaticIp) []SdwanSaasQualityProfileMonitorModeStaticIpIpAddress {
+		return v.IpAddresses
+	}).(SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanSaasQualityProfileMonitorModeStaticIp)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutput() SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput) Elem() SdwanSaasQualityProfileMonitorModeStaticIpOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorModeStaticIp) SdwanSaasQualityProfileMonitorModeStaticIp {
+		if v != nil {
+			return *v
+		}
+		var ret SdwanSaasQualityProfileMonitorModeStaticIp
+		return ret
+	}).(SdwanSaasQualityProfileMonitorModeStaticIpOutput)
+}
+
+// Fqdn
+func (o SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput) Fqdn() SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorModeStaticIp) *SdwanSaasQualityProfileMonitorModeStaticIpFqdn {
+		if v == nil {
+			return nil
+		}
+		return v.Fqdn
+	}).(SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput)
+}
+
+// List of IP addresses
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
+func (o SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput) IpAddresses() SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorModeStaticIp) []SdwanSaasQualityProfileMonitorModeStaticIpIpAddress {
+		if v == nil {
+			return nil
+		}
+		return v.IpAddresses
+	}).(SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpFqdn struct {
+	// FQDN
+	FqdnName string `pulumi:"fqdnName"`
+	// Probe interval (seconds)
+	ProbeInterval int `pulumi:"probeInterval"`
+}
+
+// SdwanSaasQualityProfileMonitorModeStaticIpFqdnInput is an input type that accepts SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs and SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModeStaticIpFqdnInput` via:
+//
+//	SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs{...}
+type SdwanSaasQualityProfileMonitorModeStaticIpFqdnInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput() SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput
+	ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs struct {
+	// FQDN
+	FqdnName pulumi.StringInput `pulumi:"fqdnName"`
+	// Probe interval (seconds)
+	ProbeInterval pulumi.IntInput `pulumi:"probeInterval"`
+}
+
+func (SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIpFqdn)(nil)).Elem()
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput() SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput)
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput() SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput).ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutputWithContext(ctx)
+}
+
+// SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrInput is an input type that accepts SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs, SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtr and SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrInput` via:
+//
+//	        SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs{...}
+//
+//	or:
+//
+//	        nil
+type SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput() SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput
+	ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput
+}
+
+type sdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrType SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs
+
+func SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtr(v *SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs) SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrInput {
+	return (*sdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrType)(v)
+}
+
+func (*sdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanSaasQualityProfileMonitorModeStaticIpFqdn)(nil)).Elem()
+}
+
+func (i *sdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrType) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput() SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutputWithContext(context.Background())
+}
+
+func (i *sdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrType) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIpFqdn)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput() SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput() SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput {
+	return o.ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutputWithContext(context.Background())
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SdwanSaasQualityProfileMonitorModeStaticIpFqdn) *SdwanSaasQualityProfileMonitorModeStaticIpFqdn {
+		return &v
+	}).(SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput)
+}
+
+// FQDN
+func (o SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput) FqdnName() pulumi.StringOutput {
+	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorModeStaticIpFqdn) string { return v.FqdnName }).(pulumi.StringOutput)
+}
+
+// Probe interval (seconds)
+func (o SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput) ProbeInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorModeStaticIpFqdn) int { return v.ProbeInterval }).(pulumi.IntOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SdwanSaasQualityProfileMonitorModeStaticIpFqdn)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput() SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput) Elem() SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorModeStaticIpFqdn) SdwanSaasQualityProfileMonitorModeStaticIpFqdn {
+		if v != nil {
+			return *v
+		}
+		var ret SdwanSaasQualityProfileMonitorModeStaticIpFqdn
+		return ret
+	}).(SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput)
+}
+
+// FQDN
+func (o SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput) FqdnName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorModeStaticIpFqdn) *string {
+		if v == nil {
+			return nil
+		}
+		return &v.FqdnName
+	}).(pulumi.StringPtrOutput)
+}
+
+// Probe interval (seconds)
+func (o SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput) ProbeInterval() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorModeStaticIpFqdn) *int {
+		if v == nil {
+			return nil
+		}
+		return &v.ProbeInterval
+	}).(pulumi.IntPtrOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpIpAddress struct {
+	// IP address
+	Name string `pulumi:"name"`
+	// Probe interval (seconds)
+	ProbeInterval int `pulumi:"probeInterval"`
+}
+
+// SdwanSaasQualityProfileMonitorModeStaticIpIpAddressInput is an input type that accepts SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs and SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModeStaticIpIpAddressInput` via:
+//
+//	SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs{...}
+type SdwanSaasQualityProfileMonitorModeStaticIpIpAddressInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput() SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput
+	ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs struct {
+	// IP address
+	Name pulumi.StringInput `pulumi:"name"`
+	// Probe interval (seconds)
+	ProbeInterval pulumi.IntInput `pulumi:"probeInterval"`
+}
+
+func (SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIpIpAddress)(nil)).Elem()
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs) ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput() SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs) ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput)
+}
+
+// SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayInput is an input type that accepts SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArray and SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput values.
+// You can construct a concrete instance of `SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayInput` via:
+//
+//	SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArray{ SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs{...} }
+type SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayInput interface {
+	pulumi.Input
+
+	ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput() SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput
+	ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutputWithContext(context.Context) SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArray []SdwanSaasQualityProfileMonitorModeStaticIpIpAddressInput
+
+func (SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SdwanSaasQualityProfileMonitorModeStaticIpIpAddress)(nil)).Elem()
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArray) ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput() SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput {
+	return i.ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutputWithContext(context.Background())
+}
+
+func (i SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArray) ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIpIpAddress)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput() SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput {
+	return o
+}
+
+// IP address
+func (o SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorModeStaticIpIpAddress) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Probe interval (seconds)
+func (o SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput) ProbeInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorModeStaticIpIpAddress) int { return v.ProbeInterval }).(pulumi.IntOutput)
+}
+
+type SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput struct{ *pulumi.OutputState }
+
+func (SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SdwanSaasQualityProfileMonitorModeStaticIpIpAddress)(nil)).Elem()
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput() SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput) ToSdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutputWithContext(ctx context.Context) SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput {
+	return o
+}
+
+func (o SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput) Index(i pulumi.IntInput) SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) SdwanSaasQualityProfileMonitorModeStaticIpIpAddress {
+		return vs[0].([]SdwanSaasQualityProfileMonitorModeStaticIpIpAddress)[vs[1].(int)]
+	}).(SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput)
+}
+
+type SdwanTrafficDistributionProfileLinkTag struct {
+	// Link-Tag used for identifying a set of interfaces
+	Name string `pulumi:"name"`
+	// Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
+	Weight *int `pulumi:"weight"`
+}
+
+// SdwanTrafficDistributionProfileLinkTagInput is an input type that accepts SdwanTrafficDistributionProfileLinkTagArgs and SdwanTrafficDistributionProfileLinkTagOutput values.
+// You can construct a concrete instance of `SdwanTrafficDistributionProfileLinkTagInput` via:
+//
+//	SdwanTrafficDistributionProfileLinkTagArgs{...}
+type SdwanTrafficDistributionProfileLinkTagInput interface {
+	pulumi.Input
+
+	ToSdwanTrafficDistributionProfileLinkTagOutput() SdwanTrafficDistributionProfileLinkTagOutput
+	ToSdwanTrafficDistributionProfileLinkTagOutputWithContext(context.Context) SdwanTrafficDistributionProfileLinkTagOutput
+}
+
+type SdwanTrafficDistributionProfileLinkTagArgs struct {
+	// Link-Tag used for identifying a set of interfaces
+	Name pulumi.StringInput `pulumi:"name"`
+	// Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
+	Weight pulumi.IntPtrInput `pulumi:"weight"`
+}
+
+func (SdwanTrafficDistributionProfileLinkTagArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanTrafficDistributionProfileLinkTag)(nil)).Elem()
+}
+
+func (i SdwanTrafficDistributionProfileLinkTagArgs) ToSdwanTrafficDistributionProfileLinkTagOutput() SdwanTrafficDistributionProfileLinkTagOutput {
+	return i.ToSdwanTrafficDistributionProfileLinkTagOutputWithContext(context.Background())
+}
+
+func (i SdwanTrafficDistributionProfileLinkTagArgs) ToSdwanTrafficDistributionProfileLinkTagOutputWithContext(ctx context.Context) SdwanTrafficDistributionProfileLinkTagOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanTrafficDistributionProfileLinkTagOutput)
+}
+
+// SdwanTrafficDistributionProfileLinkTagArrayInput is an input type that accepts SdwanTrafficDistributionProfileLinkTagArray and SdwanTrafficDistributionProfileLinkTagArrayOutput values.
+// You can construct a concrete instance of `SdwanTrafficDistributionProfileLinkTagArrayInput` via:
+//
+//	SdwanTrafficDistributionProfileLinkTagArray{ SdwanTrafficDistributionProfileLinkTagArgs{...} }
+type SdwanTrafficDistributionProfileLinkTagArrayInput interface {
+	pulumi.Input
+
+	ToSdwanTrafficDistributionProfileLinkTagArrayOutput() SdwanTrafficDistributionProfileLinkTagArrayOutput
+	ToSdwanTrafficDistributionProfileLinkTagArrayOutputWithContext(context.Context) SdwanTrafficDistributionProfileLinkTagArrayOutput
+}
+
+type SdwanTrafficDistributionProfileLinkTagArray []SdwanTrafficDistributionProfileLinkTagInput
+
+func (SdwanTrafficDistributionProfileLinkTagArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SdwanTrafficDistributionProfileLinkTag)(nil)).Elem()
+}
+
+func (i SdwanTrafficDistributionProfileLinkTagArray) ToSdwanTrafficDistributionProfileLinkTagArrayOutput() SdwanTrafficDistributionProfileLinkTagArrayOutput {
+	return i.ToSdwanTrafficDistributionProfileLinkTagArrayOutputWithContext(context.Background())
+}
+
+func (i SdwanTrafficDistributionProfileLinkTagArray) ToSdwanTrafficDistributionProfileLinkTagArrayOutputWithContext(ctx context.Context) SdwanTrafficDistributionProfileLinkTagArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SdwanTrafficDistributionProfileLinkTagArrayOutput)
+}
+
+type SdwanTrafficDistributionProfileLinkTagOutput struct{ *pulumi.OutputState }
+
+func (SdwanTrafficDistributionProfileLinkTagOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SdwanTrafficDistributionProfileLinkTag)(nil)).Elem()
+}
+
+func (o SdwanTrafficDistributionProfileLinkTagOutput) ToSdwanTrafficDistributionProfileLinkTagOutput() SdwanTrafficDistributionProfileLinkTagOutput {
+	return o
+}
+
+func (o SdwanTrafficDistributionProfileLinkTagOutput) ToSdwanTrafficDistributionProfileLinkTagOutputWithContext(ctx context.Context) SdwanTrafficDistributionProfileLinkTagOutput {
+	return o
+}
+
+// Link-Tag used for identifying a set of interfaces
+func (o SdwanTrafficDistributionProfileLinkTagOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v SdwanTrafficDistributionProfileLinkTag) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
+func (o SdwanTrafficDistributionProfileLinkTagOutput) Weight() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v SdwanTrafficDistributionProfileLinkTag) *int { return v.Weight }).(pulumi.IntPtrOutput)
+}
+
+type SdwanTrafficDistributionProfileLinkTagArrayOutput struct{ *pulumi.OutputState }
+
+func (SdwanTrafficDistributionProfileLinkTagArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SdwanTrafficDistributionProfileLinkTag)(nil)).Elem()
+}
+
+func (o SdwanTrafficDistributionProfileLinkTagArrayOutput) ToSdwanTrafficDistributionProfileLinkTagArrayOutput() SdwanTrafficDistributionProfileLinkTagArrayOutput {
+	return o
+}
+
+func (o SdwanTrafficDistributionProfileLinkTagArrayOutput) ToSdwanTrafficDistributionProfileLinkTagArrayOutputWithContext(ctx context.Context) SdwanTrafficDistributionProfileLinkTagArrayOutput {
+	return o
+}
+
+func (o SdwanTrafficDistributionProfileLinkTagArrayOutput) Index(i pulumi.IntInput) SdwanTrafficDistributionProfileLinkTagOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) SdwanTrafficDistributionProfileLinkTag {
+		return vs[0].([]SdwanTrafficDistributionProfileLinkTag)[vs[1].(int)]
+	}).(SdwanTrafficDistributionProfileLinkTagOutput)
+}
+
+type SecurityRuleAllowUrlCategory struct {
+	// Additional action
+	AdditionalAction *string `pulumi:"additionalAction"`
+	// Credential enforcement
+	CredentialEnforcement *string `pulumi:"credentialEnforcement"`
+	// Decryption
+	Decryption *string `pulumi:"decryption"`
+	// Dlp
+	Dlp *string `pulumi:"dlp"`
+	// File control
+	FileControl *SecurityRuleAllowUrlCategoryFileControl `pulumi:"fileControl"`
+	// Isolation profiles
+	IsolationProfiles *string `pulumi:"isolationProfiles"`
+	// Name
+	Name *string `pulumi:"name"`
+}
+
+// SecurityRuleAllowUrlCategoryInput is an input type that accepts SecurityRuleAllowUrlCategoryArgs and SecurityRuleAllowUrlCategoryOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowUrlCategoryInput` via:
+//
+//	SecurityRuleAllowUrlCategoryArgs{...}
+type SecurityRuleAllowUrlCategoryInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowUrlCategoryOutput() SecurityRuleAllowUrlCategoryOutput
+	ToSecurityRuleAllowUrlCategoryOutputWithContext(context.Context) SecurityRuleAllowUrlCategoryOutput
+}
+
+type SecurityRuleAllowUrlCategoryArgs struct {
+	// Additional action
+	AdditionalAction pulumi.StringPtrInput `pulumi:"additionalAction"`
+	// Credential enforcement
+	CredentialEnforcement pulumi.StringPtrInput `pulumi:"credentialEnforcement"`
+	// Decryption
+	Decryption pulumi.StringPtrInput `pulumi:"decryption"`
+	// Dlp
+	Dlp pulumi.StringPtrInput `pulumi:"dlp"`
+	// File control
+	FileControl SecurityRuleAllowUrlCategoryFileControlPtrInput `pulumi:"fileControl"`
+	// Isolation profiles
+	IsolationProfiles pulumi.StringPtrInput `pulumi:"isolationProfiles"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+}
+
+func (SecurityRuleAllowUrlCategoryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowUrlCategory)(nil)).Elem()
+}
+
+func (i SecurityRuleAllowUrlCategoryArgs) ToSecurityRuleAllowUrlCategoryOutput() SecurityRuleAllowUrlCategoryOutput {
+	return i.ToSecurityRuleAllowUrlCategoryOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowUrlCategoryArgs) ToSecurityRuleAllowUrlCategoryOutputWithContext(ctx context.Context) SecurityRuleAllowUrlCategoryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowUrlCategoryOutput)
+}
+
+// SecurityRuleAllowUrlCategoryArrayInput is an input type that accepts SecurityRuleAllowUrlCategoryArray and SecurityRuleAllowUrlCategoryArrayOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowUrlCategoryArrayInput` via:
+//
+//	SecurityRuleAllowUrlCategoryArray{ SecurityRuleAllowUrlCategoryArgs{...} }
+type SecurityRuleAllowUrlCategoryArrayInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowUrlCategoryArrayOutput() SecurityRuleAllowUrlCategoryArrayOutput
+	ToSecurityRuleAllowUrlCategoryArrayOutputWithContext(context.Context) SecurityRuleAllowUrlCategoryArrayOutput
+}
+
+type SecurityRuleAllowUrlCategoryArray []SecurityRuleAllowUrlCategoryInput
+
+func (SecurityRuleAllowUrlCategoryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SecurityRuleAllowUrlCategory)(nil)).Elem()
+}
+
+func (i SecurityRuleAllowUrlCategoryArray) ToSecurityRuleAllowUrlCategoryArrayOutput() SecurityRuleAllowUrlCategoryArrayOutput {
+	return i.ToSecurityRuleAllowUrlCategoryArrayOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowUrlCategoryArray) ToSecurityRuleAllowUrlCategoryArrayOutputWithContext(ctx context.Context) SecurityRuleAllowUrlCategoryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowUrlCategoryArrayOutput)
+}
+
+type SecurityRuleAllowUrlCategoryOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowUrlCategoryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowUrlCategory)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowUrlCategoryOutput) ToSecurityRuleAllowUrlCategoryOutput() SecurityRuleAllowUrlCategoryOutput {
+	return o
+}
+
+func (o SecurityRuleAllowUrlCategoryOutput) ToSecurityRuleAllowUrlCategoryOutputWithContext(ctx context.Context) SecurityRuleAllowUrlCategoryOutput {
+	return o
+}
+
+// Additional action
+func (o SecurityRuleAllowUrlCategoryOutput) AdditionalAction() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowUrlCategory) *string { return v.AdditionalAction }).(pulumi.StringPtrOutput)
+}
+
+// Credential enforcement
+func (o SecurityRuleAllowUrlCategoryOutput) CredentialEnforcement() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowUrlCategory) *string { return v.CredentialEnforcement }).(pulumi.StringPtrOutput)
+}
+
+// Decryption
+func (o SecurityRuleAllowUrlCategoryOutput) Decryption() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowUrlCategory) *string { return v.Decryption }).(pulumi.StringPtrOutput)
+}
+
+// Dlp
+func (o SecurityRuleAllowUrlCategoryOutput) Dlp() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowUrlCategory) *string { return v.Dlp }).(pulumi.StringPtrOutput)
+}
+
+// File control
+func (o SecurityRuleAllowUrlCategoryOutput) FileControl() SecurityRuleAllowUrlCategoryFileControlPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowUrlCategory) *SecurityRuleAllowUrlCategoryFileControl { return v.FileControl }).(SecurityRuleAllowUrlCategoryFileControlPtrOutput)
+}
+
+// Isolation profiles
+func (o SecurityRuleAllowUrlCategoryOutput) IsolationProfiles() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowUrlCategory) *string { return v.IsolationProfiles }).(pulumi.StringPtrOutput)
+}
+
+// Name
+func (o SecurityRuleAllowUrlCategoryOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowUrlCategory) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+type SecurityRuleAllowUrlCategoryArrayOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowUrlCategoryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SecurityRuleAllowUrlCategory)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowUrlCategoryArrayOutput) ToSecurityRuleAllowUrlCategoryArrayOutput() SecurityRuleAllowUrlCategoryArrayOutput {
+	return o
+}
+
+func (o SecurityRuleAllowUrlCategoryArrayOutput) ToSecurityRuleAllowUrlCategoryArrayOutputWithContext(ctx context.Context) SecurityRuleAllowUrlCategoryArrayOutput {
+	return o
+}
+
+func (o SecurityRuleAllowUrlCategoryArrayOutput) Index(i pulumi.IntInput) SecurityRuleAllowUrlCategoryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) SecurityRuleAllowUrlCategory {
+		return vs[0].([]SecurityRuleAllowUrlCategory)[vs[1].(int)]
+	}).(SecurityRuleAllowUrlCategoryOutput)
+}
+
+type SecurityRuleAllowUrlCategoryFileControl struct {
+	// Download
+	Download *string `pulumi:"download"`
+	// Upload
+	Upload *string `pulumi:"upload"`
+}
+
+// SecurityRuleAllowUrlCategoryFileControlInput is an input type that accepts SecurityRuleAllowUrlCategoryFileControlArgs and SecurityRuleAllowUrlCategoryFileControlOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowUrlCategoryFileControlInput` via:
+//
+//	SecurityRuleAllowUrlCategoryFileControlArgs{...}
+type SecurityRuleAllowUrlCategoryFileControlInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowUrlCategoryFileControlOutput() SecurityRuleAllowUrlCategoryFileControlOutput
+	ToSecurityRuleAllowUrlCategoryFileControlOutputWithContext(context.Context) SecurityRuleAllowUrlCategoryFileControlOutput
+}
+
+type SecurityRuleAllowUrlCategoryFileControlArgs struct {
+	// Download
+	Download pulumi.StringPtrInput `pulumi:"download"`
+	// Upload
+	Upload pulumi.StringPtrInput `pulumi:"upload"`
+}
+
+func (SecurityRuleAllowUrlCategoryFileControlArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowUrlCategoryFileControl)(nil)).Elem()
+}
+
+func (i SecurityRuleAllowUrlCategoryFileControlArgs) ToSecurityRuleAllowUrlCategoryFileControlOutput() SecurityRuleAllowUrlCategoryFileControlOutput {
+	return i.ToSecurityRuleAllowUrlCategoryFileControlOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowUrlCategoryFileControlArgs) ToSecurityRuleAllowUrlCategoryFileControlOutputWithContext(ctx context.Context) SecurityRuleAllowUrlCategoryFileControlOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowUrlCategoryFileControlOutput)
+}
+
+func (i SecurityRuleAllowUrlCategoryFileControlArgs) ToSecurityRuleAllowUrlCategoryFileControlPtrOutput() SecurityRuleAllowUrlCategoryFileControlPtrOutput {
+	return i.ToSecurityRuleAllowUrlCategoryFileControlPtrOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowUrlCategoryFileControlArgs) ToSecurityRuleAllowUrlCategoryFileControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowUrlCategoryFileControlPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowUrlCategoryFileControlOutput).ToSecurityRuleAllowUrlCategoryFileControlPtrOutputWithContext(ctx)
+}
+
+// SecurityRuleAllowUrlCategoryFileControlPtrInput is an input type that accepts SecurityRuleAllowUrlCategoryFileControlArgs, SecurityRuleAllowUrlCategoryFileControlPtr and SecurityRuleAllowUrlCategoryFileControlPtrOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowUrlCategoryFileControlPtrInput` via:
+//
+//	        SecurityRuleAllowUrlCategoryFileControlArgs{...}
+//
+//	or:
+//
+//	        nil
+type SecurityRuleAllowUrlCategoryFileControlPtrInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowUrlCategoryFileControlPtrOutput() SecurityRuleAllowUrlCategoryFileControlPtrOutput
+	ToSecurityRuleAllowUrlCategoryFileControlPtrOutputWithContext(context.Context) SecurityRuleAllowUrlCategoryFileControlPtrOutput
+}
+
+type securityRuleAllowUrlCategoryFileControlPtrType SecurityRuleAllowUrlCategoryFileControlArgs
+
+func SecurityRuleAllowUrlCategoryFileControlPtr(v *SecurityRuleAllowUrlCategoryFileControlArgs) SecurityRuleAllowUrlCategoryFileControlPtrInput {
+	return (*securityRuleAllowUrlCategoryFileControlPtrType)(v)
+}
+
+func (*securityRuleAllowUrlCategoryFileControlPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowUrlCategoryFileControl)(nil)).Elem()
+}
+
+func (i *securityRuleAllowUrlCategoryFileControlPtrType) ToSecurityRuleAllowUrlCategoryFileControlPtrOutput() SecurityRuleAllowUrlCategoryFileControlPtrOutput {
+	return i.ToSecurityRuleAllowUrlCategoryFileControlPtrOutputWithContext(context.Background())
+}
+
+func (i *securityRuleAllowUrlCategoryFileControlPtrType) ToSecurityRuleAllowUrlCategoryFileControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowUrlCategoryFileControlPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowUrlCategoryFileControlPtrOutput)
+}
+
+type SecurityRuleAllowUrlCategoryFileControlOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowUrlCategoryFileControlOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowUrlCategoryFileControl)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowUrlCategoryFileControlOutput) ToSecurityRuleAllowUrlCategoryFileControlOutput() SecurityRuleAllowUrlCategoryFileControlOutput {
+	return o
+}
+
+func (o SecurityRuleAllowUrlCategoryFileControlOutput) ToSecurityRuleAllowUrlCategoryFileControlOutputWithContext(ctx context.Context) SecurityRuleAllowUrlCategoryFileControlOutput {
+	return o
+}
+
+func (o SecurityRuleAllowUrlCategoryFileControlOutput) ToSecurityRuleAllowUrlCategoryFileControlPtrOutput() SecurityRuleAllowUrlCategoryFileControlPtrOutput {
+	return o.ToSecurityRuleAllowUrlCategoryFileControlPtrOutputWithContext(context.Background())
+}
+
+func (o SecurityRuleAllowUrlCategoryFileControlOutput) ToSecurityRuleAllowUrlCategoryFileControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowUrlCategoryFileControlPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SecurityRuleAllowUrlCategoryFileControl) *SecurityRuleAllowUrlCategoryFileControl {
+		return &v
+	}).(SecurityRuleAllowUrlCategoryFileControlPtrOutput)
+}
+
+// Download
+func (o SecurityRuleAllowUrlCategoryFileControlOutput) Download() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowUrlCategoryFileControl) *string { return v.Download }).(pulumi.StringPtrOutput)
+}
+
+// Upload
+func (o SecurityRuleAllowUrlCategoryFileControlOutput) Upload() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowUrlCategoryFileControl) *string { return v.Upload }).(pulumi.StringPtrOutput)
+}
+
+type SecurityRuleAllowUrlCategoryFileControlPtrOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowUrlCategoryFileControlPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowUrlCategoryFileControl)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowUrlCategoryFileControlPtrOutput) ToSecurityRuleAllowUrlCategoryFileControlPtrOutput() SecurityRuleAllowUrlCategoryFileControlPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowUrlCategoryFileControlPtrOutput) ToSecurityRuleAllowUrlCategoryFileControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowUrlCategoryFileControlPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowUrlCategoryFileControlPtrOutput) Elem() SecurityRuleAllowUrlCategoryFileControlOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowUrlCategoryFileControl) SecurityRuleAllowUrlCategoryFileControl {
+		if v != nil {
+			return *v
+		}
+		var ret SecurityRuleAllowUrlCategoryFileControl
+		return ret
+	}).(SecurityRuleAllowUrlCategoryFileControlOutput)
+}
+
+// Download
+func (o SecurityRuleAllowUrlCategoryFileControlPtrOutput) Download() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowUrlCategoryFileControl) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Download
+	}).(pulumi.StringPtrOutput)
+}
+
+// Upload
+func (o SecurityRuleAllowUrlCategoryFileControlPtrOutput) Upload() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowUrlCategoryFileControl) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Upload
+	}).(pulumi.StringPtrOutput)
+}
+
+type SecurityRuleAllowWebApplication struct {
+	// App id
+	AppId *string `pulumi:"appId"`
+	// Application function
+	ApplicationFunctions []string `pulumi:"applicationFunctions"`
+	// Dlp
+	Dlp *string `pulumi:"dlp"`
+	// File control
+	FileControl *SecurityRuleAllowWebApplicationFileControl `pulumi:"fileControl"`
+	// Name
+	Name *string `pulumi:"name"`
+	// Saas enterprise control
+	SaasEnterpriseControl *SecurityRuleAllowWebApplicationSaasEnterpriseControl `pulumi:"saasEnterpriseControl"`
+	// Saas tenant list
+	SaasTenantLists []string `pulumi:"saasTenantLists"`
+	// Saas user list
+	SaasUserLists []string `pulumi:"saasUserLists"`
+	// Tenant control
+	TenantControl *SecurityRuleAllowWebApplicationTenantControl `pulumi:"tenantControl"`
+	// Type
+	Type *string `pulumi:"type"`
+}
+
+// SecurityRuleAllowWebApplicationInput is an input type that accepts SecurityRuleAllowWebApplicationArgs and SecurityRuleAllowWebApplicationOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationInput` via:
+//
+//	SecurityRuleAllowWebApplicationArgs{...}
+type SecurityRuleAllowWebApplicationInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationOutput() SecurityRuleAllowWebApplicationOutput
+	ToSecurityRuleAllowWebApplicationOutputWithContext(context.Context) SecurityRuleAllowWebApplicationOutput
+}
+
+type SecurityRuleAllowWebApplicationArgs struct {
+	// App id
+	AppId pulumi.StringPtrInput `pulumi:"appId"`
+	// Application function
+	ApplicationFunctions pulumi.StringArrayInput `pulumi:"applicationFunctions"`
+	// Dlp
+	Dlp pulumi.StringPtrInput `pulumi:"dlp"`
+	// File control
+	FileControl SecurityRuleAllowWebApplicationFileControlPtrInput `pulumi:"fileControl"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// Saas enterprise control
+	SaasEnterpriseControl SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrInput `pulumi:"saasEnterpriseControl"`
+	// Saas tenant list
+	SaasTenantLists pulumi.StringArrayInput `pulumi:"saasTenantLists"`
+	// Saas user list
+	SaasUserLists pulumi.StringArrayInput `pulumi:"saasUserLists"`
+	// Tenant control
+	TenantControl SecurityRuleAllowWebApplicationTenantControlPtrInput `pulumi:"tenantControl"`
+	// Type
+	Type pulumi.StringPtrInput `pulumi:"type"`
+}
+
+func (SecurityRuleAllowWebApplicationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplication)(nil)).Elem()
+}
+
+func (i SecurityRuleAllowWebApplicationArgs) ToSecurityRuleAllowWebApplicationOutput() SecurityRuleAllowWebApplicationOutput {
+	return i.ToSecurityRuleAllowWebApplicationOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationArgs) ToSecurityRuleAllowWebApplicationOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationOutput)
+}
+
+// SecurityRuleAllowWebApplicationArrayInput is an input type that accepts SecurityRuleAllowWebApplicationArray and SecurityRuleAllowWebApplicationArrayOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationArrayInput` via:
+//
+//	SecurityRuleAllowWebApplicationArray{ SecurityRuleAllowWebApplicationArgs{...} }
+type SecurityRuleAllowWebApplicationArrayInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationArrayOutput() SecurityRuleAllowWebApplicationArrayOutput
+	ToSecurityRuleAllowWebApplicationArrayOutputWithContext(context.Context) SecurityRuleAllowWebApplicationArrayOutput
+}
+
+type SecurityRuleAllowWebApplicationArray []SecurityRuleAllowWebApplicationInput
+
+func (SecurityRuleAllowWebApplicationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SecurityRuleAllowWebApplication)(nil)).Elem()
+}
+
+func (i SecurityRuleAllowWebApplicationArray) ToSecurityRuleAllowWebApplicationArrayOutput() SecurityRuleAllowWebApplicationArrayOutput {
+	return i.ToSecurityRuleAllowWebApplicationArrayOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationArray) ToSecurityRuleAllowWebApplicationArrayOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationArrayOutput)
+}
+
+type SecurityRuleAllowWebApplicationOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplication)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationOutput) ToSecurityRuleAllowWebApplicationOutput() SecurityRuleAllowWebApplicationOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationOutput) ToSecurityRuleAllowWebApplicationOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationOutput {
+	return o
+}
+
+// App id
+func (o SecurityRuleAllowWebApplicationOutput) AppId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplication) *string { return v.AppId }).(pulumi.StringPtrOutput)
+}
+
+// Application function
+func (o SecurityRuleAllowWebApplicationOutput) ApplicationFunctions() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplication) []string { return v.ApplicationFunctions }).(pulumi.StringArrayOutput)
+}
+
+// Dlp
+func (o SecurityRuleAllowWebApplicationOutput) Dlp() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplication) *string { return v.Dlp }).(pulumi.StringPtrOutput)
+}
+
+// File control
+func (o SecurityRuleAllowWebApplicationOutput) FileControl() SecurityRuleAllowWebApplicationFileControlPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplication) *SecurityRuleAllowWebApplicationFileControl {
+		return v.FileControl
+	}).(SecurityRuleAllowWebApplicationFileControlPtrOutput)
+}
+
+// Name
+func (o SecurityRuleAllowWebApplicationOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplication) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+// Saas enterprise control
+func (o SecurityRuleAllowWebApplicationOutput) SaasEnterpriseControl() SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplication) *SecurityRuleAllowWebApplicationSaasEnterpriseControl {
+		return v.SaasEnterpriseControl
+	}).(SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput)
+}
+
+// Saas tenant list
+func (o SecurityRuleAllowWebApplicationOutput) SaasTenantLists() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplication) []string { return v.SaasTenantLists }).(pulumi.StringArrayOutput)
+}
+
+// Saas user list
+func (o SecurityRuleAllowWebApplicationOutput) SaasUserLists() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplication) []string { return v.SaasUserLists }).(pulumi.StringArrayOutput)
+}
+
+// Tenant control
+func (o SecurityRuleAllowWebApplicationOutput) TenantControl() SecurityRuleAllowWebApplicationTenantControlPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplication) *SecurityRuleAllowWebApplicationTenantControl {
+		return v.TenantControl
+	}).(SecurityRuleAllowWebApplicationTenantControlPtrOutput)
+}
+
+// Type
+func (o SecurityRuleAllowWebApplicationOutput) Type() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplication) *string { return v.Type }).(pulumi.StringPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationArrayOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SecurityRuleAllowWebApplication)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationArrayOutput) ToSecurityRuleAllowWebApplicationArrayOutput() SecurityRuleAllowWebApplicationArrayOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationArrayOutput) ToSecurityRuleAllowWebApplicationArrayOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationArrayOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationArrayOutput) Index(i pulumi.IntInput) SecurityRuleAllowWebApplicationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) SecurityRuleAllowWebApplication {
+		return vs[0].([]SecurityRuleAllowWebApplication)[vs[1].(int)]
+	}).(SecurityRuleAllowWebApplicationOutput)
+}
+
+type SecurityRuleAllowWebApplicationFileControl struct {
+	// Download
+	Download *string `pulumi:"download"`
+	// Upload
+	Upload *string `pulumi:"upload"`
+}
+
+// SecurityRuleAllowWebApplicationFileControlInput is an input type that accepts SecurityRuleAllowWebApplicationFileControlArgs and SecurityRuleAllowWebApplicationFileControlOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationFileControlInput` via:
+//
+//	SecurityRuleAllowWebApplicationFileControlArgs{...}
+type SecurityRuleAllowWebApplicationFileControlInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationFileControlOutput() SecurityRuleAllowWebApplicationFileControlOutput
+	ToSecurityRuleAllowWebApplicationFileControlOutputWithContext(context.Context) SecurityRuleAllowWebApplicationFileControlOutput
+}
+
+type SecurityRuleAllowWebApplicationFileControlArgs struct {
+	// Download
+	Download pulumi.StringPtrInput `pulumi:"download"`
+	// Upload
+	Upload pulumi.StringPtrInput `pulumi:"upload"`
+}
+
+func (SecurityRuleAllowWebApplicationFileControlArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplicationFileControl)(nil)).Elem()
+}
+
+func (i SecurityRuleAllowWebApplicationFileControlArgs) ToSecurityRuleAllowWebApplicationFileControlOutput() SecurityRuleAllowWebApplicationFileControlOutput {
+	return i.ToSecurityRuleAllowWebApplicationFileControlOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationFileControlArgs) ToSecurityRuleAllowWebApplicationFileControlOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationFileControlOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationFileControlOutput)
+}
+
+func (i SecurityRuleAllowWebApplicationFileControlArgs) ToSecurityRuleAllowWebApplicationFileControlPtrOutput() SecurityRuleAllowWebApplicationFileControlPtrOutput {
+	return i.ToSecurityRuleAllowWebApplicationFileControlPtrOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationFileControlArgs) ToSecurityRuleAllowWebApplicationFileControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationFileControlPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationFileControlOutput).ToSecurityRuleAllowWebApplicationFileControlPtrOutputWithContext(ctx)
+}
+
+// SecurityRuleAllowWebApplicationFileControlPtrInput is an input type that accepts SecurityRuleAllowWebApplicationFileControlArgs, SecurityRuleAllowWebApplicationFileControlPtr and SecurityRuleAllowWebApplicationFileControlPtrOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationFileControlPtrInput` via:
+//
+//	        SecurityRuleAllowWebApplicationFileControlArgs{...}
+//
+//	or:
+//
+//	        nil
+type SecurityRuleAllowWebApplicationFileControlPtrInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationFileControlPtrOutput() SecurityRuleAllowWebApplicationFileControlPtrOutput
+	ToSecurityRuleAllowWebApplicationFileControlPtrOutputWithContext(context.Context) SecurityRuleAllowWebApplicationFileControlPtrOutput
+}
+
+type securityRuleAllowWebApplicationFileControlPtrType SecurityRuleAllowWebApplicationFileControlArgs
+
+func SecurityRuleAllowWebApplicationFileControlPtr(v *SecurityRuleAllowWebApplicationFileControlArgs) SecurityRuleAllowWebApplicationFileControlPtrInput {
+	return (*securityRuleAllowWebApplicationFileControlPtrType)(v)
+}
+
+func (*securityRuleAllowWebApplicationFileControlPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowWebApplicationFileControl)(nil)).Elem()
+}
+
+func (i *securityRuleAllowWebApplicationFileControlPtrType) ToSecurityRuleAllowWebApplicationFileControlPtrOutput() SecurityRuleAllowWebApplicationFileControlPtrOutput {
+	return i.ToSecurityRuleAllowWebApplicationFileControlPtrOutputWithContext(context.Background())
+}
+
+func (i *securityRuleAllowWebApplicationFileControlPtrType) ToSecurityRuleAllowWebApplicationFileControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationFileControlPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationFileControlPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationFileControlOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationFileControlOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplicationFileControl)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationFileControlOutput) ToSecurityRuleAllowWebApplicationFileControlOutput() SecurityRuleAllowWebApplicationFileControlOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationFileControlOutput) ToSecurityRuleAllowWebApplicationFileControlOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationFileControlOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationFileControlOutput) ToSecurityRuleAllowWebApplicationFileControlPtrOutput() SecurityRuleAllowWebApplicationFileControlPtrOutput {
+	return o.ToSecurityRuleAllowWebApplicationFileControlPtrOutputWithContext(context.Background())
+}
+
+func (o SecurityRuleAllowWebApplicationFileControlOutput) ToSecurityRuleAllowWebApplicationFileControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationFileControlPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SecurityRuleAllowWebApplicationFileControl) *SecurityRuleAllowWebApplicationFileControl {
+		return &v
+	}).(SecurityRuleAllowWebApplicationFileControlPtrOutput)
+}
+
+// Download
+func (o SecurityRuleAllowWebApplicationFileControlOutput) Download() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplicationFileControl) *string { return v.Download }).(pulumi.StringPtrOutput)
+}
+
+// Upload
+func (o SecurityRuleAllowWebApplicationFileControlOutput) Upload() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplicationFileControl) *string { return v.Upload }).(pulumi.StringPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationFileControlPtrOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationFileControlPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowWebApplicationFileControl)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationFileControlPtrOutput) ToSecurityRuleAllowWebApplicationFileControlPtrOutput() SecurityRuleAllowWebApplicationFileControlPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationFileControlPtrOutput) ToSecurityRuleAllowWebApplicationFileControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationFileControlPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationFileControlPtrOutput) Elem() SecurityRuleAllowWebApplicationFileControlOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationFileControl) SecurityRuleAllowWebApplicationFileControl {
+		if v != nil {
+			return *v
+		}
+		var ret SecurityRuleAllowWebApplicationFileControl
+		return ret
+	}).(SecurityRuleAllowWebApplicationFileControlOutput)
+}
+
+// Download
+func (o SecurityRuleAllowWebApplicationFileControlPtrOutput) Download() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationFileControl) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Download
+	}).(pulumi.StringPtrOutput)
+}
+
+// Upload
+func (o SecurityRuleAllowWebApplicationFileControlPtrOutput) Upload() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationFileControl) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Upload
+	}).(pulumi.StringPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControl struct {
+	// Consumer access
+	ConsumerAccess *SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess `pulumi:"consumerAccess"`
+	// Enterprise access
+	EnterpriseAccess *SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess `pulumi:"enterpriseAccess"`
+}
+
+// SecurityRuleAllowWebApplicationSaasEnterpriseControlInput is an input type that accepts SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs and SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationSaasEnterpriseControlInput` via:
+//
+//	SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs{...}
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlOutputWithContext(context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs struct {
+	// Consumer access
+	ConsumerAccess SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrInput `pulumi:"consumerAccess"`
+	// Enterprise access
+	EnterpriseAccess SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrInput `pulumi:"enterpriseAccess"`
+}
+
+func (SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControl)(nil)).Elem()
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput {
+	return i.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput)
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput {
+	return i.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput).ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutputWithContext(ctx)
+}
+
+// SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrInput is an input type that accepts SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs, SecurityRuleAllowWebApplicationSaasEnterpriseControlPtr and SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrInput` via:
+//
+//	        SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs{...}
+//
+//	or:
+//
+//	        nil
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutputWithContext(context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput
+}
+
+type securityRuleAllowWebApplicationSaasEnterpriseControlPtrType SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs
+
+func SecurityRuleAllowWebApplicationSaasEnterpriseControlPtr(v *SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs) SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrInput {
+	return (*securityRuleAllowWebApplicationSaasEnterpriseControlPtrType)(v)
+}
+
+func (*securityRuleAllowWebApplicationSaasEnterpriseControlPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowWebApplicationSaasEnterpriseControl)(nil)).Elem()
+}
+
+func (i *securityRuleAllowWebApplicationSaasEnterpriseControlPtrType) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput {
+	return i.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutputWithContext(context.Background())
+}
+
+func (i *securityRuleAllowWebApplicationSaasEnterpriseControlPtrType) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControl)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput {
+	return o.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutputWithContext(context.Background())
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SecurityRuleAllowWebApplicationSaasEnterpriseControl) *SecurityRuleAllowWebApplicationSaasEnterpriseControl {
+		return &v
+	}).(SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput)
+}
+
+// Consumer access
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput) ConsumerAccess() SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplicationSaasEnterpriseControl) *SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess {
+		return v.ConsumerAccess
+	}).(SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput)
+}
+
+// Enterprise access
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput) EnterpriseAccess() SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplicationSaasEnterpriseControl) *SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess {
+		return v.EnterpriseAccess
+	}).(SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowWebApplicationSaasEnterpriseControl)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput) Elem() SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationSaasEnterpriseControl) SecurityRuleAllowWebApplicationSaasEnterpriseControl {
+		if v != nil {
+			return *v
+		}
+		var ret SecurityRuleAllowWebApplicationSaasEnterpriseControl
+		return ret
+	}).(SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput)
+}
+
+// Consumer access
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput) ConsumerAccess() SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationSaasEnterpriseControl) *SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess {
+		if v == nil {
+			return nil
+		}
+		return v.ConsumerAccess
+	}).(SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput)
+}
+
+// Enterprise access
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput) EnterpriseAccess() SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationSaasEnterpriseControl) *SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess {
+		if v == nil {
+			return nil
+		}
+		return v.EnterpriseAccess
+	}).(SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess struct {
+	// Enable
+	Enable *string `pulumi:"enable"`
+}
+
+// SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessInput is an input type that accepts SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs and SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessInput` via:
+//
+//	SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs{...}
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutputWithContext(context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs struct {
+	// Enable
+	Enable pulumi.StringPtrInput `pulumi:"enable"`
+}
+
+func (SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess)(nil)).Elem()
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput {
+	return i.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput)
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput {
+	return i.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput).ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutputWithContext(ctx)
+}
+
+// SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrInput is an input type that accepts SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs, SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtr and SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrInput` via:
+//
+//	        SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs{...}
+//
+//	or:
+//
+//	        nil
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutputWithContext(context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput
+}
+
+type securityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrType SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs
+
+func SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtr(v *SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs) SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrInput {
+	return (*securityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrType)(v)
+}
+
+func (*securityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess)(nil)).Elem()
+}
+
+func (i *securityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrType) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput {
+	return i.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutputWithContext(context.Background())
+}
+
+func (i *securityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrType) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput {
+	return o.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutputWithContext(context.Background())
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess) *SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess {
+		return &v
+	}).(SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput)
+}
+
+// Enable
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput) Enable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess) *string { return v.Enable }).(pulumi.StringPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput) Elem() SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess) SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess {
+		if v != nil {
+			return *v
+		}
+		var ret SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess
+		return ret
+	}).(SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput)
+}
+
+// Enable
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput) Enable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccess) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Enable
+	}).(pulumi.StringPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess struct {
+	// Enable
+	Enable *string `pulumi:"enable"`
+	// Tenant restrictions
+	TenantRestrictions []string `pulumi:"tenantRestrictions"`
+}
+
+// SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessInput is an input type that accepts SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs and SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessInput` via:
+//
+//	SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs{...}
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutputWithContext(context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs struct {
+	// Enable
+	Enable pulumi.StringPtrInput `pulumi:"enable"`
+	// Tenant restrictions
+	TenantRestrictions pulumi.StringArrayInput `pulumi:"tenantRestrictions"`
+}
+
+func (SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess)(nil)).Elem()
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput {
+	return i.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput)
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput {
+	return i.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput).ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutputWithContext(ctx)
+}
+
+// SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrInput is an input type that accepts SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs, SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtr and SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrInput` via:
+//
+//	        SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs{...}
+//
+//	or:
+//
+//	        nil
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput
+	ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutputWithContext(context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput
+}
+
+type securityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrType SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs
+
+func SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtr(v *SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs) SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrInput {
+	return (*securityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrType)(v)
+}
+
+func (*securityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess)(nil)).Elem()
+}
+
+func (i *securityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrType) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput {
+	return i.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutputWithContext(context.Background())
+}
+
+func (i *securityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrType) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput {
+	return o.ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutputWithContext(context.Background())
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess) *SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess {
+		return &v
+	}).(SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput)
+}
+
+// Enable
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput) Enable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess) *string { return v.Enable }).(pulumi.StringPtrOutput)
+}
+
+// Tenant restrictions
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput) TenantRestrictions() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess) []string {
+		return v.TenantRestrictions
+	}).(pulumi.StringArrayOutput)
+}
+
+type SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput() SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput) ToSecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput) Elem() SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess) SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess {
+		if v != nil {
+			return *v
+		}
+		var ret SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess
+		return ret
+	}).(SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput)
+}
+
+// Enable
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput) Enable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Enable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Tenant restrictions
+func (o SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput) TenantRestrictions() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccess) []string {
+		if v == nil {
+			return nil
+		}
+		return v.TenantRestrictions
+	}).(pulumi.StringArrayOutput)
+}
+
+type SecurityRuleAllowWebApplicationTenantControl struct {
+	// Allowed activities
+	AllowedActivities []string `pulumi:"allowedActivities"`
+	// Blocked activities
+	BlockedActivities []string `pulumi:"blockedActivities"`
+	// Parent application
+	ParentApplication *string `pulumi:"parentApplication"`
+	// Tenants
+	Tenants []string `pulumi:"tenants"`
+}
+
+// SecurityRuleAllowWebApplicationTenantControlInput is an input type that accepts SecurityRuleAllowWebApplicationTenantControlArgs and SecurityRuleAllowWebApplicationTenantControlOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationTenantControlInput` via:
+//
+//	SecurityRuleAllowWebApplicationTenantControlArgs{...}
+type SecurityRuleAllowWebApplicationTenantControlInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationTenantControlOutput() SecurityRuleAllowWebApplicationTenantControlOutput
+	ToSecurityRuleAllowWebApplicationTenantControlOutputWithContext(context.Context) SecurityRuleAllowWebApplicationTenantControlOutput
+}
+
+type SecurityRuleAllowWebApplicationTenantControlArgs struct {
+	// Allowed activities
+	AllowedActivities pulumi.StringArrayInput `pulumi:"allowedActivities"`
+	// Blocked activities
+	BlockedActivities pulumi.StringArrayInput `pulumi:"blockedActivities"`
+	// Parent application
+	ParentApplication pulumi.StringPtrInput `pulumi:"parentApplication"`
+	// Tenants
+	Tenants pulumi.StringArrayInput `pulumi:"tenants"`
+}
+
+func (SecurityRuleAllowWebApplicationTenantControlArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplicationTenantControl)(nil)).Elem()
+}
+
+func (i SecurityRuleAllowWebApplicationTenantControlArgs) ToSecurityRuleAllowWebApplicationTenantControlOutput() SecurityRuleAllowWebApplicationTenantControlOutput {
+	return i.ToSecurityRuleAllowWebApplicationTenantControlOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationTenantControlArgs) ToSecurityRuleAllowWebApplicationTenantControlOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationTenantControlOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationTenantControlOutput)
+}
+
+func (i SecurityRuleAllowWebApplicationTenantControlArgs) ToSecurityRuleAllowWebApplicationTenantControlPtrOutput() SecurityRuleAllowWebApplicationTenantControlPtrOutput {
+	return i.ToSecurityRuleAllowWebApplicationTenantControlPtrOutputWithContext(context.Background())
+}
+
+func (i SecurityRuleAllowWebApplicationTenantControlArgs) ToSecurityRuleAllowWebApplicationTenantControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationTenantControlPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationTenantControlOutput).ToSecurityRuleAllowWebApplicationTenantControlPtrOutputWithContext(ctx)
+}
+
+// SecurityRuleAllowWebApplicationTenantControlPtrInput is an input type that accepts SecurityRuleAllowWebApplicationTenantControlArgs, SecurityRuleAllowWebApplicationTenantControlPtr and SecurityRuleAllowWebApplicationTenantControlPtrOutput values.
+// You can construct a concrete instance of `SecurityRuleAllowWebApplicationTenantControlPtrInput` via:
+//
+//	        SecurityRuleAllowWebApplicationTenantControlArgs{...}
+//
+//	or:
+//
+//	        nil
+type SecurityRuleAllowWebApplicationTenantControlPtrInput interface {
+	pulumi.Input
+
+	ToSecurityRuleAllowWebApplicationTenantControlPtrOutput() SecurityRuleAllowWebApplicationTenantControlPtrOutput
+	ToSecurityRuleAllowWebApplicationTenantControlPtrOutputWithContext(context.Context) SecurityRuleAllowWebApplicationTenantControlPtrOutput
+}
+
+type securityRuleAllowWebApplicationTenantControlPtrType SecurityRuleAllowWebApplicationTenantControlArgs
+
+func SecurityRuleAllowWebApplicationTenantControlPtr(v *SecurityRuleAllowWebApplicationTenantControlArgs) SecurityRuleAllowWebApplicationTenantControlPtrInput {
+	return (*securityRuleAllowWebApplicationTenantControlPtrType)(v)
+}
+
+func (*securityRuleAllowWebApplicationTenantControlPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowWebApplicationTenantControl)(nil)).Elem()
+}
+
+func (i *securityRuleAllowWebApplicationTenantControlPtrType) ToSecurityRuleAllowWebApplicationTenantControlPtrOutput() SecurityRuleAllowWebApplicationTenantControlPtrOutput {
+	return i.ToSecurityRuleAllowWebApplicationTenantControlPtrOutputWithContext(context.Background())
+}
+
+func (i *securityRuleAllowWebApplicationTenantControlPtrType) ToSecurityRuleAllowWebApplicationTenantControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationTenantControlPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SecurityRuleAllowWebApplicationTenantControlPtrOutput)
+}
+
+type SecurityRuleAllowWebApplicationTenantControlOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationTenantControlOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SecurityRuleAllowWebApplicationTenantControl)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationTenantControlOutput) ToSecurityRuleAllowWebApplicationTenantControlOutput() SecurityRuleAllowWebApplicationTenantControlOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationTenantControlOutput) ToSecurityRuleAllowWebApplicationTenantControlOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationTenantControlOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationTenantControlOutput) ToSecurityRuleAllowWebApplicationTenantControlPtrOutput() SecurityRuleAllowWebApplicationTenantControlPtrOutput {
+	return o.ToSecurityRuleAllowWebApplicationTenantControlPtrOutputWithContext(context.Background())
+}
+
+func (o SecurityRuleAllowWebApplicationTenantControlOutput) ToSecurityRuleAllowWebApplicationTenantControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationTenantControlPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SecurityRuleAllowWebApplicationTenantControl) *SecurityRuleAllowWebApplicationTenantControl {
+		return &v
+	}).(SecurityRuleAllowWebApplicationTenantControlPtrOutput)
+}
+
+// Allowed activities
+func (o SecurityRuleAllowWebApplicationTenantControlOutput) AllowedActivities() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplicationTenantControl) []string { return v.AllowedActivities }).(pulumi.StringArrayOutput)
+}
+
+// Blocked activities
+func (o SecurityRuleAllowWebApplicationTenantControlOutput) BlockedActivities() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplicationTenantControl) []string { return v.BlockedActivities }).(pulumi.StringArrayOutput)
+}
+
+// Parent application
+func (o SecurityRuleAllowWebApplicationTenantControlOutput) ParentApplication() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplicationTenantControl) *string { return v.ParentApplication }).(pulumi.StringPtrOutput)
+}
+
+// Tenants
+func (o SecurityRuleAllowWebApplicationTenantControlOutput) Tenants() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v SecurityRuleAllowWebApplicationTenantControl) []string { return v.Tenants }).(pulumi.StringArrayOutput)
+}
+
+type SecurityRuleAllowWebApplicationTenantControlPtrOutput struct{ *pulumi.OutputState }
+
+func (SecurityRuleAllowWebApplicationTenantControlPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SecurityRuleAllowWebApplicationTenantControl)(nil)).Elem()
+}
+
+func (o SecurityRuleAllowWebApplicationTenantControlPtrOutput) ToSecurityRuleAllowWebApplicationTenantControlPtrOutput() SecurityRuleAllowWebApplicationTenantControlPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationTenantControlPtrOutput) ToSecurityRuleAllowWebApplicationTenantControlPtrOutputWithContext(ctx context.Context) SecurityRuleAllowWebApplicationTenantControlPtrOutput {
+	return o
+}
+
+func (o SecurityRuleAllowWebApplicationTenantControlPtrOutput) Elem() SecurityRuleAllowWebApplicationTenantControlOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationTenantControl) SecurityRuleAllowWebApplicationTenantControl {
+		if v != nil {
+			return *v
+		}
+		var ret SecurityRuleAllowWebApplicationTenantControl
+		return ret
+	}).(SecurityRuleAllowWebApplicationTenantControlOutput)
+}
+
+// Allowed activities
+func (o SecurityRuleAllowWebApplicationTenantControlPtrOutput) AllowedActivities() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationTenantControl) []string {
+		if v == nil {
+			return nil
+		}
+		return v.AllowedActivities
+	}).(pulumi.StringArrayOutput)
+}
+
+// Blocked activities
+func (o SecurityRuleAllowWebApplicationTenantControlPtrOutput) BlockedActivities() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationTenantControl) []string {
+		if v == nil {
+			return nil
+		}
+		return v.BlockedActivities
+	}).(pulumi.StringArrayOutput)
+}
+
+// Parent application
+func (o SecurityRuleAllowWebApplicationTenantControlPtrOutput) ParentApplication() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationTenantControl) *string {
+		if v == nil {
+			return nil
+		}
+		return v.ParentApplication
+	}).(pulumi.StringPtrOutput)
+}
+
+// Tenants
+func (o SecurityRuleAllowWebApplicationTenantControlPtrOutput) Tenants() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *SecurityRuleAllowWebApplicationTenantControl) []string {
+		if v == nil {
+			return nil
+		}
+		return v.Tenants
+	}).(pulumi.StringArrayOutput)
+}
+
 type SecurityRuleDefaultProfileSettings struct {
 	// Dlp
 	Dlp *string `pulumi:"dlp"`
@@ -785,6 +4005,8 @@ type ServiceConnectionBgpPeer struct {
 	PeerIpAddress *string `pulumi:"peerIpAddress"`
 	// Peer ipv6 address
 	PeerIpv6Address *string `pulumi:"peerIpv6Address"`
+	// Same peer IP address for SC
+	SameAsPrimary *bool `pulumi:"sameAsPrimary"`
 	// Secret
 	Secret *string `pulumi:"secret"`
 }
@@ -809,6 +4031,8 @@ type ServiceConnectionBgpPeerArgs struct {
 	PeerIpAddress pulumi.StringPtrInput `pulumi:"peerIpAddress"`
 	// Peer ipv6 address
 	PeerIpv6Address pulumi.StringPtrInput `pulumi:"peerIpv6Address"`
+	// Same peer IP address for SC
+	SameAsPrimary pulumi.BoolPtrInput `pulumi:"sameAsPrimary"`
 	// Secret
 	Secret pulumi.StringPtrInput `pulumi:"secret"`
 }
@@ -910,6 +4134,11 @@ func (o ServiceConnectionBgpPeerOutput) PeerIpv6Address() pulumi.StringPtrOutput
 	return o.ApplyT(func(v ServiceConnectionBgpPeer) *string { return v.PeerIpv6Address }).(pulumi.StringPtrOutput)
 }
 
+// Same peer IP address for SC
+func (o ServiceConnectionBgpPeerOutput) SameAsPrimary() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ServiceConnectionBgpPeer) *bool { return v.SameAsPrimary }).(pulumi.BoolPtrOutput)
+}
+
 // Secret
 func (o ServiceConnectionBgpPeerOutput) Secret() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ServiceConnectionBgpPeer) *string { return v.Secret }).(pulumi.StringPtrOutput)
@@ -977,6 +4206,16 @@ func (o ServiceConnectionBgpPeerPtrOutput) PeerIpv6Address() pulumi.StringPtrOut
 		}
 		return v.PeerIpv6Address
 	}).(pulumi.StringPtrOutput)
+}
+
+// Same peer IP address for SC
+func (o ServiceConnectionBgpPeerPtrOutput) SameAsPrimary() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ServiceConnectionBgpPeer) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.SameAsPrimary
+	}).(pulumi.BoolPtrOutput)
 }
 
 // Secret
@@ -54775,1439 +58014,49 @@ func (o GetBgpAddressFamilyProfileListDataIpv4UnicastOrfOutput) OrfPrefixList() 
 	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastOrf) string { return v.OrfPrefixList }).(pulumi.StringOutput)
 }
 
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAs struct {
-	// All
-	All GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAll `pulumi:"all"`
-	// Replace a s
-	ReplaceAs GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAs `pulumi:"replaceAs"`
-}
-
-// GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput values.
-// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsInput` via:
-//
-//	GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs{...}
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsInput interface {
-	pulumi.Input
-
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs struct {
-	// All
-	All GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllInput `pulumi:"all"`
-	// Replace a s
-	ReplaceAs GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsInput `pulumi:"replaceAs"`
-}
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAs)(nil)).Elem()
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput {
-	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutputWithContext(context.Background())
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput)
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput struct{ *pulumi.OutputState }
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAs)(nil)).Elem()
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput {
-	return o
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput {
-	return o
-}
-
-// All
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput) All() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput {
-	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAs) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAll {
-		return v.All
-	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput)
-}
-
-// Replace a s
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput) ReplaceAs() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput {
-	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAs) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAs {
-		return v.ReplaceAs
-	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput)
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAll struct {
-}
-
-// GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput values.
-// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllInput` via:
-//
-//	GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs{...}
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllInput interface {
-	pulumi.Input
-
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs struct {
-}
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAll)(nil)).Elem()
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput {
-	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutputWithContext(context.Background())
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput)
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput struct{ *pulumi.OutputState }
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAll)(nil)).Elem()
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput {
-	return o
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput {
-	return o
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAs struct {
-}
-
-// GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput values.
-// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsInput` via:
-//
-//	GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs{...}
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsInput interface {
-	pulumi.Input
-
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs struct {
-}
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAs)(nil)).Elem()
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput {
-	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutputWithContext(context.Background())
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput)
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput struct{ *pulumi.OutputState }
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAs)(nil)).Elem()
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput {
-	return o
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput {
-	return o
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity struct {
-	// All
-	All GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll `pulumi:"all"`
-	// Both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-	Both GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth `pulumi:"both"`
-	// Extended
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-	Extended GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended `pulumi:"extended"`
-	// Large
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-	Large GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge `pulumi:"large"`
-	// Standard
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-	Standard GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandard `pulumi:"standard"`
-}
-
-// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput values.
-// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityInput` via:
-//
-//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs{...}
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityInput interface {
-	pulumi.Input
-
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs struct {
-	// All
-	All GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllInput `pulumi:"all"`
-	// Both
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-	Both GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothInput `pulumi:"both"`
-	// Extended
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-	Extended GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedInput `pulumi:"extended"`
-	// Large
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-	Large GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeInput `pulumi:"large"`
-	// Standard
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-	Standard GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardInput `pulumi:"standard"`
-}
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity)(nil)).Elem()
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput {
-	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutputWithContext(context.Background())
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput)
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput struct{ *pulumi.OutputState }
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity)(nil)).Elem()
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput {
-	return o
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput {
-	return o
-}
-
-// All
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) All() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput {
-	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll {
-		return v.All
-	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput)
-}
-
-// Both
-//
-// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) Both() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput {
-	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth {
-		return v.Both
-	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput)
-}
-
-// Extended
-//
-// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) Extended() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput {
-	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended {
-		return v.Extended
-	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput)
-}
-
-// Large
-//
-// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) Large() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput {
-	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge {
-		return v.Large
-	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput)
-}
-
-// Standard
-//
-// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) Standard() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput {
-	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandard {
-		return v.Standard
-	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput)
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll struct {
-}
-
-// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput values.
-// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllInput` via:
-//
-//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs{...}
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllInput interface {
-	pulumi.Input
-
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs struct {
-}
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll)(nil)).Elem()
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput {
-	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutputWithContext(context.Background())
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput)
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput struct{ *pulumi.OutputState }
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll)(nil)).Elem()
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput {
-	return o
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput {
-	return o
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth struct {
-}
-
-// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput values.
-// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothInput` via:
-//
-//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs{...}
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothInput interface {
-	pulumi.Input
-
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs struct {
-}
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth)(nil)).Elem()
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput {
-	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutputWithContext(context.Background())
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput)
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput struct{ *pulumi.OutputState }
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth)(nil)).Elem()
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput {
-	return o
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput {
-	return o
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended struct {
-}
-
-// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput values.
-// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedInput` via:
-//
-//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs{...}
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedInput interface {
-	pulumi.Input
-
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs struct {
-}
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended)(nil)).Elem()
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput {
-	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutputWithContext(context.Background())
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput)
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput struct{ *pulumi.OutputState }
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended)(nil)).Elem()
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput {
-	return o
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput {
-	return o
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge struct {
-}
-
-// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput values.
-// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeInput` via:
-//
-//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs{...}
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeInput interface {
-	pulumi.Input
-
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs struct {
-}
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge)(nil)).Elem()
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput {
-	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutputWithContext(context.Background())
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput)
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput struct{ *pulumi.OutputState }
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge)(nil)).Elem()
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput {
-	return o
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput {
-	return o
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandard struct {
-}
-
-// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput values.
-// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardInput` via:
-//
-//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs{...}
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardInput interface {
-	pulumi.Input
-
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput
-	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs struct {
-}
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandard)(nil)).Elem()
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput {
-	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutputWithContext(context.Background())
-}
-
-func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput)
-}
-
-type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput struct{ *pulumi.OutputState }
-
-func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandard)(nil)).Elem()
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput {
-	return o
-}
-
-func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput {
-	return o
-}
-
-type GetBgpAuthProfileListData struct {
-	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Map of sensitive values returned from the API.
-	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder of the item. Default: Shared.
-	Folder string `pulumi:"folder"`
-	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The name of the item.
-	Name string `pulumi:"name"`
-	// BGP authentication key
-	Secret string `pulumi:"secret"`
-	// The snippet of the item.
-	Snippet string `pulumi:"snippet"`
-	// The Terraform ID.
-	Tfid string `pulumi:"tfid"`
-}
-
-// GetBgpAuthProfileListDataInput is an input type that accepts GetBgpAuthProfileListDataArgs and GetBgpAuthProfileListDataOutput values.
-// You can construct a concrete instance of `GetBgpAuthProfileListDataInput` via:
-//
-//	GetBgpAuthProfileListDataArgs{...}
-type GetBgpAuthProfileListDataInput interface {
-	pulumi.Input
-
-	ToGetBgpAuthProfileListDataOutput() GetBgpAuthProfileListDataOutput
-	ToGetBgpAuthProfileListDataOutputWithContext(context.Context) GetBgpAuthProfileListDataOutput
-}
-
-type GetBgpAuthProfileListDataArgs struct {
-	// The device in which the resource is defined
-	Device pulumi.StringInput `pulumi:"device"`
-	// Map of sensitive values returned from the API.
-	EncryptedValues pulumi.StringMapInput `pulumi:"encryptedValues"`
-	// The folder of the item. Default: Shared.
-	Folder pulumi.StringInput `pulumi:"folder"`
-	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the item.
-	Name pulumi.StringInput `pulumi:"name"`
-	// BGP authentication key
-	Secret pulumi.StringInput `pulumi:"secret"`
-	// The snippet of the item.
-	Snippet pulumi.StringInput `pulumi:"snippet"`
-	// The Terraform ID.
-	Tfid pulumi.StringInput `pulumi:"tfid"`
-}
-
-func (GetBgpAuthProfileListDataArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAuthProfileListData)(nil)).Elem()
-}
-
-func (i GetBgpAuthProfileListDataArgs) ToGetBgpAuthProfileListDataOutput() GetBgpAuthProfileListDataOutput {
-	return i.ToGetBgpAuthProfileListDataOutputWithContext(context.Background())
-}
-
-func (i GetBgpAuthProfileListDataArgs) ToGetBgpAuthProfileListDataOutputWithContext(ctx context.Context) GetBgpAuthProfileListDataOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAuthProfileListDataOutput)
-}
-
-// GetBgpAuthProfileListDataArrayInput is an input type that accepts GetBgpAuthProfileListDataArray and GetBgpAuthProfileListDataArrayOutput values.
-// You can construct a concrete instance of `GetBgpAuthProfileListDataArrayInput` via:
-//
-//	GetBgpAuthProfileListDataArray{ GetBgpAuthProfileListDataArgs{...} }
-type GetBgpAuthProfileListDataArrayInput interface {
-	pulumi.Input
-
-	ToGetBgpAuthProfileListDataArrayOutput() GetBgpAuthProfileListDataArrayOutput
-	ToGetBgpAuthProfileListDataArrayOutputWithContext(context.Context) GetBgpAuthProfileListDataArrayOutput
-}
-
-type GetBgpAuthProfileListDataArray []GetBgpAuthProfileListDataInput
-
-func (GetBgpAuthProfileListDataArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetBgpAuthProfileListData)(nil)).Elem()
-}
-
-func (i GetBgpAuthProfileListDataArray) ToGetBgpAuthProfileListDataArrayOutput() GetBgpAuthProfileListDataArrayOutput {
-	return i.ToGetBgpAuthProfileListDataArrayOutputWithContext(context.Background())
-}
-
-func (i GetBgpAuthProfileListDataArray) ToGetBgpAuthProfileListDataArrayOutputWithContext(ctx context.Context) GetBgpAuthProfileListDataArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAuthProfileListDataArrayOutput)
-}
-
-type GetBgpAuthProfileListDataOutput struct{ *pulumi.OutputState }
-
-func (GetBgpAuthProfileListDataOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpAuthProfileListData)(nil)).Elem()
-}
-
-func (o GetBgpAuthProfileListDataOutput) ToGetBgpAuthProfileListDataOutput() GetBgpAuthProfileListDataOutput {
-	return o
-}
-
-func (o GetBgpAuthProfileListDataOutput) ToGetBgpAuthProfileListDataOutputWithContext(ctx context.Context) GetBgpAuthProfileListDataOutput {
-	return o
-}
-
-// The device in which the resource is defined
-func (o GetBgpAuthProfileListDataOutput) Device() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Device }).(pulumi.StringOutput)
-}
-
-// Map of sensitive values returned from the API.
-func (o GetBgpAuthProfileListDataOutput) EncryptedValues() pulumi.StringMapOutput {
-	return o.ApplyT(func(v GetBgpAuthProfileListData) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
-}
-
-// The folder of the item. Default: Shared.
-func (o GetBgpAuthProfileListDataOutput) Folder() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Folder }).(pulumi.StringOutput)
-}
-
-// UUID of the resource
-func (o GetBgpAuthProfileListDataOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Id }).(pulumi.StringOutput)
-}
-
-// The name of the item.
-func (o GetBgpAuthProfileListDataOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// BGP authentication key
-func (o GetBgpAuthProfileListDataOutput) Secret() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Secret }).(pulumi.StringOutput)
-}
-
-// The snippet of the item.
-func (o GetBgpAuthProfileListDataOutput) Snippet() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
-}
-
-// The Terraform ID.
-func (o GetBgpAuthProfileListDataOutput) Tfid() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
-}
-
-type GetBgpAuthProfileListDataArrayOutput struct{ *pulumi.OutputState }
-
-func (GetBgpAuthProfileListDataArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetBgpAuthProfileListData)(nil)).Elem()
-}
-
-func (o GetBgpAuthProfileListDataArrayOutput) ToGetBgpAuthProfileListDataArrayOutput() GetBgpAuthProfileListDataArrayOutput {
-	return o
-}
-
-func (o GetBgpAuthProfileListDataArrayOutput) ToGetBgpAuthProfileListDataArrayOutputWithContext(ctx context.Context) GetBgpAuthProfileListDataArrayOutput {
-	return o
-}
-
-func (o GetBgpAuthProfileListDataArrayOutput) Index(i pulumi.IntInput) GetBgpAuthProfileListDataOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetBgpAuthProfileListData {
-		return vs[0].([]GetBgpAuthProfileListData)[vs[1].(int)]
-	}).(GetBgpAuthProfileListDataOutput)
-}
-
-type GetBgpFilteringProfileIpv4 struct {
-	// Multicast
-	Multicast GetBgpFilteringProfileIpv4Multicast `pulumi:"multicast"`
-	// Unicast
-	Unicast GetBgpFilteringProfileIpv4Unicast `pulumi:"unicast"`
-}
-
-// GetBgpFilteringProfileIpv4Input is an input type that accepts GetBgpFilteringProfileIpv4Args and GetBgpFilteringProfileIpv4Output values.
-// You can construct a concrete instance of `GetBgpFilteringProfileIpv4Input` via:
-//
-//	GetBgpFilteringProfileIpv4Args{...}
-type GetBgpFilteringProfileIpv4Input interface {
-	pulumi.Input
-
-	ToGetBgpFilteringProfileIpv4Output() GetBgpFilteringProfileIpv4Output
-	ToGetBgpFilteringProfileIpv4OutputWithContext(context.Context) GetBgpFilteringProfileIpv4Output
-}
-
-type GetBgpFilteringProfileIpv4Args struct {
-	// Multicast
-	Multicast GetBgpFilteringProfileIpv4MulticastInput `pulumi:"multicast"`
-	// Unicast
-	Unicast GetBgpFilteringProfileIpv4UnicastInput `pulumi:"unicast"`
-}
-
-func (GetBgpFilteringProfileIpv4Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4)(nil)).Elem()
-}
-
-func (i GetBgpFilteringProfileIpv4Args) ToGetBgpFilteringProfileIpv4Output() GetBgpFilteringProfileIpv4Output {
-	return i.ToGetBgpFilteringProfileIpv4OutputWithContext(context.Background())
-}
-
-func (i GetBgpFilteringProfileIpv4Args) ToGetBgpFilteringProfileIpv4OutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4Output {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4Output)
-}
-
-type GetBgpFilteringProfileIpv4Output struct{ *pulumi.OutputState }
-
-func (GetBgpFilteringProfileIpv4Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4)(nil)).Elem()
-}
-
-func (o GetBgpFilteringProfileIpv4Output) ToGetBgpFilteringProfileIpv4Output() GetBgpFilteringProfileIpv4Output {
-	return o
-}
-
-func (o GetBgpFilteringProfileIpv4Output) ToGetBgpFilteringProfileIpv4OutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4Output {
-	return o
-}
-
-// Multicast
-func (o GetBgpFilteringProfileIpv4Output) Multicast() GetBgpFilteringProfileIpv4MulticastOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4) GetBgpFilteringProfileIpv4Multicast { return v.Multicast }).(GetBgpFilteringProfileIpv4MulticastOutput)
-}
-
-// Unicast
-func (o GetBgpFilteringProfileIpv4Output) Unicast() GetBgpFilteringProfileIpv4UnicastOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4) GetBgpFilteringProfileIpv4Unicast { return v.Unicast }).(GetBgpFilteringProfileIpv4UnicastOutput)
-}
-
-type GetBgpFilteringProfileIpv4Multicast struct {
-	// Conditional advertisement
-	ConditionalAdvertisement GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement `pulumi:"conditionalAdvertisement"`
-	// Filter list
-	FilterList GetBgpFilteringProfileIpv4MulticastFilterList `pulumi:"filterList"`
-	// Inbound network filters
-	InboundNetworkFilters GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters `pulumi:"inboundNetworkFilters"`
-	// Inherit from unicast
-	Inherit bool `pulumi:"inherit"`
-	// Outbound network filters
-	OutboundNetworkFilters GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters `pulumi:"outboundNetworkFilters"`
-	// Route maps
-	RouteMaps GetBgpFilteringProfileIpv4MulticastRouteMaps `pulumi:"routeMaps"`
-	// Unsuppress map
-	UnsuppressMap string `pulumi:"unsuppressMap"`
-}
-
-// GetBgpFilteringProfileIpv4MulticastInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastArgs and GetBgpFilteringProfileIpv4MulticastOutput values.
-// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastInput` via:
-//
-//	GetBgpFilteringProfileIpv4MulticastArgs{...}
-type GetBgpFilteringProfileIpv4MulticastInput interface {
-	pulumi.Input
-
-	ToGetBgpFilteringProfileIpv4MulticastOutput() GetBgpFilteringProfileIpv4MulticastOutput
-	ToGetBgpFilteringProfileIpv4MulticastOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastOutput
-}
-
-type GetBgpFilteringProfileIpv4MulticastArgs struct {
-	// Conditional advertisement
-	ConditionalAdvertisement GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementInput `pulumi:"conditionalAdvertisement"`
-	// Filter list
-	FilterList GetBgpFilteringProfileIpv4MulticastFilterListInput `pulumi:"filterList"`
-	// Inbound network filters
-	InboundNetworkFilters GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersInput `pulumi:"inboundNetworkFilters"`
-	// Inherit from unicast
-	Inherit pulumi.BoolInput `pulumi:"inherit"`
-	// Outbound network filters
-	OutboundNetworkFilters GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersInput `pulumi:"outboundNetworkFilters"`
-	// Route maps
-	RouteMaps GetBgpFilteringProfileIpv4MulticastRouteMapsInput `pulumi:"routeMaps"`
-	// Unsuppress map
-	UnsuppressMap pulumi.StringInput `pulumi:"unsuppressMap"`
-}
-
-func (GetBgpFilteringProfileIpv4MulticastArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4Multicast)(nil)).Elem()
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastArgs) ToGetBgpFilteringProfileIpv4MulticastOutput() GetBgpFilteringProfileIpv4MulticastOutput {
-	return i.ToGetBgpFilteringProfileIpv4MulticastOutputWithContext(context.Background())
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastArgs) ToGetBgpFilteringProfileIpv4MulticastOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastOutput struct{ *pulumi.OutputState }
-
-func (GetBgpFilteringProfileIpv4MulticastOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4Multicast)(nil)).Elem()
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastOutput) ToGetBgpFilteringProfileIpv4MulticastOutput() GetBgpFilteringProfileIpv4MulticastOutput {
-	return o
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastOutput) ToGetBgpFilteringProfileIpv4MulticastOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastOutput {
-	return o
-}
-
-// Conditional advertisement
-func (o GetBgpFilteringProfileIpv4MulticastOutput) ConditionalAdvertisement() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement {
-		return v.ConditionalAdvertisement
-	}).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput)
-}
-
-// Filter list
-func (o GetBgpFilteringProfileIpv4MulticastOutput) FilterList() GetBgpFilteringProfileIpv4MulticastFilterListOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) GetBgpFilteringProfileIpv4MulticastFilterList {
-		return v.FilterList
-	}).(GetBgpFilteringProfileIpv4MulticastFilterListOutput)
-}
-
-// Inbound network filters
-func (o GetBgpFilteringProfileIpv4MulticastOutput) InboundNetworkFilters() GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters {
-		return v.InboundNetworkFilters
-	}).(GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput)
-}
-
-// Inherit from unicast
-func (o GetBgpFilteringProfileIpv4MulticastOutput) Inherit() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) bool { return v.Inherit }).(pulumi.BoolOutput)
-}
-
-// Outbound network filters
-func (o GetBgpFilteringProfileIpv4MulticastOutput) OutboundNetworkFilters() GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters {
-		return v.OutboundNetworkFilters
-	}).(GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput)
-}
-
-// Route maps
-func (o GetBgpFilteringProfileIpv4MulticastOutput) RouteMaps() GetBgpFilteringProfileIpv4MulticastRouteMapsOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) GetBgpFilteringProfileIpv4MulticastRouteMaps {
-		return v.RouteMaps
-	}).(GetBgpFilteringProfileIpv4MulticastRouteMapsOutput)
-}
-
-// Unsuppress map
-func (o GetBgpFilteringProfileIpv4MulticastOutput) UnsuppressMap() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) string { return v.UnsuppressMap }).(pulumi.StringOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement struct {
-	// Exist
-	Exist GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist `pulumi:"exist"`
-	// Non exist
-	NonExist GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist `pulumi:"nonExist"`
-}
-
-// GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs and GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput values.
-// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementInput` via:
-//
-//	GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs{...}
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementInput interface {
-	pulumi.Input
-
-	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput
-	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput
-}
-
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs struct {
-	// Exist
-	Exist GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistInput `pulumi:"exist"`
-	// Non exist
-	NonExist GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistInput `pulumi:"nonExist"`
-}
-
-func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement)(nil)).Elem()
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput {
-	return i.ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutputWithContext(context.Background())
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput struct{ *pulumi.OutputState }
-
-func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement)(nil)).Elem()
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput {
-	return o
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput {
-	return o
-}
-
-// Exist
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput) Exist() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist {
-		return v.Exist
-	}).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput)
-}
-
-// Non exist
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput) NonExist() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist {
-		return v.NonExist
-	}).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist struct {
-	// Advertise map
-	AdvertiseMap string `pulumi:"advertiseMap"`
-	// Exist map
-	ExistMap string `pulumi:"existMap"`
-}
-
-// GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs and GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput values.
-// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistInput` via:
-//
-//	GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs{...}
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistInput interface {
-	pulumi.Input
-
-	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput
-	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput
-}
-
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs struct {
-	// Advertise map
-	AdvertiseMap pulumi.StringInput `pulumi:"advertiseMap"`
-	// Exist map
-	ExistMap pulumi.StringInput `pulumi:"existMap"`
-}
-
-func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist)(nil)).Elem()
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput {
-	return i.ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutputWithContext(context.Background())
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput struct{ *pulumi.OutputState }
-
-func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist)(nil)).Elem()
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput {
-	return o
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput {
-	return o
-}
-
-// Advertise map
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput) AdvertiseMap() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist) string { return v.AdvertiseMap }).(pulumi.StringOutput)
-}
-
-// Exist map
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput) ExistMap() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist) string { return v.ExistMap }).(pulumi.StringOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist struct {
-	// Advertise map
-	AdvertiseMap string `pulumi:"advertiseMap"`
-	// Non exist map
-	NonExistMap string `pulumi:"nonExistMap"`
-}
-
-// GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs and GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput values.
-// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistInput` via:
-//
-//	GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs{...}
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistInput interface {
-	pulumi.Input
-
-	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput
-	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput
-}
-
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs struct {
-	// Advertise map
-	AdvertiseMap pulumi.StringInput `pulumi:"advertiseMap"`
-	// Non exist map
-	NonExistMap pulumi.StringInput `pulumi:"nonExistMap"`
-}
-
-func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist)(nil)).Elem()
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput {
-	return i.ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(context.Background())
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput struct{ *pulumi.OutputState }
-
-func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist)(nil)).Elem()
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput {
-	return o
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput {
-	return o
-}
-
-// Advertise map
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput) AdvertiseMap() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist) string {
-		return v.AdvertiseMap
-	}).(pulumi.StringOutput)
-}
-
-// Non exist map
-func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput) NonExistMap() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist) string {
-		return v.NonExistMap
-	}).(pulumi.StringOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastFilterList struct {
-	// Inbound
-	Inbound string `pulumi:"inbound"`
-	// Outbound
-	Outbound string `pulumi:"outbound"`
-}
-
-// GetBgpFilteringProfileIpv4MulticastFilterListInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastFilterListArgs and GetBgpFilteringProfileIpv4MulticastFilterListOutput values.
-// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastFilterListInput` via:
-//
-//	GetBgpFilteringProfileIpv4MulticastFilterListArgs{...}
-type GetBgpFilteringProfileIpv4MulticastFilterListInput interface {
-	pulumi.Input
-
-	ToGetBgpFilteringProfileIpv4MulticastFilterListOutput() GetBgpFilteringProfileIpv4MulticastFilterListOutput
-	ToGetBgpFilteringProfileIpv4MulticastFilterListOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastFilterListOutput
-}
-
-type GetBgpFilteringProfileIpv4MulticastFilterListArgs struct {
-	// Inbound
-	Inbound pulumi.StringInput `pulumi:"inbound"`
-	// Outbound
-	Outbound pulumi.StringInput `pulumi:"outbound"`
-}
-
-func (GetBgpFilteringProfileIpv4MulticastFilterListArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastFilterList)(nil)).Elem()
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastFilterListArgs) ToGetBgpFilteringProfileIpv4MulticastFilterListOutput() GetBgpFilteringProfileIpv4MulticastFilterListOutput {
-	return i.ToGetBgpFilteringProfileIpv4MulticastFilterListOutputWithContext(context.Background())
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastFilterListArgs) ToGetBgpFilteringProfileIpv4MulticastFilterListOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastFilterListOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastFilterListOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastFilterListOutput struct{ *pulumi.OutputState }
-
-func (GetBgpFilteringProfileIpv4MulticastFilterListOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastFilterList)(nil)).Elem()
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastFilterListOutput) ToGetBgpFilteringProfileIpv4MulticastFilterListOutput() GetBgpFilteringProfileIpv4MulticastFilterListOutput {
-	return o
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastFilterListOutput) ToGetBgpFilteringProfileIpv4MulticastFilterListOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastFilterListOutput {
-	return o
-}
-
-// Inbound
-func (o GetBgpFilteringProfileIpv4MulticastFilterListOutput) Inbound() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastFilterList) string { return v.Inbound }).(pulumi.StringOutput)
-}
-
-// Outbound
-func (o GetBgpFilteringProfileIpv4MulticastFilterListOutput) Outbound() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastFilterList) string { return v.Outbound }).(pulumi.StringOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters struct {
-	// Distribute list
-	DistributeList string `pulumi:"distributeList"`
-	// Prefix list
-	PrefixList string `pulumi:"prefixList"`
-}
-
-// GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs and GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput values.
-// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersInput` via:
-//
-//	GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs{...}
-type GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersInput interface {
-	pulumi.Input
-
-	ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput
-	ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput
-}
-
-type GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs struct {
-	// Distribute list
-	DistributeList pulumi.StringInput `pulumi:"distributeList"`
-	// Prefix list
-	PrefixList pulumi.StringInput `pulumi:"prefixList"`
-}
-
-func (GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters)(nil)).Elem()
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput {
-	return i.ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutputWithContext(context.Background())
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput struct{ *pulumi.OutputState }
-
-func (GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters)(nil)).Elem()
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput {
-	return o
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput {
-	return o
-}
-
-// Distribute list
-func (o GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput) DistributeList() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters) string { return v.DistributeList }).(pulumi.StringOutput)
-}
-
-// Prefix list
-func (o GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput) PrefixList() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters) string { return v.PrefixList }).(pulumi.StringOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters struct {
-	// Distribute list
-	DistributeList string `pulumi:"distributeList"`
-	// Prefix list
-	PrefixList string `pulumi:"prefixList"`
-}
-
-// GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs and GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput values.
-// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersInput` via:
-//
-//	GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs{...}
-type GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersInput interface {
-	pulumi.Input
-
-	ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput
-	ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput
-}
-
-type GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs struct {
-	// Distribute list
-	DistributeList pulumi.StringInput `pulumi:"distributeList"`
-	// Prefix list
-	PrefixList pulumi.StringInput `pulumi:"prefixList"`
-}
-
-func (GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters)(nil)).Elem()
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput {
-	return i.ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutputWithContext(context.Background())
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput struct{ *pulumi.OutputState }
-
-func (GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters)(nil)).Elem()
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput {
-	return o
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput {
-	return o
-}
-
-// Distribute list
-func (o GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput) DistributeList() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters) string { return v.DistributeList }).(pulumi.StringOutput)
-}
-
-// Prefix list
-func (o GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput) PrefixList() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters) string { return v.PrefixList }).(pulumi.StringOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastRouteMaps struct {
-	// Inbound
-	Inbound string `pulumi:"inbound"`
-	// Outbound
-	Outbound string `pulumi:"outbound"`
-}
-
-// GetBgpFilteringProfileIpv4MulticastRouteMapsInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastRouteMapsArgs and GetBgpFilteringProfileIpv4MulticastRouteMapsOutput values.
-// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastRouteMapsInput` via:
-//
-//	GetBgpFilteringProfileIpv4MulticastRouteMapsArgs{...}
-type GetBgpFilteringProfileIpv4MulticastRouteMapsInput interface {
-	pulumi.Input
-
-	ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutput() GetBgpFilteringProfileIpv4MulticastRouteMapsOutput
-	ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastRouteMapsOutput
-}
-
-type GetBgpFilteringProfileIpv4MulticastRouteMapsArgs struct {
-	// Inbound
-	Inbound pulumi.StringInput `pulumi:"inbound"`
-	// Outbound
-	Outbound pulumi.StringInput `pulumi:"outbound"`
-}
-
-func (GetBgpFilteringProfileIpv4MulticastRouteMapsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastRouteMaps)(nil)).Elem()
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastRouteMapsArgs) ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutput() GetBgpFilteringProfileIpv4MulticastRouteMapsOutput {
-	return i.ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutputWithContext(context.Background())
-}
-
-func (i GetBgpFilteringProfileIpv4MulticastRouteMapsArgs) ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastRouteMapsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastRouteMapsOutput)
-}
-
-type GetBgpFilteringProfileIpv4MulticastRouteMapsOutput struct{ *pulumi.OutputState }
-
-func (GetBgpFilteringProfileIpv4MulticastRouteMapsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastRouteMaps)(nil)).Elem()
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastRouteMapsOutput) ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutput() GetBgpFilteringProfileIpv4MulticastRouteMapsOutput {
-	return o
-}
-
-func (o GetBgpFilteringProfileIpv4MulticastRouteMapsOutput) ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastRouteMapsOutput {
-	return o
-}
-
-// Inbound
-func (o GetBgpFilteringProfileIpv4MulticastRouteMapsOutput) Inbound() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastRouteMaps) string { return v.Inbound }).(pulumi.StringOutput)
-}
-
-// Outbound
-func (o GetBgpFilteringProfileIpv4MulticastRouteMapsOutput) Outbound() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastRouteMaps) string { return v.Outbound }).(pulumi.StringOutput)
-}
-
-type GetBgpFilteringProfileIpv4Unicast struct {
-	// Conditional advertisement
-	ConditionalAdvertisement GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement `pulumi:"conditionalAdvertisement"`
-	// Filter list
-	FilterList GetBgpFilteringProfileIpv4UnicastFilterList `pulumi:"filterList"`
-	// Inbound network filters
-	InboundNetworkFilters GetBgpFilteringProfileIpv4UnicastInboundNetworkFilters `pulumi:"inboundNetworkFilters"`
-	// Outbound network filters
-	OutboundNetworkFilters GetBgpFilteringProfileIpv4UnicastOutboundNetworkFilters `pulumi:"outboundNetworkFilters"`
-	// Route maps
-	RouteMaps GetBgpFilteringProfileIpv4UnicastRouteMaps `pulumi:"routeMaps"`
-	// Unsuppress map
-	UnsuppressMap string `pulumi:"unsuppressMap"`
-}
-
-// GetBgpFilteringProfileIpv4UnicastInput is an input type that accepts GetBgpFilteringProfileIpv4UnicastArgs and GetBgpFilteringProfileIpv4UnicastOutput values.
-// You can construct a concrete instance of `GetBgpFilteringProfileIpv4UnicastInput` via:
-//
-//	GetBgpFilteringProfileIpv4UnicastArgs{...}
-type GetBgpFilteringProfileIpv4UnicastInput interface {
-	pulumi.Input
-
-	ToGetBgpFilteringProfileIpv4UnicastOutput() GetBgpFilteringProfileIpv4UnicastOutput
-	ToGetBgpFilteringProfileIpv4UnicastOutputWithContext(context.Context) GetBgpFilteringProfileIpv4UnicastOutput
-}
-
-type GetBgpFilteringProfileIpv4UnicastArgs struct {
-	// Conditional advertisement
-	ConditionalAdvertisement GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementInput `pulumi:"conditionalAdvertisement"`
-	// Filter list
-	FilterList GetBgpFilteringProfileIpv4UnicastFilterListInput `pulumi:"filterList"`
-	// Inbound network filters
-	InboundNetworkFilters GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersInput `pulumi:"inboundNetworkFilters"`
-	// Outbound network filters
-	OutboundNetworkFilters GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersInput `pulumi:"outboundNetworkFilters"`
-	// Route maps
-	RouteMaps GetBgpFilteringProfileIpv4UnicastRouteMapsInput `pulumi:"routeMaps"`
-	// Unsuppress map
-	UnsuppressMap pulumi.StringInput `pulumi:"unsuppressMap"`
-}
-
-func (GetBgpFilteringProfileIpv4UnicastArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4Unicast)(nil)).Elem()
-}
-
-func (i GetBgpFilteringProfileIpv4UnicastArgs) ToGetBgpFilteringProfileIpv4UnicastOutput() GetBgpFilteringProfileIpv4UnicastOutput {
-	return i.ToGetBgpFilteringProfileIpv4UnicastOutputWithContext(context.Background())
-}
-
-func (i GetBgpFilteringProfileIpv4UnicastArgs) ToGetBgpFilteringProfileIpv4UnicastOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4UnicastOutput)
-}
-
-type GetBgpFilteringProfileIpv4UnicastOutput struct{ *pulumi.OutputState }
-
-func (GetBgpFilteringProfileIpv4UnicastOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4Unicast)(nil)).Elem()
-}
-
-func (o GetBgpFilteringProfileIpv4UnicastOutput) ToGetBgpFilteringProfileIpv4UnicastOutput() GetBgpFilteringProfileIpv4UnicastOutput {
-	return o
-}
-
-func (o GetBgpFilteringProfileIpv4UnicastOutput) ToGetBgpFilteringProfileIpv4UnicastOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastOutput {
-	return o
-}
-
-// Conditional advertisement
-func (o GetBgpFilteringProfileIpv4UnicastOutput) ConditionalAdvertisement() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement {
-		return v.ConditionalAdvertisement
-	}).(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput)
-}
-
-// Filter list
-func (o GetBgpFilteringProfileIpv4UnicastOutput) FilterList() GetBgpFilteringProfileIpv4UnicastFilterListOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) GetBgpFilteringProfileIpv4UnicastFilterList {
-		return v.FilterList
-	}).(GetBgpFilteringProfileIpv4UnicastFilterListOutput)
-}
-
-// Inbound network filters
-func (o GetBgpFilteringProfileIpv4UnicastOutput) InboundNetworkFilters() GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) GetBgpFilteringProfileIpv4UnicastInboundNetworkFilters {
-		return v.InboundNetworkFilters
-	}).(GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput)
-}
-
-// Outbound network filters
-func (o GetBgpFilteringProfileIpv4UnicastOutput) OutboundNetworkFilters() GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) GetBgpFilteringProfileIpv4UnicastOutboundNetworkFilters {
-		return v.OutboundNetworkFilters
-	}).(GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput)
-}
-
-// Route maps
-func (o GetBgpFilteringProfileIpv4UnicastOutput) RouteMaps() GetBgpFilteringProfileIpv4UnicastRouteMapsOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) GetBgpFilteringProfileIpv4UnicastRouteMaps {
-		return v.RouteMaps
-	}).(GetBgpFilteringProfileIpv4UnicastRouteMapsOutput)
-}
-
-// Unsuppress map
-func (o GetBgpFilteringProfileIpv4UnicastOutput) UnsuppressMap() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) string { return v.UnsuppressMap }).(pulumi.StringOutput)
-}
-
-type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement struct {
-	// Exist
-	Exist GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExist `pulumi:"exist"`
-	// Non exist
-	NonExist GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExist `pulumi:"nonExist"`
-}
-
-// GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementInput is an input type that accepts GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs and GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput values.
-// You can construct a concrete instance of `GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementInput` via:
-//
-//	GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs{...}
-type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementInput interface {
-	pulumi.Input
-
-	ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput
-	ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutputWithContext(context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput
-}
-
-type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs struct {
-	// Exist
-	Exist GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistInput `pulumi:"exist"`
-	// Non exist
-	NonExist GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistInput `pulumi:"nonExist"`
-}
-
-func (GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement)(nil)).Elem()
-}
-
-func (i GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput {
-	return i.ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutputWithContext(context.Background())
-}
-
-func (i GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput)
-}
-
-type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput struct{ *pulumi.OutputState }
-
-func (GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement)(nil)).Elem()
-}
-
-func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput {
-	return o
-}
-
-func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput {
-	return o
-}
-
-// Exist
-func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput) Exist() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExist {
-		return v.Exist
-	}).(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput)
-}
-
-// Non exist
-func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput) NonExist() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput {
-	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExist {
-		return v.NonExist
-	}).(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput)
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanErrorCorrectionProfileModePacketDuplicationInput)(nil)).Elem(), SdwanErrorCorrectionProfileModePacketDuplicationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanErrorCorrectionProfileModePacketDuplicationPtrInput)(nil)).Elem(), SdwanErrorCorrectionProfileModePacketDuplicationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanPathQualityProfileMetricInput)(nil)).Elem(), SdwanPathQualityProfileMetricArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanPathQualityProfileMetricPtrInput)(nil)).Elem(), SdwanPathQualityProfileMetricArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanPathQualityProfileMetricJitterInput)(nil)).Elem(), SdwanPathQualityProfileMetricJitterArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanPathQualityProfileMetricJitterPtrInput)(nil)).Elem(), SdwanPathQualityProfileMetricJitterArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanPathQualityProfileMetricLatencyInput)(nil)).Elem(), SdwanPathQualityProfileMetricLatencyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanPathQualityProfileMetricLatencyPtrInput)(nil)).Elem(), SdwanPathQualityProfileMetricLatencyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanPathQualityProfileMetricPktLossInput)(nil)).Elem(), SdwanPathQualityProfileMetricPktLossArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanPathQualityProfileMetricPktLossPtrInput)(nil)).Elem(), SdwanPathQualityProfileMetricPktLossArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanRuleActionInput)(nil)).Elem(), SdwanRuleActionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanRuleActionPtrInput)(nil)).Elem(), SdwanRuleActionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModePtrInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeAdaptiveInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeAdaptiveArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeAdaptivePtrInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeAdaptiveArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeHttpHttpsInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeHttpHttpsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeHttpHttpsPtrInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeHttpHttpsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIpInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeStaticIpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIpPtrInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeStaticIpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIpFqdnInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeStaticIpFqdnArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIpIpAddressInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayInput)(nil)).Elem(), SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanTrafficDistributionProfileLinkTagInput)(nil)).Elem(), SdwanTrafficDistributionProfileLinkTagArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SdwanTrafficDistributionProfileLinkTagArrayInput)(nil)).Elem(), SdwanTrafficDistributionProfileLinkTagArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowUrlCategoryInput)(nil)).Elem(), SecurityRuleAllowUrlCategoryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowUrlCategoryArrayInput)(nil)).Elem(), SecurityRuleAllowUrlCategoryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowUrlCategoryFileControlInput)(nil)).Elem(), SecurityRuleAllowUrlCategoryFileControlArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowUrlCategoryFileControlPtrInput)(nil)).Elem(), SecurityRuleAllowUrlCategoryFileControlArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationInput)(nil)).Elem(), SecurityRuleAllowWebApplicationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationArrayInput)(nil)).Elem(), SecurityRuleAllowWebApplicationArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationFileControlInput)(nil)).Elem(), SecurityRuleAllowWebApplicationFileControlArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationFileControlPtrInput)(nil)).Elem(), SecurityRuleAllowWebApplicationFileControlArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControlInput)(nil)).Elem(), SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrInput)(nil)).Elem(), SecurityRuleAllowWebApplicationSaasEnterpriseControlArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessInput)(nil)).Elem(), SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrInput)(nil)).Elem(), SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessInput)(nil)).Elem(), SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrInput)(nil)).Elem(), SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationTenantControlInput)(nil)).Elem(), SecurityRuleAllowWebApplicationTenantControlArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleAllowWebApplicationTenantControlPtrInput)(nil)).Elem(), SecurityRuleAllowWebApplicationTenantControlArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleDefaultProfileSettingsInput)(nil)).Elem(), SecurityRuleDefaultProfileSettingsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleDefaultProfileSettingsPtrInput)(nil)).Elem(), SecurityRuleDefaultProfileSettingsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SecurityRuleDefaultProfileSettingsFileControlInput)(nil)).Elem(), SecurityRuleDefaultProfileSettingsFileControlArgs{})
@@ -56938,28 +58787,48 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelfInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelfArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelfForceInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelfForceArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastOrfInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastOrfArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAuthProfileListDataInput)(nil)).Elem(), GetBgpAuthProfileListDataArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAuthProfileListDataArrayInput)(nil)).Elem(), GetBgpAuthProfileListDataArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4Input)(nil)).Elem(), GetBgpFilteringProfileIpv4Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastFilterListInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastFilterListArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastRouteMapsInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastRouteMapsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs{})
+	pulumi.RegisterOutputType(SdwanErrorCorrectionProfileModePacketDuplicationOutput{})
+	pulumi.RegisterOutputType(SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput{})
+	pulumi.RegisterOutputType(SdwanPathQualityProfileMetricOutput{})
+	pulumi.RegisterOutputType(SdwanPathQualityProfileMetricPtrOutput{})
+	pulumi.RegisterOutputType(SdwanPathQualityProfileMetricJitterOutput{})
+	pulumi.RegisterOutputType(SdwanPathQualityProfileMetricJitterPtrOutput{})
+	pulumi.RegisterOutputType(SdwanPathQualityProfileMetricLatencyOutput{})
+	pulumi.RegisterOutputType(SdwanPathQualityProfileMetricLatencyPtrOutput{})
+	pulumi.RegisterOutputType(SdwanPathQualityProfileMetricPktLossOutput{})
+	pulumi.RegisterOutputType(SdwanPathQualityProfileMetricPktLossPtrOutput{})
+	pulumi.RegisterOutputType(SdwanRuleActionOutput{})
+	pulumi.RegisterOutputType(SdwanRuleActionPtrOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModeOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModePtrOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModeAdaptiveOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModeAdaptivePtrOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModeHttpHttpsOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModeStaticIpOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModeStaticIpFqdnOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModeStaticIpIpAddressOutput{})
+	pulumi.RegisterOutputType(SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput{})
+	pulumi.RegisterOutputType(SdwanTrafficDistributionProfileLinkTagOutput{})
+	pulumi.RegisterOutputType(SdwanTrafficDistributionProfileLinkTagArrayOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowUrlCategoryOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowUrlCategoryArrayOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowUrlCategoryFileControlOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowUrlCategoryFileControlPtrOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationArrayOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationFileControlOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationFileControlPtrOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationSaasEnterpriseControlOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationSaasEnterpriseControlPtrOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationSaasEnterpriseControlConsumerAccessPtrOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationSaasEnterpriseControlEnterpriseAccessPtrOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationTenantControlOutput{})
+	pulumi.RegisterOutputType(SecurityRuleAllowWebApplicationTenantControlPtrOutput{})
 	pulumi.RegisterOutputType(SecurityRuleDefaultProfileSettingsOutput{})
 	pulumi.RegisterOutputType(SecurityRuleDefaultProfileSettingsPtrOutput{})
 	pulumi.RegisterOutputType(SecurityRuleDefaultProfileSettingsFileControlOutput{})
@@ -57690,26 +59559,4 @@ func init() {
 	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelfOutput{})
 	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastNextHopSelfForceOutput{})
 	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastOrfOutput{})
-	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput{})
-	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput{})
-	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput{})
-	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput{})
-	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput{})
-	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput{})
-	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput{})
-	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput{})
-	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput{})
-	pulumi.RegisterOutputType(GetBgpAuthProfileListDataOutput{})
-	pulumi.RegisterOutputType(GetBgpAuthProfileListDataArrayOutput{})
-	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4Output{})
-	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastOutput{})
-	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput{})
-	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput{})
-	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput{})
-	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastFilterListOutput{})
-	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput{})
-	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput{})
-	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastRouteMapsOutput{})
-	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastOutput{})
-	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput{})
 }

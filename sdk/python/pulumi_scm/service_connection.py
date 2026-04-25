@@ -31,6 +31,7 @@ class ServiceConnectionArgs:
                  onboarding_type: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input['ServiceConnectionProtocolArgs']] = None,
                  qos: Optional[pulumi.Input['ServiceConnectionQosArgs']] = None,
+                 region_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
                  source_nat: Optional[pulumi.Input[_builtins.bool]] = None,
                  subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
@@ -47,6 +48,7 @@ class ServiceConnectionArgs:
         :param pulumi.Input[_builtins.str] onboarding_type: Onboarding type
         :param pulumi.Input['ServiceConnectionProtocolArgs'] protocol: Protocol
         :param pulumi.Input['ServiceConnectionQosArgs'] qos: Qos
+        :param pulumi.Input[_builtins.str] region_tag: Region tag
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel
         :param pulumi.Input[_builtins.bool] source_nat: Source nat
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
@@ -69,6 +71,8 @@ class ServiceConnectionArgs:
             pulumi.set(__self__, "protocol", protocol)
         if qos is not None:
             pulumi.set(__self__, "qos", qos)
+        if region_tag is not None:
+            pulumi.set(__self__, "region_tag", region_tag)
         if secondary_ipsec_tunnel is not None:
             pulumi.set(__self__, "secondary_ipsec_tunnel", secondary_ipsec_tunnel)
         if source_nat is not None:
@@ -197,6 +201,18 @@ class ServiceConnectionArgs:
         pulumi.set(self, "qos", value)
 
     @_builtins.property
+    @pulumi.getter(name="regionTag")
+    def region_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Region tag
+        """
+        return pulumi.get(self, "region_tag")
+
+    @region_tag.setter
+    def region_tag(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "region_tag", value)
+
+    @_builtins.property
     @pulumi.getter(name="secondaryIpsecTunnel")
     def secondary_ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -248,6 +264,7 @@ class _ServiceConnectionState:
                  protocol: Optional[pulumi.Input['ServiceConnectionProtocolArgs']] = None,
                  qos: Optional[pulumi.Input['ServiceConnectionQosArgs']] = None,
                  region: Optional[pulumi.Input[_builtins.str]] = None,
+                 region_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
                  source_nat: Optional[pulumi.Input[_builtins.bool]] = None,
                  subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -267,6 +284,7 @@ class _ServiceConnectionState:
         :param pulumi.Input['ServiceConnectionProtocolArgs'] protocol: Protocol
         :param pulumi.Input['ServiceConnectionQosArgs'] qos: Qos
         :param pulumi.Input[_builtins.str] region: Region
+        :param pulumi.Input[_builtins.str] region_tag: Region tag
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel
         :param pulumi.Input[_builtins.bool] source_nat: Source nat
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
@@ -296,6 +314,8 @@ class _ServiceConnectionState:
             pulumi.set(__self__, "qos", qos)
         if region is not None:
             pulumi.set(__self__, "region", region)
+        if region_tag is not None:
+            pulumi.set(__self__, "region_tag", region_tag)
         if secondary_ipsec_tunnel is not None:
             pulumi.set(__self__, "secondary_ipsec_tunnel", secondary_ipsec_tunnel)
         if source_nat is not None:
@@ -450,6 +470,18 @@ class _ServiceConnectionState:
         pulumi.set(self, "region", value)
 
     @_builtins.property
+    @pulumi.getter(name="regionTag")
+    def region_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Region tag
+        """
+        return pulumi.get(self, "region_tag")
+
+    @region_tag.setter
+    def region_tag(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "region_tag", value)
+
+    @_builtins.property
     @pulumi.getter(name="secondaryIpsecTunnel")
     def secondary_ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -514,6 +546,7 @@ class ServiceConnection(pulumi.CustomResource):
                  protocol: Optional[pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
                  qos: Optional[pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
                  region: Optional[pulumi.Input[_builtins.str]] = None,
+                 region_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
                  source_nat: Optional[pulumi.Input[_builtins.bool]] = None,
                  subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -633,6 +666,7 @@ class ServiceConnection(pulumi.CustomResource):
         :param pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']] protocol: Protocol
         :param pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']] qos: Qos
         :param pulumi.Input[_builtins.str] region: Region
+        :param pulumi.Input[_builtins.str] region_tag: Region tag
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel
         :param pulumi.Input[_builtins.bool] source_nat: Source nat
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
@@ -771,6 +805,7 @@ class ServiceConnection(pulumi.CustomResource):
                  protocol: Optional[pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
                  qos: Optional[pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
                  region: Optional[pulumi.Input[_builtins.str]] = None,
+                 region_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
                  source_nat: Optional[pulumi.Input[_builtins.bool]] = None,
                  subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -797,6 +832,7 @@ class ServiceConnection(pulumi.CustomResource):
             if region is None and not opts.urn:
                 raise TypeError("Missing required property 'region'")
             __props__.__dict__["region"] = region
+            __props__.__dict__["region_tag"] = region_tag
             __props__.__dict__["secondary_ipsec_tunnel"] = secondary_ipsec_tunnel
             __props__.__dict__["source_nat"] = source_nat
             __props__.__dict__["subnets"] = subnets
@@ -827,6 +863,7 @@ class ServiceConnection(pulumi.CustomResource):
             protocol: Optional[pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']]] = None,
             qos: Optional[pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']]] = None,
             region: Optional[pulumi.Input[_builtins.str]] = None,
+            region_tag: Optional[pulumi.Input[_builtins.str]] = None,
             secondary_ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
             source_nat: Optional[pulumi.Input[_builtins.bool]] = None,
             subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -850,6 +887,7 @@ class ServiceConnection(pulumi.CustomResource):
         :param pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']] protocol: Protocol
         :param pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']] qos: Qos
         :param pulumi.Input[_builtins.str] region: Region
+        :param pulumi.Input[_builtins.str] region_tag: Region tag
         :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel
         :param pulumi.Input[_builtins.bool] source_nat: Source nat
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
@@ -871,6 +909,7 @@ class ServiceConnection(pulumi.CustomResource):
         __props__.__dict__["protocol"] = protocol
         __props__.__dict__["qos"] = qos
         __props__.__dict__["region"] = region
+        __props__.__dict__["region_tag"] = region_tag
         __props__.__dict__["secondary_ipsec_tunnel"] = secondary_ipsec_tunnel
         __props__.__dict__["source_nat"] = source_nat
         __props__.__dict__["subnets"] = subnets
@@ -972,6 +1011,14 @@ class ServiceConnection(pulumi.CustomResource):
         Region
         """
         return pulumi.get(self, "region")
+
+    @_builtins.property
+    @pulumi.getter(name="regionTag")
+    def region_tag(self) -> pulumi.Output[_builtins.str]:
+        """
+        Region tag
+        """
+        return pulumi.get(self, "region_tag")
 
     @_builtins.property
     @pulumi.getter(name="secondaryIpsecTunnel")

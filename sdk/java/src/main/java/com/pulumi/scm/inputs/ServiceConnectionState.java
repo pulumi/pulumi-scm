@@ -202,6 +202,21 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
     }
 
     /**
+     * Region tag
+     * 
+     */
+    @Import(name="regionTag")
+    private @Nullable Output<String> regionTag;
+
+    /**
+     * @return Region tag
+     * 
+     */
+    public Optional<Output<String>> regionTag() {
+        return Optional.ofNullable(this.regionTag);
+    }
+
+    /**
      * Secondary ipsec tunnel
      * 
      */
@@ -276,6 +291,7 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
         this.protocol = $.protocol;
         this.qos = $.qos;
         this.region = $.region;
+        this.regionTag = $.regionTag;
         this.secondaryIpsecTunnel = $.secondaryIpsecTunnel;
         this.sourceNat = $.sourceNat;
         this.subnets = $.subnets;
@@ -550,6 +566,27 @@ public final class ServiceConnectionState extends com.pulumi.resources.ResourceA
          */
         public Builder region(String region) {
             return region(Output.of(region));
+        }
+
+        /**
+         * @param regionTag Region tag
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regionTag(@Nullable Output<String> regionTag) {
+            $.regionTag = regionTag;
+            return this;
+        }
+
+        /**
+         * @param regionTag Region tag
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regionTag(String regionTag) {
+            return regionTag(Output.of(regionTag));
         }
 
         /**

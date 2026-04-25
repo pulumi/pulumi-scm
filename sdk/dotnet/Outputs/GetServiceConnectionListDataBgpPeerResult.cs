@@ -30,6 +30,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string PeerIpv6Address;
         /// <summary>
+        /// Same peer IP address for SC
+        /// </summary>
+        public readonly bool SameAsPrimary;
+        /// <summary>
         /// Secret
         /// </summary>
         public readonly string Secret;
@@ -44,12 +48,15 @@ namespace Pulumi.Scm.Outputs
 
             string peerIpv6Address,
 
+            bool sameAsPrimary,
+
             string secret)
         {
             LocalIpAddress = localIpAddress;
             LocalIpv6Address = localIpv6Address;
             PeerIpAddress = peerIpAddress;
             PeerIpv6Address = peerIpv6Address;
+            SameAsPrimary = sameAsPrimary;
             Secret = secret;
         }
     }

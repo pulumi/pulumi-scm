@@ -5,7 +5,6 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,7 +29,7 @@ public final class MfaServerMfaVendorTypeOktaAdaptiveV1 {
      * @return Okta timeout (seconds)
      * 
      */
-    private Integer oktaTimeout;
+    private String oktaTimeout;
     /**
      * @return Okta API token
      * 
@@ -63,7 +62,7 @@ public final class MfaServerMfaVendorTypeOktaAdaptiveV1 {
      * @return Okta timeout (seconds)
      * 
      */
-    public Integer oktaTimeout() {
+    public String oktaTimeout() {
         return this.oktaTimeout;
     }
     /**
@@ -86,7 +85,7 @@ public final class MfaServerMfaVendorTypeOktaAdaptiveV1 {
         private String oktaApiHost;
         private String oktaBaseuri;
         private String oktaOrg;
-        private Integer oktaTimeout;
+        private String oktaTimeout;
         private String oktaToken;
         public Builder() {}
         public Builder(MfaServerMfaVendorTypeOktaAdaptiveV1 defaults) {
@@ -123,7 +122,7 @@ public final class MfaServerMfaVendorTypeOktaAdaptiveV1 {
             return this;
         }
         @CustomType.Setter
-        public Builder oktaTimeout(Integer oktaTimeout) {
+        public Builder oktaTimeout(String oktaTimeout) {
             if (oktaTimeout == null) {
               throw new MissingRequiredPropertyException("MfaServerMfaVendorTypeOktaAdaptiveV1", "oktaTimeout");
             }

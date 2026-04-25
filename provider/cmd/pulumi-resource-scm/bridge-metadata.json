@@ -957,6 +957,122 @@
                     }
                 }
             },
+            "scm_forwarding_profile": {
+                "current": "scm:index/forwardingProfile:ForwardingProfile",
+                "majorVersion": 1,
+                "fields": {
+                    "type": {
+                        "fields": {
+                            "global_protect_proxy": {
+                                "fields": {
+                                    "block_rule": {
+                                        "fields": {
+                                            "allow_tcp": {
+                                                "fields": {
+                                                    "locations": {
+                                                        "maxItemsOne": false
+                                                    }
+                                                }
+                                            },
+                                            "allow_udp": {
+                                                "fields": {
+                                                    "locations": {
+                                                        "maxItemsOne": false
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "forwarding_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            },
+                            "pac_file": {
+                                "fields": {
+                                    "block_rule": {
+                                        "fields": {
+                                            "allow_tcp": {
+                                                "fields": {
+                                                    "locations": {
+                                                        "maxItemsOne": false
+                                                    }
+                                                }
+                                            },
+                                            "allow_udp": {
+                                                "fields": {
+                                                    "locations": {
+                                                        "maxItemsOne": false
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "forwarding_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            },
+                            "ztna_agent": {
+                                "fields": {
+                                    "forwarding_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_forwarding_profile_destination": {
+                "current": "scm:index/forwardingProfileDestination:ForwardingProfileDestination",
+                "majorVersion": 1,
+                "fields": {
+                    "fqdn": {
+                        "maxItemsOne": false
+                    },
+                    "ip_addresses": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_forwarding_profile_regional_and_custom_proxy": {
+                "current": "scm:index/forwardingProfileRegionalAndCustomProxy:ForwardingProfileRegionalAndCustomProxy",
+                "majorVersion": 1,
+                "fields": {
+                    "connectivity_preference": {
+                        "maxItemsOne": false
+                    },
+                    "prisma_access_locations": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "locations": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_forwarding_profile_source_application": {
+                "current": "scm:index/forwardingProfileSourceApplication:ForwardingProfileSourceApplication",
+                "majorVersion": 1,
+                "fields": {
+                    "applications": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_forwarding_profile_user_location": {
+                "current": "scm:index/forwardingProfileUserLocation:ForwardingProfileUserLocation",
+                "majorVersion": 1,
+                "fields": {
+                    "ip_addresses": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "scm_general_setting": {
                 "current": "scm:index/generalSetting:GeneralSetting",
                 "majorVersion": 1
@@ -4810,6 +4926,49 @@
                     }
                 }
             },
+            "scm_device": {
+                "current": "scm:index/getDevice:getDevice",
+                "majorVersion": 1,
+                "fields": {
+                    "available_licensess": {
+                        "maxItemsOne": false
+                    },
+                    "installed_licenses": {
+                        "maxItemsOne": false
+                    },
+                    "labels": {
+                        "maxItemsOne": false
+                    },
+                    "snippets": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_device_list": {
+                "current": "scm:index/getDeviceList:getDeviceList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "available_licensess": {
+                                    "maxItemsOne": false
+                                },
+                                "installed_licenses": {
+                                    "maxItemsOne": false
+                                },
+                                "labels": {
+                                    "maxItemsOne": false
+                                },
+                                "snippets": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "scm_device_redistribution_collector": {
                 "current": "scm:index/getDeviceRedistributionCollector:getDeviceRedistributionCollector",
                 "majorVersion": 1
@@ -5366,6 +5525,273 @@
                                     "maxItemsOne": false
                                 },
                                 "snippets": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_forwarding_profile": {
+                "current": "scm:index/getForwardingProfile:getForwardingProfile",
+                "majorVersion": 1,
+                "fields": {
+                    "type": {
+                        "fields": {
+                            "global_protect_proxy": {
+                                "fields": {
+                                    "block_rule": {
+                                        "fields": {
+                                            "allow_tcp": {
+                                                "fields": {
+                                                    "locations": {
+                                                        "maxItemsOne": false
+                                                    }
+                                                }
+                                            },
+                                            "allow_udp": {
+                                                "fields": {
+                                                    "locations": {
+                                                        "maxItemsOne": false
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "forwarding_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            },
+                            "pac_file": {
+                                "fields": {
+                                    "block_rule": {
+                                        "fields": {
+                                            "allow_tcp": {
+                                                "fields": {
+                                                    "locations": {
+                                                        "maxItemsOne": false
+                                                    }
+                                                }
+                                            },
+                                            "allow_udp": {
+                                                "fields": {
+                                                    "locations": {
+                                                        "maxItemsOne": false
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "forwarding_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            },
+                            "ztna_agent": {
+                                "fields": {
+                                    "forwarding_rules": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_forwarding_profile_destination": {
+                "current": "scm:index/getForwardingProfileDestination:getForwardingProfileDestination",
+                "majorVersion": 1,
+                "fields": {
+                    "fqdn": {
+                        "maxItemsOne": false
+                    },
+                    "ip_addresses": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_forwarding_profile_destination_list": {
+                "current": "scm:index/getForwardingProfileDestinationList:getForwardingProfileDestinationList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "fqdn": {
+                                    "maxItemsOne": false
+                                },
+                                "ip_addresses": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_forwarding_profile_list": {
+                "current": "scm:index/getForwardingProfileList:getForwardingProfileList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "type": {
+                                    "fields": {
+                                        "global_protect_proxy": {
+                                            "fields": {
+                                                "block_rule": {
+                                                    "fields": {
+                                                        "allow_tcp": {
+                                                            "fields": {
+                                                                "locations": {
+                                                                    "maxItemsOne": false
+                                                                }
+                                                            }
+                                                        },
+                                                        "allow_udp": {
+                                                            "fields": {
+                                                                "locations": {
+                                                                    "maxItemsOne": false
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "forwarding_rules": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        },
+                                        "pac_file": {
+                                            "fields": {
+                                                "block_rule": {
+                                                    "fields": {
+                                                        "allow_tcp": {
+                                                            "fields": {
+                                                                "locations": {
+                                                                    "maxItemsOne": false
+                                                                }
+                                                            }
+                                                        },
+                                                        "allow_udp": {
+                                                            "fields": {
+                                                                "locations": {
+                                                                    "maxItemsOne": false
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "forwarding_rules": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        },
+                                        "ztna_agent": {
+                                            "fields": {
+                                                "forwarding_rules": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_forwarding_profile_regional_and_custom_proxy": {
+                "current": "scm:index/getForwardingProfileRegionalAndCustomProxy:getForwardingProfileRegionalAndCustomProxy",
+                "majorVersion": 1,
+                "fields": {
+                    "connectivity_preference": {
+                        "maxItemsOne": false
+                    },
+                    "prisma_access_locations": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "locations": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_forwarding_profile_regional_and_custom_proxy_list": {
+                "current": "scm:index/getForwardingProfileRegionalAndCustomProxyList:getForwardingProfileRegionalAndCustomProxyList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "connectivity_preference": {
+                                    "maxItemsOne": false
+                                },
+                                "prisma_access_locations": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "locations": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_forwarding_profile_source_application": {
+                "current": "scm:index/getForwardingProfileSourceApplication:getForwardingProfileSourceApplication",
+                "majorVersion": 1,
+                "fields": {
+                    "applications": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_forwarding_profile_source_application_list": {
+                "current": "scm:index/getForwardingProfileSourceApplicationList:getForwardingProfileSourceApplicationList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "applications": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_forwarding_profile_user_location": {
+                "current": "scm:index/getForwardingProfileUserLocation:getForwardingProfileUserLocation",
+                "majorVersion": 1,
+                "fields": {
+                    "ip_addresses": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_forwarding_profile_user_location_list": {
+                "current": "scm:index/getForwardingProfileUserLocationList:getForwardingProfileUserLocationList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ip_addresses": {
                                     "maxItemsOne": false
                                 }
                             }

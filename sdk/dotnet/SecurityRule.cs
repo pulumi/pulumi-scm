@@ -341,6 +341,51 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
+    ///     // Internet Rule with Web Application
+    ///     var internetRuleExample = new Scm.Index.SecurityRule("internet_rule_example", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "internet-rule-postman",
+    ///         PolicyType = "Internet",
+    ///         AllowWebApplications = new[]
+    ///         {
+    ///             new Scm.Inputs.SecurityRuleAllowWebApplicationArgs
+    ///             {
+    ///                 Name = "web_appln",
+    ///                 Type = "application",
+    ///                 ApplicationFunction = new[]
+    ///                 {
+    ///                     "any",
+    ///                 },
+    ///                 AppId = "4sync",
+    ///             },
+    ///             new Scm.Inputs.SecurityRuleAllowWebApplicationArgs
+    ///             {
+    ///                 Name = "web_appln_2",
+    ///                 Type = "application",
+    ///                 ApplicationFunction = new[]
+    ///                 {
+    ///                     "any",
+    ///                 },
+    ///                 AppId = "4sync",
+    ///             },
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Action = "allow",
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "casidp\\test_1",
+    ///             "CN=ng1,DC=casidp,DC=onmicrosoft,DC=com",
+    ///         },
+    ///     });
+    /// 
     /// });
     /// ```
     /// 

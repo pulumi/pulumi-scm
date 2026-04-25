@@ -13,6 +13,1438 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAs struct {
+	// All
+	All GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAll `pulumi:"all"`
+	// Replace a s
+	ReplaceAs GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAs `pulumi:"replaceAs"`
+}
+
+// GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput values.
+// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsInput` via:
+//
+//	GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs{...}
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsInput interface {
+	pulumi.Input
+
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs struct {
+	// All
+	All GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllInput `pulumi:"all"`
+	// Replace a s
+	ReplaceAs GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsInput `pulumi:"replaceAs"`
+}
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAs)(nil)).Elem()
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput {
+	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutputWithContext(context.Background())
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput)
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput struct{ *pulumi.OutputState }
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAs)(nil)).Elem()
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput {
+	return o
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput {
+	return o
+}
+
+// All
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput) All() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput {
+	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAs) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAll {
+		return v.All
+	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput)
+}
+
+// Replace a s
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput) ReplaceAs() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput {
+	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAs) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAs {
+		return v.ReplaceAs
+	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput)
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAll struct {
+}
+
+// GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput values.
+// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllInput` via:
+//
+//	GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs{...}
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllInput interface {
+	pulumi.Input
+
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs struct {
+}
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAll)(nil)).Elem()
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput {
+	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutputWithContext(context.Background())
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput)
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput struct{ *pulumi.OutputState }
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAll)(nil)).Elem()
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput {
+	return o
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput {
+	return o
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAs struct {
+}
+
+// GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput values.
+// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsInput` via:
+//
+//	GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs{...}
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsInput interface {
+	pulumi.Input
+
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs struct {
+}
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAs)(nil)).Elem()
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput {
+	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutputWithContext(context.Background())
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput)
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput struct{ *pulumi.OutputState }
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAs)(nil)).Elem()
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput {
+	return o
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput {
+	return o
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity struct {
+	// All
+	All GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll `pulumi:"all"`
+	// Both
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+	Both GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth `pulumi:"both"`
+	// Extended
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+	Extended GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended `pulumi:"extended"`
+	// Large
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+	Large GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge `pulumi:"large"`
+	// Standard
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+	Standard GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandard `pulumi:"standard"`
+}
+
+// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput values.
+// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityInput` via:
+//
+//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs{...}
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityInput interface {
+	pulumi.Input
+
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs struct {
+	// All
+	All GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllInput `pulumi:"all"`
+	// Both
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+	Both GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothInput `pulumi:"both"`
+	// Extended
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+	Extended GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedInput `pulumi:"extended"`
+	// Large
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+	Large GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeInput `pulumi:"large"`
+	// Standard
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+	Standard GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardInput `pulumi:"standard"`
+}
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity)(nil)).Elem()
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput {
+	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutputWithContext(context.Background())
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput)
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput struct{ *pulumi.OutputState }
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity)(nil)).Elem()
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput {
+	return o
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput {
+	return o
+}
+
+// All
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) All() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput {
+	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll {
+		return v.All
+	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput)
+}
+
+// Both
+//
+// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) Both() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput {
+	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth {
+		return v.Both
+	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput)
+}
+
+// Extended
+//
+// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) Extended() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput {
+	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended {
+		return v.Extended
+	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput)
+}
+
+// Large
+//
+// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) Large() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput {
+	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge {
+		return v.Large
+	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput)
+}
+
+// Standard
+//
+// > ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput) Standard() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput {
+	return o.ApplyT(func(v GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunity) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandard {
+		return v.Standard
+	}).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput)
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll struct {
+}
+
+// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput values.
+// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllInput` via:
+//
+//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs{...}
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllInput interface {
+	pulumi.Input
+
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs struct {
+}
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll)(nil)).Elem()
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput {
+	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutputWithContext(context.Background())
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput)
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput struct{ *pulumi.OutputState }
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAll)(nil)).Elem()
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput {
+	return o
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput {
+	return o
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth struct {
+}
+
+// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput values.
+// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothInput` via:
+//
+//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs{...}
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothInput interface {
+	pulumi.Input
+
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs struct {
+}
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth)(nil)).Elem()
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput {
+	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutputWithContext(context.Background())
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput)
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput struct{ *pulumi.OutputState }
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBoth)(nil)).Elem()
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput {
+	return o
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput {
+	return o
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended struct {
+}
+
+// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput values.
+// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedInput` via:
+//
+//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs{...}
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedInput interface {
+	pulumi.Input
+
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs struct {
+}
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended)(nil)).Elem()
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput {
+	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutputWithContext(context.Background())
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput)
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput struct{ *pulumi.OutputState }
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtended)(nil)).Elem()
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput {
+	return o
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput {
+	return o
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge struct {
+}
+
+// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput values.
+// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeInput` via:
+//
+//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs{...}
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeInput interface {
+	pulumi.Input
+
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs struct {
+}
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge)(nil)).Elem()
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput {
+	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutputWithContext(context.Background())
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput)
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput struct{ *pulumi.OutputState }
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLarge)(nil)).Elem()
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput {
+	return o
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput {
+	return o
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandard struct {
+}
+
+// GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardInput is an input type that accepts GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs and GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput values.
+// You can construct a concrete instance of `GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardInput` via:
+//
+//	GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs{...}
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardInput interface {
+	pulumi.Input
+
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput
+	ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutputWithContext(context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs struct {
+}
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandard)(nil)).Elem()
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput {
+	return i.ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutputWithContext(context.Background())
+}
+
+func (i GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput)
+}
+
+type GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput struct{ *pulumi.OutputState }
+
+func (GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandard)(nil)).Elem()
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput() GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput {
+	return o
+}
+
+func (o GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput) ToGetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutputWithContext(ctx context.Context) GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput {
+	return o
+}
+
+type GetBgpAuthProfileListData struct {
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues map[string]string `pulumi:"encryptedValues"`
+	// The folder of the item. Default: Shared.
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
+	Id string `pulumi:"id"`
+	// The name of the item.
+	Name string `pulumi:"name"`
+	// BGP authentication key
+	Secret string `pulumi:"secret"`
+	// The snippet of the item.
+	Snippet string `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+}
+
+// GetBgpAuthProfileListDataInput is an input type that accepts GetBgpAuthProfileListDataArgs and GetBgpAuthProfileListDataOutput values.
+// You can construct a concrete instance of `GetBgpAuthProfileListDataInput` via:
+//
+//	GetBgpAuthProfileListDataArgs{...}
+type GetBgpAuthProfileListDataInput interface {
+	pulumi.Input
+
+	ToGetBgpAuthProfileListDataOutput() GetBgpAuthProfileListDataOutput
+	ToGetBgpAuthProfileListDataOutputWithContext(context.Context) GetBgpAuthProfileListDataOutput
+}
+
+type GetBgpAuthProfileListDataArgs struct {
+	// The device in which the resource is defined
+	Device pulumi.StringInput `pulumi:"device"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues pulumi.StringMapInput `pulumi:"encryptedValues"`
+	// The folder of the item. Default: Shared.
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// UUID of the resource
+	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the item.
+	Name pulumi.StringInput `pulumi:"name"`
+	// BGP authentication key
+	Secret pulumi.StringInput `pulumi:"secret"`
+	// The snippet of the item.
+	Snippet pulumi.StringInput `pulumi:"snippet"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+}
+
+func (GetBgpAuthProfileListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAuthProfileListData)(nil)).Elem()
+}
+
+func (i GetBgpAuthProfileListDataArgs) ToGetBgpAuthProfileListDataOutput() GetBgpAuthProfileListDataOutput {
+	return i.ToGetBgpAuthProfileListDataOutputWithContext(context.Background())
+}
+
+func (i GetBgpAuthProfileListDataArgs) ToGetBgpAuthProfileListDataOutputWithContext(ctx context.Context) GetBgpAuthProfileListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAuthProfileListDataOutput)
+}
+
+// GetBgpAuthProfileListDataArrayInput is an input type that accepts GetBgpAuthProfileListDataArray and GetBgpAuthProfileListDataArrayOutput values.
+// You can construct a concrete instance of `GetBgpAuthProfileListDataArrayInput` via:
+//
+//	GetBgpAuthProfileListDataArray{ GetBgpAuthProfileListDataArgs{...} }
+type GetBgpAuthProfileListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetBgpAuthProfileListDataArrayOutput() GetBgpAuthProfileListDataArrayOutput
+	ToGetBgpAuthProfileListDataArrayOutputWithContext(context.Context) GetBgpAuthProfileListDataArrayOutput
+}
+
+type GetBgpAuthProfileListDataArray []GetBgpAuthProfileListDataInput
+
+func (GetBgpAuthProfileListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetBgpAuthProfileListData)(nil)).Elem()
+}
+
+func (i GetBgpAuthProfileListDataArray) ToGetBgpAuthProfileListDataArrayOutput() GetBgpAuthProfileListDataArrayOutput {
+	return i.ToGetBgpAuthProfileListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetBgpAuthProfileListDataArray) ToGetBgpAuthProfileListDataArrayOutputWithContext(ctx context.Context) GetBgpAuthProfileListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpAuthProfileListDataArrayOutput)
+}
+
+type GetBgpAuthProfileListDataOutput struct{ *pulumi.OutputState }
+
+func (GetBgpAuthProfileListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpAuthProfileListData)(nil)).Elem()
+}
+
+func (o GetBgpAuthProfileListDataOutput) ToGetBgpAuthProfileListDataOutput() GetBgpAuthProfileListDataOutput {
+	return o
+}
+
+func (o GetBgpAuthProfileListDataOutput) ToGetBgpAuthProfileListDataOutputWithContext(ctx context.Context) GetBgpAuthProfileListDataOutput {
+	return o
+}
+
+// The device in which the resource is defined
+func (o GetBgpAuthProfileListDataOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Map of sensitive values returned from the API.
+func (o GetBgpAuthProfileListDataOutput) EncryptedValues() pulumi.StringMapOutput {
+	return o.ApplyT(func(v GetBgpAuthProfileListData) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetBgpAuthProfileListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
+func (o GetBgpAuthProfileListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The name of the item.
+func (o GetBgpAuthProfileListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// BGP authentication key
+func (o GetBgpAuthProfileListDataOutput) Secret() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Secret }).(pulumi.StringOutput)
+}
+
+// The snippet of the item.
+func (o GetBgpAuthProfileListDataOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetBgpAuthProfileListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpAuthProfileListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+type GetBgpAuthProfileListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetBgpAuthProfileListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetBgpAuthProfileListData)(nil)).Elem()
+}
+
+func (o GetBgpAuthProfileListDataArrayOutput) ToGetBgpAuthProfileListDataArrayOutput() GetBgpAuthProfileListDataArrayOutput {
+	return o
+}
+
+func (o GetBgpAuthProfileListDataArrayOutput) ToGetBgpAuthProfileListDataArrayOutputWithContext(ctx context.Context) GetBgpAuthProfileListDataArrayOutput {
+	return o
+}
+
+func (o GetBgpAuthProfileListDataArrayOutput) Index(i pulumi.IntInput) GetBgpAuthProfileListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetBgpAuthProfileListData {
+		return vs[0].([]GetBgpAuthProfileListData)[vs[1].(int)]
+	}).(GetBgpAuthProfileListDataOutput)
+}
+
+type GetBgpFilteringProfileIpv4 struct {
+	// Multicast
+	Multicast GetBgpFilteringProfileIpv4Multicast `pulumi:"multicast"`
+	// Unicast
+	Unicast GetBgpFilteringProfileIpv4Unicast `pulumi:"unicast"`
+}
+
+// GetBgpFilteringProfileIpv4Input is an input type that accepts GetBgpFilteringProfileIpv4Args and GetBgpFilteringProfileIpv4Output values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4Input` via:
+//
+//	GetBgpFilteringProfileIpv4Args{...}
+type GetBgpFilteringProfileIpv4Input interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4Output() GetBgpFilteringProfileIpv4Output
+	ToGetBgpFilteringProfileIpv4OutputWithContext(context.Context) GetBgpFilteringProfileIpv4Output
+}
+
+type GetBgpFilteringProfileIpv4Args struct {
+	// Multicast
+	Multicast GetBgpFilteringProfileIpv4MulticastInput `pulumi:"multicast"`
+	// Unicast
+	Unicast GetBgpFilteringProfileIpv4UnicastInput `pulumi:"unicast"`
+}
+
+func (GetBgpFilteringProfileIpv4Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4Args) ToGetBgpFilteringProfileIpv4Output() GetBgpFilteringProfileIpv4Output {
+	return i.ToGetBgpFilteringProfileIpv4OutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4Args) ToGetBgpFilteringProfileIpv4OutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4Output {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4Output)
+}
+
+type GetBgpFilteringProfileIpv4Output struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4Output) ToGetBgpFilteringProfileIpv4Output() GetBgpFilteringProfileIpv4Output {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4Output) ToGetBgpFilteringProfileIpv4OutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4Output {
+	return o
+}
+
+// Multicast
+func (o GetBgpFilteringProfileIpv4Output) Multicast() GetBgpFilteringProfileIpv4MulticastOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4) GetBgpFilteringProfileIpv4Multicast { return v.Multicast }).(GetBgpFilteringProfileIpv4MulticastOutput)
+}
+
+// Unicast
+func (o GetBgpFilteringProfileIpv4Output) Unicast() GetBgpFilteringProfileIpv4UnicastOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4) GetBgpFilteringProfileIpv4Unicast { return v.Unicast }).(GetBgpFilteringProfileIpv4UnicastOutput)
+}
+
+type GetBgpFilteringProfileIpv4Multicast struct {
+	// Conditional advertisement
+	ConditionalAdvertisement GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement `pulumi:"conditionalAdvertisement"`
+	// Filter list
+	FilterList GetBgpFilteringProfileIpv4MulticastFilterList `pulumi:"filterList"`
+	// Inbound network filters
+	InboundNetworkFilters GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters `pulumi:"inboundNetworkFilters"`
+	// Inherit from unicast
+	Inherit bool `pulumi:"inherit"`
+	// Outbound network filters
+	OutboundNetworkFilters GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters `pulumi:"outboundNetworkFilters"`
+	// Route maps
+	RouteMaps GetBgpFilteringProfileIpv4MulticastRouteMaps `pulumi:"routeMaps"`
+	// Unsuppress map
+	UnsuppressMap string `pulumi:"unsuppressMap"`
+}
+
+// GetBgpFilteringProfileIpv4MulticastInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastArgs and GetBgpFilteringProfileIpv4MulticastOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastInput` via:
+//
+//	GetBgpFilteringProfileIpv4MulticastArgs{...}
+type GetBgpFilteringProfileIpv4MulticastInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4MulticastOutput() GetBgpFilteringProfileIpv4MulticastOutput
+	ToGetBgpFilteringProfileIpv4MulticastOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastOutput
+}
+
+type GetBgpFilteringProfileIpv4MulticastArgs struct {
+	// Conditional advertisement
+	ConditionalAdvertisement GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementInput `pulumi:"conditionalAdvertisement"`
+	// Filter list
+	FilterList GetBgpFilteringProfileIpv4MulticastFilterListInput `pulumi:"filterList"`
+	// Inbound network filters
+	InboundNetworkFilters GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersInput `pulumi:"inboundNetworkFilters"`
+	// Inherit from unicast
+	Inherit pulumi.BoolInput `pulumi:"inherit"`
+	// Outbound network filters
+	OutboundNetworkFilters GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersInput `pulumi:"outboundNetworkFilters"`
+	// Route maps
+	RouteMaps GetBgpFilteringProfileIpv4MulticastRouteMapsInput `pulumi:"routeMaps"`
+	// Unsuppress map
+	UnsuppressMap pulumi.StringInput `pulumi:"unsuppressMap"`
+}
+
+func (GetBgpFilteringProfileIpv4MulticastArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4Multicast)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastArgs) ToGetBgpFilteringProfileIpv4MulticastOutput() GetBgpFilteringProfileIpv4MulticastOutput {
+	return i.ToGetBgpFilteringProfileIpv4MulticastOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastArgs) ToGetBgpFilteringProfileIpv4MulticastOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4MulticastOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4Multicast)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastOutput) ToGetBgpFilteringProfileIpv4MulticastOutput() GetBgpFilteringProfileIpv4MulticastOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastOutput) ToGetBgpFilteringProfileIpv4MulticastOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastOutput {
+	return o
+}
+
+// Conditional advertisement
+func (o GetBgpFilteringProfileIpv4MulticastOutput) ConditionalAdvertisement() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement {
+		return v.ConditionalAdvertisement
+	}).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput)
+}
+
+// Filter list
+func (o GetBgpFilteringProfileIpv4MulticastOutput) FilterList() GetBgpFilteringProfileIpv4MulticastFilterListOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) GetBgpFilteringProfileIpv4MulticastFilterList {
+		return v.FilterList
+	}).(GetBgpFilteringProfileIpv4MulticastFilterListOutput)
+}
+
+// Inbound network filters
+func (o GetBgpFilteringProfileIpv4MulticastOutput) InboundNetworkFilters() GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters {
+		return v.InboundNetworkFilters
+	}).(GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput)
+}
+
+// Inherit from unicast
+func (o GetBgpFilteringProfileIpv4MulticastOutput) Inherit() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) bool { return v.Inherit }).(pulumi.BoolOutput)
+}
+
+// Outbound network filters
+func (o GetBgpFilteringProfileIpv4MulticastOutput) OutboundNetworkFilters() GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters {
+		return v.OutboundNetworkFilters
+	}).(GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput)
+}
+
+// Route maps
+func (o GetBgpFilteringProfileIpv4MulticastOutput) RouteMaps() GetBgpFilteringProfileIpv4MulticastRouteMapsOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) GetBgpFilteringProfileIpv4MulticastRouteMaps {
+		return v.RouteMaps
+	}).(GetBgpFilteringProfileIpv4MulticastRouteMapsOutput)
+}
+
+// Unsuppress map
+func (o GetBgpFilteringProfileIpv4MulticastOutput) UnsuppressMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Multicast) string { return v.UnsuppressMap }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement struct {
+	// Exist
+	Exist GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist `pulumi:"exist"`
+	// Non exist
+	NonExist GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist `pulumi:"nonExist"`
+}
+
+// GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs and GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementInput` via:
+//
+//	GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs{...}
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput
+	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput
+}
+
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs struct {
+	// Exist
+	Exist GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistInput `pulumi:"exist"`
+	// Non exist
+	NonExist GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistInput `pulumi:"nonExist"`
+}
+
+func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput {
+	return i.ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput {
+	return o
+}
+
+// Exist
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput) Exist() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist {
+		return v.Exist
+	}).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput)
+}
+
+// Non exist
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput) NonExist() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisement) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist {
+		return v.NonExist
+	}).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist struct {
+	// Advertise map
+	AdvertiseMap string `pulumi:"advertiseMap"`
+	// Exist map
+	ExistMap string `pulumi:"existMap"`
+}
+
+// GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs and GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistInput` via:
+//
+//	GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs{...}
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput
+	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput
+}
+
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs struct {
+	// Advertise map
+	AdvertiseMap pulumi.StringInput `pulumi:"advertiseMap"`
+	// Exist map
+	ExistMap pulumi.StringInput `pulumi:"existMap"`
+}
+
+func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput {
+	return i.ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput {
+	return o
+}
+
+// Advertise map
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput) AdvertiseMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist) string { return v.AdvertiseMap }).(pulumi.StringOutput)
+}
+
+// Exist map
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput) ExistMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExist) string { return v.ExistMap }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist struct {
+	// Advertise map
+	AdvertiseMap string `pulumi:"advertiseMap"`
+	// Non exist map
+	NonExistMap string `pulumi:"nonExistMap"`
+}
+
+// GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs and GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistInput` via:
+//
+//	GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs{...}
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput
+	ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput
+}
+
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs struct {
+	// Advertise map
+	AdvertiseMap pulumi.StringInput `pulumi:"advertiseMap"`
+	// Non exist map
+	NonExistMap pulumi.StringInput `pulumi:"nonExistMap"`
+}
+
+func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput {
+	return i.ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput() GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput) ToGetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput {
+	return o
+}
+
+// Advertise map
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput) AdvertiseMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist) string {
+		return v.AdvertiseMap
+	}).(pulumi.StringOutput)
+}
+
+// Non exist map
+func (o GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput) NonExistMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExist) string {
+		return v.NonExistMap
+	}).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastFilterList struct {
+	// Inbound
+	Inbound string `pulumi:"inbound"`
+	// Outbound
+	Outbound string `pulumi:"outbound"`
+}
+
+// GetBgpFilteringProfileIpv4MulticastFilterListInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastFilterListArgs and GetBgpFilteringProfileIpv4MulticastFilterListOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastFilterListInput` via:
+//
+//	GetBgpFilteringProfileIpv4MulticastFilterListArgs{...}
+type GetBgpFilteringProfileIpv4MulticastFilterListInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4MulticastFilterListOutput() GetBgpFilteringProfileIpv4MulticastFilterListOutput
+	ToGetBgpFilteringProfileIpv4MulticastFilterListOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastFilterListOutput
+}
+
+type GetBgpFilteringProfileIpv4MulticastFilterListArgs struct {
+	// Inbound
+	Inbound pulumi.StringInput `pulumi:"inbound"`
+	// Outbound
+	Outbound pulumi.StringInput `pulumi:"outbound"`
+}
+
+func (GetBgpFilteringProfileIpv4MulticastFilterListArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastFilterList)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastFilterListArgs) ToGetBgpFilteringProfileIpv4MulticastFilterListOutput() GetBgpFilteringProfileIpv4MulticastFilterListOutput {
+	return i.ToGetBgpFilteringProfileIpv4MulticastFilterListOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastFilterListArgs) ToGetBgpFilteringProfileIpv4MulticastFilterListOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastFilterListOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastFilterListOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastFilterListOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4MulticastFilterListOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastFilterList)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastFilterListOutput) ToGetBgpFilteringProfileIpv4MulticastFilterListOutput() GetBgpFilteringProfileIpv4MulticastFilterListOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastFilterListOutput) ToGetBgpFilteringProfileIpv4MulticastFilterListOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastFilterListOutput {
+	return o
+}
+
+// Inbound
+func (o GetBgpFilteringProfileIpv4MulticastFilterListOutput) Inbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastFilterList) string { return v.Inbound }).(pulumi.StringOutput)
+}
+
+// Outbound
+func (o GetBgpFilteringProfileIpv4MulticastFilterListOutput) Outbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastFilterList) string { return v.Outbound }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters struct {
+	// Distribute list
+	DistributeList string `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList string `pulumi:"prefixList"`
+}
+
+// GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs and GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersInput` via:
+//
+//	GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs{...}
+type GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput
+	ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput
+}
+
+type GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs struct {
+	// Distribute list
+	DistributeList pulumi.StringInput `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList pulumi.StringInput `pulumi:"prefixList"`
+}
+
+func (GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput {
+	return i.ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput {
+	return o
+}
+
+// Distribute list
+func (o GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput) DistributeList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters) string { return v.DistributeList }).(pulumi.StringOutput)
+}
+
+// Prefix list
+func (o GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput) PrefixList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastInboundNetworkFilters) string { return v.PrefixList }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters struct {
+	// Distribute list
+	DistributeList string `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList string `pulumi:"prefixList"`
+}
+
+// GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs and GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersInput` via:
+//
+//	GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs{...}
+type GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput
+	ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput
+}
+
+type GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs struct {
+	// Distribute list
+	DistributeList pulumi.StringInput `pulumi:"distributeList"`
+	// Prefix list
+	PrefixList pulumi.StringInput `pulumi:"prefixList"`
+}
+
+func (GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput {
+	return i.ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs) ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput() GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput) ToGetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput {
+	return o
+}
+
+// Distribute list
+func (o GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput) DistributeList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters) string { return v.DistributeList }).(pulumi.StringOutput)
+}
+
+// Prefix list
+func (o GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput) PrefixList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastOutboundNetworkFilters) string { return v.PrefixList }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastRouteMaps struct {
+	// Inbound
+	Inbound string `pulumi:"inbound"`
+	// Outbound
+	Outbound string `pulumi:"outbound"`
+}
+
+// GetBgpFilteringProfileIpv4MulticastRouteMapsInput is an input type that accepts GetBgpFilteringProfileIpv4MulticastRouteMapsArgs and GetBgpFilteringProfileIpv4MulticastRouteMapsOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4MulticastRouteMapsInput` via:
+//
+//	GetBgpFilteringProfileIpv4MulticastRouteMapsArgs{...}
+type GetBgpFilteringProfileIpv4MulticastRouteMapsInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutput() GetBgpFilteringProfileIpv4MulticastRouteMapsOutput
+	ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutputWithContext(context.Context) GetBgpFilteringProfileIpv4MulticastRouteMapsOutput
+}
+
+type GetBgpFilteringProfileIpv4MulticastRouteMapsArgs struct {
+	// Inbound
+	Inbound pulumi.StringInput `pulumi:"inbound"`
+	// Outbound
+	Outbound pulumi.StringInput `pulumi:"outbound"`
+}
+
+func (GetBgpFilteringProfileIpv4MulticastRouteMapsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastRouteMaps)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastRouteMapsArgs) ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutput() GetBgpFilteringProfileIpv4MulticastRouteMapsOutput {
+	return i.ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4MulticastRouteMapsArgs) ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastRouteMapsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4MulticastRouteMapsOutput)
+}
+
+type GetBgpFilteringProfileIpv4MulticastRouteMapsOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4MulticastRouteMapsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastRouteMaps)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastRouteMapsOutput) ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutput() GetBgpFilteringProfileIpv4MulticastRouteMapsOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4MulticastRouteMapsOutput) ToGetBgpFilteringProfileIpv4MulticastRouteMapsOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4MulticastRouteMapsOutput {
+	return o
+}
+
+// Inbound
+func (o GetBgpFilteringProfileIpv4MulticastRouteMapsOutput) Inbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastRouteMaps) string { return v.Inbound }).(pulumi.StringOutput)
+}
+
+// Outbound
+func (o GetBgpFilteringProfileIpv4MulticastRouteMapsOutput) Outbound() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4MulticastRouteMaps) string { return v.Outbound }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4Unicast struct {
+	// Conditional advertisement
+	ConditionalAdvertisement GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement `pulumi:"conditionalAdvertisement"`
+	// Filter list
+	FilterList GetBgpFilteringProfileIpv4UnicastFilterList `pulumi:"filterList"`
+	// Inbound network filters
+	InboundNetworkFilters GetBgpFilteringProfileIpv4UnicastInboundNetworkFilters `pulumi:"inboundNetworkFilters"`
+	// Outbound network filters
+	OutboundNetworkFilters GetBgpFilteringProfileIpv4UnicastOutboundNetworkFilters `pulumi:"outboundNetworkFilters"`
+	// Route maps
+	RouteMaps GetBgpFilteringProfileIpv4UnicastRouteMaps `pulumi:"routeMaps"`
+	// Unsuppress map
+	UnsuppressMap string `pulumi:"unsuppressMap"`
+}
+
+// GetBgpFilteringProfileIpv4UnicastInput is an input type that accepts GetBgpFilteringProfileIpv4UnicastArgs and GetBgpFilteringProfileIpv4UnicastOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4UnicastInput` via:
+//
+//	GetBgpFilteringProfileIpv4UnicastArgs{...}
+type GetBgpFilteringProfileIpv4UnicastInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4UnicastOutput() GetBgpFilteringProfileIpv4UnicastOutput
+	ToGetBgpFilteringProfileIpv4UnicastOutputWithContext(context.Context) GetBgpFilteringProfileIpv4UnicastOutput
+}
+
+type GetBgpFilteringProfileIpv4UnicastArgs struct {
+	// Conditional advertisement
+	ConditionalAdvertisement GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementInput `pulumi:"conditionalAdvertisement"`
+	// Filter list
+	FilterList GetBgpFilteringProfileIpv4UnicastFilterListInput `pulumi:"filterList"`
+	// Inbound network filters
+	InboundNetworkFilters GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersInput `pulumi:"inboundNetworkFilters"`
+	// Outbound network filters
+	OutboundNetworkFilters GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersInput `pulumi:"outboundNetworkFilters"`
+	// Route maps
+	RouteMaps GetBgpFilteringProfileIpv4UnicastRouteMapsInput `pulumi:"routeMaps"`
+	// Unsuppress map
+	UnsuppressMap pulumi.StringInput `pulumi:"unsuppressMap"`
+}
+
+func (GetBgpFilteringProfileIpv4UnicastArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4Unicast)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastArgs) ToGetBgpFilteringProfileIpv4UnicastOutput() GetBgpFilteringProfileIpv4UnicastOutput {
+	return i.ToGetBgpFilteringProfileIpv4UnicastOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastArgs) ToGetBgpFilteringProfileIpv4UnicastOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4UnicastOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4UnicastOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4Unicast)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastOutput) ToGetBgpFilteringProfileIpv4UnicastOutput() GetBgpFilteringProfileIpv4UnicastOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastOutput) ToGetBgpFilteringProfileIpv4UnicastOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastOutput {
+	return o
+}
+
+// Conditional advertisement
+func (o GetBgpFilteringProfileIpv4UnicastOutput) ConditionalAdvertisement() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement {
+		return v.ConditionalAdvertisement
+	}).(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput)
+}
+
+// Filter list
+func (o GetBgpFilteringProfileIpv4UnicastOutput) FilterList() GetBgpFilteringProfileIpv4UnicastFilterListOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) GetBgpFilteringProfileIpv4UnicastFilterList {
+		return v.FilterList
+	}).(GetBgpFilteringProfileIpv4UnicastFilterListOutput)
+}
+
+// Inbound network filters
+func (o GetBgpFilteringProfileIpv4UnicastOutput) InboundNetworkFilters() GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) GetBgpFilteringProfileIpv4UnicastInboundNetworkFilters {
+		return v.InboundNetworkFilters
+	}).(GetBgpFilteringProfileIpv4UnicastInboundNetworkFiltersOutput)
+}
+
+// Outbound network filters
+func (o GetBgpFilteringProfileIpv4UnicastOutput) OutboundNetworkFilters() GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) GetBgpFilteringProfileIpv4UnicastOutboundNetworkFilters {
+		return v.OutboundNetworkFilters
+	}).(GetBgpFilteringProfileIpv4UnicastOutboundNetworkFiltersOutput)
+}
+
+// Route maps
+func (o GetBgpFilteringProfileIpv4UnicastOutput) RouteMaps() GetBgpFilteringProfileIpv4UnicastRouteMapsOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) GetBgpFilteringProfileIpv4UnicastRouteMaps {
+		return v.RouteMaps
+	}).(GetBgpFilteringProfileIpv4UnicastRouteMapsOutput)
+}
+
+// Unsuppress map
+func (o GetBgpFilteringProfileIpv4UnicastOutput) UnsuppressMap() pulumi.StringOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4Unicast) string { return v.UnsuppressMap }).(pulumi.StringOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement struct {
+	// Exist
+	Exist GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExist `pulumi:"exist"`
+	// Non exist
+	NonExist GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExist `pulumi:"nonExist"`
+}
+
+// GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementInput is an input type that accepts GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs and GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput values.
+// You can construct a concrete instance of `GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementInput` via:
+//
+//	GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs{...}
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementInput interface {
+	pulumi.Input
+
+	ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput
+	ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutputWithContext(context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput
+}
+
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs struct {
+	// Exist
+	Exist GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistInput `pulumi:"exist"`
+	// Non exist
+	NonExist GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistInput `pulumi:"nonExist"`
+}
+
+func (GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement)(nil)).Elem()
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput {
+	return i.ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutputWithContext(context.Background())
+}
+
+func (i GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput)
+}
+
+type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput struct{ *pulumi.OutputState }
+
+func (GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement)(nil)).Elem()
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput {
+	return o
+}
+
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput) ToGetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutputWithContext(ctx context.Context) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput {
+	return o
+}
+
+// Exist
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput) Exist() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExist {
+		return v.Exist
+	}).(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput)
+}
+
+// Non exist
+func (o GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput) NonExist() GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput {
+	return o.ApplyT(func(v GetBgpFilteringProfileIpv4UnicastConditionalAdvertisement) GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExist {
+		return v.NonExist
+	}).(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput)
+}
+
 type GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExist struct {
 	// Advertise map
 	AdvertiseMap string `pulumi:"advertiseMap"`
@@ -19399,6 +20831,986 @@ func (o GetDecryptionRuleTypeSslInboundInspectionOutput) Certificates() pulumi.S
 	return o.ApplyT(func(v GetDecryptionRuleTypeSslInboundInspection) []string { return v.Certificates }).(pulumi.StringArrayOutput)
 }
 
+type GetDeviceAvailableLicensess struct {
+	// Authcode
+	Authcode string `pulumi:"authcode"`
+	// Expires
+	Expires string `pulumi:"expires"`
+	// Feature
+	Feature string `pulumi:"feature"`
+	// Issued
+	Issued string `pulumi:"issued"`
+}
+
+// GetDeviceAvailableLicensessInput is an input type that accepts GetDeviceAvailableLicensessArgs and GetDeviceAvailableLicensessOutput values.
+// You can construct a concrete instance of `GetDeviceAvailableLicensessInput` via:
+//
+//	GetDeviceAvailableLicensessArgs{...}
+type GetDeviceAvailableLicensessInput interface {
+	pulumi.Input
+
+	ToGetDeviceAvailableLicensessOutput() GetDeviceAvailableLicensessOutput
+	ToGetDeviceAvailableLicensessOutputWithContext(context.Context) GetDeviceAvailableLicensessOutput
+}
+
+type GetDeviceAvailableLicensessArgs struct {
+	// Authcode
+	Authcode pulumi.StringInput `pulumi:"authcode"`
+	// Expires
+	Expires pulumi.StringInput `pulumi:"expires"`
+	// Feature
+	Feature pulumi.StringInput `pulumi:"feature"`
+	// Issued
+	Issued pulumi.StringInput `pulumi:"issued"`
+}
+
+func (GetDeviceAvailableLicensessArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDeviceAvailableLicensess)(nil)).Elem()
+}
+
+func (i GetDeviceAvailableLicensessArgs) ToGetDeviceAvailableLicensessOutput() GetDeviceAvailableLicensessOutput {
+	return i.ToGetDeviceAvailableLicensessOutputWithContext(context.Background())
+}
+
+func (i GetDeviceAvailableLicensessArgs) ToGetDeviceAvailableLicensessOutputWithContext(ctx context.Context) GetDeviceAvailableLicensessOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDeviceAvailableLicensessOutput)
+}
+
+// GetDeviceAvailableLicensessArrayInput is an input type that accepts GetDeviceAvailableLicensessArray and GetDeviceAvailableLicensessArrayOutput values.
+// You can construct a concrete instance of `GetDeviceAvailableLicensessArrayInput` via:
+//
+//	GetDeviceAvailableLicensessArray{ GetDeviceAvailableLicensessArgs{...} }
+type GetDeviceAvailableLicensessArrayInput interface {
+	pulumi.Input
+
+	ToGetDeviceAvailableLicensessArrayOutput() GetDeviceAvailableLicensessArrayOutput
+	ToGetDeviceAvailableLicensessArrayOutputWithContext(context.Context) GetDeviceAvailableLicensessArrayOutput
+}
+
+type GetDeviceAvailableLicensessArray []GetDeviceAvailableLicensessInput
+
+func (GetDeviceAvailableLicensessArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDeviceAvailableLicensess)(nil)).Elem()
+}
+
+func (i GetDeviceAvailableLicensessArray) ToGetDeviceAvailableLicensessArrayOutput() GetDeviceAvailableLicensessArrayOutput {
+	return i.ToGetDeviceAvailableLicensessArrayOutputWithContext(context.Background())
+}
+
+func (i GetDeviceAvailableLicensessArray) ToGetDeviceAvailableLicensessArrayOutputWithContext(ctx context.Context) GetDeviceAvailableLicensessArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDeviceAvailableLicensessArrayOutput)
+}
+
+type GetDeviceAvailableLicensessOutput struct{ *pulumi.OutputState }
+
+func (GetDeviceAvailableLicensessOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDeviceAvailableLicensess)(nil)).Elem()
+}
+
+func (o GetDeviceAvailableLicensessOutput) ToGetDeviceAvailableLicensessOutput() GetDeviceAvailableLicensessOutput {
+	return o
+}
+
+func (o GetDeviceAvailableLicensessOutput) ToGetDeviceAvailableLicensessOutputWithContext(ctx context.Context) GetDeviceAvailableLicensessOutput {
+	return o
+}
+
+// Authcode
+func (o GetDeviceAvailableLicensessOutput) Authcode() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceAvailableLicensess) string { return v.Authcode }).(pulumi.StringOutput)
+}
+
+// Expires
+func (o GetDeviceAvailableLicensessOutput) Expires() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceAvailableLicensess) string { return v.Expires }).(pulumi.StringOutput)
+}
+
+// Feature
+func (o GetDeviceAvailableLicensessOutput) Feature() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceAvailableLicensess) string { return v.Feature }).(pulumi.StringOutput)
+}
+
+// Issued
+func (o GetDeviceAvailableLicensessOutput) Issued() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceAvailableLicensess) string { return v.Issued }).(pulumi.StringOutput)
+}
+
+type GetDeviceAvailableLicensessArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDeviceAvailableLicensessArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDeviceAvailableLicensess)(nil)).Elem()
+}
+
+func (o GetDeviceAvailableLicensessArrayOutput) ToGetDeviceAvailableLicensessArrayOutput() GetDeviceAvailableLicensessArrayOutput {
+	return o
+}
+
+func (o GetDeviceAvailableLicensessArrayOutput) ToGetDeviceAvailableLicensessArrayOutputWithContext(ctx context.Context) GetDeviceAvailableLicensessArrayOutput {
+	return o
+}
+
+func (o GetDeviceAvailableLicensessArrayOutput) Index(i pulumi.IntInput) GetDeviceAvailableLicensessOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDeviceAvailableLicensess {
+		return vs[0].([]GetDeviceAvailableLicensess)[vs[1].(int)]
+	}).(GetDeviceAvailableLicensessOutput)
+}
+
+type GetDeviceInstalledLicense struct {
+	// Authcode
+	Authcode string `pulumi:"authcode"`
+	// Expired
+	Expired string `pulumi:"expired"`
+	// Expires
+	Expires string `pulumi:"expires"`
+	// Feature
+	Feature string `pulumi:"feature"`
+	// Issued
+	Issued string `pulumi:"issued"`
+}
+
+// GetDeviceInstalledLicenseInput is an input type that accepts GetDeviceInstalledLicenseArgs and GetDeviceInstalledLicenseOutput values.
+// You can construct a concrete instance of `GetDeviceInstalledLicenseInput` via:
+//
+//	GetDeviceInstalledLicenseArgs{...}
+type GetDeviceInstalledLicenseInput interface {
+	pulumi.Input
+
+	ToGetDeviceInstalledLicenseOutput() GetDeviceInstalledLicenseOutput
+	ToGetDeviceInstalledLicenseOutputWithContext(context.Context) GetDeviceInstalledLicenseOutput
+}
+
+type GetDeviceInstalledLicenseArgs struct {
+	// Authcode
+	Authcode pulumi.StringInput `pulumi:"authcode"`
+	// Expired
+	Expired pulumi.StringInput `pulumi:"expired"`
+	// Expires
+	Expires pulumi.StringInput `pulumi:"expires"`
+	// Feature
+	Feature pulumi.StringInput `pulumi:"feature"`
+	// Issued
+	Issued pulumi.StringInput `pulumi:"issued"`
+}
+
+func (GetDeviceInstalledLicenseArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDeviceInstalledLicense)(nil)).Elem()
+}
+
+func (i GetDeviceInstalledLicenseArgs) ToGetDeviceInstalledLicenseOutput() GetDeviceInstalledLicenseOutput {
+	return i.ToGetDeviceInstalledLicenseOutputWithContext(context.Background())
+}
+
+func (i GetDeviceInstalledLicenseArgs) ToGetDeviceInstalledLicenseOutputWithContext(ctx context.Context) GetDeviceInstalledLicenseOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDeviceInstalledLicenseOutput)
+}
+
+// GetDeviceInstalledLicenseArrayInput is an input type that accepts GetDeviceInstalledLicenseArray and GetDeviceInstalledLicenseArrayOutput values.
+// You can construct a concrete instance of `GetDeviceInstalledLicenseArrayInput` via:
+//
+//	GetDeviceInstalledLicenseArray{ GetDeviceInstalledLicenseArgs{...} }
+type GetDeviceInstalledLicenseArrayInput interface {
+	pulumi.Input
+
+	ToGetDeviceInstalledLicenseArrayOutput() GetDeviceInstalledLicenseArrayOutput
+	ToGetDeviceInstalledLicenseArrayOutputWithContext(context.Context) GetDeviceInstalledLicenseArrayOutput
+}
+
+type GetDeviceInstalledLicenseArray []GetDeviceInstalledLicenseInput
+
+func (GetDeviceInstalledLicenseArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDeviceInstalledLicense)(nil)).Elem()
+}
+
+func (i GetDeviceInstalledLicenseArray) ToGetDeviceInstalledLicenseArrayOutput() GetDeviceInstalledLicenseArrayOutput {
+	return i.ToGetDeviceInstalledLicenseArrayOutputWithContext(context.Background())
+}
+
+func (i GetDeviceInstalledLicenseArray) ToGetDeviceInstalledLicenseArrayOutputWithContext(ctx context.Context) GetDeviceInstalledLicenseArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDeviceInstalledLicenseArrayOutput)
+}
+
+type GetDeviceInstalledLicenseOutput struct{ *pulumi.OutputState }
+
+func (GetDeviceInstalledLicenseOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDeviceInstalledLicense)(nil)).Elem()
+}
+
+func (o GetDeviceInstalledLicenseOutput) ToGetDeviceInstalledLicenseOutput() GetDeviceInstalledLicenseOutput {
+	return o
+}
+
+func (o GetDeviceInstalledLicenseOutput) ToGetDeviceInstalledLicenseOutputWithContext(ctx context.Context) GetDeviceInstalledLicenseOutput {
+	return o
+}
+
+// Authcode
+func (o GetDeviceInstalledLicenseOutput) Authcode() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceInstalledLicense) string { return v.Authcode }).(pulumi.StringOutput)
+}
+
+// Expired
+func (o GetDeviceInstalledLicenseOutput) Expired() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceInstalledLicense) string { return v.Expired }).(pulumi.StringOutput)
+}
+
+// Expires
+func (o GetDeviceInstalledLicenseOutput) Expires() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceInstalledLicense) string { return v.Expires }).(pulumi.StringOutput)
+}
+
+// Feature
+func (o GetDeviceInstalledLicenseOutput) Feature() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceInstalledLicense) string { return v.Feature }).(pulumi.StringOutput)
+}
+
+// Issued
+func (o GetDeviceInstalledLicenseOutput) Issued() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceInstalledLicense) string { return v.Issued }).(pulumi.StringOutput)
+}
+
+type GetDeviceInstalledLicenseArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDeviceInstalledLicenseArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDeviceInstalledLicense)(nil)).Elem()
+}
+
+func (o GetDeviceInstalledLicenseArrayOutput) ToGetDeviceInstalledLicenseArrayOutput() GetDeviceInstalledLicenseArrayOutput {
+	return o
+}
+
+func (o GetDeviceInstalledLicenseArrayOutput) ToGetDeviceInstalledLicenseArrayOutputWithContext(ctx context.Context) GetDeviceInstalledLicenseArrayOutput {
+	return o
+}
+
+func (o GetDeviceInstalledLicenseArrayOutput) Index(i pulumi.IntInput) GetDeviceInstalledLicenseOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDeviceInstalledLicense {
+		return vs[0].([]GetDeviceInstalledLicense)[vs[1].(int)]
+	}).(GetDeviceInstalledLicenseOutput)
+}
+
+type GetDeviceListData struct {
+	// Anti virus version
+	AntiVirusVersion string `pulumi:"antiVirusVersion"`
+	// App release date
+	AppReleaseDate string `pulumi:"appReleaseDate"`
+	// App version
+	AppVersion string `pulumi:"appVersion"`
+	// Av release date
+	AvReleaseDate string `pulumi:"avReleaseDate"`
+	// Available licensess
+	AvailableLicensesses []GetDeviceListDataAvailableLicensess `pulumi:"availableLicensesses"`
+	// Connected since
+	ConnectedSince string `pulumi:"connectedSince"`
+	// The description of the device
+	Description string `pulumi:"description"`
+	// Dev cert detail
+	DevCertDetail string `pulumi:"devCertDetail"`
+	// Dev cert expiry date
+	DevCertExpiryDate string `pulumi:"devCertExpiryDate"`
+	// The display name of the device
+	DisplayName string `pulumi:"displayName"`
+	// The product family of the device
+	Family string `pulumi:"family"`
+	// The folder containing the device
+	Folder string `pulumi:"folder"`
+	// Gp client verion
+	GpClientVerion string `pulumi:"gpClientVerion"`
+	// Gp data version
+	GpDataVersion string `pulumi:"gpDataVersion"`
+	// Ha peer serial
+	HaPeerSerial string `pulumi:"haPeerSerial"`
+	// Ha peer state
+	HaPeerState string `pulumi:"haPeerState"`
+	// Ha state
+	HaState string `pulumi:"haState"`
+	// The hostname of the device
+	Hostname string `pulumi:"hostname"`
+	// The UUID of the device
+	Id string `pulumi:"id"`
+	// Installed licenses
+	InstalledLicenses []GetDeviceListDataInstalledLicense `pulumi:"installedLicenses"`
+	// Iot release date
+	IotReleaseDate string `pulumi:"iotReleaseDate"`
+	// Iot version
+	IotVersion string `pulumi:"iotVersion"`
+	// The IPv4 address of the device
+	IpAddress string `pulumi:"ipAddress"`
+	// Ip v6 address
+	IpV6Address string `pulumi:"ipV6Address"`
+	// Is connected
+	IsConnected bool `pulumi:"isConnected"`
+	// Labels assigned to the device
+	Labels []string `pulumi:"labels"`
+	// License match
+	LicenseMatch bool `pulumi:"licenseMatch"`
+	// Log db version
+	LogDbVersion string `pulumi:"logDbVersion"`
+	// The MAC address of the device
+	MacAddress string `pulumi:"macAddress"`
+	// The model of the device
+	Model string `pulumi:"model"`
+	// The name of the device
+	Name string `pulumi:"name"`
+	// Snippets associated with the device
+	Snippets []string `pulumi:"snippets"`
+	// Software version
+	SoftwareVersion string `pulumi:"softwareVersion"`
+	// The Terraform ID.
+	Tfid string `pulumi:"tfid"`
+	// Threat release date
+	ThreatReleaseDate string `pulumi:"threatReleaseDate"`
+	// Threat version
+	ThreatVersion string `pulumi:"threatVersion"`
+	// Uptime
+	Uptime string `pulumi:"uptime"`
+	// Url db type
+	UrlDbType string `pulumi:"urlDbType"`
+	// Url db ver
+	UrlDbVer string `pulumi:"urlDbVer"`
+	// Vm state
+	VmState string `pulumi:"vmState"`
+	// Wf release date
+	WfReleaseDate string `pulumi:"wfReleaseDate"`
+	// Wf ver
+	WfVer string `pulumi:"wfVer"`
+}
+
+// GetDeviceListDataInput is an input type that accepts GetDeviceListDataArgs and GetDeviceListDataOutput values.
+// You can construct a concrete instance of `GetDeviceListDataInput` via:
+//
+//	GetDeviceListDataArgs{...}
+type GetDeviceListDataInput interface {
+	pulumi.Input
+
+	ToGetDeviceListDataOutput() GetDeviceListDataOutput
+	ToGetDeviceListDataOutputWithContext(context.Context) GetDeviceListDataOutput
+}
+
+type GetDeviceListDataArgs struct {
+	// Anti virus version
+	AntiVirusVersion pulumi.StringInput `pulumi:"antiVirusVersion"`
+	// App release date
+	AppReleaseDate pulumi.StringInput `pulumi:"appReleaseDate"`
+	// App version
+	AppVersion pulumi.StringInput `pulumi:"appVersion"`
+	// Av release date
+	AvReleaseDate pulumi.StringInput `pulumi:"avReleaseDate"`
+	// Available licensess
+	AvailableLicensesses GetDeviceListDataAvailableLicensessArrayInput `pulumi:"availableLicensesses"`
+	// Connected since
+	ConnectedSince pulumi.StringInput `pulumi:"connectedSince"`
+	// The description of the device
+	Description pulumi.StringInput `pulumi:"description"`
+	// Dev cert detail
+	DevCertDetail pulumi.StringInput `pulumi:"devCertDetail"`
+	// Dev cert expiry date
+	DevCertExpiryDate pulumi.StringInput `pulumi:"devCertExpiryDate"`
+	// The display name of the device
+	DisplayName pulumi.StringInput `pulumi:"displayName"`
+	// The product family of the device
+	Family pulumi.StringInput `pulumi:"family"`
+	// The folder containing the device
+	Folder pulumi.StringInput `pulumi:"folder"`
+	// Gp client verion
+	GpClientVerion pulumi.StringInput `pulumi:"gpClientVerion"`
+	// Gp data version
+	GpDataVersion pulumi.StringInput `pulumi:"gpDataVersion"`
+	// Ha peer serial
+	HaPeerSerial pulumi.StringInput `pulumi:"haPeerSerial"`
+	// Ha peer state
+	HaPeerState pulumi.StringInput `pulumi:"haPeerState"`
+	// Ha state
+	HaState pulumi.StringInput `pulumi:"haState"`
+	// The hostname of the device
+	Hostname pulumi.StringInput `pulumi:"hostname"`
+	// The UUID of the device
+	Id pulumi.StringInput `pulumi:"id"`
+	// Installed licenses
+	InstalledLicenses GetDeviceListDataInstalledLicenseArrayInput `pulumi:"installedLicenses"`
+	// Iot release date
+	IotReleaseDate pulumi.StringInput `pulumi:"iotReleaseDate"`
+	// Iot version
+	IotVersion pulumi.StringInput `pulumi:"iotVersion"`
+	// The IPv4 address of the device
+	IpAddress pulumi.StringInput `pulumi:"ipAddress"`
+	// Ip v6 address
+	IpV6Address pulumi.StringInput `pulumi:"ipV6Address"`
+	// Is connected
+	IsConnected pulumi.BoolInput `pulumi:"isConnected"`
+	// Labels assigned to the device
+	Labels pulumi.StringArrayInput `pulumi:"labels"`
+	// License match
+	LicenseMatch pulumi.BoolInput `pulumi:"licenseMatch"`
+	// Log db version
+	LogDbVersion pulumi.StringInput `pulumi:"logDbVersion"`
+	// The MAC address of the device
+	MacAddress pulumi.StringInput `pulumi:"macAddress"`
+	// The model of the device
+	Model pulumi.StringInput `pulumi:"model"`
+	// The name of the device
+	Name pulumi.StringInput `pulumi:"name"`
+	// Snippets associated with the device
+	Snippets pulumi.StringArrayInput `pulumi:"snippets"`
+	// Software version
+	SoftwareVersion pulumi.StringInput `pulumi:"softwareVersion"`
+	// The Terraform ID.
+	Tfid pulumi.StringInput `pulumi:"tfid"`
+	// Threat release date
+	ThreatReleaseDate pulumi.StringInput `pulumi:"threatReleaseDate"`
+	// Threat version
+	ThreatVersion pulumi.StringInput `pulumi:"threatVersion"`
+	// Uptime
+	Uptime pulumi.StringInput `pulumi:"uptime"`
+	// Url db type
+	UrlDbType pulumi.StringInput `pulumi:"urlDbType"`
+	// Url db ver
+	UrlDbVer pulumi.StringInput `pulumi:"urlDbVer"`
+	// Vm state
+	VmState pulumi.StringInput `pulumi:"vmState"`
+	// Wf release date
+	WfReleaseDate pulumi.StringInput `pulumi:"wfReleaseDate"`
+	// Wf ver
+	WfVer pulumi.StringInput `pulumi:"wfVer"`
+}
+
+func (GetDeviceListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDeviceListData)(nil)).Elem()
+}
+
+func (i GetDeviceListDataArgs) ToGetDeviceListDataOutput() GetDeviceListDataOutput {
+	return i.ToGetDeviceListDataOutputWithContext(context.Background())
+}
+
+func (i GetDeviceListDataArgs) ToGetDeviceListDataOutputWithContext(ctx context.Context) GetDeviceListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDeviceListDataOutput)
+}
+
+// GetDeviceListDataArrayInput is an input type that accepts GetDeviceListDataArray and GetDeviceListDataArrayOutput values.
+// You can construct a concrete instance of `GetDeviceListDataArrayInput` via:
+//
+//	GetDeviceListDataArray{ GetDeviceListDataArgs{...} }
+type GetDeviceListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetDeviceListDataArrayOutput() GetDeviceListDataArrayOutput
+	ToGetDeviceListDataArrayOutputWithContext(context.Context) GetDeviceListDataArrayOutput
+}
+
+type GetDeviceListDataArray []GetDeviceListDataInput
+
+func (GetDeviceListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDeviceListData)(nil)).Elem()
+}
+
+func (i GetDeviceListDataArray) ToGetDeviceListDataArrayOutput() GetDeviceListDataArrayOutput {
+	return i.ToGetDeviceListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetDeviceListDataArray) ToGetDeviceListDataArrayOutputWithContext(ctx context.Context) GetDeviceListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDeviceListDataArrayOutput)
+}
+
+type GetDeviceListDataOutput struct{ *pulumi.OutputState }
+
+func (GetDeviceListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDeviceListData)(nil)).Elem()
+}
+
+func (o GetDeviceListDataOutput) ToGetDeviceListDataOutput() GetDeviceListDataOutput {
+	return o
+}
+
+func (o GetDeviceListDataOutput) ToGetDeviceListDataOutputWithContext(ctx context.Context) GetDeviceListDataOutput {
+	return o
+}
+
+// Anti virus version
+func (o GetDeviceListDataOutput) AntiVirusVersion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.AntiVirusVersion }).(pulumi.StringOutput)
+}
+
+// App release date
+func (o GetDeviceListDataOutput) AppReleaseDate() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.AppReleaseDate }).(pulumi.StringOutput)
+}
+
+// App version
+func (o GetDeviceListDataOutput) AppVersion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.AppVersion }).(pulumi.StringOutput)
+}
+
+// Av release date
+func (o GetDeviceListDataOutput) AvReleaseDate() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.AvReleaseDate }).(pulumi.StringOutput)
+}
+
+// Available licensess
+func (o GetDeviceListDataOutput) AvailableLicensesses() GetDeviceListDataAvailableLicensessArrayOutput {
+	return o.ApplyT(func(v GetDeviceListData) []GetDeviceListDataAvailableLicensess { return v.AvailableLicensesses }).(GetDeviceListDataAvailableLicensessArrayOutput)
+}
+
+// Connected since
+func (o GetDeviceListDataOutput) ConnectedSince() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.ConnectedSince }).(pulumi.StringOutput)
+}
+
+// The description of the device
+func (o GetDeviceListDataOutput) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// Dev cert detail
+func (o GetDeviceListDataOutput) DevCertDetail() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.DevCertDetail }).(pulumi.StringOutput)
+}
+
+// Dev cert expiry date
+func (o GetDeviceListDataOutput) DevCertExpiryDate() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.DevCertExpiryDate }).(pulumi.StringOutput)
+}
+
+// The display name of the device
+func (o GetDeviceListDataOutput) DisplayName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.DisplayName }).(pulumi.StringOutput)
+}
+
+// The product family of the device
+func (o GetDeviceListDataOutput) Family() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.Family }).(pulumi.StringOutput)
+}
+
+// The folder containing the device
+func (o GetDeviceListDataOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// Gp client verion
+func (o GetDeviceListDataOutput) GpClientVerion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.GpClientVerion }).(pulumi.StringOutput)
+}
+
+// Gp data version
+func (o GetDeviceListDataOutput) GpDataVersion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.GpDataVersion }).(pulumi.StringOutput)
+}
+
+// Ha peer serial
+func (o GetDeviceListDataOutput) HaPeerSerial() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.HaPeerSerial }).(pulumi.StringOutput)
+}
+
+// Ha peer state
+func (o GetDeviceListDataOutput) HaPeerState() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.HaPeerState }).(pulumi.StringOutput)
+}
+
+// Ha state
+func (o GetDeviceListDataOutput) HaState() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.HaState }).(pulumi.StringOutput)
+}
+
+// The hostname of the device
+func (o GetDeviceListDataOutput) Hostname() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.Hostname }).(pulumi.StringOutput)
+}
+
+// The UUID of the device
+func (o GetDeviceListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// Installed licenses
+func (o GetDeviceListDataOutput) InstalledLicenses() GetDeviceListDataInstalledLicenseArrayOutput {
+	return o.ApplyT(func(v GetDeviceListData) []GetDeviceListDataInstalledLicense { return v.InstalledLicenses }).(GetDeviceListDataInstalledLicenseArrayOutput)
+}
+
+// Iot release date
+func (o GetDeviceListDataOutput) IotReleaseDate() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.IotReleaseDate }).(pulumi.StringOutput)
+}
+
+// Iot version
+func (o GetDeviceListDataOutput) IotVersion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.IotVersion }).(pulumi.StringOutput)
+}
+
+// The IPv4 address of the device
+func (o GetDeviceListDataOutput) IpAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.IpAddress }).(pulumi.StringOutput)
+}
+
+// Ip v6 address
+func (o GetDeviceListDataOutput) IpV6Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.IpV6Address }).(pulumi.StringOutput)
+}
+
+// Is connected
+func (o GetDeviceListDataOutput) IsConnected() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetDeviceListData) bool { return v.IsConnected }).(pulumi.BoolOutput)
+}
+
+// Labels assigned to the device
+func (o GetDeviceListDataOutput) Labels() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDeviceListData) []string { return v.Labels }).(pulumi.StringArrayOutput)
+}
+
+// License match
+func (o GetDeviceListDataOutput) LicenseMatch() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetDeviceListData) bool { return v.LicenseMatch }).(pulumi.BoolOutput)
+}
+
+// Log db version
+func (o GetDeviceListDataOutput) LogDbVersion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.LogDbVersion }).(pulumi.StringOutput)
+}
+
+// The MAC address of the device
+func (o GetDeviceListDataOutput) MacAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.MacAddress }).(pulumi.StringOutput)
+}
+
+// The model of the device
+func (o GetDeviceListDataOutput) Model() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.Model }).(pulumi.StringOutput)
+}
+
+// The name of the device
+func (o GetDeviceListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Snippets associated with the device
+func (o GetDeviceListDataOutput) Snippets() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetDeviceListData) []string { return v.Snippets }).(pulumi.StringArrayOutput)
+}
+
+// Software version
+func (o GetDeviceListDataOutput) SoftwareVersion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.SoftwareVersion }).(pulumi.StringOutput)
+}
+
+// The Terraform ID.
+func (o GetDeviceListDataOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+// Threat release date
+func (o GetDeviceListDataOutput) ThreatReleaseDate() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.ThreatReleaseDate }).(pulumi.StringOutput)
+}
+
+// Threat version
+func (o GetDeviceListDataOutput) ThreatVersion() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.ThreatVersion }).(pulumi.StringOutput)
+}
+
+// Uptime
+func (o GetDeviceListDataOutput) Uptime() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.Uptime }).(pulumi.StringOutput)
+}
+
+// Url db type
+func (o GetDeviceListDataOutput) UrlDbType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.UrlDbType }).(pulumi.StringOutput)
+}
+
+// Url db ver
+func (o GetDeviceListDataOutput) UrlDbVer() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.UrlDbVer }).(pulumi.StringOutput)
+}
+
+// Vm state
+func (o GetDeviceListDataOutput) VmState() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.VmState }).(pulumi.StringOutput)
+}
+
+// Wf release date
+func (o GetDeviceListDataOutput) WfReleaseDate() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.WfReleaseDate }).(pulumi.StringOutput)
+}
+
+// Wf ver
+func (o GetDeviceListDataOutput) WfVer() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListData) string { return v.WfVer }).(pulumi.StringOutput)
+}
+
+type GetDeviceListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDeviceListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDeviceListData)(nil)).Elem()
+}
+
+func (o GetDeviceListDataArrayOutput) ToGetDeviceListDataArrayOutput() GetDeviceListDataArrayOutput {
+	return o
+}
+
+func (o GetDeviceListDataArrayOutput) ToGetDeviceListDataArrayOutputWithContext(ctx context.Context) GetDeviceListDataArrayOutput {
+	return o
+}
+
+func (o GetDeviceListDataArrayOutput) Index(i pulumi.IntInput) GetDeviceListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDeviceListData {
+		return vs[0].([]GetDeviceListData)[vs[1].(int)]
+	}).(GetDeviceListDataOutput)
+}
+
+type GetDeviceListDataAvailableLicensess struct {
+	// Authcode
+	Authcode string `pulumi:"authcode"`
+	// Expires
+	Expires string `pulumi:"expires"`
+	// Feature
+	Feature string `pulumi:"feature"`
+	// Issued
+	Issued string `pulumi:"issued"`
+}
+
+// GetDeviceListDataAvailableLicensessInput is an input type that accepts GetDeviceListDataAvailableLicensessArgs and GetDeviceListDataAvailableLicensessOutput values.
+// You can construct a concrete instance of `GetDeviceListDataAvailableLicensessInput` via:
+//
+//	GetDeviceListDataAvailableLicensessArgs{...}
+type GetDeviceListDataAvailableLicensessInput interface {
+	pulumi.Input
+
+	ToGetDeviceListDataAvailableLicensessOutput() GetDeviceListDataAvailableLicensessOutput
+	ToGetDeviceListDataAvailableLicensessOutputWithContext(context.Context) GetDeviceListDataAvailableLicensessOutput
+}
+
+type GetDeviceListDataAvailableLicensessArgs struct {
+	// Authcode
+	Authcode pulumi.StringInput `pulumi:"authcode"`
+	// Expires
+	Expires pulumi.StringInput `pulumi:"expires"`
+	// Feature
+	Feature pulumi.StringInput `pulumi:"feature"`
+	// Issued
+	Issued pulumi.StringInput `pulumi:"issued"`
+}
+
+func (GetDeviceListDataAvailableLicensessArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDeviceListDataAvailableLicensess)(nil)).Elem()
+}
+
+func (i GetDeviceListDataAvailableLicensessArgs) ToGetDeviceListDataAvailableLicensessOutput() GetDeviceListDataAvailableLicensessOutput {
+	return i.ToGetDeviceListDataAvailableLicensessOutputWithContext(context.Background())
+}
+
+func (i GetDeviceListDataAvailableLicensessArgs) ToGetDeviceListDataAvailableLicensessOutputWithContext(ctx context.Context) GetDeviceListDataAvailableLicensessOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDeviceListDataAvailableLicensessOutput)
+}
+
+// GetDeviceListDataAvailableLicensessArrayInput is an input type that accepts GetDeviceListDataAvailableLicensessArray and GetDeviceListDataAvailableLicensessArrayOutput values.
+// You can construct a concrete instance of `GetDeviceListDataAvailableLicensessArrayInput` via:
+//
+//	GetDeviceListDataAvailableLicensessArray{ GetDeviceListDataAvailableLicensessArgs{...} }
+type GetDeviceListDataAvailableLicensessArrayInput interface {
+	pulumi.Input
+
+	ToGetDeviceListDataAvailableLicensessArrayOutput() GetDeviceListDataAvailableLicensessArrayOutput
+	ToGetDeviceListDataAvailableLicensessArrayOutputWithContext(context.Context) GetDeviceListDataAvailableLicensessArrayOutput
+}
+
+type GetDeviceListDataAvailableLicensessArray []GetDeviceListDataAvailableLicensessInput
+
+func (GetDeviceListDataAvailableLicensessArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDeviceListDataAvailableLicensess)(nil)).Elem()
+}
+
+func (i GetDeviceListDataAvailableLicensessArray) ToGetDeviceListDataAvailableLicensessArrayOutput() GetDeviceListDataAvailableLicensessArrayOutput {
+	return i.ToGetDeviceListDataAvailableLicensessArrayOutputWithContext(context.Background())
+}
+
+func (i GetDeviceListDataAvailableLicensessArray) ToGetDeviceListDataAvailableLicensessArrayOutputWithContext(ctx context.Context) GetDeviceListDataAvailableLicensessArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDeviceListDataAvailableLicensessArrayOutput)
+}
+
+type GetDeviceListDataAvailableLicensessOutput struct{ *pulumi.OutputState }
+
+func (GetDeviceListDataAvailableLicensessOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDeviceListDataAvailableLicensess)(nil)).Elem()
+}
+
+func (o GetDeviceListDataAvailableLicensessOutput) ToGetDeviceListDataAvailableLicensessOutput() GetDeviceListDataAvailableLicensessOutput {
+	return o
+}
+
+func (o GetDeviceListDataAvailableLicensessOutput) ToGetDeviceListDataAvailableLicensessOutputWithContext(ctx context.Context) GetDeviceListDataAvailableLicensessOutput {
+	return o
+}
+
+// Authcode
+func (o GetDeviceListDataAvailableLicensessOutput) Authcode() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListDataAvailableLicensess) string { return v.Authcode }).(pulumi.StringOutput)
+}
+
+// Expires
+func (o GetDeviceListDataAvailableLicensessOutput) Expires() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListDataAvailableLicensess) string { return v.Expires }).(pulumi.StringOutput)
+}
+
+// Feature
+func (o GetDeviceListDataAvailableLicensessOutput) Feature() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListDataAvailableLicensess) string { return v.Feature }).(pulumi.StringOutput)
+}
+
+// Issued
+func (o GetDeviceListDataAvailableLicensessOutput) Issued() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListDataAvailableLicensess) string { return v.Issued }).(pulumi.StringOutput)
+}
+
+type GetDeviceListDataAvailableLicensessArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDeviceListDataAvailableLicensessArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDeviceListDataAvailableLicensess)(nil)).Elem()
+}
+
+func (o GetDeviceListDataAvailableLicensessArrayOutput) ToGetDeviceListDataAvailableLicensessArrayOutput() GetDeviceListDataAvailableLicensessArrayOutput {
+	return o
+}
+
+func (o GetDeviceListDataAvailableLicensessArrayOutput) ToGetDeviceListDataAvailableLicensessArrayOutputWithContext(ctx context.Context) GetDeviceListDataAvailableLicensessArrayOutput {
+	return o
+}
+
+func (o GetDeviceListDataAvailableLicensessArrayOutput) Index(i pulumi.IntInput) GetDeviceListDataAvailableLicensessOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDeviceListDataAvailableLicensess {
+		return vs[0].([]GetDeviceListDataAvailableLicensess)[vs[1].(int)]
+	}).(GetDeviceListDataAvailableLicensessOutput)
+}
+
+type GetDeviceListDataInstalledLicense struct {
+	// Authcode
+	Authcode string `pulumi:"authcode"`
+	// Expired
+	Expired string `pulumi:"expired"`
+	// Expires
+	Expires string `pulumi:"expires"`
+	// Feature
+	Feature string `pulumi:"feature"`
+	// Issued
+	Issued string `pulumi:"issued"`
+}
+
+// GetDeviceListDataInstalledLicenseInput is an input type that accepts GetDeviceListDataInstalledLicenseArgs and GetDeviceListDataInstalledLicenseOutput values.
+// You can construct a concrete instance of `GetDeviceListDataInstalledLicenseInput` via:
+//
+//	GetDeviceListDataInstalledLicenseArgs{...}
+type GetDeviceListDataInstalledLicenseInput interface {
+	pulumi.Input
+
+	ToGetDeviceListDataInstalledLicenseOutput() GetDeviceListDataInstalledLicenseOutput
+	ToGetDeviceListDataInstalledLicenseOutputWithContext(context.Context) GetDeviceListDataInstalledLicenseOutput
+}
+
+type GetDeviceListDataInstalledLicenseArgs struct {
+	// Authcode
+	Authcode pulumi.StringInput `pulumi:"authcode"`
+	// Expired
+	Expired pulumi.StringInput `pulumi:"expired"`
+	// Expires
+	Expires pulumi.StringInput `pulumi:"expires"`
+	// Feature
+	Feature pulumi.StringInput `pulumi:"feature"`
+	// Issued
+	Issued pulumi.StringInput `pulumi:"issued"`
+}
+
+func (GetDeviceListDataInstalledLicenseArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDeviceListDataInstalledLicense)(nil)).Elem()
+}
+
+func (i GetDeviceListDataInstalledLicenseArgs) ToGetDeviceListDataInstalledLicenseOutput() GetDeviceListDataInstalledLicenseOutput {
+	return i.ToGetDeviceListDataInstalledLicenseOutputWithContext(context.Background())
+}
+
+func (i GetDeviceListDataInstalledLicenseArgs) ToGetDeviceListDataInstalledLicenseOutputWithContext(ctx context.Context) GetDeviceListDataInstalledLicenseOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDeviceListDataInstalledLicenseOutput)
+}
+
+// GetDeviceListDataInstalledLicenseArrayInput is an input type that accepts GetDeviceListDataInstalledLicenseArray and GetDeviceListDataInstalledLicenseArrayOutput values.
+// You can construct a concrete instance of `GetDeviceListDataInstalledLicenseArrayInput` via:
+//
+//	GetDeviceListDataInstalledLicenseArray{ GetDeviceListDataInstalledLicenseArgs{...} }
+type GetDeviceListDataInstalledLicenseArrayInput interface {
+	pulumi.Input
+
+	ToGetDeviceListDataInstalledLicenseArrayOutput() GetDeviceListDataInstalledLicenseArrayOutput
+	ToGetDeviceListDataInstalledLicenseArrayOutputWithContext(context.Context) GetDeviceListDataInstalledLicenseArrayOutput
+}
+
+type GetDeviceListDataInstalledLicenseArray []GetDeviceListDataInstalledLicenseInput
+
+func (GetDeviceListDataInstalledLicenseArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDeviceListDataInstalledLicense)(nil)).Elem()
+}
+
+func (i GetDeviceListDataInstalledLicenseArray) ToGetDeviceListDataInstalledLicenseArrayOutput() GetDeviceListDataInstalledLicenseArrayOutput {
+	return i.ToGetDeviceListDataInstalledLicenseArrayOutputWithContext(context.Background())
+}
+
+func (i GetDeviceListDataInstalledLicenseArray) ToGetDeviceListDataInstalledLicenseArrayOutputWithContext(ctx context.Context) GetDeviceListDataInstalledLicenseArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetDeviceListDataInstalledLicenseArrayOutput)
+}
+
+type GetDeviceListDataInstalledLicenseOutput struct{ *pulumi.OutputState }
+
+func (GetDeviceListDataInstalledLicenseOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetDeviceListDataInstalledLicense)(nil)).Elem()
+}
+
+func (o GetDeviceListDataInstalledLicenseOutput) ToGetDeviceListDataInstalledLicenseOutput() GetDeviceListDataInstalledLicenseOutput {
+	return o
+}
+
+func (o GetDeviceListDataInstalledLicenseOutput) ToGetDeviceListDataInstalledLicenseOutputWithContext(ctx context.Context) GetDeviceListDataInstalledLicenseOutput {
+	return o
+}
+
+// Authcode
+func (o GetDeviceListDataInstalledLicenseOutput) Authcode() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListDataInstalledLicense) string { return v.Authcode }).(pulumi.StringOutput)
+}
+
+// Expired
+func (o GetDeviceListDataInstalledLicenseOutput) Expired() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListDataInstalledLicense) string { return v.Expired }).(pulumi.StringOutput)
+}
+
+// Expires
+func (o GetDeviceListDataInstalledLicenseOutput) Expires() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListDataInstalledLicense) string { return v.Expires }).(pulumi.StringOutput)
+}
+
+// Feature
+func (o GetDeviceListDataInstalledLicenseOutput) Feature() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListDataInstalledLicense) string { return v.Feature }).(pulumi.StringOutput)
+}
+
+// Issued
+func (o GetDeviceListDataInstalledLicenseOutput) Issued() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDeviceListDataInstalledLicense) string { return v.Issued }).(pulumi.StringOutput)
+}
+
+type GetDeviceListDataInstalledLicenseArrayOutput struct{ *pulumi.OutputState }
+
+func (GetDeviceListDataInstalledLicenseArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetDeviceListDataInstalledLicense)(nil)).Elem()
+}
+
+func (o GetDeviceListDataInstalledLicenseArrayOutput) ToGetDeviceListDataInstalledLicenseArrayOutput() GetDeviceListDataInstalledLicenseArrayOutput {
+	return o
+}
+
+func (o GetDeviceListDataInstalledLicenseArrayOutput) ToGetDeviceListDataInstalledLicenseArrayOutputWithContext(ctx context.Context) GetDeviceListDataInstalledLicenseArrayOutput {
+	return o
+}
+
+func (o GetDeviceListDataInstalledLicenseArrayOutput) Index(i pulumi.IntInput) GetDeviceListDataInstalledLicenseOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetDeviceListDataInstalledLicense {
+		return vs[0].([]GetDeviceListDataInstalledLicense)[vs[1].(int)]
+	}).(GetDeviceListDataInstalledLicenseOutput)
+}
+
 type GetDeviceRedistributionCollectorListData struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
@@ -38376,2294 +40788,135 @@ func (o GetFolderListDataArrayOutput) Index(i pulumi.IntInput) GetFolderListData
 	}).(GetFolderListDataOutput)
 }
 
-type GetGeneralSettingGeneral struct {
-	// Force admins to acknowledge login banner
-	AckLoginBanner bool `pulumi:"ackLoginBanner"`
-	// DNS domain
-	Domain string `pulumi:"domain"`
-	// Geographic coordinates
-	GeoLocation GetGeneralSettingGeneralGeoLocation `pulumi:"geoLocation"`
-	// Locale
-	Locale string `pulumi:"locale"`
-	// Logon banner
-	LoginBanner string `pulumi:"loginBanner"`
-	// Setting
-	Setting GetGeneralSettingGeneralSetting `pulumi:"setting"`
-	// SSL/TLS service profile
-	SslTlsServiceProfile string `pulumi:"sslTlsServiceProfile"`
-	// Timezone
-	Timezone string `pulumi:"timezone"`
-}
-
-// GetGeneralSettingGeneralInput is an input type that accepts GetGeneralSettingGeneralArgs and GetGeneralSettingGeneralOutput values.
-// You can construct a concrete instance of `GetGeneralSettingGeneralInput` via:
-//
-//	GetGeneralSettingGeneralArgs{...}
-type GetGeneralSettingGeneralInput interface {
-	pulumi.Input
-
-	ToGetGeneralSettingGeneralOutput() GetGeneralSettingGeneralOutput
-	ToGetGeneralSettingGeneralOutputWithContext(context.Context) GetGeneralSettingGeneralOutput
-}
-
-type GetGeneralSettingGeneralArgs struct {
-	// Force admins to acknowledge login banner
-	AckLoginBanner pulumi.BoolInput `pulumi:"ackLoginBanner"`
-	// DNS domain
-	Domain pulumi.StringInput `pulumi:"domain"`
-	// Geographic coordinates
-	GeoLocation GetGeneralSettingGeneralGeoLocationInput `pulumi:"geoLocation"`
-	// Locale
-	Locale pulumi.StringInput `pulumi:"locale"`
-	// Logon banner
-	LoginBanner pulumi.StringInput `pulumi:"loginBanner"`
-	// Setting
-	Setting GetGeneralSettingGeneralSettingInput `pulumi:"setting"`
-	// SSL/TLS service profile
-	SslTlsServiceProfile pulumi.StringInput `pulumi:"sslTlsServiceProfile"`
-	// Timezone
-	Timezone pulumi.StringInput `pulumi:"timezone"`
-}
-
-func (GetGeneralSettingGeneralArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingGeneral)(nil)).Elem()
-}
-
-func (i GetGeneralSettingGeneralArgs) ToGetGeneralSettingGeneralOutput() GetGeneralSettingGeneralOutput {
-	return i.ToGetGeneralSettingGeneralOutputWithContext(context.Background())
-}
-
-func (i GetGeneralSettingGeneralArgs) ToGetGeneralSettingGeneralOutputWithContext(ctx context.Context) GetGeneralSettingGeneralOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGeneralSettingGeneralOutput)
-}
-
-type GetGeneralSettingGeneralOutput struct{ *pulumi.OutputState }
-
-func (GetGeneralSettingGeneralOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingGeneral)(nil)).Elem()
-}
-
-func (o GetGeneralSettingGeneralOutput) ToGetGeneralSettingGeneralOutput() GetGeneralSettingGeneralOutput {
-	return o
-}
-
-func (o GetGeneralSettingGeneralOutput) ToGetGeneralSettingGeneralOutputWithContext(ctx context.Context) GetGeneralSettingGeneralOutput {
-	return o
-}
-
-// Force admins to acknowledge login banner
-func (o GetGeneralSettingGeneralOutput) AckLoginBanner() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneral) bool { return v.AckLoginBanner }).(pulumi.BoolOutput)
-}
-
-// DNS domain
-func (o GetGeneralSettingGeneralOutput) Domain() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneral) string { return v.Domain }).(pulumi.StringOutput)
-}
-
-// Geographic coordinates
-func (o GetGeneralSettingGeneralOutput) GeoLocation() GetGeneralSettingGeneralGeoLocationOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneral) GetGeneralSettingGeneralGeoLocation { return v.GeoLocation }).(GetGeneralSettingGeneralGeoLocationOutput)
-}
-
-// Locale
-func (o GetGeneralSettingGeneralOutput) Locale() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneral) string { return v.Locale }).(pulumi.StringOutput)
-}
-
-// Logon banner
-func (o GetGeneralSettingGeneralOutput) LoginBanner() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneral) string { return v.LoginBanner }).(pulumi.StringOutput)
-}
-
-// Setting
-func (o GetGeneralSettingGeneralOutput) Setting() GetGeneralSettingGeneralSettingOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneral) GetGeneralSettingGeneralSetting { return v.Setting }).(GetGeneralSettingGeneralSettingOutput)
-}
-
-// SSL/TLS service profile
-func (o GetGeneralSettingGeneralOutput) SslTlsServiceProfile() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneral) string { return v.SslTlsServiceProfile }).(pulumi.StringOutput)
-}
-
-// Timezone
-func (o GetGeneralSettingGeneralOutput) Timezone() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneral) string { return v.Timezone }).(pulumi.StringOutput)
-}
-
-type GetGeneralSettingGeneralGeoLocation struct {
-	// Latitude
-	Latitude string `pulumi:"latitude"`
-	// Longitude
-	Longitude string `pulumi:"longitude"`
-}
-
-// GetGeneralSettingGeneralGeoLocationInput is an input type that accepts GetGeneralSettingGeneralGeoLocationArgs and GetGeneralSettingGeneralGeoLocationOutput values.
-// You can construct a concrete instance of `GetGeneralSettingGeneralGeoLocationInput` via:
-//
-//	GetGeneralSettingGeneralGeoLocationArgs{...}
-type GetGeneralSettingGeneralGeoLocationInput interface {
-	pulumi.Input
-
-	ToGetGeneralSettingGeneralGeoLocationOutput() GetGeneralSettingGeneralGeoLocationOutput
-	ToGetGeneralSettingGeneralGeoLocationOutputWithContext(context.Context) GetGeneralSettingGeneralGeoLocationOutput
-}
-
-type GetGeneralSettingGeneralGeoLocationArgs struct {
-	// Latitude
-	Latitude pulumi.StringInput `pulumi:"latitude"`
-	// Longitude
-	Longitude pulumi.StringInput `pulumi:"longitude"`
-}
-
-func (GetGeneralSettingGeneralGeoLocationArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingGeneralGeoLocation)(nil)).Elem()
-}
-
-func (i GetGeneralSettingGeneralGeoLocationArgs) ToGetGeneralSettingGeneralGeoLocationOutput() GetGeneralSettingGeneralGeoLocationOutput {
-	return i.ToGetGeneralSettingGeneralGeoLocationOutputWithContext(context.Background())
-}
-
-func (i GetGeneralSettingGeneralGeoLocationArgs) ToGetGeneralSettingGeneralGeoLocationOutputWithContext(ctx context.Context) GetGeneralSettingGeneralGeoLocationOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGeneralSettingGeneralGeoLocationOutput)
-}
-
-type GetGeneralSettingGeneralGeoLocationOutput struct{ *pulumi.OutputState }
-
-func (GetGeneralSettingGeneralGeoLocationOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingGeneralGeoLocation)(nil)).Elem()
-}
-
-func (o GetGeneralSettingGeneralGeoLocationOutput) ToGetGeneralSettingGeneralGeoLocationOutput() GetGeneralSettingGeneralGeoLocationOutput {
-	return o
-}
-
-func (o GetGeneralSettingGeneralGeoLocationOutput) ToGetGeneralSettingGeneralGeoLocationOutputWithContext(ctx context.Context) GetGeneralSettingGeneralGeoLocationOutput {
-	return o
-}
-
-// Latitude
-func (o GetGeneralSettingGeneralGeoLocationOutput) Latitude() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneralGeoLocation) string { return v.Latitude }).(pulumi.StringOutput)
-}
-
-// Longitude
-func (o GetGeneralSettingGeneralGeoLocationOutput) Longitude() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneralGeoLocation) string { return v.Longitude }).(pulumi.StringOutput)
-}
-
-type GetGeneralSettingGeneralSetting struct {
-	// Use hypervisor assigned MAC addresses
-	AutoMacDetect bool `pulumi:"autoMacDetect"`
-	// Fail open
-	FailOpen bool `pulumi:"failOpen"`
-	// Management
-	Management GetGeneralSettingGeneralSettingManagement `pulumi:"management"`
-	// Tunnel acceleration
-	TunnelAcceleration bool `pulumi:"tunnelAcceleration"`
-}
-
-// GetGeneralSettingGeneralSettingInput is an input type that accepts GetGeneralSettingGeneralSettingArgs and GetGeneralSettingGeneralSettingOutput values.
-// You can construct a concrete instance of `GetGeneralSettingGeneralSettingInput` via:
-//
-//	GetGeneralSettingGeneralSettingArgs{...}
-type GetGeneralSettingGeneralSettingInput interface {
-	pulumi.Input
-
-	ToGetGeneralSettingGeneralSettingOutput() GetGeneralSettingGeneralSettingOutput
-	ToGetGeneralSettingGeneralSettingOutputWithContext(context.Context) GetGeneralSettingGeneralSettingOutput
-}
-
-type GetGeneralSettingGeneralSettingArgs struct {
-	// Use hypervisor assigned MAC addresses
-	AutoMacDetect pulumi.BoolInput `pulumi:"autoMacDetect"`
-	// Fail open
-	FailOpen pulumi.BoolInput `pulumi:"failOpen"`
-	// Management
-	Management GetGeneralSettingGeneralSettingManagementInput `pulumi:"management"`
-	// Tunnel acceleration
-	TunnelAcceleration pulumi.BoolInput `pulumi:"tunnelAcceleration"`
-}
-
-func (GetGeneralSettingGeneralSettingArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingGeneralSetting)(nil)).Elem()
-}
-
-func (i GetGeneralSettingGeneralSettingArgs) ToGetGeneralSettingGeneralSettingOutput() GetGeneralSettingGeneralSettingOutput {
-	return i.ToGetGeneralSettingGeneralSettingOutputWithContext(context.Background())
-}
-
-func (i GetGeneralSettingGeneralSettingArgs) ToGetGeneralSettingGeneralSettingOutputWithContext(ctx context.Context) GetGeneralSettingGeneralSettingOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGeneralSettingGeneralSettingOutput)
-}
-
-type GetGeneralSettingGeneralSettingOutput struct{ *pulumi.OutputState }
-
-func (GetGeneralSettingGeneralSettingOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingGeneralSetting)(nil)).Elem()
-}
-
-func (o GetGeneralSettingGeneralSettingOutput) ToGetGeneralSettingGeneralSettingOutput() GetGeneralSettingGeneralSettingOutput {
-	return o
-}
-
-func (o GetGeneralSettingGeneralSettingOutput) ToGetGeneralSettingGeneralSettingOutputWithContext(ctx context.Context) GetGeneralSettingGeneralSettingOutput {
-	return o
-}
-
-// Use hypervisor assigned MAC addresses
-func (o GetGeneralSettingGeneralSettingOutput) AutoMacDetect() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneralSetting) bool { return v.AutoMacDetect }).(pulumi.BoolOutput)
-}
-
-// Fail open
-func (o GetGeneralSettingGeneralSettingOutput) FailOpen() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneralSetting) bool { return v.FailOpen }).(pulumi.BoolOutput)
-}
-
-// Management
-func (o GetGeneralSettingGeneralSettingOutput) Management() GetGeneralSettingGeneralSettingManagementOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneralSetting) GetGeneralSettingGeneralSettingManagement { return v.Management }).(GetGeneralSettingGeneralSettingManagementOutput)
-}
-
-// Tunnel acceleration
-func (o GetGeneralSettingGeneralSettingOutput) TunnelAcceleration() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneralSetting) bool { return v.TunnelAcceleration }).(pulumi.BoolOutput)
-}
-
-type GetGeneralSettingGeneralSettingManagement struct {
-	// Automatically acquire commit lock
-	AutoAcquireCommitLock bool `pulumi:"autoAcquireCommitLock"`
-	// Certificate expiration check
-	EnableCertificateExpirationCheck bool `pulumi:"enableCertificateExpirationCheck"`
-}
-
-// GetGeneralSettingGeneralSettingManagementInput is an input type that accepts GetGeneralSettingGeneralSettingManagementArgs and GetGeneralSettingGeneralSettingManagementOutput values.
-// You can construct a concrete instance of `GetGeneralSettingGeneralSettingManagementInput` via:
-//
-//	GetGeneralSettingGeneralSettingManagementArgs{...}
-type GetGeneralSettingGeneralSettingManagementInput interface {
-	pulumi.Input
-
-	ToGetGeneralSettingGeneralSettingManagementOutput() GetGeneralSettingGeneralSettingManagementOutput
-	ToGetGeneralSettingGeneralSettingManagementOutputWithContext(context.Context) GetGeneralSettingGeneralSettingManagementOutput
-}
-
-type GetGeneralSettingGeneralSettingManagementArgs struct {
-	// Automatically acquire commit lock
-	AutoAcquireCommitLock pulumi.BoolInput `pulumi:"autoAcquireCommitLock"`
-	// Certificate expiration check
-	EnableCertificateExpirationCheck pulumi.BoolInput `pulumi:"enableCertificateExpirationCheck"`
-}
-
-func (GetGeneralSettingGeneralSettingManagementArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingGeneralSettingManagement)(nil)).Elem()
-}
-
-func (i GetGeneralSettingGeneralSettingManagementArgs) ToGetGeneralSettingGeneralSettingManagementOutput() GetGeneralSettingGeneralSettingManagementOutput {
-	return i.ToGetGeneralSettingGeneralSettingManagementOutputWithContext(context.Background())
-}
-
-func (i GetGeneralSettingGeneralSettingManagementArgs) ToGetGeneralSettingGeneralSettingManagementOutputWithContext(ctx context.Context) GetGeneralSettingGeneralSettingManagementOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGeneralSettingGeneralSettingManagementOutput)
-}
-
-type GetGeneralSettingGeneralSettingManagementOutput struct{ *pulumi.OutputState }
-
-func (GetGeneralSettingGeneralSettingManagementOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingGeneralSettingManagement)(nil)).Elem()
-}
-
-func (o GetGeneralSettingGeneralSettingManagementOutput) ToGetGeneralSettingGeneralSettingManagementOutput() GetGeneralSettingGeneralSettingManagementOutput {
-	return o
-}
-
-func (o GetGeneralSettingGeneralSettingManagementOutput) ToGetGeneralSettingGeneralSettingManagementOutputWithContext(ctx context.Context) GetGeneralSettingGeneralSettingManagementOutput {
-	return o
-}
-
-// Automatically acquire commit lock
-func (o GetGeneralSettingGeneralSettingManagementOutput) AutoAcquireCommitLock() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneralSettingManagement) bool { return v.AutoAcquireCommitLock }).(pulumi.BoolOutput)
-}
-
-// Certificate expiration check
-func (o GetGeneralSettingGeneralSettingManagementOutput) EnableCertificateExpirationCheck() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingGeneralSettingManagement) bool { return v.EnableCertificateExpirationCheck }).(pulumi.BoolOutput)
-}
-
-type GetGeneralSettingListData struct {
-	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// The folder of the item. Default: Shared.
-	Folder string `pulumi:"folder"`
-	// General
-	General GetGeneralSettingListDataGeneral `pulumi:"general"`
-	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The snippet of the item.
-	Snippet string `pulumi:"snippet"`
-	// The Terraform ID.
-	Tfid string `pulumi:"tfid"`
-}
-
-// GetGeneralSettingListDataInput is an input type that accepts GetGeneralSettingListDataArgs and GetGeneralSettingListDataOutput values.
-// You can construct a concrete instance of `GetGeneralSettingListDataInput` via:
-//
-//	GetGeneralSettingListDataArgs{...}
-type GetGeneralSettingListDataInput interface {
-	pulumi.Input
-
-	ToGetGeneralSettingListDataOutput() GetGeneralSettingListDataOutput
-	ToGetGeneralSettingListDataOutputWithContext(context.Context) GetGeneralSettingListDataOutput
-}
-
-type GetGeneralSettingListDataArgs struct {
-	// The device in which the resource is defined
-	Device pulumi.StringInput `pulumi:"device"`
-	// The folder of the item. Default: Shared.
-	Folder pulumi.StringInput `pulumi:"folder"`
-	// General
-	General GetGeneralSettingListDataGeneralInput `pulumi:"general"`
-	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The snippet of the item.
-	Snippet pulumi.StringInput `pulumi:"snippet"`
-	// The Terraform ID.
-	Tfid pulumi.StringInput `pulumi:"tfid"`
-}
-
-func (GetGeneralSettingListDataArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingListData)(nil)).Elem()
-}
-
-func (i GetGeneralSettingListDataArgs) ToGetGeneralSettingListDataOutput() GetGeneralSettingListDataOutput {
-	return i.ToGetGeneralSettingListDataOutputWithContext(context.Background())
-}
-
-func (i GetGeneralSettingListDataArgs) ToGetGeneralSettingListDataOutputWithContext(ctx context.Context) GetGeneralSettingListDataOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGeneralSettingListDataOutput)
-}
-
-// GetGeneralSettingListDataArrayInput is an input type that accepts GetGeneralSettingListDataArray and GetGeneralSettingListDataArrayOutput values.
-// You can construct a concrete instance of `GetGeneralSettingListDataArrayInput` via:
-//
-//	GetGeneralSettingListDataArray{ GetGeneralSettingListDataArgs{...} }
-type GetGeneralSettingListDataArrayInput interface {
-	pulumi.Input
-
-	ToGetGeneralSettingListDataArrayOutput() GetGeneralSettingListDataArrayOutput
-	ToGetGeneralSettingListDataArrayOutputWithContext(context.Context) GetGeneralSettingListDataArrayOutput
-}
-
-type GetGeneralSettingListDataArray []GetGeneralSettingListDataInput
-
-func (GetGeneralSettingListDataArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetGeneralSettingListData)(nil)).Elem()
-}
-
-func (i GetGeneralSettingListDataArray) ToGetGeneralSettingListDataArrayOutput() GetGeneralSettingListDataArrayOutput {
-	return i.ToGetGeneralSettingListDataArrayOutputWithContext(context.Background())
-}
-
-func (i GetGeneralSettingListDataArray) ToGetGeneralSettingListDataArrayOutputWithContext(ctx context.Context) GetGeneralSettingListDataArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGeneralSettingListDataArrayOutput)
-}
-
-type GetGeneralSettingListDataOutput struct{ *pulumi.OutputState }
-
-func (GetGeneralSettingListDataOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingListData)(nil)).Elem()
-}
-
-func (o GetGeneralSettingListDataOutput) ToGetGeneralSettingListDataOutput() GetGeneralSettingListDataOutput {
-	return o
-}
-
-func (o GetGeneralSettingListDataOutput) ToGetGeneralSettingListDataOutputWithContext(ctx context.Context) GetGeneralSettingListDataOutput {
-	return o
-}
-
-// The device in which the resource is defined
-func (o GetGeneralSettingListDataOutput) Device() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListData) string { return v.Device }).(pulumi.StringOutput)
-}
-
-// The folder of the item. Default: Shared.
-func (o GetGeneralSettingListDataOutput) Folder() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListData) string { return v.Folder }).(pulumi.StringOutput)
-}
-
-// General
-func (o GetGeneralSettingListDataOutput) General() GetGeneralSettingListDataGeneralOutput {
-	return o.ApplyT(func(v GetGeneralSettingListData) GetGeneralSettingListDataGeneral { return v.General }).(GetGeneralSettingListDataGeneralOutput)
-}
-
-// UUID of the resource
-func (o GetGeneralSettingListDataOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListData) string { return v.Id }).(pulumi.StringOutput)
-}
-
-// The snippet of the item.
-func (o GetGeneralSettingListDataOutput) Snippet() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListData) string { return v.Snippet }).(pulumi.StringOutput)
-}
-
-// The Terraform ID.
-func (o GetGeneralSettingListDataOutput) Tfid() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListData) string { return v.Tfid }).(pulumi.StringOutput)
-}
-
-type GetGeneralSettingListDataArrayOutput struct{ *pulumi.OutputState }
-
-func (GetGeneralSettingListDataArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetGeneralSettingListData)(nil)).Elem()
-}
-
-func (o GetGeneralSettingListDataArrayOutput) ToGetGeneralSettingListDataArrayOutput() GetGeneralSettingListDataArrayOutput {
-	return o
-}
-
-func (o GetGeneralSettingListDataArrayOutput) ToGetGeneralSettingListDataArrayOutputWithContext(ctx context.Context) GetGeneralSettingListDataArrayOutput {
-	return o
-}
-
-func (o GetGeneralSettingListDataArrayOutput) Index(i pulumi.IntInput) GetGeneralSettingListDataOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetGeneralSettingListData {
-		return vs[0].([]GetGeneralSettingListData)[vs[1].(int)]
-	}).(GetGeneralSettingListDataOutput)
-}
-
-type GetGeneralSettingListDataGeneral struct {
-	// Force admins to acknowledge login banner
-	AckLoginBanner bool `pulumi:"ackLoginBanner"`
-	// DNS domain
-	Domain string `pulumi:"domain"`
-	// Geographic coordinates
-	GeoLocation GetGeneralSettingListDataGeneralGeoLocation `pulumi:"geoLocation"`
-	// Locale
-	Locale string `pulumi:"locale"`
-	// Logon banner
-	LoginBanner string `pulumi:"loginBanner"`
-	// Setting
-	Setting GetGeneralSettingListDataGeneralSetting `pulumi:"setting"`
-	// SSL/TLS service profile
-	SslTlsServiceProfile string `pulumi:"sslTlsServiceProfile"`
-	// Timezone
-	Timezone string `pulumi:"timezone"`
-}
-
-// GetGeneralSettingListDataGeneralInput is an input type that accepts GetGeneralSettingListDataGeneralArgs and GetGeneralSettingListDataGeneralOutput values.
-// You can construct a concrete instance of `GetGeneralSettingListDataGeneralInput` via:
-//
-//	GetGeneralSettingListDataGeneralArgs{...}
-type GetGeneralSettingListDataGeneralInput interface {
-	pulumi.Input
-
-	ToGetGeneralSettingListDataGeneralOutput() GetGeneralSettingListDataGeneralOutput
-	ToGetGeneralSettingListDataGeneralOutputWithContext(context.Context) GetGeneralSettingListDataGeneralOutput
-}
-
-type GetGeneralSettingListDataGeneralArgs struct {
-	// Force admins to acknowledge login banner
-	AckLoginBanner pulumi.BoolInput `pulumi:"ackLoginBanner"`
-	// DNS domain
-	Domain pulumi.StringInput `pulumi:"domain"`
-	// Geographic coordinates
-	GeoLocation GetGeneralSettingListDataGeneralGeoLocationInput `pulumi:"geoLocation"`
-	// Locale
-	Locale pulumi.StringInput `pulumi:"locale"`
-	// Logon banner
-	LoginBanner pulumi.StringInput `pulumi:"loginBanner"`
-	// Setting
-	Setting GetGeneralSettingListDataGeneralSettingInput `pulumi:"setting"`
-	// SSL/TLS service profile
-	SslTlsServiceProfile pulumi.StringInput `pulumi:"sslTlsServiceProfile"`
-	// Timezone
-	Timezone pulumi.StringInput `pulumi:"timezone"`
-}
-
-func (GetGeneralSettingListDataGeneralArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingListDataGeneral)(nil)).Elem()
-}
-
-func (i GetGeneralSettingListDataGeneralArgs) ToGetGeneralSettingListDataGeneralOutput() GetGeneralSettingListDataGeneralOutput {
-	return i.ToGetGeneralSettingListDataGeneralOutputWithContext(context.Background())
-}
-
-func (i GetGeneralSettingListDataGeneralArgs) ToGetGeneralSettingListDataGeneralOutputWithContext(ctx context.Context) GetGeneralSettingListDataGeneralOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGeneralSettingListDataGeneralOutput)
-}
-
-type GetGeneralSettingListDataGeneralOutput struct{ *pulumi.OutputState }
-
-func (GetGeneralSettingListDataGeneralOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingListDataGeneral)(nil)).Elem()
-}
-
-func (o GetGeneralSettingListDataGeneralOutput) ToGetGeneralSettingListDataGeneralOutput() GetGeneralSettingListDataGeneralOutput {
-	return o
-}
-
-func (o GetGeneralSettingListDataGeneralOutput) ToGetGeneralSettingListDataGeneralOutputWithContext(ctx context.Context) GetGeneralSettingListDataGeneralOutput {
-	return o
-}
-
-// Force admins to acknowledge login banner
-func (o GetGeneralSettingListDataGeneralOutput) AckLoginBanner() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneral) bool { return v.AckLoginBanner }).(pulumi.BoolOutput)
-}
-
-// DNS domain
-func (o GetGeneralSettingListDataGeneralOutput) Domain() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneral) string { return v.Domain }).(pulumi.StringOutput)
-}
-
-// Geographic coordinates
-func (o GetGeneralSettingListDataGeneralOutput) GeoLocation() GetGeneralSettingListDataGeneralGeoLocationOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneral) GetGeneralSettingListDataGeneralGeoLocation {
-		return v.GeoLocation
-	}).(GetGeneralSettingListDataGeneralGeoLocationOutput)
-}
-
-// Locale
-func (o GetGeneralSettingListDataGeneralOutput) Locale() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneral) string { return v.Locale }).(pulumi.StringOutput)
-}
-
-// Logon banner
-func (o GetGeneralSettingListDataGeneralOutput) LoginBanner() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneral) string { return v.LoginBanner }).(pulumi.StringOutput)
-}
-
-// Setting
-func (o GetGeneralSettingListDataGeneralOutput) Setting() GetGeneralSettingListDataGeneralSettingOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneral) GetGeneralSettingListDataGeneralSetting { return v.Setting }).(GetGeneralSettingListDataGeneralSettingOutput)
-}
-
-// SSL/TLS service profile
-func (o GetGeneralSettingListDataGeneralOutput) SslTlsServiceProfile() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneral) string { return v.SslTlsServiceProfile }).(pulumi.StringOutput)
-}
-
-// Timezone
-func (o GetGeneralSettingListDataGeneralOutput) Timezone() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneral) string { return v.Timezone }).(pulumi.StringOutput)
-}
-
-type GetGeneralSettingListDataGeneralGeoLocation struct {
-	// Latitude
-	Latitude string `pulumi:"latitude"`
-	// Longitude
-	Longitude string `pulumi:"longitude"`
-}
-
-// GetGeneralSettingListDataGeneralGeoLocationInput is an input type that accepts GetGeneralSettingListDataGeneralGeoLocationArgs and GetGeneralSettingListDataGeneralGeoLocationOutput values.
-// You can construct a concrete instance of `GetGeneralSettingListDataGeneralGeoLocationInput` via:
-//
-//	GetGeneralSettingListDataGeneralGeoLocationArgs{...}
-type GetGeneralSettingListDataGeneralGeoLocationInput interface {
-	pulumi.Input
-
-	ToGetGeneralSettingListDataGeneralGeoLocationOutput() GetGeneralSettingListDataGeneralGeoLocationOutput
-	ToGetGeneralSettingListDataGeneralGeoLocationOutputWithContext(context.Context) GetGeneralSettingListDataGeneralGeoLocationOutput
-}
-
-type GetGeneralSettingListDataGeneralGeoLocationArgs struct {
-	// Latitude
-	Latitude pulumi.StringInput `pulumi:"latitude"`
-	// Longitude
-	Longitude pulumi.StringInput `pulumi:"longitude"`
-}
-
-func (GetGeneralSettingListDataGeneralGeoLocationArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingListDataGeneralGeoLocation)(nil)).Elem()
-}
-
-func (i GetGeneralSettingListDataGeneralGeoLocationArgs) ToGetGeneralSettingListDataGeneralGeoLocationOutput() GetGeneralSettingListDataGeneralGeoLocationOutput {
-	return i.ToGetGeneralSettingListDataGeneralGeoLocationOutputWithContext(context.Background())
-}
-
-func (i GetGeneralSettingListDataGeneralGeoLocationArgs) ToGetGeneralSettingListDataGeneralGeoLocationOutputWithContext(ctx context.Context) GetGeneralSettingListDataGeneralGeoLocationOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGeneralSettingListDataGeneralGeoLocationOutput)
-}
-
-type GetGeneralSettingListDataGeneralGeoLocationOutput struct{ *pulumi.OutputState }
-
-func (GetGeneralSettingListDataGeneralGeoLocationOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingListDataGeneralGeoLocation)(nil)).Elem()
-}
-
-func (o GetGeneralSettingListDataGeneralGeoLocationOutput) ToGetGeneralSettingListDataGeneralGeoLocationOutput() GetGeneralSettingListDataGeneralGeoLocationOutput {
-	return o
-}
-
-func (o GetGeneralSettingListDataGeneralGeoLocationOutput) ToGetGeneralSettingListDataGeneralGeoLocationOutputWithContext(ctx context.Context) GetGeneralSettingListDataGeneralGeoLocationOutput {
-	return o
-}
-
-// Latitude
-func (o GetGeneralSettingListDataGeneralGeoLocationOutput) Latitude() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneralGeoLocation) string { return v.Latitude }).(pulumi.StringOutput)
-}
-
-// Longitude
-func (o GetGeneralSettingListDataGeneralGeoLocationOutput) Longitude() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneralGeoLocation) string { return v.Longitude }).(pulumi.StringOutput)
-}
-
-type GetGeneralSettingListDataGeneralSetting struct {
-	// Use hypervisor assigned MAC addresses
-	AutoMacDetect bool `pulumi:"autoMacDetect"`
-	// Fail open
-	FailOpen bool `pulumi:"failOpen"`
-	// Management
-	Management GetGeneralSettingListDataGeneralSettingManagement `pulumi:"management"`
-	// Tunnel acceleration
-	TunnelAcceleration bool `pulumi:"tunnelAcceleration"`
-}
-
-// GetGeneralSettingListDataGeneralSettingInput is an input type that accepts GetGeneralSettingListDataGeneralSettingArgs and GetGeneralSettingListDataGeneralSettingOutput values.
-// You can construct a concrete instance of `GetGeneralSettingListDataGeneralSettingInput` via:
-//
-//	GetGeneralSettingListDataGeneralSettingArgs{...}
-type GetGeneralSettingListDataGeneralSettingInput interface {
-	pulumi.Input
-
-	ToGetGeneralSettingListDataGeneralSettingOutput() GetGeneralSettingListDataGeneralSettingOutput
-	ToGetGeneralSettingListDataGeneralSettingOutputWithContext(context.Context) GetGeneralSettingListDataGeneralSettingOutput
-}
-
-type GetGeneralSettingListDataGeneralSettingArgs struct {
-	// Use hypervisor assigned MAC addresses
-	AutoMacDetect pulumi.BoolInput `pulumi:"autoMacDetect"`
-	// Fail open
-	FailOpen pulumi.BoolInput `pulumi:"failOpen"`
-	// Management
-	Management GetGeneralSettingListDataGeneralSettingManagementInput `pulumi:"management"`
-	// Tunnel acceleration
-	TunnelAcceleration pulumi.BoolInput `pulumi:"tunnelAcceleration"`
-}
-
-func (GetGeneralSettingListDataGeneralSettingArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingListDataGeneralSetting)(nil)).Elem()
-}
-
-func (i GetGeneralSettingListDataGeneralSettingArgs) ToGetGeneralSettingListDataGeneralSettingOutput() GetGeneralSettingListDataGeneralSettingOutput {
-	return i.ToGetGeneralSettingListDataGeneralSettingOutputWithContext(context.Background())
-}
-
-func (i GetGeneralSettingListDataGeneralSettingArgs) ToGetGeneralSettingListDataGeneralSettingOutputWithContext(ctx context.Context) GetGeneralSettingListDataGeneralSettingOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGeneralSettingListDataGeneralSettingOutput)
-}
-
-type GetGeneralSettingListDataGeneralSettingOutput struct{ *pulumi.OutputState }
-
-func (GetGeneralSettingListDataGeneralSettingOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingListDataGeneralSetting)(nil)).Elem()
-}
-
-func (o GetGeneralSettingListDataGeneralSettingOutput) ToGetGeneralSettingListDataGeneralSettingOutput() GetGeneralSettingListDataGeneralSettingOutput {
-	return o
-}
-
-func (o GetGeneralSettingListDataGeneralSettingOutput) ToGetGeneralSettingListDataGeneralSettingOutputWithContext(ctx context.Context) GetGeneralSettingListDataGeneralSettingOutput {
-	return o
-}
-
-// Use hypervisor assigned MAC addresses
-func (o GetGeneralSettingListDataGeneralSettingOutput) AutoMacDetect() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneralSetting) bool { return v.AutoMacDetect }).(pulumi.BoolOutput)
-}
-
-// Fail open
-func (o GetGeneralSettingListDataGeneralSettingOutput) FailOpen() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneralSetting) bool { return v.FailOpen }).(pulumi.BoolOutput)
-}
-
-// Management
-func (o GetGeneralSettingListDataGeneralSettingOutput) Management() GetGeneralSettingListDataGeneralSettingManagementOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneralSetting) GetGeneralSettingListDataGeneralSettingManagement {
-		return v.Management
-	}).(GetGeneralSettingListDataGeneralSettingManagementOutput)
-}
-
-// Tunnel acceleration
-func (o GetGeneralSettingListDataGeneralSettingOutput) TunnelAcceleration() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneralSetting) bool { return v.TunnelAcceleration }).(pulumi.BoolOutput)
-}
-
-type GetGeneralSettingListDataGeneralSettingManagement struct {
-	// Automatically acquire commit lock
-	AutoAcquireCommitLock bool `pulumi:"autoAcquireCommitLock"`
-	// Certificate expiration check
-	EnableCertificateExpirationCheck bool `pulumi:"enableCertificateExpirationCheck"`
-}
-
-// GetGeneralSettingListDataGeneralSettingManagementInput is an input type that accepts GetGeneralSettingListDataGeneralSettingManagementArgs and GetGeneralSettingListDataGeneralSettingManagementOutput values.
-// You can construct a concrete instance of `GetGeneralSettingListDataGeneralSettingManagementInput` via:
-//
-//	GetGeneralSettingListDataGeneralSettingManagementArgs{...}
-type GetGeneralSettingListDataGeneralSettingManagementInput interface {
-	pulumi.Input
-
-	ToGetGeneralSettingListDataGeneralSettingManagementOutput() GetGeneralSettingListDataGeneralSettingManagementOutput
-	ToGetGeneralSettingListDataGeneralSettingManagementOutputWithContext(context.Context) GetGeneralSettingListDataGeneralSettingManagementOutput
-}
-
-type GetGeneralSettingListDataGeneralSettingManagementArgs struct {
-	// Automatically acquire commit lock
-	AutoAcquireCommitLock pulumi.BoolInput `pulumi:"autoAcquireCommitLock"`
-	// Certificate expiration check
-	EnableCertificateExpirationCheck pulumi.BoolInput `pulumi:"enableCertificateExpirationCheck"`
-}
-
-func (GetGeneralSettingListDataGeneralSettingManagementArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingListDataGeneralSettingManagement)(nil)).Elem()
-}
-
-func (i GetGeneralSettingListDataGeneralSettingManagementArgs) ToGetGeneralSettingListDataGeneralSettingManagementOutput() GetGeneralSettingListDataGeneralSettingManagementOutput {
-	return i.ToGetGeneralSettingListDataGeneralSettingManagementOutputWithContext(context.Background())
-}
-
-func (i GetGeneralSettingListDataGeneralSettingManagementArgs) ToGetGeneralSettingListDataGeneralSettingManagementOutputWithContext(ctx context.Context) GetGeneralSettingListDataGeneralSettingManagementOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGeneralSettingListDataGeneralSettingManagementOutput)
-}
-
-type GetGeneralSettingListDataGeneralSettingManagementOutput struct{ *pulumi.OutputState }
-
-func (GetGeneralSettingListDataGeneralSettingManagementOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGeneralSettingListDataGeneralSettingManagement)(nil)).Elem()
-}
-
-func (o GetGeneralSettingListDataGeneralSettingManagementOutput) ToGetGeneralSettingListDataGeneralSettingManagementOutput() GetGeneralSettingListDataGeneralSettingManagementOutput {
-	return o
-}
-
-func (o GetGeneralSettingListDataGeneralSettingManagementOutput) ToGetGeneralSettingListDataGeneralSettingManagementOutputWithContext(ctx context.Context) GetGeneralSettingListDataGeneralSettingManagementOutput {
-	return o
-}
-
-// Automatically acquire commit lock
-func (o GetGeneralSettingListDataGeneralSettingManagementOutput) AutoAcquireCommitLock() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneralSettingManagement) bool { return v.AutoAcquireCommitLock }).(pulumi.BoolOutput)
-}
-
-// Certificate expiration check
-func (o GetGeneralSettingListDataGeneralSettingManagementOutput) EnableCertificateExpirationCheck() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGeneralSettingListDataGeneralSettingManagement) bool {
-		return v.EnableCertificateExpirationCheck
-	}).(pulumi.BoolOutput)
-}
-
-type GetGlobalprotectMatchListListData struct {
-	// Description of the globalprotect match list entry
-	Description string `pulumi:"description"`
-	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Filter of the globalprotect match list entry
-	Filter string `pulumi:"filter"`
-	// The folder of the item. Default: Shared.
-	Folder string `pulumi:"folder"`
-	// UUID of the resource
-	Id string `pulumi:"id"`
-	// The name of the item.
+type GetForwardingProfileDestinationFqdn struct {
+	// alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
 	Name string `pulumi:"name"`
-	// Quarantine Flag of the globalprotect match list entry
-	Quarantine bool `pulumi:"quarantine"`
-	// Send Email List of the globalprotect match list entry
-	SendEmails []string `pulumi:"sendEmails"`
-	// Send HTTP List of the globalprotect match list entry
-	SendHttps []string `pulumi:"sendHttps"`
-	// Send SNMP Trap List of the globalprotect match list entry
-	SendSnmptraps []string `pulumi:"sendSnmptraps"`
-	// Send Sys log List of the globalprotect match list entry
-	SendSyslogs []string `pulumi:"sendSyslogs"`
-	// Send to Panorama Flag of the globalprotect match list entry
-	SendToPanorama bool `pulumi:"sendToPanorama"`
-	// The snippet of the item.
-	Snippet string `pulumi:"snippet"`
-	// The Terraform ID.
-	Tfid string `pulumi:"tfid"`
+	// Port number for fqdn based destination
+	Port int `pulumi:"port"`
 }
 
-// GetGlobalprotectMatchListListDataInput is an input type that accepts GetGlobalprotectMatchListListDataArgs and GetGlobalprotectMatchListListDataOutput values.
-// You can construct a concrete instance of `GetGlobalprotectMatchListListDataInput` via:
+// GetForwardingProfileDestinationFqdnInput is an input type that accepts GetForwardingProfileDestinationFqdnArgs and GetForwardingProfileDestinationFqdnOutput values.
+// You can construct a concrete instance of `GetForwardingProfileDestinationFqdnInput` via:
 //
-//	GetGlobalprotectMatchListListDataArgs{...}
-type GetGlobalprotectMatchListListDataInput interface {
+//	GetForwardingProfileDestinationFqdnArgs{...}
+type GetForwardingProfileDestinationFqdnInput interface {
 	pulumi.Input
 
-	ToGetGlobalprotectMatchListListDataOutput() GetGlobalprotectMatchListListDataOutput
-	ToGetGlobalprotectMatchListListDataOutputWithContext(context.Context) GetGlobalprotectMatchListListDataOutput
+	ToGetForwardingProfileDestinationFqdnOutput() GetForwardingProfileDestinationFqdnOutput
+	ToGetForwardingProfileDestinationFqdnOutputWithContext(context.Context) GetForwardingProfileDestinationFqdnOutput
 }
 
-type GetGlobalprotectMatchListListDataArgs struct {
-	// Description of the globalprotect match list entry
-	Description pulumi.StringInput `pulumi:"description"`
-	// The device in which the resource is defined
-	Device pulumi.StringInput `pulumi:"device"`
-	// Filter of the globalprotect match list entry
-	Filter pulumi.StringInput `pulumi:"filter"`
-	// The folder of the item. Default: Shared.
-	Folder pulumi.StringInput `pulumi:"folder"`
-	// UUID of the resource
-	Id pulumi.StringInput `pulumi:"id"`
-	// The name of the item.
+type GetForwardingProfileDestinationFqdnArgs struct {
+	// alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
 	Name pulumi.StringInput `pulumi:"name"`
-	// Quarantine Flag of the globalprotect match list entry
-	Quarantine pulumi.BoolInput `pulumi:"quarantine"`
-	// Send Email List of the globalprotect match list entry
-	SendEmails pulumi.StringArrayInput `pulumi:"sendEmails"`
-	// Send HTTP List of the globalprotect match list entry
-	SendHttps pulumi.StringArrayInput `pulumi:"sendHttps"`
-	// Send SNMP Trap List of the globalprotect match list entry
-	SendSnmptraps pulumi.StringArrayInput `pulumi:"sendSnmptraps"`
-	// Send Sys log List of the globalprotect match list entry
-	SendSyslogs pulumi.StringArrayInput `pulumi:"sendSyslogs"`
-	// Send to Panorama Flag of the globalprotect match list entry
-	SendToPanorama pulumi.BoolInput `pulumi:"sendToPanorama"`
-	// The snippet of the item.
-	Snippet pulumi.StringInput `pulumi:"snippet"`
-	// The Terraform ID.
-	Tfid pulumi.StringInput `pulumi:"tfid"`
+	// Port number for fqdn based destination
+	Port pulumi.IntInput `pulumi:"port"`
 }
 
-func (GetGlobalprotectMatchListListDataArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGlobalprotectMatchListListData)(nil)).Elem()
+func (GetForwardingProfileDestinationFqdnArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetForwardingProfileDestinationFqdn)(nil)).Elem()
 }
 
-func (i GetGlobalprotectMatchListListDataArgs) ToGetGlobalprotectMatchListListDataOutput() GetGlobalprotectMatchListListDataOutput {
-	return i.ToGetGlobalprotectMatchListListDataOutputWithContext(context.Background())
+func (i GetForwardingProfileDestinationFqdnArgs) ToGetForwardingProfileDestinationFqdnOutput() GetForwardingProfileDestinationFqdnOutput {
+	return i.ToGetForwardingProfileDestinationFqdnOutputWithContext(context.Background())
 }
 
-func (i GetGlobalprotectMatchListListDataArgs) ToGetGlobalprotectMatchListListDataOutputWithContext(ctx context.Context) GetGlobalprotectMatchListListDataOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGlobalprotectMatchListListDataOutput)
+func (i GetForwardingProfileDestinationFqdnArgs) ToGetForwardingProfileDestinationFqdnOutputWithContext(ctx context.Context) GetForwardingProfileDestinationFqdnOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetForwardingProfileDestinationFqdnOutput)
 }
 
-// GetGlobalprotectMatchListListDataArrayInput is an input type that accepts GetGlobalprotectMatchListListDataArray and GetGlobalprotectMatchListListDataArrayOutput values.
-// You can construct a concrete instance of `GetGlobalprotectMatchListListDataArrayInput` via:
+// GetForwardingProfileDestinationFqdnArrayInput is an input type that accepts GetForwardingProfileDestinationFqdnArray and GetForwardingProfileDestinationFqdnArrayOutput values.
+// You can construct a concrete instance of `GetForwardingProfileDestinationFqdnArrayInput` via:
 //
-//	GetGlobalprotectMatchListListDataArray{ GetGlobalprotectMatchListListDataArgs{...} }
-type GetGlobalprotectMatchListListDataArrayInput interface {
+//	GetForwardingProfileDestinationFqdnArray{ GetForwardingProfileDestinationFqdnArgs{...} }
+type GetForwardingProfileDestinationFqdnArrayInput interface {
 	pulumi.Input
 
-	ToGetGlobalprotectMatchListListDataArrayOutput() GetGlobalprotectMatchListListDataArrayOutput
-	ToGetGlobalprotectMatchListListDataArrayOutputWithContext(context.Context) GetGlobalprotectMatchListListDataArrayOutput
+	ToGetForwardingProfileDestinationFqdnArrayOutput() GetForwardingProfileDestinationFqdnArrayOutput
+	ToGetForwardingProfileDestinationFqdnArrayOutputWithContext(context.Context) GetForwardingProfileDestinationFqdnArrayOutput
 }
 
-type GetGlobalprotectMatchListListDataArray []GetGlobalprotectMatchListListDataInput
+type GetForwardingProfileDestinationFqdnArray []GetForwardingProfileDestinationFqdnInput
 
-func (GetGlobalprotectMatchListListDataArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetGlobalprotectMatchListListData)(nil)).Elem()
+func (GetForwardingProfileDestinationFqdnArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetForwardingProfileDestinationFqdn)(nil)).Elem()
 }
 
-func (i GetGlobalprotectMatchListListDataArray) ToGetGlobalprotectMatchListListDataArrayOutput() GetGlobalprotectMatchListListDataArrayOutput {
-	return i.ToGetGlobalprotectMatchListListDataArrayOutputWithContext(context.Background())
+func (i GetForwardingProfileDestinationFqdnArray) ToGetForwardingProfileDestinationFqdnArrayOutput() GetForwardingProfileDestinationFqdnArrayOutput {
+	return i.ToGetForwardingProfileDestinationFqdnArrayOutputWithContext(context.Background())
 }
 
-func (i GetGlobalprotectMatchListListDataArray) ToGetGlobalprotectMatchListListDataArrayOutputWithContext(ctx context.Context) GetGlobalprotectMatchListListDataArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetGlobalprotectMatchListListDataArrayOutput)
+func (i GetForwardingProfileDestinationFqdnArray) ToGetForwardingProfileDestinationFqdnArrayOutputWithContext(ctx context.Context) GetForwardingProfileDestinationFqdnArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetForwardingProfileDestinationFqdnArrayOutput)
 }
 
-type GetGlobalprotectMatchListListDataOutput struct{ *pulumi.OutputState }
+type GetForwardingProfileDestinationFqdnOutput struct{ *pulumi.OutputState }
 
-func (GetGlobalprotectMatchListListDataOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetGlobalprotectMatchListListData)(nil)).Elem()
+func (GetForwardingProfileDestinationFqdnOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetForwardingProfileDestinationFqdn)(nil)).Elem()
 }
 
-func (o GetGlobalprotectMatchListListDataOutput) ToGetGlobalprotectMatchListListDataOutput() GetGlobalprotectMatchListListDataOutput {
+func (o GetForwardingProfileDestinationFqdnOutput) ToGetForwardingProfileDestinationFqdnOutput() GetForwardingProfileDestinationFqdnOutput {
 	return o
 }
 
-func (o GetGlobalprotectMatchListListDataOutput) ToGetGlobalprotectMatchListListDataOutputWithContext(ctx context.Context) GetGlobalprotectMatchListListDataOutput {
+func (o GetForwardingProfileDestinationFqdnOutput) ToGetForwardingProfileDestinationFqdnOutputWithContext(ctx context.Context) GetForwardingProfileDestinationFqdnOutput {
 	return o
 }
 
-// Description of the globalprotect match list entry
-func (o GetGlobalprotectMatchListListDataOutput) Description() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Description }).(pulumi.StringOutput)
+// alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
+func (o GetForwardingProfileDestinationFqdnOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetForwardingProfileDestinationFqdn) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The device in which the resource is defined
-func (o GetGlobalprotectMatchListListDataOutput) Device() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Device }).(pulumi.StringOutput)
+// Port number for fqdn based destination
+func (o GetForwardingProfileDestinationFqdnOutput) Port() pulumi.IntOutput {
+	return o.ApplyT(func(v GetForwardingProfileDestinationFqdn) int { return v.Port }).(pulumi.IntOutput)
 }
 
-// Filter of the globalprotect match list entry
-func (o GetGlobalprotectMatchListListDataOutput) Filter() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Filter }).(pulumi.StringOutput)
+type GetForwardingProfileDestinationFqdnArrayOutput struct{ *pulumi.OutputState }
+
+func (GetForwardingProfileDestinationFqdnArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetForwardingProfileDestinationFqdn)(nil)).Elem()
 }
 
-// The folder of the item. Default: Shared.
-func (o GetGlobalprotectMatchListListDataOutput) Folder() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Folder }).(pulumi.StringOutput)
-}
-
-// UUID of the resource
-func (o GetGlobalprotectMatchListListDataOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Id }).(pulumi.StringOutput)
-}
-
-// The name of the item.
-func (o GetGlobalprotectMatchListListDataOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Quarantine Flag of the globalprotect match list entry
-func (o GetGlobalprotectMatchListListDataOutput) Quarantine() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) bool { return v.Quarantine }).(pulumi.BoolOutput)
-}
-
-// Send Email List of the globalprotect match list entry
-func (o GetGlobalprotectMatchListListDataOutput) SendEmails() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) []string { return v.SendEmails }).(pulumi.StringArrayOutput)
-}
-
-// Send HTTP List of the globalprotect match list entry
-func (o GetGlobalprotectMatchListListDataOutput) SendHttps() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) []string { return v.SendHttps }).(pulumi.StringArrayOutput)
-}
-
-// Send SNMP Trap List of the globalprotect match list entry
-func (o GetGlobalprotectMatchListListDataOutput) SendSnmptraps() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) []string { return v.SendSnmptraps }).(pulumi.StringArrayOutput)
-}
-
-// Send Sys log List of the globalprotect match list entry
-func (o GetGlobalprotectMatchListListDataOutput) SendSyslogs() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) []string { return v.SendSyslogs }).(pulumi.StringArrayOutput)
-}
-
-// Send to Panorama Flag of the globalprotect match list entry
-func (o GetGlobalprotectMatchListListDataOutput) SendToPanorama() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) bool { return v.SendToPanorama }).(pulumi.BoolOutput)
-}
-
-// The snippet of the item.
-func (o GetGlobalprotectMatchListListDataOutput) Snippet() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Snippet }).(pulumi.StringOutput)
-}
-
-// The Terraform ID.
-func (o GetGlobalprotectMatchListListDataOutput) Tfid() pulumi.StringOutput {
-	return o.ApplyT(func(v GetGlobalprotectMatchListListData) string { return v.Tfid }).(pulumi.StringOutput)
-}
-
-type GetGlobalprotectMatchListListDataArrayOutput struct{ *pulumi.OutputState }
-
-func (GetGlobalprotectMatchListListDataArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetGlobalprotectMatchListListData)(nil)).Elem()
-}
-
-func (o GetGlobalprotectMatchListListDataArrayOutput) ToGetGlobalprotectMatchListListDataArrayOutput() GetGlobalprotectMatchListListDataArrayOutput {
+func (o GetForwardingProfileDestinationFqdnArrayOutput) ToGetForwardingProfileDestinationFqdnArrayOutput() GetForwardingProfileDestinationFqdnArrayOutput {
 	return o
 }
 
-func (o GetGlobalprotectMatchListListDataArrayOutput) ToGetGlobalprotectMatchListListDataArrayOutputWithContext(ctx context.Context) GetGlobalprotectMatchListListDataArrayOutput {
+func (o GetForwardingProfileDestinationFqdnArrayOutput) ToGetForwardingProfileDestinationFqdnArrayOutputWithContext(ctx context.Context) GetForwardingProfileDestinationFqdnArrayOutput {
 	return o
 }
 
-func (o GetGlobalprotectMatchListListDataArrayOutput) Index(i pulumi.IntInput) GetGlobalprotectMatchListListDataOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetGlobalprotectMatchListListData {
-		return vs[0].([]GetGlobalprotectMatchListListData)[vs[1].(int)]
-	}).(GetGlobalprotectMatchListListDataOutput)
-}
-
-type GetHipObjectAntiMalware struct {
-	// Criteria
-	Criteria GetHipObjectAntiMalwareCriteria `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor bool `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors []GetHipObjectAntiMalwareVendor `pulumi:"vendors"`
-}
-
-// GetHipObjectAntiMalwareInput is an input type that accepts GetHipObjectAntiMalwareArgs and GetHipObjectAntiMalwareOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareInput` via:
-//
-//	GetHipObjectAntiMalwareArgs{...}
-type GetHipObjectAntiMalwareInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareOutput() GetHipObjectAntiMalwareOutput
-	ToGetHipObjectAntiMalwareOutputWithContext(context.Context) GetHipObjectAntiMalwareOutput
-}
-
-type GetHipObjectAntiMalwareArgs struct {
-	// Criteria
-	Criteria GetHipObjectAntiMalwareCriteriaInput `pulumi:"criteria"`
-	// Exclude vendor
-	ExcludeVendor pulumi.BoolInput `pulumi:"excludeVendor"`
-	// Vendor name
-	Vendors GetHipObjectAntiMalwareVendorArrayInput `pulumi:"vendors"`
-}
-
-func (GetHipObjectAntiMalwareArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalware)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareArgs) ToGetHipObjectAntiMalwareOutput() GetHipObjectAntiMalwareOutput {
-	return i.ToGetHipObjectAntiMalwareOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareArgs) ToGetHipObjectAntiMalwareOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareOutput)
-}
-
-type GetHipObjectAntiMalwareOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalware)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareOutput) ToGetHipObjectAntiMalwareOutput() GetHipObjectAntiMalwareOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareOutput) ToGetHipObjectAntiMalwareOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareOutput {
-	return o
-}
-
-// Criteria
-func (o GetHipObjectAntiMalwareOutput) Criteria() GetHipObjectAntiMalwareCriteriaOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalware) GetHipObjectAntiMalwareCriteria { return v.Criteria }).(GetHipObjectAntiMalwareCriteriaOutput)
-}
-
-// Exclude vendor
-func (o GetHipObjectAntiMalwareOutput) ExcludeVendor() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalware) bool { return v.ExcludeVendor }).(pulumi.BoolOutput)
-}
-
-// Vendor name
-func (o GetHipObjectAntiMalwareOutput) Vendors() GetHipObjectAntiMalwareVendorArrayOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalware) []GetHipObjectAntiMalwareVendor { return v.Vendors }).(GetHipObjectAntiMalwareVendorArrayOutput)
-}
-
-type GetHipObjectAntiMalwareCriteria struct {
-	// Is Installed
-	IsInstalled bool `pulumi:"isInstalled"`
-	// Last scan time
-	LastScanTime GetHipObjectAntiMalwareCriteriaLastScanTime `pulumi:"lastScanTime"`
-	// Product version
-	ProductVersion GetHipObjectAntiMalwareCriteriaProductVersion `pulumi:"productVersion"`
-	// real time protection
-	RealTimeProtection string `pulumi:"realTimeProtection"`
-	// Virdef version
-	VirdefVersion GetHipObjectAntiMalwareCriteriaVirdefVersion `pulumi:"virdefVersion"`
-}
-
-// GetHipObjectAntiMalwareCriteriaInput is an input type that accepts GetHipObjectAntiMalwareCriteriaArgs and GetHipObjectAntiMalwareCriteriaOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareCriteriaInput` via:
-//
-//	GetHipObjectAntiMalwareCriteriaArgs{...}
-type GetHipObjectAntiMalwareCriteriaInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareCriteriaOutput() GetHipObjectAntiMalwareCriteriaOutput
-	ToGetHipObjectAntiMalwareCriteriaOutputWithContext(context.Context) GetHipObjectAntiMalwareCriteriaOutput
-}
-
-type GetHipObjectAntiMalwareCriteriaArgs struct {
-	// Is Installed
-	IsInstalled pulumi.BoolInput `pulumi:"isInstalled"`
-	// Last scan time
-	LastScanTime GetHipObjectAntiMalwareCriteriaLastScanTimeInput `pulumi:"lastScanTime"`
-	// Product version
-	ProductVersion GetHipObjectAntiMalwareCriteriaProductVersionInput `pulumi:"productVersion"`
-	// real time protection
-	RealTimeProtection pulumi.StringInput `pulumi:"realTimeProtection"`
-	// Virdef version
-	VirdefVersion GetHipObjectAntiMalwareCriteriaVirdefVersionInput `pulumi:"virdefVersion"`
-}
-
-func (GetHipObjectAntiMalwareCriteriaArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteria)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareCriteriaArgs) ToGetHipObjectAntiMalwareCriteriaOutput() GetHipObjectAntiMalwareCriteriaOutput {
-	return i.ToGetHipObjectAntiMalwareCriteriaOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareCriteriaArgs) ToGetHipObjectAntiMalwareCriteriaOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareCriteriaOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareCriteriaOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteria)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareCriteriaOutput) ToGetHipObjectAntiMalwareCriteriaOutput() GetHipObjectAntiMalwareCriteriaOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareCriteriaOutput) ToGetHipObjectAntiMalwareCriteriaOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaOutput {
-	return o
-}
-
-// Is Installed
-func (o GetHipObjectAntiMalwareCriteriaOutput) IsInstalled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteria) bool { return v.IsInstalled }).(pulumi.BoolOutput)
-}
-
-// Last scan time
-func (o GetHipObjectAntiMalwareCriteriaOutput) LastScanTime() GetHipObjectAntiMalwareCriteriaLastScanTimeOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteria) GetHipObjectAntiMalwareCriteriaLastScanTime {
-		return v.LastScanTime
-	}).(GetHipObjectAntiMalwareCriteriaLastScanTimeOutput)
-}
-
-// Product version
-func (o GetHipObjectAntiMalwareCriteriaOutput) ProductVersion() GetHipObjectAntiMalwareCriteriaProductVersionOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteria) GetHipObjectAntiMalwareCriteriaProductVersion {
-		return v.ProductVersion
-	}).(GetHipObjectAntiMalwareCriteriaProductVersionOutput)
-}
-
-// real time protection
-func (o GetHipObjectAntiMalwareCriteriaOutput) RealTimeProtection() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteria) string { return v.RealTimeProtection }).(pulumi.StringOutput)
-}
-
-// Virdef version
-func (o GetHipObjectAntiMalwareCriteriaOutput) VirdefVersion() GetHipObjectAntiMalwareCriteriaVirdefVersionOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteria) GetHipObjectAntiMalwareCriteriaVirdefVersion {
-		return v.VirdefVersion
-	}).(GetHipObjectAntiMalwareCriteriaVirdefVersionOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTime struct {
-	// Not available
-	NotAvailable GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailable `pulumi:"notAvailable"`
-	// Not within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	NotWithin GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin `pulumi:"notWithin"`
-	// Within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	Within GetHipObjectAntiMalwareCriteriaLastScanTimeWithin `pulumi:"within"`
-}
-
-// GetHipObjectAntiMalwareCriteriaLastScanTimeInput is an input type that accepts GetHipObjectAntiMalwareCriteriaLastScanTimeArgs and GetHipObjectAntiMalwareCriteriaLastScanTimeOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareCriteriaLastScanTimeInput` via:
-//
-//	GetHipObjectAntiMalwareCriteriaLastScanTimeArgs{...}
-type GetHipObjectAntiMalwareCriteriaLastScanTimeInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareCriteriaLastScanTimeOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeOutput
-	ToGetHipObjectAntiMalwareCriteriaLastScanTimeOutputWithContext(context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeOutput
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTimeArgs struct {
-	// Not available
-	NotAvailable GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableInput `pulumi:"notAvailable"`
-	// Not within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	NotWithin GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinInput `pulumi:"notWithin"`
-	// Within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-	Within GetHipObjectAntiMalwareCriteriaLastScanTimeWithinInput `pulumi:"within"`
-}
-
-func (GetHipObjectAntiMalwareCriteriaLastScanTimeArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTime)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareCriteriaLastScanTimeArgs) ToGetHipObjectAntiMalwareCriteriaLastScanTimeOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeOutput {
-	return i.ToGetHipObjectAntiMalwareCriteriaLastScanTimeOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareCriteriaLastScanTimeArgs) ToGetHipObjectAntiMalwareCriteriaLastScanTimeOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareCriteriaLastScanTimeOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTimeOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTime)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) ToGetHipObjectAntiMalwareCriteriaLastScanTimeOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) ToGetHipObjectAntiMalwareCriteriaLastScanTimeOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeOutput {
-	return o
-}
-
-// Not available
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) NotAvailable() GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTime) GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailable {
-		return v.NotAvailable
-	}).(GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput)
-}
-
-// Not within
-//
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) NotWithin() GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTime) GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin {
-		return v.NotWithin
-	}).(GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput)
-}
-
-// Within
-//
-// > ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeOutput) Within() GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTime) GetHipObjectAntiMalwareCriteriaLastScanTimeWithin {
-		return v.Within
-	}).(GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailable struct {
-}
-
-// GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableInput is an input type that accepts GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableArgs and GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableInput` via:
-//
-//	GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableArgs{...}
-type GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput
-	ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableArgs struct {
-}
-
-func (GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailable)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableArgs) ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
-	return i.ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableArgs) ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailable)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput) ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput) ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput {
-	return o
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin struct {
-	// specify time in days
-	Days int `pulumi:"days"`
-	// specify time in hours
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-	Hours int `pulumi:"hours"`
-}
-
-// GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinInput is an input type that accepts GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs and GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinInput` via:
-//
-//	GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs{...}
-type GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput
-	ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutputWithContext(context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs struct {
-	// specify time in days
-	Days pulumi.IntInput `pulumi:"days"`
-	// specify time in hours
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-	Hours pulumi.IntInput `pulumi:"hours"`
-}
-
-func (GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs) ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput {
-	return i.ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs) ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) ToGetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput {
-	return o
-}
-
-// specify time in days
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) Days() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin) int { return v.Days }).(pulumi.IntOutput)
-}
-
-// specify time in hours
-//
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput) Hours() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithin) int { return v.Hours }).(pulumi.IntOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTimeWithin struct {
-	// specify time in days
-	Days int `pulumi:"days"`
-	// specify time in hours
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-	Hours int `pulumi:"hours"`
-}
-
-// GetHipObjectAntiMalwareCriteriaLastScanTimeWithinInput is an input type that accepts GetHipObjectAntiMalwareCriteriaLastScanTimeWithinArgs and GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareCriteriaLastScanTimeWithinInput` via:
-//
-//	GetHipObjectAntiMalwareCriteriaLastScanTimeWithinArgs{...}
-type GetHipObjectAntiMalwareCriteriaLastScanTimeWithinInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput
-	ToGetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutputWithContext(context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTimeWithinArgs struct {
-	// specify time in days
-	Days pulumi.IntInput `pulumi:"days"`
-	// specify time in hours
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-	Hours pulumi.IntInput `pulumi:"hours"`
-}
-
-func (GetHipObjectAntiMalwareCriteriaLastScanTimeWithinArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeWithin)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareCriteriaLastScanTimeWithinArgs) ToGetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput {
-	return i.ToGetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareCriteriaLastScanTimeWithinArgs) ToGetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeWithin)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) ToGetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput() GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) ToGetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput {
-	return o
-}
-
-// specify time in days
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) Days() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTimeWithin) int { return v.Days }).(pulumi.IntOutput)
-}
-
-// specify time in hours
-//
-// > ℹ️ **Note:** You must specify exactly one of `days` and `hours`.
-func (o GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput) Hours() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaLastScanTimeWithin) int { return v.Hours }).(pulumi.IntOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaProductVersion struct {
-	// Contains
-	Contains string `pulumi:"contains"`
-	// Greater equal
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	GreaterEqual string `pulumi:"greaterEqual"`
-	// Greater than
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	GreaterThan string `pulumi:"greaterThan"`
-	// Is
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	Is string `pulumi:"is"`
-	// Is not
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	IsNot string `pulumi:"isNot"`
-	// Less equal
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	LessEqual string `pulumi:"lessEqual"`
-	// Less than
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	LessThan string `pulumi:"lessThan"`
-	// Not within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	NotWithin GetHipObjectAntiMalwareCriteriaProductVersionNotWithin `pulumi:"notWithin"`
-	// Within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	Within GetHipObjectAntiMalwareCriteriaProductVersionWithin `pulumi:"within"`
-}
-
-// GetHipObjectAntiMalwareCriteriaProductVersionInput is an input type that accepts GetHipObjectAntiMalwareCriteriaProductVersionArgs and GetHipObjectAntiMalwareCriteriaProductVersionOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareCriteriaProductVersionInput` via:
-//
-//	GetHipObjectAntiMalwareCriteriaProductVersionArgs{...}
-type GetHipObjectAntiMalwareCriteriaProductVersionInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareCriteriaProductVersionOutput() GetHipObjectAntiMalwareCriteriaProductVersionOutput
-	ToGetHipObjectAntiMalwareCriteriaProductVersionOutputWithContext(context.Context) GetHipObjectAntiMalwareCriteriaProductVersionOutput
-}
-
-type GetHipObjectAntiMalwareCriteriaProductVersionArgs struct {
-	// Contains
-	Contains pulumi.StringInput `pulumi:"contains"`
-	// Greater equal
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	GreaterEqual pulumi.StringInput `pulumi:"greaterEqual"`
-	// Greater than
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	GreaterThan pulumi.StringInput `pulumi:"greaterThan"`
-	// Is
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	Is pulumi.StringInput `pulumi:"is"`
-	// Is not
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	IsNot pulumi.StringInput `pulumi:"isNot"`
-	// Less equal
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	LessEqual pulumi.StringInput `pulumi:"lessEqual"`
-	// Less than
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	LessThan pulumi.StringInput `pulumi:"lessThan"`
-	// Not within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	NotWithin GetHipObjectAntiMalwareCriteriaProductVersionNotWithinInput `pulumi:"notWithin"`
-	// Within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-	Within GetHipObjectAntiMalwareCriteriaProductVersionWithinInput `pulumi:"within"`
-}
-
-func (GetHipObjectAntiMalwareCriteriaProductVersionArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaProductVersion)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareCriteriaProductVersionArgs) ToGetHipObjectAntiMalwareCriteriaProductVersionOutput() GetHipObjectAntiMalwareCriteriaProductVersionOutput {
-	return i.ToGetHipObjectAntiMalwareCriteriaProductVersionOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareCriteriaProductVersionArgs) ToGetHipObjectAntiMalwareCriteriaProductVersionOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaProductVersionOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareCriteriaProductVersionOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaProductVersionOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareCriteriaProductVersionOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaProductVersion)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) ToGetHipObjectAntiMalwareCriteriaProductVersionOutput() GetHipObjectAntiMalwareCriteriaProductVersionOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) ToGetHipObjectAntiMalwareCriteriaProductVersionOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaProductVersionOutput {
-	return o
-}
-
-// Contains
-func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) Contains() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.Contains }).(pulumi.StringOutput)
-}
-
-// Greater equal
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) GreaterEqual() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.GreaterEqual }).(pulumi.StringOutput)
-}
-
-// Greater than
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) GreaterThan() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.GreaterThan }).(pulumi.StringOutput)
-}
-
-// Is
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) Is() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.Is }).(pulumi.StringOutput)
-}
-
-// Is not
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) IsNot() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.IsNot }).(pulumi.StringOutput)
-}
-
-// Less equal
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) LessEqual() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.LessEqual }).(pulumi.StringOutput)
-}
-
-// Less than
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) LessThan() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) string { return v.LessThan }).(pulumi.StringOutput)
-}
-
-// Not within
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) NotWithin() GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) GetHipObjectAntiMalwareCriteriaProductVersionNotWithin {
-		return v.NotWithin
-	}).(GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput)
-}
-
-// Within
-//
-// > ℹ️ **Note:** You must specify exactly one of `contains`, `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`, `notWithin`, and `within`.
-func (o GetHipObjectAntiMalwareCriteriaProductVersionOutput) Within() GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersion) GetHipObjectAntiMalwareCriteriaProductVersionWithin {
-		return v.Within
-	}).(GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaProductVersionNotWithin struct {
-	// versions range
-	Versions int `pulumi:"versions"`
-}
-
-// GetHipObjectAntiMalwareCriteriaProductVersionNotWithinInput is an input type that accepts GetHipObjectAntiMalwareCriteriaProductVersionNotWithinArgs and GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareCriteriaProductVersionNotWithinInput` via:
-//
-//	GetHipObjectAntiMalwareCriteriaProductVersionNotWithinArgs{...}
-type GetHipObjectAntiMalwareCriteriaProductVersionNotWithinInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput() GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput
-	ToGetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutputWithContext(context.Context) GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput
-}
-
-type GetHipObjectAntiMalwareCriteriaProductVersionNotWithinArgs struct {
-	// versions range
-	Versions pulumi.IntInput `pulumi:"versions"`
-}
-
-func (GetHipObjectAntiMalwareCriteriaProductVersionNotWithinArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaProductVersionNotWithin)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareCriteriaProductVersionNotWithinArgs) ToGetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput() GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput {
-	return i.ToGetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareCriteriaProductVersionNotWithinArgs) ToGetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaProductVersionNotWithin)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput) ToGetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput() GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput) ToGetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput {
-	return o
-}
-
-// versions range
-func (o GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput) Versions() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersionNotWithin) int { return v.Versions }).(pulumi.IntOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaProductVersionWithin struct {
-	// versions range
-	Versions int `pulumi:"versions"`
-}
-
-// GetHipObjectAntiMalwareCriteriaProductVersionWithinInput is an input type that accepts GetHipObjectAntiMalwareCriteriaProductVersionWithinArgs and GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareCriteriaProductVersionWithinInput` via:
-//
-//	GetHipObjectAntiMalwareCriteriaProductVersionWithinArgs{...}
-type GetHipObjectAntiMalwareCriteriaProductVersionWithinInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareCriteriaProductVersionWithinOutput() GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput
-	ToGetHipObjectAntiMalwareCriteriaProductVersionWithinOutputWithContext(context.Context) GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput
-}
-
-type GetHipObjectAntiMalwareCriteriaProductVersionWithinArgs struct {
-	// versions range
-	Versions pulumi.IntInput `pulumi:"versions"`
-}
-
-func (GetHipObjectAntiMalwareCriteriaProductVersionWithinArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaProductVersionWithin)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareCriteriaProductVersionWithinArgs) ToGetHipObjectAntiMalwareCriteriaProductVersionWithinOutput() GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput {
-	return i.ToGetHipObjectAntiMalwareCriteriaProductVersionWithinOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareCriteriaProductVersionWithinArgs) ToGetHipObjectAntiMalwareCriteriaProductVersionWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaProductVersionWithin)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput) ToGetHipObjectAntiMalwareCriteriaProductVersionWithinOutput() GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput) ToGetHipObjectAntiMalwareCriteriaProductVersionWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput {
-	return o
-}
-
-// versions range
-func (o GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput) Versions() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaProductVersionWithin) int { return v.Versions }).(pulumi.IntOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaVirdefVersion struct {
-	// Not within
-	NotWithin GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin `pulumi:"notWithin"`
-	// Within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
-	Within GetHipObjectAntiMalwareCriteriaVirdefVersionWithin `pulumi:"within"`
-}
-
-// GetHipObjectAntiMalwareCriteriaVirdefVersionInput is an input type that accepts GetHipObjectAntiMalwareCriteriaVirdefVersionArgs and GetHipObjectAntiMalwareCriteriaVirdefVersionOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareCriteriaVirdefVersionInput` via:
-//
-//	GetHipObjectAntiMalwareCriteriaVirdefVersionArgs{...}
-type GetHipObjectAntiMalwareCriteriaVirdefVersionInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareCriteriaVirdefVersionOutput() GetHipObjectAntiMalwareCriteriaVirdefVersionOutput
-	ToGetHipObjectAntiMalwareCriteriaVirdefVersionOutputWithContext(context.Context) GetHipObjectAntiMalwareCriteriaVirdefVersionOutput
-}
-
-type GetHipObjectAntiMalwareCriteriaVirdefVersionArgs struct {
-	// Not within
-	NotWithin GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinInput `pulumi:"notWithin"`
-	// Within
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
-	Within GetHipObjectAntiMalwareCriteriaVirdefVersionWithinInput `pulumi:"within"`
-}
-
-func (GetHipObjectAntiMalwareCriteriaVirdefVersionArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaVirdefVersion)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareCriteriaVirdefVersionArgs) ToGetHipObjectAntiMalwareCriteriaVirdefVersionOutput() GetHipObjectAntiMalwareCriteriaVirdefVersionOutput {
-	return i.ToGetHipObjectAntiMalwareCriteriaVirdefVersionOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareCriteriaVirdefVersionArgs) ToGetHipObjectAntiMalwareCriteriaVirdefVersionOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaVirdefVersionOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareCriteriaVirdefVersionOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaVirdefVersionOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareCriteriaVirdefVersionOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaVirdefVersion)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionOutput) ToGetHipObjectAntiMalwareCriteriaVirdefVersionOutput() GetHipObjectAntiMalwareCriteriaVirdefVersionOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionOutput) ToGetHipObjectAntiMalwareCriteriaVirdefVersionOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaVirdefVersionOutput {
-	return o
-}
-
-// Not within
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionOutput) NotWithin() GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersion) GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin {
-		return v.NotWithin
-	}).(GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput)
-}
-
-// Within
-//
-// > ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionOutput) Within() GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersion) GetHipObjectAntiMalwareCriteriaVirdefVersionWithin {
-		return v.Within
-	}).(GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin struct {
-	// specify time in days
-	Days int `pulumi:"days"`
-	// specify versions range
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
-	Versions int `pulumi:"versions"`
-}
-
-// GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinInput is an input type that accepts GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs and GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinInput` via:
-//
-//	GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs{...}
-type GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput() GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput
-	ToGetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutputWithContext(context.Context) GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput
-}
-
-type GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs struct {
-	// specify time in days
-	Days pulumi.IntInput `pulumi:"days"`
-	// specify versions range
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
-	Versions pulumi.IntInput `pulumi:"versions"`
-}
-
-func (GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs) ToGetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput() GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput {
-	return i.ToGetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs) ToGetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) ToGetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput() GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) ToGetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput {
-	return o
-}
-
-// specify time in days
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) Days() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin) int { return v.Days }).(pulumi.IntOutput)
-}
-
-// specify versions range
-//
-// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput) Versions() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithin) int { return v.Versions }).(pulumi.IntOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaVirdefVersionWithin struct {
-	// specify time in days
-	Days int `pulumi:"days"`
-	// specify versions range
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
-	Versions int `pulumi:"versions"`
-}
-
-// GetHipObjectAntiMalwareCriteriaVirdefVersionWithinInput is an input type that accepts GetHipObjectAntiMalwareCriteriaVirdefVersionWithinArgs and GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareCriteriaVirdefVersionWithinInput` via:
-//
-//	GetHipObjectAntiMalwareCriteriaVirdefVersionWithinArgs{...}
-type GetHipObjectAntiMalwareCriteriaVirdefVersionWithinInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput() GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput
-	ToGetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutputWithContext(context.Context) GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput
-}
-
-type GetHipObjectAntiMalwareCriteriaVirdefVersionWithinArgs struct {
-	// specify time in days
-	Days pulumi.IntInput `pulumi:"days"`
-	// specify versions range
-	//
-	// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
-	Versions pulumi.IntInput `pulumi:"versions"`
-}
-
-func (GetHipObjectAntiMalwareCriteriaVirdefVersionWithinArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaVirdefVersionWithin)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareCriteriaVirdefVersionWithinArgs) ToGetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput() GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput {
-	return i.ToGetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareCriteriaVirdefVersionWithinArgs) ToGetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput)
-}
-
-type GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaVirdefVersionWithin)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput) ToGetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput() GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput) ToGetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput {
-	return o
-}
-
-// specify time in days
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput) Days() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersionWithin) int { return v.Days }).(pulumi.IntOutput)
-}
-
-// specify versions range
-//
-// > ℹ️ **Note:** You must specify exactly one of `days` and `versions`.
-func (o GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput) Versions() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareCriteriaVirdefVersionWithin) int { return v.Versions }).(pulumi.IntOutput)
-}
-
-type GetHipObjectAntiMalwareVendor struct {
-	// Name
-	Name string `pulumi:"name"`
-	// Product
-	Products []string `pulumi:"products"`
-}
-
-// GetHipObjectAntiMalwareVendorInput is an input type that accepts GetHipObjectAntiMalwareVendorArgs and GetHipObjectAntiMalwareVendorOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareVendorInput` via:
-//
-//	GetHipObjectAntiMalwareVendorArgs{...}
-type GetHipObjectAntiMalwareVendorInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareVendorOutput() GetHipObjectAntiMalwareVendorOutput
-	ToGetHipObjectAntiMalwareVendorOutputWithContext(context.Context) GetHipObjectAntiMalwareVendorOutput
-}
-
-type GetHipObjectAntiMalwareVendorArgs struct {
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Product
-	Products pulumi.StringArrayInput `pulumi:"products"`
-}
-
-func (GetHipObjectAntiMalwareVendorArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareVendor)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareVendorArgs) ToGetHipObjectAntiMalwareVendorOutput() GetHipObjectAntiMalwareVendorOutput {
-	return i.ToGetHipObjectAntiMalwareVendorOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareVendorArgs) ToGetHipObjectAntiMalwareVendorOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareVendorOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareVendorOutput)
-}
-
-// GetHipObjectAntiMalwareVendorArrayInput is an input type that accepts GetHipObjectAntiMalwareVendorArray and GetHipObjectAntiMalwareVendorArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectAntiMalwareVendorArrayInput` via:
-//
-//	GetHipObjectAntiMalwareVendorArray{ GetHipObjectAntiMalwareVendorArgs{...} }
-type GetHipObjectAntiMalwareVendorArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectAntiMalwareVendorArrayOutput() GetHipObjectAntiMalwareVendorArrayOutput
-	ToGetHipObjectAntiMalwareVendorArrayOutputWithContext(context.Context) GetHipObjectAntiMalwareVendorArrayOutput
-}
-
-type GetHipObjectAntiMalwareVendorArray []GetHipObjectAntiMalwareVendorInput
-
-func (GetHipObjectAntiMalwareVendorArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectAntiMalwareVendor)(nil)).Elem()
-}
-
-func (i GetHipObjectAntiMalwareVendorArray) ToGetHipObjectAntiMalwareVendorArrayOutput() GetHipObjectAntiMalwareVendorArrayOutput {
-	return i.ToGetHipObjectAntiMalwareVendorArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectAntiMalwareVendorArray) ToGetHipObjectAntiMalwareVendorArrayOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareVendorArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectAntiMalwareVendorArrayOutput)
-}
-
-type GetHipObjectAntiMalwareVendorOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareVendorOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectAntiMalwareVendor)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareVendorOutput) ToGetHipObjectAntiMalwareVendorOutput() GetHipObjectAntiMalwareVendorOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareVendorOutput) ToGetHipObjectAntiMalwareVendorOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareVendorOutput {
-	return o
-}
-
-// Name
-func (o GetHipObjectAntiMalwareVendorOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareVendor) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Product
-func (o GetHipObjectAntiMalwareVendorOutput) Products() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetHipObjectAntiMalwareVendor) []string { return v.Products }).(pulumi.StringArrayOutput)
-}
-
-type GetHipObjectAntiMalwareVendorArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectAntiMalwareVendorArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectAntiMalwareVendor)(nil)).Elem()
-}
-
-func (o GetHipObjectAntiMalwareVendorArrayOutput) ToGetHipObjectAntiMalwareVendorArrayOutput() GetHipObjectAntiMalwareVendorArrayOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareVendorArrayOutput) ToGetHipObjectAntiMalwareVendorArrayOutputWithContext(ctx context.Context) GetHipObjectAntiMalwareVendorArrayOutput {
-	return o
-}
-
-func (o GetHipObjectAntiMalwareVendorArrayOutput) Index(i pulumi.IntInput) GetHipObjectAntiMalwareVendorOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectAntiMalwareVendor {
-		return vs[0].([]GetHipObjectAntiMalwareVendor)[vs[1].(int)]
-	}).(GetHipObjectAntiMalwareVendorOutput)
-}
-
-type GetHipObjectCertificate struct {
-	// Criteria
-	Criteria GetHipObjectCertificateCriteria `pulumi:"criteria"`
-}
-
-// GetHipObjectCertificateInput is an input type that accepts GetHipObjectCertificateArgs and GetHipObjectCertificateOutput values.
-// You can construct a concrete instance of `GetHipObjectCertificateInput` via:
-//
-//	GetHipObjectCertificateArgs{...}
-type GetHipObjectCertificateInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCertificateOutput() GetHipObjectCertificateOutput
-	ToGetHipObjectCertificateOutputWithContext(context.Context) GetHipObjectCertificateOutput
-}
-
-type GetHipObjectCertificateArgs struct {
-	// Criteria
-	Criteria GetHipObjectCertificateCriteriaInput `pulumi:"criteria"`
-}
-
-func (GetHipObjectCertificateArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCertificate)(nil)).Elem()
-}
-
-func (i GetHipObjectCertificateArgs) ToGetHipObjectCertificateOutput() GetHipObjectCertificateOutput {
-	return i.ToGetHipObjectCertificateOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCertificateArgs) ToGetHipObjectCertificateOutputWithContext(ctx context.Context) GetHipObjectCertificateOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCertificateOutput)
-}
-
-type GetHipObjectCertificateOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCertificateOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCertificate)(nil)).Elem()
-}
-
-func (o GetHipObjectCertificateOutput) ToGetHipObjectCertificateOutput() GetHipObjectCertificateOutput {
-	return o
-}
-
-func (o GetHipObjectCertificateOutput) ToGetHipObjectCertificateOutputWithContext(ctx context.Context) GetHipObjectCertificateOutput {
-	return o
-}
-
-// Criteria
-func (o GetHipObjectCertificateOutput) Criteria() GetHipObjectCertificateCriteriaOutput {
-	return o.ApplyT(func(v GetHipObjectCertificate) GetHipObjectCertificateCriteria { return v.Criteria }).(GetHipObjectCertificateCriteriaOutput)
-}
-
-type GetHipObjectCertificateCriteria struct {
-	// Certificate attributes
-	CertificateAttributes []GetHipObjectCertificateCriteriaCertificateAttribute `pulumi:"certificateAttributes"`
-	// Profile for authenticating client certificates
-	CertificateProfile string `pulumi:"certificateProfile"`
-}
-
-// GetHipObjectCertificateCriteriaInput is an input type that accepts GetHipObjectCertificateCriteriaArgs and GetHipObjectCertificateCriteriaOutput values.
-// You can construct a concrete instance of `GetHipObjectCertificateCriteriaInput` via:
-//
-//	GetHipObjectCertificateCriteriaArgs{...}
-type GetHipObjectCertificateCriteriaInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCertificateCriteriaOutput() GetHipObjectCertificateCriteriaOutput
-	ToGetHipObjectCertificateCriteriaOutputWithContext(context.Context) GetHipObjectCertificateCriteriaOutput
-}
-
-type GetHipObjectCertificateCriteriaArgs struct {
-	// Certificate attributes
-	CertificateAttributes GetHipObjectCertificateCriteriaCertificateAttributeArrayInput `pulumi:"certificateAttributes"`
-	// Profile for authenticating client certificates
-	CertificateProfile pulumi.StringInput `pulumi:"certificateProfile"`
-}
-
-func (GetHipObjectCertificateCriteriaArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCertificateCriteria)(nil)).Elem()
-}
-
-func (i GetHipObjectCertificateCriteriaArgs) ToGetHipObjectCertificateCriteriaOutput() GetHipObjectCertificateCriteriaOutput {
-	return i.ToGetHipObjectCertificateCriteriaOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCertificateCriteriaArgs) ToGetHipObjectCertificateCriteriaOutputWithContext(ctx context.Context) GetHipObjectCertificateCriteriaOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCertificateCriteriaOutput)
-}
-
-type GetHipObjectCertificateCriteriaOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCertificateCriteriaOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCertificateCriteria)(nil)).Elem()
-}
-
-func (o GetHipObjectCertificateCriteriaOutput) ToGetHipObjectCertificateCriteriaOutput() GetHipObjectCertificateCriteriaOutput {
-	return o
-}
-
-func (o GetHipObjectCertificateCriteriaOutput) ToGetHipObjectCertificateCriteriaOutputWithContext(ctx context.Context) GetHipObjectCertificateCriteriaOutput {
-	return o
-}
-
-// Certificate attributes
-func (o GetHipObjectCertificateCriteriaOutput) CertificateAttributes() GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput {
-	return o.ApplyT(func(v GetHipObjectCertificateCriteria) []GetHipObjectCertificateCriteriaCertificateAttribute {
-		return v.CertificateAttributes
-	}).(GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput)
-}
-
-// Profile for authenticating client certificates
-func (o GetHipObjectCertificateCriteriaOutput) CertificateProfile() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectCertificateCriteria) string { return v.CertificateProfile }).(pulumi.StringOutput)
-}
-
-type GetHipObjectCertificateCriteriaCertificateAttribute struct {
-	// Attribute Name
-	Name string `pulumi:"name"`
-	// Key value
-	Value string `pulumi:"value"`
-}
-
-// GetHipObjectCertificateCriteriaCertificateAttributeInput is an input type that accepts GetHipObjectCertificateCriteriaCertificateAttributeArgs and GetHipObjectCertificateCriteriaCertificateAttributeOutput values.
-// You can construct a concrete instance of `GetHipObjectCertificateCriteriaCertificateAttributeInput` via:
-//
-//	GetHipObjectCertificateCriteriaCertificateAttributeArgs{...}
-type GetHipObjectCertificateCriteriaCertificateAttributeInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCertificateCriteriaCertificateAttributeOutput() GetHipObjectCertificateCriteriaCertificateAttributeOutput
-	ToGetHipObjectCertificateCriteriaCertificateAttributeOutputWithContext(context.Context) GetHipObjectCertificateCriteriaCertificateAttributeOutput
-}
-
-type GetHipObjectCertificateCriteriaCertificateAttributeArgs struct {
-	// Attribute Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Key value
-	Value pulumi.StringInput `pulumi:"value"`
-}
-
-func (GetHipObjectCertificateCriteriaCertificateAttributeArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCertificateCriteriaCertificateAttribute)(nil)).Elem()
-}
-
-func (i GetHipObjectCertificateCriteriaCertificateAttributeArgs) ToGetHipObjectCertificateCriteriaCertificateAttributeOutput() GetHipObjectCertificateCriteriaCertificateAttributeOutput {
-	return i.ToGetHipObjectCertificateCriteriaCertificateAttributeOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCertificateCriteriaCertificateAttributeArgs) ToGetHipObjectCertificateCriteriaCertificateAttributeOutputWithContext(ctx context.Context) GetHipObjectCertificateCriteriaCertificateAttributeOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCertificateCriteriaCertificateAttributeOutput)
-}
-
-// GetHipObjectCertificateCriteriaCertificateAttributeArrayInput is an input type that accepts GetHipObjectCertificateCriteriaCertificateAttributeArray and GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput values.
-// You can construct a concrete instance of `GetHipObjectCertificateCriteriaCertificateAttributeArrayInput` via:
-//
-//	GetHipObjectCertificateCriteriaCertificateAttributeArray{ GetHipObjectCertificateCriteriaCertificateAttributeArgs{...} }
-type GetHipObjectCertificateCriteriaCertificateAttributeArrayInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCertificateCriteriaCertificateAttributeArrayOutput() GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput
-	ToGetHipObjectCertificateCriteriaCertificateAttributeArrayOutputWithContext(context.Context) GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput
-}
-
-type GetHipObjectCertificateCriteriaCertificateAttributeArray []GetHipObjectCertificateCriteriaCertificateAttributeInput
-
-func (GetHipObjectCertificateCriteriaCertificateAttributeArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCertificateCriteriaCertificateAttribute)(nil)).Elem()
-}
-
-func (i GetHipObjectCertificateCriteriaCertificateAttributeArray) ToGetHipObjectCertificateCriteriaCertificateAttributeArrayOutput() GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput {
-	return i.ToGetHipObjectCertificateCriteriaCertificateAttributeArrayOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCertificateCriteriaCertificateAttributeArray) ToGetHipObjectCertificateCriteriaCertificateAttributeArrayOutputWithContext(ctx context.Context) GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput)
-}
-
-type GetHipObjectCertificateCriteriaCertificateAttributeOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCertificateCriteriaCertificateAttributeOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCertificateCriteriaCertificateAttribute)(nil)).Elem()
-}
-
-func (o GetHipObjectCertificateCriteriaCertificateAttributeOutput) ToGetHipObjectCertificateCriteriaCertificateAttributeOutput() GetHipObjectCertificateCriteriaCertificateAttributeOutput {
-	return o
-}
-
-func (o GetHipObjectCertificateCriteriaCertificateAttributeOutput) ToGetHipObjectCertificateCriteriaCertificateAttributeOutputWithContext(ctx context.Context) GetHipObjectCertificateCriteriaCertificateAttributeOutput {
-	return o
-}
-
-// Attribute Name
-func (o GetHipObjectCertificateCriteriaCertificateAttributeOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectCertificateCriteriaCertificateAttribute) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Key value
-func (o GetHipObjectCertificateCriteriaCertificateAttributeOutput) Value() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHipObjectCertificateCriteriaCertificateAttribute) string { return v.Value }).(pulumi.StringOutput)
-}
-
-type GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetHipObjectCertificateCriteriaCertificateAttribute)(nil)).Elem()
-}
-
-func (o GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput) ToGetHipObjectCertificateCriteriaCertificateAttributeArrayOutput() GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput) ToGetHipObjectCertificateCriteriaCertificateAttributeArrayOutputWithContext(ctx context.Context) GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput {
-	return o
-}
-
-func (o GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput) Index(i pulumi.IntInput) GetHipObjectCertificateCriteriaCertificateAttributeOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetHipObjectCertificateCriteriaCertificateAttribute {
-		return vs[0].([]GetHipObjectCertificateCriteriaCertificateAttribute)[vs[1].(int)]
-	}).(GetHipObjectCertificateCriteriaCertificateAttributeOutput)
-}
-
-type GetHipObjectCustomChecks struct {
-	// Criteria
-	Criteria GetHipObjectCustomChecksCriteria `pulumi:"criteria"`
-}
-
-// GetHipObjectCustomChecksInput is an input type that accepts GetHipObjectCustomChecksArgs and GetHipObjectCustomChecksOutput values.
-// You can construct a concrete instance of `GetHipObjectCustomChecksInput` via:
-//
-//	GetHipObjectCustomChecksArgs{...}
-type GetHipObjectCustomChecksInput interface {
-	pulumi.Input
-
-	ToGetHipObjectCustomChecksOutput() GetHipObjectCustomChecksOutput
-	ToGetHipObjectCustomChecksOutputWithContext(context.Context) GetHipObjectCustomChecksOutput
-}
-
-type GetHipObjectCustomChecksArgs struct {
-	// Criteria
-	Criteria GetHipObjectCustomChecksCriteriaInput `pulumi:"criteria"`
-}
-
-func (GetHipObjectCustomChecksArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecks)(nil)).Elem()
-}
-
-func (i GetHipObjectCustomChecksArgs) ToGetHipObjectCustomChecksOutput() GetHipObjectCustomChecksOutput {
-	return i.ToGetHipObjectCustomChecksOutputWithContext(context.Background())
-}
-
-func (i GetHipObjectCustomChecksArgs) ToGetHipObjectCustomChecksOutputWithContext(ctx context.Context) GetHipObjectCustomChecksOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetHipObjectCustomChecksOutput)
-}
-
-type GetHipObjectCustomChecksOutput struct{ *pulumi.OutputState }
-
-func (GetHipObjectCustomChecksOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetHipObjectCustomChecks)(nil)).Elem()
-}
-
-func (o GetHipObjectCustomChecksOutput) ToGetHipObjectCustomChecksOutput() GetHipObjectCustomChecksOutput {
-	return o
-}
-
-func (o GetHipObjectCustomChecksOutput) ToGetHipObjectCustomChecksOutputWithContext(ctx context.Context) GetHipObjectCustomChecksOutput {
-	return o
-}
-
-// Criteria
-func (o GetHipObjectCustomChecksOutput) Criteria() GetHipObjectCustomChecksCriteriaOutput {
-	return o.ApplyT(func(v GetHipObjectCustomChecks) GetHipObjectCustomChecksCriteria { return v.Criteria }).(GetHipObjectCustomChecksCriteriaOutput)
+func (o GetForwardingProfileDestinationFqdnArrayOutput) Index(i pulumi.IntInput) GetForwardingProfileDestinationFqdnOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetForwardingProfileDestinationFqdn {
+		return vs[0].([]GetForwardingProfileDestinationFqdn)[vs[1].(int)]
+	}).(GetForwardingProfileDestinationFqdnOutput)
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardInput)(nil)).Elem(), GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAuthProfileListDataInput)(nil)).Elem(), GetBgpAuthProfileListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpAuthProfileListDataArrayInput)(nil)).Elem(), GetBgpAuthProfileListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4Input)(nil)).Elem(), GetBgpFilteringProfileIpv4Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastFilterListInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastFilterListArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4MulticastRouteMapsInput)(nil)).Elem(), GetBgpFilteringProfileIpv4MulticastRouteMapsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetBgpFilteringProfileIpv4UnicastFilterListInput)(nil)).Elem(), GetBgpFilteringProfileIpv4UnicastFilterListArgs{})
@@ -40928,6 +41181,16 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionRuleTypeInput)(nil)).Elem(), GetDecryptionRuleTypeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionRuleTypeSslForwardProxyInput)(nil)).Elem(), GetDecryptionRuleTypeSslForwardProxyArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDecryptionRuleTypeSslInboundInspectionInput)(nil)).Elem(), GetDecryptionRuleTypeSslInboundInspectionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceAvailableLicensessInput)(nil)).Elem(), GetDeviceAvailableLicensessArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceAvailableLicensessArrayInput)(nil)).Elem(), GetDeviceAvailableLicensessArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceInstalledLicenseInput)(nil)).Elem(), GetDeviceInstalledLicenseArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceInstalledLicenseArrayInput)(nil)).Elem(), GetDeviceInstalledLicenseArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceListDataInput)(nil)).Elem(), GetDeviceListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceListDataArrayInput)(nil)).Elem(), GetDeviceListDataArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceListDataAvailableLicensessInput)(nil)).Elem(), GetDeviceListDataAvailableLicensessArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceListDataAvailableLicensessArrayInput)(nil)).Elem(), GetDeviceListDataAvailableLicensessArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceListDataInstalledLicenseInput)(nil)).Elem(), GetDeviceListDataInstalledLicenseArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceListDataInstalledLicenseArrayInput)(nil)).Elem(), GetDeviceListDataInstalledLicenseArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceRedistributionCollectorListDataInput)(nil)).Elem(), GetDeviceRedistributionCollectorListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceRedistributionCollectorListDataArrayInput)(nil)).Elem(), GetDeviceRedistributionCollectorListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetDeviceRedistributionCollectorListDataRedistributionCollectorInput)(nil)).Elem(), GetDeviceRedistributionCollectorListDataRedistributionCollectorArgs{})
@@ -41206,37 +41469,30 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetFileBlockingProfileRuleArrayInput)(nil)).Elem(), GetFileBlockingProfileRuleArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetFolderListDataInput)(nil)).Elem(), GetFolderListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetFolderListDataArrayInput)(nil)).Elem(), GetFolderListDataArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingGeneralInput)(nil)).Elem(), GetGeneralSettingGeneralArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingGeneralGeoLocationInput)(nil)).Elem(), GetGeneralSettingGeneralGeoLocationArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingGeneralSettingInput)(nil)).Elem(), GetGeneralSettingGeneralSettingArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingGeneralSettingManagementInput)(nil)).Elem(), GetGeneralSettingGeneralSettingManagementArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingListDataInput)(nil)).Elem(), GetGeneralSettingListDataArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingListDataArrayInput)(nil)).Elem(), GetGeneralSettingListDataArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingListDataGeneralInput)(nil)).Elem(), GetGeneralSettingListDataGeneralArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingListDataGeneralGeoLocationInput)(nil)).Elem(), GetGeneralSettingListDataGeneralGeoLocationArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingListDataGeneralSettingInput)(nil)).Elem(), GetGeneralSettingListDataGeneralSettingArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGeneralSettingListDataGeneralSettingManagementInput)(nil)).Elem(), GetGeneralSettingListDataGeneralSettingManagementArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGlobalprotectMatchListListDataInput)(nil)).Elem(), GetGlobalprotectMatchListListDataArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetGlobalprotectMatchListListDataArrayInput)(nil)).Elem(), GetGlobalprotectMatchListListDataArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareInput)(nil)).Elem(), GetHipObjectAntiMalwareArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaLastScanTimeArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeWithinInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaLastScanTimeWithinArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaProductVersionInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaProductVersionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaProductVersionNotWithinInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaProductVersionNotWithinArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaProductVersionWithinInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaProductVersionWithinArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaVirdefVersionInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaVirdefVersionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaVirdefVersionWithinInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaVirdefVersionWithinArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareVendorInput)(nil)).Elem(), GetHipObjectAntiMalwareVendorArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareVendorArrayInput)(nil)).Elem(), GetHipObjectAntiMalwareVendorArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCertificateInput)(nil)).Elem(), GetHipObjectCertificateArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCertificateCriteriaInput)(nil)).Elem(), GetHipObjectCertificateCriteriaArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCertificateCriteriaCertificateAttributeInput)(nil)).Elem(), GetHipObjectCertificateCriteriaCertificateAttributeArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCertificateCriteriaCertificateAttributeArrayInput)(nil)).Elem(), GetHipObjectCertificateCriteriaCertificateAttributeArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectCustomChecksInput)(nil)).Elem(), GetHipObjectCustomChecksArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetForwardingProfileDestinationFqdnInput)(nil)).Elem(), GetForwardingProfileDestinationFqdnArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetForwardingProfileDestinationFqdnArrayInput)(nil)).Elem(), GetForwardingProfileDestinationFqdnArray{})
+	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsOutput{})
+	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsAllOutput{})
+	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastRemovePrivateAsReplaceAsOutput{})
+	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityOutput{})
+	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityAllOutput{})
+	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityBothOutput{})
+	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityExtendedOutput{})
+	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityLargeOutput{})
+	pulumi.RegisterOutputType(GetBgpAddressFamilyProfileListDataIpv4UnicastSendCommunityStandardOutput{})
+	pulumi.RegisterOutputType(GetBgpAuthProfileListDataOutput{})
+	pulumi.RegisterOutputType(GetBgpAuthProfileListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4Output{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementExistOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastConditionalAdvertisementNonExistOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastFilterListOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastInboundNetworkFiltersOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastOutboundNetworkFiltersOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4MulticastRouteMapsOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastOutput{})
+	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementOutput{})
 	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementExistOutput{})
 	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastConditionalAdvertisementNonExistOutput{})
 	pulumi.RegisterOutputType(GetBgpFilteringProfileIpv4UnicastFilterListOutput{})
@@ -41501,6 +41757,16 @@ func init() {
 	pulumi.RegisterOutputType(GetDecryptionRuleTypeOutput{})
 	pulumi.RegisterOutputType(GetDecryptionRuleTypeSslForwardProxyOutput{})
 	pulumi.RegisterOutputType(GetDecryptionRuleTypeSslInboundInspectionOutput{})
+	pulumi.RegisterOutputType(GetDeviceAvailableLicensessOutput{})
+	pulumi.RegisterOutputType(GetDeviceAvailableLicensessArrayOutput{})
+	pulumi.RegisterOutputType(GetDeviceInstalledLicenseOutput{})
+	pulumi.RegisterOutputType(GetDeviceInstalledLicenseArrayOutput{})
+	pulumi.RegisterOutputType(GetDeviceListDataOutput{})
+	pulumi.RegisterOutputType(GetDeviceListDataArrayOutput{})
+	pulumi.RegisterOutputType(GetDeviceListDataAvailableLicensessOutput{})
+	pulumi.RegisterOutputType(GetDeviceListDataAvailableLicensessArrayOutput{})
+	pulumi.RegisterOutputType(GetDeviceListDataInstalledLicenseOutput{})
+	pulumi.RegisterOutputType(GetDeviceListDataInstalledLicenseArrayOutput{})
 	pulumi.RegisterOutputType(GetDeviceRedistributionCollectorListDataOutput{})
 	pulumi.RegisterOutputType(GetDeviceRedistributionCollectorListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetDeviceRedistributionCollectorListDataRedistributionCollectorOutput{})
@@ -41779,35 +42045,6 @@ func init() {
 	pulumi.RegisterOutputType(GetFileBlockingProfileRuleArrayOutput{})
 	pulumi.RegisterOutputType(GetFolderListDataOutput{})
 	pulumi.RegisterOutputType(GetFolderListDataArrayOutput{})
-	pulumi.RegisterOutputType(GetGeneralSettingGeneralOutput{})
-	pulumi.RegisterOutputType(GetGeneralSettingGeneralGeoLocationOutput{})
-	pulumi.RegisterOutputType(GetGeneralSettingGeneralSettingOutput{})
-	pulumi.RegisterOutputType(GetGeneralSettingGeneralSettingManagementOutput{})
-	pulumi.RegisterOutputType(GetGeneralSettingListDataOutput{})
-	pulumi.RegisterOutputType(GetGeneralSettingListDataArrayOutput{})
-	pulumi.RegisterOutputType(GetGeneralSettingListDataGeneralOutput{})
-	pulumi.RegisterOutputType(GetGeneralSettingListDataGeneralGeoLocationOutput{})
-	pulumi.RegisterOutputType(GetGeneralSettingListDataGeneralSettingOutput{})
-	pulumi.RegisterOutputType(GetGeneralSettingListDataGeneralSettingManagementOutput{})
-	pulumi.RegisterOutputType(GetGlobalprotectMatchListListDataOutput{})
-	pulumi.RegisterOutputType(GetGlobalprotectMatchListListDataArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaLastScanTimeOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaLastScanTimeNotAvailableOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaLastScanTimeNotWithinOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaLastScanTimeWithinOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaProductVersionOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaProductVersionNotWithinOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaProductVersionWithinOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaVirdefVersionOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaVirdefVersionNotWithinOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaVirdefVersionWithinOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareVendorOutput{})
-	pulumi.RegisterOutputType(GetHipObjectAntiMalwareVendorArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCertificateOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCertificateCriteriaOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCertificateCriteriaCertificateAttributeOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCertificateCriteriaCertificateAttributeArrayOutput{})
-	pulumi.RegisterOutputType(GetHipObjectCustomChecksOutput{})
+	pulumi.RegisterOutputType(GetForwardingProfileDestinationFqdnOutput{})
+	pulumi.RegisterOutputType(GetForwardingProfileDestinationFqdnArrayOutput{})
 }

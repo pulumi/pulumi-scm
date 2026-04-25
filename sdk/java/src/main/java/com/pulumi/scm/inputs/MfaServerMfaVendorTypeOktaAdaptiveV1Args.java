@@ -6,7 +6,6 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -65,13 +64,13 @@ public final class MfaServerMfaVendorTypeOktaAdaptiveV1Args extends com.pulumi.r
      * 
      */
     @Import(name="oktaTimeout", required=true)
-    private Output<Integer> oktaTimeout;
+    private Output<String> oktaTimeout;
 
     /**
      * @return Okta timeout (seconds)
      * 
      */
-    public Output<Integer> oktaTimeout() {
+    public Output<String> oktaTimeout() {
         return this.oktaTimeout;
     }
 
@@ -187,7 +186,7 @@ public final class MfaServerMfaVendorTypeOktaAdaptiveV1Args extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder oktaTimeout(Output<Integer> oktaTimeout) {
+        public Builder oktaTimeout(Output<String> oktaTimeout) {
             $.oktaTimeout = oktaTimeout;
             return this;
         }
@@ -198,7 +197,7 @@ public final class MfaServerMfaVendorTypeOktaAdaptiveV1Args extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder oktaTimeout(Integer oktaTimeout) {
+        public Builder oktaTimeout(String oktaTimeout) {
             return oktaTimeout(Output.of(oktaTimeout));
         }
 

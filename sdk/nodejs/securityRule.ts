@@ -166,6 +166,33 @@ import * as utilities from "./utilities";
  *     logEnd: true,
  *     tags: [webTag.name],
  * });
+ * // Internet Rule with Web Application
+ * const internetRuleExample = new scm.SecurityRule("internet_rule_example", {
+ *     folder: "ngfw-shared",
+ *     name: "internet-rule-postman",
+ *     policyType: "Internet",
+ *     allowWebApplications: [
+ *         {
+ *             name: "web_appln",
+ *             type: "application",
+ *             applicationFunction: ["any"],
+ *             appId: "4sync",
+ *         },
+ *         {
+ *             name: "web_appln_2",
+ *             type: "application",
+ *             applicationFunction: ["any"],
+ *             appId: "4sync",
+ *         },
+ *     ],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     action: "allow",
+ *     sourceUsers: [
+ *         "casidp\\test_1",
+ *         "CN=ng1,DC=casidp,DC=onmicrosoft,DC=com",
+ *     ],
+ * });
  * ```
  *
  * ## Import

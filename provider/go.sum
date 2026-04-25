@@ -573,8 +573,8 @@ github.com/opentracing/basictracer-go v1.1.0/go.mod h1:V2HZueSJEp879yv285Aap1BS6
 github.com/opentracing/opentracing-go v1.1.0/go.mod h1:UkNAQd3GIcIGf0SeVgPpRdFStlNbqXla1AfSYxPUl2o=
 github.com/opentracing/opentracing-go v1.2.0 h1:uEJPy/1a5RIPAJ0Ov+OIO8OxWu77jEv+1B0VhjKrZUs=
 github.com/opentracing/opentracing-go v1.2.0/go.mod h1:GxEUsuufX4nBwe+T+Wl9TAgYrxe9dPLANfrWvHYVTgc=
-github.com/paloaltonetworks/scm-go v1.0.9 h1:8ULIUuozz2eCwsAmuXFHjZa39m5uf7iJhi4F7ymuUrs=
-github.com/paloaltonetworks/scm-go v1.0.9/go.mod h1:gWG/i4dvJKoqR4Eu2ov/9psATUS33nNYbNezs/77xt0=
+github.com/paloaltonetworks/scm-go v1.0.10 h1:MXSPWAJBYL22Ys9H+kJ+VmYVYN1glegU76+6CUl2id4=
+github.com/paloaltonetworks/scm-go v1.0.10/go.mod h1:gWG/i4dvJKoqR4Eu2ov/9psATUS33nNYbNezs/77xt0=
 github.com/pgavlin/fx v0.1.6 h1:r9jEg69DhNoCd3Xh0+5mIbdbS3PqWrVWujkY76MFRTU=
 github.com/pgavlin/fx v0.1.6/go.mod h1:KWZJ6fqBBSh8GxHYqwYCf3rYE7Gp2p0N8tJp8xv9u9M=
 github.com/pgavlin/fx/v2 v2.0.10 h1:ggyQ6pB+lEQEbEae48Wh/X221eLOamMD7i01ISe88u4=

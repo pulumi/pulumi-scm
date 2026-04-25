@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Okta timeout (seconds)
         /// </summary>
-        public readonly int OktaTimeout;
+        public readonly string OktaTimeout;
         /// <summary>
         /// Okta API token
         /// </summary>
@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
 
             string oktaOrg,
 
-            int oktaTimeout,
+            string oktaTimeout,
 
             string oktaToken)
         {

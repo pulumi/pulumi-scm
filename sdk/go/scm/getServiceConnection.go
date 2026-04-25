@@ -92,6 +92,8 @@ type LookupServiceConnectionResult struct {
 	Qos GetServiceConnectionQos `pulumi:"qos"`
 	// Region
 	Region string `pulumi:"region"`
+	// Region tag
+	RegionTag string `pulumi:"regionTag"`
 	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel string `pulumi:"secondaryIpsecTunnel"`
 	// Source nat
@@ -203,6 +205,11 @@ func (o LookupServiceConnectionResultOutput) Qos() GetServiceConnectionQosOutput
 // Region
 func (o LookupServiceConnectionResultOutput) Region() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.Region }).(pulumi.StringOutput)
+}
+
+// Region tag
+func (o LookupServiceConnectionResultOutput) RegionTag() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.RegionTag }).(pulumi.StringOutput)
 }
 
 // Secondary ipsec tunnel

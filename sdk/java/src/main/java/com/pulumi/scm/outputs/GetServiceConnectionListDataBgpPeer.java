@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,6 +31,11 @@ public final class GetServiceConnectionListDataBgpPeer {
      * 
      */
     private String peerIpv6Address;
+    /**
+     * @return Same peer IP address for SC
+     * 
+     */
+    private Boolean sameAsPrimary;
     /**
      * @return Secret
      * 
@@ -66,6 +72,13 @@ public final class GetServiceConnectionListDataBgpPeer {
         return this.peerIpv6Address;
     }
     /**
+     * @return Same peer IP address for SC
+     * 
+     */
+    public Boolean sameAsPrimary() {
+        return this.sameAsPrimary;
+    }
+    /**
      * @return Secret
      * 
      */
@@ -86,6 +99,7 @@ public final class GetServiceConnectionListDataBgpPeer {
         private String localIpv6Address;
         private String peerIpAddress;
         private String peerIpv6Address;
+        private Boolean sameAsPrimary;
         private String secret;
         public Builder() {}
         public Builder(GetServiceConnectionListDataBgpPeer defaults) {
@@ -94,6 +108,7 @@ public final class GetServiceConnectionListDataBgpPeer {
     	      this.localIpv6Address = defaults.localIpv6Address;
     	      this.peerIpAddress = defaults.peerIpAddress;
     	      this.peerIpv6Address = defaults.peerIpv6Address;
+    	      this.sameAsPrimary = defaults.sameAsPrimary;
     	      this.secret = defaults.secret;
         }
 
@@ -130,6 +145,14 @@ public final class GetServiceConnectionListDataBgpPeer {
             return this;
         }
         @CustomType.Setter
+        public Builder sameAsPrimary(Boolean sameAsPrimary) {
+            if (sameAsPrimary == null) {
+              throw new MissingRequiredPropertyException("GetServiceConnectionListDataBgpPeer", "sameAsPrimary");
+            }
+            this.sameAsPrimary = sameAsPrimary;
+            return this;
+        }
+        @CustomType.Setter
         public Builder secret(String secret) {
             if (secret == null) {
               throw new MissingRequiredPropertyException("GetServiceConnectionListDataBgpPeer", "secret");
@@ -143,6 +166,7 @@ public final class GetServiceConnectionListDataBgpPeer {
             _resultValue.localIpv6Address = localIpv6Address;
             _resultValue.peerIpAddress = peerIpAddress;
             _resultValue.peerIpv6Address = peerIpv6Address;
+            _resultValue.sameAsPrimary = sameAsPrimary;
             _resultValue.secret = secret;
             return _resultValue;
         }

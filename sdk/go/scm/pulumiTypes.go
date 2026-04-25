@@ -61143,6 +61143,3396 @@ func (o FileBlockingProfileRuleArrayOutput) Index(i pulumi.IntInput) FileBlockin
 	}).(FileBlockingProfileRuleOutput)
 }
 
+type ForwardingProfileDestinationFqdn struct {
+	// alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
+	Name string `pulumi:"name"`
+	// Port number for fqdn based destination
+	Port *int `pulumi:"port"`
+}
+
+// ForwardingProfileDestinationFqdnInput is an input type that accepts ForwardingProfileDestinationFqdnArgs and ForwardingProfileDestinationFqdnOutput values.
+// You can construct a concrete instance of `ForwardingProfileDestinationFqdnInput` via:
+//
+//	ForwardingProfileDestinationFqdnArgs{...}
+type ForwardingProfileDestinationFqdnInput interface {
+	pulumi.Input
+
+	ToForwardingProfileDestinationFqdnOutput() ForwardingProfileDestinationFqdnOutput
+	ToForwardingProfileDestinationFqdnOutputWithContext(context.Context) ForwardingProfileDestinationFqdnOutput
+}
+
+type ForwardingProfileDestinationFqdnArgs struct {
+	// alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
+	Name pulumi.StringInput `pulumi:"name"`
+	// Port number for fqdn based destination
+	Port pulumi.IntPtrInput `pulumi:"port"`
+}
+
+func (ForwardingProfileDestinationFqdnArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileDestinationFqdn)(nil)).Elem()
+}
+
+func (i ForwardingProfileDestinationFqdnArgs) ToForwardingProfileDestinationFqdnOutput() ForwardingProfileDestinationFqdnOutput {
+	return i.ToForwardingProfileDestinationFqdnOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileDestinationFqdnArgs) ToForwardingProfileDestinationFqdnOutputWithContext(ctx context.Context) ForwardingProfileDestinationFqdnOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileDestinationFqdnOutput)
+}
+
+// ForwardingProfileDestinationFqdnArrayInput is an input type that accepts ForwardingProfileDestinationFqdnArray and ForwardingProfileDestinationFqdnArrayOutput values.
+// You can construct a concrete instance of `ForwardingProfileDestinationFqdnArrayInput` via:
+//
+//	ForwardingProfileDestinationFqdnArray{ ForwardingProfileDestinationFqdnArgs{...} }
+type ForwardingProfileDestinationFqdnArrayInput interface {
+	pulumi.Input
+
+	ToForwardingProfileDestinationFqdnArrayOutput() ForwardingProfileDestinationFqdnArrayOutput
+	ToForwardingProfileDestinationFqdnArrayOutputWithContext(context.Context) ForwardingProfileDestinationFqdnArrayOutput
+}
+
+type ForwardingProfileDestinationFqdnArray []ForwardingProfileDestinationFqdnInput
+
+func (ForwardingProfileDestinationFqdnArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileDestinationFqdn)(nil)).Elem()
+}
+
+func (i ForwardingProfileDestinationFqdnArray) ToForwardingProfileDestinationFqdnArrayOutput() ForwardingProfileDestinationFqdnArrayOutput {
+	return i.ToForwardingProfileDestinationFqdnArrayOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileDestinationFqdnArray) ToForwardingProfileDestinationFqdnArrayOutputWithContext(ctx context.Context) ForwardingProfileDestinationFqdnArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileDestinationFqdnArrayOutput)
+}
+
+type ForwardingProfileDestinationFqdnOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileDestinationFqdnOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileDestinationFqdn)(nil)).Elem()
+}
+
+func (o ForwardingProfileDestinationFqdnOutput) ToForwardingProfileDestinationFqdnOutput() ForwardingProfileDestinationFqdnOutput {
+	return o
+}
+
+func (o ForwardingProfileDestinationFqdnOutput) ToForwardingProfileDestinationFqdnOutputWithContext(ctx context.Context) ForwardingProfileDestinationFqdnOutput {
+	return o
+}
+
+// alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
+func (o ForwardingProfileDestinationFqdnOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v ForwardingProfileDestinationFqdn) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Port number for fqdn based destination
+func (o ForwardingProfileDestinationFqdnOutput) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileDestinationFqdn) *int { return v.Port }).(pulumi.IntPtrOutput)
+}
+
+type ForwardingProfileDestinationFqdnArrayOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileDestinationFqdnArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileDestinationFqdn)(nil)).Elem()
+}
+
+func (o ForwardingProfileDestinationFqdnArrayOutput) ToForwardingProfileDestinationFqdnArrayOutput() ForwardingProfileDestinationFqdnArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileDestinationFqdnArrayOutput) ToForwardingProfileDestinationFqdnArrayOutputWithContext(ctx context.Context) ForwardingProfileDestinationFqdnArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileDestinationFqdnArrayOutput) Index(i pulumi.IntInput) ForwardingProfileDestinationFqdnOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ForwardingProfileDestinationFqdn {
+		return vs[0].([]ForwardingProfileDestinationFqdn)[vs[1].(int)]
+	}).(ForwardingProfileDestinationFqdnOutput)
+}
+
+type ForwardingProfileDestinationIpAddress struct {
+	// IP address with wildcards and CIDR notation support
+	Name string `pulumi:"name"`
+	// Port number for IP address based destination
+	Port *int `pulumi:"port"`
+}
+
+// ForwardingProfileDestinationIpAddressInput is an input type that accepts ForwardingProfileDestinationIpAddressArgs and ForwardingProfileDestinationIpAddressOutput values.
+// You can construct a concrete instance of `ForwardingProfileDestinationIpAddressInput` via:
+//
+//	ForwardingProfileDestinationIpAddressArgs{...}
+type ForwardingProfileDestinationIpAddressInput interface {
+	pulumi.Input
+
+	ToForwardingProfileDestinationIpAddressOutput() ForwardingProfileDestinationIpAddressOutput
+	ToForwardingProfileDestinationIpAddressOutputWithContext(context.Context) ForwardingProfileDestinationIpAddressOutput
+}
+
+type ForwardingProfileDestinationIpAddressArgs struct {
+	// IP address with wildcards and CIDR notation support
+	Name pulumi.StringInput `pulumi:"name"`
+	// Port number for IP address based destination
+	Port pulumi.IntPtrInput `pulumi:"port"`
+}
+
+func (ForwardingProfileDestinationIpAddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileDestinationIpAddress)(nil)).Elem()
+}
+
+func (i ForwardingProfileDestinationIpAddressArgs) ToForwardingProfileDestinationIpAddressOutput() ForwardingProfileDestinationIpAddressOutput {
+	return i.ToForwardingProfileDestinationIpAddressOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileDestinationIpAddressArgs) ToForwardingProfileDestinationIpAddressOutputWithContext(ctx context.Context) ForwardingProfileDestinationIpAddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileDestinationIpAddressOutput)
+}
+
+// ForwardingProfileDestinationIpAddressArrayInput is an input type that accepts ForwardingProfileDestinationIpAddressArray and ForwardingProfileDestinationIpAddressArrayOutput values.
+// You can construct a concrete instance of `ForwardingProfileDestinationIpAddressArrayInput` via:
+//
+//	ForwardingProfileDestinationIpAddressArray{ ForwardingProfileDestinationIpAddressArgs{...} }
+type ForwardingProfileDestinationIpAddressArrayInput interface {
+	pulumi.Input
+
+	ToForwardingProfileDestinationIpAddressArrayOutput() ForwardingProfileDestinationIpAddressArrayOutput
+	ToForwardingProfileDestinationIpAddressArrayOutputWithContext(context.Context) ForwardingProfileDestinationIpAddressArrayOutput
+}
+
+type ForwardingProfileDestinationIpAddressArray []ForwardingProfileDestinationIpAddressInput
+
+func (ForwardingProfileDestinationIpAddressArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileDestinationIpAddress)(nil)).Elem()
+}
+
+func (i ForwardingProfileDestinationIpAddressArray) ToForwardingProfileDestinationIpAddressArrayOutput() ForwardingProfileDestinationIpAddressArrayOutput {
+	return i.ToForwardingProfileDestinationIpAddressArrayOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileDestinationIpAddressArray) ToForwardingProfileDestinationIpAddressArrayOutputWithContext(ctx context.Context) ForwardingProfileDestinationIpAddressArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileDestinationIpAddressArrayOutput)
+}
+
+type ForwardingProfileDestinationIpAddressOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileDestinationIpAddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileDestinationIpAddress)(nil)).Elem()
+}
+
+func (o ForwardingProfileDestinationIpAddressOutput) ToForwardingProfileDestinationIpAddressOutput() ForwardingProfileDestinationIpAddressOutput {
+	return o
+}
+
+func (o ForwardingProfileDestinationIpAddressOutput) ToForwardingProfileDestinationIpAddressOutputWithContext(ctx context.Context) ForwardingProfileDestinationIpAddressOutput {
+	return o
+}
+
+// IP address with wildcards and CIDR notation support
+func (o ForwardingProfileDestinationIpAddressOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v ForwardingProfileDestinationIpAddress) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Port number for IP address based destination
+func (o ForwardingProfileDestinationIpAddressOutput) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileDestinationIpAddress) *int { return v.Port }).(pulumi.IntPtrOutput)
+}
+
+type ForwardingProfileDestinationIpAddressArrayOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileDestinationIpAddressArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileDestinationIpAddress)(nil)).Elem()
+}
+
+func (o ForwardingProfileDestinationIpAddressArrayOutput) ToForwardingProfileDestinationIpAddressArrayOutput() ForwardingProfileDestinationIpAddressArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileDestinationIpAddressArrayOutput) ToForwardingProfileDestinationIpAddressArrayOutputWithContext(ctx context.Context) ForwardingProfileDestinationIpAddressArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileDestinationIpAddressArrayOutput) Index(i pulumi.IntInput) ForwardingProfileDestinationIpAddressOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ForwardingProfileDestinationIpAddress {
+		return vs[0].([]ForwardingProfileDestinationIpAddress)[vs[1].(int)]
+	}).(ForwardingProfileDestinationIpAddressOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyConnectivityPreference struct {
+	// Indicates whether this connectivity method is enabled for use in the proxy configuration
+	Enabled *bool `pulumi:"enabled"`
+	// Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+	Name string `pulumi:"name"`
+}
+
+// ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceInput is an input type that accepts ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs and ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput values.
+// You can construct a concrete instance of `ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceInput` via:
+//
+//	ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs{...}
+type ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceInput interface {
+	pulumi.Input
+
+	ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput() ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput
+	ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutputWithContext(context.Context) ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput
+}
+
+type ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs struct {
+	// Indicates whether this connectivity method is enabled for use in the proxy configuration
+	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
+	// Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyConnectivityPreference)(nil)).Elem()
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs) ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput() ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput {
+	return i.ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs) ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput)
+}
+
+// ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayInput is an input type that accepts ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArray and ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput values.
+// You can construct a concrete instance of `ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayInput` via:
+//
+//	ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArray{ ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs{...} }
+type ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayInput interface {
+	pulumi.Input
+
+	ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput() ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput
+	ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutputWithContext(context.Context) ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput
+}
+
+type ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArray []ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceInput
+
+func (ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileRegionalAndCustomProxyConnectivityPreference)(nil)).Elem()
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArray) ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput() ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput {
+	return i.ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArray) ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyConnectivityPreference)(nil)).Elem()
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput) ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput() ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput) ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput {
+	return o
+}
+
+// Indicates whether this connectivity method is enabled for use in the proxy configuration
+func (o ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileRegionalAndCustomProxyConnectivityPreference) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+}
+
+// Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+func (o ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v ForwardingProfileRegionalAndCustomProxyConnectivityPreference) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileRegionalAndCustomProxyConnectivityPreference)(nil)).Elem()
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput) ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput() ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput) ToForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput) Index(i pulumi.IntInput) ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ForwardingProfileRegionalAndCustomProxyConnectivityPreference {
+		return vs[0].([]ForwardingProfileRegionalAndCustomProxyConnectivityPreference)[vs[1].(int)]
+	}).(ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation struct {
+	// Add list of locations separated by space, in that region
+	Locations []string `pulumi:"locations"`
+	// One of the region from 'americas', 'europe', 'apac'
+	Name string `pulumi:"name"`
+}
+
+// ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationInput is an input type that accepts ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs and ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput values.
+// You can construct a concrete instance of `ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationInput` via:
+//
+//	ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs{...}
+type ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationInput interface {
+	pulumi.Input
+
+	ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput() ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput
+	ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutputWithContext(context.Context) ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput
+}
+
+type ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs struct {
+	// Add list of locations separated by space, in that region
+	Locations pulumi.StringArrayInput `pulumi:"locations"`
+	// One of the region from 'americas', 'europe', 'apac'
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation)(nil)).Elem()
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs) ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput() ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput {
+	return i.ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs) ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput)
+}
+
+// ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayInput is an input type that accepts ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArray and ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput values.
+// You can construct a concrete instance of `ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayInput` via:
+//
+//	ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArray{ ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs{...} }
+type ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayInput interface {
+	pulumi.Input
+
+	ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput() ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput
+	ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutputWithContext(context.Context) ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput
+}
+
+type ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArray []ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationInput
+
+func (ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation)(nil)).Elem()
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArray) ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput() ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput {
+	return i.ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArray) ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation)(nil)).Elem()
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput) ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput() ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput) ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput {
+	return o
+}
+
+// Add list of locations separated by space, in that region
+func (o ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput) Locations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation) []string { return v.Locations }).(pulumi.StringArrayOutput)
+}
+
+// One of the region from 'americas', 'europe', 'apac'
+func (o ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation)(nil)).Elem()
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput) ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput() ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput) ToForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput) Index(i pulumi.IntInput) ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation {
+		return vs[0].([]ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation)[vs[1].(int)]
+	}).(ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyProxy1 struct {
+	// fqdn of the primary proxy server (supports wildcards and alphanumeric characters with dots, hyphens, and underscores)
+	Fqdn *string `pulumi:"fqdn"`
+	// Geographic or network location identifier for the primary proxy server
+	Location *string `pulumi:"location"`
+	// port number for primary proxy
+	Port *int `pulumi:"port"`
+}
+
+// ForwardingProfileRegionalAndCustomProxyProxy1Input is an input type that accepts ForwardingProfileRegionalAndCustomProxyProxy1Args and ForwardingProfileRegionalAndCustomProxyProxy1Output values.
+// You can construct a concrete instance of `ForwardingProfileRegionalAndCustomProxyProxy1Input` via:
+//
+//	ForwardingProfileRegionalAndCustomProxyProxy1Args{...}
+type ForwardingProfileRegionalAndCustomProxyProxy1Input interface {
+	pulumi.Input
+
+	ToForwardingProfileRegionalAndCustomProxyProxy1Output() ForwardingProfileRegionalAndCustomProxyProxy1Output
+	ToForwardingProfileRegionalAndCustomProxyProxy1OutputWithContext(context.Context) ForwardingProfileRegionalAndCustomProxyProxy1Output
+}
+
+type ForwardingProfileRegionalAndCustomProxyProxy1Args struct {
+	// fqdn of the primary proxy server (supports wildcards and alphanumeric characters with dots, hyphens, and underscores)
+	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
+	// Geographic or network location identifier for the primary proxy server
+	Location pulumi.StringPtrInput `pulumi:"location"`
+	// port number for primary proxy
+	Port pulumi.IntPtrInput `pulumi:"port"`
+}
+
+func (ForwardingProfileRegionalAndCustomProxyProxy1Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyProxy1)(nil)).Elem()
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyProxy1Args) ToForwardingProfileRegionalAndCustomProxyProxy1Output() ForwardingProfileRegionalAndCustomProxyProxy1Output {
+	return i.ToForwardingProfileRegionalAndCustomProxyProxy1OutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyProxy1Args) ToForwardingProfileRegionalAndCustomProxyProxy1OutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy1Output {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileRegionalAndCustomProxyProxy1Output)
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyProxy1Args) ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutput() ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput {
+	return i.ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyProxy1Args) ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileRegionalAndCustomProxyProxy1Output).ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileRegionalAndCustomProxyProxy1PtrInput is an input type that accepts ForwardingProfileRegionalAndCustomProxyProxy1Args, ForwardingProfileRegionalAndCustomProxyProxy1Ptr and ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileRegionalAndCustomProxyProxy1PtrInput` via:
+//
+//	        ForwardingProfileRegionalAndCustomProxyProxy1Args{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileRegionalAndCustomProxyProxy1PtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutput() ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput
+	ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutputWithContext(context.Context) ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput
+}
+
+type forwardingProfileRegionalAndCustomProxyProxy1PtrType ForwardingProfileRegionalAndCustomProxyProxy1Args
+
+func ForwardingProfileRegionalAndCustomProxyProxy1Ptr(v *ForwardingProfileRegionalAndCustomProxyProxy1Args) ForwardingProfileRegionalAndCustomProxyProxy1PtrInput {
+	return (*forwardingProfileRegionalAndCustomProxyProxy1PtrType)(v)
+}
+
+func (*forwardingProfileRegionalAndCustomProxyProxy1PtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileRegionalAndCustomProxyProxy1)(nil)).Elem()
+}
+
+func (i *forwardingProfileRegionalAndCustomProxyProxy1PtrType) ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutput() ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput {
+	return i.ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileRegionalAndCustomProxyProxy1PtrType) ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyProxy1Output struct{ *pulumi.OutputState }
+
+func (ForwardingProfileRegionalAndCustomProxyProxy1Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyProxy1)(nil)).Elem()
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy1Output) ToForwardingProfileRegionalAndCustomProxyProxy1Output() ForwardingProfileRegionalAndCustomProxyProxy1Output {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy1Output) ToForwardingProfileRegionalAndCustomProxyProxy1OutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy1Output {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy1Output) ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutput() ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput {
+	return o.ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy1Output) ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileRegionalAndCustomProxyProxy1) *ForwardingProfileRegionalAndCustomProxyProxy1 {
+		return &v
+	}).(ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput)
+}
+
+// fqdn of the primary proxy server (supports wildcards and alphanumeric characters with dots, hyphens, and underscores)
+func (o ForwardingProfileRegionalAndCustomProxyProxy1Output) Fqdn() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileRegionalAndCustomProxyProxy1) *string { return v.Fqdn }).(pulumi.StringPtrOutput)
+}
+
+// Geographic or network location identifier for the primary proxy server
+func (o ForwardingProfileRegionalAndCustomProxyProxy1Output) Location() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileRegionalAndCustomProxyProxy1) *string { return v.Location }).(pulumi.StringPtrOutput)
+}
+
+// port number for primary proxy
+func (o ForwardingProfileRegionalAndCustomProxyProxy1Output) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileRegionalAndCustomProxyProxy1) *int { return v.Port }).(pulumi.IntPtrOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileRegionalAndCustomProxyProxy1)(nil)).Elem()
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput) ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutput() ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput) ToForwardingProfileRegionalAndCustomProxyProxy1PtrOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput) Elem() ForwardingProfileRegionalAndCustomProxyProxy1Output {
+	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxyProxy1) ForwardingProfileRegionalAndCustomProxyProxy1 {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileRegionalAndCustomProxyProxy1
+		return ret
+	}).(ForwardingProfileRegionalAndCustomProxyProxy1Output)
+}
+
+// fqdn of the primary proxy server (supports wildcards and alphanumeric characters with dots, hyphens, and underscores)
+func (o ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput) Fqdn() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxyProxy1) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Fqdn
+	}).(pulumi.StringPtrOutput)
+}
+
+// Geographic or network location identifier for the primary proxy server
+func (o ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput) Location() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxyProxy1) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Location
+	}).(pulumi.StringPtrOutput)
+}
+
+// port number for primary proxy
+func (o ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxyProxy1) *int {
+		if v == nil {
+			return nil
+		}
+		return v.Port
+	}).(pulumi.IntPtrOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyProxy2 struct {
+	// Fqdn of the secondary (backup) proxy server used for failover scenarios
+	Fqdn *string `pulumi:"fqdn"`
+	// Geographic or network location identifier for the secondary proxy server
+	Location *string `pulumi:"location"`
+	// port number for secondary proxy
+	Port *int `pulumi:"port"`
+}
+
+// ForwardingProfileRegionalAndCustomProxyProxy2Input is an input type that accepts ForwardingProfileRegionalAndCustomProxyProxy2Args and ForwardingProfileRegionalAndCustomProxyProxy2Output values.
+// You can construct a concrete instance of `ForwardingProfileRegionalAndCustomProxyProxy2Input` via:
+//
+//	ForwardingProfileRegionalAndCustomProxyProxy2Args{...}
+type ForwardingProfileRegionalAndCustomProxyProxy2Input interface {
+	pulumi.Input
+
+	ToForwardingProfileRegionalAndCustomProxyProxy2Output() ForwardingProfileRegionalAndCustomProxyProxy2Output
+	ToForwardingProfileRegionalAndCustomProxyProxy2OutputWithContext(context.Context) ForwardingProfileRegionalAndCustomProxyProxy2Output
+}
+
+type ForwardingProfileRegionalAndCustomProxyProxy2Args struct {
+	// Fqdn of the secondary (backup) proxy server used for failover scenarios
+	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
+	// Geographic or network location identifier for the secondary proxy server
+	Location pulumi.StringPtrInput `pulumi:"location"`
+	// port number for secondary proxy
+	Port pulumi.IntPtrInput `pulumi:"port"`
+}
+
+func (ForwardingProfileRegionalAndCustomProxyProxy2Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyProxy2)(nil)).Elem()
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyProxy2Args) ToForwardingProfileRegionalAndCustomProxyProxy2Output() ForwardingProfileRegionalAndCustomProxyProxy2Output {
+	return i.ToForwardingProfileRegionalAndCustomProxyProxy2OutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyProxy2Args) ToForwardingProfileRegionalAndCustomProxyProxy2OutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy2Output {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileRegionalAndCustomProxyProxy2Output)
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyProxy2Args) ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutput() ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput {
+	return i.ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileRegionalAndCustomProxyProxy2Args) ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileRegionalAndCustomProxyProxy2Output).ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileRegionalAndCustomProxyProxy2PtrInput is an input type that accepts ForwardingProfileRegionalAndCustomProxyProxy2Args, ForwardingProfileRegionalAndCustomProxyProxy2Ptr and ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileRegionalAndCustomProxyProxy2PtrInput` via:
+//
+//	        ForwardingProfileRegionalAndCustomProxyProxy2Args{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileRegionalAndCustomProxyProxy2PtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutput() ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput
+	ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutputWithContext(context.Context) ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput
+}
+
+type forwardingProfileRegionalAndCustomProxyProxy2PtrType ForwardingProfileRegionalAndCustomProxyProxy2Args
+
+func ForwardingProfileRegionalAndCustomProxyProxy2Ptr(v *ForwardingProfileRegionalAndCustomProxyProxy2Args) ForwardingProfileRegionalAndCustomProxyProxy2PtrInput {
+	return (*forwardingProfileRegionalAndCustomProxyProxy2PtrType)(v)
+}
+
+func (*forwardingProfileRegionalAndCustomProxyProxy2PtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileRegionalAndCustomProxyProxy2)(nil)).Elem()
+}
+
+func (i *forwardingProfileRegionalAndCustomProxyProxy2PtrType) ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutput() ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput {
+	return i.ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileRegionalAndCustomProxyProxy2PtrType) ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyProxy2Output struct{ *pulumi.OutputState }
+
+func (ForwardingProfileRegionalAndCustomProxyProxy2Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyProxy2)(nil)).Elem()
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy2Output) ToForwardingProfileRegionalAndCustomProxyProxy2Output() ForwardingProfileRegionalAndCustomProxyProxy2Output {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy2Output) ToForwardingProfileRegionalAndCustomProxyProxy2OutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy2Output {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy2Output) ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutput() ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput {
+	return o.ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy2Output) ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileRegionalAndCustomProxyProxy2) *ForwardingProfileRegionalAndCustomProxyProxy2 {
+		return &v
+	}).(ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput)
+}
+
+// Fqdn of the secondary (backup) proxy server used for failover scenarios
+func (o ForwardingProfileRegionalAndCustomProxyProxy2Output) Fqdn() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileRegionalAndCustomProxyProxy2) *string { return v.Fqdn }).(pulumi.StringPtrOutput)
+}
+
+// Geographic or network location identifier for the secondary proxy server
+func (o ForwardingProfileRegionalAndCustomProxyProxy2Output) Location() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileRegionalAndCustomProxyProxy2) *string { return v.Location }).(pulumi.StringPtrOutput)
+}
+
+// port number for secondary proxy
+func (o ForwardingProfileRegionalAndCustomProxyProxy2Output) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileRegionalAndCustomProxyProxy2) *int { return v.Port }).(pulumi.IntPtrOutput)
+}
+
+type ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileRegionalAndCustomProxyProxy2)(nil)).Elem()
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput) ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutput() ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput) ToForwardingProfileRegionalAndCustomProxyProxy2PtrOutputWithContext(ctx context.Context) ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput {
+	return o
+}
+
+func (o ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput) Elem() ForwardingProfileRegionalAndCustomProxyProxy2Output {
+	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxyProxy2) ForwardingProfileRegionalAndCustomProxyProxy2 {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileRegionalAndCustomProxyProxy2
+		return ret
+	}).(ForwardingProfileRegionalAndCustomProxyProxy2Output)
+}
+
+// Fqdn of the secondary (backup) proxy server used for failover scenarios
+func (o ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput) Fqdn() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxyProxy2) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Fqdn
+	}).(pulumi.StringPtrOutput)
+}
+
+// Geographic or network location identifier for the secondary proxy server
+func (o ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput) Location() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxyProxy2) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Location
+	}).(pulumi.StringPtrOutput)
+}
+
+// port number for secondary proxy
+func (o ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileRegionalAndCustomProxyProxy2) *int {
+		if v == nil {
+			return nil
+		}
+		return v.Port
+	}).(pulumi.IntPtrOutput)
+}
+
+type ForwardingProfileType struct {
+	// Global Protect proxy-based forwarding configuration
+	GlobalProtectProxy *ForwardingProfileTypeGlobalProtectProxy `pulumi:"globalProtectProxy"`
+	// PAC file based forwarding configuration
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+	PacFile *ForwardingProfileTypePacFile `pulumi:"pacFile"`
+	// ZTNA agent-based forwarding configuration
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+	ZtnaAgent *ForwardingProfileTypeZtnaAgent `pulumi:"ztnaAgent"`
+}
+
+// ForwardingProfileTypeInput is an input type that accepts ForwardingProfileTypeArgs and ForwardingProfileTypeOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeInput` via:
+//
+//	ForwardingProfileTypeArgs{...}
+type ForwardingProfileTypeInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeOutput() ForwardingProfileTypeOutput
+	ToForwardingProfileTypeOutputWithContext(context.Context) ForwardingProfileTypeOutput
+}
+
+type ForwardingProfileTypeArgs struct {
+	// Global Protect proxy-based forwarding configuration
+	GlobalProtectProxy ForwardingProfileTypeGlobalProtectProxyPtrInput `pulumi:"globalProtectProxy"`
+	// PAC file based forwarding configuration
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+	PacFile ForwardingProfileTypePacFilePtrInput `pulumi:"pacFile"`
+	// ZTNA agent-based forwarding configuration
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+	ZtnaAgent ForwardingProfileTypeZtnaAgentPtrInput `pulumi:"ztnaAgent"`
+}
+
+func (ForwardingProfileTypeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileType)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypeArgs) ToForwardingProfileTypeOutput() ForwardingProfileTypeOutput {
+	return i.ToForwardingProfileTypeOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeArgs) ToForwardingProfileTypeOutputWithContext(ctx context.Context) ForwardingProfileTypeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeOutput)
+}
+
+func (i ForwardingProfileTypeArgs) ToForwardingProfileTypePtrOutput() ForwardingProfileTypePtrOutput {
+	return i.ToForwardingProfileTypePtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeArgs) ToForwardingProfileTypePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeOutput).ToForwardingProfileTypePtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileTypePtrInput is an input type that accepts ForwardingProfileTypeArgs, ForwardingProfileTypePtr and ForwardingProfileTypePtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypePtrInput` via:
+//
+//	        ForwardingProfileTypeArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileTypePtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypePtrOutput() ForwardingProfileTypePtrOutput
+	ToForwardingProfileTypePtrOutputWithContext(context.Context) ForwardingProfileTypePtrOutput
+}
+
+type forwardingProfileTypePtrType ForwardingProfileTypeArgs
+
+func ForwardingProfileTypePtr(v *ForwardingProfileTypeArgs) ForwardingProfileTypePtrInput {
+	return (*forwardingProfileTypePtrType)(v)
+}
+
+func (*forwardingProfileTypePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileType)(nil)).Elem()
+}
+
+func (i *forwardingProfileTypePtrType) ToForwardingProfileTypePtrOutput() ForwardingProfileTypePtrOutput {
+	return i.ToForwardingProfileTypePtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileTypePtrType) ToForwardingProfileTypePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePtrOutput)
+}
+
+type ForwardingProfileTypeOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileType)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeOutput) ToForwardingProfileTypeOutput() ForwardingProfileTypeOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeOutput) ToForwardingProfileTypeOutputWithContext(ctx context.Context) ForwardingProfileTypeOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeOutput) ToForwardingProfileTypePtrOutput() ForwardingProfileTypePtrOutput {
+	return o.ToForwardingProfileTypePtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileTypeOutput) ToForwardingProfileTypePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileType) *ForwardingProfileType {
+		return &v
+	}).(ForwardingProfileTypePtrOutput)
+}
+
+// Global Protect proxy-based forwarding configuration
+func (o ForwardingProfileTypeOutput) GlobalProtectProxy() ForwardingProfileTypeGlobalProtectProxyPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileType) *ForwardingProfileTypeGlobalProtectProxy { return v.GlobalProtectProxy }).(ForwardingProfileTypeGlobalProtectProxyPtrOutput)
+}
+
+// PAC file based forwarding configuration
+//
+// > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+func (o ForwardingProfileTypeOutput) PacFile() ForwardingProfileTypePacFilePtrOutput {
+	return o.ApplyT(func(v ForwardingProfileType) *ForwardingProfileTypePacFile { return v.PacFile }).(ForwardingProfileTypePacFilePtrOutput)
+}
+
+// ZTNA agent-based forwarding configuration
+//
+// > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+func (o ForwardingProfileTypeOutput) ZtnaAgent() ForwardingProfileTypeZtnaAgentPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileType) *ForwardingProfileTypeZtnaAgent { return v.ZtnaAgent }).(ForwardingProfileTypeZtnaAgentPtrOutput)
+}
+
+type ForwardingProfileTypePtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileType)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypePtrOutput) ToForwardingProfileTypePtrOutput() ForwardingProfileTypePtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePtrOutput) ToForwardingProfileTypePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePtrOutput) Elem() ForwardingProfileTypeOutput {
+	return o.ApplyT(func(v *ForwardingProfileType) ForwardingProfileType {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileType
+		return ret
+	}).(ForwardingProfileTypeOutput)
+}
+
+// Global Protect proxy-based forwarding configuration
+func (o ForwardingProfileTypePtrOutput) GlobalProtectProxy() ForwardingProfileTypeGlobalProtectProxyPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileType) *ForwardingProfileTypeGlobalProtectProxy {
+		if v == nil {
+			return nil
+		}
+		return v.GlobalProtectProxy
+	}).(ForwardingProfileTypeGlobalProtectProxyPtrOutput)
+}
+
+// PAC file based forwarding configuration
+//
+// > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+func (o ForwardingProfileTypePtrOutput) PacFile() ForwardingProfileTypePacFilePtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileType) *ForwardingProfileTypePacFile {
+		if v == nil {
+			return nil
+		}
+		return v.PacFile
+	}).(ForwardingProfileTypePacFilePtrOutput)
+}
+
+// ZTNA agent-based forwarding configuration
+//
+// > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+func (o ForwardingProfileTypePtrOutput) ZtnaAgent() ForwardingProfileTypeZtnaAgentPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileType) *ForwardingProfileTypeZtnaAgent {
+		if v == nil {
+			return nil
+		}
+		return v.ZtnaAgent
+	}).(ForwardingProfileTypeZtnaAgentPtrOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxy struct {
+	// Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+	BlockRule *ForwardingProfileTypeGlobalProtectProxyBlockRule `pulumi:"blockRule"`
+	// List of GlobalProtect proxy-based forwarding rules
+	ForwardingRules []ForwardingProfileTypeGlobalProtectProxyForwardingRule `pulumi:"forwardingRules"`
+	// User uploaded PAC file for Global Protect proxy-based forwarding configuration
+	PacUpload *bool `pulumi:"pacUpload"`
+}
+
+// ForwardingProfileTypeGlobalProtectProxyInput is an input type that accepts ForwardingProfileTypeGlobalProtectProxyArgs and ForwardingProfileTypeGlobalProtectProxyOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeGlobalProtectProxyInput` via:
+//
+//	ForwardingProfileTypeGlobalProtectProxyArgs{...}
+type ForwardingProfileTypeGlobalProtectProxyInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeGlobalProtectProxyOutput() ForwardingProfileTypeGlobalProtectProxyOutput
+	ToForwardingProfileTypeGlobalProtectProxyOutputWithContext(context.Context) ForwardingProfileTypeGlobalProtectProxyOutput
+}
+
+type ForwardingProfileTypeGlobalProtectProxyArgs struct {
+	// Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+	BlockRule ForwardingProfileTypeGlobalProtectProxyBlockRulePtrInput `pulumi:"blockRule"`
+	// List of GlobalProtect proxy-based forwarding rules
+	ForwardingRules ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayInput `pulumi:"forwardingRules"`
+	// User uploaded PAC file for Global Protect proxy-based forwarding configuration
+	PacUpload pulumi.BoolPtrInput `pulumi:"pacUpload"`
+}
+
+func (ForwardingProfileTypeGlobalProtectProxyArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxy)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyArgs) ToForwardingProfileTypeGlobalProtectProxyOutput() ForwardingProfileTypeGlobalProtectProxyOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyArgs) ToForwardingProfileTypeGlobalProtectProxyOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyOutput)
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyArgs) ToForwardingProfileTypeGlobalProtectProxyPtrOutput() ForwardingProfileTypeGlobalProtectProxyPtrOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyPtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyArgs) ToForwardingProfileTypeGlobalProtectProxyPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyOutput).ToForwardingProfileTypeGlobalProtectProxyPtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileTypeGlobalProtectProxyPtrInput is an input type that accepts ForwardingProfileTypeGlobalProtectProxyArgs, ForwardingProfileTypeGlobalProtectProxyPtr and ForwardingProfileTypeGlobalProtectProxyPtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeGlobalProtectProxyPtrInput` via:
+//
+//	        ForwardingProfileTypeGlobalProtectProxyArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileTypeGlobalProtectProxyPtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeGlobalProtectProxyPtrOutput() ForwardingProfileTypeGlobalProtectProxyPtrOutput
+	ToForwardingProfileTypeGlobalProtectProxyPtrOutputWithContext(context.Context) ForwardingProfileTypeGlobalProtectProxyPtrOutput
+}
+
+type forwardingProfileTypeGlobalProtectProxyPtrType ForwardingProfileTypeGlobalProtectProxyArgs
+
+func ForwardingProfileTypeGlobalProtectProxyPtr(v *ForwardingProfileTypeGlobalProtectProxyArgs) ForwardingProfileTypeGlobalProtectProxyPtrInput {
+	return (*forwardingProfileTypeGlobalProtectProxyPtrType)(v)
+}
+
+func (*forwardingProfileTypeGlobalProtectProxyPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeGlobalProtectProxy)(nil)).Elem()
+}
+
+func (i *forwardingProfileTypeGlobalProtectProxyPtrType) ToForwardingProfileTypeGlobalProtectProxyPtrOutput() ForwardingProfileTypeGlobalProtectProxyPtrOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyPtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileTypeGlobalProtectProxyPtrType) ToForwardingProfileTypeGlobalProtectProxyPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyPtrOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeGlobalProtectProxyOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxy)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyOutput) ToForwardingProfileTypeGlobalProtectProxyOutput() ForwardingProfileTypeGlobalProtectProxyOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyOutput) ToForwardingProfileTypeGlobalProtectProxyOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyOutput) ToForwardingProfileTypeGlobalProtectProxyPtrOutput() ForwardingProfileTypeGlobalProtectProxyPtrOutput {
+	return o.ToForwardingProfileTypeGlobalProtectProxyPtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyOutput) ToForwardingProfileTypeGlobalProtectProxyPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileTypeGlobalProtectProxy) *ForwardingProfileTypeGlobalProtectProxy {
+		return &v
+	}).(ForwardingProfileTypeGlobalProtectProxyPtrOutput)
+}
+
+// Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+func (o ForwardingProfileTypeGlobalProtectProxyOutput) BlockRule() ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxy) *ForwardingProfileTypeGlobalProtectProxyBlockRule {
+		return v.BlockRule
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput)
+}
+
+// List of GlobalProtect proxy-based forwarding rules
+func (o ForwardingProfileTypeGlobalProtectProxyOutput) ForwardingRules() ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxy) []ForwardingProfileTypeGlobalProtectProxyForwardingRule {
+		return v.ForwardingRules
+	}).(ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput)
+}
+
+// User uploaded PAC file for Global Protect proxy-based forwarding configuration
+func (o ForwardingProfileTypeGlobalProtectProxyOutput) PacUpload() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxy) *bool { return v.PacUpload }).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyPtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeGlobalProtectProxyPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeGlobalProtectProxy)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyPtrOutput) ToForwardingProfileTypeGlobalProtectProxyPtrOutput() ForwardingProfileTypeGlobalProtectProxyPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyPtrOutput) ToForwardingProfileTypeGlobalProtectProxyPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyPtrOutput) Elem() ForwardingProfileTypeGlobalProtectProxyOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxy) ForwardingProfileTypeGlobalProtectProxy {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileTypeGlobalProtectProxy
+		return ret
+	}).(ForwardingProfileTypeGlobalProtectProxyOutput)
+}
+
+// Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+func (o ForwardingProfileTypeGlobalProtectProxyPtrOutput) BlockRule() ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxy) *ForwardingProfileTypeGlobalProtectProxyBlockRule {
+		if v == nil {
+			return nil
+		}
+		return v.BlockRule
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput)
+}
+
+// List of GlobalProtect proxy-based forwarding rules
+func (o ForwardingProfileTypeGlobalProtectProxyPtrOutput) ForwardingRules() ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxy) []ForwardingProfileTypeGlobalProtectProxyForwardingRule {
+		if v == nil {
+			return nil
+		}
+		return v.ForwardingRules
+	}).(ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput)
+}
+
+// User uploaded PAC file for Global Protect proxy-based forwarding configuration
+func (o ForwardingProfileTypeGlobalProtectProxyPtrOutput) PacUpload() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxy) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.PacUpload
+	}).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRule struct {
+	// TCP traffic allowlist configuration
+	AllowTcp *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp `pulumi:"allowTcp"`
+	// UDP traffic allowlist configuration with location and destination support
+	AllowUdp *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp `pulumi:"allowUdp"`
+	// Enable block rule
+	Enable *bool `pulumi:"enable"`
+}
+
+// ForwardingProfileTypeGlobalProtectProxyBlockRuleInput is an input type that accepts ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs and ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeGlobalProtectProxyBlockRuleInput` via:
+//
+//	ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs{...}
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeGlobalProtectProxyBlockRuleOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput
+	ToForwardingProfileTypeGlobalProtectProxyBlockRuleOutputWithContext(context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs struct {
+	// TCP traffic allowlist configuration
+	AllowTcp ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrInput `pulumi:"allowTcp"`
+	// UDP traffic allowlist configuration with location and destination support
+	AllowUdp ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrInput `pulumi:"allowUdp"`
+	// Enable block rule
+	Enable pulumi.BoolPtrInput `pulumi:"enable"`
+}
+
+func (ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRule)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRuleOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyBlockRuleOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRuleOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput)
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput).ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileTypeGlobalProtectProxyBlockRulePtrInput is an input type that accepts ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs, ForwardingProfileTypeGlobalProtectProxyBlockRulePtr and ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeGlobalProtectProxyBlockRulePtrInput` via:
+//
+//	        ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileTypeGlobalProtectProxyBlockRulePtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput
+	ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutputWithContext(context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput
+}
+
+type forwardingProfileTypeGlobalProtectProxyBlockRulePtrType ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs
+
+func ForwardingProfileTypeGlobalProtectProxyBlockRulePtr(v *ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs) ForwardingProfileTypeGlobalProtectProxyBlockRulePtrInput {
+	return (*forwardingProfileTypeGlobalProtectProxyBlockRulePtrType)(v)
+}
+
+func (*forwardingProfileTypeGlobalProtectProxyBlockRulePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeGlobalProtectProxyBlockRule)(nil)).Elem()
+}
+
+func (i *forwardingProfileTypeGlobalProtectProxyBlockRulePtrType) ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileTypeGlobalProtectProxyBlockRulePtrType) ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput {
+	return o.ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileTypeGlobalProtectProxyBlockRule) *ForwardingProfileTypeGlobalProtectProxyBlockRule {
+		return &v
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput)
+}
+
+// TCP traffic allowlist configuration
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput) AllowTcp() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyBlockRule) *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp {
+		return v.AllowTcp
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput)
+}
+
+// UDP traffic allowlist configuration with location and destination support
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput) AllowUdp() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyBlockRule) *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp {
+		return v.AllowUdp
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput)
+}
+
+// Enable block rule
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyBlockRule) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeGlobalProtectProxyBlockRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput) Elem() ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRule) ForwardingProfileTypeGlobalProtectProxyBlockRule {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileTypeGlobalProtectProxyBlockRule
+		return ret
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput)
+}
+
+// TCP traffic allowlist configuration
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput) AllowTcp() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRule) *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp {
+		if v == nil {
+			return nil
+		}
+		return v.AllowTcp
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput)
+}
+
+// UDP traffic allowlist configuration with location and destination support
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput) AllowUdp() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRule) *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp {
+		if v == nil {
+			return nil
+		}
+		return v.AllowUdp
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput)
+}
+
+// Enable block rule
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRule) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enable
+	}).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp struct {
+	// Enable locations for allow-tcp
+	EnableLocations *bool `pulumi:"enableLocations"`
+	// List of user locations allowed for TCP traffic
+	Locations []string `pulumi:"locations"`
+}
+
+// ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpInput is an input type that accepts ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs and ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpInput` via:
+//
+//	ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs{...}
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput
+	ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutputWithContext(context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs struct {
+	// Enable locations for allow-tcp
+	EnableLocations pulumi.BoolPtrInput `pulumi:"enableLocations"`
+	// List of user locations allowed for TCP traffic
+	Locations pulumi.StringArrayInput `pulumi:"locations"`
+}
+
+func (ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput)
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput).ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrInput is an input type that accepts ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs, ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtr and ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrInput` via:
+//
+//	        ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput
+	ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutputWithContext(context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput
+}
+
+type forwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrType ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs
+
+func ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtr(v *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrInput {
+	return (*forwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrType)(v)
+}
+
+func (*forwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp)(nil)).Elem()
+}
+
+func (i *forwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrType) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrType) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput {
+	return o.ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp) *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp {
+		return &v
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput)
+}
+
+// Enable locations for allow-tcp
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput) EnableLocations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp) *bool { return v.EnableLocations }).(pulumi.BoolPtrOutput)
+}
+
+// List of user locations allowed for TCP traffic
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput) Locations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp) []string { return v.Locations }).(pulumi.StringArrayOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput) Elem() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp
+		return ret
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput)
+}
+
+// Enable locations for allow-tcp
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput) EnableLocations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.EnableLocations
+	}).(pulumi.BoolPtrOutput)
+}
+
+// List of user locations allowed for TCP traffic
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput) Locations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp) []string {
+		if v == nil {
+			return nil
+		}
+		return v.Locations
+	}).(pulumi.StringArrayOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp struct {
+	// Destination addresses or networks allowed for UDP traffic
+	Destinations *string `pulumi:"destinations"`
+	// Enable destinations for allow-udp
+	EnableDestinations *bool `pulumi:"enableDestinations"`
+	// Enable locations for allow-udp
+	EnableLocations *bool `pulumi:"enableLocations"`
+	// List of user locations allowed for UDP traffic
+	Locations []string `pulumi:"locations"`
+}
+
+// ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpInput is an input type that accepts ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs and ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpInput` via:
+//
+//	ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs{...}
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput
+	ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutputWithContext(context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs struct {
+	// Destination addresses or networks allowed for UDP traffic
+	Destinations pulumi.StringPtrInput `pulumi:"destinations"`
+	// Enable destinations for allow-udp
+	EnableDestinations pulumi.BoolPtrInput `pulumi:"enableDestinations"`
+	// Enable locations for allow-udp
+	EnableLocations pulumi.BoolPtrInput `pulumi:"enableLocations"`
+	// List of user locations allowed for UDP traffic
+	Locations pulumi.StringArrayInput `pulumi:"locations"`
+}
+
+func (ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput)
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput).ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrInput is an input type that accepts ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs, ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtr and ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrInput` via:
+//
+//	        ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput
+	ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutputWithContext(context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput
+}
+
+type forwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrType ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs
+
+func ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtr(v *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrInput {
+	return (*forwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrType)(v)
+}
+
+func (*forwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp)(nil)).Elem()
+}
+
+func (i *forwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrType) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrType) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput {
+	return o.ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp) *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp {
+		return &v
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput)
+}
+
+// Destination addresses or networks allowed for UDP traffic
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput) Destinations() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp) *string { return v.Destinations }).(pulumi.StringPtrOutput)
+}
+
+// Enable destinations for allow-udp
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput) EnableDestinations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp) *bool { return v.EnableDestinations }).(pulumi.BoolPtrOutput)
+}
+
+// Enable locations for allow-udp
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput) EnableLocations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp) *bool { return v.EnableLocations }).(pulumi.BoolPtrOutput)
+}
+
+// List of user locations allowed for UDP traffic
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput) Locations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp) []string { return v.Locations }).(pulumi.StringArrayOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput) ToForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput) Elem() ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp) ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp
+		return ret
+	}).(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput)
+}
+
+// Destination addresses or networks allowed for UDP traffic
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput) Destinations() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Destinations
+	}).(pulumi.StringPtrOutput)
+}
+
+// Enable destinations for allow-udp
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput) EnableDestinations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.EnableDestinations
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Enable locations for allow-udp
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput) EnableLocations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.EnableLocations
+	}).(pulumi.BoolPtrOutput)
+}
+
+// List of user locations allowed for UDP traffic
+func (o ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput) Locations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp) []string {
+		if v == nil {
+			return nil
+		}
+		return v.Locations
+	}).(pulumi.StringArrayOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyForwardingRule struct {
+	// Connectivity method for this forwarding rule (e.g. direct)
+	Connectivity *string `pulumi:"connectivity"`
+	// Destination scope this forwarding rule applies to
+	Destinations *string `pulumi:"destinations"`
+	// Enable a basic forwarding rule
+	Enabled *bool `pulumi:"enabled"`
+	// Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+	Name string `pulumi:"name"`
+	// User location scope this rule applies to
+	UserLocations *string `pulumi:"userLocations"`
+}
+
+// ForwardingProfileTypeGlobalProtectProxyForwardingRuleInput is an input type that accepts ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs and ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeGlobalProtectProxyForwardingRuleInput` via:
+//
+//	ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs{...}
+type ForwardingProfileTypeGlobalProtectProxyForwardingRuleInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput() ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput
+	ToForwardingProfileTypeGlobalProtectProxyForwardingRuleOutputWithContext(context.Context) ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput
+}
+
+type ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs struct {
+	// Connectivity method for this forwarding rule (e.g. direct)
+	Connectivity pulumi.StringPtrInput `pulumi:"connectivity"`
+	// Destination scope this forwarding rule applies to
+	Destinations pulumi.StringPtrInput `pulumi:"destinations"`
+	// Enable a basic forwarding rule
+	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
+	// Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+	Name pulumi.StringInput `pulumi:"name"`
+	// User location scope this rule applies to
+	UserLocations pulumi.StringPtrInput `pulumi:"userLocations"`
+}
+
+func (ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyForwardingRule)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs) ToForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput() ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyForwardingRuleOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs) ToForwardingProfileTypeGlobalProtectProxyForwardingRuleOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput)
+}
+
+// ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayInput is an input type that accepts ForwardingProfileTypeGlobalProtectProxyForwardingRuleArray and ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayInput` via:
+//
+//	ForwardingProfileTypeGlobalProtectProxyForwardingRuleArray{ ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs{...} }
+type ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput() ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput
+	ToForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutputWithContext(context.Context) ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput
+}
+
+type ForwardingProfileTypeGlobalProtectProxyForwardingRuleArray []ForwardingProfileTypeGlobalProtectProxyForwardingRuleInput
+
+func (ForwardingProfileTypeGlobalProtectProxyForwardingRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileTypeGlobalProtectProxyForwardingRule)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyForwardingRuleArray) ToForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput() ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput {
+	return i.ToForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeGlobalProtectProxyForwardingRuleArray) ToForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyForwardingRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput) ToForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput() ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput) ToForwardingProfileTypeGlobalProtectProxyForwardingRuleOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput {
+	return o
+}
+
+// Connectivity method for this forwarding rule (e.g. direct)
+func (o ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput) Connectivity() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyForwardingRule) *string { return v.Connectivity }).(pulumi.StringPtrOutput)
+}
+
+// Destination scope this forwarding rule applies to
+func (o ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput) Destinations() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyForwardingRule) *string { return v.Destinations }).(pulumi.StringPtrOutput)
+}
+
+// Enable a basic forwarding rule
+func (o ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyForwardingRule) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+}
+
+// Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+func (o ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyForwardingRule) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// User location scope this rule applies to
+func (o ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput) UserLocations() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeGlobalProtectProxyForwardingRule) *string { return v.UserLocations }).(pulumi.StringPtrOutput)
+}
+
+type ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileTypeGlobalProtectProxyForwardingRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput) ToForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput() ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput) ToForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutputWithContext(ctx context.Context) ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput) Index(i pulumi.IntInput) ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ForwardingProfileTypeGlobalProtectProxyForwardingRule {
+		return vs[0].([]ForwardingProfileTypeGlobalProtectProxyForwardingRule)[vs[1].(int)]
+	}).(ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput)
+}
+
+type ForwardingProfileTypePacFile struct {
+	// Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+	BlockRule *ForwardingProfileTypePacFileBlockRule `pulumi:"blockRule"`
+	// List of PAC file-based forwarding rules
+	ForwardingRules []ForwardingProfileTypePacFileForwardingRule `pulumi:"forwardingRules"`
+	// User upload PAC file for PAC file based forwarding configuration
+	PacUpload *bool `pulumi:"pacUpload"`
+}
+
+// ForwardingProfileTypePacFileInput is an input type that accepts ForwardingProfileTypePacFileArgs and ForwardingProfileTypePacFileOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypePacFileInput` via:
+//
+//	ForwardingProfileTypePacFileArgs{...}
+type ForwardingProfileTypePacFileInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypePacFileOutput() ForwardingProfileTypePacFileOutput
+	ToForwardingProfileTypePacFileOutputWithContext(context.Context) ForwardingProfileTypePacFileOutput
+}
+
+type ForwardingProfileTypePacFileArgs struct {
+	// Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+	BlockRule ForwardingProfileTypePacFileBlockRulePtrInput `pulumi:"blockRule"`
+	// List of PAC file-based forwarding rules
+	ForwardingRules ForwardingProfileTypePacFileForwardingRuleArrayInput `pulumi:"forwardingRules"`
+	// User upload PAC file for PAC file based forwarding configuration
+	PacUpload pulumi.BoolPtrInput `pulumi:"pacUpload"`
+}
+
+func (ForwardingProfileTypePacFileArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypePacFile)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypePacFileArgs) ToForwardingProfileTypePacFileOutput() ForwardingProfileTypePacFileOutput {
+	return i.ToForwardingProfileTypePacFileOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypePacFileArgs) ToForwardingProfileTypePacFileOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileOutput)
+}
+
+func (i ForwardingProfileTypePacFileArgs) ToForwardingProfileTypePacFilePtrOutput() ForwardingProfileTypePacFilePtrOutput {
+	return i.ToForwardingProfileTypePacFilePtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypePacFileArgs) ToForwardingProfileTypePacFilePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFilePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileOutput).ToForwardingProfileTypePacFilePtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileTypePacFilePtrInput is an input type that accepts ForwardingProfileTypePacFileArgs, ForwardingProfileTypePacFilePtr and ForwardingProfileTypePacFilePtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypePacFilePtrInput` via:
+//
+//	        ForwardingProfileTypePacFileArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileTypePacFilePtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypePacFilePtrOutput() ForwardingProfileTypePacFilePtrOutput
+	ToForwardingProfileTypePacFilePtrOutputWithContext(context.Context) ForwardingProfileTypePacFilePtrOutput
+}
+
+type forwardingProfileTypePacFilePtrType ForwardingProfileTypePacFileArgs
+
+func ForwardingProfileTypePacFilePtr(v *ForwardingProfileTypePacFileArgs) ForwardingProfileTypePacFilePtrInput {
+	return (*forwardingProfileTypePacFilePtrType)(v)
+}
+
+func (*forwardingProfileTypePacFilePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypePacFile)(nil)).Elem()
+}
+
+func (i *forwardingProfileTypePacFilePtrType) ToForwardingProfileTypePacFilePtrOutput() ForwardingProfileTypePacFilePtrOutput {
+	return i.ToForwardingProfileTypePacFilePtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileTypePacFilePtrType) ToForwardingProfileTypePacFilePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFilePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFilePtrOutput)
+}
+
+type ForwardingProfileTypePacFileOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypePacFileOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypePacFile)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypePacFileOutput) ToForwardingProfileTypePacFileOutput() ForwardingProfileTypePacFileOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileOutput) ToForwardingProfileTypePacFileOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileOutput) ToForwardingProfileTypePacFilePtrOutput() ForwardingProfileTypePacFilePtrOutput {
+	return o.ToForwardingProfileTypePacFilePtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileTypePacFileOutput) ToForwardingProfileTypePacFilePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFilePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileTypePacFile) *ForwardingProfileTypePacFile {
+		return &v
+	}).(ForwardingProfileTypePacFilePtrOutput)
+}
+
+// Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+func (o ForwardingProfileTypePacFileOutput) BlockRule() ForwardingProfileTypePacFileBlockRulePtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFile) *ForwardingProfileTypePacFileBlockRule { return v.BlockRule }).(ForwardingProfileTypePacFileBlockRulePtrOutput)
+}
+
+// List of PAC file-based forwarding rules
+func (o ForwardingProfileTypePacFileOutput) ForwardingRules() ForwardingProfileTypePacFileForwardingRuleArrayOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFile) []ForwardingProfileTypePacFileForwardingRule {
+		return v.ForwardingRules
+	}).(ForwardingProfileTypePacFileForwardingRuleArrayOutput)
+}
+
+// User upload PAC file for PAC file based forwarding configuration
+func (o ForwardingProfileTypePacFileOutput) PacUpload() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFile) *bool { return v.PacUpload }).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypePacFilePtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypePacFilePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypePacFile)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypePacFilePtrOutput) ToForwardingProfileTypePacFilePtrOutput() ForwardingProfileTypePacFilePtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFilePtrOutput) ToForwardingProfileTypePacFilePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFilePtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFilePtrOutput) Elem() ForwardingProfileTypePacFileOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFile) ForwardingProfileTypePacFile {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileTypePacFile
+		return ret
+	}).(ForwardingProfileTypePacFileOutput)
+}
+
+// Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+func (o ForwardingProfileTypePacFilePtrOutput) BlockRule() ForwardingProfileTypePacFileBlockRulePtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFile) *ForwardingProfileTypePacFileBlockRule {
+		if v == nil {
+			return nil
+		}
+		return v.BlockRule
+	}).(ForwardingProfileTypePacFileBlockRulePtrOutput)
+}
+
+// List of PAC file-based forwarding rules
+func (o ForwardingProfileTypePacFilePtrOutput) ForwardingRules() ForwardingProfileTypePacFileForwardingRuleArrayOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFile) []ForwardingProfileTypePacFileForwardingRule {
+		if v == nil {
+			return nil
+		}
+		return v.ForwardingRules
+	}).(ForwardingProfileTypePacFileForwardingRuleArrayOutput)
+}
+
+// User upload PAC file for PAC file based forwarding configuration
+func (o ForwardingProfileTypePacFilePtrOutput) PacUpload() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFile) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.PacUpload
+	}).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypePacFileBlockRule struct {
+	// TCP traffic allowlist configuration
+	AllowTcp *ForwardingProfileTypePacFileBlockRuleAllowTcp `pulumi:"allowTcp"`
+	// UDP traffic allowlist configuration with location and destination support
+	AllowUdp *ForwardingProfileTypePacFileBlockRuleAllowUdp `pulumi:"allowUdp"`
+	// Enable block rule
+	Enable *bool `pulumi:"enable"`
+}
+
+// ForwardingProfileTypePacFileBlockRuleInput is an input type that accepts ForwardingProfileTypePacFileBlockRuleArgs and ForwardingProfileTypePacFileBlockRuleOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypePacFileBlockRuleInput` via:
+//
+//	ForwardingProfileTypePacFileBlockRuleArgs{...}
+type ForwardingProfileTypePacFileBlockRuleInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypePacFileBlockRuleOutput() ForwardingProfileTypePacFileBlockRuleOutput
+	ToForwardingProfileTypePacFileBlockRuleOutputWithContext(context.Context) ForwardingProfileTypePacFileBlockRuleOutput
+}
+
+type ForwardingProfileTypePacFileBlockRuleArgs struct {
+	// TCP traffic allowlist configuration
+	AllowTcp ForwardingProfileTypePacFileBlockRuleAllowTcpPtrInput `pulumi:"allowTcp"`
+	// UDP traffic allowlist configuration with location and destination support
+	AllowUdp ForwardingProfileTypePacFileBlockRuleAllowUdpPtrInput `pulumi:"allowUdp"`
+	// Enable block rule
+	Enable pulumi.BoolPtrInput `pulumi:"enable"`
+}
+
+func (ForwardingProfileTypePacFileBlockRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypePacFileBlockRule)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleArgs) ToForwardingProfileTypePacFileBlockRuleOutput() ForwardingProfileTypePacFileBlockRuleOutput {
+	return i.ToForwardingProfileTypePacFileBlockRuleOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleArgs) ToForwardingProfileTypePacFileBlockRuleOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileBlockRuleOutput)
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleArgs) ToForwardingProfileTypePacFileBlockRulePtrOutput() ForwardingProfileTypePacFileBlockRulePtrOutput {
+	return i.ToForwardingProfileTypePacFileBlockRulePtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleArgs) ToForwardingProfileTypePacFileBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRulePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileBlockRuleOutput).ToForwardingProfileTypePacFileBlockRulePtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileTypePacFileBlockRulePtrInput is an input type that accepts ForwardingProfileTypePacFileBlockRuleArgs, ForwardingProfileTypePacFileBlockRulePtr and ForwardingProfileTypePacFileBlockRulePtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypePacFileBlockRulePtrInput` via:
+//
+//	        ForwardingProfileTypePacFileBlockRuleArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileTypePacFileBlockRulePtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypePacFileBlockRulePtrOutput() ForwardingProfileTypePacFileBlockRulePtrOutput
+	ToForwardingProfileTypePacFileBlockRulePtrOutputWithContext(context.Context) ForwardingProfileTypePacFileBlockRulePtrOutput
+}
+
+type forwardingProfileTypePacFileBlockRulePtrType ForwardingProfileTypePacFileBlockRuleArgs
+
+func ForwardingProfileTypePacFileBlockRulePtr(v *ForwardingProfileTypePacFileBlockRuleArgs) ForwardingProfileTypePacFileBlockRulePtrInput {
+	return (*forwardingProfileTypePacFileBlockRulePtrType)(v)
+}
+
+func (*forwardingProfileTypePacFileBlockRulePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypePacFileBlockRule)(nil)).Elem()
+}
+
+func (i *forwardingProfileTypePacFileBlockRulePtrType) ToForwardingProfileTypePacFileBlockRulePtrOutput() ForwardingProfileTypePacFileBlockRulePtrOutput {
+	return i.ToForwardingProfileTypePacFileBlockRulePtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileTypePacFileBlockRulePtrType) ToForwardingProfileTypePacFileBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRulePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileBlockRulePtrOutput)
+}
+
+type ForwardingProfileTypePacFileBlockRuleOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypePacFileBlockRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypePacFileBlockRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleOutput) ToForwardingProfileTypePacFileBlockRuleOutput() ForwardingProfileTypePacFileBlockRuleOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleOutput) ToForwardingProfileTypePacFileBlockRuleOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleOutput) ToForwardingProfileTypePacFileBlockRulePtrOutput() ForwardingProfileTypePacFileBlockRulePtrOutput {
+	return o.ToForwardingProfileTypePacFileBlockRulePtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleOutput) ToForwardingProfileTypePacFileBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRulePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileTypePacFileBlockRule) *ForwardingProfileTypePacFileBlockRule {
+		return &v
+	}).(ForwardingProfileTypePacFileBlockRulePtrOutput)
+}
+
+// TCP traffic allowlist configuration
+func (o ForwardingProfileTypePacFileBlockRuleOutput) AllowTcp() ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileBlockRule) *ForwardingProfileTypePacFileBlockRuleAllowTcp {
+		return v.AllowTcp
+	}).(ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput)
+}
+
+// UDP traffic allowlist configuration with location and destination support
+func (o ForwardingProfileTypePacFileBlockRuleOutput) AllowUdp() ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileBlockRule) *ForwardingProfileTypePacFileBlockRuleAllowUdp {
+		return v.AllowUdp
+	}).(ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput)
+}
+
+// Enable block rule
+func (o ForwardingProfileTypePacFileBlockRuleOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileBlockRule) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypePacFileBlockRulePtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypePacFileBlockRulePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypePacFileBlockRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypePacFileBlockRulePtrOutput) ToForwardingProfileTypePacFileBlockRulePtrOutput() ForwardingProfileTypePacFileBlockRulePtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRulePtrOutput) ToForwardingProfileTypePacFileBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRulePtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRulePtrOutput) Elem() ForwardingProfileTypePacFileBlockRuleOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRule) ForwardingProfileTypePacFileBlockRule {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileTypePacFileBlockRule
+		return ret
+	}).(ForwardingProfileTypePacFileBlockRuleOutput)
+}
+
+// TCP traffic allowlist configuration
+func (o ForwardingProfileTypePacFileBlockRulePtrOutput) AllowTcp() ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRule) *ForwardingProfileTypePacFileBlockRuleAllowTcp {
+		if v == nil {
+			return nil
+		}
+		return v.AllowTcp
+	}).(ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput)
+}
+
+// UDP traffic allowlist configuration with location and destination support
+func (o ForwardingProfileTypePacFileBlockRulePtrOutput) AllowUdp() ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRule) *ForwardingProfileTypePacFileBlockRuleAllowUdp {
+		if v == nil {
+			return nil
+		}
+		return v.AllowUdp
+	}).(ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput)
+}
+
+// Enable block rule
+func (o ForwardingProfileTypePacFileBlockRulePtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRule) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enable
+	}).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypePacFileBlockRuleAllowTcp struct {
+	// Enable locations for allow-tcp
+	EnableLocations *bool `pulumi:"enableLocations"`
+	// List of user locations allowed for TCP traffic
+	Locations []string `pulumi:"locations"`
+}
+
+// ForwardingProfileTypePacFileBlockRuleAllowTcpInput is an input type that accepts ForwardingProfileTypePacFileBlockRuleAllowTcpArgs and ForwardingProfileTypePacFileBlockRuleAllowTcpOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypePacFileBlockRuleAllowTcpInput` via:
+//
+//	ForwardingProfileTypePacFileBlockRuleAllowTcpArgs{...}
+type ForwardingProfileTypePacFileBlockRuleAllowTcpInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypePacFileBlockRuleAllowTcpOutput() ForwardingProfileTypePacFileBlockRuleAllowTcpOutput
+	ToForwardingProfileTypePacFileBlockRuleAllowTcpOutputWithContext(context.Context) ForwardingProfileTypePacFileBlockRuleAllowTcpOutput
+}
+
+type ForwardingProfileTypePacFileBlockRuleAllowTcpArgs struct {
+	// Enable locations for allow-tcp
+	EnableLocations pulumi.BoolPtrInput `pulumi:"enableLocations"`
+	// List of user locations allowed for TCP traffic
+	Locations pulumi.StringArrayInput `pulumi:"locations"`
+}
+
+func (ForwardingProfileTypePacFileBlockRuleAllowTcpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypePacFileBlockRuleAllowTcp)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleAllowTcpArgs) ToForwardingProfileTypePacFileBlockRuleAllowTcpOutput() ForwardingProfileTypePacFileBlockRuleAllowTcpOutput {
+	return i.ToForwardingProfileTypePacFileBlockRuleAllowTcpOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleAllowTcpArgs) ToForwardingProfileTypePacFileBlockRuleAllowTcpOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowTcpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileBlockRuleAllowTcpOutput)
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleAllowTcpArgs) ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput() ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput {
+	return i.ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleAllowTcpArgs) ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileBlockRuleAllowTcpOutput).ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileTypePacFileBlockRuleAllowTcpPtrInput is an input type that accepts ForwardingProfileTypePacFileBlockRuleAllowTcpArgs, ForwardingProfileTypePacFileBlockRuleAllowTcpPtr and ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypePacFileBlockRuleAllowTcpPtrInput` via:
+//
+//	        ForwardingProfileTypePacFileBlockRuleAllowTcpArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileTypePacFileBlockRuleAllowTcpPtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput() ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput
+	ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutputWithContext(context.Context) ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput
+}
+
+type forwardingProfileTypePacFileBlockRuleAllowTcpPtrType ForwardingProfileTypePacFileBlockRuleAllowTcpArgs
+
+func ForwardingProfileTypePacFileBlockRuleAllowTcpPtr(v *ForwardingProfileTypePacFileBlockRuleAllowTcpArgs) ForwardingProfileTypePacFileBlockRuleAllowTcpPtrInput {
+	return (*forwardingProfileTypePacFileBlockRuleAllowTcpPtrType)(v)
+}
+
+func (*forwardingProfileTypePacFileBlockRuleAllowTcpPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypePacFileBlockRuleAllowTcp)(nil)).Elem()
+}
+
+func (i *forwardingProfileTypePacFileBlockRuleAllowTcpPtrType) ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput() ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput {
+	return i.ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileTypePacFileBlockRuleAllowTcpPtrType) ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput)
+}
+
+type ForwardingProfileTypePacFileBlockRuleAllowTcpOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypePacFileBlockRuleAllowTcpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypePacFileBlockRuleAllowTcp)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowTcpOutput) ToForwardingProfileTypePacFileBlockRuleAllowTcpOutput() ForwardingProfileTypePacFileBlockRuleAllowTcpOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowTcpOutput) ToForwardingProfileTypePacFileBlockRuleAllowTcpOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowTcpOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowTcpOutput) ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput() ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput {
+	return o.ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowTcpOutput) ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileTypePacFileBlockRuleAllowTcp) *ForwardingProfileTypePacFileBlockRuleAllowTcp {
+		return &v
+	}).(ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput)
+}
+
+// Enable locations for allow-tcp
+func (o ForwardingProfileTypePacFileBlockRuleAllowTcpOutput) EnableLocations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileBlockRuleAllowTcp) *bool { return v.EnableLocations }).(pulumi.BoolPtrOutput)
+}
+
+// List of user locations allowed for TCP traffic
+func (o ForwardingProfileTypePacFileBlockRuleAllowTcpOutput) Locations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileBlockRuleAllowTcp) []string { return v.Locations }).(pulumi.StringArrayOutput)
+}
+
+type ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypePacFileBlockRuleAllowTcp)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput) ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput() ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput) ToForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput) Elem() ForwardingProfileTypePacFileBlockRuleAllowTcpOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRuleAllowTcp) ForwardingProfileTypePacFileBlockRuleAllowTcp {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileTypePacFileBlockRuleAllowTcp
+		return ret
+	}).(ForwardingProfileTypePacFileBlockRuleAllowTcpOutput)
+}
+
+// Enable locations for allow-tcp
+func (o ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput) EnableLocations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRuleAllowTcp) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.EnableLocations
+	}).(pulumi.BoolPtrOutput)
+}
+
+// List of user locations allowed for TCP traffic
+func (o ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput) Locations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRuleAllowTcp) []string {
+		if v == nil {
+			return nil
+		}
+		return v.Locations
+	}).(pulumi.StringArrayOutput)
+}
+
+type ForwardingProfileTypePacFileBlockRuleAllowUdp struct {
+	// Destination addresses or networks allowed for UDP traffic
+	Destinations *string `pulumi:"destinations"`
+	// Enable destinations for allow-udp
+	EnableDestinations *bool `pulumi:"enableDestinations"`
+	// Enable locations for allow-udp
+	EnableLocations *bool `pulumi:"enableLocations"`
+	// List of user locations allowed for UDP traffic
+	Locations []string `pulumi:"locations"`
+}
+
+// ForwardingProfileTypePacFileBlockRuleAllowUdpInput is an input type that accepts ForwardingProfileTypePacFileBlockRuleAllowUdpArgs and ForwardingProfileTypePacFileBlockRuleAllowUdpOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypePacFileBlockRuleAllowUdpInput` via:
+//
+//	ForwardingProfileTypePacFileBlockRuleAllowUdpArgs{...}
+type ForwardingProfileTypePacFileBlockRuleAllowUdpInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypePacFileBlockRuleAllowUdpOutput() ForwardingProfileTypePacFileBlockRuleAllowUdpOutput
+	ToForwardingProfileTypePacFileBlockRuleAllowUdpOutputWithContext(context.Context) ForwardingProfileTypePacFileBlockRuleAllowUdpOutput
+}
+
+type ForwardingProfileTypePacFileBlockRuleAllowUdpArgs struct {
+	// Destination addresses or networks allowed for UDP traffic
+	Destinations pulumi.StringPtrInput `pulumi:"destinations"`
+	// Enable destinations for allow-udp
+	EnableDestinations pulumi.BoolPtrInput `pulumi:"enableDestinations"`
+	// Enable locations for allow-udp
+	EnableLocations pulumi.BoolPtrInput `pulumi:"enableLocations"`
+	// List of user locations allowed for UDP traffic
+	Locations pulumi.StringArrayInput `pulumi:"locations"`
+}
+
+func (ForwardingProfileTypePacFileBlockRuleAllowUdpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypePacFileBlockRuleAllowUdp)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleAllowUdpArgs) ToForwardingProfileTypePacFileBlockRuleAllowUdpOutput() ForwardingProfileTypePacFileBlockRuleAllowUdpOutput {
+	return i.ToForwardingProfileTypePacFileBlockRuleAllowUdpOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleAllowUdpArgs) ToForwardingProfileTypePacFileBlockRuleAllowUdpOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowUdpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileBlockRuleAllowUdpOutput)
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleAllowUdpArgs) ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput() ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput {
+	return i.ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypePacFileBlockRuleAllowUdpArgs) ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileBlockRuleAllowUdpOutput).ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileTypePacFileBlockRuleAllowUdpPtrInput is an input type that accepts ForwardingProfileTypePacFileBlockRuleAllowUdpArgs, ForwardingProfileTypePacFileBlockRuleAllowUdpPtr and ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypePacFileBlockRuleAllowUdpPtrInput` via:
+//
+//	        ForwardingProfileTypePacFileBlockRuleAllowUdpArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileTypePacFileBlockRuleAllowUdpPtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput() ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput
+	ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutputWithContext(context.Context) ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput
+}
+
+type forwardingProfileTypePacFileBlockRuleAllowUdpPtrType ForwardingProfileTypePacFileBlockRuleAllowUdpArgs
+
+func ForwardingProfileTypePacFileBlockRuleAllowUdpPtr(v *ForwardingProfileTypePacFileBlockRuleAllowUdpArgs) ForwardingProfileTypePacFileBlockRuleAllowUdpPtrInput {
+	return (*forwardingProfileTypePacFileBlockRuleAllowUdpPtrType)(v)
+}
+
+func (*forwardingProfileTypePacFileBlockRuleAllowUdpPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypePacFileBlockRuleAllowUdp)(nil)).Elem()
+}
+
+func (i *forwardingProfileTypePacFileBlockRuleAllowUdpPtrType) ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput() ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput {
+	return i.ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileTypePacFileBlockRuleAllowUdpPtrType) ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput)
+}
+
+type ForwardingProfileTypePacFileBlockRuleAllowUdpOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypePacFileBlockRuleAllowUdpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypePacFileBlockRuleAllowUdp)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpOutput) ToForwardingProfileTypePacFileBlockRuleAllowUdpOutput() ForwardingProfileTypePacFileBlockRuleAllowUdpOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpOutput) ToForwardingProfileTypePacFileBlockRuleAllowUdpOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowUdpOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpOutput) ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput() ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput {
+	return o.ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpOutput) ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileTypePacFileBlockRuleAllowUdp) *ForwardingProfileTypePacFileBlockRuleAllowUdp {
+		return &v
+	}).(ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput)
+}
+
+// Destination addresses or networks allowed for UDP traffic
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpOutput) Destinations() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileBlockRuleAllowUdp) *string { return v.Destinations }).(pulumi.StringPtrOutput)
+}
+
+// Enable destinations for allow-udp
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpOutput) EnableDestinations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileBlockRuleAllowUdp) *bool { return v.EnableDestinations }).(pulumi.BoolPtrOutput)
+}
+
+// Enable locations for allow-udp
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpOutput) EnableLocations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileBlockRuleAllowUdp) *bool { return v.EnableLocations }).(pulumi.BoolPtrOutput)
+}
+
+// List of user locations allowed for UDP traffic
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpOutput) Locations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileBlockRuleAllowUdp) []string { return v.Locations }).(pulumi.StringArrayOutput)
+}
+
+type ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypePacFileBlockRuleAllowUdp)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput) ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput() ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput) ToForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput) Elem() ForwardingProfileTypePacFileBlockRuleAllowUdpOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRuleAllowUdp) ForwardingProfileTypePacFileBlockRuleAllowUdp {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileTypePacFileBlockRuleAllowUdp
+		return ret
+	}).(ForwardingProfileTypePacFileBlockRuleAllowUdpOutput)
+}
+
+// Destination addresses or networks allowed for UDP traffic
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput) Destinations() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRuleAllowUdp) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Destinations
+	}).(pulumi.StringPtrOutput)
+}
+
+// Enable destinations for allow-udp
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput) EnableDestinations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRuleAllowUdp) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.EnableDestinations
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Enable locations for allow-udp
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput) EnableLocations() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRuleAllowUdp) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.EnableLocations
+	}).(pulumi.BoolPtrOutput)
+}
+
+// List of user locations allowed for UDP traffic
+func (o ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput) Locations() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypePacFileBlockRuleAllowUdp) []string {
+		if v == nil {
+			return nil
+		}
+		return v.Locations
+	}).(pulumi.StringArrayOutput)
+}
+
+type ForwardingProfileTypePacFileForwardingRule struct {
+	// Connectivity method for this forwarding rule (e.g. direct)
+	Connectivity *string `pulumi:"connectivity"`
+	// Destination scope this forwarding rule applies to
+	Destinations *string `pulumi:"destinations"`
+	// Enable a basic forwarding rule
+	Enabled *bool `pulumi:"enabled"`
+	// Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+	Name string `pulumi:"name"`
+	// User location scope this rule applies to
+	UserLocations *string `pulumi:"userLocations"`
+}
+
+// ForwardingProfileTypePacFileForwardingRuleInput is an input type that accepts ForwardingProfileTypePacFileForwardingRuleArgs and ForwardingProfileTypePacFileForwardingRuleOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypePacFileForwardingRuleInput` via:
+//
+//	ForwardingProfileTypePacFileForwardingRuleArgs{...}
+type ForwardingProfileTypePacFileForwardingRuleInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypePacFileForwardingRuleOutput() ForwardingProfileTypePacFileForwardingRuleOutput
+	ToForwardingProfileTypePacFileForwardingRuleOutputWithContext(context.Context) ForwardingProfileTypePacFileForwardingRuleOutput
+}
+
+type ForwardingProfileTypePacFileForwardingRuleArgs struct {
+	// Connectivity method for this forwarding rule (e.g. direct)
+	Connectivity pulumi.StringPtrInput `pulumi:"connectivity"`
+	// Destination scope this forwarding rule applies to
+	Destinations pulumi.StringPtrInput `pulumi:"destinations"`
+	// Enable a basic forwarding rule
+	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
+	// Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+	Name pulumi.StringInput `pulumi:"name"`
+	// User location scope this rule applies to
+	UserLocations pulumi.StringPtrInput `pulumi:"userLocations"`
+}
+
+func (ForwardingProfileTypePacFileForwardingRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypePacFileForwardingRule)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypePacFileForwardingRuleArgs) ToForwardingProfileTypePacFileForwardingRuleOutput() ForwardingProfileTypePacFileForwardingRuleOutput {
+	return i.ToForwardingProfileTypePacFileForwardingRuleOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypePacFileForwardingRuleArgs) ToForwardingProfileTypePacFileForwardingRuleOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileForwardingRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileForwardingRuleOutput)
+}
+
+// ForwardingProfileTypePacFileForwardingRuleArrayInput is an input type that accepts ForwardingProfileTypePacFileForwardingRuleArray and ForwardingProfileTypePacFileForwardingRuleArrayOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypePacFileForwardingRuleArrayInput` via:
+//
+//	ForwardingProfileTypePacFileForwardingRuleArray{ ForwardingProfileTypePacFileForwardingRuleArgs{...} }
+type ForwardingProfileTypePacFileForwardingRuleArrayInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypePacFileForwardingRuleArrayOutput() ForwardingProfileTypePacFileForwardingRuleArrayOutput
+	ToForwardingProfileTypePacFileForwardingRuleArrayOutputWithContext(context.Context) ForwardingProfileTypePacFileForwardingRuleArrayOutput
+}
+
+type ForwardingProfileTypePacFileForwardingRuleArray []ForwardingProfileTypePacFileForwardingRuleInput
+
+func (ForwardingProfileTypePacFileForwardingRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileTypePacFileForwardingRule)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypePacFileForwardingRuleArray) ToForwardingProfileTypePacFileForwardingRuleArrayOutput() ForwardingProfileTypePacFileForwardingRuleArrayOutput {
+	return i.ToForwardingProfileTypePacFileForwardingRuleArrayOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypePacFileForwardingRuleArray) ToForwardingProfileTypePacFileForwardingRuleArrayOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileForwardingRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypePacFileForwardingRuleArrayOutput)
+}
+
+type ForwardingProfileTypePacFileForwardingRuleOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypePacFileForwardingRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypePacFileForwardingRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypePacFileForwardingRuleOutput) ToForwardingProfileTypePacFileForwardingRuleOutput() ForwardingProfileTypePacFileForwardingRuleOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileForwardingRuleOutput) ToForwardingProfileTypePacFileForwardingRuleOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileForwardingRuleOutput {
+	return o
+}
+
+// Connectivity method for this forwarding rule (e.g. direct)
+func (o ForwardingProfileTypePacFileForwardingRuleOutput) Connectivity() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileForwardingRule) *string { return v.Connectivity }).(pulumi.StringPtrOutput)
+}
+
+// Destination scope this forwarding rule applies to
+func (o ForwardingProfileTypePacFileForwardingRuleOutput) Destinations() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileForwardingRule) *string { return v.Destinations }).(pulumi.StringPtrOutput)
+}
+
+// Enable a basic forwarding rule
+func (o ForwardingProfileTypePacFileForwardingRuleOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileForwardingRule) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+}
+
+// Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+func (o ForwardingProfileTypePacFileForwardingRuleOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileForwardingRule) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// User location scope this rule applies to
+func (o ForwardingProfileTypePacFileForwardingRuleOutput) UserLocations() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypePacFileForwardingRule) *string { return v.UserLocations }).(pulumi.StringPtrOutput)
+}
+
+type ForwardingProfileTypePacFileForwardingRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypePacFileForwardingRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileTypePacFileForwardingRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypePacFileForwardingRuleArrayOutput) ToForwardingProfileTypePacFileForwardingRuleArrayOutput() ForwardingProfileTypePacFileForwardingRuleArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileForwardingRuleArrayOutput) ToForwardingProfileTypePacFileForwardingRuleArrayOutputWithContext(ctx context.Context) ForwardingProfileTypePacFileForwardingRuleArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileTypePacFileForwardingRuleArrayOutput) Index(i pulumi.IntInput) ForwardingProfileTypePacFileForwardingRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ForwardingProfileTypePacFileForwardingRule {
+		return vs[0].([]ForwardingProfileTypePacFileForwardingRule)[vs[1].(int)]
+	}).(ForwardingProfileTypePacFileForwardingRuleOutput)
+}
+
+type ForwardingProfileTypeZtnaAgent struct {
+	// ZTNA block rule configuration
+	BlockRule *ForwardingProfileTypeZtnaAgentBlockRule `pulumi:"blockRule"`
+	// List of ZTNA agent-based forwarding rules
+	ForwardingRules []ForwardingProfileTypeZtnaAgentForwardingRule `pulumi:"forwardingRules"`
+	// User uploaded PAC file for a ZTNA agent-based forwarding configuration
+	PacUpload *bool `pulumi:"pacUpload"`
+}
+
+// ForwardingProfileTypeZtnaAgentInput is an input type that accepts ForwardingProfileTypeZtnaAgentArgs and ForwardingProfileTypeZtnaAgentOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeZtnaAgentInput` via:
+//
+//	ForwardingProfileTypeZtnaAgentArgs{...}
+type ForwardingProfileTypeZtnaAgentInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeZtnaAgentOutput() ForwardingProfileTypeZtnaAgentOutput
+	ToForwardingProfileTypeZtnaAgentOutputWithContext(context.Context) ForwardingProfileTypeZtnaAgentOutput
+}
+
+type ForwardingProfileTypeZtnaAgentArgs struct {
+	// ZTNA block rule configuration
+	BlockRule ForwardingProfileTypeZtnaAgentBlockRulePtrInput `pulumi:"blockRule"`
+	// List of ZTNA agent-based forwarding rules
+	ForwardingRules ForwardingProfileTypeZtnaAgentForwardingRuleArrayInput `pulumi:"forwardingRules"`
+	// User uploaded PAC file for a ZTNA agent-based forwarding configuration
+	PacUpload pulumi.BoolPtrInput `pulumi:"pacUpload"`
+}
+
+func (ForwardingProfileTypeZtnaAgentArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeZtnaAgent)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypeZtnaAgentArgs) ToForwardingProfileTypeZtnaAgentOutput() ForwardingProfileTypeZtnaAgentOutput {
+	return i.ToForwardingProfileTypeZtnaAgentOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeZtnaAgentArgs) ToForwardingProfileTypeZtnaAgentOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeZtnaAgentOutput)
+}
+
+func (i ForwardingProfileTypeZtnaAgentArgs) ToForwardingProfileTypeZtnaAgentPtrOutput() ForwardingProfileTypeZtnaAgentPtrOutput {
+	return i.ToForwardingProfileTypeZtnaAgentPtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeZtnaAgentArgs) ToForwardingProfileTypeZtnaAgentPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeZtnaAgentOutput).ToForwardingProfileTypeZtnaAgentPtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileTypeZtnaAgentPtrInput is an input type that accepts ForwardingProfileTypeZtnaAgentArgs, ForwardingProfileTypeZtnaAgentPtr and ForwardingProfileTypeZtnaAgentPtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeZtnaAgentPtrInput` via:
+//
+//	        ForwardingProfileTypeZtnaAgentArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileTypeZtnaAgentPtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeZtnaAgentPtrOutput() ForwardingProfileTypeZtnaAgentPtrOutput
+	ToForwardingProfileTypeZtnaAgentPtrOutputWithContext(context.Context) ForwardingProfileTypeZtnaAgentPtrOutput
+}
+
+type forwardingProfileTypeZtnaAgentPtrType ForwardingProfileTypeZtnaAgentArgs
+
+func ForwardingProfileTypeZtnaAgentPtr(v *ForwardingProfileTypeZtnaAgentArgs) ForwardingProfileTypeZtnaAgentPtrInput {
+	return (*forwardingProfileTypeZtnaAgentPtrType)(v)
+}
+
+func (*forwardingProfileTypeZtnaAgentPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeZtnaAgent)(nil)).Elem()
+}
+
+func (i *forwardingProfileTypeZtnaAgentPtrType) ToForwardingProfileTypeZtnaAgentPtrOutput() ForwardingProfileTypeZtnaAgentPtrOutput {
+	return i.ToForwardingProfileTypeZtnaAgentPtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileTypeZtnaAgentPtrType) ToForwardingProfileTypeZtnaAgentPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeZtnaAgentPtrOutput)
+}
+
+type ForwardingProfileTypeZtnaAgentOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeZtnaAgentOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeZtnaAgent)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeZtnaAgentOutput) ToForwardingProfileTypeZtnaAgentOutput() ForwardingProfileTypeZtnaAgentOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeZtnaAgentOutput) ToForwardingProfileTypeZtnaAgentOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeZtnaAgentOutput) ToForwardingProfileTypeZtnaAgentPtrOutput() ForwardingProfileTypeZtnaAgentPtrOutput {
+	return o.ToForwardingProfileTypeZtnaAgentPtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileTypeZtnaAgentOutput) ToForwardingProfileTypeZtnaAgentPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileTypeZtnaAgent) *ForwardingProfileTypeZtnaAgent {
+		return &v
+	}).(ForwardingProfileTypeZtnaAgentPtrOutput)
+}
+
+// ZTNA block rule configuration
+func (o ForwardingProfileTypeZtnaAgentOutput) BlockRule() ForwardingProfileTypeZtnaAgentBlockRulePtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgent) *ForwardingProfileTypeZtnaAgentBlockRule { return v.BlockRule }).(ForwardingProfileTypeZtnaAgentBlockRulePtrOutput)
+}
+
+// List of ZTNA agent-based forwarding rules
+func (o ForwardingProfileTypeZtnaAgentOutput) ForwardingRules() ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgent) []ForwardingProfileTypeZtnaAgentForwardingRule {
+		return v.ForwardingRules
+	}).(ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput)
+}
+
+// User uploaded PAC file for a ZTNA agent-based forwarding configuration
+func (o ForwardingProfileTypeZtnaAgentOutput) PacUpload() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgent) *bool { return v.PacUpload }).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypeZtnaAgentPtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeZtnaAgentPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeZtnaAgent)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeZtnaAgentPtrOutput) ToForwardingProfileTypeZtnaAgentPtrOutput() ForwardingProfileTypeZtnaAgentPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeZtnaAgentPtrOutput) ToForwardingProfileTypeZtnaAgentPtrOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeZtnaAgentPtrOutput) Elem() ForwardingProfileTypeZtnaAgentOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgent) ForwardingProfileTypeZtnaAgent {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileTypeZtnaAgent
+		return ret
+	}).(ForwardingProfileTypeZtnaAgentOutput)
+}
+
+// ZTNA block rule configuration
+func (o ForwardingProfileTypeZtnaAgentPtrOutput) BlockRule() ForwardingProfileTypeZtnaAgentBlockRulePtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgent) *ForwardingProfileTypeZtnaAgentBlockRule {
+		if v == nil {
+			return nil
+		}
+		return v.BlockRule
+	}).(ForwardingProfileTypeZtnaAgentBlockRulePtrOutput)
+}
+
+// List of ZTNA agent-based forwarding rules
+func (o ForwardingProfileTypeZtnaAgentPtrOutput) ForwardingRules() ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgent) []ForwardingProfileTypeZtnaAgentForwardingRule {
+		if v == nil {
+			return nil
+		}
+		return v.ForwardingRules
+	}).(ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput)
+}
+
+// User uploaded PAC file for a ZTNA agent-based forwarding configuration
+func (o ForwardingProfileTypeZtnaAgentPtrOutput) PacUpload() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgent) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.PacUpload
+	}).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypeZtnaAgentBlockRule struct {
+	// Allow ICMP for troubleshooting
+	AllowIcmpForTroubleshooting *bool `pulumi:"allowIcmpForTroubleshooting"`
+	// Block all other unmatched outbound connections
+	BlockAllOtherUnmatchedOutboundConnections *bool `pulumi:"blockAllOtherUnmatchedOutboundConnections"`
+	// Block inbound access when connected to tunnel
+	BlockInboundAccessWhenConnectedToTunnel *bool `pulumi:"blockInboundAccessWhenConnectedToTunnel"`
+	// Block Non-TCP Non UDP based traffic when connected to tunnel
+	BlockNonTcpNonUdpTrafficWhenConnectedToTunnel *bool `pulumi:"blockNonTcpNonUdpTrafficWhenConnectedToTunnel"`
+	// Block outbound LAN access when connected to tunnel
+	BlockOutboundLanAccessWhenConnectedToTunnel *bool `pulumi:"blockOutboundLanAccessWhenConnectedToTunnel"`
+	// Enforce FQDN DNS resolution via tunnel DNS servers
+	EnforcerFqdnDnsResolutionViaDnsServers *bool `pulumi:"enforcerFqdnDnsResolutionViaDnsServers"`
+	// Resolve All FQDNs using DNS servers assigned by the tunnel (Windows Only)
+	ResolveAllFqdnsUsingDnsServersAssignedByTheTunnel *bool `pulumi:"resolveAllFqdnsUsingDnsServersAssignedByTheTunnel"`
+}
+
+// ForwardingProfileTypeZtnaAgentBlockRuleInput is an input type that accepts ForwardingProfileTypeZtnaAgentBlockRuleArgs and ForwardingProfileTypeZtnaAgentBlockRuleOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeZtnaAgentBlockRuleInput` via:
+//
+//	ForwardingProfileTypeZtnaAgentBlockRuleArgs{...}
+type ForwardingProfileTypeZtnaAgentBlockRuleInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeZtnaAgentBlockRuleOutput() ForwardingProfileTypeZtnaAgentBlockRuleOutput
+	ToForwardingProfileTypeZtnaAgentBlockRuleOutputWithContext(context.Context) ForwardingProfileTypeZtnaAgentBlockRuleOutput
+}
+
+type ForwardingProfileTypeZtnaAgentBlockRuleArgs struct {
+	// Allow ICMP for troubleshooting
+	AllowIcmpForTroubleshooting pulumi.BoolPtrInput `pulumi:"allowIcmpForTroubleshooting"`
+	// Block all other unmatched outbound connections
+	BlockAllOtherUnmatchedOutboundConnections pulumi.BoolPtrInput `pulumi:"blockAllOtherUnmatchedOutboundConnections"`
+	// Block inbound access when connected to tunnel
+	BlockInboundAccessWhenConnectedToTunnel pulumi.BoolPtrInput `pulumi:"blockInboundAccessWhenConnectedToTunnel"`
+	// Block Non-TCP Non UDP based traffic when connected to tunnel
+	BlockNonTcpNonUdpTrafficWhenConnectedToTunnel pulumi.BoolPtrInput `pulumi:"blockNonTcpNonUdpTrafficWhenConnectedToTunnel"`
+	// Block outbound LAN access when connected to tunnel
+	BlockOutboundLanAccessWhenConnectedToTunnel pulumi.BoolPtrInput `pulumi:"blockOutboundLanAccessWhenConnectedToTunnel"`
+	// Enforce FQDN DNS resolution via tunnel DNS servers
+	EnforcerFqdnDnsResolutionViaDnsServers pulumi.BoolPtrInput `pulumi:"enforcerFqdnDnsResolutionViaDnsServers"`
+	// Resolve All FQDNs using DNS servers assigned by the tunnel (Windows Only)
+	ResolveAllFqdnsUsingDnsServersAssignedByTheTunnel pulumi.BoolPtrInput `pulumi:"resolveAllFqdnsUsingDnsServersAssignedByTheTunnel"`
+}
+
+func (ForwardingProfileTypeZtnaAgentBlockRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeZtnaAgentBlockRule)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypeZtnaAgentBlockRuleArgs) ToForwardingProfileTypeZtnaAgentBlockRuleOutput() ForwardingProfileTypeZtnaAgentBlockRuleOutput {
+	return i.ToForwardingProfileTypeZtnaAgentBlockRuleOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeZtnaAgentBlockRuleArgs) ToForwardingProfileTypeZtnaAgentBlockRuleOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentBlockRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeZtnaAgentBlockRuleOutput)
+}
+
+func (i ForwardingProfileTypeZtnaAgentBlockRuleArgs) ToForwardingProfileTypeZtnaAgentBlockRulePtrOutput() ForwardingProfileTypeZtnaAgentBlockRulePtrOutput {
+	return i.ToForwardingProfileTypeZtnaAgentBlockRulePtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeZtnaAgentBlockRuleArgs) ToForwardingProfileTypeZtnaAgentBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentBlockRulePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeZtnaAgentBlockRuleOutput).ToForwardingProfileTypeZtnaAgentBlockRulePtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileTypeZtnaAgentBlockRulePtrInput is an input type that accepts ForwardingProfileTypeZtnaAgentBlockRuleArgs, ForwardingProfileTypeZtnaAgentBlockRulePtr and ForwardingProfileTypeZtnaAgentBlockRulePtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeZtnaAgentBlockRulePtrInput` via:
+//
+//	        ForwardingProfileTypeZtnaAgentBlockRuleArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileTypeZtnaAgentBlockRulePtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeZtnaAgentBlockRulePtrOutput() ForwardingProfileTypeZtnaAgentBlockRulePtrOutput
+	ToForwardingProfileTypeZtnaAgentBlockRulePtrOutputWithContext(context.Context) ForwardingProfileTypeZtnaAgentBlockRulePtrOutput
+}
+
+type forwardingProfileTypeZtnaAgentBlockRulePtrType ForwardingProfileTypeZtnaAgentBlockRuleArgs
+
+func ForwardingProfileTypeZtnaAgentBlockRulePtr(v *ForwardingProfileTypeZtnaAgentBlockRuleArgs) ForwardingProfileTypeZtnaAgentBlockRulePtrInput {
+	return (*forwardingProfileTypeZtnaAgentBlockRulePtrType)(v)
+}
+
+func (*forwardingProfileTypeZtnaAgentBlockRulePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeZtnaAgentBlockRule)(nil)).Elem()
+}
+
+func (i *forwardingProfileTypeZtnaAgentBlockRulePtrType) ToForwardingProfileTypeZtnaAgentBlockRulePtrOutput() ForwardingProfileTypeZtnaAgentBlockRulePtrOutput {
+	return i.ToForwardingProfileTypeZtnaAgentBlockRulePtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileTypeZtnaAgentBlockRulePtrType) ToForwardingProfileTypeZtnaAgentBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentBlockRulePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeZtnaAgentBlockRulePtrOutput)
+}
+
+type ForwardingProfileTypeZtnaAgentBlockRuleOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeZtnaAgentBlockRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeZtnaAgentBlockRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeZtnaAgentBlockRuleOutput) ToForwardingProfileTypeZtnaAgentBlockRuleOutput() ForwardingProfileTypeZtnaAgentBlockRuleOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeZtnaAgentBlockRuleOutput) ToForwardingProfileTypeZtnaAgentBlockRuleOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentBlockRuleOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeZtnaAgentBlockRuleOutput) ToForwardingProfileTypeZtnaAgentBlockRulePtrOutput() ForwardingProfileTypeZtnaAgentBlockRulePtrOutput {
+	return o.ToForwardingProfileTypeZtnaAgentBlockRulePtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileTypeZtnaAgentBlockRuleOutput) ToForwardingProfileTypeZtnaAgentBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentBlockRulePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileTypeZtnaAgentBlockRule) *ForwardingProfileTypeZtnaAgentBlockRule {
+		return &v
+	}).(ForwardingProfileTypeZtnaAgentBlockRulePtrOutput)
+}
+
+// Allow ICMP for troubleshooting
+func (o ForwardingProfileTypeZtnaAgentBlockRuleOutput) AllowIcmpForTroubleshooting() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentBlockRule) *bool { return v.AllowIcmpForTroubleshooting }).(pulumi.BoolPtrOutput)
+}
+
+// Block all other unmatched outbound connections
+func (o ForwardingProfileTypeZtnaAgentBlockRuleOutput) BlockAllOtherUnmatchedOutboundConnections() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		return v.BlockAllOtherUnmatchedOutboundConnections
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Block inbound access when connected to tunnel
+func (o ForwardingProfileTypeZtnaAgentBlockRuleOutput) BlockInboundAccessWhenConnectedToTunnel() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		return v.BlockInboundAccessWhenConnectedToTunnel
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Block Non-TCP Non UDP based traffic when connected to tunnel
+func (o ForwardingProfileTypeZtnaAgentBlockRuleOutput) BlockNonTcpNonUdpTrafficWhenConnectedToTunnel() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		return v.BlockNonTcpNonUdpTrafficWhenConnectedToTunnel
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Block outbound LAN access when connected to tunnel
+func (o ForwardingProfileTypeZtnaAgentBlockRuleOutput) BlockOutboundLanAccessWhenConnectedToTunnel() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		return v.BlockOutboundLanAccessWhenConnectedToTunnel
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Enforce FQDN DNS resolution via tunnel DNS servers
+func (o ForwardingProfileTypeZtnaAgentBlockRuleOutput) EnforcerFqdnDnsResolutionViaDnsServers() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentBlockRule) *bool { return v.EnforcerFqdnDnsResolutionViaDnsServers }).(pulumi.BoolPtrOutput)
+}
+
+// Resolve All FQDNs using DNS servers assigned by the tunnel (Windows Only)
+func (o ForwardingProfileTypeZtnaAgentBlockRuleOutput) ResolveAllFqdnsUsingDnsServersAssignedByTheTunnel() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		return v.ResolveAllFqdnsUsingDnsServersAssignedByTheTunnel
+	}).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypeZtnaAgentBlockRulePtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeZtnaAgentBlockRulePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileTypeZtnaAgentBlockRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeZtnaAgentBlockRulePtrOutput) ToForwardingProfileTypeZtnaAgentBlockRulePtrOutput() ForwardingProfileTypeZtnaAgentBlockRulePtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeZtnaAgentBlockRulePtrOutput) ToForwardingProfileTypeZtnaAgentBlockRulePtrOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentBlockRulePtrOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeZtnaAgentBlockRulePtrOutput) Elem() ForwardingProfileTypeZtnaAgentBlockRuleOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgentBlockRule) ForwardingProfileTypeZtnaAgentBlockRule {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileTypeZtnaAgentBlockRule
+		return ret
+	}).(ForwardingProfileTypeZtnaAgentBlockRuleOutput)
+}
+
+// Allow ICMP for troubleshooting
+func (o ForwardingProfileTypeZtnaAgentBlockRulePtrOutput) AllowIcmpForTroubleshooting() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.AllowIcmpForTroubleshooting
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Block all other unmatched outbound connections
+func (o ForwardingProfileTypeZtnaAgentBlockRulePtrOutput) BlockAllOtherUnmatchedOutboundConnections() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.BlockAllOtherUnmatchedOutboundConnections
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Block inbound access when connected to tunnel
+func (o ForwardingProfileTypeZtnaAgentBlockRulePtrOutput) BlockInboundAccessWhenConnectedToTunnel() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.BlockInboundAccessWhenConnectedToTunnel
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Block Non-TCP Non UDP based traffic when connected to tunnel
+func (o ForwardingProfileTypeZtnaAgentBlockRulePtrOutput) BlockNonTcpNonUdpTrafficWhenConnectedToTunnel() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.BlockNonTcpNonUdpTrafficWhenConnectedToTunnel
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Block outbound LAN access when connected to tunnel
+func (o ForwardingProfileTypeZtnaAgentBlockRulePtrOutput) BlockOutboundLanAccessWhenConnectedToTunnel() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.BlockOutboundLanAccessWhenConnectedToTunnel
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Enforce FQDN DNS resolution via tunnel DNS servers
+func (o ForwardingProfileTypeZtnaAgentBlockRulePtrOutput) EnforcerFqdnDnsResolutionViaDnsServers() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.EnforcerFqdnDnsResolutionViaDnsServers
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Resolve All FQDNs using DNS servers assigned by the tunnel (Windows Only)
+func (o ForwardingProfileTypeZtnaAgentBlockRulePtrOutput) ResolveAllFqdnsUsingDnsServersAssignedByTheTunnel() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileTypeZtnaAgentBlockRule) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.ResolveAllFqdnsUsingDnsServersAssignedByTheTunnel
+	}).(pulumi.BoolPtrOutput)
+}
+
+type ForwardingProfileTypeZtnaAgentForwardingRule struct {
+	// Connectivity method for this ZTNA forwarding rule (e.g. direct)
+	Connectivity *string `pulumi:"connectivity"`
+	// Destination scope this ZTNA forwarding rule applies to
+	Destinations *string `pulumi:"destinations"`
+	// Enable a forwarding rule ztna
+	Enabled *bool `pulumi:"enabled"`
+	// Forwarding rule ZTNA name as an alphanumeric string [ 0-9a-zA-Z._ -]
+	Name string `pulumi:"name"`
+	// Source applications this ZTNA rule applies to
+	SourceApplications *string `pulumi:"sourceApplications"`
+	// Type of traffic this ZTNA rule applies to (dns, network, or both)
+	TrafficType *string `pulumi:"trafficType"`
+	// User location scope this ZTNA rule applies to
+	UserLocations *string `pulumi:"userLocations"`
+}
+
+// ForwardingProfileTypeZtnaAgentForwardingRuleInput is an input type that accepts ForwardingProfileTypeZtnaAgentForwardingRuleArgs and ForwardingProfileTypeZtnaAgentForwardingRuleOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeZtnaAgentForwardingRuleInput` via:
+//
+//	ForwardingProfileTypeZtnaAgentForwardingRuleArgs{...}
+type ForwardingProfileTypeZtnaAgentForwardingRuleInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeZtnaAgentForwardingRuleOutput() ForwardingProfileTypeZtnaAgentForwardingRuleOutput
+	ToForwardingProfileTypeZtnaAgentForwardingRuleOutputWithContext(context.Context) ForwardingProfileTypeZtnaAgentForwardingRuleOutput
+}
+
+type ForwardingProfileTypeZtnaAgentForwardingRuleArgs struct {
+	// Connectivity method for this ZTNA forwarding rule (e.g. direct)
+	Connectivity pulumi.StringPtrInput `pulumi:"connectivity"`
+	// Destination scope this ZTNA forwarding rule applies to
+	Destinations pulumi.StringPtrInput `pulumi:"destinations"`
+	// Enable a forwarding rule ztna
+	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
+	// Forwarding rule ZTNA name as an alphanumeric string [ 0-9a-zA-Z._ -]
+	Name pulumi.StringInput `pulumi:"name"`
+	// Source applications this ZTNA rule applies to
+	SourceApplications pulumi.StringPtrInput `pulumi:"sourceApplications"`
+	// Type of traffic this ZTNA rule applies to (dns, network, or both)
+	TrafficType pulumi.StringPtrInput `pulumi:"trafficType"`
+	// User location scope this ZTNA rule applies to
+	UserLocations pulumi.StringPtrInput `pulumi:"userLocations"`
+}
+
+func (ForwardingProfileTypeZtnaAgentForwardingRuleArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeZtnaAgentForwardingRule)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypeZtnaAgentForwardingRuleArgs) ToForwardingProfileTypeZtnaAgentForwardingRuleOutput() ForwardingProfileTypeZtnaAgentForwardingRuleOutput {
+	return i.ToForwardingProfileTypeZtnaAgentForwardingRuleOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeZtnaAgentForwardingRuleArgs) ToForwardingProfileTypeZtnaAgentForwardingRuleOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentForwardingRuleOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeZtnaAgentForwardingRuleOutput)
+}
+
+// ForwardingProfileTypeZtnaAgentForwardingRuleArrayInput is an input type that accepts ForwardingProfileTypeZtnaAgentForwardingRuleArray and ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput values.
+// You can construct a concrete instance of `ForwardingProfileTypeZtnaAgentForwardingRuleArrayInput` via:
+//
+//	ForwardingProfileTypeZtnaAgentForwardingRuleArray{ ForwardingProfileTypeZtnaAgentForwardingRuleArgs{...} }
+type ForwardingProfileTypeZtnaAgentForwardingRuleArrayInput interface {
+	pulumi.Input
+
+	ToForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput() ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput
+	ToForwardingProfileTypeZtnaAgentForwardingRuleArrayOutputWithContext(context.Context) ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput
+}
+
+type ForwardingProfileTypeZtnaAgentForwardingRuleArray []ForwardingProfileTypeZtnaAgentForwardingRuleInput
+
+func (ForwardingProfileTypeZtnaAgentForwardingRuleArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileTypeZtnaAgentForwardingRule)(nil)).Elem()
+}
+
+func (i ForwardingProfileTypeZtnaAgentForwardingRuleArray) ToForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput() ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput {
+	return i.ToForwardingProfileTypeZtnaAgentForwardingRuleArrayOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileTypeZtnaAgentForwardingRuleArray) ToForwardingProfileTypeZtnaAgentForwardingRuleArrayOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput)
+}
+
+type ForwardingProfileTypeZtnaAgentForwardingRuleOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeZtnaAgentForwardingRuleOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileTypeZtnaAgentForwardingRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleOutput) ToForwardingProfileTypeZtnaAgentForwardingRuleOutput() ForwardingProfileTypeZtnaAgentForwardingRuleOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleOutput) ToForwardingProfileTypeZtnaAgentForwardingRuleOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentForwardingRuleOutput {
+	return o
+}
+
+// Connectivity method for this ZTNA forwarding rule (e.g. direct)
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleOutput) Connectivity() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentForwardingRule) *string { return v.Connectivity }).(pulumi.StringPtrOutput)
+}
+
+// Destination scope this ZTNA forwarding rule applies to
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleOutput) Destinations() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentForwardingRule) *string { return v.Destinations }).(pulumi.StringPtrOutput)
+}
+
+// Enable a forwarding rule ztna
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentForwardingRule) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+}
+
+// Forwarding rule ZTNA name as an alphanumeric string [ 0-9a-zA-Z._ -]
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentForwardingRule) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Source applications this ZTNA rule applies to
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleOutput) SourceApplications() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentForwardingRule) *string { return v.SourceApplications }).(pulumi.StringPtrOutput)
+}
+
+// Type of traffic this ZTNA rule applies to (dns, network, or both)
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleOutput) TrafficType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentForwardingRule) *string { return v.TrafficType }).(pulumi.StringPtrOutput)
+}
+
+// User location scope this ZTNA rule applies to
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleOutput) UserLocations() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ForwardingProfileTypeZtnaAgentForwardingRule) *string { return v.UserLocations }).(pulumi.StringPtrOutput)
+}
+
+type ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ForwardingProfileTypeZtnaAgentForwardingRule)(nil)).Elem()
+}
+
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput) ToForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput() ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput) ToForwardingProfileTypeZtnaAgentForwardingRuleArrayOutputWithContext(ctx context.Context) ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput {
+	return o
+}
+
+func (o ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput) Index(i pulumi.IntInput) ForwardingProfileTypeZtnaAgentForwardingRuleOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ForwardingProfileTypeZtnaAgentForwardingRule {
+		return vs[0].([]ForwardingProfileTypeZtnaAgentForwardingRule)[vs[1].(int)]
+	}).(ForwardingProfileTypeZtnaAgentForwardingRuleOutput)
+}
+
+type ForwardingProfileUserLocationInternalHostDetection struct {
+	// user location fqdn
+	Fqdn string `pulumi:"fqdn"`
+	// user location ip address
+	IpAddress string `pulumi:"ipAddress"`
+}
+
+// ForwardingProfileUserLocationInternalHostDetectionInput is an input type that accepts ForwardingProfileUserLocationInternalHostDetectionArgs and ForwardingProfileUserLocationInternalHostDetectionOutput values.
+// You can construct a concrete instance of `ForwardingProfileUserLocationInternalHostDetectionInput` via:
+//
+//	ForwardingProfileUserLocationInternalHostDetectionArgs{...}
+type ForwardingProfileUserLocationInternalHostDetectionInput interface {
+	pulumi.Input
+
+	ToForwardingProfileUserLocationInternalHostDetectionOutput() ForwardingProfileUserLocationInternalHostDetectionOutput
+	ToForwardingProfileUserLocationInternalHostDetectionOutputWithContext(context.Context) ForwardingProfileUserLocationInternalHostDetectionOutput
+}
+
+type ForwardingProfileUserLocationInternalHostDetectionArgs struct {
+	// user location fqdn
+	Fqdn pulumi.StringInput `pulumi:"fqdn"`
+	// user location ip address
+	IpAddress pulumi.StringInput `pulumi:"ipAddress"`
+}
+
+func (ForwardingProfileUserLocationInternalHostDetectionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileUserLocationInternalHostDetection)(nil)).Elem()
+}
+
+func (i ForwardingProfileUserLocationInternalHostDetectionArgs) ToForwardingProfileUserLocationInternalHostDetectionOutput() ForwardingProfileUserLocationInternalHostDetectionOutput {
+	return i.ToForwardingProfileUserLocationInternalHostDetectionOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileUserLocationInternalHostDetectionArgs) ToForwardingProfileUserLocationInternalHostDetectionOutputWithContext(ctx context.Context) ForwardingProfileUserLocationInternalHostDetectionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileUserLocationInternalHostDetectionOutput)
+}
+
+func (i ForwardingProfileUserLocationInternalHostDetectionArgs) ToForwardingProfileUserLocationInternalHostDetectionPtrOutput() ForwardingProfileUserLocationInternalHostDetectionPtrOutput {
+	return i.ToForwardingProfileUserLocationInternalHostDetectionPtrOutputWithContext(context.Background())
+}
+
+func (i ForwardingProfileUserLocationInternalHostDetectionArgs) ToForwardingProfileUserLocationInternalHostDetectionPtrOutputWithContext(ctx context.Context) ForwardingProfileUserLocationInternalHostDetectionPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileUserLocationInternalHostDetectionOutput).ToForwardingProfileUserLocationInternalHostDetectionPtrOutputWithContext(ctx)
+}
+
+// ForwardingProfileUserLocationInternalHostDetectionPtrInput is an input type that accepts ForwardingProfileUserLocationInternalHostDetectionArgs, ForwardingProfileUserLocationInternalHostDetectionPtr and ForwardingProfileUserLocationInternalHostDetectionPtrOutput values.
+// You can construct a concrete instance of `ForwardingProfileUserLocationInternalHostDetectionPtrInput` via:
+//
+//	        ForwardingProfileUserLocationInternalHostDetectionArgs{...}
+//
+//	or:
+//
+//	        nil
+type ForwardingProfileUserLocationInternalHostDetectionPtrInput interface {
+	pulumi.Input
+
+	ToForwardingProfileUserLocationInternalHostDetectionPtrOutput() ForwardingProfileUserLocationInternalHostDetectionPtrOutput
+	ToForwardingProfileUserLocationInternalHostDetectionPtrOutputWithContext(context.Context) ForwardingProfileUserLocationInternalHostDetectionPtrOutput
+}
+
+type forwardingProfileUserLocationInternalHostDetectionPtrType ForwardingProfileUserLocationInternalHostDetectionArgs
+
+func ForwardingProfileUserLocationInternalHostDetectionPtr(v *ForwardingProfileUserLocationInternalHostDetectionArgs) ForwardingProfileUserLocationInternalHostDetectionPtrInput {
+	return (*forwardingProfileUserLocationInternalHostDetectionPtrType)(v)
+}
+
+func (*forwardingProfileUserLocationInternalHostDetectionPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileUserLocationInternalHostDetection)(nil)).Elem()
+}
+
+func (i *forwardingProfileUserLocationInternalHostDetectionPtrType) ToForwardingProfileUserLocationInternalHostDetectionPtrOutput() ForwardingProfileUserLocationInternalHostDetectionPtrOutput {
+	return i.ToForwardingProfileUserLocationInternalHostDetectionPtrOutputWithContext(context.Background())
+}
+
+func (i *forwardingProfileUserLocationInternalHostDetectionPtrType) ToForwardingProfileUserLocationInternalHostDetectionPtrOutputWithContext(ctx context.Context) ForwardingProfileUserLocationInternalHostDetectionPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ForwardingProfileUserLocationInternalHostDetectionPtrOutput)
+}
+
+type ForwardingProfileUserLocationInternalHostDetectionOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileUserLocationInternalHostDetectionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ForwardingProfileUserLocationInternalHostDetection)(nil)).Elem()
+}
+
+func (o ForwardingProfileUserLocationInternalHostDetectionOutput) ToForwardingProfileUserLocationInternalHostDetectionOutput() ForwardingProfileUserLocationInternalHostDetectionOutput {
+	return o
+}
+
+func (o ForwardingProfileUserLocationInternalHostDetectionOutput) ToForwardingProfileUserLocationInternalHostDetectionOutputWithContext(ctx context.Context) ForwardingProfileUserLocationInternalHostDetectionOutput {
+	return o
+}
+
+func (o ForwardingProfileUserLocationInternalHostDetectionOutput) ToForwardingProfileUserLocationInternalHostDetectionPtrOutput() ForwardingProfileUserLocationInternalHostDetectionPtrOutput {
+	return o.ToForwardingProfileUserLocationInternalHostDetectionPtrOutputWithContext(context.Background())
+}
+
+func (o ForwardingProfileUserLocationInternalHostDetectionOutput) ToForwardingProfileUserLocationInternalHostDetectionPtrOutputWithContext(ctx context.Context) ForwardingProfileUserLocationInternalHostDetectionPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ForwardingProfileUserLocationInternalHostDetection) *ForwardingProfileUserLocationInternalHostDetection {
+		return &v
+	}).(ForwardingProfileUserLocationInternalHostDetectionPtrOutput)
+}
+
+// user location fqdn
+func (o ForwardingProfileUserLocationInternalHostDetectionOutput) Fqdn() pulumi.StringOutput {
+	return o.ApplyT(func(v ForwardingProfileUserLocationInternalHostDetection) string { return v.Fqdn }).(pulumi.StringOutput)
+}
+
+// user location ip address
+func (o ForwardingProfileUserLocationInternalHostDetectionOutput) IpAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v ForwardingProfileUserLocationInternalHostDetection) string { return v.IpAddress }).(pulumi.StringOutput)
+}
+
+type ForwardingProfileUserLocationInternalHostDetectionPtrOutput struct{ *pulumi.OutputState }
+
+func (ForwardingProfileUserLocationInternalHostDetectionPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ForwardingProfileUserLocationInternalHostDetection)(nil)).Elem()
+}
+
+func (o ForwardingProfileUserLocationInternalHostDetectionPtrOutput) ToForwardingProfileUserLocationInternalHostDetectionPtrOutput() ForwardingProfileUserLocationInternalHostDetectionPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileUserLocationInternalHostDetectionPtrOutput) ToForwardingProfileUserLocationInternalHostDetectionPtrOutputWithContext(ctx context.Context) ForwardingProfileUserLocationInternalHostDetectionPtrOutput {
+	return o
+}
+
+func (o ForwardingProfileUserLocationInternalHostDetectionPtrOutput) Elem() ForwardingProfileUserLocationInternalHostDetectionOutput {
+	return o.ApplyT(func(v *ForwardingProfileUserLocationInternalHostDetection) ForwardingProfileUserLocationInternalHostDetection {
+		if v != nil {
+			return *v
+		}
+		var ret ForwardingProfileUserLocationInternalHostDetection
+		return ret
+	}).(ForwardingProfileUserLocationInternalHostDetectionOutput)
+}
+
+// user location fqdn
+func (o ForwardingProfileUserLocationInternalHostDetectionPtrOutput) Fqdn() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileUserLocationInternalHostDetection) *string {
+		if v == nil {
+			return nil
+		}
+		return &v.Fqdn
+	}).(pulumi.StringPtrOutput)
+}
+
+// user location ip address
+func (o ForwardingProfileUserLocationInternalHostDetectionPtrOutput) IpAddress() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ForwardingProfileUserLocationInternalHostDetection) *string {
+		if v == nil {
+			return nil
+		}
+		return &v.IpAddress
+	}).(pulumi.StringPtrOutput)
+}
+
 type GeneralSettingGeneral struct {
 	// Force admins to acknowledge login banner
 	AckLoginBanner *bool `pulumi:"ackLoginBanner"`
@@ -77367,2985 +80757,6 @@ func (o HttpServerProfileFormatDataHeaderArrayOutput) Index(i pulumi.IntInput) H
 	}).(HttpServerProfileFormatDataHeaderOutput)
 }
 
-type HttpServerProfileFormatDataParam struct {
-	// Parameter name
-	Name *string `pulumi:"name"`
-	// Parameter value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatDataParamInput is an input type that accepts HttpServerProfileFormatDataParamArgs and HttpServerProfileFormatDataParamOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatDataParamInput` via:
-//
-//	HttpServerProfileFormatDataParamArgs{...}
-type HttpServerProfileFormatDataParamInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatDataParamOutput() HttpServerProfileFormatDataParamOutput
-	ToHttpServerProfileFormatDataParamOutputWithContext(context.Context) HttpServerProfileFormatDataParamOutput
-}
-
-type HttpServerProfileFormatDataParamArgs struct {
-	// Parameter name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Parameter value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatDataParamArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatDataParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatDataParamArgs) ToHttpServerProfileFormatDataParamOutput() HttpServerProfileFormatDataParamOutput {
-	return i.ToHttpServerProfileFormatDataParamOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatDataParamArgs) ToHttpServerProfileFormatDataParamOutputWithContext(ctx context.Context) HttpServerProfileFormatDataParamOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatDataParamOutput)
-}
-
-// HttpServerProfileFormatDataParamArrayInput is an input type that accepts HttpServerProfileFormatDataParamArray and HttpServerProfileFormatDataParamArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatDataParamArrayInput` via:
-//
-//	HttpServerProfileFormatDataParamArray{ HttpServerProfileFormatDataParamArgs{...} }
-type HttpServerProfileFormatDataParamArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatDataParamArrayOutput() HttpServerProfileFormatDataParamArrayOutput
-	ToHttpServerProfileFormatDataParamArrayOutputWithContext(context.Context) HttpServerProfileFormatDataParamArrayOutput
-}
-
-type HttpServerProfileFormatDataParamArray []HttpServerProfileFormatDataParamInput
-
-func (HttpServerProfileFormatDataParamArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatDataParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatDataParamArray) ToHttpServerProfileFormatDataParamArrayOutput() HttpServerProfileFormatDataParamArrayOutput {
-	return i.ToHttpServerProfileFormatDataParamArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatDataParamArray) ToHttpServerProfileFormatDataParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatDataParamArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatDataParamArrayOutput)
-}
-
-type HttpServerProfileFormatDataParamOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatDataParamOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatDataParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatDataParamOutput) ToHttpServerProfileFormatDataParamOutput() HttpServerProfileFormatDataParamOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDataParamOutput) ToHttpServerProfileFormatDataParamOutputWithContext(ctx context.Context) HttpServerProfileFormatDataParamOutput {
-	return o
-}
-
-// Parameter name
-func (o HttpServerProfileFormatDataParamOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatDataParam) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Parameter value
-func (o HttpServerProfileFormatDataParamOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatDataParam) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatDataParamArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatDataParamArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatDataParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatDataParamArrayOutput) ToHttpServerProfileFormatDataParamArrayOutput() HttpServerProfileFormatDataParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDataParamArrayOutput) ToHttpServerProfileFormatDataParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatDataParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDataParamArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatDataParamOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatDataParam {
-		return vs[0].([]HttpServerProfileFormatDataParam)[vs[1].(int)]
-	}).(HttpServerProfileFormatDataParamOutput)
-}
-
-type HttpServerProfileFormatDecryption struct {
-	// Headers
-	Headers []HttpServerProfileFormatDecryptionHeader `pulumi:"headers"`
-	// The name of the payload format
-	Name *string `pulumi:"name"`
-	// Params
-	Params []HttpServerProfileFormatDecryptionParam `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload *string `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat *string `pulumi:"urlFormat"`
-}
-
-// HttpServerProfileFormatDecryptionInput is an input type that accepts HttpServerProfileFormatDecryptionArgs and HttpServerProfileFormatDecryptionOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatDecryptionInput` via:
-//
-//	HttpServerProfileFormatDecryptionArgs{...}
-type HttpServerProfileFormatDecryptionInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatDecryptionOutput() HttpServerProfileFormatDecryptionOutput
-	ToHttpServerProfileFormatDecryptionOutputWithContext(context.Context) HttpServerProfileFormatDecryptionOutput
-}
-
-type HttpServerProfileFormatDecryptionArgs struct {
-	// Headers
-	Headers HttpServerProfileFormatDecryptionHeaderArrayInput `pulumi:"headers"`
-	// The name of the payload format
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Params
-	Params HttpServerProfileFormatDecryptionParamArrayInput `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload pulumi.StringPtrInput `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat pulumi.StringPtrInput `pulumi:"urlFormat"`
-}
-
-func (HttpServerProfileFormatDecryptionArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatDecryption)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatDecryptionArgs) ToHttpServerProfileFormatDecryptionOutput() HttpServerProfileFormatDecryptionOutput {
-	return i.ToHttpServerProfileFormatDecryptionOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatDecryptionArgs) ToHttpServerProfileFormatDecryptionOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatDecryptionOutput)
-}
-
-func (i HttpServerProfileFormatDecryptionArgs) ToHttpServerProfileFormatDecryptionPtrOutput() HttpServerProfileFormatDecryptionPtrOutput {
-	return i.ToHttpServerProfileFormatDecryptionPtrOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatDecryptionArgs) ToHttpServerProfileFormatDecryptionPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatDecryptionOutput).ToHttpServerProfileFormatDecryptionPtrOutputWithContext(ctx)
-}
-
-// HttpServerProfileFormatDecryptionPtrInput is an input type that accepts HttpServerProfileFormatDecryptionArgs, HttpServerProfileFormatDecryptionPtr and HttpServerProfileFormatDecryptionPtrOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatDecryptionPtrInput` via:
-//
-//	        HttpServerProfileFormatDecryptionArgs{...}
-//
-//	or:
-//
-//	        nil
-type HttpServerProfileFormatDecryptionPtrInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatDecryptionPtrOutput() HttpServerProfileFormatDecryptionPtrOutput
-	ToHttpServerProfileFormatDecryptionPtrOutputWithContext(context.Context) HttpServerProfileFormatDecryptionPtrOutput
-}
-
-type httpServerProfileFormatDecryptionPtrType HttpServerProfileFormatDecryptionArgs
-
-func HttpServerProfileFormatDecryptionPtr(v *HttpServerProfileFormatDecryptionArgs) HttpServerProfileFormatDecryptionPtrInput {
-	return (*httpServerProfileFormatDecryptionPtrType)(v)
-}
-
-func (*httpServerProfileFormatDecryptionPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatDecryption)(nil)).Elem()
-}
-
-func (i *httpServerProfileFormatDecryptionPtrType) ToHttpServerProfileFormatDecryptionPtrOutput() HttpServerProfileFormatDecryptionPtrOutput {
-	return i.ToHttpServerProfileFormatDecryptionPtrOutputWithContext(context.Background())
-}
-
-func (i *httpServerProfileFormatDecryptionPtrType) ToHttpServerProfileFormatDecryptionPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatDecryptionPtrOutput)
-}
-
-type HttpServerProfileFormatDecryptionOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatDecryptionOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatDecryption)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatDecryptionOutput) ToHttpServerProfileFormatDecryptionOutput() HttpServerProfileFormatDecryptionOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDecryptionOutput) ToHttpServerProfileFormatDecryptionOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDecryptionOutput) ToHttpServerProfileFormatDecryptionPtrOutput() HttpServerProfileFormatDecryptionPtrOutput {
-	return o.ToHttpServerProfileFormatDecryptionPtrOutputWithContext(context.Background())
-}
-
-func (o HttpServerProfileFormatDecryptionOutput) ToHttpServerProfileFormatDecryptionPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v HttpServerProfileFormatDecryption) *HttpServerProfileFormatDecryption {
-		return &v
-	}).(HttpServerProfileFormatDecryptionPtrOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatDecryptionOutput) Headers() HttpServerProfileFormatDecryptionHeaderArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatDecryption) []HttpServerProfileFormatDecryptionHeader { return v.Headers }).(HttpServerProfileFormatDecryptionHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatDecryptionOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatDecryption) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatDecryptionOutput) Params() HttpServerProfileFormatDecryptionParamArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatDecryption) []HttpServerProfileFormatDecryptionParam { return v.Params }).(HttpServerProfileFormatDecryptionParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatDecryptionOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatDecryption) *string { return v.Payload }).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatDecryptionOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatDecryption) *string { return v.UrlFormat }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatDecryptionPtrOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatDecryptionPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatDecryption)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatDecryptionPtrOutput) ToHttpServerProfileFormatDecryptionPtrOutput() HttpServerProfileFormatDecryptionPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDecryptionPtrOutput) ToHttpServerProfileFormatDecryptionPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDecryptionPtrOutput) Elem() HttpServerProfileFormatDecryptionOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatDecryption) HttpServerProfileFormatDecryption {
-		if v != nil {
-			return *v
-		}
-		var ret HttpServerProfileFormatDecryption
-		return ret
-	}).(HttpServerProfileFormatDecryptionOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatDecryptionPtrOutput) Headers() HttpServerProfileFormatDecryptionHeaderArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatDecryption) []HttpServerProfileFormatDecryptionHeader {
-		if v == nil {
-			return nil
-		}
-		return v.Headers
-	}).(HttpServerProfileFormatDecryptionHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatDecryptionPtrOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatDecryption) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Name
-	}).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatDecryptionPtrOutput) Params() HttpServerProfileFormatDecryptionParamArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatDecryption) []HttpServerProfileFormatDecryptionParam {
-		if v == nil {
-			return nil
-		}
-		return v.Params
-	}).(HttpServerProfileFormatDecryptionParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatDecryptionPtrOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatDecryption) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Payload
-	}).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatDecryptionPtrOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatDecryption) *string {
-		if v == nil {
-			return nil
-		}
-		return v.UrlFormat
-	}).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatDecryptionHeader struct {
-	// Header name
-	Name *string `pulumi:"name"`
-	// Header value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatDecryptionHeaderInput is an input type that accepts HttpServerProfileFormatDecryptionHeaderArgs and HttpServerProfileFormatDecryptionHeaderOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatDecryptionHeaderInput` via:
-//
-//	HttpServerProfileFormatDecryptionHeaderArgs{...}
-type HttpServerProfileFormatDecryptionHeaderInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatDecryptionHeaderOutput() HttpServerProfileFormatDecryptionHeaderOutput
-	ToHttpServerProfileFormatDecryptionHeaderOutputWithContext(context.Context) HttpServerProfileFormatDecryptionHeaderOutput
-}
-
-type HttpServerProfileFormatDecryptionHeaderArgs struct {
-	// Header name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Header value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatDecryptionHeaderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatDecryptionHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatDecryptionHeaderArgs) ToHttpServerProfileFormatDecryptionHeaderOutput() HttpServerProfileFormatDecryptionHeaderOutput {
-	return i.ToHttpServerProfileFormatDecryptionHeaderOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatDecryptionHeaderArgs) ToHttpServerProfileFormatDecryptionHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionHeaderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatDecryptionHeaderOutput)
-}
-
-// HttpServerProfileFormatDecryptionHeaderArrayInput is an input type that accepts HttpServerProfileFormatDecryptionHeaderArray and HttpServerProfileFormatDecryptionHeaderArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatDecryptionHeaderArrayInput` via:
-//
-//	HttpServerProfileFormatDecryptionHeaderArray{ HttpServerProfileFormatDecryptionHeaderArgs{...} }
-type HttpServerProfileFormatDecryptionHeaderArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatDecryptionHeaderArrayOutput() HttpServerProfileFormatDecryptionHeaderArrayOutput
-	ToHttpServerProfileFormatDecryptionHeaderArrayOutputWithContext(context.Context) HttpServerProfileFormatDecryptionHeaderArrayOutput
-}
-
-type HttpServerProfileFormatDecryptionHeaderArray []HttpServerProfileFormatDecryptionHeaderInput
-
-func (HttpServerProfileFormatDecryptionHeaderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatDecryptionHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatDecryptionHeaderArray) ToHttpServerProfileFormatDecryptionHeaderArrayOutput() HttpServerProfileFormatDecryptionHeaderArrayOutput {
-	return i.ToHttpServerProfileFormatDecryptionHeaderArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatDecryptionHeaderArray) ToHttpServerProfileFormatDecryptionHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionHeaderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatDecryptionHeaderArrayOutput)
-}
-
-type HttpServerProfileFormatDecryptionHeaderOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatDecryptionHeaderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatDecryptionHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatDecryptionHeaderOutput) ToHttpServerProfileFormatDecryptionHeaderOutput() HttpServerProfileFormatDecryptionHeaderOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDecryptionHeaderOutput) ToHttpServerProfileFormatDecryptionHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionHeaderOutput {
-	return o
-}
-
-// Header name
-func (o HttpServerProfileFormatDecryptionHeaderOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatDecryptionHeader) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Header value
-func (o HttpServerProfileFormatDecryptionHeaderOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatDecryptionHeader) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatDecryptionHeaderArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatDecryptionHeaderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatDecryptionHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatDecryptionHeaderArrayOutput) ToHttpServerProfileFormatDecryptionHeaderArrayOutput() HttpServerProfileFormatDecryptionHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDecryptionHeaderArrayOutput) ToHttpServerProfileFormatDecryptionHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDecryptionHeaderArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatDecryptionHeaderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatDecryptionHeader {
-		return vs[0].([]HttpServerProfileFormatDecryptionHeader)[vs[1].(int)]
-	}).(HttpServerProfileFormatDecryptionHeaderOutput)
-}
-
-type HttpServerProfileFormatDecryptionParam struct {
-	// Parameter name
-	Name *string `pulumi:"name"`
-	// Parameter value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatDecryptionParamInput is an input type that accepts HttpServerProfileFormatDecryptionParamArgs and HttpServerProfileFormatDecryptionParamOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatDecryptionParamInput` via:
-//
-//	HttpServerProfileFormatDecryptionParamArgs{...}
-type HttpServerProfileFormatDecryptionParamInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatDecryptionParamOutput() HttpServerProfileFormatDecryptionParamOutput
-	ToHttpServerProfileFormatDecryptionParamOutputWithContext(context.Context) HttpServerProfileFormatDecryptionParamOutput
-}
-
-type HttpServerProfileFormatDecryptionParamArgs struct {
-	// Parameter name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Parameter value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatDecryptionParamArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatDecryptionParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatDecryptionParamArgs) ToHttpServerProfileFormatDecryptionParamOutput() HttpServerProfileFormatDecryptionParamOutput {
-	return i.ToHttpServerProfileFormatDecryptionParamOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatDecryptionParamArgs) ToHttpServerProfileFormatDecryptionParamOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionParamOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatDecryptionParamOutput)
-}
-
-// HttpServerProfileFormatDecryptionParamArrayInput is an input type that accepts HttpServerProfileFormatDecryptionParamArray and HttpServerProfileFormatDecryptionParamArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatDecryptionParamArrayInput` via:
-//
-//	HttpServerProfileFormatDecryptionParamArray{ HttpServerProfileFormatDecryptionParamArgs{...} }
-type HttpServerProfileFormatDecryptionParamArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatDecryptionParamArrayOutput() HttpServerProfileFormatDecryptionParamArrayOutput
-	ToHttpServerProfileFormatDecryptionParamArrayOutputWithContext(context.Context) HttpServerProfileFormatDecryptionParamArrayOutput
-}
-
-type HttpServerProfileFormatDecryptionParamArray []HttpServerProfileFormatDecryptionParamInput
-
-func (HttpServerProfileFormatDecryptionParamArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatDecryptionParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatDecryptionParamArray) ToHttpServerProfileFormatDecryptionParamArrayOutput() HttpServerProfileFormatDecryptionParamArrayOutput {
-	return i.ToHttpServerProfileFormatDecryptionParamArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatDecryptionParamArray) ToHttpServerProfileFormatDecryptionParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionParamArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatDecryptionParamArrayOutput)
-}
-
-type HttpServerProfileFormatDecryptionParamOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatDecryptionParamOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatDecryptionParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatDecryptionParamOutput) ToHttpServerProfileFormatDecryptionParamOutput() HttpServerProfileFormatDecryptionParamOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDecryptionParamOutput) ToHttpServerProfileFormatDecryptionParamOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionParamOutput {
-	return o
-}
-
-// Parameter name
-func (o HttpServerProfileFormatDecryptionParamOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatDecryptionParam) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Parameter value
-func (o HttpServerProfileFormatDecryptionParamOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatDecryptionParam) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatDecryptionParamArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatDecryptionParamArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatDecryptionParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatDecryptionParamArrayOutput) ToHttpServerProfileFormatDecryptionParamArrayOutput() HttpServerProfileFormatDecryptionParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDecryptionParamArrayOutput) ToHttpServerProfileFormatDecryptionParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatDecryptionParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatDecryptionParamArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatDecryptionParamOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatDecryptionParam {
-		return vs[0].([]HttpServerProfileFormatDecryptionParam)[vs[1].(int)]
-	}).(HttpServerProfileFormatDecryptionParamOutput)
-}
-
-type HttpServerProfileFormatGlobalprotect struct {
-	// Headers
-	Headers []HttpServerProfileFormatGlobalprotectHeader `pulumi:"headers"`
-	// The name of the payload format
-	Name *string `pulumi:"name"`
-	// Params
-	Params []HttpServerProfileFormatGlobalprotectParam `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload *string `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat *string `pulumi:"urlFormat"`
-}
-
-// HttpServerProfileFormatGlobalprotectInput is an input type that accepts HttpServerProfileFormatGlobalprotectArgs and HttpServerProfileFormatGlobalprotectOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGlobalprotectInput` via:
-//
-//	HttpServerProfileFormatGlobalprotectArgs{...}
-type HttpServerProfileFormatGlobalprotectInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGlobalprotectOutput() HttpServerProfileFormatGlobalprotectOutput
-	ToHttpServerProfileFormatGlobalprotectOutputWithContext(context.Context) HttpServerProfileFormatGlobalprotectOutput
-}
-
-type HttpServerProfileFormatGlobalprotectArgs struct {
-	// Headers
-	Headers HttpServerProfileFormatGlobalprotectHeaderArrayInput `pulumi:"headers"`
-	// The name of the payload format
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Params
-	Params HttpServerProfileFormatGlobalprotectParamArrayInput `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload pulumi.StringPtrInput `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat pulumi.StringPtrInput `pulumi:"urlFormat"`
-}
-
-func (HttpServerProfileFormatGlobalprotectArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGlobalprotect)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatGlobalprotectArgs) ToHttpServerProfileFormatGlobalprotectOutput() HttpServerProfileFormatGlobalprotectOutput {
-	return i.ToHttpServerProfileFormatGlobalprotectOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGlobalprotectArgs) ToHttpServerProfileFormatGlobalprotectOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGlobalprotectOutput)
-}
-
-func (i HttpServerProfileFormatGlobalprotectArgs) ToHttpServerProfileFormatGlobalprotectPtrOutput() HttpServerProfileFormatGlobalprotectPtrOutput {
-	return i.ToHttpServerProfileFormatGlobalprotectPtrOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGlobalprotectArgs) ToHttpServerProfileFormatGlobalprotectPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGlobalprotectOutput).ToHttpServerProfileFormatGlobalprotectPtrOutputWithContext(ctx)
-}
-
-// HttpServerProfileFormatGlobalprotectPtrInput is an input type that accepts HttpServerProfileFormatGlobalprotectArgs, HttpServerProfileFormatGlobalprotectPtr and HttpServerProfileFormatGlobalprotectPtrOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGlobalprotectPtrInput` via:
-//
-//	        HttpServerProfileFormatGlobalprotectArgs{...}
-//
-//	or:
-//
-//	        nil
-type HttpServerProfileFormatGlobalprotectPtrInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGlobalprotectPtrOutput() HttpServerProfileFormatGlobalprotectPtrOutput
-	ToHttpServerProfileFormatGlobalprotectPtrOutputWithContext(context.Context) HttpServerProfileFormatGlobalprotectPtrOutput
-}
-
-type httpServerProfileFormatGlobalprotectPtrType HttpServerProfileFormatGlobalprotectArgs
-
-func HttpServerProfileFormatGlobalprotectPtr(v *HttpServerProfileFormatGlobalprotectArgs) HttpServerProfileFormatGlobalprotectPtrInput {
-	return (*httpServerProfileFormatGlobalprotectPtrType)(v)
-}
-
-func (*httpServerProfileFormatGlobalprotectPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatGlobalprotect)(nil)).Elem()
-}
-
-func (i *httpServerProfileFormatGlobalprotectPtrType) ToHttpServerProfileFormatGlobalprotectPtrOutput() HttpServerProfileFormatGlobalprotectPtrOutput {
-	return i.ToHttpServerProfileFormatGlobalprotectPtrOutputWithContext(context.Background())
-}
-
-func (i *httpServerProfileFormatGlobalprotectPtrType) ToHttpServerProfileFormatGlobalprotectPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGlobalprotectPtrOutput)
-}
-
-type HttpServerProfileFormatGlobalprotectOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGlobalprotectOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGlobalprotect)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGlobalprotectOutput) ToHttpServerProfileFormatGlobalprotectOutput() HttpServerProfileFormatGlobalprotectOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGlobalprotectOutput) ToHttpServerProfileFormatGlobalprotectOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGlobalprotectOutput) ToHttpServerProfileFormatGlobalprotectPtrOutput() HttpServerProfileFormatGlobalprotectPtrOutput {
-	return o.ToHttpServerProfileFormatGlobalprotectPtrOutputWithContext(context.Background())
-}
-
-func (o HttpServerProfileFormatGlobalprotectOutput) ToHttpServerProfileFormatGlobalprotectPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v HttpServerProfileFormatGlobalprotect) *HttpServerProfileFormatGlobalprotect {
-		return &v
-	}).(HttpServerProfileFormatGlobalprotectPtrOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatGlobalprotectOutput) Headers() HttpServerProfileFormatGlobalprotectHeaderArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGlobalprotect) []HttpServerProfileFormatGlobalprotectHeader {
-		return v.Headers
-	}).(HttpServerProfileFormatGlobalprotectHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatGlobalprotectOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGlobalprotect) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatGlobalprotectOutput) Params() HttpServerProfileFormatGlobalprotectParamArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGlobalprotect) []HttpServerProfileFormatGlobalprotectParam {
-		return v.Params
-	}).(HttpServerProfileFormatGlobalprotectParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatGlobalprotectOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGlobalprotect) *string { return v.Payload }).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatGlobalprotectOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGlobalprotect) *string { return v.UrlFormat }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatGlobalprotectPtrOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGlobalprotectPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatGlobalprotect)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGlobalprotectPtrOutput) ToHttpServerProfileFormatGlobalprotectPtrOutput() HttpServerProfileFormatGlobalprotectPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGlobalprotectPtrOutput) ToHttpServerProfileFormatGlobalprotectPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGlobalprotectPtrOutput) Elem() HttpServerProfileFormatGlobalprotectOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGlobalprotect) HttpServerProfileFormatGlobalprotect {
-		if v != nil {
-			return *v
-		}
-		var ret HttpServerProfileFormatGlobalprotect
-		return ret
-	}).(HttpServerProfileFormatGlobalprotectOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatGlobalprotectPtrOutput) Headers() HttpServerProfileFormatGlobalprotectHeaderArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGlobalprotect) []HttpServerProfileFormatGlobalprotectHeader {
-		if v == nil {
-			return nil
-		}
-		return v.Headers
-	}).(HttpServerProfileFormatGlobalprotectHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatGlobalprotectPtrOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGlobalprotect) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Name
-	}).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatGlobalprotectPtrOutput) Params() HttpServerProfileFormatGlobalprotectParamArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGlobalprotect) []HttpServerProfileFormatGlobalprotectParam {
-		if v == nil {
-			return nil
-		}
-		return v.Params
-	}).(HttpServerProfileFormatGlobalprotectParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatGlobalprotectPtrOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGlobalprotect) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Payload
-	}).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatGlobalprotectPtrOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGlobalprotect) *string {
-		if v == nil {
-			return nil
-		}
-		return v.UrlFormat
-	}).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatGlobalprotectHeader struct {
-	// Header name
-	Name *string `pulumi:"name"`
-	// Header value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatGlobalprotectHeaderInput is an input type that accepts HttpServerProfileFormatGlobalprotectHeaderArgs and HttpServerProfileFormatGlobalprotectHeaderOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGlobalprotectHeaderInput` via:
-//
-//	HttpServerProfileFormatGlobalprotectHeaderArgs{...}
-type HttpServerProfileFormatGlobalprotectHeaderInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGlobalprotectHeaderOutput() HttpServerProfileFormatGlobalprotectHeaderOutput
-	ToHttpServerProfileFormatGlobalprotectHeaderOutputWithContext(context.Context) HttpServerProfileFormatGlobalprotectHeaderOutput
-}
-
-type HttpServerProfileFormatGlobalprotectHeaderArgs struct {
-	// Header name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Header value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatGlobalprotectHeaderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGlobalprotectHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatGlobalprotectHeaderArgs) ToHttpServerProfileFormatGlobalprotectHeaderOutput() HttpServerProfileFormatGlobalprotectHeaderOutput {
-	return i.ToHttpServerProfileFormatGlobalprotectHeaderOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGlobalprotectHeaderArgs) ToHttpServerProfileFormatGlobalprotectHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectHeaderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGlobalprotectHeaderOutput)
-}
-
-// HttpServerProfileFormatGlobalprotectHeaderArrayInput is an input type that accepts HttpServerProfileFormatGlobalprotectHeaderArray and HttpServerProfileFormatGlobalprotectHeaderArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGlobalprotectHeaderArrayInput` via:
-//
-//	HttpServerProfileFormatGlobalprotectHeaderArray{ HttpServerProfileFormatGlobalprotectHeaderArgs{...} }
-type HttpServerProfileFormatGlobalprotectHeaderArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGlobalprotectHeaderArrayOutput() HttpServerProfileFormatGlobalprotectHeaderArrayOutput
-	ToHttpServerProfileFormatGlobalprotectHeaderArrayOutputWithContext(context.Context) HttpServerProfileFormatGlobalprotectHeaderArrayOutput
-}
-
-type HttpServerProfileFormatGlobalprotectHeaderArray []HttpServerProfileFormatGlobalprotectHeaderInput
-
-func (HttpServerProfileFormatGlobalprotectHeaderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatGlobalprotectHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatGlobalprotectHeaderArray) ToHttpServerProfileFormatGlobalprotectHeaderArrayOutput() HttpServerProfileFormatGlobalprotectHeaderArrayOutput {
-	return i.ToHttpServerProfileFormatGlobalprotectHeaderArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGlobalprotectHeaderArray) ToHttpServerProfileFormatGlobalprotectHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectHeaderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGlobalprotectHeaderArrayOutput)
-}
-
-type HttpServerProfileFormatGlobalprotectHeaderOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGlobalprotectHeaderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGlobalprotectHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGlobalprotectHeaderOutput) ToHttpServerProfileFormatGlobalprotectHeaderOutput() HttpServerProfileFormatGlobalprotectHeaderOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGlobalprotectHeaderOutput) ToHttpServerProfileFormatGlobalprotectHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectHeaderOutput {
-	return o
-}
-
-// Header name
-func (o HttpServerProfileFormatGlobalprotectHeaderOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGlobalprotectHeader) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Header value
-func (o HttpServerProfileFormatGlobalprotectHeaderOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGlobalprotectHeader) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatGlobalprotectHeaderArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGlobalprotectHeaderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatGlobalprotectHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGlobalprotectHeaderArrayOutput) ToHttpServerProfileFormatGlobalprotectHeaderArrayOutput() HttpServerProfileFormatGlobalprotectHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGlobalprotectHeaderArrayOutput) ToHttpServerProfileFormatGlobalprotectHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGlobalprotectHeaderArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatGlobalprotectHeaderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatGlobalprotectHeader {
-		return vs[0].([]HttpServerProfileFormatGlobalprotectHeader)[vs[1].(int)]
-	}).(HttpServerProfileFormatGlobalprotectHeaderOutput)
-}
-
-type HttpServerProfileFormatGlobalprotectParam struct {
-	// Parameter name
-	Name *string `pulumi:"name"`
-	// Parameter value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatGlobalprotectParamInput is an input type that accepts HttpServerProfileFormatGlobalprotectParamArgs and HttpServerProfileFormatGlobalprotectParamOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGlobalprotectParamInput` via:
-//
-//	HttpServerProfileFormatGlobalprotectParamArgs{...}
-type HttpServerProfileFormatGlobalprotectParamInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGlobalprotectParamOutput() HttpServerProfileFormatGlobalprotectParamOutput
-	ToHttpServerProfileFormatGlobalprotectParamOutputWithContext(context.Context) HttpServerProfileFormatGlobalprotectParamOutput
-}
-
-type HttpServerProfileFormatGlobalprotectParamArgs struct {
-	// Parameter name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Parameter value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatGlobalprotectParamArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGlobalprotectParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatGlobalprotectParamArgs) ToHttpServerProfileFormatGlobalprotectParamOutput() HttpServerProfileFormatGlobalprotectParamOutput {
-	return i.ToHttpServerProfileFormatGlobalprotectParamOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGlobalprotectParamArgs) ToHttpServerProfileFormatGlobalprotectParamOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectParamOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGlobalprotectParamOutput)
-}
-
-// HttpServerProfileFormatGlobalprotectParamArrayInput is an input type that accepts HttpServerProfileFormatGlobalprotectParamArray and HttpServerProfileFormatGlobalprotectParamArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGlobalprotectParamArrayInput` via:
-//
-//	HttpServerProfileFormatGlobalprotectParamArray{ HttpServerProfileFormatGlobalprotectParamArgs{...} }
-type HttpServerProfileFormatGlobalprotectParamArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGlobalprotectParamArrayOutput() HttpServerProfileFormatGlobalprotectParamArrayOutput
-	ToHttpServerProfileFormatGlobalprotectParamArrayOutputWithContext(context.Context) HttpServerProfileFormatGlobalprotectParamArrayOutput
-}
-
-type HttpServerProfileFormatGlobalprotectParamArray []HttpServerProfileFormatGlobalprotectParamInput
-
-func (HttpServerProfileFormatGlobalprotectParamArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatGlobalprotectParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatGlobalprotectParamArray) ToHttpServerProfileFormatGlobalprotectParamArrayOutput() HttpServerProfileFormatGlobalprotectParamArrayOutput {
-	return i.ToHttpServerProfileFormatGlobalprotectParamArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGlobalprotectParamArray) ToHttpServerProfileFormatGlobalprotectParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectParamArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGlobalprotectParamArrayOutput)
-}
-
-type HttpServerProfileFormatGlobalprotectParamOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGlobalprotectParamOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGlobalprotectParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGlobalprotectParamOutput) ToHttpServerProfileFormatGlobalprotectParamOutput() HttpServerProfileFormatGlobalprotectParamOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGlobalprotectParamOutput) ToHttpServerProfileFormatGlobalprotectParamOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectParamOutput {
-	return o
-}
-
-// Parameter name
-func (o HttpServerProfileFormatGlobalprotectParamOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGlobalprotectParam) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Parameter value
-func (o HttpServerProfileFormatGlobalprotectParamOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGlobalprotectParam) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatGlobalprotectParamArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGlobalprotectParamArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatGlobalprotectParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGlobalprotectParamArrayOutput) ToHttpServerProfileFormatGlobalprotectParamArrayOutput() HttpServerProfileFormatGlobalprotectParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGlobalprotectParamArrayOutput) ToHttpServerProfileFormatGlobalprotectParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatGlobalprotectParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGlobalprotectParamArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatGlobalprotectParamOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatGlobalprotectParam {
-		return vs[0].([]HttpServerProfileFormatGlobalprotectParam)[vs[1].(int)]
-	}).(HttpServerProfileFormatGlobalprotectParamOutput)
-}
-
-type HttpServerProfileFormatGtp struct {
-	// Headers
-	Headers []HttpServerProfileFormatGtpHeader `pulumi:"headers"`
-	// The name of the payload format
-	Name *string `pulumi:"name"`
-	// Params
-	Params []HttpServerProfileFormatGtpParam `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload *string `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat *string `pulumi:"urlFormat"`
-}
-
-// HttpServerProfileFormatGtpInput is an input type that accepts HttpServerProfileFormatGtpArgs and HttpServerProfileFormatGtpOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGtpInput` via:
-//
-//	HttpServerProfileFormatGtpArgs{...}
-type HttpServerProfileFormatGtpInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGtpOutput() HttpServerProfileFormatGtpOutput
-	ToHttpServerProfileFormatGtpOutputWithContext(context.Context) HttpServerProfileFormatGtpOutput
-}
-
-type HttpServerProfileFormatGtpArgs struct {
-	// Headers
-	Headers HttpServerProfileFormatGtpHeaderArrayInput `pulumi:"headers"`
-	// The name of the payload format
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Params
-	Params HttpServerProfileFormatGtpParamArrayInput `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload pulumi.StringPtrInput `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat pulumi.StringPtrInput `pulumi:"urlFormat"`
-}
-
-func (HttpServerProfileFormatGtpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGtp)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatGtpArgs) ToHttpServerProfileFormatGtpOutput() HttpServerProfileFormatGtpOutput {
-	return i.ToHttpServerProfileFormatGtpOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGtpArgs) ToHttpServerProfileFormatGtpOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGtpOutput)
-}
-
-func (i HttpServerProfileFormatGtpArgs) ToHttpServerProfileFormatGtpPtrOutput() HttpServerProfileFormatGtpPtrOutput {
-	return i.ToHttpServerProfileFormatGtpPtrOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGtpArgs) ToHttpServerProfileFormatGtpPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGtpOutput).ToHttpServerProfileFormatGtpPtrOutputWithContext(ctx)
-}
-
-// HttpServerProfileFormatGtpPtrInput is an input type that accepts HttpServerProfileFormatGtpArgs, HttpServerProfileFormatGtpPtr and HttpServerProfileFormatGtpPtrOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGtpPtrInput` via:
-//
-//	        HttpServerProfileFormatGtpArgs{...}
-//
-//	or:
-//
-//	        nil
-type HttpServerProfileFormatGtpPtrInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGtpPtrOutput() HttpServerProfileFormatGtpPtrOutput
-	ToHttpServerProfileFormatGtpPtrOutputWithContext(context.Context) HttpServerProfileFormatGtpPtrOutput
-}
-
-type httpServerProfileFormatGtpPtrType HttpServerProfileFormatGtpArgs
-
-func HttpServerProfileFormatGtpPtr(v *HttpServerProfileFormatGtpArgs) HttpServerProfileFormatGtpPtrInput {
-	return (*httpServerProfileFormatGtpPtrType)(v)
-}
-
-func (*httpServerProfileFormatGtpPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatGtp)(nil)).Elem()
-}
-
-func (i *httpServerProfileFormatGtpPtrType) ToHttpServerProfileFormatGtpPtrOutput() HttpServerProfileFormatGtpPtrOutput {
-	return i.ToHttpServerProfileFormatGtpPtrOutputWithContext(context.Background())
-}
-
-func (i *httpServerProfileFormatGtpPtrType) ToHttpServerProfileFormatGtpPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGtpPtrOutput)
-}
-
-type HttpServerProfileFormatGtpOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGtpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGtp)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGtpOutput) ToHttpServerProfileFormatGtpOutput() HttpServerProfileFormatGtpOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGtpOutput) ToHttpServerProfileFormatGtpOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGtpOutput) ToHttpServerProfileFormatGtpPtrOutput() HttpServerProfileFormatGtpPtrOutput {
-	return o.ToHttpServerProfileFormatGtpPtrOutputWithContext(context.Background())
-}
-
-func (o HttpServerProfileFormatGtpOutput) ToHttpServerProfileFormatGtpPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v HttpServerProfileFormatGtp) *HttpServerProfileFormatGtp {
-		return &v
-	}).(HttpServerProfileFormatGtpPtrOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatGtpOutput) Headers() HttpServerProfileFormatGtpHeaderArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGtp) []HttpServerProfileFormatGtpHeader { return v.Headers }).(HttpServerProfileFormatGtpHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatGtpOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGtp) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatGtpOutput) Params() HttpServerProfileFormatGtpParamArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGtp) []HttpServerProfileFormatGtpParam { return v.Params }).(HttpServerProfileFormatGtpParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatGtpOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGtp) *string { return v.Payload }).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatGtpOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGtp) *string { return v.UrlFormat }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatGtpPtrOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGtpPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatGtp)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGtpPtrOutput) ToHttpServerProfileFormatGtpPtrOutput() HttpServerProfileFormatGtpPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGtpPtrOutput) ToHttpServerProfileFormatGtpPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGtpPtrOutput) Elem() HttpServerProfileFormatGtpOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGtp) HttpServerProfileFormatGtp {
-		if v != nil {
-			return *v
-		}
-		var ret HttpServerProfileFormatGtp
-		return ret
-	}).(HttpServerProfileFormatGtpOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatGtpPtrOutput) Headers() HttpServerProfileFormatGtpHeaderArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGtp) []HttpServerProfileFormatGtpHeader {
-		if v == nil {
-			return nil
-		}
-		return v.Headers
-	}).(HttpServerProfileFormatGtpHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatGtpPtrOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGtp) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Name
-	}).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatGtpPtrOutput) Params() HttpServerProfileFormatGtpParamArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGtp) []HttpServerProfileFormatGtpParam {
-		if v == nil {
-			return nil
-		}
-		return v.Params
-	}).(HttpServerProfileFormatGtpParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatGtpPtrOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGtp) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Payload
-	}).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatGtpPtrOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatGtp) *string {
-		if v == nil {
-			return nil
-		}
-		return v.UrlFormat
-	}).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatGtpHeader struct {
-	// Header name
-	Name *string `pulumi:"name"`
-	// Header value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatGtpHeaderInput is an input type that accepts HttpServerProfileFormatGtpHeaderArgs and HttpServerProfileFormatGtpHeaderOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGtpHeaderInput` via:
-//
-//	HttpServerProfileFormatGtpHeaderArgs{...}
-type HttpServerProfileFormatGtpHeaderInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGtpHeaderOutput() HttpServerProfileFormatGtpHeaderOutput
-	ToHttpServerProfileFormatGtpHeaderOutputWithContext(context.Context) HttpServerProfileFormatGtpHeaderOutput
-}
-
-type HttpServerProfileFormatGtpHeaderArgs struct {
-	// Header name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Header value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatGtpHeaderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGtpHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatGtpHeaderArgs) ToHttpServerProfileFormatGtpHeaderOutput() HttpServerProfileFormatGtpHeaderOutput {
-	return i.ToHttpServerProfileFormatGtpHeaderOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGtpHeaderArgs) ToHttpServerProfileFormatGtpHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpHeaderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGtpHeaderOutput)
-}
-
-// HttpServerProfileFormatGtpHeaderArrayInput is an input type that accepts HttpServerProfileFormatGtpHeaderArray and HttpServerProfileFormatGtpHeaderArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGtpHeaderArrayInput` via:
-//
-//	HttpServerProfileFormatGtpHeaderArray{ HttpServerProfileFormatGtpHeaderArgs{...} }
-type HttpServerProfileFormatGtpHeaderArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGtpHeaderArrayOutput() HttpServerProfileFormatGtpHeaderArrayOutput
-	ToHttpServerProfileFormatGtpHeaderArrayOutputWithContext(context.Context) HttpServerProfileFormatGtpHeaderArrayOutput
-}
-
-type HttpServerProfileFormatGtpHeaderArray []HttpServerProfileFormatGtpHeaderInput
-
-func (HttpServerProfileFormatGtpHeaderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatGtpHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatGtpHeaderArray) ToHttpServerProfileFormatGtpHeaderArrayOutput() HttpServerProfileFormatGtpHeaderArrayOutput {
-	return i.ToHttpServerProfileFormatGtpHeaderArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGtpHeaderArray) ToHttpServerProfileFormatGtpHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpHeaderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGtpHeaderArrayOutput)
-}
-
-type HttpServerProfileFormatGtpHeaderOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGtpHeaderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGtpHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGtpHeaderOutput) ToHttpServerProfileFormatGtpHeaderOutput() HttpServerProfileFormatGtpHeaderOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGtpHeaderOutput) ToHttpServerProfileFormatGtpHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpHeaderOutput {
-	return o
-}
-
-// Header name
-func (o HttpServerProfileFormatGtpHeaderOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGtpHeader) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Header value
-func (o HttpServerProfileFormatGtpHeaderOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGtpHeader) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatGtpHeaderArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGtpHeaderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatGtpHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGtpHeaderArrayOutput) ToHttpServerProfileFormatGtpHeaderArrayOutput() HttpServerProfileFormatGtpHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGtpHeaderArrayOutput) ToHttpServerProfileFormatGtpHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGtpHeaderArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatGtpHeaderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatGtpHeader {
-		return vs[0].([]HttpServerProfileFormatGtpHeader)[vs[1].(int)]
-	}).(HttpServerProfileFormatGtpHeaderOutput)
-}
-
-type HttpServerProfileFormatGtpParam struct {
-	// Parameter name
-	Name *string `pulumi:"name"`
-	// Parameter value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatGtpParamInput is an input type that accepts HttpServerProfileFormatGtpParamArgs and HttpServerProfileFormatGtpParamOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGtpParamInput` via:
-//
-//	HttpServerProfileFormatGtpParamArgs{...}
-type HttpServerProfileFormatGtpParamInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGtpParamOutput() HttpServerProfileFormatGtpParamOutput
-	ToHttpServerProfileFormatGtpParamOutputWithContext(context.Context) HttpServerProfileFormatGtpParamOutput
-}
-
-type HttpServerProfileFormatGtpParamArgs struct {
-	// Parameter name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Parameter value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatGtpParamArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGtpParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatGtpParamArgs) ToHttpServerProfileFormatGtpParamOutput() HttpServerProfileFormatGtpParamOutput {
-	return i.ToHttpServerProfileFormatGtpParamOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGtpParamArgs) ToHttpServerProfileFormatGtpParamOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpParamOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGtpParamOutput)
-}
-
-// HttpServerProfileFormatGtpParamArrayInput is an input type that accepts HttpServerProfileFormatGtpParamArray and HttpServerProfileFormatGtpParamArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatGtpParamArrayInput` via:
-//
-//	HttpServerProfileFormatGtpParamArray{ HttpServerProfileFormatGtpParamArgs{...} }
-type HttpServerProfileFormatGtpParamArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatGtpParamArrayOutput() HttpServerProfileFormatGtpParamArrayOutput
-	ToHttpServerProfileFormatGtpParamArrayOutputWithContext(context.Context) HttpServerProfileFormatGtpParamArrayOutput
-}
-
-type HttpServerProfileFormatGtpParamArray []HttpServerProfileFormatGtpParamInput
-
-func (HttpServerProfileFormatGtpParamArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatGtpParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatGtpParamArray) ToHttpServerProfileFormatGtpParamArrayOutput() HttpServerProfileFormatGtpParamArrayOutput {
-	return i.ToHttpServerProfileFormatGtpParamArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatGtpParamArray) ToHttpServerProfileFormatGtpParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpParamArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatGtpParamArrayOutput)
-}
-
-type HttpServerProfileFormatGtpParamOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGtpParamOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatGtpParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGtpParamOutput) ToHttpServerProfileFormatGtpParamOutput() HttpServerProfileFormatGtpParamOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGtpParamOutput) ToHttpServerProfileFormatGtpParamOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpParamOutput {
-	return o
-}
-
-// Parameter name
-func (o HttpServerProfileFormatGtpParamOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGtpParam) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Parameter value
-func (o HttpServerProfileFormatGtpParamOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatGtpParam) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatGtpParamArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatGtpParamArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatGtpParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatGtpParamArrayOutput) ToHttpServerProfileFormatGtpParamArrayOutput() HttpServerProfileFormatGtpParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGtpParamArrayOutput) ToHttpServerProfileFormatGtpParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatGtpParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatGtpParamArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatGtpParamOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatGtpParam {
-		return vs[0].([]HttpServerProfileFormatGtpParam)[vs[1].(int)]
-	}).(HttpServerProfileFormatGtpParamOutput)
-}
-
-type HttpServerProfileFormatHipMatch struct {
-	// Headers
-	Headers []HttpServerProfileFormatHipMatchHeader `pulumi:"headers"`
-	// The name of the payload format
-	Name *string `pulumi:"name"`
-	// Params
-	Params []HttpServerProfileFormatHipMatchParam `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload *string `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat *string `pulumi:"urlFormat"`
-}
-
-// HttpServerProfileFormatHipMatchInput is an input type that accepts HttpServerProfileFormatHipMatchArgs and HttpServerProfileFormatHipMatchOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatHipMatchInput` via:
-//
-//	HttpServerProfileFormatHipMatchArgs{...}
-type HttpServerProfileFormatHipMatchInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatHipMatchOutput() HttpServerProfileFormatHipMatchOutput
-	ToHttpServerProfileFormatHipMatchOutputWithContext(context.Context) HttpServerProfileFormatHipMatchOutput
-}
-
-type HttpServerProfileFormatHipMatchArgs struct {
-	// Headers
-	Headers HttpServerProfileFormatHipMatchHeaderArrayInput `pulumi:"headers"`
-	// The name of the payload format
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Params
-	Params HttpServerProfileFormatHipMatchParamArrayInput `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload pulumi.StringPtrInput `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat pulumi.StringPtrInput `pulumi:"urlFormat"`
-}
-
-func (HttpServerProfileFormatHipMatchArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatHipMatch)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatHipMatchArgs) ToHttpServerProfileFormatHipMatchOutput() HttpServerProfileFormatHipMatchOutput {
-	return i.ToHttpServerProfileFormatHipMatchOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatHipMatchArgs) ToHttpServerProfileFormatHipMatchOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatHipMatchOutput)
-}
-
-func (i HttpServerProfileFormatHipMatchArgs) ToHttpServerProfileFormatHipMatchPtrOutput() HttpServerProfileFormatHipMatchPtrOutput {
-	return i.ToHttpServerProfileFormatHipMatchPtrOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatHipMatchArgs) ToHttpServerProfileFormatHipMatchPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatHipMatchOutput).ToHttpServerProfileFormatHipMatchPtrOutputWithContext(ctx)
-}
-
-// HttpServerProfileFormatHipMatchPtrInput is an input type that accepts HttpServerProfileFormatHipMatchArgs, HttpServerProfileFormatHipMatchPtr and HttpServerProfileFormatHipMatchPtrOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatHipMatchPtrInput` via:
-//
-//	        HttpServerProfileFormatHipMatchArgs{...}
-//
-//	or:
-//
-//	        nil
-type HttpServerProfileFormatHipMatchPtrInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatHipMatchPtrOutput() HttpServerProfileFormatHipMatchPtrOutput
-	ToHttpServerProfileFormatHipMatchPtrOutputWithContext(context.Context) HttpServerProfileFormatHipMatchPtrOutput
-}
-
-type httpServerProfileFormatHipMatchPtrType HttpServerProfileFormatHipMatchArgs
-
-func HttpServerProfileFormatHipMatchPtr(v *HttpServerProfileFormatHipMatchArgs) HttpServerProfileFormatHipMatchPtrInput {
-	return (*httpServerProfileFormatHipMatchPtrType)(v)
-}
-
-func (*httpServerProfileFormatHipMatchPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatHipMatch)(nil)).Elem()
-}
-
-func (i *httpServerProfileFormatHipMatchPtrType) ToHttpServerProfileFormatHipMatchPtrOutput() HttpServerProfileFormatHipMatchPtrOutput {
-	return i.ToHttpServerProfileFormatHipMatchPtrOutputWithContext(context.Background())
-}
-
-func (i *httpServerProfileFormatHipMatchPtrType) ToHttpServerProfileFormatHipMatchPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatHipMatchPtrOutput)
-}
-
-type HttpServerProfileFormatHipMatchOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatHipMatchOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatHipMatch)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatHipMatchOutput) ToHttpServerProfileFormatHipMatchOutput() HttpServerProfileFormatHipMatchOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatHipMatchOutput) ToHttpServerProfileFormatHipMatchOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatHipMatchOutput) ToHttpServerProfileFormatHipMatchPtrOutput() HttpServerProfileFormatHipMatchPtrOutput {
-	return o.ToHttpServerProfileFormatHipMatchPtrOutputWithContext(context.Background())
-}
-
-func (o HttpServerProfileFormatHipMatchOutput) ToHttpServerProfileFormatHipMatchPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v HttpServerProfileFormatHipMatch) *HttpServerProfileFormatHipMatch {
-		return &v
-	}).(HttpServerProfileFormatHipMatchPtrOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatHipMatchOutput) Headers() HttpServerProfileFormatHipMatchHeaderArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatHipMatch) []HttpServerProfileFormatHipMatchHeader { return v.Headers }).(HttpServerProfileFormatHipMatchHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatHipMatchOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatHipMatch) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatHipMatchOutput) Params() HttpServerProfileFormatHipMatchParamArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatHipMatch) []HttpServerProfileFormatHipMatchParam { return v.Params }).(HttpServerProfileFormatHipMatchParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatHipMatchOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatHipMatch) *string { return v.Payload }).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatHipMatchOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatHipMatch) *string { return v.UrlFormat }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatHipMatchPtrOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatHipMatchPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatHipMatch)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatHipMatchPtrOutput) ToHttpServerProfileFormatHipMatchPtrOutput() HttpServerProfileFormatHipMatchPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatHipMatchPtrOutput) ToHttpServerProfileFormatHipMatchPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatHipMatchPtrOutput) Elem() HttpServerProfileFormatHipMatchOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatHipMatch) HttpServerProfileFormatHipMatch {
-		if v != nil {
-			return *v
-		}
-		var ret HttpServerProfileFormatHipMatch
-		return ret
-	}).(HttpServerProfileFormatHipMatchOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatHipMatchPtrOutput) Headers() HttpServerProfileFormatHipMatchHeaderArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatHipMatch) []HttpServerProfileFormatHipMatchHeader {
-		if v == nil {
-			return nil
-		}
-		return v.Headers
-	}).(HttpServerProfileFormatHipMatchHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatHipMatchPtrOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatHipMatch) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Name
-	}).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatHipMatchPtrOutput) Params() HttpServerProfileFormatHipMatchParamArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatHipMatch) []HttpServerProfileFormatHipMatchParam {
-		if v == nil {
-			return nil
-		}
-		return v.Params
-	}).(HttpServerProfileFormatHipMatchParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatHipMatchPtrOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatHipMatch) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Payload
-	}).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatHipMatchPtrOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatHipMatch) *string {
-		if v == nil {
-			return nil
-		}
-		return v.UrlFormat
-	}).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatHipMatchHeader struct {
-	// Header name
-	Name *string `pulumi:"name"`
-	// Header value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatHipMatchHeaderInput is an input type that accepts HttpServerProfileFormatHipMatchHeaderArgs and HttpServerProfileFormatHipMatchHeaderOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatHipMatchHeaderInput` via:
-//
-//	HttpServerProfileFormatHipMatchHeaderArgs{...}
-type HttpServerProfileFormatHipMatchHeaderInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatHipMatchHeaderOutput() HttpServerProfileFormatHipMatchHeaderOutput
-	ToHttpServerProfileFormatHipMatchHeaderOutputWithContext(context.Context) HttpServerProfileFormatHipMatchHeaderOutput
-}
-
-type HttpServerProfileFormatHipMatchHeaderArgs struct {
-	// Header name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Header value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatHipMatchHeaderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatHipMatchHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatHipMatchHeaderArgs) ToHttpServerProfileFormatHipMatchHeaderOutput() HttpServerProfileFormatHipMatchHeaderOutput {
-	return i.ToHttpServerProfileFormatHipMatchHeaderOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatHipMatchHeaderArgs) ToHttpServerProfileFormatHipMatchHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchHeaderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatHipMatchHeaderOutput)
-}
-
-// HttpServerProfileFormatHipMatchHeaderArrayInput is an input type that accepts HttpServerProfileFormatHipMatchHeaderArray and HttpServerProfileFormatHipMatchHeaderArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatHipMatchHeaderArrayInput` via:
-//
-//	HttpServerProfileFormatHipMatchHeaderArray{ HttpServerProfileFormatHipMatchHeaderArgs{...} }
-type HttpServerProfileFormatHipMatchHeaderArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatHipMatchHeaderArrayOutput() HttpServerProfileFormatHipMatchHeaderArrayOutput
-	ToHttpServerProfileFormatHipMatchHeaderArrayOutputWithContext(context.Context) HttpServerProfileFormatHipMatchHeaderArrayOutput
-}
-
-type HttpServerProfileFormatHipMatchHeaderArray []HttpServerProfileFormatHipMatchHeaderInput
-
-func (HttpServerProfileFormatHipMatchHeaderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatHipMatchHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatHipMatchHeaderArray) ToHttpServerProfileFormatHipMatchHeaderArrayOutput() HttpServerProfileFormatHipMatchHeaderArrayOutput {
-	return i.ToHttpServerProfileFormatHipMatchHeaderArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatHipMatchHeaderArray) ToHttpServerProfileFormatHipMatchHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchHeaderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatHipMatchHeaderArrayOutput)
-}
-
-type HttpServerProfileFormatHipMatchHeaderOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatHipMatchHeaderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatHipMatchHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatHipMatchHeaderOutput) ToHttpServerProfileFormatHipMatchHeaderOutput() HttpServerProfileFormatHipMatchHeaderOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatHipMatchHeaderOutput) ToHttpServerProfileFormatHipMatchHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchHeaderOutput {
-	return o
-}
-
-// Header name
-func (o HttpServerProfileFormatHipMatchHeaderOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatHipMatchHeader) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Header value
-func (o HttpServerProfileFormatHipMatchHeaderOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatHipMatchHeader) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatHipMatchHeaderArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatHipMatchHeaderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatHipMatchHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatHipMatchHeaderArrayOutput) ToHttpServerProfileFormatHipMatchHeaderArrayOutput() HttpServerProfileFormatHipMatchHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatHipMatchHeaderArrayOutput) ToHttpServerProfileFormatHipMatchHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatHipMatchHeaderArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatHipMatchHeaderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatHipMatchHeader {
-		return vs[0].([]HttpServerProfileFormatHipMatchHeader)[vs[1].(int)]
-	}).(HttpServerProfileFormatHipMatchHeaderOutput)
-}
-
-type HttpServerProfileFormatHipMatchParam struct {
-	// Parameter name
-	Name *string `pulumi:"name"`
-	// Parameter value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatHipMatchParamInput is an input type that accepts HttpServerProfileFormatHipMatchParamArgs and HttpServerProfileFormatHipMatchParamOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatHipMatchParamInput` via:
-//
-//	HttpServerProfileFormatHipMatchParamArgs{...}
-type HttpServerProfileFormatHipMatchParamInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatHipMatchParamOutput() HttpServerProfileFormatHipMatchParamOutput
-	ToHttpServerProfileFormatHipMatchParamOutputWithContext(context.Context) HttpServerProfileFormatHipMatchParamOutput
-}
-
-type HttpServerProfileFormatHipMatchParamArgs struct {
-	// Parameter name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Parameter value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatHipMatchParamArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatHipMatchParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatHipMatchParamArgs) ToHttpServerProfileFormatHipMatchParamOutput() HttpServerProfileFormatHipMatchParamOutput {
-	return i.ToHttpServerProfileFormatHipMatchParamOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatHipMatchParamArgs) ToHttpServerProfileFormatHipMatchParamOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchParamOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatHipMatchParamOutput)
-}
-
-// HttpServerProfileFormatHipMatchParamArrayInput is an input type that accepts HttpServerProfileFormatHipMatchParamArray and HttpServerProfileFormatHipMatchParamArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatHipMatchParamArrayInput` via:
-//
-//	HttpServerProfileFormatHipMatchParamArray{ HttpServerProfileFormatHipMatchParamArgs{...} }
-type HttpServerProfileFormatHipMatchParamArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatHipMatchParamArrayOutput() HttpServerProfileFormatHipMatchParamArrayOutput
-	ToHttpServerProfileFormatHipMatchParamArrayOutputWithContext(context.Context) HttpServerProfileFormatHipMatchParamArrayOutput
-}
-
-type HttpServerProfileFormatHipMatchParamArray []HttpServerProfileFormatHipMatchParamInput
-
-func (HttpServerProfileFormatHipMatchParamArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatHipMatchParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatHipMatchParamArray) ToHttpServerProfileFormatHipMatchParamArrayOutput() HttpServerProfileFormatHipMatchParamArrayOutput {
-	return i.ToHttpServerProfileFormatHipMatchParamArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatHipMatchParamArray) ToHttpServerProfileFormatHipMatchParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchParamArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatHipMatchParamArrayOutput)
-}
-
-type HttpServerProfileFormatHipMatchParamOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatHipMatchParamOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatHipMatchParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatHipMatchParamOutput) ToHttpServerProfileFormatHipMatchParamOutput() HttpServerProfileFormatHipMatchParamOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatHipMatchParamOutput) ToHttpServerProfileFormatHipMatchParamOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchParamOutput {
-	return o
-}
-
-// Parameter name
-func (o HttpServerProfileFormatHipMatchParamOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatHipMatchParam) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Parameter value
-func (o HttpServerProfileFormatHipMatchParamOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatHipMatchParam) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatHipMatchParamArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatHipMatchParamArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatHipMatchParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatHipMatchParamArrayOutput) ToHttpServerProfileFormatHipMatchParamArrayOutput() HttpServerProfileFormatHipMatchParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatHipMatchParamArrayOutput) ToHttpServerProfileFormatHipMatchParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatHipMatchParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatHipMatchParamArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatHipMatchParamOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatHipMatchParam {
-		return vs[0].([]HttpServerProfileFormatHipMatchParam)[vs[1].(int)]
-	}).(HttpServerProfileFormatHipMatchParamOutput)
-}
-
-type HttpServerProfileFormatIptag struct {
-	// Headers
-	Headers []HttpServerProfileFormatIptagHeader `pulumi:"headers"`
-	// The name of the payload format
-	Name *string `pulumi:"name"`
-	// Params
-	Params []HttpServerProfileFormatIptagParam `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload *string `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat *string `pulumi:"urlFormat"`
-}
-
-// HttpServerProfileFormatIptagInput is an input type that accepts HttpServerProfileFormatIptagArgs and HttpServerProfileFormatIptagOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatIptagInput` via:
-//
-//	HttpServerProfileFormatIptagArgs{...}
-type HttpServerProfileFormatIptagInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatIptagOutput() HttpServerProfileFormatIptagOutput
-	ToHttpServerProfileFormatIptagOutputWithContext(context.Context) HttpServerProfileFormatIptagOutput
-}
-
-type HttpServerProfileFormatIptagArgs struct {
-	// Headers
-	Headers HttpServerProfileFormatIptagHeaderArrayInput `pulumi:"headers"`
-	// The name of the payload format
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Params
-	Params HttpServerProfileFormatIptagParamArrayInput `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload pulumi.StringPtrInput `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat pulumi.StringPtrInput `pulumi:"urlFormat"`
-}
-
-func (HttpServerProfileFormatIptagArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatIptag)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatIptagArgs) ToHttpServerProfileFormatIptagOutput() HttpServerProfileFormatIptagOutput {
-	return i.ToHttpServerProfileFormatIptagOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatIptagArgs) ToHttpServerProfileFormatIptagOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatIptagOutput)
-}
-
-func (i HttpServerProfileFormatIptagArgs) ToHttpServerProfileFormatIptagPtrOutput() HttpServerProfileFormatIptagPtrOutput {
-	return i.ToHttpServerProfileFormatIptagPtrOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatIptagArgs) ToHttpServerProfileFormatIptagPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatIptagOutput).ToHttpServerProfileFormatIptagPtrOutputWithContext(ctx)
-}
-
-// HttpServerProfileFormatIptagPtrInput is an input type that accepts HttpServerProfileFormatIptagArgs, HttpServerProfileFormatIptagPtr and HttpServerProfileFormatIptagPtrOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatIptagPtrInput` via:
-//
-//	        HttpServerProfileFormatIptagArgs{...}
-//
-//	or:
-//
-//	        nil
-type HttpServerProfileFormatIptagPtrInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatIptagPtrOutput() HttpServerProfileFormatIptagPtrOutput
-	ToHttpServerProfileFormatIptagPtrOutputWithContext(context.Context) HttpServerProfileFormatIptagPtrOutput
-}
-
-type httpServerProfileFormatIptagPtrType HttpServerProfileFormatIptagArgs
-
-func HttpServerProfileFormatIptagPtr(v *HttpServerProfileFormatIptagArgs) HttpServerProfileFormatIptagPtrInput {
-	return (*httpServerProfileFormatIptagPtrType)(v)
-}
-
-func (*httpServerProfileFormatIptagPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatIptag)(nil)).Elem()
-}
-
-func (i *httpServerProfileFormatIptagPtrType) ToHttpServerProfileFormatIptagPtrOutput() HttpServerProfileFormatIptagPtrOutput {
-	return i.ToHttpServerProfileFormatIptagPtrOutputWithContext(context.Background())
-}
-
-func (i *httpServerProfileFormatIptagPtrType) ToHttpServerProfileFormatIptagPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatIptagPtrOutput)
-}
-
-type HttpServerProfileFormatIptagOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatIptagOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatIptag)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatIptagOutput) ToHttpServerProfileFormatIptagOutput() HttpServerProfileFormatIptagOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatIptagOutput) ToHttpServerProfileFormatIptagOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatIptagOutput) ToHttpServerProfileFormatIptagPtrOutput() HttpServerProfileFormatIptagPtrOutput {
-	return o.ToHttpServerProfileFormatIptagPtrOutputWithContext(context.Background())
-}
-
-func (o HttpServerProfileFormatIptagOutput) ToHttpServerProfileFormatIptagPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v HttpServerProfileFormatIptag) *HttpServerProfileFormatIptag {
-		return &v
-	}).(HttpServerProfileFormatIptagPtrOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatIptagOutput) Headers() HttpServerProfileFormatIptagHeaderArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatIptag) []HttpServerProfileFormatIptagHeader { return v.Headers }).(HttpServerProfileFormatIptagHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatIptagOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatIptag) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatIptagOutput) Params() HttpServerProfileFormatIptagParamArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatIptag) []HttpServerProfileFormatIptagParam { return v.Params }).(HttpServerProfileFormatIptagParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatIptagOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatIptag) *string { return v.Payload }).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatIptagOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatIptag) *string { return v.UrlFormat }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatIptagPtrOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatIptagPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatIptag)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatIptagPtrOutput) ToHttpServerProfileFormatIptagPtrOutput() HttpServerProfileFormatIptagPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatIptagPtrOutput) ToHttpServerProfileFormatIptagPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatIptagPtrOutput) Elem() HttpServerProfileFormatIptagOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatIptag) HttpServerProfileFormatIptag {
-		if v != nil {
-			return *v
-		}
-		var ret HttpServerProfileFormatIptag
-		return ret
-	}).(HttpServerProfileFormatIptagOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatIptagPtrOutput) Headers() HttpServerProfileFormatIptagHeaderArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatIptag) []HttpServerProfileFormatIptagHeader {
-		if v == nil {
-			return nil
-		}
-		return v.Headers
-	}).(HttpServerProfileFormatIptagHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatIptagPtrOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatIptag) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Name
-	}).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatIptagPtrOutput) Params() HttpServerProfileFormatIptagParamArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatIptag) []HttpServerProfileFormatIptagParam {
-		if v == nil {
-			return nil
-		}
-		return v.Params
-	}).(HttpServerProfileFormatIptagParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatIptagPtrOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatIptag) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Payload
-	}).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatIptagPtrOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatIptag) *string {
-		if v == nil {
-			return nil
-		}
-		return v.UrlFormat
-	}).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatIptagHeader struct {
-	// Header name
-	Name *string `pulumi:"name"`
-	// Header value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatIptagHeaderInput is an input type that accepts HttpServerProfileFormatIptagHeaderArgs and HttpServerProfileFormatIptagHeaderOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatIptagHeaderInput` via:
-//
-//	HttpServerProfileFormatIptagHeaderArgs{...}
-type HttpServerProfileFormatIptagHeaderInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatIptagHeaderOutput() HttpServerProfileFormatIptagHeaderOutput
-	ToHttpServerProfileFormatIptagHeaderOutputWithContext(context.Context) HttpServerProfileFormatIptagHeaderOutput
-}
-
-type HttpServerProfileFormatIptagHeaderArgs struct {
-	// Header name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Header value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatIptagHeaderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatIptagHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatIptagHeaderArgs) ToHttpServerProfileFormatIptagHeaderOutput() HttpServerProfileFormatIptagHeaderOutput {
-	return i.ToHttpServerProfileFormatIptagHeaderOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatIptagHeaderArgs) ToHttpServerProfileFormatIptagHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagHeaderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatIptagHeaderOutput)
-}
-
-// HttpServerProfileFormatIptagHeaderArrayInput is an input type that accepts HttpServerProfileFormatIptagHeaderArray and HttpServerProfileFormatIptagHeaderArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatIptagHeaderArrayInput` via:
-//
-//	HttpServerProfileFormatIptagHeaderArray{ HttpServerProfileFormatIptagHeaderArgs{...} }
-type HttpServerProfileFormatIptagHeaderArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatIptagHeaderArrayOutput() HttpServerProfileFormatIptagHeaderArrayOutput
-	ToHttpServerProfileFormatIptagHeaderArrayOutputWithContext(context.Context) HttpServerProfileFormatIptagHeaderArrayOutput
-}
-
-type HttpServerProfileFormatIptagHeaderArray []HttpServerProfileFormatIptagHeaderInput
-
-func (HttpServerProfileFormatIptagHeaderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatIptagHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatIptagHeaderArray) ToHttpServerProfileFormatIptagHeaderArrayOutput() HttpServerProfileFormatIptagHeaderArrayOutput {
-	return i.ToHttpServerProfileFormatIptagHeaderArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatIptagHeaderArray) ToHttpServerProfileFormatIptagHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagHeaderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatIptagHeaderArrayOutput)
-}
-
-type HttpServerProfileFormatIptagHeaderOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatIptagHeaderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatIptagHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatIptagHeaderOutput) ToHttpServerProfileFormatIptagHeaderOutput() HttpServerProfileFormatIptagHeaderOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatIptagHeaderOutput) ToHttpServerProfileFormatIptagHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagHeaderOutput {
-	return o
-}
-
-// Header name
-func (o HttpServerProfileFormatIptagHeaderOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatIptagHeader) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Header value
-func (o HttpServerProfileFormatIptagHeaderOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatIptagHeader) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatIptagHeaderArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatIptagHeaderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatIptagHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatIptagHeaderArrayOutput) ToHttpServerProfileFormatIptagHeaderArrayOutput() HttpServerProfileFormatIptagHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatIptagHeaderArrayOutput) ToHttpServerProfileFormatIptagHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatIptagHeaderArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatIptagHeaderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatIptagHeader {
-		return vs[0].([]HttpServerProfileFormatIptagHeader)[vs[1].(int)]
-	}).(HttpServerProfileFormatIptagHeaderOutput)
-}
-
-type HttpServerProfileFormatIptagParam struct {
-	// Parameter name
-	Name *string `pulumi:"name"`
-	// Parameter value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatIptagParamInput is an input type that accepts HttpServerProfileFormatIptagParamArgs and HttpServerProfileFormatIptagParamOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatIptagParamInput` via:
-//
-//	HttpServerProfileFormatIptagParamArgs{...}
-type HttpServerProfileFormatIptagParamInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatIptagParamOutput() HttpServerProfileFormatIptagParamOutput
-	ToHttpServerProfileFormatIptagParamOutputWithContext(context.Context) HttpServerProfileFormatIptagParamOutput
-}
-
-type HttpServerProfileFormatIptagParamArgs struct {
-	// Parameter name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Parameter value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatIptagParamArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatIptagParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatIptagParamArgs) ToHttpServerProfileFormatIptagParamOutput() HttpServerProfileFormatIptagParamOutput {
-	return i.ToHttpServerProfileFormatIptagParamOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatIptagParamArgs) ToHttpServerProfileFormatIptagParamOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagParamOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatIptagParamOutput)
-}
-
-// HttpServerProfileFormatIptagParamArrayInput is an input type that accepts HttpServerProfileFormatIptagParamArray and HttpServerProfileFormatIptagParamArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatIptagParamArrayInput` via:
-//
-//	HttpServerProfileFormatIptagParamArray{ HttpServerProfileFormatIptagParamArgs{...} }
-type HttpServerProfileFormatIptagParamArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatIptagParamArrayOutput() HttpServerProfileFormatIptagParamArrayOutput
-	ToHttpServerProfileFormatIptagParamArrayOutputWithContext(context.Context) HttpServerProfileFormatIptagParamArrayOutput
-}
-
-type HttpServerProfileFormatIptagParamArray []HttpServerProfileFormatIptagParamInput
-
-func (HttpServerProfileFormatIptagParamArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatIptagParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatIptagParamArray) ToHttpServerProfileFormatIptagParamArrayOutput() HttpServerProfileFormatIptagParamArrayOutput {
-	return i.ToHttpServerProfileFormatIptagParamArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatIptagParamArray) ToHttpServerProfileFormatIptagParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagParamArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatIptagParamArrayOutput)
-}
-
-type HttpServerProfileFormatIptagParamOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatIptagParamOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatIptagParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatIptagParamOutput) ToHttpServerProfileFormatIptagParamOutput() HttpServerProfileFormatIptagParamOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatIptagParamOutput) ToHttpServerProfileFormatIptagParamOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagParamOutput {
-	return o
-}
-
-// Parameter name
-func (o HttpServerProfileFormatIptagParamOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatIptagParam) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Parameter value
-func (o HttpServerProfileFormatIptagParamOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatIptagParam) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatIptagParamArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatIptagParamArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatIptagParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatIptagParamArrayOutput) ToHttpServerProfileFormatIptagParamArrayOutput() HttpServerProfileFormatIptagParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatIptagParamArrayOutput) ToHttpServerProfileFormatIptagParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatIptagParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatIptagParamArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatIptagParamOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatIptagParam {
-		return vs[0].([]HttpServerProfileFormatIptagParam)[vs[1].(int)]
-	}).(HttpServerProfileFormatIptagParamOutput)
-}
-
-type HttpServerProfileFormatSctp struct {
-	// Headers
-	Headers []HttpServerProfileFormatSctpHeader `pulumi:"headers"`
-	// The name of the payload format
-	Name *string `pulumi:"name"`
-	// Params
-	Params []HttpServerProfileFormatSctpParam `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload *string `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat *string `pulumi:"urlFormat"`
-}
-
-// HttpServerProfileFormatSctpInput is an input type that accepts HttpServerProfileFormatSctpArgs and HttpServerProfileFormatSctpOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSctpInput` via:
-//
-//	HttpServerProfileFormatSctpArgs{...}
-type HttpServerProfileFormatSctpInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSctpOutput() HttpServerProfileFormatSctpOutput
-	ToHttpServerProfileFormatSctpOutputWithContext(context.Context) HttpServerProfileFormatSctpOutput
-}
-
-type HttpServerProfileFormatSctpArgs struct {
-	// Headers
-	Headers HttpServerProfileFormatSctpHeaderArrayInput `pulumi:"headers"`
-	// The name of the payload format
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Params
-	Params HttpServerProfileFormatSctpParamArrayInput `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload pulumi.StringPtrInput `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat pulumi.StringPtrInput `pulumi:"urlFormat"`
-}
-
-func (HttpServerProfileFormatSctpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSctp)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatSctpArgs) ToHttpServerProfileFormatSctpOutput() HttpServerProfileFormatSctpOutput {
-	return i.ToHttpServerProfileFormatSctpOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSctpArgs) ToHttpServerProfileFormatSctpOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSctpOutput)
-}
-
-func (i HttpServerProfileFormatSctpArgs) ToHttpServerProfileFormatSctpPtrOutput() HttpServerProfileFormatSctpPtrOutput {
-	return i.ToHttpServerProfileFormatSctpPtrOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSctpArgs) ToHttpServerProfileFormatSctpPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSctpOutput).ToHttpServerProfileFormatSctpPtrOutputWithContext(ctx)
-}
-
-// HttpServerProfileFormatSctpPtrInput is an input type that accepts HttpServerProfileFormatSctpArgs, HttpServerProfileFormatSctpPtr and HttpServerProfileFormatSctpPtrOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSctpPtrInput` via:
-//
-//	        HttpServerProfileFormatSctpArgs{...}
-//
-//	or:
-//
-//	        nil
-type HttpServerProfileFormatSctpPtrInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSctpPtrOutput() HttpServerProfileFormatSctpPtrOutput
-	ToHttpServerProfileFormatSctpPtrOutputWithContext(context.Context) HttpServerProfileFormatSctpPtrOutput
-}
-
-type httpServerProfileFormatSctpPtrType HttpServerProfileFormatSctpArgs
-
-func HttpServerProfileFormatSctpPtr(v *HttpServerProfileFormatSctpArgs) HttpServerProfileFormatSctpPtrInput {
-	return (*httpServerProfileFormatSctpPtrType)(v)
-}
-
-func (*httpServerProfileFormatSctpPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatSctp)(nil)).Elem()
-}
-
-func (i *httpServerProfileFormatSctpPtrType) ToHttpServerProfileFormatSctpPtrOutput() HttpServerProfileFormatSctpPtrOutput {
-	return i.ToHttpServerProfileFormatSctpPtrOutputWithContext(context.Background())
-}
-
-func (i *httpServerProfileFormatSctpPtrType) ToHttpServerProfileFormatSctpPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSctpPtrOutput)
-}
-
-type HttpServerProfileFormatSctpOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSctpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSctp)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSctpOutput) ToHttpServerProfileFormatSctpOutput() HttpServerProfileFormatSctpOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSctpOutput) ToHttpServerProfileFormatSctpOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSctpOutput) ToHttpServerProfileFormatSctpPtrOutput() HttpServerProfileFormatSctpPtrOutput {
-	return o.ToHttpServerProfileFormatSctpPtrOutputWithContext(context.Background())
-}
-
-func (o HttpServerProfileFormatSctpOutput) ToHttpServerProfileFormatSctpPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v HttpServerProfileFormatSctp) *HttpServerProfileFormatSctp {
-		return &v
-	}).(HttpServerProfileFormatSctpPtrOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatSctpOutput) Headers() HttpServerProfileFormatSctpHeaderArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSctp) []HttpServerProfileFormatSctpHeader { return v.Headers }).(HttpServerProfileFormatSctpHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatSctpOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSctp) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatSctpOutput) Params() HttpServerProfileFormatSctpParamArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSctp) []HttpServerProfileFormatSctpParam { return v.Params }).(HttpServerProfileFormatSctpParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatSctpOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSctp) *string { return v.Payload }).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatSctpOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSctp) *string { return v.UrlFormat }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatSctpPtrOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSctpPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatSctp)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSctpPtrOutput) ToHttpServerProfileFormatSctpPtrOutput() HttpServerProfileFormatSctpPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSctpPtrOutput) ToHttpServerProfileFormatSctpPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSctpPtrOutput) Elem() HttpServerProfileFormatSctpOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSctp) HttpServerProfileFormatSctp {
-		if v != nil {
-			return *v
-		}
-		var ret HttpServerProfileFormatSctp
-		return ret
-	}).(HttpServerProfileFormatSctpOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatSctpPtrOutput) Headers() HttpServerProfileFormatSctpHeaderArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSctp) []HttpServerProfileFormatSctpHeader {
-		if v == nil {
-			return nil
-		}
-		return v.Headers
-	}).(HttpServerProfileFormatSctpHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatSctpPtrOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSctp) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Name
-	}).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatSctpPtrOutput) Params() HttpServerProfileFormatSctpParamArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSctp) []HttpServerProfileFormatSctpParam {
-		if v == nil {
-			return nil
-		}
-		return v.Params
-	}).(HttpServerProfileFormatSctpParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatSctpPtrOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSctp) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Payload
-	}).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatSctpPtrOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSctp) *string {
-		if v == nil {
-			return nil
-		}
-		return v.UrlFormat
-	}).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatSctpHeader struct {
-	// Header name
-	Name *string `pulumi:"name"`
-	// Header value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatSctpHeaderInput is an input type that accepts HttpServerProfileFormatSctpHeaderArgs and HttpServerProfileFormatSctpHeaderOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSctpHeaderInput` via:
-//
-//	HttpServerProfileFormatSctpHeaderArgs{...}
-type HttpServerProfileFormatSctpHeaderInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSctpHeaderOutput() HttpServerProfileFormatSctpHeaderOutput
-	ToHttpServerProfileFormatSctpHeaderOutputWithContext(context.Context) HttpServerProfileFormatSctpHeaderOutput
-}
-
-type HttpServerProfileFormatSctpHeaderArgs struct {
-	// Header name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Header value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatSctpHeaderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSctpHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatSctpHeaderArgs) ToHttpServerProfileFormatSctpHeaderOutput() HttpServerProfileFormatSctpHeaderOutput {
-	return i.ToHttpServerProfileFormatSctpHeaderOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSctpHeaderArgs) ToHttpServerProfileFormatSctpHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpHeaderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSctpHeaderOutput)
-}
-
-// HttpServerProfileFormatSctpHeaderArrayInput is an input type that accepts HttpServerProfileFormatSctpHeaderArray and HttpServerProfileFormatSctpHeaderArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSctpHeaderArrayInput` via:
-//
-//	HttpServerProfileFormatSctpHeaderArray{ HttpServerProfileFormatSctpHeaderArgs{...} }
-type HttpServerProfileFormatSctpHeaderArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSctpHeaderArrayOutput() HttpServerProfileFormatSctpHeaderArrayOutput
-	ToHttpServerProfileFormatSctpHeaderArrayOutputWithContext(context.Context) HttpServerProfileFormatSctpHeaderArrayOutput
-}
-
-type HttpServerProfileFormatSctpHeaderArray []HttpServerProfileFormatSctpHeaderInput
-
-func (HttpServerProfileFormatSctpHeaderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatSctpHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatSctpHeaderArray) ToHttpServerProfileFormatSctpHeaderArrayOutput() HttpServerProfileFormatSctpHeaderArrayOutput {
-	return i.ToHttpServerProfileFormatSctpHeaderArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSctpHeaderArray) ToHttpServerProfileFormatSctpHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpHeaderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSctpHeaderArrayOutput)
-}
-
-type HttpServerProfileFormatSctpHeaderOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSctpHeaderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSctpHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSctpHeaderOutput) ToHttpServerProfileFormatSctpHeaderOutput() HttpServerProfileFormatSctpHeaderOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSctpHeaderOutput) ToHttpServerProfileFormatSctpHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpHeaderOutput {
-	return o
-}
-
-// Header name
-func (o HttpServerProfileFormatSctpHeaderOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSctpHeader) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Header value
-func (o HttpServerProfileFormatSctpHeaderOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSctpHeader) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatSctpHeaderArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSctpHeaderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatSctpHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSctpHeaderArrayOutput) ToHttpServerProfileFormatSctpHeaderArrayOutput() HttpServerProfileFormatSctpHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSctpHeaderArrayOutput) ToHttpServerProfileFormatSctpHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSctpHeaderArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatSctpHeaderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatSctpHeader {
-		return vs[0].([]HttpServerProfileFormatSctpHeader)[vs[1].(int)]
-	}).(HttpServerProfileFormatSctpHeaderOutput)
-}
-
-type HttpServerProfileFormatSctpParam struct {
-	// Parameter name
-	Name *string `pulumi:"name"`
-	// Parameter value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatSctpParamInput is an input type that accepts HttpServerProfileFormatSctpParamArgs and HttpServerProfileFormatSctpParamOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSctpParamInput` via:
-//
-//	HttpServerProfileFormatSctpParamArgs{...}
-type HttpServerProfileFormatSctpParamInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSctpParamOutput() HttpServerProfileFormatSctpParamOutput
-	ToHttpServerProfileFormatSctpParamOutputWithContext(context.Context) HttpServerProfileFormatSctpParamOutput
-}
-
-type HttpServerProfileFormatSctpParamArgs struct {
-	// Parameter name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Parameter value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatSctpParamArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSctpParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatSctpParamArgs) ToHttpServerProfileFormatSctpParamOutput() HttpServerProfileFormatSctpParamOutput {
-	return i.ToHttpServerProfileFormatSctpParamOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSctpParamArgs) ToHttpServerProfileFormatSctpParamOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpParamOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSctpParamOutput)
-}
-
-// HttpServerProfileFormatSctpParamArrayInput is an input type that accepts HttpServerProfileFormatSctpParamArray and HttpServerProfileFormatSctpParamArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSctpParamArrayInput` via:
-//
-//	HttpServerProfileFormatSctpParamArray{ HttpServerProfileFormatSctpParamArgs{...} }
-type HttpServerProfileFormatSctpParamArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSctpParamArrayOutput() HttpServerProfileFormatSctpParamArrayOutput
-	ToHttpServerProfileFormatSctpParamArrayOutputWithContext(context.Context) HttpServerProfileFormatSctpParamArrayOutput
-}
-
-type HttpServerProfileFormatSctpParamArray []HttpServerProfileFormatSctpParamInput
-
-func (HttpServerProfileFormatSctpParamArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatSctpParam)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatSctpParamArray) ToHttpServerProfileFormatSctpParamArrayOutput() HttpServerProfileFormatSctpParamArrayOutput {
-	return i.ToHttpServerProfileFormatSctpParamArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSctpParamArray) ToHttpServerProfileFormatSctpParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpParamArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSctpParamArrayOutput)
-}
-
-type HttpServerProfileFormatSctpParamOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSctpParamOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSctpParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSctpParamOutput) ToHttpServerProfileFormatSctpParamOutput() HttpServerProfileFormatSctpParamOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSctpParamOutput) ToHttpServerProfileFormatSctpParamOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpParamOutput {
-	return o
-}
-
-// Parameter name
-func (o HttpServerProfileFormatSctpParamOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSctpParam) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Parameter value
-func (o HttpServerProfileFormatSctpParamOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSctpParam) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatSctpParamArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSctpParamArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatSctpParam)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSctpParamArrayOutput) ToHttpServerProfileFormatSctpParamArrayOutput() HttpServerProfileFormatSctpParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSctpParamArrayOutput) ToHttpServerProfileFormatSctpParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatSctpParamArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSctpParamArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatSctpParamOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatSctpParam {
-		return vs[0].([]HttpServerProfileFormatSctpParam)[vs[1].(int)]
-	}).(HttpServerProfileFormatSctpParamOutput)
-}
-
-type HttpServerProfileFormatSystem struct {
-	// Headers
-	Headers []HttpServerProfileFormatSystemHeader `pulumi:"headers"`
-	// The name of the payload format
-	Name *string `pulumi:"name"`
-	// Params
-	Params []HttpServerProfileFormatSystemParam `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload *string `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat *string `pulumi:"urlFormat"`
-}
-
-// HttpServerProfileFormatSystemInput is an input type that accepts HttpServerProfileFormatSystemArgs and HttpServerProfileFormatSystemOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSystemInput` via:
-//
-//	HttpServerProfileFormatSystemArgs{...}
-type HttpServerProfileFormatSystemInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSystemOutput() HttpServerProfileFormatSystemOutput
-	ToHttpServerProfileFormatSystemOutputWithContext(context.Context) HttpServerProfileFormatSystemOutput
-}
-
-type HttpServerProfileFormatSystemArgs struct {
-	// Headers
-	Headers HttpServerProfileFormatSystemHeaderArrayInput `pulumi:"headers"`
-	// The name of the payload format
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Params
-	Params HttpServerProfileFormatSystemParamArrayInput `pulumi:"params"`
-	// The log payload format.  The accepted log field values are as follows.
-	Payload pulumi.StringPtrInput `pulumi:"payload"`
-	// The URL path of the HTTP server
-	UrlFormat pulumi.StringPtrInput `pulumi:"urlFormat"`
-}
-
-func (HttpServerProfileFormatSystemArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSystem)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatSystemArgs) ToHttpServerProfileFormatSystemOutput() HttpServerProfileFormatSystemOutput {
-	return i.ToHttpServerProfileFormatSystemOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSystemArgs) ToHttpServerProfileFormatSystemOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSystemOutput)
-}
-
-func (i HttpServerProfileFormatSystemArgs) ToHttpServerProfileFormatSystemPtrOutput() HttpServerProfileFormatSystemPtrOutput {
-	return i.ToHttpServerProfileFormatSystemPtrOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSystemArgs) ToHttpServerProfileFormatSystemPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSystemOutput).ToHttpServerProfileFormatSystemPtrOutputWithContext(ctx)
-}
-
-// HttpServerProfileFormatSystemPtrInput is an input type that accepts HttpServerProfileFormatSystemArgs, HttpServerProfileFormatSystemPtr and HttpServerProfileFormatSystemPtrOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSystemPtrInput` via:
-//
-//	        HttpServerProfileFormatSystemArgs{...}
-//
-//	or:
-//
-//	        nil
-type HttpServerProfileFormatSystemPtrInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSystemPtrOutput() HttpServerProfileFormatSystemPtrOutput
-	ToHttpServerProfileFormatSystemPtrOutputWithContext(context.Context) HttpServerProfileFormatSystemPtrOutput
-}
-
-type httpServerProfileFormatSystemPtrType HttpServerProfileFormatSystemArgs
-
-func HttpServerProfileFormatSystemPtr(v *HttpServerProfileFormatSystemArgs) HttpServerProfileFormatSystemPtrInput {
-	return (*httpServerProfileFormatSystemPtrType)(v)
-}
-
-func (*httpServerProfileFormatSystemPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatSystem)(nil)).Elem()
-}
-
-func (i *httpServerProfileFormatSystemPtrType) ToHttpServerProfileFormatSystemPtrOutput() HttpServerProfileFormatSystemPtrOutput {
-	return i.ToHttpServerProfileFormatSystemPtrOutputWithContext(context.Background())
-}
-
-func (i *httpServerProfileFormatSystemPtrType) ToHttpServerProfileFormatSystemPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSystemPtrOutput)
-}
-
-type HttpServerProfileFormatSystemOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSystemOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSystem)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSystemOutput) ToHttpServerProfileFormatSystemOutput() HttpServerProfileFormatSystemOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSystemOutput) ToHttpServerProfileFormatSystemOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSystemOutput) ToHttpServerProfileFormatSystemPtrOutput() HttpServerProfileFormatSystemPtrOutput {
-	return o.ToHttpServerProfileFormatSystemPtrOutputWithContext(context.Background())
-}
-
-func (o HttpServerProfileFormatSystemOutput) ToHttpServerProfileFormatSystemPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v HttpServerProfileFormatSystem) *HttpServerProfileFormatSystem {
-		return &v
-	}).(HttpServerProfileFormatSystemPtrOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatSystemOutput) Headers() HttpServerProfileFormatSystemHeaderArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSystem) []HttpServerProfileFormatSystemHeader { return v.Headers }).(HttpServerProfileFormatSystemHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatSystemOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSystem) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatSystemOutput) Params() HttpServerProfileFormatSystemParamArrayOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSystem) []HttpServerProfileFormatSystemParam { return v.Params }).(HttpServerProfileFormatSystemParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatSystemOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSystem) *string { return v.Payload }).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatSystemOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSystem) *string { return v.UrlFormat }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatSystemPtrOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSystemPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**HttpServerProfileFormatSystem)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSystemPtrOutput) ToHttpServerProfileFormatSystemPtrOutput() HttpServerProfileFormatSystemPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSystemPtrOutput) ToHttpServerProfileFormatSystemPtrOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemPtrOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSystemPtrOutput) Elem() HttpServerProfileFormatSystemOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSystem) HttpServerProfileFormatSystem {
-		if v != nil {
-			return *v
-		}
-		var ret HttpServerProfileFormatSystem
-		return ret
-	}).(HttpServerProfileFormatSystemOutput)
-}
-
-// Headers
-func (o HttpServerProfileFormatSystemPtrOutput) Headers() HttpServerProfileFormatSystemHeaderArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSystem) []HttpServerProfileFormatSystemHeader {
-		if v == nil {
-			return nil
-		}
-		return v.Headers
-	}).(HttpServerProfileFormatSystemHeaderArrayOutput)
-}
-
-// The name of the payload format
-func (o HttpServerProfileFormatSystemPtrOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSystem) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Name
-	}).(pulumi.StringPtrOutput)
-}
-
-// Params
-func (o HttpServerProfileFormatSystemPtrOutput) Params() HttpServerProfileFormatSystemParamArrayOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSystem) []HttpServerProfileFormatSystemParam {
-		if v == nil {
-			return nil
-		}
-		return v.Params
-	}).(HttpServerProfileFormatSystemParamArrayOutput)
-}
-
-// The log payload format.  The accepted log field values are as follows.
-func (o HttpServerProfileFormatSystemPtrOutput) Payload() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSystem) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Payload
-	}).(pulumi.StringPtrOutput)
-}
-
-// The URL path of the HTTP server
-func (o HttpServerProfileFormatSystemPtrOutput) UrlFormat() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *HttpServerProfileFormatSystem) *string {
-		if v == nil {
-			return nil
-		}
-		return v.UrlFormat
-	}).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatSystemHeader struct {
-	// Header name
-	Name *string `pulumi:"name"`
-	// Header value
-	Value *string `pulumi:"value"`
-}
-
-// HttpServerProfileFormatSystemHeaderInput is an input type that accepts HttpServerProfileFormatSystemHeaderArgs and HttpServerProfileFormatSystemHeaderOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSystemHeaderInput` via:
-//
-//	HttpServerProfileFormatSystemHeaderArgs{...}
-type HttpServerProfileFormatSystemHeaderInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSystemHeaderOutput() HttpServerProfileFormatSystemHeaderOutput
-	ToHttpServerProfileFormatSystemHeaderOutputWithContext(context.Context) HttpServerProfileFormatSystemHeaderOutput
-}
-
-type HttpServerProfileFormatSystemHeaderArgs struct {
-	// Header name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Header value
-	Value pulumi.StringPtrInput `pulumi:"value"`
-}
-
-func (HttpServerProfileFormatSystemHeaderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSystemHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatSystemHeaderArgs) ToHttpServerProfileFormatSystemHeaderOutput() HttpServerProfileFormatSystemHeaderOutput {
-	return i.ToHttpServerProfileFormatSystemHeaderOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSystemHeaderArgs) ToHttpServerProfileFormatSystemHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemHeaderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSystemHeaderOutput)
-}
-
-// HttpServerProfileFormatSystemHeaderArrayInput is an input type that accepts HttpServerProfileFormatSystemHeaderArray and HttpServerProfileFormatSystemHeaderArrayOutput values.
-// You can construct a concrete instance of `HttpServerProfileFormatSystemHeaderArrayInput` via:
-//
-//	HttpServerProfileFormatSystemHeaderArray{ HttpServerProfileFormatSystemHeaderArgs{...} }
-type HttpServerProfileFormatSystemHeaderArrayInput interface {
-	pulumi.Input
-
-	ToHttpServerProfileFormatSystemHeaderArrayOutput() HttpServerProfileFormatSystemHeaderArrayOutput
-	ToHttpServerProfileFormatSystemHeaderArrayOutputWithContext(context.Context) HttpServerProfileFormatSystemHeaderArrayOutput
-}
-
-type HttpServerProfileFormatSystemHeaderArray []HttpServerProfileFormatSystemHeaderInput
-
-func (HttpServerProfileFormatSystemHeaderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatSystemHeader)(nil)).Elem()
-}
-
-func (i HttpServerProfileFormatSystemHeaderArray) ToHttpServerProfileFormatSystemHeaderArrayOutput() HttpServerProfileFormatSystemHeaderArrayOutput {
-	return i.ToHttpServerProfileFormatSystemHeaderArrayOutputWithContext(context.Background())
-}
-
-func (i HttpServerProfileFormatSystemHeaderArray) ToHttpServerProfileFormatSystemHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemHeaderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatSystemHeaderArrayOutput)
-}
-
-type HttpServerProfileFormatSystemHeaderOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSystemHeaderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*HttpServerProfileFormatSystemHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSystemHeaderOutput) ToHttpServerProfileFormatSystemHeaderOutput() HttpServerProfileFormatSystemHeaderOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSystemHeaderOutput) ToHttpServerProfileFormatSystemHeaderOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemHeaderOutput {
-	return o
-}
-
-// Header name
-func (o HttpServerProfileFormatSystemHeaderOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSystemHeader) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Header value
-func (o HttpServerProfileFormatSystemHeaderOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v HttpServerProfileFormatSystemHeader) *string { return v.Value }).(pulumi.StringPtrOutput)
-}
-
-type HttpServerProfileFormatSystemHeaderArrayOutput struct{ *pulumi.OutputState }
-
-func (HttpServerProfileFormatSystemHeaderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]HttpServerProfileFormatSystemHeader)(nil)).Elem()
-}
-
-func (o HttpServerProfileFormatSystemHeaderArrayOutput) ToHttpServerProfileFormatSystemHeaderArrayOutput() HttpServerProfileFormatSystemHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSystemHeaderArrayOutput) ToHttpServerProfileFormatSystemHeaderArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatSystemHeaderArrayOutput {
-	return o
-}
-
-func (o HttpServerProfileFormatSystemHeaderArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatSystemHeaderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatSystemHeader {
-		return vs[0].([]HttpServerProfileFormatSystemHeader)[vs[1].(int)]
-	}).(HttpServerProfileFormatSystemHeaderOutput)
-}
-
 func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*AddressGroupDynamicInput)(nil)).Elem(), AddressGroupDynamicArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AddressGroupDynamicPtrInput)(nil)).Elem(), AddressGroupDynamicArgs{})
@@ -81102,6 +81513,48 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*ExternalDynamicListTypeUrlRecurringWeeklyPtrInput)(nil)).Elem(), ExternalDynamicListTypeUrlRecurringWeeklyArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*FileBlockingProfileRuleInput)(nil)).Elem(), FileBlockingProfileRuleArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*FileBlockingProfileRuleArrayInput)(nil)).Elem(), FileBlockingProfileRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileDestinationFqdnInput)(nil)).Elem(), ForwardingProfileDestinationFqdnArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileDestinationFqdnArrayInput)(nil)).Elem(), ForwardingProfileDestinationFqdnArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileDestinationIpAddressInput)(nil)).Elem(), ForwardingProfileDestinationIpAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileDestinationIpAddressArrayInput)(nil)).Elem(), ForwardingProfileDestinationIpAddressArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceInput)(nil)).Elem(), ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayInput)(nil)).Elem(), ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationInput)(nil)).Elem(), ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayInput)(nil)).Elem(), ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyProxy1Input)(nil)).Elem(), ForwardingProfileRegionalAndCustomProxyProxy1Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyProxy1PtrInput)(nil)).Elem(), ForwardingProfileRegionalAndCustomProxyProxy1Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyProxy2Input)(nil)).Elem(), ForwardingProfileRegionalAndCustomProxyProxy2Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileRegionalAndCustomProxyProxy2PtrInput)(nil)).Elem(), ForwardingProfileRegionalAndCustomProxyProxy2Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeInput)(nil)).Elem(), ForwardingProfileTypeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypePtrInput)(nil)).Elem(), ForwardingProfileTypeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyInput)(nil)).Elem(), ForwardingProfileTypeGlobalProtectProxyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyPtrInput)(nil)).Elem(), ForwardingProfileTypeGlobalProtectProxyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRuleInput)(nil)).Elem(), ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRulePtrInput)(nil)).Elem(), ForwardingProfileTypeGlobalProtectProxyBlockRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpInput)(nil)).Elem(), ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrInput)(nil)).Elem(), ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpInput)(nil)).Elem(), ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrInput)(nil)).Elem(), ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyForwardingRuleInput)(nil)).Elem(), ForwardingProfileTypeGlobalProtectProxyForwardingRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayInput)(nil)).Elem(), ForwardingProfileTypeGlobalProtectProxyForwardingRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypePacFileInput)(nil)).Elem(), ForwardingProfileTypePacFileArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypePacFilePtrInput)(nil)).Elem(), ForwardingProfileTypePacFileArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypePacFileBlockRuleInput)(nil)).Elem(), ForwardingProfileTypePacFileBlockRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypePacFileBlockRulePtrInput)(nil)).Elem(), ForwardingProfileTypePacFileBlockRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypePacFileBlockRuleAllowTcpInput)(nil)).Elem(), ForwardingProfileTypePacFileBlockRuleAllowTcpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypePacFileBlockRuleAllowTcpPtrInput)(nil)).Elem(), ForwardingProfileTypePacFileBlockRuleAllowTcpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypePacFileBlockRuleAllowUdpInput)(nil)).Elem(), ForwardingProfileTypePacFileBlockRuleAllowUdpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypePacFileBlockRuleAllowUdpPtrInput)(nil)).Elem(), ForwardingProfileTypePacFileBlockRuleAllowUdpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypePacFileForwardingRuleInput)(nil)).Elem(), ForwardingProfileTypePacFileForwardingRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypePacFileForwardingRuleArrayInput)(nil)).Elem(), ForwardingProfileTypePacFileForwardingRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeZtnaAgentInput)(nil)).Elem(), ForwardingProfileTypeZtnaAgentArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeZtnaAgentPtrInput)(nil)).Elem(), ForwardingProfileTypeZtnaAgentArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeZtnaAgentBlockRuleInput)(nil)).Elem(), ForwardingProfileTypeZtnaAgentBlockRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeZtnaAgentBlockRulePtrInput)(nil)).Elem(), ForwardingProfileTypeZtnaAgentBlockRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeZtnaAgentForwardingRuleInput)(nil)).Elem(), ForwardingProfileTypeZtnaAgentForwardingRuleArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileTypeZtnaAgentForwardingRuleArrayInput)(nil)).Elem(), ForwardingProfileTypeZtnaAgentForwardingRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileUserLocationInternalHostDetectionInput)(nil)).Elem(), ForwardingProfileUserLocationInternalHostDetectionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ForwardingProfileUserLocationInternalHostDetectionPtrInput)(nil)).Elem(), ForwardingProfileUserLocationInternalHostDetectionArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GeneralSettingGeneralInput)(nil)).Elem(), GeneralSettingGeneralArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GeneralSettingGeneralPtrInput)(nil)).Elem(), GeneralSettingGeneralArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GeneralSettingGeneralGeoLocationInput)(nil)).Elem(), GeneralSettingGeneralGeoLocationArgs{})
@@ -81304,48 +81757,6 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatDataPtrInput)(nil)).Elem(), HttpServerProfileFormatDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatDataHeaderInput)(nil)).Elem(), HttpServerProfileFormatDataHeaderArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatDataHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatDataHeaderArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatDataParamInput)(nil)).Elem(), HttpServerProfileFormatDataParamArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatDataParamArrayInput)(nil)).Elem(), HttpServerProfileFormatDataParamArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatDecryptionInput)(nil)).Elem(), HttpServerProfileFormatDecryptionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatDecryptionPtrInput)(nil)).Elem(), HttpServerProfileFormatDecryptionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatDecryptionHeaderInput)(nil)).Elem(), HttpServerProfileFormatDecryptionHeaderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatDecryptionHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatDecryptionHeaderArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatDecryptionParamInput)(nil)).Elem(), HttpServerProfileFormatDecryptionParamArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatDecryptionParamArrayInput)(nil)).Elem(), HttpServerProfileFormatDecryptionParamArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGlobalprotectInput)(nil)).Elem(), HttpServerProfileFormatGlobalprotectArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGlobalprotectPtrInput)(nil)).Elem(), HttpServerProfileFormatGlobalprotectArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGlobalprotectHeaderInput)(nil)).Elem(), HttpServerProfileFormatGlobalprotectHeaderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGlobalprotectHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatGlobalprotectHeaderArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGlobalprotectParamInput)(nil)).Elem(), HttpServerProfileFormatGlobalprotectParamArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGlobalprotectParamArrayInput)(nil)).Elem(), HttpServerProfileFormatGlobalprotectParamArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGtpInput)(nil)).Elem(), HttpServerProfileFormatGtpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGtpPtrInput)(nil)).Elem(), HttpServerProfileFormatGtpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGtpHeaderInput)(nil)).Elem(), HttpServerProfileFormatGtpHeaderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGtpHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatGtpHeaderArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGtpParamInput)(nil)).Elem(), HttpServerProfileFormatGtpParamArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatGtpParamArrayInput)(nil)).Elem(), HttpServerProfileFormatGtpParamArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatHipMatchInput)(nil)).Elem(), HttpServerProfileFormatHipMatchArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatHipMatchPtrInput)(nil)).Elem(), HttpServerProfileFormatHipMatchArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatHipMatchHeaderInput)(nil)).Elem(), HttpServerProfileFormatHipMatchHeaderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatHipMatchHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatHipMatchHeaderArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatHipMatchParamInput)(nil)).Elem(), HttpServerProfileFormatHipMatchParamArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatHipMatchParamArrayInput)(nil)).Elem(), HttpServerProfileFormatHipMatchParamArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatIptagInput)(nil)).Elem(), HttpServerProfileFormatIptagArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatIptagPtrInput)(nil)).Elem(), HttpServerProfileFormatIptagArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatIptagHeaderInput)(nil)).Elem(), HttpServerProfileFormatIptagHeaderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatIptagHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatIptagHeaderArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatIptagParamInput)(nil)).Elem(), HttpServerProfileFormatIptagParamArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatIptagParamArrayInput)(nil)).Elem(), HttpServerProfileFormatIptagParamArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSctpInput)(nil)).Elem(), HttpServerProfileFormatSctpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSctpPtrInput)(nil)).Elem(), HttpServerProfileFormatSctpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSctpHeaderInput)(nil)).Elem(), HttpServerProfileFormatSctpHeaderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSctpHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatSctpHeaderArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSctpParamInput)(nil)).Elem(), HttpServerProfileFormatSctpParamArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSctpParamArrayInput)(nil)).Elem(), HttpServerProfileFormatSctpParamArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSystemInput)(nil)).Elem(), HttpServerProfileFormatSystemArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSystemPtrInput)(nil)).Elem(), HttpServerProfileFormatSystemArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSystemHeaderInput)(nil)).Elem(), HttpServerProfileFormatSystemHeaderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatSystemHeaderArrayInput)(nil)).Elem(), HttpServerProfileFormatSystemHeaderArray{})
 	pulumi.RegisterOutputType(AddressGroupDynamicOutput{})
 	pulumi.RegisterOutputType(AddressGroupDynamicPtrOutput{})
 	pulumi.RegisterOutputType(AggregateInterfaceLayer2Output{})
@@ -82101,6 +82512,48 @@ func init() {
 	pulumi.RegisterOutputType(ExternalDynamicListTypeUrlRecurringWeeklyPtrOutput{})
 	pulumi.RegisterOutputType(FileBlockingProfileRuleOutput{})
 	pulumi.RegisterOutputType(FileBlockingProfileRuleArrayOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileDestinationFqdnOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileDestinationFqdnArrayOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileDestinationIpAddressOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileDestinationIpAddressArrayOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileRegionalAndCustomProxyConnectivityPreferenceArrayOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileRegionalAndCustomProxyPrismaAccessLocationArrayOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileRegionalAndCustomProxyProxy1Output{})
+	pulumi.RegisterOutputType(ForwardingProfileRegionalAndCustomProxyProxy1PtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileRegionalAndCustomProxyProxy2Output{})
+	pulumi.RegisterOutputType(ForwardingProfileRegionalAndCustomProxyProxy2PtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypePtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeGlobalProtectProxyOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeGlobalProtectProxyPtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeGlobalProtectProxyBlockRuleOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeGlobalProtectProxyBlockRulePtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcpPtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdpPtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeGlobalProtectProxyForwardingRuleOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeGlobalProtectProxyForwardingRuleArrayOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypePacFileOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypePacFilePtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypePacFileBlockRuleOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypePacFileBlockRulePtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypePacFileBlockRuleAllowTcpOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypePacFileBlockRuleAllowTcpPtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypePacFileBlockRuleAllowUdpOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypePacFileBlockRuleAllowUdpPtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypePacFileForwardingRuleOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypePacFileForwardingRuleArrayOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeZtnaAgentOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeZtnaAgentPtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeZtnaAgentBlockRuleOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeZtnaAgentBlockRulePtrOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeZtnaAgentForwardingRuleOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileTypeZtnaAgentForwardingRuleArrayOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileUserLocationInternalHostDetectionOutput{})
+	pulumi.RegisterOutputType(ForwardingProfileUserLocationInternalHostDetectionPtrOutput{})
 	pulumi.RegisterOutputType(GeneralSettingGeneralOutput{})
 	pulumi.RegisterOutputType(GeneralSettingGeneralPtrOutput{})
 	pulumi.RegisterOutputType(GeneralSettingGeneralGeoLocationOutput{})
@@ -82303,46 +82756,4 @@ func init() {
 	pulumi.RegisterOutputType(HttpServerProfileFormatDataPtrOutput{})
 	pulumi.RegisterOutputType(HttpServerProfileFormatDataHeaderOutput{})
 	pulumi.RegisterOutputType(HttpServerProfileFormatDataHeaderArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatDataParamOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatDataParamArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatDecryptionOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatDecryptionPtrOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatDecryptionHeaderOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatDecryptionHeaderArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatDecryptionParamOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatDecryptionParamArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGlobalprotectOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGlobalprotectPtrOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGlobalprotectHeaderOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGlobalprotectHeaderArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGlobalprotectParamOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGlobalprotectParamArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGtpOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGtpPtrOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGtpHeaderOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGtpHeaderArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGtpParamOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatGtpParamArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatHipMatchOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatHipMatchPtrOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatHipMatchHeaderOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatHipMatchHeaderArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatHipMatchParamOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatHipMatchParamArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatIptagOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatIptagPtrOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatIptagHeaderOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatIptagHeaderArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatIptagParamOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatIptagParamArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSctpOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSctpPtrOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSctpHeaderOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSctpHeaderArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSctpParamOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSctpParamArrayOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSystemOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSystemPtrOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSystemHeaderOutput{})
-	pulumi.RegisterOutputType(HttpServerProfileFormatSystemHeaderArrayOutput{})
 }

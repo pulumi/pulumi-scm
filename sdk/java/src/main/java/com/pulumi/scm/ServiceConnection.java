@@ -339,6 +339,20 @@ public class ServiceConnection extends com.pulumi.resources.CustomResource {
         return this.region;
     }
     /**
+     * Region tag
+     * 
+     */
+    @Export(name="regionTag", refs={String.class}, tree="[0]")
+    private Output<String> regionTag;
+
+    /**
+     * @return Region tag
+     * 
+     */
+    public Output<String> regionTag() {
+        return this.regionTag;
+    }
+    /**
      * Secondary ipsec tunnel
      * 
      */

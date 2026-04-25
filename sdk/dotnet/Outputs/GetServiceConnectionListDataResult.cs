@@ -66,6 +66,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Region;
         /// <summary>
+        /// Region tag
+        /// </summary>
+        public readonly string RegionTag;
+        /// <summary>
         /// Secondary ipsec tunnel
         /// </summary>
         public readonly string SecondaryIpsecTunnel;
@@ -110,6 +114,8 @@ namespace Pulumi.Scm.Outputs
 
             string region,
 
+            string regionTag,
+
             string secondaryIpsecTunnel,
 
             bool sourceNat,
@@ -131,6 +137,7 @@ namespace Pulumi.Scm.Outputs
             Protocol = protocol;
             Qos = qos;
             Region = region;
+            RegionTag = regionTag;
             SecondaryIpsecTunnel = secondaryIpsecTunnel;
             SourceNat = sourceNat;
             Subnets = subnets;

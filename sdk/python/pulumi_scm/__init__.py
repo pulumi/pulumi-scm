@@ -49,6 +49,11 @@ from .ethernet_interface import *
 from .external_dynamic_list import *
 from .file_blocking_profile import *
 from .folder import *
+from .forwarding_profile import *
+from .forwarding_profile_destination import *
+from .forwarding_profile_regional_and_custom_proxy import *
+from .forwarding_profile_source_application import *
+from .forwarding_profile_user_location import *
 from .general_setting import *
 from .get_address import *
 from .get_address_group import *
@@ -110,6 +115,8 @@ from .get_decryption_profile import *
 from .get_decryption_profile_list import *
 from .get_decryption_rule import *
 from .get_decryption_rule_list import *
+from .get_device import *
+from .get_device_list import *
 from .get_device_redistribution_collector import *
 from .get_device_redistribution_collector_list import *
 from .get_dhcp_interface import *
@@ -132,6 +139,16 @@ from .get_file_blocking_profile import *
 from .get_file_blocking_profile_list import *
 from .get_folder import *
 from .get_folder_list import *
+from .get_forwarding_profile import *
+from .get_forwarding_profile_destination import *
+from .get_forwarding_profile_destination_list import *
+from .get_forwarding_profile_list import *
+from .get_forwarding_profile_regional_and_custom_proxy import *
+from .get_forwarding_profile_regional_and_custom_proxy_list import *
+from .get_forwarding_profile_source_application import *
+from .get_forwarding_profile_source_application_list import *
+from .get_forwarding_profile_user_location import *
+from .get_forwarding_profile_user_location_list import *
 from .get_general_setting import *
 from .get_general_setting_list import *
 from .get_globalprotect_match_list import *
@@ -726,6 +743,46 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/folder:Folder": "Folder"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/forwardingProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/forwardingProfile:ForwardingProfile": "ForwardingProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/forwardingProfileDestination",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/forwardingProfileDestination:ForwardingProfileDestination": "ForwardingProfileDestination"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/forwardingProfileRegionalAndCustomProxy",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/forwardingProfileRegionalAndCustomProxy:ForwardingProfileRegionalAndCustomProxy": "ForwardingProfileRegionalAndCustomProxy"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/forwardingProfileSourceApplication",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/forwardingProfileSourceApplication:ForwardingProfileSourceApplication": "ForwardingProfileSourceApplication"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/forwardingProfileUserLocation",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/forwardingProfileUserLocation:ForwardingProfileUserLocation": "ForwardingProfileUserLocation"
   }
  },
  {
