@@ -14,6 +14,10 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSecurityRuleAllowWebApplicationResult
     {
         /// <summary>
+        /// App id
+        /// </summary>
+        public readonly string AppId;
+        /// <summary>
         /// Application function
         /// </summary>
         public readonly ImmutableArray<string> ApplicationFunctions;
@@ -52,6 +56,8 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private GetSecurityRuleAllowWebApplicationResult(
+            string appId,
+
             ImmutableArray<string> applicationFunctions,
 
             string dlp,
@@ -70,6 +76,7 @@ namespace Pulumi.Scm.Outputs
 
             string type)
         {
+            AppId = appId;
             ApplicationFunctions = applicationFunctions;
             Dlp = dlp;
             FileControl = fileControl;

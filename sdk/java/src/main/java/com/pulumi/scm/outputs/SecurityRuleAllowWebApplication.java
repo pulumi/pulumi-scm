@@ -16,6 +16,11 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityRuleAllowWebApplication {
     /**
+     * @return App id
+     * 
+     */
+    private @Nullable String appId;
+    /**
      * @return Application function
      * 
      */
@@ -62,6 +67,13 @@ public final class SecurityRuleAllowWebApplication {
     private @Nullable String type;
 
     private SecurityRuleAllowWebApplication() {}
+    /**
+     * @return App id
+     * 
+     */
+    public Optional<String> appId() {
+        return Optional.ofNullable(this.appId);
+    }
     /**
      * @return Application function
      * 
@@ -135,6 +147,7 @@ public final class SecurityRuleAllowWebApplication {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable String appId;
         private @Nullable List<String> applicationFunctions;
         private @Nullable String dlp;
         private @Nullable SecurityRuleAllowWebApplicationFileControl fileControl;
@@ -147,6 +160,7 @@ public final class SecurityRuleAllowWebApplication {
         public Builder() {}
         public Builder(SecurityRuleAllowWebApplication defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.appId = defaults.appId;
     	      this.applicationFunctions = defaults.applicationFunctions;
     	      this.dlp = defaults.dlp;
     	      this.fileControl = defaults.fileControl;
@@ -158,6 +172,12 @@ public final class SecurityRuleAllowWebApplication {
     	      this.type = defaults.type;
         }
 
+        @CustomType.Setter
+        public Builder appId(@Nullable String appId) {
+
+            this.appId = appId;
+            return this;
+        }
         @CustomType.Setter
         public Builder applicationFunctions(@Nullable List<String> applicationFunctions) {
 
@@ -223,6 +243,7 @@ public final class SecurityRuleAllowWebApplication {
         }
         public SecurityRuleAllowWebApplication build() {
             final var _resultValue = new SecurityRuleAllowWebApplication();
+            _resultValue.appId = appId;
             _resultValue.applicationFunctions = applicationFunctions;
             _resultValue.dlp = dlp;
             _resultValue.fileControl = fileControl;

@@ -27,7 +27,7 @@ class GetServiceConnectionResult:
     """
     A collection of values returned by getServiceConnection.
     """
-    def __init__(__self__, backup_sc=None, bgp_peer=None, encrypted_values=None, folder=None, id=None, ipsec_tunnel=None, name=None, nat_pool=None, no_export_community=None, onboarding_type=None, protocol=None, qos=None, region=None, secondary_ipsec_tunnel=None, source_nat=None, subnets=None, tfid=None):
+    def __init__(__self__, backup_sc=None, bgp_peer=None, encrypted_values=None, folder=None, id=None, ipsec_tunnel=None, name=None, nat_pool=None, no_export_community=None, onboarding_type=None, protocol=None, qos=None, region=None, region_tag=None, secondary_ipsec_tunnel=None, source_nat=None, subnets=None, tfid=None):
         if backup_sc and not isinstance(backup_sc, str):
             raise TypeError("Expected argument 'backup_sc' to be a str")
         pulumi.set(__self__, "backup_sc", backup_sc)
@@ -67,6 +67,9 @@ class GetServiceConnectionResult:
         if region and not isinstance(region, str):
             raise TypeError("Expected argument 'region' to be a str")
         pulumi.set(__self__, "region", region)
+        if region_tag and not isinstance(region_tag, str):
+            raise TypeError("Expected argument 'region_tag' to be a str")
+        pulumi.set(__self__, "region_tag", region_tag)
         if secondary_ipsec_tunnel and not isinstance(secondary_ipsec_tunnel, str):
             raise TypeError("Expected argument 'secondary_ipsec_tunnel' to be a str")
         pulumi.set(__self__, "secondary_ipsec_tunnel", secondary_ipsec_tunnel)
@@ -185,6 +188,14 @@ class GetServiceConnectionResult:
         return pulumi.get(self, "region")
 
     @_builtins.property
+    @pulumi.getter(name="regionTag")
+    def region_tag(self) -> _builtins.str:
+        """
+        Region tag
+        """
+        return pulumi.get(self, "region_tag")
+
+    @_builtins.property
     @pulumi.getter(name="secondaryIpsecTunnel")
     def secondary_ipsec_tunnel(self) -> _builtins.str:
         """
@@ -236,6 +247,7 @@ class AwaitableGetServiceConnectionResult(GetServiceConnectionResult):
             protocol=self.protocol,
             qos=self.qos,
             region=self.region,
+            region_tag=self.region_tag,
             secondary_ipsec_tunnel=self.secondary_ipsec_tunnel,
             source_nat=self.source_nat,
             subnets=self.subnets,
@@ -290,6 +302,7 @@ def get_service_connection(folder: Optional[_builtins.str] = None,
         protocol=pulumi.get(__ret__, 'protocol'),
         qos=pulumi.get(__ret__, 'qos'),
         region=pulumi.get(__ret__, 'region'),
+        region_tag=pulumi.get(__ret__, 'region_tag'),
         secondary_ipsec_tunnel=pulumi.get(__ret__, 'secondary_ipsec_tunnel'),
         source_nat=pulumi.get(__ret__, 'source_nat'),
         subnets=pulumi.get(__ret__, 'subnets'),
@@ -341,6 +354,7 @@ def get_service_connection_output(folder: Optional[pulumi.Input[Optional[_builti
         protocol=pulumi.get(__response__, 'protocol'),
         qos=pulumi.get(__response__, 'qos'),
         region=pulumi.get(__response__, 'region'),
+        region_tag=pulumi.get(__response__, 'region_tag'),
         secondary_ipsec_tunnel=pulumi.get(__response__, 'secondary_ipsec_tunnel'),
         source_nat=pulumi.get(__response__, 'source_nat'),
         subnets=pulumi.get(__response__, 'subnets'),

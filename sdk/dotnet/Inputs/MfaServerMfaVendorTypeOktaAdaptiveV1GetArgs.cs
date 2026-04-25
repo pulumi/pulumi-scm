@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         /// Okta timeout (seconds)
         /// </summary>
         [Input("oktaTimeout", required: true)]
-        public Input<int> OktaTimeout { get; set; } = null!;
+        public Input<string> OktaTimeout { get; set; } = null!;
 
         [Input("oktaToken", required: true)]
         private Input<string>? _oktaToken;

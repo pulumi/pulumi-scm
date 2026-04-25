@@ -82,6 +82,11 @@ public final class GetServiceConnectionResult {
      */
     private String region;
     /**
+     * @return Region tag
+     * 
+     */
+    private String regionTag;
+    /**
      * @return Secondary ipsec tunnel
      * 
      */
@@ -195,6 +200,13 @@ public final class GetServiceConnectionResult {
         return this.region;
     }
     /**
+     * @return Region tag
+     * 
+     */
+    public String regionTag() {
+        return this.regionTag;
+    }
+    /**
      * @return Secondary ipsec tunnel
      * 
      */
@@ -245,6 +257,7 @@ public final class GetServiceConnectionResult {
         private GetServiceConnectionProtocol protocol;
         private GetServiceConnectionQos qos;
         private String region;
+        private String regionTag;
         private String secondaryIpsecTunnel;
         private Boolean sourceNat;
         private List<String> subnets;
@@ -265,6 +278,7 @@ public final class GetServiceConnectionResult {
     	      this.protocol = defaults.protocol;
     	      this.qos = defaults.qos;
     	      this.region = defaults.region;
+    	      this.regionTag = defaults.regionTag;
     	      this.secondaryIpsecTunnel = defaults.secondaryIpsecTunnel;
     	      this.sourceNat = defaults.sourceNat;
     	      this.subnets = defaults.subnets;
@@ -376,6 +390,14 @@ public final class GetServiceConnectionResult {
             return this;
         }
         @CustomType.Setter
+        public Builder regionTag(String regionTag) {
+            if (regionTag == null) {
+              throw new MissingRequiredPropertyException("GetServiceConnectionResult", "regionTag");
+            }
+            this.regionTag = regionTag;
+            return this;
+        }
+        @CustomType.Setter
         public Builder secondaryIpsecTunnel(String secondaryIpsecTunnel) {
             if (secondaryIpsecTunnel == null) {
               throw new MissingRequiredPropertyException("GetServiceConnectionResult", "secondaryIpsecTunnel");
@@ -425,6 +447,7 @@ public final class GetServiceConnectionResult {
             _resultValue.protocol = protocol;
             _resultValue.qos = qos;
             _resultValue.region = region;
+            _resultValue.regionTag = regionTag;
             _resultValue.secondaryIpsecTunnel = secondaryIpsecTunnel;
             _resultValue.sourceNat = sourceNat;
             _resultValue.subnets = subnets;

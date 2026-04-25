@@ -110,6 +110,10 @@ export interface GetServiceConnectionResult {
      */
     readonly region: string;
     /**
+     * Region tag
+     */
+    readonly regionTag: string;
+    /**
      * Secondary ipsec tunnel
      */
     readonly secondaryIpsecTunnel: string;

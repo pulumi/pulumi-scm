@@ -36,6 +36,12 @@ namespace Pulumi.Scm.Inputs
         [Input("peerIpv6Address")]
         public Input<string>? PeerIpv6Address { get; set; }
 
+        /// <summary>
+        /// Same peer IP address for SC
+        /// </summary>
+        [Input("sameAsPrimary")]
+        public Input<bool>? SameAsPrimary { get; set; }
+
         [Input("secret")]
         private Input<string>? _secret;
 

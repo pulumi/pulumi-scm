@@ -40,6 +40,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.SecurityRuleArgs;
  * import com.pulumi.scm.inputs.SecurityRuleSecuritySettingsArgs;
  * import com.pulumi.scm.inputs.SecurityRuleLogSettingsArgs;
+ * import com.pulumi.scm.inputs.SecurityRuleAllowWebApplicationArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -204,6 +205,32 @@ import javax.annotation.Nullable;
  *             .services("service-https")
  *             .logEnd(true)
  *             .tags(webTag.name())
+ *             .build());
+ * 
+ *         // Internet Rule with Web Application
+ *         var internetRuleExample = new SecurityRule("internetRuleExample", SecurityRuleArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("internet-rule-postman")
+ *             .policyType("Internet")
+ *             .allowWebApplications(            
+ *                 SecurityRuleAllowWebApplicationArgs.builder()
+ *                     .name("web_appln")
+ *                     .type("application")
+ *                     .applicationFunction(List.of("any"))
+ *                     .appId("4sync")
+ *                     .build(),
+ *                 SecurityRuleAllowWebApplicationArgs.builder()
+ *                     .name("web_appln_2")
+ *                     .type("application")
+ *                     .applicationFunction(List.of("any"))
+ *                     .appId("4sync")
+ *                     .build())
+ *             .sources("any")
+ *             .destinations("any")
+ *             .action("allow")
+ *             .sourceUsers(            
+ *                 "casidp\\test_1",
+ *                 "CN=ng1,DC=casidp,DC=onmicrosoft,DC=com")
  *             .build());
  * 
  *     }

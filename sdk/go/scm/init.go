@@ -107,6 +107,16 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &FileBlockingProfile{}
 	case "scm:index/folder:Folder":
 		r = &Folder{}
+	case "scm:index/forwardingProfile:ForwardingProfile":
+		r = &ForwardingProfile{}
+	case "scm:index/forwardingProfileDestination:ForwardingProfileDestination":
+		r = &ForwardingProfileDestination{}
+	case "scm:index/forwardingProfileRegionalAndCustomProxy:ForwardingProfileRegionalAndCustomProxy":
+		r = &ForwardingProfileRegionalAndCustomProxy{}
+	case "scm:index/forwardingProfileSourceApplication:ForwardingProfileSourceApplication":
+		r = &ForwardingProfileSourceApplication{}
+	case "scm:index/forwardingProfileUserLocation:ForwardingProfileUserLocation":
+		r = &ForwardingProfileUserLocation{}
 	case "scm:index/generalSetting:GeneralSetting":
 		r = &GeneralSetting{}
 	case "scm:index/globalprotectMatchList:GlobalprotectMatchList":
@@ -513,6 +523,31 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/folder",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/forwardingProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/forwardingProfileDestination",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/forwardingProfileRegionalAndCustomProxy",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/forwardingProfileSourceApplication",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/forwardingProfileUserLocation",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -31,6 +32,11 @@ public final class ServiceConnectionBgpPeer {
      * 
      */
     private @Nullable String peerIpv6Address;
+    /**
+     * @return Same peer IP address for SC
+     * 
+     */
+    private @Nullable Boolean sameAsPrimary;
     /**
      * @return Secret
      * 
@@ -67,6 +73,13 @@ public final class ServiceConnectionBgpPeer {
         return Optional.ofNullable(this.peerIpv6Address);
     }
     /**
+     * @return Same peer IP address for SC
+     * 
+     */
+    public Optional<Boolean> sameAsPrimary() {
+        return Optional.ofNullable(this.sameAsPrimary);
+    }
+    /**
      * @return Secret
      * 
      */
@@ -87,6 +100,7 @@ public final class ServiceConnectionBgpPeer {
         private @Nullable String localIpv6Address;
         private @Nullable String peerIpAddress;
         private @Nullable String peerIpv6Address;
+        private @Nullable Boolean sameAsPrimary;
         private @Nullable String secret;
         public Builder() {}
         public Builder(ServiceConnectionBgpPeer defaults) {
@@ -95,6 +109,7 @@ public final class ServiceConnectionBgpPeer {
     	      this.localIpv6Address = defaults.localIpv6Address;
     	      this.peerIpAddress = defaults.peerIpAddress;
     	      this.peerIpv6Address = defaults.peerIpv6Address;
+    	      this.sameAsPrimary = defaults.sameAsPrimary;
     	      this.secret = defaults.secret;
         }
 
@@ -123,6 +138,12 @@ public final class ServiceConnectionBgpPeer {
             return this;
         }
         @CustomType.Setter
+        public Builder sameAsPrimary(@Nullable Boolean sameAsPrimary) {
+
+            this.sameAsPrimary = sameAsPrimary;
+            return this;
+        }
+        @CustomType.Setter
         public Builder secret(@Nullable String secret) {
 
             this.secret = secret;
@@ -134,6 +155,7 @@ public final class ServiceConnectionBgpPeer {
             _resultValue.localIpv6Address = localIpv6Address;
             _resultValue.peerIpAddress = peerIpAddress;
             _resultValue.peerIpv6Address = peerIpv6Address;
+            _resultValue.sameAsPrimary = sameAsPrimary;
             _resultValue.secret = secret;
             return _resultValue;
         }

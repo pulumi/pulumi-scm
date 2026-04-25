@@ -12,6 +12,12 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class SecurityRuleAllowWebApplicationGetArgs : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// App id
+        /// </summary>
+        [Input("appId")]
+        public Input<string>? AppId { get; set; }
+
         [Input("applicationFunctions")]
         private InputList<string>? _applicationFunctions;
 

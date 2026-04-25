@@ -20,6 +20,21 @@ public final class SecurityRuleAllowWebApplicationArgs extends com.pulumi.resour
     public static final SecurityRuleAllowWebApplicationArgs Empty = new SecurityRuleAllowWebApplicationArgs();
 
     /**
+     * App id
+     * 
+     */
+    @Import(name="appId")
+    private @Nullable Output<String> appId;
+
+    /**
+     * @return App id
+     * 
+     */
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
+    }
+
+    /**
      * Application function
      * 
      */
@@ -157,6 +172,7 @@ public final class SecurityRuleAllowWebApplicationArgs extends com.pulumi.resour
     private SecurityRuleAllowWebApplicationArgs() {}
 
     private SecurityRuleAllowWebApplicationArgs(SecurityRuleAllowWebApplicationArgs $) {
+        this.appId = $.appId;
         this.applicationFunctions = $.applicationFunctions;
         this.dlp = $.dlp;
         this.fileControl = $.fileControl;
@@ -184,6 +200,27 @@ public final class SecurityRuleAllowWebApplicationArgs extends com.pulumi.resour
 
         public Builder(SecurityRuleAllowWebApplicationArgs defaults) {
             $ = new SecurityRuleAllowWebApplicationArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param appId App id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appId(@Nullable Output<String> appId) {
+            $.appId = appId;
+            return this;
+        }
+
+        /**
+         * @param appId App id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
 
         /**

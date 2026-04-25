@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,6 +77,21 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
     }
 
     /**
+     * Same peer IP address for SC
+     * 
+     */
+    @Import(name="sameAsPrimary")
+    private @Nullable Output<Boolean> sameAsPrimary;
+
+    /**
+     * @return Same peer IP address for SC
+     * 
+     */
+    public Optional<Output<Boolean>> sameAsPrimary() {
+        return Optional.ofNullable(this.sameAsPrimary);
+    }
+
+    /**
      * Secret
      * 
      */
@@ -97,6 +113,7 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         this.localIpv6Address = $.localIpv6Address;
         this.peerIpAddress = $.peerIpAddress;
         this.peerIpv6Address = $.peerIpv6Address;
+        this.sameAsPrimary = $.sameAsPrimary;
         this.secret = $.secret;
     }
 
@@ -200,6 +217,27 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
          */
         public Builder peerIpv6Address(String peerIpv6Address) {
             return peerIpv6Address(Output.of(peerIpv6Address));
+        }
+
+        /**
+         * @param sameAsPrimary Same peer IP address for SC
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sameAsPrimary(@Nullable Output<Boolean> sameAsPrimary) {
+            $.sameAsPrimary = sameAsPrimary;
+            return this;
+        }
+
+        /**
+         * @param sameAsPrimary Same peer IP address for SC
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sameAsPrimary(Boolean sameAsPrimary) {
+            return sameAsPrimary(Output.of(sameAsPrimary));
         }
 
         /**

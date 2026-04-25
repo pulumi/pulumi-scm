@@ -126,6 +126,10 @@ import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
 import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
 import com.pulumi.scm.inputs.GetDecryptionRuleListPlainArgs;
 import com.pulumi.scm.inputs.GetDecryptionRulePlainArgs;
+import com.pulumi.scm.inputs.GetDeviceArgs;
+import com.pulumi.scm.inputs.GetDeviceListArgs;
+import com.pulumi.scm.inputs.GetDeviceListPlainArgs;
+import com.pulumi.scm.inputs.GetDevicePlainArgs;
 import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorArgs;
 import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListArgs;
 import com.pulumi.scm.inputs.GetDeviceRedistributionCollectorListPlainArgs;
@@ -170,6 +174,26 @@ import com.pulumi.scm.inputs.GetFolderArgs;
 import com.pulumi.scm.inputs.GetFolderListArgs;
 import com.pulumi.scm.inputs.GetFolderListPlainArgs;
 import com.pulumi.scm.inputs.GetFolderPlainArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileDestinationArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileDestinationListArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileDestinationListPlainArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileDestinationPlainArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileListArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileListPlainArgs;
+import com.pulumi.scm.inputs.GetForwardingProfilePlainArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyListArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyListPlainArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyPlainArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationListArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationListPlainArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationPlainArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileUserLocationArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileUserLocationListArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileUserLocationListPlainArgs;
+import com.pulumi.scm.inputs.GetForwardingProfileUserLocationPlainArgs;
 import com.pulumi.scm.inputs.GetGeneralSettingArgs;
 import com.pulumi.scm.inputs.GetGeneralSettingListArgs;
 import com.pulumi.scm.inputs.GetGeneralSettingListPlainArgs;
@@ -546,8 +570,10 @@ import com.pulumi.scm.outputs.GetDecryptionProfileListResult;
 import com.pulumi.scm.outputs.GetDecryptionProfileResult;
 import com.pulumi.scm.outputs.GetDecryptionRuleListResult;
 import com.pulumi.scm.outputs.GetDecryptionRuleResult;
+import com.pulumi.scm.outputs.GetDeviceListResult;
 import com.pulumi.scm.outputs.GetDeviceRedistributionCollectorListResult;
 import com.pulumi.scm.outputs.GetDeviceRedistributionCollectorResult;
+import com.pulumi.scm.outputs.GetDeviceResult;
 import com.pulumi.scm.outputs.GetDhcpInterfaceListResult;
 import com.pulumi.scm.outputs.GetDhcpInterfaceResult;
 import com.pulumi.scm.outputs.GetDnsProxyListResult;
@@ -568,6 +594,16 @@ import com.pulumi.scm.outputs.GetFileBlockingProfileListResult;
 import com.pulumi.scm.outputs.GetFileBlockingProfileResult;
 import com.pulumi.scm.outputs.GetFolderListResult;
 import com.pulumi.scm.outputs.GetFolderResult;
+import com.pulumi.scm.outputs.GetForwardingProfileDestinationListResult;
+import com.pulumi.scm.outputs.GetForwardingProfileDestinationResult;
+import com.pulumi.scm.outputs.GetForwardingProfileListResult;
+import com.pulumi.scm.outputs.GetForwardingProfileRegionalAndCustomProxyListResult;
+import com.pulumi.scm.outputs.GetForwardingProfileRegionalAndCustomProxyResult;
+import com.pulumi.scm.outputs.GetForwardingProfileResult;
+import com.pulumi.scm.outputs.GetForwardingProfileSourceApplicationListResult;
+import com.pulumi.scm.outputs.GetForwardingProfileSourceApplicationResult;
+import com.pulumi.scm.outputs.GetForwardingProfileUserLocationListResult;
+import com.pulumi.scm.outputs.GetForwardingProfileUserLocationResult;
 import com.pulumi.scm.outputs.GetGeneralSettingListResult;
 import com.pulumi.scm.outputs.GetGeneralSettingResult;
 import com.pulumi.scm.outputs.GetGlobalprotectMatchListListResult;
@@ -12780,6 +12816,339 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getDecryptionRuleList:getDecryptionRuleList", TypeShape.of(GetDecryptionRuleListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * Device data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a device by id
+     *         final var myDevice = ScmFunctions.getDevice(GetDeviceArgs.builder()
+     *             .id("007099000023642")
+     *             .build());
+     * 
+     *         ctx.export("scmDeviceOutput", Map.ofEntries(
+     *             Map.entry("id", myDevice.id()),
+     *             Map.entry("name", myDevice.name()),
+     *             Map.entry("hostname", myDevice.hostname()),
+     *             Map.entry("model", myDevice.model()),
+     *             Map.entry("family", myDevice.family()),
+     *             Map.entry("folder", myDevice.folder()),
+     *             Map.entry("isConnected", myDevice.isConnected()),
+     *             Map.entry("softwareVersion", myDevice.softwareVersion()),
+     *             Map.entry("ipAddress", myDevice.ipAddress()),
+     *             Map.entry("macAddress", myDevice.macAddress()),
+     *             Map.entry("uptime", myDevice.uptime())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDeviceResult> getDevice(GetDeviceArgs args) {
+        return getDevice(args, InvokeOptions.Empty);
+    }
+    /**
+     * Device data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a device by id
+     *         final var myDevice = ScmFunctions.getDevice(GetDeviceArgs.builder()
+     *             .id("007099000023642")
+     *             .build());
+     * 
+     *         ctx.export("scmDeviceOutput", Map.ofEntries(
+     *             Map.entry("id", myDevice.id()),
+     *             Map.entry("name", myDevice.name()),
+     *             Map.entry("hostname", myDevice.hostname()),
+     *             Map.entry("model", myDevice.model()),
+     *             Map.entry("family", myDevice.family()),
+     *             Map.entry("folder", myDevice.folder()),
+     *             Map.entry("isConnected", myDevice.isConnected()),
+     *             Map.entry("softwareVersion", myDevice.softwareVersion()),
+     *             Map.entry("ipAddress", myDevice.ipAddress()),
+     *             Map.entry("macAddress", myDevice.macAddress()),
+     *             Map.entry("uptime", myDevice.uptime())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args) {
+        return getDevicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Device data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a device by id
+     *         final var myDevice = ScmFunctions.getDevice(GetDeviceArgs.builder()
+     *             .id("007099000023642")
+     *             .build());
+     * 
+     *         ctx.export("scmDeviceOutput", Map.ofEntries(
+     *             Map.entry("id", myDevice.id()),
+     *             Map.entry("name", myDevice.name()),
+     *             Map.entry("hostname", myDevice.hostname()),
+     *             Map.entry("model", myDevice.model()),
+     *             Map.entry("family", myDevice.family()),
+     *             Map.entry("folder", myDevice.folder()),
+     *             Map.entry("isConnected", myDevice.isConnected()),
+     *             Map.entry("softwareVersion", myDevice.softwareVersion()),
+     *             Map.entry("ipAddress", myDevice.ipAddress()),
+     *             Map.entry("macAddress", myDevice.macAddress()),
+     *             Map.entry("uptime", myDevice.uptime())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDevice:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Device data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a device by id
+     *         final var myDevice = ScmFunctions.getDevice(GetDeviceArgs.builder()
+     *             .id("007099000023642")
+     *             .build());
+     * 
+     *         ctx.export("scmDeviceOutput", Map.ofEntries(
+     *             Map.entry("id", myDevice.id()),
+     *             Map.entry("name", myDevice.name()),
+     *             Map.entry("hostname", myDevice.hostname()),
+     *             Map.entry("model", myDevice.model()),
+     *             Map.entry("family", myDevice.family()),
+     *             Map.entry("folder", myDevice.folder()),
+     *             Map.entry("isConnected", myDevice.isConnected()),
+     *             Map.entry("softwareVersion", myDevice.softwareVersion()),
+     *             Map.entry("ipAddress", myDevice.ipAddress()),
+     *             Map.entry("macAddress", myDevice.macAddress()),
+     *             Map.entry("uptime", myDevice.uptime())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDevice:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Device data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a device by id
+     *         final var myDevice = ScmFunctions.getDevice(GetDeviceArgs.builder()
+     *             .id("007099000023642")
+     *             .build());
+     * 
+     *         ctx.export("scmDeviceOutput", Map.ofEntries(
+     *             Map.entry("id", myDevice.id()),
+     *             Map.entry("name", myDevice.name()),
+     *             Map.entry("hostname", myDevice.hostname()),
+     *             Map.entry("model", myDevice.model()),
+     *             Map.entry("family", myDevice.family()),
+     *             Map.entry("folder", myDevice.folder()),
+     *             Map.entry("isConnected", myDevice.isConnected()),
+     *             Map.entry("softwareVersion", myDevice.softwareVersion()),
+     *             Map.entry("ipAddress", myDevice.ipAddress()),
+     *             Map.entry("macAddress", myDevice.macAddress()),
+     *             Map.entry("uptime", myDevice.uptime())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getDevice:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetDeviceListResult> getDeviceList() {
+        return getDeviceList(GetDeviceListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDeviceListResult> getDeviceListPlain() {
+        return getDeviceListPlain(GetDeviceListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetDeviceListResult> getDeviceList(GetDeviceListArgs args) {
+        return getDeviceList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDeviceListResult> getDeviceListPlain(GetDeviceListPlainArgs args) {
+        return getDeviceListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetDeviceListResult> getDeviceList(GetDeviceListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDeviceList:getDeviceList", TypeShape.of(GetDeviceListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetDeviceListResult> getDeviceList(GetDeviceListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getDeviceList:getDeviceList", TypeShape.of(GetDeviceListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDeviceListResult> getDeviceListPlain(GetDeviceListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getDeviceList:getDeviceList", TypeShape.of(GetDeviceListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * DeviceRedistributionCollector data source
      * 
      * ## Example Usage
@@ -16706,6 +17075,1697 @@ public final class ScmFunctions {
      */
     public static CompletableFuture<GetFolderListResult> getFolderListPlain(GetFolderListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getFolderList:getFolderList", TypeShape.of(GetFolderListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a basic Global Protect proxy forwarding profile by its ID.
+     *         final var gpProxyBasic = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d")
+     *             .build());
+     * 
+     *         // Look up a full Global Protect proxy forwarding profile with block rules by its ID.
+     *         final var gpProxyFull = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("f1e2d3c4-b5a6-4758-9192-a3b4c5d6e7f8")
+     *             .build());
+     * 
+     *         // Look up a PAC file based forwarding profile by its ID.
+     *         final var pacFile = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("1a2b3c4d-5e6f-7890-abcd-ef1234567890")
+     *             .build());
+     * 
+     *         // Look up a ZTNA agent forwarding profile by its ID.
+     *         final var ztnaAgent = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("9f8e7d6c-5b4a-3210-fedc-ba9876543210")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileDataSourceResults", Map.ofEntries(
+     *             Map.entry("gpProxyBasicObject", gpProxyBasic),
+     *             Map.entry("gpProxyFullObject", gpProxyFull),
+     *             Map.entry("pacFileObject", pacFile),
+     *             Map.entry("ztnaAgentObject", ztnaAgent)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileResult> getForwardingProfile(GetForwardingProfileArgs args) {
+        return getForwardingProfile(args, InvokeOptions.Empty);
+    }
+    /**
+     * ForwardingProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a basic Global Protect proxy forwarding profile by its ID.
+     *         final var gpProxyBasic = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d")
+     *             .build());
+     * 
+     *         // Look up a full Global Protect proxy forwarding profile with block rules by its ID.
+     *         final var gpProxyFull = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("f1e2d3c4-b5a6-4758-9192-a3b4c5d6e7f8")
+     *             .build());
+     * 
+     *         // Look up a PAC file based forwarding profile by its ID.
+     *         final var pacFile = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("1a2b3c4d-5e6f-7890-abcd-ef1234567890")
+     *             .build());
+     * 
+     *         // Look up a ZTNA agent forwarding profile by its ID.
+     *         final var ztnaAgent = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("9f8e7d6c-5b4a-3210-fedc-ba9876543210")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileDataSourceResults", Map.ofEntries(
+     *             Map.entry("gpProxyBasicObject", gpProxyBasic),
+     *             Map.entry("gpProxyFullObject", gpProxyFull),
+     *             Map.entry("pacFileObject", pacFile),
+     *             Map.entry("ztnaAgentObject", ztnaAgent)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileResult> getForwardingProfilePlain(GetForwardingProfilePlainArgs args) {
+        return getForwardingProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ForwardingProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a basic Global Protect proxy forwarding profile by its ID.
+     *         final var gpProxyBasic = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d")
+     *             .build());
+     * 
+     *         // Look up a full Global Protect proxy forwarding profile with block rules by its ID.
+     *         final var gpProxyFull = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("f1e2d3c4-b5a6-4758-9192-a3b4c5d6e7f8")
+     *             .build());
+     * 
+     *         // Look up a PAC file based forwarding profile by its ID.
+     *         final var pacFile = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("1a2b3c4d-5e6f-7890-abcd-ef1234567890")
+     *             .build());
+     * 
+     *         // Look up a ZTNA agent forwarding profile by its ID.
+     *         final var ztnaAgent = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("9f8e7d6c-5b4a-3210-fedc-ba9876543210")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileDataSourceResults", Map.ofEntries(
+     *             Map.entry("gpProxyBasicObject", gpProxyBasic),
+     *             Map.entry("gpProxyFullObject", gpProxyFull),
+     *             Map.entry("pacFileObject", pacFile),
+     *             Map.entry("ztnaAgentObject", ztnaAgent)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileResult> getForwardingProfile(GetForwardingProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfile:getForwardingProfile", TypeShape.of(GetForwardingProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a basic Global Protect proxy forwarding profile by its ID.
+     *         final var gpProxyBasic = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d")
+     *             .build());
+     * 
+     *         // Look up a full Global Protect proxy forwarding profile with block rules by its ID.
+     *         final var gpProxyFull = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("f1e2d3c4-b5a6-4758-9192-a3b4c5d6e7f8")
+     *             .build());
+     * 
+     *         // Look up a PAC file based forwarding profile by its ID.
+     *         final var pacFile = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("1a2b3c4d-5e6f-7890-abcd-ef1234567890")
+     *             .build());
+     * 
+     *         // Look up a ZTNA agent forwarding profile by its ID.
+     *         final var ztnaAgent = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("9f8e7d6c-5b4a-3210-fedc-ba9876543210")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileDataSourceResults", Map.ofEntries(
+     *             Map.entry("gpProxyBasicObject", gpProxyBasic),
+     *             Map.entry("gpProxyFullObject", gpProxyFull),
+     *             Map.entry("pacFileObject", pacFile),
+     *             Map.entry("ztnaAgentObject", ztnaAgent)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileResult> getForwardingProfile(GetForwardingProfileArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfile:getForwardingProfile", TypeShape.of(GetForwardingProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a basic Global Protect proxy forwarding profile by its ID.
+     *         final var gpProxyBasic = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d")
+     *             .build());
+     * 
+     *         // Look up a full Global Protect proxy forwarding profile with block rules by its ID.
+     *         final var gpProxyFull = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("f1e2d3c4-b5a6-4758-9192-a3b4c5d6e7f8")
+     *             .build());
+     * 
+     *         // Look up a PAC file based forwarding profile by its ID.
+     *         final var pacFile = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("1a2b3c4d-5e6f-7890-abcd-ef1234567890")
+     *             .build());
+     * 
+     *         // Look up a ZTNA agent forwarding profile by its ID.
+     *         final var ztnaAgent = ScmFunctions.getForwardingProfile(GetForwardingProfileArgs.builder()
+     *             .id("9f8e7d6c-5b4a-3210-fedc-ba9876543210")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileDataSourceResults", Map.ofEntries(
+     *             Map.entry("gpProxyBasicObject", gpProxyBasic),
+     *             Map.entry("gpProxyFullObject", gpProxyFull),
+     *             Map.entry("pacFileObject", pacFile),
+     *             Map.entry("ztnaAgentObject", ztnaAgent)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileResult> getForwardingProfilePlain(GetForwardingProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getForwardingProfile:getForwardingProfile", TypeShape.of(GetForwardingProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileDestination data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileDestinationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the forwarding profile destination with FQDN by its ID.
+     *         final var scmForwardingProfileDestination1Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("47c43e8b-eedf-483a-bfd8-5dfcf7a2462b")
+     *             .build());
+     * 
+     *         // Look up the forwarding profile destination with IP addresses by its ID.
+     *         final var scmForwardingProfileDestination2Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("7796420b-c45e-4ca2-a609-91ab83bbd219")
+     *             .build());
+     * 
+     *         // Look up the forwarding profile destination with mixed types by its ID.
+     *         final var scmForwardingProfileDestination3Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("b3730821-0692-4245-96b5-3474651ed2b5")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileDestinationDataSourceResults", Map.ofEntries(
+     *             Map.entry("fqdnDestination", scmForwardingProfileDestination1Ds),
+     *             Map.entry("ipDestination", scmForwardingProfileDestination2Ds),
+     *             Map.entry("mixedDestination", scmForwardingProfileDestination3Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileDestinationResult> getForwardingProfileDestination(GetForwardingProfileDestinationArgs args) {
+        return getForwardingProfileDestination(args, InvokeOptions.Empty);
+    }
+    /**
+     * ForwardingProfileDestination data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileDestinationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the forwarding profile destination with FQDN by its ID.
+     *         final var scmForwardingProfileDestination1Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("47c43e8b-eedf-483a-bfd8-5dfcf7a2462b")
+     *             .build());
+     * 
+     *         // Look up the forwarding profile destination with IP addresses by its ID.
+     *         final var scmForwardingProfileDestination2Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("7796420b-c45e-4ca2-a609-91ab83bbd219")
+     *             .build());
+     * 
+     *         // Look up the forwarding profile destination with mixed types by its ID.
+     *         final var scmForwardingProfileDestination3Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("b3730821-0692-4245-96b5-3474651ed2b5")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileDestinationDataSourceResults", Map.ofEntries(
+     *             Map.entry("fqdnDestination", scmForwardingProfileDestination1Ds),
+     *             Map.entry("ipDestination", scmForwardingProfileDestination2Ds),
+     *             Map.entry("mixedDestination", scmForwardingProfileDestination3Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileDestinationResult> getForwardingProfileDestinationPlain(GetForwardingProfileDestinationPlainArgs args) {
+        return getForwardingProfileDestinationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ForwardingProfileDestination data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileDestinationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the forwarding profile destination with FQDN by its ID.
+     *         final var scmForwardingProfileDestination1Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("47c43e8b-eedf-483a-bfd8-5dfcf7a2462b")
+     *             .build());
+     * 
+     *         // Look up the forwarding profile destination with IP addresses by its ID.
+     *         final var scmForwardingProfileDestination2Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("7796420b-c45e-4ca2-a609-91ab83bbd219")
+     *             .build());
+     * 
+     *         // Look up the forwarding profile destination with mixed types by its ID.
+     *         final var scmForwardingProfileDestination3Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("b3730821-0692-4245-96b5-3474651ed2b5")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileDestinationDataSourceResults", Map.ofEntries(
+     *             Map.entry("fqdnDestination", scmForwardingProfileDestination1Ds),
+     *             Map.entry("ipDestination", scmForwardingProfileDestination2Ds),
+     *             Map.entry("mixedDestination", scmForwardingProfileDestination3Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileDestinationResult> getForwardingProfileDestination(GetForwardingProfileDestinationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileDestination:getForwardingProfileDestination", TypeShape.of(GetForwardingProfileDestinationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileDestination data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileDestinationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the forwarding profile destination with FQDN by its ID.
+     *         final var scmForwardingProfileDestination1Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("47c43e8b-eedf-483a-bfd8-5dfcf7a2462b")
+     *             .build());
+     * 
+     *         // Look up the forwarding profile destination with IP addresses by its ID.
+     *         final var scmForwardingProfileDestination2Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("7796420b-c45e-4ca2-a609-91ab83bbd219")
+     *             .build());
+     * 
+     *         // Look up the forwarding profile destination with mixed types by its ID.
+     *         final var scmForwardingProfileDestination3Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("b3730821-0692-4245-96b5-3474651ed2b5")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileDestinationDataSourceResults", Map.ofEntries(
+     *             Map.entry("fqdnDestination", scmForwardingProfileDestination1Ds),
+     *             Map.entry("ipDestination", scmForwardingProfileDestination2Ds),
+     *             Map.entry("mixedDestination", scmForwardingProfileDestination3Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileDestinationResult> getForwardingProfileDestination(GetForwardingProfileDestinationArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileDestination:getForwardingProfileDestination", TypeShape.of(GetForwardingProfileDestinationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileDestination data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileDestinationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the forwarding profile destination with FQDN by its ID.
+     *         final var scmForwardingProfileDestination1Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("47c43e8b-eedf-483a-bfd8-5dfcf7a2462b")
+     *             .build());
+     * 
+     *         // Look up the forwarding profile destination with IP addresses by its ID.
+     *         final var scmForwardingProfileDestination2Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("7796420b-c45e-4ca2-a609-91ab83bbd219")
+     *             .build());
+     * 
+     *         // Look up the forwarding profile destination with mixed types by its ID.
+     *         final var scmForwardingProfileDestination3Ds = ScmFunctions.getForwardingProfileDestination(GetForwardingProfileDestinationArgs.builder()
+     *             .id("b3730821-0692-4245-96b5-3474651ed2b5")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileDestinationDataSourceResults", Map.ofEntries(
+     *             Map.entry("fqdnDestination", scmForwardingProfileDestination1Ds),
+     *             Map.entry("ipDestination", scmForwardingProfileDestination2Ds),
+     *             Map.entry("mixedDestination", scmForwardingProfileDestination3Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileDestinationResult> getForwardingProfileDestinationPlain(GetForwardingProfileDestinationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getForwardingProfileDestination:getForwardingProfileDestination", TypeShape.of(GetForwardingProfileDestinationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileDestinationListResult> getForwardingProfileDestinationList() {
+        return getForwardingProfileDestinationList(GetForwardingProfileDestinationListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileDestinationListResult> getForwardingProfileDestinationListPlain() {
+        return getForwardingProfileDestinationListPlain(GetForwardingProfileDestinationListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileDestinationListResult> getForwardingProfileDestinationList(GetForwardingProfileDestinationListArgs args) {
+        return getForwardingProfileDestinationList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileDestinationListResult> getForwardingProfileDestinationListPlain(GetForwardingProfileDestinationListPlainArgs args) {
+        return getForwardingProfileDestinationListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileDestinationListResult> getForwardingProfileDestinationList(GetForwardingProfileDestinationListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileDestinationList:getForwardingProfileDestinationList", TypeShape.of(GetForwardingProfileDestinationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileDestinationListResult> getForwardingProfileDestinationList(GetForwardingProfileDestinationListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileDestinationList:getForwardingProfileDestinationList", TypeShape.of(GetForwardingProfileDestinationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileDestinationListResult> getForwardingProfileDestinationListPlain(GetForwardingProfileDestinationListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getForwardingProfileDestinationList:getForwardingProfileDestinationList", TypeShape.of(GetForwardingProfileDestinationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileListResult> getForwardingProfileList() {
+        return getForwardingProfileList(GetForwardingProfileListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileListResult> getForwardingProfileListPlain() {
+        return getForwardingProfileListPlain(GetForwardingProfileListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileListResult> getForwardingProfileList(GetForwardingProfileListArgs args) {
+        return getForwardingProfileList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileListResult> getForwardingProfileListPlain(GetForwardingProfileListPlainArgs args) {
+        return getForwardingProfileListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileListResult> getForwardingProfileList(GetForwardingProfileListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileList:getForwardingProfileList", TypeShape.of(GetForwardingProfileListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileListResult> getForwardingProfileList(GetForwardingProfileListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileList:getForwardingProfileList", TypeShape.of(GetForwardingProfileListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileListResult> getForwardingProfileListPlain(GetForwardingProfileListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getForwardingProfileList:getForwardingProfileList", TypeShape.of(GetForwardingProfileListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileRegionalAndCustomProxy data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the gp-and-pac basic proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy1Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("0e1c887a-ecf7-4a12-990c-bf1213ef81fd")
+     *             .build());
+     * 
+     *         // Look up the gp-and-pac dual proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy2Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("64ecc1e6-8bb6-4689-8f69-67a4553d4da8")
+     *             .build());
+     * 
+     *         // Look up the ztna-agent basic proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy3Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("8a3401e6-01dc-4fd4-b273-b0070c8fe9bb")
+     *             .build());
+     * 
+     *         // Look up the complete ztna-agent by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy4Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("7de1edaf-b9dc-4b65-b8c4-c44a14f1095b")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileRegionalAndCustomProxyDataSourceResults", Map.ofEntries(
+     *             Map.entry("gpAndPacBasicProxy", scmForwardingProfileRegionalAndCustomProxy1Ds),
+     *             Map.entry("gpAndPacDualProxy", scmForwardingProfileRegionalAndCustomProxy2Ds),
+     *             Map.entry("ztnaAgentBasicProxy", scmForwardingProfileRegionalAndCustomProxy3Ds),
+     *             Map.entry("ztnaAgentFullProxy", scmForwardingProfileRegionalAndCustomProxy4Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileRegionalAndCustomProxyResult> getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs args) {
+        return getForwardingProfileRegionalAndCustomProxy(args, InvokeOptions.Empty);
+    }
+    /**
+     * ForwardingProfileRegionalAndCustomProxy data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the gp-and-pac basic proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy1Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("0e1c887a-ecf7-4a12-990c-bf1213ef81fd")
+     *             .build());
+     * 
+     *         // Look up the gp-and-pac dual proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy2Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("64ecc1e6-8bb6-4689-8f69-67a4553d4da8")
+     *             .build());
+     * 
+     *         // Look up the ztna-agent basic proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy3Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("8a3401e6-01dc-4fd4-b273-b0070c8fe9bb")
+     *             .build());
+     * 
+     *         // Look up the complete ztna-agent by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy4Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("7de1edaf-b9dc-4b65-b8c4-c44a14f1095b")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileRegionalAndCustomProxyDataSourceResults", Map.ofEntries(
+     *             Map.entry("gpAndPacBasicProxy", scmForwardingProfileRegionalAndCustomProxy1Ds),
+     *             Map.entry("gpAndPacDualProxy", scmForwardingProfileRegionalAndCustomProxy2Ds),
+     *             Map.entry("ztnaAgentBasicProxy", scmForwardingProfileRegionalAndCustomProxy3Ds),
+     *             Map.entry("ztnaAgentFullProxy", scmForwardingProfileRegionalAndCustomProxy4Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileRegionalAndCustomProxyResult> getForwardingProfileRegionalAndCustomProxyPlain(GetForwardingProfileRegionalAndCustomProxyPlainArgs args) {
+        return getForwardingProfileRegionalAndCustomProxyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ForwardingProfileRegionalAndCustomProxy data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the gp-and-pac basic proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy1Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("0e1c887a-ecf7-4a12-990c-bf1213ef81fd")
+     *             .build());
+     * 
+     *         // Look up the gp-and-pac dual proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy2Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("64ecc1e6-8bb6-4689-8f69-67a4553d4da8")
+     *             .build());
+     * 
+     *         // Look up the ztna-agent basic proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy3Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("8a3401e6-01dc-4fd4-b273-b0070c8fe9bb")
+     *             .build());
+     * 
+     *         // Look up the complete ztna-agent by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy4Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("7de1edaf-b9dc-4b65-b8c4-c44a14f1095b")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileRegionalAndCustomProxyDataSourceResults", Map.ofEntries(
+     *             Map.entry("gpAndPacBasicProxy", scmForwardingProfileRegionalAndCustomProxy1Ds),
+     *             Map.entry("gpAndPacDualProxy", scmForwardingProfileRegionalAndCustomProxy2Ds),
+     *             Map.entry("ztnaAgentBasicProxy", scmForwardingProfileRegionalAndCustomProxy3Ds),
+     *             Map.entry("ztnaAgentFullProxy", scmForwardingProfileRegionalAndCustomProxy4Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileRegionalAndCustomProxyResult> getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileRegionalAndCustomProxy:getForwardingProfileRegionalAndCustomProxy", TypeShape.of(GetForwardingProfileRegionalAndCustomProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileRegionalAndCustomProxy data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the gp-and-pac basic proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy1Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("0e1c887a-ecf7-4a12-990c-bf1213ef81fd")
+     *             .build());
+     * 
+     *         // Look up the gp-and-pac dual proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy2Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("64ecc1e6-8bb6-4689-8f69-67a4553d4da8")
+     *             .build());
+     * 
+     *         // Look up the ztna-agent basic proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy3Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("8a3401e6-01dc-4fd4-b273-b0070c8fe9bb")
+     *             .build());
+     * 
+     *         // Look up the complete ztna-agent by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy4Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("7de1edaf-b9dc-4b65-b8c4-c44a14f1095b")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileRegionalAndCustomProxyDataSourceResults", Map.ofEntries(
+     *             Map.entry("gpAndPacBasicProxy", scmForwardingProfileRegionalAndCustomProxy1Ds),
+     *             Map.entry("gpAndPacDualProxy", scmForwardingProfileRegionalAndCustomProxy2Ds),
+     *             Map.entry("ztnaAgentBasicProxy", scmForwardingProfileRegionalAndCustomProxy3Ds),
+     *             Map.entry("ztnaAgentFullProxy", scmForwardingProfileRegionalAndCustomProxy4Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileRegionalAndCustomProxyResult> getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileRegionalAndCustomProxy:getForwardingProfileRegionalAndCustomProxy", TypeShape.of(GetForwardingProfileRegionalAndCustomProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileRegionalAndCustomProxy data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileRegionalAndCustomProxyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the gp-and-pac basic proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy1Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("0e1c887a-ecf7-4a12-990c-bf1213ef81fd")
+     *             .build());
+     * 
+     *         // Look up the gp-and-pac dual proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy2Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("64ecc1e6-8bb6-4689-8f69-67a4553d4da8")
+     *             .build());
+     * 
+     *         // Look up the ztna-agent basic proxy by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy3Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("8a3401e6-01dc-4fd4-b273-b0070c8fe9bb")
+     *             .build());
+     * 
+     *         // Look up the complete ztna-agent by its ID.
+     *         final var scmForwardingProfileRegionalAndCustomProxy4Ds = ScmFunctions.getForwardingProfileRegionalAndCustomProxy(GetForwardingProfileRegionalAndCustomProxyArgs.builder()
+     *             .id("7de1edaf-b9dc-4b65-b8c4-c44a14f1095b")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileRegionalAndCustomProxyDataSourceResults", Map.ofEntries(
+     *             Map.entry("gpAndPacBasicProxy", scmForwardingProfileRegionalAndCustomProxy1Ds),
+     *             Map.entry("gpAndPacDualProxy", scmForwardingProfileRegionalAndCustomProxy2Ds),
+     *             Map.entry("ztnaAgentBasicProxy", scmForwardingProfileRegionalAndCustomProxy3Ds),
+     *             Map.entry("ztnaAgentFullProxy", scmForwardingProfileRegionalAndCustomProxy4Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileRegionalAndCustomProxyResult> getForwardingProfileRegionalAndCustomProxyPlain(GetForwardingProfileRegionalAndCustomProxyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getForwardingProfileRegionalAndCustomProxy:getForwardingProfileRegionalAndCustomProxy", TypeShape.of(GetForwardingProfileRegionalAndCustomProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileRegionalAndCustomProxyListResult> getForwardingProfileRegionalAndCustomProxyList() {
+        return getForwardingProfileRegionalAndCustomProxyList(GetForwardingProfileRegionalAndCustomProxyListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileRegionalAndCustomProxyListResult> getForwardingProfileRegionalAndCustomProxyListPlain() {
+        return getForwardingProfileRegionalAndCustomProxyListPlain(GetForwardingProfileRegionalAndCustomProxyListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileRegionalAndCustomProxyListResult> getForwardingProfileRegionalAndCustomProxyList(GetForwardingProfileRegionalAndCustomProxyListArgs args) {
+        return getForwardingProfileRegionalAndCustomProxyList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileRegionalAndCustomProxyListResult> getForwardingProfileRegionalAndCustomProxyListPlain(GetForwardingProfileRegionalAndCustomProxyListPlainArgs args) {
+        return getForwardingProfileRegionalAndCustomProxyListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileRegionalAndCustomProxyListResult> getForwardingProfileRegionalAndCustomProxyList(GetForwardingProfileRegionalAndCustomProxyListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileRegionalAndCustomProxyList:getForwardingProfileRegionalAndCustomProxyList", TypeShape.of(GetForwardingProfileRegionalAndCustomProxyListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileRegionalAndCustomProxyListResult> getForwardingProfileRegionalAndCustomProxyList(GetForwardingProfileRegionalAndCustomProxyListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileRegionalAndCustomProxyList:getForwardingProfileRegionalAndCustomProxyList", TypeShape.of(GetForwardingProfileRegionalAndCustomProxyListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileRegionalAndCustomProxyListResult> getForwardingProfileRegionalAndCustomProxyListPlain(GetForwardingProfileRegionalAndCustomProxyListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getForwardingProfileRegionalAndCustomProxyList:getForwardingProfileRegionalAndCustomProxyList", TypeShape.of(GetForwardingProfileRegionalAndCustomProxyListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileSourceApplication data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a single forwarding profile source application by its ID.
+     *         final var example = ScmFunctions.getForwardingProfileSourceApplication(GetForwardingProfileSourceApplicationArgs.builder()
+     *             .id("12345678-1234-1234-1234-123456789012")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileSourceApplicationResult", example);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileSourceApplicationResult> getForwardingProfileSourceApplication(GetForwardingProfileSourceApplicationArgs args) {
+        return getForwardingProfileSourceApplication(args, InvokeOptions.Empty);
+    }
+    /**
+     * ForwardingProfileSourceApplication data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a single forwarding profile source application by its ID.
+     *         final var example = ScmFunctions.getForwardingProfileSourceApplication(GetForwardingProfileSourceApplicationArgs.builder()
+     *             .id("12345678-1234-1234-1234-123456789012")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileSourceApplicationResult", example);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileSourceApplicationResult> getForwardingProfileSourceApplicationPlain(GetForwardingProfileSourceApplicationPlainArgs args) {
+        return getForwardingProfileSourceApplicationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ForwardingProfileSourceApplication data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a single forwarding profile source application by its ID.
+     *         final var example = ScmFunctions.getForwardingProfileSourceApplication(GetForwardingProfileSourceApplicationArgs.builder()
+     *             .id("12345678-1234-1234-1234-123456789012")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileSourceApplicationResult", example);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileSourceApplicationResult> getForwardingProfileSourceApplication(GetForwardingProfileSourceApplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileSourceApplication:getForwardingProfileSourceApplication", TypeShape.of(GetForwardingProfileSourceApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileSourceApplication data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a single forwarding profile source application by its ID.
+     *         final var example = ScmFunctions.getForwardingProfileSourceApplication(GetForwardingProfileSourceApplicationArgs.builder()
+     *             .id("12345678-1234-1234-1234-123456789012")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileSourceApplicationResult", example);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileSourceApplicationResult> getForwardingProfileSourceApplication(GetForwardingProfileSourceApplicationArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileSourceApplication:getForwardingProfileSourceApplication", TypeShape.of(GetForwardingProfileSourceApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileSourceApplication data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileSourceApplicationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a single forwarding profile source application by its ID.
+     *         final var example = ScmFunctions.getForwardingProfileSourceApplication(GetForwardingProfileSourceApplicationArgs.builder()
+     *             .id("12345678-1234-1234-1234-123456789012")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileSourceApplicationResult", example);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileSourceApplicationResult> getForwardingProfileSourceApplicationPlain(GetForwardingProfileSourceApplicationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getForwardingProfileSourceApplication:getForwardingProfileSourceApplication", TypeShape.of(GetForwardingProfileSourceApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationList() {
+        return getForwardingProfileSourceApplicationList(GetForwardingProfileSourceApplicationListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationListPlain() {
+        return getForwardingProfileSourceApplicationListPlain(GetForwardingProfileSourceApplicationListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationList(GetForwardingProfileSourceApplicationListArgs args) {
+        return getForwardingProfileSourceApplicationList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationListPlain(GetForwardingProfileSourceApplicationListPlainArgs args) {
+        return getForwardingProfileSourceApplicationListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationList(GetForwardingProfileSourceApplicationListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileSourceApplicationList:getForwardingProfileSourceApplicationList", TypeShape.of(GetForwardingProfileSourceApplicationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static Output<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationList(GetForwardingProfileSourceApplicationListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileSourceApplicationList:getForwardingProfileSourceApplicationList", TypeShape.of(GetForwardingProfileSourceApplicationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileSourceApplicationListResult> getForwardingProfileSourceApplicationListPlain(GetForwardingProfileSourceApplicationListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getForwardingProfileSourceApplicationList:getForwardingProfileSourceApplicationList", TypeShape.of(GetForwardingProfileSourceApplicationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileUserLocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileUserLocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the user location with IP addresses by its ID.
+     *         final var scmForwardingProfileUserLocation1Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("847948c9-8973-48aa-8496-212f572ab859")
+     *             .build());
+     * 
+     *         // Look up the user location with internal host detection by its ID.
+     *         final var scmForwardingProfileUserLocation2Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("ee149f5a-533e-48be-8492-e3aa6b20acf2")
+     *             .build());
+     * 
+     *         // Look up the user location with multiple IP ranges by its ID.
+     *         final var scmForwardingProfileUserLocation4Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("23293d0f-0403-4549-870f-c6c04cd6c95c")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileUserLocationDataSourceResults", Map.ofEntries(
+     *             Map.entry("ipAddressesObject", scmForwardingProfileUserLocation1Ds),
+     *             Map.entry("internalHostDetectionObject", scmForwardingProfileUserLocation2Ds),
+     *             Map.entry("multiIpRangeObject", scmForwardingProfileUserLocation4Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileUserLocationResult> getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs args) {
+        return getForwardingProfileUserLocation(args, InvokeOptions.Empty);
+    }
+    /**
+     * ForwardingProfileUserLocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileUserLocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the user location with IP addresses by its ID.
+     *         final var scmForwardingProfileUserLocation1Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("847948c9-8973-48aa-8496-212f572ab859")
+     *             .build());
+     * 
+     *         // Look up the user location with internal host detection by its ID.
+     *         final var scmForwardingProfileUserLocation2Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("ee149f5a-533e-48be-8492-e3aa6b20acf2")
+     *             .build());
+     * 
+     *         // Look up the user location with multiple IP ranges by its ID.
+     *         final var scmForwardingProfileUserLocation4Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("23293d0f-0403-4549-870f-c6c04cd6c95c")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileUserLocationDataSourceResults", Map.ofEntries(
+     *             Map.entry("ipAddressesObject", scmForwardingProfileUserLocation1Ds),
+     *             Map.entry("internalHostDetectionObject", scmForwardingProfileUserLocation2Ds),
+     *             Map.entry("multiIpRangeObject", scmForwardingProfileUserLocation4Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileUserLocationResult> getForwardingProfileUserLocationPlain(GetForwardingProfileUserLocationPlainArgs args) {
+        return getForwardingProfileUserLocationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ForwardingProfileUserLocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileUserLocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the user location with IP addresses by its ID.
+     *         final var scmForwardingProfileUserLocation1Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("847948c9-8973-48aa-8496-212f572ab859")
+     *             .build());
+     * 
+     *         // Look up the user location with internal host detection by its ID.
+     *         final var scmForwardingProfileUserLocation2Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("ee149f5a-533e-48be-8492-e3aa6b20acf2")
+     *             .build());
+     * 
+     *         // Look up the user location with multiple IP ranges by its ID.
+     *         final var scmForwardingProfileUserLocation4Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("23293d0f-0403-4549-870f-c6c04cd6c95c")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileUserLocationDataSourceResults", Map.ofEntries(
+     *             Map.entry("ipAddressesObject", scmForwardingProfileUserLocation1Ds),
+     *             Map.entry("internalHostDetectionObject", scmForwardingProfileUserLocation2Ds),
+     *             Map.entry("multiIpRangeObject", scmForwardingProfileUserLocation4Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileUserLocationResult> getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileUserLocation:getForwardingProfileUserLocation", TypeShape.of(GetForwardingProfileUserLocationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileUserLocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileUserLocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the user location with IP addresses by its ID.
+     *         final var scmForwardingProfileUserLocation1Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("847948c9-8973-48aa-8496-212f572ab859")
+     *             .build());
+     * 
+     *         // Look up the user location with internal host detection by its ID.
+     *         final var scmForwardingProfileUserLocation2Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("ee149f5a-533e-48be-8492-e3aa6b20acf2")
+     *             .build());
+     * 
+     *         // Look up the user location with multiple IP ranges by its ID.
+     *         final var scmForwardingProfileUserLocation4Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("23293d0f-0403-4549-870f-c6c04cd6c95c")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileUserLocationDataSourceResults", Map.ofEntries(
+     *             Map.entry("ipAddressesObject", scmForwardingProfileUserLocation1Ds),
+     *             Map.entry("internalHostDetectionObject", scmForwardingProfileUserLocation2Ds),
+     *             Map.entry("multiIpRangeObject", scmForwardingProfileUserLocation4Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetForwardingProfileUserLocationResult> getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileUserLocation:getForwardingProfileUserLocation", TypeShape.of(GetForwardingProfileUserLocationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ForwardingProfileUserLocation data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetForwardingProfileUserLocationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the user location with IP addresses by its ID.
+     *         final var scmForwardingProfileUserLocation1Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("847948c9-8973-48aa-8496-212f572ab859")
+     *             .build());
+     * 
+     *         // Look up the user location with internal host detection by its ID.
+     *         final var scmForwardingProfileUserLocation2Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("ee149f5a-533e-48be-8492-e3aa6b20acf2")
+     *             .build());
+     * 
+     *         // Look up the user location with multiple IP ranges by its ID.
+     *         final var scmForwardingProfileUserLocation4Ds = ScmFunctions.getForwardingProfileUserLocation(GetForwardingProfileUserLocationArgs.builder()
+     *             .id("23293d0f-0403-4549-870f-c6c04cd6c95c")
+     *             .build());
+     * 
+     *         ctx.export("forwardingProfileUserLocationDataSourceResults", Map.ofEntries(
+     *             Map.entry("ipAddressesObject", scmForwardingProfileUserLocation1Ds),
+     *             Map.entry("internalHostDetectionObject", scmForwardingProfileUserLocation2Ds),
+     *             Map.entry("multiIpRangeObject", scmForwardingProfileUserLocation4Ds)
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileUserLocationResult> getForwardingProfileUserLocationPlain(GetForwardingProfileUserLocationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getForwardingProfileUserLocation:getForwardingProfileUserLocation", TypeShape.of(GetForwardingProfileUserLocationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileUserLocationListResult> getForwardingProfileUserLocationList() {
+        return getForwardingProfileUserLocationList(GetForwardingProfileUserLocationListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileUserLocationListResult> getForwardingProfileUserLocationListPlain() {
+        return getForwardingProfileUserLocationListPlain(GetForwardingProfileUserLocationListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileUserLocationListResult> getForwardingProfileUserLocationList(GetForwardingProfileUserLocationListArgs args) {
+        return getForwardingProfileUserLocationList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileUserLocationListResult> getForwardingProfileUserLocationListPlain(GetForwardingProfileUserLocationListPlainArgs args) {
+        return getForwardingProfileUserLocationListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileUserLocationListResult> getForwardingProfileUserLocationList(GetForwardingProfileUserLocationListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileUserLocationList:getForwardingProfileUserLocationList", TypeShape.of(GetForwardingProfileUserLocationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetForwardingProfileUserLocationListResult> getForwardingProfileUserLocationList(GetForwardingProfileUserLocationListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getForwardingProfileUserLocationList:getForwardingProfileUserLocationList", TypeShape.of(GetForwardingProfileUserLocationListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetForwardingProfileUserLocationListResult> getForwardingProfileUserLocationListPlain(GetForwardingProfileUserLocationListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getForwardingProfileUserLocationList:getForwardingProfileUserLocationList", TypeShape.of(GetForwardingProfileUserLocationListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * GeneralSetting data source

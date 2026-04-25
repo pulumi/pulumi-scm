@@ -186,6 +186,8 @@ type ServiceConnection struct {
 	Qos ServiceConnectionQosPtrOutput `pulumi:"qos"`
 	// Region
 	Region pulumi.StringOutput `pulumi:"region"`
+	// Region tag
+	RegionTag pulumi.StringOutput `pulumi:"regionTag"`
 	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel pulumi.StringPtrOutput `pulumi:"secondaryIpsecTunnel"`
 	// Source nat
@@ -260,6 +262,8 @@ type serviceConnectionState struct {
 	Qos *ServiceConnectionQos `pulumi:"qos"`
 	// Region
 	Region *string `pulumi:"region"`
+	// Region tag
+	RegionTag *string `pulumi:"regionTag"`
 	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel *string `pulumi:"secondaryIpsecTunnel"`
 	// Source nat
@@ -295,6 +299,8 @@ type ServiceConnectionState struct {
 	Qos ServiceConnectionQosPtrInput
 	// Region
 	Region pulumi.StringPtrInput
+	// Region tag
+	RegionTag pulumi.StringPtrInput
 	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel pulumi.StringPtrInput
 	// Source nat
@@ -330,6 +336,8 @@ type serviceConnectionArgs struct {
 	Qos *ServiceConnectionQos `pulumi:"qos"`
 	// Region
 	Region string `pulumi:"region"`
+	// Region tag
+	RegionTag *string `pulumi:"regionTag"`
 	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel *string `pulumi:"secondaryIpsecTunnel"`
 	// Source nat
@@ -360,6 +368,8 @@ type ServiceConnectionArgs struct {
 	Qos ServiceConnectionQosPtrInput
 	// Region
 	Region pulumi.StringInput
+	// Region tag
+	RegionTag pulumi.StringPtrInput
 	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel pulumi.StringPtrInput
 	// Source nat
@@ -513,6 +523,11 @@ func (o ServiceConnectionOutput) Qos() ServiceConnectionQosPtrOutput {
 // Region
 func (o ServiceConnectionOutput) Region() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringOutput { return v.Region }).(pulumi.StringOutput)
+}
+
+// Region tag
+func (o ServiceConnectionOutput) RegionTag() pulumi.StringOutput {
+	return o.ApplyT(func(v *ServiceConnection) pulumi.StringOutput { return v.RegionTag }).(pulumi.StringOutput)
 }
 
 // Secondary ipsec tunnel

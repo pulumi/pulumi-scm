@@ -5257,6 +5257,353 @@ export interface FileBlockingProfileRule {
     name: string;
 }
 
+export interface ForwardingProfileDestinationFqdn {
+    /**
+     * alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
+     */
+    name: string;
+    /**
+     * Port number for fqdn based destination
+     */
+    port?: number;
+}
+
+export interface ForwardingProfileDestinationIpAddress {
+    /**
+     * IP address with wildcards and CIDR notation support
+     */
+    name: string;
+    /**
+     * Port number for IP address based destination
+     */
+    port?: number;
+}
+
+export interface ForwardingProfileRegionalAndCustomProxyConnectivityPreference {
+    /**
+     * Indicates whether this connectivity method is enabled for use in the proxy configuration
+     */
+    enabled: boolean;
+    /**
+     * Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+     */
+    name: string;
+}
+
+export interface ForwardingProfileRegionalAndCustomProxyPrismaAccessLocation {
+    /**
+     * Add list of locations separated by space, in that region
+     */
+    locations?: string[];
+    /**
+     * One of the region from 'americas', 'europe', 'apac'
+     */
+    name: string;
+}
+
+export interface ForwardingProfileRegionalAndCustomProxyProxy1 {
+    /**
+     * fqdn of the primary proxy server (supports wildcards and alphanumeric characters with dots, hyphens, and underscores)
+     */
+    fqdn?: string;
+    /**
+     * Geographic or network location identifier for the primary proxy server
+     */
+    location?: string;
+    /**
+     * port number for primary proxy
+     */
+    port?: number;
+}
+
+export interface ForwardingProfileRegionalAndCustomProxyProxy2 {
+    /**
+     * Fqdn of the secondary (backup) proxy server used for failover scenarios
+     */
+    fqdn?: string;
+    /**
+     * Geographic or network location identifier for the secondary proxy server
+     */
+    location?: string;
+    /**
+     * port number for secondary proxy
+     */
+    port?: number;
+}
+
+export interface ForwardingProfileType {
+    /**
+     * Global Protect proxy-based forwarding configuration
+     */
+    globalProtectProxy?: outputs.ForwardingProfileTypeGlobalProtectProxy;
+    /**
+     * PAC file based forwarding configuration
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+     */
+    pacFile?: outputs.ForwardingProfileTypePacFile;
+    /**
+     * ZTNA agent-based forwarding configuration
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+     */
+    ztnaAgent?: outputs.ForwardingProfileTypeZtnaAgent;
+}
+
+export interface ForwardingProfileTypeGlobalProtectProxy {
+    /**
+     * Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+     */
+    blockRule?: outputs.ForwardingProfileTypeGlobalProtectProxyBlockRule;
+    /**
+     * List of GlobalProtect proxy-based forwarding rules
+     */
+    forwardingRules?: outputs.ForwardingProfileTypeGlobalProtectProxyForwardingRule[];
+    /**
+     * User uploaded PAC file for Global Protect proxy-based forwarding configuration
+     */
+    pacUpload: boolean;
+}
+
+export interface ForwardingProfileTypeGlobalProtectProxyBlockRule {
+    /**
+     * TCP traffic allowlist configuration
+     */
+    allowTcp?: outputs.ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp;
+    /**
+     * UDP traffic allowlist configuration with location and destination support
+     */
+    allowUdp?: outputs.ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp;
+    /**
+     * Enable block rule
+     */
+    enable?: boolean;
+}
+
+export interface ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp {
+    /**
+     * Enable locations for allow-tcp
+     */
+    enableLocations?: boolean;
+    /**
+     * List of user locations allowed for TCP traffic
+     */
+    locations?: string[];
+}
+
+export interface ForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp {
+    /**
+     * Destination addresses or networks allowed for UDP traffic
+     */
+    destinations?: string;
+    /**
+     * Enable destinations for allow-udp
+     */
+    enableDestinations?: boolean;
+    /**
+     * Enable locations for allow-udp
+     */
+    enableLocations?: boolean;
+    /**
+     * List of user locations allowed for UDP traffic
+     */
+    locations?: string[];
+}
+
+export interface ForwardingProfileTypeGlobalProtectProxyForwardingRule {
+    /**
+     * Connectivity method for this forwarding rule (e.g. direct)
+     */
+    connectivity: string;
+    /**
+     * Destination scope this forwarding rule applies to
+     */
+    destinations: string;
+    /**
+     * Enable a basic forwarding rule
+     */
+    enabled: boolean;
+    /**
+     * Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: string;
+    /**
+     * User location scope this rule applies to
+     */
+    userLocations: string;
+}
+
+export interface ForwardingProfileTypePacFile {
+    /**
+     * Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+     */
+    blockRule?: outputs.ForwardingProfileTypePacFileBlockRule;
+    /**
+     * List of PAC file-based forwarding rules
+     */
+    forwardingRules?: outputs.ForwardingProfileTypePacFileForwardingRule[];
+    /**
+     * User upload PAC file for PAC file based forwarding configuration
+     */
+    pacUpload: boolean;
+}
+
+export interface ForwardingProfileTypePacFileBlockRule {
+    /**
+     * TCP traffic allowlist configuration
+     */
+    allowTcp?: outputs.ForwardingProfileTypePacFileBlockRuleAllowTcp;
+    /**
+     * UDP traffic allowlist configuration with location and destination support
+     */
+    allowUdp?: outputs.ForwardingProfileTypePacFileBlockRuleAllowUdp;
+    /**
+     * Enable block rule
+     */
+    enable?: boolean;
+}
+
+export interface ForwardingProfileTypePacFileBlockRuleAllowTcp {
+    /**
+     * Enable locations for allow-tcp
+     */
+    enableLocations?: boolean;
+    /**
+     * List of user locations allowed for TCP traffic
+     */
+    locations?: string[];
+}
+
+export interface ForwardingProfileTypePacFileBlockRuleAllowUdp {
+    /**
+     * Destination addresses or networks allowed for UDP traffic
+     */
+    destinations?: string;
+    /**
+     * Enable destinations for allow-udp
+     */
+    enableDestinations?: boolean;
+    /**
+     * Enable locations for allow-udp
+     */
+    enableLocations?: boolean;
+    /**
+     * List of user locations allowed for UDP traffic
+     */
+    locations?: string[];
+}
+
+export interface ForwardingProfileTypePacFileForwardingRule {
+    /**
+     * Connectivity method for this forwarding rule (e.g. direct)
+     */
+    connectivity: string;
+    /**
+     * Destination scope this forwarding rule applies to
+     */
+    destinations: string;
+    /**
+     * Enable a basic forwarding rule
+     */
+    enabled: boolean;
+    /**
+     * Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: string;
+    /**
+     * User location scope this rule applies to
+     */
+    userLocations: string;
+}
+
+export interface ForwardingProfileTypeZtnaAgent {
+    /**
+     * ZTNA block rule configuration
+     */
+    blockRule?: outputs.ForwardingProfileTypeZtnaAgentBlockRule;
+    /**
+     * List of ZTNA agent-based forwarding rules
+     */
+    forwardingRules?: outputs.ForwardingProfileTypeZtnaAgentForwardingRule[];
+    /**
+     * User uploaded PAC file for a ZTNA agent-based forwarding configuration
+     */
+    pacUpload: boolean;
+}
+
+export interface ForwardingProfileTypeZtnaAgentBlockRule {
+    /**
+     * Allow ICMP for troubleshooting
+     */
+    allowIcmpForTroubleshooting: boolean;
+    /**
+     * Block all other unmatched outbound connections
+     */
+    blockAllOtherUnmatchedOutboundConnections: boolean;
+    /**
+     * Block inbound access when connected to tunnel
+     */
+    blockInboundAccessWhenConnectedToTunnel: boolean;
+    /**
+     * Block Non-TCP Non UDP based traffic when connected to tunnel
+     */
+    blockNonTcpNonUdpTrafficWhenConnectedToTunnel: boolean;
+    /**
+     * Block outbound LAN access when connected to tunnel
+     */
+    blockOutboundLanAccessWhenConnectedToTunnel: boolean;
+    /**
+     * Enforce FQDN DNS resolution via tunnel DNS servers
+     */
+    enforcerFqdnDnsResolutionViaDnsServers: boolean;
+    /**
+     * Resolve All FQDNs using DNS servers assigned by the tunnel (Windows Only)
+     */
+    resolveAllFqdnsUsingDnsServersAssignedByTheTunnel: boolean;
+}
+
+export interface ForwardingProfileTypeZtnaAgentForwardingRule {
+    /**
+     * Connectivity method for this ZTNA forwarding rule (e.g. direct)
+     */
+    connectivity: string;
+    /**
+     * Destination scope this ZTNA forwarding rule applies to
+     */
+    destinations: string;
+    /**
+     * Enable a forwarding rule ztna
+     */
+    enabled: boolean;
+    /**
+     * Forwarding rule ZTNA name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: string;
+    /**
+     * Source applications this ZTNA rule applies to
+     */
+    sourceApplications: string;
+    /**
+     * Type of traffic this ZTNA rule applies to (dns, network, or both)
+     */
+    trafficType: string;
+    /**
+     * User location scope this ZTNA rule applies to
+     */
+    userLocations: string;
+}
+
+export interface ForwardingProfileUserLocationInternalHostDetection {
+    /**
+     * user location fqdn
+     */
+    fqdn: string;
+    /**
+     * user location ip address
+     */
+    ipAddress: string;
+}
+
 export interface GeneralSettingGeneral {
     /**
      * Force admins to acknowledge login banner
@@ -14208,6 +14555,261 @@ export interface GetDecryptionRuleTypeSslInboundInspection {
     certificates: string[];
 }
 
+export interface GetDeviceAvailableLicensess {
+    /**
+     * Authcode
+     */
+    authcode: string;
+    /**
+     * Expires
+     */
+    expires: string;
+    /**
+     * Feature
+     */
+    feature: string;
+    /**
+     * Issued
+     */
+    issued: string;
+}
+
+export interface GetDeviceInstalledLicense {
+    /**
+     * Authcode
+     */
+    authcode: string;
+    /**
+     * Expired
+     */
+    expired: string;
+    /**
+     * Expires
+     */
+    expires: string;
+    /**
+     * Feature
+     */
+    feature: string;
+    /**
+     * Issued
+     */
+    issued: string;
+}
+
+export interface GetDeviceListData {
+    /**
+     * Anti virus version
+     */
+    antiVirusVersion: string;
+    /**
+     * App release date
+     */
+    appReleaseDate: string;
+    /**
+     * App version
+     */
+    appVersion: string;
+    /**
+     * Av release date
+     */
+    avReleaseDate: string;
+    /**
+     * Available licensess
+     */
+    availableLicensesses: outputs.GetDeviceListDataAvailableLicensess[];
+    /**
+     * Connected since
+     */
+    connectedSince: string;
+    /**
+     * The description of the device
+     */
+    description: string;
+    /**
+     * Dev cert detail
+     */
+    devCertDetail: string;
+    /**
+     * Dev cert expiry date
+     */
+    devCertExpiryDate: string;
+    /**
+     * The display name of the device
+     */
+    displayName: string;
+    /**
+     * The product family of the device
+     */
+    family: string;
+    /**
+     * The folder containing the device
+     */
+    folder: string;
+    /**
+     * Gp client verion
+     */
+    gpClientVerion: string;
+    /**
+     * Gp data version
+     */
+    gpDataVersion: string;
+    /**
+     * Ha peer serial
+     */
+    haPeerSerial: string;
+    /**
+     * Ha peer state
+     */
+    haPeerState: string;
+    /**
+     * Ha state
+     */
+    haState: string;
+    /**
+     * The hostname of the device
+     */
+    hostname: string;
+    /**
+     * The UUID of the device
+     */
+    id: string;
+    /**
+     * Installed licenses
+     */
+    installedLicenses: outputs.GetDeviceListDataInstalledLicense[];
+    /**
+     * Iot release date
+     */
+    iotReleaseDate: string;
+    /**
+     * Iot version
+     */
+    iotVersion: string;
+    /**
+     * The IPv4 address of the device
+     */
+    ipAddress: string;
+    /**
+     * Ip v6 address
+     */
+    ipV6Address: string;
+    /**
+     * Is connected
+     */
+    isConnected: boolean;
+    /**
+     * Labels assigned to the device
+     */
+    labels: string[];
+    /**
+     * License match
+     */
+    licenseMatch: boolean;
+    /**
+     * Log db version
+     */
+    logDbVersion: string;
+    /**
+     * The MAC address of the device
+     */
+    macAddress: string;
+    /**
+     * The model of the device
+     */
+    model: string;
+    /**
+     * The name of the device
+     */
+    name: string;
+    /**
+     * Snippets associated with the device
+     */
+    snippets: string[];
+    /**
+     * Software version
+     */
+    softwareVersion: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+    /**
+     * Threat release date
+     */
+    threatReleaseDate: string;
+    /**
+     * Threat version
+     */
+    threatVersion: string;
+    /**
+     * Uptime
+     */
+    uptime: string;
+    /**
+     * Url db type
+     */
+    urlDbType: string;
+    /**
+     * Url db ver
+     */
+    urlDbVer: string;
+    /**
+     * Vm state
+     */
+    vmState: string;
+    /**
+     * Wf release date
+     */
+    wfReleaseDate: string;
+    /**
+     * Wf ver
+     */
+    wfVer: string;
+}
+
+export interface GetDeviceListDataAvailableLicensess {
+    /**
+     * Authcode
+     */
+    authcode: string;
+    /**
+     * Expires
+     */
+    expires: string;
+    /**
+     * Feature
+     */
+    feature: string;
+    /**
+     * Issued
+     */
+    issued: string;
+}
+
+export interface GetDeviceListDataInstalledLicense {
+    /**
+     * Authcode
+     */
+    authcode: string;
+    /**
+     * Expired
+     */
+    expired: string;
+    /**
+     * Expires
+     */
+    expires: string;
+    /**
+     * Feature
+     */
+    feature: string;
+    /**
+     * Issued
+     */
+    issued: string;
+}
+
 export interface GetDeviceRedistributionCollectorListData {
     /**
      * The device in which the resource is defined
@@ -17887,6 +18489,871 @@ export interface GetFolderListData {
      * The Terraform ID.
      */
     tfid: string;
+}
+
+export interface GetForwardingProfileDestinationFqdn {
+    /**
+     * alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
+     */
+    name: string;
+    /**
+     * Port number for fqdn based destination
+     */
+    port: number;
+}
+
+export interface GetForwardingProfileDestinationIpAddress {
+    /**
+     * IP address with wildcards and CIDR notation support
+     */
+    name: string;
+    /**
+     * Port number for IP address based destination
+     */
+    port: number;
+}
+
+export interface GetForwardingProfileDestinationListData {
+    /**
+     * description of the destination
+     */
+    description: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder: string;
+    /**
+     * List of FQDN based destination entries
+     */
+    fqdns: outputs.GetForwardingProfileDestinationListDataFqdn[];
+    /**
+     * The UUID of the destination
+     */
+    id: string;
+    /**
+     * List of IP address based destination entries
+     */
+    ipAddresses: outputs.GetForwardingProfileDestinationListDataIpAddress[];
+    /**
+     * alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+}
+
+export interface GetForwardingProfileDestinationListDataFqdn {
+    /**
+     * alphanumeric string [*0-9a-zA-Z._-] and at most one $ by the end
+     */
+    name: string;
+    /**
+     * Port number for fqdn based destination
+     */
+    port: number;
+}
+
+export interface GetForwardingProfileDestinationListDataIpAddress {
+    /**
+     * IP address with wildcards and CIDR notation support
+     */
+    name: string;
+    /**
+     * Port number for IP address based destination
+     */
+    port: number;
+}
+
+export interface GetForwardingProfileListData {
+    /**
+     * Enable forwarding rule for forwarding profile
+     */
+    definitionMethod: string;
+    /**
+     * Forwarding profile description
+     */
+    description: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder: string;
+    /**
+     * The UUID of the forwarding profile
+     */
+    id: string;
+    /**
+     * forwarding profile name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+    /**
+     * Forwarding profile type configuration (PAC file, GlobalProtect proxy, or ZTNA agent)
+     */
+    type: outputs.GetForwardingProfileListDataType;
+}
+
+export interface GetForwardingProfileListDataType {
+    /**
+     * Global Protect proxy-based forwarding configuration
+     */
+    globalProtectProxy: outputs.GetForwardingProfileListDataTypeGlobalProtectProxy;
+    /**
+     * PAC file based forwarding configuration
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+     */
+    pacFile: outputs.GetForwardingProfileListDataTypePacFile;
+    /**
+     * ZTNA agent-based forwarding configuration
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+     */
+    ztnaAgent: outputs.GetForwardingProfileListDataTypeZtnaAgent;
+}
+
+export interface GetForwardingProfileListDataTypeGlobalProtectProxy {
+    /**
+     * Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+     */
+    blockRule: outputs.GetForwardingProfileListDataTypeGlobalProtectProxyBlockRule;
+    /**
+     * List of GlobalProtect proxy-based forwarding rules
+     */
+    forwardingRules: outputs.GetForwardingProfileListDataTypeGlobalProtectProxyForwardingRule[];
+    /**
+     * User uploaded PAC file for Global Protect proxy-based forwarding configuration
+     */
+    pacUpload: boolean;
+}
+
+export interface GetForwardingProfileListDataTypeGlobalProtectProxyBlockRule {
+    /**
+     * TCP traffic allowlist configuration
+     */
+    allowTcp: outputs.GetForwardingProfileListDataTypeGlobalProtectProxyBlockRuleAllowTcp;
+    /**
+     * UDP traffic allowlist configuration with location and destination support
+     */
+    allowUdp: outputs.GetForwardingProfileListDataTypeGlobalProtectProxyBlockRuleAllowUdp;
+    /**
+     * Enable block rule
+     */
+    enable: boolean;
+}
+
+export interface GetForwardingProfileListDataTypeGlobalProtectProxyBlockRuleAllowTcp {
+    /**
+     * Enable locations for allow-tcp
+     */
+    enableLocations: boolean;
+    /**
+     * List of user locations allowed for TCP traffic
+     */
+    locations: string[];
+}
+
+export interface GetForwardingProfileListDataTypeGlobalProtectProxyBlockRuleAllowUdp {
+    /**
+     * Destination addresses or networks allowed for UDP traffic
+     */
+    destinations: string;
+    /**
+     * Enable destinations for allow-udp
+     */
+    enableDestinations: boolean;
+    /**
+     * Enable locations for allow-udp
+     */
+    enableLocations: boolean;
+    /**
+     * List of user locations allowed for UDP traffic
+     */
+    locations: string[];
+}
+
+export interface GetForwardingProfileListDataTypeGlobalProtectProxyForwardingRule {
+    /**
+     * Connectivity method for this forwarding rule (e.g. direct)
+     */
+    connectivity: string;
+    /**
+     * Destination scope this forwarding rule applies to
+     */
+    destinations: string;
+    /**
+     * Enable a basic forwarding rule
+     */
+    enabled: boolean;
+    /**
+     * Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: string;
+    /**
+     * User location scope this rule applies to
+     */
+    userLocations: string;
+}
+
+export interface GetForwardingProfileListDataTypePacFile {
+    /**
+     * Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+     */
+    blockRule: outputs.GetForwardingProfileListDataTypePacFileBlockRule;
+    /**
+     * List of PAC file-based forwarding rules
+     */
+    forwardingRules: outputs.GetForwardingProfileListDataTypePacFileForwardingRule[];
+    /**
+     * User upload PAC file for PAC file based forwarding configuration
+     */
+    pacUpload: boolean;
+}
+
+export interface GetForwardingProfileListDataTypePacFileBlockRule {
+    /**
+     * TCP traffic allowlist configuration
+     */
+    allowTcp: outputs.GetForwardingProfileListDataTypePacFileBlockRuleAllowTcp;
+    /**
+     * UDP traffic allowlist configuration with location and destination support
+     */
+    allowUdp: outputs.GetForwardingProfileListDataTypePacFileBlockRuleAllowUdp;
+    /**
+     * Enable block rule
+     */
+    enable: boolean;
+}
+
+export interface GetForwardingProfileListDataTypePacFileBlockRuleAllowTcp {
+    /**
+     * Enable locations for allow-tcp
+     */
+    enableLocations: boolean;
+    /**
+     * List of user locations allowed for TCP traffic
+     */
+    locations: string[];
+}
+
+export interface GetForwardingProfileListDataTypePacFileBlockRuleAllowUdp {
+    /**
+     * Destination addresses or networks allowed for UDP traffic
+     */
+    destinations: string;
+    /**
+     * Enable destinations for allow-udp
+     */
+    enableDestinations: boolean;
+    /**
+     * Enable locations for allow-udp
+     */
+    enableLocations: boolean;
+    /**
+     * List of user locations allowed for UDP traffic
+     */
+    locations: string[];
+}
+
+export interface GetForwardingProfileListDataTypePacFileForwardingRule {
+    /**
+     * Connectivity method for this forwarding rule (e.g. direct)
+     */
+    connectivity: string;
+    /**
+     * Destination scope this forwarding rule applies to
+     */
+    destinations: string;
+    /**
+     * Enable a basic forwarding rule
+     */
+    enabled: boolean;
+    /**
+     * Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: string;
+    /**
+     * User location scope this rule applies to
+     */
+    userLocations: string;
+}
+
+export interface GetForwardingProfileListDataTypeZtnaAgent {
+    /**
+     * ZTNA block rule configuration
+     */
+    blockRule: outputs.GetForwardingProfileListDataTypeZtnaAgentBlockRule;
+    /**
+     * List of ZTNA agent-based forwarding rules
+     */
+    forwardingRules: outputs.GetForwardingProfileListDataTypeZtnaAgentForwardingRule[];
+    /**
+     * User uploaded PAC file for a ZTNA agent-based forwarding configuration
+     */
+    pacUpload: boolean;
+}
+
+export interface GetForwardingProfileListDataTypeZtnaAgentBlockRule {
+    /**
+     * Allow ICMP for troubleshooting
+     */
+    allowIcmpForTroubleshooting: boolean;
+    /**
+     * Block all other unmatched outbound connections
+     */
+    blockAllOtherUnmatchedOutboundConnections: boolean;
+    /**
+     * Block inbound access when connected to tunnel
+     */
+    blockInboundAccessWhenConnectedToTunnel: boolean;
+    /**
+     * Block Non-TCP Non UDP based traffic when connected to tunnel
+     */
+    blockNonTcpNonUdpTrafficWhenConnectedToTunnel: boolean;
+    /**
+     * Block outbound LAN access when connected to tunnel
+     */
+    blockOutboundLanAccessWhenConnectedToTunnel: boolean;
+    /**
+     * Enforce FQDN DNS resolution via tunnel DNS servers
+     */
+    enforcerFqdnDnsResolutionViaDnsServers: boolean;
+    /**
+     * Resolve All FQDNs using DNS servers assigned by the tunnel (Windows Only)
+     */
+    resolveAllFqdnsUsingDnsServersAssignedByTheTunnel: boolean;
+}
+
+export interface GetForwardingProfileListDataTypeZtnaAgentForwardingRule {
+    /**
+     * Connectivity method for this ZTNA forwarding rule (e.g. direct)
+     */
+    connectivity: string;
+    /**
+     * Destination scope this ZTNA forwarding rule applies to
+     */
+    destinations: string;
+    /**
+     * Enable a forwarding rule ztna
+     */
+    enabled: boolean;
+    /**
+     * Forwarding rule ZTNA name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: string;
+    /**
+     * Source applications this ZTNA rule applies to
+     */
+    sourceApplications: string;
+    /**
+     * Type of traffic this ZTNA rule applies to (dns, network, or both)
+     */
+    trafficType: string;
+    /**
+     * User location scope this ZTNA rule applies to
+     */
+    userLocations: string;
+}
+
+export interface GetForwardingProfileRegionalAndCustomProxyConnectivityPreference {
+    /**
+     * Indicates whether this connectivity method is enabled for use in the proxy configuration
+     */
+    enabled: boolean;
+    /**
+     * Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+     */
+    name: string;
+}
+
+export interface GetForwardingProfileRegionalAndCustomProxyListData {
+    /**
+     * List of connectivity methods and their enablement status for establishing proxy connections
+     */
+    connectivityPreferences: outputs.GetForwardingProfileRegionalAndCustomProxyListDataConnectivityPreference[];
+    /**
+     * regional and custom proxy configuration description
+     */
+    description: string;
+    /**
+     * Behavior when proxy connection fails - 'fail-open' allows direct internet access, 'fail-safe' blocks traffic until proxy is restored
+     */
+    fallbackOption: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder: string;
+    /**
+     * The UUID of the regional and custom proxy
+     */
+    id: string;
+    /**
+     * Strategy for selecting Prisma Access location - 'best-available-pa-location' automatically selects optimal location, 'specific-pa-location' uses predefined locations
+     */
+    locationPreference: string;
+    /**
+     * alphanumeric string [ 0-9a-zA-Z ._-]
+     */
+    name: string;
+    /**
+     * Select Prisma Access location Americas, Europe and Asia-Pacific.
+     */
+    prismaAccessLocations: outputs.GetForwardingProfileRegionalAndCustomProxyListDataPrismaAccessLocation[];
+    /**
+     * primary regional and custom proxy
+     */
+    proxy1: outputs.GetForwardingProfileRegionalAndCustomProxyListDataProxy1;
+    /**
+     * secondary regional and custom proxy
+     */
+    proxy2: outputs.GetForwardingProfileRegionalAndCustomProxyListDataProxy2;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+    /**
+     * Proxy configuration type - 'gp-and-pac' for GlobalProtect and PAC file forwarding, 'ztna-agent' for ZTNA agent forwarding
+     */
+    type: string;
+}
+
+export interface GetForwardingProfileRegionalAndCustomProxyListDataConnectivityPreference {
+    /**
+     * Indicates whether this connectivity method is enabled for use in the proxy configuration
+     */
+    enabled: boolean;
+    /**
+     * Connectivity method type - 'tunnel' for VPN tunnels, 'proxy' for HTTP/HTTPS proxies, 'adns' for authenticated DNS, 'masque' for MASQUE protocol
+     */
+    name: string;
+}
+
+export interface GetForwardingProfileRegionalAndCustomProxyListDataPrismaAccessLocation {
+    /**
+     * Add list of locations separated by space, in that region
+     */
+    locations: string[];
+    /**
+     * One of the region from 'americas', 'europe', 'apac'
+     */
+    name: string;
+}
+
+export interface GetForwardingProfileRegionalAndCustomProxyListDataProxy1 {
+    /**
+     * fqdn of the primary proxy server (supports wildcards and alphanumeric characters with dots, hyphens, and underscores)
+     */
+    fqdn: string;
+    /**
+     * Geographic or network location identifier for the primary proxy server
+     */
+    location: string;
+    /**
+     * port number for primary proxy
+     */
+    port: number;
+}
+
+export interface GetForwardingProfileRegionalAndCustomProxyListDataProxy2 {
+    /**
+     * Fqdn of the secondary (backup) proxy server used for failover scenarios
+     */
+    fqdn: string;
+    /**
+     * Geographic or network location identifier for the secondary proxy server
+     */
+    location: string;
+    /**
+     * port number for secondary proxy
+     */
+    port: number;
+}
+
+export interface GetForwardingProfileRegionalAndCustomProxyPrismaAccessLocation {
+    /**
+     * Add list of locations separated by space, in that region
+     */
+    locations: string[];
+    /**
+     * One of the region from 'americas', 'europe', 'apac'
+     */
+    name: string;
+}
+
+export interface GetForwardingProfileRegionalAndCustomProxyProxy1 {
+    /**
+     * fqdn of the primary proxy server (supports wildcards and alphanumeric characters with dots, hyphens, and underscores)
+     */
+    fqdn: string;
+    /**
+     * Geographic or network location identifier for the primary proxy server
+     */
+    location: string;
+    /**
+     * port number for primary proxy
+     */
+    port: number;
+}
+
+export interface GetForwardingProfileRegionalAndCustomProxyProxy2 {
+    /**
+     * Fqdn of the secondary (backup) proxy server used for failover scenarios
+     */
+    fqdn: string;
+    /**
+     * Geographic or network location identifier for the secondary proxy server
+     */
+    location: string;
+    /**
+     * port number for secondary proxy
+     */
+    port: number;
+}
+
+export interface GetForwardingProfileSourceApplicationListData {
+    /**
+     * List of application names to be included in this source application profile
+     */
+    applications: string[];
+    /**
+     * fowarding profile source application description
+     */
+    description: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder: string;
+    /**
+     * The id of the source application
+     */
+    id: string;
+    /**
+     * The unique name identifying the source application. Must be alphanumeric with allowed characters [0-9a-zA-Z._-]
+     */
+    name: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+}
+
+export interface GetForwardingProfileType {
+    /**
+     * Global Protect proxy-based forwarding configuration
+     */
+    globalProtectProxy: outputs.GetForwardingProfileTypeGlobalProtectProxy;
+    /**
+     * PAC file based forwarding configuration
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+     */
+    pacFile: outputs.GetForwardingProfileTypePacFile;
+    /**
+     * ZTNA agent-based forwarding configuration
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `globalProtectProxy`, `pacFile`, and `ztnaAgent`.
+     */
+    ztnaAgent: outputs.GetForwardingProfileTypeZtnaAgent;
+}
+
+export interface GetForwardingProfileTypeGlobalProtectProxy {
+    /**
+     * Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+     */
+    blockRule: outputs.GetForwardingProfileTypeGlobalProtectProxyBlockRule;
+    /**
+     * List of GlobalProtect proxy-based forwarding rules
+     */
+    forwardingRules: outputs.GetForwardingProfileTypeGlobalProtectProxyForwardingRule[];
+    /**
+     * User uploaded PAC file for Global Protect proxy-based forwarding configuration
+     */
+    pacUpload: boolean;
+}
+
+export interface GetForwardingProfileTypeGlobalProtectProxyBlockRule {
+    /**
+     * TCP traffic allowlist configuration
+     */
+    allowTcp: outputs.GetForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp;
+    /**
+     * UDP traffic allowlist configuration with location and destination support
+     */
+    allowUdp: outputs.GetForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp;
+    /**
+     * Enable block rule
+     */
+    enable: boolean;
+}
+
+export interface GetForwardingProfileTypeGlobalProtectProxyBlockRuleAllowTcp {
+    /**
+     * Enable locations for allow-tcp
+     */
+    enableLocations: boolean;
+    /**
+     * List of user locations allowed for TCP traffic
+     */
+    locations: string[];
+}
+
+export interface GetForwardingProfileTypeGlobalProtectProxyBlockRuleAllowUdp {
+    /**
+     * Destination addresses or networks allowed for UDP traffic
+     */
+    destinations: string;
+    /**
+     * Enable destinations for allow-udp
+     */
+    enableDestinations: boolean;
+    /**
+     * Enable locations for allow-udp
+     */
+    enableLocations: boolean;
+    /**
+     * List of user locations allowed for UDP traffic
+     */
+    locations: string[];
+}
+
+export interface GetForwardingProfileTypeGlobalProtectProxyForwardingRule {
+    /**
+     * Connectivity method for this forwarding rule (e.g. direct)
+     */
+    connectivity: string;
+    /**
+     * Destination scope this forwarding rule applies to
+     */
+    destinations: string;
+    /**
+     * Enable a basic forwarding rule
+     */
+    enabled: boolean;
+    /**
+     * Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: string;
+    /**
+     * User location scope this rule applies to
+     */
+    userLocations: string;
+}
+
+export interface GetForwardingProfileTypePacFile {
+    /**
+     * Basic block rule configuration for PAC file and GlobalProtect proxy profiles
+     */
+    blockRule: outputs.GetForwardingProfileTypePacFileBlockRule;
+    /**
+     * List of PAC file-based forwarding rules
+     */
+    forwardingRules: outputs.GetForwardingProfileTypePacFileForwardingRule[];
+    /**
+     * User upload PAC file for PAC file based forwarding configuration
+     */
+    pacUpload: boolean;
+}
+
+export interface GetForwardingProfileTypePacFileBlockRule {
+    /**
+     * TCP traffic allowlist configuration
+     */
+    allowTcp: outputs.GetForwardingProfileTypePacFileBlockRuleAllowTcp;
+    /**
+     * UDP traffic allowlist configuration with location and destination support
+     */
+    allowUdp: outputs.GetForwardingProfileTypePacFileBlockRuleAllowUdp;
+    /**
+     * Enable block rule
+     */
+    enable: boolean;
+}
+
+export interface GetForwardingProfileTypePacFileBlockRuleAllowTcp {
+    /**
+     * Enable locations for allow-tcp
+     */
+    enableLocations: boolean;
+    /**
+     * List of user locations allowed for TCP traffic
+     */
+    locations: string[];
+}
+
+export interface GetForwardingProfileTypePacFileBlockRuleAllowUdp {
+    /**
+     * Destination addresses or networks allowed for UDP traffic
+     */
+    destinations: string;
+    /**
+     * Enable destinations for allow-udp
+     */
+    enableDestinations: boolean;
+    /**
+     * Enable locations for allow-udp
+     */
+    enableLocations: boolean;
+    /**
+     * List of user locations allowed for UDP traffic
+     */
+    locations: string[];
+}
+
+export interface GetForwardingProfileTypePacFileForwardingRule {
+    /**
+     * Connectivity method for this forwarding rule (e.g. direct)
+     */
+    connectivity: string;
+    /**
+     * Destination scope this forwarding rule applies to
+     */
+    destinations: string;
+    /**
+     * Enable a basic forwarding rule
+     */
+    enabled: boolean;
+    /**
+     * Basic forwarding rule name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: string;
+    /**
+     * User location scope this rule applies to
+     */
+    userLocations: string;
+}
+
+export interface GetForwardingProfileTypeZtnaAgent {
+    /**
+     * ZTNA block rule configuration
+     */
+    blockRule: outputs.GetForwardingProfileTypeZtnaAgentBlockRule;
+    /**
+     * List of ZTNA agent-based forwarding rules
+     */
+    forwardingRules: outputs.GetForwardingProfileTypeZtnaAgentForwardingRule[];
+    /**
+     * User uploaded PAC file for a ZTNA agent-based forwarding configuration
+     */
+    pacUpload: boolean;
+}
+
+export interface GetForwardingProfileTypeZtnaAgentBlockRule {
+    /**
+     * Allow ICMP for troubleshooting
+     */
+    allowIcmpForTroubleshooting: boolean;
+    /**
+     * Block all other unmatched outbound connections
+     */
+    blockAllOtherUnmatchedOutboundConnections: boolean;
+    /**
+     * Block inbound access when connected to tunnel
+     */
+    blockInboundAccessWhenConnectedToTunnel: boolean;
+    /**
+     * Block Non-TCP Non UDP based traffic when connected to tunnel
+     */
+    blockNonTcpNonUdpTrafficWhenConnectedToTunnel: boolean;
+    /**
+     * Block outbound LAN access when connected to tunnel
+     */
+    blockOutboundLanAccessWhenConnectedToTunnel: boolean;
+    /**
+     * Enforce FQDN DNS resolution via tunnel DNS servers
+     */
+    enforcerFqdnDnsResolutionViaDnsServers: boolean;
+    /**
+     * Resolve All FQDNs using DNS servers assigned by the tunnel (Windows Only)
+     */
+    resolveAllFqdnsUsingDnsServersAssignedByTheTunnel: boolean;
+}
+
+export interface GetForwardingProfileTypeZtnaAgentForwardingRule {
+    /**
+     * Connectivity method for this ZTNA forwarding rule (e.g. direct)
+     */
+    connectivity: string;
+    /**
+     * Destination scope this ZTNA forwarding rule applies to
+     */
+    destinations: string;
+    /**
+     * Enable a forwarding rule ztna
+     */
+    enabled: boolean;
+    /**
+     * Forwarding rule ZTNA name as an alphanumeric string [ 0-9a-zA-Z._ -]
+     */
+    name: string;
+    /**
+     * Source applications this ZTNA rule applies to
+     */
+    sourceApplications: string;
+    /**
+     * Type of traffic this ZTNA rule applies to (dns, network, or both)
+     */
+    trafficType: string;
+    /**
+     * User location scope this ZTNA rule applies to
+     */
+    userLocations: string;
+}
+
+export interface GetForwardingProfileUserLocationInternalHostDetection {
+    /**
+     * user location fqdn
+     */
+    fqdn: string;
+    /**
+     * user location ip address
+     */
+    ipAddress: string;
+}
+
+export interface GetForwardingProfileUserLocationListData {
+    /**
+     * Description of the user location
+     */
+    description: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    folder: string;
+    /**
+     * The UUID of the user location
+     */
+    id: string;
+    /**
+     * Configuration for detecting internal hosts using IP address and FQDN
+     */
+    internalHostDetection: outputs.GetForwardingProfileUserLocationListDataInternalHostDetection;
+    /**
+     * List of IP addresses that define the user location
+     */
+    ipAddresses: string[];
+    /**
+     * alphanumeric string [ 0-9a-zA-Z._-]
+     */
+    name: string;
+    /**
+     * The Terraform ID.
+     */
+    tfid: string;
+}
+
+export interface GetForwardingProfileUserLocationListDataInternalHostDetection {
+    /**
+     * user location fqdn
+     */
+    fqdn: string;
+    /**
+     * user location ip address
+     */
+    ipAddress: string;
 }
 
 export interface GetGeneralSettingGeneral {
@@ -38331,6 +39798,10 @@ export interface GetSecurityRuleAllowUrlCategoryFileControl {
 
 export interface GetSecurityRuleAllowWebApplication {
     /**
+     * App id
+     */
+    appId: string;
+    /**
      * Application function
      */
     applicationFunctions: string[];
@@ -38660,6 +40131,10 @@ export interface GetSecurityRuleListDataAllowUrlCategoryFileControl {
 
 export interface GetSecurityRuleListDataAllowWebApplication {
     /**
+     * App id
+     */
+    appId: string;
+    /**
      * Application function
      */
     applicationFunctions: string[];
@@ -38854,6 +40329,10 @@ export interface GetServiceConnectionBgpPeer {
      */
     peerIpv6Address: string;
     /**
+     * Same peer IP address for SC
+     */
+    sameAsPrimary: boolean;
+    /**
      * Secret
      */
     secret: string;
@@ -38944,6 +40423,10 @@ export interface GetServiceConnectionListData {
      */
     region: string;
     /**
+     * Region tag
+     */
+    regionTag: string;
+    /**
      * Secondary ipsec tunnel
      */
     secondaryIpsecTunnel: string;
@@ -38978,6 +40461,10 @@ export interface GetServiceConnectionListDataBgpPeer {
      * Peer ipv6 address
      */
     peerIpv6Address: string;
+    /**
+     * Same peer IP address for SC
+     */
+    sameAsPrimary: boolean;
     /**
      * Secret
      */
@@ -53278,7 +54765,7 @@ export interface MfaServerMfaVendorTypeOktaAdaptiveV1 {
     /**
      * Okta timeout (seconds)
      */
-    oktaTimeout: number;
+    oktaTimeout: string;
     /**
      * Okta API token
      */
@@ -54618,6 +56105,10 @@ export interface SecurityRuleAllowUrlCategoryFileControl {
 
 export interface SecurityRuleAllowWebApplication {
     /**
+     * App id
+     */
+    appId: string;
+    /**
      * Application function
      */
     applicationFunctions?: string[];
@@ -54782,6 +56273,10 @@ export interface ServiceConnectionBgpPeer {
      * Peer ipv6 address
      */
     peerIpv6Address?: string;
+    /**
+     * Same peer IP address for SC
+     */
+    sameAsPrimary?: boolean;
     /**
      * Secret
      */

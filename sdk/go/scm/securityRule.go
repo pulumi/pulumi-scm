@@ -297,6 +297,44 @@ import (
 //			if err != nil {
 //				return err
 //			}
+//			// Internet Rule with Web Application
+//			_, err = scm.NewSecurityRule(ctx, "internet_rule_example", &scm.SecurityRuleArgs{
+//				Folder:     pulumi.String("ngfw-shared"),
+//				Name:       pulumi.String("internet-rule-postman"),
+//				PolicyType: pulumi.String("Internet"),
+//				AllowWebApplications: scm.SecurityRuleAllowWebApplicationArray{
+//					&scm.SecurityRuleAllowWebApplicationArgs{
+//						Name: pulumi.String("web_appln"),
+//						Type: pulumi.String("application"),
+//						ApplicationFunction: []string{
+//							"any",
+//						},
+//						AppId: pulumi.String("4sync"),
+//					},
+//					&scm.SecurityRuleAllowWebApplicationArgs{
+//						Name: pulumi.String("web_appln_2"),
+//						Type: pulumi.String("application"),
+//						ApplicationFunction: []string{
+//							"any",
+//						},
+//						AppId: pulumi.String("4sync"),
+//					},
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Action: pulumi.String("allow"),
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("casidp\\test_1"),
+//					pulumi.String("CN=ng1,DC=casidp,DC=onmicrosoft,DC=com"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
 //			return nil
 //		})
 //	}

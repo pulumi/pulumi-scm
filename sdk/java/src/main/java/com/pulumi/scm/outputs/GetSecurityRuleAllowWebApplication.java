@@ -15,6 +15,11 @@ import java.util.Objects;
 @CustomType
 public final class GetSecurityRuleAllowWebApplication {
     /**
+     * @return App id
+     * 
+     */
+    private String appId;
+    /**
      * @return Application function
      * 
      */
@@ -61,6 +66,13 @@ public final class GetSecurityRuleAllowWebApplication {
     private String type;
 
     private GetSecurityRuleAllowWebApplication() {}
+    /**
+     * @return App id
+     * 
+     */
+    public String appId() {
+        return this.appId;
+    }
     /**
      * @return Application function
      * 
@@ -134,6 +146,7 @@ public final class GetSecurityRuleAllowWebApplication {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String appId;
         private List<String> applicationFunctions;
         private String dlp;
         private GetSecurityRuleAllowWebApplicationFileControl fileControl;
@@ -146,6 +159,7 @@ public final class GetSecurityRuleAllowWebApplication {
         public Builder() {}
         public Builder(GetSecurityRuleAllowWebApplication defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.appId = defaults.appId;
     	      this.applicationFunctions = defaults.applicationFunctions;
     	      this.dlp = defaults.dlp;
     	      this.fileControl = defaults.fileControl;
@@ -157,6 +171,14 @@ public final class GetSecurityRuleAllowWebApplication {
     	      this.type = defaults.type;
         }
 
+        @CustomType.Setter
+        public Builder appId(String appId) {
+            if (appId == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleAllowWebApplication", "appId");
+            }
+            this.appId = appId;
+            return this;
+        }
         @CustomType.Setter
         public Builder applicationFunctions(List<String> applicationFunctions) {
             if (applicationFunctions == null) {
@@ -240,6 +262,7 @@ public final class GetSecurityRuleAllowWebApplication {
         }
         public GetSecurityRuleAllowWebApplication build() {
             final var _resultValue = new GetSecurityRuleAllowWebApplication();
+            _resultValue.appId = appId;
             _resultValue.applicationFunctions = applicationFunctions;
             _resultValue.dlp = dlp;
             _resultValue.fileControl = fileControl;
