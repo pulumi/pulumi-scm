@@ -37,8 +37,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.AddressArgs;
  * import com.pulumi.scm.inputs.AntiSpywareProfileRuleArgs;
  * import com.pulumi.resources.CustomResourceOptions;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -88,7 +88,7 @@ import javax.annotation.Nullable;
  *                 .notes("Managed by Pulumi")
  *                 .packetCapture("single-packet")
  *                 .category("net-worm")
- *                 .severity(List.of("critical"))
+ *                 .severity(Arrays.asList("critical"))
  *                 .threatName("data-theft")
  *                 .build())
  *             .build());

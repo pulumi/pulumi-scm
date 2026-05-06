@@ -45,8 +45,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs;
  * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastRouteMapsArgs;
  * import com.pulumi.resources.CustomResourceOptions;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -104,7 +104,7 @@ import javax.annotation.Nullable;
  *                         .build())
  *                     .build())
  *                 .set(BgpRouteMapRouteMapSetArgs.builder()
- *                     .regularCommunity(List.of("no-export"))
+ *                     .regularCommunity(Arrays.asList("no-export"))
  *                     .build())
  *                 .build())
  *             .build(), CustomResourceOptions.builder()
@@ -144,7 +144,7 @@ import javax.annotation.Nullable;
  *                         .build())
  *                     .build())
  *                 .set(BgpRouteMapRouteMapSetArgs.builder()
- *                     .regularCommunity(List.of("no-export"))
+ *                     .regularCommunity(Arrays.asList("no-export"))
  *                     .build())
  *                 .build())
  *             .build(), CustomResourceOptions.builder()

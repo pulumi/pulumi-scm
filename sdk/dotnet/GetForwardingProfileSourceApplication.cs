@@ -25,7 +25,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a single forwarding profile source application by its ID.
-        ///     var example = Scm.Index.GetForwardingProfileSourceApplication.Invoke(new()
+        ///     var example = Scm.GetForwardingProfileSourceApplication.Invoke(new()
         ///     {
         ///         Id = "12345678-1234-1234-1234-123456789012",
         ///     });
@@ -54,7 +54,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a single forwarding profile source application by its ID.
-        ///     var example = Scm.Index.GetForwardingProfileSourceApplication.Invoke(new()
+        ///     var example = Scm.GetForwardingProfileSourceApplication.Invoke(new()
         ///     {
         ///         Id = "12345678-1234-1234-1234-123456789012",
         ///     });
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up a single forwarding profile source application by its ID.
-        ///     var example = Scm.Index.GetForwardingProfileSourceApplication.Invoke(new()
+        ///     var example = Scm.GetForwardingProfileSourceApplication.Invoke(new()
         ///     {
         ///         Id = "12345678-1234-1234-1234-123456789012",
         ///     });

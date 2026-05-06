@@ -42,8 +42,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.LogicalRouterVrfRoutingTableIpArgs;
  * import com.pulumi.scm.inputs.LogicalRouterVrfBgpArgs;
  * import com.pulumi.resources.CustomResourceOptions;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -111,10 +111,10 @@ import javax.annotation.Nullable;
  *             .routingStack("advanced")
  *             .vrves(LogicalRouterVrfArgs.builder()
  *                 .name("default")
- *                 .interface_(List.of("$scm_ethernet_interface"))
+ *                 .interface_(Arrays.asList("$scm_ethernet_interface"))
  *                 .routingTable(LogicalRouterVrfRoutingTableArgs.builder()
  *                     .ip(LogicalRouterVrfRoutingTableIpArgs.builder()
- *                         .staticRoute(List.of(                        
+ *                         .staticRoute(Arrays.asList(                        
  *                             Map.ofEntries(
  *                                 Map.entry("name", "default-route"),
  *                                 Map.entry("destination", "0.0.0.0/0"),
@@ -155,18 +155,18 @@ import javax.annotation.Nullable;
  *             .routingStack("advanced")
  *             .vrves(LogicalRouterVrfArgs.builder()
  *                 .name("default")
- *                 .interface_(List.of("$scm_bgp_interface"))
+ *                 .interface_(Arrays.asList("$scm_bgp_interface"))
  *                 .bgp(LogicalRouterVrfBgpArgs.builder()
  *                     .enable(true)
  *                     .routerId("198.18.1.254")
  *                     .localAs("65535")
  *                     .installRoute(true)
  *                     .rejectDefaultRoute(false)
- *                     .peerGroup(List.of(Map.ofEntries(
+ *                     .peerGroup(Arrays.asList(Map.ofEntries(
  *                         Map.entry("name", "prisma-access"),
  *                         Map.entry("addressFamily", Map.of("ipv4", "default")),
  *                         Map.entry("connectionOptions", Map.of("authentication", "bgp_auth_profile")),
- *                         Map.entry("peer", List.of(Map.ofEntries(
+ *                         Map.entry("peer", Arrays.asList(Map.ofEntries(
  *                             Map.entry("name", "primary-access-primary"),
  *                             Map.entry("enable", true),
  *                             Map.entry("peerAs", 65515),

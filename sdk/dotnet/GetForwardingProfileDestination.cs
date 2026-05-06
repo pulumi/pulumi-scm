@@ -25,19 +25,19 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the forwarding profile destination with FQDN by its ID.
-        ///     var scmForwardingProfileDestination1Ds = Scm.Index.GetForwardingProfileDestination.Invoke(new()
+        ///     var scmForwardingProfileDestination1Ds = Scm.GetForwardingProfileDestination.Invoke(new()
         ///     {
         ///         Id = "47c43e8b-eedf-483a-bfd8-5dfcf7a2462b",
         ///     });
         /// 
         ///     // Look up the forwarding profile destination with IP addresses by its ID.
-        ///     var scmForwardingProfileDestination2Ds = Scm.Index.GetForwardingProfileDestination.Invoke(new()
+        ///     var scmForwardingProfileDestination2Ds = Scm.GetForwardingProfileDestination.Invoke(new()
         ///     {
         ///         Id = "7796420b-c45e-4ca2-a609-91ab83bbd219",
         ///     });
         /// 
         ///     // Look up the forwarding profile destination with mixed types by its ID.
-        ///     var scmForwardingProfileDestination3Ds = Scm.Index.GetForwardingProfileDestination.Invoke(new()
+        ///     var scmForwardingProfileDestination3Ds = Scm.GetForwardingProfileDestination.Invoke(new()
         ///     {
         ///         Id = "b3730821-0692-4245-96b5-3474651ed2b5",
         ///     });
@@ -71,19 +71,19 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the forwarding profile destination with FQDN by its ID.
-        ///     var scmForwardingProfileDestination1Ds = Scm.Index.GetForwardingProfileDestination.Invoke(new()
+        ///     var scmForwardingProfileDestination1Ds = Scm.GetForwardingProfileDestination.Invoke(new()
         ///     {
         ///         Id = "47c43e8b-eedf-483a-bfd8-5dfcf7a2462b",
         ///     });
         /// 
         ///     // Look up the forwarding profile destination with IP addresses by its ID.
-        ///     var scmForwardingProfileDestination2Ds = Scm.Index.GetForwardingProfileDestination.Invoke(new()
+        ///     var scmForwardingProfileDestination2Ds = Scm.GetForwardingProfileDestination.Invoke(new()
         ///     {
         ///         Id = "7796420b-c45e-4ca2-a609-91ab83bbd219",
         ///     });
         /// 
         ///     // Look up the forwarding profile destination with mixed types by its ID.
-        ///     var scmForwardingProfileDestination3Ds = Scm.Index.GetForwardingProfileDestination.Invoke(new()
+        ///     var scmForwardingProfileDestination3Ds = Scm.GetForwardingProfileDestination.Invoke(new()
         ///     {
         ///         Id = "b3730821-0692-4245-96b5-3474651ed2b5",
         ///     });
@@ -117,19 +117,19 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the forwarding profile destination with FQDN by its ID.
-        ///     var scmForwardingProfileDestination1Ds = Scm.Index.GetForwardingProfileDestination.Invoke(new()
+        ///     var scmForwardingProfileDestination1Ds = Scm.GetForwardingProfileDestination.Invoke(new()
         ///     {
         ///         Id = "47c43e8b-eedf-483a-bfd8-5dfcf7a2462b",
         ///     });
         /// 
         ///     // Look up the forwarding profile destination with IP addresses by its ID.
-        ///     var scmForwardingProfileDestination2Ds = Scm.Index.GetForwardingProfileDestination.Invoke(new()
+        ///     var scmForwardingProfileDestination2Ds = Scm.GetForwardingProfileDestination.Invoke(new()
         ///     {
         ///         Id = "7796420b-c45e-4ca2-a609-91ab83bbd219",
         ///     });
         /// 
         ///     // Look up the forwarding profile destination with mixed types by its ID.
-        ///     var scmForwardingProfileDestination3Ds = Scm.Index.GetForwardingProfileDestination.Invoke(new()
+        ///     var scmForwardingProfileDestination3Ds = Scm.GetForwardingProfileDestination.Invoke(new()
         ///     {
         ///         Id = "b3730821-0692-4245-96b5-3474651ed2b5",
         ///     });

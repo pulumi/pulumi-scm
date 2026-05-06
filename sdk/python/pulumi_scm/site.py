@@ -595,7 +595,7 @@ class Site(pulumi.CustomResource):
             }],
             qos={
                 "profile": "Default Profile",
-                "cir": 20,
+                "cir": float(20),
             })
         ```
 
@@ -721,7 +721,7 @@ class Site(pulumi.CustomResource):
             }],
             qos={
                 "profile": "Default Profile",
-                "cir": 20,
+                "cir": float(20),
             })
         ```
 

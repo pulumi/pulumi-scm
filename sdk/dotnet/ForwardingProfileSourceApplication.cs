@@ -23,7 +23,7 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     // Basic forwarding profile source application
-    ///     var exampleBasic = new Scm.Index.ForwardingProfileSourceApplication("example_basic", new()
+    ///     var exampleBasic = new Scm.ForwardingProfileSourceApplication("example_basic", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-source-app",
@@ -35,7 +35,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Forwarding profile source application with description
-    ///     var exampleWithDesc = new Scm.Index.ForwardingProfileSourceApplication("example_with_desc", new()
+    ///     var exampleWithDesc = new Scm.ForwardingProfileSourceApplication("example_with_desc", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "example-source-app-detailed",
@@ -50,7 +50,7 @@ namespace Pulumi.Scm
     ///     });
     /// 
     ///     // Forwarding profile source application with multiple applications
-    ///     var exampleMultiApps = new Scm.Index.ForwardingProfileSourceApplication("example_multi_apps", new()
+    ///     var exampleMultiApps = new Scm.ForwardingProfileSourceApplication("example_multi_apps", new()
     ///     {
     ///         Folder = "Mobile Users",
     ///         Name = "corp-mobile-apps",

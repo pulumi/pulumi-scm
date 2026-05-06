@@ -30,7 +30,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source List: SCM Service Connection Group (List Lookup)
         ///     // ------------------------------------------------------------------
-        ///     var allGroupsInFolder = Scm.Index.GetServiceConnectionGroupList.Invoke(new()
+        ///     var allGroupsInFolder = Scm.GetServiceConnectionGroupList.Invoke(new()
         ///     {
         ///         Folder = folderScope,
         ///         Limit = 50,
@@ -42,7 +42,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return @group.Name;
         ///         }).ToList(),
-        ///         ["totalGroupsCount"] = allGroupsInFolder.Apply(getServiceConnectionGroupListResult =&gt; getServiceConnectionGroupListResult.Datas).Length,
+        ///         ["totalGroupsCount"] = allGroupsInFolder.Apply(getServiceConnectionGroupListResult =&gt; getServiceConnectionGroupListResult.Datas).Length(),
         ///     };
         /// });
         /// ```
@@ -69,7 +69,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source List: SCM Service Connection Group (List Lookup)
         ///     // ------------------------------------------------------------------
-        ///     var allGroupsInFolder = Scm.Index.GetServiceConnectionGroupList.Invoke(new()
+        ///     var allGroupsInFolder = Scm.GetServiceConnectionGroupList.Invoke(new()
         ///     {
         ///         Folder = folderScope,
         ///         Limit = 50,
@@ -81,7 +81,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return @group.Name;
         ///         }).ToList(),
-        ///         ["totalGroupsCount"] = allGroupsInFolder.Apply(getServiceConnectionGroupListResult =&gt; getServiceConnectionGroupListResult.Datas).Length,
+        ///         ["totalGroupsCount"] = allGroupsInFolder.Apply(getServiceConnectionGroupListResult =&gt; getServiceConnectionGroupListResult.Datas).Length(),
         ///     };
         /// });
         /// ```
@@ -108,7 +108,7 @@ namespace Pulumi.Scm
         ///     // ------------------------------------------------------------------
         ///     // Data Source List: SCM Service Connection Group (List Lookup)
         ///     // ------------------------------------------------------------------
-        ///     var allGroupsInFolder = Scm.Index.GetServiceConnectionGroupList.Invoke(new()
+        ///     var allGroupsInFolder = Scm.GetServiceConnectionGroupList.Invoke(new()
         ///     {
         ///         Folder = folderScope,
         ///         Limit = 50,
@@ -120,7 +120,7 @@ namespace Pulumi.Scm
         ///         {
         ///             return @group.Name;
         ///         }).ToList(),
-        ///         ["totalGroupsCount"] = allGroupsInFolder.Apply(getServiceConnectionGroupListResult =&gt; getServiceConnectionGroupListResult.Datas).Length,
+        ///         ["totalGroupsCount"] = allGroupsInFolder.Apply(getServiceConnectionGroupListResult =&gt; getServiceConnectionGroupListResult.Datas).Length(),
         ///     };
         /// });
         /// ```

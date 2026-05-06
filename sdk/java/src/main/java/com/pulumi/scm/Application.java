@@ -34,8 +34,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.Application;
  * import com.pulumi.scm.ApplicationArgs;
  * import com.pulumi.scm.inputs.ApplicationSignatureArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -101,7 +101,7 @@ import javax.annotation.Nullable;
  *                 .comment("Managed by Pulumi")
  *                 .scope("session")
  *                 .orderFree(false)
- *                 .andCondition(List.of(Map.ofEntries(
+ *                 .andCondition(Arrays.asList(Map.ofEntries(
  *                     Map.entry("name", "Example Condition"),
  *                     Map.entry("operator", Map.of("patternMatch", Map.ofEntries(
  *                         Map.entry("context", "file-data"),

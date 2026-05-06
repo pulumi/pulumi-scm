@@ -25,25 +25,25 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the gp-and-pac basic proxy by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy1Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy1Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "0e1c887a-ecf7-4a12-990c-bf1213ef81fd",
         ///     });
         /// 
         ///     // Look up the gp-and-pac dual proxy by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy2Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy2Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "64ecc1e6-8bb6-4689-8f69-67a4553d4da8",
         ///     });
         /// 
         ///     // Look up the ztna-agent basic proxy by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy3Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy3Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "8a3401e6-01dc-4fd4-b273-b0070c8fe9bb",
         ///     });
         /// 
         ///     // Look up the complete ztna-agent by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy4Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy4Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "7de1edaf-b9dc-4b65-b8c4-c44a14f1095b",
         ///     });
@@ -78,25 +78,25 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the gp-and-pac basic proxy by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy1Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy1Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "0e1c887a-ecf7-4a12-990c-bf1213ef81fd",
         ///     });
         /// 
         ///     // Look up the gp-and-pac dual proxy by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy2Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy2Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "64ecc1e6-8bb6-4689-8f69-67a4553d4da8",
         ///     });
         /// 
         ///     // Look up the ztna-agent basic proxy by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy3Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy3Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "8a3401e6-01dc-4fd4-b273-b0070c8fe9bb",
         ///     });
         /// 
         ///     // Look up the complete ztna-agent by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy4Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy4Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "7de1edaf-b9dc-4b65-b8c4-c44a14f1095b",
         ///     });
@@ -131,25 +131,25 @@ namespace Pulumi.Scm
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
         ///     // Look up the gp-and-pac basic proxy by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy1Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy1Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "0e1c887a-ecf7-4a12-990c-bf1213ef81fd",
         ///     });
         /// 
         ///     // Look up the gp-and-pac dual proxy by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy2Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy2Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "64ecc1e6-8bb6-4689-8f69-67a4553d4da8",
         ///     });
         /// 
         ///     // Look up the ztna-agent basic proxy by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy3Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy3Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "8a3401e6-01dc-4fd4-b273-b0070c8fe9bb",
         ///     });
         /// 
         ///     // Look up the complete ztna-agent by its ID.
-        ///     var scmForwardingProfileRegionalAndCustomProxy4Ds = Scm.Index.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
+        ///     var scmForwardingProfileRegionalAndCustomProxy4Ds = Scm.GetForwardingProfileRegionalAndCustomProxy.Invoke(new()
         ///     {
         ///         Id = "7de1edaf-b9dc-4b65-b8c4-c44a14f1095b",
         ///     });

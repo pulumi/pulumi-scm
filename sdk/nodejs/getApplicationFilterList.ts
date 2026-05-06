@@ -8,6 +8,58 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * function tryOutput_(
+ * 	...fns: Array<() => pulumi.Input<any>>
+ * ): pulumi.Output<any> {
+ * 	if (fns.length === 0) {
+ * 		throw new Error("try: all parameters failed");
+ * 	}
+ * 	const [fn, ...rest] = fns;
+ * 	try {
+ * 		return pulumi.output(fn()).apply(result => result !== undefined ? result : tryOutput_(...rest));
+ * 	} catch {
+ * 		return tryOutput_(...rest);
+ * 	}
+ * 	throw new Error("try: all parameters failed");
+ * }
+ *
+ *
+ * // This data source will call the "List" API endpoint
+ * // and return all application filters in the "All" folder.
+ * // 1. Use a single data block to fetch ALL application filters in the "All" folder.
+ * const allShared = scm.getApplicationFilterList({
+ *     folder: "All",
+ * });
+ * export const applicationFiltersRawData = tryOutput_(
+ *     () => allShared,
+ *     () => null
+ * );
+ * // Simplified pagination example with error handling
+ * const paginatedApplicationFiltersExample = scm.getApplicationFilterList({
+ *     folder: "All",
+ *     limit: 5,
+ *     offset: 0,
+ * });
+ * export const paginatedApplicationFilters = tryOutput_(
+ *     () => paginatedApplicationFiltersExample.then(paginatedApplicationFiltersExample => .reduce((__obj, applicationFilter) => ({ ...__obj, [applicationFilter.id]: applicationFilter }), {})),
+ *     () => {}
+ * );
+ * export const paginationApplicationFiltersDetails = tryOutput_(
+ *     () => {
+ *         totalObjectsInFolder: paginatedApplicationFiltersExample.then(paginatedApplicationFiltersExample => paginatedApplicationFiltersExample.total),
+ *         limitUsed: paginatedApplicationFiltersExample.then(paginatedApplicationFiltersExample => paginatedApplicationFiltersExample.limit),
+ *         offsetUsed: paginatedApplicationFiltersExample.then(paginatedApplicationFiltersExample => paginatedApplicationFiltersExample.offset),
+ *     },
+ *     () => {}
+ * );
+ * ```
  */
 export function getApplicationFilterList(args?: GetApplicationFilterListArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationFilterListResult> {
     args = args || {};
@@ -99,6 +151,58 @@ export interface GetApplicationFilterListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * function tryOutput_(
+ * 	...fns: Array<() => pulumi.Input<any>>
+ * ): pulumi.Output<any> {
+ * 	if (fns.length === 0) {
+ * 		throw new Error("try: all parameters failed");
+ * 	}
+ * 	const [fn, ...rest] = fns;
+ * 	try {
+ * 		return pulumi.output(fn()).apply(result => result !== undefined ? result : tryOutput_(...rest));
+ * 	} catch {
+ * 		return tryOutput_(...rest);
+ * 	}
+ * 	throw new Error("try: all parameters failed");
+ * }
+ *
+ *
+ * // This data source will call the "List" API endpoint
+ * // and return all application filters in the "All" folder.
+ * // 1. Use a single data block to fetch ALL application filters in the "All" folder.
+ * const allShared = scm.getApplicationFilterList({
+ *     folder: "All",
+ * });
+ * export const applicationFiltersRawData = tryOutput_(
+ *     () => allShared,
+ *     () => null
+ * );
+ * // Simplified pagination example with error handling
+ * const paginatedApplicationFiltersExample = scm.getApplicationFilterList({
+ *     folder: "All",
+ *     limit: 5,
+ *     offset: 0,
+ * });
+ * export const paginatedApplicationFilters = tryOutput_(
+ *     () => paginatedApplicationFiltersExample.then(paginatedApplicationFiltersExample => .reduce((__obj, applicationFilter) => ({ ...__obj, [applicationFilter.id]: applicationFilter }), {})),
+ *     () => {}
+ * );
+ * export const paginationApplicationFiltersDetails = tryOutput_(
+ *     () => {
+ *         totalObjectsInFolder: paginatedApplicationFiltersExample.then(paginatedApplicationFiltersExample => paginatedApplicationFiltersExample.total),
+ *         limitUsed: paginatedApplicationFiltersExample.then(paginatedApplicationFiltersExample => paginatedApplicationFiltersExample.limit),
+ *         offsetUsed: paginatedApplicationFiltersExample.then(paginatedApplicationFiltersExample => paginatedApplicationFiltersExample.offset),
+ *     },
+ *     () => {}
+ * );
+ * ```
  */
 export function getApplicationFilterListOutput(args?: GetApplicationFilterListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationFilterListResult> {
     args = args || {};

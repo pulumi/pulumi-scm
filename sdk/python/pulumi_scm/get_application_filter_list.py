@@ -168,6 +168,48 @@ def get_application_filter_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    def try_(*fns):
+        for fn in fns:
+            try:
+                result = fn()
+                return result
+            except:
+                continue
+        return None
+
+
+    # This data source will call the "List" API endpoint
+    # and return all application filters in the "All" folder.
+    # 1. Use a single data block to fetch ALL application filters in the "All" folder.
+    all_shared = scm.get_application_filter_list(folder="All")
+    pulumi.export("applicationFiltersRawData", try_(
+        lambda: all_shared,
+        lambda: None
+    ))
+    # Simplified pagination example with error handling
+    paginated_application_filters_example = scm.get_application_filter_list(folder="All",
+        limit=5,
+        offset=0)
+    pulumi.export("paginatedApplicationFilters", try_(
+        lambda: {application_filter.id: application_filter for applicationFilter in paginated_application_filters_example.datas},
+        lambda: {}
+    ))
+    pulumi.export("paginationApplicationFiltersDetails", try_(
+        lambda: {
+            "totalObjectsInFolder": paginated_application_filters_example.total,
+            "limitUsed": paginated_application_filters_example.limit,
+            "offsetUsed": paginated_application_filters_example.offset,
+        },
+        lambda: {}
+    ))
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -206,6 +248,48 @@ def get_application_filter_list_output(device: Optional[pulumi.Input[Optional[_b
                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationFilterListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    def try_(*fns):
+        for fn in fns:
+            try:
+                result = fn()
+                return result
+            except:
+                continue
+        return None
+
+
+    # This data source will call the "List" API endpoint
+    # and return all application filters in the "All" folder.
+    # 1. Use a single data block to fetch ALL application filters in the "All" folder.
+    all_shared = scm.get_application_filter_list(folder="All")
+    pulumi.export("applicationFiltersRawData", try_(
+        lambda: all_shared,
+        lambda: None
+    ))
+    # Simplified pagination example with error handling
+    paginated_application_filters_example = scm.get_application_filter_list(folder="All",
+        limit=5,
+        offset=0)
+    pulumi.export("paginatedApplicationFilters", try_(
+        lambda: {application_filter.id: application_filter for applicationFilter in paginated_application_filters_example.datas},
+        lambda: {}
+    ))
+    pulumi.export("paginationApplicationFiltersDetails", try_(
+        lambda: {
+            "totalObjectsInFolder": paginated_application_filters_example.total,
+            "limitUsed": paginated_application_filters_example.limit,
+            "offsetUsed": paginated_application_filters_example.offset,
+        },
+        lambda: {}
+    ))
+    ```
 
 
     :param _builtins.str device: The device of the item.

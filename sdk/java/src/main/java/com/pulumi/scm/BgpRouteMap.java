@@ -40,8 +40,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.BgpRouteMapRouteMapMatchIpv4AddressArgs;
  * import com.pulumi.scm.inputs.BgpRouteMapRouteMapSetArgs;
  * import com.pulumi.resources.CustomResourceOptions;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -93,7 +93,7 @@ import javax.annotation.Nullable;
  *                         .build())
  *                     .build())
  *                 .set(BgpRouteMapRouteMapSetArgs.builder()
- *                     .regularCommunity(List.of("no-export"))
+ *                     .regularCommunity(Arrays.asList("no-export"))
  *                     .build())
  *                 .build())
  *             .build(), CustomResourceOptions.builder()

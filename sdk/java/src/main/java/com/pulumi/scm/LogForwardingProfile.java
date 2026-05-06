@@ -31,8 +31,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.LogForwardingProfile;
  * import com.pulumi.scm.LogForwardingProfileArgs;
  * import com.pulumi.scm.inputs.LogForwardingProfileMatchListArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -62,8 +62,8 @@ import javax.annotation.Nullable;
  *                 .name("profile_match")
  *                 .logType("traffic")
  *                 .filter("(device_name eq test_device)")
- *                 .sendHttp(List.of("test_http"))
- *                 .sendSyslog(List.of("syslog-server-prof-complete"))
+ *                 .sendHttp(Arrays.asList("test_http"))
+ *                 .sendSyslog(Arrays.asList("syslog-server-prof-complete"))
  *                 .build())
  *             .build());
  * 
@@ -76,12 +76,12 @@ import javax.annotation.Nullable;
  *                 .actionDesc("all server profiles")
  *                 .logType("dns-security")
  *                 .filter("All Logs")
- *                 .sendHttp(List.of(                
+ *                 .sendHttp(Arrays.asList(                
  *                     "test_http",
  *                     "t10"))
- *                 .sendSyslog(List.of("syslog-server-prof-complete"))
- *                 .sendSnmptrap(List.of("snmp_test"))
- *                 .sendEmail(List.of("email_test"))
+ *                 .sendSyslog(Arrays.asList("syslog-server-prof-complete"))
+ *                 .sendSnmptrap(Arrays.asList("snmp_test"))
+ *                 .sendEmail(Arrays.asList("email_test"))
  *                 .build())
  *             .build());
  * 
@@ -95,30 +95,30 @@ import javax.annotation.Nullable;
  *                     .actionDesc("match list for url")
  *                     .logType("url")
  *                     .filter("(sdwan_cluster contains 123)")
- *                     .sendHttp(List.of("t10"))
- *                     .sendSyslog(List.of("syslog-server-prof-complete"))
- *                     .sendSnmptrap(List.of("snmp_test"))
+ *                     .sendHttp(Arrays.asList("t10"))
+ *                     .sendSyslog(Arrays.asList("syslog-server-prof-complete"))
+ *                     .sendSnmptrap(Arrays.asList("snmp_test"))
  *                     .build(),
  *                 LogForwardingProfileMatchListArgs.builder()
  *                     .name("profile_match_2")
  *                     .logType("data")
  *                     .filter("(link_switch_2 neq lnk_2) or (pkts_received geq 100)")
- *                     .sendHttp(List.of(                    
+ *                     .sendHttp(Arrays.asList(                    
  *                         "t5",
  *                         "t10"))
- *                     .sendSyslog(List.of("syslog-server-prof-complete"))
- *                     .sendEmail(List.of("email_test"))
+ *                     .sendSyslog(Arrays.asList("syslog-server-prof-complete"))
+ *                     .sendEmail(Arrays.asList("email_test"))
  *                     .build(),
  *                 LogForwardingProfileMatchListArgs.builder()
  *                     .name("profile_match_3")
  *                     .actionDesc("match list for wildfire")
  *                     .logType("wildfire")
  *                     .filter("(imei contains test_server)")
- *                     .sendHttp(List.of(                    
+ *                     .sendHttp(Arrays.asList(                    
  *                         "t5",
  *                         "t10"))
- *                     .sendSyslog(List.of("syslog-server-prof-complete"))
- *                     .sendEmail(List.of("email_test"))
+ *                     .sendSyslog(Arrays.asList("syslog-server-prof-complete"))
+ *                     .sendEmail(Arrays.asList("email_test"))
  *                     .build())
  *             .build());
  * 

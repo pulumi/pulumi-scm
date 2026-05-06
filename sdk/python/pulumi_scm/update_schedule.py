@@ -225,7 +225,7 @@ class UpdateSchedule(pulumi.CustomResource):
                         "new_app_threshold": 300,
                         "sync_to_peer": False,
                         "hourly": {
-                            "at": 30,
+                            "at": float(30),
                             "action": "download-only",
                             "disable_new_content": False,
                         },
@@ -311,7 +311,7 @@ class UpdateSchedule(pulumi.CustomResource):
                         "new_app_threshold": 300,
                         "sync_to_peer": False,
                         "hourly": {
-                            "at": 30,
+                            "at": float(30),
                             "action": "download-only",
                             "disable_new_content": False,
                         },

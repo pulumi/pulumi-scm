@@ -32,8 +32,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.DataObjectPatternTypeArgs;
  * import com.pulumi.scm.inputs.DataObjectPatternTypePredefinedArgs;
  * import com.pulumi.scm.inputs.DataObjectPatternTypeFilePropertiesArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -51,7 +51,7 @@ import javax.annotation.Nullable;
  *             .patternType(DataObjectPatternTypeArgs.builder()
  *                 .predefined(DataObjectPatternTypePredefinedArgs.builder()
  *                     .patterns(DataObjectPatternTypePredefinedPatternArgs.builder()
- *                         .fileType(List.of("text/html"))
+ *                         .fileType(Arrays.asList("text/html"))
  *                         .name("ABA-Routing-Number")
  *                         .build())
  *                     .build())

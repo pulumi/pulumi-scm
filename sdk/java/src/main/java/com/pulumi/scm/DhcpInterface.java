@@ -37,8 +37,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionNtpArgs;
  * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionWinsArgs;
  * import com.pulumi.scm.inputs.DhcpInterfaceServerOptionNisArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -86,7 +86,7 @@ import javax.annotation.Nullable;
  *                         .inherited(true)
  *                         .name("option-foo")
  *                         .code(224)
- *                         .ip(List.of("192.0.2.10"))
+ *                         .ip(Arrays.asList("192.0.2.10"))
  *                         .build())
  *                     .build())
  *                 .reserveds(DhcpInterfaceServerReservedArgs.builder()

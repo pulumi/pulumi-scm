@@ -31,8 +31,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.FileBlockingProfile;
  * import com.pulumi.scm.FileBlockingProfileArgs;
  * import com.pulumi.scm.inputs.FileBlockingProfileRuleArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -57,16 +57,16 @@ import javax.annotation.Nullable;
  *                 FileBlockingProfileRuleArgs.builder()
  *                     .name("block_rule")
  *                     .action("block")
- *                     .application(List.of("any"))
+ *                     .application(Arrays.asList("any"))
  *                     .direction("upload")
- *                     .fileType(List.of("any"))
+ *                     .fileType(Arrays.asList("any"))
  *                     .build(),
  *                 FileBlockingProfileRuleArgs.builder()
  *                     .name("block_rule_two")
  *                     .action("block")
- *                     .application(List.of("8x8"))
+ *                     .application(Arrays.asList("8x8"))
  *                     .direction("upload")
- *                     .fileType(List.of(                    
+ *                     .fileType(Arrays.asList(                    
  *                         "7z",
  *                         "bat",
  *                         "chm",
@@ -86,20 +86,20 @@ import javax.annotation.Nullable;
  *                 FileBlockingProfileRuleArgs.builder()
  *                     .name("alert_rule")
  *                     .action("alert")
- *                     .application(List.of(                    
+ *                     .application(Arrays.asList(                    
  *                         "access-grid",
  *                         "adobe-update"))
  *                     .direction("both")
- *                     .fileType(List.of("ico"))
+ *                     .fileType(Arrays.asList("ico"))
  *                     .build(),
  *                 FileBlockingProfileRuleArgs.builder()
  *                     .name("continue_rule")
  *                     .action("continue")
- *                     .application(List.of(                    
+ *                     .application(Arrays.asList(                    
  *                         "apple-appstore",
  *                         "limelight"))
  *                     .direction("download")
- *                     .fileType(List.of(                    
+ *                     .fileType(Arrays.asList(                    
  *                         "doc",
  *                         "bmp",
  *                         "dsn",
